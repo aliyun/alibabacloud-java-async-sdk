@@ -67,7 +67,7 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned results.</p>
+         * <p>The statistical results of API security risks or events.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -378,7 +378,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * Account.
+             * <p>The number of accounts associated with the monitored APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder account(Long account) {
                 this.account = account;
@@ -386,7 +389,7 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of handled events.</p>
+             * <p>The number of handled items.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -397,10 +400,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of APIs.</p>
+             * <p>The number of APIs that are monitored by the API security module.</p>
              * 
              * <strong>example:</strong>
-             * <p>/api/v1/login</p>
+             * <p>202</p>
              */
             public Builder api(Long api) {
                 this.api = api;
@@ -408,10 +411,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of confirmed events.</p>
+             * <p>The number of confirmed items.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>11</p>
              */
             public Builder confirmed(Long confirmed) {
                 this.confirmed = confirmed;
@@ -419,10 +422,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of domain names.</p>
+             * <p>The number of domain names that are monitored by the API security module.</p>
              * 
              * <strong>example:</strong>
-             * <p>a.aliyun.com</p>
+             * <p>22</p>
              */
             public Builder domain(Long domain) {
                 this.domain = domain;
@@ -430,10 +433,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of fixed risks.</p>
+             * <p>The number of items that are manually verified as fixed.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>13</p>
              */
             public Builder fixed(Long fixed) {
                 this.fixed = fixed;
@@ -441,10 +444,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of high-risk events.</p>
+             * <p>The number of high-risk items.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>135</p>
              */
             public Builder high(Long high) {
                 this.high = high;
@@ -452,10 +455,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of ignored risks.</p>
+             * <p>The number of ignored items.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>3</p>
              */
             public Builder ignore(Long ignore) {
                 this.ignore = ignore;
@@ -463,10 +466,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of low-risk events.</p>
+             * <p>The number of low-risk items.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>160</p>
              */
             public Builder low(Long low) {
                 this.low = low;
@@ -474,10 +477,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of moderate-risk events.</p>
+             * <p>The number of medium-risk items.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>27</p>
              */
             public Builder medium(Long medium) {
                 this.medium = medium;
@@ -485,7 +488,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NotFixed.
+             * <p>The number of items that are verified as not fixed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder notFixed(Long notFixed) {
                 this.notFixed = notFixed;
@@ -493,7 +499,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemFixed.
+             * <p>The number of items that are verified as fixed by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder systemFixed(Long systemFixed) {
                 this.systemFixed = systemFixed;
@@ -501,10 +510,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of events to be confirmed.</p>
+             * <p>The number of items to be confirmed.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>295</p>
              */
             public Builder toBeConfirmed(Long toBeConfirmed) {
                 this.toBeConfirmed = toBeConfirmed;
@@ -512,10 +521,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of risks to be fixed.</p>
+             * <p>The number of items to be fixed.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>3</p>
              */
             public Builder toBeFixed(Long toBeFixed) {
                 this.toBeFixed = toBeFixed;
@@ -523,7 +532,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ToBeVerified.
+             * <p>The number of items to be verified by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder toBeVerified(Long toBeVerified) {
                 this.toBeVerified = toBeVerified;
@@ -531,10 +543,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of new high-risk events today.</p>
+             * <p>The number of new high-risk items detected today.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>3</p>
              */
             public Builder todayHigh(String todayHigh) {
                 this.todayHigh = todayHigh;
@@ -542,10 +554,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of new low-risk events today.</p>
+             * <p>The number of new low-risk items detected today.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>0</p>
              */
             public Builder todayLow(Long todayLow) {
                 this.todayLow = todayLow;
@@ -553,10 +565,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of new moderate-risk events today.</p>
+             * <p>The number of new medium-risk items detected today.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>0</p>
              */
             public Builder todayMedium(String todayMedium) {
                 this.todayMedium = todayMedium;
@@ -564,10 +576,10 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of new events today.</p>
+             * <p>The total number of new items detected today.</p>
              * 
              * <strong>example:</strong>
-             * <p>30</p>
+             * <p>3</p>
              */
             public Builder todayTotal(String todayTotal) {
                 this.todayTotal = todayTotal;
@@ -575,10 +587,13 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of events.</p>
+             * <p>The total number of items.</p>
+             * <blockquote>
+             * <p>This is the sum of the values of the <strong>High</strong>, <strong>Medium</strong>, and <strong>Low</strong> response parameters.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>30</p>
+             * <p>322</p>
              */
             public Builder total(Long total) {
                 this.total = total;

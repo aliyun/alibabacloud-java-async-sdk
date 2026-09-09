@@ -67,7 +67,7 @@ public class CreateSM2CertResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>***-cn-hangzhou</p>
@@ -78,7 +78,7 @@ public class CreateSM2CertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D7861F61-5B61-46CE-A47C-***</p>

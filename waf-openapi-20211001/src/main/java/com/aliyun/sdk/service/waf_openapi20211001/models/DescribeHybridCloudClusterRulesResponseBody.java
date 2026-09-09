@@ -80,7 +80,7 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of cloud native mode entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +220,10 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The ID of the hybrid cloud cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1099</p>
              */
             public Builder clusterId(Long clusterId) {
                 this.clusterId = clusterId;
@@ -222,7 +231,10 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterRuleResourceId.
+             * <p>The resource ID of the cluster rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdbc-clusterrule-*****khzre0ym0w</p>
              */
             public Builder clusterRuleResourceId(String clusterRuleResourceId) {
                 this.clusterRuleResourceId = clusterRuleResourceId;
@@ -230,7 +242,32 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleConfig.
+             * <p>The configuration of the traffic redirection rule:</p>
+             * <ul>
+             * <li><p><strong>check_mode</strong></p>
+             * <p>: the mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>all</strong>: redirects all traffic.</p>
+             * </li>
+             * <li><p><strong>part</strong>: redirects a portion of traffic.</p>
+             * </li>
+             * </ul>
+             * </li>
+             * <li><p><strong>type</strong></p>
+             * <p>: the match type of the rule. Valid values:</p>
+             * <ul>
+             * <li><p><strong>exact</strong>: exact match.</p>
+             * </li>
+             * <li><p><strong>regex</strong>: regular expression match.</p>
+             * </li>
+             * </ul>
+             * </li>
+             * <li><p><strong>substance</strong>: the value of the rule.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;check_mode\&quot;: \&quot;all\&quot;, \&quot;type\&quot;: \&quot;exact\&quot;, \&quot;substance\&quot;: \&quot;122\&quot;}</p>
              */
             public Builder ruleConfig(String ruleConfig) {
                 this.ruleConfig = ruleConfig;
@@ -238,7 +275,13 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * <p>The type of the rule. Valid value:</p>
+             * <ul>
+             * <li><strong>pullin</strong>: traffic redirection</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pullin</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -246,7 +289,16 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>0</strong>: disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -254,7 +306,10 @@ public class DescribeHybridCloudClusterRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Long version) {
                 this.version = version;

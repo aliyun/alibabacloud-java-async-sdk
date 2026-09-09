@@ -91,7 +91,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The time series data returned. This operation can return time series for multiple metrics.</p>
+         * <p>The returned time series data. The operation can return time series data for multiple values.</p>
          */
         public Builder securityEventTimeSeries(java.util.List<SecurityEventTimeSeries> securityEventTimeSeries) {
             this.securityEventTimeSeries = securityEventTimeSeries;
@@ -99,7 +99,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The metadata of the time series data returned.</p>
+         * <p>The metadata of the returned data.</p>
          */
         public Builder timeSeriesMetaData(TimeSeriesMetaData timeSeriesMetaData) {
             this.timeSeriesMetaData = timeSeriesMetaData;
@@ -178,7 +178,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The metric. This value is the same as the value of Metric in the request parameters.</p>
+             * <p>The content of the returned data. This is consistent with the \<code>Metric\\</code> request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>monitored_requests</p>
@@ -189,7 +189,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The time points. Each point represents a time range.</p>
+             * <p>The time series. Each point represents the start time of a time range.</p>
              */
             public Builder timestamps(java.util.List<String> timestamps) {
                 this.timestamps = timestamps;
@@ -197,7 +197,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The data points. Each point represents a count for a time range.</p>
+             * <p>The data series. Each point represents the statistical count within a specific time range.</p>
              */
             public Builder values(java.util.List<Long> values) {
                 this.values = values;
@@ -264,7 +264,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The end of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</p>
+             * <p>The end time of the query. This is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>EndDate\\</code> request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888600</p>
@@ -275,7 +275,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</p>
+             * <p>The start time of the query. This is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>StartDate\\</code> request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888000</p>
@@ -358,7 +358,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The time granularity of data points in the time series data returned. For example, a value of 15m indicates that data points are collected at 15-minute intervals. For more information about time granularities, see the <strong>Time granularities of data points in time series</strong> section below.</p>
+             * <p>The time granularity of each data point in the returned time series data. For example, &quot;15m&quot; indicates that each returned data point represents statistics for a 15-minute interval. For more information about the time granularity of the returned data, see the Time granularity of time series data points section.</p>
              * 
              * <strong>example:</strong>
              * <p>1m</p>
@@ -369,7 +369,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The time range that is used for the query.</p>
+             * <p>The time range used for the query.</p>
              */
             public Builder dateRange(DateRange dateRange) {
                 this.dateRange = dateRange;
@@ -377,7 +377,7 @@ public class DescribeSecurityEventTimeSeriesMetricResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The unit of the statistics returned. It is fixed as requests.</p>
+             * <p>The unit of the returned statistical data.</p>
              * 
              * <strong>example:</strong>
              * <p>requests</p>

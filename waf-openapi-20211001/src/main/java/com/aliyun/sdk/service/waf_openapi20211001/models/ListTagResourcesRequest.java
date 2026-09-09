@@ -117,7 +117,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token that is used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -129,10 +129,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -146,7 +148,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+         * <p>The resource ID. You can specify up to 50 entries.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is conditionally required. You must specify at least one ResourceId.N value. If ResourceType is set to ALIYUN::WAF::DEFENSERESOURCE, the value of ResourceId corresponds to the Resources[].Resource field returned by the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation.</li>
+         * </ul>
+         * </blockquote>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -155,7 +162,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
+         * <p>The resource type. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +175,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags that are added to the resource.</p>
+         * <p>The list of tags. You can specify up to 20 entries.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -236,7 +243,7 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N that is added to the resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>Tagkey1</p>
@@ -247,7 +254,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N that is added to the resource. Valid values of N: 1 to 20.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>TagValue1</p>

@@ -26,6 +26,10 @@ public class ModifyDefenseRuleRequest extends Request {
     private String defenseType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -55,6 +59,7 @@ public class ModifyDefenseRuleRequest extends Request {
         super(builder);
         this.defenseScene = builder.defenseScene;
         this.defenseType = builder.defenseType;
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
@@ -88,6 +93,13 @@ public class ModifyDefenseRuleRequest extends Request {
      */
     public String getDefenseType() {
         return this.defenseType;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -135,6 +147,7 @@ public class ModifyDefenseRuleRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDefenseRuleRequest, Builder> {
         private String defenseScene; 
         private String defenseType; 
+        private Boolean dryRun; 
         private String instanceId; 
         private String regionId; 
         private String resource; 
@@ -150,6 +163,7 @@ public class ModifyDefenseRuleRequest extends Request {
             super(request);
             this.defenseScene = request.defenseScene;
             this.defenseType = request.defenseType;
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resource = request.resource;
@@ -159,7 +173,7 @@ public class ModifyDefenseRuleRequest extends Request {
         } 
 
         /**
-         * <p>The scenario in which you want to use the protection rule. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
+         * <p>The protection scenario to modify. For more information, see the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_group</p>
@@ -171,7 +185,10 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * DefenseType.
+         * <p>The type of the protection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder defenseType(String defenseType) {
             this.putQueryParameter("DefenseType", defenseType);
@@ -180,9 +197,25 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+         * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -196,10 +229,12 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +247,13 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>The protected object associated with the rule to modify.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rencs***-waf</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -233,7 +274,23 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
+         * <p>The details of the protection rule. The value is a string that is converted from a JSON object constructed by a series of parameters. When you configure this parameter, specify the rule ID and the protection rule configuration to modify. The following parameters are included:</p>
+         * <ul>
+         * <li><p><strong>id</strong>: Long | Required | The rule ID.</p>
+         * </li>
+         * <li><p>Protection rule configuration: Same as the <strong>Rules</strong> parameter of the <strong>CreateDefenseRule</strong> operation. For more information, see the <strong>protection rule parameter description</strong> in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;id&quot;: 2344,
+         *             &quot;policyId&quot;: 1012,
+         *             &quot;action&quot;: &quot;block&quot;
+         *       }
+         * ]</p>
          */
         public Builder rules(String rules) {
             this.putBodyParameter("Rules", rules);
@@ -242,7 +299,10 @@ public class ModifyDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the protection rule template to which the protection rule whose configurations you want to modify belongs.</p>
+         * <p>The ID of the protection rule template.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>template</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>5325</p>

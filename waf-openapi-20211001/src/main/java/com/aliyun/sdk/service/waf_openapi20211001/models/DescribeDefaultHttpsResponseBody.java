@@ -67,7 +67,7 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The default SSL and TLS settings.</p>
+         * <p>The default SSL/TLS settings.</p>
          */
         public Builder defaultHttps(DefaultHttps defaultHttps) {
             this.defaultHttps = defaultHttps;
@@ -183,7 +183,7 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The certificate ID.</p>
+             * <p>The ID of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>123-cn-hangzhou</p>
@@ -194,11 +194,14 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cipher suites. Valid values:</p>
+             * <p>The type of the cipher suite. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: all cipher suites.</li>
-             * <li><strong>2</strong>: strong cipher suites.</li>
-             * <li><strong>99</strong>: custom cipher suites.</li>
+             * <li><p><strong>1</strong>: All cipher suites are added.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Strong cipher suites are added. This value is available only when TLSVersion is set to tlsv1.2.</p>
+             * </li>
+             * <li><p><strong>99</strong>: Custom cipher suites are added. This value is available only when TLSVersion is not set to tlsv1.3.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -210,7 +213,7 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom cipher suite.</p>
+             * <p>The custom cipher suites.</p>
              * 
              * <strong>example:</strong>
              * <p>ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384</p>
@@ -223,9 +226,14 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
+             * </li>
+             * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
+             * </li>
              * </ul>
+             * <blockquote>
+             * <p>This parameter takes effect only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be true.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -236,11 +244,16 @@ public class DescribeDefaultHttpsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the TLS protocol. Valid values:</p>
+             * <p>The TLS version. Valid values:</p>
              * <ul>
-             * <li><strong>tlsv1</strong></li>
-             * <li><strong>tlsv1.1</strong></li>
-             * <li><strong>tlsv1.2</strong></li>
+             * <li><p><strong>tlsv1</strong>: TLS 1.0 and later are supported. This value provides the highest compatibility and the lowest security.</p>
+             * </li>
+             * <li><p><strong>tlsv1.1</strong>: TLS 1.1 and later are supported. This value provides good compatibility and security.</p>
+             * </li>
+             * <li><p><strong>tlsv1.2</strong>: TLS 1.2 and later are supported. This value provides good compatibility and the highest security.</p>
+             * </li>
+             * <li><p><strong>tlsv1.3</strong>: Only TLS 1.3 is supported. This value provides the highest security and the lowest compatibility.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

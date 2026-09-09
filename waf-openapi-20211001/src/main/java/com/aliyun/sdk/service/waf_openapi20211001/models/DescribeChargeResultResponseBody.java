@@ -93,7 +93,7 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         } 
 
         /**
-         * ModuleDetails.
+         * <p>The calculation results.</p>
          */
         public Builder moduleDetails(java.util.List<ModuleDetails> moduleDetails) {
             this.moduleDetails = moduleDetails;
@@ -101,7 +101,10 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +112,10 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCredit.
+         * <p>The total number of calculated Credits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCredit(Double totalCredit) {
             this.totalCredit = totalCredit;
@@ -117,7 +123,10 @@ public class DescribeChargeResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSeCu.
+         * <p>The total number of calculated SeCUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         public Builder totalSeCu(Double totalSeCu) {
             this.totalSeCu = totalSeCu;
@@ -196,7 +205,10 @@ public class DescribeChargeResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Credit.
+             * <p>The number of Credits for the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder credit(Double credit) {
                 this.credit = credit;
@@ -204,7 +216,10 @@ public class DescribeChargeResultResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleCode.
+             * <p>The pricing module identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domainCount</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -212,7 +227,10 @@ public class DescribeChargeResultResponseBody extends TeaModel {
             }
 
             /**
-             * SeCu.
+             * <p>The number of SeCUs for the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder seCu(Double seCu) {
                 this.seCu = seCu;

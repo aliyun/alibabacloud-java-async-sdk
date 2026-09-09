@@ -80,7 +80,7 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information records involved in cross-border data transfer.</p>
+         * <p>The list of cross-border data transfer information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -205,7 +205,7 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of personal information records involved in cross-border data transfer.</p>
+             * <p>The total number of personal information records transferred cross-border.</p>
              * 
              * <strong>example:</strong>
              * <p>541</p>
@@ -216,7 +216,7 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of sensitive information records involved in cross-border data transfer.</p>
+             * <p>The total number of sensitive information records transferred cross-border.</p>
              * 
              * <strong>example:</strong>
              * <p>378</p>
@@ -227,7 +227,7 @@ public class DescribeSensitiveOutboundTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time of cross-border data transfer. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+             * <p>The time of the cross-border data transfer. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1672502400</p>

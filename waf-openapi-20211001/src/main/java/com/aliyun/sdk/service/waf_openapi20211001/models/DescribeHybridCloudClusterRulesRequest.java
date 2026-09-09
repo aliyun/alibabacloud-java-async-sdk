@@ -174,6 +174,10 @@ public class DescribeHybridCloudClusterRulesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * <blockquote>
+         * <p>This parameter is available only for hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain information about hybrid cloud clusters.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +190,10 @@ public class DescribeHybridCloudClusterRulesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +206,10 @@ public class DescribeHybridCloudClusterRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -207,7 +218,10 @@ public class DescribeHybridCloudClusterRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +230,16 @@ public class DescribeHybridCloudClusterRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +248,10 @@ public class DescribeHybridCloudClusterRulesRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -234,7 +260,10 @@ public class DescribeHybridCloudClusterRulesRequest extends Request {
         }
 
         /**
-         * RuleContent.
+         * <p>The prefix of the rule value to match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder ruleContent(String ruleContent) {
             this.putQueryParameter("RuleContent", ruleContent);
@@ -243,7 +272,16 @@ public class DescribeHybridCloudClusterRulesRequest extends Request {
         }
 
         /**
-         * RuleMatchType.
+         * <p>The matching logic. Valid values:</p>
+         * <ul>
+         * <li><p>exact: exact match</p>
+         * </li>
+         * <li><p>regex: regular expression match</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
          */
         public Builder ruleMatchType(String ruleMatchType) {
             this.putQueryParameter("RuleMatchType", ruleMatchType);
@@ -252,6 +290,10 @@ public class DescribeHybridCloudClusterRulesRequest extends Request {
         }
 
         /**
+         * <p>The type of the rule. Valid value:</p>
+         * <ul>
+         * <li><strong>pullin</strong>: traffic redirection</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -54,7 +54,7 @@ public class DeleteCloudResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>D7861F61-5B61-46CE-A47C-***</p>

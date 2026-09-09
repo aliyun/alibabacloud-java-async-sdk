@@ -78,7 +78,7 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The statistics.</p>
+         * <p>The list of statistics.</p>
          */
         public Builder requests(java.util.List<Requests> requests) {
             this.requests = requests;
@@ -144,7 +144,7 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned.</p>
+             * <p>The number of statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>76</p>
@@ -155,12 +155,16 @@ public class DescribeUserApiRequestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the statistics. Valid values:</p>
+             * <p>The statistics information. This includes:</p>
              * <ul>
-             * <li><strong>client_list</strong>: client</li>
-             * <li><strong>ip</strong>: IP address</li>
-             * <li><strong>region_id</strong> region</li>
-             * <li><strong>country_id</strong>: country</li>
+             * <li><p><strong>client_list</strong>: the client tool.</p>
+             * </li>
+             * <li><p><strong>ip</strong>: the IP address information.</p>
+             * </li>
+             * <li><p><strong>region_id</strong>: the region.</p>
+             * </li>
+             * <li><p><strong>country_id</strong>: the country.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

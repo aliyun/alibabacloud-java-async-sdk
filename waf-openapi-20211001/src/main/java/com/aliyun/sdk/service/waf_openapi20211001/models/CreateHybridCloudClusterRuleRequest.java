@@ -147,6 +147,10 @@ public class CreateHybridCloudClusterRuleRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * <blockquote>
+         * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +163,10 @@ public class CreateHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +179,16 @@ public class CreateHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -180,7 +197,10 @@ public class CreateHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -189,7 +209,27 @@ public class CreateHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * RuleConfig.
+         * <p>The traffic redirection rule configuration.</p>
+         * <blockquote>
+         * <p>The mode options are mutually exclusive. You can select only one. If you change the mode, all traffic redirection rules under the original mode are cleared.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>check_mode</strong>: the mode. Valid values:<ul>
+         * <li><strong>all</strong>: full traffic redirection.</li>
+         * <li><strong>part</strong>: partial traffic redirection.</li>
+         * </ul>
+         * </li>
+         * <li><strong>type</strong>: the rule matching type. Valid values:<ul>
+         * <li><strong>exact</strong>: exact match.</li>
+         * <li><strong>regex</strong>: regular expression.</li>
+         * </ul>
+         * </li>
+         * <li><strong>substance</strong>: the rule value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>full volume drainage:{\&quot;check_mode\&quot;: \&quot;all\&quot;, \&quot;type\&quot;: \&quot;exact\&quot;, \&quot;substance\&quot;: \&quot;122\&quot;}
+         * Specified partial drainage：{\&quot;check_mode\&quot;: \&quot;part\&quot;, \&quot;type\&quot;: \&quot;exact\&quot;, \&quot;substance\&quot;: \&quot;12222\&quot;}</p>
          */
         public Builder ruleConfig(String ruleConfig) {
             this.putQueryParameter("RuleConfig", ruleConfig);
@@ -198,6 +238,11 @@ public class CreateHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule status. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled.</li>
+         * <li><strong>off</strong>: disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +255,10 @@ public class CreateHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule type. Valid values:</p>
+         * <ul>
+         * <li><strong>pullin</strong>: cluster traffic redirection.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

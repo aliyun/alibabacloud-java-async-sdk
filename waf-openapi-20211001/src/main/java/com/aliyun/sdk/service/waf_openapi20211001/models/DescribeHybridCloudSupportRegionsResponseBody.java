@@ -67,7 +67,10 @@ public class DescribeHybridCloudSupportRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256959D5-3B45-54CD-A66D-F75F11E8E754</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeHybridCloudSupportRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * SupportRegions.
+         * <p>The list of supported regions.</p>
          */
         public Builder supportRegions(java.util.List<String> supportRegions) {
             this.supportRegions = supportRegions;

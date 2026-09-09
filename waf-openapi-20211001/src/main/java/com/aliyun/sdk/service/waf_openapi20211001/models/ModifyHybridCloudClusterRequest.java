@@ -290,7 +290,15 @@ public class ModifyHybridCloudClusterRequest extends Request {
         } 
 
         /**
+         * <p>The network access mode. Valid values:</p>
+         * <ul>
+         * <li><strong>internet</strong>: public network access.</li>
+         * <li><strong>vpc</strong>: Express Connect private network access.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internet</p>
          */
         public Builder accessMode(String accessMode) {
             this.putQueryParameter("AccessMode", accessMode);
@@ -299,7 +307,15 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * AccessRegion.
+         * <p>The Express Connect access region. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Hangzhou.</li>
+         * <li><strong>cn-beiijng</strong>: Beijing.</li>
+         * <li><strong>cn-shanghai</strong>: Shanghai.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder accessRegion(String accessRegion) {
             this.putQueryParameter("AccessRegion", accessRegion);
@@ -308,8 +324,11 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf-example-***</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -318,7 +337,7 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The HTTP ports that are supported. Set this parameter to a string. Specify multiple ports in the <strong>port1,port2,port3</strong> format.</p>
+         * <p>The list of available ports for the HTTP protocol. The value is a string. If multiple ports are specified, they are returned in the format of <strong>port1,port2,port3</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -331,7 +350,7 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The HTTPS ports that are supported. Set this parameter to a string. Specify multiple ports in the <strong>port1,port2,port3</strong> format.</p>
+         * <p>The list of available ports for the HTTPS protocol. The value is a string. If multiple ports are specified, they are returned in the format of <strong>port1,port2,port3</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -344,7 +363,7 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -357,9 +376,9 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The WAF instance ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -373,7 +392,10 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * LogFieldsNotReturned.
+         * <p>The log fields to be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log_example</p>
          */
         public Builder logFieldsNotReturned(String logFieldsNotReturned) {
             this.putQueryParameter("LogFieldsNotReturned", logFieldsNotReturned);
@@ -395,7 +417,14 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * ProxyStatus.
+         * <p>The proxy gateway mode. Valid values:</p>
+         * <ul>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder proxyStatus(String proxyStatus) {
             this.putQueryParameter("ProxyStatus", proxyStatus);
@@ -404,7 +433,14 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * ProxyType.
+         * <p>The cluster type. Valid values:</p>
+         * <ul>
+         * <li><strong>cname</strong>: reverse proxy cluster.</li>
+         * <li><strong>service</strong>: service-based cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>service</p>
          */
         public Builder proxyType(String proxyType) {
             this.putQueryParameter("ProxyType", proxyType);
@@ -413,10 +449,12 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -429,7 +467,10 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The remarks about the cluster.</p>
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remarkExample</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -438,7 +479,10 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The Alibaba Cloud resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -447,7 +491,22 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * RuleConfig.
+         * <p>The rule configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;enable&quot;: true,
+         *       &quot;param&quot;: {
+         *             &quot;breaker&quot;: {
+         *                   &quot;duration&quot;: 1,
+         *                   &quot;failed&quot;: 1,
+         *                   &quot;recent_failed&quot;: 1
+         *             },
+         *             &quot;disable_protect&quot;: false,
+         *             &quot;max_request_body_len&quot;: 1,
+         *             &quot;timeout&quot;: 1
+         *       }
+         * }</p>
          */
         public Builder ruleConfig(String ruleConfig) {
             this.putQueryParameter("RuleConfig", ruleConfig);
@@ -456,7 +515,14 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * RuleStatus.
+         * <p>The rule status. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled.</li>
+         * <li><strong>off</strong>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder ruleStatus(String ruleStatus) {
             this.putQueryParameter("RuleStatus", ruleStatus);
@@ -465,7 +531,11 @@ public class ModifyHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>The rule type. Valid values:</p>
+         * <p>bypass: bypasses security checks and directly allows the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bypass</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);

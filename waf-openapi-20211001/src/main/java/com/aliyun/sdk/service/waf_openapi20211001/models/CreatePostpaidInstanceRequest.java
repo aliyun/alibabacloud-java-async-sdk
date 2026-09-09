@@ -73,10 +73,12 @@ public class CreatePostpaidInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +91,7 @@ public class CreatePostpaidInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>The Alibaba Cloud resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm4gh****wela</p>

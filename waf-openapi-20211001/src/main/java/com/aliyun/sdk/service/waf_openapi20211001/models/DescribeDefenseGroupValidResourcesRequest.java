@@ -144,7 +144,13 @@ public class DescribeDefenseGroupValidResourcesRequest extends Request {
         } 
 
         /**
-         * GroupName.
+         * <p>The name of the defense group to query.</p>
+         * <blockquote>
+         * <p>Leave this parameter empty to query for protected objects that can be associated with a new defense group.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>group221</p>
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -153,6 +159,10 @@ public class DescribeDefenseGroupValidResourcesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +175,10 @@ public class DescribeDefenseGroupValidResourcesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -174,7 +187,10 @@ public class DescribeDefenseGroupValidResourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +199,16 @@ public class DescribeDefenseGroupValidResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +217,10 @@ public class DescribeDefenseGroupValidResourcesRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>The name of the protected object that you want to use as a filter for the query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyun-waf</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -201,7 +229,10 @@ public class DescribeDefenseGroupValidResourcesRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2lrm****6pnq</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

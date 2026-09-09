@@ -67,10 +67,10 @@ public class DescribeResourceSupportRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>58FD****-3D56-5DE8-91E0-96A26BABFFDD</p>
+         * <p>58FDF266-3D56-5DE8-91E0-96A26BAB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeResourceSupportRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of region IDs of the CLB and ECS instances that are added to WAF in cloud native mode.</p>
+         * <p>The list of region IDs supported by WAF in transparent proxy mode.</p>
          */
         public Builder supportRegions(java.util.List<String> supportRegions) {
             this.supportRegions = supportRegions;

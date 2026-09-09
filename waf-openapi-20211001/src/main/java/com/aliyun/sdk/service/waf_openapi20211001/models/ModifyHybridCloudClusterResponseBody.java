@@ -54,7 +54,7 @@ public class ModifyHybridCloudClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2EFCFE18-78F8-5079-B312-07***48B</p>

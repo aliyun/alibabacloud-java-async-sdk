@@ -106,7 +106,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * AbroadInfos.
+         * <p>The list of country information outside China.</p>
          */
         public Builder abroadInfos(java.util.List<AbroadInfos> abroadInfos) {
             this.abroadInfos = abroadInfos;
@@ -114,7 +114,10 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * AbroadRegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>US-CA</p>
              */
             public Builder abroadRegionId(String abroadRegionId) {
                 this.abroadRegionId = abroadRegionId;
@@ -212,7 +227,10 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * AbroadRegionName.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>California</p>
              */
             public Builder abroadRegionName(String abroadRegionName) {
                 this.abroadRegionName = abroadRegionName;
@@ -305,7 +323,10 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * Continent.
+             * <p>The continent to which the country belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>North America</p>
              */
             public Builder continent(String continent) {
                 this.continent = continent;
@@ -313,7 +334,10 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The ID of the country.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>US</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -321,7 +345,10 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * CountryName.
+             * <p>The name of the country.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>United States</p>
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -329,7 +356,7 @@ public class DescribeIpAbroadCountryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Regions.
+             * <p>The list of region information outside China.</p>
              */
             public Builder regions(java.util.List<Regions> regions) {
                 this.regions = regions;

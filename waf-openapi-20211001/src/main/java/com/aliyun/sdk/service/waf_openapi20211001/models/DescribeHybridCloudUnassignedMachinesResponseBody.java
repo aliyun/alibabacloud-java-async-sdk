@@ -80,7 +80,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3EBCFCE9-4A3C-5E01-915D-691B****510A</p>
@@ -102,7 +102,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The servers that are not assigned to the hybrid cloud cluster.</p>
+         * <p>The list of unassigned machines in the hybrid cloud cluster.</p>
          */
         public Builder unassignedMachines(java.util.List<UnassignedMachines> unassignedMachines) {
             this.unassignedMachines = unassignedMachines;
@@ -244,7 +244,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The name of the node.</p>
+             * <p>The node name.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleName</p>
@@ -255,7 +255,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The host name.</p>
+             * <p>The hostname.</p>
              * 
              * <strong>example:</strong>
              * <p>online-xagent1</p>
@@ -277,7 +277,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The media access control (MAC) address of the device.</p>
+             * <p>The MAC address of the device.</p>
              * 
              * <strong>example:</strong>
              * <p>00163e2686ac</p>
@@ -288,7 +288,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The memory size. Unit: KB. A conversion factor of 1,000 is used.</p>
+             * <p>The memory size. Unit: KB. The conversion factor is 1000.</p>
              * 
              * <strong>example:</strong>
              * <p>31580872</p>
@@ -299,7 +299,7 @@ public class DescribeHybridCloudUnassignedMachinesResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The ID of the node.</p>
+             * <p>The machine identifier (MID).</p>
              * 
              * <strong>example:</strong>
              * <p>78db009ab6cf055a9085f9f4****ae3a</p>

@@ -80,7 +80,7 @@ public class DescribeApisecMatchedHostsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The domain names.</p>
+         * <p>The list of domain names.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -168,7 +168,7 @@ public class DescribeApisecMatchedHostsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of APIs related to the domain name.</p>
+             * <p>The number of queries.</p>
              * 
              * <strong>example:</strong>
              * <p>31</p>

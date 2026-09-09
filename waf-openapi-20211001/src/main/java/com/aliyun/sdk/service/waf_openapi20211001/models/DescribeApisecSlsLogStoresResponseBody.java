@@ -67,7 +67,7 @@ public class DescribeApisecSlsLogStoresResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The names of the Logstores in Simple Log Service.</p>
+         * <p>The list of Logstores in Simple Log Service.</p>
          */
         public Builder logStores(java.util.List<String> logStores) {
             this.logStores = logStores;
@@ -75,7 +75,7 @@ public class DescribeApisecSlsLogStoresResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>

@@ -54,7 +54,10 @@ public class DeleteDefenseRuleBlockIpResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D11AC3A-A10C-56E7-A342-E87EC892BAE2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

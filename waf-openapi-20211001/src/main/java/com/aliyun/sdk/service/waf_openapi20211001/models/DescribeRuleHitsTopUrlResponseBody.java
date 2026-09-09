@@ -78,7 +78,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The top 10 URLs that match protection rules.</p>
+         * <p>The top 10 URLs with rule hits.</p>
          */
         public Builder ruleHitsTopUrl(java.util.List<RuleHitsTopUrl> ruleHitsTopUrl) {
             this.ruleHitsTopUrl = ruleHitsTopUrl;
@@ -144,7 +144,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of requests that match protection rules.</p>
+             * <p>The number of requests that hit the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>21862</p>
@@ -157,7 +157,7 @@ public class DescribeRuleHitsTopUrlResponseBody extends TeaModel {
             /**
              * <p>The request URL.</p>
              * <blockquote>
-             * <p> The value is Base64-encoded.</p>
+             * <p>The returned value is Base64-encoded.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

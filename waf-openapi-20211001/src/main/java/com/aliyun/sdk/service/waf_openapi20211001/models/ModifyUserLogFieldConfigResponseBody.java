@@ -54,7 +54,10 @@ public class ModifyUserLogFieldConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2D63742-9BAA-*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

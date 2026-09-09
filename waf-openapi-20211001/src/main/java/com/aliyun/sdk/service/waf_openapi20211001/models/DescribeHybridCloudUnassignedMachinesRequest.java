@@ -160,6 +160,9 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
 
         /**
          * <p>The ID of the hybrid cloud cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation and obtain the <strong>Id</strong> field value of the target hybrid cloud cluster from the <strong>ClusterInfos</strong> array in the response. If no cluster is available, call the <a href="https://help.aliyun.com/document_detail/2980286.html">CreateHybridCloudCluster</a> operation to create a hybrid cloud cluster.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +175,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
         }
 
         /**
-         * <p>The host name.</p>
+         * <p>The hostname.</p>
          * 
          * <strong>example:</strong>
          * <p>online-xagent1</p>
@@ -184,9 +187,9 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -212,7 +215,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number to return in a paged query. Default value: <strong>1</strong>. For more information about paging, see the PageSize parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,7 +227,7 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates that each page contains 10 entries. For more information about paging, see the PageNumber parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -236,10 +239,12 @@ public class DescribeHybridCloudUnassignedMachinesRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

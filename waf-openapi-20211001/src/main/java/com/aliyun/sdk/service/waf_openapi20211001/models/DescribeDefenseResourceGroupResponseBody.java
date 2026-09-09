@@ -75,7 +75,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E67D21C6-5376-5F94-B745-70E08D03E3CB</p>
@@ -194,7 +194,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the protected object group was created.</p>
+             * <p>The timestamp when the protected object group was created.</p>
              * 
              * <strong>example:</strong>
              * <p>23242312312</p>
@@ -205,7 +205,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent time when the protected object group was modified.</p>
+             * <p>The timestamp when the protected object group was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>23242312312</p>
@@ -216,7 +216,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the protected object group.</p>
+             * <p>The name of the protected object group that you want to query.</p>
              * 
              * <strong>example:</strong>
              * <p>group1</p>
@@ -227,7 +227,7 @@ public class DescribeDefenseResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protected objects in the protected object group. The protected objects are separated with commas (,).</p>
+             * <p>All the protected objects that are added to the protected object group. Separate the protected objects with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>test1.aliyundoc.com,test2.aliyundoc.com</p>

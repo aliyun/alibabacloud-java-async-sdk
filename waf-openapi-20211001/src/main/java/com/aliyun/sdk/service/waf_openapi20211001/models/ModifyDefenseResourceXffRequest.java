@@ -188,10 +188,12 @@ public class ModifyDefenseResourceXffRequest extends Request {
         } 
 
         /**
-         * <p>The status of the tracking cookie.</p>
+         * <p>The status of the tracking cookie switch.</p>
          * <ul>
-         * <li><strong>0</strong>: disabled</li>
-         * <li><strong>1</strong>: enabled. This is the default value.</li>
+         * <li><p><strong>0</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1 (default)</strong>: enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,8 +208,10 @@ public class ModifyDefenseResourceXffRequest extends Request {
         /**
          * <p>The status of the secure attribute of the tracking cookie.</p>
          * <ul>
-         * <li><strong>0</strong>: disabled. This is the default value.</li>
-         * <li><strong>1</strong>: enabled.</li>
+         * <li><p><strong>0 (default)</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,10 +224,12 @@ public class ModifyDefenseResourceXffRequest extends Request {
         }
 
         /**
-         * <p>The status of the secure attribute of the slider CAPTCHA cookie.</p>
+         * <p>The status of the secure attribute of the slider cookie.</p>
          * <ul>
-         * <li><strong>0</strong>: disabled. This is the default value.</li>
-         * <li><strong>1</strong>: enabled.</li>
+         * <li><p><strong>0 (default)</strong>: disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,9 +242,9 @@ public class ModifyDefenseResourceXffRequest extends Request {
         }
 
         /**
-         * <p>The custom header fields.</p>
+         * <p>The list of specified header fields.</p>
          * <blockquote>
-         * <p> The first IP address in the specified custom header field is used as the originating IP address of the client to prevent X-Forwarded-For forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the X-Forwarded-For header is used as the originating IP address of the client.</p>
+         * <p>The first IP address in the specified header field is used as the client source IP address to prevent XFF spoofing. If multiple headers are specified, the system attempts to obtain the source IP address from the headers in order. If the first header does not contain an IP address, the system tries the second header, and so on. If none of the specified headers contain an IP address, the first IP address in the X-Forwarded-For header is used.</p>
          * </blockquote>
          */
         public Builder customHeaders(java.util.List<String> customHeaders) {
@@ -248,14 +254,14 @@ public class ModifyDefenseResourceXffRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>waf_v2_public_cn-wwo3c****07</p>
+         * <p>waf_v2_public_cn-wwo****ek07</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -264,10 +270,12 @@ public class ModifyDefenseResourceXffRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,10 +289,13 @@ public class ModifyDefenseResourceXffRequest extends Request {
 
         /**
          * <p>The name of the protected object.</p>
+         * <blockquote>
+         * <p>The protected object must have been added to WAF. You can call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the name of the protected object.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>alb-4pxu81fgagx3****mz-alb</p>
+         * <p>alb-4pxu81fgagx3h6y****-alb</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -296,7 +307,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
          * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfm2kie2****wq</p>
+         * <p>rg-acfm2ki****miwq</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -305,7 +316,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
         }
 
         /**
-         * <p>The response header.</p>
+         * <p>The response header parameters.</p>
          */
         public Builder responseHeaders(java.util.List<ResponseHeaders> responseHeaders) {
             this.putQueryParameter("ResponseHeaders", responseHeaders);
@@ -314,10 +325,12 @@ public class ModifyDefenseResourceXffRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether a Layer 7 proxy is deployed in front of WAF. Layer 7 proxies include Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</p>
+         * <p>Specifies whether a Layer 7 proxy (Anti-DDoS Pro, CDN, or similar) is deployed in front of WAF. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No Layer 7 proxies are deployed. This is the default value.</li>
-         * <li><strong>1</strong>: A Layer 7 proxy is deployed.</li>
+         * <li><p><strong>0 (default)</strong>: No Layer 7 proxy is deployed.</p>
+         * </li>
+         * <li><p><strong>1</strong>: A Layer 7 proxy is deployed.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -392,7 +405,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
             } 
 
             /**
-             * <p>Specifies the key for a custom response header.</p>
+             * <p>The key of the custom response header.</p>
              * 
              * <strong>example:</strong>
              * <p>Header-Key</p>
@@ -403,7 +416,7 @@ public class ModifyDefenseResourceXffRequest extends Request {
             }
 
             /**
-             * <p>Specifies the value for a custom response header.</p>
+             * <p>The value of the custom response header.</p>
              * 
              * <strong>example:</strong>
              * <p>Header-Value</p>

@@ -80,7 +80,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Id of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>66A98669-CC6E-4F3E-80A6-3014***B11AE</p>
@@ -99,7 +99,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,7 +229,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The number of high-level risks.</p>
+             * <p>The number of high-risk vulnerabilities.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -240,7 +240,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The number of low-level risks.</p>
+             * <p>The number of low-risk vulnerabilities.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -251,7 +251,7 @@ public class DescribeApisecAbnormalDomainStatisticResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The number of medium-level risks.</p>
+             * <p>The number of medium-risk vulnerabilities.</p>
              * 
              * <strong>example:</strong>
              * <p>9</p>

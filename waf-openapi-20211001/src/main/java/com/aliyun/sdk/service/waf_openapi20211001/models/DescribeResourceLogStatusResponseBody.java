@@ -67,7 +67,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0DABF8AB-2321-5F8D-A8D7-922D757FBFFE</p>
@@ -144,7 +144,10 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * RatePerMille.
+             * <p>The per-mille sampling ratio for Tracing Analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder ratePerMille(Integer ratePerMille) {
                 this.ratePerMille = ratePerMille;
@@ -152,7 +155,10 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Workspace.
+             * <p>The Hybrid Cloud Monitoring 2.0 workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms-test</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;
@@ -245,7 +251,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The protected object.</p>
+             * <p>The queried protected object.</p>
              * 
              * <strong>example:</strong>
              * <p>alb-wewbb23dfsetetcic****</p>
@@ -256,10 +262,12 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the log collection feature is enabled for the protected object. Valid values:</p>
+             * <p>The log enabling status of the protected object. Valid values:</p>
              * <ul>
-             * <li><strong>true:</strong> The log collection feature is enabled.</li>
-             * <li><strong>false:</strong> The log collection feature is disabled.</li>
+             * <li><p><strong>true</strong>: Logging is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Logging is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -271,7 +279,7 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TraceConfig.
+             * <p>The Tracing Analysis configuration.</p>
              */
             public Builder traceConfig(TraceConfig traceConfig) {
                 this.traceConfig = traceConfig;
@@ -279,7 +287,16 @@ public class DescribeResourceLogStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TraceStatus.
+             * <p>The Tracing Analysis status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Tracing Analysis is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Tracing Analysis is shutdown.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder traceStatus(Boolean traceStatus) {
                 this.traceStatus = traceStatus;

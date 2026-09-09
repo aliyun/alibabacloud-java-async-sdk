@@ -104,6 +104,7 @@ public class DeleteAddressRequest extends Request {
         } 
 
         /**
+         * <p>The list of addresses to delete.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addressList(java.util.List<String> addressList) {
@@ -113,6 +114,10 @@ public class DeleteAddressRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +130,10 @@ public class DeleteAddressRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The Alibaba Cloud resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -134,6 +142,7 @@ public class DeleteAddressRequest extends Request {
         }
 
         /**
+         * <p>The ID of the address book.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

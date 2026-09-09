@@ -67,7 +67,7 @@ public class DescribeAlarmListResponseBody extends TeaModel {
         } 
 
         /**
-         * Alarms.
+         * <p>The alerts.</p>
          */
         public Builder alarms(java.util.List<Alarms> alarms) {
             this.alarms = alarms;
@@ -75,7 +75,10 @@ public class DescribeAlarmListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D8EBFB7-E1EB-5236-952A-092EDC72***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,20 @@ public class DescribeAlarmListResponseBody extends TeaModel {
             } 
 
             /**
-             * Cause.
+             * <p>The cause of the alert. Valid values:</p>
+             * <ul>
+             * <li><p><strong>fivefold</strong>: The QPS exceeds the limit of the current WAF instance specifications.</p>
+             * </li>
+             * <li><p><strong>4count</strong>: The actual QPS has cumulatively exceeded the limit of the current WAF instance specifications.</p>
+             * </li>
+             * <li><p><strong>exceed10w</strong>: The peak QPS exceeds 100,000.</p>
+             * </li>
+             * <li><p><strong>costProtection</strong>: Billing protection is triggered.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4count</p>
              */
             public Builder cause(String cause) {
                 this.cause = cause;
@@ -214,7 +230,10 @@ public class DescribeAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the alert. This is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605600798</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -222,7 +241,10 @@ public class DescribeAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQps.
+             * <p>The peak QPS during the alert period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12000</p>
              */
             public Builder maxQps(Long maxQps) {
                 this.maxQps = maxQps;
@@ -230,7 +252,10 @@ public class DescribeAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The QPS limit of the current WAF instance specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder spec(Long spec) {
                 this.spec = spec;
@@ -238,7 +263,10 @@ public class DescribeAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the alert. This is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1605600767</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -246,7 +274,20 @@ public class DescribeAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The current status of the alert. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: The queries per second (QPS) limit is exceeded.</p>
+             * </li>
+             * <li><p><strong>2</strong>: The WAF instance enters the sandbox.</p>
+             * </li>
+             * <li><p><strong>3</strong>: The WAF instance is removed from the sandbox.</p>
+             * </li>
+             * <li><p><strong>4</strong>: The QPS no longer exceeds the limit.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -254,7 +295,13 @@ public class DescribeAlarmListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the alert. Valid value:</p>
+             * <ul>
+             * <li><strong>qps</strong>: a QPS alert.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>qps</p>
              */
             public Builder type(String type) {
                 this.type = type;

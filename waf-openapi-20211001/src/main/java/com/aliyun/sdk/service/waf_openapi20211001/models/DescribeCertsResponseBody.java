@@ -80,7 +80,7 @@ public class DescribeCertsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The certificates.</p>
+         * <p>The certificate list.</p>
          */
         public Builder certs(java.util.List<Certs> certs) {
             this.certs = certs;
@@ -233,7 +233,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The expiration time.</p>
+             * <p>The expiration time. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1976256736582</p>
@@ -244,7 +244,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective time.</p>
+             * <p>The effective period. The value is a UNIX timestamp in the format of milliseconds (ms).</p>
              * 
              * <strong>example:</strong>
              * <p>1976256836582</p>
@@ -255,10 +255,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The globally unique ID of the certificate. The value follows a &quot;&lt;Certificate ID&gt;-ap-southeast-1&quot; format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-ap-southeast-1.</p>
+             * <p>The global certificate ID, which is in the format of certificate ID + &quot;-cn-hangzhou&quot;. For example, if the certificate ID is 123, the CertIdentifier is &quot;123-cn-hangzhou&quot;.</p>
              * 
              * <strong>example:</strong>
-             * <p>123-ap-southeast-1</p>
+             * <p>12345-cn-hangzhou</p>
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -266,7 +266,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate.</p>
+             * <p>The certificate name.</p>
              * 
              * <strong>example:</strong>
              * <p>waf1234</p>
@@ -288,7 +288,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain that is supported by the certificate.</p>
+             * <p>The domain name supported by the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -301,8 +301,10 @@ public class DescribeCertsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the certificate chain is complete. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: The certificate chain is complete.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The certificate chain is incomplete.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class ModifyResourceLogStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7C55A3E5-638A-5D6E-9A2F-C3CE5A677EC5</p>
@@ -78,10 +78,12 @@ public class ModifyResourceLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the log collection feature is enabled for the protected object. Valid values:</p>
+         * <p>The log enabling status of the protected object. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

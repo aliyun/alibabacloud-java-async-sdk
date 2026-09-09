@@ -67,7 +67,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * AbnormalCloudResources.
+         * <p>The abnormal cloud resources that are added in cloud native mode.</p>
          */
         public Builder abnormalCloudResources(java.util.List<AbnormalCloudResources> abnormalCloudResources) {
             this.abnormalCloudResources = abnormalCloudResources;
@@ -75,7 +75,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>66A98669-CC6E-4F3E-80A6-***</p>
@@ -222,7 +222,16 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppliedType.
+             * <p>The type of the certificate for the HTTPS protocol. Valid values:</p>
+             * <ul>
+             * <li><p><strong>default</strong>: default certificate.</p>
+             * </li>
+             * <li><p><strong>extension</strong>: additional certificate.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder appliedType(String appliedType) {
                 this.appliedType = appliedType;
@@ -230,7 +239,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * <p>The name of the certificate in SSL Certificate Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-name</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -238,7 +250,17 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The cause of the exception. Valid values:</p>
+             * <p>InvalidCert: The certificate is invalid.</p>
+             * <p>ClientCertOpend: Mutual authentication is enabled.</p>
+             * <p>NetworkConfigLost: A network error occurred.</p>
+             * <p>UserUploadCert: A custom certificate is uploaded.</p>
+             * <p>CertNotExistInCertCenter: The certificate ID does not exist in SSL Certificate Service.</p>
+             * <p>CertExpired: The certificate has expired.</p>
+             * <p>EmptyCertCN: The common name (CN) is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CertExpired</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -246,7 +268,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CommonName.
+             * <p>The common name (CN) of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.test.com">www.test.com</a></p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -254,7 +279,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The time when the certificate expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735009193</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -262,7 +290,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCertId.
+             * <p>The ID of the certificate that is configured in the cloud service console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-cn-hangzhou</p>
              */
             public Builder productCertId(String productCertId) {
                 this.productCertId = productCertId;
@@ -270,7 +301,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCertName.
+             * <p>The name of the certificate that is configured in the cloud service console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-cert-name</p>
              */
             public Builder productCertName(String productCertName) {
                 this.productCertName = productCertName;
@@ -278,7 +312,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductDomainExtension.
+             * <p>The additional domain name that is configured in the cloud service console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.test.com">www.test.com</a></p>
              */
             public Builder productDomainExtension(String productDomainExtension) {
                 this.productDomainExtension = productDomainExtension;
@@ -410,7 +447,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * CloudResourceId.
+             * <p>The ID of the cloud resource. This ID is automatically generated by WAF when the resource is added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-***-80-clb7</p>
              */
             public Builder cloudResourceId(String cloudResourceId) {
                 this.cloudResourceId = cloudResourceId;
@@ -418,7 +458,7 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Details.
+             * <p>The details of the exception.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -426,7 +466,26 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The cause of the exception. Valid values:</p>
+             * <ul>
+             * <li><p><strong>InvalidCert</strong>: The certificate is invalid.</p>
+             * </li>
+             * <li><p><strong>ClientCertOpend</strong>: Mutual authentication is enabled.</p>
+             * </li>
+             * <li><p><strong>NetworkConfigLost</strong>: A network error occurred.</p>
+             * </li>
+             * <li><p><strong>UserUploadCert</strong>: A custom certificate is uploaded.</p>
+             * </li>
+             * <li><p><strong>CertNotExistInCertCenter</strong>: The certificate ID does not exist in SSL Certificate Service.</p>
+             * </li>
+             * <li><p><strong>CertExpired</strong>: The certificate has expired.</p>
+             * </li>
+             * <li><p><strong>EmptyCertCN</strong>: The common name (CN) is empty.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CertExpired</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -434,7 +493,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceId.
+             * <p>The ID of the instance that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-***</p>
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -442,7 +504,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceName.
+             * <p>The name of the instance that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-name</p>
              */
             public Builder resourceInstanceName(String resourceInstanceName) {
                 this.resourceInstanceName = resourceInstanceName;
@@ -450,7 +515,10 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstancePort.
+             * <p>The port of the instance that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder resourceInstancePort(Integer resourceInstancePort) {
                 this.resourceInstancePort = resourceInstancePort;
@@ -458,7 +526,31 @@ public class DescribeAbnormalCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceProduct.
+             * <p>The cloud service to which the resource belongs. By default, instances of Application Load Balancer (ALB), MSE, FC, and SAE are returned. Valid values:</p>
+             * <ul>
+             * <li><p><strong>alb</strong>: ALB.</p>
+             * </li>
+             * <li><p><strong>mse</strong>: MSE.</p>
+             * </li>
+             * <li><p><strong>fc</strong>: FC.</p>
+             * </li>
+             * <li><p><strong>sae</strong>: SAE.</p>
+             * </li>
+             * <li><p><strong>ecs</strong>: ECS.</p>
+             * </li>
+             * <li><p><strong>clb4</strong>: Classic Load Balancer (CLB) that uses TCP.</p>
+             * </li>
+             * <li><p><strong>clb7</strong>: CLB that uses HTTP or HTTPS.</p>
+             * </li>
+             * <li><p><strong>nlb</strong>: Network Load Balancer (NLB).</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>Each cloud service is supported in different regions. If you specify this parameter, make sure that the specified cloud service is supported in the selected region. Otherwise, the request may fail.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>clb7</p>
              */
             public Builder resourceProduct(String resourceProduct) {
                 this.resourceProduct = resourceProduct;

@@ -22,6 +22,14 @@ public class ModifyDefenseTemplateRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Detail")
+    private String detail;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -47,6 +55,8 @@ public class ModifyDefenseTemplateRequest extends Request {
     private ModifyDefenseTemplateRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.detail = builder.detail;
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -72,6 +82,20 @@ public class ModifyDefenseTemplateRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return detail
+     */
+    public String getDetail() {
+        return this.detail;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -111,6 +135,8 @@ public class ModifyDefenseTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDefenseTemplateRequest, Builder> {
         private String description; 
+        private String detail; 
+        private Boolean dryRun; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -124,6 +150,8 @@ public class ModifyDefenseTemplateRequest extends Request {
         private Builder(ModifyDefenseTemplateRequest request) {
             super(request);
             this.description = request.description;
+            this.detail = request.detail;
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -132,7 +160,7 @@ public class ModifyDefenseTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The description of the protection rule template whose configurations you want to modify.</p>
+         * <p>The description of the protection template that you want to modify.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -144,9 +172,37 @@ public class ModifyDefenseTemplateRequest extends Request {
         }
 
         /**
+         * <p>The details of the template. For more information, see the Detail parameter in <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</p>
+         */
+        public Builder detail(String detail) {
+            this.putQueryParameter("Detail", detail);
+            this.detail = detail;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+         * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -160,10 +216,12 @@ public class ModifyDefenseTemplateRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,7 +234,7 @@ public class ModifyDefenseTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -188,7 +246,7 @@ public class ModifyDefenseTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the protection rule template whose configurations you want to modify.</p>
+         * <p>The ID of the protection template that you want to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +259,10 @@ public class ModifyDefenseTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the protection rule template whose configurations you want to modify.</p>
+         * <p>The name of the protection template that you want to modify. The name must be 1 to 255 characters in length and can contain Chinese characters, letters, digits, underscores (_), periods (.), and hyphens (-).</p>
+         * <blockquote>
+         * <p>Template names within the same protection scenario (<strong>DefenseScene</strong>) must be unique.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The security events.</p>
+         * <p>The list of security events.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -475,9 +475,6 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
 
             /**
              * <p>The number of attacks.</p>
-             * <blockquote>
-             * <p>Notice: The parameter has been deprecated, please use the Attackips parameter.</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -488,7 +485,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API.</p>
+             * <p>The API operation.</p>
              * 
              * <strong>example:</strong>
              * <p>/apisec/v1/register.php</p>
@@ -499,7 +496,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the API that is associated with the security event.</p>
+             * <p>The ID of the API associated with the security event.</p>
              * 
              * <strong>example:</strong>
              * <p>2ecc1cf67b91853bc55545052ccf06a8</p>
@@ -512,7 +509,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             /**
              * <p>The business purpose of the API.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
+             * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -524,7 +521,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client that is attacked.</p>
+             * <p>The attack client.</p>
              * 
              * <strong>example:</strong>
              * <p>Chrome</p>
@@ -535,10 +532,14 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the number of attacks. The value of this parameter is a JSON string that contains multiple parameters. Key indicates the timestamp in seconds, and Value indicates the number of attacks.</p>
+             * <p>The attack count information, which is a string converted from a JSON object. The key is a timestamp in seconds, and the value is the number of attacks.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;1717498320&quot;:500,&quot;1717498380&quot;:529,&quot;1717498440&quot;:20,&quot;1717498260&quot;:518,&quot;1717498200&quot;:481,&quot;1717498140&quot;:52}</p>
+             * <p>{
+             *     &quot;1717498320&quot;: 500,
+             *     &quot;1717498380&quot;: 529,
+             *     &quot;1717498440&quot;: 20
+             * }</p>
              */
             public Builder attackCntInfo(String attackCntInfo) {
                 this.attackCntInfo = attackCntInfo;
@@ -546,10 +547,13 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source IP address of the attack.</p>
+             * <p>The attack IP address.</p>
+             * <blockquote>
+             * <p>Notice: This parameter is deprecated. Use the AttackIps parameter instead.</notice></p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>104.234.140.33</p>
+             * <p>104.234.140.**</p>
              */
             public Builder attackIp(String attackIp) {
                 this.attackIp = attackIp;
@@ -557,16 +561,23 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the attack source IP address. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</p>
+             * <p>The attack IP information, which is a string converted from a JSON object constructed with the following parameters:</p>
              * <ul>
-             * <li><strong>ip</strong>: the IP address</li>
-             * <li><strong>country_id</strong>: the country ID</li>
-             * <li><strong>region_id</strong>: the region ID</li>
-             * <li><strong>cnt</strong>: the number of attacks</li>
+             * <li><strong>ip</strong>: the IP address.</li>
+             * <li><strong>country_id</strong>: the country to which the IP address belongs.</li>
+             * <li><strong>region_id</strong>: the region to which the IP address belongs.</li>
+             * <li><strong>cnt</strong>: the number of attacks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;ip&quot;:&quot;72.<em>.</em>.119&quot;,&quot;country_id&quot;:&quot;US&quot;,&quot;region_id&quot;:&quot;&quot;,&quot;cnt&quot;:&quot;2100&quot;}]</p>
+             * <p>[
+             *     {
+             *         &quot;ip&quot;: &quot;72.<em>.</em>.119&quot;,
+             *         &quot;country_id&quot;: &quot;US&quot;,
+             *         &quot;region_id&quot;: &quot;&quot;,
+             *         &quot;cnt&quot;: &quot;2100&quot;
+             *     }
+             * ]</p>
              */
             public Builder attackIpInfo(String attackIpInfo) {
                 this.attackIpInfo = attackIpInfo;
@@ -574,7 +585,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source IP addresses of the attacks.</p>
+             * <p>The list of attack IP addresses.</p>
              */
             public Builder attackIps(java.util.List<String> attackIps) {
                 this.attackIps = attackIps;
@@ -582,7 +593,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AttackerList.
+             * <p>The Attacker list associated with the event.</p>
              */
             public Builder attackerList(java.util.List<String> attackerList) {
                 this.attackerList = attackerList;
@@ -590,7 +601,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+             * <p>The end time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1683703260</p>
@@ -601,7 +612,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the event.</p>
+             * <p>The event ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c82cb276847e9c96f9597d9f4b0cdcff</p>
@@ -612,15 +623,26 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the event. The value of this parameter is a JSON string that contains multiple parameters. The value includes the following parameters:</p>
+             * <p>The event details, which is a string converted from a JSON object constructed with the following parameters:</p>
              * <ul>
-             * <li><strong>ip_info</strong>: the information about the attack source IP address. This parameter corresponds to the <strong>AttackIpInfo</strong> response parameter.</li>
-             * <li><strong>rule_id</strong>: the ID of the rule corresponding to the event.</li>
-             * <li><strong>rule_tag</strong>: the information about the rule corresponding to the event.</li>
+             * <li><strong>ip_info</strong>: the attack IP information. Refer to the response parameter <strong>AttackIpInfo</strong> of this operation.</li>
+             * <li><strong>rule_id</strong>: the rule ID associated with the event.</li>
+             * <li><strong>rule_tag</strong>: the rule information associated with the event.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{}</p>
+             * <p>{
+             *     &quot;ip_info&quot;: [
+             *         {
+             *             &quot;ip&quot;: &quot;112.224.143.<strong>&quot;,
+             *             &quot;country_id&quot;: &quot;CN&quot;,
+             *             &quot;region_id&quot;: &quot;-&quot;,
+             *             &quot;cnt&quot;: &quot;4&quot;
+             *         }
+             *     ],
+             *     &quot;rule_id&quot;: &quot;837</strong>&quot;,
+             *     &quot;rule_tag&quot;: &quot;interface returns a large amount of sensitive information&quot;
+             * }</p>
              */
             public Builder eventInfo(String eventInfo) {
                 this.eventInfo = eventInfo;
@@ -628,11 +650,11 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the event. Valid values:</p>
+             * <p>The event level. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong></li>
-             * <li><strong>medium</strong></li>
-             * <li><strong>low</strong></li>
+             * <li><strong>high</strong>: High-risk.</li>
+             * <li><strong>medium</strong>: Medium-risk.</li>
+             * <li><strong>low</strong>: Low-risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -644,9 +666,9 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the event.</p>
+             * <p>The event type.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</p>
+             * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported event types.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -658,10 +680,10 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the API is followed. Valid values:</p>
+             * <p>Indicates whether the event is followed. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: The API is followed.</li>
-             * <li><strong>0</strong>: The API is not followed.</li>
+             * <li><strong>1</strong>: Followed.</li>
+             * <li><strong>0</strong>: Not followed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -673,10 +695,10 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name or IP address of the API.</p>
+             * <p>The domain name or IP address to which the API operation belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>a.aliyun.com</p>
+             * <p>a.***.com</p>
              */
             public Builder matchedHost(String matchedHost) {
                 this.matchedHost = matchedHost;
@@ -687,7 +709,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
              * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
-             * <p>Notified</p>
+             * <p>Notify</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -697,8 +719,8 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             /**
              * <p>The source of the event type. Valid values:</p>
              * <ul>
-             * <li><strong>custom</strong></li>
-             * <li><strong>default</strong></li>
+             * <li><strong>custom</strong>: Custom.</li>
+             * <li><strong>default</strong>: Built-in.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -710,7 +732,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The country to which the attack source IP address belongs.</p>
+             * <p>The country to which the attack IP address belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>US</p>
@@ -721,7 +743,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region to which the attack source IP address belongs.</p>
+             * <p>The region to which the attack IP address belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>110000</p>
@@ -732,7 +754,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sample API request. The value of this parameter is a JSON string that contains multiple parameters.</p>
+             * <p>A sample API request data, which is a string converted from a JSON object constructed with a series of parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -743,7 +765,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sample API response. The value of this parameter is a JSON string that contains multiple parameters.</p>
+             * <p>A sample API response data, which is a string converted from a JSON object constructed with a series of parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -754,7 +776,7 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+             * <p>The start time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1683648000</p>
@@ -767,13 +789,14 @@ public class DescribeApisecEventsResponseBody extends TeaModel {
             /**
              * <p>The event status. Valid values:</p>
              * <ul>
-             * <li><strong>toBeConfirmed</strong></li>
-             * <li><strong>confirmed</strong></li>
-             * <li><strong>ignored</strong></li>
+             * <li><strong>toBeConfirmed</strong>: To be confirmed.</li>
+             * <li><strong>confirmed</strong>: Confirmed.</li>
+             * <li><strong>actioned</strong>: Handled.</li>
+             * <li><strong>ignored</strong>: Ignored.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Ignore</p>
+             * <p>toBeConfirmed</p>
              */
             public Builder userStatus(String userStatus) {
                 this.userStatus = userStatus;

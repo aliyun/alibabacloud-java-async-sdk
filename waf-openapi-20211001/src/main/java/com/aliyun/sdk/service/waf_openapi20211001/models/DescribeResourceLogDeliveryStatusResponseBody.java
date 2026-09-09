@@ -67,7 +67,7 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * LogConfigs.
+         * <p>The list of log delivery configurations for protected objects.</p>
          */
         public Builder logConfigs(java.util.List<LogConfigs> logConfigs) {
             this.logConfigs = logConfigs;
@@ -75,7 +75,10 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * DeliveryName.
+             * <p>The name of the delivery configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>export-kafka</p>
              */
             public Builder deliveryName(String deliveryName) {
                 this.deliveryName = deliveryName;
@@ -175,7 +181,14 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryType.
+             * <p>The delivery type of the protected object. Valid values:</p>
+             * <ul>
+             * <li><strong>syslog</strong>: delivered to a syslog service.</li>
+             * <li><strong>kafka</strong>: delivered to a Kafka service.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>kafka</p>
              */
             public Builder deliveryType(String deliveryType) {
                 this.deliveryType = deliveryType;
@@ -183,7 +196,10 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Resource.
+             * <p>The protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.waf.com-waf</p>
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -191,7 +207,16 @@ public class DescribeResourceLogDeliveryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The log delivery status of the protected object. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

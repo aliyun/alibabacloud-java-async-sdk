@@ -80,7 +80,7 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterServers.
+         * <p>The result list.</p>
          */
         public Builder clusterServers(java.util.List<ClusterServers> clusterServers) {
             this.clusterServers = clusterServers;
@@ -88,7 +88,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C3B0FDD2-11CE-59A5-BEB5-*****1A969</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -396,7 +402,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             } 
 
             /**
-             * Continents.
+             * <p>The continent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asiapacific</p>
              */
             public Builder continents(String continents) {
                 this.continents = continents;
@@ -404,7 +413,13 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * ContinentsValue.
+             * <p>The continent code of the protection cluster.</p>
+             * <blockquote>
+             * <p>For the list of code values, see the supplementary description of response parameters.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>410</p>
              */
             public Builder continentsValue(Integer continentsValue) {
                 this.continentsValue = continentsValue;
@@ -412,7 +427,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -420,7 +438,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * <p>The creation timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665987186000</p>
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -428,7 +449,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * CustomName.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customTest</p>
              */
             public Builder customName(String customName) {
                 this.customName = customName;
@@ -436,7 +460,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The node group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -444,7 +471,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The name of the node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>groupTest</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -452,7 +482,20 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupType.
+             * <p>The type of the hybrid cloud node group. Valid values:</p>
+             * <ul>
+             * <li><p><strong>protect</strong>: protection.</p>
+             * </li>
+             * <li><p><strong>control</strong>: management.</p>
+             * </li>
+             * <li><p><strong>storage</strong>: storage.</p>
+             * </li>
+             * <li><p><strong>controlStorage</strong>: management and storage.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>protect</p>
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -460,7 +503,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qsh5-sec-waf-*****-6</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -468,7 +514,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.*.*1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -476,7 +525,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * <p>The running status of the machine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -484,7 +536,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * Mac.
+             * <p>The MAC address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong>:</strong>:00:02:eb:c7</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -492,7 +547,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33547386880</p>
              */
             public Builder memory(Long memory) {
                 this.memory = memory;
@@ -500,7 +558,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * Mid.
+             * <p>The machine identifier (MID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28ab688cd403563e8e173*****79600</p>
              */
             public Builder mid(String mid) {
                 this.mid = mid;
@@ -508,7 +569,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The cloud service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -516,7 +580,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorValue.
+             * <p>The operator value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder operatorValue(Integer operatorValue) {
                 this.operatorValue = operatorValue;
@@ -524,7 +591,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCode.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>beijing</p>
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -532,7 +602,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCodeValue.
+             * <p>The region code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder regionCodeValue(Integer regionCodeValue) {
                 this.regionCodeValue = regionCodeValue;
@@ -540,7 +613,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The machine status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -548,7 +624,10 @@ public class DescribeHybridCloudClusterServersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * <p>The last update timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1711953897000</p>
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;

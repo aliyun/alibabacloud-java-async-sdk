@@ -67,7 +67,7 @@ public class DescribeUserAssetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The API statistics.</p>
+         * <p>The list of asset statistics.</p>
          */
         public Builder assets(java.util.List<Assets> assets) {
             this.assets = assets;
@@ -144,7 +144,7 @@ public class DescribeUserAssetResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of APIs returned.</p>
+             * <p>The number of statistics.</p>
              * 
              * <strong>example:</strong>
              * <p>134</p>
@@ -155,7 +155,7 @@ public class DescribeUserAssetResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+             * <p>The time of the statistics in UNIX timestamp format (UTC). Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1723435200</p>

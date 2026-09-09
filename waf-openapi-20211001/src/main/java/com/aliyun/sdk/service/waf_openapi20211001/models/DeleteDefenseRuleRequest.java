@@ -22,6 +22,10 @@ public class DeleteDefenseRuleRequest extends Request {
     private String defenseType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -50,6 +54,7 @@ public class DeleteDefenseRuleRequest extends Request {
     private DeleteDefenseRuleRequest(Builder builder) {
         super(builder);
         this.defenseType = builder.defenseType;
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
@@ -76,6 +81,13 @@ public class DeleteDefenseRuleRequest extends Request {
      */
     public String getDefenseType() {
         return this.defenseType;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -122,6 +134,7 @@ public class DeleteDefenseRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteDefenseRuleRequest, Builder> {
         private String defenseType; 
+        private Boolean dryRun; 
         private String instanceId; 
         private String regionId; 
         private String resource; 
@@ -136,6 +149,7 @@ public class DeleteDefenseRuleRequest extends Request {
         private Builder(DeleteDefenseRuleRequest request) {
             super(request);
             this.defenseType = request.defenseType;
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resource = request.resource;
@@ -145,7 +159,10 @@ public class DeleteDefenseRuleRequest extends Request {
         } 
 
         /**
-         * DefenseType.
+         * <p>The type of the protection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder defenseType(String defenseType) {
             this.putQueryParameter("DefenseType", defenseType);
@@ -154,9 +171,18 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -170,10 +196,12 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,7 +214,13 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>The protection object associated with the rule to delete.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rencs***-waf</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -195,7 +229,7 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -207,7 +241,7 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the protection rules that you want to delete. Separate the IDs with commas (,).</p>
+         * <p>The IDs of the protection rules to delete. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +254,10 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the protection rule template to which the protection rule that you want to delete belongs.</p>
+         * <p>The ID of the protection template to delete.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>template</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2221</p>

@@ -242,7 +242,35 @@ public class DescribeBaseSystemRulesRequest extends Request {
         } 
 
         /**
-         * DetectType.
+         * <p>The detection module. Valid values:</p>
+         * <ul>
+         * <li><strong>sqli</strong>: SQL injection.</li>
+         * <li><strong>xss</strong>: cross-site scripting (XSS).</li>
+         * <li><strong>cmdi</strong>: OS command injection.</li>
+         * <li><strong>expression_injection</strong>: expression injection.</li>
+         * <li><strong>java_deserialization</strong>: Java deserialization.</li>
+         * <li><strong>dot_net_deserialization</strong>: .NET deserialization.</li>
+         * <li><strong>php_deserialization</strong>: PHP deserialization.</li>
+         * <li><strong>code_exec</strong>: code execution.</li>
+         * <li><strong>ssrf</strong>: server-side request forgery (SSRF).</li>
+         * <li><strong>path_traversal</strong>: path traversal.</li>
+         * <li><strong>arbitrary_file_uploading</strong>: arbitrary file upload.</li>
+         * <li><strong>webshell</strong>: webshell.</li>
+         * <li><strong>rfilei</strong>: remote file inclusion (RFI).</li>
+         * <li><strong>lfilei</strong>: local file inclusion (LFI).</li>
+         * <li><strong>protocol_violation</strong>: protocol violation.</li>
+         * <li><strong>scanner_behavior</strong>: scanner behavior.</li>
+         * <li><strong>logic_flaw</strong>: business logic bug.</li>
+         * <li><strong>arbitrary_file_reading</strong>: arbitrary file read.</li>
+         * <li><strong>arbitrary_file_download</strong>: arbitrary file download.</li>
+         * <li><strong>xxe</strong>: XML external entity injection.</li>
+         * <li><strong>csrf</strong>: cross-site request forgery.</li>
+         * <li><strong>crlf</strong>: CRLF injection.</li>
+         * <li><strong>other</strong>: other.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sqli</p>
          */
         public Builder detectType(String detectType) {
             this.putQueryParameter("DetectType", detectType);
@@ -251,6 +279,10 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,7 +295,14 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the returned rules. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -272,7 +311,10 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -281,7 +323,10 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query. Default value: 100. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -290,7 +335,16 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,7 +353,10 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -308,7 +365,20 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * RiskLevel.
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li><p><strong>super_strict</strong>: super strict.</p>
+         * </li>
+         * <li><p><strong>strict</strong>: strict.</p>
+         * </li>
+         * <li><p><strong>medium</strong>: medium.</p>
+         * </li>
+         * <li><p><strong>loose</strong>: loose.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>loose</p>
          */
         public Builder riskLevel(String riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);
@@ -317,7 +387,16 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * RuleAction.
+         * <p>The rule action. Valid values:</p>
+         * <ul>
+         * <li><p><strong>block</strong>: Block.</p>
+         * </li>
+         * <li><p><strong>monitor</strong>: Monitor.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>block</p>
          */
         public Builder ruleAction(String ruleAction) {
             this.putQueryParameter("RuleAction", ruleAction);
@@ -326,7 +405,10 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the system protection rule to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113089</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -335,7 +417,7 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * RuleIds.
+         * <p>The list of system protection rule IDs to query.</p>
          */
         public Builder ruleIds(java.util.List<Long> ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);
@@ -344,7 +426,10 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the system protection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>systemRuleTest</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -353,7 +438,14 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * RuleStatus.
+         * <p>The rule status. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: disabled.</li>
+         * <li><strong>0</strong>: enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ruleStatus(Integer ruleStatus) {
             this.putQueryParameter("RuleStatus", ruleStatus);
@@ -362,7 +454,16 @@ public class DescribeBaseSystemRulesRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the protection template.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can set this parameter to query the system protection rules in a specific Web core protection rule template. Settings apply to the specified template.</li>
+         * <li>If this parameter is left empty, the default configurations of system protection rules are queried.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>24354</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

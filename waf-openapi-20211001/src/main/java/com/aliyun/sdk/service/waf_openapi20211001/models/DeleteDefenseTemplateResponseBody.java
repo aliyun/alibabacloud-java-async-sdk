@@ -54,7 +54,7 @@ public class DeleteDefenseTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E2DE6F11-6FED-5909-95F2-2520B58C5BC7</p>

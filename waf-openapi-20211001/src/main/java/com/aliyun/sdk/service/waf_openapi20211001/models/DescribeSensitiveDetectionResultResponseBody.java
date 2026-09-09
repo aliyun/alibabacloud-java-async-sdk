@@ -67,7 +67,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The compliance check results.</p>
+         * <p>The compliance detection results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -168,7 +168,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sensitive personal information records that are involved in cross-border data transfer.</p>
+             * <p>The number of cross-border personal information records.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -262,7 +262,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of sensitive personal information records that are of the most frequent sensitive data type.</p>
+             * <p>The number of personal information records corresponding to the sensitive data type with the highest count.</p>
              * 
              * <strong>example:</strong>
              * <p>187</p>
@@ -273,7 +273,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sensitive personal information records that are of the most frequent sensitive data type and are involved in cross-border data transfer.</p>
+             * <p>The number of cross-border personal information records corresponding to the sensitive data type with the highest count.</p>
              * 
              * <strong>example:</strong>
              * <p>54</p>
@@ -284,7 +284,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most frequent sensitive data type.</p>
+             * <p>The sensitive data type with the highest count.</p>
              * 
              * <strong>example:</strong>
              * <p>1003</p>
@@ -367,10 +367,10 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compliance check results. Valid values:</p>
+             * <p>The compliance detection result. Valid values: </p>
              * <ul>
-             * <li><strong>report</strong>: Risks exist in cross-border data transfer.</li>
-             * <li><strong>none</strong>: No risks exist in cross-border data transfer.</li>
+             * <li><strong>report</strong>: A data cross-border transfer risk exists.</li>
+             * <li><strong>none</strong>: No data cross-border transfer risk exists.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -382,7 +382,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive information check results by sensitive data type.</p>
+             * <p>The detection list of sensitive data types.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -390,7 +390,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum values in the statistics of sensitive data types.</p>
+             * <p>The maximum values of sensitive data type statistics.</p>
              */
             public Builder max(Max max) {
                 this.max = max;
@@ -444,7 +444,7 @@ public class DescribeSensitiveDetectionResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compliance checks.</p>
+             * <p>The compliance detection list.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;

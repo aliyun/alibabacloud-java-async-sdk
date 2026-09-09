@@ -173,9 +173,9 @@ public class DescribeSensitiveStatisticRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the hybrid cloud cluster.</p>
+         * <p>The hybrid cloud cluster ID.</p>
          * <blockquote>
-         * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+         * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,11 @@ public class DescribeSensitiveStatisticRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The end of the time range to query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
+         * <blockquote>
+         * <p>Only data within the last month can be queried. <strong>StartTime</strong> cannot be earlier than one month before the current time. The query fails if the value is out of the supported range.
+         * This parameter is optional. Default value: the current time.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1725966000</p>
@@ -202,7 +206,7 @@ public class DescribeSensitiveStatisticRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -216,7 +220,7 @@ public class DescribeSensitiveStatisticRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +232,7 @@ public class DescribeSensitiveStatisticRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -240,10 +244,12 @@ public class DescribeSensitiveStatisticRequest extends Request {
         }
 
         /**
-         * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +262,7 @@ public class DescribeSensitiveStatisticRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>The Alibaba Cloud resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -268,7 +274,11 @@ public class DescribeSensitiveStatisticRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The beginning of the time range to query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
+         * <blockquote>
+         * <p>Only data within the last month can be queried. <strong>StartTime</strong> cannot be earlier than one month before the current time. The query fails if the value is out of the supported range.
+         * This parameter is optional. Default value: one month before the current time.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1672502400</p>
@@ -280,12 +290,12 @@ public class DescribeSensitiveStatisticRequest extends Request {
         }
 
         /**
-         * <p>The type of the statistics. Valid values:</p>
+         * <p>The type of data statistics. Valid values:</p>
          * <ul>
-         * <li><strong>ip</strong>: IP address</li>
-         * <li><strong>host</strong>: domain name</li>
-         * <li><strong>sensitive_code</strong>: sensitive data type</li>
-         * <li><strong>api</strong>: sensitive data-related API</li>
+         * <li><strong>ip</strong>: IP address statistics.</li>
+         * <li><strong>host</strong>: domain name statistics.</li>
+         * <li><strong>sensitive_code</strong>: sensitive data type statistics.</li>
+         * <li><strong>api</strong>: sensitive data API statistics.</li>
          * </ul>
          * 
          * <strong>example:</strong>

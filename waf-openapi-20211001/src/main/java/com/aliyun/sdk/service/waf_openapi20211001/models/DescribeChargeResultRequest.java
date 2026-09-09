@@ -131,7 +131,15 @@ public class DescribeChargeResultRequest extends Request {
         } 
 
         /**
-         * ChargeCycle.
+         * <p>The billing cycle for the calculation. Valid values:</p>
+         * <ul>
+         * <li><strong>Year</strong>: Calculates the billing result for one year.</li>
+         * <li><strong>Month</strong>: Calculates the billing result for one month.</li>
+         * <li><strong>Day</strong>: Calculates the billing result for one day.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Day</p>
          */
         public Builder chargeCycle(String chargeCycle) {
             this.putQueryParameter("ChargeCycle", chargeCycle);
@@ -140,6 +148,7 @@ public class DescribeChargeResultRequest extends Request {
         }
 
         /**
+         * <p>The list of billing modules to calculate.</p>
          * <p>This parameter is required.</p>
          */
         public Builder chargeModules(java.util.List<ChargeModules> chargeModules) {
@@ -149,7 +158,10 @@ public class DescribeChargeResultRequest extends Request {
         }
 
         /**
-         * ChargeUnit.
+         * <p>The metering unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SeCU</p>
          */
         public Builder chargeUnit(String chargeUnit) {
             this.putQueryParameter("ChargeUnit", chargeUnit);
@@ -158,6 +170,10 @@ public class DescribeChargeResultRequest extends Request {
         }
 
         /**
+         * <p>The billing type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go WAF instance.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +186,16 @@ public class DescribeChargeResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -179,7 +204,10 @@ public class DescribeChargeResultRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The Alibaba Cloud resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -247,7 +275,10 @@ public class DescribeChargeResultRequest extends Request {
             } 
 
             /**
-             * ModuleCode.
+             * <p>The pricing module identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domainCount</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -255,7 +286,10 @@ public class DescribeChargeResultRequest extends Request {
             }
 
             /**
-             * Usage.
+             * <p>The usage of the pricing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usage(Long usage) {
                 this.usage = usage;

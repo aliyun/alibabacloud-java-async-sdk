@@ -131,7 +131,7 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the current time is used as the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1665386340</p>
@@ -145,7 +145,7 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         /**
          * <p>The ID of the Web Application Firewall (WAF) instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -161,8 +161,10 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,7 +177,7 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -187,13 +189,18 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * <p>The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.</p>
+         * <p>The type of rule that was triggered. If you do not specify this parameter, data for all rule types is returned.</p>
          * <ul>
-         * <li><strong>blacklist:</strong> IP address blacklist rules.</li>
-         * <li><strong>custom:</strong> custom rules.</li>
-         * <li><strong>antiscan:</strong> scan protection rules.</li>
-         * <li><strong>cc_system:</strong> HTTP flood protection rules.</li>
-         * <li><strong>region_block:</strong> region blacklist rules.</li>
+         * <li><p><strong>blacklist</strong>: The IP address blacklist.</p>
+         * </li>
+         * <li><p><strong>custom</strong>: A custom rule.</p>
+         * </li>
+         * <li><p><strong>antiscan</strong>: A scan protection rule.</p>
+         * </li>
+         * <li><p><strong>cc_system</strong>: An HTTP flood protection rule.</p>
+         * </li>
+         * <li><p><strong>region_block</strong>: The Location Blacklist feature.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -206,7 +213,7 @@ public class DescribeRuleHitsTopResourceRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Unit: seconds.</p>
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

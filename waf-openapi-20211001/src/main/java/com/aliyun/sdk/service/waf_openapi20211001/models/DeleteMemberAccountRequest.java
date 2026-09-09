@@ -119,7 +119,7 @@ public class DeleteMemberAccountRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -133,7 +133,7 @@ public class DeleteMemberAccountRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the managed member.</p>
+         * <p>The ID of the managed WAF member account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,10 +146,12 @@ public class DeleteMemberAccountRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,7 +176,7 @@ public class DeleteMemberAccountRequest extends Request {
         }
 
         /**
-         * <p>The source IP address of the request. The system automatically obtains the value of this parameter.</p>
+         * <p>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.XX.XX</p>

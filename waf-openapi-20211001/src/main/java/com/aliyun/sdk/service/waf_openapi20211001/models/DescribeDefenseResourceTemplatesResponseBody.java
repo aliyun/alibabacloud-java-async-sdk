@@ -70,7 +70,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>2305CEB0-BA5A-5543-A1D3-3F1D0891****</p>
+         * <p>2305CEB0-BA5A-5543-A1D3-3F1D08911B1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The protection templates.</p>
+         * <p>The list of protection templates.</p>
          */
         public Builder templates(java.util.List<Templates> templates) {
             this.templates = templates;
@@ -107,6 +107,9 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("Detail")
+        private java.util.Map<String, ?> detail;
+
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
@@ -129,6 +132,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
             this.defenseScene = builder.defenseScene;
             this.defenseSubScene = builder.defenseSubScene;
             this.description = builder.description;
+            this.detail = builder.detail;
             this.gmtModified = builder.gmtModified;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
@@ -164,6 +168,13 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return detail
+         */
+        public java.util.Map<String, ?> getDetail() {
+            return this.detail;
         }
 
         /**
@@ -212,6 +223,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
             private String defenseScene; 
             private String defenseSubScene; 
             private String description; 
+            private java.util.Map<String, ?> detail; 
             private Long gmtModified; 
             private Long templateId; 
             private String templateName; 
@@ -226,6 +238,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
                 this.defenseScene = model.defenseScene;
                 this.defenseSubScene = model.defenseSubScene;
                 this.description = model.description;
+                this.detail = model.detail;
                 this.gmtModified = model.gmtModified;
                 this.templateId = model.templateId;
                 this.templateName = model.templateName;
@@ -235,19 +248,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The scenario in which the protection template is used.</p>
-             * <ul>
-             * <li><strong>waf_group</strong>: basic protection.</li>
-             * <li><strong>antiscan</strong>: scan protection.</li>
-             * <li><strong>ip_blacklist</strong>: IP address blacklist.</li>
-             * <li><strong>custom_acl</strong>: custom rule.</li>
-             * <li><strong>whitelist</strong>: whitelist.</li>
-             * <li><strong>region_block</strong>: region blacklist.</li>
-             * <li><strong>custom_response</strong>: custom response.</li>
-             * <li><strong>cc</strong>: HTTP flood protection.</li>
-             * <li><strong>tamperproof</strong>: website tamper-proofing.</li>
-             * <li><strong>dlp</strong>: data leakage prevention.</li>
-             * </ul>
+             * <p>The protection scenario. For more information, see the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>whitelist</p>
@@ -258,11 +259,11 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sub-scenario in which the template is used. Valid values:</p>
+             * <p>The sub-scenario of the protection template. Valid values:</p>
              * <ul>
-             * <li><strong>web</strong>: bot management for website protection.</li>
-             * <li><strong>app</strong>: bot management for app protection.</li>
-             * <li><strong>basic</strong>: bot management for basic protection.</li>
+             * <li><strong>web</strong>: bot management web protection scenario template.</li>
+             * <li><strong>app</strong>: bot management app protection scenario template.</li>
+             * <li><strong>basic</strong>: bot management basic protection template.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -274,10 +275,10 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the protection template.</p>
+             * <p>The description of the template.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>testTemplate</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -285,7 +286,18 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the protection template was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The detailed template information. For more information, see the Detail parameter in <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;trafficFeature&quot;:&quot;{\&quot;global\&quot;:0,\&quot;excludeStatus\&quot;:1,\&quot;conditions\&quot;:[{\&quot;key\&quot;:\&quot;URL\&quot;,\&quot;opValue\&quot;:\&quot;not-contain\&quot;,\&quot;values\&quot;:\&quot;test\&quot;}]}&quot;}</p>
+             */
+            public Builder detail(java.util.Map<String, ?> detail) {
+                this.detail = detail;
+                return this;
+            }
+
+            /**
+             * <p>The time when the protection template was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1692930539000</p>
@@ -299,7 +311,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
              * <p>The ID of the protection template.</p>
              * 
              * <strong>example:</strong>
-             * <p>12345</p>
+             * <p>34328</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -310,7 +322,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
              * <p>The name of the protection template.</p>
              * 
              * <strong>example:</strong>
-             * <p>TestTemplateName</p>
+             * <p>antiscanTemplate</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -318,7 +330,7 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origin of the protection template. The value custom indicates that the template is a custom template created by the user.</p>
+             * <p>The source of the protection template. The value custom indicates that the template is user-defined.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -344,10 +356,10 @@ public class DescribeDefenseResourceTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the protection template. Valid values:</p>
+             * <p>The templatetype of the protection template. Valid values:</p>
              * <ul>
-             * <li><strong>user_default</strong>: default template.</li>
-             * <li><strong>user_custom</strong>: custom template.</li>
+             * <li><strong>user_default</strong>: user default protection.</li>
+             * <li><strong>user_custom</strong>: user custom protection.</li>
              * </ul>
              * 
              * <strong>example:</strong>

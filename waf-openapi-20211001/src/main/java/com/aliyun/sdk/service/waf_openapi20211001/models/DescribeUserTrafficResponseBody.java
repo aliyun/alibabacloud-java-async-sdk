@@ -67,7 +67,10 @@ public class DescribeUserTrafficResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EC10C9EA-A367-52D5-<em><strong>-</strong></em></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeUserTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * UserTraffic.
+         * <p>The list of user traffic data.</p>
          */
         public Builder userTraffic(java.util.List<UserTraffic> userTraffic) {
             this.userTraffic = userTraffic;
@@ -141,7 +144,10 @@ public class DescribeUserTrafficResponseBody extends TeaModel {
             } 
 
             /**
-             * Index.
+             * <p>The sequence number sorted in chronological order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -149,7 +155,10 @@ public class DescribeUserTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * Pv.
+             * <p>The usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder pv(Long pv) {
                 this.pv = pv;

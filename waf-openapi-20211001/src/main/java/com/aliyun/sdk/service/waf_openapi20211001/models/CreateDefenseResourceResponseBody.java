@@ -67,7 +67,10 @@ public class CreateDefenseResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1738C613-D054-5191-888B-DC0CF4C3A4A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateDefenseResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Resource.
+         * <p>The name of the created protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdX.XXX-call.cn-alb</p>
          */
         public Builder resource(String resource) {
             this.resource = resource;

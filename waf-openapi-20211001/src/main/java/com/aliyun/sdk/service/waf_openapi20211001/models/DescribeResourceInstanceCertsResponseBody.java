@@ -80,7 +80,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The certificates.</p>
+         * <p>The certificate results.</p>
          */
         public Builder certs(java.util.List<Certs> certs) {
             this.certs = certs;
@@ -233,7 +233,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the certificate expires.</p>
+             * <p>The expiration time of the certificate. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1708415521211</p>
@@ -244,7 +244,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate was issued.</p>
+             * <p>The issuance time of the certificate. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1708415521211</p>
@@ -255,7 +255,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The globally unique ID of the certificate. The value is in the &quot;Certificate ID-cn-hangzhou&quot; format. For example, if the ID of the certificate is 123, the value of CertIdentifier is 123-cn-hangzhou.</p>
+             * <p>The global certificate ID, which is in the format of certificate ID + &quot;-cn-hangzhou&quot;. For example, if the certificate ID is 123, the CertIdentifier is &quot;123-cn-hangzhou&quot;.</p>
              * 
              * <strong>example:</strong>
              * <p>123-cn-hangzhou</p>
@@ -266,10 +266,10 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate.</p>
+             * <p>The certificate name.</p>
              * 
              * <strong>example:</strong>
-             * <p>demoCertName</p>
+             * <p>waf-cert-name</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -277,10 +277,10 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The common name.</p>
+             * <p>The common name (CN).</p>
              * 
              * <strong>example:</strong>
-             * <p>*.aliyundemo.com</p>
+             * <p><a href="http://www.aliyundemo.com">www.aliyundemo.com</a></p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -288,7 +288,7 @@ public class DescribeResourceInstanceCertsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name for which the certificate is issued.</p>
+             * <p>The domain name supported by the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>waf.aliyundemo.com</p>

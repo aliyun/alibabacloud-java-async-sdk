@@ -67,7 +67,7 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9087ADDC-9047-4D02-82A7-33021B58083C</p>
@@ -78,7 +78,7 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The back-to-origin CIDR blocks that are used by the protection cluster.</p>
+         * <p>The list of WAF back-to-origin IP addresses CIDR blocks used by the protection cluster.</p>
          */
         public Builder wafSourceIp(WafSourceIp wafSourceIp) {
             this.wafSourceIp = wafSourceIp;
@@ -144,7 +144,7 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array of back-to-origin IPv4 CIDR blocks.</p>
+             * <p>The list of IPv4 back-to-origin CIDR blocks.</p>
              */
             public Builder iPv4(java.util.List<String> iPv4) {
                 this.iPv4 = iPv4;
@@ -152,7 +152,7 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array of back-to-origin IPv6 CIDR blocks.</p>
+             * <p>The list of IPv6 back-to-origin CIDR blocks.</p>
              */
             public Builder iPv6(java.util.List<String> iPv6) {
                 this.iPv6 = iPv6;

@@ -67,7 +67,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
@@ -78,7 +78,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The trends of risks.</p>
+         * <p>The list of API security risk trend data points.</p>
          */
         public Builder trend(java.util.List<Trend> trend) {
             this.trend = trend;
@@ -184,7 +184,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of high risks.</p>
+             * <p>The number of high-severity security risks.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -195,7 +195,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of low risks.</p>
+             * <p>The number of low-severity security risks.</p>
              * 
              * <strong>example:</strong>
              * <p>23</p>
@@ -206,7 +206,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of medium risks.</p>
+             * <p>The number of medium-severity security risks.</p>
              * 
              * <strong>example:</strong>
              * <p>14</p>
@@ -217,10 +217,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
-             * <blockquote>
-             * <p>Notice: The parameter has been deprecated, it is recommended to use the Timestamp parameter.</p>
-             * </blockquote>
+             * <p>The point in time when the statistics were collected. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1722268800</p>
@@ -231,7 +228,7 @@ public class DescribeUserAbnormalTrendResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+             * <p>The point in time when the statistics were collected. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1722268800</p>

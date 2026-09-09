@@ -133,7 +133,7 @@ public class DescribeSecurityEventLogsRequest extends Request {
         } 
 
         /**
-         * <p>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</p>
+         * <p>The filter conditions. A logical AND relationship exists between multiple filter conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder filter(Filter filter) {
@@ -146,7 +146,7 @@ public class DescribeSecurityEventLogsRequest extends Request {
         /**
          * <p>The ID of the Web Application Firewall (WAF) instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -160,7 +160,7 @@ public class DescribeSecurityEventLogsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number to return for a paged query. The default value is <strong>1</strong>, which indicates the first page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class DescribeSecurityEventLogsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: <strong>100</strong>.</p>
+         * <p>The number of entries to return on each page for a paged query. The maximum value is <strong>100</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,14 +186,16 @@ public class DescribeSecurityEventLogsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <p>The region of the WAF instance. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: The Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ap-southeast-1</p>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -286,7 +288,7 @@ public class DescribeSecurityEventLogsRequest extends Request {
             } 
 
             /**
-             * <p>The field name. This operation supports all fields. For more information, see the <strong>Supported field names</strong> section below.</p>
+             * <p>The name of the field to filter. This operation supports all fields.</p>
              * 
              * <strong>example:</strong>
              * <p>matched_host</p>
@@ -297,7 +299,7 @@ public class DescribeSecurityEventLogsRequest extends Request {
             }
 
             /**
-             * <p>The operator. For more information, see the <strong>Supported operators</strong> section below.</p>
+             * <p>The operator.</p>
              * 
              * <strong>example:</strong>
              * <p>eq</p>
@@ -308,7 +310,7 @@ public class DescribeSecurityEventLogsRequest extends Request {
             }
 
             /**
-             * <p>The field content.</p>
+             * <p>The filter value.</p>
              * 
              * <strong>example:</strong>
              * <p>test.waf-top</p>
@@ -392,7 +394,10 @@ public class DescribeSecurityEventLogsRequest extends Request {
             }
 
             /**
-             * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <p>The start of the time range to query. The time range cannot exceed the last 30 days. The value is a UNIX timestamp. Unit: seconds.</p>
+             * <blockquote>
+             * <p>The start time must be within the last 30 days from the current time.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -464,7 +469,7 @@ public class DescribeSecurityEventLogsRequest extends Request {
             } 
 
             /**
-             * <p>The filter conditions. Each object describes a filter condition.</p>
+             * <p>A list of filter conditions. Each node describes a filter condition.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -472,7 +477,7 @@ public class DescribeSecurityEventLogsRequest extends Request {
             }
 
             /**
-             * <p>The time range for the query.</p>
+             * <p>The time range to query.</p>
              * <p>This parameter is required.</p>
              */
             public Builder dateRange(DateRange dateRange) {

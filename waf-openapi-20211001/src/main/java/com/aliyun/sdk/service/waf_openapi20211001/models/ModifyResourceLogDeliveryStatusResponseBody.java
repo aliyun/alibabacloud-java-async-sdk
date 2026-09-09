@@ -93,7 +93,10 @@ public class ModifyResourceLogDeliveryStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * DeliveryName.
+         * <p>The name of the log delivery configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder deliveryName(String deliveryName) {
             this.deliveryName = deliveryName;
@@ -101,7 +104,16 @@ public class ModifyResourceLogDeliveryStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DeliveryType.
+         * <p>The type of log delivery destination for the protected object. Valid values:</p>
+         * <ul>
+         * <li><p><strong>syslog</strong>: logs are delivered to a syslog server.</p>
+         * </li>
+         * <li><p><strong>kafka</strong>: logs are delivered to a Kafka cluster.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sls</p>
          */
         public Builder deliveryType(String deliveryType) {
             this.deliveryType = deliveryType;
@@ -109,7 +121,10 @@ public class ModifyResourceLogDeliveryStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +132,16 @@ public class ModifyResourceLogDeliveryStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether log delivery is enabled for the protected object. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Log delivery is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Log delivery is disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;

@@ -80,7 +80,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The array of time-series data. Supports returning data with multiple values.</p>
+         * <p>The time series data. Multiple data series can be returned.</p>
          */
         public Builder networkFlowTimeSeries(java.util.List<NetworkFlowTimeSeries> networkFlowTimeSeries) {
             this.networkFlowTimeSeries = networkFlowTimeSeries;
@@ -88,10 +88,10 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>D827FCFE-90A7-4330-9326-D33C8B4C7726</p>
+         * <p>D827FCFE-90A7-4330-9326-D33C8B4*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The metric name, consistent with the Metric request parameter.</p>
+             * <p>The metric name. This value is the same as the Metric request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>total_requests</p>
@@ -189,7 +189,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of timestamps (seconds) marking the start of each time interval.</p>
+             * <p>The timestamps. Each value represents the start of a time interval.</p>
              */
             public Builder timestamps(java.util.List<String> timestamps) {
                 this.timestamps = timestamps;
@@ -197,7 +197,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array of counts, each representing the count for the corresponding time interval.</p>
+             * <p>The metric values. Each value represents the count within the corresponding time interval.</p>
              */
             public Builder values(java.util.List<Long> values) {
                 this.values = values;
@@ -264,7 +264,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the query range (Unix timestamp, seconds). Same as the EndDate request parameter.</p>
+             * <p>The end of the time range that was queried. This value is a UNIX timestamp. Unit: seconds. This value is the same as the EndDate request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888600</p>
@@ -275,7 +275,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query range (Unix timestamp, seconds). Same as the StartDate request parameter.</p>
+             * <p>The start of the time range that was queried. This value is a UNIX timestamp. Unit: seconds. This value is the same as the StartDate request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888000</p>
@@ -358,7 +358,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time granularity. For example, 15m indicates that each data point is counted every 15 minutes. For details, see the <strong>Time granularity of time series data points</strong> section below.</p>
+             * <p>The time granularity of each data point in the returned time series. For example, &quot;15m&quot; indicates that each data point represents statistics for a 15-minute interval. For more information about the time granularity, see the <strong>Time granularity of data points</strong> section.</p>
              * 
              * <strong>example:</strong>
              * <p>1m</p>
@@ -369,7 +369,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query time range.</p>
+             * <p>The time range that was queried.</p>
              */
             public Builder dateRange(DateRange dateRange) {
                 this.dateRange = dateRange;
@@ -377,7 +377,7 @@ public class DescribeNetworkFlowTimeSeriesMetricResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the returned data. It is fixed as requests.</p>
+             * <p>The unit of the returned data. Default value: requests.</p>
              * 
              * <strong>example:</strong>
              * <p>requests</p>

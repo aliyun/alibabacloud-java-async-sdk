@@ -133,11 +133,23 @@ public class ModifyLogDeliveryConfigRequest extends Request {
         } 
 
         /**
-         * <p>The content of the log delivery configuration. Set the value to a JSON string that contains multiple parameters.</p>
+         * <p>The log delivery configuration content, which is a string converted from a JSON object constructed with a series of parameters.</p>
          * <blockquote>
-         * <p> This parameter is the same as the <strong>DeliveryDetail</strong> parameter of the <strong>CreateLogDeliveryConfig</strong> operation. For more information, see <strong>Parameter description for log delivery configuration</strong> of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</p>
+         * <p>This parameter is the same as the <strong>DeliveryDetail</strong> parameter of the <strong>CreateLogDeliveryConfig</strong> operation. For more information, see the <strong>log delivery configuration content parameter description</strong> in the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;rfcVersion&quot;: &quot;rfc3164&quot;,
+         *   &quot;protocol&quot;: &quot;tcp&quot;,
+         *   &quot;servers&quot;: [
+         *     {
+         *       &quot;address&quot;: &quot;1.1.1.1&quot;,
+         *       &quot;port&quot;: 20
+         *     }
+         *   ]
+         * }</p>
          */
         public Builder deliveryDetail(String deliveryDetail) {
             this.putQueryParameter("DeliveryDetail", deliveryDetail);
@@ -146,7 +158,7 @@ public class ModifyLogDeliveryConfigRequest extends Request {
         }
 
         /**
-         * <p>The name of the log delivery configuration that you want to modify.</p>
+         * <p>The name of the log delivery configuration to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,15 +171,15 @@ public class ModifyLogDeliveryConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the log delivery configuration that you want to modify. Valid values:</p>
+         * <p>The type of the log delivery configuration to modify. Valid values:</p>
          * <ul>
-         * <li><strong>syslog</strong>: Logs are delivered to a syslog service.</li>
-         * <li><strong>kafka</strong>: Logs are delivered to a Kafka service.</li>
+         * <li><strong>syslog</strong>: delivers logs to a syslog service.</li>
+         * <li><strong>kafka</strong>: delivers logs to a Kafka service.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>kafka</p>
+         * <p>syslog</p>
          */
         public Builder deliveryType(String deliveryType) {
             this.putQueryParameter("DeliveryType", deliveryType);
@@ -176,9 +188,9 @@ public class ModifyLogDeliveryConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -192,10 +204,12 @@ public class ModifyLogDeliveryConfigRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

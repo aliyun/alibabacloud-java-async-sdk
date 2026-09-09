@@ -80,7 +80,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the instances.</p>
+         * <p>The list of cloud service information.</p>
          */
         public Builder productInstances(java.util.List<ProductInstances> productInstances) {
             this.productInstances = productInstances;
@@ -88,7 +88,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FDCBAE1E-2B3F-5C13-AD20-844B9473****</p>
@@ -181,7 +181,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CertificateIds.
+             * <p>The list of certificate IDs.</p>
              */
             public Builder certificateIds(java.util.List<String> certificateIds) {
                 this.certificateIds = certificateIds;
@@ -189,7 +189,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port of the cloud service that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -197,7 +200,14 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li><strong>http</strong>: HTTP.</li>
+             * <li><strong>https</strong>: HTTPS.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -290,7 +300,16 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppliedType.
+             * <p>The certificate type for the HTTPS protocol. Valid values:</p>
+             * <ul>
+             * <li><p><strong>default</strong>: Default certificate.</p>
+             * </li>
+             * <li><p><strong>extension</strong>: Extension certificate.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder appliedType(String appliedType) {
                 this.appliedType = appliedType;
@@ -298,10 +317,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate.</p>
+             * <p>The certificate ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>10106183</p>
+             * <p>1234567</p>
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -309,10 +328,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the certificate.</p>
+             * <p>The SSL certificate name.</p>
              * 
              * <strong>example:</strong>
-             * <p>trafficxxxx.cn</p>
+             * <p>demoCertName</p>
              */
             public Builder certificateName(String certificateName) {
                 this.certificateName = certificateName;
@@ -320,7 +339,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name bound to the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.test.com">www.test.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -400,7 +422,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the certificates.</p>
+             * <p>The list of certificate information.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -408,7 +430,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number.</p>
+             * <p>The port.</p>
              * 
              * <strong>example:</strong>
              * <p>443</p>
@@ -419,10 +441,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type. Valid values:</p>
+             * <p>The network protocol type. Valid values:</p>
              * <ul>
-             * <li><strong>http</strong></li>
-             * <li><strong>https</strong></li>
+             * <li><strong>http</strong>: HTTP.</li>
+             * <li><strong>https</strong>: HTTPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -664,7 +686,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessInstanceId.
+             * <p>The instance ID of the instance that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze1tm4pvghp****cluv</p>
              */
             public Builder accessInstanceId(String accessInstanceId) {
                 this.accessInstanceId = accessInstanceId;
@@ -672,7 +697,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AccessPortAndProtocols.
+             * <p>The port and protocol information of the cloud service that is added to WAF.</p>
              */
             public Builder accessPortAndProtocols(java.util.List<AccessPortAndProtocols> accessPortAndProtocols) {
                 this.accessPortAndProtocols = accessPortAndProtocols;
@@ -680,7 +705,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AccessPorts.
+             * <p>The list of ports that are added to WAF.</p>
              */
             public Builder accessPorts(java.util.List<Integer> accessPorts) {
                 this.accessPorts = accessPorts;
@@ -688,7 +713,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * <p>The UID of the resource ownership user.</p>
              * 
              * <strong>example:</strong>
              * <p>1704********9107</p>
@@ -699,7 +724,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDomain.
+             * <p>The domain name that is added to WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.c**sw.net">www.c**sw.net</a></p>
              */
             public Builder resourceDomain(String resourceDomain) {
                 this.resourceDomain = resourceDomain;
@@ -707,7 +735,20 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceAccessStatus.
+             * <p>The WAF protection status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>all</strong>: Full protection.</p>
+             * </li>
+             * <li><p><strong>any</strong>: Protected.</p>
+             * </li>
+             * <li><p><strong>part</strong>: Partial protection.</p>
+             * </li>
+             * <li><p><strong>non</strong>: Not protected.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder resourceInstanceAccessStatus(String resourceInstanceAccessStatus) {
                 this.resourceInstanceAccessStatus = resourceInstanceAccessStatus;
@@ -715,7 +756,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceEdition.
+             * <p>The edition of the cloud service instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.e-c1m1.large</p>
              */
             public Builder resourceInstanceEdition(String resourceInstanceEdition) {
                 this.resourceInstanceEdition = resourceInstanceEdition;
@@ -723,7 +767,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>i-2ze1tm4pvghp****cluv</p>
@@ -734,7 +778,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the instance that is added to WAF.</p>
+             * <p>The IP address of the cloud service instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1.X.X.1</p>
@@ -745,7 +789,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance that is added to WAF.</p>
+             * <p>The instance name of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>demoInstanceName</p>
@@ -756,7 +800,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the instance.</p>
+             * <p>The public IP address of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>1.X.X.1</p>
@@ -767,7 +811,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance name of the cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs-test</p>
@@ -778,7 +822,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the ports.</p>
+             * <p>The list of port information.</p>
              */
             public Builder resourcePorts(java.util.List<ResourcePorts> resourcePorts) {
                 this.resourcePorts = resourcePorts;
@@ -786,11 +830,16 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cloud service to which the instance belongs. Valid values:</p>
+             * <p>The type of the cloud service. Valid values:</p>
              * <ul>
-             * <li><strong>clb4</strong>: Layer 4 CLB.</li>
-             * <li><strong>clb7</strong>: Layer 7 CLB.</li>
-             * <li><strong>ecs</strong>: ECS.</li>
+             * <li><p><strong>clb4</strong>: Layer 4 CLB.</p>
+             * </li>
+             * <li><p><strong>clb7</strong>: Layer 7 CLB.</p>
+             * </li>
+             * <li><p><strong>ecs</strong>: ECS.</p>
+             * </li>
+             * <li><p><strong>nlb</strong>: NLB.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -802,18 +851,28 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance. Valid values:</p>
+             * <p>The region ID of the cloud service. Valid values:</p>
              * <ul>
-             * <li><strong>cn-chengdu</strong>: China (Chengdu).</li>
-             * <li><strong>cn-beijing</strong>: China (Beijing).</li>
-             * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</li>
-             * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
-             * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
-             * <li><strong>cn-shenzhen</strong>: China (Shenzhen).</li>
-             * <li><strong>cn-qingdao</strong>: China (Qingdao).</li>
-             * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
-             * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
-             * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
+             * <li><p><strong>cn-chengdu</strong>: China Southwest 1 (Chengdu).</p>
+             * </li>
+             * <li><p><strong>cn-beijing</strong>: China North 2 (Beijing).</p>
+             * </li>
+             * <li><p><strong>cn-zhangjiakou</strong>: China North 3 (Zhangjiakou).</p>
+             * </li>
+             * <li><p><strong>cn-hangzhou</strong>: China East 1 (Hangzhou).</p>
+             * </li>
+             * <li><p><strong>cn-shanghai</strong>: China East 2 (Shanghai).</p>
+             * </li>
+             * <li><p><strong>cn-shenzhen</strong>: China South 1 (Shenzhen).</p>
+             * </li>
+             * <li><p><strong>cn-qingdao</strong>: China North 1 (Qingdao).</p>
+             * </li>
+             * <li><p><strong>cn-hongkong</strong>: Hong Kong (China).</p>
+             * </li>
+             * <li><p><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</p>
+             * </li>
+             * <li><p><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

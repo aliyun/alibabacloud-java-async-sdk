@@ -259,9 +259,9 @@ public class DescribeProductInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the WAF instance.</p>
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -275,7 +275,7 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The UID of the resource ownership user.</p>
          * 
          * <strong>example:</strong>
          * <p>1704********9107</p>
@@ -299,7 +299,7 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page when paging. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -311,10 +311,12 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +329,13 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * ResourceDomain.
+         * <p>The domain name that is added to WAF.</p>
+         * <blockquote>
+         * <p>This parameter is supported only when the cloud service type is ddos.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.c**sw.net">www.c**sw.net</a></p>
          */
         public Builder resourceDomain(String resourceDomain) {
             this.putQueryParameter("ResourceDomain", resourceDomain);
@@ -336,7 +344,10 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * ResourceInstanceAccessStatus.
+         * <p>The WAF protection status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder resourceInstanceAccessStatus(String resourceInstanceAccessStatus) {
             this.putQueryParameter("ResourceInstanceAccessStatus", resourceInstanceAccessStatus);
@@ -345,7 +356,7 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-2zeugkfj81jvo****4tqm</p>
@@ -381,7 +392,7 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * <p>The public IP address of the instance.</p>
+         * <p>The public IP address of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>1.X.X.1</p>
@@ -393,7 +404,7 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>The Alibaba Cloud resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz6ql****5uzi</p>
@@ -405,7 +416,7 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleResourceName</p>
@@ -417,11 +428,18 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * <p>The cloud service to which the instance belongs. Valid values:</p>
+         * <p>The type of the cloud service. Valid values:</p>
          * <ul>
-         * <li><strong>clb4</strong>: Layer 4 Classic Load Balancer (CLB).</li>
-         * <li><strong>clb7</strong>: Layer 7 CLB.</li>
-         * <li><strong>ecs</strong>: Elastic Compute Service (ECS).</li>
+         * <li><p><strong>clb4</strong>: Layer 4 CLB.</p>
+         * </li>
+         * <li><p><strong>clb7</strong>: Layer 7 CLB.</p>
+         * </li>
+         * <li><p><strong>ecs</strong>: ECS.</p>
+         * </li>
+         * <li><p><strong>nlb</strong>: NLB.</p>
+         * </li>
+         * <li><p><strong>ddos</strong>: Anti-DDoS.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,18 +452,28 @@ public class DescribeProductInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. Valid values:</p>
+         * <p>The region ID of the cloud service. Valid values:</p>
          * <ul>
-         * <li><strong>cn-chengdu</strong>: China (Chengdu).</li>
-         * <li><strong>cn-beijing</strong>: China (Beijing).</li>
-         * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou).</li>
-         * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
-         * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
-         * <li><strong>cn-shenzhen</strong>: China (Shenzhen).</li>
-         * <li><strong>cn-qingdao</strong>: China (Qingdao).</li>
-         * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
-         * <li><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</li>
-         * <li><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</li>
+         * <li><p><strong>cn-chengdu</strong>: China Southwest 1 (Chengdu).</p>
+         * </li>
+         * <li><p><strong>cn-beijing</strong>: China North 2 (Beijing).</p>
+         * </li>
+         * <li><p><strong>cn-zhangjiakou</strong>: China North 3 (Zhangjiakou).</p>
+         * </li>
+         * <li><p><strong>cn-hangzhou</strong>: China East 1 (Hangzhou).</p>
+         * </li>
+         * <li><p><strong>cn-shanghai</strong>: China East 2 (Shanghai).</p>
+         * </li>
+         * <li><p><strong>cn-shenzhen</strong>: China South 1 (Shenzhen).</p>
+         * </li>
+         * <li><p><strong>cn-qingdao</strong>: China North 1 (Qingdao).</p>
+         * </li>
+         * <li><p><strong>cn-hongkong</strong>: Hong Kong (China).</p>
+         * </li>
+         * <li><p><strong>ap-southeast-3</strong>: Malaysia (Kuala Lumpur).</p>
+         * </li>
+         * <li><p><strong>ap-southeast-5</strong>: Indonesia (Jakarta).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

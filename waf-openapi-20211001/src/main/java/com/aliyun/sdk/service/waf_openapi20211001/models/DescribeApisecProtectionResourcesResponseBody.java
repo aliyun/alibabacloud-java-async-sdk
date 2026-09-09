@@ -80,7 +80,7 @@ public class DescribeApisecProtectionResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The protected objects.</p>
+         * <p>The list of protected objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -194,7 +194,7 @@ public class DescribeApisecProtectionResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The switch of the API security module.</p>
+             * <p>The global switch for API security.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -205,7 +205,7 @@ public class DescribeApisecProtectionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The switch of the compliance check feature.</p>
+             * <p>The status of the compliance review switch.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -227,7 +227,7 @@ public class DescribeApisecProtectionResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The switch of the tracing and auditing feature.</p>
+             * <p>The status of the tracing audit switch.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

@@ -54,7 +54,7 @@ public class SyncProductInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>45BA2382-7C3F-5B29-9A83-C3BCE586****</p>

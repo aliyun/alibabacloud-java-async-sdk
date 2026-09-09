@@ -78,7 +78,7 @@ public class CopyDefenseTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the new protection template.</p>
+         * <p>The ID of the newly created protection template.</p>
          * 
          * <strong>example:</strong>
          * <p>12346</p>

@@ -246,7 +246,10 @@ public class CreateDefenseResourceRequest extends Request {
         } 
 
         /**
-         * CustomHeaders.
+         * <p>The list of specified header fields.</p>
+         * <blockquote>
+         * <p>When XffStatus is set to 1, the first IP in the specified header field is used as the client source IP to prevent XFF spoofing. When multiple headers are specified, the system attempts to obtain the source IP from each header in order. If the first header does not contain an IP, the system tries the second header, and so on. If no specified header contains an IP, the first IP in the X-Forwarded-For header is used. When XffStatus is set to 1, the IP is obtained from the first available header.</p>
+         * </blockquote>
          */
         public Builder customHeaders(java.util.List<String> customHeaders) {
             String customHeadersShrink = shrink(customHeaders, "CustomHeaders", "json");
@@ -256,7 +259,10 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the protected object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceTest</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -265,10 +271,17 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
+         * <p>The specific parameter information of the protected object, which is a string converted from a JSON object constructed with a series of parameters.</p>
+         * <blockquote>
+         * <p>The parameters vary depending on the specified <strong>cloud product</strong> (<strong>Product</strong>) and <strong>protection mode</strong> (<strong>Pattern</strong>). For more information, see <strong>Detail parameter description for protected objects</strong>.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Notice: When <strong>Product</strong> is set to <strong>ecs</strong>, <strong>clb4</strong>, <strong>clb7</strong>, or <strong>nlb</strong>, domain names connected to regions in the Chinese mainland must have completed ICP filing.</notice></p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;domain&quot;: &quot;zhhclb4test096-05111.test.com&quot;}</p>
+         * <p>{\&quot;domain\&quot;: \&quot;zhhclb4test096-05111.test.com\&quot;}</p>
          */
         public Builder detail(String detail) {
             this.putQueryParameter("Detail", detail);
@@ -277,6 +290,10 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +306,10 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
-         * OwnerUserId.
+         * <p>The ID of the account to which the protected object belongs in multi-account scenarios. By default, the protected object belongs to the WAF administrator account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123221XXX</p>
          */
         public Builder ownerUserId(String ownerUserId) {
             this.putQueryParameter("OwnerUserId", ownerUserId);
@@ -298,6 +318,16 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
+         * <p>The protection mode of the protected object. Valid values:</p>
+         * <ul>
+         * <li><p><strong>domain</strong>: domain name-based protection.</p>
+         * </li>
+         * <li><p><strong>multi_service</strong>: hybrid cloud service-based protection.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Currently, only the following combinations are supported: when <strong>Product</strong> is set to <strong>alb</strong>, <strong>ecs</strong>, <strong>clb4</strong>, <strong>clb7</strong>, or <strong>nlb</strong>, <strong>Pattern</strong> must be set to <strong>domain</strong>. When <strong>Product</strong> is set to <strong>waf</strong>, <strong>Pattern</strong> must be set to <strong>multi_service</strong>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,6 +340,21 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
+         * <p>The cloud product name. Valid values:</p>
+         * <ul>
+         * <li><p><strong>alb</strong>: Application Load Balancer (ALB).</p>
+         * </li>
+         * <li><p><strong>ecs</strong>: Elastic Compute Service (ECS).</p>
+         * </li>
+         * <li><p><strong>clb4</strong>: Classic Load Balancer (CLB) Layer 4 access.</p>
+         * </li>
+         * <li><p><strong>clb7</strong>: Classic Load Balancer (CLB) Layer 7 access.</p>
+         * </li>
+         * <li><p><strong>nlb</strong>: Network Load Balancer (NLB).</p>
+         * </li>
+         * <li><p><strong>waf</strong>: Web Application Firewall (WAF).</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +367,16 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -331,7 +385,15 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>The name of the protected object.</p>
+         * <blockquote>
+         * <ul>
+         * <li>Only protected objects in hybrid cloud service mode support custom protected object names.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>abctest.com</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -340,7 +402,10 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
-         * ResourceGroup.
+         * <p>The name of the protection group to which the protected object is added. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testGroup</p>
          */
         public Builder resourceGroup(String resourceGroup) {
             this.putQueryParameter("ResourceGroup", resourceGroup);
@@ -349,7 +414,10 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The Alibaba Cloud resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -358,6 +426,10 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
+         * <p>The source of the protected object. Valid values:</p>
+         * <ul>
+         * <li><strong>custom</strong>: user-defined.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -370,7 +442,7 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag list, which contains up to 20 items.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -379,7 +451,16 @@ public class CreateDefenseResourceRequest extends Request {
         }
 
         /**
-         * XffStatus.
+         * <p>Specifies whether XFF proxy is enabled for the protected object. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Disabled (default).</p>
+         * </li>
+         * <li><p><strong>1</strong>: Enabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder xffStatus(Integer xffStatus) {
             this.putQueryParameter("XffStatus", xffStatus);
@@ -447,7 +528,10 @@ public class CreateDefenseResourceRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demoTagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -455,7 +539,10 @@ public class CreateDefenseResourceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

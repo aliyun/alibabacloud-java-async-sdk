@@ -148,7 +148,7 @@ public class CreateCloudResourceRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -162,7 +162,7 @@ public class CreateCloudResourceRequest extends Request {
         }
 
         /**
-         * <p>The listener configurations.</p>
+         * <p>The listener configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listen(Listen listen) {
@@ -173,7 +173,7 @@ public class CreateCloudResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The UID of the current resource ownership.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -185,7 +185,7 @@ public class CreateCloudResourceRequest extends Request {
         }
 
         /**
-         * <p>The forwarding configurations.</p>
+         * <p>The forwarding configuration.</p>
          */
         public Builder redirect(Redirect redirect) {
             String redirectShrink = shrink(redirect, "Redirect", "json");
@@ -195,10 +195,12 @@ public class CreateCloudResourceRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -224,7 +226,7 @@ public class CreateCloudResourceRequest extends Request {
         }
 
         /**
-         * <p>The tags. You can specify up to 20 tags.</p>
+         * <p>The list of tags. A maximum of 20 tags can be specified.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -292,10 +294,12 @@ public class CreateCloudResourceRequest extends Request {
             } 
 
             /**
-             * <p>The type of the certificate. Valid values:</p>
+             * <p>The certificate type for the HTTPS protocol. Valid values:</p>
              * <ul>
-             * <li><strong>default</strong>: default certificate.</li>
-             * <li><strong>extension</strong>: additional certificate.</li>
+             * <li><p><strong>default</strong>: default certificate.</p>
+             * </li>
+             * <li><p><strong>extension</strong>: extension certificate.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -307,9 +311,9 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the certificate that you want to add.</p>
+             * <p>The ID of the certificate to add.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/160783.html">DescribeCertificates</a> operation to query the IDs of all SSL certificates that are associated with a domain name.</p>
+             * <p>Call <a href="https://help.aliyun.com/document_detail/2718120.html">DescribeResourceInstanceCerts</a> to query the IDs of all SSL certificates associated with the cloud service instance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -511,7 +515,7 @@ public class CreateCloudResourceRequest extends Request {
             } 
 
             /**
-             * <p>The certificates.</p>
+             * <p>The list of certificate IDs.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -519,11 +523,14 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The type of the cipher suites that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <p>The type of cipher suite to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: all cipher suites.</li>
-             * <li><strong>2</strong>: strong cipher suites. This value is available only if you set <strong>TLSVersion</strong> to <strong>tlsv1.2</strong>.</li>
-             * <li><strong>99</strong>: custom cipher suites.</li>
+             * <li><p><strong>1</strong>: all cipher suites.</p>
+             * </li>
+             * <li><p><strong>2</strong>: strong cipher suites. This value is available only when <strong>TLSVersion</strong> is set to <strong>tlsv1.2</strong>.</p>
+             * </li>
+             * <li><p><strong>99</strong>: custom cipher suites. This value is available only when TLSVersion is not set to tlsv1.3.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -535,7 +542,7 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The custom cipher suites that you want to add. This parameter is available only if you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
+             * <p>The specific custom cipher suites to add. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
              */
             public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
@@ -543,7 +550,14 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * Domain.
+             * <p>The domain name to connect to WAF.</p>
+             * <blockquote>
+             * <p>This parameter is required only when the cloud service type is ddos. For other service types, leave this field empty.
+             * Refer to the Anti-DDoS connection documentation listed in the operation description for the applicable scope of domain names.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.c**sw.net">www.c**sw.net</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -551,11 +565,16 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to support TLS 1.3. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <p>Specifies whether TLS 1.3 is supported. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
+             * </li>
+             * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
+             * </li>
              * </ul>
+             * <blockquote>
+             * <p>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses HTTPS. When TLSVersion is set to tlsv1.3, this value must be true.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -566,10 +585,12 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable HTTP/2. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <p>Specifies whether to enable HTTP/2. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong> (default)</li>
+             * <li><p><strong>true</strong>: HTTP/2 is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong> (default): HTTP/2 is not enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -581,7 +602,7 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The port of the cloud service.</p>
+             * <p>The port of the cloud service connected to WAF.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -592,11 +613,7 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The protocol type. Valid values:</p>
-             * <ul>
-             * <li><strong>http</strong></li>
-             * <li><strong>https</strong></li>
-             * </ul>
+             * <p>The protocol type.</p>
              * 
              * <strong>example:</strong>
              * <p>http</p>
@@ -607,7 +624,11 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The instance ID of the cloud service.</p>
+             * <p>The ID of the cloud service instance.</p>
+             * <blockquote>
+             * <p>The instance must meet the applicable scope of the corresponding cloud service (instance specifications, region, etc.). Refer to the corresponding product connection documentation listed in the operation description.</p>
+             * <p>This parameter is required when <strong>ResourceProduct</strong> is set to <strong>ecs</strong>, <strong>clb4</strong>, <strong>clb7</strong>, or <strong>nlb</strong>.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>lb-bp1*****</p>
@@ -618,13 +639,7 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The type of the cloud service that you want to add. Valid values:</p>
-             * <ul>
-             * <li><strong>clb4</strong>: Layer 4 CLB.</li>
-             * <li><strong>clb7</strong>: Layer 7 CLB.</li>
-             * <li><strong>ecs</strong>: ECS.</li>
-             * <li><strong>nlb</strong>: Network Load Balancer (NLB).</li>
-             * </ul>
+             * <p>The cloud service type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -636,7 +651,14 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The region ID of the cloud service.</p>
+             * <blockquote>
+             * <p>This parameter is required when the instance ID to be connected has not been synchronized to WAF.
+             * Call <a href="https://help.aliyun.com/document_detail/2743902.html">SyncProductInstance</a> to synchronize ECS, CLB, and NLB assets, and call <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> to query the synchronized cloud service assets and their region IDs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -644,11 +666,12 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The Transport Layer Security (TLS) version that you want to add. This parameter is available only if you specify <strong>HttpsPorts</strong>. Valid values:</p>
+             * <p>The TLS version to add. This parameter is used only when <strong>HttpsPorts</strong> is not empty, which indicates that the domain name uses HTTPS. Valid values:</p>
              * <ul>
-             * <li><strong>tlsv1</strong></li>
-             * <li><strong>tlsv1.1</strong></li>
-             * <li><strong>tlsv1.2</strong></li>
+             * <li><strong>tlsv1</strong>: TLS 1.0 and later. Highest compatibility, lower security.</li>
+             * <li><strong>tlsv1.1</strong>: TLS 1.1 and later. Good compatibility, good security.</li>
+             * <li><strong>tlsv1.2</strong>: TLS 1.2 and later. Good compatibility, highest security.</li>
+             * <li><strong>tlsv1.3</strong>: TLS 1.3 only. Highest security, lower compatibility.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -719,7 +742,7 @@ public class CreateCloudResourceRequest extends Request {
             } 
 
             /**
-             * <p>The key of the custom header field.</p>
+             * <p>The custom request header field.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -730,7 +753,7 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The value of the custom header field.</p>
+             * <p>The value set for the custom request header field.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>
@@ -907,10 +930,12 @@ public class CreateCloudResourceRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the persistent connection feature. Valid values:</p>
+             * <p>Specifies whether to enable persistent connections. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong> (default)</li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong> (default): Persistent connections are enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Persistent connections are not enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -922,9 +947,9 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The number of reused persistent connections. Valid values: 60 to 1000.</p>
+             * <p>The number of requests that can reuse a persistent connection. Valid values: 60 to 1000.</p>
              * <blockquote>
-             * <p> This parameter specifies the number of persistent connections that can be reused after you enable the persistent connection feature.</p>
+             * <p>After persistent connections are enabled, this parameter specifies how many requests can reuse a persistent connection.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -936,13 +961,13 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</p>
+             * <p>The idle timeout period for persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</p>
              * <blockquote>
-             * <p> This parameter specifies the period of time after which an idle persistent connection is closed.</p>
+             * <p>Specifies how long an idle persistent connection remains open before it is released.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>15</p>
+             * <p>3600</p>
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -950,7 +975,13 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * MaxBodySize.
+             * <p>The maximum request body size. Valid values: 2 to 10. Default value: 2. Unit: GB.</p>
+             * <blockquote>
+             * <p>Only the Ultimate Edition supports this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxBodySize(Integer maxBodySize) {
                 this.maxBodySize = maxBodySize;
@@ -958,7 +989,8 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</p>
+             * <p>The read timeout period. Unit: seconds.
+             * Valid values: 1 to 3600.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -969,9 +1001,9 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The custom header fields. Specify the value in the [<strong>{&quot;k&quot;:&quot;<em>key</em>&quot;,&quot;v&quot;:&quot;<em>value</em>&quot;}</strong>] format. <em><strong>key</strong></em> specifies the key of a custom header field. <em><strong>value</strong></em> specifies the value of a custom header field.</p>
+             * <p>The value of this parameter is in the format of [<strong>{&quot;k&quot;:&quot;<em>key</em>&quot;,&quot;v&quot;:&quot;<em>value</em>&quot;}</strong>], where <strong><em>key</em></strong> specifies the custom request header field and <strong><em>value</em></strong> specifies the value set for the field.</p>
              * <blockquote>
-             * <p> If a request contains a custom header field, WAF overwrites the original value of the field with the specified value.</p>
+             * <p>If the custom header field already exists in the request, the system overwrites the value of the custom field in the request with the specified traffic mark value.</p>
              * </blockquote>
              */
             public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
@@ -980,7 +1012,8 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</p>
+             * <p>The write timeout period. Unit: seconds.
+             * Valid values: 1 to 3600.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -991,11 +1024,16 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The method that is used to obtain the originating IP address of a client. Valid values:</p>
+             * <p>The method that WAF uses to obtain the originating IP address of the client. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: No Layer 7 proxies are deployed in front of WAF.</li>
-             * <li><strong>1</strong>: WAF reads the first value of the X-Forwarded-For (XFF) header field as the originating IP address of the client.</li>
-             * <li><strong>2</strong>: WAF reads the value of a custom header field as the originating IP address of the client.</li>
+             * <li><p><strong>0</strong>: No Layer 7 proxy is deployed in front of WAF.</p>
+             * </li>
+             * <li><p><strong>1</strong>: WAF reads the first value in the X-Forwarded-For (XFF) header as the client IP address.</p>
+             * </li>
+             * <li><p><strong>2</strong>: WAF reads the value of a custom header field that you specify as the client IP address.</p>
+             * </li>
+             * <li><p><strong>3</strong>: WAF reads the Client IP from the Proxy Protocol header as the client IP address.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1007,9 +1045,9 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The custom header fields that are used to obtain the originating IP address of a client. Specify the value in the <strong>[&quot;header1&quot;,&quot;header2&quot;,...]</strong> format.</p>
+             * <p>The list of custom header fields used to obtain the client IP address, in the format of [<strong>&quot;header1&quot;,&quot;header2&quot;,……</strong>].</p>
              * <blockquote>
-             * <p> This parameter is required only if you set <strong>XffHeaderMode</strong> to 2.</p>
+             * <p>This parameter is required only when <strong>XffHeaderMode</strong> is set to 2, which indicates that WAF reads the value of a custom header field that you specify as the client IP address.</p>
              * </blockquote>
              */
             public Builder xffHeaders(java.util.List<String> xffHeaders) {
@@ -1018,10 +1056,12 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to use the X-Forward-For-Proto header field to pass the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+             * <p>Specifies whether to use X-Forward-For-Proto to pass the protocol used by WAF. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong> (default)</li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong> (default): The protocol used by WAF is passed.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The protocol used by WAF is not passed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1092,7 +1132,7 @@ public class CreateCloudResourceRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>TagKey1</p>
@@ -1103,7 +1143,7 @@ public class CreateCloudResourceRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>TagValue1</p>

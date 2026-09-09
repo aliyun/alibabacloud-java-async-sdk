@@ -173,7 +173,7 @@ public class DescribeDomainsRequest extends Request {
         } 
 
         /**
-         * <p>An array of HTTPS listener ports.</p>
+         * <p>The IP address of the origin server or the back-to-origin domain name. You can specify only one of these options.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.XX.XX</p>
@@ -185,7 +185,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The domain name added to WAF.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -197,7 +197,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * DomainId.
+         * <p>The ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
          */
         public Builder domainId(String domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -206,7 +209,10 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Default value: 1.</p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to view the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +225,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -231,7 +237,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -245,8 +251,10 @@ public class DescribeDomainsRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,7 +267,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -271,7 +279,7 @@ public class DescribeDomainsRequest extends Request {
         }
 
         /**
-         * <p>The tag of the resource. You can specify up to 20 tags.</p>
+         * <p>The tags of the resource. A maximum of 20 tags are supported.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);

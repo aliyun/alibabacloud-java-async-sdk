@@ -67,7 +67,10 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * StatisticsInfos.
+         * <p>The statistics results.</p>
          */
         public Builder statisticsInfos(java.util.List<StatisticsInfos> statisticsInfos) {
             this.statisticsInfos = statisticsInfos;
@@ -180,7 +183,10 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of rules that meet all query conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -188,7 +194,10 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * FourthValue.
+             * <p>The value corresponding to the quaternary query condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>action</p>
              */
             public Builder fourthValue(String fourthValue) {
                 this.fourthValue = fourthValue;
@@ -196,7 +205,10 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryValue.
+             * <p>The value corresponding to the primary query condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sytem</p>
              */
             public Builder primaryValue(String primaryValue) {
                 this.primaryValue = primaryValue;
@@ -204,7 +216,10 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SecondaryValue.
+             * <p>The value corresponding to the secondary query condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder secondaryValue(String secondaryValue) {
                 this.secondaryValue = secondaryValue;
@@ -212,7 +227,10 @@ public class DescribeDefenseRuleStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ThirdValue.
+             * <p>The value corresponding to the tertiary query condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder thirdValue(String thirdValue) {
                 this.thirdValue = thirdValue;

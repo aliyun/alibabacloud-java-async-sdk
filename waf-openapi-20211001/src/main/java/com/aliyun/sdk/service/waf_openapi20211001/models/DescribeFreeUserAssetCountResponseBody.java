@@ -67,7 +67,7 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The asset statistics provided by basic detection.</p>
+         * <p>The statistics information about assets detected by the basic API security feature.</p>
          */
         public Builder asset(Asset asset) {
             this.asset = asset;
@@ -168,7 +168,7 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of APIs.</p>
+             * <p>The total number of API assets.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -179,7 +179,7 @@ public class DescribeFreeUserAssetCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of deactivated APIs.</p>
+             * <p>The number of inactive APIs.</p>
              * 
              * <strong>example:</strong>
              * <p>13</p>

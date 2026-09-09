@@ -103,6 +103,10 @@ public class DeleteDefenseResourceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +119,16 @@ public class DeleteDefenseResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,10 +137,11 @@ public class DeleteDefenseResourceRequest extends Request {
         }
 
         /**
+         * <p>The name of the protected object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>zhh*****-2034.test.top-clb7</p>
+         * <p>zhh*****.test.top-clb7</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -136,7 +150,10 @@ public class DeleteDefenseResourceRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

@@ -355,7 +355,10 @@ public class DescribeApisecEventsRequest extends Request {
         } 
 
         /**
-         * Account.
+         * <p>The account information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1818743389962696</p>
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -364,10 +367,10 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The API.</p>
+         * <p>The API operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>/apisec/v1/register.php</p>
+         * <p>/apisec/v1/***.php</p>
          */
         public Builder apiFormat(String apiFormat) {
             this.putQueryParameter("ApiFormat", apiFormat);
@@ -376,7 +379,7 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the event-related API.</p>
+         * <p>The ID of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>820b860***6205da93b935b28</p>
@@ -390,7 +393,7 @@ public class DescribeApisecEventsRequest extends Request {
         /**
          * <p>The business purpose of the API.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -403,7 +406,7 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The Attack source IP.</p>
+         * <p>The attack IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>42.224.<em>.</em></p>
@@ -415,9 +418,9 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the hybrid cloud cluster.</p>
+         * <p>The hybrid cloud cluster ID.</p>
          * <blockquote>
-         * <p> This parameter is available only in hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud clusters.</p>
+         * <p>This parameter applies only to hybrid cloud scenarios. You can call <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> to obtain hybrid cloud cluster information.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -430,7 +433,7 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+         * <p>The end time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683703260</p>
@@ -454,11 +457,11 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The severity level of the event. Valid values:</p>
+         * <p>The event level. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong></li>
-         * <li><strong>medium</strong></li>
-         * <li><strong>low</strong></li>
+         * <li><strong>high</strong>: High-risk.</li>
+         * <li><strong>medium</strong>: Medium-risk.</li>
+         * <li><strong>low</strong>: Low-risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -471,7 +474,10 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * EventScope.
+         * <p>The dimension of the security event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder eventScope(String eventScope) {
             this.putQueryParameter("EventScope", eventScope);
@@ -480,9 +486,9 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The type of the event.</p>
+         * <p>The event type.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported event types.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -495,9 +501,9 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -511,10 +517,10 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The domain name or IP address of the API.</p>
+         * <p>The domain name or IP address to which the API operation belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>a.aliyun.com</p>
+         * <p>a.***.com</p>
          */
         public Builder matchedHost(String matchedHost) {
             this.putQueryParameter("MatchedHost", matchedHost);
@@ -523,11 +529,11 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The name of the sorting field. Valid values:</p>
+         * <p>The name of the field used for sorting. Valid values:</p>
          * <ul>
-         * <li><strong>allCnt</strong>: the number of attacks</li>
-         * <li><strong>startTs</strong>: the start time of the event</li>
-         * <li><strong>endTs</strong>: the end time of the event</li>
+         * <li><strong>allCnt</strong>: attack count.</li>
+         * <li><strong>startTs</strong>: event start time.</li>
+         * <li><strong>endTs</strong>: event end time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -540,10 +546,10 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The sorting method. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><strong>desc</strong> (default): descending order</li>
-         * <li><strong>asc</strong>: ascending order</li>
+         * <li><strong>desc</strong>: Descending order (default).</li>
+         * <li><strong>asc</strong>: Ascending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -558,8 +564,8 @@ public class DescribeApisecEventsRequest extends Request {
         /**
          * <p>The source of the event type. Valid values:</p>
          * <ul>
-         * <li><strong>custom</strong></li>
-         * <li><strong>default</strong></li>
+         * <li><strong>custom</strong>: Custom.</li>
+         * <li><strong>default</strong>: Built-in.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -572,7 +578,7 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number to return in a paged query. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -584,7 +590,7 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -596,10 +602,12 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Value:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -612,7 +620,7 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>The Alibaba Cloud resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -624,7 +632,7 @@ public class DescribeApisecEventsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. This value is a UNIX timestamp in UTC. Unit: seconds.</p>
+         * <p>The start time of the query, in UNIX timestamp (UTC) format. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1683648000</p>
@@ -638,13 +646,14 @@ public class DescribeApisecEventsRequest extends Request {
         /**
          * <p>The event status. Valid values:</p>
          * <ul>
-         * <li><strong>toBeConfirmed</strong></li>
-         * <li><strong>confirmed</strong></li>
-         * <li><strong>ignored</strong></li>
+         * <li><strong>toBeConfirmed</strong>: To be confirmed.</li>
+         * <li><strong>confirmed</strong>: Confirmed.</li>
+         * <li><strong>actioned</strong>: Handled.</li>
+         * <li><strong>ignored</strong>: Ignored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Ignore</p>
+         * <p>ignored</p>
          */
         public Builder userStatus(String userStatus) {
             this.putQueryParameter("UserStatus", userStatus);

@@ -67,7 +67,7 @@ public class DescribeVisitUasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2847CE98-AFAE-5A64-B80E-60461717F9DE</p>
@@ -78,7 +78,7 @@ public class DescribeVisitUasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array of the top 10 user agents that are used to initiate requests.</p>
+         * <p>The top 10 User-Agents by traffic.</p>
          */
         public Builder uas(java.util.List<Uas> uas) {
             this.uas = uas;
@@ -144,7 +144,7 @@ public class DescribeVisitUasResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of requests that use the user agent.</p>
+             * <p>The total number of requests from the User-Agent.</p>
              * 
              * <strong>example:</strong>
              * <p>698455</p>
@@ -155,7 +155,7 @@ public class DescribeVisitUasResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user agent.</p>
+             * <p>The User-Agent name.</p>
              * 
              * <strong>example:</strong>
              * <p>chrome</p>

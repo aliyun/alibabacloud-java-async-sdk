@@ -106,7 +106,7 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
         } 
 
         /**
-         * Examples.
+         * <p>The list of samples.</p>
          */
         public Builder examples(java.util.List<Examples> examples) {
             this.examples = examples;
@@ -114,7 +114,10 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 5. Default value: 5. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             } 
 
             /**
-             * SensitiveCode.
+             * <p>The sensitive information type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder sensitiveCode(String sensitiveCode) {
                 this.sensitiveCode = sensitiveCode;
@@ -212,7 +227,7 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveDataList.
+             * <p>The list of sensitive data.</p>
              */
             public Builder sensitiveDataList(java.util.List<String> sensitiveDataList) {
                 this.sensitiveDataList = sensitiveDataList;
@@ -279,7 +294,10 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             } 
 
             /**
-             * SensitiveCode.
+             * <p>The sensitive information type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder sensitiveCode(String sensitiveCode) {
                 this.sensitiveCode = sensitiveCode;
@@ -287,7 +305,7 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             }
 
             /**
-             * SensitiveDataList.
+             * <p>The list of sensitive data.</p>
              */
             public Builder sensitiveDataList(java.util.List<String> sensitiveDataList) {
                 this.sensitiveDataList = sensitiveDataList;
@@ -419,7 +437,10 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiUrl.
+             * <p>The full request path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.test.com/api/v1/hello.php?token=TkJGQw">http://www.test.com/api/v1/hello.php?token=TkJGQw</a></p>
              */
             public Builder apiUrl(String apiUrl) {
                 this.apiUrl = apiUrl;
@@ -427,7 +448,7 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             }
 
             /**
-             * PocPayload.
+             * <p>The verification request.</p>
              */
             public Builder pocPayload(String pocPayload) {
                 this.pocPayload = pocPayload;
@@ -435,7 +456,16 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>http</strong>: HTTP protocol.</p>
+             * </li>
+             * <li><p><strong>https</strong>: HTTPS protocol.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -443,7 +473,19 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Request.
+             * <p>The sample request content, which is a character string converted from a JSON format constructed with a series of parameters. The following fields are included:</p>
+             * <ul>
+             * <li><strong>method</strong>: the request method.</li>
+             * <li><strong>host</strong>: the request domain name.</li>
+             * <li><strong>header</strong>: the request header.</li>
+             * <li><strong>server_port</strong>: the service port.</li>
+             * <li><strong>body</strong>: the request body content.</li>
+             * <li><strong>url</strong>: the request path.</li>
+             * <li><strong>server_protocol</strong>: the server protocol.</li>
+             * </ul>
+             * <blockquote>
+             * <p>If the <strong>body</strong> content exceeds 16 KB, only partial content is returned.</p>
+             * </blockquote>
              */
             public Builder request(String request) {
                 this.request = request;
@@ -451,7 +493,7 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             }
 
             /**
-             * RequestSensitiveData.
+             * <p>The list of request sensitive data.</p>
              */
             public Builder requestSensitiveData(java.util.List<RequestSensitiveData> requestSensitiveData) {
                 this.requestSensitiveData = requestSensitiveData;
@@ -459,7 +501,26 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             }
 
             /**
-             * Response.
+             * <p>The sample response content, which is a string converted from a JSON object constructed with a series of parameters. The following fields are included:</p>
+             * <ul>
+             * <li><strong>status</strong>: the status code.</li>
+             * <li><strong>header</strong>: the response header.</li>
+             * <li><strong>body</strong>: the response body content.</li>
+             * </ul>
+             * <blockquote>
+             * <p>If the <strong>body</strong> content exceeds 16 KB, only partial content is returned.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;header&quot;: {
+             *     &quot;Connection&quot;: &quot;keep-alive&quot;,
+             *     &quot;Content-Encoding&quot;: &quot;gzip&quot;,
+             *     &quot;Content-Type&quot;: &quot;text/html; charset=UTF-8&quot;
+             *   },
+             *   &quot;body&quot;: &quot;xxxx&quot;,
+             *   &quot;status&quot;: 200
+             * }</p>
              */
             public Builder response(String response) {
                 this.response = response;
@@ -467,7 +528,7 @@ public class DescribeApisecExamplesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseSensitiveData.
+             * <p>The list of response sensitive data.</p>
              */
             public Builder responseSensitiveData(java.util.List<ResponseSensitiveData> responseSensitiveData) {
                 this.responseSensitiveData = responseSensitiveData;

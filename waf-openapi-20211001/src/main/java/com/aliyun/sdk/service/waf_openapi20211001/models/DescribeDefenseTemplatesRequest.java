@@ -228,19 +228,7 @@ public class DescribeDefenseTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The scenario in which the protection template is used.</p>
-         * <ul>
-         * <li><strong>waf_group</strong>: basic protection.</li>
-         * <li><strong>antiscan</strong>: scan protection.</li>
-         * <li><strong>ip_blacklist</strong>: IP address blacklist.</li>
-         * <li><strong>custom_acl</strong>: custom rule.</li>
-         * <li><strong>whitelist</strong>: whitelist.</li>
-         * <li><strong>region_block</strong>: region blacklist.</li>
-         * <li><strong>custom_response</strong>: custom response.</li>
-         * <li><strong>cc</strong>: HTTP flood protection.</li>
-         * <li><strong>tamperproof</strong>: website tamper-proofing.</li>
-         * <li><strong>dlp</strong>: data leakage prevention.</li>
-         * </ul>
+         * <p>The protection scenario. For more information, see the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>region_block</p>
@@ -252,11 +240,12 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The sub-scenario in which the protection template is used. Valid values:</p>
+         * <p>The sub-scenario of the protection template. Valid values:</p>
          * <ul>
-         * <li><strong>web</strong>: bot management for website protection.</li>
-         * <li><strong>app</strong>: bot management for app protection.</li>
-         * <li><strong>basic</strong>: bot management for basic protection.</li>
+         * <li><strong>web</strong>: bot management web protection scenario template.</li>
+         * <li><strong>app</strong>: bot management app protection scenario template.</li>
+         * <li><strong>basic</strong>: bot management basic protection template.</li>
+         * <li><strong>bot_custom_acl</strong>: bot management advanced custom rule protection template.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -269,9 +258,9 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -285,7 +274,7 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number to return in a paging request. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -297,7 +286,7 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page when paging. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -309,10 +298,12 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,13 +316,13 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The name of the protected object or protected object group.</p>
+         * <p>The name of the protected object, the name of the protected object group, or the ID of the protected asset.</p>
          * <blockquote>
-         * <p> If you specify ResourceType, you must specify this parameter.</p>
+         * <p>This parameter is used together with the ResourceType parameter. Both parameters must have values for filtering to take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>xxxqiu.cc-ecs</p>
+         * <p>ruiqiu.cc-ecs</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -352,13 +343,9 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The type of the protected resource. Valid values:</p>
-         * <ul>
-         * <li><strong>single</strong>: protected object. This is the default value.</li>
-         * <li><strong>group</strong>: protected object group.</li>
-         * </ul>
+         * <p>The type of the protected resource.</p>
          * <blockquote>
-         * <p> If you specify Resource, you must specify this parameter.</p>
+         * <p>This parameter is used together with the Resource parameter. Both parameters must have values for filtering to take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -374,7 +361,7 @@ public class DescribeDefenseTemplatesRequest extends Request {
          * <p>The ID of the protection template.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345</p>
+         * <p>39395</p>
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -383,7 +370,7 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the protection templates that you want to query. Separate multiple template IDs with commas (,).</p>
+         * <p>The IDs of the protection templates to query. You can specify this parameter to query the protected resources associated with multiple protection templates. Separate multiple template IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>189731,189539,189538,189531,189540,189542,189541</p>
@@ -395,10 +382,10 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The name of the protection template.</p>
+         * <p>The name of the protection template to query.</p>
          * 
          * <strong>example:</strong>
-         * <p>testTemplateName</p>
+         * <p>test</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -407,10 +394,10 @@ public class DescribeDefenseTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The type of the protection template. Valid values:</p>
+         * <p>The templatetype of the protection template. Valid values:</p>
          * <ul>
-         * <li><strong>user_default</strong>: default template.</li>
-         * <li><strong>user_custom</strong>: custom template.</li>
+         * <li><strong>user_default</strong>: default protection.</li>
+         * <li><strong>user_custom</strong>: custom protection.</li>
          * </ul>
          * 
          * <strong>example:</strong>

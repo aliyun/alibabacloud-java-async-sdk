@@ -160,7 +160,7 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         /**
          * <p>The ID of the hybrid cloud cluster.</p>
          * <blockquote>
-         * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+         * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain hybrid cloud cluster information.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -173,9 +173,9 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -201,7 +201,7 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number to return in a paging query. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +213,7 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -225,10 +225,12 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,9 +257,9 @@ public class DescribeApisecMatchedHostsRequest extends Request {
         /**
          * <p>The detection type. Valid values:</p>
          * <ul>
-         * <li><strong>api</strong>: API-related domain names</li>
-         * <li><strong>abnormal</strong>: risk-related domain names</li>
-         * <li><strong>event</strong>: security event-related domain names</li>
+         * <li><strong>api</strong>: the domain name list of API assets.</li>
+         * <li><strong>abnormal</strong>: the domain name list of risks.</li>
+         * <li><strong>event</strong>: the domain name list of security events.</li>
          * </ul>
          * 
          * <strong>example:</strong>

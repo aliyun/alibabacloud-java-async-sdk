@@ -133,6 +133,11 @@ public class ModifyDefenseSceneConfigRequest extends Request {
         } 
 
         /**
+         * <p>The name of the configuration item to modify.</p>
+         * <p>If <strong>DefenseScene</strong> is set to <strong>apisec</strong>, the valid value is:</p>
+         * <ul>
+         * <li><strong>autoEnabled</strong>: indicates whether core API security detection is automatically enabled for new resources.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +150,10 @@ public class ModifyDefenseSceneConfigRequest extends Request {
         }
 
         /**
+         * <p>The value to set for the configuration item.</p>
+         * <blockquote>
+         * <p>The value of this parameter depends on the value of <strong>ConfigKey</strong>. For more information, see <strong>Description of mitigation setting parameters</strong>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +166,10 @@ public class ModifyDefenseSceneConfigRequest extends Request {
         }
 
         /**
+         * <p>The protection scenario for which you want to modify the mitigation settings. Valid values:</p>
+         * <ul>
+         * <li><strong>apisec</strong>: API security.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +182,10 @@ public class ModifyDefenseSceneConfigRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +198,16 @@ public class ModifyDefenseSceneConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -190,7 +216,10 @@ public class ModifyDefenseSceneConfigRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

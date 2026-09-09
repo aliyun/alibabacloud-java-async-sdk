@@ -80,7 +80,10 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80736FA5-FA87-55F6-AA69-C5477C6FE6D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The list of system protection rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -96,7 +99,10 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -253,7 +259,10 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * CveId.
+             * <p>The CVE ID of the vulnerability associated with the system rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2021-34538</p>
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
@@ -261,7 +270,10 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -269,7 +281,35 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DetectType.
+             * <p>The detection module. Valid values:</p>
+             * <ul>
+             * <li><strong>sqli</strong>: SQL injection.</li>
+             * <li><strong>xss</strong>: cross-site scripting (XSS).</li>
+             * <li><strong>cmdi</strong>: OS command injection.</li>
+             * <li><strong>expression_injection</strong>: expression injection.</li>
+             * <li><strong>java_deserialization</strong>: Java deserialization.</li>
+             * <li><strong>dot_net_deserialization</strong>: .NET deserialization.</li>
+             * <li><strong>php_deserialization</strong>: PHP deserialization.</li>
+             * <li><strong>code_exec</strong>: code execution.</li>
+             * <li><strong>ssrf</strong>: server-side request forgery (SSRF).</li>
+             * <li><strong>path_traversal</strong>: path traversal.</li>
+             * <li><strong>arbitrary_file_uploading</strong>: arbitrary file upload.</li>
+             * <li><strong>webshell</strong>: webshell.</li>
+             * <li><strong>rfilei</strong>: remote file inclusion (RFI).</li>
+             * <li><strong>lfilei</strong>: local file inclusion (LFI).</li>
+             * <li><strong>protocol_violation</strong>: protocol violation.</li>
+             * <li><strong>scanner_behavior</strong>: scanner behavior.</li>
+             * <li><strong>logic_flaw</strong>: business logic bug.</li>
+             * <li><strong>arbitrary_file_reading</strong>: arbitrary file read.</li>
+             * <li><strong>arbitrary_file_download</strong>: arbitrary file download.</li>
+             * <li><strong>xxe</strong>: XML external entity injection.</li>
+             * <li><strong>csrf</strong>: cross-site request forgery.</li>
+             * <li><strong>crlf</strong>: CRLF injection.</li>
+             * <li><strong>other</strong>: other.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>sqli</p>
              */
             public Builder detectType(String detectType) {
                 this.detectType = detectType;
@@ -277,7 +317,20 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><p><strong>super_strict</strong>: super strict.</p>
+             * </li>
+             * <li><p><strong>strict</strong>: strict.</p>
+             * </li>
+             * <li><p><strong>medium</strong>: medium.</p>
+             * </li>
+             * <li><p><strong>loose</strong>: loose.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>super_strict</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -285,7 +338,16 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleAction.
+             * <p>The rule action. Valid values:</p>
+             * <ul>
+             * <li><p><strong>block</strong>: Block.</p>
+             * </li>
+             * <li><p><strong>monitor</strong>: Monitor.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder ruleAction(String ruleAction) {
                 this.ruleAction = ruleAction;
@@ -293,7 +355,10 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>113089</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -301,7 +366,10 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>systemRuleTest</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -309,7 +377,14 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleStatus.
+             * <p>The rule status. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: disabled.</li>
+             * <li><strong>0</strong>: enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ruleStatus(Integer ruleStatus) {
                 this.ruleStatus = ruleStatus;
@@ -317,7 +392,10 @@ public class DescribeBaseSystemRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the rule was last updated. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665460629000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

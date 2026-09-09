@@ -102,7 +102,7 @@ public class DescribeDomainDetailRequest extends Request {
         } 
 
         /**
-         * <p>The domain name that you want to query.</p>
+         * <p>The domain name to query.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -114,7 +114,10 @@ public class DescribeDomainDetailRequest extends Request {
         }
 
         /**
-         * DomainId.
+         * <p>The domain name ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
          */
         public Builder domainId(String domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -125,7 +128,7 @@ public class DescribeDomainDetailRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -140,10 +143,6 @@ public class DescribeDomainDetailRequest extends Request {
 
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
-         * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

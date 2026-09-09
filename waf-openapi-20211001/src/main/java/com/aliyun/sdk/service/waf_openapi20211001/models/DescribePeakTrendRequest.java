@@ -146,7 +146,7 @@ public class DescribePeakTrendRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the current time is used as the end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1665386340</p>
@@ -158,9 +158,9 @@ public class DescribePeakTrendRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF instance.</p>
+         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -174,7 +174,7 @@ public class DescribePeakTrendRequest extends Request {
         }
 
         /**
-         * <p>The time interval. Unit: seconds. The value must be an integral multiple of 60.</p>
+         * <p>The time interval. Unit: seconds. The value must be an integer multiple of 60.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,8 +189,10 @@ public class DescribePeakTrendRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +205,7 @@ public class DescribePeakTrendRequest extends Request {
         }
 
         /**
-         * <p>The protected object.</p>
+         * <p>The protected object for which you want to query the QPS trend, such as a domain name.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -227,7 +229,7 @@ public class DescribePeakTrendRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Unit: seconds.</p>
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

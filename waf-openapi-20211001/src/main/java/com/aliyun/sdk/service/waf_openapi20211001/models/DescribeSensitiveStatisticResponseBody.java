@@ -80,7 +80,7 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The statistics of the sensitive data.</p>
+         * <p>The list of sensitive data statistics.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -207,7 +207,7 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API.</p>
+             * <p>The API operation.</p>
              * 
              * <strong>example:</strong>
              * <p>/api/login</p>
@@ -229,7 +229,7 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned.</p>
+             * <p>The number of data entries.</p>
              * 
              * <strong>example:</strong>
              * <p>169</p>
@@ -251,9 +251,9 @@ public class DescribeSensitiveStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the sensitive data.</p>
+             * <p>The sensitive data type.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</p>
+             * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported sensitive data types.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

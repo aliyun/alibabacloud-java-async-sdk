@@ -130,6 +130,10 @@ public class DescribeCommonLogFieldsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +146,16 @@ public class DescribeCommonLogFieldsRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * <p>Specifies whether to query for default log fields.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Queries for default log fields.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Queries for non-default log fields.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -151,7 +164,16 @@ public class DescribeCommonLogFieldsRequest extends Request {
         }
 
         /**
-         * IsRequired.
+         * <p>Specifies whether to query for required log fields.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Queries for required log fields.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Queries for non-required log fields.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isRequired(Boolean isRequired) {
             this.putQueryParameter("IsRequired", isRequired);
@@ -160,7 +182,7 @@ public class DescribeCommonLogFieldsRequest extends Request {
         }
 
         /**
-         * LogKeyList.
+         * <p>The list of log fields to query.</p>
          */
         public Builder logKeyList(java.util.List<String> logKeyList) {
             String logKeyListShrink = shrink(logKeyList, "LogKeyList", "json");
@@ -170,7 +192,16 @@ public class DescribeCommonLogFieldsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -179,7 +210,10 @@ public class DescribeCommonLogFieldsRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2sxgs*****</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

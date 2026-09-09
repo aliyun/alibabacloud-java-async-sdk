@@ -159,7 +159,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The back-to-origin IP address or domain name.</p>
+         * <p>The IP address or domain name of the origin server that corresponds to the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.XX.XX</p>
@@ -171,10 +171,12 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the public cloud disaster recovery feature is enabled for the domain name. Valid values:</p>
+         * <p>Specifies whether public cloud disaster recovery is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Public cloud disaster recovery is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Public cloud disaster recovery is not enabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -187,7 +189,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>The domain name that you want to query.</p>
+         * <p>The domain name to query.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -201,7 +203,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -215,7 +217,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number to return in a paging query. Default value: <strong>1</strong>, which indicates the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -227,7 +229,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>10</strong>.</p>
+         * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>, which indicates 10 entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -239,10 +241,12 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,7 +259,7 @@ public class DescribeHybridCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmvtc5z52****</p>

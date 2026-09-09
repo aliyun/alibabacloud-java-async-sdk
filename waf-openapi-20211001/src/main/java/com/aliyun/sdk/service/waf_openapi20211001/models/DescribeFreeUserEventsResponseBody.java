@@ -67,7 +67,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The security events on which basic detection is performed.</p>
+         * <p>The list of security events detected by basic detection.</p>
          */
         public Builder event(java.util.List<Event> event) {
             this.event = event;
@@ -196,7 +196,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API.</p>
+             * <p>The API operation.</p>
              * 
              * <strong>example:</strong>
              * <p>/api/login</p>
@@ -207,7 +207,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attacker IP address.</p>
+             * <p>The attack IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>104.234.140.**</p>
@@ -218,7 +218,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the attack was launched. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+             * <p>The attack time. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1683703260</p>
@@ -229,7 +229,7 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the API.</p>
+             * <p>The domain name to which the API operation belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>www.***.cn</p>
@@ -240,11 +240,11 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The severity level of the security event. Valid values:</p>
+             * <p>The event level. Valid values:</p>
              * <ul>
-             * <li><strong>high</strong></li>
-             * <li><strong>medium</strong></li>
-             * <li><strong>low</strong></li>
+             * <li><strong>high</strong>: high risk.</li>
+             * <li><strong>medium</strong>: medium risk.</li>
+             * <li><strong>low</strong>: low risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -256,9 +256,9 @@ public class DescribeFreeUserEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the security event.</p>
+             * <p>The event type.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of security events.</p>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported event types.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

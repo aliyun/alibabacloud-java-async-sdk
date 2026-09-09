@@ -80,7 +80,7 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP ports.</p>
+         * <p>The HTTP port.</p>
          */
         public Builder http(java.util.List<Integer> http) {
             this.http = http;
@@ -88,7 +88,7 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTPS ports.</p>
+         * <p>The HTTPS port.</p>
          */
         public Builder https(java.util.List<Integer> https) {
             this.https = https;
@@ -96,7 +96,7 @@ public class DescribeCloudResourceAccessedPortsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C1823E96-EF4B-5BD2-9E02-1D18****3ED8</p>

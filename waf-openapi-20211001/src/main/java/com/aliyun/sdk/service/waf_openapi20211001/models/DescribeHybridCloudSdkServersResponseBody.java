@@ -80,7 +80,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600F008-2E76-5D0B-BC76-EFBD****6D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
         }
 
         /**
-         * SdkServers.
+         * <p>The SDK information.</p>
          */
         public Builder sdkServers(java.util.List<SdkServers> sdkServers) {
             this.sdkServers = sdkServers;
@@ -96,7 +99,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +272,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterName.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testcluster</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -274,7 +283,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The timestamp when the entry was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1621428205000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -282,7 +294,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qsh5-sec-8-fedd**005</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -290,7 +305,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -298,7 +316,7 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>SDKID。</p>
+             * <p>The machine identifier (MID).</p>
              * 
              * <strong>example:</strong>
              * <p>b11327c21790846374051d5d**83c</p>
@@ -309,7 +327,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectionGroupAddress.
+             * <p>The IP address of the backend server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder protectionGroupAddress(String protectionGroupAddress) {
                 this.protectionGroupAddress = protectionGroupAddress;
@@ -317,7 +338,14 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             }
 
             /**
-             * PullinStatus.
+             * <p>The traffic redirection status. Valid values:</p>
+             * <ul>
+             * <li><strong>on</strong>: enabled.</li>
+             * <li><strong>off</strong>: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder pullinStatus(String pullinStatus) {
                 this.pullinStatus = pullinStatus;
@@ -325,7 +353,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-antifaud-2.jqt.wafqax.top-waf</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -333,7 +364,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -341,7 +375,10 @@ public class DescribeHybridCloudSdkServersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The timestamp when the entry was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1719489906000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -118,6 +118,7 @@ public class DescribeThreatEventTopMetricRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the security event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,10 @@ public class DescribeThreatEventTopMetricRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +147,14 @@ public class DescribeThreatEventTopMetricRequest extends Request {
         }
 
         /**
+         * <p>The statistical metric. Different values of Metric correspond to different statistical objects. Valid values:</p>
+         * <ul>
+         * <li><strong>time</strong>: aggregates statistics by attack time, sorts them in descending order, and returns the top 5 records.</li>
+         * <li><strong>src</strong>: aggregates statistics by source IP address of attack requests, sorts them in descending order, and returns the top 5 records.</li>
+         * <li><strong>target</strong>: aggregates statistics by URL of attack requests (excluding query strings), sorts them in descending order, and returns the top 5 records.</li>
+         * <li><strong>type</strong>: aggregates statistics by attack type, sorts them in descending order, and returns the top 5 records.</li>
+         * <li><strong>tools</strong>: aggregates statistics by attack tool, sorts them in descending order, and returns the top 5 records.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +167,16 @@ public class DescribeThreatEventTopMetricRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +185,10 @@ public class DescribeThreatEventTopMetricRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyResourceLogStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -50,6 +54,7 @@ public class ModifyResourceLogStatusRequest extends Request {
 
     private ModifyResourceLogStatusRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
@@ -70,6 +75,13 @@ public class ModifyResourceLogStatusRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -122,6 +134,7 @@ public class ModifyResourceLogStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyResourceLogStatusRequest, Builder> {
+        private Boolean dryRun; 
         private String instanceId; 
         private String regionId; 
         private String resource; 
@@ -136,6 +149,7 @@ public class ModifyResourceLogStatusRequest extends Request {
 
         private Builder(ModifyResourceLogStatusRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resource = request.resource;
@@ -146,9 +160,25 @@ public class ModifyResourceLogStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Log.Control.DryRunOperation is returned.</li>
+         * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -164,8 +194,10 @@ public class ModifyResourceLogStatusRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +210,7 @@ public class ModifyResourceLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The protected object on which you want to manage the log collection feature.</p>
+         * <p>The protected object to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +223,7 @@ public class ModifyResourceLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -203,10 +235,12 @@ public class ModifyResourceLogStatusRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the log collection feature for the protected object. Valid values:</p>
+         * <p>The log enabling status of the protected object. Valid values:</p>
          * <ul>
-         * <li><strong>true:</strong> enables the log collection feature.</li>
-         * <li><strong>false:</strong> disables the log collection feature.</li>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Not enabled.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -220,7 +254,10 @@ public class ModifyResourceLogStatusRequest extends Request {
         }
 
         /**
-         * TraceConfig.
+         * <p>The Tracing Analysis configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Workspace&quot;:&quot;cms-test&quot;,&quot;RatePerMille&quot;:90}</p>
          */
         public Builder traceConfig(TraceConfig traceConfig) {
             String traceConfigShrink = shrink(traceConfig, "TraceConfig", "json");
@@ -230,7 +267,19 @@ public class ModifyResourceLogStatusRequest extends Request {
         }
 
         /**
-         * TraceStatus.
+         * <p>The Tracing Analysis status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Shutdown.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>To enable Tracing Analysis, you must first enable the log status <strong>Status</strong> of the protected object.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder traceStatus(Boolean traceStatus) {
             this.putQueryParameter("TraceStatus", traceStatus);
@@ -299,7 +348,10 @@ public class ModifyResourceLogStatusRequest extends Request {
             } 
 
             /**
-             * RatePerMille.
+             * <p>The per-mille sampling rate for Tracing Analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder ratePerMille(Integer ratePerMille) {
                 this.ratePerMille = ratePerMille;
@@ -307,7 +359,10 @@ public class ModifyResourceLogStatusRequest extends Request {
             }
 
             /**
-             * Workspace.
+             * <p>The Hybrid Cloud Monitoring 2.0 workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms-test</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDefenseTemplateStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -42,6 +46,7 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
 
     private ModifyDefenseTemplateStatusRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -60,6 +65,13 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -98,6 +110,7 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDefenseTemplateStatusRequest, Builder> {
+        private Boolean dryRun; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -110,6 +123,7 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
 
         private Builder(ModifyDefenseTemplateStatusRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -118,9 +132,25 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Sends a dry run request. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+         * <li><strong>false</strong>: Sends a normal request. The specified operation is performed after the request passes the check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -134,10 +164,12 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -150,7 +182,7 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -162,7 +194,7 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the protection rule template whose status you want to change.</p>
+         * <p>The ID of the protection rule template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,10 +207,10 @@ public class ModifyDefenseTemplateStatusRequest extends Request {
         }
 
         /**
-         * <p>The new status of the protection rule template. Valid values:</p>
+         * <p>The status of the protection template that you want to set. Valid values:</p>
          * <ul>
-         * <li><strong>0:</strong> disabled.</li>
-         * <li><strong>1:</strong> enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

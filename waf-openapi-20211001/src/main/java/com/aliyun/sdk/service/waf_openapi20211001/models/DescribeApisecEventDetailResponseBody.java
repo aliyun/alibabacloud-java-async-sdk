@@ -210,7 +210,10 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AttackCnt.
+         * <p>The number of attacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>345</p>
          */
         public Builder attackCnt(String attackCnt) {
             this.attackCnt = attackCnt;
@@ -218,7 +221,7 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AttackerList.
+         * <p>The attacker list.</p>
          */
         public Builder attackerList(java.util.List<String> attackerList) {
             this.attackerList = attackerList;
@@ -226,7 +229,10 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DetailValue.
+         * <p>The detailed information about the security event. The value is a string converted from a JSON object constructed by a series of parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;location\&quot;:[\&quot;FR\&quot;,\&quot;CN\&quot;],\&quot;location_type\&quot;:\&quot;country\&quot;}</p>
          */
         public Builder detailValue(String detailValue) {
             this.detailValue = detailValue;
@@ -234,7 +240,10 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EndTs.
+         * <p>The end time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683703260</p>
          */
         public Builder endTs(String endTs) {
             this.endTs = endTs;
@@ -242,7 +251,10 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventId.
+         * <p>The ID of the API security event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18ba94fea9***e66ba0557b7b91</p>
          */
         public Builder eventId(String eventId) {
             this.eventId = eventId;
@@ -250,7 +262,15 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventLevel.
+         * <p>The event level. Valid values:</p>
+         * <ul>
+         * <li><strong>high</strong>: high risk.</li>
+         * <li><strong>medium</strong>: medium risk.</li>
+         * <li><strong>low</strong>: low risk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         public Builder eventLevel(String eventLevel) {
             this.eventLevel = eventLevel;
@@ -258,7 +278,16 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventScope.
+         * <p>The dimension of the security event. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ip</strong> (default): IP security event.</p>
+         * </li>
+         * <li><p><strong>account</strong>: account security event.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder eventScope(String eventScope) {
             this.eventScope = eventScope;
@@ -266,7 +295,13 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EventTag.
+         * <p>The event type.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported event types.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ObtainSensitiveUnauthorized</p>
          */
         public Builder eventTag(String eventTag) {
             this.eventTag = eventTag;
@@ -274,7 +309,10 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Note.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>already confirmed.</p>
          */
         public Builder note(String note) {
             this.note = note;
@@ -282,7 +320,14 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Origin.
+         * <p>The origin of the event type. Valid values:</p>
+         * <ul>
+         * <li><strong>custom</strong>: custom.</li>
+         * <li><strong>default</strong>: built-in.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder origin(String origin) {
             this.origin = origin;
@@ -290,7 +335,10 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +346,10 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * StartTs.
+         * <p>The start time of the query. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683648000</p>
          */
         public Builder startTs(String startTs) {
             this.startTs = startTs;
@@ -306,7 +357,16 @@ public class DescribeApisecEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * UserStatus.
+         * <p>The event status. Valid values:</p>
+         * <ul>
+         * <li><strong>toBeConfirmed</strong>: to be confirmed.</li>
+         * <li><strong>confirmed</strong>: confirmed.</li>
+         * <li><strong>actioned</strong>: handled.</li>
+         * <li><strong>ignored</strong>: ignored.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>toBeConfirmed</p>
          */
         public Builder userStatus(String userStatus) {
             this.userStatus = userStatus;

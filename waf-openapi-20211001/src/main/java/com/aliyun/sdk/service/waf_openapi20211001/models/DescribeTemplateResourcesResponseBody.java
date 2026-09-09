@@ -119,7 +119,10 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +130,13 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token (Token) for the next page. If a next page exists, this field contains a value.</p>
+         * <blockquote>
+         * <p>If this parameter has a return value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAABLQv******37sHZaHk4=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +144,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C7BC9373-3960-53B0-8968-2B13454AE18F</p>
@@ -146,7 +155,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of protected objects or protected object groups that are associated to the protection rule template.</p>
+         * <p>The list of bound protected object names, protected object group names, or protected asset IDs.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;
@@ -154,7 +163,10 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the protection template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>168465</p>
          */
         public Builder templateId(Long templateId) {
             this.templateId = templateId;
@@ -162,7 +174,10 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

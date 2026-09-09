@@ -276,10 +276,12 @@ public class CreateHybridCloudClusterRequest extends Request {
         } 
 
         /**
-         * <p>The network access mode. Valid values:</p>
+         * <p>The network access mode of the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>internet</strong>: Internet access.</li>
-         * <li><strong>vpc</strong>: internal network access by using Express Connect circuits.</li>
+         * <li><p><strong>internet</strong>: access over the Internet.</p>
+         * </li>
+         * <li><p><strong>vpc</strong>: access over an Express Connect circuit.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -293,11 +295,14 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The region where the virtual private cloud (VPC) resides. Valid values:</p>
+         * <p>The region for Express Connect circuit access. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
-         * <li><strong>cn-beiijng</strong>: China (Beijing).</li>
-         * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
+         * <li><p><strong>cn-hangzhou</strong>: Hangzhou.</p>
+         * </li>
+         * <li><p><strong>cn-beijing</strong>: Beijing.</p>
+         * </li>
+         * <li><p><strong>cn-shanghai</strong>: Shanghai.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -310,8 +315,11 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The name of the hybrid cloud cluster.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -320,7 +328,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The HTTP ports that are supported. Set this parameter to a string. Specify multiple ports in the <strong>port1,port2,port3</strong> format.</p>
+         * <p>The listening ports for the HTTP protocol. Separate multiple ports with commas (,), such as <strong>port1,port2,port3</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,7 +341,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The HTTPS ports that are supported. Set this parameter to a string. Specify multiple ports in the <strong>port1,port2,port3</strong> format.</p>
+         * <p>The listening ports for the HTTPS protocol. Separate multiple ports with commas (,), such as <strong>port1,port2,port3</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -346,9 +354,9 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -362,7 +370,12 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * LogFieldsNotReturned.
+         * <blockquote>
+         * <p>This parameter is deprecated. It no longer returns meaningful data.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>deprecated</p>
          */
         public Builder logFieldsNotReturned(String logFieldsNotReturned) {
             this.putQueryParameter("LogFieldsNotReturned", logFieldsNotReturned);
@@ -371,7 +384,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The number of protection nodes that can be added to the cluster.</p>
+         * <p>The maximum number of protection nodes that can be added to the hybrid cloud cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -384,10 +397,12 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The status of the proxy gateway. Valid value:</p>
+         * <p>Indicates whether the proxy gateway is enabled for the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enabled.</li>
-         * <li><strong>off</strong>: disabled.</li>
+         * <li><p><strong>on</strong>: The proxy gateway is enabled.</p>
+         * </li>
+         * <li><p><strong>off</strong>: The proxy gateway is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -400,10 +415,12 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The type of the cluster. Valid value:</p>
+         * <p>The type of the hybrid cloud cluster. Valid values:</p>
          * <ul>
-         * <li><strong>cname</strong>: reverse proxy cluster.</li>
-         * <li><strong>service</strong>: SDK-based traffic mirroring cluster.</li>
+         * <li><p><strong>cname</strong>: reverse proxy cluster. Traffic is forwarded through CNAME resolution.</p>
+         * </li>
+         * <li><p><strong>service</strong>: transparent proxy cluster. Traffic is forwarded at the service level.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -416,10 +433,12 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid value:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -432,7 +451,10 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The remarks about the cluster.</p>
+         * <p>The description of the hybrid cloud cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -441,7 +463,10 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -450,7 +475,7 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the rule.</p>
+         * <p>The configuration of the bypass rule, in JSON format. This includes settings such as circuit breaker thresholds, request body size limits, and timeout values.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -474,10 +499,12 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The status of manual bypass. Valid values:</p>
+         * <p>Indicates whether manual bypass is enabled for the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enabled.</li>
-         * <li><strong>off</strong>: disabled.</li>
+         * <li><p><strong>on</strong>: Manual bypass is enabled.</p>
+         * </li>
+         * <li><p><strong>off</strong>: Manual bypass is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -490,9 +517,9 @@ public class CreateHybridCloudClusterRequest extends Request {
         }
 
         /**
-         * <p>The type of the rule. Valid value:</p>
+         * <p>The type of the bypass rule. Valid values:</p>
          * <ul>
-         * <li><strong>bypass</strong>: allows requests without security checks.</li>
+         * <li><strong>bypass</strong>: skips WAF security checks and allows traffic to pass through directly.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -93,7 +93,7 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10***********34</p>
@@ -104,7 +104,7 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the Alibaba Cloud account. This parameter is returned only if the account is the delegated administrator account.</p>
+         * <p>The Alibaba Cloud account name. This parameter is returned only when the account is a delegated administrator.</p>
          * 
          * <strong>example:</strong>
          * <p>account_test</p>
@@ -115,10 +115,12 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the Alibaba Cloud account is the delegated administrator account of the WAF instance.</p>
+         * <p>Indicates whether the user is a delegated administrator of WAF. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The user is a delegated administrator of WAF.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The user is not a delegated administrator of WAF.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +135,7 @@ public class DescribeAccountDelegatedStatusResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>8161375D-5958-5627-BFDE-DF14****3E87</p>
+         * <p>8161375D-5958-5627-BFDE-DF1458A73E87</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -80,7 +80,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The statistics.</p>
+         * <p>The statistics list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -207,7 +207,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API.</p>
+             * <p>The API operation.</p>
              * 
              * <strong>example:</strong>
              * <p>/api/login</p>
@@ -218,7 +218,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the API.</p>
+             * <p>The ID of the API operation.</p>
              * 
              * <strong>example:</strong>
              * <p>d288137009c119a873d4c395****</p>
@@ -229,7 +229,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of personal information records involved in cross-border data transfer by API.</p>
+             * <p>The number of outbound personal information entries at the API level.</p>
              * 
              * <strong>example:</strong>
              * <p>78</p>
@@ -240,7 +240,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The types of sensitive data.</p>
+             * <p>The list of sensitive data types.</p>
              */
             public Builder sensitiveCode(java.util.List<String> sensitiveCode) {
                 this.sensitiveCode = sensitiveCode;
@@ -248,7 +248,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sensitive personal information records involved in cross-border data transfer by API.</p>
+             * <p>The number of outbound sensitive personal information items at the API level.</p>
              * 
              * <strong>example:</strong>
              * <p>55</p>
@@ -344,7 +344,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of personal information records involved in cross-border data transfer by domain name.</p>
+             * <p>The number of outbound personal information entries at the domain name level.</p>
              * 
              * <strong>example:</strong>
              * <p>213</p>
@@ -355,7 +355,10 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name-related APIs.</p>
+             * <p>The list of API operation statistics information under the domain name.</p>
+             * <blockquote>
+             * <p>This field is returned only when the <strong>Type</strong> parameter is set to <strong>apiFormat</strong>, which represents the API dimension statistics information.</p>
+             * </blockquote>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -374,7 +377,7 @@ public class DescribeSensitiveApiStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sensitive personal information records involved in cross-border data transfer by domain name.</p>
+             * <p>The number of outbound sensitive personal information items at the domain name level.</p>
              * 
              * <strong>example:</strong>
              * <p>127</p>

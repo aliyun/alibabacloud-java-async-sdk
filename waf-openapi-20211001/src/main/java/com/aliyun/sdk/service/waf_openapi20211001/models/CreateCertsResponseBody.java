@@ -67,7 +67,7 @@ public class CreateCertsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456-cn-hangzhou</p>
@@ -78,7 +78,7 @@ public class CreateCertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5BBA38B1-07AE-559F-8766-AB50****C300</p>

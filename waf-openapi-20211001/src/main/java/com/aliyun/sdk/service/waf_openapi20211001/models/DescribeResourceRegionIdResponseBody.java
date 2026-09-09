@@ -78,7 +78,7 @@ public class DescribeResourceRegionIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode.</p>
+         * <p>The region IDs of cloud service resources that can be added to WAF by using the SDK.</p>
          */
         public Builder resourceRegionIds(java.util.List<String> resourceRegionIds) {
             this.resourceRegionIds = resourceRegionIds;

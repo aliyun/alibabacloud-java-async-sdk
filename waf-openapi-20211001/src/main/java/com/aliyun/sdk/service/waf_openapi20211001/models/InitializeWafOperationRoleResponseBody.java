@@ -54,7 +54,10 @@ public class InitializeWafOperationRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EC9EA6C-F80A-5D25-A8F7-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

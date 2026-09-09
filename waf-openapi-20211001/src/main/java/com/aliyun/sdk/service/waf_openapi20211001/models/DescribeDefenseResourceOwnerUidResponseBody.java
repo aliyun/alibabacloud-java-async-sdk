@@ -67,7 +67,7 @@ public class DescribeDefenseResourceOwnerUidResponseBody extends TeaModel {
         } 
 
         /**
-         * OwnerInfos.
+         * <p>The owner account information of the protected objects.</p>
          */
         public Builder ownerInfos(java.util.List<OwnerInfos> ownerInfos) {
             this.ownerInfos = ownerInfos;
@@ -75,7 +75,10 @@ public class DescribeDefenseResourceOwnerUidResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7326952B-B83B-5B7C-84FA-77F3E17310A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeDefenseResourceOwnerUidResponseBody extends TeaModel {
             } 
 
             /**
-             * OwnerUserId.
+             * <p>The ID of the asset owner account of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125************21</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -149,7 +155,10 @@ public class DescribeDefenseResourceOwnerUidResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The name of the protected object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a.com-waf</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;

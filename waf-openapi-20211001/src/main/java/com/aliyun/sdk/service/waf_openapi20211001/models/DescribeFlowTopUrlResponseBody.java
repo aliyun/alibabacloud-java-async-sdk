@@ -78,7 +78,7 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array of the top 10 URLs that are used to initiate requests.</p>
+         * <p>The top 10 URLs that are most frequently accessed.</p>
          */
         public Builder ruleHitsTopUrl(java.util.List<RuleHitsTopUrl> ruleHitsTopUrl) {
             this.ruleHitsTopUrl = ruleHitsTopUrl;
@@ -144,7 +144,7 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of requests that are initiated by using the URL.</p>
+             * <p>The total number of requests for the URL.</p>
              * 
              * <strong>example:</strong>
              * <p>181174784</p>
@@ -155,7 +155,7 @@ public class DescribeFlowTopUrlResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that is used to initiate requests.</p>
+             * <p>The requested URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyundoc.com/path1">www.aliyundoc.com/path1</a></p>

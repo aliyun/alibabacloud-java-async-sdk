@@ -67,7 +67,7 @@ public class ModifyDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the domain name.</p>
+         * <p>The information about the added domain name.</p>
          */
         public Builder domainInfo(DomainInfo domainInfo) {
             this.domainInfo = domainInfo;
@@ -78,7 +78,7 @@ public class ModifyDomainResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>D7861F61-5B61-46CE-A47C-6B19160D5EB0</p>
+         * <p>D7861F61-5B61-46CE-A47C-6B19160D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +157,7 @@ public class ModifyDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CNAME that is assigned by WAF to the domain name.</p>
+             * <p>The CNAME assigned by WAF to the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxcvdaf.****.com</p>
@@ -168,7 +168,7 @@ public class ModifyDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name whose access configurations you modified.</p>
+             * <p>The domain name to be modified.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -179,7 +179,7 @@ public class ModifyDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the domain name.</p>
+             * <p>The domain name ID.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>

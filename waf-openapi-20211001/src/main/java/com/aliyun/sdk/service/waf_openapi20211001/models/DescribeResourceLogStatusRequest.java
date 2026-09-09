@@ -103,9 +103,9 @@ public class DescribeResourceLogStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,10 +119,12 @@ public class DescribeResourceLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +137,7 @@ public class DescribeResourceLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The Alibaba Cloud resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -147,7 +149,7 @@ public class DescribeResourceLogStatusRequest extends Request {
         }
 
         /**
-         * <p>The protected object that you want to query. You can specify multiple protected objects. Separate the protected objects with commas (,).</p>
+         * <p>The protected objects to query. Separate multiple protected objects with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

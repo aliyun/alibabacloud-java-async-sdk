@@ -67,7 +67,7 @@ public class CreateHybridCloudGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the node group.</p>
+         * <p>The ID of the created node group.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -78,7 +78,7 @@ public class CreateHybridCloudGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>48F7C7BA-0932-50EA-89AD-5B0E1***274</p>

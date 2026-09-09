@@ -176,11 +176,11 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>demo</p>
+         * <p>groupTest</p>
          */
         public Builder customName(String customName) {
             this.putQueryParameter("CustomName", customName);
@@ -191,7 +191,7 @@ public class ModifyHybridCloudServerRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -205,7 +205,7 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The machine identifier (MID).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,10 +244,12 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * <p>The region of the WAF instance. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +262,7 @@ public class ModifyHybridCloudServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>The Alibaba Cloud resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>

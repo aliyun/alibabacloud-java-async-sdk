@@ -57,7 +57,7 @@ public class ModifyDefenseResourceXffResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>6C094583-9B3F-5BD8-8748-DC638E****BF</p>
+         * <p>6C094583-9B3F-5BD8-8748-DC638E48****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

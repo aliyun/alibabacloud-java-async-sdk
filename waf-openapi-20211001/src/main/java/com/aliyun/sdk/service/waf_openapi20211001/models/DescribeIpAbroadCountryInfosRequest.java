@@ -159,7 +159,10 @@ public class DescribeIpAbroadCountryInfosRequest extends Request {
         } 
 
         /**
-         * AbroadRegion.
+         * <p>The region outside China to query. Supports fuzzy query by region ID or region name in Chinese or English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>US-CA</p>
          */
         public Builder abroadRegion(String abroadRegion) {
             this.putQueryParameter("AbroadRegion", abroadRegion);
@@ -168,7 +171,10 @@ public class DescribeIpAbroadCountryInfosRequest extends Request {
         }
 
         /**
-         * Country.
+         * <p>The country outside China to query. Supports fuzzy query by country ID or country name in Chinese or English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>US</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -177,6 +183,10 @@ public class DescribeIpAbroadCountryInfosRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the current WAF instance ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +199,16 @@ public class DescribeIpAbroadCountryInfosRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language used for country and region names in the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>en</strong> (<strong>default</strong>): English.</p>
+         * </li>
+         * <li><p><strong>cn</strong>: Simplified Chinese.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -198,7 +217,10 @@ public class DescribeIpAbroadCountryInfosRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 500. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -207,7 +229,10 @@ public class DescribeIpAbroadCountryInfosRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page. Set this parameter to the value of the <strong>NextToken</strong> parameter returned from the previous API call. You do not need to specify this parameter for the first page query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -216,7 +241,16 @@ public class DescribeIpAbroadCountryInfosRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: The Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +259,10 @@ public class DescribeIpAbroadCountryInfosRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzwwk****cv5i</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

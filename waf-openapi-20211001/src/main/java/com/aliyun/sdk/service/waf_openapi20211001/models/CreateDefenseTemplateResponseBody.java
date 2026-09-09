@@ -67,7 +67,7 @@ public class CreateDefenseTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F48ABDF7-D777-5F26-892A-57349765D7A9</p>
@@ -78,7 +78,7 @@ public class CreateDefenseTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the protection rule template.</p>
+         * <p>The ID of the protection template.</p>
          * 
          * <strong>example:</strong>
          * <p>2212</p>

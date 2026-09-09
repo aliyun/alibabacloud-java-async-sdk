@@ -80,7 +80,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -102,7 +102,7 @@ public class ListTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tag values.</p>
+         * <p>The list of tag values.</p>
          */
         public Builder values(java.util.List<String> values) {
             this.values = values;

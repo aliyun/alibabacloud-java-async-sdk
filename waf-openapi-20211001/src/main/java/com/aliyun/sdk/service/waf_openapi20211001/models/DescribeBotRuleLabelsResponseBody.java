@@ -106,7 +106,10 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,13 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. If a value is returned for this parameter, the next page exists.</p>
+         * <blockquote>
+         * <p>If this parameter has a return value, the next page exists. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +131,10 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-6B19****5EB0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,7 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * RuleLabels.
+         * <p>The list of bot management rule tags.</p>
          */
         public Builder ruleLabels(java.util.List<RuleLabels> ruleLabels) {
             this.ruleLabels = ruleLabels;
@@ -138,7 +150,10 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +297,15 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             } 
 
             /**
-             * BotBehavior.
+             * <p>The crawler behavior corresponding to the rule tag.</p>
+             * <ul>
+             * <li><strong>malicious</strong>: malicious crawler.</li>
+             * <li><strong>suspicious</strong>: suspected crawler.</li>
+             * <li><strong>normal</strong>: normal crawler.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>malicious</p>
              */
             public Builder botBehavior(String botBehavior) {
                 this.botBehavior = botBehavior;
@@ -290,7 +313,18 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultAction.
+             * <p>The default action. Valid values:</p>
+             * <ul>
+             * <li><strong>block</strong>: Block.</li>
+             * <li><strong>monitor</strong>: Monitor.</li>
+             * <li><strong>js</strong>: JavaScript verification.</li>
+             * <li><strong>captcha</strong>: slider CAPTCHA.</li>
+             * <li><strong>captcha_strict</strong>: strict slider CAPTCHA.</li>
+             * <li><strong>bypass</strong>: Allow.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block</p>
              */
             public Builder defaultAction(String defaultAction) {
                 this.defaultAction = defaultAction;
@@ -298,7 +332,10 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultConfig.
+             * <p>The default configurations corresponding to the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;crawlerStatusMap&quot;:{&quot;360&quot;:1,&quot;bytedance&quot;:1}}</p>
              */
             public Builder defaultConfig(String defaultConfig) {
                 this.defaultConfig = defaultConfig;
@@ -306,7 +343,14 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultStatus.
+             * <p>The default status of the tag rule.</p>
+             * <ul>
+             * <li><strong>1</strong>: The rule is enabled.</li>
+             * <li><strong>0</strong>: The rule is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder defaultStatus(Integer defaultStatus) {
                 this.defaultStatus = defaultStatus;
@@ -314,7 +358,10 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * LabelKey.
+             * <p>The bot management rule tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>malicious_crawler_python</p>
              */
             public Builder labelKey(String labelKey) {
                 this.labelKey = labelKey;
@@ -322,7 +369,14 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * LabelStatus.
+             * <p>The tag status.</p>
+             * <ul>
+             * <li><strong>online</strong>: Online.</li>
+             * <li><strong>wait_offline</strong>: Pending offline.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder labelStatus(String labelStatus) {
                 this.labelStatus = labelStatus;
@@ -330,7 +384,10 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * LabelType.
+             * <p>The type of the bot rule tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>human_machine_challenge</p>
              */
             public Builder labelType(String labelType) {
                 this.labelType = labelType;
@@ -338,7 +395,14 @@ public class DescribeBotRuleLabelsResponseBody extends TeaModel {
             }
 
             /**
-             * SubScene.
+             * <p>The set of bot management protection scenarios to which the rule belongs. Multiple scenarios are separated by commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>web</strong>: Web protection scenario.</li>
+             * <li><strong>app</strong>: App protection scenario.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>web,app</p>
              */
             public Builder subScene(String subScene) {
                 this.subScene = subScene;

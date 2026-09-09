@@ -67,7 +67,7 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the regions.</p>
+         * <p>The list of region information.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -75,7 +75,7 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0FBBDE11-C35F-531B-96BA-64CA****C875</p>
@@ -144,7 +144,7 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the region.</p>
+             * <p>The region code.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -155,7 +155,7 @@ public class DescribeHybridCloudServerRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region name.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyun</p>

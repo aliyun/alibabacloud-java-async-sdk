@@ -80,7 +80,10 @@ public class DescribeDefenseTemplateValidResourcesResponseBody extends TeaModel 
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C54DD36B-6380-57E5-89BA-2642757C4DB8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeDefenseTemplateValidResourcesResponseBody extends TeaModel 
         }
 
         /**
-         * Resources.
+         * <p>The names of the protected objects that are valid for the protection template.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;
@@ -96,7 +99,10 @@ public class DescribeDefenseTemplateValidResourcesResponseBody extends TeaModel 
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of protected objects that match the query criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

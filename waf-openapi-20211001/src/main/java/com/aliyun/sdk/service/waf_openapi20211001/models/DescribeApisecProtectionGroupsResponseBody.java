@@ -80,7 +80,7 @@ public class DescribeApisecProtectionGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The protected object groups.</p>
+         * <p>The list of protected object groups.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -194,7 +194,7 @@ public class DescribeApisecProtectionGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The switch of the API security module.</p>
+             * <p>The master switch for API security.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -205,7 +205,7 @@ public class DescribeApisecProtectionGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The switch of the compliance check feature.</p>
+             * <p>The compliance check switch.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -227,7 +227,7 @@ public class DescribeApisecProtectionGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The switch of the tracing and auditing feature.</p>
+             * <p>The traceability audit switch.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

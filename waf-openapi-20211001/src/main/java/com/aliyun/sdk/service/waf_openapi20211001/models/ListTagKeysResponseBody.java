@@ -80,7 +80,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The keys and types of the tags.</p>
+         * <p>The list of tag keys and types.</p>
          */
         public Builder keys(java.util.List<Keys> keys) {
             this.keys = keys;
@@ -88,7 +88,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token that is used to start the next query. If this parameter is empty, no more results are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -99,7 +99,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>8CB8BB88-24C7-5608-BF5E-4DCA****CF1C</p>
@@ -168,10 +168,10 @@ public class ListTagKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the tag. Valid values:</p>
+             * <p>The tag type. Valid values:</p>
              * <ul>
-             * <li>custom</li>
-             * <li>system</li>
+             * <li>custom: custom tag.</li>
+             * <li>system: system tag.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class ListTagKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>demoTagKey</p>

@@ -27,6 +27,10 @@ public class CreateDefenseRuleRequest extends Request {
     private String defenseType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -56,6 +60,7 @@ public class CreateDefenseRuleRequest extends Request {
         super(builder);
         this.defenseScene = builder.defenseScene;
         this.defenseType = builder.defenseType;
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
@@ -89,6 +94,13 @@ public class CreateDefenseRuleRequest extends Request {
      */
     public String getDefenseType() {
         return this.defenseType;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -136,6 +148,7 @@ public class CreateDefenseRuleRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDefenseRuleRequest, Builder> {
         private String defenseScene; 
         private String defenseType; 
+        private Boolean dryRun; 
         private String instanceId; 
         private String regionId; 
         private String resource; 
@@ -151,6 +164,7 @@ public class CreateDefenseRuleRequest extends Request {
             super(request);
             this.defenseScene = request.defenseScene;
             this.defenseType = request.defenseType;
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resource = request.resource;
@@ -160,18 +174,58 @@ public class CreateDefenseRuleRequest extends Request {
         } 
 
         /**
-         * <p>The module to which the protection rule that you want to create belongs.</p>
+         * <p>The WAF protection scenario to create.</p>
+         * <p>When the protection rule type <strong>DefenseType</strong> is set to <strong>template</strong>, valid values:</p>
          * <ul>
-         * <li><strong>waf_group:</strong> the basic protection rule module.</li>
-         * <li><strong>antiscan:</strong> the scan protection module.</li>
-         * <li><strong>ip_blacklist:</strong> the IP address blacklist module.</li>
-         * <li><strong>custom_acl:</strong> the custom rule module.</li>
-         * <li><strong>whitelist:</strong> the whitelist module.</li>
-         * <li><strong>region_block:</strong> the region blacklist module.</li>
-         * <li><strong>custom_response:</strong> the custom response module.</li>
-         * <li><strong>cc:</strong> the HTTP flood protection module.</li>
-         * <li><strong>tamperproof:</strong> the website tamper-proofing module.</li>
-         * <li><strong>dlp:</strong> the data leakage prevention module.</li>
+         * <li><p><strong>waf_group</strong>: basic protection.</p>
+         * </li>
+         * <li><p><strong>waf_base</strong>: new version of Web Core Protection.</p>
+         * </li>
+         * <li><p><strong>antiscan</strong>: Scan Protection.</p>
+         * </li>
+         * <li><p><strong>ip_blacklist</strong>: IP Blacklist.</p>
+         * </li>
+         * <li><p><strong>custom_acl</strong>: Custom Rule.</p>
+         * </li>
+         * <li><p><strong>whitelist</strong>: Whitelist.</p>
+         * </li>
+         * <li><p><strong>region_block</strong>: Location Blacklist.</p>
+         * </li>
+         * <li><p><strong>custom_response</strong>: legacy Custom Response.</p>
+         * </li>
+         * <li><p><strong>cc</strong>: HTTP Flood Protection.</p>
+         * </li>
+         * <li><p><strong>tamperproof</strong>: web tamper proofing.</p>
+         * </li>
+         * <li><p><strong>dlp</strong>: Information Leak Prevention.</p>
+         * </li>
+         * <li><p><strong>spike_throttle</strong>: peak traffic throttling.</p>
+         * </li>
+         * <li><p><strong>bot_manager</strong>: BOT Management.</p>
+         * </li>
+         * </ul>
+         * <p>When the protection rule type <strong>DefenseType</strong> is set to <strong>resource</strong>, valid values:</p>
+         * <ul>
+         * <li><p><strong>account_identifier</strong>: Account Extraction.</p>
+         * </li>
+         * <li><p><strong>custom_response</strong>: new version of Custom Response.</p>
+         * </li>
+         * <li><p><strong>waf_codec</strong>: Decoding.</p>
+         * </li>
+         * <li><p><strong>websdk</strong>: WebSDK Integration.</p>
+         * </li>
+         * </ul>
+         * <p>When the protection rule type <strong>DefenseType</strong> is set to <strong>global</strong>, valid values:</p>
+         * <ul>
+         * <li><p><strong>regular_custom</strong>: Custom Regex.</p>
+         * </li>
+         * <li><p><strong>address_book</strong>: Address Book.</p>
+         * </li>
+         * <li><p><strong>custom_response</strong>: new version of Custom Response.</p>
+         * <blockquote>
+         * <p>For the custom response in global configuration, users can reference it at the protected object or rule level. When custom response rules are referenced at different dimensions, the actual effective logic is: rule level &gt; protected object level &gt; default page.</p>
+         * </blockquote>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -185,7 +239,10 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * DefenseType.
+         * <p>The type of the protection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder defenseType(String defenseType) {
             this.putQueryParameter("DefenseType", defenseType);
@@ -194,9 +251,25 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: A dry run request is sent. The system only checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+         * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -212,8 +285,10 @@ public class CreateDefenseRuleRequest extends Request {
         /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,7 +301,13 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * Resource.
+         * <p>The protected object associated with the rule to be created.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>sec****-waf</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -235,7 +316,7 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -247,7 +328,14 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule configuration content, which is a string converted from a JSON-formatted array of parameters.</p>
+         * <blockquote>
+         * <p>The specific parameters vary depending on the specified <strong>protection rule type</strong> (<strong>DefenseScene</strong>). For more information, refer to <strong>Protection rule parameter descriptions</strong>.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_group</p>
          */
         public Builder rules(String rules) {
             this.putBodyParameter("Rules", rules);
@@ -256,7 +344,11 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the rule template for which you want to create a protection rule.</p>
+         * <p>The ID of the protection template for the protection rule to be created.</p>
+         * <blockquote>
+         * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>template</strong>.
+         * There is an upper limit on the number of rules that can be created within the same protection template. For specific limits, refer to <strong>Rule quantity limits</strong>. When the rule quantity has reached the upper limit, you can call the <a href="https://help.aliyun.com/document_detail/461613.html">CreateDefenseTemplate</a> operation to create a new protection template. You can also call the <a href="https://help.aliyun.com/document_detail/461422.html">ModifyDefenseRule</a> operation to modify an existing rule.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1122</p>

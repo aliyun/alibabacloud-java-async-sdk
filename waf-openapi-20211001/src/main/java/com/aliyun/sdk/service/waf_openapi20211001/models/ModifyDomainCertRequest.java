@@ -161,6 +161,7 @@ public class ModifyDomainCertRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the certificate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +174,10 @@ public class ModifyDomainCertRequest extends Request {
         }
 
         /**
-         * CipherSuite.
+         * <p>The type of the cipher suite.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cipherSuite(String cipherSuite) {
             this.putQueryParameter("CipherSuite", cipherSuite);
@@ -182,7 +186,7 @@ public class ModifyDomainCertRequest extends Request {
         }
 
         /**
-         * CustomCiphers.
+         * <p>The specific custom cipher suites to add. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
          */
         public Builder customCiphers(java.util.List<String> customCiphers) {
             this.putQueryParameter("CustomCiphers", customCiphers);
@@ -191,6 +195,7 @@ public class ModifyDomainCertRequest extends Request {
         }
 
         /**
+         * <p>The domain name that you want to manage.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +208,19 @@ public class ModifyDomainCertRequest extends Request {
         }
 
         /**
-         * EnableTLSv3.
+         * <p>Specifies whether TLS 1.3 is supported. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. When TLSVersion is set to tlsv1.3, this value must be true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableTLSv3(Boolean enableTLSv3) {
             this.putQueryParameter("EnableTLSv3", enableTLSv3);
@@ -212,6 +229,10 @@ public class ModifyDomainCertRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,6 +245,13 @@ public class ModifyDomainCertRequest extends Request {
         }
 
         /**
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +264,10 @@ public class ModifyDomainCertRequest extends Request {
         }
 
         /**
-         * TLSVersion.
+         * <p>The TLS version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tlsv1</p>
          */
         public Builder TLSVersion(String TLSVersion) {
             this.putQueryParameter("TLSVersion", TLSVersion);

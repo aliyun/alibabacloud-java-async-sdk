@@ -67,7 +67,10 @@ public class CreateHybridCloudClusterRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterRuleResourceId.
+         * <p>The cluster rule resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdbc-clusterrule-*******m0w</p>
          */
         public Builder clusterRuleResourceId(String clusterRuleResourceId) {
             this.clusterRuleResourceId = clusterRuleResourceId;
@@ -75,7 +78,10 @@ public class CreateHybridCloudClusterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-CC6E-4F3E-*****-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

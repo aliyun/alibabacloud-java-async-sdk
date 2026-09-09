@@ -173,15 +173,13 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The type of the cipher suites. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: all cipher suites.</li>
-         * <li><strong>2</strong>: strong cipher suites.</li>
-         * <li><strong>99</strong>: custom cipher suites.</li>
-         * </ul>
+         * <p>The cipher suite type.</p>
+         * <blockquote>
+         * <p>This parameter is required. You must specify this parameter when you call this operation.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         public Builder cipherSuite(Integer cipherSuite) {
             this.putQueryParameter("CipherSuite", cipherSuite);
@@ -190,7 +188,7 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The custom cipher suites that you want to add. This parameter is available only if you set <strong>CipherSuite</strong> to <strong>99</strong>.</p>
+         * <p>The custom cipher suites to add. This parameter is used only when <strong>CipherSuite</strong> is set to <strong>99</strong>.</p>
          */
         public Builder customCiphers(java.util.List<String> customCiphers) {
             this.putQueryParameter("CustomCiphers", customCiphers);
@@ -199,10 +197,17 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to support TLS 1.3. Valid values:</p>
+         * <p>Specifies whether TLS 1.3 is supported. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
+         * </li>
+         * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is used only when HttpsPorts is not empty, which indicates that the domain name uses the HTTPS protocol. If TLSVersion is set to tlsv1.3, this value must be true.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,9 +220,9 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -231,10 +236,12 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,7 +254,7 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>阿里云资源组ID。</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -259,12 +266,7 @@ public class ModifyDefaultHttpsRequest extends Request {
         }
 
         /**
-         * <p>The version of the TLS protocol. Valid values:</p>
-         * <ul>
-         * <li><strong>tlsv1</strong></li>
-         * <li><strong>tlsv1.1</strong></li>
-         * <li><strong>tlsv1.2</strong></li>
-         * </ul>
+         * <p>The TLS version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

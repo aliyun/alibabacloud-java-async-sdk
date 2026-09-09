@@ -67,7 +67,10 @@ public class DescribeDomainUsedPortsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-<em>-A47C-</em></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeDomainUsedPortsResponseBody extends TeaModel {
         }
 
         /**
-         * UsedPorts.
+         * <p>The list of used ports.</p>
          */
         public Builder usedPorts(java.util.List<Integer> usedPorts) {
             this.usedPorts = usedPorts;

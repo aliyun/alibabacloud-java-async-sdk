@@ -118,7 +118,10 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the hybrid cloud cluster.</p>
+         * <p>The resource ID of the hybrid cloud cluster.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation and find the target hybrid cloud cluster in the <strong>ClusterInfos</strong> array of the response. Use the value of the <strong>ClusterResourceId</strong> field. If no cluster is available, call the <a href="https://help.aliyun.com/document_detail/2980286.html">CreateHybridCloudCluster</a> operation to create a hybrid cloud cluster.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,9 +134,10 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
-         * <p>**</p>
-         * <p>**You can call the **DescribeInstanceInfo<a href="https://help.aliyun.com/document_detail/140857.html"> operation to obtain the ID of the WAF instance.</a></p>
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,10 +150,12 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,10 +180,12 @@ public class ModifyHybridCloudClusterBypassStatusRequest extends Request {
         }
 
         /**
-         * <p>The status of manual bypass. Valid values:</p>
+         * <p>The enabling status of the manual bypass switch. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enabled.</li>
-         * <li><strong>off</strong>: disabled. This is the default value.</li>
+         * <li><p><strong>on</strong>: enabled.</p>
+         * </li>
+         * <li><p><strong>off (default)</strong>: shutdown.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -67,7 +67,7 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The types and statistics of security events.</p>
+         * <p>The list of security event types and statistics.</p>
          */
         public Builder event(java.util.List<Event> event) {
             this.event = event;
@@ -170,7 +170,7 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the security event.</p>
+             * <p>The event code.</p>
              * 
              * <strong>example:</strong>
              * <p>Event_LoginCollision</p>
@@ -192,7 +192,7 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent type of the security event.</p>
+             * <p>The parent event type.</p>
              * 
              * <strong>example:</strong>
              * <p>EventType_Account</p>
@@ -203,13 +203,13 @@ public class DescribeUserEventTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the security event.</p>
+             * <p>The event type.</p>
              * <blockquote>
-             * <p> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of security events.</p>
+             * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported event types.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>Event_AbnormalFrequency</p>
+             * <p>Event_LoginCollision</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;

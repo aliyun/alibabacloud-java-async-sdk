@@ -80,7 +80,10 @@ public class DescribeDefenseGroupValidResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A57BA089-3B28-5C82-8331-7B94****4978</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeDefenseGroupValidResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>The names of the protected objects.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;
@@ -96,7 +99,10 @@ public class DescribeDefenseGroupValidResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

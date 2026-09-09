@@ -117,6 +117,10 @@ public class ModifyUserWafLogStatusRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +133,19 @@ public class ModifyUserWafLogStatusRequest extends Request {
         }
 
         /**
-         * LogRegionId.
+         * <p>The ID of the log storage region. If this parameter is not specified, Simple Log Service is enabled in the region where the WAF instance resides.</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the default region where Simple Log Service is enabled for a WAF instance in the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: the default region where Simple Log Service is enabled for a WAF instance outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/2712598.html">DescribeUserSlsLogRegions</a> to query the available log storage regions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder logRegionId(String logRegionId) {
             this.putQueryParameter("LogRegionId", logRegionId);
@@ -138,6 +154,13 @@ public class ModifyUserWafLogStatusRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether Simple Log Service is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: Simple Log Service is disabled.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Simple Log Service is enabled.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +173,16 @@ public class ModifyUserWafLogStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -159,7 +191,10 @@ public class ModifyUserWafLogStatusRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

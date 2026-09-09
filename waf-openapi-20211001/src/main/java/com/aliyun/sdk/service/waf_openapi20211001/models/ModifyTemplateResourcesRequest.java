@@ -30,6 +30,10 @@ public class ModifyTemplateResourcesRequest extends Request {
     private java.util.List<String> bindResources;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -64,6 +68,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         this.bindAssets = builder.bindAssets;
         this.bindResourceGroups = builder.bindResourceGroups;
         this.bindResources = builder.bindResources;
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -105,6 +110,13 @@ public class ModifyTemplateResourcesRequest extends Request {
      */
     public java.util.List<String> getBindResources() {
         return this.bindResources;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -160,6 +172,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         private java.util.List<String> bindAssets; 
         private java.util.List<String> bindResourceGroups; 
         private java.util.List<String> bindResources; 
+        private Boolean dryRun; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -177,6 +190,7 @@ public class ModifyTemplateResourcesRequest extends Request {
             this.bindAssets = request.bindAssets;
             this.bindResourceGroups = request.bindResourceGroups;
             this.bindResources = request.bindResources;
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -187,7 +201,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         } 
 
         /**
-         * BindAssets.
+         * <p>The IDs of the protected assets to associate, in the format of [&quot;XX1&quot;,&quot;XX2&quot;,...].</p>
          */
         public Builder bindAssets(java.util.List<String> bindAssets) {
             this.putQueryParameter("BindAssets", bindAssets);
@@ -196,7 +210,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The protected object groups that you want to associate with the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
+         * <p>The protected object groups to associate, in the format of [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>].</p>
          */
         public Builder bindResourceGroups(java.util.List<String> bindResourceGroups) {
             this.putQueryParameter("BindResourceGroups", bindResourceGroups);
@@ -205,7 +219,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The protected objects that you want to associate with the template. Specify the value in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+         * <p>The protected objects to associate, in the format of [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>].</p>
          */
         public Builder bindResources(java.util.List<String> bindResources) {
             this.putQueryParameter("BindResources", bindResources);
@@ -214,9 +228,25 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>Specifies whether to enable the dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+         * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -230,10 +260,12 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +290,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the protection rule template.</p>
+         * <p>The ID of the protection template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,7 +303,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * UnbindAssets.
+         * <p>The IDs of the protected assets to disassociate, in the format of [&quot;XX1&quot;,&quot;XX2&quot;,...].</p>
          */
         public Builder unbindAssets(java.util.List<String> unbindAssets) {
             this.putQueryParameter("UnbindAssets", unbindAssets);
@@ -280,7 +312,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The protected object groups that you want to disassociate from the template. Specify the value in the [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>] format.</p>
+         * <p>The protected object groups to disassociate, in the format of [<strong>&quot;group1&quot;,&quot;group2&quot;,...</strong>].</p>
          */
         public Builder unbindResourceGroups(java.util.List<String> unbindResourceGroups) {
             this.putQueryParameter("UnbindResourceGroups", unbindResourceGroups);
@@ -289,7 +321,7 @@ public class ModifyTemplateResourcesRequest extends Request {
         }
 
         /**
-         * <p>The protected objects that you want to disassociate from the template. Specify the value in the [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>] format.</p>
+         * <p>The protected objects to disassociate, in the format of [<strong>&quot;XX1&quot;,&quot;XX2&quot;,...</strong>].</p>
          */
         public Builder unbindResources(java.util.List<String> unbindResources) {
             this.putQueryParameter("UnbindResources", unbindResources);

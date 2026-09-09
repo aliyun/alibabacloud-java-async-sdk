@@ -67,7 +67,7 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The operation records.</p>
+         * <p>The user operation records for API security.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C9825654-327B-5156-A570-847054B4CF10</p>
@@ -222,20 +222,28 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The state before the operation.</p>
-             * <p>Valid values of the risk state:</p>
+             * <p>The status of the threat detection or security event before the operation was performed.</p>
+             * <p>Valid values for threat detection:</p>
              * <ul>
-             * <li><strong>toBeConfirmed</strong></li>
-             * <li><strong>confirmed</strong></li>
-             * <li><strong>toBeFixed</strong></li>
-             * <li><strong>fixed</strong></li>
-             * <li><strong>ignored</strong></li>
+             * <li><p><strong>toBeConfirmed</strong>: to be confirmed.</p>
+             * </li>
+             * <li><p><strong>confirmed</strong>: confirmed.</p>
+             * </li>
+             * <li><p><strong>toBeFixed</strong>: to be fixed.</p>
+             * </li>
+             * <li><p><strong>fixed</strong>: fixed.</p>
+             * </li>
+             * <li><p><strong>ignored</strong>: ignored.</p>
+             * </li>
              * </ul>
-             * <p>Valid values of the event state:</p>
+             * <p>Valid values for a security event:</p>
              * <ul>
-             * <li><strong>toBeConfirmed</strong></li>
-             * <li><strong>confirmed</strong></li>
-             * <li><strong>ignored</strong></li>
+             * <li><p><strong>toBeConfirmed</strong>: to be confirmed.</p>
+             * </li>
+             * <li><p><strong>confirmed</strong>: confirmed.</p>
+             * </li>
+             * <li><p><strong>ignored</strong>: ignored.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -247,10 +255,10 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks.</p>
+             * <p>The remarks that the user added to the operation record.</p>
              * 
              * <strong>example:</strong>
-             * <p>Handled</p>
+             * <p>Procesed</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -258,7 +266,7 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The object ID of the operation record.</p>
+             * <p>The ID of the threat detection or security event associated with the operation record.</p>
              * 
              * <strong>example:</strong>
              * <p>24d997acc48a67a01e09b9c5ad861287</p>
@@ -269,7 +277,16 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * OperationSource.
+             * <p>The source of the operation. Valid values:</p>
+             * <ul>
+             * <li><p><strong>system</strong>: the operation was automatically performed by the system.</p>
+             * </li>
+             * <li><p><strong>custom</strong>: the operation was manually performed by a user.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder operationSource(String operationSource) {
                 this.operationSource = operationSource;
@@ -277,7 +294,7 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the operation was performed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+             * <p>The time when the operation was performed. This value is a UNIX timestamp. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1685072214</p>
@@ -288,20 +305,28 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state after the operation.</p>
-             * <p>Valid values of the risk state:</p>
+             * <p>The status of the threat detection or security event after the operation was performed.</p>
+             * <p>Valid values for threat detection:</p>
              * <ul>
-             * <li><strong>toBeConfirmed</strong></li>
-             * <li><strong>confirmed</strong></li>
-             * <li><strong>toBeFixed</strong></li>
-             * <li><strong>fixed</strong></li>
-             * <li><strong>ignored</strong></li>
+             * <li><p><strong>toBeConfirmed</strong>: to be confirmed.</p>
+             * </li>
+             * <li><p><strong>confirmed</strong>: confirmed.</p>
+             * </li>
+             * <li><p><strong>toBeFixed</strong>: to be fixed.</p>
+             * </li>
+             * <li><p><strong>fixed</strong>: fixed.</p>
+             * </li>
+             * <li><p><strong>ignored</strong>: ignored.</p>
+             * </li>
              * </ul>
-             * <p>Valid values of the event state:</p>
+             * <p>Valid values for a security event:</p>
              * <ul>
-             * <li><strong>toBeConfirmed</strong></li>
-             * <li><strong>confirmed</strong></li>
-             * <li><strong>ignored</strong></li>
+             * <li><p><strong>toBeConfirmed</strong>: to be confirmed.</p>
+             * </li>
+             * <li><p><strong>confirmed</strong>: confirmed.</p>
+             * </li>
+             * <li><p><strong>ignored</strong>: ignored.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -315,8 +340,10 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             /**
              * <p>The type of the operation record. Valid values:</p>
              * <ul>
-             * <li><strong>abnormal</strong>: risk detection</li>
-             * <li><strong>event</strong>: security event</li>
+             * <li><p><strong>abnormal</strong>: threat detection.</p>
+             * </li>
+             * <li><p><strong>event</strong>: security event.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -328,7 +355,7 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>The ID of the user who performed the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>1610954****</p>

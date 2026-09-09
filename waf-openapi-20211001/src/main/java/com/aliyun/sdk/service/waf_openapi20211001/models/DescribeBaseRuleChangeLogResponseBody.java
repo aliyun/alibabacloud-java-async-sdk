@@ -80,7 +80,10 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FBF08CB-8691-5B65-BBF8-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The list of rule group changes.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -96,7 +99,10 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of rule change records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +207,10 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
             } 
 
             /**
-             * CveId.
+             * <p>The CVE ID of the vulnerability associated with the system rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVE-2021-34538</p>
              */
             public Builder cveId(String cveId) {
                 this.cveId = cveId;
@@ -209,7 +218,14 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * Operation.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li>add: added.</li>
+             * <li>modify: modified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -217,7 +233,10 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42755</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -225,7 +244,10 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header XSS Scanner Behavior</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -233,7 +255,10 @@ public class DescribeBaseRuleChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the rule was updated. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1665460629000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -81,7 +81,7 @@ public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status of the applications.</p>
+         * <p>The application status list.</p>
          */
         public Builder processMonitors(java.util.List<ProcessMonitors> processMonitors) {
             this.processMonitors = processMonitors;
@@ -89,7 +89,7 @@ public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DBF79169-B6A0-5C8E-86B2-CFE3****496E</p>
@@ -100,7 +100,10 @@ public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated and no longer returns meaningful data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -179,7 +182,14 @@ public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
             } 
 
             /**
-             * Levle.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li><strong>normal</strong>: Normal.</li>
+             * <li><strong>critical</strong>: abnormal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder levle(String levle) {
                 this.levle = levle;
@@ -187,22 +197,22 @@ public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service that the application provides. Valid values:</p>
+             * <p>The service. Valid values:</p>
              * <ul>
              * <li><strong>tianqingproxy</strong>: centralized management service.</li>
              * <li><strong>redis</strong>: storage service.</li>
-             * <li><strong>scc</strong>: traffic calculation service.</li>
+             * <li><strong>scc</strong>: traffic computing service.</li>
              * <li><strong>keeper</strong>: threat intelligence service.</li>
              * <li><strong>node_exporter</strong>: application log upload service.</li>
              * <li><strong>xagent</strong>: traffic detection service.</li>
              * <li><strong>noproxy</strong>: traffic forwarding service.</li>
              * <li><strong>xloge</strong>: attack log upload service.</li>
              * <li><strong>ilogtail</strong>: log collection service.</li>
-             * <li><strong>xlogd</strong>: log analysis service.</li>
+             * <li><strong>xlogd</strong>: log analysis feature.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>tianqingproxy</p>
+             * <p>keeper</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -210,10 +220,10 @@ public class DescribeHybridCloudProcessMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the application. Valid values:</p>
+             * <p>The running status. Valid values:</p>
              * <ul>
              * <li><strong>0</strong>: abnormal.</li>
-             * <li><strong>1</strong>: normal.</li>
+             * <li><strong>1</strong>: Normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>

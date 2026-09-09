@@ -162,6 +162,7 @@ public class DescribeRelatedDefenseRulesRequest extends Request {
         } 
 
         /**
+         * <p>The WAF protection scenario.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +175,10 @@ public class DescribeRelatedDefenseRulesRequest extends Request {
         }
 
         /**
+         * <p>The type of the protection rule. Only the following value is supported:</p>
+         * <ul>
+         * <li><strong>global</strong>: a global-level rule.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +191,10 @@ public class DescribeRelatedDefenseRulesRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +207,10 @@ public class DescribeRelatedDefenseRulesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -207,7 +219,13 @@ public class DescribeRelatedDefenseRulesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token (<strong>Token</strong>) for the next page. If a next page exists, this field has a return value.</p>
+         * <blockquote>
+         * <p>If this parameter has a return value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -216,7 +234,16 @@ public class DescribeRelatedDefenseRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +252,10 @@ public class DescribeRelatedDefenseRulesRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The Alibaba Cloud resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -234,6 +264,7 @@ public class DescribeRelatedDefenseRulesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the rule to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

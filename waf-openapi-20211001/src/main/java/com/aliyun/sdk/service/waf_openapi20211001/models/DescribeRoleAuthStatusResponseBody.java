@@ -67,7 +67,16 @@ public class DescribeRoleAuthStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthStatus.
+         * <p>Indicates whether the service-linked role for WAF is authorized.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The service-linked role is authorized.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The service-linked role is not authorized.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder authStatus(Boolean authStatus) {
             this.authStatus = authStatus;
@@ -75,7 +84,10 @@ public class DescribeRoleAuthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79ECBB08-079C-57C5-A676-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

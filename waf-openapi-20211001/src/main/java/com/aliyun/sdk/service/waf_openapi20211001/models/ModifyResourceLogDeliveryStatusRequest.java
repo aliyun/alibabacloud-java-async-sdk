@@ -132,7 +132,13 @@ public class ModifyResourceLogDeliveryStatusRequest extends Request {
         } 
 
         /**
-         * DeliveryName.
+         * <p>The name of the log delivery configuration.</p>
+         * <blockquote>
+         * <p>This parameter is required when you enable log delivery by setting <strong>Status</strong> to <strong>true</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>export-kafka</p>
          */
         public Builder deliveryName(String deliveryName) {
             this.putQueryParameter("DeliveryName", deliveryName);
@@ -141,6 +147,10 @@ public class ModifyResourceLogDeliveryStatusRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +163,16 @@ public class ModifyResourceLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,6 +181,7 @@ public class ModifyResourceLogDeliveryStatusRequest extends Request {
         }
 
         /**
+         * <p>The protected object for which you want to modify the log delivery status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +194,10 @@ public class ModifyResourceLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -183,6 +206,13 @@ public class ModifyResourceLogDeliveryStatusRequest extends Request {
         }
 
         /**
+         * <p>Indicates whether to enable log delivery for the protected object. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enables log delivery.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables log delivery.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

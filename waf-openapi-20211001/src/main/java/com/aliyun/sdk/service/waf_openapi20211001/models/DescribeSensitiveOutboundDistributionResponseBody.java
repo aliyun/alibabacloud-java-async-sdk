@@ -67,7 +67,7 @@ public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The traffic distribution of personal information records involved in cross-border data transfer.</p>
+         * <p>The list of cross-border traffic distribution that contains personal information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -157,7 +157,7 @@ public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The country to which the data is transferred.</p>
+             * <p>The destination country.</p>
              * 
              * <strong>example:</strong>
              * <p>US</p>
@@ -168,7 +168,7 @@ public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The number of personal information records involved in cross-border data transfer.</p>
+             * <p>The number of personal information items transferred cross-border.</p>
              * 
              * <strong>example:</strong>
              * <p>213</p>
@@ -179,7 +179,7 @@ public class DescribeSensitiveOutboundDistributionResponseBody extends TeaModel 
             }
 
             /**
-             * <p>The number of sensitive information records involved in cross-border data transfer.</p>
+             * <p>The number of sensitive information items transferred cross-border.</p>
              * 
              * <strong>example:</strong>
              * <p>144</p>

@@ -67,7 +67,7 @@ public class DescribeFreeUserEventCountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the security events that are detected by using the basic detection feature.</p>
+         * <p>The security event information of basic detection.</p>
          */
         public Builder event(Event event) {
             this.event = event;
@@ -203,7 +203,7 @@ public class DescribeFreeUserEventCountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of security events.</p>
+             * <p>The total number of API security events.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>

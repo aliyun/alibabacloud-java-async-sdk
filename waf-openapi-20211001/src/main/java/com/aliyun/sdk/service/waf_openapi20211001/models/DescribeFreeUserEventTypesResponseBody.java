@@ -67,7 +67,7 @@ public class DescribeFreeUserEventTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The types of security events on which basic detection is performed.</p>
+         * <p>The list of security event types detected by the basic detection feature.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -155,7 +155,7 @@ public class DescribeFreeUserEventTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the security event.</p>
+             * <p>The security event type.</p>
              * 
              * <strong>example:</strong>
              * <p>SMSInterfaceAbuse</p>

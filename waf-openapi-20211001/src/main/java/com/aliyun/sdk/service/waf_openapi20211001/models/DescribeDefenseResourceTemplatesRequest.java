@@ -173,9 +173,9 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p> You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -189,10 +189,12 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -205,11 +207,11 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The name of the protected object or protected object group that you want to query.</p>
+         * <p>The name of the protected object or protected object group, or the ID of the protected asset to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxxxhemicals.cn-waf</p>
+         * <p>mitsuichemicals.cn-waf</p>
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -230,11 +232,7 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The type of the protected resource. Valid values:</p>
-         * <ul>
-         * <li><strong>single</strong>: protected object. This is the default value.</li>
-         * <li><strong>group</strong>: protected object group.</li>
-         * </ul>
+         * <p>The type of the protected resource.</p>
          * 
          * <strong>example:</strong>
          * <p>single</p>
@@ -258,7 +256,7 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The name of the protection rule.</p>
          * 
          * <strong>example:</strong>
          * <p>demoRuleName</p>
@@ -272,7 +270,7 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         /**
          * <p>The type of the protection rule. Valid values:</p>
          * <ul>
-         * <li><strong>defense</strong>: defense rule. This is the default value.</li>
+         * <li><strong>defense</strong> (default): protection rule.</li>
          * <li><strong>whitelist</strong>: whitelist rule.</li>
          * </ul>
          * 
@@ -286,7 +284,7 @@ public class DescribeDefenseResourceTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The name of the protection rule template.</p>
+         * <p>The name of the protection template to query.</p>
          * 
          * <strong>example:</strong>
          * <p>test221</p>

@@ -202,7 +202,10 @@ public class DescribeApisecExamplesRequest extends Request {
         } 
 
         /**
-         * AbnormalTag.
+         * <p>The risk type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LackOfSpeedLimit</p>
          */
         public Builder abnormalTag(String abnormalTag) {
             this.putQueryParameter("AbnormalTag", abnormalTag);
@@ -211,6 +214,7 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +227,13 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the hybrid cloud cluster.</p>
+         * <blockquote>
+         * <p>This parameter applies only to hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query hybrid cloud cluster information.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>176</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -232,7 +242,10 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
-         * ExampleType.
+         * <p>The type of the sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sensitive</p>
          */
         public Builder exampleType(String exampleType) {
             this.putQueryParameter("ExampleType", exampleType);
@@ -241,6 +254,10 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +270,10 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 5. Default value: 5. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -262,7 +282,10 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -271,7 +294,16 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -280,7 +312,7 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
-         * RequestSensitiveTypeList.
+         * <p>The list of request sensitive information types.</p>
          */
         public Builder requestSensitiveTypeList(java.util.List<String> requestSensitiveTypeList) {
             this.putQueryParameter("RequestSensitiveTypeList", requestSensitiveTypeList);
@@ -289,7 +321,10 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -298,7 +333,7 @@ public class DescribeApisecExamplesRequest extends Request {
         }
 
         /**
-         * ResponseSensitiveTypeList.
+         * <p>The list of response sensitive information types.</p>
          */
         public Builder responseSensitiveTypeList(java.util.List<String> responseSensitiveTypeList) {
             this.putQueryParameter("ResponseSensitiveTypeList", responseSensitiveTypeList);

@@ -118,7 +118,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the new resource group. You can view the available resource groups in the Resource Management console.</p>
+         * <p>The ID of the new resource group. You can view available resource groups in the resource group console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,10 +131,12 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +149,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the protected object that you want to manage.</p>
+         * <p>The ID of the WAF resource to operate on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +162,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>The Alibaba Cloud resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -172,7 +174,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Set the value to defenseresource.</p>
+         * <p>The resource type. Fixed value: defenseresource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

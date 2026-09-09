@@ -67,7 +67,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the member.</p>
+         * <p>The information about the member accounts.</p>
          */
         public Builder accountInfos(java.util.List<AccountInfos> accountInfos) {
             this.accountInfos = accountInfos;
@@ -75,10 +75,10 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>50C4A80D-D46C-57E0-9A7D-03C0****4852</p>
+         * <p>50C4A80D-D46C-57E0-9A7D-03C078474852</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +183,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the member.</p>
+             * <p>The ID of the member accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>169************21</p>
@@ -194,7 +194,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the member.</p>
+             * <p>The name of the member accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>ipflgmqqnbjg</p>
@@ -205,11 +205,14 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the member.</p>
+             * <p>The status of the member accounts. Valid values:</p>
              * <ul>
-             * <li><strong>enabled</strong>: managed.</li>
-             * <li><strong>disabled</strong>: not managed.</li>
-             * <li><strong>disabling</strong>: being deleted.</li>
+             * <li><p><strong>enabled</strong>: The member accounts is managed.</p>
+             * </li>
+             * <li><p><strong>disabled</strong>: The member accounts is not managed.</p>
+             * </li>
+             * <li><p><strong>disabling</strong>: The member accounts is being deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -221,10 +224,10 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the member.</p>
+             * <p>The description of the member accounts.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>descriptionTest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -232,7 +235,7 @@ public class DescribeMemberAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the member was added.</p>
+             * <p>The time when the member accounts was added.</p>
              * 
              * <strong>example:</strong>
              * <p>1683367751000</p>

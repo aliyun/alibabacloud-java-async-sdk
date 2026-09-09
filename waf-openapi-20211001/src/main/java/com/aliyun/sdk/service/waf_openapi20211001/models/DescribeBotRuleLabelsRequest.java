@@ -145,6 +145,10 @@ public class DescribeBotRuleLabelsRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +161,10 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * LabelType.
+         * <p>The type of bot rule tag to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>human_machine_challenge</p>
          */
         public Builder labelType(String labelType) {
             this.putQueryParameter("LabelType", labelType);
@@ -166,7 +173,10 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 200. Default value: 20. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -175,7 +185,13 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. If a value is returned for this parameter, the next page exists.</p>
+         * <blockquote>
+         * <p>If this parameter has a return value, the next page exists. Use the returned NextToken value as a request parameter to retrieve the next page of data. Repeat until no value is returned, which indicates that all data has been retrieved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -184,7 +200,16 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +218,10 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -202,7 +230,10 @@ public class DescribeBotRuleLabelsRequest extends Request {
         }
 
         /**
-         * SubScene.
+         * <p>The type of bot management protection scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         public Builder subScene(String subScene) {
             this.putQueryParameter("SubScene", subScene);

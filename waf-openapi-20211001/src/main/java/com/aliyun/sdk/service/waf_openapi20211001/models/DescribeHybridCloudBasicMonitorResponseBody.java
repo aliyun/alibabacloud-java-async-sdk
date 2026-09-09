@@ -81,7 +81,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The basic metrics.</p>
+         * <p>The list of basic monitoring items.</p>
          */
         public Builder basicMonitors(java.util.List<BasicMonitors> basicMonitors) {
             this.basicMonitors = basicMonitors;
@@ -89,7 +89,7 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0B8AF42B-16A9-5762-AEF3-D148****FE5D</p>
@@ -100,7 +100,12 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <blockquote>
+         * <p>This parameter is deprecated and no longer returns meaningful data.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -179,7 +184,16 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
             } 
 
             /**
-             * Levle.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>normal</strong>: Normal.</p>
+             * </li>
+             * <li><p><code>****</code>: abnormal (four asterisk characters are returned).</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder levle(String levle) {
                 this.levle = levle;
@@ -187,11 +201,14 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric. Valid values:</p>
+             * <p>The monitoring item. Valid values:</p>
              * <ul>
-             * <li><strong>basic_monitor_cpu_usage</strong>: the CPU.</li>
-             * <li><strong>basic_monitor_memory_usage</strong>: the memory.</li>
-             * <li><strong>basic_monitor_disk_usage</strong>: the disk.</li>
+             * <li><p><strong>basic_monitor_cpu_usage</strong>: CPU.</p>
+             * </li>
+             * <li><p><strong>basic_monitor_memory_usage</strong>: memory.</p>
+             * </li>
+             * <li><p><strong>basic_monitor_disk_usage</strong>: disk.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -203,10 +220,10 @@ public class DescribeHybridCloudBasicMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource usage.</p>
+             * <p>The usage ratio.</p>
              * 
              * <strong>example:</strong>
-             * <p>5.905694</p>
+             * <p>20</p>
              */
             public Builder useRatio(Long useRatio) {
                 this.useRatio = useRatio;

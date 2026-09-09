@@ -160,7 +160,10 @@ public class DescribeDefenseRuleStatisticsRequest extends Request {
         } 
 
         /**
-         * FourthKey.
+         * <p>The quaternary query condition. The value cannot be the same as the primary, secondary, or tertiary query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>riskLevel</p>
          */
         public Builder fourthKey(String fourthKey) {
             this.putQueryParameter("FourthKey", fourthKey);
@@ -169,6 +172,10 @@ public class DescribeDefenseRuleStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,6 +188,7 @@ public class DescribeDefenseRuleStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The primary query condition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +201,16 @@ public class DescribeDefenseRuleStatisticsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,7 +219,10 @@ public class DescribeDefenseRuleStatisticsRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -211,7 +231,10 @@ public class DescribeDefenseRuleStatisticsRequest extends Request {
         }
 
         /**
-         * SecondaryKey.
+         * <p>The secondary query condition. The value cannot be the same as the primary query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>action</p>
          */
         public Builder secondaryKey(String secondaryKey) {
             this.putQueryParameter("SecondaryKey", secondaryKey);
@@ -220,6 +243,10 @@ public class DescribeDefenseRuleStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the protection template to query.</p>
+         * <blockquote>
+         * <p>This operation supports querying protection templates under the new Bot Management (<strong>bot_manager</strong>) and new Web Core Protection (<strong>waf_base</strong>) scenarios. You can call <a href="https://help.aliyun.com/document_detail/2712643.html">DescribeDefenseTemplates</a> to query the protection scenario (DefenseScene) of a protection template.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +259,10 @@ public class DescribeDefenseRuleStatisticsRequest extends Request {
         }
 
         /**
-         * ThirdKey.
+         * <p>The tertiary query condition. The value cannot be the same as the primary or secondary query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status</p>
          */
         public Builder thirdKey(String thirdKey) {
             this.putQueryParameter("ThirdKey", thirdKey);

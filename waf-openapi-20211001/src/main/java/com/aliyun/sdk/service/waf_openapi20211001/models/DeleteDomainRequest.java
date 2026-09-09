@@ -117,10 +117,10 @@ public class DeleteDomainRequest extends Request {
         } 
 
         /**
-         * <p>The mode in which the domain name is added to WAF. Valid values:</p>
+         * <p>The access type of the WAF instance. Valid values:</p>
          * <ul>
-         * <li><strong>share:</strong> CNAME record mode. This is the default value.</li>
-         * <li><strong>hybrid_cloud_cname:</strong> hybrid cloud reverse proxy mode.</li>
+         * <li><strong>share</strong> (default): CNAME access.</li>
+         * <li><strong>hybrid_cloud_cname</strong>: hybrid cloud reverse proxy access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,10 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * <p>The domain name that you want to delete.</p>
+         * <p>The domain name that has been connected to WAF.</p>
+         * <blockquote>
+         * <p>You must specify at least one of <strong>Domain</strong> and <strong>DomainId</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -145,7 +148,10 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * <p>The ID of the domain name.</p>
+         * <p>The domain name ID.</p>
+         * <blockquote>
+         * <p>You must specify at least one of <strong>Domain</strong> and <strong>DomainId</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
@@ -159,7 +165,7 @@ public class DeleteDomainRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</p>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -173,10 +179,12 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1:</strong> outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

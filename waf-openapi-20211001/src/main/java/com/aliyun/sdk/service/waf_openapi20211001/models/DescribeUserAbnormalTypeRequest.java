@@ -146,7 +146,7 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         /**
          * <p>The ID of the hybrid cloud cluster.</p>
          * <blockquote>
-         * <p>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</p>
+         * <p>This parameter applies only to hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the IDs of hybrid cloud clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The end of the time range to query. Specify the time as a UNIX timestamp in seconds. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1726113600</p>
@@ -171,9 +171,9 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -187,10 +187,12 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +217,7 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
+         * <p>The beginning of the time range to query. Specify the time as a UNIX timestamp in seconds. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1723435200</p>
@@ -227,7 +229,10 @@ public class DescribeUserAbnormalTypeRequest extends Request {
         }
 
         /**
-         * UserStatusList.
+         * <p>The list of risk states for which to collect statistics.</p>
+         * <blockquote>
+         * <p>By default, statistics are collected for risks in the <strong>toBeConfirmed</strong>, <strong>toBeFixed</strong>, <strong>toBeVerified</strong>, and <strong>notFixed</strong> states.</p>
+         * </blockquote>
          */
         public Builder userStatusList(java.util.List<String> userStatusList) {
             this.putQueryParameter("UserStatusList", userStatusList);

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CopyDefenseTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -37,6 +41,7 @@ public class CopyDefenseTemplateRequest extends Request {
 
     private CopyDefenseTemplateRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -54,6 +59,13 @@ public class CopyDefenseTemplateRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -85,6 +97,7 @@ public class CopyDefenseTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CopyDefenseTemplateRequest, Builder> {
+        private Boolean dryRun; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -96,6 +109,7 @@ public class CopyDefenseTemplateRequest extends Request {
 
         private Builder(CopyDefenseTemplateRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -103,9 +117,18 @@ public class CopyDefenseTemplateRequest extends Request {
         } 
 
         /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
          * <p>The ID of the Web Application Firewall (WAF) instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -119,10 +142,12 @@ public class CopyDefenseTemplateRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -135,7 +160,7 @@ public class CopyDefenseTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>The ID of the resource group to which the WAF instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>

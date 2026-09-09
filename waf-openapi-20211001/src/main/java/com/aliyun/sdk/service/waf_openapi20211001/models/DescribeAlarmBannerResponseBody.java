@@ -67,7 +67,7 @@ public class DescribeAlarmBannerResponseBody extends TeaModel {
         } 
 
         /**
-         * BannerStatus.
+         * <p>The status information of the alert banner.</p>
          */
         public Builder bannerStatus(BannerStatus bannerStatus) {
             this.bannerStatus = bannerStatus;
@@ -75,7 +75,10 @@ public class DescribeAlarmBannerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5555DC36-0CF2-5AA3-B1C7-D6BD8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,20 @@ public class DescribeAlarmBannerResponseBody extends TeaModel {
             } 
 
             /**
-             * Cause.
+             * <p>The cause of the alert. If <strong>Type</strong> is set to <strong>sandbox</strong>, valid values:</p>
+             * <ul>
+             * <li><p><strong>fivefold</strong>: The queries per second (QPS) of your service exceeds five times the upper limit of your plan.</p>
+             * </li>
+             * <li><p><strong>4count</strong>: The QPS of your service has exceeded the upper limit of your plan for four or more days.</p>
+             * </li>
+             * <li><p><strong>exceed10w</strong>: The peak QPS of your service exceeds 100,000.</p>
+             * </li>
+             * <li><p><strong>costProtection</strong>: Billing protection is triggered.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4count</p>
              */
             public Builder cause(String cause) {
                 this.cause = cause;
@@ -175,7 +191,13 @@ public class DescribeAlarmBannerResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The count associated with the alert at the time it was triggered.</p>
+             * <ul>
+             * <li>If <strong>Type</strong> is set to <strong>sandbox</strong>, this parameter indicates the number of days that the QPS has exceeded the upper limit of your plan.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>9008</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -183,7 +205,16 @@ public class DescribeAlarmBannerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether an alert is triggered. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: An alert is triggered. If <strong>Type</strong> is set to <strong>sandbox</strong>, the instance is in the sandbox.</p>
+             * </li>
+             * <li><p><strong>false</strong>: No alert is triggered. If <strong>Type</strong> is set to <strong>sandbox</strong>, the instance is not in the sandbox.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -191,7 +222,13 @@ public class DescribeAlarmBannerResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The alert type. Valid value:</p>
+             * <ul>
+             * <li><strong>sandbox</strong>: a sandbox alert.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>sandbox</p>
              */
             public Builder type(String type) {
                 this.type = type;

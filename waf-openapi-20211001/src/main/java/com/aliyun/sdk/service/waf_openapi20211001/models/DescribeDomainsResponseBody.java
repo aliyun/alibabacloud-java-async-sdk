@@ -80,7 +80,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The domain names that are added to WAF in CNAME record mode.</p>
+         * <p>The list of domain names.</p>
          */
         public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
@@ -88,7 +88,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABF68BB3-2C48-5FA4-9750-D5FE55700E36</p>
@@ -99,7 +99,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of domain name configurations returned.</p>
          * 
          * <strong>example:</strong>
          * <p>146</p>
@@ -155,7 +155,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP address of the origin server.</p>
+             * <p>The origin address for the HTTP protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.XX.XX</p>
@@ -212,7 +212,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTPS address of the origin server.</p>
+             * <p>The origin address for the HTTPS protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>1.1.XX.XX</p>
@@ -282,7 +282,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP addresses of the origin server.</p>
+             * <p>The list of origin addresses for the HTTP protocol.</p>
              */
             public Builder http(java.util.List<Http> http) {
                 this.http = http;
@@ -290,7 +290,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTPS addresses of the origin server.</p>
+             * <p>The list of origin addresses for the HTTPS protocol.</p>
              */
             public Builder https(java.util.List<Https> https) {
                 this.https = https;
@@ -357,7 +357,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP listener ports.</p>
+             * <p>The list of listening ports for the HTTP protocol.</p>
              */
             public Builder http(java.util.List<Long> http) {
                 this.http = http;
@@ -365,7 +365,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTPS listener ports.</p>
+             * <p>The list of listening ports for the HTTPS protocol.</p>
              */
             public Builder https(java.util.List<Long> https) {
                 this.https = https;
@@ -497,7 +497,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The back-to-origin settings.</p>
+             * <p>The back-to-origin configuration.</p>
              */
             public Builder backeds(Backeds backeds) {
                 this.backeds = backeds;
@@ -505,7 +505,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CNAME assigned by WAF to the domain name.</p>
+             * <p>The canonical name (CNAME) that is assigned to the domain name by WAF.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxcvdaf.****.com</p>
@@ -516,7 +516,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name that is added to WAF in CNAME record mode.</p>
+             * <p>The domain name that is added to WAF.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -527,7 +527,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainId.
+             * <p>The ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyundoc.com-waf">www.aliyundoc.com-waf</a></p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -535,7 +538,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the listeners.</p>
+             * <p>The listener configuration.</p>
              */
             public Builder listenPorts(ListenPorts listenPorts) {
                 this.listenPorts = listenPorts;
@@ -543,7 +546,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The ID of the Alibaba Cloud resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfmvtc5z52****</p>
@@ -556,11 +559,16 @@ public class DescribeDomainsResponseBody extends TeaModel {
             /**
              * <p>The status of the domain name. Valid values:</p>
              * <ul>
-             * <li><strong>1:</strong> The domain name is in a normal state.</li>
-             * <li><strong>2:</strong> The domain name is being created.</li>
-             * <li><strong>3:</strong> The domain name is being modified.</li>
-             * <li><strong>4:</strong> The domain name is being released.</li>
-             * <li><strong>5:</strong> WAF no longer forwards traffic that is sent to the domain name.</li>
+             * <li><p><strong>1</strong>: The domain name is in a normal state.</p>
+             * </li>
+             * <li><p><strong>2</strong>: The domain name is being created.</p>
+             * </li>
+             * <li><p><strong>3</strong>: The domain name is being modified.</p>
+             * </li>
+             * <li><p><strong>4</strong>: The domain name is being released.</p>
+             * </li>
+             * <li><p><strong>5</strong>: Forwarding is disabled for the domain name.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

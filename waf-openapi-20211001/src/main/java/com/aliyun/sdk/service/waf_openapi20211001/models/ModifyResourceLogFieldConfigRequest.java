@@ -161,6 +161,12 @@ public class ModifyResourceLogFieldConfigRequest extends Request {
         } 
 
         /**
+         * <p>The log delivery type. Valid values:</p>
+         * <ul>
+         * <li><strong>sls</strong>: Simple Log Service.</li>
+         * <li><strong>kafka</strong>: external delivery to Kafka logs.</li>
+         * <li><strong>syslog</strong>: external delivery to Syslog logs.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +179,13 @@ public class ModifyResourceLogFieldConfigRequest extends Request {
         }
 
         /**
-         * ExtendConfig.
+         * <p>The log delivery extension configuration. The value is a string converted from a JSON object constructed with a series of parameters.</p>
+         * <blockquote>
+         * <p>For more information, see the <strong>Log delivery extension configuration</strong> parameter description.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;request_header\&quot;:\&quot;Ali-Cdn-Real-Ip\&quot;}</p>
          */
         public Builder extendConfig(String extendConfig) {
             this.putQueryParameter("ExtendConfig", extendConfig);
@@ -182,6 +194,13 @@ public class ModifyResourceLogFieldConfigRequest extends Request {
         }
 
         /**
+         * <p>The list of log fields to deliver. Specify the fields in the &quot;a,b,c,...&quot; format.</p>
+         * <blockquote>
+         * <ul>
+         * <li>All required log fields must be included. You can invoke the <a href="~~DescribeCommonLogFields~~">DescribeCommonLogFields</a> operation to view the log fields supported by Simple Log Service for WAF. </li>
+         * <li>If the log fields include <strong>request_header</strong>, use the <strong>delivery extension configuration</strong> (<strong>ExtendConfig</strong>) parameter to specify the request headers to deliver.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +213,10 @@ public class ModifyResourceLogFieldConfigRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +229,13 @@ public class ModifyResourceLogFieldConfigRequest extends Request {
         }
 
         /**
-         * LogDeliveryStrategy.
+         * <p>The log delivery strategy. Multiple strategies are supported. The value is a string converted from a JSON array constructed with a series of parameters.</p>
+         * <blockquote>
+         * <p>For more information, see the <strong>Log delivery strategy</strong> parameter description.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;logType\&quot;:\&quot;blockLog\&quot;,\&quot;rate\&quot;:100},{\&quot;logType\&quot;:\&quot;normalRequestLog\&quot;,\&quot;rate\&quot;:100},{\&quot;logType\&quot;:\&quot;checkLog\&quot;,\&quot;rate\&quot;:100}]</p>
          */
         public Builder logDeliveryStrategy(String logDeliveryStrategy) {
             this.putQueryParameter("LogDeliveryStrategy", logDeliveryStrategy);
@@ -215,7 +244,16 @@ public class ModifyResourceLogFieldConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -224,6 +262,7 @@ public class ModifyResourceLogFieldConfigRequest extends Request {
         }
 
         /**
+         * <p>The protected object to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +275,10 @@ public class ModifyResourceLogFieldConfigRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

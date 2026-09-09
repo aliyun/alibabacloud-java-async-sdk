@@ -133,11 +133,23 @@ public class CreateLogDeliveryConfigRequest extends Request {
         } 
 
         /**
-         * <p>The content of the log delivery configuration. Set the value to a JSON string that contains multiple parameters.</p>
+         * <p>The content of the log delivery configuration. The value is a JSON string constructed from a series of parameters.</p>
          * <blockquote>
-         * <p> The parameters vary based on the type of the <strong>log delivery configuration</strong> specified by <strong>DeliveryType</strong>. For more information, see <strong>Parameter description for log delivery configuration</strong>.</p>
+         * <p>The parameters vary based on the specified <strong>delivery type</strong> (<strong>DeliveryType</strong>). For more information, see <strong>Description of delivery configuration content parameters</strong>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;rfcVersion&quot;: &quot;rfc3164&quot;,
+         *   &quot;protocol&quot;: &quot;tcp&quot;,
+         *   &quot;servers&quot;: [
+         *     {
+         *       &quot;address&quot;: &quot;1.1.1.1&quot;,
+         *       &quot;port&quot;: 20
+         *     }
+         *   ]
+         * }</p>
          */
         public Builder deliveryDetail(String deliveryDetail) {
             this.putQueryParameter("DeliveryDetail", deliveryDetail);
@@ -161,13 +173,13 @@ public class CreateLogDeliveryConfigRequest extends Request {
         /**
          * <p>The type of the log delivery configuration. Valid values:</p>
          * <ul>
-         * <li><strong>syslog</strong>: Logs are delivered to a syslog service.</li>
-         * <li><strong>kafka</strong>: Logs are delivered to a Kafka service.</li>
+         * <li><strong>syslog</strong>: delivers logs to a syslog service.</li>
+         * <li><strong>kafka</strong>: delivers logs to a Kafka service.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>kafka</p>
+         * <p>syslog</p>
          */
         public Builder deliveryType(String deliveryType) {
             this.putQueryParameter("DeliveryType", deliveryType);
@@ -176,9 +188,9 @@ public class CreateLogDeliveryConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+         * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -192,10 +204,12 @@ public class CreateLogDeliveryConfigRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the WAF instance. Valid values:</p>
+         * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: the Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

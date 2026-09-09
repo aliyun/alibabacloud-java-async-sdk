@@ -38,6 +38,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ClearAddressResponse> clearAddress(ClearAddressRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * 
      * @param request the request parameters of ClearMajorProtectionBlackIp  ClearMajorProtectionBlackIpRequest
      * @return ClearMajorProtectionBlackIpResponse
      */
@@ -62,6 +65,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCertsResponse> createCerts(CreateCertsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, complete the following steps:</p>
+     * <ol>
+     * <li>Confirm that you have a WAF instance. Invoke <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</li>
+     * <li>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. Refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/464617.html">ECS connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB connection</a> documentation. For Anti-DDoS connections, which are configured for domain names, refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/3032763.html">Anti-DDoS connection</a> documentation.
+     * After completing the preceding steps, invoke this operation to connect the cloud service to WAF in cloud native mode.</li>
+     * </ol>
+     * 
      * @param request the request parameters of CreateCloudResource  CreateCloudResourceRequest
      * @return CreateCloudResourceResponse
      */
@@ -98,6 +109,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDefenseTemplateResponse> createDefenseTemplate(CreateDefenseTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, the domain name (<strong>Domain</strong>) must meet the following requirements.</p>
+     * <ul>
+     * <li><strong>Domain ownership authentication</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <strong>DomainName</strong> parameter to specify the domain name. The <strong>DescribeVerifyContent</strong> operation also requires the <strong>AccessOrigin</strong> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</li>
+     * <li><strong>ICP filing</strong>: If <strong>AccessType</strong> is set to <strong>share</strong> (CNAME access) or <strong>hybrid_cloud_cname</strong> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDomain  CreateDomainRequest
      * @return CreateDomainResponse
      */
@@ -110,6 +128,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHybridCloudClusterResponse> createHybridCloudCluster(CreateHybridCloudClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of CreateHybridCloudClusterRule  CreateHybridCloudClusterRuleRequest
      * @return CreateHybridCloudClusterRuleResponse
      */
@@ -122,6 +143,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHybridCloudGroupResponse> createHybridCloudGroup(CreateHybridCloudGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the value of the Details.HybridCloudNodeExtend response parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
+     * 
      * @param request the request parameters of CreateLogDeliveryConfig  CreateLogDeliveryConfigRequest
      * @return CreateLogDeliveryConfigResponse
      */
@@ -129,7 +153,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is available only on the China site (aliyun.com).</p>
+     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
      * 
      * @param request the request parameters of CreateMajorProtectionBlackIp  CreateMajorProtectionBlackIpRequest
      * @return CreateMajorProtectionBlackIpResponse
@@ -137,6 +161,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMajorProtectionBlackIpResponse> createMajorProtectionBlackIp(CreateMajorProtectionBlackIpRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, ensure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not, upgrade the instance to enable multi-account management. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> folder to configure a WAF delegated administrator in the resource directory first.</p>
+     * 
      * @param request the request parameters of CreateMemberAccounts  CreateMemberAccountsRequest
      * @return CreateMemberAccountsResponse
      */
@@ -149,6 +176,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePocFunctionResponse> createPocFunction(CreatePocFunctionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Each Alibaba Cloud account can have only one WAF instance in the same region (the Chinese mainland or outside the Chinese mainland). Before calling this operation, call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to check whether a WAF instance already exists in the region specified by <strong>RegionId</strong>. If a pay-as-you-go instance already exists, call the <a href="https://help.aliyun.com/document_detail/2834183.html">ReleaseInstance</a> operation to release it. If a subscription instance already exists, unsubscribe from it in the WAF console. You can create a new pay-as-you-go instance only after the existing instance is released or unsubscribed.</p>
+     * 
      * @param request the request parameters of CreatePostpaidInstance  CreatePostpaidInstanceRequest
      * @return CreatePostpaidInstanceResponse
      */
@@ -227,6 +257,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DeleteHybridCloudClusterRule  DeleteHybridCloudClusterRuleRequest
      * @return DeleteHybridCloudClusterRuleResponse
      */
@@ -239,18 +272,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteHybridCloudGroupResponse> deleteHybridCloudGroup(DeleteHybridCloudGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</p>
+     * 
      * @param request the request parameters of DeleteLogDeliveryConfig  DeleteLogDeliveryConfigRequest
      * @return DeleteLogDeliveryConfigResponse
      */
     CompletableFuture<DeleteLogDeliveryConfigResponse> deleteLogDeliveryConfig(DeleteLogDeliveryConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * 
      * @param request the request parameters of DeleteMajorProtectionBlackIp  DeleteMajorProtectionBlackIpRequest
      * @return DeleteMajorProtectionBlackIpResponse
      */
     CompletableFuture<DeleteMajorProtectionBlackIpResponse> deleteMajorProtectionBlackIp(DeleteMajorProtectionBlackIpRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.ResourceDirectory response parameter is true, the instance supports the multi-account management feature. If the instance does not support this feature, upgrade the instance to enable multi-account management. Call the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management</a> documentation to configure a WAF delegated administrator in the resource directory first.</p>
+     * 
      * @param request the request parameters of DeleteMemberAccount  DeleteMemberAccountRequest
      * @return DeleteMemberAccountResponse
      */
@@ -545,6 +587,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDefenseResourceNamesResponse> describeDefenseResourceNames(DescribeDefenseResourceNamesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that a WAF instance already exists under the current Alibaba Cloud account. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the InstanceId parameter in the response has a value (in the format of waf_v2_public_cn********60f), the instance exists. If no instance exists, call the <a href="https://help.aliyun.com/document_detail/2773874.html">CreatePostpaidInstance</a> operation to create a pay-as-you-go instance, or log on to the WAF console to purchase an instance.</p>
+     * 
      * @param request the request parameters of DescribeDefenseResourceOwnerUid  DescribeDefenseResourceOwnerUidRequest
      * @return DescribeDefenseResourceOwnerUidResponse
      */
@@ -569,6 +614,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDefenseRuleResponse> describeDefenseRule(DescribeDefenseRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</p>
+     * 
      * @param request the request parameters of DescribeDefenseRuleStatistics  DescribeDefenseRuleStatisticsRequest
      * @return DescribeDefenseRuleStatisticsResponse
      */
@@ -683,12 +731,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFreeUserEventsResponse> describeFreeUserEvents(DescribeFreeUserEventsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for your WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudBasicMonitor  DescribeHybridCloudBasicMonitorRequest
      * @return DescribeHybridCloudBasicMonitorResponse
      */
     CompletableFuture<DescribeHybridCloudBasicMonitorResponse> describeHybridCloudBasicMonitor(DescribeHybridCloudBasicMonitorRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudClusterRule  DescribeHybridCloudClusterRuleRequest
      * @return DescribeHybridCloudClusterRuleResponse
      */
@@ -701,6 +755,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHybridCloudClusterRulesResponse> describeHybridCloudClusterRules(DescribeHybridCloudClusterRulesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudClusterServers  DescribeHybridCloudClusterServersRequest
      * @return DescribeHybridCloudClusterServersResponse
      */
@@ -713,12 +770,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHybridCloudClustersResponse> describeHybridCloudClusters(DescribeHybridCloudClustersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudGroups  DescribeHybridCloudGroupsRequest
      * @return DescribeHybridCloudGroupsResponse
      */
     CompletableFuture<DescribeHybridCloudGroupsResponse> describeHybridCloudGroups(DescribeHybridCloudGroupsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudProcessMonitor  DescribeHybridCloudProcessMonitorRequest
      * @return DescribeHybridCloudProcessMonitorResponse
      */
@@ -743,24 +806,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHybridCloudResourcesResponse> describeHybridCloudResources(DescribeHybridCloudResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudSdkServers  DescribeHybridCloudSdkServersRequest
      * @return DescribeHybridCloudSdkServersResponse
      */
     CompletableFuture<DescribeHybridCloudSdkServersResponse> describeHybridCloudSdkServers(DescribeHybridCloudSdkServersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudServerRegions  DescribeHybridCloudServerRegionsRequest
      * @return DescribeHybridCloudServerRegionsResponse
      */
     CompletableFuture<DescribeHybridCloudServerRegionsResponse> describeHybridCloudServerRegions(DescribeHybridCloudServerRegionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudSupportRegions  DescribeHybridCloudSupportRegionsRequest
      * @return DescribeHybridCloudSupportRegionsResponse
      */
     CompletableFuture<DescribeHybridCloudSupportRegionsResponse> describeHybridCloudSupportRegions(DescribeHybridCloudSupportRegionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudUnassignedMachines  DescribeHybridCloudUnassignedMachinesRequest
      * @return DescribeHybridCloudUnassignedMachinesResponse
      */
@@ -773,6 +848,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeHybridCloudUnsupportPortsResponse> describeHybridCloudUnsupportPorts(DescribeHybridCloudUnsupportPortsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of DescribeHybridCloudUser  DescribeHybridCloudUserRequest
      * @return DescribeHybridCloudUserResponse
      */
@@ -803,12 +881,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLogDeliveryConfigsResponse> describeLogDeliveryConfigs(DescribeLogDeliveryConfigsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * 
      * @param request the request parameters of DescribeMajorProtectionBlackIps  DescribeMajorProtectionBlackIpsRequest
      * @return DescribeMajorProtectionBlackIpsResponse
      */
     CompletableFuture<DescribeMajorProtectionBlackIpsResponse> describeMajorProtectionBlackIps(DescribeMajorProtectionBlackIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports the multi-account management feature. If not, upgrade the instance to enable the multi-account management feature. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder.</p>
+     * 
      * @param request the request parameters of DescribeMemberAccounts  DescribeMemberAccountsRequest
      * @return DescribeMemberAccountsResponse
      */
@@ -881,6 +965,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeResourceInstanceCertsResponse> describeResourceInstanceCerts(DescribeResourceInstanceCertsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance has hybrid cloud extension nodes purchased. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloudNodeExtend is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and upgrade the instance to purchase hybrid cloud extension nodes.</p>
+     * 
      * @param request the request parameters of DescribeResourceLogDeliveryStatus  DescribeResourceLogDeliveryStatusRequest
      * @return DescribeResourceLogDeliveryStatusResponse
      */
@@ -972,11 +1059,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <p>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</p>
      * <ul>
-     * <li>Requests that match the protection rules of the whitelist module.</li>
-     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
-     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * <li>Requests that hit a whitelist rule.</li>
+     * <li>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</li>
+     * <li>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSecurityEventLogs  DescribeSecurityEventLogsRequest
@@ -986,11 +1073,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <p>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</p>
      * <ul>
-     * <li>Requests that match the protection rules of the whitelist module.</li>
-     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
-     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * <li>Requests that hit a whitelist rule.</li>
+     * <li>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</li>
+     * <li>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSecurityEventTimeSeriesMetric  DescribeSecurityEventTimeSeriesMetricRequest
@@ -1000,11 +1087,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</p>
+     * <p>Attack traffic refers to requests that have rule hits and are identified as risky. The following three types of data are excluded:</p>
      * <ul>
-     * <li>Requests that match the protection rules of the whitelist module.</li>
-     * <li>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</li>
-     * <li>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</li>
+     * <li>Requests that hit whitelist rules.</li>
+     * <li>Requests that hit bot rules but whose rule action is set to &quot;back-to-origin marking&quot;.</li>
+     * <li>Requests that hit rules with actions set to &quot;dynamic token&quot;, &quot;slider&quot;, &quot;strict slider&quot;, or &quot;JS authenticate&quot;, but the user passes the verification and the requests are allowed.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSecurityEventTopNMetric  DescribeSecurityEventTopNMetricRequest
@@ -1145,6 +1232,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserEventTypeResponse> describeUserEventType(DescribeUserEventTypeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the log service is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.LogService response parameter is true, the log service is enabled. If the log service is not enabled, log on to the WAF console and upgrade the instance to enable the log service.</p>
+     * 
      * @param request the request parameters of DescribeUserLogFieldConfig  DescribeUserLogFieldConfigRequest
      * @return DescribeUserLogFieldConfigResponse
      */
@@ -1235,18 +1325,39 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyApisecEventsResponse> modifyApisecEvents(ModifyApisecEventsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that you have completed the following steps:</p>
+     * <ol>
+     * <li>Confirm that the API security feature is enabled. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticApisec or Details.Apisec parameter in the response is true, the API security feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the API security feature.</li>
+     * <li>Confirm that WAF is authorized to access cloud resources. You can call the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, call the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the authorization.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query available Simple Log Service (SLS) projects and Logstores.
+     * After completing the preceding steps, call this operation to configure API security log delivery.</li>
+     * </ol>
+     * 
      * @param request the request parameters of ModifyApisecLogDelivery  ModifyApisecLogDeliveryRequest
      * @return ModifyApisecLogDeliveryResponse
      */
     CompletableFuture<ModifyApisecLogDeliveryResponse> modifyApisecLogDelivery(ModifyApisecLogDeliveryRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you invoke this operation, make sure that you have created an API security log delivery configuration by invoking the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation. If you have not created a delivery configuration, complete the following prerequisites:</p>
+     * <ol>
+     * <li>Confirm that the API security feature is enabled. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the instance details. If the Details.AgenticApisec or Details.Apisec parameter in the response is true, the API security feature is enabled.</li>
+     * <li>Confirm that WAF is authorized to access cloud resources. Invoke the <a href="https://help.aliyun.com/document_detail/2990717.html">DescribeRoleAuthStatus</a> operation to query the authorization status. If WAF is not authorized, invoke the <a href="https://help.aliyun.com/document_detail/2990727.html">InitializeWafOperationRole</a> operation to grant the authorization.</li>
+     * <li>Invoke the <a href="https://help.aliyun.com/document_detail/2932936.html">DescribeApisecSlsProjects</a> and <a href="https://help.aliyun.com/document_detail/2932935.html">DescribeApisecSlsLogStores</a> operations to query active SLS projects and Logstores, and then invoke the <a href="https://help.aliyun.com/document_detail/2932937.html">ModifyApisecLogDelivery</a> operation to create a delivery configuration.
+     * After you complete the preceding steps, invoke this operation to enable or disable the delivery status of API security logs.</li>
+     * </ol>
+     * 
      * @param request the request parameters of ModifyApisecLogDeliveryStatus  ModifyApisecLogDeliveryStatusRequest
      * @return ModifyApisecLogDeliveryStatusResponse
      */
     CompletableFuture<ModifyApisecLogDeliveryStatusResponse> modifyApisecLogDeliveryStatus(ModifyApisecLogDeliveryStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</p>
+     * 
      * @param request the request parameters of ModifyApisecModuleStatus  ModifyApisecModuleStatusRequest
      * @return ModifyApisecModuleStatusResponse
      */
@@ -1289,6 +1400,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDefenseResourceGroupResponse> modifyDefenseResourceGroup(ModifyDefenseResourceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</p>
+     * 
      * @param request the request parameters of ModifyDefenseResourceXff  ModifyDefenseResourceXffRequest
      * @return ModifyDefenseResourceXffResponse
      */
@@ -1307,6 +1421,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDefenseRuleCacheResponse> modifyDefenseRuleCache(ModifyDefenseRuleCacheRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that you have created a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</p>
+     * 
      * @param request the request parameters of ModifyDefenseRuleStatus  ModifyDefenseRuleStatusRequest
      * @return ModifyDefenseRuleStatusResponse
      */
@@ -1337,6 +1454,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDomainResponse> modifyDomain(ModifyDomainRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation supports modifying the certificate of a domain name that is added by using CNAME (<strong>AccessType</strong> is set to <strong>share</strong> or <strong>hybrid_cloud_cname</strong>). For domain names added in cloud native mode, call the <a href="https://help.aliyun.com/document_detail/2990691.html">ModifyCloudResourceCert</a> operation to modify the certificate.</p>
+     * 
      * @param request the request parameters of ModifyDomainCert  ModifyDomainCertRequest
      * @return ModifyDomainCertResponse
      */
@@ -1349,24 +1469,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDomainPunishStatusResponse> modifyDomainPunishStatus(ModifyDomainPunishStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the Web Application Firewall (WAF) instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of ModifyHybridCloudCluster  ModifyHybridCloudClusterRequest
      * @return ModifyHybridCloudClusterResponse
      */
     CompletableFuture<ModifyHybridCloudClusterResponse> modifyHybridCloudCluster(ModifyHybridCloudClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of ModifyHybridCloudClusterBypassStatus  ModifyHybridCloudClusterBypassStatusRequest
      * @return ModifyHybridCloudClusterBypassStatusResponse
      */
     CompletableFuture<ModifyHybridCloudClusterBypassStatusResponse> modifyHybridCloudClusterBypassStatus(ModifyHybridCloudClusterBypassStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of ModifyHybridCloudClusterRule  ModifyHybridCloudClusterRuleRequest
      * @return ModifyHybridCloudClusterRuleResponse
      */
     CompletableFuture<ModifyHybridCloudClusterRuleResponse> modifyHybridCloudClusterRule(ModifyHybridCloudClusterRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of ModifyHybridCloudGroup  ModifyHybridCloudGroupRequest
      * @return ModifyHybridCloudGroupResponse
      */
@@ -1379,36 +1511,54 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyHybridCloudGroupExpansionServerResponse> modifyHybridCloudGroupExpansionServer(ModifyHybridCloudGroupExpansionServerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of ModifyHybridCloudGroupShrinkServer  ModifyHybridCloudGroupShrinkServerRequest
      * @return ModifyHybridCloudGroupShrinkServerResponse
      */
     CompletableFuture<ModifyHybridCloudGroupShrinkServerResponse> modifyHybridCloudGroupShrinkServer(ModifyHybridCloudGroupShrinkServerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of ModifyHybridCloudSdkPullinStatus  ModifyHybridCloudSdkPullinStatusRequest
      * @return ModifyHybridCloudSdkPullinStatusResponse
      */
     CompletableFuture<ModifyHybridCloudSdkPullinStatusResponse> modifyHybridCloudSdkPullinStatus(ModifyHybridCloudSdkPullinStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.HybridCloud is true, the hybrid cloud feature is enabled. If it is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</p>
+     * 
      * @param request the request parameters of ModifyHybridCloudServer  ModifyHybridCloudServerRequest
      * @return ModifyHybridCloudServerResponse
      */
     CompletableFuture<ModifyHybridCloudServerResponse> modifyHybridCloudServer(ModifyHybridCloudServerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</p>
+     * 
      * @param request the request parameters of ModifyLogDeliveryConfig  ModifyLogDeliveryConfigRequest
      * @return ModifyLogDeliveryConfigResponse
      */
     CompletableFuture<ModifyLogDeliveryConfigResponse> modifyLogDeliveryConfig(ModifyLogDeliveryConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</p>
+     * 
      * @param request the request parameters of ModifyMajorProtectionBlackIp  ModifyMajorProtectionBlackIpRequest
      * @return ModifyMajorProtectionBlackIpResponse
      */
     CompletableFuture<ModifyMajorProtectionBlackIpResponse> modifyMajorProtectionBlackIp(ModifyMajorProtectionBlackIpRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before invoking this operation, make sure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not supported, you can upgrade the instance to enable multi-account management. You can also invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to query whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder first.</p>
+     * 
      * @param request the request parameters of ModifyMemberAccount  ModifyMemberAccountRequest
      * @return ModifyMemberAccountResponse
      */
@@ -1427,6 +1577,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyResourceLogDeliveryStatusResponse> modifyResourceLogDeliveryStatus(ModifyResourceLogDeliveryStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you invoke this operation, make sure you have completed the following steps:</p>
+     * <ol>
+     * <li>Invoke the <a href="https://help.aliyun.com/document_detail/2773867.html">DescribeDefenseResourceNames</a> operation to obtain the names of created protected objects.</li>
+     * <li>Invoke the <a href="https://help.aliyun.com/document_detail/461429.html">DescribeResourceLogStatus</a> operation to query the enabling status of logs for the protected object. If logging is not enabled, invoke the <a href="https://help.aliyun.com/document_detail/461427.html">ModifyResourceLogStatus</a> operation to enable logging (Status=true).
+     * After completing the preceding steps, invoke this operation to modify the log field configuration of the protected object.</li>
+     * </ol>
+     * 
      * @param request the request parameters of ModifyResourceLogFieldConfig  ModifyResourceLogFieldConfigRequest
      * @return ModifyResourceLogFieldConfigResponse
      */
@@ -1445,6 +1603,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyTemplateResourcesResponse> modifyTemplateResources(ModifyTemplateResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that the log service is activated for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.LogService response parameter is true, the log service is activated. If the log service is not activated, log on to the WAF console and upgrade the instance to activate the log service.</p>
+     * 
      * @param request the request parameters of ModifyUserLogFieldConfig  ModifyUserLogFieldConfigRequest
      * @return ModifyUserLogFieldConfigResponse
      */
@@ -1470,7 +1631,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</p>
+     * <p>After you call this operation, the system performs the synchronization asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the synchronization result.</p>
      * 
      * @param request the request parameters of SyncProductInstance  SyncProductInstanceRequest
      * @return SyncProductInstanceResponse

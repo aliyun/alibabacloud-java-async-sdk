@@ -93,7 +93,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         } 
 
         /**
-         * DnsContent.
+         * <p>The DNS-based verification content, including the TXT record details.</p>
          */
         public Builder dnsContent(DnsContent dnsContent) {
             this.dnsContent = dnsContent;
@@ -101,7 +101,7 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         }
 
         /**
-         * FileContent.
+         * <p>The file-based verification content, including the file name, path, and download URL.</p>
          */
         public Builder fileContent(FileContent fileContent) {
             this.fileContent = fileContent;
@@ -109,7 +109,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-46CE-A47C-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
         }
 
         /**
-         * VerifyResult.
+         * <p>Indicates whether the domain ownership verification is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verifyResult(Boolean verifyResult) {
             this.verifyResult = verifyResult;
@@ -196,7 +202,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
             } 
 
             /**
-             * RR.
+             * <p>The host record of the DNS TXT record used for domain ownership verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>verification</p>
              */
             public Builder rr(String rr) {
                 this.rr = rr;
@@ -204,7 +213,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the DNS record used for verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TXT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -212,7 +224,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the DNS TXT record used for verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>verify_0a246ca99d504ba087472d***</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -318,7 +333,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
             } 
 
             /**
-             * DownloadUrl.
+             * <p>The download URL of the verification file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss.xxx.com//xxx.html">http://oss.xxx.com//xxx.html</a></p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -326,7 +344,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the verification file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.html</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -334,7 +355,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
             }
 
             /**
-             * TopDomain.
+             * <p>The root domain of the domain name to be verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyundemo.com</p>
              */
             public Builder topDomain(String topDomain) {
                 this.topDomain = topDomain;
@@ -342,7 +366,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The content of the verification file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>verify_0a246ca99d504ba08***</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -350,7 +377,10 @@ public class DescribeVerifyContentResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyPath.
+             * <p>The URL that is used to access the verification file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.xxx.com//xxx.html">http://xxx.xxx.com//xxx.html</a></p>
              */
             public Builder verifyPath(String verifyPath) {
                 this.verifyPath = verifyPath;

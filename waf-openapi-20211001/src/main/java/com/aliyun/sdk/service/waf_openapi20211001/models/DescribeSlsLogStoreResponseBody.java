@@ -152,10 +152,10 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request</p>
          * 
          * <strong>example:</strong>
-         * <p>CAC0A24B-486A-5E12-9894-BE860E5F****</p>
+         * <p>CAC0A24B-486A-5E12-9894-BE860E5F41CC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,7 +163,7 @@ public class DescribeSlsLogStoreResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage duration of the Logstore. Unit: days.</p>
+         * <p>The log retention period. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>

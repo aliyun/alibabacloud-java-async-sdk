@@ -80,7 +80,10 @@ public class DescribeThreatEventResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98106632-6865-5600-A834-3D909***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DescribeThreatEventResponseBody extends TeaModel {
         }
 
         /**
-         * ThreatEvents.
+         * <p>The list of notable security events.</p>
          */
         public Builder threatEvents(java.util.List<ThreatEvents> threatEvents) {
             this.threatEvents = threatEvents;
@@ -96,7 +99,10 @@ public class DescribeThreatEventResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of security events that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -227,7 +233,10 @@ public class DescribeThreatEventResponseBody extends TeaModel {
             } 
 
             /**
-             * BlockRate.
+             * <p>The percentage of attack requests that were blocked by WAF.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder blockRate(String blockRate) {
                 this.blockRate = blockRate;
@@ -235,7 +244,10 @@ public class DescribeThreatEventResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the last attack occurred. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1768406400000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -243,7 +255,10 @@ public class DescribeThreatEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The ID of the security event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f439994c8ab39f84eced33490f0c4388</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -251,7 +266,20 @@ public class DescribeThreatEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventLevel.
+             * <p>The severity level of the security event. Valid values:</p>
+             * <ul>
+             * <li><p><strong>critical</strong></p>
+             * </li>
+             * <li><p><strong>high</strong></p>
+             * </li>
+             * <li><p><strong>medium</strong></p>
+             * </li>
+             * <li><p><strong>low</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -259,7 +287,13 @@ public class DescribeThreatEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventSrc.
+             * <p>The source IP address of the attack.</p>
+             * <blockquote>
+             * <p>A security event may have multiple source IP addresses. This operation returns only one of them.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3.3.3.3</p>
              */
             public Builder eventSrc(String eventSrc) {
                 this.eventSrc = eventSrc;
@@ -267,7 +301,34 @@ public class DescribeThreatEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventTag.
+             * <p>The type of the security event. Valid values:</p>
+             * <ul>
+             * <li><p><strong>MultipleDomainDirscan</strong>: a directory and file scan against multiple domain names.</p>
+             * </li>
+             * <li><p><strong>SingleDomainDirscan</strong>: a directory and file scan against a single domain name.</p>
+             * </li>
+             * <li><p><strong>MultipleDomainWebscan</strong>: a web vulnerability scan against multiple domain names.</p>
+             * </li>
+             * <li><p><strong>SingleDomainWebscan</strong>: a web vulnerability scan against a single domain name.</p>
+             * </li>
+             * <li><p><strong>MultipleDomainWebattack</strong>: a web vulnerability attack against multiple domain names.</p>
+             * </li>
+             * <li><p><strong>SingleDomainWebattack</strong>: a web vulnerability attack against a single domain name.</p>
+             * </li>
+             * <li><p><strong>SingleURLWebattack</strong>: a web vulnerability attack against a specific URL.</p>
+             * </li>
+             * <li><p><strong>SingleURLSqlattack</strong>: an SQL injection attack against a specific URL.</p>
+             * </li>
+             * <li><p><strong>SingleURLXssattack</strong>: an XSS attack against a specific URL.</p>
+             * </li>
+             * <li><p><strong>WebshellUpload</strong>: an attack that attempts to upload backdoor trojans.</p>
+             * </li>
+             * <li><p><strong>RandomVulnTest</strong>: a random web vulnerability probe.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Event_InternalLoginWeakPasswd</p>
              */
             public Builder eventTag(String eventTag) {
                 this.eventTag = eventTag;
@@ -275,7 +336,13 @@ public class DescribeThreatEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventTarget.
+             * <p>The protected object that is the target of the attack.</p>
+             * <blockquote>
+             * <p>A security event may have multiple protected objects as targets. This operation returns only one of them.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test.aliyundemo.com-waf</p>
              */
             public Builder eventTarget(String eventTarget) {
                 this.eventTarget = eventTarget;

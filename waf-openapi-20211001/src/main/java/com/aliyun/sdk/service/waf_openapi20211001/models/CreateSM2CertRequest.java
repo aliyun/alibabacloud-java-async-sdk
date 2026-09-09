@@ -158,7 +158,7 @@ public class CreateSM2CertRequest extends Request {
         } 
 
         /**
-         * <p>The name of the SM certificate.</p>
+         * <p>The certificate name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-sm2</p>
@@ -170,7 +170,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * <p>The content of the SM certificate.</p>
+         * <p>The content of the SM encryption certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----</p>
@@ -184,7 +184,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * <p>The private key of the SM certificate.</p>
+         * <p>The private key content of the SM encryption certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -198,9 +198,9 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF instance.</p>
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -214,10 +214,12 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid values:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,7 +232,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * <p>The Alibaba Cloud resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm***q</p>
@@ -242,7 +244,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * <p>The content of the signing certificate for the SM certificate.</p>
+         * <p>The signing certificate content of the SM certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----</p>
@@ -256,7 +258,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * <p>The private key of the signing certificate for the SM certificate.</p>
+         * <p>The private key content of the SM signing certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN PRIVATE KEY-----</p>

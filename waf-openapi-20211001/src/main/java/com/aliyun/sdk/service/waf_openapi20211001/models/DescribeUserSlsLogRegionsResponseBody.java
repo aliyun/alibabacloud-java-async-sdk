@@ -67,7 +67,7 @@ public class DescribeUserSlsLogRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The region IDs.</p>
+         * <p>The list of log storage region IDs.</p>
          */
         public Builder logRegions(java.util.List<String> logRegions) {
             this.logRegions = logRegions;
@@ -78,7 +78,7 @@ public class DescribeUserSlsLogRegionsResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>9D11AC3A-A10C-56E7-A342-E87EC892****</p>
+         * <p>9D11AC3A-A10C-56E7-A342-E87EC892BAE2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -160,10 +160,10 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the hybrid cloud cluster.</p>
+         * <p><strong>[Deprecated]</strong> The ID of the hybrid cloud cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>1018</p>
+         * <p>10*</p>
          */
         public Builder clusterId(Long clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -172,7 +172,10 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * ClusterRuleResourceId.
+         * <p>The resource ID of the cluster rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdbc-clusterrule-*******ym0w</p>
          */
         public Builder clusterRuleResourceId(String clusterRuleResourceId) {
             this.putQueryParameter("ClusterRuleResourceId", clusterRuleResourceId);
@@ -181,9 +184,9 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the WAF instance.</p>
+         * <p>Instance ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the DescribeInstanceInfo operation to query the ID of the WAF instance.<a href="~~140857~~"></a></p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query instance ID of the current WAF instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -197,10 +200,12 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The region of the WAF instance. Valid value:</p>
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: Outside the Chinese mainland.</li>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,10 +230,24 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the rule.</p>
+         * <p>The traffic redirection rule configuration.</p>
+         * <p><notice>The mode cannot be modified.</notice></p>
+         * <ul>
+         * <li><strong>check_mode</strong>: the mode. Valid values:<ul>
+         * <li><strong>all</strong>: full traffic redirection.</li>
+         * <li><strong>part</strong>: partial traffic redirection.</li>
+         * </ul>
+         * </li>
+         * <li><strong>type</strong>: the rule matching type. Valid values:<ul>
+         * <li><strong>exact</strong>: exact match.</li>
+         * <li><strong>regex</strong>: regular expression.</li>
+         * </ul>
+         * </li>
+         * <li><strong>substance</strong>: the rule value.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;check_mode&quot;:&quot;part&quot;,&quot;include&quot;:{&quot;exact&quot;:[],&quot;regex&quot;:[]}}</p>
+         * <p>{\&quot;check_mode\&quot;: \&quot;all\&quot;, \&quot;type\&quot;: \&quot;exact\&quot;, \&quot;substance\&quot;: \&quot;122\&quot;}</p>
          */
         public Builder ruleConfig(String ruleConfig) {
             this.putQueryParameter("RuleConfig", ruleConfig);
@@ -237,10 +256,10 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The status of the rule. Valid values:</p>
+         * <p>The rule status. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enables the rule.</li>
-         * <li><strong>off</strong>: disables the rule.</li>
+         * <li><strong>on</strong>: enabled.</li>
+         * <li><strong>off</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,9 +272,9 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the rule. Valid values:</p>
+         * <p><strong>[Deprecated]</strong> The rule type. Valid values:</p>
          * <ul>
-         * <li><strong>pullin</strong>: The traffic redirection rule.</li>
+         * <li><strong>pullin</strong>: traffic redirection configuration.</li>
          * </ul>
          * 
          * <strong>example:</strong>

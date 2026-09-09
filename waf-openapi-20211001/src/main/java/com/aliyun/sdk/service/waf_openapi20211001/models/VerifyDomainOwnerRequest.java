@@ -104,8 +104,7 @@ public class VerifyDomainOwnerRequest extends Request {
         } 
 
         /**
-         * <p>The domain name of which you want to verify the ownership.</p>
-         * <p>You can specify this parameter to check whether a domain name is added to WAF. Fuzzy match is supported.</p>
+         * <p>The domain name whose ownership you want to verify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +119,7 @@ public class VerifyDomainOwnerRequest extends Request {
         /**
          * <p>The ID of the WAF instance.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the WAF instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -134,10 +133,12 @@ public class VerifyDomainOwnerRequest extends Request {
         }
 
         /**
-         * <p>The protocol type that is used for file verification. Specify this parameter when you set VerifyType to fileCheck. Valid values:</p>
+         * <p>The protocol type used for file verification. This parameter is required only when you set VerifyType to fileCheck. Valid values:</p>
          * <ul>
-         * <li><strong>HTTP</strong></li>
-         * <li><strong>HTTPS</strong></li>
+         * <li><p><strong>HTTP</strong>: the HTTP protocol.</p>
+         * </li>
+         * <li><p><strong>HTTPS</strong>: the HTTPS protocol.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -152,8 +153,10 @@ public class VerifyDomainOwnerRequest extends Request {
         /**
          * <p>The verification method. Valid values:</p>
          * <ul>
-         * <li><strong>dnsCheck</strong>: DNS verification</li>
-         * <li><strong>fileCheck</strong>: file verification</li>
+         * <li><p><strong>dnsCheck</strong>: DNS verification.</p>
+         * </li>
+         * <li><p><strong>fileCheck</strong>: File verification.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

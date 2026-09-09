@@ -80,7 +80,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>02E9A4B8-90FB-5F41-A049-C82277EB82FB</p>
@@ -91,7 +91,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array of regular expression rule groups.</p>
+         * <p>The list of regular expression rule groups.</p>
          */
         public Builder ruleGroups(java.util.List<RuleGroups> ruleGroups) {
             this.ruleGroups = ruleGroups;
@@ -99,7 +99,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that are returned.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -220,7 +220,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The most recent time when the rule group was modified.</p>
+             * <p>The time when the rule group was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1664336364000</p>
@@ -231,10 +231,12 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the automatic update feature is enabled for the rule group.</p>
+             * <p>The automatic update status of the rule group.</p>
              * <ul>
-             * <li>1: The automatic update feature is enabled for the rule group.</li>
-             * <li>2: The automatic update feature is disabled for the rule group.</li>
+             * <li><p>1: Automatic updates are enabled.</p>
+             * </li>
+             * <li><p>2: Automatic updates are disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -246,12 +248,16 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the rule group.</p>
+             * <p>The ID of the rule group that the current rule group inherits.</p>
              * <ul>
-             * <li>0: The rule group is created from scratch.</li>
-             * <li>1011: The rule group is a strict rule group.</li>
-             * <li>1012: The rule group is a medium rule group.</li>
-             * <li>1013: The rue group is a loose rule group.</li>
+             * <li><p>0: The rule group is created from scratch and does not inherit from another rule group.</p>
+             * </li>
+             * <li><p>1011: The Strict rule group.</p>
+             * </li>
+             * <li><p>1012: The Medium rule group.</p>
+             * </li>
+             * <li><p>1013: The Loose rule group.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -263,7 +269,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the regular expression rule group.</p>
+             * <p>The ID of the rule group.</p>
              * 
              * <strong>example:</strong>
              * <p>115361</p>
@@ -285,7 +291,7 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of built-in rules in the rule group.</p>
+             * <p>The number of built-in rules.</p>
              * 
              * <strong>example:</strong>
              * <p>4444</p>

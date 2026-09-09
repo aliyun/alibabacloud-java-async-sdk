@@ -96,7 +96,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>D827FCFE-90A7-4330-9326-D33C8B4C7726</p>
+         * <p>D827FCFE-90A7-4330-9326-******4C7726</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -104,7 +104,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The attack logs returned.</p>
+         * <p>A list of detailed attack logs.</p>
          */
         public Builder securityEventLogs(java.util.List<?> securityEventLogs) {
             this.securityEventLogs = securityEventLogs;
@@ -112,7 +112,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of logs returned.</p>
+         * <p>The total number of attack logs found.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -123,7 +123,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metadata of the time series data returned.</p>
+         * <p>The metadata of the returned data.</p>
          */
         public Builder securityEventMetaData(SecurityEventMetaData securityEventMetaData) {
             this.securityEventMetaData = securityEventMetaData;
@@ -189,7 +189,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</p>
+             * <p>The end of the time range used for the query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>EndDate\\</code> request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888600</p>
@@ -200,7 +200,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</p>
+             * <p>The start of the time range used for the query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<code>StartDate\\</code> request parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>1713888000</p>
@@ -270,7 +270,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time range that is used for the query.</p>
+             * <p>The time range used for the query.</p>
              */
             public Builder dateRange(DateRange dateRange) {
                 this.dateRange = dateRange;
@@ -278,7 +278,7 @@ public class DescribeSecurityEventLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the statistics returned. The value is fixed as requests.</p>
+             * <p>The unit of the returned statistical data.</p>
              * 
              * <strong>example:</strong>
              * <p>requests</p>

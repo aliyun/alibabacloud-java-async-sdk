@@ -67,7 +67,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the clusters.</p>
+         * <p>The list of clusters.</p>
          */
         public Builder clusterInfos(java.util.List<ClusterInfos> clusterInfos) {
             this.clusterInfos = clusterInfos;
@@ -75,7 +75,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>66A98669-ER12-WE34-23PO-301469*****E</p>
@@ -302,8 +302,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             /**
              * <p>The network access mode. Valid values:</p>
              * <ul>
-             * <li><strong>internet</strong>: Internet access.</li>
-             * <li><strong>vpc</strong>: internal network access by using Express Connect circuits.</li>
+             * <li><p><strong>internet</strong>: Internet access.</p>
+             * </li>
+             * <li><p><strong>vpc</strong>: leased line-based private network access.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -315,11 +317,14 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region where the virtual private cloud (VPC) resides. Valid values:</p>
+             * <p>The region where the leased line is connected. Valid values:</p>
              * <ul>
-             * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
-             * <li><strong>cn-beiijng</strong>: China (Beijing).</li>
-             * <li><strong>cn-shanghai</strong>: China (Shanghai).</li>
+             * <li><p><strong>cn-hangzhou</strong>: Hangzhou</p>
+             * </li>
+             * <li><p><strong>cn-beijing</strong>: Beijing</p>
+             * </li>
+             * <li><p><strong>cn-shanghai</strong>: Shanghai</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -334,7 +339,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
              * <p>The name of the cluster.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>testcluster</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -342,7 +347,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the hybrid cloud cluster resource.</p>
+             * <p>The resource ID of the hybrid cloud cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>hdbc-cluster-t1****a</p>
@@ -353,7 +358,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+             * <p>The ports that use the HTTP protocol. The value is a string. If multiple ports are returned, they are separated by commas in the <strong>port1,port2,port3</strong> format.</p>
              * 
              * <strong>example:</strong>
              * <p>80,8080</p>
@@ -364,7 +369,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTPS ports. The value is a string. If multiple ports are returned, the value is in the <strong>port1,port2,port3</strong> format.</p>
+             * <p>The ports that use the HTTPS protocol. The value is a string. If multiple ports are returned, they are separated by commas in the <strong>port1,port2,port3</strong> format.</p>
              * 
              * <strong>example:</strong>
              * <p>443,8443</p>
@@ -375,7 +380,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>524**8</p>
@@ -386,7 +391,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of protection nodes that can be added to the cluster.</p>
+             * <p>The number of protection nodes that you can add to the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -397,10 +402,12 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the proxy gateway. Valid values:</p>
+             * <p>The status of the proxy. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong>: enabled.</li>
-             * <li><strong>off</strong>: disabled.</li>
+             * <li><p><strong>on</strong>: enabled</p>
+             * </li>
+             * <li><p><strong>off</strong>: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -414,8 +421,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             /**
              * <p>The type of the cluster. Valid values:</p>
              * <ul>
-             * <li><strong>cname</strong>: reverse proxy cluster.</li>
-             * <li><strong>service</strong>: SDK-based traffic mirroring cluster.</li>
+             * <li><p><strong>cname</strong>: reverse proxy cluster</p>
+             * </li>
+             * <li><p><strong>service</strong>: service cluster</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -427,10 +436,10 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks about the cluster.</p>
+             * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
-             * <p>demo</p>
+             * <p>test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -438,7 +447,7 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the rule.</p>
+             * <p>The rule configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;enable&quot;:true,&quot;param&quot;:{&quot;breaker&quot;:{&quot;duration&quot;:1,&quot;failed&quot;:1,&quot;recent_failed&quot;:1},&quot;disable_protect&quot;:false,&quot;max_request_body_len&quot;:1,&quot;timeout&quot;:1}}</p>
@@ -449,10 +458,12 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of manual bypass. Valid values:</p>
+             * <p>The status of the manual bypass setting. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong>: enabled.</li>
-             * <li><strong>off</strong>: disabled.</li>
+             * <li><p><strong>on</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>off</strong>: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -464,9 +475,9 @@ public class DescribeHybridCloudClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the rule. Valid value:</p>
+             * <p>The type of the rule. Valid values:</p>
              * <ul>
-             * <li><strong>bypass</strong>: Requests are allowed without security checks.</li>
+             * <li><strong>bypass</strong>: WAF does not perform security checks and allows traffic to pass through.</li>
              * </ul>
              * 
              * <strong>example:</strong>

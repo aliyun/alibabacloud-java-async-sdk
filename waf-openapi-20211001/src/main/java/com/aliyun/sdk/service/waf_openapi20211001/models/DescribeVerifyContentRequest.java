@@ -90,6 +90,17 @@ public class DescribeVerifyContentRequest extends Request {
         } 
 
         /**
+         * <p>The source of the domain name. Valid values:</p>
+         * <ul>
+         * <li><p><strong>share</strong>: The domain name is added to WAF in CNAME record mode.</p>
+         * </li>
+         * <li><p><strong>asset</strong>: The domain name is added to WAF as a custom asset.</p>
+         * </li>
+         * <li><p><strong>hybrid_cloud_cname</strong>: The domain name is added to WAF in hybrid cloud CNAME record mode.</p>
+         * </li>
+         * <li><p><strong>tgw</strong>: The domain name is added to WAF in cloud native mode.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +113,7 @@ public class DescribeVerifyContentRequest extends Request {
         }
 
         /**
+         * <p>The domain name that you want to query for ownership verification content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +126,10 @@ public class DescribeVerifyContentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -160,7 +160,10 @@ public class DescribeHybridCloudResourceDetailRequest extends Request {
         } 
 
         /**
-         * Backend.
+         * <p>The back-to-origin address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.XX.XX</p>
          */
         public Builder backend(String backend) {
             this.putQueryParameter("Backend", backend);
@@ -169,7 +172,16 @@ public class DescribeHybridCloudResourceDetailRequest extends Request {
         }
 
         /**
-         * CnameEnabled.
+         * <p>Specifies whether to enable public cloud disaster recovery. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Public cloud disaster recovery is enabled.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Public cloud disaster recovery is not enabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cnameEnabled(Boolean cnameEnabled) {
             this.putQueryParameter("CnameEnabled", cnameEnabled);
@@ -178,6 +190,7 @@ public class DescribeHybridCloudResourceDetailRequest extends Request {
         }
 
         /**
+         * <p>The domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +203,10 @@ public class DescribeHybridCloudResourceDetailRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +219,10 @@ public class DescribeHybridCloudResourceDetailRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -211,7 +231,10 @@ public class DescribeHybridCloudResourceDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,7 +243,16 @@ public class DescribeHybridCloudResourceDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance resides. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -229,7 +261,10 @@ public class DescribeHybridCloudResourceDetailRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm***q</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);

@@ -67,7 +67,7 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ADA11BC7-AA95-5C31-9095-5802C02ED1DC</p>
@@ -78,7 +78,7 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array of the top 10 protected objects that trigger protection rules.</p>
+         * <p>The top 10 protected objects that triggered protection rules.</p>
          */
         public Builder ruleHitsTopResource(java.util.List<RuleHitsTopResource> ruleHitsTopResource) {
             this.ruleHitsTopResource = ruleHitsTopResource;
@@ -144,7 +144,7 @@ public class DescribeRuleHitsTopResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of requests that match protection rules.</p>
+             * <p>The number of requests that triggered the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>14219</p>

@@ -144,7 +144,10 @@ public class DescribeUserTrafficRequest extends Request {
         } 
 
         /**
-         * EndTimestamp.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665386280</p>
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -153,6 +156,10 @@ public class DescribeUserTrafficRequest extends Request {
         }
 
         /**
+         * <p>Instance ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +172,10 @@ public class DescribeUserTrafficRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time interval. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder interval(Long interval) {
             this.putQueryParameter("Interval", interval);
@@ -174,7 +184,16 @@ public class DescribeUserTrafficRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +202,10 @@ public class DescribeUserTrafficRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The ID of the Alibaba Cloud resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae*******i</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -192,7 +214,10 @@ public class DescribeUserTrafficRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * <p>The beginning of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665331200</p>
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);
@@ -201,7 +226,23 @@ public class DescribeUserTrafficRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of real-time user traffic. Valid values:</p>
+         * <ul>
+         * <li>bot: the number of bot management requests.</li>
+         * <li>risk: the number of times risk identification is triggered.</li>
+         * <li>custom_acl_captcha: the number of times the slider action of custom rules is triggered.</li>
+         * <li>qps: the peak QPS.</li>
+         * <li>apisec: the number of API security requests.</li>
+         * <li>alb: the number of requests connected through ALB.</li>
+         * <li>mse: the number of requests connected through MSE.</li>
+         * <li>fc: the number of requests connected through Function Compute.</li>
+         * <li>sae: the number of requests connected through Serverless App Engine.</li>
+         * <li>apig: the number of requests connected through Cloud Native API Gateway.</li>
+         * <li>nlb: the number of requests connected through NLB.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>qps</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

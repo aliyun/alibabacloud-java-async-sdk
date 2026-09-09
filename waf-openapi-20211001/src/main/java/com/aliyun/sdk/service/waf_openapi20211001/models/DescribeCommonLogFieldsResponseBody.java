@@ -80,7 +80,7 @@ public class DescribeCommonLogFieldsResponseBody extends TeaModel {
         } 
 
         /**
-         * LogFieldList.
+         * <p>The list of log fields returned.</p>
          */
         public Builder logFieldList(java.util.List<LogFieldList> logFieldList) {
             this.logFieldList = logFieldList;
@@ -88,7 +88,10 @@ public class DescribeCommonLogFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AB0775EB-2594-598A-97E1-51B1*******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeCommonLogFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of log fields returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,16 @@ public class DescribeCommonLogFieldsResponseBody extends TeaModel {
             } 
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the log field is a default field.</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The log field is a default field.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The log field is not a default field.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -196,7 +211,16 @@ public class DescribeCommonLogFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * IsRequired.
+             * <p>Indicates whether the log field is required.</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The log field is required.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The log field is not required.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isRequired(Boolean isRequired) {
                 this.isRequired = isRequired;
@@ -204,7 +228,13 @@ public class DescribeCommonLogFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * LogKey.
+             * <p>The name of the log field.</p>
+             * <blockquote>
+             * <p>For more information about the log fields, see <a href="https://help.aliyun.com/zh/waf/web-application-firewall-3-0/user-guide/fields-in-logs?spm=openapi-amp.newDocPublishment.0.0.ccef281fNAb0XR"><strong>Log field descriptions</strong></a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>final_action</p>
              */
             public Builder logKey(String logKey) {
                 this.logKey = logKey;
@@ -212,7 +242,20 @@ public class DescribeCommonLogFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the log field. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: offline.</p>
+             * </li>
+             * <li><p><strong>1</strong>: online or in use.</p>
+             * </li>
+             * <li><p><strong>2</strong>: about to be unpublished.</p>
+             * </li>
+             * <li><p><strong>3</strong>: about to be published.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

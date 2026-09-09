@@ -93,7 +93,7 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         } 
 
         /**
-         * BillDetail.
+         * <p>The list of bill details.</p>
          */
         public Builder billDetail(java.util.List<BillDetail> billDetail) {
             this.billDetail = billDetail;
@@ -101,7 +101,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. If a next page exists, this field has a return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0*****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FBBDE11-C35F-531B-96BA-64CA****C875</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -287,7 +296,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeData.
+             * <p>The bill usage details. The value is a JSON string constructed from a series of parameters. For more information, refer to <strong>Supplementary description of response parameters</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;aiWhiteListTemplateCount\&quot;:4,\&quot;apisecResourceCount\&quot;:2,\&quot;botAppTemplateCount\&quot;:1,\&quot;botWebTemplateCount\&quot;:4,\&quot;ccRuleCount\&quot;:1,\&quot;customAclAdvanceRuleCount\&quot;:4,\&quot;customResponseRuleCount\&quot;:5,\&quot;dlpRuleCount\&quot;:1,\&quot;gslb\&quot;:1,\&quot;instanceFee\&quot;:1,\&quot;ipv6\&quot;:1,\&quot;nonPort\&quot;:1,\&quot;qps\&quot;:0,\&quot;regionBlockRuleCount\&quot;:1,\&quot;threatIntelligenceTemplateCount\&quot;:1,\&quot;wafBaseTemplateCount\&quot;:4}</p>
              */
             public Builder chargeData(String chargeData) {
                 this.chargeData = chargeData;
@@ -295,7 +307,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
-             * Credit.
+             * <p>The total Credit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>382</p>
              */
             public Builder credit(Double credit) {
                 this.credit = credit;
@@ -303,7 +318,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
-             * CreditChargeData.
+             * <p>The Credit bill usage details. The value is a JSON string constructed from a series of parameters. For more information, refer to <strong>Supplementary description of response parameters</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;apisecTraffic\&quot;:\&quot;8000\&quot;,\&quot;apisecResourceCount\&quot;:\&quot;3\&quot;}</p>
              */
             public Builder creditChargeData(String creditChargeData) {
                 this.creditChargeData = creditChargeData;
@@ -311,7 +329,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The total SeCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -319,7 +340,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1779123599</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -327,7 +351,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionCredit.
+             * <p>The Credit consumed by features.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>375</p>
              */
             public Builder functionCredit(Double functionCredit) {
                 this.functionCredit = functionCredit;
@@ -335,7 +362,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionCu.
+             * <p>The SeCU consumed by features.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder functionCu(String functionCu) {
                 this.functionCu = functionCu;
@@ -343,7 +373,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1779120000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -351,7 +384,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficCredit.
+             * <p>The Credit consumed by traffic processing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder trafficCredit(Double trafficCredit) {
                 this.trafficCredit = trafficCredit;
@@ -359,7 +395,10 @@ public class DescribePostpayBillsResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficCu.
+             * <p>The SeCU consumed by traffic processing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder trafficCu(String trafficCu) {
                 this.trafficCu = trafficCu;

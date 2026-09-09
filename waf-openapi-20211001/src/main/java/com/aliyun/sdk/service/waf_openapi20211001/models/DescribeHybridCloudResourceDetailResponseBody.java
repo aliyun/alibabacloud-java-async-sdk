@@ -67,7 +67,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Domain.
+         * <p>The domain name information.</p>
          */
         public Builder domain(Domain domain) {
             this.domain = domain;
@@ -75,7 +75,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66A98669-CC6E-4F3E-80A6-3014697B11AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -297,7 +300,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * CertId.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19312542-cn-hangzhou</p>
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -305,7 +311,18 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CipherSuite.
+             * <p>The type of cipher suite. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: all cipher suites are added.</p>
+             * </li>
+             * <li><p><strong>2</strong>: strong cipher suites are added.</p>
+             * </li>
+             * <li><p><strong>99</strong>: custom cipher suites are added.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cipherSuite(Integer cipherSuite) {
                 this.cipherSuite = cipherSuite;
@@ -313,7 +330,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CustomCiphers.
+             * <p>The custom cipher suites.</p>
              */
             public Builder customCiphers(java.util.List<String> customCiphers) {
                 this.customCiphers = customCiphers;
@@ -321,7 +338,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnableTLSv3.
+             * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: TLS 1.3 is supported.</p>
+             * </li>
+             * <li><p><strong>false</strong>: TLS 1.3 is not supported.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableTLSv3(Boolean enableTLSv3) {
                 this.enableTLSv3 = enableTLSv3;
@@ -329,7 +355,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExclusiveIp.
+             * <p>Indicates whether an exclusive IP address is supported. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Supported.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Not supported.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder exclusiveIp(Boolean exclusiveIp) {
                 this.exclusiveIp = exclusiveIp;
@@ -337,7 +372,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FocusHttps.
+             * <p>Indicates whether HTTPS forced redirect is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: HTTPS forced redirect is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: HTTPS forced redirect is not enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder focusHttps(Boolean focusHttps) {
                 this.focusHttps = focusHttps;
@@ -345,7 +389,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Http2Enabled.
+             * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: HTTP/2 is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: HTTP/2 is not enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder http2Enabled(Boolean http2Enabled) {
                 this.http2Enabled = http2Enabled;
@@ -353,7 +406,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HttpPorts.
+             * <p>The list of available ports for the HTTP protocol. The value is a string. When multiple ports are available, they are returned in the format of <strong>port1,port2,port3</strong>.</p>
              */
             public Builder httpPorts(java.util.List<Long> httpPorts) {
                 this.httpPorts = httpPorts;
@@ -361,7 +414,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPorts.
+             * <p>The ports for the HTTPS protocol.</p>
              */
             public Builder httpsPorts(java.util.List<Long> httpsPorts) {
                 this.httpsPorts = httpsPorts;
@@ -369,7 +422,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IPv6Enabled.
+             * <p>Indicates whether IPv6 is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: IPv6 is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: IPv6 is not enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder iPv6Enabled(Boolean iPv6Enabled) {
                 this.iPv6Enabled = iPv6Enabled;
@@ -377,7 +439,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectionResource.
+             * <p>The type of protection resource to use. Valid values:</p>
+             * <ul>
+             * <li><p><strong>share</strong>: shared cluster.</p>
+             * </li>
+             * <li><p><strong>gslb</strong>: intelligent load balancing of the shared cluster.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>share</p>
              */
             public Builder protectionResource(String protectionResource) {
                 this.protectionResource = protectionResource;
@@ -385,7 +456,18 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TLSVersion.
+             * <p>The TLS version. Valid values:</p>
+             * <ul>
+             * <li><p><strong>tlsv1</strong></p>
+             * </li>
+             * <li><p><strong>tlsv1.1</strong></p>
+             * </li>
+             * <li><p><strong>tlsv1.2</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>tlsv1</p>
              */
             public Builder TLSVersion(String TLSVersion) {
                 this.TLSVersion = TLSVersion;
@@ -393,7 +475,20 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * XffHeaderMode.
+             * <p>The method that WAF uses to obtain the originating IP address of the client. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: No Layer 7 proxy is deployed before WAF.</p>
+             * </li>
+             * <li><p><strong>1</strong>: WAF reads the first value in the X-Forwarded-For (XFF) header as the client IP address.</p>
+             * </li>
+             * <li><p><strong>2</strong>: WAF reads the value of a custom field in the request header as the client IP address.</p>
+             * </li>
+             * <li><p><strong>3</strong>: WAF reads the Client IP from the Proxy Protocol header as the client IP address.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder xffHeaderMode(Integer xffHeaderMode) {
                 this.xffHeaderMode = xffHeaderMode;
@@ -401,7 +496,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * XffHeaders.
+             * <p>The list of custom fields used to obtain the client IP address, in the format of [<strong>&quot;header1&quot;,&quot;header2&quot;,……</strong>].</p>
+             * <blockquote>
+             * <p>This parameter is required only when <strong>XffHeaderMode</strong> is set to 2, which indicates that WAF reads the custom field value you specified in the request header as the client IP address.</p>
+             * </blockquote>
              */
             public Builder xffHeaders(java.util.List<String> xffHeaders) {
                 this.xffHeaders = xffHeaders;
@@ -481,7 +579,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * BackendPort.
+             * <p>The back-to-origin port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder backendPort(Integer backendPort) {
                 this.backendPort = backendPort;
@@ -489,7 +590,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ListenPort.
+             * <p>The listening port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder listenPort(Integer listenPort) {
                 this.listenPort = listenPort;
@@ -497,7 +601,14 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type of the listening port. Valid values:</p>
+             * <ul>
+             * <li>http: HTTP protocol.</li>
+             * <li>https: HTTPS protocol.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -564,7 +675,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L2x1ZmZ5L2NvcmUvYXBwcy9tLnl1bmR1bi53YWYuMS9wbHVnaW5z</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -572,7 +686,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9506360478730</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -834,7 +951,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * BackendPorts.
+             * <p>The custom port configuration. By default, the port is the same as the listening port.</p>
              */
             public Builder backendPorts(java.util.List<BackendPorts> backendPorts) {
                 this.backendPorts = backendPorts;
@@ -842,7 +959,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Backends.
+             * <p>The IP address of the origin server or the domain name used for back-to-origin.</p>
              */
             public Builder backends(java.util.List<String> backends) {
                 this.backends = backends;
@@ -850,7 +967,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CnameEnabled.
+             * <p>Specifies whether to enable public cloud disaster recovery. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Public cloud disaster recovery is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Public cloud disaster recovery is not enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cnameEnabled(Boolean cnameEnabled) {
                 this.cnameEnabled = cnameEnabled;
@@ -858,7 +984,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectTimeout.
+             * <p>The connection timeout period. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder connectTimeout(Long connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -866,7 +995,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FocusHttpBackend.
+             * <p>Indicates whether forced HTTP back-to-origin is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Forced HTTP back-to-origin is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Forced HTTP back-to-origin is not enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder focusHttpBackend(Boolean focusHttpBackend) {
                 this.focusHttpBackend = focusHttpBackend;
@@ -874,7 +1012,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Keepalive.
+             * <p>Indicates whether keep-alive connections are enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong> (default): Keep-alive connections are enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Keep-alive connections are not enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder keepalive(Boolean keepalive) {
                 this.keepalive = keepalive;
@@ -882,7 +1029,13 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * KeepaliveRequests.
+             * <p>The number of requests that reuse keep-alive connections. Valid values: 60 to 1000.</p>
+             * <blockquote>
+             * <p>After keep-alive connections are enabled, this parameter specifies how many keep-alive connections are reused.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder keepaliveRequests(Long keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -890,7 +1043,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * KeepaliveTimeout.
+             * <p>The idle timeout period of keep-alive connections.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder keepaliveTimeout(Long keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -898,7 +1054,18 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Loadbalance.
+             * <p>The load balancing algorithm used for back-to-origin. Valid values:</p>
+             * <ul>
+             * <li><p><strong>iphash</strong>: IP Hash algorithm.</p>
+             * </li>
+             * <li><p><strong>roundRobin</strong>: round-robin algorithm.</p>
+             * </li>
+             * <li><p><strong>leastTime</strong>: Least Time algorithm.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>iphash</p>
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
@@ -906,7 +1073,14 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProxyProtocol.
+             * <p>Indicates whether the client source IP preservation feature is enabled.</p>
+             * <ul>
+             * <li>true: The client source IP preservation feature is enabled. After this feature is enabled, the backend service can view the originating IP address of the client.</li>
+             * <li>false: The client source IP preservation feature is not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder proxyProtocol(Boolean proxyProtocol) {
                 this.proxyProtocol = proxyProtocol;
@@ -914,7 +1088,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ReadTimeout.
+             * <p>The read timeout period of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder readTimeout(Long readTimeout) {
                 this.readTimeout = readTimeout;
@@ -922,7 +1099,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHeaders.
+             * <p>The HTTP request headers.</p>
              */
             public Builder requestHeaders(java.util.List<RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -930,7 +1107,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Retry.
+             * <p>Indicates whether WAF retries when back-to-origin fails. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: WAF retries.</p>
+             * </li>
+             * <li><p><strong>false</strong>: WAF does not retry.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder retry(Boolean retry) {
                 this.retry = retry;
@@ -938,7 +1124,13 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoutingRules.
+             * <p>The hybrid cloud forwarding rules, expressed as a string converted from a JSON array. Each element in the JSON array is a structure that contains the following fields:</p>
+             * <ul>
+             * <li><strong>rs</strong>: Array type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;backupRs\&quot;:[],\&quot;location\&quot;:\&quot;v3-test\&quot;,\&quot;locationId\&quot;:1148,\&quot;rs\&quot;:[\&quot;39.98.217.197\&quot;,\&quot;2.2.2.2\&quot;]}]</p>
              */
             public Builder routingRules(String routingRules) {
                 this.routingRules = routingRules;
@@ -946,7 +1138,16 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SniEnabled.
+             * <p>Indicates whether back-to-origin Server Name Indication (SNI) is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Back-to-origin SNI is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Back-to-origin SNI is not enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sniEnabled(Boolean sniEnabled) {
                 this.sniEnabled = sniEnabled;
@@ -954,7 +1155,13 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SniHost.
+             * <p>The custom value of the SNI extension field. If the value is empty, the SNI value is not customized, and the value of the <strong>Host</strong> field in the request header is used as the SNI extension field value by default.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>SniStatus</strong> is set to <strong>1</strong>, which indicates that back-to-origin SNI is enabled.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>eew111</p>
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;
@@ -962,7 +1169,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WriteTimeout.
+             * <p>The write timeout period. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder writeTimeout(Long writeTimeout) {
                 this.writeTimeout = writeTimeout;
@@ -1107,7 +1317,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>CNAME</p>
+             * <p>The CNAME assigned by WAF to the domain name.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when <strong>CnameEnabled</strong> is set to true, which indicates that public cloud disaster recovery is enabled.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>kdmqyi3ck7xogegxpiyfpb0fj21mgkxn.****.com</p>
@@ -1118,7 +1331,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>www.*****.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -1126,7 +1342,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>id</p>
+             * <p>The access ID.</p>
              * 
              * <strong>example:</strong>
              * <p>31323</p>
@@ -1137,7 +1353,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Listen.
+             * <p>The listening information.</p>
              */
             public Builder listen(Listen listen) {
                 this.listen = listen;
@@ -1145,7 +1361,7 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Redirect.
+             * <p>The rules for returning response header values.</p>
              */
             public Builder redirect(Redirect redirect) {
                 this.redirect = redirect;
@@ -1153,7 +1369,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceManagerResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-***aby</p>
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -1161,7 +1380,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1169,7 +1391,10 @@ public class DescribeHybridCloudResourceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1046011128270720</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

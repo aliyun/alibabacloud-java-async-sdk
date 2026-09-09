@@ -54,7 +54,10 @@ public class ClearAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>276D7566-31C9-4192-9DD1-51B10D*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

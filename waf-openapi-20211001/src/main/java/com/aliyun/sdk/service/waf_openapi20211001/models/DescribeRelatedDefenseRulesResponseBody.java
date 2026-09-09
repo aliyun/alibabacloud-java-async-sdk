@@ -106,7 +106,10 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,13 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token (<strong>Token</strong>) for the next page. If a next page exists, this field has a return value.</p>
+         * <blockquote>
+         * <p>If this parameter has a return value, a next page exists. Use the returned <strong>NextToken</strong> as a request parameter to obtain the data on the next page. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +131,10 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F35F45B0-5D6B-4238-BE02-A62D****E840</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +142,7 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The list of associated rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -138,7 +150,10 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +258,10 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * DefenseScene.
+             * <p>The protection scenario of the protection rule. For more information, refer to the <strong>DefenseScene</strong> parameter in <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom_acl</p>
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
@@ -251,7 +269,18 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseType.
+             * <p>The type of the protection rule. Valid values:</p>
+             * <ul>
+             * <li><p><strong>template</strong> (default): a template-based protection rule.</p>
+             * </li>
+             * <li><p><strong>resource</strong>: a protection object-level rule.</p>
+             * </li>
+             * <li><p><strong>global</strong>: a global-level rule.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>template</p>
              */
             public Builder defenseType(String defenseType) {
                 this.defenseType = defenseType;
@@ -259,7 +288,10 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2456789</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -267,7 +299,10 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ruleTest</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -275,7 +310,10 @@ public class DescribeRelatedDefenseRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the protection rule template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81501</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

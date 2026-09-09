@@ -144,7 +144,10 @@ public class DescribeAddressesRequest extends Request {
         } 
 
         /**
-         * AddressLike.
+         * <p>The address to query. You can set this parameter to perform a fuzzy match on added addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.3.3</p>
          */
         public Builder addressLike(String addressLike) {
             this.putQueryParameter("AddressLike", addressLike);
@@ -153,6 +156,10 @@ public class DescribeAddressesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the WAF instance.</p>
+         * <blockquote>
+         * <p>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +172,10 @@ public class DescribeAddressesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for paging. Valid values: 1 to 500. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -174,7 +184,10 @@ public class DescribeAddressesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. Set this parameter to the value of <strong>NextToken</strong> returned in the previous API call. Leave this parameter empty for the first page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -183,7 +196,16 @@ public class DescribeAddressesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region where the WAF instance is deployed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>cn-hangzhou</strong>: the Chinese mainland.</p>
+         * </li>
+         * <li><p><strong>ap-southeast-1</strong>: outside the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +214,10 @@ public class DescribeAddressesRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * <p>The Alibaba Cloud resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm4gh****wela</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -201,7 +226,10 @@ public class DescribeAddressesRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * <p>The ID of the address book to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);

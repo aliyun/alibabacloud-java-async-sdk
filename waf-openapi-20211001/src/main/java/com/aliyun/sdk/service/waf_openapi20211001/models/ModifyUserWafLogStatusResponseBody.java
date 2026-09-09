@@ -80,7 +80,10 @@ public class ModifyUserWafLogStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * LogStoreName.
+         * <p>The name of the Logstore in Simple Log Service (SLS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wafng-logstore</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.logStoreName = logStoreName;
@@ -88,7 +91,10 @@ public class ModifyUserWafLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>Indicates whether the Simple Log Service project is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wafng-project-14316572********-cn-hangzhou</p>
          */
         public Builder projectName(Boolean projectName) {
             this.projectName = projectName;
@@ -96,7 +102,10 @@ public class ModifyUserWafLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D7861F61-5B61-<strong><strong>-A47C-6B19160</strong></strong>*</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

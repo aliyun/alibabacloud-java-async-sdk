@@ -67,7 +67,10 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12EF3845-CCEB-4B84-AE60-2B49B*****EE5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
         }
 
         /**
-         * TopMetrics.
+         * <p>The list of statistics.</p>
          */
         public Builder topMetrics(java.util.List<TopMetrics> topMetrics) {
             this.topMetrics = topMetrics;
@@ -167,7 +170,10 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * Cnt.
+             * <p>The number of attacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cnt(Long cnt) {
                 this.cnt = cnt;
@@ -175,7 +181,13 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The country to which the source IP address of the attack belongs.</p>
+             * <blockquote>
+             * <p>This field returns a meaningful value only when the statistical object (<strong>Metric</strong>) is set to source IP address (<strong>src</strong>).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder country(String country) {
                 this.country = country;
@@ -183,7 +195,13 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region to which the source IP address of the attack belongs.</p>
+             * <blockquote>
+             * <p>This field returns a meaningful value only when the statistical object (<strong>Metric</strong>) is set to source IP address (<strong>src</strong>).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -191,7 +209,17 @@ public class DescribeThreatEventTopMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The attack value. The meaning of this field varies depending on the value of <strong>Metric</strong>.</p>
+             * <ul>
+             * <li>If <strong>Metric</strong> is set to <strong>time</strong>, this field indicates the attack time.</li>
+             * <li>If <strong>Metric</strong> is set to <strong>src</strong>, this field indicates the source IP address of the attack.</li>
+             * <li>If <strong>Metric</strong> is set to <strong>target</strong>, this field indicates the URL of the attack request.</li>
+             * <li>If <strong>Metric</strong> is set to <strong>type</strong>, this field indicates the attack type. <strong>dirscan</strong> indicates directory scanning, <strong>webscan</strong> indicates web scanning, and other attack types are described in the <strong>detectType</strong> (detection type) parameter of the <strong>custom regular rule</strong> (<strong>regular_custom</strong>) in the <a href="https://help.aliyun.com/document_detail/461421.html"><strong>CreateDefenseRule</strong></a> operation.</li>
+             * <li>If <strong>Metric</strong> is set to <strong>tools</strong>, this field indicates the attack tool.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>115.28.209.212</p>
              */
             public Builder value(String value) {
                 this.value = value;

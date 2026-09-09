@@ -80,7 +80,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The bills of the burstable QPS (pay-as-you-go) feature.</p>
+         * <p>The list of WAF burstable billing records.</p>
          */
         public Builder bills(java.util.List<Bills> bills) {
             this.bills = bills;
@@ -324,7 +324,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The burstable QPS of the WAF instance.</p>
+             * <p>The burstable QPS specification of the WAF instance.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -335,7 +335,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing end time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The end time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1687591200</p>
@@ -346,11 +346,11 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of QPS usage within the current period of time. Valid values:</p>
+             * <p>The overuse status of the current period. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: normal.</li>
-             * <li><strong>1</strong>: excess.</li>
-             * <li><strong>2</strong>: sandbox.</li>
+             * <li><strong>0</strong>: Normal.</li>
+             * <li><strong>1</strong>: overused.</li>
+             * <li><strong>2</strong>: sandboxed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -362,7 +362,14 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionPlugin.
+             * <p>Indicates whether the extension plug-in is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The extension plug-in is enabled.</li>
+             * <li><strong>false</strong>: The extension plug-in is not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder extensionPlugin(Boolean extensionPlugin) {
                 this.extensionPlugin = extensionPlugin;
@@ -370,7 +377,10 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionPluginRequest.
+             * <p>The number of requests processed by the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder extensionPluginRequest(Long extensionPluginRequest) {
                 this.extensionPluginRequest = extensionPluginRequest;
@@ -378,7 +388,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The peak QPS within the current period of time.</p>
+             * <p>The maximum QPS during the current period.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -389,7 +399,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit price in the bill. The price is measured in CNY for bills at the China site (aliyun.com) and in USD for bills at the international site (alibabacloud.com).</p>
+             * <p>The unit price for burstable billing. Unit: CNY for the China site and USD for the international site.</p>
              * 
              * <strong>example:</strong>
              * <p>0.25</p>
@@ -400,7 +410,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extended QPS of the WAF instance.</p>
+             * <p>The QPS extension specification of the WAF instance.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -411,7 +421,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default QPS of the WAF instance.</p>
+             * <p>The QPS specification included in the WAF instance edition.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -424,8 +434,8 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether risk identification is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Risk identification is enabled.</li>
+             * <li><strong>false</strong>: Risk identification is not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -437,7 +447,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that risk identification is performed.</p>
+             * <p>The number of times risk identification is used.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -448,7 +458,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing start time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The start time of the billing record. The value is a UNIX timestamp (UTC). Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1687822980</p>
@@ -459,7 +469,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual QPS in total.</p>
+             * <p>The total QPS that is billed.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -470,7 +480,7 @@ public class DescribePrepayDailyBillsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing types.</p>
+             * <p>The burstable billing type.</p>
              */
             public Builder type(java.util.List<String> type) {
                 this.type = type;

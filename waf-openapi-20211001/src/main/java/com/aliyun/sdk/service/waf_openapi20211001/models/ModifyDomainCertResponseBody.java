@@ -54,7 +54,7 @@ public class ModifyDomainCertResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>03E3B4DD-2BE7-5D9D-80E8-***</p>

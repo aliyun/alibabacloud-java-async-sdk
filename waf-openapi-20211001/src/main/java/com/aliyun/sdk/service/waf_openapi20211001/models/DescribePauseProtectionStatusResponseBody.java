@@ -67,10 +67,12 @@ public class DescribePauseProtectionStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether WAF protection is paused.</p>
+         * <p>Indicates whether WAF protection is paused for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: indicates that WAF protection is not paused. This is the default value.</li>
-         * <li><strong>1</strong>: indicates that WAF protection is paused.</li>
+         * <li><p><strong>0</strong> (default): Protection is not paused.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Protection is paused.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

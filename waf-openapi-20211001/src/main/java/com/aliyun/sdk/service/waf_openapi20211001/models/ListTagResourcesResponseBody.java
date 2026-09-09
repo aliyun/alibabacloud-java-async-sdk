@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token that is used to start the next query. If NextToken is empty, no more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0*****</p>
@@ -205,7 +205,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. ALIYUN::WAF::DEFENSERESOURCE is returned.</p>
+             * <p>The resource type. Fixed value: ALIYUN::WAF::DEFENSERESOURCE.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN::WAF::DEFENSERESOURCE</p>
@@ -216,7 +216,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of tag N that is added to the resource.</p>
+             * <p>The tag key of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>TagKey1</p>
@@ -227,7 +227,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag N that is added to the resource.</p>
+             * <p>The tag value of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>TayValue1</p>

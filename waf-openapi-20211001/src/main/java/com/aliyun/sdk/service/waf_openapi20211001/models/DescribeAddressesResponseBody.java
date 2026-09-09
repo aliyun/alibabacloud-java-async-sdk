@@ -106,7 +106,7 @@ public class DescribeAddressesResponseBody extends TeaModel {
         } 
 
         /**
-         * AddressList.
+         * <p>The list of addresses.</p>
          */
         public Builder addressList(java.util.List<AddressList> addressList) {
             this.addressList = addressList;
@@ -114,7 +114,10 @@ public class DescribeAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for paging. Valid values: 1 to 500. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,13 @@ public class DescribeAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. If a next page exists, this field contains a value.</p>
+         * <blockquote>
+         * <p>If this parameter has a return value, a next page exists. You can pass the returned <strong>NextToken</strong> as a request parameter to retrieve the next page of data. Repeat this process until no value is returned, which indicates that all data has been retrieved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAGBgV9tolsLfijC4wam2htS*****D/46H3X2wIS</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class DescribeAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D8EBFB7-E1EB-5236-952A-092EDC72***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +232,10 @@ public class DescribeAddressesResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -225,7 +243,10 @@ public class DescribeAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The most recent modification time of the address. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1760408233000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -233,7 +254,10 @@ public class DescribeAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The address book ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345678</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;

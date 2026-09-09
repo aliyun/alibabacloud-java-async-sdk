@@ -67,7 +67,7 @@ public class DescribePunishedDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The domain names that are penalized for failing to obtain an ICP filing.</p>
+         * <p>The list of domain names penalized for not having an ICP filing.</p>
          */
         public Builder punishedDomains(java.util.List<String> punishedDomains) {
             this.punishedDomains = punishedDomains;
