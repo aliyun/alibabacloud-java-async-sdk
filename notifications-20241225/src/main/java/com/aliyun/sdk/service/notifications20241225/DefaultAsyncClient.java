@@ -349,6 +349,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves page metadata.</p>
+     * 
      * @param request the request parameters of ReadMetaConfig  ReadMetaConfigRequest
      * @return ReadMetaConfigResponse
      */
@@ -541,6 +544,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMessageLanguageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a user subscription.</p>
+     * 
+     * @param request the request parameters of UpdateUserSubscription  UpdateUserSubscriptionRequest
+     * @return UpdateUserSubscriptionResponse
+     */
+    @Override
+    public CompletableFuture<UpdateUserSubscriptionResponse> updateUserSubscription(UpdateUserSubscriptionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateUserSubscription").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateUserSubscriptionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateUserSubscriptionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

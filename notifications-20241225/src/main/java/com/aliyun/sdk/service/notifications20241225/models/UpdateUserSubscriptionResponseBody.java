@@ -12,16 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ReadMetaConfigResponseBody} extends {@link TeaModel}
+ * {@link UpdateUserSubscriptionResponseBody} extends {@link TeaModel}
  *
- * <p>ReadMetaConfigResponseBody</p>
+ * <p>UpdateUserSubscriptionResponseBody</p>
  */
-public class ReadMetaConfigResponseBody extends TeaModel {
+public class UpdateUserSubscriptionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
-
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private Object data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,9 +29,8 @@ public class ReadMetaConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ReadMetaConfigResponseBody(Builder builder) {
+    private UpdateUserSubscriptionResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -44,7 +40,7 @@ public class ReadMetaConfigResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ReadMetaConfigResponseBody create() {
+    public static UpdateUserSubscriptionResponseBody create() {
         return builder().build();
     }
 
@@ -57,13 +53,6 @@ public class ReadMetaConfigResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return data
-     */
-    public Object getData() {
-        return this.data;
     }
 
     /**
@@ -89,7 +78,6 @@ public class ReadMetaConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Object data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -97,43 +85,21 @@ public class ReadMetaConfigResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ReadMetaConfigResponseBody model) {
+        private Builder(UpdateUserSubscriptionResponseBody model) {
             this.code = model.code;
-            this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
 
         /**
-         * <p>The error code returned when the call fails. For more information, see error codes.</p>
+         * <p>The error code returned by the system. For more information about error codes, see error codes.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * <p>The execution result.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{
-         *     &quot;isSubNextUser&quot;: &quot;YES&quot;,
-         *     &quot;IS_INNER_USER&quot;: &quot;NO&quot;,
-         *     &quot;isXsWhite&quot;: &quot;NO&quot;,
-         *     &quot;isXs&quot;: &quot;NO&quot;,
-         *     &quot;SITEID&quot;: &quot;cn&quot;,
-         *     &quot;webhookSignatures&quot;: [
-         *         &quot;Alibaba&quot;,
-         *         &quot;阿里云&quot;
-         *     ]
-         * }</p>
-         */
-        public Builder data(Object data) {
-            this.data = data;
             return this;
         }
 
@@ -160,7 +126,11 @@ public class ReadMetaConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -170,8 +140,8 @@ public class ReadMetaConfigResponseBody extends TeaModel {
             return this;
         }
 
-        public ReadMetaConfigResponseBody build() {
-            return new ReadMetaConfigResponseBody(this);
+        public UpdateUserSubscriptionResponseBody build() {
+            return new UpdateUserSubscriptionResponseBody(this);
         } 
 
     } 

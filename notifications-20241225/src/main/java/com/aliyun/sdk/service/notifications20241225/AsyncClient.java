@@ -122,6 +122,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReadMessageNewTotalResponse> readMessageNewTotal(ReadMessageNewTotalRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves page metadata.</p>
+     * 
      * @param request the request parameters of ReadMetaConfig  ReadMetaConfigRequest
      * @return ReadMetaConfigResponse
      */
@@ -186,6 +189,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateMessageLanguageResponse
      */
     CompletableFuture<UpdateMessageLanguageResponse> updateMessageLanguage(UpdateMessageLanguageRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Updates a user subscription.</p>
+     * 
+     * @param request the request parameters of UpdateUserSubscription  UpdateUserSubscriptionRequest
+     * @return UpdateUserSubscriptionResponse
+     */
+    CompletableFuture<UpdateUserSubscriptionResponse> updateUserSubscription(UpdateUserSubscriptionRequest request);
 
     /**
      * @param request the request parameters of UpdateWebhookContact  UpdateWebhookContactRequest

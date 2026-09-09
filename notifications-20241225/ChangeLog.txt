@@ -1,3 +1,6 @@
+2026-09-09 Version: 1.0.5
+- Generated java-async 2024-12-25 for Notifications.
+
 2026-09-08 Version: 1.0.4
 - Generated java-async 2024-12-25 for Notifications.
 
