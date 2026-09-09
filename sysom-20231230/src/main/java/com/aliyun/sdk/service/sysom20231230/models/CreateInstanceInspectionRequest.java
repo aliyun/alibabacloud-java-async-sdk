@@ -152,7 +152,10 @@ public class CreateInstanceInspectionRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze5ru5rjurix7f71sxv</p>
          */
         public Builder instance(String instance) {
             this.putBodyParameter("instance", instance);
@@ -161,7 +164,7 @@ public class CreateInstanceInspectionRequest extends Request {
         }
 
         /**
-         * items.
+         * <p>The anomaly items.</p>
          */
         public Builder items(java.util.List<String> items) {
             this.putBodyParameter("items", items);
@@ -170,7 +173,10 @@ public class CreateInstanceInspectionRequest extends Request {
         }
 
         /**
-         * metricSource.
+         * <p>The metric source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sysom</p>
          */
         public Builder metricSource(String metricSource) {
             this.putBodyParameter("metricSource", metricSource);
@@ -179,7 +185,10 @@ public class CreateInstanceInspectionRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("region", region);
@@ -188,7 +197,10 @@ public class CreateInstanceInspectionRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("source", source);

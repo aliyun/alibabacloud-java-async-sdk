@@ -278,7 +278,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * analysisTool.
+         * <p>The analysis tool. This parameter does not need to be specified when you use OpenAPI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp/pyki/analysis</p>
          */
         public Builder analysisTool(String analysisTool) {
             this.putBodyParameter("analysisTool", analysisTool);
@@ -287,7 +290,7 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * analysis_params.
+         * <p>The data richness level.</p>
          */
         public Builder analysisParams(java.util.List<String> analysisParams) {
             this.putBodyParameter("analysis_params", analysisParams);
@@ -296,7 +299,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * channel.
+         * <p>The channel name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs_sysom</p>
          */
         public Builder channel(String channel) {
             this.putBodyParameter("channel", channel);
@@ -305,7 +311,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * comms.
+         * <p>The process name. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python_test</p>
          */
         public Builder comms(String comms) {
             this.putBodyParameter("comms", comms);
@@ -314,7 +323,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * created_by.
+         * <p>The creator. This parameter does not need to be specified when you use OpenAPI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445333</p>
          */
         public Builder createdBy(String createdBy) {
             this.putBodyParameter("created_by", createdBy);
@@ -323,7 +335,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9dej066kii4goqxxxx</p>
          */
         public Builder instance(String instance) {
             this.putBodyParameter("instance", instance);
@@ -332,7 +347,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * instance_type.
+         * <p>The instance type. This parameter does not need to be specified when you use OpenAPI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip/sn/hostname</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instance_type", instanceType);
@@ -341,7 +359,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * iteration_func.
+         * <p>The iteration entry function. This parameter is required only in iteration mode and can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Class.function</p>
          */
         public Builder iterationFunc(String iterationFunc) {
             this.putBodyParameter("iteration_func", iterationFunc);
@@ -350,7 +371,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * iteration_mod.
+         * <p>The iteration entry module. This parameter is required only in iteration mode and can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a.b.module</p>
          */
         public Builder iterationMod(String iterationMod) {
             this.putBodyParameter("iteration_mod", iterationMod);
@@ -359,7 +383,7 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * iteration_range.
+         * <p>The iteration range. The iteration count refers to the number of iterations when the data collection module is activated, which is independent of the AI job iteration count.</p>
          */
         public Builder iterationRange(java.util.List<Integer> iterationRange) {
             this.putBodyParameter("iteration_range", iterationRange);
@@ -368,7 +392,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * pids.
+         * <p>The process IDs (PIDs) of the AI job. Multiple PIDs are supported, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2421,36547,10043</p>
          */
         public Builder pids(String pids) {
             this.putBodyParameter("pids", pids);
@@ -377,7 +404,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("region", region);
@@ -386,7 +416,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * timeout.
+         * <p>The AI Infra analysis duration. Unit: milliseconds. Default value: 2000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder timeout(Integer timeout) {
             this.putBodyParameter("timeout", timeout);
@@ -395,7 +428,10 @@ public class StartAIAnalysisRequest extends Request {
         }
 
         /**
-         * uid.
+         * <p>The Alibaba Cloud user ID. This parameter does not need to be specified when you use OpenAPI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123423414</p>
          */
         public Builder uid(String uid) {
             this.putBodyParameter("uid", uid);

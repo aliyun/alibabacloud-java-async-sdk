@@ -93,7 +93,14 @@ public class CreateAlertStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed error message when an authorization fault occurs.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,19 @@ public class CreateAlertStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *             &quot;uid&quot;: &quot;uid-1&quot;,
+         *             &quot;name&quot;: &quot;test-name&quot;,
+         *             &quot;strategy&quot;: {
+         *                 &quot;clusters&quot;: [&quot;test-cluster-1&quot;,&quot;test-cluster-2&quot;],
+         *                 &quot;items&quot;: [&quot;test-item1&quot;,&quot;test-item2&quot;]
+         *             },
+         *             &quot;enabled&quot;: True,</p>
+         * <pre><code>    }
+         * </code></pre>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -109,7 +128,14 @@ public class CreateAlertStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to create the policy</p>
          */
         public Builder message(String message) {
             this.message = message;

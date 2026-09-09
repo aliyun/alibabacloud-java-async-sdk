@@ -154,6 +154,7 @@ public class ListInstancesEcsInfoListRequest extends Request {
         }
 
         /**
+         * <p>The type of information to retrieve.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,10 @@ public class ListInstancesEcsInfoListRequest extends Request {
         }
 
         /**
-         * instance_id.
+         * <p>Specifies the instance ID to filter the Agent installation status of the specified instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp118piqcio9tiwgh84b</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instance_id", instanceId);
@@ -175,7 +179,10 @@ public class ListInstancesEcsInfoListRequest extends Request {
         }
 
         /**
-         * managed_type.
+         * <p>The management status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>managed</p>
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("managed_type", managedType);
@@ -184,7 +191,10 @@ public class ListInstancesEcsInfoListRequest extends Request {
         }
 
         /**
-         * plugin_id.
+         * <p>Specifies the component ID to filter the instance information list for the corresponding component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("plugin_id", pluginId);
@@ -193,6 +203,7 @@ public class ListInstancesEcsInfoListRequest extends Request {
         }
 
         /**
+         * <p>The region used to filter instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

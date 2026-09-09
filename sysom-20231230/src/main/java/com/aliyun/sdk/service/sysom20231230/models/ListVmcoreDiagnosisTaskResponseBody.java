@@ -106,7 +106,14 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +129,14 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the error message of the request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +155,10 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -246,7 +263,10 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The task creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-02T17:36:12</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -254,7 +274,10 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error message</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -262,7 +285,10 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbe94a98-4192-4172-b856-95777e0a55d7</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -270,7 +296,10 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskStatus.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -278,7 +307,10 @@ public class ListVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vmcore</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

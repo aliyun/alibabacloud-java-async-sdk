@@ -93,7 +93,14 @@ public class AuthDiagnosisResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,10 @@ public class AuthDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>This operation does not return data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -109,7 +119,14 @@ public class AuthDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +134,10 @@ public class AuthDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

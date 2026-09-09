@@ -152,7 +152,10 @@ public class ListAlertStrategiesRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number (starting from 1).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Integer current) {
             this.putQueryParameter("current", current);
@@ -161,7 +164,10 @@ public class ListAlertStrategiesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to retrieve in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -170,7 +176,10 @@ public class ListAlertStrategiesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The policy name of the alerting policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>strategy1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -179,7 +188,10 @@ public class ListAlertStrategiesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2f78a783f49457caba6bace6f6f79e4</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -188,7 +200,10 @@ public class ListAlertStrategiesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

@@ -208,7 +208,10 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(String current) {
             this.putQueryParameter("current", current);
@@ -217,7 +220,10 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * filters.
+         * <p>The list of filter conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder filters(String filters) {
             this.putQueryParameter("filters", filters);
@@ -226,7 +232,10 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * instanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("instanceType", instanceType);
@@ -235,7 +244,10 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * managedType.
+         * <p>The management type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>managed</p>
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("managedType", managedType);
@@ -244,7 +256,10 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to retrieve in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -253,7 +268,13 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * <blockquote>
+         * <p>If this parameter is not empty, more data is available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>U+w1wv2R4ZWR5oZLXD0+Dp4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -262,7 +283,10 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -271,7 +295,10 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * pluginId.
+         * <p>The plugin ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01fc4a0b-f199-4885-9861-b4054a310fe7</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("pluginId", pluginId);
@@ -280,7 +307,10 @@ public class ListAllInstancesRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);

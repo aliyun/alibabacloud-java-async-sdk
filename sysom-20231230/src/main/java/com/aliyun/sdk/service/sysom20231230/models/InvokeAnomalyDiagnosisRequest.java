@@ -96,7 +96,10 @@ public class InvokeAnomalyDiagnosisRequest extends Request {
         }
 
         /**
-         * uuid.
+         * <p>The UUID of the anomaly event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8047d763-5465-4a8c-b1cd-23f5a8ba2594</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("uuid", uuid);

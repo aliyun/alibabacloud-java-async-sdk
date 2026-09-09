@@ -93,7 +93,14 @@ public class GetInspectionReportResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,10 @@ public class GetInspectionReportResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -109,7 +119,14 @@ public class GetInspectionReportResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
          */
         public Builder message(String message) {
             this.message = message;

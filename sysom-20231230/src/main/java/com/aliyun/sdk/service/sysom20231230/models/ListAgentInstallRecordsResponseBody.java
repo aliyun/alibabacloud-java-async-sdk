@@ -106,7 +106,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8CDFBA1-0564-5897-B070-D3C85002AF2F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,14 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +132,7 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -130,7 +140,14 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the error information of the request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +155,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -256,7 +276,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * created_at.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-27T16:37:53</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -264,7 +287,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * instance_id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp118piqcio9tiwgh84b</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -272,7 +298,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * plugin_id.
+             * <p>The component ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -280,7 +309,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * plugin_version.
+             * <p>The plug-in version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.4.0-1</p>
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;
@@ -288,7 +320,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The component status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Installed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -296,7 +331,10 @@ public class ListAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * updated_at.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-27T16:37:53</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

@@ -179,6 +179,7 @@ public class InstallAgentWithTypeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the component to install.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +192,7 @@ public class InstallAgentWithTypeRequest extends Request {
         }
 
         /**
+         * <p>The version of the component to install.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +205,10 @@ public class InstallAgentWithTypeRequest extends Request {
         }
 
         /**
-         * configId.
+         * <p>The configuration ID of the component to install.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f0078fbb-4213-11f0-a19b-00163e4ae208</p>
          */
         public Builder configId(String configId) {
             this.putBodyParameter("configId", configId);
@@ -212,6 +217,7 @@ public class InstallAgentWithTypeRequest extends Request {
         }
 
         /**
+         * <p>The instance type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,6 +230,7 @@ public class InstallAgentWithTypeRequest extends Request {
         }
 
         /**
+         * <p>The list of instances on which to install the component.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
@@ -378,6 +385,7 @@ public class InstallAgentWithTypeRequest extends Request {
             } 
 
             /**
+             * <p>The instance ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -389,6 +397,7 @@ public class InstallAgentWithTypeRequest extends Request {
             }
 
             /**
+             * <p>The region ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -127,7 +127,11 @@ public class UpgradeAgentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the component to update.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
          */
         public Builder agentId(String agentId) {
             this.putBodyParameter("agent_id", agentId);
@@ -136,7 +140,11 @@ public class UpgradeAgentRequest extends Request {
         }
 
         /**
+         * <p>The version to which the component is updated.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.4.0-1</p>
          */
         public Builder agentVersion(String agentVersion) {
             this.putBodyParameter("agent_version", agentVersion);
@@ -145,6 +153,7 @@ public class UpgradeAgentRequest extends Request {
         }
 
         /**
+         * <p>The list of instances on which to update the component.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
@@ -224,6 +233,7 @@ public class UpgradeAgentRequest extends Request {
             } 
 
             /**
+             * <p>The instance ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -235,6 +245,7 @@ public class UpgradeAgentRequest extends Request {
             }
 
             /**
+             * <p>The region ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

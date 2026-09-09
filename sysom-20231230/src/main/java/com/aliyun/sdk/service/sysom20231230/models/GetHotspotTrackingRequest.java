@@ -171,6 +171,7 @@ public class GetHotspotTrackingRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +184,7 @@ public class GetHotspotTrackingRequest extends Request {
         }
 
         /**
+         * <p>The start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +197,11 @@ public class GetHotspotTrackingRequest extends Request {
         }
 
         /**
+         * <p>The hot spot type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alloc</p>
          */
         public Builder hotType(String hotType) {
             this.putBodyParameter("hot_type", hotType);
@@ -204,6 +210,7 @@ public class GetHotspotTrackingRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +223,10 @@ public class GetHotspotTrackingRequest extends Request {
         }
 
         /**
-         * pid.
+         * <p>The process PID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657494</p>
          */
         public Builder pid(Long pid) {
             this.putBodyParameter("pid", pid);
@@ -225,6 +235,7 @@ public class GetHotspotTrackingRequest extends Request {
         }
 
         /**
+         * <p>The name of the table to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -132,7 +132,14 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +147,10 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -148,7 +158,10 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to retrieve in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -156,7 +169,14 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the error information for the request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>server error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +184,10 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2f78a783f49457caba6bace6f6f79e4</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -172,7 +195,10 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +206,10 @@ public class ListAlertDestinationsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The maximum number of records returned by this request based on MaxResults.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>623</p>
          */
         public Builder total(Integer total) {
             this.total = total;

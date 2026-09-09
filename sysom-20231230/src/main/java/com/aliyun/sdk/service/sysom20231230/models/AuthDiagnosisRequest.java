@@ -124,7 +124,7 @@ public class AuthDiagnosisRequest extends Request {
         }
 
         /**
-         * autoCreateRole.
+         * <p>Specifies whether to enable automatic creation of the service-linked role.</p>
          */
         public Builder autoCreateRole(Boolean autoCreateRole) {
             this.putBodyParameter("autoCreateRole", autoCreateRole);
@@ -133,7 +133,7 @@ public class AuthDiagnosisRequest extends Request {
         }
 
         /**
-         * autoInstallAgent.
+         * <p>Specifies whether to automatically install the latest version of the agent if it is not installed.</p>
          */
         public Builder autoInstallAgent(Boolean autoInstallAgent) {
             this.putBodyParameter("autoInstallAgent", autoInstallAgent);
@@ -142,7 +142,7 @@ public class AuthDiagnosisRequest extends Request {
         }
 
         /**
-         * instances.
+         * <p>The list of instances authorized for diagnosis.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.putBodyParameter("instances", instances);
@@ -219,7 +219,10 @@ public class AuthDiagnosisRequest extends Request {
             } 
 
             /**
-             * instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9b9vucz1iubsz8sjqo</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -227,7 +230,10 @@ public class AuthDiagnosisRequest extends Request {
             }
 
             /**
-             * region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;

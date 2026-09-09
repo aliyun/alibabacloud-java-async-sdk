@@ -106,7 +106,14 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +129,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +151,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -204,7 +220,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * tag_key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tag_key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -212,7 +231,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * tag_value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tag_value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -370,7 +392,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * instance_id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp118piqcio9tiwgh84b</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -378,7 +403,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * instance_name.
+             * <p>The component instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>allowed-repos-qmf8w</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -386,7 +414,7 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * instance_tag.
+             * <p>The instance tags.</p>
              */
             public Builder instanceTag(java.util.List<InstanceTag> instanceTag) {
                 this.instanceTag = instanceTag;
@@ -394,7 +422,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * os_name.
+             * <p>The operating system name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Linux  3.2104 LTS 64 bit</p>
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -402,7 +433,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * private_ip.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -410,7 +444,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * public_ip.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -418,7 +455,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -426,7 +466,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * resource_group_id.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -434,7 +477,10 @@ public class ListPluginsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * resource_group_name.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default resource group</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;

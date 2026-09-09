@@ -93,7 +93,10 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.ServerError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -186,7 +192,7 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
             } 
 
             /**
-             * columns.
+             * <p>The field names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -194,7 +200,7 @@ public class GetHotspotInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The instance list.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;

@@ -93,7 +93,14 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +116,14 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +187,10 @@ public class UpdateFuncSwitchRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * task_id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63fc5acb99e642d793f42912612e8001</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

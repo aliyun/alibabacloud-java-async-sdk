@@ -170,6 +170,7 @@ public class GetHotSpotUniqListRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +183,7 @@ public class GetHotSpotUniqListRequest extends Request {
         }
 
         /**
+         * <p>The start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +196,7 @@ public class GetHotSpotUniqListRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +209,10 @@ public class GetHotSpotUniqListRequest extends Request {
         }
 
         /**
-         * pid.
+         * <p>The process ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder pid(Long pid) {
             this.putBodyParameter("pid", pid);
@@ -215,7 +221,10 @@ public class GetHotSpotUniqListRequest extends Request {
         }
 
         /**
-         * table.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prof_on</p>
          */
         public Builder table(String table) {
             this.putBodyParameter("table", table);
@@ -224,7 +233,11 @@ public class GetHotSpotUniqListRequest extends Request {
         }
 
         /**
+         * <p>The identifier flag.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认需要为&quot;flag&quot;，待查询的字段</p>
          */
         public Builder uniq(String uniq) {
             this.putBodyParameter("uniq", uniq);

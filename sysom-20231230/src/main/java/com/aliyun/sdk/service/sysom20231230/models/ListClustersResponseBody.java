@@ -106,7 +106,10 @@ public class ListClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +132,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -130,7 +140,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +155,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -282,7 +302,16 @@ public class ListClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * cluster_id.
+             * <p>The actual cluster ID.</p>
+             * <blockquote>
+             * <ul>
+             * <li>For <code>ACK</code> type clusters, this is the ACK cluster ID.</li>
+             * <li>For <code>CUSTOM</code> type clusters, this serves as a unique identifier with no additional meaning.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>c666d4774f0e2440b979bf917bf100e40</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -290,7 +319,16 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * cluster_status.
+             * <ul>
+             * <li><code>Running</code>: The cluster is managed normally.</li>
+             * <li><code>Installing</code>: An installation task is in progress for the cluster.</li>
+             * <li><code>Uninstalling</code>: An uninstallation task is in progress for the cluster.</li>
+             * <li><code>Upgrading</code>: An update task is in progress for the cluster.</li>
+             * <li><code>Offline</code>: The cluster is offline and management is abnormal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder clusterStatus(String clusterStatus) {
                 this.clusterStatus = clusterStatus;
@@ -298,7 +336,13 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * cluster_type.
+             * <ul>
+             * <li><code>ACK</code>: ACK cluster.</li>
+             * <li><code>CUSTOM</code>: Custom cluster (default clusters belong to custom clusters).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACK</p>
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -306,7 +350,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * created_at.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-25T15:08:19</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -314,7 +361,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5389fba5-92a1-4ff4-9b26-773b97828144</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -322,7 +372,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto-name-sbvCT</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +383,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -338,7 +394,10 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * updated_at.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-25T15:08:19</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

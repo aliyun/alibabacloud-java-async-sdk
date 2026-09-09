@@ -229,6 +229,7 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
+         * <p>The end time 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +242,7 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
+         * <p>The start time 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,6 +255,7 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
+         * <p>The end time 2.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,6 +268,7 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
+         * <p>The start time 2.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +281,10 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
-         * hot_type.
+         * <p>The hot spot type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alloc</p>
          */
         public Builder hotType(String hotType) {
             this.putBodyParameter("hot_type", hotType);
@@ -286,6 +293,7 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
+         * <p>The instance 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,6 +306,7 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
+         * <p>The instance 2.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,7 +319,10 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
-         * pid1.
+         * <p>The process of instance 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pid1(Long pid1) {
             this.putBodyParameter("pid1", pid1);
@@ -319,7 +331,10 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
-         * pid2.
+         * <p>The process of instance 2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2zei55fwj8nnu31h3z46</p>
          */
         public Builder pid2(Long pid2) {
             this.putBodyParameter("pid2", pid2);
@@ -328,6 +343,7 @@ public class GetHotspotCompareRequest extends Request {
         }
 
         /**
+         * <p>The name of the table to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

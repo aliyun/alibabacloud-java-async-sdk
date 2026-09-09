@@ -93,7 +93,10 @@ public class GetAIQueryResultResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class GetAIQueryResultResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result. The data volume is large.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;task_id\&quot;: \&quot;y4ba8uRV\&quot;}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -109,7 +115,11 @@ public class GetAIQueryResultResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Analysis ID: 56dae746-ef55-4f77-8373-cb3594c41457
+         * Analysis failed for machine i-bp164ns76pzirbwv0snt. Cause: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
          */
         public Builder message(String message) {
             this.message = message;

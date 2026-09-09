@@ -110,7 +110,10 @@ public class GetInstantScoreRequest extends Request {
         }
 
         /**
-         * cluster.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ijff4be-bf24-4070-89ca-c47c879b0g32</p>
          */
         public Builder cluster(String cluster) {
             this.putQueryParameter("cluster", cluster);
@@ -119,7 +122,10 @@ public class GetInstantScoreRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9d00ut2ska3mlyhn6j</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);

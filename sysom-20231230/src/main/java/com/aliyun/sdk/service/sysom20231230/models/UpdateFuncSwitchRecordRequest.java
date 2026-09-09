@@ -127,6 +127,7 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         }
 
         /**
+         * <p>The diagnostic channel. Currently, this parameter is fixed to the ECS channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         }
 
         /**
+         * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match specified values.</p>
          * <p>This parameter is required.</p>
          */
         public Builder params(Params params) {
@@ -149,6 +151,7 @@ public class UpdateFuncSwitchRecordRequest extends Request {
         }
 
         /**
+         * <p>The service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +323,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             } 
 
             /**
-             * add_cmd.
+             * <p>The configuration process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder addCmd(String addCmd) {
                 this.addCmd = addCmd;
@@ -328,7 +334,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * cpu.
+             * <p>The ONCPU tracing switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -336,7 +345,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * duration.
+             * <p>The start duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -344,7 +356,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * java_store_path.
+             * <p>The storage path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/sysom/java-profiler</p>
              */
             public Builder javaStorePath(String javaStorePath) {
                 this.javaStorePath = javaStorePath;
@@ -352,7 +367,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * locks.
+             * <p>The lock tracing switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder locks(String locks) {
                 this.locks = locks;
@@ -360,7 +378,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * loop.
+             * <p>The tracing cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder loop(Integer loop) {
                 this.loop = loop;
@@ -368,7 +389,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * mem.
+             * <p>The memory tracing switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mem(String mem) {
                 this.mem = mem;
@@ -376,7 +400,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * pid.
+             * <p>The process PID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1243</p>
              */
             public Builder pid(Integer pid) {
                 this.pid = pid;
@@ -384,7 +411,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * system_profiling.
+             * <p>The system tracing switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder systemProfiling(String systemProfiling) {
                 this.systemProfiling = systemProfiling;
@@ -504,7 +534,7 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             } 
 
             /**
-             * args.
+             * <p>The configuration parameters.</p>
              */
             public Builder args(Args args) {
                 this.args = args;
@@ -512,6 +542,7 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
+             * <p>The feature name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -523,7 +554,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zei55fwj8nnu31h3z46</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -531,7 +565,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * op.
+             * <p>The operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>restart</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -539,7 +576,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * region.
+             * <p>The region to which the instance belongs. Make sure that all instance IDs passed in instances belong to the same region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -547,7 +587,10 @@ public class UpdateFuncSwitchRecordRequest extends Request {
             }
 
             /**
-             * uid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1664516888213680</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

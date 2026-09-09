@@ -170,6 +170,7 @@ public class GetHotspotAnalysisRequest extends Request {
         }
 
         /**
+         * <p>The application type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +183,7 @@ public class GetHotspotAnalysisRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +196,7 @@ public class GetHotspotAnalysisRequest extends Request {
         }
 
         /**
+         * <p>The start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +209,7 @@ public class GetHotspotAnalysisRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +222,10 @@ public class GetHotspotAnalysisRequest extends Request {
         }
 
         /**
-         * pid.
+         * <p>The process PID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657494</p>
          */
         public Builder pid(Long pid) {
             this.putBodyParameter("pid", pid);
@@ -227,7 +234,10 @@ public class GetHotspotAnalysisRequest extends Request {
         }
 
         /**
-         * table.
+         * <p>The name of the table to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prof_on</p>
          */
         public Builder table(String table) {
             this.putBodyParameter("table", table);

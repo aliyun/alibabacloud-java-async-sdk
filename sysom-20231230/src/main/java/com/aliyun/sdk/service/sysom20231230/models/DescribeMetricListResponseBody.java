@@ -93,7 +93,14 @@ public class DescribeMetricListResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -109,7 +116,15 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Analysis ID: 56dae746-ef55-4f77-8373-cb3594c41457
+         * Analysis failed for machine i-bp164ns76pzirbwv0snt. Failure reason: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +214,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
             } 
 
             /**
-             * labels.
+             * <p>The metric labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;taskExecName\&quot;: \&quot;build-and-deploy\&quot;, \&quot;pipelineName\&quot;: \&quot;pipeline-run-1722909642357\&quot;}</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -207,7 +225,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * metricName.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sysom_cpu_usage_idle</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -215,7 +236,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The metric data.</p>
              */
             public Builder values(java.util.List<java.util.List<String>> values) {
                 this.values = values;

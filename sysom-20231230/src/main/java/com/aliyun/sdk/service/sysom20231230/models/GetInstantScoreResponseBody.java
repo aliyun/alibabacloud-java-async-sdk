@@ -93,7 +93,11 @@ public class GetInstantScoreResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>集群ID</p>
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization has failed. If the authorization has failed, check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -104,7 +108,7 @@ public class GetInstantScoreResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +116,14 @@ public class GetInstantScoreResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the error information of the request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Query no data</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -228,7 +239,10 @@ public class GetInstantScoreResponseBody extends TeaModel {
             } 
 
             /**
-             * error.
+             * <p>The error score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder error(Float error) {
                 this.error = error;
@@ -236,7 +250,10 @@ public class GetInstantScoreResponseBody extends TeaModel {
             }
 
             /**
-             * latency.
+             * <p>The latency score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder latency(Float latency) {
                 this.latency = latency;
@@ -244,7 +261,10 @@ public class GetInstantScoreResponseBody extends TeaModel {
             }
 
             /**
-             * load.
+             * <p>The load score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder load(Float load) {
                 this.load = load;
@@ -252,7 +272,10 @@ public class GetInstantScoreResponseBody extends TeaModel {
             }
 
             /**
-             * saturation.
+             * <p>The saturation score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder saturation(Float saturation) {
                 this.saturation = saturation;
@@ -260,7 +283,10 @@ public class GetInstantScoreResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Float total) {
                 this.total = total;

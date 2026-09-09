@@ -80,7 +80,10 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,7 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -96,7 +99,10 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The business error message. This parameter is not empty when success is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -175,7 +181,7 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
             } 
 
             /**
-             * eventList.
+             * <p>The list of abnormal events.</p>
              */
             public Builder eventList(java.util.List<String> eventList) {
                 this.eventList = eventList;
@@ -183,7 +189,10 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the abnormal event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>health</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -191,7 +200,10 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The number of abnormal events of this type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Long value) {
                 this.value = value;

@@ -93,7 +93,10 @@ public class InitialSysomResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3FCA2E38-2A8E-5501-93BD-5CE1BA58F2EF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,14 @@ public class InitialSysomResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +119,7 @@ public class InitialSysomResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -117,7 +127,14 @@ public class InitialSysomResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +187,10 @@ public class InitialSysomResponseBody extends TeaModel {
             } 
 
             /**
-             * role_exist.
+             * <p>Indicates whether the service-linked role exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder roleExist(Boolean roleExist) {
                 this.roleExist = roleExist;

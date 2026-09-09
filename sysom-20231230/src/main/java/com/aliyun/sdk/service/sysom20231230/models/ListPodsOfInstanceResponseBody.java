@@ -118,7 +118,10 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +129,7 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -134,6 +137,7 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The error message. An empty value indicates that all data has been read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +149,10 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The maximum number of entries returned for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -211,7 +218,10 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * namespace.
+             * <p>The namespace in which the pod resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -219,7 +229,10 @@ public class ListPodsOfInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * pod.
+             * <p>The pod name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pod</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;

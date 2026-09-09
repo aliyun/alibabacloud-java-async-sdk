@@ -96,7 +96,10 @@ public class GetAIQueryResultRequest extends Request {
         }
 
         /**
-         * analysisId.
+         * <p>The AI analysis ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16896fa8-37f6-4c70-bb32-67fa9817d426</p>
          */
         public Builder analysisId(String analysisId) {
             this.putBodyParameter("analysisId", analysisId);

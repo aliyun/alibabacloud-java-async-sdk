@@ -96,7 +96,10 @@ public class GetAgentRequest extends Request {
         }
 
         /**
-         * agent_id.
+         * <p>The component ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("agent_id", agentId);

@@ -152,7 +152,10 @@ public class InstallAgentForClusterRequest extends Request {
         }
 
         /**
-         * agent_id.
+         * <p>The component ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
          */
         public Builder agentId(String agentId) {
             this.putBodyParameter("agent_id", agentId);
@@ -161,7 +164,10 @@ public class InstallAgentForClusterRequest extends Request {
         }
 
         /**
-         * agent_version.
+         * <p>The component version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.4.0-1</p>
          */
         public Builder agentVersion(String agentVersion) {
             this.putBodyParameter("agent_version", agentVersion);
@@ -170,7 +176,13 @@ public class InstallAgentForClusterRequest extends Request {
         }
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>Pass the ID of the ACK cluster for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>c9d7f3fc3d42942afbcb65c1100ffb19d</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("cluster_id", clusterId);
@@ -179,7 +191,10 @@ public class InstallAgentForClusterRequest extends Request {
         }
 
         /**
-         * config_id.
+         * <p>The component configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8gj86wrt7-3170-412c-8e67-da3389ecg6a9</p>
          */
         public Builder configId(String configId) {
             this.putBodyParameter("config_id", configId);
@@ -188,7 +203,10 @@ public class InstallAgentForClusterRequest extends Request {
         }
 
         /**
-         * grayscale_config.
+         * <p>The canary release environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;numeric&quot;,&quot;config&quot;:{&quot;value&quot;:2}}</p>
          */
         public Builder grayscaleConfig(String grayscaleConfig) {
             this.putBodyParameter("grayscale_config", grayscaleConfig);

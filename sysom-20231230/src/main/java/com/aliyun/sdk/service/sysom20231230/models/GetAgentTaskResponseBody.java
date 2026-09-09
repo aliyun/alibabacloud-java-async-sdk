@@ -93,7 +93,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2E75336A-0DB2-5263-B201-A6488EC97B50</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,14 @@ public class GetAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +119,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -117,7 +127,14 @@ public class GetAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -261,7 +278,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * error.
+             * <p>The reason that caused the task to fail. This field is returned only when the task execution fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deprecated (misused)</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -269,7 +289,31 @@ public class GetAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorCode.
+             * <p>The error code of the subtask failure. Valid values:</p>
+             * <ul>
+             * <li>Empty: The task is executed normally.</li>
+             * <li>INSTANCE_NOT_SUPPORTED: The instance type is not supported.</li>
+             * <li>INSTANCE_NOT_EXISTS: The instance does not exist.</li>
+             * <li>INSTANCE_RELEASED: The instance has been released.</li>
+             * <li>INSTANCE_NOT_RUNNING: The instance is not running.</li>
+             * <li>INSTANCE_NOT_OWNED: The instance does not belong to the current account.</li>
+             * <li>AGENT_ALREADY_INSTALLED: The Agent is already installed.</li>
+             * <li>AGENT_NOT_INSTALLED: The Agent is not installed.</li>
+             * <li>AGENT_SAME_VERSION: The version is the same.</li>
+             * <li>HAS_RUNNING_JOB: A running task exists.</li>
+             * <li>RPM_LOCK_HELD: The RPM lock is held.</li>
+             * <li>DISK_SPACE_INSUFFICIENT: The disk space is insufficient.</li>
+             * <li>NODE_LOAD_HIGH: The node load is high.</li>
+             * <li>COMMAND_FAILED: The command execution failed.</li>
+             * <li>CLIENT_NOT_RUNNING: The Cloud Assistant Agent is not running.</li>
+             * <li>CLIENT_NOT_RESPONSE: The Cloud Assistant Agent is not responding.</li>
+             * <li>DELIVERY_TIMEOUT: The command delivery timed out.</li>
+             * <li>EXECUTION_TIMEOUT: The command execution timed out.</li>
+             * <li>TASK_CONCURRENCY_LIMIT: The task concurrency limit is reached.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DISK_SPACE_INSUFFICIENT</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -277,7 +321,30 @@ public class GetAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The detailed description of the subtask failure. Valid values:</p>
+             * <ul>
+             * <li>The instance type is not supported.</li>
+             * <li>The instance does not exist.</li>
+             * <li>The instance has been released.</li>
+             * <li>The instance is not running.</li>
+             * <li>The instance does not belong to the current account.</li>
+             * <li>The Agent is already installed.</li>
+             * <li>The Agent is not installed.</li>
+             * <li>The Agent version is the same. No upgrade is required.</li>
+             * <li>A running task exists. Try again later.</li>
+             * <li>The RPM lock is held. Try again later.</li>
+             * <li>The disk space is insufficient.</li>
+             * <li>The node load is too high. Try again later.</li>
+             * <li>The command execution failed. Try again later.</li>
+             * <li>The Cloud Assistant Agent is not running.</li>
+             * <li>The Cloud Assistant Agent is not responding.</li>
+             * <li>The command delivery timed out.</li>
+             * <li>The command execution timed out.</li>
+             * <li>The task concurrency limit is reached.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>The disk space is insufficient</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -285,7 +352,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zehme0rs1tc090fdl3n</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -293,7 +363,15 @@ public class GetAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * <p>The subtask parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;agent_version&quot;: &quot;3.5.0-beta&quot;,
+             *     &quot;opt&quot;: &quot;install&quot;,
+             *     &quot;agent_id&quot;: &quot;74a86327-3170-412c-8fd67-da3389ec56a9&quot;,
+             *     &quot;install_type&quot;: &quot;InstallAndUpgrade&quot;
+             * }</p>
              */
             public Builder params(Object params) {
                 this.params = params;
@@ -301,7 +379,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -309,7 +390,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The subtask execution result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deprecated (misused)</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -317,7 +401,16 @@ public class GetAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The subtask status. Valid values:</p>
+             * <ul>
+             * <li>Created: The subtask is created.</li>
+             * <li>Running: The subtask is running.</li>
+             * <li>Success: The subtask succeeded.</li>
+             * <li>Fail: The subtask failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -397,7 +490,7 @@ public class GetAgentTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * jobs.
+             * <p>The list of subtasks.</p>
              */
             public Builder jobs(java.util.List<Jobs> jobs) {
                 this.jobs = jobs;
@@ -405,7 +498,16 @@ public class GetAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The subtask status. Valid values:</p>
+             * <ul>
+             * <li>Created: The subtask is created.</li>
+             * <li>Running: The subtask is running.</li>
+             * <li>Success: The subtask succeeded.</li>
+             * <li>Fail: The subtask failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -413,7 +515,10 @@ public class GetAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * task_id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c41d8e3506224184a714682fea86d22d</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

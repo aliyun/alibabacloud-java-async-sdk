@@ -93,7 +93,14 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success or Sysom.ServerError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +116,14 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +131,10 @@ public class GetAlertDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -261,7 +278,10 @@ public class GetAlertDestinationResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751520976660</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -269,7 +289,10 @@ public class GetAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The alert contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -277,7 +300,10 @@ public class GetAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The alert contact name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -285,7 +311,13 @@ public class GetAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * <p>The configuration parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;webhook&quot;:&quot;&quot;,
+             *     &quot;sec&quot;:&quot;&quot;,
+             * }</p>
              */
             public Builder params(Object params) {
                 this.params = params;
@@ -293,7 +325,10 @@ public class GetAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The configuration source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>console</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -301,7 +336,10 @@ public class GetAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * target.
+             * <p>The alert push target. Currently, only DingTalk chatbots are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -309,7 +347,10 @@ public class GetAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * uid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234123412352311</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -317,7 +358,10 @@ public class GetAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751254826285</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

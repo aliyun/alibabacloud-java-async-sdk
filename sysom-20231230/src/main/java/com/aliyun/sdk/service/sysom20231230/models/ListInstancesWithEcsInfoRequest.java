@@ -293,7 +293,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The page number for pagination. This parameter specifies the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Integer current) {
             this.putQueryParameter("current", current);
@@ -302,7 +305,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * health_status.
+         * <p>Filters instances by health status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         public Builder healthStatus(String healthStatus) {
             this.putQueryParameter("health_status", healthStatus);
@@ -311,7 +317,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * instance_id.
+         * <p>Specifies an instance ID to filter the Agent installation status of the specified instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp118piqcio9tiwgh84b</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instance_id", instanceId);
@@ -320,7 +329,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * instance_id_name.
+         * <p>Filters instances by instance name or instance ID. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84b</p>
          */
         public Builder instanceIdName(String instanceIdName) {
             this.putQueryParameter("instance_id_name", instanceIdName);
@@ -329,7 +341,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * instance_name.
+         * <p>The name of the component instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>block-load-balancer-hjdm9</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("instance_name", instanceName);
@@ -338,7 +353,7 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * instance_tag.
+         * <p>Filters instances by instance tag.</p>
          */
         public Builder instanceTag(InstanceTag instanceTag) {
             String instanceTagShrink = shrink(instanceTag, "instance_tag", "json");
@@ -348,7 +363,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * is_managed.
+         * <p>Filters instances by management status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isManaged(Integer isManaged) {
             this.putQueryParameter("is_managed", isManaged);
@@ -357,7 +375,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * os_name.
+         * <p>Filters instances by operating system name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alibaba Cloud Linux  3.2104 LTS 64bit</p>
          */
         public Builder osName(String osName) {
             this.putQueryParameter("os_name", osName);
@@ -366,7 +387,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -375,7 +399,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * private_ip.
+         * <p>Filters instances by private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder privateIp(String privateIp) {
             this.putQueryParameter("private_ip", privateIp);
@@ -384,7 +411,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * public_ip.
+         * <p>Filters instances by public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder publicIp(String publicIp) {
             this.putQueryParameter("public_ip", publicIp);
@@ -393,6 +423,7 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
+         * <p>Filters instances by region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -405,7 +436,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * resource_group_id.
+         * <p>Filters instances by resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resource_group_id", resourceGroupId);
@@ -414,7 +448,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * resource_group_id_name.
+         * <p>Filters instances by resource group name or resource group ID. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder resourceGroupIdName(String resourceGroupIdName) {
             this.putQueryParameter("resource_group_id_name", resourceGroupIdName);
@@ -423,7 +460,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
         }
 
         /**
-         * resource_group_name.
+         * <p>Filters instances by resource group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default resource group</p>
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("resource_group_name", resourceGroupName);
@@ -500,7 +540,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feature_dim_radar_chart</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -508,7 +551,10 @@ public class ListInstancesWithEcsInfoRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

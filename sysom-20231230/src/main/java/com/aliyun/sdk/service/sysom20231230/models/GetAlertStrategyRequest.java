@@ -96,7 +96,10 @@ public class GetAlertStrategyRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putQueryParameter("id", id);

@@ -93,7 +93,14 @@ public class StartAIDiffAnalysisResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that authorization is successful.</li>
+         * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,27 @@ public class StartAIDiffAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The AI differential analysis result data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;[
+         *   {
+         *       name: &quot;xxx&quot;, #operator name
+         *       before_time: 2, # total time of the former
+         *       after_time: 4, # total time of the latter
+         *       time_diff: 2,  # time difference
+         *       before_time_perc: &quot;80%&quot;, # total time percentage of the former
+         *       after_time_perc: &quot;23%&quot;, # total time percentage of the latter
+         *       time_perc_diff: &quot;-54%&quot;,  # time percentage difference
+         *       before_count: 1, # total call count of the former
+         *       after_count: 2,  # total call count of the latter
+         *       count_diff: 1,   # call count difference
+         *       before_count_perc: &quot;56%&quot;, # total call percentage of the former
+         *       after_count_perc: &quot;32%&quot;,  # total call percentage of the latter
+         *       count_perc_diff: &quot;44%&quot;,   # call percentage difference
+         *   },
+         *   {...}
+         * ]&quot;</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -109,7 +136,10 @@ public class StartAIDiffAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error code description. This field is empty if no error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;

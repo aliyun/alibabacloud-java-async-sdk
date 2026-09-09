@@ -183,7 +183,10 @@ public class ListPluginsInstancesRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The page number for pagination. This field indicates the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
@@ -192,7 +195,10 @@ public class ListPluginsInstancesRequest extends Request {
         }
 
         /**
-         * instance_id_name.
+         * <p>Filters instances by instance ID or instance name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bpxx</p>
          */
         public Builder instanceIdName(String instanceIdName) {
             this.putQueryParameter("instance_id_name", instanceIdName);
@@ -201,7 +207,10 @@ public class ListPluginsInstancesRequest extends Request {
         }
 
         /**
-         * instance_tag.
+         * <p>Filters instances by instance tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;app&quot;,&quot;value&quot;:&quot;sysom-aliyun-com&quot;}</p>
          */
         public Builder instanceTag(String instanceTag) {
             this.putQueryParameter("instance_tag", instanceTag);
@@ -210,6 +219,7 @@ public class ListPluginsInstancesRequest extends Request {
         }
 
         /**
+         * <p>Filters instances by plugin installation status.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +232,10 @@ public class ListPluginsInstancesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -231,6 +244,7 @@ public class ListPluginsInstancesRequest extends Request {
         }
 
         /**
+         * <p>Specifies the agent ID to filter the instance list for the specified agent.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,6 +257,7 @@ public class ListPluginsInstancesRequest extends Request {
         }
 
         /**
+         * <p>Filters instances by region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

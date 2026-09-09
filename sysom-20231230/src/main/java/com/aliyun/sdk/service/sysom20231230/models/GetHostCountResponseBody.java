@@ -106,7 +106,14 @@ public class GetHostCountResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class GetHostCountResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +129,14 @@ public class GetHostCountResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetHostCountResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43A910E9-A739-525E-855D-A32C257F1826</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetHostCountResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -204,7 +224,10 @@ public class GetHostCountResponseBody extends TeaModel {
             } 
 
             /**
-             * time.
+             * <p>The point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1725797727754</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -212,7 +235,10 @@ public class GetHostCountResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder value(Integer value) {
                 this.value = value;

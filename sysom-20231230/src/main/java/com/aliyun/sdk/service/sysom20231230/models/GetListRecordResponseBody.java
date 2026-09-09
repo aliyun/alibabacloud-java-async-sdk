@@ -106,7 +106,10 @@ public class GetListRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetListRecordResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetListRecordResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The description of the status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class GetListRecordResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -246,7 +255,10 @@ public class GetListRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * analysisId.
+             * <p>The AI analysis ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16896fa8-37f6-4c70-bb32-67fa9817d426</p>
              */
             public Builder analysisId(String analysisId) {
                 this.analysisId = analysisId;
@@ -254,7 +266,10 @@ public class GetListRecordResponseBody extends TeaModel {
             }
 
             /**
-             * analysisTime.
+             * <p>The analysis time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-24 12:02:05</p>
              */
             public Builder analysisTime(String analysisTime) {
                 this.analysisTime = analysisTime;
@@ -262,7 +277,10 @@ public class GetListRecordResponseBody extends TeaModel {
             }
 
             /**
-             * arguments.
+             * <p>The analysis parameters of the AI job analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>timeout=2000 ms</p>
              */
             public Builder arguments(String arguments) {
                 this.arguments = arguments;
@@ -270,7 +288,10 @@ public class GetListRecordResponseBody extends TeaModel {
             }
 
             /**
-             * failedLog.
+             * <p>The analysis failure log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>机器i-wz9dej066kii4goqpnze分析失败, 失败原因: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</p>
              */
             public Builder failedLog(String failedLog) {
                 this.failedLog = failedLog;
@@ -278,7 +299,10 @@ public class GetListRecordResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The analysis status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed/Analysis Failed</p>
              */
             public Builder status(String status) {
                 this.status = status;

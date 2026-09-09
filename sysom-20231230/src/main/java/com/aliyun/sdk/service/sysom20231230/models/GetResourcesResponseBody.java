@@ -93,7 +93,14 @@ public class GetResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +116,14 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +131,10 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +213,10 @@ public class GetResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * total.
+             * <p>The total number of resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2354</p>
              */
             public Builder total(Float total) {
                 this.total = total;
@@ -204,7 +224,10 @@ public class GetResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Kbytes</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -212,7 +235,10 @@ public class GetResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * usage.
+             * <p>The resource usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder usage(Float usage) {
                 this.usage = usage;

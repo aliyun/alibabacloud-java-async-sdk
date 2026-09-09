@@ -180,7 +180,10 @@ public class ListInstanceInfoRequest extends Request {
         }
 
         /**
-         * infoType.
+         * <p>The information type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_tag</p>
          */
         public Builder infoType(String infoType) {
             this.putQueryParameter("infoType", infoType);
@@ -189,7 +192,10 @@ public class ListInstanceInfoRequest extends Request {
         }
 
         /**
-         * instanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("instanceType", instanceType);
@@ -198,7 +204,10 @@ public class ListInstanceInfoRequest extends Request {
         }
 
         /**
-         * managedType.
+         * <p>The managed type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>managed</p>
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("managedType", managedType);
@@ -207,7 +216,10 @@ public class ListInstanceInfoRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -216,7 +228,10 @@ public class ListInstanceInfoRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiF/wDgaeitjjhVJYYzLwJ4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -225,7 +240,10 @@ public class ListInstanceInfoRequest extends Request {
         }
 
         /**
-         * pluginId.
+         * <p>The plugin ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01fc4a0b-f199-4885-9861-b4054a310fe7</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("pluginId", pluginId);
@@ -234,7 +252,10 @@ public class ListInstanceInfoRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);

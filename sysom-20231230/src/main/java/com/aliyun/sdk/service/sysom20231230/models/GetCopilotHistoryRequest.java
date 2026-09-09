@@ -97,6 +97,7 @@ public class GetCopilotHistoryRequest extends Request {
         }
 
         /**
+         * <p>The number of historical chat records to request. The value is generally less than 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

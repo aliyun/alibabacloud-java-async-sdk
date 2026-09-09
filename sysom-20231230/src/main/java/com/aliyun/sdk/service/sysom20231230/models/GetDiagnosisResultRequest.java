@@ -97,6 +97,7 @@ public class GetDiagnosisResultRequest extends Request {
         }
 
         /**
+         * <p>The diagnostic task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

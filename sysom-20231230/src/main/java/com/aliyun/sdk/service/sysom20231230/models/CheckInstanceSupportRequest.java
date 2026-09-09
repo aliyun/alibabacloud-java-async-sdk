@@ -110,7 +110,10 @@ public class CheckInstanceSupportRequest extends Request {
         }
 
         /**
-         * instances.
+         * <p>The list of instance IDs to check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;i-2zxxxxxx&quot;]</p>
          */
         public Builder instances(java.util.List<String> instances) {
             this.putBodyParameter("instances", instances);
@@ -119,7 +122,10 @@ public class CheckInstanceSupportRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region to which the instances belong. Ensure that all instance IDs passed in instances belong to the same region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putBodyParameter("region", region);

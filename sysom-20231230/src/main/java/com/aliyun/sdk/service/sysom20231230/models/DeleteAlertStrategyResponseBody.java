@@ -93,7 +93,14 @@ public class DeleteAlertStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,25 @@ public class DeleteAlertStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;uid&quot;: &quot;1808078950770264&quot;,
+         *     &quot;name&quot;: &quot;test&quot;,
+         *     &quot;strategy&quot;: {
+         *       &quot;items&quot;: [
+         *         &quot;Node CPU usage detection&quot;
+         *       ],
+         *       &quot;clusters&quot;: [
+         *         &quot;1&quot;
+         *       ]
+         *     },
+         *     &quot;enabled&quot;: false,
+         *     &quot;id&quot;: 1,
+         *     &quot;created_at&quot;: 1753170771,
+         *     &quot;updated_at&quot;: 1753170811
+         *   }</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -109,7 +134,14 @@ public class DeleteAlertStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the error information of the request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

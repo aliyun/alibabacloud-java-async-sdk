@@ -96,7 +96,10 @@ public class GetAlertDestinationRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The alert contact ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Integer id) {
             this.putQueryParameter("id", id);

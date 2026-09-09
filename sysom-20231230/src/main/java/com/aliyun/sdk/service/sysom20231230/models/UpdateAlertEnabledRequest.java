@@ -110,7 +110,10 @@ public class UpdateAlertEnabledRequest extends Request {
         }
 
         /**
-         * enabled.
+         * <p>Specifies whether the alert policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("enabled", enabled);
@@ -119,7 +122,10 @@ public class UpdateAlertEnabledRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The ID of the alert policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("id", id);

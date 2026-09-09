@@ -127,6 +127,7 @@ public class GetServiceFuncStatusRequest extends Request {
         }
 
         /**
+         * <p>The channel name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class GetServiceFuncStatusRequest extends Request {
         }
 
         /**
+         * <p>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
          * <p>This parameter is required.</p>
          */
         public Builder params(Params params) {
@@ -149,6 +151,7 @@ public class GetServiceFuncStatusRequest extends Request {
         }
 
         /**
+         * <p>The service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,6 +246,7 @@ public class GetServiceFuncStatusRequest extends Request {
             } 
 
             /**
+             * <p>The feature name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -254,7 +258,10 @@ public class GetServiceFuncStatusRequest extends Request {
             }
 
             /**
-             * instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zei55fwj8nnu31h3z46</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -262,7 +269,10 @@ public class GetServiceFuncStatusRequest extends Request {
             }
 
             /**
-             * uid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1338904783509062</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;

@@ -126,6 +126,7 @@ public class CreateClusterVpcEndpointConnectionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the ACK cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +139,10 @@ public class CreateClusterVpcEndpointConnectionRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * <p>Specifies whether to perform a dry run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putBodyParameter("dryRun", dryRun);
@@ -147,6 +151,7 @@ public class CreateClusterVpcEndpointConnectionRequest extends Request {
         }
 
         /**
+         * <p>The region to which the cluster belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

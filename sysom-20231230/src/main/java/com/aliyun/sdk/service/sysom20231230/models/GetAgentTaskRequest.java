@@ -96,7 +96,10 @@ public class GetAgentTaskRequest extends Request {
         }
 
         /**
-         * task_id.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42172120177e4b3abd6fabb3a6b5e2dd</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("task_id", taskId);

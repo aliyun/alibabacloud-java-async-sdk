@@ -93,7 +93,14 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization was successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -109,7 +116,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error code description. This value is empty if no error occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +127,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -183,7 +196,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * status.
+             * <p>The diagnostic status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -191,7 +207,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The URL of the diagnostic details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/diagnose/result/PhfFg456</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -271,7 +290,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * label.
+             * <p>The operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>diagnose</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -279,7 +301,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The diagnostic result of the anomaly item.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -287,7 +309,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The diagnostic type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -367,7 +392,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * end_time.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761814928</p>
              */
             public Builder endTime(Float endTime) {
                 this.endTime = endTime;
@@ -375,7 +403,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * metrics.
+             * <p>The list of metric values.</p>
              */
             public Builder metrics(java.util.List<String> metrics) {
                 this.metrics = metrics;
@@ -383,7 +411,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * start_time.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1761814928</p>
              */
             public Builder startTime(Float startTime) {
                 this.startTime = startTime;
@@ -606,7 +637,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * created_at.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1725801090000</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -614,7 +648,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The detailed description of the anomaly item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>节点发生OOM, 可查看OOM发生原因</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -622,7 +659,17 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * diag_status.
+             * <p>The diagnostic status. Valid values:</p>
+             * <ul>
+             * <li>1: diagnosis ready.</li>
+             * <li>2: diagnosis in progress.</li>
+             * <li>3: diagnosis completed.</li>
+             * <li>4: not diagnosable.</li>
+             * <li>5: diagnosis failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder diagStatus(Integer diagStatus) {
                 this.diagStatus = diagStatus;
@@ -630,7 +677,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * end_at.
+             * <p>The end time of the anomaly event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1725797727754</p>
              */
             public Builder endAt(Long endAt) {
                 this.endAt = endAt;
@@ -638,7 +688,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9d00ut2ska3mlyhn6j</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -646,7 +699,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * item.
+             * <p>The name of the anomaly item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>节点CPU使用率检测</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -654,7 +710,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The level of the anomaly item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>potential</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -662,7 +721,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The namespace of the pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -670,7 +732,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * opts.
+             * <p>The list of operations for the anomaly item.</p>
              */
             public Builder opts(java.util.List<Opts> opts) {
                 this.opts = opts;
@@ -678,7 +740,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * pod.
+             * <p>The pod name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pod</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -686,7 +751,7 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * raw_metrics.
+             * <p>The raw metrics.</p>
              */
             public Builder rawMetrics(RawMetrics rawMetrics) {
                 this.rawMetrics = rawMetrics;
@@ -694,7 +759,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * region_id.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -702,7 +770,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the anomaly item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>saturation</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -710,7 +781,10 @@ public class ListAbnormalyEventsResponseBody extends TeaModel {
             }
 
             /**
-             * uuid.
+             * <p>The UUID of the anomaly event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43f05b46-1034-42e8-a528-6e5ca1108277</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

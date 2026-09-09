@@ -152,7 +152,10 @@ public class ListInstanceStatusRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number (starting from 1). This field is present when pagination is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
@@ -161,7 +164,10 @@ public class ListInstanceStatusRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9b9vucz1iubsz355rh</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
@@ -170,7 +176,10 @@ public class ListInstanceStatusRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -179,7 +188,10 @@ public class ListInstanceStatusRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -188,7 +200,10 @@ public class ListInstanceStatusRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Filters the instance list by status. If this field is specified, only instances with the corresponding status are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

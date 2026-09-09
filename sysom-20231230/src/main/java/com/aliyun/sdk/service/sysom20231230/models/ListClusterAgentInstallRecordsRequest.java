@@ -175,7 +175,13 @@ public class ListClusterAgentInstallRecordsRequest extends Request {
         }
 
         /**
-         * cluster_id.
+         * <p>Filters by cluster ID.</p>
+         * <blockquote>
+         * <p>This cluster ID is not the ACK cluster ID. It is the <code>cluster_id</code> field in the data returned by this operation, or the <code>id</code> field in the data returned by the ListCluster operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cbd80af02b9d6454ebdc579c5e022d0c8</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -184,7 +190,10 @@ public class ListClusterAgentInstallRecordsRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number (starting from 1).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
@@ -193,7 +202,10 @@ public class ListClusterAgentInstallRecordsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -202,7 +214,10 @@ public class ListClusterAgentInstallRecordsRequest extends Request {
         }
 
         /**
-         * plugin_id.
+         * <p>Specifies the agent ID to filter the installation list for the specified agent. This parameter can be used together with the plugin_version parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("plugin_id", pluginId);
@@ -211,7 +226,10 @@ public class ListClusterAgentInstallRecordsRequest extends Request {
         }
 
         /**
-         * plugin_version.
+         * <p>Cannot be used alone. Use this parameter together with plugin_id to filter the installation list for a specified version of the specified agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.4.0-1</p>
          */
         public Builder pluginVersion(String pluginVersion) {
             this.putQueryParameter("plugin_version", pluginVersion);

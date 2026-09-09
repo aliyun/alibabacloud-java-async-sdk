@@ -138,7 +138,10 @@ public class GetHostCountRequest extends Request {
         }
 
         /**
-         * cluster.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1808078950770264</p>
          */
         public Builder cluster(String cluster) {
             this.putQueryParameter("cluster", cluster);
@@ -147,7 +150,10 @@ public class GetHostCountRequest extends Request {
         }
 
         /**
-         * end.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725801327754</p>
          */
         public Builder end(Float end) {
             this.putQueryParameter("end", end);
@@ -156,7 +162,10 @@ public class GetHostCountRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9d00ut2ska3mlyhn6j</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
@@ -165,7 +174,10 @@ public class GetHostCountRequest extends Request {
         }
 
         /**
-         * start.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725797727754</p>
          */
         public Builder start(Float start) {
             this.putQueryParameter("start", start);

@@ -93,7 +93,14 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +116,14 @@ public class GetAlertStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +213,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * clusters.
+             * <p>The collection of clusters for which alerts are received.</p>
              */
             public Builder clusters(java.util.List<String> clusters) {
                 this.clusters = clusters;
@@ -207,7 +221,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * destinations.
+             * <p>The alert contacts.</p>
              */
             public Builder destinations(Object destinations) {
                 this.destinations = destinations;
@@ -215,7 +229,10 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * <p>The list of anomaly items for which alerts are received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node CPU utilization detection</p>
              */
             public Builder items(Object items) {
                 this.items = items;
@@ -360,7 +377,10 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751520976660</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -368,7 +388,10 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Indicates whether the alert policy is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -376,7 +399,10 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The alert policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -384,7 +410,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * k8sLabel.
+             * <p>The Kubernetes label.</p>
              */
             public Builder k8sLabel(Boolean k8sLabel) {
                 this.k8sLabel = k8sLabel;
@@ -392,7 +418,10 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>strategy1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -400,7 +429,7 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * strategy.
+             * <p>The alert policy details.</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;
@@ -408,7 +437,10 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * uid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1222933234714935</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -416,7 +448,10 @@ public class GetAlertStrategyResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751254826285</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;

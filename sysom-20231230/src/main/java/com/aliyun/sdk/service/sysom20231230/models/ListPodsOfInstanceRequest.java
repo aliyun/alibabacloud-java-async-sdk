@@ -138,7 +138,10 @@ public class ListPodsOfInstanceRequest extends Request {
         }
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c96e34d74eb6748f3b2a46552d5d653f6</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -147,7 +150,10 @@ public class ListPodsOfInstanceRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
@@ -156,7 +162,10 @@ public class ListPodsOfInstanceRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9d00ut2ska3mlyhn6j</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
@@ -165,7 +174,10 @@ public class ListPodsOfInstanceRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);

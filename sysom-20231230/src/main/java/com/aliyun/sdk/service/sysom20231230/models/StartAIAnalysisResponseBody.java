@@ -93,7 +93,10 @@ public class StartAIAnalysisResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class StartAIAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class StartAIAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +179,10 @@ public class StartAIAnalysisResponseBody extends TeaModel {
             } 
 
             /**
-             * analysis_id.
+             * <p>The AI analysis ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16896fa8-37f6-4c70-bb32-67fa9817d426</p>
              */
             public Builder analysisId(String analysisId) {
                 this.analysisId = analysisId;

@@ -93,7 +93,10 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.ServerError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,7 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
             } 
 
             /**
-             * columns.
+             * <p>The list of field names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -191,7 +200,7 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The list of flame graph data.</p>
              */
             public Builder values(java.util.List<java.util.List<String>> values) {
                 this.values = values;
@@ -258,7 +267,7 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
             } 
 
             /**
-             * columns.
+             * <p>The list of field names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -266,7 +275,7 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The list of hot spot time series data.</p>
              */
             public Builder values(java.util.List<java.util.List<String>> values) {
                 this.values = values;
@@ -333,7 +342,7 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
             } 
 
             /**
-             * flame.
+             * <p>The flame graph data.</p>
              */
             public Builder flame(Flame flame) {
                 this.flame = flame;
@@ -341,7 +350,7 @@ public class GetHotspotTrackingResponseBody extends TeaModel {
             }
 
             /**
-             * series.
+             * <p>The data list.</p>
              */
             public Builder series(Series series) {
                 this.series = series;

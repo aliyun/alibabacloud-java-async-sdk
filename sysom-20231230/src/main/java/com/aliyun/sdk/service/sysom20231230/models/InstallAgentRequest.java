@@ -142,7 +142,11 @@ public class InstallAgentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the component to install.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
          */
         public Builder agentId(String agentId) {
             this.putBodyParameter("agent_id", agentId);
@@ -151,7 +155,11 @@ public class InstallAgentRequest extends Request {
         }
 
         /**
+         * <p>The version of the component to install.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.4.0-1</p>
          */
         public Builder agentVersion(String agentVersion) {
             this.putBodyParameter("agent_version", agentVersion);
@@ -160,6 +168,13 @@ public class InstallAgentRequest extends Request {
         }
 
         /**
+         * <p>The installation type. Valid values:</p>
+         * <ul>
+         * <li>InstallAndUpgrade: installs the component if it does not exist, or updates it if it exists.</li>
+         * <li>OnlyInstallNotHasAgent: installs the component if it does not exist, or takes no action if it exists.</li>
+         * <li>OnlyUpgradeHasAgent: takes no action if the component does not exist, or updates it if it exists.</li>
+         * <li>OnlyInstallWithoutStart: installs the component only without starting the service.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +187,7 @@ public class InstallAgentRequest extends Request {
         }
 
         /**
+         * <p>The list of instances on which to install the component.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
@@ -251,6 +267,7 @@ public class InstallAgentRequest extends Request {
             } 
 
             /**
+             * <p>The instance ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -262,6 +279,7 @@ public class InstallAgentRequest extends Request {
             }
 
             /**
+             * <p>The region ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

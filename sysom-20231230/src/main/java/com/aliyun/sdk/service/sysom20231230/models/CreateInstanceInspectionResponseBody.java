@@ -93,7 +93,10 @@ public class CreateInstanceInspectionResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateInstanceInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reportId</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -109,7 +115,10 @@ public class CreateInstanceInspectionResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

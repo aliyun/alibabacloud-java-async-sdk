@@ -166,7 +166,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -175,7 +178,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number. This field exists when pagination is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
@@ -184,7 +190,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The ECS instance ID used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-8vbfd3g9vs32sfuvv38h</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
@@ -193,7 +202,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -202,7 +214,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>Filters instances by region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -211,7 +226,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Filters instances by status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

@@ -124,7 +124,10 @@ public class UninstallAgentForClusterRequest extends Request {
         }
 
         /**
-         * agent_id.
+         * <p>The component ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
          */
         public Builder agentId(String agentId) {
             this.putBodyParameter("agent_id", agentId);
@@ -133,7 +136,10 @@ public class UninstallAgentForClusterRequest extends Request {
         }
 
         /**
-         * agent_version.
+         * <p>The component version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.4.0-1</p>
          */
         public Builder agentVersion(String agentVersion) {
             this.putBodyParameter("agent_version", agentVersion);
@@ -142,7 +148,13 @@ public class UninstallAgentForClusterRequest extends Request {
         }
 
         /**
-         * cluster_id.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>This cluster ID must be the ID of an ACK cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>c822f83bb45994ddbac9326b4c2f04f35</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("cluster_id", clusterId);

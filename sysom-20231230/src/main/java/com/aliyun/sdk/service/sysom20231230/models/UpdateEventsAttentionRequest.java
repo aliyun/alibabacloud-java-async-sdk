@@ -125,7 +125,10 @@ public class UpdateEventsAttentionRequest extends Request {
         }
 
         /**
-         * mode.
+         * <p>The sensitivity of the anomaly event. Valid values: -1 to 3. A value of -1 indicates that the sensitivity is decreased by 1. A value of 0 indicates that the sensitivity is increased by 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder mode(Integer mode) {
             this.putBodyParameter("mode", mode);
@@ -134,7 +137,10 @@ public class UpdateEventsAttentionRequest extends Request {
         }
 
         /**
-         * range.
+         * <p>The scope in which the update takes effect. Valid values: cluster and node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder range(String range) {
             this.putBodyParameter("range", range);
@@ -143,7 +149,11 @@ public class UpdateEventsAttentionRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the anomaly event.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03de78af-f49f-433d-b5b1-0f6a70c493ba</p>
          */
         public Builder uuid(String uuid) {
             this.putBodyParameter("uuid", uuid);

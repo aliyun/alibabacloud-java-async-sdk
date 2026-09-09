@@ -112,7 +112,11 @@ public class StartAIDiffAnalysisRequest extends Request {
         }
 
         /**
+         * <p>The task1 parameters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task1 parameters</p>
          */
         public Builder task1(Task1 task1) {
             this.putBodyParameter("task1", task1);
@@ -121,7 +125,11 @@ public class StartAIDiffAnalysisRequest extends Request {
         }
 
         /**
+         * <p>The task2 parameters.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task2 parameters. Currently, only comparison with the same analysisId and pid is supported</p>
          */
         public Builder task2(Task2 task2) {
             this.putBodyParameter("task2", task2);
@@ -224,7 +232,10 @@ public class StartAIDiffAnalysisRequest extends Request {
             } 
 
             /**
-             * analysisId.
+             * <p>The AI analysis ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16896fa8-37f6-4c70-bb32-67fa9817d426</p>
              */
             public Builder analysisId(String analysisId) {
                 this.analysisId = analysisId;
@@ -232,7 +243,7 @@ public class StartAIDiffAnalysisRequest extends Request {
             }
 
             /**
-             * pids.
+             * <p>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</p>
              */
             public Builder pids(java.util.List<String> pids) {
                 this.pids = pids;
@@ -240,7 +251,10 @@ public class StartAIDiffAnalysisRequest extends Request {
             }
 
             /**
-             * step_end.
+             * <p>The step end time, calculated based on the selected step number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4660551334179.955</p>
              */
             public Builder stepEnd(Float stepEnd) {
                 this.stepEnd = stepEnd;
@@ -248,7 +262,10 @@ public class StartAIDiffAnalysisRequest extends Request {
             }
 
             /**
-             * step_start.
+             * <p>The step start time, calculated based on the selected step number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4660550379415.497</p>
              */
             public Builder stepStart(Float stepStart) {
                 this.stepStart = stepStart;
@@ -345,6 +362,7 @@ public class StartAIDiffAnalysisRequest extends Request {
             } 
 
             /**
+             * <p>The AI analysis ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -356,6 +374,7 @@ public class StartAIDiffAnalysisRequest extends Request {
             }
 
             /**
+             * <p>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -367,6 +386,7 @@ public class StartAIDiffAnalysisRequest extends Request {
             }
 
             /**
+             * <p>The step end time, calculated based on the selected step number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -378,6 +398,7 @@ public class StartAIDiffAnalysisRequest extends Request {
             }
 
             /**
+             * <p>The step start time, calculated based on the selected step number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

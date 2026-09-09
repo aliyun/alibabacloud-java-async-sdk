@@ -106,7 +106,14 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.ServerError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +129,14 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the error information of the request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Query no data</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class ListInstanceHealthResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -269,7 +289,7 @@ public class ListInstanceHealthResponseBody extends TeaModel {
             } 
 
             /**
-             * images.
+             * <p>The list of container image names in the Pod.</p>
              */
             public Builder images(java.util.List<String> images) {
                 this.images = images;
@@ -277,7 +297,10 @@ public class ListInstanceHealthResponseBody extends TeaModel {
             }
 
             /**
-             * instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9d00ut2ska3mlyhn6j</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -285,7 +308,10 @@ public class ListInstanceHealthResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The namespace of the Pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -293,7 +319,10 @@ public class ListInstanceHealthResponseBody extends TeaModel {
             }
 
             /**
-             * pod.
+             * <p>The Pod name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pod</p>
              */
             public Builder pod(String pod) {
                 this.pod = pod;
@@ -301,7 +330,10 @@ public class ListInstanceHealthResponseBody extends TeaModel {
             }
 
             /**
-             * region_id.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -309,7 +341,10 @@ public class ListInstanceHealthResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>The health score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -317,7 +352,17 @@ public class ListInstanceHealthResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The running status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Running</strong>: running.</li>
+             * <li><strong>Offline</strong>: offline.</li>
+             * </ul>
+             * <blockquote>
+             * <p>An instance in the Offline state indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

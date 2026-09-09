@@ -93,7 +93,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,14 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the error message for the request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +127,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +222,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             } 
 
             /**
-             * email.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxx@email.com">xxx@email.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -217,7 +233,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * phone.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1xxx</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -225,7 +244,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * sec.
+             * <p>The secret key of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECxxx</p>
              */
             public Builder sec(String sec) {
                 this.sec = sec;
@@ -233,7 +255,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * webhook.
+             * <p>The webhook URL of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
@@ -378,7 +403,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753669116286</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -386,7 +414,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -394,7 +425,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SysOM</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -402,7 +436,7 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * <p>The configuration parameters of the alert contact.</p>
              */
             public Builder params(Params params) {
                 this.params = params;
@@ -410,7 +444,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The configuration source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>console</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -418,7 +455,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * target.
+             * <p>The notification target. Currently, only DingTalk chatbots are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -426,7 +466,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * uid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1222933234714935</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -434,7 +477,10 @@ public class CreateAlertDestinationResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751254826285</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;

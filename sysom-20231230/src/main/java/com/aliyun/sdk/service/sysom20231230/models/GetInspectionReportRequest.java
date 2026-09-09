@@ -96,7 +96,10 @@ public class GetInspectionReportRequest extends Request {
         }
 
         /**
-         * reportId.
+         * <p>The inspection report ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91bec4c5a168494e8128468e3995df87</p>
          */
         public Builder reportId(String reportId) {
             this.putQueryParameter("reportId", reportId);

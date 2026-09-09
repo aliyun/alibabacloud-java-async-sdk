@@ -106,7 +106,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message. An empty value indicates that all data has been read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>319</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -204,7 +216,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * tag_key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tag_key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -212,7 +227,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * tag_value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_tag_value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -422,7 +440,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * cluster_id.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbf7a37bc905d4682a3338b3744810269</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -430,7 +451,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * instance_id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp118piqcio9tiwgh84b</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -438,7 +462,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * instance_name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>allowed-repos-r2tzl</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -446,7 +473,7 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * instance_tag.
+             * <p>The instance tags.</p>
              */
             public Builder instanceTag(java.util.List<InstanceTag> instanceTag) {
                 this.instanceTag = instanceTag;
@@ -454,7 +481,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * kernel_version.
+             * <p>The kernel version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.10.134-14.an8.x86_64</p>
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -462,7 +492,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * os_arch.
+             * <p>The architecture of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86</p>
              */
             public Builder osArch(String osArch) {
                 this.osArch = osArch;
@@ -470,7 +503,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * os_health_score.
+             * <p>The health score of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder osHealthScore(String osHealthScore) {
                 this.osHealthScore = osHealthScore;
@@ -478,7 +514,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * os_name.
+             * <p>The operating system name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Linux  3.2104 LTS 64bit</p>
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -486,7 +525,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * private_ip.
+             * <p>The private IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -494,7 +536,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * public_ip.
+             * <p>The public IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -502,7 +547,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * resource_group_id.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -510,7 +558,10 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * resource_group_name.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default resource group</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -518,7 +569,17 @@ public class ListInstancesWithEcsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The running status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Running</strong>: The instance is running.</li>
+             * <li><strong>Offline</strong>: The instance is offline.</li>
+             * </ul>
+             * <blockquote>
+             * <p>An instance in the Offline state indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance has stopped running.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

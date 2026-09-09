@@ -80,7 +80,10 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,7 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -96,7 +99,14 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -188,7 +198,10 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
             } 
 
             /**
-             * ip.
+             * <p>The IP address of the machine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.193.52.91</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -196,7 +209,10 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * tag_key.
+             * <p>The tag name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sysom</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -204,7 +220,10 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * tag_value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>diagnosis</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -212,7 +231,10 @@ public class ListInstancesEcsInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The IP address type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder type(String type) {
                 this.type = type;

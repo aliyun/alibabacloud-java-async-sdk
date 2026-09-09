@@ -93,7 +93,10 @@ public class GetHotspotPidListResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetHotspotPidListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetHotspotPidListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -186,7 +192,7 @@ public class GetHotspotPidListResponseBody extends TeaModel {
             } 
 
             /**
-             * columns.
+             * <p>The list of field names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -194,7 +200,7 @@ public class GetHotspotPidListResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The list of process information.</p>
              */
             public Builder values(java.util.List<java.util.List<String>> values) {
                 this.values = values;

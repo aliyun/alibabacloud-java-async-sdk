@@ -106,7 +106,10 @@ public class ListAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66EAED72-542B-583B-BCED-64433DC27AD7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,14 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +132,7 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -130,7 +140,14 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +155,10 @@ public class ListAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -256,7 +276,10 @@ public class ListAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * created_at.
+             * <p>The time when the component version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-14T20:46:08</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -264,7 +287,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * install_script.
+             * <p>The installation script of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sysom.sh install</p>
              */
             public Builder installScript(String installScript) {
                 this.installScript = installScript;
@@ -272,7 +298,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * uninstall_script.
+             * <p>The uninstallation script of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sysom.sh uninstall</p>
              */
             public Builder uninstallScript(String uninstallScript) {
                 this.uninstallScript = uninstallScript;
@@ -280,7 +309,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * updated_at.
+             * <p>The time when the component version was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-14T20:46:08</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -288,7 +320,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * upgrade_script.
+             * <p>The update script of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sysom.sh upgrade</p>
              */
             public Builder upgradeScript(String upgradeScript) {
                 this.upgradeScript = upgradeScript;
@@ -296,7 +331,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The component version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.4.0-1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -441,7 +479,10 @@ public class ListAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * created_at.
+             * <p>The time when the component was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-14T20:46:08</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -449,7 +490,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The component description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SysOM Agent</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -457,7 +501,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The component ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -465,7 +512,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SysOM Agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -473,7 +523,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * support_arch.
+             * <p>The supported architectures (multiple architectures are separated by commas).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86</p>
              */
             public Builder supportArch(String supportArch) {
                 this.supportArch = supportArch;
@@ -481,7 +534,14 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the component. Valid values:</p>
+             * <ul>
+             * <li>Control: control-type component.</li>
+             * <li>AI: AI component.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Control</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -489,7 +549,10 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * updated_at.
+             * <p>The time when the component was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-14T20:46:08</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -497,7 +560,7 @@ public class ListAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * versions.
+             * <p>The list of component versions.</p>
              */
             public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;

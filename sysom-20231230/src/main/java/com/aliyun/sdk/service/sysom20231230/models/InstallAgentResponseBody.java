@@ -93,7 +93,10 @@ public class InstallAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D8887FC-4BDB-5A1C-AB19-135C29A9E481</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,14 @@ public class InstallAgentResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +119,7 @@ public class InstallAgentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -117,7 +127,14 @@ public class InstallAgentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +187,11 @@ public class InstallAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * task_id.
+             * <p>The task ID.</p>
+             * <p>You can use this task ID to call the GetAgentTask operation to query the task execution status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26b3cd97389c43dcad6bc4901c36fcec</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

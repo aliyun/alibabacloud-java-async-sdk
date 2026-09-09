@@ -168,7 +168,10 @@ public class ListInstanceHealthRequest extends Request {
         }
 
         /**
-         * cluster.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2dc6f3be-bf24-4070-8d3a-c03c26850532</p>
          */
         public Builder cluster(String cluster) {
             this.putQueryParameter("cluster", cluster);
@@ -177,7 +180,10 @@ public class ListInstanceHealthRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Integer current) {
             this.putQueryParameter("current", current);
@@ -186,6 +192,7 @@ public class ListInstanceHealthRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +205,10 @@ public class ListInstanceHealthRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9d00ut2ska3mlyhn6j</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
@@ -207,7 +217,10 @@ public class ListInstanceHealthRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 5. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -216,6 +229,7 @@ public class ListInstanceHealthRequest extends Request {
         }
 
         /**
+         * <p>The start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

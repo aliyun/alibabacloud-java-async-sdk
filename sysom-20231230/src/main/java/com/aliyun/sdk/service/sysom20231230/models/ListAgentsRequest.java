@@ -138,7 +138,10 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number (starting from page 1).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
@@ -147,7 +150,10 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Filters plug-ins by plug-in name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysOM</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -156,7 +162,10 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -165,7 +174,10 @@ public class ListAgentsRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>Filters the list by Agent type. For example, pass control to retrieve all Agents of the control type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>control</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

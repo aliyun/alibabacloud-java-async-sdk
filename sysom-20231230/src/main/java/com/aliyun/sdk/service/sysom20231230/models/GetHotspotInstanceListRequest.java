@@ -127,6 +127,7 @@ public class GetHotspotInstanceListRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class GetHotspotInstanceListRequest extends Request {
         }
 
         /**
+         * <p>The start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +153,7 @@ public class GetHotspotInstanceListRequest extends Request {
         }
 
         /**
+         * <p>The name of the table to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

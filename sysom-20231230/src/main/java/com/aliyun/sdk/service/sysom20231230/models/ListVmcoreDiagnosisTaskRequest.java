@@ -97,6 +97,7 @@ public class ListVmcoreDiagnosisTaskRequest extends Request {
         }
 
         /**
+         * <p>The number of past days to query tasks for, up to a maximum of 30 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

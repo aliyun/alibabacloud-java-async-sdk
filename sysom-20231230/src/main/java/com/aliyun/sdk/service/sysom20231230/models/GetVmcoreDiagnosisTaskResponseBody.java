@@ -93,7 +93,14 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +116,14 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -212,7 +226,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * debuginfoCommonUrl.
+             * <p>The download URL of the debuginfo-common RPM package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></p>
              */
             public Builder debuginfoCommonUrl(String debuginfoCommonUrl) {
                 this.debuginfoCommonUrl = debuginfoCommonUrl;
@@ -220,7 +237,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * debuginfoUrl.
+             * <p>The download URL of the debuginfo RPM package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></p>
              */
             public Builder debuginfoUrl(String debuginfoUrl) {
                 this.debuginfoUrl = debuginfoUrl;
@@ -228,7 +248,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dmesgUrl.
+             * <p>The download URL of the dmesg log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></p>
              */
             public Builder dmesgUrl(String dmesgUrl) {
                 this.dmesgUrl = dmesgUrl;
@@ -236,7 +259,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * vmcoreUrl.
+             * <p>The download URL of the vmcore file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></p>
              */
             public Builder vmcoreUrl(String vmcoreUrl) {
                 this.vmcoreUrl = vmcoreUrl;
@@ -368,7 +394,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-02T17:36:12</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -376,7 +405,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * diagnoseResult.
+             * <p>The diagnostic result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>result</p>
              */
             public Builder diagnoseResult(String diagnoseResult) {
                 this.diagnoseResult = diagnoseResult;
@@ -384,7 +416,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMsg.
+             * <p>The diagnostic error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error message</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -392,7 +427,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bbe94a98-4192-4172-b856-95777e0a55d7</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -400,7 +438,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskStatus.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -408,7 +449,10 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vmcore</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -416,7 +460,7 @@ public class GetVmcoreDiagnosisTaskResponseBody extends TeaModel {
             }
 
             /**
-             * urls.
+             * <p>The download URLs of related files associated with the task.</p>
              */
             public Builder urls(Urls urls) {
                 this.urls = urls;

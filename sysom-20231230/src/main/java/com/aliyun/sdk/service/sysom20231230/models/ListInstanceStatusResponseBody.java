@@ -106,7 +106,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5BC79EF5-798B-5499-9683-4E14EBBBF712</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,14 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +132,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -130,7 +140,14 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +155,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>218</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -217,7 +237,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * instance.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9d00ut2ska3mlyhn6j</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -225,7 +248,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -233,7 +259,17 @@ public class ListInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The running status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Running</strong>: running.</li>
+             * <li><strong>Offline</strong>: offline.</li>
+             * </ul>
+             * <blockquote>
+             * <p>An instance in the Offline status indicates that the heartbeat between the node and the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

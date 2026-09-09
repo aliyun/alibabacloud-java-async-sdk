@@ -93,7 +93,10 @@ public class CreateClusterVpcEndpointConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateClusterVpcEndpointConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateClusterVpcEndpointConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The description of the error code. This parameter is empty if no error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +179,10 @@ public class CreateClusterVpcEndpointConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * endpointConnectionId.
+             * <p>The ID of the endpoint connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-xxx</p>
              */
             public Builder endpointConnectionId(String endpointConnectionId) {
                 this.endpointConnectionId = endpointConnectionId;

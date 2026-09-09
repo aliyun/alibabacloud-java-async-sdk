@@ -152,7 +152,10 @@ public class ListDiagnosisRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
@@ -161,7 +164,10 @@ public class ListDiagnosisRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -170,7 +176,10 @@ public class ListDiagnosisRequest extends Request {
         }
 
         /**
-         * params.
+         * <p>The diagnostic parameters. Different diagnostic types require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;key\&quot;:\&quot;region\&quot;,\&quot;value\&quot;:\&quot;cn-beijing\&quot;}]</p>
          */
         public Builder params(String params) {
             this.putQueryParameter("params", params);
@@ -179,7 +188,10 @@ public class ListDiagnosisRequest extends Request {
         }
 
         /**
-         * service_name.
+         * <p>The diagnostic type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memgraph</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("service_name", serviceName);
@@ -188,7 +200,17 @@ public class ListDiagnosisRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The execution status of the diagnostic task.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>Ready</strong>: Ready.</li>
+         * <li><strong>Running</strong>: Running.</li>
+         * <li><strong>Success</strong>: Succeeded.</li>
+         * <li><strong>Fail</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

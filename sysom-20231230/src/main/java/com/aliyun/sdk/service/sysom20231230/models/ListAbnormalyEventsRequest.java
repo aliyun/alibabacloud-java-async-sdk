@@ -236,7 +236,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * cluster.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2d33d4be-bf54-4070-82ca-c1dc2d8b1562</p>
          */
         public Builder cluster(String cluster) {
             this.putQueryParameter("cluster", cluster);
@@ -245,7 +248,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number. This parameter is present during paginated queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Integer current) {
             this.putQueryParameter("current", current);
@@ -254,7 +260,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * end.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725801327754</p>
          */
         public Builder end(Float end) {
             this.putQueryParameter("end", end);
@@ -263,7 +272,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * event.
+         * <p>The name of the anomaly event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>节点根文件系统使用检测</p>
          */
         public Builder event(String event) {
             this.putQueryParameter("event", event);
@@ -272,7 +284,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9d00ut2ska3mlyhn6j</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
@@ -281,7 +296,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * level.
+         * <p>The level of the anomaly event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>potential</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("level", level);
@@ -290,7 +308,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The namespace of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -299,7 +320,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 5. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -308,7 +332,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * pod.
+         * <p>The pod name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-pod</p>
          */
         public Builder pod(String pod) {
             this.putQueryParameter("pod", pod);
@@ -317,7 +344,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * showPod.
+         * <p>Specifies whether to display pod anomaly events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder showPod(Integer showPod) {
             this.putQueryParameter("showPod", showPod);
@@ -326,7 +356,10 @@ public class ListAbnormalyEventsRequest extends Request {
         }
 
         /**
-         * start.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725797727754</p>
          */
         public Builder start(Float start) {
             this.putQueryParameter("start", start);

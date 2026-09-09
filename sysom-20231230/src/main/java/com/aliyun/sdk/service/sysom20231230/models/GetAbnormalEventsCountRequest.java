@@ -194,7 +194,10 @@ public class GetAbnormalEventsCountRequest extends Request {
         }
 
         /**
-         * cluster.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ijff4be-bf24-4070-89ca-c47c879b0g32</p>
          */
         public Builder cluster(String cluster) {
             this.putQueryParameter("cluster", cluster);
@@ -203,7 +206,10 @@ public class GetAbnormalEventsCountRequest extends Request {
         }
 
         /**
-         * end.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725801327754</p>
          */
         public Builder end(Float end) {
             this.putQueryParameter("end", end);
@@ -212,7 +218,10 @@ public class GetAbnormalEventsCountRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9d00ut2ska3mlyhn6j</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
@@ -221,7 +230,10 @@ public class GetAbnormalEventsCountRequest extends Request {
         }
 
         /**
-         * level.
+         * <p>The severity level of abnormal events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>potential</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("level", level);
@@ -230,7 +242,10 @@ public class GetAbnormalEventsCountRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The namespace of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -239,7 +254,10 @@ public class GetAbnormalEventsCountRequest extends Request {
         }
 
         /**
-         * pod.
+         * <p>The pod name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-pod</p>
          */
         public Builder pod(String pod) {
             this.putQueryParameter("pod", pod);
@@ -248,7 +266,10 @@ public class GetAbnormalEventsCountRequest extends Request {
         }
 
         /**
-         * showPod.
+         * <p>Specifies whether to display abnormal events of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder showPod(Integer showPod) {
             this.putQueryParameter("showPod", showPod);
@@ -257,7 +278,10 @@ public class GetAbnormalEventsCountRequest extends Request {
         }
 
         /**
-         * start.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1725797727754</p>
          */
         public Builder start(Float start) {
             this.putQueryParameter("start", start);

@@ -93,7 +93,14 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +116,11 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
          */
         public Builder message(String message) {
             this.message = message;
@@ -251,7 +262,10 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * add_cmd.
+             * <p>The configuration process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>java</p>
              */
             public Builder addCmd(String addCmd) {
                 this.addCmd = addCmd;
@@ -259,7 +273,10 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
             }
 
             /**
-             * cpu.
+             * <p>The ONCPU tracing switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -267,7 +284,10 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
             }
 
             /**
-             * java_store_path.
+             * <p>The storage path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/sysom/java-profiler</p>
              */
             public Builder javaStorePath(String javaStorePath) {
                 this.javaStorePath = javaStorePath;
@@ -275,7 +295,10 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
             }
 
             /**
-             * locks.
+             * <p>The lock tracing switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder locks(String locks) {
                 this.locks = locks;
@@ -283,7 +306,10 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
             }
 
             /**
-             * loop.
+             * <p>The tracing cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder loop(Integer loop) {
                 this.loop = loop;
@@ -291,7 +317,10 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
             }
 
             /**
-             * mem.
+             * <p>The memory tracing switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mem(String mem) {
                 this.mem = mem;
@@ -299,7 +328,10 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
             }
 
             /**
-             * system_profiling.
+             * <p>The system profiling switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder systemProfiling(String systemProfiling) {
                 this.systemProfiling = systemProfiling;
@@ -353,7 +385,7 @@ public class GetServiceFuncStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * args.
+             * <p>The configuration parameters.</p>
              */
             public Builder args(Args args) {
                 this.args = args;

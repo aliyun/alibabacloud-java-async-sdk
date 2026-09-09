@@ -154,7 +154,11 @@ public class GetConfigByNameRequest extends Request {
         }
 
         /**
+         * <p>The configuration name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>节点网络延时检测</p>
          */
         public Builder configName(String configName) {
             this.putQueryParameter("configName", configName);
@@ -163,6 +167,7 @@ public class GetConfigByNameRequest extends Request {
         }
 
         /**
+         * <p>The type of the configuration parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +180,10 @@ public class GetConfigByNameRequest extends Request {
         }
 
         /**
-         * entityId.
+         * <p>The entity ID. Default value: &quot;default&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bptest</p>
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("entityId", entityId);
@@ -184,7 +192,10 @@ public class GetConfigByNameRequest extends Request {
         }
 
         /**
-         * useGlobalUid.
+         * <p>Specifies whether to use the global UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useGlobalUid(Boolean useGlobalUid) {
             this.putQueryParameter("useGlobalUid", useGlobalUid);
@@ -193,7 +204,10 @@ public class GetConfigByNameRequest extends Request {
         }
 
         /**
-         * versionId.
+         * <p>The version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionId(Long versionId) {
             this.putQueryParameter("versionId", versionId);

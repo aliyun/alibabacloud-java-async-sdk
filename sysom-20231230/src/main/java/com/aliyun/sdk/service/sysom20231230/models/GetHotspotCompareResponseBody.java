@@ -106,7 +106,10 @@ public class GetHotspotCompareResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.ServerError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetHotspotCompareResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,14 @@ public class GetHotspotCompareResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -207,7 +220,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             } 
 
             /**
-             * columns.
+             * <p>The list of field names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -215,7 +228,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The list of flame graph data.</p>
              */
             public Builder values(java.util.List<java.util.List<String>> values) {
                 this.values = values;
@@ -282,7 +295,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             } 
 
             /**
-             * columns.
+             * <p>The list of field names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -290,7 +303,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The list of hot spot time series data.</p>
              */
             public Builder values(java.util.List<java.util.List<String>> values) {
                 this.values = values;
@@ -357,7 +370,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             } 
 
             /**
-             * columns.
+             * <p>The list of field names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -365,7 +378,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The list of hot spot time series data.</p>
              */
             public Builder values(java.util.List<java.util.List<String>> values) {
                 this.values = values;
@@ -445,7 +458,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             } 
 
             /**
-             * flame.
+             * <p>The differential flame graph data.</p>
              */
             public Builder flame(Flame flame) {
                 this.flame = flame;
@@ -453,7 +466,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             }
 
             /**
-             * series_instance1.
+             * <p>The hot spot time series 1.</p>
              */
             public Builder seriesInstance1(SeriesInstance1 seriesInstance1) {
                 this.seriesInstance1 = seriesInstance1;
@@ -461,7 +474,7 @@ public class GetHotspotCompareResponseBody extends TeaModel {
             }
 
             /**
-             * series_instance2.
+             * <p>The hot spot time series 2.</p>
              */
             public Builder seriesInstance2(SeriesInstance2 seriesInstance2) {
                 this.seriesInstance2 = seriesInstance2;

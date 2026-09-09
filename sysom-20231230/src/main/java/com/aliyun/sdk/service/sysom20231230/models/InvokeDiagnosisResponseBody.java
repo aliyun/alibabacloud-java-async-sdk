@@ -93,7 +93,14 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +116,14 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +131,10 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43A910E9-A739-525E-855D-A32C257F1826</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +187,10 @@ public class InvokeDiagnosisResponseBody extends TeaModel {
             } 
 
             /**
-             * task_id.
+             * <p>The diagnostic task ID. You can use this ID to call the <code>GetDiagnosisResult</code> operation to query the diagnostic result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ihqhAcrt</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

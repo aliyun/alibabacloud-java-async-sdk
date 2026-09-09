@@ -110,7 +110,7 @@ public class InitialSysomRequest extends Request {
         }
 
         /**
-         * check_only.
+         * <p>Specifies whether to only check if the service-linked role exists.</p>
          */
         public Builder checkOnly(Boolean checkOnly) {
             this.putBodyParameter("check_only", checkOnly);
@@ -119,7 +119,10 @@ public class InitialSysomRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The source. Set this parameter to console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("source", source);

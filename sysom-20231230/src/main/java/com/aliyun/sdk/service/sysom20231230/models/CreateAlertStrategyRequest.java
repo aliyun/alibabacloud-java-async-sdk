@@ -141,6 +141,7 @@ public class CreateAlertStrategyRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the alert policy is enabled.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +154,7 @@ public class CreateAlertStrategyRequest extends Request {
         }
 
         /**
-         * k8sLabel.
+         * <p>The Kubernetes label.</p>
          */
         public Builder k8sLabel(Boolean k8sLabel) {
             this.putBodyParameter("k8sLabel", k8sLabel);
@@ -162,6 +163,7 @@ public class CreateAlertStrategyRequest extends Request {
         }
 
         /**
+         * <p>The Policy Name of the alerting policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +176,7 @@ public class CreateAlertStrategyRequest extends Request {
         }
 
         /**
+         * <p>The details of the alert policy.</p>
          * <p>This parameter is required.</p>
          */
         public Builder strategy(Strategy strategy) {
@@ -264,7 +267,7 @@ public class CreateAlertStrategyRequest extends Request {
             } 
 
             /**
-             * clusters.
+             * <p>The collection of clusters for which alerts are received.</p>
              */
             public Builder clusters(java.util.List<String> clusters) {
                 this.clusters = clusters;
@@ -272,7 +275,7 @@ public class CreateAlertStrategyRequest extends Request {
             }
 
             /**
-             * destinations.
+             * <p>The alert contacts.</p>
              */
             public Builder destinations(java.util.List<Integer> destinations) {
                 this.destinations = destinations;
@@ -280,7 +283,7 @@ public class CreateAlertStrategyRequest extends Request {
             }
 
             /**
-             * items.
+             * <p>The collection of anomaly items for which alerts are received.</p>
              */
             public Builder items(java.util.List<String> items) {
                 this.items = items;

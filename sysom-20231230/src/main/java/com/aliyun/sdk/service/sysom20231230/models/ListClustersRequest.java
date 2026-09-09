@@ -180,7 +180,13 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * cluster_id.
+         * <p>Filters by cluster ID.</p>
+         * <blockquote>
+         * <p>This cluster ID is not the ACK cluster ID. It is the <code>id</code> field returned by this operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cb7d4cc26c8f845fb8a8255ffd394820e</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -189,7 +195,16 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * cluster_status.
+         * <ul>
+         * <li><code>Running</code>: The cluster is managed normally.</li>
+         * <li><code>Installing</code>: An installation task is in progress for the cluster.</li>
+         * <li><code>Uninstalling</code>: An uninstallation task is in progress for the cluster.</li>
+         * <li><code>Upgrading</code>: An update task is in progress for the cluster.</li>
+         * <li><code>Offline</code>: The cluster is offline and management is abnormal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder clusterStatus(String clusterStatus) {
             this.putQueryParameter("cluster_status", clusterStatus);
@@ -198,7 +213,13 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * cluster_type.
+         * <ul>
+         * <li><code>ACK</code>: ACK cluster.</li>
+         * <li><code>CUSTOM</code>: Custom cluster (default clusters belong to custom clusters).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK</p>
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -207,7 +228,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number (starting from page 1).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
@@ -216,7 +240,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * id.
+         * <p><strong>[Deprecated]</strong> Use the cluster_id parameter to filter instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb7d4cc26c8f845fb8a8255ffd394820e</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("id", id);
@@ -225,7 +252,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Filters plugins by plugin name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proxy-next-upstream</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -234,7 +264,10 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);

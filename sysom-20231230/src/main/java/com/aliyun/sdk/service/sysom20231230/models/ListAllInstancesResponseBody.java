@@ -132,7 +132,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -156,7 +162,14 @@ public class ListAllInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>instance not exists</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +177,13 @@ public class ListAllInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * <blockquote>
+         * <p>A non-empty value indicates that more data is available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>c2f78a783f49457caba6bace6f6f79e4</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -183,7 +202,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -262,7 +284,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * infoKey.
+             * <p>The information key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sysom</p>
              */
             public Builder infoKey(String infoKey) {
                 this.infoKey = infoKey;
@@ -270,7 +295,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * infoType.
+             * <p>The information type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_tag</p>
              */
             public Builder infoType(String infoType) {
                 this.infoType = infoType;
@@ -278,7 +306,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * infoValue.
+             * <p>The information value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>diagnosis</p>
              */
             public Builder infoValue(String infoValue) {
                 this.infoValue = infoValue;
@@ -605,7 +636,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * agentConfigId.
+             * <p>The agent configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_id</p>
              */
             public Builder agentConfigId(String agentConfigId) {
                 this.agentConfigId = agentConfigId;
@@ -613,7 +647,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * agentConfigName.
+             * <p>The agent configuration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_name</p>
              */
             public Builder agentConfigName(String agentConfigName) {
                 this.agentConfigName = agentConfigName;
@@ -621,7 +658,7 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * attributes.
+             * <p>The extended information.</p>
              */
             public Builder attributes(java.util.List<Attributes> attributes) {
                 this.attributes = attributes;
@@ -629,7 +666,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * clusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b24a621-acb3-11ef-8c90-00163e1029af</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -637,7 +677,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * clusterName.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zjk_vpc_domain_1</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -645,7 +688,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * imageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_3_x64_20G_alibase_20250117.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -653,7 +699,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * installLevel.
+             * <p>The installation level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cluster</p>
              */
             public Builder installLevel(String installLevel) {
                 this.installLevel = installLevel;
@@ -661,7 +710,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * installType.
+             * <p>The installation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>console</p>
              */
             public Builder installType(String installType) {
                 this.installType = installType;
@@ -669,7 +721,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-bp17uabeke9v7n30abm2</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -677,7 +732,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * instanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -685,7 +743,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * instanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -693,7 +754,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * kernelVersion.
+             * <p>The kernel version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.10.134-18.al8.x86_64</p>
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -701,7 +765,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * manageLevel.
+             * <p>The management level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder manageLevel(String manageLevel) {
                 this.manageLevel = manageLevel;
@@ -709,7 +776,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * manageType.
+             * <p>The management type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>managed</p>
              */
             public Builder manageType(String manageType) {
                 this.manageType = manageType;
@@ -717,7 +787,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * osArch.
+             * <p>The operating system architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86_64</p>
              */
             public Builder osArch(String osArch) {
                 this.osArch = osArch;
@@ -725,7 +798,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * osHealthScore.
+             * <p>The operating system health score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder osHealthScore(Integer osHealthScore) {
                 this.osHealthScore = osHealthScore;
@@ -733,7 +809,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * osName.
+             * <p>The operating system name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alios</p>
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -741,7 +820,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * privateIp.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.21.172.7</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -749,7 +831,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * publicIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.98.215.58</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -757,7 +842,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b24a621-acb3-11ef-8c90-00163e1029af</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -765,7 +853,10 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -773,7 +864,17 @@ public class ListAllInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The running status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Running</strong>: The instance is running.</li>
+             * <li><strong>Offline</strong>: The instance is offline.</li>
+             * </ul>
+             * <blockquote>
+             * <p>An instance in the Offline state indicates that the heartbeat from the node to the SysOM server is lost. It does not mean that the corresponding ECS instance is not running.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -152,7 +152,10 @@ public class GetListRecordRequest extends Request {
         }
 
         /**
-         * analysisId.
+         * <p>The ID of the analysis record to query the status of.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxx-f37b-478d-87f6-2259ed8766bf</p>
          */
         public Builder analysisId(String analysisId) {
             this.putQueryParameter("analysisId", analysisId);
@@ -161,7 +164,10 @@ public class GetListRecordRequest extends Request {
         }
 
         /**
-         * current.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder current(Long current) {
             this.putQueryParameter("current", current);
@@ -179,7 +185,10 @@ public class GetListRecordRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -188,7 +197,10 @@ public class GetListRecordRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);

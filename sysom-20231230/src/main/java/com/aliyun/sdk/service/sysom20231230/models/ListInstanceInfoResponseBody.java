@@ -119,7 +119,10 @@ public class ListInstanceInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned per request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -143,7 +149,14 @@ public class ListInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +164,10 @@ public class ListInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U+w1wv2R4ZWR5oZLXD0+Dp4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -241,7 +257,10 @@ public class ListInstanceInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * infoKey.
+             * <p>The information key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sysom</p>
              */
             public Builder infoKey(String infoKey) {
                 this.infoKey = infoKey;
@@ -249,7 +268,10 @@ public class ListInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * infoType.
+             * <p>The information type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_tag</p>
              */
             public Builder infoType(String infoType) {
                 this.infoType = infoType;
@@ -257,7 +279,10 @@ public class ListInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * infoValue.
+             * <p>The information value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>diagnosis</p>
              */
             public Builder infoValue(String infoValue) {
                 this.infoValue = infoValue;

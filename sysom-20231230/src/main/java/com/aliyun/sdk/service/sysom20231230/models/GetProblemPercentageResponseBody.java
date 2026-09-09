@@ -106,7 +106,14 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +129,14 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>result: code=1 msg=(Request failed, status_code != 200)</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class GetProblemPercentageResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total amount of data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -204,7 +224,10 @@ public class GetProblemPercentageResponseBody extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The type of the abnormal item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>saturation</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -212,7 +235,10 @@ public class GetProblemPercentageResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The number of abnormal items of this type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder value(Long value) {
                 this.value = value;

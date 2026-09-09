@@ -93,7 +93,10 @@ public class ListRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +115,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The list of regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cn-hangzhou&quot;, &quot;cn-shengzhen&quot;]</p>
          */
         public Builder data(java.util.List<String> data) {
             this.data = data;
@@ -117,7 +126,10 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error code description. This value is empty if no error occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
          */
         public Builder message(String message) {
             this.message = message;

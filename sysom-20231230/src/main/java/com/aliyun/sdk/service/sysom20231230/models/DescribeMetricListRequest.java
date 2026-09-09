@@ -138,7 +138,10 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end time, in seconds (UNIX timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683618245000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -147,7 +150,10 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9d00ut2ska3mlyhn6j</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
@@ -156,7 +162,10 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * metricName.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sysom_cpu_graph</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("metricName", metricName);
@@ -165,7 +174,10 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * startTime.
+         * <p>The start time, in seconds (UNIX timestamp).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1709740800000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);

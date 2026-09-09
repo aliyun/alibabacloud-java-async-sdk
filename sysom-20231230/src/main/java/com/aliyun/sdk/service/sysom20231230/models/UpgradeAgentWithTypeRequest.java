@@ -141,6 +141,7 @@ public class UpgradeAgentWithTypeRequest extends Request {
         }
 
         /**
+         * <p>The ID of the component to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +154,7 @@ public class UpgradeAgentWithTypeRequest extends Request {
         }
 
         /**
+         * <p>The version of the component to update to.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +167,10 @@ public class UpgradeAgentWithTypeRequest extends Request {
         }
 
         /**
-         * instanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -174,6 +179,7 @@ public class UpgradeAgentWithTypeRequest extends Request {
         }
 
         /**
+         * <p>The list of instances for which to update the component.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
@@ -253,6 +259,7 @@ public class UpgradeAgentWithTypeRequest extends Request {
             } 
 
             /**
+             * <p>The instance ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -264,6 +271,7 @@ public class UpgradeAgentWithTypeRequest extends Request {
             }
 
             /**
+             * <p>The region ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

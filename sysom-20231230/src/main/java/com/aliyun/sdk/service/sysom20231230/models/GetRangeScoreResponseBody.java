@@ -106,7 +106,11 @@ public class GetRangeScoreResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>代表资源一级ID的资源属性字段</p>
+         * <p>The status code.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +121,7 @@ public class GetRangeScoreResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -125,7 +129,14 @@ public class GetRangeScoreResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -133,7 +144,10 @@ public class GetRangeScoreResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +155,10 @@ public class GetRangeScoreResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total amount of data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Float total) {
             this.total = total;
@@ -220,7 +237,10 @@ public class GetRangeScoreResponseBody extends TeaModel {
             } 
 
             /**
-             * time.
+             * <p>The point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1725797727754</p>
              */
             public Builder time(Long time) {
                 this.time = time;
@@ -228,7 +248,10 @@ public class GetRangeScoreResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The metric type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>saturation</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -236,7 +259,10 @@ public class GetRangeScoreResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder value(Long value) {
                 this.value = value;

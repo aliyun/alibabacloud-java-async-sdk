@@ -93,7 +93,14 @@ public class UpgradeAgentWithTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class UpgradeAgentWithTypeResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +116,14 @@ public class UpgradeAgentWithTypeResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +131,10 @@ public class UpgradeAgentWithTypeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +187,10 @@ public class UpgradeAgentWithTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>391f5aeba2054f66b3aaef0136142fe2</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -80,7 +80,14 @@ public class InvokeAnomalyDiagnosisResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +95,14 @@ public class InvokeAnomalyDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

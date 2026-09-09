@@ -93,7 +93,14 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.InvalidParameter</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,13 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;webhook&quot;:&quot;&quot;,
+         * &quot;sec&quot;:&quot;&quot;
+         * }</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -109,7 +122,14 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +137,10 @@ public class UpdateAlertDestinationResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -96,7 +96,10 @@ public class DeleteAlertDestinationRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Integer id) {
             this.putQueryParameter("id", id);

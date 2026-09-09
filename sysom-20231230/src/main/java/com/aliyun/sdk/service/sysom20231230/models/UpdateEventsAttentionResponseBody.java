@@ -93,7 +93,10 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44841312-7227-55C9-AE03-D59729BFAE38</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,14 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li>Success: The authorization is successful.</li>
+         * <li>Other values: The authorization failed. Check the message field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +119,7 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -117,7 +127,10 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance not belong to current user</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +183,10 @@ public class UpdateEventsAttentionResponseBody extends TeaModel {
             } 
 
             /**
-             * mode.
+             * <p>The updated attention level value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;

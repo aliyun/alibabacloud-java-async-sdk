@@ -132,7 +132,14 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization has failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +147,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +155,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -156,7 +166,14 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the error information for the request.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +181,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2f78a783f49457caba6bace6f6f79e4</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -183,7 +203,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -262,7 +285,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             } 
 
             /**
-             * clusters.
+             * <p>The collection of clusters for which alerts are received.</p>
              */
             public Builder clusters(java.util.List<String> clusters) {
                 this.clusters = clusters;
@@ -278,7 +301,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * items.
+             * <p>接收告警的异常项列表</p>
              */
             public Builder items(java.util.List<String> items) {
                 this.items = items;
@@ -423,7 +446,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753669116286</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -431,7 +457,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Indicates whether the alert policy is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -439,7 +468,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -455,7 +487,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>strategy1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -463,7 +498,7 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * strategy.
+             * <p>The alert policy details.</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;
@@ -471,7 +506,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * uid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1880327028143673</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -479,7 +517,10 @@ public class ListAlertStrategiesResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753237017710</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;

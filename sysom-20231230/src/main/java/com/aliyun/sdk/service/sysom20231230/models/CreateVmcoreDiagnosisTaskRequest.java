@@ -153,7 +153,11 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
         }
 
         /**
-         * debuginfoCommonUrl.
+         * <p>The download URL of the debuginfo-common file. This parameter is optional when the diagnosis type is vmcore.</p>
+         * <p>For CentOS or Alinux kernel diagnostics, the corresponding debuginfo-common file is automatically downloaded, so this parameter is not required. For other distribution kernels, manually provide the download URL of the debuginfo-common file that corresponds to the kernel version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></p>
          */
         public Builder debuginfoCommonUrl(String debuginfoCommonUrl) {
             this.putBodyParameter("debuginfoCommonUrl", debuginfoCommonUrl);
@@ -162,7 +166,11 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
         }
 
         /**
-         * debuginfoUrl.
+         * <p>The download URL of the debuginfo file. This parameter is optional when the diagnosis type is vmcore.</p>
+         * <p>For CentOS or Alinux kernel diagnostics, the corresponding debuginfo file is automatically downloaded, so this parameter is not required. For other distribution kernels, manually provide the download URL of the debuginfo file that corresponds to the kernel version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></p>
          */
         public Builder debuginfoUrl(String debuginfoUrl) {
             this.putBodyParameter("debuginfoUrl", debuginfoUrl);
@@ -171,7 +179,10 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
         }
 
         /**
-         * dmesgUrl.
+         * <p>The download URL of the dmesg log file. This parameter is required when the diagnosis type is dmesg.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></p>
          */
         public Builder dmesgUrl(String dmesgUrl) {
             this.putBodyParameter("dmesgUrl", dmesgUrl);
@@ -180,6 +191,11 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
         }
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>vmcore: vmcore file diagnostic task.</li>
+         * <li>dmesg: dmesg log diagnostic task.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +208,10 @@ public class CreateVmcoreDiagnosisTaskRequest extends Request {
         }
 
         /**
-         * vmcoreUrl.
+         * <p>The download URL of the vmcore file. This parameter is required when the diagnosis type is vmcore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></p>
          */
         public Builder vmcoreUrl(String vmcoreUrl) {
             this.putBodyParameter("vmcoreUrl", vmcoreUrl);

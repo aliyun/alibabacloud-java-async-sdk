@@ -106,7 +106,14 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.ServerError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +129,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Requests for llm service failed</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +144,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9515E5A0-8905-59B0-9BBF-5F0BE568C3A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +155,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>623</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -334,7 +354,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * cluster_id.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c2218ca2b76ec45e7b7ee1693f6fcd374</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -342,7 +365,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * instance.
+             * <p>The ECS instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9d00ut2ska3mlyhn6j</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -350,7 +376,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * kernel_version.
+             * <p>The current kernel version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.10.134-16.1.an8.x86_64</p>
              */
             public Builder kernelVersion(String kernelVersion) {
                 this.kernelVersion = kernelVersion;
@@ -358,7 +387,26 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * meta.
+             * <p>The metadata of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;uname&quot;: &quot;Linux&quot;,
+             *     &quot;oncpu&quot;: &quot;off&quot;,
+             *     &quot;release&quot;: &quot;5.10.134-16.3.al8.aarch64&quot;,
+             *     &quot;monitor&quot;: &quot;on&quot;,
+             *     &quot;version_id&quot;: &quot;3&quot;,
+             *     &quot;version&quot;: &quot;3 (Soaring Falcon)&quot;,
+             *     &quot;podNs&quot;: [</p>
+             * <pre><code>],
+             * &quot;machine&quot;: &quot;aarch64&quot;,
+             * &quot;name&quot;: &quot;Alibaba Cloud Linux&quot;,
+             * &quot;sysak&quot;: &quot;3.4.0-1&quot;,
+             * &quot;id&quot;: &quot;alinux&quot;,
+             * &quot;region&quot;: &quot;cn-hangzhou&quot;,
+             * &quot;centos-release&quot;: &quot;Alibaba Cloud Linux release 3 (Soaring Falcon)&quot;
+             * </code></pre>
+             * <p>}</p>
              */
             public Builder meta(Object meta) {
                 this.meta = meta;
@@ -366,7 +414,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * os_arch.
+             * <p>The architecture of the ECS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x86</p>
              */
             public Builder osArch(String osArch) {
                 this.osArch = osArch;
@@ -374,7 +425,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * os_health_score.
+             * <p>The health score of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder osHealthScore(String osHealthScore) {
                 this.osHealthScore = osHealthScore;
@@ -382,7 +436,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * os_name.
+             * <p>The operating system name of the instance (obtained from /etc/os-release).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Anolis OS</p>
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -390,7 +447,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * os_name_id.
+             * <p>The operating system name ID of the instance (obtained from /etc/os-release).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>anolis</p>
              */
             public Builder osNameId(String osNameId) {
                 this.osNameId = osNameId;
@@ -398,7 +458,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * os_version.
+             * <p>The operating system version of the instance (obtained from /etc/os-release).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.9</p>
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -406,7 +469,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * os_version_id.
+             * <p>The operating system version ID of the instance (obtained from /etc/os-release).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rhel fedora centos</p>
              */
             public Builder osVersionId(String osVersionId) {
                 this.osVersionId = osVersionId;
@@ -414,7 +480,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -422,7 +491,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

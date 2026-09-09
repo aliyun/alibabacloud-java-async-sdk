@@ -124,7 +124,10 @@ public class GetResourcesRequest extends Request {
         }
 
         /**
-         * cluster.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1808078950770264</p>
          */
         public Builder cluster(String cluster) {
             this.putQueryParameter("cluster", cluster);
@@ -133,7 +136,10 @@ public class GetResourcesRequest extends Request {
         }
 
         /**
-         * instance.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9d00ut2ska3mlyhn6j</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("instance", instance);
@@ -142,7 +148,10 @@ public class GetResourcesRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mem</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

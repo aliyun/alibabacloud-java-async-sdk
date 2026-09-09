@@ -31,9 +31,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "SysOM";
         this.version = "2023-12-30";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-hangzhou", "sysom.cn-hangzhou.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -43,6 +41,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: The diagnosis feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+     * Take note of the following items when you invoke this operation to authorize SysOM to diagnose ECS instances:</p>
+     * </blockquote>
+     * <ul>
+     * <li>Each authorization is valid for 7 days. After 7 days, the authorization expires and you must invoke this operation again to re-authorize.</li>
+     * <li>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The Resource Access Management (RAM) user that invokes this operation must have the <code>ram:CreateServiceLinkedRole</code> permission.</li>
+     * <li>When you invoke this operation to authorize diagnosis on a specific instance, the label <code>sysom:diagnosis</code> is automatically associated with the target ECS instance. SysOM only allows diagnosis on instances that have this label.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AuthDiagnosis  AuthDiagnosisRequest
      * @return AuthDiagnosisResponse
      */
@@ -61,6 +70,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this operation contains only instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
      * @param request the request parameters of CheckInstanceSupport  CheckInstanceSupportRequest
      * @return CheckInstanceSupportResponse
      */
@@ -158,6 +170,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</li>
+     * <li>Populate the parameters based on the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateClusterVpcEndpointConnection  CreateClusterVpcEndpointConnectionRequest
      * @return CreateClusterVpcEndpointConnectionResponse
      */
@@ -248,6 +267,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
      * @param request the request parameters of DescribeMetricList  DescribeMetricListRequest
      * @return DescribeMetricListResponse
      */
@@ -266,6 +288,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned data from a string to a dict before use. Refer to the standard LLM service response format.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GenerateCopilotResponse  GenerateCopilotResponseRequest
      * @return GenerateCopilotResponseResponse
      */
@@ -284,6 +312,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Use this operation together with the call_sseapi interface in the aliyun-tea-openapi-inner package.</li>
+     * <li>Populate parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned string data to a dict before use. Refer to the standard LLM service response format.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GenerateCopilotStreamResponse  GenerateCopilotStreamResponseRequest
      * @return GenerateCopilotStreamResponseResponse
      */
@@ -456,6 +491,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be running. You can check the <code>data.status</code> field in the response to determine the status. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * 
      * @param request the request parameters of GetDiagnosisResult  GetDiagnosisResultRequest
      * @return GetDiagnosisResultResponse
      */
@@ -726,6 +764,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the service configuration status.</p>
+     * 
      * @param request the request parameters of GetServiceFuncStatus  GetServiceFuncStatusRequest
      * @return GetServiceFuncStatusResponse
      */
@@ -762,6 +803,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Some SysOM API operations require role assumption based on the <code>AliyunServiceRoleForSysom</code> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</p>
+     * <ul>
+     * <li><code>check_only</code>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, invoking this operation triggers automatic creation of the service-linked role if it does not exist.<blockquote>
+     * <p>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, refer to: <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a>, <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a></p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of InitialSysom  InitialSysomRequest
      * @return InitialSysomResponse
      */
@@ -780,6 +830,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</p>
+     * 
      * @param request the request parameters of InstallAgent  InstallAgentRequest
      * @return InstallAgentResponse
      */
@@ -798,6 +851,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After you install a component on the target ACK cluster:</p>
+     * <ol>
+     * <li>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are processed in the first batch.</li>
+     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster in each epoch. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
+     * </ol>
+     * 
      * @param request the request parameters of InstallAgentForCluster  InstallAgentForClusterRequest
      * @return InstallAgentForClusterResponse
      */
@@ -816,6 +876,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</p>
+     * 
      * @param request the request parameters of InstallAgentWithType  InstallAgentWithTypeRequest
      * @return InstallAgentWithTypeResponse
      */
@@ -852,6 +915,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The following requirements must be met to diagnose a target ECS instance:</p>
+     * <ul>
+     * <li>The target ECS instance status must be Running.</li>
+     * <li>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</li>
+     * <li>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly fails.</li>
+     * <li>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, first invoke AuthDiagnosis to associate the authorization. That operation creates the aforementioned service-linked role.</li>
+     * </ul>
+     * 
      * @param request the request parameters of InvokeDiagnosis  InvokeDiagnosisRequest
      * @return InvokeDiagnosisResponse
      */
@@ -1086,6 +1158,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the list of machines managed by SysOM.</p>
+     * 
      * @param request the request parameters of ListInstanceStatus  ListInstanceStatusRequest
      * @return ListInstanceStatusResponse
      */
@@ -1104,6 +1179,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of instances that are already managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -1122,6 +1200,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
      * @param request the request parameters of ListInstancesEcsInfoList  ListInstancesEcsInfoListRequest
      * @return ListInstancesEcsInfoListResponse
      */
@@ -1140,6 +1221,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list returned by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
      * @param request the request parameters of ListInstancesWithEcsInfo  ListInstancesWithEcsInfoRequest
      * @return ListInstancesWithEcsInfoResponse
      */
@@ -1158,6 +1242,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</p>
+     * 
      * @param request the request parameters of ListPluginsInstances  ListPluginsInstancesRequest
      * @return ListPluginsInstancesResponse
      */
@@ -1194,6 +1281,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</p>
+     * 
      * @param request the request parameters of ListRegions  ListRegionsRequest
      * @return ListRegionsResponse
      */
@@ -1248,6 +1338,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Currently, only comparative analysis of the same pid across different steps within the same AI Infra analysis record is supported.</p>
+     * 
      * @param request the request parameters of StartAIDiffAnalysis  StartAIDiffAnalysisRequest
      * @return StartAIDiffAnalysisResponse
      */
@@ -1266,6 +1359,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * 
      * @param request the request parameters of UninstallAgent  UninstallAgentRequest
      * @return UninstallAgentResponse
      */
@@ -1302,6 +1398,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * 
      * @param request the request parameters of UninstallAgentWithType  UninstallAgentWithTypeRequest
      * @return UninstallAgentWithTypeResponse
      */
@@ -1395,6 +1494,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</li>
+     * <li>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateFuncSwitchRecord  UpdateFuncSwitchRecordRequest
      * @return UpdateFuncSwitchRecordResponse
      */
@@ -1413,6 +1518,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * 
      * @param request the request parameters of UpgradeAgent  UpgradeAgentRequest
      * @return UpgradeAgentResponse
      */
@@ -1449,6 +1557,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</p>
+     * 
      * @param request the request parameters of UpgradeAgentWithType  UpgradeAgentWithTypeRequest
      * @return UpgradeAgentWithTypeResponse
      */

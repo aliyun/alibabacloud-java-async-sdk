@@ -93,7 +93,14 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +108,7 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -109,7 +116,10 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message. This field contains the error information when code is not Success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +209,10 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
             } 
 
             /**
-             * instance.
+             * <p>The ECS instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-wz9d00ut2ska3mlyhn6j</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -207,7 +220,10 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
             }
 
             /**
-             * reason.
+             * <p>The reason why the instance cannot be managed. This value is not empty when success is false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance not found in ecs</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -215,7 +231,16 @@ public class CheckInstanceSupportResponseBody extends TeaModel {
             }
 
             /**
-             * support.
+             * <p>Indicates whether the instance can be managed by SysOM.</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The instance can be managed by SysOM.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The instance cannot be managed by SysOM.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder support(Boolean support) {
                 this.support = support;

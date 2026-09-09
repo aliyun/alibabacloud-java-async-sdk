@@ -93,7 +93,10 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44841312-7227-55C9-AE03-D59729BFAE38</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,14 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +119,7 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -117,7 +127,14 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPIException: SysomOpenAPI.NotAuthorizedInstance Instance 21 is not authorized</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +187,10 @@ public class UninstallAgentForClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * task_id.
+             * <p>The task ID. You can use this task ID to call GetAgentTask to query the execution status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>049ea0609515414b9e19c3389d7ba638</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

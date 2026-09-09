@@ -106,7 +106,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -114,7 +117,14 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +132,7 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -130,7 +140,14 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * <ul>
+         * <li>If <code>code == Success</code>, this field is empty.</li>
+         * <li>Otherwise, this field contains the request error information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +155,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -298,7 +318,13 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * cluster_id.
+             * <p>The cluster ID.</p>
+             * <blockquote>
+             * <p>This cluster ID is not the ACK cluster ID.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>cbf7a37bc905d4682a3338b3744810269</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -306,7 +332,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * created_at.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-25T15:08:19</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -314,7 +343,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * grayscale_config.
+             * <p>The canary release environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder grayscaleConfig(String grayscaleConfig) {
                 this.grayscaleConfig = grayscaleConfig;
@@ -322,7 +354,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * plugin_id.
+             * <p>The component ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -330,7 +365,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * plugin_version.
+             * <p>The plug-in version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.4.0-1</p>
              */
             public Builder pluginVersion(String pluginVersion) {
                 this.pluginVersion = pluginVersion;
@@ -338,7 +376,10 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * updated_at.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-25T15:08:19</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;

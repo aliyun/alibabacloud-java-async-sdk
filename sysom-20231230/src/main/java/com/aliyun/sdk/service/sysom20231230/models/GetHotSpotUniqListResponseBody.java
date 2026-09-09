@@ -106,7 +106,14 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed error message.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +129,10 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,10 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D693121-C925-5154-8DF6-C09A8B369822</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +151,10 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call is successful. true: successful. false: failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -204,7 +220,7 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
             } 
 
             /**
-             * columns.
+             * <p>The list of data names.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -212,7 +228,7 @@ public class GetHotSpotUniqListResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The list of data values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;

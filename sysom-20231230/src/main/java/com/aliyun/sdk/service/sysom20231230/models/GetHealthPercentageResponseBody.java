@@ -80,7 +80,14 @@ public class GetHealthPercentageResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><code>code == Success</code> indicates that the authorization is successful.</li>
+         * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SysomOpenAPI.ServerError</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +95,7 @@ public class GetHealthPercentageResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -96,7 +103,10 @@ public class GetHealthPercentageResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +172,10 @@ public class GetHealthPercentageResponseBody extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The health level of the node or Pod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>health</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -170,7 +183,10 @@ public class GetHealthPercentageResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(Long value) {
                 this.value = value;

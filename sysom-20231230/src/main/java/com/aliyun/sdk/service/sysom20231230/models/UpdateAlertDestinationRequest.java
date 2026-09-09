@@ -235,7 +235,10 @@ public class UpdateAlertDestinationRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The ID of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("id", id);
@@ -253,7 +256,10 @@ public class UpdateAlertDestinationRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -262,7 +268,7 @@ public class UpdateAlertDestinationRequest extends Request {
         }
 
         /**
-         * params.
+         * <p>The configuration parameters.</p>
          */
         public Builder params(Params params) {
             this.putBodyParameter("params", params);
@@ -271,7 +277,10 @@ public class UpdateAlertDestinationRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The configuration source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>console</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("source", source);
@@ -280,7 +289,10 @@ public class UpdateAlertDestinationRequest extends Request {
         }
 
         /**
-         * target.
+         * <p>The alert notification target. Currently, only DingTalk contacts are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
          */
         public Builder target(String target) {
             this.putBodyParameter("target", target);
@@ -383,7 +395,10 @@ public class UpdateAlertDestinationRequest extends Request {
             } 
 
             /**
-             * email.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxx@email.com">xxx@email.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -391,7 +406,10 @@ public class UpdateAlertDestinationRequest extends Request {
             }
 
             /**
-             * phone.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1xxx</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -399,7 +417,10 @@ public class UpdateAlertDestinationRequest extends Request {
             }
 
             /**
-             * sec.
+             * <p>The secret key of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECxxx</p>
              */
             public Builder sec(String sec) {
                 this.sec = sec;
@@ -407,7 +428,10 @@ public class UpdateAlertDestinationRequest extends Request {
             }
 
             /**
-             * webhook.
+             * <p>The webhook URL of the chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>
              */
             public Builder webhook(String webhook) {
                 this.webhook = webhook;
