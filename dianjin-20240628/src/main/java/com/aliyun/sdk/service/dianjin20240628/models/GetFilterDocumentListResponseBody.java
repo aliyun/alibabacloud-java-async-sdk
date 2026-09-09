@@ -145,7 +145,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Time spent on the request, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7ADF010C-FD89-569D-A079-2D4D5247E943</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -358,7 +379,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             } 
 
             /**
-             * docId.
+             * <p>Document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29368126816</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -366,7 +390,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * documentMeta.
+             * <p>Document metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;: &quot;1&quot;}</p>
              */
             public Builder documentMeta(java.util.Map<String, ?> documentMeta) {
                 this.documentMeta = documentMeta;
@@ -374,7 +401,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * fileType.
+             * <p>File type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -382,7 +412,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -390,7 +423,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -398,7 +434,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * libraryId.
+             * <p>Document library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdfgsjdfg</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;
@@ -406,7 +445,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * statusCode.
+             * <p>Document status. Valid values: WaitRefresh (waiting for refresh), InQueue (pending), FetchingData (retrieving data), Embedding (processing document), Error (failed), Completed (active), Null (unknown).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WaitRefresh</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -414,7 +456,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Document title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>公司文档</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -422,7 +467,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>Document URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -528,7 +576,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             } 
 
             /**
-             * currentPage.
+             * <p>Current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -536,7 +587,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -544,7 +598,7 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * records.
+             * <p>Records.</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -552,7 +606,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * totalPages.
+             * <p>Total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;
@@ -560,7 +617,10 @@ public class GetFilterDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * totalRecords.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;

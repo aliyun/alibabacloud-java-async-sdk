@@ -117,6 +117,7 @@ public class UpdateLibraryRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class UpdateLibraryRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Document library description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文档库描述</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -138,7 +142,7 @@ public class UpdateLibraryRequest extends Request {
         }
 
         /**
-         * indexSetting.
+         * <p>Document library index configuration</p>
          */
         public Builder indexSetting(IndexSetting indexSetting) {
             this.putBodyParameter("indexSetting", indexSetting);
@@ -147,6 +151,7 @@ public class UpdateLibraryRequest extends Request {
         }
 
         /**
+         * <p>Document library ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +164,10 @@ public class UpdateLibraryRequest extends Request {
         }
 
         /**
-         * libraryName.
+         * <p>Document library name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档库</p>
          */
         public Builder libraryName(String libraryName) {
             this.putBodyParameter("libraryName", libraryName);
@@ -318,7 +326,10 @@ public class UpdateLibraryRequest extends Request {
             } 
 
             /**
-             * docTreeSplit.
+             * <p>Layout-based chunking</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder docTreeSplit(Boolean docTreeSplit) {
                 this.docTreeSplit = docTreeSplit;
@@ -326,7 +337,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * docTreeSplitSize.
+             * <p>Layout-based chunking size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160</p>
              */
             public Builder docTreeSplitSize(Integer docTreeSplitSize) {
                 this.docTreeSplitSize = docTreeSplitSize;
@@ -334,7 +348,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * enhanceGraph.
+             * <p>Enhance images</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enhanceGraph(Boolean enhanceGraph) {
                 this.enhanceGraph = enhanceGraph;
@@ -342,7 +359,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * enhanceTable.
+             * <p>Enhance tables</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enhanceTable(Boolean enhanceTable) {
                 this.enhanceTable = enhanceTable;
@@ -350,7 +370,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * overlap.
+             * <p>Chunk overlap length</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder overlap(Integer overlap) {
                 this.overlap = overlap;
@@ -358,7 +381,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * sentenceSplit.
+             * <p>Split by sentence. Default is true</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sentenceSplit(Boolean sentenceSplit) {
                 this.sentenceSplit = sentenceSplit;
@@ -366,7 +392,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * sentenceSplitSize.
+             * <p>Average sentence-based chunking length</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160</p>
              */
             public Builder sentenceSplitSize(Integer sentenceSplitSize) {
                 this.sentenceSplitSize = sentenceSplitSize;
@@ -374,7 +403,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * size.
+             * <p>Fixed-length chunking size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -382,7 +414,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * split.
+             * <p>Enable chunking</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder split(Boolean split) {
                 this.split = split;
@@ -449,7 +484,10 @@ public class UpdateLibraryRequest extends Request {
             } 
 
             /**
-             * temperature.
+             * <p>Temperature</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder temperature(Double temperature) {
                 this.temperature = temperature;
@@ -457,7 +495,7 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * <p>topP</p>
+             * <p>Top P</p>
              * 
              * <strong>example:</strong>
              * <p>0.8</p>
@@ -592,7 +630,10 @@ public class UpdateLibraryRequest extends Request {
             } 
 
             /**
-             * enableFollowUp.
+             * <p>Multi-turn enhancement</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableFollowUp(Boolean enableFollowUp) {
                 this.enableFollowUp = enableFollowUp;
@@ -600,7 +641,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * enableMultiQuery.
+             * <p>Use Large Language Models (LLMs) to decompose queries</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableMultiQuery(Boolean enableMultiQuery) {
                 this.enableMultiQuery = enableMultiQuery;
@@ -608,7 +652,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * enableOpenQa.
+             * <p>Use Large Language Models (LLMs) to answer queries</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableOpenQa(Boolean enableOpenQa) {
                 this.enableOpenQa = enableOpenQa;
@@ -616,7 +663,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * enableQueryRewrite.
+             * <p>Rewrite queries using domain knowledge</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableQueryRewrite(Boolean enableQueryRewrite) {
                 this.enableQueryRewrite = enableQueryRewrite;
@@ -624,7 +674,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * enableSession.
+             * <p>Record session history</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSession(Boolean enableSession) {
                 this.enableSession = enableSession;
@@ -632,7 +685,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * localKnowledgeId.
+             * <p>Document library ID used for query rewriting</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sjdhgfc</p>
              */
             public Builder localKnowledgeId(String localKnowledgeId) {
                 this.localKnowledgeId = localKnowledgeId;
@@ -640,7 +696,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * withDocumentReference.
+             * <p>Include document references in responses</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder withDocumentReference(Boolean withDocumentReference) {
                 this.withDocumentReference = withDocumentReference;
@@ -707,7 +766,10 @@ public class UpdateLibraryRequest extends Request {
             } 
 
             /**
-             * documentRankType.
+             * <p>Merge and sort strategy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder documentRankType(String documentRankType) {
                 this.documentRankType = documentRankType;
@@ -715,7 +777,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * limit.
+             * <p>Number of results from two-way merge and summarization</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -834,7 +899,10 @@ public class UpdateLibraryRequest extends Request {
             } 
 
             /**
-             * category.
+             * <p>Text index type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ElasticSearch</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -842,7 +910,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * enable.
+             * <p>Enable text indexing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -850,7 +921,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * indexAnalyzer.
+             * <p>Text index analyzer: Standard, IkMaxWord, or IkSmart</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder indexAnalyzer(String indexAnalyzer) {
                 this.indexAnalyzer = indexAnalyzer;
@@ -858,7 +932,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * rankThreshold.
+             * <p>Text index ranking threshold</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder rankThreshold(Double rankThreshold) {
                 this.rankThreshold = rankThreshold;
@@ -866,7 +943,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * searchAnalyzer.
+             * <p>Text index search analyzer: Standard, IkMaxWord, or IkSmart</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder searchAnalyzer(String searchAnalyzer) {
                 this.searchAnalyzer = searchAnalyzer;
@@ -874,7 +954,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * topK.
+             * <p>Number of final summarized results from text indexing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder topK(Integer topK) {
                 this.topK = topK;
@@ -980,7 +1063,10 @@ public class UpdateLibraryRequest extends Request {
             } 
 
             /**
-             * category.
+             * <p>Vector index source. We recommend ADB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADB</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -988,7 +1074,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * embeddingType.
+             * <p>Text embedding model for vector indexing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DashScope</p>
              */
             public Builder embeddingType(String embeddingType) {
                 this.embeddingType = embeddingType;
@@ -996,7 +1085,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * enable.
+             * <p>Enable vector indexing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1004,7 +1096,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * rankThreshold.
+             * <p>Vector index ranking threshold</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder rankThreshold(Double rankThreshold) {
                 this.rankThreshold = rankThreshold;
@@ -1012,7 +1107,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * topK.
+             * <p>Number of final summarized results from vector indexing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder topK(Integer topK) {
                 this.topK = topK;
@@ -1144,7 +1242,7 @@ public class UpdateLibraryRequest extends Request {
             } 
 
             /**
-             * chunkStrategy.
+             * <p>Chunking strategy</p>
              */
             public Builder chunkStrategy(ChunkStrategy chunkStrategy) {
                 this.chunkStrategy = chunkStrategy;
@@ -1152,7 +1250,7 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * modelConfig.
+             * <p>Model configuration</p>
              */
             public Builder modelConfig(ModelConfig modelConfig) {
                 this.modelConfig = modelConfig;
@@ -1160,7 +1258,10 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * promptRoleStyle.
+             * <p>Prompt role style</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你是一位文档分析专家，非常善于从给定的知识中，找到重点，像老师给学生讲课一样把问题回答清晰。你的回答富有逻辑性，遇到复杂问题，你善于一步一步思考。</p>
              */
             public Builder promptRoleStyle(String promptRoleStyle) {
                 this.promptRoleStyle = promptRoleStyle;
@@ -1168,7 +1269,7 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * queryEnhancer.
+             * <p>Query enhancement</p>
              */
             public Builder queryEnhancer(QueryEnhancer queryEnhancer) {
                 this.queryEnhancer = queryEnhancer;
@@ -1176,7 +1277,7 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * recallStrategy.
+             * <p>Retrieval strategy</p>
              */
             public Builder recallStrategy(RecallStrategy recallStrategy) {
                 this.recallStrategy = recallStrategy;
@@ -1184,7 +1285,7 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * textIndexSetting.
+             * <p>Text index settings</p>
              */
             public Builder textIndexSetting(TextIndexSetting textIndexSetting) {
                 this.textIndexSetting = textIndexSetting;
@@ -1192,7 +1293,7 @@ public class UpdateLibraryRequest extends Request {
             }
 
             /**
-             * vectorIndexSetting.
+             * <p>Vector index settings</p>
              */
             public Builder vectorIndexSetting(VectorIndexSetting vectorIndexSetting) {
                 this.vectorIndexSetting = vectorIndexSetting;

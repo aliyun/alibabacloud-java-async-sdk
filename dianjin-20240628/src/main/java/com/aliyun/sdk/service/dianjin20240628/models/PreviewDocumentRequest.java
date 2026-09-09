@@ -75,6 +75,7 @@ public class PreviewDocumentRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter, workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class PreviewDocumentRequest extends Request {
         }
 
         /**
+         * <p>Document ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

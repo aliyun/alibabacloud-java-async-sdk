@@ -145,7 +145,10 @@ public class CreateDialogResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>The time consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class CreateDialogResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class CreateDialogResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class CreateDialogResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class CreateDialogResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class CreateDialogResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>003D019A-1BB3-53EC-A0D2-CE76DA5D73B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class CreateDialogResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class CreateDialogResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -267,7 +288,10 @@ public class CreateDialogResponseBody extends TeaModel {
             } 
 
             /**
-             * openingRemarks.
+             * <p>The opening remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好，我是XX客服人员。</p>
              */
             public Builder openingRemarks(String openingRemarks) {
                 this.openingRemarks = openingRemarks;
@@ -275,7 +299,10 @@ public class CreateDialogResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1728545917713234</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

@@ -149,6 +149,7 @@ public class SubmitChatQuestionRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +162,7 @@ public class SubmitChatQuestionRequest extends Request {
         }
 
         /**
+         * <p>Current time</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,11 @@ public class SubmitChatQuestionRequest extends Request {
         }
 
         /**
+         * <p>Live channel script</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>我们家的酒全都是老酒，酒厂直售【当前用户问句】，保证正儿八经的自家酿造，地址都能告诉大家，品质实实在在的有保障。我们家这款酒入口非常绵柔顺滑，酱香、粮食香、花果香层层递进，空杯留香能持续48小时，不会有上头的感觉。今天我们是厂家直销，大家平时买酒在烟酒店要经过好几个环节的中间商，每个环节都要加价，今天在这里拍下，只会让你省不少冤枉钱。如果说你拿去存酒的话， 拍蓝瓶的云端系列也可以，越存的话会越香，你拿去托人办事、请人吃饭、商务宴请、搞接待送礼，直接带白瓶云悠系列。</p>
          */
         public Builder liveScriptContent(String liveScriptContent) {
             this.putBodyParameter("liveScriptContent", liveScriptContent);
@@ -182,7 +188,10 @@ public class SubmitChatQuestionRequest extends Request {
         }
 
         /**
-         * openSmallTalk.
+         * <p>Enable small talk. Default is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder openSmallTalk(Boolean openSmallTalk) {
             this.putBodyParameter("openSmallTalk", openSmallTalk);
@@ -191,6 +200,7 @@ public class SubmitChatQuestionRequest extends Request {
         }
 
         /**
+         * <p>Question list</p>
          * <p>This parameter is required.</p>
          */
         public Builder questionList(java.util.List<QuestionList> questionList) {
@@ -200,6 +210,7 @@ public class SubmitChatQuestionRequest extends Request {
         }
 
         /**
+         * <p>Request ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,6 +223,7 @@ public class SubmitChatQuestionRequest extends Request {
         }
 
         /**
+         * <p>Session ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -353,7 +365,11 @@ public class SubmitChatQuestionRequest extends Request {
             } 
 
             /**
+             * <p>Question content</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是多大的体积</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -361,6 +377,7 @@ public class SubmitChatQuestionRequest extends Request {
             }
 
             /**
+             * <p>Original question time</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -372,7 +389,10 @@ public class SubmitChatQuestionRequest extends Request {
             }
 
             /**
-             * reply.
+             * <p>Reply content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是三升的。</p>
              */
             public Builder reply(String reply) {
                 this.reply = reply;
@@ -380,6 +400,7 @@ public class SubmitChatQuestionRequest extends Request {
             }
 
             /**
+             * <p>Session ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -391,7 +412,10 @@ public class SubmitChatQuestionRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>Question type: PRODUCT_QA (audio submission), GOSSIP (operation submission), UNKNOWN (unknown)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRODUCT_QA</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -399,6 +423,7 @@ public class SubmitChatQuestionRequest extends Request {
             }
 
             /**
+             * <p>Unique ID of the user asking questions in the live channel</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -410,7 +435,11 @@ public class SubmitChatQuestionRequest extends Request {
             }
 
             /**
+             * <p>Name of the user asking questions in the live channel</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张**</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

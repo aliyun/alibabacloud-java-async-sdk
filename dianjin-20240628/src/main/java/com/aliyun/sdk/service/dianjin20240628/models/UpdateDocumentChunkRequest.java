@@ -90,6 +90,7 @@ public class UpdateDocumentChunkRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class UpdateDocumentChunkRequest extends Request {
         }
 
         /**
+         * <p>List of document chunks.</p>
          * <p>This parameter is required.</p>
          */
         public Builder chunks(java.util.List<Chunks> chunks) {
@@ -111,6 +113,7 @@ public class UpdateDocumentChunkRequest extends Request {
         }
 
         /**
+         * <p>Library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +187,7 @@ public class UpdateDocumentChunkRequest extends Request {
             } 
 
             /**
+             * <p>Document chunk ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -195,7 +199,11 @@ public class UpdateDocumentChunkRequest extends Request {
             }
 
             /**
+             * <p>Document chunk text.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一段测试文本</p>
              */
             public Builder chunkText(String chunkText) {
                 this.chunkText = chunkText;

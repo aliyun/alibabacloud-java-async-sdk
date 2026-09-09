@@ -145,7 +145,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Time consumed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2B8F6DC9-6FAF-576F-9095-CCD90FB2BDDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Success status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -280,7 +301,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             } 
 
             /**
-             * axisArray.
+             * <p>Coordinate</p>
              */
             public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
@@ -288,7 +309,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>Page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -296,7 +320,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * textHighlightArea.
+             * <p>Text highlight area, used for highlighting text-type files</p>
              */
             public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
@@ -519,7 +543,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             } 
 
             /**
-             * chunkId.
+             * <p>Document chunk ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28377468263482764</p>
              */
             public Builder chunkId(String chunkId) {
                 this.chunkId = chunkId;
@@ -527,7 +554,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * chunkMeta.
+             * <p>Document chunk metadata</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;:&quot;1&quot;}</p>
              */
             public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
@@ -535,7 +565,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * chunkOssUrl.
+             * <p>Document chunk OSS address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-xxxx-hangzhou.com/test.pdf</p>
              */
             public Builder chunkOssUrl(String chunkOssUrl) {
                 this.chunkOssUrl = chunkOssUrl;
@@ -543,7 +576,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * chunkText.
+             * <p>Document chunk text</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一段测试文本</p>
              */
             public Builder chunkText(String chunkText) {
                 this.chunkText = chunkText;
@@ -551,7 +587,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * chunkType.
+             * <p>Document chunk type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder chunkType(String chunkType) {
                 this.chunkType = chunkType;
@@ -559,7 +598,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * docId.
+             * <p>Document ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8947387648356</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -567,7 +609,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * fileType.
+             * <p>Document type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -575,7 +620,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * libraryId.
+             * <p>Library ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jhsdvne</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;
@@ -583,7 +631,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * libraryName.
+             * <p>Library name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档库</p>
              */
             public Builder libraryName(String libraryName) {
                 this.libraryName = libraryName;
@@ -591,7 +642,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * nextChunkId.
+             * <p>Next document chunk ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>947538465</p>
              */
             public Builder nextChunkId(String nextChunkId) {
                 this.nextChunkId = nextChunkId;
@@ -599,7 +653,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * pos.
+             * <p>Document chunk position</p>
              */
             public Builder pos(java.util.List<Pos> pos) {
                 this.pos = pos;
@@ -607,7 +661,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * preChunkId.
+             * <p>Previous document chunk ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9848346548365</p>
              */
             public Builder preChunkId(String preChunkId) {
                 this.preChunkId = preChunkId;
@@ -615,7 +672,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>Document chunk score</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -623,7 +683,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Document title</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -729,7 +792,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             } 
 
             /**
-             * currentPage.
+             * <p>Current page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -737,7 +803,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Records per page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -745,7 +814,7 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * records.
+             * <p>Records</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -753,7 +822,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * totalPages.
+             * <p>Total pages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;
@@ -761,7 +833,10 @@ public class GetDocumentChunkListResponseBody extends TeaModel {
             }
 
             /**
-             * totalRecords.
+             * <p>Total records</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;

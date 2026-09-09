@@ -145,7 +145,10 @@ public class GetDocumentListResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>The time consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E3FBAF1-17AF-53B7-AF0A-CDCEEB6DE658</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetDocumentListResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -358,7 +379,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             } 
 
             /**
-             * docId.
+             * <p>The document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8326748346</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -366,7 +390,7 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * documentMeta.
+             * <p>The document metadata.</p>
              */
             public Builder documentMeta(java.util.Map<String, ?> documentMeta) {
                 this.documentMeta = documentMeta;
@@ -374,7 +398,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * fileType.
+             * <p>The document type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -382,7 +409,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -390,7 +420,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -398,7 +431,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * libraryId.
+             * <p>The ID of the library to which the document belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skjdhshbv</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;
@@ -406,7 +442,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * statusCode.
+             * <p>The document status. Valid values: WaitRefresh (waiting for refresh), InQueue (pending), FetchingData (retrieving data), Embedding (processing document), Error (error), Completed (available), and Null (unknown).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WaitRefresh</p>
              */
             public Builder statusCode(String statusCode) {
                 this.statusCode = statusCode;
@@ -414,7 +453,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>The document title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -422,7 +464,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The document URL. This field will be deprecated. The value is empty. To get the document URL, use the GetDocumentUrl operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -528,7 +573,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             } 
 
             /**
-             * currentPage.
+             * <p>The current page number. This is a paging parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -536,7 +584,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page. This is a paging parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -544,7 +595,7 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * records.
+             * <p>The records.</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -552,7 +603,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * totalPages.
+             * <p>The total number of pages. This is a paging parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;
@@ -560,7 +614,10 @@ public class GetDocumentListResponseBody extends TeaModel {
             }
 
             /**
-             * totalRecords.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;

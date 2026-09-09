@@ -118,9 +118,6 @@ public class GetReportResponseRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>XIANYU</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putPathParameter("sceneCode", sceneCode);
@@ -130,9 +127,6 @@ public class GetReportResponseRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>msxf_stable</p>
          */
         public Builder fundProduct(String fundProduct) {
             this.putPathParameter("fundProduct", fundProduct);
@@ -142,9 +136,6 @@ public class GetReportResponseRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cf6b904c1ef...</p>
          */
         public Builder outRequestNo(String outRequestNo) {
             this.putPathParameter("outRequestNo", outRequestNo);

@@ -160,7 +160,7 @@ public class QueryRedemptionRecordsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>21577</p>
+         * <p>1</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putPathParameter("tenantId", tenantId);

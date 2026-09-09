@@ -145,7 +145,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>The time consumed, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02CD4454-3F2C-57D0-9060-68DEAA1F6993</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -267,7 +288,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>二级标签</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -275,7 +299,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>协商还款</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -394,7 +421,12 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             } 
 
             /**
-             * dialogExecPlan.
+             * <p>The session execution plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <ol>
+             * <li>核实客户账户信息，确认还款情况。\\n2. 若未收到还款，联系财务部门确认是否到账延迟。\\n3. 若已还款，更新客户记录并致歉。\\n4. 跟进客户，确保问题解决。</li>
+             * </ol>
              */
             public Builder dialogExecPlan(String dialogExecPlan) {
                 this.dialogExecPlan = dialogExecPlan;
@@ -402,7 +434,7 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * dialogLabels.
+             * <p>The list of session labels.</p>
              */
             public Builder dialogLabels(java.util.List<DialogLabels> dialogLabels) {
                 this.dialogLabels = dialogLabels;
@@ -410,7 +442,7 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * dialogOpenAnalysis.
+             * <p>The session open analysis.</p>
              */
             public Builder dialogOpenAnalysis(java.util.Map<String, ?> dialogOpenAnalysis) {
                 this.dialogOpenAnalysis = dialogOpenAnalysis;
@@ -418,7 +450,7 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * dialogProcessAnalysis.
+             * <p>The session process analysis.</p>
              */
             public Builder dialogProcessAnalysis(java.util.Map<String, ?> dialogProcessAnalysis) {
                 this.dialogProcessAnalysis = dialogProcessAnalysis;
@@ -426,7 +458,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * dialogSop.
+             * <p>The session SOP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销</p>
              */
             public Builder dialogSop(String dialogSop) {
                 this.dialogSop = dialogSop;
@@ -434,7 +469,12 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * dialogSummary.
+             * <p>The session summary.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>是否有资金需求：否\\n- 是否有意向：否，客户认为自己已经解决，对当前状态表示不解\\n- 是否可营销：否，对话中未表现出对营销信息的兴趣或接受度\\n- 待满足需求：客户希望在三天内解决问题</li>
+             * </ul>
              */
             public Builder dialogSummary(String dialogSummary) {
                 this.dialogSummary = dialogSummary;
@@ -540,7 +580,7 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             } 
 
             /**
-             * analysisResp.
+             * <p>The result of the session analysis.</p>
              */
             public Builder analysisResp(AnalysisResp analysisResp) {
                 this.analysisResp = analysisResp;
@@ -548,7 +588,7 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * failNode.
+             * <p>The list of failed nodes.</p>
              */
             public Builder failNode(java.util.List<String> failNode) {
                 this.failNode = failNode;
@@ -556,7 +596,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>The time when the session was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-24 11:54:34</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -564,7 +607,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1759457905S001vejpvd6vej</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -572,7 +618,10 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The execution status of the session analysis task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -626,7 +675,7 @@ public class RunDialogAnalysisResponseBody extends TeaModel {
             } 
 
             /**
-             * dialogAnalysisRespList.
+             * <p>The list of session analysis results.</p>
              */
             public Builder dialogAnalysisRespList(java.util.List<DialogAnalysisRespList> dialogAnalysisRespList) {
                 this.dialogAnalysisRespList = dialogAnalysisRespList;

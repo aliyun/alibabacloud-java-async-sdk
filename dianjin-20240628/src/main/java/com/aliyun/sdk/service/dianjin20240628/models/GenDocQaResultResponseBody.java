@@ -145,7 +145,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>The time consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GenDocQaResultResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44BD277A-87F9-5310-8D63-3E6645F1DA85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -267,7 +288,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
             } 
 
             /**
-             * answer.
+             * <p>The answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>今天的天气不错，多云转晴。</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -275,7 +299,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
             }
 
             /**
-             * question.
+             * <p>The question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>今天的天气怎么样？</p>
              */
             public Builder question(String question) {
                 this.question = question;
@@ -368,7 +395,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
             } 
 
             /**
-             * currentStatus.
+             * <p>The current status. Valid values: \<code>INIT\\</code>, \<code>PROCESSING\\</code>, \<code>COMPLETED\\</code>, and \<code>FAIL\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROCESSING</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -376,7 +406,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
             }
 
             /**
-             * docId.
+             * <p>The document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>873648346573245</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -384,7 +417,10 @@ public class GenDocQaResultResponseBody extends TeaModel {
             }
 
             /**
-             * libraryId.
+             * <p>The document library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7wxwrjpabj</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;
@@ -392,7 +428,7 @@ public class GenDocQaResultResponseBody extends TeaModel {
             }
 
             /**
-             * parseQaResults.
+             * <p>The results of the Q\&amp;A pair parsing.</p>
              */
             public Builder parseQaResults(java.util.List<ParseQaResults> parseQaResults) {
                 this.parseQaResults = parseQaResults;

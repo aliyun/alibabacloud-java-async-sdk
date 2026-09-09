@@ -116,6 +116,7 @@ public class CreatePredefinedDocumentRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,7 @@ public class CreatePredefinedDocumentRequest extends Request {
         }
 
         /**
-         * chunks.
+         * <p>A list of document chunks.</p>
          */
         public Builder chunks(java.util.List<Chunks> chunks) {
             this.putBodyParameter("chunks", chunks);
@@ -137,7 +138,10 @@ public class CreatePredefinedDocumentRequest extends Request {
         }
 
         /**
-         * libraryId.
+         * <p>The ID of the document library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3</p>
          */
         public Builder libraryId(String libraryId) {
             this.putBodyParameter("libraryId", libraryId);
@@ -146,7 +150,10 @@ public class CreatePredefinedDocumentRequest extends Request {
         }
 
         /**
-         * metadata.
+         * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;a&quot;: &quot;1&quot;}</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.putBodyParameter("metadata", metadata);
@@ -155,7 +162,10 @@ public class CreatePredefinedDocumentRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>The title of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -249,7 +259,10 @@ public class CreatePredefinedDocumentRequest extends Request {
             } 
 
             /**
-             * chunkMeta.
+             * <p>The metadata for the document chunk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;: &quot;1&quot;}</p>
              */
             public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
@@ -257,7 +270,10 @@ public class CreatePredefinedDocumentRequest extends Request {
             }
 
             /**
-             * chunkOrder.
+             * <p>The order of the chunk. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder chunkOrder(Integer chunkOrder) {
                 this.chunkOrder = chunkOrder;
@@ -265,7 +281,10 @@ public class CreatePredefinedDocumentRequest extends Request {
             }
 
             /**
-             * chunkText.
+             * <p>The text content of the document chunk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一段测试文本</p>
              */
             public Builder chunkText(String chunkText) {
                 this.chunkText = chunkText;
@@ -273,7 +292,10 @@ public class CreatePredefinedDocumentRequest extends Request {
             }
 
             /**
-             * chunkType.
+             * <p>The type of the document chunk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder chunkType(String chunkType) {
                 this.chunkType = chunkType;

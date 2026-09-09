@@ -145,7 +145,10 @@ public class EvictTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>The time consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,10 @@ public class EvictTaskResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data, which is the task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17071319</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -161,7 +167,10 @@ public class EvictTaskResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +178,10 @@ public class EvictTaskResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +189,10 @@ public class EvictTaskResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>返回任务取消的结果，成功/失败。</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +200,10 @@ public class EvictTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44BD277A-87F9-5310-8D63-3E6645F1DA85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +211,10 @@ public class EvictTaskResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +222,10 @@ public class EvictTaskResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;

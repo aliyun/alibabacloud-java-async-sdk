@@ -104,6 +104,7 @@ public class GetParseResultRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter, the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class GetParseResultRequest extends Request {
         }
 
         /**
+         * <p>The document ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class GetParseResultRequest extends Request {
         }
 
         /**
+         * <p>The document library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class GetParseResultRequest extends Request {
         }
 
         /**
-         * useUrlResult.
+         * <p>Specifies whether to return the result as a URL. If true, the parsing result is in resultUrl, and result is empty. If false, the parsing result is in result, and resultUrl is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useUrlResult(Boolean useUrlResult) {
             this.putBodyParameter("useUrlResult", useUrlResult);

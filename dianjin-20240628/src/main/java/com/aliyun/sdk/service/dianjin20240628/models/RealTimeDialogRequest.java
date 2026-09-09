@@ -216,6 +216,7 @@ public class RealTimeDialogRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +229,10 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
-         * analysis.
+         * <p>Specifies whether to perform analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder analysis(Boolean analysis) {
             this.putBodyParameter("analysis", analysis);
@@ -237,7 +241,10 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
-         * bizType.
+         * <p>The business type. The default value is mixIntentChat.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mixIntentChat</p>
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("bizType", bizType);
@@ -246,6 +253,7 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
+         * <p>The list of conversations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder conversationModel(java.util.List<ConversationModel> conversationModel) {
@@ -255,7 +263,10 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
-         * dialogMemoryTurns.
+         * <p>The number of historical conversation turns to include.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder dialogMemoryTurns(Integer dialogMemoryTurns) {
             this.putBodyParameter("dialogMemoryTurns", dialogMemoryTurns);
@@ -264,7 +275,14 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
-         * metaData.
+         * <p>The metadata used to encapsulate prompts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;phoneTailNumber&quot;: &quot;机主尾号：98X1&quot;,
+         *       &quot;preScreeningQuota&quot;: &quot;预审额度：3万&quot;,
+         *       &quot;generalInterest&quot;: &quot;平台一般利息：20.4%&quot;
+         *     }</p>
          */
         public Builder metaData(java.util.Map<String, ?> metaData) {
             this.putBodyParameter("metaData", metaData);
@@ -273,7 +291,10 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
-         * opType.
+         * <p>The operation type. Only common and hierarchical are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder opType(String opType) {
             this.putBodyParameter("opType", opType);
@@ -282,7 +303,10 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
-         * recommend.
+         * <p>The recommended intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recommend(Boolean recommend) {
             this.putBodyParameter("recommend", recommend);
@@ -291,7 +315,10 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
-         * scriptContentPlayed.
+         * <p>The part of the previous script from the customer service representative that has been played.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好，我是</p>
          */
         public Builder scriptContentPlayed(String scriptContentPlayed) {
             this.putBodyParameter("scriptContentPlayed", scriptContentPlayed);
@@ -300,6 +327,7 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,7 +340,10 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
-         * stream.
+         * <p>Specifies whether to return the response in a stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder stream(Boolean stream) {
             this.putBodyParameter("stream", stream);
@@ -321,7 +352,10 @@ public class RealTimeDialogRequest extends Request {
         }
 
         /**
-         * userVad.
+         * <p>Specifies whether the user interrupted the conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder userVad(Boolean userVad) {
             this.putBodyParameter("userVad", userVad);
@@ -496,7 +530,10 @@ public class RealTimeDialogRequest extends Request {
             } 
 
             /**
-             * begin.
+             * <p>The start time of the sentence, in milliseconds, relative to the start of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -504,7 +541,10 @@ public class RealTimeDialogRequest extends Request {
             }
 
             /**
-             * beginTime.
+             * <p>The start time of this sentence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-08 09:51:16</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -512,7 +552,11 @@ public class RealTimeDialogRequest extends Request {
             }
 
             /**
+             * <p>The specific content of the conversation.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>人工客服</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -520,7 +564,10 @@ public class RealTimeDialogRequest extends Request {
             }
 
             /**
-             * customerId.
+             * <p>The unique ID of the conversation role. This parameter is <strong>required</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98457834685635</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -528,7 +575,10 @@ public class RealTimeDialogRequest extends Request {
             }
 
             /**
-             * customerServiceId.
+             * <p>The ID of the customer service representative. This parameter is <strong>required</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1374683645635</p>
              */
             public Builder customerServiceId(String customerServiceId) {
                 this.customerServiceId = customerServiceId;
@@ -536,7 +586,10 @@ public class RealTimeDialogRequest extends Request {
             }
 
             /**
-             * customerServiceType.
+             * <p>The type of the customer service representative. 0: bot, 1: human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder customerServiceType(String customerServiceType) {
                 this.customerServiceType = customerServiceType;
@@ -544,7 +597,10 @@ public class RealTimeDialogRequest extends Request {
             }
 
             /**
-             * end.
+             * <p>The end time of the sentence, in milliseconds, relative to the start of the session.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -552,7 +608,10 @@ public class RealTimeDialogRequest extends Request {
             }
 
             /**
-             * intentionCode.
+             * <p>The intent code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>198379874354</p>
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
@@ -560,6 +619,7 @@ public class RealTimeDialogRequest extends Request {
             }
 
             /**
+             * <p>The role. 0 indicates the customer, and 1 indicates the customer service representative.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -571,6 +631,7 @@ public class RealTimeDialogRequest extends Request {
             }
 
             /**
+             * <p>The type of the conversation content. Valid values: text, audio, and image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

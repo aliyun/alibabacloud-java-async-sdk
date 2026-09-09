@@ -93,7 +93,10 @@ public class DeleteLibraryResponseBody extends TeaModel {
         } 
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -101,7 +104,10 @@ public class DeleteLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class DeleteLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30F6AD44-F078-540D-B5A5-1E519C8E9E6D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class DeleteLibraryResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

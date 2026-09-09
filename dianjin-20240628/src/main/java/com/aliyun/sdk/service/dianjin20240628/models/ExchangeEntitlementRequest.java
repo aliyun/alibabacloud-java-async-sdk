@@ -177,7 +177,7 @@ public class ExchangeEntitlementRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>174274395739042</p>
+         * <p>10001</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putPathParameter("tenantId", tenantId);
@@ -198,7 +198,7 @@ public class ExchangeEntitlementRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>your_user_id_001</p>
+         * <p>1</p>
          */
         public Builder externalUserId(String externalUserId) {
             this.putBodyParameter("externalUserId", externalUserId);
@@ -231,7 +231,7 @@ public class ExchangeEntitlementRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10001</p>
+         * <p>1</p>
          */
         public Builder templateId(Long templateId) {
             this.putBodyParameter("templateId", templateId);

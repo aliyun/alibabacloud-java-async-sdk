@@ -145,7 +145,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Time consumed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID. This is the system-recorded request ID. If issues arise, provide this ID to the Model Studio DianJin R\&amp;D team for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67C7021A-D268-553D-8C15-A087B9604028</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -306,7 +327,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             } 
 
             /**
-             * assistScript.
+             * <p>Recommended utterance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>可按照SOP流程回应。</p>
              */
             public Builder assistScript(String assistScript) {
                 this.assistScript = assistScript;
@@ -314,7 +338,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * intentCode.
+             * <p>Intent encoding</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;1920005488515465216&quot;</p>
              */
             public Builder intentCode(String intentCode) {
                 this.intentCode = intentCode;
@@ -322,7 +349,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * intentLabels.
+             * <p>Intent labels</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder intentLabels(String intentLabels) {
                 this.intentLabels = intentLabels;
@@ -330,7 +360,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * intentName.
+             * <p>Intent name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>礼貌问答</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -338,7 +371,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * isDefault.
+             * <p>Whether intent escaped</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -431,7 +467,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             } 
 
             /**
-             * assistSop.
+             * <p>Recommended flow</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX</p>
              */
             public Builder assistSop(String assistSop) {
                 this.assistSop = assistSop;
@@ -439,7 +478,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * intentCode.
+             * <p>Intent encoding</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX</p>
              */
             public Builder intentCode(String intentCode) {
                 this.intentCode = intentCode;
@@ -447,7 +489,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * intentName.
+             * <p>Intent name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXX</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -455,7 +500,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * isDefault.
+             * <p>Indicates whether the intent is to escape.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -574,7 +622,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>Specific content of the dialog</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -582,7 +633,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * customerId.
+             * <p>Unique identity of the dialog role</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;98457834685635&quot;</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -590,7 +644,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceId.
+             * <p>Customer service ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;1374683645635&quot;</p>
              */
             public Builder customerServiceId(String customerServiceId) {
                 this.customerServiceId = customerServiceId;
@@ -598,7 +655,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceType.
+             * <p>Agent type. 0: Robot, 1: Human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;0&quot;</p>
              */
             public Builder customerServiceType(String customerServiceType) {
                 this.customerServiceType = customerServiceType;
@@ -606,7 +666,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>Role. 0 indicates customer, 1 indicates agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;0&quot;</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -614,7 +677,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Type of dialog content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -746,7 +812,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             } 
 
             /**
-             * analysisProcess.
+             * <p>Analysis process</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户回答的内容与提供的意图列表描述均不匹配，没有表达出对账单、还款、天气或其他服务的具体需求或问题。</p>
              */
             public Builder analysisProcess(String analysisProcess) {
                 this.analysisProcess = analysisProcess;
@@ -754,7 +823,7 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * assistScripts.
+             * <p>List of dialog assist results</p>
              */
             public Builder assistScripts(java.util.List<AssistScripts> assistScripts) {
                 this.assistScripts = assistScripts;
@@ -762,7 +831,7 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * assistSop.
+             * <p>List of flow assist results</p>
              */
             public Builder assistSop(java.util.List<AssistSop> assistSop) {
                 this.assistSop = assistSop;
@@ -770,7 +839,7 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * conversationModel.
+             * <p>Current dialog content</p>
              */
             public Builder conversationModel(java.util.List<ConversationModel> conversationModel) {
                 this.conversationModel = conversationModel;
@@ -778,7 +847,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * interrupt.
+             * <p>Whether interrupted</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder interrupt(Boolean interrupt) {
                 this.interrupt = interrupt;
@@ -786,7 +858,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * requestId.
+             * <p>Unique request ID. This request ID matches the request ID in the input parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0FC6636E-380A-5369-AE01-D1C15BB9B254</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -794,7 +869,10 @@ public class RealtimeDialogAssistResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>Session ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;1915593248420413441&quot;</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

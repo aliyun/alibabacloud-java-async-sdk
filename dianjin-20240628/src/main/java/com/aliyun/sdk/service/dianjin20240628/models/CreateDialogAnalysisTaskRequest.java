@@ -133,6 +133,7 @@ public class CreateDialogAnalysisTaskRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,7 @@ public class CreateDialogAnalysisTaskRequest extends Request {
         }
 
         /**
-         * analysisNodes.
+         * <p>A list of analysis nodes. If you leave this parameter empty, all nodes are analyzed. You can specify one or more nodes.</p>
          */
         public Builder analysisNodes(java.util.List<String> analysisNodes) {
             this.putBodyParameter("analysisNodes", analysisNodes);
@@ -154,6 +155,7 @@ public class CreateDialogAnalysisTaskRequest extends Request {
         }
 
         /**
+         * <p>The session content. You can specify multiple sessions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder conversationList(java.util.List<ConversationList> conversationList) {
@@ -163,7 +165,20 @@ public class CreateDialogAnalysisTaskRequest extends Request {
         }
 
         /**
-         * metaData.
+         * <p>The metadata. This includes business-related properties that are used during session analysis. The business system passes these properties in real time when it initiates the analysis task.</p>
+         * <pre><code>{
+         *   &quot;labels&quot;: &quot;XXX&quot;,  // Tags
+         *   &quot;summaryConstraints&quot;: &quot;XXX&quot;,   // Summary dimensions
+         *   &quot;sopInfo&quot;: &quot;XXX&quot;  // SOP information
+         * }
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         * &quot;labels&quot;: &quot;XXX&quot;,
+         * &quot;summaryConstraints&quot;: &quot;XXX&quot;,
+         * &quot;sopInfo&quot;: &quot;XXX&quot;
+         * }</p>
          */
         public Builder metaData(java.util.Map<String, ?> metaData) {
             this.putBodyParameter("metaData", metaData);
@@ -172,6 +187,7 @@ public class CreateDialogAnalysisTaskRequest extends Request {
         }
 
         /**
+         * <p>The session scenario code, which is associated with the session analysis configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +200,7 @@ public class CreateDialogAnalysisTaskRequest extends Request {
         }
 
         /**
+         * <p>The request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,7 +274,11 @@ public class CreateDialogAnalysisTaskRequest extends Request {
             } 
 
             /**
+             * <p>The content of the dialogue.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好，我是2001，很高兴为您服务！</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -265,6 +286,7 @@ public class CreateDialogAnalysisTaskRequest extends Request {
             }
 
             /**
+             * <p>The role.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -323,6 +345,7 @@ public class CreateDialogAnalysisTaskRequest extends Request {
             } 
 
             /**
+             * <p>A list of dialogues.</p>
              * <p>This parameter is required.</p>
              */
             public Builder dialogueList(java.util.List<DialogueList> dialogueList) {

@@ -104,6 +104,7 @@ public class UpdateQaLibraryRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class UpdateQaLibraryRequest extends Request {
         }
 
         /**
+         * <p>A list of parsed Q\&amp;A pair results.</p>
          * <p>This parameter is required.</p>
          */
         public Builder parseQaResults(java.util.List<ParseQaResults> parseQaResults) {
@@ -125,7 +127,10 @@ public class UpdateQaLibraryRequest extends Request {
         }
 
         /**
-         * qaLibraryId.
+         * <p>The ID of the Q\&amp;A library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6jh378d</p>
          */
         public Builder qaLibraryId(String qaLibraryId) {
             this.putBodyParameter("qaLibraryId", qaLibraryId);
@@ -134,6 +139,7 @@ public class UpdateQaLibraryRequest extends Request {
         }
 
         /**
+         * <p>The request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +213,11 @@ public class UpdateQaLibraryRequest extends Request {
             } 
 
             /**
+             * <p>The answer.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这款**糯米大烧麦的净含量是900g。</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -215,7 +225,11 @@ public class UpdateQaLibraryRequest extends Request {
             }
 
             /**
+             * <p>The question.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这款**糯米大烧麦的净含量是多少？</p>
              */
             public Builder question(String question) {
                 this.question = question;

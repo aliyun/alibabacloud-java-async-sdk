@@ -12,44 +12,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RetryReportTaskRequest} extends {@link RequestModel}
+ * {@link QueryAmountRequest} extends {@link RequestModel}
  *
- * <p>RetryReportTaskRequest</p>
+ * <p>QueryAmountRequest</p>
  */
-public class RetryReportTaskRequest extends Request {
+public class QueryAmountRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("sceneCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aliyunUidList")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String sceneCode;
+    private java.util.List<String> aliyunUidList;
 
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("fundProduct")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endDate")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String fundProduct;
+    private String endDate;
 
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("outRequestNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("startDate")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String outRequestNo;
+    private String startDate;
 
-    private RetryReportTaskRequest(Builder builder) {
+    private QueryAmountRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
-        this.sceneCode = builder.sceneCode;
-        this.fundProduct = builder.fundProduct;
-        this.outRequestNo = builder.outRequestNo;
+        this.aliyunUidList = builder.aliyunUidList;
+        this.endDate = builder.endDate;
+        this.startDate = builder.startDate;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RetryReportTaskRequest create() {
+    public static QueryAmountRequest create() {
         return builder().build();
     }
 
@@ -66,42 +66,42 @@ public class RetryReportTaskRequest extends Request {
     }
 
     /**
-     * @return sceneCode
+     * @return aliyunUidList
      */
-    public String getSceneCode() {
-        return this.sceneCode;
+    public java.util.List<String> getAliyunUidList() {
+        return this.aliyunUidList;
     }
 
     /**
-     * @return fundProduct
+     * @return endDate
      */
-    public String getFundProduct() {
-        return this.fundProduct;
+    public String getEndDate() {
+        return this.endDate;
     }
 
     /**
-     * @return outRequestNo
+     * @return startDate
      */
-    public String getOutRequestNo() {
-        return this.outRequestNo;
+    public String getStartDate() {
+        return this.startDate;
     }
 
-    public static final class Builder extends Request.Builder<RetryReportTaskRequest, Builder> {
+    public static final class Builder extends Request.Builder<QueryAmountRequest, Builder> {
         private String workspaceId; 
-        private String sceneCode; 
-        private String fundProduct; 
-        private String outRequestNo; 
+        private java.util.List<String> aliyunUidList; 
+        private String endDate; 
+        private String startDate; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RetryReportTaskRequest request) {
+        private Builder(QueryAmountRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
-            this.sceneCode = request.sceneCode;
-            this.fundProduct = request.fundProduct;
-            this.outRequestNo = request.outRequestNo;
+            this.aliyunUidList = request.aliyunUidList;
+            this.endDate = request.endDate;
+            this.startDate = request.startDate;
         } 
 
         /**
@@ -119,33 +119,33 @@ public class RetryReportTaskRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder sceneCode(String sceneCode) {
-            this.putPathParameter("sceneCode", sceneCode);
-            this.sceneCode = sceneCode;
+        public Builder aliyunUidList(java.util.List<String> aliyunUidList) {
+            this.putBodyParameter("aliyunUidList", aliyunUidList);
+            this.aliyunUidList = aliyunUidList;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder fundProduct(String fundProduct) {
-            this.putPathParameter("fundProduct", fundProduct);
-            this.fundProduct = fundProduct;
+        public Builder endDate(String endDate) {
+            this.putBodyParameter("endDate", endDate);
+            this.endDate = endDate;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder outRequestNo(String outRequestNo) {
-            this.putPathParameter("outRequestNo", outRequestNo);
-            this.outRequestNo = outRequestNo;
+        public Builder startDate(String startDate) {
+            this.putBodyParameter("startDate", startDate);
+            this.startDate = startDate;
             return this;
         }
 
         @Override
-        public RetryReportTaskRequest build() {
-            return new RetryReportTaskRequest(this);
+        public QueryAmountRequest build() {
+            return new QueryAmountRequest(this);
         } 
 
     } 

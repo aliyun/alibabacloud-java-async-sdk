@@ -145,7 +145,10 @@ public class DeleteDocumentResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Time consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,10 @@ public class DeleteDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -161,7 +167,10 @@ public class DeleteDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +178,10 @@ public class DeleteDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +189,10 @@ public class DeleteDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +200,10 @@ public class DeleteDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67C7021A-D268-553D-8C15-A087B9604028</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +211,10 @@ public class DeleteDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +222,10 @@ public class DeleteDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;

@@ -133,6 +133,7 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
         }
 
         /**
+         * <p>List of years to analyze</p>
          * <p>This parameter is required.</p>
          */
         public Builder anaYears(java.util.List<Integer> anaYears) {
@@ -154,6 +156,7 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
         }
 
         /**
+         * <p>List of document information</p>
          * <p>This parameter is required.</p>
          */
         public Builder docInfos(java.util.List<DocInfos> docInfos) {
@@ -163,7 +166,10 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
         }
 
         /**
-         * enableTable.
+         * <p>Enable table extraction. Default is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableTable(Boolean enableTable) {
             this.putBodyParameter("enableTable", enableTable);
@@ -172,7 +178,15 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
         }
 
         /**
-         * instruction.
+         * <p>Instruction</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你是资深的证券研究员，对xx年上市公司进行业绩分析。根据参考信息从如下方面详细分析：</p>
+         * <ol>
+         * <li>整体业绩变化情况，包括营收，利润等详细指标变化情况</li>
+         * <li>业绩变化情况具体原因，包括各个业务变化情况
+         * 严格只输出xx年情况。</li>
+         * </ol>
          */
         public Builder instruction(String instruction) {
             this.putBodyParameter("instruction", instruction);
@@ -181,6 +195,7 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
         }
 
         /**
+         * <p>Model ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,6 +309,7 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
             } 
 
             /**
+             * <p>Document ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -305,6 +321,7 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
             }
 
             /**
+             * <p>Document year</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -316,7 +333,10 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
             }
 
             /**
-             * endPage.
+             * <p>End page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder endPage(Integer endPage) {
                 this.endPage = endPage;
@@ -324,6 +344,7 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
             }
 
             /**
+             * <p>Document library ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -335,7 +356,10 @@ public class CreateAnnualDocSummaryTaskRequest extends Request {
             }
 
             /**
-             * startPage.
+             * <p>Start page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder startPage(Integer startPage) {
                 this.startPage = startPage;

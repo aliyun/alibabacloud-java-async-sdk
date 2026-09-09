@@ -90,6 +90,7 @@ public class DeleteDocumentRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
+         * <p>List of document IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder docIds(java.util.List<String> docIds) {
@@ -111,6 +113,7 @@ public class DeleteDocumentRequest extends Request {
         }
 
         /**
+         * <p>Document library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

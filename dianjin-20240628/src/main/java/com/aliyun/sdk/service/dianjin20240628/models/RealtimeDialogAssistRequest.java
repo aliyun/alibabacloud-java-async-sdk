@@ -204,6 +204,7 @@ public class RealtimeDialogAssistRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +217,10 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
-         * analysis.
+         * <p>Whether to analyze</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder analysis(Boolean analysis) {
             this.putBodyParameter("analysis", analysis);
@@ -225,6 +229,7 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
+         * <p>Business type. Currently, only dialogAssist is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,6 +242,7 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
+         * <p>Dialog list</p>
          * <p>This parameter is required.</p>
          */
         public Builder conversationModel(java.util.List<ConversationModel> conversationModel) {
@@ -246,7 +252,10 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
-         * dialogMemoryTurns.
+         * <p>Number of historical dialog turns included</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder dialogMemoryTurns(Integer dialogMemoryTurns) {
             this.putBodyParameter("dialogMemoryTurns", dialogMemoryTurns);
@@ -255,7 +264,10 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
-         * hangUpDialog.
+         * <p>Hang up the session</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hangUpDialog(Boolean hangUpDialog) {
             this.putBodyParameter("hangUpDialog", hangUpDialog);
@@ -265,6 +277,13 @@ public class RealtimeDialogAssistRequest extends Request {
 
         /**
          * <p>metaData</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;phoneTailNumber&quot;: &quot;机主尾号：98X1&quot;,
+         *       &quot;preScreeningQuota&quot;: &quot;预审额度：3万&quot;,
+         *       &quot;generalInterest&quot;: &quot;平台一般利息：20.4%&quot;
+         *     }</p>
          */
         public Builder metaData(java.util.Map<String, ?> metaData) {
             this.putBodyParameter("metaData", metaData);
@@ -273,6 +292,7 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
+         * <p>Request ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +305,10 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
-         * scriptContentPlayed.
+         * <p>Portion of the previous agent utterance already broadcast</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
          */
         public Builder scriptContentPlayed(String scriptContentPlayed) {
             this.putBodyParameter("scriptContentPlayed", scriptContentPlayed);
@@ -294,6 +317,7 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
+         * <p>Session ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +330,10 @@ public class RealtimeDialogAssistRequest extends Request {
         }
 
         /**
-         * userVad.
+         * <p>Whether the user interrupted</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder userVad(Boolean userVad) {
             this.putBodyParameter("userVad", userVad);
@@ -467,7 +494,10 @@ public class RealtimeDialogAssistRequest extends Request {
             } 
 
             /**
-             * begin.
+             * <p>Start time of this utterance, offset in milliseconds from the session start.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -475,7 +505,10 @@ public class RealtimeDialogAssistRequest extends Request {
             }
 
             /**
-             * beginTime.
+             * <p>Start time of this utterance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-12 09:00:00</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -483,7 +516,11 @@ public class RealtimeDialogAssistRequest extends Request {
             }
 
             /**
+             * <p>Specific content of the dialog</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -491,7 +528,10 @@ public class RealtimeDialogAssistRequest extends Request {
             }
 
             /**
-             * customerId.
+             * <p>Unique identity of the dialog role</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98457834685635</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -499,7 +539,10 @@ public class RealtimeDialogAssistRequest extends Request {
             }
 
             /**
-             * customerServiceId.
+             * <p>Customer service ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1374683645635</p>
              */
             public Builder customerServiceId(String customerServiceId) {
                 this.customerServiceId = customerServiceId;
@@ -507,7 +550,10 @@ public class RealtimeDialogAssistRequest extends Request {
             }
 
             /**
-             * customerServiceType.
+             * <p>Agent type. 0: Robot, 1: Human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder customerServiceType(String customerServiceType) {
                 this.customerServiceType = customerServiceType;
@@ -515,7 +561,10 @@ public class RealtimeDialogAssistRequest extends Request {
             }
 
             /**
-             * end.
+             * <p>End time of this utterance, offset in milliseconds from the session start.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -523,6 +572,7 @@ public class RealtimeDialogAssistRequest extends Request {
             }
 
             /**
+             * <p>Role. 0 indicates customer, 1 indicates agent.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -534,7 +584,10 @@ public class RealtimeDialogAssistRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>Type of dialog content. Currently, only text is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -145,7 +145,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Processing time, in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67C7021A-D268-553D-8C15-A087B9604028</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Whether the request succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -371,7 +392,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * begin.
+             * <p>Start time of this utterance, in milliseconds relative to the start of the conversation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -379,7 +403,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * beginTime.
+             * <p>Start time of this utterance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-27 11:23:20</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -387,7 +414,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * content.
+             * <p>Dialogue content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好，我是2001，很高兴为您服务！</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -395,7 +425,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerId.
+             * <p>Unique identifier for the dialogue role</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -403,7 +436,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceId.
+             * <p>Agent ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>李四</p>
              */
             public Builder customerServiceId(String customerServiceId) {
                 this.customerServiceId = customerServiceId;
@@ -411,7 +447,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceType.
+             * <p>Agent type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder customerServiceType(String customerServiceType) {
                 this.customerServiceType = customerServiceType;
@@ -419,7 +458,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * end.
+             * <p>End time of this utterance, in milliseconds relative to the start of the conversation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -427,7 +469,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Unique identifier for this utterance. Assigned internally</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -435,7 +480,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>Role</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -443,7 +491,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Content type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEXT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -575,7 +626,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * callType.
+             * <p>Call type:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -583,7 +637,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerId.
+             * <p>Customer ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>234234</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -591,7 +648,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerName.
+             * <p>Customer name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder customerName(String customerName) {
                 this.customerName = customerName;
@@ -599,7 +659,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceId.
+             * <p>Agent ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23984763826</p>
              */
             public Builder customerServiceId(String customerServiceId) {
                 this.customerServiceId = customerServiceId;
@@ -607,7 +670,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceName.
+             * <p>Agent name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>李四</p>
              */
             public Builder customerServiceName(String customerServiceName) {
                 this.customerServiceName = customerServiceName;
@@ -615,7 +681,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * dialogueList.
+             * <p>Dialogue details list</p>
              */
             public Builder dialogueList(java.util.List<DialogueList> dialogueList) {
                 this.dialogueList = dialogueList;
@@ -623,7 +689,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * gmtService.
+             * <p>Conversation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-27 11:23:20</p>
              */
             public Builder gmtService(String gmtService) {
                 this.gmtService = gmtService;
@@ -794,7 +863,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * begin.
+             * <p>Start time of this utterance, in milliseconds relative to the start of the conversation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -802,7 +874,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * beginTime.
+             * <p>Start time of this utterance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-23 14:57:50</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -810,7 +885,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * content.
+             * <p>Dialogue content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好，我是2001，很高兴为您服务！</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -818,7 +896,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerId.
+             * <p>Unique identifier for the dialogue role</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -826,7 +907,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceId.
+             * <p>Agent ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23876432</p>
              */
             public Builder customerServiceId(String customerServiceId) {
                 this.customerServiceId = customerServiceId;
@@ -834,7 +918,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceType.
+             * <p>Agent type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder customerServiceType(String customerServiceType) {
                 this.customerServiceType = customerServiceType;
@@ -842,7 +929,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * end.
+             * <p>End time of this utterance, in milliseconds relative to the start of the conversation</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -850,7 +940,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Unique identifier for this utterance. Assigned internally</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -858,7 +951,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>Role</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -866,7 +962,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Content type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEXT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1089,7 +1188,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * bizType.
+             * <p>Rule business type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -1097,7 +1199,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * checkExplanation.
+             * <p>Reason for passing or failing the quality check</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暂无</p>
              */
             public Builder checkExplanation(String checkExplanation) {
                 this.checkExplanation = checkExplanation;
@@ -1105,7 +1210,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * checkPassed.
+             * <p>Whether the quality check passed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PASSED</p>
              */
             public Builder checkPassed(String checkPassed) {
                 this.checkPassed = checkPassed;
@@ -1113,7 +1221,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * checkProcess.
+             * <p>Description of the quality check process</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暂无</p>
              */
             public Builder checkProcess(String checkProcess) {
                 this.checkProcess = checkProcess;
@@ -1121,7 +1232,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * checked.
+             * <p>Whether the rule matched</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HIT</p>
              */
             public Builder checked(String checked) {
                 this.checked = checked;
@@ -1129,7 +1243,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * gmtEnd.
+             * <p>Quality check completion time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-23 14:57:50</p>
              */
             public Builder gmtEnd(String gmtEnd) {
                 this.gmtEnd = gmtEnd;
@@ -1137,7 +1254,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * gmtStart.
+             * <p>Quality check start time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-23 14:57:50</p>
              */
             public Builder gmtStart(String gmtStart) {
                 this.gmtStart = gmtStart;
@@ -1145,7 +1265,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * mode.
+             * <p>Internal quality check mode</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1153,7 +1276,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * originDialogue.
+             * <p>Original dialogue list</p>
              */
             public Builder originDialogue(java.util.List<OriginDialogue> originDialogue) {
                 this.originDialogue = originDialogue;
@@ -1161,7 +1284,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * qualityGroupId.
+             * <p>Quality check group ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warning_customers</p>
              */
             public Builder qualityGroupId(String qualityGroupId) {
                 this.qualityGroupId = qualityGroupId;
@@ -1169,7 +1295,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * ruleDescription.
+             * <p>Quality check item description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>进入检测预警客户流程</p>
              */
             public Builder ruleDescription(String ruleDescription) {
                 this.ruleDescription = ruleDescription;
@@ -1177,7 +1306,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * ruleId.
+             * <p>Quality check item ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wcm_start</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1185,7 +1317,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * ruleType.
+             * <p>Rule direction. 0: negative, 1: positive</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -1193,7 +1328,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * subNodeCol.
+             * <p>Child node</p>
              */
             public Builder subNodeCol(java.util.List<?> subNodeCol) {
                 this.subNodeCol = subNodeCol;
@@ -1325,7 +1460,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             } 
 
             /**
-             * conversationList.
+             * <p>Original conversation content</p>
              */
             public Builder conversationList(ConversationList conversationList) {
                 this.conversationList = conversationList;
@@ -1333,7 +1468,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Task creation time. This is when the task was submitted</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-27 11:23:20</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1341,7 +1479,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * gmtEnd.
+             * <p>System execution end time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-27 11:23:20</p>
              */
             public Builder gmtEnd(String gmtEnd) {
                 this.gmtEnd = gmtEnd;
@@ -1349,7 +1490,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * gmtStart.
+             * <p>System execution start time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-27 11:23:20</p>
              */
             public Builder gmtStart(String gmtStart) {
                 this.gmtStart = gmtStart;
@@ -1357,7 +1501,7 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * qualityCheckList.
+             * <p>Quality check result set</p>
              */
             public Builder qualityCheckList(java.util.List<QualityCheckList> qualityCheckList) {
                 this.qualityCheckList = qualityCheckList;
@@ -1365,7 +1509,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Task status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INIT</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1373,7 +1520,10 @@ public class GetQualityCheckTaskResultResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1703557101831</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

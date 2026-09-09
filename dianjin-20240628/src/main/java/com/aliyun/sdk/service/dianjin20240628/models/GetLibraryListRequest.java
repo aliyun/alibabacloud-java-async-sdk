@@ -102,6 +102,7 @@ public class GetLibraryListRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter, the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class GetLibraryListRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -123,7 +127,10 @@ public class GetLibraryListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Number of records per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -132,7 +139,10 @@ public class GetLibraryListRequest extends Request {
         }
 
         /**
-         * query.
+         * <p>Search keywords. Supports document library names and descriptions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试文档库</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);

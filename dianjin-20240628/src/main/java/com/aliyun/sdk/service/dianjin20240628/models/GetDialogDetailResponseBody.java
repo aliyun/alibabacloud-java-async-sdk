@@ -145,7 +145,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Processing time in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetDialogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E3FBAF1-17AF-53B7-AF0A-CDCEEB6DE658</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the operation succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -384,7 +405,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>Dialogue content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>请问具体怎么操作呢？</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -392,7 +416,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * customerId.
+             * <p>Customer ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123761283</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -400,7 +427,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceId.
+             * <p>Agent ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BOT</p>
              */
             public Builder customerServiceId(String customerServiceId) {
                 this.customerServiceId = customerServiceId;
@@ -408,7 +438,16 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * customerServiceType.
+             * <p>Agent type:</p>
+             * <ul>
+             * <li><p>0: Bot</p>
+             * </li>
+             * <li><p>1: Human</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder customerServiceType(String customerServiceType) {
                 this.customerServiceType = customerServiceType;
@@ -416,7 +455,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * hangUpDialog.
+             * <p>Indicates whether the session ended with this message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hangUpDialog(Boolean hangUpDialog) {
                 this.hangUpDialog = hangUpDialog;
@@ -424,7 +466,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Unique identifier for this message. Assigned internally. May be empty. Use recordId instead.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742869659849</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -432,7 +477,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * intentCode.
+             * <p>Intent code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>193874634xxx</p>
              */
             public Builder intentCode(String intentCode) {
                 this.intentCode = intentCode;
@@ -440,7 +488,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * intentName.
+             * <p>Intent name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户询问如何操作</p>
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -448,7 +499,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * recordId.
+             * <p>Unique identifier for this message. Assigned internally. String type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19387872364736xdhcb</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -456,7 +510,16 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>Role:</p>
+             * <ul>
+             * <li><p>0: Customer</p>
+             * </li>
+             * <li><p>1: Agent</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -464,7 +527,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Content type: text, audio, or image. Only text is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -570,7 +636,7 @@ public class GetDialogDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * dialogueList.
+             * <p>List of dialogue details</p>
              */
             public Builder dialogueList(java.util.List<DialogueList> dialogueList) {
                 this.dialogueList = dialogueList;
@@ -578,7 +644,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Session time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-27 11:23:20</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -586,7 +655,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Session status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -594,7 +666,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * totalDialogTurns.
+             * <p>Total conversation rounds. Each round counts one exchange between AI and the customer. Multiple consecutive messages from either side count as one round. If the last message is from the AI and is not a hang-up, subtract one from the total round count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalDialogTurns(Integer totalDialogTurns) {
                 this.totalDialogTurns = totalDialogTurns;
@@ -602,7 +677,10 @@ public class GetDialogDetailResponseBody extends TeaModel {
             }
 
             /**
-             * validDialogTurns.
+             * <p>Valid conversation rounds. Each valid round counts one question-and-answer pair between AI and the customer. This differs from the total round count method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder validDialogTurns(Integer validDialogTurns) {
                 this.validDialogTurns = validDialogTurns;

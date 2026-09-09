@@ -118,6 +118,7 @@ public class GetHistoryListByBizTypeRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class GetHistoryListByBizTypeRequest extends Request {
         }
 
         /**
+         * <p>Unique business identifier. When bizType is LibraryChat, bizId is the document library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class GetHistoryListByBizTypeRequest extends Request {
         }
 
         /**
+         * <p>Business type. Supported values are LlmChat and LibraryChat.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,10 @@ public class GetHistoryListByBizTypeRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -163,7 +169,10 @@ public class GetHistoryListByBizTypeRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Number of records per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

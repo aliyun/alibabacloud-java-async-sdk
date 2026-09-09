@@ -75,6 +75,7 @@ public class ReIndexRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter. The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ReIndexRequest extends Request {
         }
 
         /**
+         * <p>The ID of the document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

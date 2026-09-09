@@ -145,7 +145,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Time consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class PreviewDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ff551395-1c8a-4f30-8ffd-ef7e87c70b4c</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -293,7 +314,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * previewType.
+             * <p>Preview type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder previewType(String previewType) {
                 this.previewType = previewType;
@@ -301,7 +325,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Document title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -309,7 +336,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * uploadTime.
+             * <p>Upload time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;
@@ -317,7 +347,10 @@ public class PreviewDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>Document URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://agi.alicdn.com/user/d0o/d3c1f50d-a6c2-49b3-b0c8-3e613c3f20ee_16872_3236784461.png">https://agi.alicdn.com/user/d0o/d3c1f50d-a6c2-49b3-b0c8-3e613c3f20ee_16872_3236784461.png</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

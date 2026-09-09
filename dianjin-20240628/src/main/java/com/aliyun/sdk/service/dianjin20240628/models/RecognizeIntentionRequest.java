@@ -188,6 +188,7 @@ public class RecognizeIntentionRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +201,10 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
-         * analysis.
+         * <p>Enable analysis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder analysis(Boolean analysis) {
             this.putBodyParameter("analysis", analysis);
@@ -209,6 +213,7 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
+         * <p>Business type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +226,11 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
+         * <p>Conversation text.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>##客服##：您好，请问是朱杰先生吗？这里是诚信财务的周莉。我们发现您有一项款项昨天是账单日，但您还没还款，这很可能是一个小小的疏忽。来电是提醒您尽快完成还款，避免影响您的信用记录。\n ##客户##：今天天气怎么样呢？</p>
          */
         public Builder conversation(String conversation) {
             this.putBodyParameter("conversation", conversation);
@@ -230,7 +239,7 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
-         * globalIntentionList.
+         * <p>Global intent list. Required when opType is hierarchical.</p>
          */
         public Builder globalIntentionList(java.util.List<GlobalIntentionList> globalIntentionList) {
             this.putBodyParameter("globalIntentionList", globalIntentionList);
@@ -239,7 +248,7 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
-         * hierarchicalIntentionList.
+         * <p>Hierarchical intent list. Required when opType is hierarchical.</p>
          */
         public Builder hierarchicalIntentionList(java.util.List<HierarchicalIntentionList> hierarchicalIntentionList) {
             this.putBodyParameter("hierarchicalIntentionList", hierarchicalIntentionList);
@@ -248,7 +257,10 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
-         * intentionDomainCode.
+         * <p>Intent library: Local intent library code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collection</p>
          */
         public Builder intentionDomainCode(String intentionDomainCode) {
             this.putBodyParameter("intentionDomainCode", intentionDomainCode);
@@ -257,7 +269,7 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
-         * intentionList.
+         * <p>Intent list. Required when bizType is not attitude.</p>
          */
         public Builder intentionList(java.util.List<IntentionList> intentionList) {
             this.putBodyParameter("intentionList", intentionList);
@@ -266,7 +278,10 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
-         * opType.
+         * <p>Operation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder opType(String opType) {
             this.putBodyParameter("opType", opType);
@@ -275,7 +290,10 @@ public class RecognizeIntentionRequest extends Request {
         }
 
         /**
-         * recommend.
+         * <p>Recommend intent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder recommend(Boolean recommend) {
             this.putBodyParameter("recommend", recommend);
@@ -369,7 +387,10 @@ public class RecognizeIntentionRequest extends Request {
             } 
 
             /**
-             * description.
+             * <p>Intent description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>正常付款3</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -377,7 +398,10 @@ public class RecognizeIntentionRequest extends Request {
             }
 
             /**
-             * intention.
+             * <p>Intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>正常付款3</p>
              */
             public Builder intention(String intention) {
                 this.intention = intention;
@@ -385,7 +409,10 @@ public class RecognizeIntentionRequest extends Request {
             }
 
             /**
-             * intentionCode.
+             * <p>Intent code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1810566978021232640</p>
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
@@ -393,7 +420,10 @@ public class RecognizeIntentionRequest extends Request {
             }
 
             /**
-             * intentionScript.
+             * <p>Intent script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>好的，那先不打扰您了，祝您生活愉快！再见！</p>
              */
             public Builder intentionScript(String intentionScript) {
                 this.intentionScript = intentionScript;
@@ -486,7 +516,10 @@ public class RecognizeIntentionRequest extends Request {
             } 
 
             /**
-             * description.
+             * <p>Intent description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>询问股票价格</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -494,7 +527,10 @@ public class RecognizeIntentionRequest extends Request {
             }
 
             /**
-             * intention.
+             * <p>Intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>询问股票价格</p>
              */
             public Builder intention(String intention) {
                 this.intention = intention;
@@ -502,7 +538,10 @@ public class RecognizeIntentionRequest extends Request {
             }
 
             /**
-             * intentionCode.
+             * <p>Intent code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1810929291010150400</p>
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
@@ -510,7 +549,10 @@ public class RecognizeIntentionRequest extends Request {
             }
 
             /**
-             * intentionScript.
+             * <p>Intent script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>好的，那先不打扰您了，祝您生活愉快！再见！</p>
              */
             public Builder intentionScript(String intentionScript) {
                 this.intentionScript = intentionScript;
@@ -603,7 +645,10 @@ public class RecognizeIntentionRequest extends Request {
             } 
 
             /**
-             * description.
+             * <p>Intent description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户表示忘记还款</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -611,7 +656,10 @@ public class RecognizeIntentionRequest extends Request {
             }
 
             /**
-             * intention.
+             * <p>Intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户表示忘记还款</p>
              */
             public Builder intention(String intention) {
                 this.intention = intention;
@@ -619,7 +667,10 @@ public class RecognizeIntentionRequest extends Request {
             }
 
             /**
-             * intentionCode.
+             * <p>Intent code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1808766224000262144</p>
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
@@ -627,7 +678,10 @@ public class RecognizeIntentionRequest extends Request {
             }
 
             /**
-             * intentionScript.
+             * <p>Intent script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>好的，那先不打扰您了，祝您生活愉快！再见！</p>
              */
             public Builder intentionScript(String intentionScript) {
                 this.intentionScript = intentionScript;

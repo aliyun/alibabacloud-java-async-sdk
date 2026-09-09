@@ -88,6 +88,7 @@ public class DashscopeAsyncTaskFinishEventRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class DashscopeAsyncTaskFinishEventRequest extends Request {
         }
 
         /**
-         * X-Load-Test.
+         * <p>Indicates whether the request is part of a stress test</p>
          */
         public Builder xLoadTest(Boolean xLoadTest) {
             this.putHeaderParameter("X-Load-Test", xLoadTest);
@@ -109,7 +110,10 @@ public class DashscopeAsyncTaskFinishEventRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>Request body parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder body(java.util.Map<String, ?> body) {
             this.putBodyParameter("body", body);

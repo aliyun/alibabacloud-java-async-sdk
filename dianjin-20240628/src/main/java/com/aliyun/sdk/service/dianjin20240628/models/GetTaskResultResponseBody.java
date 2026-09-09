@@ -145,7 +145,10 @@ public class GetTaskResultResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>The time consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,18 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The result of the asynchronous task.</p>
+         * <h2>PDF translation task</h2>
+         * <p>The returned file_url is a downloadable file address.</p>
+         * <pre><code>{
+         *   &quot;file_url&quot;: &quot;https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf&quot;
+         * }
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;file_url&quot;: &quot;<a href="https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf">https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf</a>&quot;
+         * }</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -161,7 +175,10 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +186,10 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +197,10 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +208,10 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D5D6BB5-BEAE-53C8-A70A-7275CC1F856C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +219,10 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +230,10 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;

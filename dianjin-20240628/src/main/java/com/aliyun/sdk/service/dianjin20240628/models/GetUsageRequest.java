@@ -132,7 +132,7 @@ public class GetUsageRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>33412</p>
+         * <p>1</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putPathParameter("tenantId", tenantId);

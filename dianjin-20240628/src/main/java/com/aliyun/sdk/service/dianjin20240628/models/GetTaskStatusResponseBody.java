@@ -145,7 +145,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Execution time, in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,24 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data. The current status of the task.</p>
+         * <ul>
+         * <li><p>invalid: Parameters or dependent resources are unavailable.</p>
+         * </li>
+         * <li><p>success: The task completed successfully.</p>
+         * </li>
+         * <li><p>evict: The task was canceled.</p>
+         * </li>
+         * <li><p>error: The task failed.</p>
+         * </li>
+         * <li><p>running: The task is running.</p>
+         * </li>
+         * <li><p>pending: The task is queued.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -161,7 +181,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +192,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +203,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +214,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30F6AD44-F078-540D-B5A5-1E519C8E9E6D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +225,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +236,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;

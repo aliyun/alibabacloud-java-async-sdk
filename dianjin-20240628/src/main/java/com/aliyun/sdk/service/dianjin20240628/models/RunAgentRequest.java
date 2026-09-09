@@ -174,6 +174,7 @@ public class RunAgentRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,6 +187,7 @@ public class RunAgentRequest extends Request {
         }
 
         /**
+         * <p>Agent ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +200,10 @@ public class RunAgentRequest extends Request {
         }
 
         /**
-         * modelId.
+         * <p>Model ID. Optional. If empty, the agent uses the model from its configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
          */
         public Builder modelId(String modelId) {
             this.putBodyParameter("modelId", modelId);
@@ -207,7 +212,10 @@ public class RunAgentRequest extends Request {
         }
 
         /**
-         * stream.
+         * <p>Enable streaming. Default is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stream(Boolean stream) {
             this.putBodyParameter("stream", stream);
@@ -216,7 +224,10 @@ public class RunAgentRequest extends Request {
         }
 
         /**
-         * threadId.
+         * <p>Thread ID. Optional. If empty, a new thread starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4vlag5ken3</p>
          */
         public Builder threadId(String threadId) {
             this.putBodyParameter("threadId", threadId);
@@ -225,7 +236,10 @@ public class RunAgentRequest extends Request {
         }
 
         /**
-         * useDraft.
+         * <p>Use the draft version. Drafts are unpublished versions in the editor. They are unstable. Default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useDraft(Boolean useDraft) {
             this.putBodyParameter("useDraft", useDraft);
@@ -234,7 +248,11 @@ public class RunAgentRequest extends Request {
         }
 
         /**
+         * <p>User input</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你是谁</p>
          */
         public Builder userContent(String userContent) {
             this.putBodyParameter("userContent", userContent);
@@ -243,7 +261,10 @@ public class RunAgentRequest extends Request {
         }
 
         /**
-         * userInputs.
+         * <p>More complex user-defined input parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;name&quot;: &quot;zhangsan&quot;}</p>
          */
         public Builder userInputs(java.util.Map<String, ?> userInputs) {
             this.putBodyParameter("userInputs", userInputs);
@@ -252,7 +273,10 @@ public class RunAgentRequest extends Request {
         }
 
         /**
-         * versionId.
+         * <p>Version ID to run</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w4paqoezm2</p>
          */
         public Builder versionId(String versionId) {
             this.putBodyParameter("versionId", versionId);

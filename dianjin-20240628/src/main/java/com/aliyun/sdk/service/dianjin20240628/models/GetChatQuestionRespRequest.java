@@ -90,6 +90,7 @@ public class GetChatQuestionRespRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetChatQuestionRespRequest extends Request {
         }
 
         /**
+         * <p>Question batch ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetChatQuestionRespRequest extends Request {
         }
 
         /**
+         * <p>Session ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

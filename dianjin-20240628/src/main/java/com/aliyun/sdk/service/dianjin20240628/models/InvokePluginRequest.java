@@ -88,6 +88,7 @@ public class InvokePluginRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter. The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,18 @@ public class InvokePluginRequest extends Request {
         }
 
         /**
-         * params.
+         * <p>Request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;query&quot;: &quot;介绍一下贵金属业务&quot;,
+         *         &quot;filters&quot;: [
+         *             {
+         *                 &quot;libraryId&quot;: &quot;9xznrxw&quot;
+         *             }
+         *         ],
+         *         &quot;topK&quot;: 1
+         *     }</p>
          */
         public Builder params(java.util.Map<String, ?> params) {
             this.putBodyParameter("params", params);
@@ -109,7 +121,10 @@ public class InvokePluginRequest extends Request {
         }
 
         /**
-         * pluginId.
+         * <p>The plugin ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3mj87da7zr</p>
          */
         public Builder pluginId(String pluginId) {
             this.putBodyParameter("pluginId", pluginId);

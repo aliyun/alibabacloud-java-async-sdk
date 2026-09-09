@@ -54,7 +54,10 @@ public class EndToEndRealTimeDialogResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1C98B466-D6E0-5252-A60B-F345CBB33DDB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

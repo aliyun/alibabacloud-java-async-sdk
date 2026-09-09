@@ -161,6 +161,7 @@ public class CreateDialogRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +174,7 @@ public class CreateDialogRequest extends Request {
         }
 
         /**
+         * <p>The channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +187,10 @@ public class CreateDialogRequest extends Request {
         }
 
         /**
-         * enableLibrary.
+         * <p>Specifies whether to enable the intent library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableLibrary(Boolean enableLibrary) {
             this.putBodyParameter("enableLibrary", enableLibrary);
@@ -194,7 +199,10 @@ public class CreateDialogRequest extends Request {
         }
 
         /**
-         * metaData.
+         * <p>Other information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder metaData(java.util.Map<String, ?> metaData) {
             this.putBodyParameter("metaData", metaData);
@@ -203,6 +211,7 @@ public class CreateDialogRequest extends Request {
         }
 
         /**
+         * <p>The playbook code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +224,7 @@ public class CreateDialogRequest extends Request {
         }
 
         /**
-         * qaLibraryList.
+         * <p>A list of Q\&amp;A library IDs.</p>
          */
         public Builder qaLibraryList(java.util.List<String> qaLibraryList) {
             this.putBodyParameter("qaLibraryList", qaLibraryList);
@@ -224,6 +233,7 @@ public class CreateDialogRequest extends Request {
         }
 
         /**
+         * <p>The request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +246,10 @@ public class CreateDialogRequest extends Request {
         }
 
         /**
-         * selfDirected.
+         * <p>Specifies whether to enable autonomous Q\&amp;A.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder selfDirected(Boolean selfDirected) {
             this.putBodyParameter("selfDirected", selfDirected);

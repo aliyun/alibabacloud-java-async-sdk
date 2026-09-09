@@ -133,6 +133,7 @@ public class CreatePdfTranslateTaskRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
+         * <p>Document ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +159,12 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * knowledge.
+         * <p>Domain knowledge used as reference during translation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>净利润 (Net Profit)
+         * 英文：Net Profit
+         * 中文：净利润（通常指扣除所有费用和税后的利润）</p>
          */
         public Builder knowledge(String knowledge) {
             this.putBodyParameter("knowledge", knowledge);
@@ -166,6 +173,7 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
+         * <p>Document library ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,6 +186,7 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
+         * <p>Model ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +199,10 @@ public class CreatePdfTranslateTaskRequest extends Request {
         }
 
         /**
-         * translateTo.
+         * <p>Target language. Default is Chinese</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中文</p>
          */
         public Builder translateTo(String translateTo) {
             this.putBodyParameter("translateTo", translateTo);

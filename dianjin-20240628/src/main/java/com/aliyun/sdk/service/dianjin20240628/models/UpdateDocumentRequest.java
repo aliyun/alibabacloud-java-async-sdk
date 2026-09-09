@@ -118,6 +118,7 @@ public class UpdateDocumentRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter, workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
+         * <p>Document ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
+         * <p>Document library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,12 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
-         * meta.
+         * <p>Document metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;businessId&quot;: &quot;12321&quot;
+         *     }</p>
          */
         public Builder meta(java.util.Map<String, ?> meta) {
             this.putBodyParameter("meta", meta);
@@ -163,7 +171,10 @@ public class UpdateDocumentRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>Document title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);

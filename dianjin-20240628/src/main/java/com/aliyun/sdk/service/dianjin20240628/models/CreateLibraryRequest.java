@@ -104,6 +104,7 @@ public class CreateLibraryRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,11 @@ public class CreateLibraryRequest extends Request {
         }
 
         /**
+         * <p>Document library description</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述文档库的具体作用</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -125,7 +130,7 @@ public class CreateLibraryRequest extends Request {
         }
 
         /**
-         * indexSetting.
+         * <p>Index settings for the document library</p>
          */
         public Builder indexSetting(IndexSetting indexSetting) {
             this.putBodyParameter("indexSetting", indexSetting);
@@ -134,7 +139,11 @@ public class CreateLibraryRequest extends Request {
         }
 
         /**
+         * <p>Document library name</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>金融知识文档库</p>
          */
         public Builder libraryName(String libraryName) {
             this.putBodyParameter("libraryName", libraryName);
@@ -293,7 +302,10 @@ public class CreateLibraryRequest extends Request {
             } 
 
             /**
-             * docTreeSplit.
+             * <p>Layout-based chunking</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder docTreeSplit(Boolean docTreeSplit) {
                 this.docTreeSplit = docTreeSplit;
@@ -301,7 +313,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * docTreeSplitSize.
+             * <p>Layout-based chunk size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder docTreeSplitSize(Integer docTreeSplitSize) {
                 this.docTreeSplitSize = docTreeSplitSize;
@@ -309,7 +324,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * enhanceGraph.
+             * <p>Parse images in documents</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enhanceGraph(Boolean enhanceGraph) {
                 this.enhanceGraph = enhanceGraph;
@@ -317,7 +335,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * enhanceTable.
+             * <p>Parse tables in documents</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enhanceTable(Boolean enhanceTable) {
                 this.enhanceTable = enhanceTable;
@@ -325,7 +346,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * overlap.
+             * <p>Chunk overlap length</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder overlap(Integer overlap) {
                 this.overlap = overlap;
@@ -333,7 +357,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * sentenceSplit.
+             * <p>Split by sentence</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sentenceSplit(Boolean sentenceSplit) {
                 this.sentenceSplit = sentenceSplit;
@@ -341,7 +368,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * sentenceSplitSize.
+             * <p>Sentence-based chunk size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder sentenceSplitSize(Integer sentenceSplitSize) {
                 this.sentenceSplitSize = sentenceSplitSize;
@@ -349,7 +379,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * size.
+             * <p>Chunk size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -357,7 +390,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * split.
+             * <p>Enable chunking</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder split(Boolean split) {
                 this.split = split;
@@ -424,7 +460,11 @@ public class CreateLibraryRequest extends Request {
             } 
 
             /**
-             * temperature.
+             * <p>Control the randomness and diversity of model responses. Higher values flatten the probability distribution over candidate tokens, increasing diversity. Lower values sharpen the distribution, increasing determinism.</p>
+             * <p>Valid range: [0, 2). Avoid 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder temperature(Double temperature) {
                 this.temperature = temperature;
@@ -432,7 +472,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * topP.
+             * <p>Probability threshold for nucleus sampling. For example, with a value of 0.8, only the smallest set of most likely tokens whose cumulative probability is at least 0.8 is used. Higher values increase randomness. Lower values increase determinism.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder topP(Double topP) {
                 this.topP = topP;
@@ -564,7 +607,10 @@ public class CreateLibraryRequest extends Request {
             } 
 
             /**
-             * enableFollowUp.
+             * <p>Rewrite queries using history</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableFollowUp(Boolean enableFollowUp) {
                 this.enableFollowUp = enableFollowUp;
@@ -572,7 +618,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * enableMultiQuery.
+             * <p>Use Large Language Models (LLMs) to decompose queries</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableMultiQuery(Boolean enableMultiQuery) {
                 this.enableMultiQuery = enableMultiQuery;
@@ -580,7 +629,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * enableOpenQa.
+             * <p>Use LLMs to answer queries</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableOpenQa(Boolean enableOpenQa) {
                 this.enableOpenQa = enableOpenQa;
@@ -588,7 +640,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * enableQueryRewrite.
+             * <p>Enable query rewriting</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableQueryRewrite(Boolean enableQueryRewrite) {
                 this.enableQueryRewrite = enableQueryRewrite;
@@ -596,7 +651,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * enableSession.
+             * <p>Enable multi-turn conversations</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSession(Boolean enableSession) {
                 this.enableSession = enableSession;
@@ -604,7 +662,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * localKnowledgeId.
+             * <p>Document library ID for knowledge rewriting</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder localKnowledgeId(String localKnowledgeId) {
                 this.localKnowledgeId = localKnowledgeId;
@@ -612,7 +673,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * withDocumentReference.
+             * <p>Include document references in responses</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder withDocumentReference(Boolean withDocumentReference) {
                 this.withDocumentReference = withDocumentReference;
@@ -679,7 +743,10 @@ public class CreateLibraryRequest extends Request {
             } 
 
             /**
-             * documentRankType.
+             * <p>Merge and sort policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder documentRankType(String documentRankType) {
                 this.documentRankType = documentRankType;
@@ -687,7 +754,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * limit.
+             * <p>Number of results from two-way merge and summarization</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -806,7 +876,10 @@ public class CreateLibraryRequest extends Request {
             } 
 
             /**
-             * category.
+             * <p>Text index type. Only ElasticSearch is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ElasticSearch</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -814,7 +887,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * enable.
+             * <p>Enable text indexing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -822,7 +898,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * indexAnalyzer.
+             * <p>Text index analyzer: Standard, IkMaxWord, or IkSmart</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder indexAnalyzer(String indexAnalyzer) {
                 this.indexAnalyzer = indexAnalyzer;
@@ -830,7 +909,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * rankThreshold.
+             * <p>Text index ranking threshold</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder rankThreshold(Double rankThreshold) {
                 this.rankThreshold = rankThreshold;
@@ -838,7 +920,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * searchAnalyzer.
+             * <p>Text index search analyzer: Standard, IkMaxWord, or IkSmart</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder searchAnalyzer(String searchAnalyzer) {
                 this.searchAnalyzer = searchAnalyzer;
@@ -846,7 +931,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * topK.
+             * <p>Number of final text index results</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder topK(Integer topK) {
                 this.topK = topK;
@@ -952,7 +1040,10 @@ public class CreateLibraryRequest extends Request {
             } 
 
             /**
-             * category.
+             * <p>Vector index source. Only ADB is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADB</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -960,7 +1051,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * embeddingType.
+             * <p>Text embedding type for vector indexing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DashScope</p>
              */
             public Builder embeddingType(String embeddingType) {
                 this.embeddingType = embeddingType;
@@ -968,7 +1062,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * enable.
+             * <p>Enable vector indexing</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -976,7 +1073,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * rankThreshold.
+             * <p>Vector index ranking threshold</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder rankThreshold(Double rankThreshold) {
                 this.rankThreshold = rankThreshold;
@@ -984,7 +1084,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * topK.
+             * <p>Number of final vector index results</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder topK(Integer topK) {
                 this.topK = topK;
@@ -1116,7 +1219,7 @@ public class CreateLibraryRequest extends Request {
             } 
 
             /**
-             * chunkStrategy.
+             * <p>Chunking strategy</p>
              */
             public Builder chunkStrategy(ChunkStrategy chunkStrategy) {
                 this.chunkStrategy = chunkStrategy;
@@ -1124,7 +1227,7 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * modelConfig.
+             * <p>Model configuration</p>
              */
             public Builder modelConfig(ModelConfig modelConfig) {
                 this.modelConfig = modelConfig;
@@ -1132,7 +1235,10 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * promptRoleStyle.
+             * <p>Prompt role style. Specify a role and tone to guide response quality. Examples: Document analysis expert, friendly customer service agent, professional financial analyst.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你是一位信息处理专家，耐心、友好、逻辑清晰。</p>
              */
             public Builder promptRoleStyle(String promptRoleStyle) {
                 this.promptRoleStyle = promptRoleStyle;
@@ -1140,7 +1246,7 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * queryEnhancer.
+             * <p>Query enhancement configuration</p>
              */
             public Builder queryEnhancer(QueryEnhancer queryEnhancer) {
                 this.queryEnhancer = queryEnhancer;
@@ -1148,7 +1254,7 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * recallStrategy.
+             * <p>Retrieval strategy</p>
              */
             public Builder recallStrategy(RecallStrategy recallStrategy) {
                 this.recallStrategy = recallStrategy;
@@ -1156,7 +1262,7 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * textIndexSetting.
+             * <p>Text index configuration</p>
              */
             public Builder textIndexSetting(TextIndexSetting textIndexSetting) {
                 this.textIndexSetting = textIndexSetting;
@@ -1164,7 +1270,7 @@ public class CreateLibraryRequest extends Request {
             }
 
             /**
-             * vectorIndexSetting.
+             * <p>Vector index settings</p>
              */
             public Builder vectorIndexSetting(VectorIndexSetting vectorIndexSetting) {
                 this.vectorIndexSetting = vectorIndexSetting;

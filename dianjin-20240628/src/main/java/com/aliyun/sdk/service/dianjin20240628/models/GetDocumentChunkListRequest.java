@@ -174,6 +174,7 @@ public class GetDocumentChunkListRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter, workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,7 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
-         * chunkIdList.
+         * <p>List of document chunk IDs</p>
          */
         public Builder chunkIdList(java.util.List<String> chunkIdList) {
             this.putBodyParameter("chunkIdList", chunkIdList);
@@ -195,6 +196,7 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
+         * <p>Document ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,6 +209,7 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
+         * <p>Library ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +222,10 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
-         * order.
+         * <p>Sorting method</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("order", order);
@@ -228,7 +234,10 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>Sort field</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gmtCreate</p>
          */
         public Builder orderBy(String orderBy) {
             this.putBodyParameter("orderBy", orderBy);
@@ -237,7 +246,10 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putBodyParameter("page", page);
@@ -246,7 +258,10 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -255,7 +270,10 @@ public class GetDocumentChunkListRequest extends Request {
         }
 
         /**
-         * searchQuery.
+         * <p>Search query keyword</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder searchQuery(String searchQuery) {
             this.putBodyParameter("searchQuery", searchQuery);

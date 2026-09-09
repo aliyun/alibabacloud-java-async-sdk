@@ -159,6 +159,7 @@ public class GetFilterDocumentListRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +172,7 @@ public class GetFilterDocumentListRequest extends Request {
         }
 
         /**
-         * and.
+         * <p>AND expression to filter documents or document chunks.</p>
          */
         public Builder and(java.util.List<And> and) {
             this.putBodyParameter("and", and);
@@ -180,7 +181,7 @@ public class GetFilterDocumentListRequest extends Request {
         }
 
         /**
-         * docIdList.
+         * <p>List of document IDs to filter documents or document chunks.</p>
          */
         public Builder docIdList(java.util.List<String> docIdList) {
             this.putBodyParameter("docIdList", docIdList);
@@ -189,6 +190,7 @@ public class GetFilterDocumentListRequest extends Request {
         }
 
         /**
+         * <p>Document library ID to filter documents or document chunks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +203,7 @@ public class GetFilterDocumentListRequest extends Request {
         }
 
         /**
-         * or.
+         * <p>OR expression to filter documents or document chunks.</p>
          */
         public Builder or(java.util.List<Or> or) {
             this.putBodyParameter("or", or);
@@ -210,7 +212,10 @@ public class GetFilterDocumentListRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>Page number for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putBodyParameter("page", page);
@@ -219,7 +224,10 @@ public class GetFilterDocumentListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Number of records per page for pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -228,7 +236,23 @@ public class GetFilterDocumentListRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>List of document statuses to filter documents.</p>
+         * <h3>Document parsing status codes</h3>
+         * <p><em>Status codes: WaitRefresh, InQueue, FetchingData, Embedding, Completed, FormatError, Error</em></p>
+         * <ul>
+         * <li><p>Completed: Active. Document parsing completed.</p>
+         * </li>
+         * <li><p>Error: Inactive. Document parsing failed.</p>
+         * </li>
+         * <li><p>FormatError: File format error. Re-upload the file in the correct format if it is encrypted or incomplete.</p>
+         * </li>
+         * <li><p>InQueue: Pending. Document is waiting for parsing.</p>
+         * </li>
+         * <li><p>Parsed: Parsing completed.</p>
+         * </li>
+         * <li><p>Other statuses are internal system states. For example, WaitRefresh means the task is scheduled. FetchingData means parsing is in progress. Embedding means index building is in progress.</p>
+         * </li>
+         * </ul>
          */
         public Builder status(java.util.List<String> status) {
             this.putBodyParameter("status", status);
@@ -322,7 +346,10 @@ public class GetFilterDocumentListRequest extends Request {
             } 
 
             /**
-             * boost.
+             * <p>Weight of the value in the text retrieval engine. Default is 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder boost(Float boost) {
                 this.boost = boost;
@@ -330,7 +357,10 @@ public class GetFilterDocumentListRequest extends Request {
             }
 
             /**
-             * key.
+             * <p>Metadata key in the document library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -338,7 +368,16 @@ public class GetFilterDocumentListRequest extends Request {
             }
 
             /**
-             * operator.
+             * <h3>Relationship between the stored metadata value and your input value</h3>
+             * <ul>
+             * <li><p>eq: The stored metadata value equals your input value.</p>
+             * </li>
+             * <li><p>contains: The stored metadata value list contains your input value.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -346,7 +385,10 @@ public class GetFilterDocumentListRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Input metadata value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -439,7 +481,10 @@ public class GetFilterDocumentListRequest extends Request {
             } 
 
             /**
-             * boost.
+             * <p>Weight of the value in the text retrieval engine. Default is 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder boost(Float boost) {
                 this.boost = boost;
@@ -447,7 +492,10 @@ public class GetFilterDocumentListRequest extends Request {
             }
 
             /**
-             * key.
+             * <p>Metadata key in the document library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -455,7 +503,16 @@ public class GetFilterDocumentListRequest extends Request {
             }
 
             /**
-             * operator.
+             * <h3>Relationship between the stored metadata value and your input value</h3>
+             * <ul>
+             * <li><p>eq: The stored metadata value equals your input value.</p>
+             * </li>
+             * <li><p>contains: The stored metadata value list contains your input value.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -463,7 +520,10 @@ public class GetFilterDocumentListRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Input metadata value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibaba</p>
              */
             public Builder value(String value) {
                 this.value = value;

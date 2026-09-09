@@ -145,7 +145,10 @@ public class InvokePluginResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Response time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,10 @@ public class InvokePluginResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;jobWaiting\&quot;: [0, 0], \&quot;timestamps\&quot;: [1713383820, 1713383880], \&quot;jobUsage\&quot;: [0, 0], \&quot;quotaUsage\&quot;: [123, 32]}</p>
          */
         public Builder data(java.util.Map<String, ?> data) {
             this.data = data;
@@ -161,7 +167,10 @@ public class InvokePluginResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +178,10 @@ public class InvokePluginResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +189,10 @@ public class InvokePluginResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +200,10 @@ public class InvokePluginResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>915AAAB9-4908-5224-9E53-9E9D7D0AA94B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +211,10 @@ public class InvokePluginResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the call succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +222,10 @@ public class InvokePluginResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp in YYYY-MM-DD HH:MM:SS format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;

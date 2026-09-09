@@ -88,6 +88,7 @@ public class GetDialogLogRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetDialogLogRequest extends Request {
         }
 
         /**
-         * id.
+         * <p>The \<code>id\\</code> field returned by the real-time conversation API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>175600129454077743fb03ac54955a4be72ec08f9c216</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("id", id);
@@ -109,7 +113,10 @@ public class GetDialogLogRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1758010668S001w4paq82azm</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("sessionId", sessionId);

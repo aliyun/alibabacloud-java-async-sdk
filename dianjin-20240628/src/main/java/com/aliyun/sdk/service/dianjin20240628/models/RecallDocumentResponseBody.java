@@ -145,7 +145,10 @@ public class RecallDocumentResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Time elapsed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class RecallDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class RecallDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class RecallDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class RecallDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class RecallDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc13a9517168617617186457e401f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class RecallDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class RecallDocumentResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -280,7 +301,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * axisArray.
+             * <p>Coordinates.</p>
              */
             public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
@@ -288,7 +309,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -296,7 +320,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * textHighlightArea.
+             * <p>Text highlight area, used for text-type file highlighting.</p>
              */
             public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
@@ -519,7 +543,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * chunkId.
+             * <p>Document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>823746762354</p>
              */
             public Builder chunkId(String chunkId) {
                 this.chunkId = chunkId;
@@ -527,7 +554,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkMeta.
+             * <p>Document chunk metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;:&quot;1&quot;}</p>
              */
             public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
@@ -535,7 +565,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkOssUrl.
+             * <p>Document chunk OSS address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss-xxx-hangzhou.com/xxx">http://oss-xxx-hangzhou.com/xxx</a></p>
              */
             public Builder chunkOssUrl(String chunkOssUrl) {
                 this.chunkOssUrl = chunkOssUrl;
@@ -543,7 +576,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkText.
+             * <p>Document chunk text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档块</p>
              */
             public Builder chunkText(String chunkText) {
                 this.chunkText = chunkText;
@@ -551,7 +587,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkType.
+             * <p>Document chunk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder chunkType(String chunkType) {
                 this.chunkType = chunkType;
@@ -559,7 +598,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * docId.
+             * <p>Document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>839468263472</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -567,7 +609,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * fileType.
+             * <p>Document type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -575,7 +620,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * libraryId.
+             * <p>Document library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dscsbdsk</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;
@@ -583,7 +631,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * libraryName.
+             * <p>Document library name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档库</p>
              */
             public Builder libraryName(String libraryName) {
                 this.libraryName = libraryName;
@@ -591,7 +642,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * nextChunkId.
+             * <p>Next document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>982374872364</p>
              */
             public Builder nextChunkId(String nextChunkId) {
                 this.nextChunkId = nextChunkId;
@@ -599,7 +653,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * pos.
+             * <p>Document chunk position.</p>
              */
             public Builder pos(java.util.List<Pos> pos) {
                 this.pos = pos;
@@ -607,7 +661,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * preChunkId.
+             * <p>Previous document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>827364827364832</p>
              */
             public Builder preChunkId(String preChunkId) {
                 this.preChunkId = preChunkId;
@@ -615,7 +672,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>Document chunk score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -623,7 +683,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Document title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -703,7 +766,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * axisArray.
+             * <p>Coordinates.</p>
              */
             public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
@@ -711,7 +774,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -719,7 +785,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * textHighlightArea.
+             * <p>Text highlight area, used for text-type file highlighting.</p>
              */
             public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
@@ -942,7 +1008,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * chunkId.
+             * <p>Document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98327482364</p>
              */
             public Builder chunkId(String chunkId) {
                 this.chunkId = chunkId;
@@ -950,7 +1019,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkMeta.
+             * <p>Document chunk metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;:&quot;1&quot;}</p>
              */
             public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
@@ -958,7 +1030,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkOssUrl.
+             * <p>Document chunk OSS address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss-xxx-hangzhou.com/xxx">http://oss-xxx-hangzhou.com/xxx</a></p>
              */
             public Builder chunkOssUrl(String chunkOssUrl) {
                 this.chunkOssUrl = chunkOssUrl;
@@ -966,7 +1041,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkText.
+             * <p>Document chunk text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档块</p>
              */
             public Builder chunkText(String chunkText) {
                 this.chunkText = chunkText;
@@ -974,7 +1052,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkType.
+             * <p>Document chunk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder chunkType(String chunkType) {
                 this.chunkType = chunkType;
@@ -982,7 +1063,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * docId.
+             * <p>Document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92837482364</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -990,7 +1074,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * fileType.
+             * <p>Document type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -998,7 +1085,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * libraryId.
+             * <p>Document library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sjdhgjsd</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;
@@ -1006,7 +1096,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * libraryName.
+             * <p>Document library name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档库</p>
              */
             public Builder libraryName(String libraryName) {
                 this.libraryName = libraryName;
@@ -1014,7 +1107,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * nextChunkId.
+             * <p>Next document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2387648263542</p>
              */
             public Builder nextChunkId(String nextChunkId) {
                 this.nextChunkId = nextChunkId;
@@ -1022,7 +1118,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * pos.
+             * <p>Document chunk position.</p>
              */
             public Builder pos(java.util.List<ChunkPartListPos> pos) {
                 this.pos = pos;
@@ -1030,7 +1126,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * preChunkId.
+             * <p>Previous document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32874682764</p>
              */
             public Builder preChunkId(String preChunkId) {
                 this.preChunkId = preChunkId;
@@ -1038,7 +1137,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>Document chunk score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -1046,7 +1148,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Document title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档标题</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1178,7 +1283,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * docId.
+             * <p>Document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>92837482364</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -1186,7 +1294,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * documentMeta.
+             * <p>Document metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;:&quot;1&quot;}</p>
              */
             public Builder documentMeta(java.util.Map<String, ?> documentMeta) {
                 this.documentMeta = documentMeta;
@@ -1194,7 +1305,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * fileType.
+             * <p>Document type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -1202,7 +1316,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1210,7 +1327,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * libraryId.
+             * <p>Document library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sjdhgjsd</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;
@@ -1218,7 +1338,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Document title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1226,7 +1349,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>Document link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss-xxx-hangzhou.com/test.pdf">http://oss-xxx-hangzhou.com/test.pdf</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1306,7 +1432,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * axisArray.
+             * <p>Coordinates.</p>
              */
             public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
@@ -1314,7 +1440,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -1322,7 +1451,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * textHighlightArea.
+             * <p>Text highlight area, used for text-type file highlighting.</p>
              */
             public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
@@ -1545,7 +1674,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * chunkId.
+             * <p>Document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32874682364</p>
              */
             public Builder chunkId(String chunkId) {
                 this.chunkId = chunkId;
@@ -1553,7 +1685,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkMeta.
+             * <p>Document chunk metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;:&quot;1&quot;}</p>
              */
             public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
@@ -1561,7 +1696,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkOssUrl.
+             * <p>Document chunk OSS address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://oss-xxx-hangzhou.com/xxx">http://oss-xxx-hangzhou.com/xxx</a></p>
              */
             public Builder chunkOssUrl(String chunkOssUrl) {
                 this.chunkOssUrl = chunkOssUrl;
@@ -1569,7 +1707,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkText.
+             * <p>Document chunk text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一段测试文档块</p>
              */
             public Builder chunkText(String chunkText) {
                 this.chunkText = chunkText;
@@ -1577,7 +1718,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkType.
+             * <p>Document chunk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder chunkType(String chunkType) {
                 this.chunkType = chunkType;
@@ -1585,7 +1729,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * docId.
+             * <p>Document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8372467263542</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -1593,7 +1740,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * fileType.
+             * <p>Document type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -1601,7 +1751,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * libraryId.
+             * <p>Document library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>djsgfsjd</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;
@@ -1609,7 +1762,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * libraryName.
+             * <p>Document library name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档库</p>
              */
             public Builder libraryName(String libraryName) {
                 this.libraryName = libraryName;
@@ -1617,7 +1773,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * nextChunkId.
+             * <p>Next document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23874682432</p>
              */
             public Builder nextChunkId(String nextChunkId) {
                 this.nextChunkId = nextChunkId;
@@ -1625,7 +1784,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * pos.
+             * <p>Document chunk position.</p>
              */
             public Builder pos(java.util.List<TextChunkListPos> pos) {
                 this.pos = pos;
@@ -1633,7 +1792,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * preChunkId.
+             * <p>Previous document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>89473868346</p>
              */
             public Builder preChunkId(String preChunkId) {
                 this.preChunkId = preChunkId;
@@ -1641,7 +1803,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>Document chunk score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -1649,7 +1814,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Document title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档标题</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1729,7 +1897,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * axisArray.
+             * <p>Coordinates.</p>
              */
             public Builder axisArray(java.util.List<Double> axisArray) {
                 this.axisArray = axisArray;
@@ -1737,7 +1905,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * page.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -1745,7 +1916,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * textHighlightArea.
+             * <p>Text highlight area, used for text-type file highlighting.</p>
              */
             public Builder textHighlightArea(java.util.List<Integer> textHighlightArea) {
                 this.textHighlightArea = textHighlightArea;
@@ -1968,7 +2139,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * chunkId.
+             * <p>Document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8723642345276</p>
              */
             public Builder chunkId(String chunkId) {
                 this.chunkId = chunkId;
@@ -1976,7 +2150,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkMeta.
+             * <p>Document chunk metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;:&quot;1&quot;}</p>
              */
             public Builder chunkMeta(java.util.Map<String, ?> chunkMeta) {
                 this.chunkMeta = chunkMeta;
@@ -1984,7 +2161,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkOssUrl.
+             * <p>Document chunk OSS address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oss-xxxx-hangzhou.com/test.pdf">https://oss-xxxx-hangzhou.com/test.pdf</a></p>
              */
             public Builder chunkOssUrl(String chunkOssUrl) {
                 this.chunkOssUrl = chunkOssUrl;
@@ -1992,7 +2172,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkText.
+             * <p>Document chunk text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一段测试文本</p>
              */
             public Builder chunkText(String chunkText) {
                 this.chunkText = chunkText;
@@ -2000,7 +2183,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkType.
+             * <p>Document chunk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder chunkType(String chunkType) {
                 this.chunkType = chunkType;
@@ -2008,7 +2194,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * docId.
+             * <p>Document ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78326476235675372</p>
              */
             public Builder docId(String docId) {
                 this.docId = docId;
@@ -2016,7 +2205,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * fileType.
+             * <p>Document type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -2024,7 +2216,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * libraryId.
+             * <p>Document library ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>djsgfsjd</p>
              */
             public Builder libraryId(String libraryId) {
                 this.libraryId = libraryId;
@@ -2032,7 +2227,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * libraryName.
+             * <p>Document library name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档库</p>
              */
             public Builder libraryName(String libraryName) {
                 this.libraryName = libraryName;
@@ -2040,7 +2238,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * nextChunkId.
+             * <p>Next document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>293846872343</p>
              */
             public Builder nextChunkId(String nextChunkId) {
                 this.nextChunkId = nextChunkId;
@@ -2048,7 +2249,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * pos.
+             * <p>Document chunk position.</p>
              */
             public Builder pos(java.util.List<VectorChunkListPos> pos) {
                 this.pos = pos;
@@ -2056,7 +2257,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * preChunkId.
+             * <p>Previous document chunk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>873647326542</p>
              */
             public Builder preChunkId(String preChunkId) {
                 this.preChunkId = preChunkId;
@@ -2064,7 +2268,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>Document chunk score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -2072,7 +2279,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>Document title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -2243,7 +2453,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             } 
 
             /**
-             * chunkList.
+             * <p>Chunk list.</p>
              */
             public Builder chunkList(java.util.List<ChunkList> chunkList) {
                 this.chunkList = chunkList;
@@ -2251,7 +2461,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkPartList.
+             * <p>Chunk part (layout recognition result) list.</p>
              */
             public Builder chunkPartList(java.util.List<ChunkPartList> chunkPartList) {
                 this.chunkPartList = chunkPartList;
@@ -2259,7 +2469,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * chunkTextList.
+             * <p>Chunk text list.</p>
              */
             public Builder chunkTextList(java.util.List<String> chunkTextList) {
                 this.chunkTextList = chunkTextList;
@@ -2267,7 +2477,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * documents.
+             * <p>Document list.</p>
              */
             public Builder documents(java.util.List<Documents> documents) {
                 this.documents = documents;
@@ -2275,7 +2485,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * embeddingElapsedMs.
+             * <p>Vector computation time elapsed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder embeddingElapsedMs(Long embeddingElapsedMs) {
                 this.embeddingElapsedMs = embeddingElapsedMs;
@@ -2283,7 +2496,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * textChunkList.
+             * <p>List of chunks retrieved from the text index.</p>
              */
             public Builder textChunkList(java.util.List<TextChunkList> textChunkList) {
                 this.textChunkList = textChunkList;
@@ -2291,7 +2504,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * textSearchElapsedMs.
+             * <p>Text search time elapsed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder textSearchElapsedMs(Long textSearchElapsedMs) {
                 this.textSearchElapsedMs = textSearchElapsedMs;
@@ -2299,7 +2515,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * totalElapsedMs.
+             * <p>Total time elapsed, including vector computation time, vector search time, and text search time (depending on retrieval parameters).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder totalElapsedMs(Long totalElapsedMs) {
                 this.totalElapsedMs = totalElapsedMs;
@@ -2307,7 +2526,7 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * vectorChunkList.
+             * <p>List of chunks retrieved from the vector index.</p>
              */
             public Builder vectorChunkList(java.util.List<VectorChunkList> vectorChunkList) {
                 this.vectorChunkList = vectorChunkList;
@@ -2315,7 +2534,10 @@ public class RecallDocumentResponseBody extends TeaModel {
             }
 
             /**
-             * vectorSearchElapsedMs.
+             * <p>Vector search time elapsed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder vectorSearchElapsedMs(Long vectorSearchElapsedMs) {
                 this.vectorSearchElapsedMs = vectorSearchElapsedMs;

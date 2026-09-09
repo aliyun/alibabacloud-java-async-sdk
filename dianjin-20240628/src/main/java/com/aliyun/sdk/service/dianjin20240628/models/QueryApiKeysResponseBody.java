@@ -301,10 +301,7 @@ public class QueryApiKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p><strong>API Key ID</strong></p>
-             * 
-             * <strong>example:</strong>
-             * <p>key_001</p>
+             * keyId.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;

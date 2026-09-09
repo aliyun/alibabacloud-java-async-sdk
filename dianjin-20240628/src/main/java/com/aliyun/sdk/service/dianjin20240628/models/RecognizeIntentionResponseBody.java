@@ -145,7 +145,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Processing time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>003D019A-1BB3-53EC-A0D2-CE76DA5D73B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -319,7 +340,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
             } 
 
             /**
-             * analysisProcess.
+             * <p>Analysis process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户回答的内容与提供的意图列表描述均不匹配，没有表达出对账单、还款、天气或其他服务的具体需求或问题。</p>
              */
             public Builder analysisProcess(String analysisProcess) {
                 this.analysisProcess = analysisProcess;
@@ -327,7 +351,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
             }
 
             /**
-             * intentionCode.
+             * <p>Intent code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
@@ -335,7 +362,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
             }
 
             /**
-             * intentionName.
+             * <p>Intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>其它</p>
              */
             public Builder intentionName(String intentionName) {
                 this.intentionName = intentionName;
@@ -343,7 +373,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
             }
 
             /**
-             * intentionScript.
+             * <p>Intent script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>朱先生，理解您可能对天气感兴趣，但更重要的是您的账户情况。请让我们专注于您未偿还的款项，这对您的信用健康至关重要。</p>
              */
             public Builder intentionScript(String intentionScript) {
                 this.intentionScript = intentionScript;
@@ -351,7 +384,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
             }
 
             /**
-             * recommendIntention.
+             * <p>Recommended intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>客户试图回避谈论逾期还款的话题</p>
              */
             public Builder recommendIntention(String recommendIntention) {
                 this.recommendIntention = recommendIntention;
@@ -359,7 +395,10 @@ public class RecognizeIntentionResponseBody extends TeaModel {
             }
 
             /**
-             * recommendScript.
+             * <p>Recommended script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>朱先生，理解您可能对天气感兴趣，但更重要的是您的账户情况。请让我们专注于您未偿还的款项，这对您的信用健康至关重要。</p>
              */
             public Builder recommendScript(String recommendScript) {
                 this.recommendScript = recommendScript;

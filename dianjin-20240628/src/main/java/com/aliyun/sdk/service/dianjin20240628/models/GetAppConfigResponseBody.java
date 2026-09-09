@@ -145,7 +145,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Time consumed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Returned data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF4B5C9B-3BC8-5171-A47B-4C5CF3DC3258</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Is successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -319,7 +340,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * embeddingTypeList.
+             * <p>Embedding type list</p>
              */
             public Builder embeddingTypeList(java.util.List<java.util.Map<String, String>> embeddingTypeList) {
                 this.embeddingTypeList = embeddingTypeList;
@@ -327,7 +348,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             }
 
             /**
-             * frontendConfig.
+             * <p>Frontend configuration</p>
              */
             public Builder frontendConfig(java.util.Map<String, Boolean> frontendConfig) {
                 this.frontendConfig = frontendConfig;
@@ -335,7 +356,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             }
 
             /**
-             * libraryDocumentStatusList.
+             * <p>Document library status list</p>
              */
             public Builder libraryDocumentStatusList(java.util.List<java.util.Map<String, String>> libraryDocumentStatusList) {
                 this.libraryDocumentStatusList = libraryDocumentStatusList;
@@ -343,7 +364,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             }
 
             /**
-             * llmHelperTypeList.
+             * <p>Large Language Model (LLM) type list</p>
              */
             public Builder llmHelperTypeList(java.util.List<java.util.Map<String, String>> llmHelperTypeList) {
                 this.llmHelperTypeList = llmHelperTypeList;
@@ -351,7 +372,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             }
 
             /**
-             * textIndexCategoryList.
+             * <p>Text index category list</p>
              */
             public Builder textIndexCategoryList(java.util.List<String> textIndexCategoryList) {
                 this.textIndexCategoryList = textIndexCategoryList;
@@ -359,7 +380,7 @@ public class GetAppConfigResponseBody extends TeaModel {
             }
 
             /**
-             * vectorIndexCategoryList.
+             * <p>Vector index category list</p>
              */
             public Builder vectorIndexCategoryList(java.util.List<String> vectorIndexCategoryList) {
                 this.vectorIndexCategoryList = vectorIndexCategoryList;

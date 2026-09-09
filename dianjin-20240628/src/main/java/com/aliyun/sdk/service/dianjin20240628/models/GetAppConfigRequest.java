@@ -60,6 +60,7 @@ public class GetAppConfigRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter, workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

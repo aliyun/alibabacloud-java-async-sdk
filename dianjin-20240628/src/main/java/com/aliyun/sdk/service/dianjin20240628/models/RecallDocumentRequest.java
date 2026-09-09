@@ -117,6 +117,7 @@ public class RecallDocumentRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter, workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,7 @@ public class RecallDocumentRequest extends Request {
         }
 
         /**
-         * filters.
+         * <p>Metadata filter conditions.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putBodyParameter("filters", filters);
@@ -138,7 +139,11 @@ public class RecallDocumentRequest extends Request {
         }
 
         /**
+         * <p>Text.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>欧洲杯历史上有哪些球队因为球员的适应新文化而受益</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);
@@ -147,7 +152,13 @@ public class RecallDocumentRequest extends Request {
         }
 
         /**
-         * rearrangement.
+         * <p>Enable parent-child document chunk retrieval.</p>
+         * <ul>
+         * <li>Parent-child document chunks: During document parsing, a complete semantic block, such as a paragraph or a section, might split into multiple document chunks. This depends on your chunking strategy. When you enable parent-child document retrieval, the system attempts to complete the semantic block of the retrieved document chunk. This makes the corpus more semantically complete when constructing prompts, improving answer completeness and accuracy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder rearrangement(Boolean rearrangement) {
             this.putBodyParameter("rearrangement", rearrangement);
@@ -156,7 +167,10 @@ public class RecallDocumentRequest extends Request {
         }
 
         /**
-         * topK.
+         * <p>The number of document chunks to retrieve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topK(Integer topK) {
             this.putBodyParameter("topK", topK);
@@ -250,7 +264,10 @@ public class RecallDocumentRequest extends Request {
             } 
 
             /**
-             * boost.
+             * <p>Keyword weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder boost(Float boost) {
                 this.boost = boost;
@@ -258,7 +275,10 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * key.
+             * <p>The key of the metadata in the document library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>docType</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -266,7 +286,24 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * operator.
+             * <p>The relationship between the value stored in the document library metadata key and the value you enter.</p>
+             * <ul>
+             * <li><p>eq: The value stored in the document library metadata key equals the value you enter.</p>
+             * </li>
+             * <li><p>lte: The value stored in the document library metadata key is less than or equal to the value you enter.</p>
+             * </li>
+             * <li><p>gte: The value stored in the document library metadata key is greater than or equal to the value you enter.</p>
+             * </li>
+             * <li><p>lt: The value stored in the document library metadata key is less than the value you enter.</p>
+             * </li>
+             * <li><p>gt: The value stored in the document library metadata key is greater than the value you enter.</p>
+             * </li>
+             * <li><p>contains: The list of values stored in the document library metadata key contains the value you enter.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>contains</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -274,7 +311,10 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the metadata you enter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>策略报告</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -367,7 +407,10 @@ public class RecallDocumentRequest extends Request {
             } 
 
             /**
-             * boost.
+             * <p>Keyword weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder boost(Float boost) {
                 this.boost = boost;
@@ -375,7 +418,10 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * key.
+             * <p>The key of the metadata in the document library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>researcher</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -383,7 +429,24 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * operator.
+             * <p>The relationship between the value stored in the document library metadata key and the value you enter.</p>
+             * <ul>
+             * <li><p>eq: The value stored in the document library metadata key equals the value you enter.</p>
+             * </li>
+             * <li><p>lte: The value stored in the document library metadata key is less than or equal to the value you enter.</p>
+             * </li>
+             * <li><p>gte: The value stored in the document library metadata key is greater than or equal to the value you enter.</p>
+             * </li>
+             * <li><p>lt: The value stored in the document library metadata key is less than the value you enter.</p>
+             * </li>
+             * <li><p>gt: The value stored in the document library metadata key is greater than the value you enter.</p>
+             * </li>
+             * <li><p>contains: The list of values stored in the document library metadata key contains the value you enter.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -391,7 +454,10 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the metadata you enter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -511,7 +577,7 @@ public class RecallDocumentRequest extends Request {
             } 
 
             /**
-             * and.
+             * <p>AND expression, used to filter documents/document chunks.</p>
              */
             public Builder and(java.util.List<And> and) {
                 this.and = and;
@@ -519,7 +585,10 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * chunkType.
+             * <p>Document chunk type, used to filter document chunks, such as: Text, Graph, Table, FAQ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Text</p>
              */
             public Builder chunkType(String chunkType) {
                 this.chunkType = chunkType;
@@ -527,7 +596,7 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * docIdList.
+             * <p>Document ID list, used to filter documents/document chunks.</p>
              */
             public Builder docIdList(java.util.List<String> docIdList) {
                 this.docIdList = docIdList;
@@ -535,6 +604,7 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
+             * <p>Document library ID, used to filter documents/document chunks.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -546,7 +616,7 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * or.
+             * <p>OR expression, used to filter documents/document chunks.</p>
              */
             public Builder or(java.util.List<Or> or) {
                 this.or = or;
@@ -554,7 +624,7 @@ public class RecallDocumentRequest extends Request {
             }
 
             /**
-             * status.
+             * <p>Document status list, used to filter documents.</p>
              */
             public Builder status(java.util.List<String> status) {
                 this.status = status;

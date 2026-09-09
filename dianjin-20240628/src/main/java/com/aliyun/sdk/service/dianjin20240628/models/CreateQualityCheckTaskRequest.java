@@ -162,6 +162,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +175,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         }
 
         /**
+         * <p>The conversation content. If associated with a quality check scenario, pass multiple conversations. Otherwise, pass only one.</p>
          * <p>This parameter is required.</p>
          */
         public Builder conversationList(ConversationList conversationList) {
@@ -183,6 +185,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         }
 
         /**
+         * <p>The business occurrence time. The system uses this to record submission time, make task scheduling priority decisions, and so on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +198,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         }
 
         /**
-         * metaData.
+         * <p>The metadata. These are properties related to business that rules consume during execution. The business system passes these in real-time when initiating a quality check.</p>
          */
         public Builder metaData(java.util.Map<String, String> metaData) {
             this.putBodyParameter("metaData", metaData);
@@ -204,7 +207,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         }
 
         /**
-         * qualityGroup.
+         * <p>The quality check rule group.</p>
          */
         public Builder qualityGroup(java.util.List<String> qualityGroup) {
             this.putBodyParameter("qualityGroup", qualityGroup);
@@ -213,6 +216,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         }
 
         /**
+         * <p>The request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +229,10 @@ public class CreateQualityCheckTaskRequest extends Request {
         }
 
         /**
-         * sceneCode.
+         * <p>The scenario code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>o9c8u8</p>
          */
         public Builder sceneCode(String sceneCode) {
             this.putBodyParameter("sceneCode", sceneCode);
@@ -234,6 +241,7 @@ public class CreateQualityCheckTaskRequest extends Request {
         }
 
         /**
+         * <p>Quality check type:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -399,7 +407,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             } 
 
             /**
-             * begin.
+             * <p>The start time of this sentence. This is the offset time in milliseconds from the start of the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -407,7 +418,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * beginTime.
+             * <p>The start time of this sentence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-23 14:57:50</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -415,7 +429,11 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
+             * <p>The specific content of the dialogue.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>您好，我是2001，很高兴为您服务！</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -423,7 +441,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * customerId.
+             * <p>The unique identifier of the dialogue role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2348234</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -431,7 +452,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * customerServiceId.
+             * <p>The customer service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23874627346</p>
              */
             public Builder customerServiceId(String customerServiceId) {
                 this.customerServiceId = customerServiceId;
@@ -439,7 +463,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * customerServiceType.
+             * <p>Agent type:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder customerServiceType(String customerServiceType) {
                 this.customerServiceType = customerServiceType;
@@ -447,7 +474,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * end.
+             * <p>The end time of this sentence. This is the offset time in milliseconds from the start of the conversation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -455,6 +485,7 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
+             * <p>Role:</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -466,6 +497,7 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
+             * <p>Dialogue content type:</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -602,7 +634,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             } 
 
             /**
-             * callType.
+             * <p>Call type:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callType(String callType) {
                 this.callType = callType;
@@ -610,7 +645,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * customerId.
+             * <p>The Customer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder customerId(String customerId) {
                 this.customerId = customerId;
@@ -618,7 +656,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * customerName.
+             * <p>The customer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder customerName(String customerName) {
                 this.customerName = customerName;
@@ -626,7 +667,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * customerServiceId.
+             * <p>The customer service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder customerServiceId(String customerServiceId) {
                 this.customerServiceId = customerServiceId;
@@ -634,7 +678,10 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * customerServiceName.
+             * <p>The customer service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>李四</p>
              */
             public Builder customerServiceName(String customerServiceName) {
                 this.customerServiceName = customerServiceName;
@@ -642,6 +689,7 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
+             * <p>The list of dialogue details.</p>
              * <p>This parameter is required.</p>
              */
             public Builder dialogueList(java.util.List<DialogueList> dialogueList) {
@@ -650,7 +698,7 @@ public class CreateQualityCheckTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The conversation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-09-27 11:23:20</p>

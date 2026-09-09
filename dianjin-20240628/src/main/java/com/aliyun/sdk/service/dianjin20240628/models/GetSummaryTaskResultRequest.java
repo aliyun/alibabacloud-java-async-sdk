@@ -75,6 +75,7 @@ public class GetSummaryTaskResultRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetSummaryTaskResultRequest extends Request {
         }
 
         /**
+         * <p>Task ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

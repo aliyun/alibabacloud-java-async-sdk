@@ -119,7 +119,7 @@ public class QueryApiKeysRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>1</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putPathParameter("tenantId", tenantId);
@@ -140,7 +140,7 @@ public class QueryApiKeysRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1001</p>
+         * <p>1</p>
          */
         public Builder externalUserId(String externalUserId) {
             this.putQueryParameter("externalUserId", externalUserId);

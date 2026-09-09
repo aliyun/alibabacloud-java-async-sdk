@@ -117,6 +117,7 @@ public class GetDocumentListRequest extends Request {
         } 
 
         /**
+         * <p>A path parameter that specifies the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class GetDocumentListRequest extends Request {
         }
 
         /**
+         * <p>The document library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class GetDocumentListRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -150,7 +155,10 @@ public class GetDocumentListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -159,7 +167,10 @@ public class GetDocumentListRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The document status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>即将可用</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

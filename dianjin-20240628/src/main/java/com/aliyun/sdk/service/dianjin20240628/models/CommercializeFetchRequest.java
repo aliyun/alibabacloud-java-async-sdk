@@ -235,9 +235,6 @@ public class CommercializeFetchRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>XIANYU</p>
          */
         public Builder cjfCode(String cjfCode) {
             this.putPathParameter("cjfCode", cjfCode);
@@ -247,9 +244,6 @@ public class CommercializeFetchRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>msxf_stable</p>
          */
         public Builder zjfCode(String zjfCode) {
             this.putPathParameter("zjfCode", zjfCode);
@@ -259,9 +253,6 @@ public class CommercializeFetchRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>XIANYU</p>
          */
         public Builder channelId(String channelId) {
             this.putBodyParameter("channelId", channelId);
@@ -298,9 +289,6 @@ public class CommercializeFetchRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ms5780</p>
          */
         public Builder productId(String productId) {
             this.putBodyParameter("productId", productId);
@@ -310,9 +298,6 @@ public class CommercializeFetchRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>17804781000470382...</p>
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("requestId", requestId);
@@ -322,9 +307,6 @@ public class CommercializeFetchRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>O_ML0gxByoua7IACrhRKKQ...</p>
          */
         public Builder secretKey(String secretKey) {
             this.putBodyParameter("secretKey", secretKey);
@@ -334,9 +316,6 @@ public class CommercializeFetchRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pFjPryoSTcMCaOwnGfRAQL...</p>
          */
         public Builder sign(String sign) {
             this.putBodyParameter("sign", sign);

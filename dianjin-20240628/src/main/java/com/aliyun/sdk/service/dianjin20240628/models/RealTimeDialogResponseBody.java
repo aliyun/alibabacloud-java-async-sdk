@@ -106,7 +106,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
         } 
 
         /**
-         * choices.
+         * <p>An array of generated content. It can contain one or more choice objects.</p>
          */
         public Builder choices(java.util.List<Choices> choices) {
             this.choices = choices;
@@ -114,7 +114,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
         }
 
         /**
-         * created.
+         * <p>The timestamp when this request was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735139569523</p>
          */
         public Builder created(String created) {
             this.created = created;
@@ -122,7 +125,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The unique identifier for this call. Each chunk object has the same ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eb2b6139-ddf1-91a0-a47f-df7617ae9032</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -130,7 +136,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5E3FBAF1-17AF-53B7-AF0A-CDCEEB6DE658</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -334,7 +346,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             } 
 
             /**
-             * analysisProcess.
+             * <p>The analysis process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder analysisProcess(String analysisProcess) {
                 this.analysisProcess = analysisProcess;
@@ -342,7 +357,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>time</p>
+             * <p>The time.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -353,7 +368,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * hangUpDialog.
+             * <p>Hangs up the dialog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hangUpDialog(Boolean hangUpDialog) {
                 this.hangUpDialog = hangUpDialog;
@@ -361,7 +379,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * intentionCode.
+             * <p>The intent code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1853360771162058752</p>
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
@@ -369,7 +390,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * intentionName.
+             * <p>The intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>其他</p>
              */
             public Builder intentionName(String intentionName) {
                 this.intentionName = intentionName;
@@ -377,7 +401,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * intentionScript.
+             * <p>The intent script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>抱歉，我没有明白您的意思，或者您可以拨打我们的客服热线，请客服人员为您解答。</p>
              */
             public Builder intentionScript(String intentionScript) {
                 this.intentionScript = intentionScript;
@@ -385,7 +412,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * interrupt.
+             * <p>Specifies whether the conversation was interrupted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder interrupt(Boolean interrupt) {
                 this.interrupt = interrupt;
@@ -393,7 +423,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * recommendIntention.
+             * <p>The recommended intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder recommendIntention(String recommendIntention) {
                 this.recommendIntention = recommendIntention;
@@ -401,7 +434,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * recommendScript.
+             * <p>The recommended script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder recommendScript(String recommendScript) {
                 this.recommendScript = recommendScript;
@@ -409,7 +445,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * selfDirectedScript.
+             * <p>The script for the Q\&amp;A pair. This is incremental data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>话题</p>
              */
             public Builder selfDirectedScript(String selfDirectedScript) {
                 this.selfDirectedScript = selfDirectedScript;
@@ -417,7 +456,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * selfDirectedScriptFullContent.
+             * <p>The script for the Q\&amp;A pair. This is the full data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>关于宇宙的大小，这是一个非常深奥的科学话题</p>
              */
             public Builder selfDirectedScriptFullContent(String selfDirectedScriptFullContent) {
                 this.selfDirectedScriptFullContent = selfDirectedScriptFullContent;
@@ -425,7 +467,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * skipCurrentRecognize.
+             * <p>Specifies whether to skip the current recognition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skipCurrentRecognize(Boolean skipCurrentRecognize) {
                 this.skipCurrentRecognize = skipCurrentRecognize;
@@ -622,7 +667,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             } 
 
             /**
-             * analysisProcess.
+             * <p>The analysis process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder analysisProcess(String analysisProcess) {
                 this.analysisProcess = analysisProcess;
@@ -630,7 +678,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>time</p>
+             * <p>The time.</p>
              * 
              * <strong>example:</strong>
              * <p>1735139569523</p>
@@ -641,7 +689,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * hangUpDialog.
+             * <p>Hang up the dialog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hangUpDialog(Boolean hangUpDialog) {
                 this.hangUpDialog = hangUpDialog;
@@ -649,7 +700,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * intentionCode.
+             * <p>The intent code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1853360771162058752</p>
              */
             public Builder intentionCode(String intentionCode) {
                 this.intentionCode = intentionCode;
@@ -657,7 +711,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * intentionName.
+             * <p>The intent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>其它</p>
              */
             public Builder intentionName(String intentionName) {
                 this.intentionName = intentionName;
@@ -665,7 +722,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * intentionScript.
+             * <p>The intent script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>抱歉，我没有明白您的意思，或者您可以拨打我们的客服热线，请客服人员为您解答。</p>
              */
             public Builder intentionScript(String intentionScript) {
                 this.intentionScript = intentionScript;
@@ -673,7 +733,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * interrupt.
+             * <p>Specifies whether the conversation was interrupted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder interrupt(Boolean interrupt) {
                 this.interrupt = interrupt;
@@ -681,7 +744,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * recommendIntention.
+             * <p>The recommended intent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder recommendIntention(String recommendIntention) {
                 this.recommendIntention = recommendIntention;
@@ -689,7 +755,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * recommendScript.
+             * <p>The recommended script.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder recommendScript(String recommendScript) {
                 this.recommendScript = recommendScript;
@@ -697,7 +766,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * selfDirectedScript.
+             * <p>The script for the Q\&amp;A pair. This is incremental data. This is empty for streaming responses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder selfDirectedScript(String selfDirectedScript) {
                 this.selfDirectedScript = selfDirectedScript;
@@ -705,7 +777,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * selfDirectedScriptFullContent.
+             * <p>The script for the Q\&amp;A pair. This is the full data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>关于宇宙的大小，这是一个非常深奥的科学话题</p>
              */
             public Builder selfDirectedScriptFullContent(String selfDirectedScriptFullContent) {
                 this.selfDirectedScriptFullContent = selfDirectedScriptFullContent;
@@ -713,7 +788,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * skipCurrentRecognize.
+             * <p>Specifies whether to skip the current recognition.</p>
              */
             public Builder skipCurrentRecognize(Boolean skipCurrentRecognize) {
                 this.skipCurrentRecognize = skipCurrentRecognize;
@@ -806,7 +881,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             } 
 
             /**
-             * delta.
+             * <p>The incremental result returned for streaming responses. This is empty for non-streaming responses.</p>
              */
             public Builder delta(Delta delta) {
                 this.delta = delta;
@@ -814,7 +889,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * finishReason.
+             * <p>The value is \<code>stop\\</code> if the session ends. The value is \<code>null\\</code> if the session is in progress. If \<code>success\\</code> is \<code>false\\</code>, this parameter returns an error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder finishReason(String finishReason) {
                 this.finishReason = finishReason;
@@ -822,7 +900,10 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * <p>The sequence number in the choices list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -830,7 +911,7 @@ public class RealTimeDialogResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The full result returned for non-streaming responses. This is empty for streaming responses.</p>
              */
             public Builder message(Message message) {
                 this.message = message;

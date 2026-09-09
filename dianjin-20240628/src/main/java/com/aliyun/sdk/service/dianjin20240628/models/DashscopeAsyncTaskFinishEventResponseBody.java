@@ -93,7 +93,10 @@ public class DashscopeAsyncTaskFinishEventResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class DashscopeAsyncTaskFinishEventResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Return message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>成功</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class DashscopeAsyncTaskFinishEventResponseBody extends TeaModel {
         }
 
         /**
-         * retryAble.
+         * <p>Indicates whether the operation can be retried</p>
          */
         public Builder retryAble(Boolean retryAble) {
             this.retryAble = retryAble;
@@ -117,7 +123,7 @@ public class DashscopeAsyncTaskFinishEventResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the operation succeeded</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

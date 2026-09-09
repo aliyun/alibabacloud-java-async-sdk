@@ -315,6 +315,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -327,7 +328,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * docIdList.
+         * <p>A list of document IDs.</p>
          */
         public Builder docIdList(java.util.List<String> docIdList) {
             this.putBodyParameter("docIdList", docIdList);
@@ -336,7 +337,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * enableFollowUp.
+         * <p>Specifies whether to enable multi-turn enhancement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableFollowUp(Boolean enableFollowUp) {
             this.putBodyParameter("enableFollowUp", enableFollowUp);
@@ -345,7 +349,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * enableMultiQuery.
+         * <p>Specifies whether to enable query splitting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableMultiQuery(Boolean enableMultiQuery) {
             this.putBodyParameter("enableMultiQuery", enableMultiQuery);
@@ -354,7 +361,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * enableOpenQa.
+         * <p>Specifies whether to enable openQA.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableOpenQa(Boolean enableOpenQa) {
             this.putBodyParameter("enableOpenQa", enableOpenQa);
@@ -363,7 +373,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * followUpLlm.
+         * <p>The Large Language Model (LLM) used for multi-turn query enhancement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder followUpLlm(String followUpLlm) {
             this.putBodyParameter("followUpLlm", followUpLlm);
@@ -372,6 +385,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the document library.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -384,6 +398,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
+         * <p>The type of the LLM.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -396,7 +411,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * multiQueryLlm.
+         * <p>The LLM used for query splitting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder multiQueryLlm(String multiQueryLlm) {
             this.putBodyParameter("multiQueryLlm", multiQueryLlm);
@@ -405,7 +423,11 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
+         * <p>The query entered by the user.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这两天北京气候怎么样</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);
@@ -414,7 +436,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * queryCriteria.
+         * <p>The property filter.</p>
          */
         public Builder queryCriteria(QueryCriteria queryCriteria) {
             this.putBodyParameter("queryCriteria", queryCriteria);
@@ -423,7 +445,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * rerankType.
+         * <p>The type of the sort policy. Valid values: \<code>linear\\</code> and \<code>model\\</code>. \<code>linear\\</code>: rule-based sorting. \<code>model\\</code>: model-based sorting (LLM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linear</p>
          */
         public Builder rerankType(String rerankType) {
             this.putBodyParameter("rerankType", rerankType);
@@ -432,7 +457,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * <p>sessionId</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -444,7 +469,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * stream.
+         * <p>Specifies whether to use streaming or non-streaming mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder stream(Boolean stream) {
             this.putBodyParameter("stream", stream);
@@ -453,7 +481,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * subQueryList.
+         * <p>A list of subqueries.</p>
          */
         public Builder subQueryList(java.util.List<String> subQueryList) {
             this.putBodyParameter("subQueryList", subQueryList);
@@ -462,7 +490,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * textSearchParameter.
+         * <p>Search engine parameters: text search parameters.</p>
          */
         public Builder textSearchParameter(TextSearchParameter textSearchParameter) {
             this.putBodyParameter("textSearchParameter", textSearchParameter);
@@ -471,7 +499,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * topK.
+         * <p>The final number of retrieved corpus entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder topK(Integer topK) {
             this.putBodyParameter("topK", topK);
@@ -480,7 +511,7 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * vectorSearchParameter.
+         * <p>Search engine parameters: vector search parameters.</p>
          */
         public Builder vectorSearchParameter(VectorSearchParameter vectorSearchParameter) {
             this.putBodyParameter("vectorSearchParameter", vectorSearchParameter);
@@ -489,7 +520,10 @@ public class RunLibraryChatGenerationRequest extends Request {
         }
 
         /**
-         * withDocumentReference.
+         * <p>Specifies whether to return document references.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder withDocumentReference(Boolean withDocumentReference) {
             this.putBodyParameter("withDocumentReference", withDocumentReference);
@@ -583,7 +617,10 @@ public class RunLibraryChatGenerationRequest extends Request {
             } 
 
             /**
-             * boost.
+             * <p>The weight of the tag. A value less than 1 decreases the weight of the corresponding keyword. A value greater than 1 increases the weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder boost(Float boost) {
                 this.boost = boost;
@@ -591,7 +628,10 @@ public class RunLibraryChatGenerationRequest extends Request {
             }
 
             /**
-             * key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>city</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -599,7 +639,22 @@ public class RunLibraryChatGenerationRequest extends Request {
             }
 
             /**
-             * operator.
+             * <p>The operator for the tag. It specifies the relationship between the metadata key\&quot;s stored value and your input value.</p>
+             * <ul>
+             * <li><p>eq: Equal to.</p>
+             * </li>
+             * <li><p>lte: Less than or equal to.</p>
+             * </li>
+             * <li><p>gte: Greater than or equal to.</p>
+             * </li>
+             * <li><p>lt: Less than.</p>
+             * </li>
+             * <li><p>gt: Greater than.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -607,7 +662,10 @@ public class RunLibraryChatGenerationRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -700,7 +758,10 @@ public class RunLibraryChatGenerationRequest extends Request {
             } 
 
             /**
-             * boost.
+             * <p>The weight of the tag. A value less than 1 decreases the weight of the corresponding keyword. A value greater than 1 increases the weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder boost(Float boost) {
                 this.boost = boost;
@@ -708,7 +769,10 @@ public class RunLibraryChatGenerationRequest extends Request {
             }
 
             /**
-             * key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>city</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -716,7 +780,22 @@ public class RunLibraryChatGenerationRequest extends Request {
             }
 
             /**
-             * operator.
+             * <p>The operator for the tag. It specifies the relationship between the metadata key\&quot;s stored value and your input value.</p>
+             * <ul>
+             * <li><p>eq: Equal to.</p>
+             * </li>
+             * <li><p>lte: Less than or equal to.</p>
+             * </li>
+             * <li><p>gte: Greater than or equal to.</p>
+             * </li>
+             * <li><p>lt: Less than.</p>
+             * </li>
+             * <li><p>gt: Greater than.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -724,7 +803,10 @@ public class RunLibraryChatGenerationRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -791,7 +873,7 @@ public class RunLibraryChatGenerationRequest extends Request {
             } 
 
             /**
-             * and.
+             * <p>The \<code>and\\</code> expression, used to filter documents or document chunks.</p>
              */
             public Builder and(java.util.List<And> and) {
                 this.and = and;
@@ -799,7 +881,7 @@ public class RunLibraryChatGenerationRequest extends Request {
             }
 
             /**
-             * or.
+             * <p>The \<code>or\\</code> expression, used to filter documents or document chunks.</p>
              */
             public Builder or(java.util.List<Or> or) {
                 this.or = or;
@@ -866,7 +948,10 @@ public class RunLibraryChatGenerationRequest extends Request {
             } 
 
             /**
-             * limit.
+             * <p>The number of rows to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -874,7 +959,10 @@ public class RunLibraryChatGenerationRequest extends Request {
             }
 
             /**
-             * searchAnalyzerType.
+             * <p>The search tokenizer. Valid values: \<code>Standard\\</code>, \<code>IkMaxWord\\</code>, and \<code>IkSmart\\</code>. Configure this parameter as needed. If left empty, the tokenizer attached to the document library is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IkMaxWord</p>
              */
             public Builder searchAnalyzerType(String searchAnalyzerType) {
                 this.searchAnalyzerType = searchAnalyzerType;
@@ -928,7 +1016,10 @@ public class RunLibraryChatGenerationRequest extends Request {
             } 
 
             /**
-             * limit.
+             * <p>The number of rows to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;

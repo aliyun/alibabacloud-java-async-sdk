@@ -74,7 +74,10 @@ public class GetLibraryRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * <p>Path parameter. The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xxxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -83,6 +86,7 @@ public class GetLibraryRequest extends Request {
         }
 
         /**
+         * <p>The document library ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

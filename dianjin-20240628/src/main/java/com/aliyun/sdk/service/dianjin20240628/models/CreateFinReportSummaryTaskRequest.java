@@ -176,6 +176,7 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,6 +189,7 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
+         * <p>Document ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,6 +202,7 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
+         * <p>Enable table</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +215,10 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
-         * endPage.
+         * <p>End page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder endPage(Integer endPage) {
             this.putBodyParameter("endPage", endPage);
@@ -221,7 +227,10 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
-         * instruction.
+         * <p>Instruction</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请帮我总结一下。</p>
          */
         public Builder instruction(String instruction) {
             this.putBodyParameter("instruction", instruction);
@@ -230,6 +239,7 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
+         * <p>Document library ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,6 +252,7 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
+         * <p>Model ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +265,10 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
-         * startPage.
+         * <p>Start page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder startPage(Integer startPage) {
             this.putBodyParameter("startPage", startPage);
@@ -263,7 +277,10 @@ public class CreateFinReportSummaryTaskRequest extends Request {
         }
 
         /**
-         * taskType.
+         * <p>Task type. Optional. Defaults to finance_report. If you set this to custom, provide an instruction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder taskType(String taskType) {
             this.putBodyParameter("taskType", taskType);

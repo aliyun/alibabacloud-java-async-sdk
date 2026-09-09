@@ -75,6 +75,7 @@ public class GetDocumentUrlRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter. The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetDocumentUrlRequest extends Request {
         }
 
         /**
+         * <p>The document ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

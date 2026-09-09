@@ -145,7 +145,10 @@ public class GetLibraryListResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Time consumed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetLibraryListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Returned data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetLibraryListResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetLibraryListResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetLibraryListResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetLibraryListResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06dfe817156528535968405edce3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetLibraryListResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetLibraryListResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -358,7 +379,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             } 
 
             /**
-             * docTreeSplit.
+             * <p>Layout chunking</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder docTreeSplit(Boolean docTreeSplit) {
                 this.docTreeSplit = docTreeSplit;
@@ -366,7 +390,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * docTreeSplitSize.
+             * <p>Layout chunking size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160</p>
              */
             public Builder docTreeSplitSize(Integer docTreeSplitSize) {
                 this.docTreeSplitSize = docTreeSplitSize;
@@ -374,7 +401,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * enhanceGraph.
+             * <p>Enhance images</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enhanceGraph(Boolean enhanceGraph) {
                 this.enhanceGraph = enhanceGraph;
@@ -382,7 +412,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * enhanceTable.
+             * <p>Enhance tables</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enhanceTable(Boolean enhanceTable) {
                 this.enhanceTable = enhanceTable;
@@ -390,7 +423,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * overlap.
+             * <p>Chunk overlap length</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder overlap(Integer overlap) {
                 this.overlap = overlap;
@@ -398,7 +434,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * sentenceSplit.
+             * <p>Split by sentence</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder sentenceSplit(Boolean sentenceSplit) {
                 this.sentenceSplit = sentenceSplit;
@@ -406,7 +445,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * sentenceSplitSize.
+             * <p>Split by sentence size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160</p>
              */
             public Builder sentenceSplitSize(Integer sentenceSplitSize) {
                 this.sentenceSplitSize = sentenceSplitSize;
@@ -414,7 +456,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>Chunk size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -422,7 +467,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * split.
+             * <p>Chunking enabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder split(Boolean split) {
                 this.split = split;
@@ -489,7 +537,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             } 
 
             /**
-             * temperature.
+             * <p>Temperature</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder temperature(Double temperature) {
                 this.temperature = temperature;
@@ -632,7 +683,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             } 
 
             /**
-             * enableFollowUp.
+             * <p>Multi-turn enhancement</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableFollowUp(Boolean enableFollowUp) {
                 this.enableFollowUp = enableFollowUp;
@@ -640,7 +694,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * enableMultiQuery.
+             * <p>Use Large Language Model (LLM) knowledge to decompose questions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableMultiQuery(Boolean enableMultiQuery) {
                 this.enableMultiQuery = enableMultiQuery;
@@ -648,7 +705,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * enableOpenQa.
+             * <p>Use Large Language Model (LLM) knowledge to answer questions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableOpenQa(Boolean enableOpenQa) {
                 this.enableOpenQa = enableOpenQa;
@@ -656,7 +716,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * enableQueryRewrite.
+             * <p>Rewrite questions based on domain knowledge</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableQueryRewrite(Boolean enableQueryRewrite) {
                 this.enableQueryRewrite = enableQueryRewrite;
@@ -664,7 +727,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * enableSession.
+             * <p>Record session</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSession(Boolean enableSession) {
                 this.enableSession = enableSession;
@@ -672,7 +738,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * localKnowledgeId.
+             * <p>Document library ID used for knowledge rewriting</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdbcjsbc</p>
              */
             public Builder localKnowledgeId(String localKnowledgeId) {
                 this.localKnowledgeId = localKnowledgeId;
@@ -680,7 +749,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * withDocumentReference.
+             * <p>Include document reference</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder withDocumentReference(Boolean withDocumentReference) {
                 this.withDocumentReference = withDocumentReference;
@@ -747,7 +819,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             } 
 
             /**
-             * documentRankType.
+             * <p>Merge and sort policy</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model</p>
              */
             public Builder documentRankType(String documentRankType) {
                 this.documentRankType = documentRankType;
@@ -755,7 +830,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * limit.
+             * <p>Number of results from two-way merge summary</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -874,7 +952,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             } 
 
             /**
-             * category.
+             * <p>Text index type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ElasticSearch</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -882,7 +963,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Text index enabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -890,7 +974,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * indexAnalyzer.
+             * <p>Index analyzer for text index: (Standard, IkMaxWord, IkSmart)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder indexAnalyzer(String indexAnalyzer) {
                 this.indexAnalyzer = indexAnalyzer;
@@ -898,7 +985,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * rankThreshold.
+             * <p>Text index sort threshold</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder rankThreshold(Double rankThreshold) {
                 this.rankThreshold = rankThreshold;
@@ -906,7 +996,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * searchAnalyzer.
+             * <p>Search analyzer for text index: (Standard, IkMaxWord, IkSmart)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder searchAnalyzer(String searchAnalyzer) {
                 this.searchAnalyzer = searchAnalyzer;
@@ -914,7 +1007,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * topK.
+             * <p>Number of final summary results for text index</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder topK(Integer topK) {
                 this.topK = topK;
@@ -1020,7 +1116,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             } 
 
             /**
-             * category.
+             * <p>Vector index source. Recommended: ADB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADB</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1028,7 +1127,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * embeddingType.
+             * <p>Vector index text embedding model</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DashScope</p>
              */
             public Builder embeddingType(String embeddingType) {
                 this.embeddingType = embeddingType;
@@ -1036,7 +1138,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Enabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1044,7 +1149,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * rankThreshold.
+             * <p>Vector index sort threshold</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder rankThreshold(Double rankThreshold) {
                 this.rankThreshold = rankThreshold;
@@ -1052,7 +1160,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * topK.
+             * <p>Number of final summary results for vector index</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder topK(Integer topK) {
                 this.topK = topK;
@@ -1184,7 +1295,7 @@ public class GetLibraryListResponseBody extends TeaModel {
             } 
 
             /**
-             * chunkStrategy.
+             * <p>Chunking strategy</p>
              */
             public Builder chunkStrategy(ChunkStrategy chunkStrategy) {
                 this.chunkStrategy = chunkStrategy;
@@ -1192,7 +1303,7 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * modelConfig.
+             * <p>Model Configuration</p>
              */
             public Builder modelConfig(ModelConfig modelConfig) {
                 this.modelConfig = modelConfig;
@@ -1200,7 +1311,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * promptRoleStyle.
+             * <p>Prompt role style</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你是一个信息处理专家。</p>
              */
             public Builder promptRoleStyle(String promptRoleStyle) {
                 this.promptRoleStyle = promptRoleStyle;
@@ -1208,7 +1322,7 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * queryEnhancer.
+             * <p>Query enhancement</p>
              */
             public Builder queryEnhancer(QueryEnhancer queryEnhancer) {
                 this.queryEnhancer = queryEnhancer;
@@ -1216,7 +1330,7 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * recallStrategy.
+             * <p>Recall strategy</p>
              */
             public Builder recallStrategy(RecallStrategy recallStrategy) {
                 this.recallStrategy = recallStrategy;
@@ -1224,7 +1338,7 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * textIndexSetting.
+             * <p>Text index settings</p>
              */
             public Builder textIndexSetting(TextIndexSetting textIndexSetting) {
                 this.textIndexSetting = textIndexSetting;
@@ -1232,7 +1346,7 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * vectorIndexSetting.
+             * <p>Vector index settings</p>
              */
             public Builder vectorIndexSetting(VectorIndexSetting vectorIndexSetting) {
                 this.vectorIndexSetting = vectorIndexSetting;
@@ -1364,7 +1478,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>Document library description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>文档库</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1372,7 +1489,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * documentCount.
+             * <p>Document count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder documentCount(Long documentCount) {
                 this.documentCount = documentCount;
@@ -1380,7 +1500,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1388,7 +1511,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Modification time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1396,7 +1522,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Document library ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24vs4aa42jv1rg7</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1404,7 +1533,7 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * indexSetting.
+             * <p>Document library index settings</p>
              */
             public Builder indexSetting(IndexSetting indexSetting) {
                 this.indexSetting = indexSetting;
@@ -1412,7 +1541,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * libraryName.
+             * <p>Document library name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试文档库</p>
              */
             public Builder libraryName(String libraryName) {
                 this.libraryName = libraryName;
@@ -1518,7 +1650,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             } 
 
             /**
-             * currentPage.
+             * <p>Page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -1526,7 +1661,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Number of records per page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -1534,7 +1672,7 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * records.
+             * <p>Record list</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -1542,7 +1680,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * totalPages.
+             * <p>Total pages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;
@@ -1550,7 +1691,10 @@ public class GetLibraryListResponseBody extends TeaModel {
             }
 
             /**
-             * totalRecords.
+             * <p>Total records</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;

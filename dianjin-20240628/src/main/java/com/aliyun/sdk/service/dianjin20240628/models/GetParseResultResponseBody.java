@@ -145,7 +145,10 @@ public class GetParseResultResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>The time consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetParseResultResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetParseResultResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>The data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetParseResultResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetParseResultResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetParseResultResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0abb793617204049360065953ec6dd</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetParseResultResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetParseResultResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -319,7 +340,10 @@ public class GetParseResultResponseBody extends TeaModel {
             } 
 
             /**
-             * fileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -327,7 +351,10 @@ public class GetParseResultResponseBody extends TeaModel {
             }
 
             /**
-             * providerType.
+             * <p>The provider type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;
@@ -335,7 +362,10 @@ public class GetParseResultResponseBody extends TeaModel {
             }
 
             /**
-             * requestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b0a202e2-5031-4589-a6d7-39185f0d8d01</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -343,7 +373,15 @@ public class GetParseResultResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The parsing result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *           &quot;Status&quot;: &quot;Success&quot;,
+             *           &quot;Data&quot;: {},
+             *           &quot;Message&quot;: null,
+             *           &quot;TaskId&quot;: &quot;docmind-20240601-123abc&quot;
+             *         }</p>
              */
             public Builder result(java.util.Map<String, ?> result) {
                 this.result = result;
@@ -351,7 +389,10 @@ public class GetParseResultResponseBody extends TeaModel {
             }
 
             /**
-             * resultUrl.
+             * <p>The parsing result returned as a URL. You can download it directly. Note: Only PDF, DOC, DOCX, PPT, and PPTX file types have parsing results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.oss-cn-beijing.aliyuncs.com/library/3mjeoywx7z/1826661605606129665.json">https://xxx.oss-cn-beijing.aliyuncs.com/library/3mjeoywx7z/1826661605606129665.json</a></p>
              */
             public Builder resultUrl(String resultUrl) {
                 this.resultUrl = resultUrl;
@@ -359,7 +400,10 @@ public class GetParseResultResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The document parsing status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WaitRefresh</p>
              */
             public Builder status(String status) {
                 this.status = status;

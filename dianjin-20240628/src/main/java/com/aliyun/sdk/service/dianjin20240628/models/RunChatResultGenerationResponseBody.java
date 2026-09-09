@@ -145,7 +145,7 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         } 
 
         /**
-         * choices.
+         * <p>Details of the model-generated content.</p>
          */
         public Builder choices(java.util.List<Choices> choices) {
             this.choices = choices;
@@ -153,7 +153,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * created.
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1720602203</p>
          */
         public Builder created(Long created) {
             this.created = created;
@@ -161,7 +164,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>Request identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eb2b6139-ddf1-91a0-a47f-df7617ae9032</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -169,7 +175,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * modelId.
+         * <p>Large Language Model (LLM) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder modelId(String modelId) {
             this.modelId = modelId;
@@ -177,7 +186,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eb2b6139-ddf1-91a0-a47f-df7617ae9032</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,7 +197,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-24 11:54:34</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -193,7 +208,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * totalTokens.
+         * <p>Total tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder totalTokens(Integer totalTokens) {
             this.totalTokens = totalTokens;
@@ -201,7 +219,7 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * usage.
+         * <p>Usage.</p>
          */
         public Builder usage(Usage usage) {
             this.usage = usage;
@@ -280,7 +298,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>Message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你是谁</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -288,7 +309,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>Role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -296,7 +320,7 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * toolCalls.
+             * <p>List of tool calls.</p>
              */
             public Builder toolCalls(java.util.List<java.util.Map<String, ?>> toolCalls) {
                 this.toolCalls = toolCalls;
@@ -376,7 +400,18 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             } 
 
             /**
-             * finishReason.
+             * <p>Three possible values:</p>
+             * <ul>
+             * <li><p>null while generating;</p>
+             * </li>
+             * <li><p>&quot;stop&quot; if generation ends due to a stop condition in the input parameters;</p>
+             * </li>
+             * <li><p>&quot;length&quot; if generation ends because the output is too long.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder finishReason(String finishReason) {
                 this.finishReason = finishReason;
@@ -384,7 +419,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * <p>Sequence number of the generated result. Default is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -392,7 +430,7 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>Chat message.</p>
              */
             public Builder message(Message message) {
                 this.message = message;
@@ -498,7 +536,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             } 
 
             /**
-             * imageCount.
+             * <p>Number of images. Returned by models such as wanx.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder imageCount(Integer imageCount) {
                 this.imageCount = imageCount;
@@ -506,7 +547,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * imageTokens.
+             * <p>Image tokens. Returned by models such as qwen-vl.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder imageTokens(Integer imageTokens) {
                 this.imageTokens = imageTokens;
@@ -514,7 +558,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * inputTokens.
+             * <p>Input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder inputTokens(Integer inputTokens) {
                 this.inputTokens = inputTokens;
@@ -522,7 +569,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * outputTokens.
+             * <p>Output tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder outputTokens(Integer outputTokens) {
                 this.outputTokens = outputTokens;
@@ -530,7 +580,10 @@ public class RunChatResultGenerationResponseBody extends TeaModel {
             }
 
             /**
-             * totalTokens.
+             * <p>Total tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder totalTokens(Integer totalTokens) {
                 this.totalTokens = totalTokens;

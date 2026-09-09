@@ -145,7 +145,10 @@ public class RunAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Duration in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class RunAgentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class RunAgentResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class RunAgentResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class RunAgentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class RunAgentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EF4B5C9B-3BC8-5171-A47B-4C5CF3DC3258</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class RunAgentResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates success</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class RunAgentResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -319,7 +340,10 @@ public class RunAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * displayName.
+             * <p>Tool function display name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>搜索引擎</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -327,7 +351,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>End time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-21 16:37:14</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -335,7 +362,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * functionArgs.
+             * <p>Tool function arguments</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;query\&quot;:\&quot;2025年1月28日到2月3日天气预报\&quot;}</p>
              */
             public Builder functionArgs(String functionArgs) {
                 this.functionArgs = functionArgs;
@@ -343,7 +373,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * functionName.
+             * <p>Tool function name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web_search</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -351,7 +384,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>Tool call result</p>
+             * 
+             * <strong>example:</strong>
+             * <p>下周天气晴朗</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -359,7 +395,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>Start time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-21 16:37:14</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -439,7 +478,10 @@ public class RunAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>Text generated by the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>下周天气都不错</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -447,7 +489,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>Role of the model. Fixed value: assistant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>assistant</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -455,7 +500,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * roleDisplayName.
+             * <p>Display name of the model\&quot;s role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>assistant</p>
              */
             public Builder roleDisplayName(String roleDisplayName) {
                 this.roleDisplayName = roleDisplayName;
@@ -535,7 +583,10 @@ public class RunAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * finishReason.
+             * <p>Reason why the model stopped generating content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder finishReason(String finishReason) {
                 this.finishReason = finishReason;
@@ -543,7 +594,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * <p>Index number of the generated result. Default is 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -551,7 +605,7 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>Message from the model.</p>
              */
             public Builder message(Message message) {
                 this.message = message;
@@ -571,7 +625,7 @@ public class RunAgentResponseBody extends TeaModel {
      *
      * <p>RunAgentResponseBody</p>
      */
-    public static class Response extends TeaModel {
+    public static class DataResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("choices")
         private java.util.List<Choices> choices;
 
@@ -587,7 +641,7 @@ public class RunAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("time")
         private String time;
 
-        private Response(Builder builder) {
+        private DataResponse(Builder builder) {
             this.choices = builder.choices;
             this.created = builder.created;
             this.id = builder.id;
@@ -599,7 +653,7 @@ public class RunAgentResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Response create() {
+        public static DataResponse create() {
             return builder().build();
         }
 
@@ -648,7 +702,7 @@ public class RunAgentResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Response model) {
+            private Builder(DataResponse model) {
                 this.choices = model.choices;
                 this.created = model.created;
                 this.id = model.id;
@@ -657,7 +711,7 @@ public class RunAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * choices.
+             * <p>Details of the model-generated content.</p>
              */
             public Builder choices(java.util.List<Choices> choices) {
                 this.choices = choices;
@@ -665,7 +719,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737448637</p>
              */
             public Builder created(Long created) {
                 this.created = created;
@@ -673,7 +730,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>ID generated by the system for this call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d91d9afa-7cfc-4235-b012-a6f8e6ffa443</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -681,7 +741,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * modelId.
+             * <p>Name of the model used for this call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -689,15 +752,18 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * time.
+             * <p>Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-21T16:37:17.497206762</p>
              */
             public Builder time(String time) {
                 this.time = time;
                 return this;
             }
 
-            public Response build() {
-                return new Response(this);
+            public DataResponse build() {
+                return new DataResponse(this);
             } 
 
         } 
@@ -720,7 +786,7 @@ public class RunAgentResponseBody extends TeaModel {
         private Integer outputTokens;
 
         @com.aliyun.core.annotation.NameInMap("response")
-        private Response response;
+        private DataResponse response;
 
         @com.aliyun.core.annotation.NameInMap("threadId")
         private String threadId;
@@ -773,7 +839,7 @@ public class RunAgentResponseBody extends TeaModel {
         /**
          * @return response
          */
-        public Response getResponse() {
+        public DataResponse getResponse() {
             return this.response;
         }
 
@@ -802,7 +868,7 @@ public class RunAgentResponseBody extends TeaModel {
             private java.util.List<FunctionCallResponses> functionCallResponses; 
             private Integer inputTokens; 
             private Integer outputTokens; 
-            private Response response; 
+            private DataResponse response; 
             private String threadId; 
             private String traceId; 
             private String versionId; 
@@ -821,7 +887,7 @@ public class RunAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * functionCallResponses.
+             * <p>Tool call responses</p>
              */
             public Builder functionCallResponses(java.util.List<FunctionCallResponses> functionCallResponses) {
                 this.functionCallResponses = functionCallResponses;
@@ -829,7 +895,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * inputTokens.
+             * <p>Input tokens</p>
+             * 
+             * <strong>example:</strong>
+             * <p>766</p>
              */
             public Builder inputTokens(Integer inputTokens) {
                 this.inputTokens = inputTokens;
@@ -837,7 +906,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * outputTokens.
+             * <p>Output tokens</p>
+             * 
+             * <strong>example:</strong>
+             * <p>988</p>
              */
             public Builder outputTokens(Integer outputTokens) {
                 this.outputTokens = outputTokens;
@@ -845,15 +917,18 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * response.
+             * <p>Model response</p>
              */
-            public Builder response(Response response) {
+            public Builder response(DataResponse response) {
                 this.response = response;
                 return this;
             }
 
             /**
-             * threadId.
+             * <p>Thread ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4vlag5ken3</p>
              */
             public Builder threadId(String threadId) {
                 this.threadId = threadId;
@@ -861,7 +936,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * traceId.
+             * <p>Trace ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5bdb9809856c58acb92001f8ae65773c</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -869,7 +947,10 @@ public class RunAgentResponseBody extends TeaModel {
             }
 
             /**
-             * versionId.
+             * <p>Agent version ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>w4paqoezm2</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

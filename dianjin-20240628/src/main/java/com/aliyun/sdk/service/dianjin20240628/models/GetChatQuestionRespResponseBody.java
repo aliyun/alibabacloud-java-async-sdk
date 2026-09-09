@@ -145,7 +145,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Time consumed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44BD277A-87F9-5310-8D63-3E6645F1DA85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -345,7 +366,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>Question content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>今天天气怎么样</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -353,7 +377,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Original question time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-17 10:05:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -361,7 +388,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             }
 
             /**
-             * oriContent.
+             * <p>Original question</p>
+             * 
+             * <strong>example:</strong>
+             * <p>今天天气怎么样</p>
              */
             public Builder oriContent(String oriContent) {
                 this.oriContent = oriContent;
@@ -369,7 +399,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             }
 
             /**
-             * reply.
+             * <p>Reply content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>感谢您的支持！</p>
              */
             public Builder reply(String reply) {
                 this.reply = reply;
@@ -377,7 +410,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>Session ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1732846760323001</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -385,7 +421,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Question type [PRODUCT_QA (Audio submission), GOSSIP (Operation submission), UNKNOWN (Unknown)]</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRODUCT_QA</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -393,7 +432,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>Unique ID of the user who asked the question in the live channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39847834568436</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -401,7 +443,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * <p>Name of the user who asked the question in the live channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张*</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -468,7 +513,10 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             } 
 
             /**
-             * currentState.
+             * <p>Current state [INIT (Initialization), PROCESSING (Processing), COMPLETED (Completed)]</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROCESSING</p>
              */
             public Builder currentState(String currentState) {
                 this.currentState = currentState;
@@ -476,7 +524,7 @@ public class GetChatQuestionRespResponseBody extends TeaModel {
             }
 
             /**
-             * questionList.
+             * <p>Question list</p>
              */
             public Builder questionList(java.util.List<QuestionList> questionList) {
                 this.questionList = questionList;

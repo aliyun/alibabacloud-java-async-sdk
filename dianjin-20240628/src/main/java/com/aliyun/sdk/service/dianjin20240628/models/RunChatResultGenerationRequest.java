@@ -146,6 +146,7 @@ public class RunChatResultGenerationRequest extends Request {
         } 
 
         /**
+         * <p>Path parameter. The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +159,10 @@ public class RunChatResultGenerationRequest extends Request {
         }
 
         /**
-         * inferenceParameters.
+         * <p>Hyperparameters used for inference.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;topP&quot;: 0.8}</p>
          */
         public Builder inferenceParameters(java.util.Map<String, ?> inferenceParameters) {
             this.putBodyParameter("inferenceParameters", inferenceParameters);
@@ -167,6 +171,7 @@ public class RunChatResultGenerationRequest extends Request {
         }
 
         /**
+         * <p>Messages to input into the model.</p>
          * <p>This parameter is required.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
@@ -176,6 +181,7 @@ public class RunChatResultGenerationRequest extends Request {
         }
 
         /**
+         * <p>The model service type. Get this value from the /api/app/config API endpoint in the llmHelperTypeList field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +194,10 @@ public class RunChatResultGenerationRequest extends Request {
         }
 
         /**
-         * sessionId.
+         * <p>Session ID. Use this to mark a conversation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>237645726354</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("sessionId", sessionId);
@@ -197,7 +206,10 @@ public class RunChatResultGenerationRequest extends Request {
         }
 
         /**
-         * stream.
+         * <p>Streaming mode. Set to true for streaming responses. Set to false for full responses. Default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder stream(Boolean stream) {
             this.putBodyParameter("stream", stream);
@@ -206,7 +218,7 @@ public class RunChatResultGenerationRequest extends Request {
         }
 
         /**
-         * tools.
+         * <p>Tool information. Specify a list of tools the model can call. When multiple tools are provided, the model selects one to generate a response.</p>
          */
         public Builder tools(java.util.List<Tools> tools) {
             this.putBodyParameter("tools", tools);
@@ -274,7 +286,10 @@ public class RunChatResultGenerationRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>Message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你是一个信息处理专家</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -282,7 +297,10 @@ public class RunChatResultGenerationRequest extends Request {
             }
 
             /**
-             * role.
+             * <p>Message role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -349,7 +367,22 @@ public class RunChatResultGenerationRequest extends Request {
             } 
 
             /**
-             * properties.
+             * <p>Properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *                             &quot;location&quot;: {
+             *                                 &quot;type&quot;: &quot;string&quot;,
+             *                                 &quot;description&quot;: &quot;The city and state, e.g. San Francisco, CA&quot;
+             *                             },
+             *                             &quot;unit&quot;: {
+             *                                 &quot;type&quot;: &quot;string&quot;,
+             *                                 &quot;enum&quot;: [
+             *                                     &quot;celsius&quot;,
+             *                                     &quot;fahrenheit&quot;
+             *                                 ]
+             *                             }
+             *                         }</p>
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
@@ -357,7 +390,10 @@ public class RunChatResultGenerationRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>Type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>object</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -450,7 +486,10 @@ public class RunChatResultGenerationRequest extends Request {
             } 
 
             /**
-             * description.
+             * <p>A string describing the tool function. This helps the model decide when and how to call it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>工具函数的描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,7 +497,10 @@ public class RunChatResultGenerationRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>A string representing the tool function name. It must contain only letters, digits, underscores, and hyphens. Maximum length is 64 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get_time</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -466,7 +508,7 @@ public class RunChatResultGenerationRequest extends Request {
             }
 
             /**
-             * parameters.
+             * <p>An object describing the tool parameters. It must be a valid JSON Schema.</p>
              */
             public Builder parameters(Parameters parameters) {
                 this.parameters = parameters;
@@ -474,7 +516,7 @@ public class RunChatResultGenerationRequest extends Request {
             }
 
             /**
-             * required.
+             * <p>List of required parameters.</p>
              */
             public Builder required(java.util.List<String> required) {
                 this.required = required;
@@ -541,7 +583,7 @@ public class RunChatResultGenerationRequest extends Request {
             } 
 
             /**
-             * function.
+             * <p>An object containing name, description, and parameters.</p>
              */
             public Builder function(Function function) {
                 this.function = function;
@@ -549,7 +591,10 @@ public class RunChatResultGenerationRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>A string indicating the tool type. Currently, only &quot;function&quot; is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>function</p>
              */
             public Builder type(String type) {
                 this.type = type;

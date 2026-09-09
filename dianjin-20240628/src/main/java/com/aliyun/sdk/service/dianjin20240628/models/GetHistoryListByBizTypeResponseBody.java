@@ -145,7 +145,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * cost.
+         * <p>Response time in milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -153,7 +156,7 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Response data</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>Data type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder dataType(String dataType) {
             this.dataType = dataType;
@@ -169,7 +175,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -177,7 +186,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -185,7 +197,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DF9B3F3-9FFE-52CB-A8DC-F7BD5F842F0E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>Timestamp</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 00:00:00</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -384,7 +405,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * bizId.
+             * <p>Business ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GysYBsxx</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -392,7 +416,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * bizType.
+             * <p>Business type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LibraryChat</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -400,7 +427,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * extraMessage.
+             * <p>Extension information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder extraMessage(Object extraMessage) {
                 this.extraMessage = extraMessage;
@@ -408,7 +438,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -416,7 +449,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * <p>Last modified time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -424,7 +460,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>History record ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>210</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -432,7 +471,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * llmAnswer.
+             * <p>Large Language Model (LLM) response</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你好。</p>
              */
             public Builder llmAnswer(String llmAnswer) {
                 this.llmAnswer = llmAnswer;
@@ -440,7 +482,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * llmPrompt.
+             * <p>Prompt for the Large Language Model (LLM)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>请使用以下上下文来回答最后的问题。\n以下是上下文内容：</p>
              */
             public Builder llmPrompt(String llmPrompt) {
                 this.llmPrompt = llmPrompt;
@@ -448,7 +493,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * llmType.
+             * <p>Large Language Model (LLM) type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-max</p>
              */
             public Builder llmType(String llmType) {
                 this.llmType = llmType;
@@ -456,7 +504,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>Session ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -464,7 +515,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * userQuery.
+             * <p>User query</p>
+             * 
+             * <strong>example:</strong>
+             * <p>你是谁</p>
              */
             public Builder userQuery(String userQuery) {
                 this.userQuery = userQuery;
@@ -570,7 +624,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * currentPage.
+             * <p>Current page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Long currentPage) {
                 this.currentPage = currentPage;
@@ -578,7 +635,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Number of records per page</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -586,7 +646,7 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * records.
+             * <p>Records</p>
              */
             public Builder records(java.util.List<Records> records) {
                 this.records = records;
@@ -594,7 +654,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * totalPages.
+             * <p>Total number of pages</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalPages(Long totalPages) {
                 this.totalPages = totalPages;
@@ -602,7 +665,10 @@ public class GetHistoryListByBizTypeResponseBody extends TeaModel {
             }
 
             /**
-             * totalRecords.
+             * <p>Total number of records</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;
