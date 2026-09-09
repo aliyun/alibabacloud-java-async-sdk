@@ -67,7 +67,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>A list of previous skill versions.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,6 +222,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The time when the skill version was created.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -230,7 +234,10 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +245,10 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -246,7 +256,10 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the skill version is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -254,7 +267,10 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * remark.
+             * <p>The remark for the skill version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>remark</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -262,7 +278,10 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * skillName.
+             * <p>The skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -270,6 +289,7 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the skill version was last updated.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -281,7 +301,10 @@ public class ListDigitalEmployeeSkillVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1770386951147366810</p>
              */
             public Builder version(String version) {
                 this.version = version;

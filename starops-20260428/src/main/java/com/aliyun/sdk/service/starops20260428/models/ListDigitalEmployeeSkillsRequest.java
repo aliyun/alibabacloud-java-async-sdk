@@ -117,6 +117,7 @@ public class ListDigitalEmployeeSkillsRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +139,10 @@ public class ListDigitalEmployeeSkillsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -147,7 +151,10 @@ public class ListDigitalEmployeeSkillsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that is used in a subsequent request to retrieve the next page of results. To retrieve the first page, do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -156,7 +163,10 @@ public class ListDigitalEmployeeSkillsRequest extends Request {
         }
 
         /**
-         * skillName.
+         * <p>The name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder skillName(String skillName) {
             this.putQueryParameter("skillName", skillName);

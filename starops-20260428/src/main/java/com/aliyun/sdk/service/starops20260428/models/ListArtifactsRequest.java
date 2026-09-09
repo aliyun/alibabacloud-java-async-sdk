@@ -103,6 +103,7 @@ public class ListArtifactsRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
+         * <p>The artifact path from which to list artifacts. If this parameter is not specified, artifacts are listed from the root directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return. If more results are available, the response includes a <code>nextToken</code> to retrieve the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -136,7 +141,10 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token used to retrieve the next page of results. You can obtain this token from the <code>nextToken</code> parameter of a previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

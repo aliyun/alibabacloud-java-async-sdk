@@ -177,10 +177,11 @@ public class CreateMcpServiceRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>test-agent</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -198,6 +199,7 @@ public class CreateMcpServiceRequest extends Request {
         }
 
         /**
+         * <p>The request body parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder connection(Connection connection) {
@@ -207,7 +209,10 @@ public class CreateMcpServiceRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the MCP service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通过 MCP 调用日志查询工具。</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -216,7 +221,10 @@ public class CreateMcpServiceRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the MCP service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>日志查询</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -225,6 +233,7 @@ public class CreateMcpServiceRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the MCP service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,10 +246,11 @@ public class CreateMcpServiceRequest extends Request {
         }
 
         /**
+         * <p>The service name of the MCP service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>log-query</p>
          */
         public Builder mcpServiceName(String mcpServiceName) {
             this.putBodyParameter("mcpServiceName", mcpServiceName);
@@ -249,6 +259,7 @@ public class CreateMcpServiceRequest extends Request {
         }
 
         /**
+         * <p>The request body parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder network(Network network) {
@@ -258,7 +269,11 @@ public class CreateMcpServiceRequest extends Request {
         }
 
         /**
+         * <p>The list of MCP tools.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;:&quot;query_logs&quot;}]</p>
          */
         public Builder tools(java.util.List<Tools> tools) {
             this.putBodyParameter("tools", tools);
@@ -326,7 +341,10 @@ public class CreateMcpServiceRequest extends Request {
             } 
 
             /**
-             * <p>key</p>
+             * <p>The request body parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;token&quot;:&quot;example-token&quot;}</p>
              */
             public Builder keyInfo(java.util.Map<String, String> keyInfo) {
                 this.keyInfo = keyInfo;
@@ -334,7 +352,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The authentication type. Currently, only bearer is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bearer</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -456,7 +477,7 @@ public class CreateMcpServiceRequest extends Request {
             } 
 
             /**
-             * auth.
+             * <p>The request body parameters.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -464,10 +485,11 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
+             * <p>The access endpoint of the MCP service.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="http://10.0.1.23:8080/mcp">http://10.0.1.23:8080/mcp</a></p>
+             * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -483,6 +505,7 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
+             * <p>The platform type of the MCP service. Valid values: AIGateway and Custom.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -494,7 +517,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * timeout.
+             * <p>The timeout period for requests to the MCP service. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -502,6 +528,7 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
+             * <p>The transport protocol of the MCP service. Valid values: http and sse.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -664,7 +691,10 @@ public class CreateMcpServiceRequest extends Request {
             } 
 
             /**
-             * accessIp.
+             * <p>The IP address used to access the MCP service over the VPC network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.12</p>
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -672,7 +702,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * accessPort.
+             * <p>The port used to access the MCP service over the VPC network. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder accessPort(Long accessPort) {
                 this.accessPort = accessPort;
@@ -680,7 +713,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -688,7 +724,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * mcpServerId.
+             * <p>The MCP Server instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-xxx</p>
              */
             public Builder mcpServerId(String mcpServerId) {
                 this.mcpServerId = mcpServerId;
@@ -696,6 +735,7 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
+             * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -707,7 +747,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * region.
+             * <p>The region where the VPC network resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -715,7 +758,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * securityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -723,7 +769,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -731,7 +780,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * vswId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -917,7 +969,10 @@ public class CreateMcpServiceRequest extends Request {
             } 
 
             /**
-             * annotations.
+             * <p>The request body parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder annotations(java.util.Map<String, ?> annotations) {
                 this.annotations = annotations;
@@ -925,7 +980,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * confirm.
+             * <p>Specifies whether user confirmation is required before calling the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder confirm(Boolean confirm) {
                 this.confirm = confirm;
@@ -933,7 +991,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The description of the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询指定日志库中的日志。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -941,7 +1002,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>日志查询工具</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -949,7 +1013,7 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>Specifies whether to enable the MCP tool.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -960,7 +1024,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * execution.
+             * <p>The request body parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder execution(java.util.Map<String, ?> execution) {
                 this.execution = execution;
@@ -968,7 +1035,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * icons.
+             * <p>The list of MCP tool icons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder icons(java.util.List<java.util.Map<String, ?>> icons) {
                 this.icons = icons;
@@ -976,7 +1046,11 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
+             * <p>The request body parameters.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;query&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;query&quot;]}</p>
              */
             public Builder inputSchema(java.util.Map<String, ?> inputSchema) {
                 this.inputSchema = inputSchema;
@@ -984,10 +1058,11 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
+             * <p>The name of the MCP tool.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>agentloop-1654218979e79fb55dbddac2</p>
+             * <p>query_logs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -995,7 +1070,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * outputSchema.
+             * <p>The request body parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;}</p>
              */
             public Builder outputSchema(java.util.Map<String, ?> outputSchema) {
                 this.outputSchema = outputSchema;
@@ -1003,7 +1081,10 @@ public class CreateMcpServiceRequest extends Request {
             }
 
             /**
-             * title.
+             * <p>The title of the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询日志</p>
              */
             public Builder title(String title) {
                 this.title = title;

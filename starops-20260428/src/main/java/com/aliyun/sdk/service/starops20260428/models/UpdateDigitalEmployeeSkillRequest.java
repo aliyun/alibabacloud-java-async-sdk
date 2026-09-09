@@ -161,6 +161,7 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +174,7 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
+         * <p>The name of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +196,10 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -203,7 +208,10 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -212,6 +220,7 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the skill is enabled.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,6 +233,7 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
+         * <p>An array of skill files.</p>
          * <p>This parameter is required.</p>
          */
         public Builder files(java.util.List<Files> files) {
@@ -233,7 +243,10 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * remark.
+         * <p>Notes or comments about the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -301,7 +314,14 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>The content of the skill file.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
+             * <h2>name: skill
+             * description: description</h2>
+             * <h1>skill</h1>
+             * <p>skill test</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -309,10 +329,10 @@ public class UpdateDigitalEmployeeSkillRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the skill file.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>SKILL.md</p>
              */
             public Builder name(String name) {
                 this.name = name;

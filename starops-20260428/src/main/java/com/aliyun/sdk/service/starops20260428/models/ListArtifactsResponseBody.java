@@ -93,7 +93,10 @@ public class ListArtifactsResponseBody extends TeaModel {
         } 
 
         /**
-         * artifacts.
+         * <p>The list of artifacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;path&quot;:&quot;reports/summary.pdf&quot;,&quot;size&quot;:1024,&quot;lastModified&quot;:&quot;2026-05-25T08:00:00Z&quot;,&quot;isDirectory&quot;:false}]</p>
          */
         public Builder artifacts(java.util.List<Artifacts> artifacts) {
             this.artifacts = artifacts;
@@ -101,7 +104,10 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +115,10 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page of results. This parameter is returned only if more results are available. To retrieve the next page, use this token in the <code>nextToken</code> query parameter of your next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +126,10 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +221,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             } 
 
             /**
-             * isDirectory.
+             * <p>Specifies whether the item is a directory. A value of <code>true</code> indicates a directory and <code>false</code> indicates a file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDirectory(Boolean isDirectory) {
                 this.isDirectory = isDirectory;
@@ -217,7 +232,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * lastModified.
+             * <p>The time the artifact was last modified, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-30T16:03:54Z</p>
              */
             public Builder lastModified(String lastModified) {
                 this.lastModified = lastModified;
@@ -225,7 +243,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The path of the artifact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>missions/mission-xxx/artifacts/2026-05/05-01/xxxx.md</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -233,7 +254,10 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The size of the artifact in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21950</p>
              */
             public Builder size(Long size) {
                 this.size = size;

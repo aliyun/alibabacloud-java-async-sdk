@@ -106,7 +106,10 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token to retrieve the next page of results. If this parameter is not returned, it indicates that no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</p>
@@ -133,7 +139,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * skills.
+         * <p>The list of skills.</p>
          */
         public Builder skills(java.util.List<Skills> skills) {
             this.skills = skills;
@@ -141,7 +147,10 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of entries that match the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -259,6 +268,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The time at which the skill was created.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -270,7 +280,10 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,7 +291,10 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -286,7 +302,10 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the skill is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -294,7 +313,10 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * skillName.
+             * <p>The name of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -302,6 +324,7 @@ public class ListDigitalEmployeeSkillsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time at which the skill was last updated.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

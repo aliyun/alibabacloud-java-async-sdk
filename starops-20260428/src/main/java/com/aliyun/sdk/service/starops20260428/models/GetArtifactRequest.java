@@ -75,6 +75,7 @@ public class GetArtifactRequest extends Request {
         } 
 
         /**
+         * <p>The name of the Digital Employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetArtifactRequest extends Request {
         }
 
         /**
+         * <p>The path to the artifact.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

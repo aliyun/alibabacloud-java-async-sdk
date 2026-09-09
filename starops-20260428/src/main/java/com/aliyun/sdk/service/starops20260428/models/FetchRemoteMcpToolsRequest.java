@@ -97,6 +97,7 @@ public class FetchRemoteMcpToolsRequest extends Request {
         }
 
         /**
+         * <p>The request body parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder connection(Connection connection) {
@@ -106,7 +107,7 @@ public class FetchRemoteMcpToolsRequest extends Request {
         }
 
         /**
-         * network.
+         * <p>The request body parameters.</p>
          */
         public Builder network(Network network) {
             this.putBodyParameter("network", network);
@@ -174,7 +175,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             } 
 
             /**
-             * keyInfo.
+             * <p>The request body parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;token&quot;:&quot;example-token&quot;}</p>
              */
             public Builder keyInfo(java.util.Map<String, String> keyInfo) {
                 this.keyInfo = keyInfo;
@@ -182,7 +186,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The authentication type. Currently, only bearer is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bearer</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -303,7 +310,7 @@ public class FetchRemoteMcpToolsRequest extends Request {
             } 
 
             /**
-             * auth.
+             * <p>The request body parameters.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -311,6 +318,7 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
+             * <p>The access endpoint of the MCP service.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -330,7 +338,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * platform.
+             * <p>The MCP service platform type. Valid values: AIGateway and Custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -338,7 +349,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * timeout.
+             * <p>The timeout period for requests to the MCP service. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -346,6 +360,7 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
+             * <p>The transport protocol of the MCP service. Valid values: http and sse.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -507,7 +522,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             } 
 
             /**
-             * accessIp.
+             * <p>The IP address used to access the MCP service over the VPC network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.12</p>
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -515,7 +533,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * accessPort.
+             * <p>The port used to access the MCP service over the VPC network. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder accessPort(Long accessPort) {
                 this.accessPort = accessPort;
@@ -523,7 +544,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -531,7 +555,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * mcpServerId.
+             * <p>The MCP Server instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-xxx</p>
              */
             public Builder mcpServerId(String mcpServerId) {
                 this.mcpServerId = mcpServerId;
@@ -539,7 +566,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * mode.
+             * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -547,7 +577,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * region.
+             * <p>The region where the VPC network resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -555,7 +588,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * securityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -563,7 +599,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -571,7 +610,10 @@ public class FetchRemoteMcpToolsRequest extends Request {
             }
 
             /**
-             * vswId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;

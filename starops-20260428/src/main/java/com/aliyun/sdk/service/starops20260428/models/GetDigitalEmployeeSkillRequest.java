@@ -103,6 +103,7 @@ public class GetDigitalEmployeeSkillRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class GetDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
+         * <p>The name of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class GetDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The version of the skill to retrieve. If this parameter is not specified, the latest version is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1770386951147366810</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

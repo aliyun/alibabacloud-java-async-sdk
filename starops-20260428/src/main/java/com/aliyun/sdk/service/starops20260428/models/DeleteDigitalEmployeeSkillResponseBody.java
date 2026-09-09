@@ -54,7 +54,10 @@ public class DeleteDigitalEmployeeSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

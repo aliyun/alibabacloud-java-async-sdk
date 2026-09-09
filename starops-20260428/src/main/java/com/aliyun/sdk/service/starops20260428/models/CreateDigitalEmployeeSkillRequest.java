@@ -160,6 +160,7 @@ public class CreateDigitalEmployeeSkillRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +182,10 @@ public class CreateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -190,7 +194,10 @@ public class CreateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -199,7 +206,10 @@ public class CreateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>Specifies whether to enable the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -208,6 +218,7 @@ public class CreateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
+         * <p>The files for the skill.</p>
          * <p>This parameter is required.</p>
          */
         public Builder files(java.util.List<Files> files) {
@@ -217,7 +228,10 @@ public class CreateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
-         * remark.
+         * <p>Remarks about the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -226,6 +240,7 @@ public class CreateDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
+         * <p>The name of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +312,14 @@ public class CreateDigitalEmployeeSkillRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>The content of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
+             * <h2>name: skill
+             * description: description</h2>
+             * <h1>skill</h1>
+             * <p>skill test</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -305,10 +327,10 @@ public class CreateDigitalEmployeeSkillRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the file.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>SKILL.md</p>
              */
             public Builder name(String name) {
                 this.name = name;

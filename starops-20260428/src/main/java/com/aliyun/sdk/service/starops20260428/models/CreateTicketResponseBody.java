@@ -54,7 +54,10 @@ public class CreateTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * ticket.
+         * <p>The passwordless logon ticket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ***************.eyJ******************.KUT****************</p>
          */
         public Builder ticket(String ticket) {
             this.ticket = ticket;

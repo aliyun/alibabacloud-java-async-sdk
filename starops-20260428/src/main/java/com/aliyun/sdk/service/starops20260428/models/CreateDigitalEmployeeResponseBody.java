@@ -67,7 +67,10 @@ public class CreateDigitalEmployeeResponseBody extends TeaModel {
         } 
 
         /**
-         * name.
+         * <p>The name of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -75,7 +78,10 @@ public class CreateDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3B311FD9-A60B-55E0-A896-A0C73*********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

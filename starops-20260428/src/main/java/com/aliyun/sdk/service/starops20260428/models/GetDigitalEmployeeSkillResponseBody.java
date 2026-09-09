@@ -171,6 +171,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         } 
 
         /**
+         * <p>The time when the skill was created.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +183,10 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -190,7 +194,10 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -198,7 +205,10 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the skill is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -206,7 +216,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * files.
+         * <p>The file list of the skill.</p>
          */
         public Builder files(java.util.List<Files> files) {
             this.files = files;
@@ -214,7 +224,10 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * remark.
+         * <p>A user-provided remark about the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>remark</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -222,7 +235,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -233,7 +246,10 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * skillName.
+         * <p>The name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder skillName(String skillName) {
             this.skillName = skillName;
@@ -241,6 +257,7 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The time when the skill was last updated.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +269,10 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1770386951147366810</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -318,7 +338,14 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
+             * <h2>name: skill
+             * description: description</h2>
+             * <h1>skill</h1>
+             * <p>skill test</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -326,7 +353,10 @@ public class GetDigitalEmployeeSkillResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SKILL.md</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -80,7 +80,7 @@ public class CreateChatResponseBody extends TeaModel {
         } 
 
         /**
-         * messages.
+         * <p>The list of messages in the session.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.messages = messages;
@@ -88,7 +88,10 @@ public class CreateChatResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID data of the current message request. The first request ID in the root data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CEC5375-XXXX-XXXX-XXXX-9A629907C1F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class CreateChatResponseBody extends TeaModel {
         }
 
         /**
-         * traceId.
+         * <p>The ID data of the current message request. The first trace ID in the root data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21504600000008405622576e3b48</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -305,7 +311,7 @@ public class CreateChatResponseBody extends TeaModel {
             } 
 
             /**
-             * agents.
+             * <p>The list of invoked agents.</p>
              */
             public Builder agents(java.util.List<java.util.Map<String, ?>> agents) {
                 this.agents = agents;
@@ -313,7 +319,7 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * artifacts.
+             * <p>The artifact output information.</p>
              */
             public Builder artifacts(java.util.List<java.util.Map<String, ?>> artifacts) {
                 this.artifacts = artifacts;
@@ -321,7 +327,10 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * callId.
+             * <p>The current execution ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>call_search_001</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -329,7 +338,7 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * contents.
+             * <p>The content information.</p>
              */
             public Builder contents(java.util.List<java.util.Map<String, ?>> contents) {
                 this.contents = contents;
@@ -337,7 +346,10 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * detail.
+             * <p>The message details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -345,7 +357,7 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * events.
+             * <p>The list of events.</p>
              */
             public Builder events(java.util.List<java.util.Map<String, ?>> events) {
                 this.events = events;
@@ -353,7 +365,10 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * parentCallId.
+             * <p>The execution ID of the parent level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sess_abc123</p>
              */
             public Builder parentCallId(String parentCallId) {
                 this.parentCallId = parentCallId;
@@ -361,7 +376,10 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>The role that initiated the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tool</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -369,7 +387,10 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * seq.
+             * <p>The sequence number of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder seq(Integer seq) {
                 this.seq = seq;
@@ -377,7 +398,10 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The timestamp in nanoseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765000005</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -385,7 +409,7 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * tools.
+             * <p>The list of tools used.</p>
              */
             public Builder tools(java.util.List<java.util.Map<String, ?>> tools) {
                 this.tools = tools;
@@ -393,7 +417,10 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The specific type of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>done</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -401,7 +428,10 @@ public class CreateChatResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

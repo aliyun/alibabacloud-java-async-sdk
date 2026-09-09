@@ -54,7 +54,10 @@ public class UpdateDigitalEmployeeSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350779DC-980D-58FD-BECB-D2275D2487CA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

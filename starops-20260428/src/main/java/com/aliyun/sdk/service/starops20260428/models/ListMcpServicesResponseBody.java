@@ -106,7 +106,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
         }
 
         /**
-         * mcpServices.
+         * <p>The paginated results of MCP services.</p>
          */
         public Builder mcpServices(McpServices mcpServices) {
             this.mcpServices = mcpServices;
@@ -122,7 +125,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJvZmZzZXQiOjIwfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of MCP services that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -204,7 +216,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * keyInfo.
+             * <p>The key-value information required for authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;token&quot;:&quot;example-token&quot;}</p>
              */
             public Builder keyInfo(java.util.Map<String, String> keyInfo) {
                 this.keyInfo = keyInfo;
@@ -212,7 +227,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The authentication type. Currently, bearer is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bearer</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -331,7 +349,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * auth.
+             * <p>The authentication configuration of the MCP service.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -339,7 +357,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * <p>The access endpoint of the MCP service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -355,7 +376,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * platform.
+             * <p>The platform type of the MCP service. Valid values: AIGateway and Custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -363,7 +387,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * timeout.
+             * <p>The timeout period for requests to the MCP service. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -371,7 +398,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * transport.
+             * <p>The transport protocol of the MCP service. Valid values: http and sse.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder transport(String transport) {
                 this.transport = transport;
@@ -529,7 +559,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * accessIp.
+             * <p>The IP address used to access the MCP service over the VPC network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.12</p>
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -537,7 +570,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * accessPort.
+             * <p>The port used to access the MCP service over the VPC network. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder accessPort(Long accessPort) {
                 this.accessPort = accessPort;
@@ -545,7 +581,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * gatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gw-xxx</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -553,7 +592,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * mcpServerId.
+             * <p>The MCP Server instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-xxx</p>
              */
             public Builder mcpServerId(String mcpServerId) {
                 this.mcpServerId = mcpServerId;
@@ -561,7 +603,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * mode.
+             * <p>The network access mode of the MCP service. Valid values: public and vpc.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -569,7 +614,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region where the VPC network is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -577,7 +625,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * securityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -585,7 +636,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -593,7 +647,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * vswId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -777,7 +834,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * annotations.
+             * <p>The annotation information of the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder annotations(java.util.Map<String, ?> annotations) {
                 this.annotations = annotations;
@@ -785,7 +845,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * confirm.
+             * <p>Indicates whether user confirmation is required before calling the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder confirm(Boolean confirm) {
                 this.confirm = confirm;
@@ -793,7 +856,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询指定日志库中的日志。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -801,7 +867,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>日志查询工具</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -809,7 +878,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the MCP tool is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -817,7 +889,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * execution.
+             * <p>The execution configuration of the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder execution(java.util.Map<String, ?> execution) {
                 this.execution = execution;
@@ -825,7 +900,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * icons.
+             * <p>The list of MCP tool icons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder icons(java.util.List<java.util.Map<String, ?>> icons) {
                 this.icons = icons;
@@ -833,7 +911,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * inputSchema.
+             * <p>The JSON Schema of the MCP tool input parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;,&quot;properties&quot;:{&quot;query&quot;:{&quot;type&quot;:&quot;string&quot;}},&quot;required&quot;:[&quot;query&quot;]}</p>
              */
             public Builder inputSchema(java.util.Map<String, ?> inputSchema) {
                 this.inputSchema = inputSchema;
@@ -841,7 +922,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>query_logs</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -849,7 +933,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * outputSchema.
+             * <p>The JSON Schema of the MCP tool output results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;}</p>
              */
             public Builder outputSchema(java.util.Map<String, ?> outputSchema) {
                 this.outputSchema = outputSchema;
@@ -857,7 +944,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>The title of the MCP tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询日志</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -989,7 +1079,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * connection.
+             * <p>The connection configuration of the MCP service.</p>
              */
             public Builder connection(Connection connection) {
                 this.connection = connection;
@@ -997,7 +1087,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the MCP service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>通过 MCP 调用日志查询工具。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1005,7 +1098,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the MCP service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>日志查询</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1013,7 +1109,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the MCP service is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1021,7 +1120,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * mcpServiceName.
+             * <p>The service name of the MCP service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log-query</p>
              */
             public Builder mcpServiceName(String mcpServiceName) {
                 this.mcpServiceName = mcpServiceName;
@@ -1029,7 +1131,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * network.
+             * <p>The network connectivity information.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -1037,7 +1139,10 @@ public class ListMcpServicesResponseBody extends TeaModel {
             }
 
             /**
-             * tools.
+             * <p>The list of MCP tools.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;:&quot;query_logs&quot;}]</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
@@ -1091,7 +1196,7 @@ public class ListMcpServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * mcpServiceList.
+             * <p>The list of MCP services.</p>
              */
             public Builder mcpServiceList(java.util.List<McpServiceList> mcpServiceList) {
                 this.mcpServiceList = mcpServiceList;

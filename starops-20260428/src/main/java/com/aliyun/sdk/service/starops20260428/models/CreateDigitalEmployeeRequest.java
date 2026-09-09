@@ -225,7 +225,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * attributes.
+         * <p>The attributes.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.putBodyParameter("attributes", attributes);
@@ -234,7 +234,10 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * defaultRule.
+         * <p>The default rule of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder defaultRule(String defaultRule) {
             this.putBodyParameter("defaultRule", defaultRule);
@@ -243,7 +246,10 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -252,7 +258,10 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>digial-employee-test</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -261,7 +270,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * knowledges.
+         * <p>The knowledge base list.</p>
          */
         public Builder knowledges(Knowledges knowledges) {
             this.putBodyParameter("knowledges", knowledges);
@@ -270,6 +279,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +292,10 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******ey</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -291,6 +304,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
+         * <p>The ARN of the RAM role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -303,7 +317,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>数字员工沙箱网络 ACL 策略配置。</p>
+         * <p>The sandbox network ACL policy configuration of the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
@@ -315,7 +329,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             this.putBodyParameter("tags", tags);
@@ -324,7 +338,7 @@ public class CreateDigitalEmployeeRequest extends Request {
         }
 
         /**
-         * <p>数字员工工具调用安全策略配置。</p>
+         * <p>The tool calling security policy configuration of the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
@@ -421,7 +435,10 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * attributes.
+             * <p>The knowledge base attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -429,7 +446,10 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * indexId.
+             * <p>The Bailian index ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>index-xxxx</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -437,7 +457,10 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * region.
+             * <p>The region of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -445,7 +468,10 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * workspaceId.
+             * <p>The Bailian workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm-xxxxx</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -512,7 +538,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * bailian.
+             * <p>The Bailian knowledge base list.</p>
              */
             public Builder bailian(java.util.List<Bailian> bailian) {
                 this.bailian = bailian;
@@ -520,7 +546,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * sop.
+             * <p>The SOP knowledge base list.</p>
              */
             public Builder sop(java.util.List<java.util.Map<String, ?>> sop) {
                 this.sop = sop;
@@ -600,7 +626,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>允许访问的 CIDR 或 IP 列表，最多 50 个。</p>
+             * <p>The list of allowed CIDRs or IP addresses. A maximum of 50 entries are supported.</p>
              */
             public Builder allowCidrs(java.util.List<String> allowCidrs) {
                 this.allowCidrs = allowCidrs;
@@ -608,7 +634,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>允许访问的 FQDN 列表，最多 50 个。</p>
+             * <p>The list of allowed FQDNs. A maximum of 50 entries are supported.</p>
              */
             public Builder allowFqdns(java.util.List<String> allowFqdns) {
                 this.allowFqdns = allowFqdns;
@@ -616,7 +642,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>是否启用沙箱网络 ACL。</p>
+             * <p>Specifies whether to enable the sandbox network ACL.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -713,7 +739,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>Aliyun OpenAPI Action 列表，格式为 product:ApiName、product:Prefix* 或 product:*。</p>
+             * <p>The list of Aliyun OpenAPI actions. Format: product:ApiName, product:Prefix*, or product:*.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</p>
@@ -724,7 +750,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>本条语句对应的 Aliyun OpenAPI API 版本。</p>
+             * <p>The Aliyun OpenAPI version that this statement applies to.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-30</p>
@@ -735,7 +761,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>命中该 API 后的执行策略。</p>
+             * <p>The execution policy when the API is matched.</p>
              * 
              * <strong>example:</strong>
              * <p>user_ack</p>
@@ -746,7 +772,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>本条语句对应的 Aliyun OpenAPI 产品名。</p>
+             * <p>The Aliyun OpenAPI product name that this statement applies to.</p>
              * 
              * <strong>example:</strong>
              * <p>Sls</p>
@@ -843,7 +869,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>自动放行策略。条目为 RAM Action 字符串，格式为 product:ApiName、product:Prefix* 或 product:<em>。命中则自动放行，不走人工确认。为空或不配置时内置只读（Get</em>、List*、Describe*）自动放行；未命中一律走人工确认（HIL）。</p>
+             * <p>The auto-pass policy. Entries are RAM Action strings in the format of product:ApiName, product:Prefix*, or product:<em>. Matched requests are automatically passed without human confirmation. If this parameter is empty or not configured, built-in read-only actions (Get</em>, List*, Describe*) are automatically passed. Unmatched requests require human-in-the-loop (HIL) confirmation.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -854,7 +880,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>显式拒绝策略，优先级最高。条目为 RAM Action 字符串，格式为 product:ApiName、product:Prefix* 或 product:*。为空或不配置时不主动拒绝任何操作。STAROps 命中直接拒绝；Pop 侧再做二次兜底。</p>
+             * <p>The explicit deny policy with the highest priority. Entries are RAM Action strings in the format of product:ApiName, product:Prefix*, or product:*. If this parameter is empty or not configured, no operations are actively denied. When matched by STAROps, the request is directly denied. Pop performs a secondary fallback check.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -865,7 +891,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>是否启用 Aliyun MCP 工具策略。缺省为启用，仅显式设置为 false 时关闭。</p>
+             * <p>Specifies whether to enable the Aliyun MCP tool policy. The policy is enabled by default and is disabled only when this parameter is explicitly set to false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -876,7 +902,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             }
 
             /**
-             * <p>已废弃，请改用 denyPolicy 与 autoPassPolicy。过渡期仍会回读。 原说明：Aliyun OpenAPI 工具策略语句列表。</p>
+             * <p><strong>[Deprecated]</strong> Use denyPolicy and autoPassPolicy instead. This parameter is still returned during the transition period. Original description: The list of Aliyun OpenAPI tool policy statements.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -933,7 +959,7 @@ public class CreateDigitalEmployeeRequest extends Request {
             } 
 
             /**
-             * <p>Aliyun MCP 工具调用安全策略配置。</p>
+             * <p>The Aliyun MCP tool calling security policy configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>

@@ -102,6 +102,7 @@ public class CreateThreadRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,7 @@ public class CreateThreadRequest extends Request {
         }
 
         /**
-         * attributes.
+         * <p>Key-value pairs that you can attach to the thread.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.putBodyParameter("attributes", attributes);
@@ -123,7 +124,10 @@ public class CreateThreadRequest extends Request {
         }
 
         /**
-         * title.
+         * <p>The title of the thread.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);
@@ -132,7 +136,7 @@ public class CreateThreadRequest extends Request {
         }
 
         /**
-         * variables.
+         * <p>The variables for the thread. You can use them to pass custom data to the digital employee.</p>
          */
         public Builder variables(Variables variables) {
             this.putBodyParameter("variables", variables);
@@ -200,7 +204,10 @@ public class CreateThreadRequest extends Request {
             } 
 
             /**
-             * project.
+             * <p>The name of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -208,7 +215,10 @@ public class CreateThreadRequest extends Request {
             }
 
             /**
-             * workspace.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

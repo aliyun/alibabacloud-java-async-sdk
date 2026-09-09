@@ -103,6 +103,7 @@ public class ListMcpServicesRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class ListMcpServicesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -133,7 +137,10 @@ public class ListMcpServicesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJvZmZzZXQiOjIwfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

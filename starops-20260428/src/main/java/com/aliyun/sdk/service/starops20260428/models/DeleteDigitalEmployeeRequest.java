@@ -74,6 +74,7 @@ public class DeleteDigitalEmployeeRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

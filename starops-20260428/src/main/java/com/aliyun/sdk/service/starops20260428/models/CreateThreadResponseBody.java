@@ -67,7 +67,7 @@ public class CreateThreadResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request id.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -78,7 +78,10 @@ public class CreateThreadResponseBody extends TeaModel {
         }
 
         /**
-         * threadId.
+         * <p>The thread id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thread_id01</p>
          */
         public Builder threadId(String threadId) {
             this.threadId = threadId;

@@ -75,6 +75,7 @@ public class GetArtifactDownloadUrlRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital worker.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetArtifactDownloadUrlRequest extends Request {
         }
 
         /**
+         * <p>The artifact file path, relative to the digital worker artifact root directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

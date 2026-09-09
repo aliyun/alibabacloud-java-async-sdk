@@ -106,7 +106,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         } 
 
         /**
-         * digitalEmployees.
+         * <p>The list of digital employees.</p>
          */
         public Builder digitalEmployees(java.util.List<DigitalEmployees> digitalEmployees) {
             this.digitalEmployees = digitalEmployees;
@@ -114,7 +114,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -230,7 +242,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             } 
 
             /**
-             * attributes.
+             * <p>The attributes of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -238,7 +253,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * indexId.
+             * <p>The Bailian index ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>index-xxxx</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -246,7 +264,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -254,7 +275,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The Bailian workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm-xxxx</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -321,7 +345,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             } 
 
             /**
-             * bailian.
+             * <p>The list of Bailian knowledge bases.</p>
              */
             public Builder bailian(java.util.List<Bailian> bailian) {
                 this.bailian = bailian;
@@ -329,7 +353,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * sop.
+             * <p>The list of SOP knowledge bases.</p>
              */
             public Builder sop(java.util.List<java.util.Map<String, ?>> sop) {
                 this.sop = sop;
@@ -527,7 +551,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             } 
 
             /**
-             * attributes.
+             * <p>The attributes of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder attributes(java.util.Map<String, String> attributes) {
                 this.attributes = attributes;
@@ -535,6 +562,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -546,7 +574,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * defaultRule.
+             * <p>The default rule of the digital employee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder defaultRule(String defaultRule) {
                 this.defaultRule = defaultRule;
@@ -554,7 +585,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the digital employee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -562,7 +596,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the digital employee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -570,7 +607,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * employeeType.
+             * <p>The type of the digital employee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder employeeType(String employeeType) {
                 this.employeeType = employeeType;
@@ -578,7 +618,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * knowledges.
+             * <p>The list of knowledge bases.</p>
              */
             public Builder knowledges(Knowledges knowledges) {
                 this.knowledges = knowledges;
@@ -586,7 +626,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the digital employee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -594,7 +637,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-ae******ey</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -602,7 +648,10 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * roleArn.
+             * <p>The ARN of the RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::12345678912:role/testrole</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -610,7 +659,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;
@@ -618,6 +667,7 @@ public class ListDigitalEmployeesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The modification time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

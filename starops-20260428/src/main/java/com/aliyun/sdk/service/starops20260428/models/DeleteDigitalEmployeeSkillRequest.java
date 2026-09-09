@@ -89,6 +89,7 @@ public class DeleteDigitalEmployeeSkillRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteDigitalEmployeeSkillRequest extends Request {
         }
 
         /**
+         * <p>The name of the skill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

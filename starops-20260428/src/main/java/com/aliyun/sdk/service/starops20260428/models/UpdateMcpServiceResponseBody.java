@@ -67,7 +67,10 @@ public class UpdateMcpServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * mcpServiceName.
+         * <p>The service name of the MCP service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>log-query</p>
          */
         public Builder mcpServiceName(String mcpServiceName) {
             this.mcpServiceName = mcpServiceName;
@@ -75,7 +78,10 @@ public class UpdateMcpServiceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

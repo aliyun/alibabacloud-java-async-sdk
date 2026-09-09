@@ -54,7 +54,7 @@ public class DeleteThreadResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123-0F43-23423-AC43-34234</p>

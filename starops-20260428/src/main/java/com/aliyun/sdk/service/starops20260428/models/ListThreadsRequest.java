@@ -144,6 +144,7 @@ public class ListThreadsRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital worker.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,7 @@ public class ListThreadsRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>Filters the results. If this parameter is omitted, the operation returns all threads in the instance.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             String filterShrink = shrink(filter, "filter", "json");
@@ -166,7 +167,7 @@ public class ListThreadsRequest extends Request {
         }
 
         /**
-         * includeMission.
+         * <p>Specifies whether to include threads created by missions.</p>
          */
         public Builder includeMission(Boolean includeMission) {
             this.putQueryParameter("includeMission", includeMission);
@@ -175,7 +176,10 @@ public class ListThreadsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -184,7 +188,10 @@ public class ListThreadsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -193,7 +200,10 @@ public class ListThreadsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status of the thread.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -202,7 +212,10 @@ public class ListThreadsRequest extends Request {
         }
 
         /**
-         * threadId.
+         * <p>The thread ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thread-123123</p>
          */
         public Builder threadId(String threadId) {
             this.putQueryParameter("threadId", threadId);
@@ -272,6 +285,7 @@ public class ListThreadsRequest extends Request {
             } 
 
             /**
+             * <p>The filter key. Supported values are title, workspace, and project.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -283,6 +297,7 @@ public class ListThreadsRequest extends Request {
             }
 
             /**
+             * <p>The value for the filter key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -74,6 +74,7 @@ public class CreateArtifactUploadTokenRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital human.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class CreateArtifactUploadTokenRequest extends Request {
         }
 
         /**
-         * artifactPath.
+         * <p>The artifact upload directory, relative to the digital human artifact root directory. The value can only be empty or a directory under upload/. If not specified, upload/{YYYY-MM-DD}/ is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upload/2026-05-25/</p>
          */
         public Builder artifactPath(String artifactPath) {
             this.putQueryParameter("artifactPath", artifactPath);

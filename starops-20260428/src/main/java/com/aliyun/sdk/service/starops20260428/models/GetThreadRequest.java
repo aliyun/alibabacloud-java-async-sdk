@@ -75,6 +75,7 @@ public class GetThreadRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetThreadRequest extends Request {
         }
 
         /**
+         * <p>The thread ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

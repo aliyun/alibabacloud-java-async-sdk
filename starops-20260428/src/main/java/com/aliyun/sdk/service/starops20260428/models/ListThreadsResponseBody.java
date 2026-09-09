@@ -119,7 +119,10 @@ public class ListThreadsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return. The maximum value is 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +130,10 @@ public class ListThreadsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>A token to retrieve the next page of results. If this parameter is absent, no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +141,7 @@ public class ListThreadsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CD8BA7D6-995D-578D-9941-xxxx</p>
@@ -146,7 +152,10 @@ public class ListThreadsResponseBody extends TeaModel {
         }
 
         /**
-         * threadId.
+         * <p>The thread ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thread-123123</p>
          */
         public Builder threadId(String threadId) {
             this.threadId = threadId;
@@ -154,7 +163,7 @@ public class ListThreadsResponseBody extends TeaModel {
         }
 
         /**
-         * threads.
+         * <p>A list of threads.</p>
          */
         public Builder threads(java.util.List<Threads> threads) {
             this.threads = threads;
@@ -162,7 +171,10 @@ public class ListThreadsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of threads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -228,7 +240,7 @@ public class ListThreadsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>SLS project。</p>
+             * <p>The project in SLS.</p>
              * 
              * <strong>example:</strong>
              * <p>project</p>
@@ -239,7 +251,10 @@ public class ListThreadsResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;
@@ -397,7 +412,7 @@ public class ListThreadsResponseBody extends TeaModel {
             } 
 
             /**
-             * attributes.
+             * <p>A map of key-value pairs that you can attach to the thread.</p>
              */
             public Builder attributes(java.util.Map<String, String> attributes) {
                 this.attributes = attributes;
@@ -405,7 +420,10 @@ public class ListThreadsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time of the thread, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-19T15:19:55.040403272+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -413,7 +431,10 @@ public class ListThreadsResponseBody extends TeaModel {
             }
 
             /**
-             * digitalEmployeeName.
+             * <p>The digital employee name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;
@@ -421,7 +442,10 @@ public class ListThreadsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The thread status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -429,7 +453,10 @@ public class ListThreadsResponseBody extends TeaModel {
             }
 
             /**
-             * threadId.
+             * <p>The thread ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>thread-123123</p>
              */
             public Builder threadId(String threadId) {
                 this.threadId = threadId;
@@ -437,7 +464,10 @@ public class ListThreadsResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>The thread title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -445,7 +475,10 @@ public class ListThreadsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The last update time of the thread, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-19T15:19:55.040403272+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -453,7 +486,7 @@ public class ListThreadsResponseBody extends TeaModel {
             }
 
             /**
-             * variables.
+             * <p>The thread variables.</p>
              */
             public Builder variables(Variables variables) {
                 this.variables = variables;
@@ -461,7 +494,10 @@ public class ListThreadsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The thread version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder version(Long version) {
                 this.version = version;

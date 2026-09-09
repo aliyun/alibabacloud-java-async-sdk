@@ -167,7 +167,10 @@ public class ListDigitalEmployeesRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("displayName", displayName);
@@ -176,7 +179,10 @@ public class ListDigitalEmployeesRequest extends Request {
         }
 
         /**
-         * employeeType.
+         * <p>The type of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder employeeType(String employeeType) {
             this.putQueryParameter("employeeType", employeeType);
@@ -185,7 +191,10 @@ public class ListDigitalEmployeesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The page size. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -194,7 +203,10 @@ public class ListDigitalEmployeesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -203,7 +215,10 @@ public class ListDigitalEmployeesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -212,7 +227,10 @@ public class ListDigitalEmployeesRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******ey</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -221,7 +239,7 @@ public class ListDigitalEmployeesRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             String tagsShrink = shrink(tags, "tags", "json");

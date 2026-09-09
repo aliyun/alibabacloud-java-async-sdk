@@ -31,10 +31,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "STAROps";
         this.version = "2026-04-28";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-beijing", "starops.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "starops.ap-southeast-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -44,6 +41,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Obtains the link required to upload content. This operation is applicable to large files.</p>
+     * 
      * @param request the request parameters of CreateArtifactUploadToken  CreateArtifactUploadTokenRequest
      * @return CreateArtifactUploadTokenResponse
      */
@@ -62,6 +62,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Initiates a conversation.</p>
+     * 
      * @param request the request parameters of CreateChat  CreateChatRequest
      * @return CreateChatResponse
      */
@@ -119,6 +122,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a digital employee.</p>
+     * 
      * @param request the request parameters of CreateDigitalEmployee  CreateDigitalEmployeeRequest
      * @return CreateDigitalEmployeeResponse
      */
@@ -137,6 +143,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a new skill for a specified digital employee.</p>
+     * 
      * @param request the request parameters of CreateDigitalEmployeeSkill  CreateDigitalEmployeeSkillRequest
      * @return CreateDigitalEmployeeSkillResponse
      */
@@ -155,6 +164,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an MCP service.</p>
+     * 
      * @param request the request parameters of CreateMcpService  CreateMcpServiceRequest
      * @return CreateMcpServiceResponse
      */
@@ -173,6 +185,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a thread for a specified digital employee.</p>
+     * 
      * @param request the request parameters of CreateThread  CreateThreadRequest
      * @return CreateThreadResponse
      */
@@ -209,6 +224,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a digital employee.</p>
+     * 
      * @param request the request parameters of DeleteDigitalEmployee  DeleteDigitalEmployeeRequest
      * @return DeleteDigitalEmployeeResponse
      */
@@ -227,6 +245,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a skill from the specified digital employee.</p>
+     * 
      * @param request the request parameters of DeleteDigitalEmployeeSkill  DeleteDigitalEmployeeSkillRequest
      * @return DeleteDigitalEmployeeSkillResponse
      */
@@ -239,6 +260,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteDigitalEmployeeSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteDigitalEmployeeUmodelCommonSchemaRef  DeleteDigitalEmployeeUmodelCommonSchemaRefRequest
+     * @return DeleteDigitalEmployeeUmodelCommonSchemaRefResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDigitalEmployeeUmodelCommonSchemaRefResponse> deleteDigitalEmployeeUmodelCommonSchemaRef(DeleteDigitalEmployeeUmodelCommonSchemaRefRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteDigitalEmployeeUmodelCommonSchemaRef").setMethod(HttpMethod.DELETE).setPathRegex("/digital-employee/{name}/umodel/common-schema-refs/{group}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDigitalEmployeeUmodelCommonSchemaRefResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDigitalEmployeeUmodelCommonSchemaRefResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -263,6 +302,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation deletes a specified thread.</p>
+     * 
      * @param request the request parameters of DeleteThread  DeleteThreadRequest
      * @return DeleteThreadResponse
      */
@@ -299,6 +341,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the content of an artifact.</p>
+     * 
      * @param request the request parameters of GetArtifact  GetArtifactRequest
      * @return GetArtifactResponse
      */
@@ -317,6 +362,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the download URL for artifact content. This operation is suitable for large files.</p>
+     * 
      * @param request the request parameters of GetArtifactDownloadUrl  GetArtifactDownloadUrlRequest
      * @return GetArtifactDownloadUrlResponse
      */
@@ -335,6 +383,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a digital employee.</p>
+     * 
      * @param request the request parameters of GetDigitalEmployee  GetDigitalEmployeeRequest
      * @return GetDigitalEmployeeResponse
      */
@@ -353,6 +404,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDigitalEmployeeEntityData  GetDigitalEmployeeEntityDataRequest
+     * @return GetDigitalEmployeeEntityDataResponse
+     */
+    @Override
+    public CompletableFuture<GetDigitalEmployeeEntityDataResponse> getDigitalEmployeeEntityData(GetDigitalEmployeeEntityDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDigitalEmployeeEntityData").setMethod(HttpMethod.POST).setPathRegex("/digital-employee/{name}/entities/query").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDigitalEmployeeEntityDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDigitalEmployeeEntityDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a specified skill for a digital employee.</p>
+     * 
      * @param request the request parameters of GetDigitalEmployeeSkill  GetDigitalEmployeeSkillRequest
      * @return GetDigitalEmployeeSkillResponse
      */
@@ -365,6 +437,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDigitalEmployeeSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDigitalEmployeeUmodel  GetDigitalEmployeeUmodelRequest
+     * @return GetDigitalEmployeeUmodelResponse
+     */
+    @Override
+    public CompletableFuture<GetDigitalEmployeeUmodelResponse> getDigitalEmployeeUmodel(GetDigitalEmployeeUmodelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDigitalEmployeeUmodel").setMethod(HttpMethod.GET).setPathRegex("/digital-employee/{name}/umodel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDigitalEmployeeUmodelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDigitalEmployeeUmodelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -389,6 +479,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a thread.</p>
+     * 
      * @param request the request parameters of GetThread  GetThreadRequest
      * @return GetThreadResponse
      */
@@ -407,6 +500,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Gets session data.</p>
+     * 
      * @param request the request parameters of GetThreadData  GetThreadDataRequest
      * @return GetThreadDataResponse
      */
@@ -425,6 +521,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the artifacts for a specified digital employee.</p>
+     * 
      * @param request the request parameters of ListArtifacts  ListArtifactsRequest
      * @return ListArtifactsResponse
      */
@@ -443,6 +542,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the previous versions of a skill.</p>
+     * 
      * @param request the request parameters of ListDigitalEmployeeSkillVersions  ListDigitalEmployeeSkillVersionsRequest
      * @return ListDigitalEmployeeSkillVersionsResponse
      */
@@ -461,6 +563,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the skills of a specified digital employee.</p>
+     * 
      * @param request the request parameters of ListDigitalEmployeeSkills  ListDigitalEmployeeSkillsRequest
      * @return ListDigitalEmployeeSkillsResponse
      */
@@ -479,6 +584,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists digital employees.</p>
+     * 
      * @param request the request parameters of ListDigitalEmployees  ListDigitalEmployeesRequest
      * @return ListDigitalEmployeesResponse
      */
@@ -515,6 +623,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>List sessions</p>
+     * 
      * @param request the request parameters of ListThreads  ListThreadsRequest
      * @return ListThreadsResponse
      */
@@ -533,6 +644,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a digital employee.</p>
+     * 
      * @param request the request parameters of UpdateDigitalEmployee  UpdateDigitalEmployeeRequest
      * @return UpdateDigitalEmployeeResponse
      */
@@ -551,6 +665,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation updates a skill for a specified digital employee.</p>
+     * 
      * @param request the request parameters of UpdateDigitalEmployeeSkill  UpdateDigitalEmployeeSkillRequest
      * @return UpdateDigitalEmployeeSkillResponse
      */
@@ -563,6 +680,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateDigitalEmployeeSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateDigitalEmployeeUmodel  UpdateDigitalEmployeeUmodelRequest
+     * @return UpdateDigitalEmployeeUmodelResponse
+     */
+    @Override
+    public CompletableFuture<UpdateDigitalEmployeeUmodelResponse> updateDigitalEmployeeUmodel(UpdateDigitalEmployeeUmodelRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateDigitalEmployeeUmodel").setMethod(HttpMethod.PUT).setPathRegex("/digital-employee/{name}/umodel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateDigitalEmployeeUmodelResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateDigitalEmployeeUmodelResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -587,6 +722,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a thread.</p>
+     * 
      * @param request the request parameters of UpdateThread  UpdateThreadRequest
      * @return UpdateThreadResponse
      */
@@ -599,6 +737,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateThreadResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpsertDigitalEmployeeUmodelCommonSchemaRef  UpsertDigitalEmployeeUmodelCommonSchemaRefRequest
+     * @return UpsertDigitalEmployeeUmodelCommonSchemaRefResponse
+     */
+    @Override
+    public CompletableFuture<UpsertDigitalEmployeeUmodelCommonSchemaRefResponse> upsertDigitalEmployeeUmodelCommonSchemaRef(UpsertDigitalEmployeeUmodelCommonSchemaRefRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpsertDigitalEmployeeUmodelCommonSchemaRef").setMethod(HttpMethod.PUT).setPathRegex("/digital-employee/{name}/umodel/common-schema-refs/{group}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpsertDigitalEmployeeUmodelCommonSchemaRefResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpsertDigitalEmployeeUmodelCommonSchemaRefResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -138,7 +138,16 @@ public class CreateChatRequest extends Request {
         }
 
         /**
-         * action.
+         * <p>The action type. Valid values:</p>
+         * <ul>
+         * <li>create: creates a conversation.</li>
+         * <li>reconnect: reconnects to an existing conversation.</li>
+         * <li>stop: stops the conversation.</li>
+         * </ul>
+         * <p>Default value: create.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create</p>
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -147,7 +156,10 @@ public class CreateChatRequest extends Request {
         }
 
         /**
-         * digitalEmployeeName.
+         * <p>The name of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder digitalEmployeeName(String digitalEmployeeName) {
             this.putBodyParameter("digitalEmployeeName", digitalEmployeeName);
@@ -156,7 +168,7 @@ public class CreateChatRequest extends Request {
         }
 
         /**
-         * messages.
+         * <p>The list of messages.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.putBodyParameter("messages", messages);
@@ -165,7 +177,10 @@ public class CreateChatRequest extends Request {
         }
 
         /**
-         * threadId.
+         * <p>The conversation thread ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thread_id01</p>
          */
         public Builder threadId(String threadId) {
             this.putBodyParameter("threadId", threadId);
@@ -174,7 +189,20 @@ public class CreateChatRequest extends Request {
         }
 
         /**
-         * variables.
+         * <p>The list of variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;workspace&quot;: &quot;test&quot;,
+         *   &quot;region&quot;: &quot;cn-beijing&quot;,
+         *   &quot;project&quot;: &quot;test&quot;,
+         *   &quot;language&quot;: &quot;zh&quot;,
+         *   &quot;timeZone&quot;: &quot;Asia/Shanghai&quot;,
+         *   &quot;timeStamp&quot;: &quot;1768893948&quot;,
+         *   &quot;startTime&quot;: 1768887171,
+         *   &quot;endTime&quot;: 1768890771,
+         *   &quot;skill&quot;: &quot;trace&quot;
+         * }</p>
          */
         public Builder variables(java.util.Map<String, ?> variables) {
             this.putBodyParameter("variables", variables);
@@ -242,7 +270,10 @@ public class CreateChatRequest extends Request {
             } 
 
             /**
-             * type.
+             * <p>The content type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -250,7 +281,10 @@ public class CreateChatRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -343,7 +377,7 @@ public class CreateChatRequest extends Request {
             } 
 
             /**
-             * contents.
+             * <p>The text or multimodal array.</p>
              */
             public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
@@ -351,7 +385,10 @@ public class CreateChatRequest extends Request {
             }
 
             /**
-             * messageId.
+             * <p>The unique identifier of the current message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>message_id02</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -359,7 +396,10 @@ public class CreateChatRequest extends Request {
             }
 
             /**
-             * role.
+             * <p>The role of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -367,7 +407,7 @@ public class CreateChatRequest extends Request {
             }
 
             /**
-             * tools.
+             * <p>The list of tool invocations.</p>
              */
             public Builder tools(java.util.List<java.util.Map<String, ?>> tools) {
                 this.tools = tools;

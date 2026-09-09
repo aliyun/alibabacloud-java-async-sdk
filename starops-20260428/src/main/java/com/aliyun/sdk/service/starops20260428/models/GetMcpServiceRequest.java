@@ -89,6 +89,7 @@ public class GetMcpServiceRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class GetMcpServiceRequest extends Request {
         }
 
         /**
+         * <p>The service name of the MCP service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

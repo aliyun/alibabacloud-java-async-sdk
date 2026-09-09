@@ -119,7 +119,7 @@ public class GetThreadDataResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The message data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GetThreadDataResponseBody extends TeaModel {
         }
 
         /**
-         * digitalEmployeeName.
+         * <p>The name of the current digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder digitalEmployeeName(String digitalEmployeeName) {
             this.digitalEmployeeName = digitalEmployeeName;
@@ -135,7 +138,10 @@ public class GetThreadDataResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -143,7 +149,10 @@ public class GetThreadDataResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token to retrieve the next page of results. If this parameter is not returned, there are no more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -151,7 +160,10 @@ public class GetThreadDataResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID for this GetThreadData API request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetThreadDataResponseBody extends TeaModel {
         }
 
         /**
-         * threadId.
+         * <p>The unique ID of the thread.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thread_id01</p>
          */
         public Builder threadId(String threadId) {
             this.threadId = threadId;
@@ -368,7 +383,7 @@ public class GetThreadDataResponseBody extends TeaModel {
             } 
 
             /**
-             * agents.
+             * <p>A list of called agents.</p>
              */
             public Builder agents(java.util.List<java.util.Map<String, ?>> agents) {
                 this.agents = agents;
@@ -376,7 +391,7 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * artifacts.
+             * <p>A list of generated artifacts.</p>
              */
             public Builder artifacts(java.util.List<java.util.Map<String, ?>> artifacts) {
                 this.artifacts = artifacts;
@@ -384,7 +399,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * callId.
+             * <p>The current call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b5287b7176360</p>
              */
             public Builder callId(String callId) {
                 this.callId = callId;
@@ -392,7 +410,7 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * contents.
+             * <p>The contents of the message.</p>
              */
             public Builder contents(java.util.List<java.util.Map<String, ?>> contents) {
                 this.contents = contents;
@@ -400,7 +418,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * detail.
+             * <p>The message details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>context of model exceed</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -408,7 +429,7 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * events.
+             * <p>A list of events.</p>
              */
             public Builder events(java.util.List<java.util.Map<String, ?>> events) {
                 this.events = events;
@@ -416,7 +437,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * parentCallId.
+             * <p>The parent call ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b5287b7176360</p>
              */
             public Builder parentCallId(String parentCallId) {
                 this.parentCallId = parentCallId;
@@ -424,7 +448,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>The role that initiates the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -432,7 +459,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * seq.
+             * <p>The sequence number of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder seq(Integer seq) {
                 this.seq = seq;
@@ -440,7 +470,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The message creation time in nanoseconds since the Unix epoch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1768702985000000000</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -448,7 +481,7 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * tools.
+             * <p>A list of tools used to generate the message.</p>
              */
             public Builder tools(java.util.List<java.util.Map<String, ?>> tools) {
                 this.tools = tools;
@@ -456,7 +489,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_finished</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -464,7 +500,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The message data version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -544,7 +583,7 @@ public class GetThreadDataResponseBody extends TeaModel {
             } 
 
             /**
-             * messages.
+             * <p>A list of messages in the thread.</p>
              */
             public Builder messages(java.util.List<Messages> messages) {
                 this.messages = messages;
@@ -552,7 +591,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * requestId.
+             * <p>The ID of the original request that generated this message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8FDE2569-626B-5176-9844-28877A*****</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -560,7 +602,10 @@ public class GetThreadDataResponseBody extends TeaModel {
             }
 
             /**
-             * traceId.
+             * <p>The unique ID that identifies the entire trace of a request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3b5287b717636040171772050d0095</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;

@@ -250,7 +250,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         } 
 
         /**
-         * attributes.
+         * <p>The attributes.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
@@ -258,6 +258,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +270,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * defaultRule.
+         * <p>The default rule of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder defaultRule(String defaultRule) {
             this.defaultRule = defaultRule;
@@ -277,7 +281,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -285,7 +292,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -293,7 +303,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * employeeType.
+         * <p>The type of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder employeeType(String employeeType) {
             this.employeeType = employeeType;
@@ -301,7 +314,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * knowledges.
+         * <p>The knowledge base list.</p>
          */
         public Builder knowledges(Knowledges knowledges) {
             this.knowledges = knowledges;
@@ -309,7 +322,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -317,7 +333,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -325,7 +344,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -333,7 +355,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******ey</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -341,7 +366,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * roleArn.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::12345678912:role/testrole</p>
          */
         public Builder roleArn(String roleArn) {
             this.roleArn = roleArn;
@@ -349,7 +377,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数字员工沙箱网络 ACL 策略配置。</p>
+         * <p>The sandbox network ACL policy configuration for the digital employee.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;allowFqdns&quot;:[&quot;api.example.com&quot;],&quot;allowCidrs&quot;:[&quot;1.2.3.0/24&quot;,&quot;8.8.8.8&quot;],&quot;enableAcl&quot;:false}</p>
@@ -360,7 +388,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             this.tags = tags;
@@ -368,10 +396,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数字员工工具调用安全策略配置。</p>
+         * <p>The tool policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
+         * <p>{&quot;aliyun&quot;:{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}}</p>
          */
         public Builder toolPolicy(ToolPolicy toolPolicy) {
             this.toolPolicy = toolPolicy;
@@ -379,6 +407,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -474,7 +503,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             } 
 
             /**
-             * attributes.
+             * <p>The knowledge base attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder attributes(String attributes) {
                 this.attributes = attributes;
@@ -482,7 +514,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * indexId.
+             * <p>The Bailian index ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>index-xxxx</p>
              */
             public Builder indexId(String indexId) {
                 this.indexId = indexId;
@@ -490,7 +525,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -498,7 +536,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The Bailian workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm-xxxxx</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -565,7 +606,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             } 
 
             /**
-             * bailian.
+             * <p>The Bailian knowledge base list.</p>
              */
             public Builder bailian(java.util.List<Bailian> bailian) {
                 this.bailian = bailian;
@@ -573,7 +614,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * sop.
+             * <p>The SOP knowledge base list.</p>
              */
             public Builder sop(java.util.List<java.util.Map<String, ?>> sop) {
                 this.sop = sop;
@@ -653,7 +694,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>允许访问的 CIDR 或 IP 列表，最多 50 个。</p>
+             * <p>The list of allowed CIDRs or IP addresses.</p>
              */
             public Builder allowCidrs(java.util.List<String> allowCidrs) {
                 this.allowCidrs = allowCidrs;
@@ -661,7 +702,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>允许访问的 FQDN 列表，最多 50 个。</p>
+             * <p>The list of allowed FQDNs.</p>
              */
             public Builder allowFqdns(java.util.List<String> allowFqdns) {
                 this.allowFqdns = allowFqdns;
@@ -669,7 +710,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否启用沙箱网络 ACL。</p>
+             * <p>Indicates whether the sandbox network ACL is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -767,7 +808,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Aliyun OpenAPI Action 列表，格式为 product:ApiName、product:Prefix* 或 product:*。</p>
+             * <p>The list of RAM actions.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]</p>
@@ -778,7 +819,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>本条语句对应的 Aliyun OpenAPI API 版本。</p>
+             * <p>The API version.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-12-30</p>
@@ -789,7 +830,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>命中该 API 后的执行策略。</p>
+             * <p>The execution policy.</p>
              * 
              * <strong>example:</strong>
              * <p>user_ack</p>
@@ -800,7 +841,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>本条语句对应的 Aliyun OpenAPI 产品名。</p>
+             * <p>The cloud product code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -898,7 +939,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>自动放行策略。条目为 RAM Action 字符串，格式为 product:ApiName、product:Prefix* 或 product:<em>。命中则自动放行，不走人工确认。为空或不配置时内置只读（Get</em>、List*、Describe*）自动放行；未命中一律走人工确认（HIL）。</p>
+             * <p>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched requests are automatically approved without human confirmation. If empty or not configured, built-in read-only operations (Get</em>, List*, Describe*) are automatically approved. Unmatched requests require human-in-the-loop (HIL) confirmation.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</p>
@@ -909,7 +950,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>显式拒绝策略，优先级最高。条目为 RAM Action 字符串，格式为 product:ApiName、product:Prefix* 或 product:*。为空或不配置时不主动拒绝任何操作。STAROps 命中直接拒绝；Pop 侧再做二次兜底。</p>
+             * <p>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If empty or not configured, no operations are actively denied. STAROps directly rejects matched requests. The Pop side performs a secondary fallback check.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</p>
@@ -920,7 +961,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否启用 Aliyun MCP 工具策略。缺省为启用，仅显式设置为 false 时关闭。</p>
+             * <p>Indicates whether the policy is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -931,7 +972,7 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>已废弃，请改用 denyPolicy 与 autoPassPolicy。过渡期仍会回读。 原说明：Aliyun OpenAPI 工具策略语句列表。</p>
+             * <p>The list of Aliyun CLI tool policy statements.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]</p>
@@ -988,10 +1029,10 @@ public class GetDigitalEmployeeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Aliyun MCP 工具调用安全策略配置。</p>
+             * <p>The security policy configuration for Aliyun CLI tool calling.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;enable&quot;:true,&quot;denyPolicy&quot;:[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;],&quot;autoPassPolicy&quot;:[&quot;log:Get*&quot;,&quot;log:List*&quot;],&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
+             * <p>{&quot;enable&quot;:true,&quot;statements&quot;:[{&quot;decision&quot;:&quot;user_ack&quot;,&quot;product&quot;:&quot;Sls&quot;,&quot;apiVersion&quot;:&quot;2020-12-30&quot;,&quot;actions&quot;:[&quot;log:GetProject&quot;,&quot;log:CreateDashboard&quot;]}]}</p>
              */
             public Builder aliyun(Aliyun aliyun) {
                 this.aliyun = aliyun;

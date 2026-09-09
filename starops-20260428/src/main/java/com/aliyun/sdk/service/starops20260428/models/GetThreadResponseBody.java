@@ -171,7 +171,7 @@ public class GetThreadResponseBody extends TeaModel {
         } 
 
         /**
-         * attributes.
+         * <p>The thread\&quot;s attributes.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
@@ -179,7 +179,10 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The thread\&quot;s creation time, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-19T15:19:55.040403272+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -187,7 +190,10 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * digitalEmployeeName.
+         * <p>The name of the digital employee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder digitalEmployeeName(String digitalEmployeeName) {
             this.digitalEmployeeName = digitalEmployeeName;
@@ -195,7 +201,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -206,7 +212,10 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The thread\&quot;s status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -214,7 +223,10 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * threadId.
+         * <p>The thread ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>thread_id01</p>
          */
         public Builder threadId(String threadId) {
             this.threadId = threadId;
@@ -222,7 +234,10 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The thread\&quot;s title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testLive</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -230,7 +245,10 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The thread\&quot;s last update time, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-19T15:19:55.040403272+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -238,7 +256,7 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * variables.
+         * <p>The thread\&quot;s variables.</p>
          */
         public Builder variables(Variables variables) {
             this.variables = variables;
@@ -246,7 +264,10 @@ public class GetThreadResponseBody extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The thread\&quot;s version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1231</p>
          */
         public Builder version(Long version) {
             this.version = version;
@@ -312,7 +333,10 @@ public class GetThreadResponseBody extends TeaModel {
             } 
 
             /**
-             * project.
+             * <p>The name of the SLS project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -320,7 +344,10 @@ public class GetThreadResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

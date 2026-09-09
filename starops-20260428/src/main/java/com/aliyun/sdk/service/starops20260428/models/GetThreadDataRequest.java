@@ -103,6 +103,7 @@ public class GetThreadDataRequest extends Request {
         } 
 
         /**
+         * <p>The name of the digital employee.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class GetThreadDataRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier for the thread.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class GetThreadDataRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of session entries to return. The maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -136,7 +141,10 @@ public class GetThreadDataRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination cursor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

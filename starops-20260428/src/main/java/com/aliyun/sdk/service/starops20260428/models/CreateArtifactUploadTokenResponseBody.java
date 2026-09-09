@@ -171,7 +171,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * accessId.
+         * <p>The AccessKey ID used for OSS uploads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI******</p>
          */
         public Builder accessId(String accessId) {
             this.accessId = accessId;
@@ -179,7 +182,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * artifactPath.
+         * <p>The normalized logical upload directory on the server side, relative to the digital human artifact root directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>upload/2026-05-25/</p>
          */
         public Builder artifactPath(String artifactPath) {
             this.artifactPath = artifactPath;
@@ -187,7 +193,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * dir.
+         * <p>The allowed OSS object prefix for uploads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agents/123/sample-agent/home/starops/upload/2026-05-25/</p>
          */
         public Builder dir(String dir) {
             this.dir = dir;
@@ -195,7 +204,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * expire.
+         * <p>The expiration time of the upload credential. The value is a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1770000000</p>
          */
         public Builder expire(Long expire) {
             this.expire = expire;
@@ -203,7 +215,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * host.
+         * <p>The OSS form upload URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com">https://example-bucket.oss-cn-shanghai.aliyuncs.com</a></p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -211,7 +226,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * maxSize.
+         * <p>The maximum size of a single file upload, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>104857600</p>
          */
         public Builder maxSize(Long maxSize) {
             this.maxSize = maxSize;
@@ -219,7 +237,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * policy.
+         * <p>The Base64-encoded OSS Post Policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAyNi0wNS0yMVQwODowMDowMFoifQ==</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -227,7 +248,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A1B2C3D-4E5F-6789-ABCD-1234567890AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +259,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * signature.
+         * <p>The OSS Post Policy signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc123signature</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;
@@ -243,7 +270,10 @@ public class CreateArtifactUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * successActionStatus.
+         * <p>The status code returned upon a successful OSS upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder successActionStatus(String successActionStatus) {
             this.successActionStatus = successActionStatus;
