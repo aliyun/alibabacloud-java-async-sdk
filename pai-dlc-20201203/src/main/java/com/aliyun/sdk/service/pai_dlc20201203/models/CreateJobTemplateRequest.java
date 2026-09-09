@@ -132,7 +132,7 @@ public class CreateJobTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The field constraint rules. The key is a JSONPath expression, and the value is a constraint type: <code>locked</code> (cannot be overridden), <code>overridable</code> (can be overridden), or <code>required</code> (must be specified).</p>
+         * <p>The field constraint rules. The key is a JSONPath expression, and the value is the constraint type: locked (locked and cannot be overridden), overridable (can be overridden), or required (required).</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;JobSpecs[0].Image\&quot;:\&quot;locked\&quot;,\&quot;UserCommand\&quot;:\&quot;locked\&quot;,\&quot;JobType\&quot;:\&quot;locked\&quot;}</p>
@@ -144,7 +144,7 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The configuration of the job template, which must be a JSON string containing the job configuration parameters.</p>
+         * <p>The configuration content of the task template, which contains job configuration parameters. Pass the value in JSON string format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The description of the job template.</p>
+         * <p>The description of the task template.</p>
          * 
          * <strong>example:</strong>
          * <p>Template description</p>
@@ -169,7 +169,7 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>User-defined key-value metadata.</p>
+         * <p>The custom key-value pair metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -181,7 +181,7 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the job template.</p>
+         * <p>The name of the task template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class CreateJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace that contains the job template.</p>
+         * <p>The ID of the workspace to which the template belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

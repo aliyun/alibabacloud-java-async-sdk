@@ -106,7 +106,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of job templates.</p>
+         * <p>The list of templates.</p>
          */
         public Builder jobTemplates(java.util.List<JobTemplates> jobTemplates) {
             this.jobTemplates = jobTemplates;
@@ -125,7 +125,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of results on the current page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -136,7 +136,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The unique ID of the request. Use this ID to troubleshoot issues.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D*****</p>
@@ -147,7 +147,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of job templates that match the filter conditions.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -182,6 +182,9 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModifyTime")
         private String gmtModifyTime;
 
+        @com.aliyun.core.annotation.NameInMap("LastUsedTime")
+        private String lastUsedTime;
+
         @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map<String, ?> metadata;
 
@@ -208,6 +211,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             this.description = builder.description;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifyTime = builder.gmtModifyTime;
+            this.lastUsedTime = builder.lastUsedTime;
             this.metadata = builder.metadata;
             this.modifiedBy = builder.modifiedBy;
             this.templateId = builder.templateId;
@@ -251,6 +255,13 @@ public class ListJobTemplatesResponseBody extends TeaModel {
          */
         public String getGmtModifyTime() {
             return this.gmtModifyTime;
+        }
+
+        /**
+         * @return lastUsedTime
+         */
+        public String getLastUsedTime() {
+            return this.lastUsedTime;
         }
 
         /**
@@ -307,6 +318,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             private String description; 
             private String gmtCreateTime; 
             private String gmtModifyTime; 
+            private String lastUsedTime; 
             private java.util.Map<String, ?> metadata; 
             private String modifiedBy; 
             private String templateId; 
@@ -323,6 +335,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
                 this.description = model.description;
                 this.gmtCreateTime = model.gmtCreateTime;
                 this.gmtModifyTime = model.gmtModifyTime;
+                this.lastUsedTime = model.lastUsedTime;
                 this.metadata = model.metadata;
                 this.modifiedBy = model.modifiedBy;
                 this.templateId = model.templateId;
@@ -344,7 +357,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the job template.</p>
+             * <p>The template description.</p>
              * 
              * <strong>example:</strong>
              * <p>job description</p>
@@ -355,7 +368,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the template, in UTC and ISO 8601 format.</p>
+             * <p>The time when the template was created.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -367,7 +380,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time of the template, in UTC and ISO 8601 format.</p>
+             * <p>The time when the template was last modified.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -379,7 +392,19 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Custom metadata, represented as a collection of key-value pairs.</p>
+             * <p>The most recent time when a task was successfully created by using this template.</p>
+             * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-03T11:30:00Z</p>
+             */
+            public Builder lastUsedTime(String lastUsedTime) {
+                this.lastUsedTime = lastUsedTime;
+                return this;
+            }
+
+            /**
+             * <p>The custom metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -390,7 +415,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the modifier.</p>
+             * <p>The ID of the user who last modified the template.</p>
              * 
              * <strong>example:</strong>
              * <p>20**************26</p>
@@ -401,7 +426,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the job template.</p>
+             * <p>The template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>tpl1r5g9ait7****</p>
@@ -412,7 +437,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the job template.</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
              * <p>job-template-1772516653885</p>
@@ -423,7 +448,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the tenant.</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>142388383837****</p>
@@ -434,7 +459,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the creator.</p>
+             * <p>The ID of the user who created the template.</p>
              * 
              * <strong>example:</strong>
              * <p>20**************26</p>
@@ -445,7 +470,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workspace.</p>
+             * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>88****</p>

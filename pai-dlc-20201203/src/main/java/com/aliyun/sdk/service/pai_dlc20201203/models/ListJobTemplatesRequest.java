@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListJobTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 1024)
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
@@ -55,6 +60,7 @@ public class ListJobTemplatesRequest extends Request {
 
     private ListJobTemplatesRequest(Builder builder) {
         super(builder);
+        this.description = builder.description;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -76,6 +82,13 @@ public class ListJobTemplatesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -135,6 +148,7 @@ public class ListJobTemplatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListJobTemplatesRequest, Builder> {
+        private String description; 
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -150,6 +164,7 @@ public class ListJobTemplatesRequest extends Request {
 
         private Builder(ListJobTemplatesRequest request) {
             super(request);
+            this.description = request.description;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -161,7 +176,19 @@ public class ListJobTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The sort order. Valid values: <code>asc</code> for ascending and <code>desc</code> for descending. Default value: <code>desc</code>.</p>
+         * <p>Filters the list by a fuzzy match of the template description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PyTorch training template</p>
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The sort order.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -173,7 +200,7 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The page number to retrieve.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +212,7 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of results to return per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -197,7 +224,7 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The field to sort the results by. Default value: <code>GmtCreateTime</code>.</p>
+         * <p>The field by which to sort the results.</p>
          * 
          * <strong>example:</strong>
          * <p>GmtCreateTime</p>
@@ -209,7 +236,7 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The job template ID. Use this parameter to filter for an exact match.</p>
+         * <p>Filters the list by an exact match of the template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>tpl1****6jcq2q</p>
@@ -221,7 +248,7 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The job template name. Use this parameter to filter for a partial match.</p>
+         * <p>Filters the list by a fuzzy match of the template name.</p>
          * 
          * <strong>example:</strong>
          * <p>job-template-example-1778047****</p>
@@ -233,7 +260,7 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the creator. Use this parameter to filter results by a specific creator.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20**************02</p>
@@ -245,7 +272,7 @@ public class ListJobTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

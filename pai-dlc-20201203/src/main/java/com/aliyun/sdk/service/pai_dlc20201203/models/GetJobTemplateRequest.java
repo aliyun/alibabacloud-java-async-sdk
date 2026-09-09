@@ -74,7 +74,7 @@ public class GetJobTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the job template.</p>
+         * <p>The unique identifier of the task template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetJobTemplateRequest extends Request {
         }
 
         /**
-         * <p>The version to retrieve. If omitted, the default version is returned. Specify <code>all</code> to retrieve all versions.</p>
+         * <p>If this parameter is not specified, the default version is returned. If a specific number is specified, the corresponding version is returned. If all is specified, all versions are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>
