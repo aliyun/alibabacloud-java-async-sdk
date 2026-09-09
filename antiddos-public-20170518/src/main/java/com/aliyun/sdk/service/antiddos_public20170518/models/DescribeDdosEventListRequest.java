@@ -148,7 +148,7 @@ public class DescribeDdosEventListRequest extends Request {
         } 
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The number of the page to return for a paged query. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,9 +160,9 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the asset to query.</p>
+         * <p>The region ID of the asset that is assigned a public IP address.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> to query all region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -176,9 +176,9 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * <p>The ID of asset to query.</p>
+         * <p>The ID of the instance for the asset that is assigned a public IP address.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.</p>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> to query the IDs of the ECS, SLB, and EIP instances that belong to your Alibaba Cloud account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -192,15 +192,22 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * <p>The type of the asset to query. Valid values:</p>
+         * <p>The instance type of the asset that is assigned a public IP address. Valid values:</p>
          * <ul>
-         * <li><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</li>
-         * <li><strong>slb</strong>: a Server Load Balancer (SLB) instance.</li>
-         * <li><strong>eip</strong>: an elastic IP address (EIP).</li>
-         * <li><strong>ipv6</strong>: an IPv6 gateway.</li>
-         * <li><strong>swas</strong>: a simple application server.</li>
-         * <li><strong>waf</strong>: a Web Application Firewall (WAF) instance of the Exclusive edition.</li>
-         * <li><strong>ga_basic</strong>: a Global Accelerator (GA) instance.</li>
+         * <li><p><strong>ecs</strong>: an Elastic Compute Service (ECS) instance.</p>
+         * </li>
+         * <li><p><strong>slb</strong>: a Server Load Balancer (SLB) instance.</p>
+         * </li>
+         * <li><p><strong>eip</strong>: an elastic IP address (EIP) instance.</p>
+         * </li>
+         * <li><p><strong>ipv6</strong>: an IPv6 Gateway instance.</p>
+         * </li>
+         * <li><p><strong>swas</strong>: a simple application server instance.</p>
+         * </li>
+         * <li><p><strong>waf</strong>: a dedicated Web Application Firewall (WAF) instance.</p>
+         * </li>
+         * <li><p><strong>ga_basic</strong>: a Global Accelerator instance.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -214,7 +221,7 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the asset to query.</p>
+         * <p>The IP address of the asset that is assigned a public IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>121.199.XX.XX</p>
@@ -226,7 +233,7 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+         * <p>The number of attack events to return on each page for a paged query. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -238,7 +245,10 @@ public class DescribeDdosEventListRequest extends Request {
         }
 
         /**
-         * QueryDays.
+         * <p>The number of days to query backwards from the current time. Default value: 7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder queryDays(Integer queryDays) {
             this.putQueryParameter("QueryDays", queryDays);

@@ -93,16 +93,17 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhengzhou-nebula-1", "antiddos.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "antiddos.aliyuncs.com"),
             new TeaPair("rus-west-1-pop", "antiddos.aliyuncs.com"),
-            new TeaPair("us-southeast-1", "antiddos-openapi.us-southeast-1.aliyuncs.com"),
-            new TeaPair("na-south-1", "antiddos-openapi.na-south-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "antiddos-openapi.me-central-1.aliyuncs.com"),
-            new TeaPair("eu-west-2", "antiddos-openapi.eu-west-2.aliyuncs.com"),
-            new TeaPair("cn-zhongwei", "antiddos-openapi.cn-zhongwei.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "antiddos-openapi.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "antiddos-openapi.cn-hangzhou-cloudstone.aliyuncs.com"),
             new TeaPair("cn-fuzhou", "antiddos-openapi.cn-hangzhou-cloudstone.aliyuncs.com"),
+            new TeaPair("cn-wuhan-lr", "antiddos-openapi.cn-hangzhou-cloudstone.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-jva", "antiddos-openapi.cn-zhengzhou-jva.aliyuncs.com"),
+            new TeaPair("cn-zhongwei", "antiddos-openapi.cn-zhongwei.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "antiddos-openapi.ap-southeast-7.aliyuncs.com"),
             new TeaPair("ap-southeast-8", "antiddos-openapi.ap-southeast-8.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "antiddos-openapi.ap-southeast-7.aliyuncs.com")
+            new TeaPair("us-southeast-1", "antiddos-openapi.us-southeast-1.aliyuncs.com"),
+            new TeaPair("sa-east-1", "antiddos-openapi.sa-east-1.aliyuncs.com"),
+            new TeaPair("eu-west-2", "antiddos-openapi.eu-west-2.aliyuncs.com"),
+            new TeaPair("na-south-1", "antiddos-openapi.na-south-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "antiddos-openapi.me-central-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -205,9 +206,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call the DescribeDdosEventList operation to query the details of the DDoS attack events that occur on an asset by page. The details include the start time, end time, and status of each DDoS attack event.</p>
-     * <h2><a href="#qps-"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>This operation performs a paged query to retrieve the details of DDoS attack events for a specific asset with a public IP address. The details include the start time, end time, and status of each event.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for this operation is 10 for each user. API calls are throttled if you exceed the limit. This can affect your business. We recommend that you call this operation a reasonable number of times.</p>
      * 
      * @param request the request parameters of DescribeDdosEventList  DescribeDdosEventListRequest
      * @return DescribeDdosEventListResponse
@@ -366,8 +367,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#qps-"></a>Limits</h2>
-     * <p>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This can affect your business. We recommend that you call this API at a reasonable rate.</p>
      * 
      * @param request the request parameters of ModifyDefenseThreshold  ModifyDefenseThresholdRequest
      * @return ModifyDefenseThresholdResponse
