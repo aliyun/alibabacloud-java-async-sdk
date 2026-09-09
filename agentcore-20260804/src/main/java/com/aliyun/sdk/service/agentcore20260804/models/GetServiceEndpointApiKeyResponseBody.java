@@ -119,7 +119,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code. The value is SUCCESS when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The currently active API Key information for the service endpoint.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value is 200 when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. The value is success when the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID, used for troubleshooting and tracing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req-1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful. The value is true when the request succeeds.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +302,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * apiKey.
+             * <p>The currently active API Key for the service endpoint. The service reads this value from the gateway consumer in real time. AgentCore does not persist the plaintext. When calling the service endpoint, include this value in the request header specified by apiKeyName. Do not log this value or expose it in public configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-api-key-value</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -298,7 +313,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * apiKeyFingerprint.
+             * <p>The API Key fingerprint, which consists of the first 12 lowercase hexadecimal characters of the SHA-256 digest of the API Key. It can be used to identify the key version but cannot replace the API Key for authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b2520bf19231</p>
              */
             public Builder apiKeyFingerprint(String apiKeyFingerprint) {
                 this.apiKeyFingerprint = apiKeyFingerprint;
@@ -306,7 +324,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * apiKeyName.
+             * <p>The name of the HTTP request header used to pass the API Key. The value is currently fixed to x-api-key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x-api-key</p>
              */
             public Builder apiKeyName(String apiKeyName) {
                 this.apiKeyName = apiKeyName;
@@ -314,7 +335,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * apiKeySource.
+             * <p>The location where the API Key is passed. The value is currently fixed to Header, indicating that the API Key is passed through an HTTP request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Header</p>
              */
             public Builder apiKeySource(String apiKeySource) {
                 this.apiKeySource = apiKeySource;
@@ -322,7 +346,15 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * authenticationType.
+             * <p>The authentication type of the service endpoint. Valid values:</p>
+             * <ul>
+             * <li>NONE: Authentication is not enabled.</li>
+             * <li>API_KEY: API Key authentication is used.</li>
+             * </ul>
+             * <p>This operation succeeds only when the authentication type is API_KEY. Therefore, the value API_KEY is always returned in a successful response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API_KEY</p>
              */
             public Builder authenticationType(String authenticationType) {
                 this.authenticationType = authenticationType;
@@ -330,7 +362,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * serviceEndpointId.
+             * <p>The service endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>se-1</p>
              */
             public Builder serviceEndpointId(String serviceEndpointId) {
                 this.serviceEndpointId = serviceEndpointId;
@@ -338,7 +373,10 @@ public class GetServiceEndpointApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The ID of the workspace to which the service endpoint belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

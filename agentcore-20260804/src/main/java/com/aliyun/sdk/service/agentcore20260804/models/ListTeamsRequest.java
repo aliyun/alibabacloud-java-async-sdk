@@ -102,6 +102,7 @@ public class ListTeamsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -123,7 +127,10 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>The filter condition for fuzzy match by team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -132,7 +139,10 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dGVhbS1vZmZzZXQ6MTA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

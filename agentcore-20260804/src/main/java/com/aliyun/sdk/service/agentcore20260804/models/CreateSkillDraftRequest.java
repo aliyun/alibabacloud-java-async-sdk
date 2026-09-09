@@ -74,6 +74,7 @@ public class CreateSkillDraftRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class CreateSkillDraftRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(CreateSkillDraftRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -195,7 +196,10 @@ public class CreateSkillDraftRequest extends Request {
             } 
 
             /**
-             * basedOnVersion.
+             * <p>The version from which to fork the draft. If not specified, a new Skill is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder basedOnVersion(String basedOnVersion) {
                 this.basedOnVersion = basedOnVersion;
@@ -203,7 +207,10 @@ public class CreateSkillDraftRequest extends Request {
             }
 
             /**
-             * commitMsg.
+             * <p>The commit message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Initial version</p>
              */
             public Builder commitMsg(String commitMsg) {
                 this.commitMsg = commitMsg;
@@ -211,7 +218,10 @@ public class CreateSkillDraftRequest extends Request {
             }
 
             /**
-             * skillCard.
+             * <p>The Skill card JSON string that contains the complete Skill information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;customer-service-skill&quot;,&quot;description&quot;:&quot;...&quot;}</p>
              */
             public Builder skillCard(String skillCard) {
                 this.skillCard = skillCard;
@@ -219,6 +229,7 @@ public class CreateSkillDraftRequest extends Request {
             }
 
             /**
+             * <p>The Skill name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -230,7 +241,10 @@ public class CreateSkillDraftRequest extends Request {
             }
 
             /**
-             * targetVersion.
+             * <p>The draft version number to assign. If not specified, the version number is automatically incremented.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.2</p>
              */
             public Builder targetVersion(String targetVersion) {
                 this.targetVersion = targetVersion;

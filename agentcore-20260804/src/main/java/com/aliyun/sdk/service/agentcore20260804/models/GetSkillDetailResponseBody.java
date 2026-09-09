@@ -67,7 +67,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * author.
+             * <p>The version author.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder author(String author) {
                 this.author = author;
@@ -240,7 +246,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * commitMsg.
+             * <p>The commit message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Update documentation</p>
              */
             public Builder commitMsg(String commitMsg) {
                 this.commitMsg = commitMsg;
@@ -248,7 +257,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787671022000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -256,7 +268,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A sample description that explains the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -264,7 +279,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * downloadCount.
+             * <p>The download count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder downloadCount(Long downloadCount) {
                 this.downloadCount = downloadCount;
@@ -272,7 +290,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * publishPipelineInfo.
+             * <p>The publish pipeline information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;status&quot;:&quot;SUCCESS&quot;}</p>
              */
             public Builder publishPipelineInfo(String publishPipelineInfo) {
                 this.publishPipelineInfo = publishPipelineInfo;
@@ -280,7 +301,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -288,7 +312,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787671022000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -296,7 +323,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -545,7 +575,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * bizTags.
+             * <p>The business tag JSON array string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample property value</p>
              */
             public Builder bizTags(String bizTags) {
                 this.bizTags = bizTags;
@@ -553,7 +586,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A sample description that explains the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -561,7 +597,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * downloadCount.
+             * <p>The total number of downloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder downloadCount(Long downloadCount) {
                 this.downloadCount = downloadCount;
@@ -569,7 +608,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * editingVersion.
+             * <p>The version currently being edited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder editingVersion(String editingVersion) {
                 this.editingVersion = editingVersion;
@@ -577,7 +619,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the Skill is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -585,7 +627,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * from.
+             * <p>The source tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPLOAD</p>
              */
             public Builder from(String from) {
                 this.from = from;
@@ -593,7 +638,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * labels.
+             * <p>The label mapping.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -601,7 +646,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skill-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -609,7 +657,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * onlineCnt.
+             * <p>The number of online versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onlineCnt(Integer onlineCnt) {
                 this.onlineCnt = onlineCnt;
@@ -617,7 +668,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * owner.
+             * <p>The resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -625,7 +679,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * reviewingVersion.
+             * <p>The version currently under review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder reviewingVersion(String reviewingVersion) {
                 this.reviewingVersion = reviewingVersion;
@@ -633,7 +690,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * scope.
+             * <p>The visibility scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -641,7 +701,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787671022000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -649,7 +712,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * versions.
+             * <p>The list of all version summaries.</p>
              */
             public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;
@@ -657,7 +720,10 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1234567890abcdef</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -665,7 +731,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * writeable.
+             * <p>Indicates whether the current user has write permissions.</p>
              */
             public Builder writeable(Boolean writeable) {
                 this.writeable = writeable;

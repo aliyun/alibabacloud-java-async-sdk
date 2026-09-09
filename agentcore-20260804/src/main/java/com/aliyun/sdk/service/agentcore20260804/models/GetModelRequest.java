@@ -75,6 +75,7 @@ public class GetModelRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetModelRequest extends Request {
         }
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

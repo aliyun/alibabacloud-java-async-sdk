@@ -119,7 +119,10 @@ public class GetModelResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. A value of SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The model details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The request processing result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetModelResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -303,7 +315,7 @@ public class GetModelResponseBody extends TeaModel {
             } 
 
             /**
-             * audio.
+             * <p>Indicates whether the model supports audio input or output.</p>
              */
             public Builder audio(Boolean audio) {
                 this.audio = audio;
@@ -311,7 +323,7 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * document.
+             * <p>Indicates whether the model supports document input.</p>
              */
             public Builder document(Boolean document) {
                 this.document = document;
@@ -319,7 +331,7 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * multiToolCall.
+             * <p>Indicates whether the model is able to invoke multiple tool calling requests in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -327,7 +339,7 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * reasoning.
+             * <p>Indicates whether the model supports reasoning capabilities.</p>
              */
             public Builder reasoning(Boolean reasoning) {
                 this.reasoning = reasoning;
@@ -335,7 +347,7 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * streamToolCall.
+             * <p>Indicates whether the model supports streaming tool calling.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -343,7 +355,7 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * toolCall.
+             * <p>Indicates whether the model supports tool calling.</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -351,7 +363,7 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * video.
+             * <p>Indicates whether the model supports video input.</p>
              */
             public Builder video(Boolean video) {
                 this.video = video;
@@ -359,7 +371,7 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * vision.
+             * <p>Indicates whether the model supports image input.</p>
              */
             public Builder vision(Boolean vision) {
                 this.vision = vision;
@@ -543,7 +555,7 @@ public class GetModelResponseBody extends TeaModel {
             } 
 
             /**
-             * capabilities.
+             * <p>The model capability configuration.</p>
              */
             public Builder capabilities(Capabilities capabilities) {
                 this.capabilities = capabilities;
@@ -551,7 +563,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * connectionId.
+             * <p>The model connection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mc-1</p>
              */
             public Builder connectionId(String connectionId) {
                 this.connectionId = connectionId;
@@ -559,7 +574,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * contextSize.
+             * <p>The model context window size, in tokens. The value must be a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128000</p>
              */
             public Builder contextSize(Long contextSize) {
                 this.contextSize = contextSize;
@@ -567,7 +585,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-09T00:00:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -575,7 +596,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The model description, up to 255 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -583,7 +607,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * maxTokens.
+             * <p>The maximum number of output tokens supported per model generation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131072</p>
              */
             public Builder maxTokens(Long maxTokens) {
                 this.maxTokens = maxTokens;
@@ -591,7 +618,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * modelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-1</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -599,7 +629,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * modelName.
+             * <p>The upstream model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-max</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -607,7 +640,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -615,7 +651,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-09T00:00:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -623,7 +662,10 @@ public class GetModelResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

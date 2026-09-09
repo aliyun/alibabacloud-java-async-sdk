@@ -88,6 +88,7 @@ public class BatchDeleteModelsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class BatchDeleteModelsRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(BatchDeleteModelsRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -110,7 +111,10 @@ public class BatchDeleteModelsRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token used for idempotence. Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -166,6 +170,7 @@ public class BatchDeleteModelsRequest extends Request {
             } 
 
             /**
+             * <p>The list of model IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder modelIds(java.util.List<String> modelIds) {

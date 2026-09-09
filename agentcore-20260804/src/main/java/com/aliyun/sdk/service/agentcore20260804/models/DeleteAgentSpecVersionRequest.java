@@ -75,6 +75,7 @@ public class DeleteAgentSpecVersionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteAgentSpecVersionRequest extends Request {
         }
 
         /**
+         * <p>The unique name of the AgentSpec.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

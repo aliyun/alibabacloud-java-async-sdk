@@ -93,7 +93,10 @@ public class DataResourceValue extends TeaModel {
         } 
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentspec-example</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -101,7 +104,10 @@ public class DataResourceValue extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -109,7 +115,10 @@ public class DataResourceValue extends TeaModel {
         }
 
         /**
-         * content.
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample content</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -117,7 +126,7 @@ public class DataResourceValue extends TeaModel {
         }
 
         /**
-         * metadata.
+         * <p>The metadata.</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;

@@ -119,7 +119,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The updated credential information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class UpdateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -316,7 +328,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -324,7 +339,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * credentialId.
+             * <p>The credential ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cred-123456</p>
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -332,7 +350,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * credentialMetadata.
+             * <p>The masked credential content. If credentialType is set to apiKey, the apiKey value is returned as asterisks (*) of equal length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
              */
             public Builder credentialMetadata(String credentialMetadata) {
                 this.credentialMetadata = credentialMetadata;
@@ -340,7 +361,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * credentialType.
+             * <p>The credential type. Currently, only apiKey is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiKey</p>
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -348,7 +372,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The credential description. The description can be up to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API Key used for calling model services in the production environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -356,7 +383,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-api-key</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -364,7 +394,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID where the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -372,7 +405,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time of the most recent modification in UTC, formatted according to RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -380,7 +416,10 @@ public class UpdateCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

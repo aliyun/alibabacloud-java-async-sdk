@@ -104,6 +104,7 @@ public class SubmitSkillVersionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class SubmitSkillVersionRequest extends Request {
         }
 
         /**
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class SubmitSkillVersionRequest extends Request {
         }
 
         /**
+         * <p>The skill version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,7 @@ public class SubmitSkillVersionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(SubmitSkillVersionRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");

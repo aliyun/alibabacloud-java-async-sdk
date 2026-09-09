@@ -89,6 +89,7 @@ public class DeleteModelConnectionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteModelConnectionRequest extends Request {
         }
 
         /**
+         * <p>The model connection ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeleteModelConnectionRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token for idempotence. Not currently supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

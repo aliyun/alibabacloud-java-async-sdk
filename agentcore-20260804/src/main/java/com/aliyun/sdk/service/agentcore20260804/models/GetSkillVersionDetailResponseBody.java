@@ -67,7 +67,7 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A sample description that explains the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -188,7 +194,10 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skill-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -196,7 +205,7 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * resource.
+             * <p>The resource mapping (key is the resource name).</p>
              */
             public Builder resource(java.util.Map<String, DataResourceValue> resource) {
                 this.resource = resource;
@@ -204,7 +213,11 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * skillMd.
+             * <p>The Skill card content (SKILL.md).</p>
+             * 
+             * <strong>example:</strong>
+             * <h1>Sample Skill</h1>
+             * <p>Used to demonstrate Skill document content</p>
              */
             public Builder skillMd(String skillMd) {
                 this.skillMd = skillMd;
@@ -212,7 +225,10 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1234567890abcdef</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

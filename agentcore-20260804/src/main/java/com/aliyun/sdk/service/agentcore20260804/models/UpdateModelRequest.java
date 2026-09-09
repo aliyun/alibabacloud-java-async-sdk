@@ -103,6 +103,7 @@ public class UpdateModelRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for updating the model. At least one non-null parameter must be provided among description, contextSize, maxTokens, and capabilities.</p>
          */
         public Builder body(UpdateModelRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -137,7 +139,10 @@ public class UpdateModelRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token for idempotence. Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -193,6 +198,7 @@ public class UpdateModelRequest extends Request {
             } 
 
             /**
+             * <p>The model description. The maximum length is 255 characters after leading and trailing whitespace is removed. Pass an empty string to clear the description. If this parameter is not provided or set to null, the original value is retained. Modifying only the description does not refresh the model configuration of associated agents.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

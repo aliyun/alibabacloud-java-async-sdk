@@ -116,6 +116,7 @@ public class ListModelsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * connectionId.
+         * <p>The model connection ID used to filter models.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc-1</p>
          */
         public Builder connectionId(String connectionId) {
             this.putQueryParameter("connectionId", connectionId);
@@ -137,7 +141,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of results per page. Valid values: 0 to 100. If this parameter is not set or set to 0, the default value 10 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -146,7 +153,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * modelName.
+         * <p>The upstream model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-max</p>
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("modelName", modelName);
@@ -155,7 +165,10 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Pass the token returned from the previous query. An empty response indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWw6MTA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

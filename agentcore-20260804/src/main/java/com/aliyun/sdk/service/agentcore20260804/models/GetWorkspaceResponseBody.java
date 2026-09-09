@@ -119,7 +119,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The workspace details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * enabled.
+             * <p>Indicates whether the VPC network is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -246,7 +264,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The list of vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -254,7 +272,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The ID of the user VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1234567890</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -308,7 +329,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * vpc.
+             * <p>The user VPC network configuration.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -453,7 +474,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-06T03:56:56Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -461,7 +485,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production-agents</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -469,7 +496,7 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * networkConfiguration.
+             * <p>The workspace network configuration.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;
@@ -477,7 +504,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -485,7 +515,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The workspace status. Valid values: Initializing, InitializationFailed, Initialized, Deleting, Deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Initialized</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -493,7 +526,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * statusReason.
+             * <p>The reason for the workspace status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InitializationFailed: VPC not found</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -501,7 +537,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * tenantId.
+             * <p>The ID of the tenant to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tenant-123456</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -509,7 +548,10 @@ public class GetWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

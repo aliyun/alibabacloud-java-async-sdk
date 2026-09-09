@@ -103,6 +103,7 @@ public class UpdateExternalAgentRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateExternalAgentRequest extends Request {
         }
 
         /**
+         * <p>The external agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class UpdateExternalAgentRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UpdateExternalAgentRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -137,7 +139,10 @@ public class UpdateExternalAgentRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>A reserved idempotency token. The backend does not guarantee idempotency in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -207,6 +212,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
+             * <p>The model connection ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -218,6 +224,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
+             * <p>The upstream model name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -289,6 +296,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
+             * <p>The skill name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -300,7 +308,10 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * version.
+             * <p>The skill version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -368,6 +379,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
+             * <p>The name of the template in AI Registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -379,7 +391,10 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * version.
+             * <p>The version of the template in AI Registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -433,7 +448,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
-             * aiRegistry.
+             * <p>The AI Registry template configuration.</p>
              */
             public Builder aiRegistry(AiRegistry aiRegistry) {
                 this.aiRegistry = aiRegistry;
@@ -502,6 +517,7 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
+             * <p>The tool name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -513,6 +529,10 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
+             * <p>The tool type. Valid values:</p>
+             * <ul>
+             * <li>MCP: MCP tool.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -661,7 +681,10 @@ public class UpdateExternalAgentRequest extends Request {
             } 
 
             /**
-             * description.
+             * <p>The description of the external agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A code review agent running in the user environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -669,7 +692,10 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * instruction.
+             * <p>The agent instruction that guides the behavior of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a code review assistant</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -677,7 +703,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * model.
+             * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -685,7 +711,14 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * modelSource.
+             * <p>The source of the model configuration. Valid values:</p>
+             * <ul>
+             * <li>PLATFORM: The model configuration is parsed and distributed by the platform. You can specify the model parameter.</li>
+             * <li>RUNTIME: The model is managed by the external runtime. You cannot specify the model parameter at the same time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PLATFORM</p>
              */
             public Builder modelSource(String modelSource) {
                 this.modelSource = modelSource;
@@ -693,10 +726,10 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the external agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>code-reviewer</p>
+             * <p>my-external-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -704,7 +737,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * skills.
+             * <p>The list of skill configurations.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -712,7 +745,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * template.
+             * <p>The agent template configuration.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -720,7 +753,7 @@ public class UpdateExternalAgentRequest extends Request {
             }
 
             /**
-             * tools.
+             * <p>The list of tool configurations.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;

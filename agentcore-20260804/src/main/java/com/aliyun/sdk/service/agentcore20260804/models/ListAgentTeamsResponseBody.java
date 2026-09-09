@@ -158,7 +158,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of agent-team membership relationships.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The number of records returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The cursor used to retrieve the next page. An empty value indicates that no more data is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dXNlci1vZmZzZXQ6MTA</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,7 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +240,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records that match the conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -314,7 +335,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-123456</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -322,7 +346,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * teamId.
+             * <p>The team ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team-123456</p>
              */
             public Builder teamId(String teamId) {
                 this.teamId = teamId;
@@ -330,7 +357,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * teamName.
+             * <p>The team name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default Team</p>
              */
             public Builder teamName(String teamName) {
                 this.teamName = teamName;
@@ -338,7 +368,10 @@ public class ListAgentTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * teamRole.
+             * <p>The role of the agent in the team.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MEMBER</p>
              */
             public Builder teamRole(String teamRole) {
                 this.teamRole = teamRole;

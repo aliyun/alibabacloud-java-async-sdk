@@ -60,6 +60,7 @@ public class ListPredefinedModelsRequest extends Request {
         } 
 
         /**
+         * <p>The model provider type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

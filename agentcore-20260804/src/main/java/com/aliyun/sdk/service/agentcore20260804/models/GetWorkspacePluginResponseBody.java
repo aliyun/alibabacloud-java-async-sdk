@@ -119,7 +119,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The plug-in details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +250,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * agentSpaceName.
+             * <p>The AgentSpace name associated with the AgentLoop plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentcore-ws-123456</p>
              */
             public Builder agentSpaceName(String agentSpaceName) {
                 this.agentSpaceName = agentSpaceName;
@@ -246,7 +261,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time of the AgentSpace in UTC in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -254,7 +272,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID where the AgentSpace resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -308,7 +329,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * enabled.
+             * <p>Indicates whether public network access is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -388,7 +412,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>表示 collaboration 插件当前是否启用 VPC 网络。</p>
+             * <p>Indicates whether VPC network access is enabled for the collaboration plug-in.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -399,7 +423,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The list of vSwitch IDs used for plug-in deployment.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -407,7 +431,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID used for plug-in deployment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1example</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -474,7 +501,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * internet.
+             * <p>The public network access configuration.</p>
              */
             public Builder internet(Internet internet) {
                 this.internet = internet;
@@ -482,7 +509,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * vpc.
+             * <p>The user VPC configuration.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -549,7 +576,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * agentLoop.
+             * <p>The AgentLoop plug-in configuration.</p>
              */
             public Builder agentLoop(AgentLoop agentLoop) {
                 this.agentLoop = agentLoop;
@@ -557,7 +584,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * network.
+             * <p>The network configuration of the plug-in, including public network access configuration and VPC configuration.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -663,7 +690,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>插件当前生效的用户可配置属性。插件未安装时该字段为空。</p>
+             * <p>The user-configurable properties currently in effect for the plug-in. This field is empty if the plug-in is not installed.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -671,10 +698,7 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * <p>表示 collaboration 插件当前是否启用 VPC 网络。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * <p>Indicates whether the plug-in is enabled. The value is true when the status is ENABLED.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -682,7 +706,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * pluginName.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>collaboration</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -690,7 +717,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The plug-in status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, DISABLE_FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -698,7 +728,10 @@ public class GetWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

@@ -75,6 +75,7 @@ public class GetIdentityProviderRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetIdentityProviderRequest extends Request {
         }
 
         /**
+         * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

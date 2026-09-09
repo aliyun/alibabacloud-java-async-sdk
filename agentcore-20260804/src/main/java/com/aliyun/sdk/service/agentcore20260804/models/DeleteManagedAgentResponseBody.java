@@ -119,7 +119,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The summary information of the managed agent after deletion.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The result message of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -355,7 +370,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The managed agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-1</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -363,7 +381,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * createMode.
+             * <p>The creation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder createMode(String createMode) {
                 this.createMode = createMode;
@@ -371,7 +392,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -379,7 +403,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * deployType.
+             * <p>The deployment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -387,7 +414,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the managed agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An agent for code review</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -395,7 +425,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * effectiveSpecVersion.
+             * <p>The effective specification version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder effectiveSpecVersion(Long effectiveSpecVersion) {
                 this.effectiveSpecVersion = effectiveSpecVersion;
@@ -403,7 +436,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * latestSpecVersion.
+             * <p>The latest specification version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder latestSpecVersion(Long latestSpecVersion) {
                 this.latestSpecVersion = latestSpecVersion;
@@ -411,7 +447,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the managed agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -419,7 +458,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * runtime.
+             * <p>The runtime type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -427,7 +469,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the managed agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -435,7 +480,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -443,7 +491,10 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

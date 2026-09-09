@@ -158,7 +158,10 @@ public class ListCredentialsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of credentials.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page that takes effect for this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. This value is empty if no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,7 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +240,10 @@ public class ListCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of credentials that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -392,7 +413,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             } 
 
             /**
-             * boundAgentsCounts.
+             * <p>The number of agents bound to this credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder boundAgentsCounts(Integer boundAgentsCounts) {
                 this.boundAgentsCounts = boundAgentsCounts;
@@ -400,7 +424,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -408,7 +435,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * credentialId.
+             * <p>The credential ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cred-123456</p>
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -416,7 +446,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * credentialMetadata.
+             * <p>The masked content of the credential. When credentialType is apiKey, the apiKey value is returned with equal-length asterisks (*).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;apiKey&quot;:&quot;****************&quot;}</p>
              */
             public Builder credentialMetadata(String credentialMetadata) {
                 this.credentialMetadata = credentialMetadata;
@@ -424,7 +457,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * credentialType.
+             * <p>The credential type. Currently, only apiKey is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiKey</p>
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -432,7 +468,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The credential description. The description can be up to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API Key used for calling model services in the production environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -440,7 +479,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-api-key</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -448,7 +490,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -456,7 +501,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time of the last modification in UTC, formatted according to RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -464,7 +512,10 @@ public class ListCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

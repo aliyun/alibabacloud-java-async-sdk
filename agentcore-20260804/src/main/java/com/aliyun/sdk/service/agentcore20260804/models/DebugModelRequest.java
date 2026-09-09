@@ -89,6 +89,7 @@ public class DebugModelRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DebugModelRequest extends Request {
         }
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class DebugModelRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(DebugModelRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -170,6 +172,7 @@ public class DebugModelRequest extends Request {
             } 
 
             /**
+             * <p>The prompt used to verify the model call chain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -88,6 +88,7 @@ public class ListExternalAgentsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class ListExternalAgentsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -109,7 +113,10 @@ public class ListExternalAgentsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. You do not need to specify this parameter for the first request. For subsequent requests, use the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-token-1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

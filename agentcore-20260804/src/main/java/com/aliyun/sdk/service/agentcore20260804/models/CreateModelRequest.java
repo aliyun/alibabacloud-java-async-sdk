@@ -88,6 +88,7 @@ public class CreateModelRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(CreateModelRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -110,7 +111,10 @@ public class CreateModelRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token for idempotence. Not currently supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -256,7 +260,7 @@ public class CreateModelRequest extends Request {
             } 
 
             /**
-             * audio.
+             * <p>Specifies whether the model supports audio input or output.</p>
              */
             public Builder audio(Boolean audio) {
                 this.audio = audio;
@@ -264,7 +268,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * document.
+             * <p>Specifies whether the model supports document input.</p>
              */
             public Builder document(Boolean document) {
                 this.document = document;
@@ -272,7 +276,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * multiToolCall.
+             * <p>Specifies whether the model is able to invoke multiple tools in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -280,7 +284,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * reasoning.
+             * <p>Specifies whether the model supports reasoning capabilities.</p>
              */
             public Builder reasoning(Boolean reasoning) {
                 this.reasoning = reasoning;
@@ -288,7 +292,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * streamToolCall.
+             * <p>Specifies whether the model supports streaming tool calling.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -296,7 +300,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * toolCall.
+             * <p>Specifies whether the model supports tool calling.</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -304,7 +308,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * video.
+             * <p>Specifies whether the model supports video input.</p>
              */
             public Builder video(Boolean video) {
                 this.video = video;
@@ -312,7 +316,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * vision.
+             * <p>Specifies whether the model supports image input.</p>
              */
             public Builder vision(Boolean vision) {
                 this.vision = vision;
@@ -433,7 +437,7 @@ public class CreateModelRequest extends Request {
             } 
 
             /**
-             * capabilities.
+             * <p>The model capability configuration.</p>
              */
             public Builder capabilities(Capabilities capabilities) {
                 this.capabilities = capabilities;
@@ -441,6 +445,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
+             * <p>The model connection ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -452,7 +457,10 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * contextSize.
+             * <p>The model context window size, in tokens. The value must be a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128000</p>
              */
             public Builder contextSize(Long contextSize) {
                 this.contextSize = contextSize;
@@ -460,7 +468,10 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The model description. Maximum length: 255 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -468,7 +479,10 @@ public class CreateModelRequest extends Request {
             }
 
             /**
-             * maxTokens.
+             * <p>The maximum number of output tokens supported per model generation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131072</p>
              */
             public Builder maxTokens(Long maxTokens) {
                 this.maxTokens = maxTokens;
@@ -476,6 +490,7 @@ public class CreateModelRequest extends Request {
             }
 
             /**
+             * <p>The upstream model name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

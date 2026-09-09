@@ -158,7 +158,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list data.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-page-token</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,7 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +240,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -314,7 +335,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * inputSchema.
+             * <p>The input parameter schema of the tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;}</p>
              */
             public Builder inputSchema(String inputSchema) {
                 this.inputSchema = inputSchema;
@@ -322,7 +346,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
             }
 
             /**
-             * outputSchema.
+             * <p>The output parameter schema of the tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;}</p>
              */
             public Builder outputSchema(String outputSchema) {
                 this.outputSchema = outputSchema;
@@ -330,7 +357,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
             }
 
             /**
-             * toolDescription.
+             * <p>The MCP tool description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Get the current time</p>
              */
             public Builder toolDescription(String toolDescription) {
                 this.toolDescription = toolDescription;
@@ -338,7 +368,10 @@ public class ListMcpToolsResponseBody extends TeaModel {
             }
 
             /**
-             * toolName.
+             * <p>The MCP tool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>get-current-time</p>
              */
             public Builder toolName(String toolName) {
                 this.toolName = toolName;

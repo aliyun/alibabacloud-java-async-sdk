@@ -119,7 +119,10 @@ public class DeleteCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DeleteCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The deleted credential information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DeleteCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DeleteCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DeleteCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class DeleteCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +250,10 @@ public class DeleteCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * credentialId.
+             * <p>The credential ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cred-123456</p>
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -246,7 +261,10 @@ public class DeleteCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods (.), underscores (_), and hyphens (-). The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-api-key</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +272,10 @@ public class DeleteCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

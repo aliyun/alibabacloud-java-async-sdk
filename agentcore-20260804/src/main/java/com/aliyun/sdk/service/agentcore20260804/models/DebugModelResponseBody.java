@@ -119,7 +119,10 @@ public class DebugModelResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DebugModelResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The model debugging result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DebugModelResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DebugModelResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The request processing result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DebugModelResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class DebugModelResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -329,7 +341,10 @@ public class DebugModelResponseBody extends TeaModel {
             } 
 
             /**
-             * connectionId.
+             * <p>The model connection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mc-1</p>
              */
             public Builder connectionId(String connectionId) {
                 this.connectionId = connectionId;
@@ -337,7 +352,7 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * debugSuccess.
+             * <p>Indicates whether the model debugging was successful.</p>
              */
             public Builder debugSuccess(Boolean debugSuccess) {
                 this.debugSuccess = debugSuccess;
@@ -345,7 +360,7 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>调试失败时的错误码。取值：MODEL_CONNECTION_NOT_READY（模型连接尚未发布就绪）、MODEL_CONNECTION_TEST_FAILED（平台调用网关失败）、UPSTREAM_MODEL_NOT_FOUND（模型服务商侧不存在该模型）、UPSTREAM_UNAUTHORIZED（模型服务商拒绝所配置的凭证）、UPSTREAM_RATE_LIMITED（模型服务商限流）、UPSTREAM_SERVER_ERROR（模型服务商服务端错误）、UPSTREAM_HTTP_ERROR（模型服务商返回其它非成功状态）、UPSTREAM_EMPTY_RESPONSE（模型服务商返回空响应）、UPSTREAM_INVALID_RESPONSE（模型服务商响应格式非法）、UPSTREAM_MODEL_ERROR（模型服务商拒绝本次请求）、MODEL_RESPONSE_INVALID（响应解析失败）。</p>
+             * <p>The error code returned when debugging fails.</p>
              * 
              * <strong>example:</strong>
              * <p>UPSTREAM_MODEL_ERROR</p>
@@ -356,7 +371,7 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>调试失败时的错误描述，为固定脱敏文案，不透传模型服务商的原始错误详情。</p>
+             * <p>The error message returned when debugging fails.</p>
              * 
              * <strong>example:</strong>
              * <p>The model endpoint rejected the debug request.</p>
@@ -367,7 +382,10 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * inputTokens.
+             * <p>The number of input tokens consumed by this model debugging request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder inputTokens(Long inputTokens) {
                 this.inputTokens = inputTokens;
@@ -375,7 +393,10 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * latencyMs.
+             * <p>The time consumed by this model debugging call, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder latencyMs(Long latencyMs) {
                 this.latencyMs = latencyMs;
@@ -383,7 +404,10 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * modelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-1</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -391,7 +415,10 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * outputTokens.
+             * <p>The number of output tokens consumed by this model debugging response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder outputTokens(Long outputTokens) {
                 this.outputTokens = outputTokens;
@@ -399,7 +426,10 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * response.
+             * <p>The text response returned by the model when debugging succeeds. This value is empty when debugging fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder response(String response) {
                 this.response = response;
@@ -407,7 +437,7 @@ public class DebugModelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>调试结果状态。取值：NORMAL（正常）、ABNORMAL（异常）。</p>
+             * <p>The debug result status.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>

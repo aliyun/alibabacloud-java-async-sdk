@@ -104,6 +104,7 @@ public class SubmitAgentSpecVersionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class SubmitAgentSpecVersionRequest extends Request {
         }
 
         /**
+         * <p>The unique name of the AgentSpec.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class SubmitAgentSpecVersionRequest extends Request {
         }
 
         /**
+         * <p>The version number of the AgentSpec.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,7 @@ public class SubmitAgentSpecVersionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(SubmitAgentSpecVersionRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");

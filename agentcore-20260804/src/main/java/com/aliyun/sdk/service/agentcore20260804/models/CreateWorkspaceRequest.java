@@ -73,7 +73,7 @@ public class CreateWorkspaceRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request body for creating a workspace.</p>
          */
         public Builder body(CreateWorkspaceRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -83,7 +83,10 @@ public class CreateWorkspaceRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-create-20260805-001</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -164,7 +167,10 @@ public class CreateWorkspaceRequest extends Request {
             } 
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable VPC networking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -172,7 +178,7 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -180,7 +186,10 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * vpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1234567890</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -235,6 +244,7 @@ public class CreateWorkspaceRequest extends Request {
             } 
 
             /**
+             * <p>The VPC network configuration of the user.</p>
              * <p>This parameter is required.</p>
              */
             public Builder vpc(Vpc vpc) {
@@ -303,6 +313,7 @@ public class CreateWorkspaceRequest extends Request {
             } 
 
             /**
+             * <p>The workspace name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -314,7 +325,7 @@ public class CreateWorkspaceRequest extends Request {
             }
 
             /**
-             * networkConfiguration.
+             * <p>The network configuration of the workspace.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;

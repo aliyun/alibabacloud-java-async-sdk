@@ -88,6 +88,7 @@ public class CreateCredentialRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for creating a credential.</p>
          */
         public Builder body(CreateCredentialRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -110,7 +111,10 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not supported</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -207,6 +211,7 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
+             * <p>The credential content. The value is a JSON string. When credentialType is set to apiKey, the JSON string can contain only the apiKey field, and the value cannot be empty. After being written, the content can only be queried in masked form.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -218,6 +223,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
+             * <p>The credential type. Currently, only apiKey is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -229,7 +235,10 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The credential description. The description can be up to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API Key used for calling model services in the production environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -237,6 +246,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
+             * <p>The credential name. The name must be unique within the workspace and can contain only letters, digits, periods, underscores, and hyphens. The name must be 3 to 128 characters in length and cannot use runtime reserved names.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -158,7 +158,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. A value of SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of managed agents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;agentId&quot;:&quot;agent-xxxxxx&quot;,&quot;workspaceId&quot;:&quot;ws-xxxxxx&quot;,&quot;agentName&quot;:&quot;demo-agent&quot;,&quot;status&quot;:&quot;Running&quot;,&quot;template&quot;:{&quot;templateId&quot;:&quot;tpl-xxxxxx&quot;,&quot;templateVersion&quot;:&quot;v1.0.0&quot;},&quot;spec&quot;:{&quot;replicas&quot;:1,&quot;cpu&quot;:&quot;2&quot;,&quot;memory&quot;:&quot;4Gi&quot;},&quot;createTime&quot;:&quot;2026-01-01T00:00:00Z&quot;,&quot;updateTime&quot;:&quot;2026-01-01T00:00:00Z&quot;}]</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +191,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results returned for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +202,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +213,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page. An empty value indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-token-1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +224,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +235,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +246,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -418,7 +445,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The managed agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-1</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -426,7 +456,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * createMode.
+             * <p>The creation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder createMode(String createMode) {
                 this.createMode = createMode;
@@ -434,7 +467,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -442,7 +478,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * deployType.
+             * <p>The deployment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -450,7 +489,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the managed agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An agent for code review</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -458,7 +500,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * effectiveSpecVersion.
+             * <p>The effective specification version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder effectiveSpecVersion(Long effectiveSpecVersion) {
                 this.effectiveSpecVersion = effectiveSpecVersion;
@@ -466,7 +511,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * latestSpecVersion.
+             * <p>The latest specification version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder latestSpecVersion(Long latestSpecVersion) {
                 this.latestSpecVersion = latestSpecVersion;
@@ -474,7 +522,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The managed agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -482,7 +533,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * runtime.
+             * <p>The runtime type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -490,7 +544,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the managed agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -498,7 +555,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -506,7 +566,10 @@ public class ListManagedAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

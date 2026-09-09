@@ -75,6 +75,7 @@ public class DeleteManagedAgentRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteManagedAgentRequest extends Request {
         }
 
         /**
+         * <p>The managed agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

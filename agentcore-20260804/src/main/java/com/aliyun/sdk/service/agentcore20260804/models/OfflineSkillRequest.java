@@ -89,6 +89,7 @@ public class OfflineSkillRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class OfflineSkillRequest extends Request {
         }
 
         /**
+         * <p>The Skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class OfflineSkillRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(OfflineSkillRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -182,7 +184,14 @@ public class OfflineSkillRequest extends Request {
             } 
 
             /**
-             * scope.
+             * <p>The operation scope. Valid values:</p>
+             * <ul>
+             * <li>skill: the entire Skill.</li>
+             * <li>version: a specified version.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>version</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -190,7 +199,10 @@ public class OfflineSkillRequest extends Request {
             }
 
             /**
-             * skillVersion.
+             * <p>The Skill version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder skillVersion(String skillVersion) {
                 this.skillVersion = skillVersion;

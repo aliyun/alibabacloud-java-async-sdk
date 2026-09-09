@@ -58,6 +58,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</p>
+     * 
      * @param request the request parameters of BatchUploadSkillsViaOss  BatchUploadSkillsViaOssRequest
      * @return BatchUploadSkillsViaOssResponse
      */
@@ -77,7 +81,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>为指定 Agent 创建一个 IM 渠道。同一 Agent 的同一渠道类型最多存在一个。</p>
+     * <p>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</p>
      * 
      * @param request the request parameters of CreateAgentIMChannel  CreateAgentIMChannelRequest
      * @return CreateAgentIMChannelResponse
@@ -97,6 +101,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</p>
+     * 
      * @param request the request parameters of CreateAgentSpec  CreateAgentSpecRequest
      * @return CreateAgentSpecResponse
      */
@@ -115,6 +123,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</p>
+     * 
      * @param request the request parameters of CreateAgentSpecVersion  CreateAgentSpecVersionRequest
      * @return CreateAgentSpecVersionResponse
      */
@@ -151,6 +163,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an external agent in a specified workspace.</p>
+     * 
      * @param request the request parameters of CreateExternalAgent  CreateExternalAgentRequest
      * @return CreateExternalAgentResponse
      */
@@ -169,6 +184,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</p>
+     * 
      * @param request the request parameters of CreateExternalAgentBootstrapToken  CreateExternalAgentBootstrapTokenRequest
      * @return CreateExternalAgentBootstrapTokenResponse
      */
@@ -223,6 +241,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</p>
+     * 
      * @param request the request parameters of CreateMcp  CreateMcpRequest
      * @return CreateMcpResponse
      */
@@ -277,6 +299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</p>
+     * 
      * @param request the request parameters of CreateSkillDraft  CreateSkillDraftRequest
      * @return CreateSkillDraftResponse
      */
@@ -332,7 +358,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明\n创建 AgentCore 工作空间控制面记录。服务端在同一事务内完成 <code>Initializing</code> 到 <code>Initialized</code> 的状态转换。网络配置通过 <code>Enabled</code> 指定是否开启 VPC 网络，开启时必须提供 <code>VpcId</code> 和至少一个 <code>VSwitchIds</code>。\n</h2>
+     * <h2>Operation description\nCreates an AgentCore workspace control plane record. The server completes the state transition from <code>Initializing</code> to <code>Initialized</code> within the same transaction. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
      * 
      * @param request the request parameters of CreateWorkspace  CreateWorkspaceRequest
      * @return CreateWorkspaceResponse
@@ -370,6 +396,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes an IM channel of a specified agent.</p>
+     * 
      * @param request the request parameters of DeleteAgentIMChannel  DeleteAgentIMChannelRequest
      * @return DeleteAgentIMChannelResponse
      */
@@ -388,6 +417,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</p>
+     * 
      * @param request the request parameters of DeleteAgentSpec  DeleteAgentSpecRequest
      * @return DeleteAgentSpecResponse
      */
@@ -406,6 +439,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</p>
+     * 
      * @param request the request parameters of DeleteAgentSpecVersion  DeleteAgentSpecVersionRequest
      * @return DeleteAgentSpecVersionResponse
      */
@@ -442,6 +479,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified external agent.</p>
+     * 
      * @param request the request parameters of DeleteExternalAgent  DeleteExternalAgentRequest
      * @return DeleteExternalAgentResponse
      */
@@ -496,6 +536,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</p>
+     * 
      * @param request the request parameters of DeleteMcp  DeleteMcpRequest
      * @return DeleteMcpResponse
      */
@@ -550,6 +594,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
+     * 
      * @param request the request parameters of DeleteSkill  DeleteSkillRequest
      * @return DeleteSkillResponse
      */
@@ -568,6 +616,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Deletes the draft version currently being edited for a specified Skill.</p>
+     * 
      * @param request the request parameters of DeleteSkillDraft  DeleteSkillDraftRequest
      * @return DeleteSkillDraftResponse
      */
@@ -623,7 +675,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明\n删除指定工作空间控制面记录。服务端在同一事务内完成 <code>Deleting</code> 到 <code>Deleted</code> 的状态转换。重复删除处于 <code>Deleting</code> 或 <code>Deleted</code> 状态的工作空间时，服务端按幂等语义处理。\n</h2>
+     * <h2>Request description\nDeletes the control plane record of a specified workspace. The server completes the state transition from <code>Deleting</code> to <code>Deleted</code> within the same transaction. When you repeatedly delete a workspace that is in the <code>Deleting</code> or <code>Deleted</code> state, the server handles the request with idempotence semantics.\n.</h2>
      * 
      * @param request the request parameters of DeleteWorkspace  DeleteWorkspaceRequest
      * @return DeleteWorkspaceResponse
@@ -643,6 +695,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</p>
+     * 
      * @param request the request parameters of DownloadAgentSpecViaOss  DownloadAgentSpecViaOssRequest
      * @return DownloadAgentSpecViaOssResponse
      */
@@ -661,6 +717,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</p>
+     * 
      * @param request the request parameters of DownloadSkillVersionViaOss  DownloadSkillVersionViaOssRequest
      * @return DownloadSkillVersionViaOssResponse
      */
@@ -679,6 +739,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * 
      * @param request the request parameters of ForcePublishSkillVersion  ForcePublishSkillVersionRequest
      * @return ForcePublishSkillVersionResponse
      */
@@ -697,6 +761,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified agent IM channel.</p>
+     * 
      * @param request the request parameters of GetAgentIMChannel  GetAgentIMChannelRequest
      * @return GetAgentIMChannelResponse
      */
@@ -715,6 +782,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</p>
+     * 
      * @param request the request parameters of GetAgentSpec  GetAgentSpecRequest
      * @return GetAgentSpecResponse
      */
@@ -733,6 +804,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</p>
+     * 
      * @param request the request parameters of GetAgentSpecImportFileUrl  GetAgentSpecImportFileUrlRequest
      * @return GetAgentSpecImportFileUrlResponse
      */
@@ -751,6 +826,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</p>
+     * 
      * @param request the request parameters of GetAgentSpecLatest  GetAgentSpecLatestRequest
      * @return GetAgentSpecLatestResponse
      */
@@ -769,6 +848,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</p>
+     * 
      * @param request the request parameters of GetAgentSpecVersion  GetAgentSpecVersionRequest
      * @return GetAgentSpecVersionResponse
      */
@@ -805,6 +888,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a specified external agent.</p>
+     * 
      * @param request the request parameters of GetExternalAgent  GetExternalAgentRequest
      * @return GetExternalAgentResponse
      */
@@ -823,6 +909,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the available network types for a specified external agent.</p>
+     * 
      * @param request the request parameters of GetExternalAgentBootstrapOptions  GetExternalAgentBootstrapOptionsRequest
      * @return GetExternalAgentBootstrapOptionsResponse
      */
@@ -877,6 +966,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</p>
+     * 
      * @param request the request parameters of GetMcp  GetMcpRequest
      * @return GetMcpResponse
      */
@@ -931,6 +1024,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description\nQueries the details of a specified service endpoint. A service endpoint (ServiceEndpoint) provides a stable access URL for a specific agent version (AgentVersion) or workspace collaboration component. The response includes target routing, access URL list, authentication configuration, and current lifecycle status.\n.</h2>
+     * 
      * @param request the request parameters of GetServiceEndpoint  GetServiceEndpointRequest
      * @return GetServiceEndpointResponse
      */
@@ -949,6 +1045,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the currently active API Key for a specified service endpoint. The call succeeds only when the service endpoint has API_KEY authentication enabled and the gateway consumer and credentials are ready. The service reads the API Key from the gateway in real time. AgentCore does not persist the plaintext. Keep the returned API Key secure and avoid logging it or exposing it in public configurations.</p>
+     * 
      * @param request the request parameters of GetServiceEndpointApiKey  GetServiceEndpointApiKeyRequest
      * @return GetServiceEndpointApiKeyResponse
      */
@@ -967,6 +1066,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</p>
+     * 
      * @param request the request parameters of GetSkillDetail  GetSkillDetailRequest
      * @return GetSkillDetailResponse
      */
@@ -985,6 +1088,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</p>
+     * 
      * @param request the request parameters of GetSkillImportFileUrl  GetSkillImportFileUrlRequest
      * @return GetSkillImportFileUrlResponse
      */
@@ -1003,6 +1110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</p>
+     * 
      * @param request the request parameters of GetSkillVersionDetail  GetSkillVersionDetailRequest
      * @return GetSkillVersionDetailResponse
      */
@@ -1058,7 +1169,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明\n根据工作空间 ID 查询工作空间详情，包括生命周期状态、CMS Workspace、AIRegistry Namespace 和当前网络策略。\n</h2>
+     * <h2>Operation description\nQueries workspace details by workspace ID, including lifecycle status, CMS Workspace, AIRegistry Namespace, and current network policy.\n.</h2>
      * 
      * @param request the request parameters of GetWorkspace  GetWorkspaceRequest
      * @return GetWorkspaceResponse
@@ -1079,7 +1190,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询指定工作空间的插件状态。</p>
+     * <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
      * 
      * @param request the request parameters of GetWorkspacePlugin  GetWorkspacePluginRequest
      * @return GetWorkspacePluginResponse
@@ -1100,7 +1211,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明\n为指定的 AgentCore 工作空间安装插件。当前支持 <code>collaboration</code> 插件。插件配置通过 <code>Config</code> 参数传入，不同插件可以定义各自的配置结构。<code>collaboration</code> 插件使用 <code>Config.NetworkConfiguration</code> 指定 VPC 和公网访问策略。安装过程异步执行。对正在安装或已经安装的同名插件重复调用时，如果配置一致，接口按幂等语义返回当前状态；如果配置不同，接口返回操作冲突。\n</h2>
+     * <h2>Operation description\nInstalls a plugin for a specified AgentCore workspace. Currently supports the <code>collaboration</code> plugin. Plugin configuration is passed through the <code>Config</code> parameter, and different plugins can define their own configuration structures. The <code>collaboration</code> plugin uses <code>Config.NetworkConfiguration</code> to specify VPC and public network access policies. The installation process is executed asynchronously. When you repeatedly call this operation for a plugin with the same name that is being installed or already installed, the operation returns the current status with idempotent semantics if the configuration is the same. If the configuration is different, the operation returns an operation conflict error.\n.</h2>
      * 
      * @param request the request parameters of InstallWorkspacePlugin  InstallWorkspacePluginRequest
      * @return InstallWorkspacePluginResponse
@@ -1120,6 +1231,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the IM channel list of a specified agent.</p>
+     * 
      * @param request the request parameters of ListAgentIMChannels  ListAgentIMChannelsRequest
      * @return ListAgentIMChannelsResponse
      */
@@ -1138,6 +1252,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * 
      * @param request the request parameters of ListAgentSpecs  ListAgentSpecsRequest
      * @return ListAgentSpecsResponse
      */
@@ -1192,6 +1310,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of external agents in a specified workspace.</p>
+     * 
      * @param request the request parameters of ListExternalAgents  ListExternalAgentsRequest
      * @return ListExternalAgentsResponse
      */
@@ -1228,6 +1349,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of managed agents in a specified workspace by using paging. Returns summary information for each agent, including the identity, name, status, template, and specifications.</p>
+     * 
      * @param request the request parameters of ListManagedAgents  ListManagedAgentsRequest
      * @return ListManagedAgentsResponse
      */
@@ -1246,6 +1370,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</p>
+     * 
      * @param request the request parameters of ListMcpTools  ListMcpToolsRequest
      * @return ListMcpToolsResponse
      */
@@ -1265,7 +1393,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询指定 AgentCore 工作空间中的 MCP 服务。支持通过 <code>Name</code> 按名称筛选，并通过 <code>SearchType</code> 选择精确匹配或模糊匹配；支持通过 <code>MaxResults</code> 和 <code>NextToken</code> 分页查询。</p>
+     * <h2>Operation description</h2>
+     * <p>Queries MCP services and their configurations and statuses in a specified workspace by page.</p>
      * 
      * @param request the request parameters of ListMcps  ListMcpsRequest
      * @return ListMcpsResponse
@@ -1286,7 +1415,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询指定 AgentCore 工作空间中的模型连接。支持通过 <code>Name</code> 按名称筛选，并通过 <code>SearchType</code> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</p>
+     * <p>Queries model connections in a specified AgentCore workspace. Supports filtering by name through <code>Name</code> and selecting exact match or fuzzy match through <code>SearchType</code>. Also supports filtering by model provider type and invoke protocol, and supports paging.</p>
      * 
      * @param request the request parameters of ListModelConnections  ListModelConnectionsRequest
      * @return ListModelConnectionsResponse
@@ -1360,6 +1489,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+     * 
      * @param request the request parameters of ListServiceEndpoints  ListServiceEndpointsRequest
      * @return ListServiceEndpointsResponse
      */
@@ -1378,6 +1510,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</p>
+     * 
      * @param request the request parameters of ListSkills  ListSkillsRequest
      * @return ListSkillsResponse
      */
@@ -1433,7 +1569,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明\n分页查询当前租户下的工作空间。列表默认不返回状态为 <code>Deleted</code> 的软删除记录，结果按创建顺序由服务端稳定排序。通过 <code>nextToken</code> 获取下一页，通过 <code>skip</code> 跳过指定数量的工作空间，通过 <code>maxResults</code> 指定单页最大记录数，通过 <code>nameLike</code> 按工作空间名称模糊过滤。未指定 <code>maxResults</code> 或取值为 0 时，服务端默认返回 20 条。\n</h2>
+     * <h2>Request description\nQueries workspaces under the current tenant with paging. The list does not return soft-deleted records with a status of <code>Deleted</code> by default. Results are stably sorted by creation order on the server side. Use <code>nextToken</code> to retrieve the next page, <code>skip</code> to skip a specified number of workspaces, <code>maxResults</code> to specify the maximum number of records per page, and <code>nameLike</code> to filter workspaces by name using fuzzy match. If <code>maxResults</code> is not specified or is set to 0, the server returns 20 records by default.\n</h2>
      * 
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
@@ -1453,6 +1589,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</p>
+     * 
      * @param request the request parameters of OfflineSkill  OfflineSkillRequest
      * @return OfflineSkillResponse
      */
@@ -1471,6 +1611,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Sets a specified Skill version as the online version.</p>
+     * 
      * @param request the request parameters of OnlineSkill  OnlineSkillRequest
      * @return OnlineSkillResponse
      */
@@ -1489,6 +1633,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</p>
+     * 
      * @param request the request parameters of PrecheckSkillUploadViaOss  PrecheckSkillUploadViaOssRequest
      * @return PrecheckSkillUploadViaOssResponse
      */
@@ -1507,6 +1655,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * 
      * @param request the request parameters of PublishSkillVersion  PublishSkillVersionRequest
      * @return PublishSkillVersionResponse
      */
@@ -1525,6 +1677,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Converts a specified Skill version back into an editable draft for further modifications.</p>
+     * 
      * @param request the request parameters of RedraftSkillVersion  RedraftSkillVersionRequest
      * @return RedraftSkillVersionResponse
      */
@@ -1561,6 +1717,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</p>
+     * 
      * @param request the request parameters of SubmitAgentSpecVersion  SubmitAgentSpecVersionRequest
      * @return SubmitAgentSpecVersionResponse
      */
@@ -1579,6 +1739,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Submits a specified draft version of a skill for review.</p>
+     * 
      * @param request the request parameters of SubmitSkillVersion  SubmitSkillVersionRequest
      * @return SubmitSkillVersionResponse
      */
@@ -1598,7 +1762,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>更新 IM 渠道绑定的 ServiceEndpoint、启停状态或渠道行为配置。至少需要提供一个可更新字段。</p>
+     * <p>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</p>
      * 
      * @param request the request parameters of UpdateAgentIMChannel  UpdateAgentIMChannelRequest
      * @return UpdateAgentIMChannelResponse
@@ -1619,7 +1783,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>全量更新指定 IM 渠道的渠道凭据。Secret 不会在响应中回显。</p>
+     * <p>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</p>
      * 
      * @param request the request parameters of UpdateAgentIMChannelCredential  UpdateAgentIMChannelCredentialRequest
      * @return UpdateAgentIMChannelCredentialResponse
@@ -1639,6 +1803,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</p>
+     * 
      * @param request the request parameters of UpdateAgentSpec  UpdateAgentSpecRequest
      * @return UpdateAgentSpecResponse
      */
@@ -1675,6 +1843,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the configuration of a specified external agent.</p>
+     * 
      * @param request the request parameters of UpdateExternalAgent  UpdateExternalAgentRequest
      * @return UpdateExternalAgentResponse
      */
@@ -1730,7 +1901,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>更新 MCP 的可变配置。type 与 protocol 在创建后不可修改，更新请求中不要传入这两个字段。</p>
+     * <h2>Operation description</h2>
+     * <p>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</p>
      * 
      * @param request the request parameters of UpdateMcp  UpdateMcpRequest
      * @return UpdateMcpResponse
@@ -1750,6 +1922,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation updates description, contextSize, maxTokens, and capabilities. At least one non-null parameter must be provided. Parameters that are not provided or set to null retain their original values. The capabilities object is replaced as a whole. Capability fields not included in the object are treated as false.
+     * Modifying only description does not refresh the model configuration of associated agents. When contextSize, maxTokens, or capabilities actually change, the system asynchronously refreshes managed agents that reference the model within the same workspace, as well as external agents whose model source is PLATFORM. External agents whose model source is RUNTIME are not affected. Submitting the same configuration repeatedly does not trigger a new model configuration refresh.
+     * A successful response indicates that the model configuration has been saved. It does not indicate that associated agents have completed the configuration refresh or that the runtime has loaded the new configuration. Call GetModel to query the saved model configuration.</p>
+     * 
      * @param request the request parameters of UpdateModel  UpdateModelRequest
      * @return UpdateModelResponse
      */
@@ -1786,6 +1963,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</p>
+     * 
      * @param request the request parameters of UpdateSkillBizTags  UpdateSkillBizTagsRequest
      * @return UpdateSkillBizTagsResponse
      */
@@ -1804,6 +1985,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Updates the version labels and their mappings for a specified Skill.</p>
+     * 
      * @param request the request parameters of UpdateSkillLabels  UpdateSkillLabelsRequest
      * @return UpdateSkillLabelsResponse
      */
@@ -1822,6 +2007,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>Updates the visibility scope of a specified skill.</p>
+     * 
      * @param request the request parameters of UpdateSkillScope  UpdateSkillScopeRequest
      * @return UpdateSkillScopeResponse
      */
@@ -1877,7 +2066,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明\n更新工作空间名称或网络配置。只有状态为 <code>Initialized</code> 的工作空间允许更新。<code>Status</code>、<code>TenantId</code> 和 <code>RegionId</code> 由服务端维护，不允许通过本接口修改。网络配置通过 <code>Enabled</code> 指定是否开启 VPC 网络，开启时必须同时提供 <code>VpcId</code> 和至少一个 <code>VSwitchIds</code>。\n</h2>
+     * <h2>Operation description\nUpdates the name or network configuration of a workspace. Only workspaces in the <code>Initialized</code> status can be updated. <code>Status</code>, <code>TenantId</code>, and <code>RegionId</code> are maintained by the server and cannot be modified through this operation. The network configuration uses <code>Enabled</code> to specify whether to enable VPC networking. When enabled, you must also provide <code>VpcId</code> and at least one <code>VSwitchIds</code>.\n.</h2>
      * 
      * @param request the request parameters of UpdateWorkspace  UpdateWorkspaceRequest
      * @return UpdateWorkspaceResponse
@@ -1897,6 +2086,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</p>
+     * 
      * @param request the request parameters of UploadAgentSpecViaOss  UploadAgentSpecViaOssRequest
      * @return UploadAgentSpecViaOssResponse
      */
@@ -1915,6 +2108,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</p>
+     * 
      * @param request the request parameters of UploadSkillViaOss  UploadSkillViaOssRequest
      * @return UploadSkillViaOssResponse
      */

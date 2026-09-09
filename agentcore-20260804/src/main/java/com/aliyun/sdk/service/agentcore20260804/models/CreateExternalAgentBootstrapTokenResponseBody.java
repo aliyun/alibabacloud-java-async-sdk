@@ -119,7 +119,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The Bootstrap Token and CMS configuration required for connecting the external agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The message indicating the request processing result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +250,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * endpoint.
+             * <p>The CMS reporting endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://public.example.com/apm/trace/opentelemetry">https://public.example.com/apm/trace/opentelemetry</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -246,7 +261,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * licenseKey.
+             * <p>The license key used for CMS connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>license-key</p>
              */
             public Builder licenseKey(String licenseKey) {
                 this.licenseKey = licenseKey;
@@ -254,7 +272,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The CMS workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms-workspace</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;
@@ -373,7 +394,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The external agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-1</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -381,7 +405,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * bootstrapToken.
+             * <p>The Bootstrap Token used for connecting the external agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bootstrap-token</p>
              */
             public Builder bootstrapToken(String bootstrapToken) {
                 this.bootstrapToken = bootstrapToken;
@@ -389,7 +416,7 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * cms.
+             * <p>The CMS configuration used for connecting the external agent.</p>
              */
             public Builder cms(Cms cms) {
                 this.cms = cms;
@@ -397,7 +424,14 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * networkType.
+             * <p>The network type for connection. Valid values:</p>
+             * <ul>
+             * <li>INTERNET: public network</li>
+             * <li>INTRANET: internal network</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERNET</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -405,7 +439,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * tokenFingerprint.
+             * <p>The fingerprint of the Bootstrap Token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fingerprint</p>
              */
             public Builder tokenFingerprint(String tokenFingerprint) {
                 this.tokenFingerprint = tokenFingerprint;
@@ -413,7 +450,10 @@ public class CreateExternalAgentBootstrapTokenResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

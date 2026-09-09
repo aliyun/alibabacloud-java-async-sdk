@@ -67,7 +67,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             } 
 
             /**
-             * author.
+             * <p>The version author.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder author(String author) {
                 this.author = author;
@@ -227,7 +233,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787671022000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -235,7 +244,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A sample description that explains the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +255,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * downloadCount.
+             * <p>The number of downloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder downloadCount(Long downloadCount) {
                 this.downloadCount = downloadCount;
@@ -251,7 +266,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * publishPipelineInfo.
+             * <p>The publish pipeline information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;status&quot;:&quot;SUCCESS&quot;}</p>
              */
             public Builder publishPipelineInfo(String publishPipelineInfo) {
                 this.publishPipelineInfo = publishPipelineInfo;
@@ -259,7 +277,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -267,7 +288,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787671022000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -275,7 +299,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -485,7 +512,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             } 
 
             /**
-             * bizTags.
+             * <p>The business tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample property value</p>
              */
             public Builder bizTags(String bizTags) {
                 this.bizTags = bizTags;
@@ -493,7 +523,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A sample description that explains the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -501,7 +534,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * downloadCount.
+             * <p>The number of downloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder downloadCount(Long downloadCount) {
                 this.downloadCount = downloadCount;
@@ -509,7 +545,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * editingVersion.
+             * <p>The version that is currently being edited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder editingVersion(String editingVersion) {
                 this.editingVersion = editingVersion;
@@ -517,7 +556,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the AgentSpec is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -525,7 +564,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * from.
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPLOAD</p>
              */
             public Builder from(String from) {
                 this.from = from;
@@ -533,7 +575,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * labels.
+             * <p>The version labels.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -541,7 +583,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentspec-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -549,7 +594,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * onlineCnt.
+             * <p>The number of online versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onlineCnt(Integer onlineCnt) {
                 this.onlineCnt = onlineCnt;
@@ -557,7 +605,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * reviewingVersion.
+             * <p>The version that is currently under review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder reviewingVersion(String reviewingVersion) {
                 this.reviewingVersion = reviewingVersion;
@@ -565,7 +616,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * scope.
+             * <p>The visibility scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -573,7 +627,10 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787671022000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -581,7 +638,7 @@ public class GetAgentSpecResponseBody extends TeaModel {
             }
 
             /**
-             * versions.
+             * <p>The list of version summaries.</p>
              */
             public Builder versions(java.util.List<Versions> versions) {
                 this.versions = versions;

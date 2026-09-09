@@ -158,7 +158,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of external identity providers.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page that takes effect for this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. This parameter is empty if no more pages exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aWRlbnRpdHktcHJvdmlkZXItb2Zmc2V0OjEw</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +240,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of external identity providers that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -301,7 +322,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * appId.
+             * <p>The App ID of the Lark application. Required when the binding type is Feishu.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cli_exampleappid01</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -309,7 +333,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * appKey.
+             * <p>The AppKey of the DingTalk application. Required when the binding type is DingTalk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingexampleappkey01</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -317,7 +344,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * corpId.
+             * <p>The CorpId of the DingTalk enterprise. Required when the binding type is DingTalk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingexamplecorpid01</p>
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -488,7 +518,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -496,7 +529,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * eventSubscriptionCallbackUrl.
+             * <p>The event subscription callback URL. Configure this URL in the external identity provider application to receive organization change events. An empty string is returned if the user pool has not been provisioned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></p>
              */
             public Builder eventSubscriptionCallbackUrl(String eventSubscriptionCallbackUrl) {
                 this.eventSubscriptionCallbackUrl = eventSubscriptionCallbackUrl;
@@ -504,7 +540,14 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * identityProviderType.
+             * <p>The type of the external identity provider. Valid values:</p>
+             * <ul>
+             * <li>DingTalk</li>
+             * <li>Feishu</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder identityProviderType(String identityProviderType) {
                 this.identityProviderType = identityProviderType;
@@ -512,7 +555,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * loginCallbackUrl.
+             * <p>The logon callback URL. Configure this URL in the external identity provider application. An empty string is returned if the user pool has not been provisioned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></p>
              */
             public Builder loginCallbackUrl(String loginCallbackUrl) {
                 this.loginCallbackUrl = loginCallbackUrl;
@@ -520,7 +566,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * loginEnabled.
+             * <p>Indicates whether workspace users are allowed to log on through this external identity provider.</p>
              */
             public Builder loginEnabled(Boolean loginEnabled) {
                 this.loginEnabled = loginEnabled;
@@ -528,7 +574,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * metadata.
+             * <p>The application configuration of the external identity provider. Application secret configurations are not returned.</p>
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -536,7 +582,21 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The binding status. Valid values:</p>
+             * <ul>
+             * <li>CONFIGURED: The configuration has been accepted and is waiting for user pool provisioning.</li>
+             * <li>SYNCING: Organization members are being synchronized.</li>
+             * <li>SYNCED: Organization member synchronization is complete.</li>
+             * <li>READY: The binding is active.</li>
+             * <li>SYNC_FAILED: Organization member synchronization failed.</li>
+             * <li>UPDATING: The configuration is being updated.</li>
+             * <li>UPDATE_FAILED: The configuration update failed.</li>
+             * <li>DISCONNECTING: The binding is being removed.</li>
+             * <li>DISCONNECT_FAILED: The unbinding failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -544,7 +604,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * syncEnabled.
+             * <p>Indicates whether organization member synchronization is enabled. When enabled, organization members are synchronized from this external identity provider as workspace users.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;
@@ -552,7 +612,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The last modification time in UTC, formatted according to RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -560,7 +623,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

@@ -88,6 +88,7 @@ public class CreateManagedAgentRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class CreateManagedAgentRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(CreateManagedAgentRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -110,7 +111,10 @@ public class CreateManagedAgentRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -166,6 +170,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>The credential ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -238,6 +243,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>The environment variable name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -249,6 +255,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * <p>The environment variable value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -319,7 +326,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * credentialReferences.
+             * <p>The list of credential references.</p>
              */
             public Builder credentialReferences(java.util.List<CredentialReferences> credentialReferences) {
                 this.credentialReferences = credentialReferences;
@@ -327,7 +334,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * variables.
+             * <p>The list of environment variables.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
@@ -396,6 +403,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>The model connection ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -407,6 +415,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * <p>The upstream model name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -465,6 +474,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>Specifies whether to allow access to the Internet.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -523,6 +533,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>Specifies whether to allow access to the VPC.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -593,7 +604,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * accessInternet.
+             * <p>The public network access configuration.</p>
              */
             public Builder accessInternet(AccessInternet accessInternet) {
                 this.accessInternet = accessInternet;
@@ -601,7 +612,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * accessVpc.
+             * <p>The VPC access configuration.</p>
              */
             public Builder accessVpc(AccessVpc accessVpc) {
                 this.accessVpc = accessVpc;
@@ -656,6 +667,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>The compute specification.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -727,7 +739,10 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * headerName.
+             * <p>The HTTP header name used for session affinity. This parameter takes effect only when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X-Session-Id</p>
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -735,6 +750,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * <p>The session policy type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -807,6 +823,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>The compute configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder compute(Compute compute) {
@@ -815,6 +832,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * <p>The session policy configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sessionPolicy(SessionPolicy sessionPolicy) {
@@ -883,6 +901,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>The skill name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -894,7 +913,10 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * version.
+             * <p>The skill version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -963,7 +985,11 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>The sub-agent instruction.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Please review the code</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -971,6 +997,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * <p>The sub-agent name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1042,6 +1069,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>The name of the template in the AI registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1053,7 +1081,10 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * version.
+             * <p>The version of the template in the AI registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1107,7 +1138,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * aiRegistry.
+             * <p>The AI registry template configuration.</p>
              */
             public Builder aiRegistry(AiRegistry aiRegistry) {
                 this.aiRegistry = aiRegistry;
@@ -1176,6 +1207,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
+             * <p>The tool name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1187,6 +1219,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * <p>The tool type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1377,7 +1410,10 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * description.
+             * <p>The description of the managed agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An agent for code review</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1385,7 +1421,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * environment.
+             * <p>The environment configuration.</p>
              */
             public Builder environment(Environment environment) {
                 this.environment = environment;
@@ -1393,7 +1429,10 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The agent instruction that guides the behavior of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a code review assistant</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -1401,6 +1440,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * <p>The model configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder model(Model model) {
@@ -1409,6 +1449,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * <p>The name of the managed agent.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1420,7 +1461,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * network.
+             * <p>The network configuration.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -1428,6 +1469,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * <p>The runtime configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder runtime(Runtime runtime) {
@@ -1436,7 +1478,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * skills.
+             * <p>The list of skill configurations.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -1444,7 +1486,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * subAgents.
+             * <p>The list of sub-agent configurations.</p>
              */
             public Builder subAgents(java.util.List<SubAgents> subAgents) {
                 this.subAgents = subAgents;
@@ -1452,7 +1494,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * template.
+             * <p>The agent template configuration.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -1460,7 +1502,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * tools.
+             * <p>The list of tool configurations.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;

@@ -74,6 +74,7 @@ public class UploadSkillViaOssRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class UploadSkillViaOssRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UploadSkillViaOssRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -182,7 +183,10 @@ public class UploadSkillViaOssRequest extends Request {
             } 
 
             /**
-             * commitMsg.
+             * <p>The commit message. This parameter is optional.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Update documentation</p>
              */
             public Builder commitMsg(String commitMsg) {
                 this.commitMsg = commitMsg;
@@ -190,6 +194,7 @@ public class UploadSkillViaOssRequest extends Request {
             }
 
             /**
+             * <p>The OSS object name (path).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -201,7 +206,10 @@ public class UploadSkillViaOssRequest extends Request {
             }
 
             /**
-             * overwrite.
+             * <p>Specifies whether to overwrite an existing Skill. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder overwrite(Boolean overwrite) {
                 this.overwrite = overwrite;
@@ -209,7 +217,10 @@ public class UploadSkillViaOssRequest extends Request {
             }
 
             /**
-             * targetVersion.
+             * <p>The upload version number. This parameter is optional and used as a fallback when the ZIP package contains no version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder targetVersion(String targetVersion) {
                 this.targetVersion = targetVersion;

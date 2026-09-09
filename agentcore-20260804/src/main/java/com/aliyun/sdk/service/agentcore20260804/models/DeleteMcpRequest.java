@@ -89,6 +89,7 @@ public class DeleteMcpRequest extends Request {
         } 
 
         /**
+         * <p>The MCP service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteMcpRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

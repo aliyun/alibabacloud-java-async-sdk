@@ -67,7 +67,7 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
             } 
 
             /**
-             * contentType.
+             * <p>The Content-Type of the upload file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/zip</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -175,7 +181,10 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
             }
 
             /**
-             * maxSize.
+             * <p>The maximum file size allowed for upload, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10485760</p>
              */
             public Builder maxSize(String maxSize) {
                 this.maxSize = maxSize;
@@ -183,7 +192,10 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ossObjectName.
+             * <p>The OSS object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imports/example.zip</p>
              */
             public Builder ossObjectName(String ossObjectName) {
                 this.ossObjectName = ossObjectName;
@@ -191,7 +203,10 @@ public class GetSkillImportFileUrlResponseBody extends TeaModel {
             }
 
             /**
-             * uploadUrl.
+             * <p>The OSS pre-signed upload URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/artifacts/example.zip">https://example.com/artifacts/example.zip</a></p>
              */
             public Builder uploadUrl(String uploadUrl) {
                 this.uploadUrl = uploadUrl;

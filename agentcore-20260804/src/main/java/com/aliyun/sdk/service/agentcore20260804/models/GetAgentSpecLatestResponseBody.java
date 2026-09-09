@@ -67,7 +67,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentspec-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +188,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentspec-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -366,7 +375,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             } 
 
             /**
-             * bizTags.
+             * <p>The business tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample property value</p>
              */
             public Builder bizTags(String bizTags) {
                 this.bizTags = bizTags;
@@ -374,7 +386,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * content.
+             * <p>The content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -382,7 +397,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A sample description that explains the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -390,7 +408,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * downloadCount.
+             * <p>The download count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder downloadCount(Long downloadCount) {
                 this.downloadCount = downloadCount;
@@ -398,7 +419,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the AgentSpec is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -406,7 +427,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * mcpServers.
+             * <p>The list of MCP server references.</p>
              */
             public Builder mcpServers(java.util.List<McpServers> mcpServers) {
                 this.mcpServers = mcpServers;
@@ -414,7 +435,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentspec-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -422,7 +446,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * resource.
+             * <p>The resource file mapping.</p>
              */
             public Builder resource(java.util.Map<String, DataResourceValue> resource) {
                 this.resource = resource;
@@ -430,7 +454,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * scope.
+             * <p>The visibility scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -438,7 +465,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * skills.
+             * <p>The list of skill references.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -446,7 +473,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The update time. This value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787671022000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

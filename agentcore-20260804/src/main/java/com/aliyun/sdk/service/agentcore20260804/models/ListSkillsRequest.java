@@ -186,6 +186,7 @@ public class ListSkillsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -207,7 +211,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-page-token</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -216,7 +223,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The sort field. The value download_count is supported. Default value: gmt_modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>download_count</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -225,7 +235,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * owner.
+         * <p>Filters results by owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user123</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("owner", owner);
@@ -234,7 +247,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * pageNo.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("pageNo", pageNo);
@@ -243,7 +259,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -252,7 +271,14 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>Filters results by visibility. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC</li>
+         * <li>PRIVATE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("scope", scope);
@@ -261,7 +287,14 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * search.
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li>accurate: exact match.</li>
+         * <li>blur: fuzzy match.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>blur</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("search", search);
@@ -270,7 +303,10 @@ public class ListSkillsRequest extends Request {
         }
 
         /**
-         * skillName.
+         * <p>The filter keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         public Builder skillName(String skillName) {
             this.putQueryParameter("skillName", skillName);

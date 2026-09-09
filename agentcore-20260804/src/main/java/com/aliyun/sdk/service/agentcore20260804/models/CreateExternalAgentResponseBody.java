@@ -119,7 +119,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The information about the external agent after creation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The result message of the request processing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +289,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * matrixUserId.
+             * <p>The user ID of the agent in Matrix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@agent-1:matrix.example.com</p>
              */
             public Builder matrixUserId(String matrixUserId) {
                 this.matrixUserId = matrixUserId;
@@ -285,7 +300,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * personalRoomId.
+             * <p>The Matrix personal room ID of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>!room:matrix.example.com</p>
              */
             public Builder personalRoomId(String personalRoomId) {
                 this.personalRoomId = personalRoomId;
@@ -293,7 +311,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * runtimeAcceptStatus.
+             * <p>The acceptance status of the runtime for the current request version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACCEPTED</p>
              */
             public Builder runtimeAcceptStatus(String runtimeAcceptStatus) {
                 this.runtimeAcceptStatus = runtimeAcceptStatus;
@@ -301,7 +322,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * runtimeId.
+             * <p>The runtime instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>runtime-123</p>
              */
             public Builder runtimeId(String runtimeId) {
                 this.runtimeId = runtimeId;
@@ -309,7 +333,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * runtimeRequestVersion.
+             * <p>The runtime request version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder runtimeRequestVersion(Long runtimeRequestVersion) {
                 this.runtimeRequestVersion = runtimeRequestVersion;
@@ -317,7 +344,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * workspacePrefix.
+             * <p>The storage prefix of the agent in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agents/agent-1</p>
              */
             public Builder workspacePrefix(String workspacePrefix) {
                 this.workspacePrefix = workspacePrefix;
@@ -423,7 +453,15 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * heartbeatStatus.
+             * <p>The heartbeat status. ONLINE indicates that the most recent heartbeat has not exceeded the configured timeout threshold. STALE indicates that the heartbeat has timed out. UNKNOWN indicates that the heartbeat is missing or has an invalid format. Valid values:</p>
+             * <ul>
+             * <li>ONLINE: Online.</li>
+             * <li>STALE: Heartbeat expired.</li>
+             * <li>UNKNOWN: Unknown.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder heartbeatStatus(String heartbeatStatus) {
                 this.heartbeatStatus = heartbeatStatus;
@@ -431,7 +469,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * lastActiveAt.
+             * <p>The most recent active time of the external agent in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder lastActiveAt(String lastActiveAt) {
                 this.lastActiveAt = lastActiveAt;
@@ -439,7 +480,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * lastHeartbeat.
+             * <p>The most recent heartbeat time of the external agent in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder lastHeartbeat(String lastHeartbeat) {
                 this.lastHeartbeat = lastHeartbeat;
@@ -447,7 +491,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * localIP.
+             * <p>The local IP address reported by the external agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.42</p>
              */
             public Builder localIP(String localIP) {
                 this.localIP = localIP;
@@ -455,7 +502,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * runtime.
+             * <p>The runtime type reported by the external agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwenpaw</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -524,6 +574,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The model connection ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -535,6 +586,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The upstream model name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -606,6 +658,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The skill name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -617,7 +670,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The skill version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -685,6 +741,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The name of the template in AI Registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -696,7 +753,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the template in AI Registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -750,7 +810,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * aiRegistry.
+             * <p>The AI Registry template configuration.</p>
              */
             public Builder aiRegistry(AiRegistry aiRegistry) {
                 this.aiRegistry = aiRegistry;
@@ -819,6 +879,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The tool name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -830,6 +891,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The tool type. Valid values:</p>
+             * <ul>
+             * <li>MCP: MCP tool.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1160,7 +1225,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The external agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-1</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -1168,7 +1236,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * createMode.
+             * <p>The creation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder createMode(String createMode) {
                 this.createMode = createMode;
@@ -1176,7 +1247,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -1184,7 +1258,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * deployType.
+             * <p>The deployment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELF_HOSTED</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -1192,7 +1269,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the external agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A code review agent running in the user environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1200,7 +1280,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * effectiveResult.
+             * <p>The runtime result corresponding to the currently effective specification.</p>
              */
             public Builder effectiveResult(EffectiveResult effectiveResult) {
                 this.effectiveResult = effectiveResult;
@@ -1208,7 +1288,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * effectiveSpecVersion.
+             * <p>The currently effective specification version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder effectiveSpecVersion(Long effectiveSpecVersion) {
                 this.effectiveSpecVersion = effectiveSpecVersion;
@@ -1216,7 +1299,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * externalAgentStatus.
+             * <p>The runtime status information reported by the external agent.</p>
              */
             public Builder externalAgentStatus(ExternalAgentStatus externalAgentStatus) {
                 this.externalAgentStatus = externalAgentStatus;
@@ -1224,7 +1307,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * instruction.
+             * <p>The agent instruction that guides the behavior of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a code review assistant</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -1232,7 +1318,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * latestSpecVersion.
+             * <p>The latest specification version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder latestSpecVersion(Long latestSpecVersion) {
                 this.latestSpecVersion = latestSpecVersion;
@@ -1240,7 +1329,18 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * latestVersionStatus.
+             * <p>The processing status of the latest specification version. Valid values:</p>
+             * <ul>
+             * <li>pending: Pending processing.</li>
+             * <li>processing: Being processed.</li>
+             * <li>waiting_retry: Waiting for retry.</li>
+             * <li>succeeded: Succeeded.</li>
+             * <li>failed: Failed.</li>
+             * <li>superseded: Superseded by a newer version.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder latestVersionStatus(String latestVersionStatus) {
                 this.latestVersionStatus = latestVersionStatus;
@@ -1248,7 +1348,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * model.
+             * <p>The model configuration. This parameter is available only when modelSource is set to PLATFORM.</p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -1256,7 +1356,14 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * modelSource.
+             * <p>The source of the model configuration. Valid values:</p>
+             * <ul>
+             * <li>PLATFORM: The platform parses and delivers the model configuration. You can specify the model parameter.</li>
+             * <li>RUNTIME: The external runtime manages the model on its own. You cannot specify the model parameter at the same time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PLATFORM</p>
              */
             public Builder modelSource(String modelSource) {
                 this.modelSource = modelSource;
@@ -1264,10 +1371,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the external agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>code-reviewer</p>
+             * <p>my-external-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1275,7 +1382,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1283,7 +1393,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * runtime.
+             * <p>The runtime type reported by the external agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwenpaw</p>
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -1291,7 +1404,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * skills.
+             * <p>The list of skill configurations.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -1299,7 +1412,18 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the external agent. Valid values:</p>
+             * <ul>
+             * <li>Creating: The agent is being created.</li>
+             * <li>Running: The agent is running.</li>
+             * <li>Failed: The agent creation failed.</li>
+             * <li>Updating: The agent is being updated.</li>
+             * <li>Deleting: The agent is being deleted.</li>
+             * <li>Deleted: The agent has been deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1307,7 +1431,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * template.
+             * <p>The agent template configuration.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -1315,7 +1439,7 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * tools.
+             * <p>The list of tool configurations.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
@@ -1323,7 +1447,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -1331,7 +1458,10 @@ public class CreateExternalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

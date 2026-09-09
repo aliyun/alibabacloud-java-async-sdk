@@ -90,6 +90,7 @@ public class GetAgentIMChannelRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetAgentIMChannelRequest extends Request {
         }
 
         /**
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetAgentIMChannelRequest extends Request {
         }
 
         /**
+         * <p>The IM channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

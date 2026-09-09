@@ -31,6 +31,10 @@ public class ListCredentialsRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nameLike")
     private String nameLike;
 
@@ -43,6 +47,7 @@ public class ListCredentialsRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.credentialType = builder.credentialType;
         this.maxResults = builder.maxResults;
+        this.name = builder.name;
         this.nameLike = builder.nameLike;
         this.nextToken = builder.nextToken;
     }
@@ -82,6 +87,13 @@ public class ListCredentialsRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return nameLike
      */
     public String getNameLike() {
@@ -99,6 +111,7 @@ public class ListCredentialsRequest extends Request {
         private String workspaceId; 
         private String credentialType; 
         private Integer maxResults; 
+        private String name; 
         private String nameLike; 
         private String nextToken; 
 
@@ -111,11 +124,13 @@ public class ListCredentialsRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.credentialType = request.credentialType;
             this.maxResults = request.maxResults;
+            this.name = request.name;
             this.nameLike = request.nameLike;
             this.nextToken = request.nextToken;
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +143,10 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * credentialType.
+         * <p>Filters by credential type. Currently, only apiKey is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiKey</p>
          */
         public Builder credentialType(String credentialType) {
             this.putQueryParameter("credentialType", credentialType);
@@ -137,7 +155,10 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -146,7 +167,22 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * nameLike.
+         * <p>Filters by credential name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>credentialxxx</p>
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * <p>The filter condition for fuzzy match by credential name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model</p>
          */
         public Builder nameLike(String nameLike) {
             this.putQueryParameter("nameLike", nameLike);
@@ -155,7 +191,10 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, set this parameter to the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

@@ -119,7 +119,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The details of the managed agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The result message of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -213,6 +228,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The credential ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -285,6 +301,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The environment variable name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -296,6 +313,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The environment variable value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -366,7 +384,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * credentialReferences.
+             * <p>The list of credential references.</p>
              */
             public Builder credentialReferences(java.util.List<CredentialReferences> credentialReferences) {
                 this.credentialReferences = credentialReferences;
@@ -374,7 +392,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * variables.
+             * <p>The list of environment variables.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;
@@ -443,6 +461,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The model connection ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -454,6 +473,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The upstream model name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -512,6 +532,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>Specifies whether to allow access to the Internet.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -570,6 +591,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>Specifies whether to allow access to the VPC.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -640,7 +662,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * accessInternet.
+             * <p>The public network access configuration.</p>
              */
             public Builder accessInternet(AccessInternet accessInternet) {
                 this.accessInternet = accessInternet;
@@ -648,7 +670,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * accessVpc.
+             * <p>The VPC access configuration.</p>
              */
             public Builder accessVpc(AccessVpc accessVpc) {
                 this.accessVpc = accessVpc;
@@ -703,6 +725,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The compute specification.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -774,7 +797,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * headerName.
+             * <p>The HTTP header name used for session affinity. This parameter takes effect only when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X-Session-Id</p>
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -782,6 +808,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The session policy type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -854,6 +881,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The compute configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder compute(Compute compute) {
@@ -862,6 +890,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The session policy configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sessionPolicy(SessionPolicy sessionPolicy) {
@@ -930,6 +959,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The skill name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -941,7 +971,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The skill version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1010,7 +1043,11 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The sub-agent instruction.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Please review the code</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -1018,6 +1055,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The sub-agent name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1089,6 +1127,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The name of the template in the AI registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1100,7 +1139,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the template in the AI registry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1154,7 +1196,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * aiRegistry.
+             * <p>The AI registry template configuration.</p>
              */
             public Builder aiRegistry(AiRegistry aiRegistry) {
                 this.aiRegistry = aiRegistry;
@@ -1223,6 +1265,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The tool name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1234,6 +1277,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The tool type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1551,7 +1595,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The managed agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-1</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -1559,7 +1606,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * createMode.
+             * <p>The creation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder createMode(String createMode) {
                 this.createMode = createMode;
@@ -1567,7 +1617,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -1575,7 +1628,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * deployType.
+             * <p>The deployment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -1583,7 +1639,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the managed agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An agent for code review</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1591,7 +1650,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * environment.
+             * <p>The environment configuration information.</p>
              */
             public Builder environment(Environment environment) {
                 this.environment = environment;
@@ -1599,7 +1658,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The agent instruction that guides the behavior of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a code review assistant</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -1607,7 +1669,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * latestSpecVersion.
+             * <p>The latest specification version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder latestSpecVersion(Long latestSpecVersion) {
                 this.latestSpecVersion = latestSpecVersion;
@@ -1615,7 +1680,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * latestVersionStatus.
+             * <p>The latest version status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>succeeded</p>
              */
             public Builder latestVersionStatus(String latestVersionStatus) {
                 this.latestVersionStatus = latestVersionStatus;
@@ -1623,7 +1691,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * model.
+             * <p>The model configuration information.</p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -1631,10 +1699,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the managed agent.</p>
              * 
              * <strong>example:</strong>
-             * <p>code-reviewer</p>
+             * <p>my-agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1642,7 +1710,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * network.
+             * <p>The network configuration information.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -1650,7 +1718,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1658,7 +1729,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * runtime.
+             * <p>The runtime configuration information.</p>
              */
             public Builder runtime(Runtime runtime) {
                 this.runtime = runtime;
@@ -1666,7 +1737,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * skills.
+             * <p>The list of skill configurations.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;
@@ -1674,7 +1745,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the managed agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1682,7 +1756,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * subAgents.
+             * <p>The list of sub-agent configurations.</p>
              */
             public Builder subAgents(java.util.List<SubAgents> subAgents) {
                 this.subAgents = subAgents;
@@ -1690,7 +1764,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * template.
+             * <p>The template configuration information.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -1698,7 +1772,7 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * tools.
+             * <p>The list of tool configurations.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
@@ -1706,7 +1780,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -1714,7 +1791,10 @@ public class UpdateManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

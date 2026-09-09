@@ -158,7 +158,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. A value of SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The IM channel list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned per page for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page. An empty value indicates that the last page has been reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-token-1</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +240,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -288,7 +309,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * showThinking.
+             * <p>Specifies whether to display the thinking process in IM messages. Default value: false.</p>
              */
             public Builder showThinking(Boolean showThinking) {
                 this.showThinking = showThinking;
@@ -296,7 +317,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * showToolCalls.
+             * <p>Specifies whether to display the tool calling process in IM messages. Default value: false.</p>
              */
             public Builder showToolCalls(Boolean showToolCalls) {
                 this.showToolCalls = showToolCalls;
@@ -363,7 +384,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * configuredSecretFields.
+             * <p>The list of configured secret field names. Secret values are not included.</p>
              */
             public Builder configuredSecretFields(java.util.List<String> configuredSecretFields) {
                 this.configuredSecretFields = configuredSecretFields;
@@ -371,7 +392,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * nonSecretFields.
+             * <p>The non-sensitive credential fields and their values.</p>
              */
             public Builder nonSecretFields(java.util.Map<String, String> nonSecretFields) {
                 this.nonSecretFields = nonSecretFields;
@@ -581,7 +602,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-1</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -589,7 +613,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * channelConfig.
+             * <p>The channel behavior configuration.</p>
              */
             public Builder channelConfig(ChannelConfig channelConfig) {
                 this.channelConfig = channelConfig;
@@ -597,7 +621,15 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * channelType.
+             * <p>The IM channel type. Valid values:</p>
+             * <ul>
+             * <li>DINGTALK: DingTalk.</li>
+             * <li>FEISHU: Lark.</li>
+             * <li>WECOM: WeCom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DINGTALK</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -605,7 +637,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -613,7 +648,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * credentialSummary.
+             * <p>The channel credential summary. Only non-sensitive fields and configured secret field names are returned. Secret values are not returned.</p>
              */
             public Builder credentialSummary(CredentialSummary credentialSummary) {
                 this.credentialSummary = credentialSummary;
@@ -621,7 +656,7 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Indicates whether the IM channel is enabled. Default value upon creation: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -629,7 +664,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * endpointUrl.
+             * <p>The public network access URL of the attached ServiceEndpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://agent.example.com">https://agent.example.com</a></p>
              */
             public Builder endpointUrl(String endpointUrl) {
                 this.endpointUrl = endpointUrl;
@@ -637,7 +675,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * imChannelId.
+             * <p>The IM channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imc-1</p>
              */
             public Builder imChannelId(String imChannelId) {
                 this.imChannelId = imChannelId;
@@ -645,7 +686,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * serviceEndpointId.
+             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>se-1</p>
              */
             public Builder serviceEndpointId(String serviceEndpointId) {
                 this.serviceEndpointId = serviceEndpointId;
@@ -653,7 +697,18 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The IM channel status. Valid values:</p>
+             * <ul>
+             * <li>CREATING: being created.</li>
+             * <li>READY: ready.</li>
+             * <li>UPDATING: being updated.</li>
+             * <li>FAILED: failed.</li>
+             * <li>DELETING: being deleted.</li>
+             * <li>DELETE_FAILED: deletion failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -661,7 +716,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * statusReason.
+             * <p>The reason for the current status of the IM channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AppFlow creation failed</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -669,7 +727,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The update time in RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -677,7 +738,10 @@ public class ListAgentIMChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

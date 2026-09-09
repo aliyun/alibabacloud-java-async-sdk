@@ -119,7 +119,10 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The details of the plugin installation operation.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +266,10 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
             } 
 
             /**
-             * enabled.
+             * <p>Indicates whether the plugin is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -259,7 +277,10 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * pluginName.
+             * <p>The plugin name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>collaboration</p>
              */
             public Builder pluginName(String pluginName) {
                 this.pluginName = pluginName;
@@ -267,7 +288,10 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The plugin status. Valid values: DISABLED, ENABLING, ENABLED, ENABLE_FAILED, DISABLING, and DISABLE_FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,7 +299,10 @@ public class InstallWorkspacePluginResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

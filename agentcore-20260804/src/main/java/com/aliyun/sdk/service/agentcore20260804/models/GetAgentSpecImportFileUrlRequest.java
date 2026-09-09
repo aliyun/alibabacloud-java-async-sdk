@@ -74,6 +74,7 @@ public class GetAgentSpecImportFileUrlRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetAgentSpecImportFileUrlRequest extends Request {
         }
 
         /**
-         * contentType.
+         * <p>The Content-Type of the file to upload. The client must use the same value from the response when performing the PUT request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/zip</p>
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("contentType", contentType);

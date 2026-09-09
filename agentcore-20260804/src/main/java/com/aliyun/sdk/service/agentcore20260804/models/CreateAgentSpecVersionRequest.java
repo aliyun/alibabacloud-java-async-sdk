@@ -89,6 +89,7 @@ public class CreateAgentSpecVersionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class CreateAgentSpecVersionRequest extends Request {
         }
 
         /**
+         * <p>The unique name of the AgentSpec.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class CreateAgentSpecVersionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(CreateAgentSpecVersionRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -182,7 +184,10 @@ public class CreateAgentSpecVersionRequest extends Request {
             } 
 
             /**
-             * basedOnVersion.
+             * <p>The existing version on which to base the draft.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder basedOnVersion(String basedOnVersion) {
                 this.basedOnVersion = basedOnVersion;
@@ -190,7 +195,10 @@ public class CreateAgentSpecVersionRequest extends Request {
             }
 
             /**
-             * targetVersion.
+             * <p>The version number for the draft. If not specified, the version number is automatically incremented.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.0</p>
              */
             public Builder targetVersion(String targetVersion) {
                 this.targetVersion = targetVersion;

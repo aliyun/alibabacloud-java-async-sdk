@@ -103,6 +103,7 @@ public class UpdateModelConnectionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateModelConnectionRequest extends Request {
         }
 
         /**
+         * <p>The model connection ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class UpdateModelConnectionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UpdateModelConnectionRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -137,7 +139,10 @@ public class UpdateModelConnectionRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token used for idempotence. Not currently supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -257,7 +262,7 @@ public class UpdateModelConnectionRequest extends Request {
             } 
 
             /**
-             * apiKeys.
+             * <p>The list of API keys used to access the upstream model service. The list must contain at least one non-empty value.</p>
              */
             public Builder apiKeys(java.util.List<String> apiKeys) {
                 this.apiKeys = apiKeys;
@@ -265,7 +270,10 @@ public class UpdateModelConnectionRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The description of the model connection. The description can be up to 255 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -273,7 +281,10 @@ public class UpdateModelConnectionRequest extends Request {
             }
 
             /**
-             * endpoint.
+             * <p>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -281,7 +292,10 @@ public class UpdateModelConnectionRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -289,7 +303,10 @@ public class UpdateModelConnectionRequest extends Request {
             }
 
             /**
-             * protocol.
+             * <p>The model invocation protocol. Currently, only OpenAI/v1 is supported. If not specified in Settings when the model connection is created, this default value is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAI/v1</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -297,7 +314,10 @@ public class UpdateModelConnectionRequest extends Request {
             }
 
             /**
-             * providerType.
+             * <p>The model provider type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen</p>
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;

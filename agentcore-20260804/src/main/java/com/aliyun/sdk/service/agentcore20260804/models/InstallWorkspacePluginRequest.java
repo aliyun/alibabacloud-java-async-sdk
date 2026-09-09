@@ -103,6 +103,7 @@ public class InstallWorkspacePluginRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class InstallWorkspacePluginRequest extends Request {
         }
 
         /**
+         * <p>The plugin name. Currently, only collaboration is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class InstallWorkspacePluginRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for installing a plugin.</p>
          */
         public Builder body(InstallWorkspacePluginRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -137,7 +139,10 @@ public class InstallWorkspacePluginRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-plugin-install-20260810-001</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -192,7 +197,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>设置为 true 且未指定 VPC 时使用 PUB_NET；设置为 true 且指定 VPC 时使用 PRIVATE_PUBNET；仅指定 VPC 时使用 PRIVATE_NET。公网和 VPC 至少配置一种。</p>
+             * <p>Specifies whether to enable public network access. If set to true without a VPC specified, PUB_NET is used. If set to true with a VPC specified, PRIVATE_PUBNET is used. If only a VPC is specified, PRIVATE_NET is used. At least one of public network or VPC must be configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -277,7 +282,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>显式控制 collaboration 插件是否使用 VPC 网络。设置为 false 时，VpcId 和 VSwitchIds 将被忽略；设置为 true 时必须同时提供 VpcId 和至少两个 VSwitchIds。</p>
+             * <p>Specifies whether the collaboration plugin uses VPC networking. If set to false, vpcId and vSwitchIds are ignored. If set to true, you must provide both vpcId and at least two vSwitchIds.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -288,7 +293,7 @@ public class InstallWorkspacePluginRequest extends Request {
             }
 
             /**
-             * <p>交换机 ID 列表。collaboration 插件要求交换机至少覆盖两个不同可用区，且所有交换机必须属于 VpcId 指定的 VPC。</p>
+             * <p>The list of vSwitch IDs. The collaboration plugin requires that the vSwitches cover at least two different zones, and all vSwitches must belong to the VPC specified by vpcId.</p>
              * <p>This parameter is required.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
@@ -297,6 +302,7 @@ public class InstallWorkspacePluginRequest extends Request {
             }
 
             /**
+             * <p>The VPC ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -367,7 +373,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>控制协作组件是否允许访问公网。该配置只控制公网访问能力，不表示将组件服务暴露到公网。</p>
+             * <p>Controls whether the collaboration component is allowed to access the public network. This configuration only controls public network access capability and does not expose the component service to the public network.</p>
              */
             public Builder internet(Internet internet) {
                 this.internet = internet;
@@ -375,7 +381,7 @@ public class InstallWorkspacePluginRequest extends Request {
             }
 
             /**
-             * <p>协作插件部署使用的用户 VPC 和交换机列表。交换机对应的可用区由服务端查询，不需要用户传入 Zones。</p>
+             * <p>The user VPC and vSwitch list used for deploying the collaboration plugin. The zones corresponding to the vSwitches are queried by the server and do not need to be provided by the user.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -429,7 +435,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>collaboration 插件使用的网络配置。未指定时，服务端使用工作空间已有的网络配置。</p>
+             * <p>The network configuration used by the collaboration plugin. If not specified, the server uses the existing network configuration of the workspace.</p>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -483,7 +489,7 @@ public class InstallWorkspacePluginRequest extends Request {
             } 
 
             /**
-             * <p>插件专属配置。配置结构由 PluginName 决定。当前 collaboration 插件支持 Network。</p>
+             * <p>The plugin-specific configuration. The configuration structure is determined by pluginName. Currently, the collaboration plugin supports network.</p>
              */
             public Builder config(Config config) {
                 this.config = config;

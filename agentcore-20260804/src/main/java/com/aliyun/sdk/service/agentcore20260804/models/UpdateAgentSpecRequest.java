@@ -89,6 +89,7 @@ public class UpdateAgentSpecRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class UpdateAgentSpecRequest extends Request {
         }
 
         /**
+         * <p>The unique name of the AgentSpec.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class UpdateAgentSpecRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UpdateAgentSpecRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -195,7 +197,10 @@ public class UpdateAgentSpecRequest extends Request {
             } 
 
             /**
-             * bizTags.
+             * <p>The business tags as a JSON-formatted string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;ai&quot;,&quot;agent&quot;]</p>
              */
             public Builder bizTags(String bizTags) {
                 this.bizTags = bizTags;
@@ -203,7 +208,10 @@ public class UpdateAgentSpecRequest extends Request {
             }
 
             /**
-             * labels.
+             * <p>The label mapping as a JSON-formatted string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;latest&quot;:&quot;0.0.1&quot;}</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -211,7 +219,14 @@ public class UpdateAgentSpecRequest extends Request {
             }
 
             /**
-             * scope.
+             * <p>The visibility scope. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC</li>
+             * <li>PRIVATE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;

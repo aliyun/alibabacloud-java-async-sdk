@@ -74,6 +74,7 @@ public class ListAgentTeamsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class ListAgentTeamsRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request parameters for querying the agent team list.</p>
          */
         public Builder body(ListAgentTeamsRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -143,6 +144,7 @@ public class ListAgentTeamsRequest extends Request {
             } 
 
             /**
+             * <p>The list of agent IDs for which to query team information.</p>
              * <p>This parameter is required.</p>
              */
             public Builder agentIds(java.util.List<String> agentIds) {

@@ -130,6 +130,7 @@ public class ListMcpsRequest extends Request {
         } 
 
         /**
+         * <p>The AgentCore workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,10 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -160,7 +164,10 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The MCP service name. Used together with SearchType.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-mcp-server</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -169,7 +176,10 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-page-token</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -178,7 +188,15 @@ public class ListMcpsRequest extends Request {
         }
 
         /**
-         * searchType.
+         * <p>The name matching method. Takes effect only when Name is specified. Valid values:</p>
+         * <ul>
+         * <li>accurate: exact match.</li>
+         * <li>blur: fuzzy match.</li>
+         * </ul>
+         * <p>Default value: blur.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>blur</p>
          */
         public Builder searchType(String searchType) {
             this.putQueryParameter("searchType", searchType);

@@ -119,7 +119,10 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The available network access information for the external agent.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The result message of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +237,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * available.
+             * <p>Indicates whether the network access type is available.</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -233,7 +245,14 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * networkType.
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li>INTRANET: internal network.</li>
+             * <li>INTERNET: public network.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERNET</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -313,7 +332,10 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The external agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-1</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -321,7 +343,7 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * networkOptions.
+             * <p>The list of available network access options.</p>
              */
             public Builder networkOptions(java.util.List<NetworkOptions> networkOptions) {
                 this.networkOptions = networkOptions;
@@ -329,7 +351,10 @@ public class GetExternalAgentBootstrapOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

@@ -67,7 +67,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             } 
 
             /**
-             * editingVersion.
+             * <p>The version currently being edited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder editingVersion(String editingVersion) {
                 this.editingVersion = editingVersion;
@@ -279,7 +285,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * entryPath.
+             * <p>The entry path of the Skill package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SKILL.md</p>
              */
             public Builder entryPath(String entryPath) {
                 this.entryPath = entryPath;
@@ -287,7 +296,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * exists.
+             * <p>Indicates whether the Skill already exists.</p>
              */
             public Builder exists(Boolean exists) {
                 this.exists = exists;
@@ -295,7 +304,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * maxPublishedVersion.
+             * <p>The highest published version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder maxPublishedVersion(String maxPublishedVersion) {
                 this.maxPublishedVersion = maxPublishedVersion;
@@ -303,7 +315,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * owner.
+             * <p>The resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -311,7 +326,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * parsedVersion.
+             * <p>The version parsed from the uploaded content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder parsedVersion(String parsedVersion) {
                 this.parsedVersion = parsedVersion;
@@ -319,7 +337,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * precheckCode.
+             * <p>The pre-check result code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VALIDATION_FAILED</p>
              */
             public Builder precheckCode(String precheckCode) {
                 this.precheckCode = precheckCode;
@@ -327,7 +348,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * reason.
+             * <p>The reason description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource processing completed</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -335,7 +359,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * reviewingVersion.
+             * <p>The version currently under review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder reviewingVersion(String reviewingVersion) {
                 this.reviewingVersion = reviewingVersion;
@@ -343,7 +370,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * skillName.
+             * <p>The Skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skill-example</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -351,7 +381,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * targetVersion.
+             * <p>The target version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder targetVersion(String targetVersion) {
                 this.targetVersion = targetVersion;
@@ -359,7 +392,10 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1234567890abcdef</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

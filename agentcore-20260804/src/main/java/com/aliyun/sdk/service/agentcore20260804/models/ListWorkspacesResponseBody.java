@@ -158,7 +158,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of workspaces.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page used for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. This value is empty if no more pages exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d29ya3NwYWNlLW9mZnNldDo0MA</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +243,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of workspaces that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -301,7 +325,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * enabled.
+             * <p>Indicates whether the VPC network is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -309,7 +336,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The list of vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -317,7 +344,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The ID of the user VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1234567890</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -371,7 +401,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * vpc.
+             * <p>The VPC network configuration of the user.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -503,7 +533,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-06T03:56:56Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -511,7 +544,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production-agents</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -519,7 +555,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * networkConfiguration.
+             * <p>The network configuration of the workspace.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;
@@ -527,7 +563,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -535,7 +574,16 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The workspace status. Valid values:</p>
+             * <ul>
+             * <li>Initializing</li>
+             * <li>Initialized</li>
+             * <li>Deleting</li>
+             * <li>Deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Initialized</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -543,7 +591,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * tenantId.
+             * <p>The ID of the tenant to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tenant-123456</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -551,7 +602,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

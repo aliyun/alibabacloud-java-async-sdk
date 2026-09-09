@@ -88,7 +88,10 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -97,7 +100,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token used to retrieve the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d29ya3NwYWNlLW9mZnNldDoyMA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -106,7 +112,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * skip.
+         * <p>The number of workspaces to skip.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder skip(Integer skip) {
             this.putQueryParameter("skip", skip);

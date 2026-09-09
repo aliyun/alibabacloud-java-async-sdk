@@ -74,6 +74,7 @@ public class CreateAgentSpecRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class CreateAgentSpecRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(CreateAgentSpecRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -156,6 +157,7 @@ public class CreateAgentSpecRequest extends Request {
             } 
 
             /**
+             * <p>The unique name of the AgentSpec.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -167,7 +169,10 @@ public class CreateAgentSpecRequest extends Request {
             }
 
             /**
-             * targetVersion.
+             * <p>The draft version number. If not specified, the default value is 0.0.1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder targetVersion(String targetVersion) {
                 this.targetVersion = targetVersion;

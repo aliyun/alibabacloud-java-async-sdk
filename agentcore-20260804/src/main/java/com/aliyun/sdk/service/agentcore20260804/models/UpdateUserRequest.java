@@ -103,6 +103,7 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for updating a user.</p>
          */
         public Builder body(UpdateUserRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -137,7 +139,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not supported</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -218,7 +223,10 @@ public class UpdateUserRequest extends Request {
             } 
 
             /**
-             * displayName.
+             * <p>The display name of the user. The name must be 1 to 32 characters in length. At least one of displayName, email, and note must be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -226,7 +234,10 @@ public class UpdateUserRequest extends Request {
             }
 
             /**
-             * email.
+             * <p>The email address of the user. The address can be up to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -234,7 +245,10 @@ public class UpdateUserRequest extends Request {
             }
 
             /**
-             * note.
+             * <p>The note for the user. The note can be up to 1,024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent operations team member</p>
              */
             public Builder note(String note) {
                 this.note = note;

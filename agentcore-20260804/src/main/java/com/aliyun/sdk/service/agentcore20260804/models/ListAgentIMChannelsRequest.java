@@ -132,6 +132,7 @@ public class ListAgentIMChannelsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +145,7 @@ public class ListAgentIMChannelsRequest extends Request {
         }
 
         /**
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +158,15 @@ public class ListAgentIMChannelsRequest extends Request {
         }
 
         /**
-         * channelType.
+         * <p>The IM channel type. Valid values:</p>
+         * <ul>
+         * <li>DINGTALK: DingTalk.</li>
+         * <li>FEISHU: Lark.</li>
+         * <li>WECOM: WeCom.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DINGTALK</p>
          */
         public Builder channelType(String channelType) {
             this.putQueryParameter("channelType", channelType);
@@ -165,7 +175,10 @@ public class ListAgentIMChannelsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return per page. Default value: 20. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -174,7 +187,10 @@ public class ListAgentIMChannelsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. You do not need to specify this parameter for the first request. For subsequent requests, use the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>next-token-1</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -183,7 +199,18 @@ public class ListAgentIMChannelsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The IM channel status. Valid values:</p>
+         * <ul>
+         * <li>CREATING: being created.</li>
+         * <li>READY: ready.</li>
+         * <li>UPDATING: being updated.</li>
+         * <li>FAILED: failed.</li>
+         * <li>DELETING: being deleted.</li>
+         * <li>DELETE_FAILED: deletion failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

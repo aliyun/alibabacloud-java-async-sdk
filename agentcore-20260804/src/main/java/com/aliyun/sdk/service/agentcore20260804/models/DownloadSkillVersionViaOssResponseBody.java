@@ -67,7 +67,10 @@ public class DownloadSkillVersionViaOssResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/artifacts/example.zip">https://example.com/artifacts/example.zip</a></p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class DownloadSkillVersionViaOssResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

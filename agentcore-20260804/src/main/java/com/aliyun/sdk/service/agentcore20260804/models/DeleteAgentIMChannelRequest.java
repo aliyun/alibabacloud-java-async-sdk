@@ -104,6 +104,7 @@ public class DeleteAgentIMChannelRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DeleteAgentIMChannelRequest extends Request {
         }
 
         /**
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class DeleteAgentIMChannelRequest extends Request {
         }
 
         /**
+         * <p>The IM channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class DeleteAgentIMChannelRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>A reserved idempotence token. The backend does not provide persistent idempotence guarantee in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

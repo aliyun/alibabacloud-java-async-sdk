@@ -158,7 +158,10 @@ public class ListTeamsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of teams.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page that took effect for this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. This parameter is empty if no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dGVhbS1vZmZzZXQ6MTA</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +240,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of teams that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -301,7 +322,10 @@ public class ListTeamsResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-123456</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -309,7 +333,10 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * agentName.
+             * <p>The agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-01</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -317,7 +344,14 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * teamRole.
+             * <p>The role of the agent in the team. Valid values:</p>
+             * <ul>
+             * <li>LEADER</li>
+             * <li>WORKER</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WORKER</p>
              */
             public Builder teamRole(String teamRole) {
                 this.teamRole = teamRole;
@@ -397,7 +431,15 @@ public class ListTeamsResponseBody extends TeaModel {
             } 
 
             /**
-             * teamRole.
+             * <p>The role of the user in the team. Valid values:</p>
+             * <ul>
+             * <li>ADMIN</li>
+             * <li>MEMBER</li>
+             * </ul>
+             * <p>Each team must have exactly one ADMIN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADMIN</p>
              */
             public Builder teamRole(String teamRole) {
                 this.teamRole = teamRole;
@@ -405,7 +447,10 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usr-123456</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -413,7 +458,10 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-01</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -571,7 +619,7 @@ public class ListTeamsResponseBody extends TeaModel {
             } 
 
             /**
-             * agents.
+             * <p>The list of agent members in the team.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -579,7 +627,10 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The time when the team was created, in UTC and RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -587,7 +638,10 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The team description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Team responsible for the intelligent customer service business</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -595,7 +649,10 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 128 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team-01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -603,7 +660,18 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The team status. Valid values:</p>
+             * <ul>
+             * <li>Creating</li>
+             * <li>Active</li>
+             * <li>Updating</li>
+             * <li>Deleting</li>
+             * <li>Failed</li>
+             * <li>Deleted</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -611,7 +679,10 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * teamId.
+             * <p>The team ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tm-123456</p>
              */
             public Builder teamId(String teamId) {
                 this.teamId = teamId;
@@ -619,7 +690,10 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the team was last modified, in UTC and RFC 3339 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -627,7 +701,7 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * users.
+             * <p>The list of user members in the team.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;
@@ -635,7 +709,10 @@ public class ListTeamsResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

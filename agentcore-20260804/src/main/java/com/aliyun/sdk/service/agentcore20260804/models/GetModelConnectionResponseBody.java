@@ -119,7 +119,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS is returned if the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The detailed information about the model connection.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 is returned if the request succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The request processing result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -394,7 +406,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * apiKeyCount.
+             * <p>The number of API keys configured in the model connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder apiKeyCount(Integer apiKeyCount) {
                 this.apiKeyCount = apiKeyCount;
@@ -402,7 +417,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * apiKeys.
+             * <p>The list of API keys used to access the upstream model service. The list contains at least one non-empty value.</p>
              */
             public Builder apiKeys(java.util.List<String> apiKeys) {
                 this.apiKeys = apiKeys;
@@ -410,7 +425,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * connectionId.
+             * <p>The model connection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mc-1</p>
              */
             public Builder connectionId(String connectionId) {
                 this.connectionId = connectionId;
@@ -418,7 +436,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The time when the resource was created, in RFC 3339 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-09T00:00:00Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -426,7 +447,7 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * credentialConfigured.
+             * <p>Indicates whether access credentials have been configured for the model connection.</p>
              */
             public Builder credentialConfigured(Boolean credentialConfigured) {
                 this.credentialConfigured = credentialConfigured;
@@ -434,7 +455,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the model connection. The description can be up to 255 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -442,7 +466,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * <p>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -450,7 +477,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the model connection. The name must be 1 to 128 non-whitespace characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -458,7 +488,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The model invocation protocol. Currently, only OpenAI/v1 is supported. If this parameter is not set during model connection creation, this default value is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAI/v1</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -466,7 +499,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * providerType.
+             * <p>The model provider type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen</p>
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;
@@ -474,7 +510,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -482,7 +521,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The resource status. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -490,7 +532,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * statusReason.
+             * <p>The failure summary returned when the model connection fails to be published or fails to be deleted but remains in the Deleting state. This value is empty for other statuses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GatewayOperationException</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -498,7 +543,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the resource was last updated, in RFC 3339 UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-09T00:00:00Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -506,7 +554,10 @@ public class GetModelConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-1</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

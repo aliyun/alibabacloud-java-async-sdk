@@ -172,6 +172,7 @@ public class ListServiceEndpointsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +185,10 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * agentId.
+         * <p>Filters by target agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-123456</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("agentId", agentId);
@@ -193,7 +197,10 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * agentVersion.
+         * <p>Filters by target agent version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder agentVersion(String agentVersion) {
             this.putQueryParameter("agentVersion", agentVersion);
@@ -202,7 +209,10 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * collaborationComponent.
+         * <p>Filters by collaboration component type. Valid values: MATRIX_CLIENT, MATRIX_FEDERATION, ELEMENT_WEB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ELEMENT_WEB</p>
          */
         public Builder collaborationComponent(String collaborationComponent) {
             this.putQueryParameter("collaborationComponent", collaborationComponent);
@@ -211,7 +221,10 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page. Valid values: 1 to 100. If this parameter is not specified, 20 records are returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -220,7 +233,10 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. Do not specify this parameter for the first request. For subsequent requests, specify the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -229,7 +245,10 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * resourceBindingId.
+         * <p>Filters by the workspace resource binding ID of the target collaboration component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wrb-123456</p>
          */
         public Builder resourceBindingId(String resourceBindingId) {
             this.putQueryParameter("resourceBindingId", resourceBindingId);
@@ -238,7 +257,10 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Filters by service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, DELETING.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -247,7 +269,10 @@ public class ListServiceEndpointsRequest extends Request {
         }
 
         /**
-         * targetType.
+         * <p>Filters by target type. Valid values: AGENT_VERSION, TEAM_COLLABORATION.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AGENT_VERSION</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("targetType", targetType);

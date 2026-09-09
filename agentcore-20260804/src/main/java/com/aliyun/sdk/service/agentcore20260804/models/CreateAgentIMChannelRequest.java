@@ -103,6 +103,7 @@ public class CreateAgentIMChannelRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class CreateAgentIMChannelRequest extends Request {
         }
 
         /**
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class CreateAgentIMChannelRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(CreateAgentIMChannelRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -137,7 +139,10 @@ public class CreateAgentIMChannelRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>A reserved idempotency token. The backend does not provide persistent idempotency guarantees in the current phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -205,7 +210,7 @@ public class CreateAgentIMChannelRequest extends Request {
             } 
 
             /**
-             * showThinking.
+             * <p>Specifies whether to display the thinking process in IM messages. Default value: false.</p>
              */
             public Builder showThinking(Boolean showThinking) {
                 this.showThinking = showThinking;
@@ -213,7 +218,7 @@ public class CreateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * showToolCalls.
+             * <p>Specifies whether to display the tool calling process in IM messages. Default value: false.</p>
              */
             public Builder showToolCalls(Boolean showToolCalls) {
                 this.showToolCalls = showToolCalls;
@@ -322,7 +327,7 @@ public class CreateAgentIMChannelRequest extends Request {
             } 
 
             /**
-             * channelConfig.
+             * <p>The channel behavior configuration.</p>
              */
             public Builder channelConfig(ChannelConfig channelConfig) {
                 this.channelConfig = channelConfig;
@@ -330,6 +335,12 @@ public class CreateAgentIMChannelRequest extends Request {
             }
 
             /**
+             * <p>The IM channel type. Valid values:</p>
+             * <ul>
+             * <li>DINGTALK: DingTalk.</li>
+             * <li>FEISHU: Lark.</li>
+             * <li>WECOM: WeCom.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -341,6 +352,7 @@ public class CreateAgentIMChannelRequest extends Request {
             }
 
             /**
+             * <p>The channel credentials. All fields must be provided and field values must be non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</p>
              * <p>This parameter is required.</p>
              */
             public Builder credential(java.util.Map<String, String> credential) {
@@ -349,7 +361,7 @@ public class CreateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable the IM channel. Default value: true.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -357,6 +369,7 @@ public class CreateAgentIMChannelRequest extends Request {
             }
 
             /**
+             * <p>The ID of the ServiceEndpoint to bind. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public network address.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
             } 
 
             /**
-             * errorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VALIDATION_FAILED</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -188,7 +194,10 @@ public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Parameter validation failed</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -196,7 +205,10 @@ public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>skill-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +216,10 @@ public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * owner.
+             * <p>The resource owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -212,7 +227,7 @@ public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * success.
+             * <p>Indicates whether the request is successful.</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -266,7 +281,7 @@ public class BatchUploadSkillsViaOssResponseBody extends TeaModel {
             } 
 
             /**
-             * results.
+             * <p>The batch upload results.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;

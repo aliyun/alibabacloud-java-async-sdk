@@ -158,7 +158,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +169,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -174,7 +180,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of service endpoints.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -182,7 +188,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records per page that takes effect for this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -190,7 +199,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -198,7 +210,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. This value is empty if no more pages exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>djE6YWdlbnRjb3JlLnNlcnZpY2UtZW5kcG9pbnQubGlzdDoyMA</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -206,7 +221,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +232,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +240,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of service endpoints that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -314,7 +335,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * accessType.
+             * <p>The access URL type. Valid values: INTERNET, VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INTERNET</p>
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -322,7 +346,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The access URL status. Valid values: CREATING, READY, DEGRADED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +357,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * statusReason.
+             * <p>The reason for the access URL status. A specific reason is returned when the status is abnormal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -338,7 +368,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The access URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://endpoint.example.com">https://endpoint.example.com</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -392,7 +425,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The authentication method. NONE indicates that no authentication is required. API_KEY indicates that authentication is performed by passing an API key through the x-api-key request header.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API_KEY</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -498,7 +534,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * agentId.
+             * <p>The target agent ID. This parameter is returned when the target type is AGENT_VERSION.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-123456</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -506,7 +545,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * agentVersion.
+             * <p>The target agent version number. This parameter is returned when the target type is AGENT_VERSION.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -514,7 +556,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * collaborationComponent.
+             * <p>The collaboration component type. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ELEMENT_WEB</p>
              */
             public Builder collaborationComponent(String collaborationComponent) {
                 this.collaborationComponent = collaborationComponent;
@@ -522,7 +567,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceBindingId.
+             * <p>The workspace resource binding ID associated with the target collaboration component. This parameter is returned when the target type is TEAM_COLLABORATION.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wrb-123456</p>
              */
             public Builder resourceBindingId(String resourceBindingId) {
                 this.resourceBindingId = resourceBindingId;
@@ -530,7 +578,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * targetType.
+             * <p>The target type. Valid values: AGENT_VERSION, TEAM_COLLABORATION.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AGENT_VERSION</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -727,7 +778,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * accessUrls.
+             * <p>The list of access URLs for the service endpoint.</p>
              */
             public Builder accessUrls(java.util.List<AccessUrls> accessUrls) {
                 this.accessUrls = accessUrls;
@@ -735,7 +786,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * authentication.
+             * <p>The authentication configuration of the service endpoint.</p>
              */
             public Builder authentication(Authentication authentication) {
                 this.authentication = authentication;
@@ -743,7 +794,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time in UTC, formatted according to RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -751,7 +805,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * endpointType.
+             * <p>The service endpoint type. DEFAULT indicates a default endpoint created and maintained by the platform. NAMED indicates a named endpoint explicitly created by the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NAMED</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -759,7 +816,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The service endpoint name. The name is unique within the workspace and is 1 to 128 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-agent-endpoint</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -767,7 +827,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID where the service endpoint is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -775,7 +838,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * serviceEndpointId.
+             * <p>The service endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>se-123456</p>
              */
             public Builder serviceEndpointId(String serviceEndpointId) {
                 this.serviceEndpointId = serviceEndpointId;
@@ -783,7 +849,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The service endpoint status. Valid values: CREATING, READY, UPDATING, DEGRADED, DISABLED, DELETING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -791,7 +860,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * statusReason.
+             * <p>The reason for the service endpoint status. A specific reason is returned when the status is abnormal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceEndpoint.Provider.Unavailable: no provider for the target type</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -799,7 +871,7 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * target.
+             * <p>The target routing configuration of the service endpoint.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -807,7 +879,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The last modification time in UTC, formatted according to RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -815,7 +890,10 @@ public class ListServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

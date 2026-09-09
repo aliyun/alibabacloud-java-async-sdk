@@ -118,6 +118,7 @@ public class UpdateAgentIMChannelRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class UpdateAgentIMChannelRequest extends Request {
         }
 
         /**
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class UpdateAgentIMChannelRequest extends Request {
         }
 
         /**
+         * <p>The IM channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class UpdateAgentIMChannelRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UpdateAgentIMChannelRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -164,7 +167,10 @@ public class UpdateAgentIMChannelRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The reserved idempotency token. The backend does not provide persistent idempotency guarantees in this phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -232,7 +238,7 @@ public class UpdateAgentIMChannelRequest extends Request {
             } 
 
             /**
-             * showThinking.
+             * <p>Specifies whether to display the thinking process in IM messages. Default value: false.</p>
              */
             public Builder showThinking(Boolean showThinking) {
                 this.showThinking = showThinking;
@@ -240,7 +246,7 @@ public class UpdateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * showToolCalls.
+             * <p>Specifies whether to display the tool calling process in IM messages. Default value: false.</p>
              */
             public Builder showToolCalls(Boolean showToolCalls) {
                 this.showToolCalls = showToolCalls;
@@ -320,7 +326,7 @@ public class UpdateAgentIMChannelRequest extends Request {
             } 
 
             /**
-             * channelConfig.
+             * <p>The channel behavior configuration. When provided, the entire configuration is replaced. An empty object restores default values.</p>
              */
             public Builder channelConfig(ChannelConfig channelConfig) {
                 this.channelConfig = channelConfig;
@@ -328,7 +334,7 @@ public class UpdateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable the IM channel. Default value: true (when created).</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -336,7 +342,10 @@ public class UpdateAgentIMChannelRequest extends Request {
             }
 
             /**
-             * serviceEndpointId.
+             * <p>The ID of the bound ServiceEndpoint. The endpoint must belong to the specified agent and its current version, be in the ready state, and have a public endpoint address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>se-1</p>
              */
             public Builder serviceEndpointId(String serviceEndpointId) {
                 this.serviceEndpointId = serviceEndpointId;

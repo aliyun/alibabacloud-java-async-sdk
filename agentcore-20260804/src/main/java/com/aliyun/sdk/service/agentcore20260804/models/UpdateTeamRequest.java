@@ -103,6 +103,7 @@ public class UpdateTeamRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateTeamRequest extends Request {
         }
 
         /**
+         * <p>The team ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class UpdateTeamRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for updating the team.</p>
          */
         public Builder body(UpdateTeamRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -137,7 +139,10 @@ public class UpdateTeamRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not supported</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -205,7 +210,10 @@ public class UpdateTeamRequest extends Request {
             } 
 
             /**
-             * agentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-123456</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -213,7 +221,10 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * teamRole.
+             * <p>The role of the agent in the team. Valid values: LEADER, WORKER.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WORKER</p>
              */
             public Builder teamRole(String teamRole) {
                 this.teamRole = teamRole;
@@ -280,7 +291,10 @@ public class UpdateTeamRequest extends Request {
             } 
 
             /**
-             * teamRole.
+             * <p>The role of the user in the team. Valid values: ADMIN, MEMBER. Each team must have exactly one ADMIN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADMIN</p>
              */
             public Builder teamRole(String teamRole) {
                 this.teamRole = teamRole;
@@ -288,7 +302,10 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * userId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usr-123456</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -368,7 +385,7 @@ public class UpdateTeamRequest extends Request {
             } 
 
             /**
-             * agents.
+             * <p>The new list of agent members. The existing agent members are replaced using full overwrite semantics. If not specified, the current value remains unchanged.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -376,7 +393,10 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The new team description. If not specified, the current value remains unchanged.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Team responsible for intelligent customer service</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -384,7 +404,7 @@ public class UpdateTeamRequest extends Request {
             }
 
             /**
-             * users.
+             * <p>The new list of user members. The existing user members are replaced using full overwrite semantics. When this parameter is specified, the list must contain exactly one member with the ADMIN role. If not specified, the current value remains unchanged.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;

@@ -119,7 +119,10 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The binding information of the external identity provider after the update.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +276,10 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * identityProviderType.
+             * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder identityProviderType(String identityProviderType) {
                 this.identityProviderType = identityProviderType;
@@ -272,7 +287,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * loginEnabled.
+             * <p>Specifies whether workspace users are allowed to log on through this external identity provider.</p>
              */
             public Builder loginEnabled(Boolean loginEnabled) {
                 this.loginEnabled = loginEnabled;
@@ -280,7 +295,21 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The binding status. Valid values:</p>
+             * <ul>
+             * <li>CONFIGURED: The configuration has been accepted and is waiting for user pool provisioning.</li>
+             * <li>SYNCING: Organization members are being synchronized.</li>
+             * <li>SYNCED: Organization member synchronization is complete.</li>
+             * <li>READY: The binding is active.</li>
+             * <li>SYNC_FAILED: Organization member synchronization failed.</li>
+             * <li>UPDATING: The configuration is being updated.</li>
+             * <li>UPDATE_FAILED: The configuration update failed.</li>
+             * <li>DISCONNECTING: The binding is being removed.</li>
+             * <li>DISCONNECT_FAILED: The unbinding failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -288,7 +317,7 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * syncEnabled.
+             * <p>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;
@@ -296,7 +325,10 @@ public class UpdateIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

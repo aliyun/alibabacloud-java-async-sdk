@@ -88,6 +88,7 @@ public class CreateModelConnectionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class CreateModelConnectionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(CreateModelConnectionRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -110,7 +111,10 @@ public class CreateModelConnectionRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token used for idempotence. Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -234,6 +238,7 @@ public class CreateModelConnectionRequest extends Request {
             } 
 
             /**
+             * <p>The list of API keys used to access the upstream model service. The list must contain at least one non-empty value.</p>
              * <p>This parameter is required.</p>
              */
             public Builder apiKeys(java.util.List<String> apiKeys) {
@@ -242,7 +247,10 @@ public class CreateModelConnectionRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The description of the model connection. The description can be up to 255 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,6 +258,7 @@ public class CreateModelConnectionRequest extends Request {
             }
 
             /**
+             * <p>The absolute HTTP or HTTPS address of the upstream model service. The address can be up to 1024 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -261,6 +270,7 @@ public class CreateModelConnectionRequest extends Request {
             }
 
             /**
+             * <p>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -272,7 +282,10 @@ public class CreateModelConnectionRequest extends Request {
             }
 
             /**
-             * protocol.
+             * <p>The model invoke protocol. Currently, only OpenAI/v1 is supported. If this parameter is not configured in Settings during model creation, this default value is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenAI/v1</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -280,6 +293,7 @@ public class CreateModelConnectionRequest extends Request {
             }
 
             /**
+             * <p>The model provider type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

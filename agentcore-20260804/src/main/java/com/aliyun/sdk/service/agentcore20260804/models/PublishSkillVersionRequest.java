@@ -104,6 +104,7 @@ public class PublishSkillVersionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class PublishSkillVersionRequest extends Request {
         }
 
         /**
+         * <p>The Skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class PublishSkillVersionRequest extends Request {
         }
 
         /**
+         * <p>The Skill version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,7 @@ public class PublishSkillVersionRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(PublishSkillVersionRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -196,7 +199,10 @@ public class PublishSkillVersionRequest extends Request {
             } 
 
             /**
-             * updateLatestLabel.
+             * <p>Specifies whether to update the latest label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder updateLatestLabel(Boolean updateLatestLabel) {
                 this.updateLatestLabel = updateLatestLabel;

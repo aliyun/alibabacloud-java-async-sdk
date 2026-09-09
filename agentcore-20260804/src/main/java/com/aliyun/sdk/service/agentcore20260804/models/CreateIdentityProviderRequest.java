@@ -74,6 +74,7 @@ public class CreateIdentityProviderRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for binding an external identity provider.</p>
          */
         public Builder body(CreateIdentityProviderRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -207,7 +208,10 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * appId.
+             * <p>The App ID of the Lark application. This parameter is required when the binding type is Feishu.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cli_exampleappid01</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -215,7 +219,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * appKey.
+             * <p>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingexampleappkey01</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -223,7 +230,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * appSecret.
+             * <p>Required. The secret of the external identity provider application. This parameter is used only for write operations. The query API does not return this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-app-secret</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
@@ -231,7 +241,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * corpId.
+             * <p>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingexamplecorpid01</p>
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -239,7 +252,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * encryptKey.
+             * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations. The query API does not return this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-encrypt-key</p>
              */
             public Builder encryptKey(String encryptKey) {
                 this.encryptKey = encryptKey;
@@ -247,7 +263,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * verificationToken.
+             * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations. The query API does not return this field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-verification-token</p>
              */
             public Builder verificationToken(String verificationToken) {
                 this.verificationToken = verificationToken;
@@ -341,6 +360,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
+             * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -352,7 +372,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * loginEnabled.
+             * <p>Specifies whether workspace users are allowed to log on through this external identity provider.</p>
              */
             public Builder loginEnabled(Boolean loginEnabled) {
                 this.loginEnabled = loginEnabled;
@@ -360,7 +380,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * metadata.
+             * <p>The application configuration of the external identity provider. When binding DingTalk, you must provide appKey, appSecret, and corpId. When binding Lark, you must provide appId and appSecret.</p>
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -368,7 +388,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * syncEnabled.
+             * <p>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</p>
              */
             public Builder syncEnabled(Boolean syncEnabled) {
                 this.syncEnabled = syncEnabled;

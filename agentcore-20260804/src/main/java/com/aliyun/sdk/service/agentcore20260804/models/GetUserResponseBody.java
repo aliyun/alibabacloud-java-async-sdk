@@ -119,7 +119,10 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The user details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -342,7 +354,10 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * agentCoreUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usr-123456</p>
              */
             public Builder agentCoreUserId(String agentCoreUserId) {
                 this.agentCoreUserId = agentCoreUserId;
@@ -350,7 +365,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * authMethod.
+             * <p>The authentication method of the user. password indicates local password authentication in the workspace. dingtalk and feishu indicate that the user is synchronized and authenticated by the corresponding external identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder authMethod(String authMethod) {
                 this.authMethod = authMethod;
@@ -358,7 +376,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time in UTC, formatted in RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -366,7 +387,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the user. The display name must be 1 to 32 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Smith</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -374,7 +398,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * email.
+             * <p>The email address of the user. The email address can be up to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user-01@example.com">user-01@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -382,7 +409,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The username. The username must be unique within the workspace and can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The username must be 1 to 32 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -390,7 +420,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * note.
+             * <p>The remarks of the user. The remarks can be up to 1024 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent operations team member</p>
              */
             public Builder note(String note) {
                 this.note = note;
@@ -398,7 +431,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -406,7 +442,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The user status. Valid values: Creating, Active, Updating, Deleting, Failed, DeleteFailed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -414,7 +453,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The last modification time in UTC, formatted in RFC 3339.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-12T03:04:05Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -422,7 +464,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

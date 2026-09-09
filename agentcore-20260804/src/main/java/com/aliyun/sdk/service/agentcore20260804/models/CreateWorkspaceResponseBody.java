@@ -119,7 +119,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The workspace details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable VPC networking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -246,7 +264,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The list of vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -254,7 +272,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1234567890</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -308,7 +329,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * vpc.
+             * <p>The VPC network configuration of the user.</p>
              */
             public Builder vpc(Vpc vpc) {
                 this.vpc = vpc;
@@ -427,7 +448,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production-agents</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -435,7 +459,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * networkConfiguration.
+             * <p>The network configuration of the workspace.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;
@@ -443,7 +467,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -451,7 +478,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The workspace status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Initialized</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -459,7 +489,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * tenantId.
+             * <p>The ID of the tenant to which the workspace belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tenant-123456</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -467,7 +500,10 @@ public class CreateWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

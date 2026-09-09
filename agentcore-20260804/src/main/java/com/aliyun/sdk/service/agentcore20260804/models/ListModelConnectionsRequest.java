@@ -158,6 +158,7 @@ public class ListModelConnectionsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,10 @@ public class ListModelConnectionsRequest extends Request {
         }
 
         /**
-         * includeModels.
+         * <p>Specifies whether to return associated model summaries for each model connection. By default, model summaries are not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeModels(Boolean includeModels) {
             this.putQueryParameter("includeModels", includeModels);
@@ -179,7 +183,10 @@ public class ListModelConnectionsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of records per page. Valid values: 0 to 100. If this parameter is not set or is set to 0, the default value 10 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -188,7 +195,10 @@ public class ListModelConnectionsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The model connection name. The name must be 1 to 128 non-whitespace characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -197,7 +207,10 @@ public class ListModelConnectionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Pass the token returned in the previous query. An empty response indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bW9kZWwtbWFuYWdlbWVudC1vZmZzZXQ6bW9kZWwtY29ubmVjdGlvbjoxMA</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -206,7 +219,10 @@ public class ListModelConnectionsRequest extends Request {
         }
 
         /**
-         * protocol.
+         * <p>The invocation protocol used to filter model connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenAI/v1</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("protocol", protocol);
@@ -215,7 +231,10 @@ public class ListModelConnectionsRequest extends Request {
         }
 
         /**
-         * providerType.
+         * <p>The model provider type used to filter model connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen</p>
          */
         public Builder providerType(String providerType) {
             this.putQueryParameter("providerType", providerType);
@@ -224,7 +243,10 @@ public class ListModelConnectionsRequest extends Request {
         }
 
         /**
-         * searchType.
+         * <p>The name matching mode. Takes effect only when Name is set. Valid values: accurate (exact match), blur (fuzzy match). Default value: blur.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>blur</p>
          */
         public Builder searchType(String searchType) {
             this.putQueryParameter("searchType", searchType);

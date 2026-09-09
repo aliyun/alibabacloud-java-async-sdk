@@ -117,6 +117,7 @@ public class ListMcpToolsRequest extends Request {
         } 
 
         /**
+         * <p>The AgentCore workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class ListMcpToolsRequest extends Request {
         }
 
         /**
+         * <p>The MCP service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +152,10 @@ public class ListMcpToolsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return per request. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -159,7 +164,10 @@ public class ListMcpToolsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

@@ -119,7 +119,10 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The summary of the updated IM channel credential.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The result message of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1a2b3c4d-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +237,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * configuredSecretFields.
+             * <p>The list of configured secret field names. Secret values are not included.</p>
              */
             public Builder configuredSecretFields(java.util.List<String> configuredSecretFields) {
                 this.configuredSecretFields = configuredSecretFields;
@@ -233,7 +245,7 @@ public class UpdateAgentIMChannelCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * nonSecretFields.
+             * <p>The non-sensitive credential fields and their values.</p>
              */
             public Builder nonSecretFields(java.util.Map<String, String> nonSecretFields) {
                 this.nonSecretFields = nonSecretFields;

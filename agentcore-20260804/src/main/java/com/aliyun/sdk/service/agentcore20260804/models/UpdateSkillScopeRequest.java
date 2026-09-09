@@ -89,6 +89,7 @@ public class UpdateSkillScopeRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class UpdateSkillScopeRequest extends Request {
         }
 
         /**
+         * <p>The skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class UpdateSkillScopeRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UpdateSkillScopeRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -170,6 +172,7 @@ public class UpdateSkillScopeRequest extends Request {
             } 
 
             /**
+             * <p>The visibility scope.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

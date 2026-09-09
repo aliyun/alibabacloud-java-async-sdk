@@ -119,7 +119,10 @@ public class GetMcpResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Request processed successfully</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-47A8-90AB-CDEF12345678</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetMcpResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +237,10 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +248,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The authentication parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-credential</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -339,7 +357,10 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * credential.
+             * <p>The authentication credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-credential</p>
              */
             public Builder credential(String credential) {
                 this.credential = credential;
@@ -347,7 +368,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The authentication scheme ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-1234567890abcdef</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -355,7 +379,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -363,7 +390,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * position.
+             * <p>The position of the credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>header</p>
              */
             public Builder position(String position) {
                 this.position = position;
@@ -371,7 +401,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>basic</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -451,7 +484,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * directProxy.
+             * <p>The direct proxy authentication configuration.</p>
              */
             public Builder directProxy(DirectProxy directProxy) {
                 this.directProxy = directProxy;
@@ -459,7 +492,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Indicates whether authentication is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -467,7 +500,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * httpToMcp.
+             * <p>The list of HTTP_TO_MCP authentication configurations.</p>
              */
             public Builder httpToMcp(java.util.List<HttpToMcp> httpToMcp) {
                 this.httpToMcp = httpToMcp;
@@ -664,7 +697,7 @@ public class GetMcpResponseBody extends TeaModel {
             } 
 
             /**
-             * addresses.
+             * <p>The list of MCP service addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -672,7 +705,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * auth.
+             * <p>The backend authentication configuration. enabled indicates whether authentication is enabled. directProxy specifies the custom authentication header for direct proxy. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -680,7 +713,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A sample description that explains the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -688,7 +724,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * mcpServerConfig.
+             * <p>The MCP server configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;}</p>
              */
             public Builder mcpServerConfig(String mcpServerConfig) {
                 this.mcpServerConfig = mcpServerConfig;
@@ -696,7 +735,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * mcpServerId.
+             * <p>The MCP service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-1234567890abcdef</p>
              */
             public Builder mcpServerId(String mcpServerId) {
                 this.mcpServerId = mcpServerId;
@@ -704,7 +746,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -712,7 +757,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The MCP protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SSE</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -720,7 +768,7 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MCP 服务器状态：CREATING（创建中）、READY（可用）、UPDATING（更新中）、DELETING（删除中）、FAILED（失败）。创建、更新和删除均为异步操作，返回后需轮询该字段直到 READY 或 FAILED，删除成功后资源不再返回。</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>CREATING</p>
@@ -731,7 +779,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * <p>部署失败时返回具体错误信息，例如 APIG OpenAPI 解析失败原因。READY 时为空。</p>
+             * <p>The status reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource processing completed</p>
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -739,7 +790,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * swaggerConfig.
+             * <p>The Swagger configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;}</p>
              */
             public Builder swaggerConfig(String swaggerConfig) {
                 this.swaggerConfig = swaggerConfig;
@@ -747,7 +801,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -755,7 +812,10 @@ public class GetMcpResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The MCP service access URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/artifacts/example.zip">https://example.com/artifacts/example.zip</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

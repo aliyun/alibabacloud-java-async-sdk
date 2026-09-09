@@ -89,6 +89,7 @@ public class UpdateSkillBizTagsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class UpdateSkillBizTagsRequest extends Request {
         }
 
         /**
+         * <p>The Skill name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,7 @@ public class UpdateSkillBizTagsRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UpdateSkillBizTagsRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -170,6 +172,7 @@ public class UpdateSkillBizTagsRequest extends Request {
             } 
 
             /**
+             * <p>The business tags as a JSON array string.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

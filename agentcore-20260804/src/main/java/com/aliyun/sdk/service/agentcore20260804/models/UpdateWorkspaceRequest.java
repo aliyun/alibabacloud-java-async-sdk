@@ -88,6 +88,7 @@ public class UpdateWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for updating a workspace.</p>
          */
         public Builder body(UpdateWorkspaceRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -110,7 +111,10 @@ public class UpdateWorkspaceRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-update-20260805-001</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -191,7 +195,10 @@ public class UpdateWorkspaceRequest extends Request {
             } 
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable VPC networking.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -199,7 +206,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The list of vSwitch IDs. When VPC networking is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -207,7 +214,10 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * vpcId.
+             * <p>The ID of the user VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1234567890</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -262,6 +272,7 @@ public class UpdateWorkspaceRequest extends Request {
             } 
 
             /**
+             * <p>The user VPC network configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder vpc(Vpc vpc) {
@@ -329,7 +340,10 @@ public class UpdateWorkspaceRequest extends Request {
             } 
 
             /**
-             * name.
+             * <p>The updated workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production-agents-v2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -337,7 +351,7 @@ public class UpdateWorkspaceRequest extends Request {
             }
 
             /**
-             * networkConfiguration.
+             * <p>The updated workspace network configuration.</p>
              */
             public Builder networkConfiguration(NetworkConfiguration networkConfiguration) {
                 this.networkConfiguration = networkConfiguration;

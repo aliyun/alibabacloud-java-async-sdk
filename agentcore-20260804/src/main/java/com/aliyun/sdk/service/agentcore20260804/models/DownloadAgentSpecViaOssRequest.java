@@ -89,6 +89,7 @@ public class DownloadAgentSpecViaOssRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DownloadAgentSpecViaOssRequest extends Request {
         }
 
         /**
+         * <p>The unique name of the AgentSpec.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DownloadAgentSpecViaOssRequest extends Request {
         }
 
         /**
-         * agentSpecVersion.
+         * <p>The version number. If not specified, the version corresponding to the latest label is downloaded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder agentSpecVersion(String agentSpecVersion) {
             this.putQueryParameter("agentSpecVersion", agentSpecVersion);

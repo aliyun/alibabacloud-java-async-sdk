@@ -74,6 +74,7 @@ public class BatchUploadSkillsViaOssRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class BatchUploadSkillsViaOssRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(BatchUploadSkillsViaOssRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -156,6 +157,7 @@ public class BatchUploadSkillsViaOssRequest extends Request {
             } 
 
             /**
+             * <p>The OSS object name (path).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -167,7 +169,10 @@ public class BatchUploadSkillsViaOssRequest extends Request {
             }
 
             /**
-             * overwrite.
+             * <p>Specifies whether to overwrite an existing Skill. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder overwrite(Boolean overwrite) {
                 this.overwrite = overwrite;

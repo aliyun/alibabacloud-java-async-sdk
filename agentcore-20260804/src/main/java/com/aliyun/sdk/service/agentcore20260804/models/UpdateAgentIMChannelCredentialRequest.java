@@ -118,6 +118,7 @@ public class UpdateAgentIMChannelCredentialRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class UpdateAgentIMChannelCredentialRequest extends Request {
         }
 
         /**
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class UpdateAgentIMChannelCredentialRequest extends Request {
         }
 
         /**
+         * <p>The IM channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,7 @@ public class UpdateAgentIMChannelCredentialRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UpdateAgentIMChannelCredentialRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -164,7 +167,10 @@ public class UpdateAgentIMChannelCredentialRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>A reserved idempotency token. The backend does not provide persistent idempotence guarantee in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-1</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -220,6 +226,7 @@ public class UpdateAgentIMChannelCredentialRequest extends Request {
             } 
 
             /**
+             * <p>The channel credential. All fields must be provided and field values must be non-empty strings. DingTalk uses clientID and clientSecret. Lark uses appId and appSecret. WeCom uses botId and secret.</p>
              * <p>This parameter is required.</p>
              */
             public Builder credential(java.util.Map<String, String> credential) {

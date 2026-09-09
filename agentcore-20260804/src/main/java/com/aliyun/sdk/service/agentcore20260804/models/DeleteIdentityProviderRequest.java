@@ -89,6 +89,7 @@ public class DeleteIdentityProviderRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteIdentityProviderRequest extends Request {
         }
 
         /**
+         * <p>The type of the external identity provider to unbind. Valid values: DingTalk, Feishu. The value must match the currently bound type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeleteIdentityProviderRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not supported</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

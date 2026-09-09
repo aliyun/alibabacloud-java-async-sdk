@@ -119,7 +119,10 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code. The value SUCCESS indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The list of predefined models.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code. The value 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The request processing result message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -303,7 +315,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * audio.
+             * <p>Indicates whether the model supports audio input or output.</p>
              */
             public Builder audio(Boolean audio) {
                 this.audio = audio;
@@ -311,7 +323,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * document.
+             * <p>Indicates whether the model supports document input.</p>
              */
             public Builder document(Boolean document) {
                 this.document = document;
@@ -319,7 +331,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * multiToolCall.
+             * <p>Indicates whether the model is able to invoke multiple tool calling requests in a single response.</p>
              */
             public Builder multiToolCall(Boolean multiToolCall) {
                 this.multiToolCall = multiToolCall;
@@ -327,7 +339,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * reasoning.
+             * <p>Indicates whether the model supports reasoning capabilities.</p>
              */
             public Builder reasoning(Boolean reasoning) {
                 this.reasoning = reasoning;
@@ -335,7 +347,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * streamToolCall.
+             * <p>Indicates whether the model supports streaming tool calling.</p>
              */
             public Builder streamToolCall(Boolean streamToolCall) {
                 this.streamToolCall = streamToolCall;
@@ -343,7 +355,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * toolCall.
+             * <p>Indicates whether the model supports tool calling.</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -351,7 +363,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * video.
+             * <p>Indicates whether the model supports video input.</p>
              */
             public Builder video(Boolean video) {
                 this.video = video;
@@ -359,7 +371,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * vision.
+             * <p>Indicates whether the model supports image input.</p>
              */
             public Builder vision(Boolean vision) {
                 this.vision = vision;
@@ -465,7 +477,7 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * capabilities.
+             * <p>The model capability configuration.</p>
              */
             public Builder capabilities(Capabilities capabilities) {
                 this.capabilities = capabilities;
@@ -473,7 +485,10 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * contextSize.
+             * <p>The model context window size in tokens. The value must be a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128000</p>
              */
             public Builder contextSize(Long contextSize) {
                 this.contextSize = contextSize;
@@ -481,7 +496,10 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * maxTokens.
+             * <p>The maximum number of output tokens supported by the model in a single generation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131072</p>
              */
             public Builder maxTokens(Long maxTokens) {
                 this.maxTokens = maxTokens;
@@ -489,7 +507,10 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * modelName.
+             * <p>The upstream model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-max</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -497,7 +518,10 @@ public class ListPredefinedModelsResponseBody extends TeaModel {
             }
 
             /**
-             * releaseDate.
+             * <p>The model release date in the format of YYYY-MM-DD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-01</p>
              */
             public Builder releaseDate(String releaseDate) {
                 this.releaseDate = releaseDate;

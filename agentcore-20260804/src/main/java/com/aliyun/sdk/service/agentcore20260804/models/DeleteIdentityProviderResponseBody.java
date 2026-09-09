@@ -119,7 +119,10 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The business status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The binding information of the external identity provider after the unbinding operation is accepted.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message. An error description is returned if the request fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request-123456</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +250,10 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * identityProviderType.
+             * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingTalk</p>
              */
             public Builder identityProviderType(String identityProviderType) {
                 this.identityProviderType = identityProviderType;
@@ -246,7 +261,21 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>CONFIGURED: The configuration has been accepted and is waiting for the user pool to be provisioned.</li>
+             * <li>SYNCING: Organization members are being synchronized.</li>
+             * <li>SYNCED: Organization member synchronization is complete.</li>
+             * <li>READY: The binding is in effect.</li>
+             * <li>SYNC_FAILED: Organization member synchronization failed.</li>
+             * <li>UPDATING: The configuration is being updated.</li>
+             * <li>UPDATE_FAILED: Configuration update failed.</li>
+             * <li>DISCONNECTING: The unbinding is in progress.</li>
+             * <li>DISCONNECT_FAILED: The unbinding failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>READY</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -254,7 +283,10 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * workspaceId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-123456</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

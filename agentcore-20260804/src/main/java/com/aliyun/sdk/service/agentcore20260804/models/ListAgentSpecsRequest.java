@@ -186,6 +186,7 @@ public class ListAgentSpecsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,10 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * agentSpecName.
+         * <p>The AgentSpec name used as a search keyword. Use this parameter together with the search parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-worker</p>
          */
         public Builder agentSpecName(String agentSpecName) {
             this.putQueryParameter("agentSpecName", agentSpecName);
@@ -207,7 +211,10 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * bizTag.
+         * <p>The business tag used for fuzzy filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai</p>
          */
         public Builder bizTag(String bizTag) {
             this.putQueryParameter("bizTag", bizTag);
@@ -216,7 +223,10 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The field by which to sort results. Set this parameter to download_count to sort by download count. By default, results are sorted by update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>download_count</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -225,7 +235,10 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * owner.
+         * <p>The owner used to filter results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("owner", owner);
@@ -234,7 +247,10 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * pageNo.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("pageNo", pageNo);
@@ -243,7 +259,10 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -252,7 +271,14 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>The visibility scope used to filter results. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC</li>
+         * <li>PRIVATE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("scope", scope);
@@ -261,7 +287,15 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * search.
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li>accurate: exact match.</li>
+         * <li>blur: fuzzy match.</li>
+         * </ul>
+         * <p>Default value: blur.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>blur</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("search", search);
@@ -270,7 +304,10 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * withCapabilities.
+         * <p>Specifies whether to return the Skills and McpServers lists. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withCapabilities(Boolean withCapabilities) {
             this.putQueryParameter("withCapabilities", withCapabilities);

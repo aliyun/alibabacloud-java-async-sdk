@@ -88,6 +88,7 @@ public class CreateTeamRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,7 @@ public class CreateTeamRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for creating a team.</p>
          */
         public Builder body(CreateTeamRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -110,7 +111,10 @@ public class CreateTeamRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not supported</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -178,7 +182,10 @@ public class CreateTeamRequest extends Request {
             } 
 
             /**
-             * agentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-123456</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -186,7 +193,14 @@ public class CreateTeamRequest extends Request {
             }
 
             /**
-             * teamRole.
+             * <p>The role of the agent in the team. Valid values:</p>
+             * <ul>
+             * <li>LEADER</li>
+             * <li>WORKER</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WORKER</p>
              */
             public Builder teamRole(String teamRole) {
                 this.teamRole = teamRole;
@@ -253,7 +267,15 @@ public class CreateTeamRequest extends Request {
             } 
 
             /**
-             * teamRole.
+             * <p>The role of the user in the team. Valid values:</p>
+             * <ul>
+             * <li>ADMIN</li>
+             * <li>MEMBER</li>
+             * </ul>
+             * <p>Each team must have exactly one ADMIN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADMIN</p>
              */
             public Builder teamRole(String teamRole) {
                 this.teamRole = teamRole;
@@ -261,7 +283,10 @@ public class CreateTeamRequest extends Request {
             }
 
             /**
-             * userId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>usr-123456</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -355,7 +380,7 @@ public class CreateTeamRequest extends Request {
             } 
 
             /**
-             * agents.
+             * <p>The list of agent members for the team.</p>
              */
             public Builder agents(java.util.List<Agents> agents) {
                 this.agents = agents;
@@ -363,7 +388,10 @@ public class CreateTeamRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The team description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A team responsible for intelligent customer service</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -371,6 +399,7 @@ public class CreateTeamRequest extends Request {
             }
 
             /**
+             * <p>The team name. The name can contain only lowercase letters, digits, and hyphens (-). It must start and end with a lowercase letter or digit. The name must be 1 to 128 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -382,7 +411,7 @@ public class CreateTeamRequest extends Request {
             }
 
             /**
-             * users.
+             * <p>The list of user members for the team. The list must include exactly one member with the ADMIN role.</p>
              */
             public Builder users(java.util.List<Users> users) {
                 this.users = users;

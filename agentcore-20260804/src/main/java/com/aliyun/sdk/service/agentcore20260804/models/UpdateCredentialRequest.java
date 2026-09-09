@@ -103,6 +103,7 @@ public class UpdateCredentialRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateCredentialRequest extends Request {
         }
 
         /**
+         * <p>The credential ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,7 @@ public class UpdateCredentialRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for updating the credential.</p>
          */
         public Builder body(UpdateCredentialRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -137,7 +139,10 @@ public class UpdateCredentialRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>Not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not supported</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -205,7 +210,10 @@ public class UpdateCredentialRequest extends Request {
             } 
 
             /**
-             * credentialMetadata.
+             * <p>The new credential content. The value is a JSON string. If credentialType is set to apiKey, only the apiKey field can be included, and the value cannot be empty. At least one of credentialMetadata and description must be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;apiKey&quot;:&quot;sk-example-value&quot;}</p>
              */
             public Builder credentialMetadata(String credentialMetadata) {
                 this.credentialMetadata = credentialMetadata;
@@ -213,7 +221,10 @@ public class UpdateCredentialRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The new credential description. The description can be up to 256 characters in length. At least one of credentialMetadata and description must be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>API Key used for calling model services in the production environment</p>
              */
             public Builder description(String description) {
                 this.description = description;

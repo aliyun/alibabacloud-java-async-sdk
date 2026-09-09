@@ -117,6 +117,7 @@ public class UpdateMcpRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
+         * <p>The MCP service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +152,7 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UpdateMcpRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -160,7 +162,10 @@ public class UpdateMcpRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426614174000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -228,7 +233,10 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -236,7 +244,10 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The authentication parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-credential</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -342,7 +353,10 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * credential.
+             * <p>The authentication credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-credential</p>
              */
             public Builder credential(String credential) {
                 this.credential = credential;
@@ -350,7 +364,10 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * id.
+             * <p>The authentication scheme ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-1234567890abcdef</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -358,7 +375,10 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mcp-example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -366,7 +386,10 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * position.
+             * <p>The position of the credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>header</p>
              */
             public Builder position(String position) {
                 this.position = position;
@@ -374,7 +397,10 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>basic</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -454,7 +480,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * directProxy.
+             * <p>The direct proxy authentication configuration.</p>
              */
             public Builder directProxy(DirectProxy directProxy) {
                 this.directProxy = directProxy;
@@ -462,7 +488,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * enabled.
+             * <p>Specifies whether to enable authentication.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -470,7 +496,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * httpToMcp.
+             * <p>The list of HTTP_TO_MCP authentication configurations.</p>
              */
             public Builder httpToMcp(java.util.List<HttpToMcp> httpToMcp) {
                 this.httpToMcp = httpToMcp;
@@ -563,7 +589,7 @@ public class UpdateMcpRequest extends Request {
             } 
 
             /**
-             * addresses.
+             * <p>The list of MCP service addresses.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -571,7 +597,7 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * auth.
+             * <p>The backend authentication configuration. When enabled=true: for DIRECT_PROXY, specify directProxy (name/value). For HTTP_TO_MCP, specify the httpToMcp array (each item contains id/type/credential; apiKey also requires position/name). Multiple authentication objects are supported, and the first one is the default upstream credential. HTTP_TO_MCP credentials are merged into the securitySchemes of the Swagger specification.</p>
              */
             public Builder auth(Auth auth) {
                 this.auth = auth;
@@ -579,7 +605,10 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A sample description that explains the purpose of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -587,7 +616,10 @@ public class UpdateMcpRequest extends Request {
             }
 
             /**
-             * swaggerConfig.
+             * <p>The Swagger configuration. Specify this field if Type is set to HTTP_TO_MCP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;object&quot;}</p>
              */
             public Builder swaggerConfig(String swaggerConfig) {
                 this.swaggerConfig = swaggerConfig;

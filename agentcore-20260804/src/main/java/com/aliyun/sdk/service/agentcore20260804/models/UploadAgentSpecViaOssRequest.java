@@ -74,6 +74,7 @@ public class UploadAgentSpecViaOssRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class UploadAgentSpecViaOssRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(UploadAgentSpecViaOssRequestBody body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -169,6 +170,7 @@ public class UploadAgentSpecViaOssRequest extends Request {
             } 
 
             /**
+             * <p>The OSS object name (full path).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -180,7 +182,10 @@ public class UploadAgentSpecViaOssRequest extends Request {
             }
 
             /**
-             * overwrite.
+             * <p>Specifies whether to overwrite existing drafts. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder overwrite(Boolean overwrite) {
                 this.overwrite = overwrite;
@@ -188,7 +193,10 @@ public class UploadAgentSpecViaOssRequest extends Request {
             }
 
             /**
-             * publish.
+             * <p>Specifies whether to publish immediately after upload. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder publish(Boolean publish) {
                 this.publish = publish;
