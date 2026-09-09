@@ -167,7 +167,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * <p>The external ID of the group.</p>
+         * <p>Group external ID.</p>
          * 
          * <strong>example:</strong>
          * <p>group_external_id</p>
@@ -179,7 +179,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * <p>The group IDs.</p>
+         * <p>Group ID list.</p>
          */
         public Builder groupIds(java.util.List<String> groupIds) {
             this.putQueryParameter("GroupIds", groupIds);
@@ -188,7 +188,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name of the group. If you specify this parameter, the query is based on an exact match.</p>
+         * <p>Group name. The query uses exact matching.</p>
          * 
          * <strong>example:</strong>
          * <p>name_test</p>
@@ -200,7 +200,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the group name. If you specify this parameter, the query follows the leftmost matching principle.</p>
+         * <p>Group name prefix. The query uses prefix matching.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -212,7 +212,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>Page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -237,7 +237,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>Page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

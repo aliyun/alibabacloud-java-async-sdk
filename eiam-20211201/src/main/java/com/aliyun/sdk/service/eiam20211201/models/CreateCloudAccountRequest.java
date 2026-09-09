@@ -188,6 +188,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +201,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * <p>云账号唯一标识</p>
+         * <p>The external unique identifier of the cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +214,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * <p>云账号名称</p>
+         * <p>The cloud account name.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_xxxx</p>
@@ -225,7 +226,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * <p>云账号提供商名称</p>
+         * <p>The identity provider name.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas-eiam-oidc-provider</p>
@@ -237,7 +238,14 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * CloudAccountSite.
+         * <p>The cloud account site. Valid values:</p>
+         * <ul>
+         * <li>global: international site.</li>
+         * <li>china_mainland: China site.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>china_mainland</p>
          */
         public Builder cloudAccountSite(String cloudAccountSite) {
             this.putQueryParameter("CloudAccountSite", cloudAccountSite);
@@ -246,8 +254,14 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * <p>云账号类型</p>
+         * <p>The cloud account type. Valid values:</p>
+         * <ul>
+         * <li>alibaba_cloud: Alibaba Cloud.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud(Alibaba Cloud)</p>
          */
         public Builder cloudAccountVendorType(String cloudAccountVendorType) {
             this.putQueryParameter("CloudAccountVendorType", cloudAccountVendorType);
@@ -256,7 +270,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * <p>云账号描述</p>
+         * <p>The description of the cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_accout_description</p>
@@ -268,7 +282,7 @@ public class CreateCloudAccountRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

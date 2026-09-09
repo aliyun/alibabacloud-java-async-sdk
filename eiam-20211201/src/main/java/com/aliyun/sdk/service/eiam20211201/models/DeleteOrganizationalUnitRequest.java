@@ -111,7 +111,7 @@ public class DeleteOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The organization ID.</p>
+         * <p>The organizational unit ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

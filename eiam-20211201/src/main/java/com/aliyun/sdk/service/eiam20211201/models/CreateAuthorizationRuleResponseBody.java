@@ -67,7 +67,10 @@ public class CreateAuthorizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorizationRuleId.
+         * <p>The authorization rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arrule_01kf143ug06fg7m9f43u7vahxxxx</p>
          */
         public Builder authorizationRuleId(String authorizationRuleId) {
             this.authorizationRuleId = authorizationRuleId;
@@ -75,7 +78,10 @@ public class CreateAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -214,7 +214,14 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ApplicationIdentityType.
+         * <p>The application identity type. Default value: application. Valid values:</p>
+         * <ul>
+         * <li>application: application.</li>
+         * <li>agent: agent.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder applicationIdentityType(String applicationIdentityType) {
             this.putQueryParameter("ApplicationIdentityType", applicationIdentityType);
@@ -223,7 +230,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,10 +252,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The type of the application source. Valid values:</p>
+         * <p>The source from which the application is created. Valid values:</p>
          * <ul>
-         * <li>urn:alibaba:idaas:app:source:template: application template</li>
-         * <li>urn:alibaba:idaas:app:source:standard: standard protocol</li>
+         * <li>urn:alibaba:idaas:app:source:template: application template.</li>
+         * <li>urn:alibaba:idaas:app:source:standard: standard protocol.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -262,10 +269,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application template. This parameter is required if you set the ApplicationSourceType parameter to urn:alibaba:idaas:app:source:template.</p>
+         * <p>The application template ID. This parameter is required when ApplicationSourceType is set to urn:alibaba:idaas:app:source:template.</p>
          * 
          * <strong>example:</strong>
-         * <p>template_cloud_ram</p>
+         * <p>apt_ramuser_mjqrsi</p>
          */
         public Builder applicationTemplateId(String applicationTemplateId) {
             this.putQueryParameter("ApplicationTemplateId", applicationTemplateId);
@@ -283,10 +290,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The description of the application.</p>
+         * <p>The application description.</p>
          * 
          * <strong>example:</strong>
-         * <p>RAM user SSO application</p>
+         * <p>RAM account SSO application</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -295,7 +302,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,10 +327,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * <p>The SSO protocol. Valid values:</p>
+         * <p>The single sign-on protocol. Valid values:</p>
          * <ul>
-         * <li>saml2: the SAML 2.0 protocol.</li>
-         * <li>oidc: the OpenID Connect protocol.</li>
+         * <li>saml2: SAML 2.0 protocol.</li>
+         * <li>oidc: OpenID Connect protocol.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

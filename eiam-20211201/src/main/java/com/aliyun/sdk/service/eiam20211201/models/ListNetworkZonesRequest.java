@@ -139,7 +139,7 @@ public class ListNetworkZonesRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class ListNetworkZonesRequest extends Request {
         }
 
         /**
-         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -164,7 +164,7 @@ public class ListNetworkZonesRequest extends Request {
         }
 
         /**
-         * <p>网络ID集合</p>
+         * <p>The collection of network zone IDs.</p>
          */
         public Builder networkZoneIds(java.util.List<String> networkZoneIds) {
             this.putQueryParameter("NetworkZoneIds", networkZoneIds);
@@ -173,7 +173,7 @@ public class ListNetworkZonesRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -185,7 +185,10 @@ public class ListNetworkZonesRequest extends Request {
         }
 
         /**
-         * PreviousToken.
+         * <p>The pagination token for the previous page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PTxxxxxexample</p>
          */
         public Builder previousToken(String previousToken) {
             this.putQueryParameter("PreviousToken", previousToken);

@@ -98,7 +98,7 @@ public class GetIdentityProviderAdvancedConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的身份提供方主键id</p>
+         * <p>Identity provider ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetIdentityProviderAdvancedConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM的实例id</p>
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

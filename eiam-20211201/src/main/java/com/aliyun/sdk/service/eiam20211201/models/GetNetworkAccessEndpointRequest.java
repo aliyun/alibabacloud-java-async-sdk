@@ -111,7 +111,7 @@ public class GetNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the network access endpoint.</p>
+         * <p>The ID of the dedicated network access endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

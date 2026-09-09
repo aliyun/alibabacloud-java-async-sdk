@@ -113,7 +113,7 @@ public class SetLoginRedirectApplicationForBrandRequest extends Request {
         }
 
         /**
-         * <p>应用ID</p>
+         * <p>Application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class SetLoginRedirectApplicationForBrandRequest extends Request {
         }
 
         /**
-         * <p>品牌化Id</p>
+         * <p>Brand ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class SetLoginRedirectApplicationForBrandRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

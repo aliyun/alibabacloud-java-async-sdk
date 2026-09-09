@@ -67,7 +67,10 @@ public class CreateFederatedCredentialProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * FederatedCredentialProviderId.
+         * <p>The ID of the federated trust source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fcp_sada123XXXX</p>
          */
         public Builder federatedCredentialProviderId(String federatedCredentialProviderId) {
             this.federatedCredentialProviderId = federatedCredentialProviderId;
@@ -75,7 +78,10 @@ public class CreateFederatedCredentialProviderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

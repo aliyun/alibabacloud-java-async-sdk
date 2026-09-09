@@ -169,7 +169,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration of event callback synchronization. This parameter is required when the ProvisionProtocolType parameter is set to idaas_callback.</p>
+         * <p>The application event callback synchronization configuration. This parameter is required when ProvisionProtocolType is set to idaas_callback.</p>
          */
         public Builder callbackProvisioningConfig(CallbackProvisioningConfig callbackProvisioningConfig) {
             this.putQueryParameter("CallbackProvisioningConfig", callbackProvisioningConfig);
@@ -191,7 +191,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * NetworkAccessEndpointId.
+         * <p>The network endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae_examplexxxx</p>
          */
         public Builder networkAccessEndpointId(String networkAccessEndpointId) {
             this.putQueryParameter("NetworkAccessEndpointId", networkAccessEndpointId);
@@ -213,10 +216,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to synchronize the password in IDaaS user event callbacks. Valid values:</p>
+         * <p>Specifies whether IDaaS user event callbacks synchronize passwords. Valid values:</p>
          * <ul>
-         * <li>true: synchronize the password.</li>
-         * <li>false: do not synchronize the password.</li>
+         * <li>true: Passwords are synchronized.</li>
+         * <li>false: Passwords are not synchronized.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -229,10 +232,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * <p>The synchronization protocol type of the application. Valid values:</p>
+         * <p>The account synchronization protocol type. Valid values:</p>
          * <ul>
-         * <li>idaas_callback: custom event callback protocol of IDaaS.</li>
-         * <li>scim2: System for Cross-domain Identity Management (SCIM) protocol.</li>
+         * <li>idaas_callback: IDaaS custom event callback-based account synchronization.</li>
+         * <li>scim2: System for Cross-domain Identity Management protocol-based synchronization.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -246,7 +249,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * <p>The configuration of SCIM-based IDaaS synchronization. This parameter is required when the ProvisionProtocolType parameter is set to scim2.</p>
+         * <p>The IDaaS System for Cross-domain Identity Management protocol synchronization configuration parameters. This parameter is required when ProvisionProtocolType is set to scim2.</p>
          */
         public Builder scimProvisioningConfig(ScimProvisioningConfig scimProvisioningConfig) {
             this.putQueryParameter("ScimProvisioningConfig", scimProvisioningConfig);
@@ -340,7 +343,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             } 
 
             /**
-             * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
+             * <p>The destination URL where the application receives IDaaS event callbacks.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/event/callback">https://example.com/event/callback</a></p>
@@ -351,7 +354,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * <p>The symmetric key for IDaaS event callbacks. The key is an AES-256 encryption key in the HEX format.</p>
+             * <p>The symmetric encryption and decryption key for IDaaS event callbacks. The key uses the AES256 algorithm and is in hexadecimal encoding format.</p>
              * 
              * <strong>example:</strong>
              * <p>ad3b248**************************b3561a73d7</p>
@@ -362,10 +365,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to encrypt IDaaS event callback messages. Valid values:</p>
+             * <p>Specifies whether IDaaS event callback messages are encrypted. Valid values:</p>
              * <ul>
-             * <li>true: encrypt the messages.</li>
-             * <li>false: transmit the messages in plaintext.</li>
+             * <li>true: Encrypted.</li>
+             * <li>false: Not encrypted. Messages are transmitted in plaintext.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -377,7 +380,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * <p>The list of types of IDaaS event callback messages that are supported by the listener.</p>
+             * <p>The list of IDaaS event callback message types to listen for.</p>
              */
             public Builder listenEventScopes(java.util.List<String> listenEventScopes) {
                 this.listenEventScopes = listenEventScopes;
@@ -483,7 +486,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             } 
 
             /**
-             * <p>The access token. If the GrantType parameter is set to bearer_token, you can set this parameter.</p>
+             * <p>The access token. This field can be updated when GrantType is set to bearer_token.</p>
              * 
              * <strong>example:</strong>
              * <p>k52x2ru63rlkflina5utgkxxxx</p>
@@ -494,10 +497,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * <p>The authentication mode of the SCIM protocol. Valid values:</p>
+             * <p>The System for Cross-domain Identity Management protocol authentication pattern. Valid values:</p>
              * <ul>
-             * <li>client_secret_basic: The client secret is passed in the request header.</li>
-             * <li>client_secret_post: The client secret is passed in the request body.</li>
+             * <li>client_secret_basic: Passes the secret through the request header.</li>
+             * <li>client_secret_post: Passes the secret through the request body.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -614,9 +617,9 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             } 
 
             /**
-             * <p>The authentication mode of the SCIM protocol. Valid value:</p>
+             * <p>The authorization pattern for the System for Cross-domain Identity Management protocol API. Valid values:</p>
              * <ul>
-             * <li>oauth2: OAuth2.0 mode.</li>
+             * <li>oauth2: OAuth2 pattern.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -628,10 +631,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * <p>The configuration parameters related to authorization.</p>
+             * <p>The authorization configuration parameters. Usage:</p>
              * <ul>
-             * <li>If the GrantType parameter is set to client_credentials, you can set the configuration parameters ClientId, ClientSecret, and AuthnMethod.</li>
-             * <li>If the GrantType parameter is set to bearer_token, you can set the configuration parameter AccessToken.</li>
+             * <li>If GrantType is set to client_credentials, you can update ClientId, ClientSecret, and AuthnMethod.</li>
+             * <li>If GrantType is set to bearer_token, you can update AccessToken.</li>
              * </ul>
              */
             public Builder authnParam(AuthnParam authnParam) {
@@ -640,10 +643,10 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * <p>The grant type of the SCIM protocol. Valid values:</p>
+             * <p>The System for Cross-domain Identity Management protocol authorization pattern. Valid values:</p>
              * <ul>
-             * <li>client_credentials: client mode.</li>
-             * <li>bearer_token: key mode.</li>
+             * <li>client_credentials: Client credentials pattern.</li>
+             * <li>bearer_token: Bearer token pattern.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -740,7 +743,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             } 
 
             /**
-             * <p>The configuration parameters related to SCIM-based synchronization.</p>
+             * <p>The System for Cross-domain Identity Management protocol synchronization configuration parameters.</p>
              */
             public Builder authnConfiguration(AuthnConfiguration authnConfiguration) {
                 this.authnConfiguration = authnConfiguration;
@@ -748,9 +751,9 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * <p>The full synchronization scope of the SCIM protocol. Valid value:</p>
+             * <p>The System for Cross-domain Identity Management protocol full push scope. Valid values:</p>
              * <ul>
-             * <li>urn:alibaba:idaas:app:scim:User:PUSH: full account data synchronization.</li>
+             * <li>urn:alibaba:idaas:app:scim:User:PUSH: Full user synchronization.</li>
              * </ul>
              */
             public Builder fullPushScopes(java.util.List<String> fullPushScopes) {
@@ -759,11 +762,11 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * <p>The resource operations of the SCIM protocol. Valid values:</p>
+             * <p>The System for Cross-domain Identity Management protocol target resource operation actions. Valid values:</p>
              * <ul>
-             * <li>urn:alibaba:idaas:app:scim:User:CREATE: account creation.</li>
-             * <li>urn:alibaba:idaas:app:scim:User:UPDATE: account update.</li>
-             * <li>urn:alibaba:idaas:app:scim:User:DELETE: account deletion.</li>
+             * <li>urn:alibaba:idaas:app:scim:User:CREATE: Account creation.</li>
+             * <li>urn:alibaba:idaas:app:scim:User:UPDATE: Account update.</li>
+             * <li>urn:alibaba:idaas:app:scim:User:DELETE: Account deletion.</li>
              * </ul>
              */
             public Builder provisioningActions(java.util.List<String> provisioningActions) {
@@ -772,7 +775,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             }
 
             /**
-             * <p>The base URL that the application uses to receive the SCIM protocol for IDaaS synchronization.</p>
+             * <p>The base URL where the application accepts IDaaS synchronization requests based on the System for Cross-domain Identity Management protocol.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/scim">https://example.com/scim</a></p>

@@ -113,7 +113,7 @@ public class DeleteApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application for which you want to delete a client key.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class DeleteApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class DeleteApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the client key that you want to delete for the application.</p>
+         * <p>The client secret ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

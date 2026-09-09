@@ -67,7 +67,10 @@ public class CreateBrandResponseBody extends TeaModel {
         } 
 
         /**
-         * BrandId.
+         * <p>The brand ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>brand_xxxx</p>
          */
         public Builder brandId(String brandId) {
             this.brandId = brandId;
@@ -75,7 +78,10 @@ public class CreateBrandResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

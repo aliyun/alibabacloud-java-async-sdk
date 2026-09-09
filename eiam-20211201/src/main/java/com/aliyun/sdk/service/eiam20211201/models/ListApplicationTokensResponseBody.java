@@ -67,7 +67,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationTokens.
+         * <p>The application tokens.</p>
          */
         public Builder applicationTokens(java.util.List<ApplicationTokens> applicationTokens) {
             this.applicationTokens = applicationTokens;
@@ -75,7 +75,10 @@ public class ListApplicationTokensResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +272,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用ID</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_m7ar5tms4dwtggavalk3j3mxxxx</p>
@@ -280,7 +283,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用token</p>
+             * <p>The application tokens.</p>
              * 
              * <strong>example:</strong>
              * <p>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBYktxxxx</p>
@@ -291,7 +294,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用token ID</p>
+             * <p>The application token ID.</p>
              * 
              * <strong>example:</strong>
              * <p>token_ndfxxigahelfne2y2hodehrxxxx</p>
@@ -302,7 +305,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用token类型</p>
+             * <p>The application token type.</p>
              * 
              * <strong>example:</strong>
              * <p>bearer_token</p>
@@ -313,7 +316,10 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747796654000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -321,7 +327,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用token描述</p>
+             * <p>The application token description.</p>
              * 
              * <strong>example:</strong>
              * <p>jwqtts-0430</p>
@@ -332,7 +338,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>到期时间</p>
+             * <p>The expiration time.</p>
              * 
              * <strong>example:</strong>
              * <p>1747796654000</p>
@@ -343,7 +349,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The IDaaS EIAM instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ki6hd7ihir4ybawogqk6kqxxxx</p>
@@ -354,7 +360,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最后使用时间</p>
+             * <p>The last used time.</p>
              * 
              * <strong>example:</strong>
              * <p>1747796654000</p>
@@ -365,7 +371,7 @@ public class ListApplicationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用状态</p>
+             * <p>The enabling status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>

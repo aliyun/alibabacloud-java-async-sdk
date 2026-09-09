@@ -181,7 +181,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
              * <p>Instance Indicates the maximum quota number of authorized agents.</p>
              * 
              * <strong>example:</strong>
-             * <p>20</p>
+             * <p>1000</p>
              */
             public Builder maxQuota(Integer maxQuota) {
                 this.maxQuota = maxQuota;

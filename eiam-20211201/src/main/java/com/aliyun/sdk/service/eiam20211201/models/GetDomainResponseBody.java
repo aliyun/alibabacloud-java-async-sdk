@@ -67,7 +67,7 @@ public class GetDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The domain name.</p>
+         * <p>The domain name object.</p>
          */
         public Builder domain(Domain domain) {
             this.domain = domain;
@@ -131,8 +131,10 @@ public class GetDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * <p><notice>The ICP filing number is only applicable for services in the China region.  For non-China regions, no validation or display of this record number will be performed.</notice>
-             * The ICP filing number associated with the domain name, with a maximum length of 64 characters.</p>
+             * <p>The ICP filing number that is associated with the domain name. The ICP filing number can be for an entity or a website.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xICPxxxxxx-xx</p>
              */
             public Builder icpNumber(String icpNumber) {
                 this.icpNumber = icpNumber;
@@ -303,7 +305,10 @@ public class GetDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * BrandId.
+             * <p>The ID of the brand.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>brand_xxxxx</p>
              */
             public Builder brandId(String brandId) {
                 this.brandId = brandId;
@@ -311,7 +316,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time when the change order was created.</p>
+             * <p>The time when the domain name was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -322,7 +327,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is the default domain.</p>
+             * <p>Specifies whether the domain name is the default domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -333,7 +338,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain.</p>
+             * <p>The domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>login.example.com</p>
@@ -344,7 +349,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Domain ID.</p>
+             * <p>The ID of the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>dm_examplexxxxx</p>
@@ -357,8 +362,10 @@ public class GetDomainResponseBody extends TeaModel {
             /**
              * <p>The type of the domain name. Valid values:</p>
              * <ul>
-             * <li><strong>system_init</strong>: Initialize domain</li>
-             * <li><strong>user_custom</strong>: user custom domain</li>
+             * <li><p>system_init: The initial domain name.</p>
+             * </li>
+             * <li><p>user_custom: A custom domain name.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -370,7 +377,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Domain registration information.</p>
+             * <p>The ICP filing information about the domain name.</p>
              */
             public Builder filing(Filing filing) {
                 this.filing = filing;
@@ -378,7 +385,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -389,10 +396,12 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lock status of the instance. Valid values:</p>
+             * <p>The lock status of the domain name. Valid values:</p>
              * <ul>
-             * <li><strong>Unlock</strong>: The instance is normal.</li>
-             * <li><strong>lockByLicense</strong>: Not available due to license restrictions.</li>
+             * <li><p>unlock: Normal.</p>
+             * </li>
+             * <li><p>lockByLicense: The domain name is unavailable due to license restrictions.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -404,7 +413,7 @@ public class GetDomainResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the service was updated.</p>
+             * <p>The time when the domain name was last updated. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>

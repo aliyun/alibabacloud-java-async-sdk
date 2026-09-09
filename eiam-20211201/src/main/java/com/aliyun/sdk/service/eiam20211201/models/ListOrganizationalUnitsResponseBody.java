@@ -80,7 +80,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of data objects of organizational units.</p>
+         * <p>The list of organizational units.</p>
          */
         public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -88,7 +88,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -99,10 +99,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries in the list.</p>
+         * <p>The total number of entries that are returned. This value is the total number of matched entries. The maximum number of entries that can be returned in a single request is specified by PageSize.</p>
          * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -285,7 +285,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the organizational unit was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -299,7 +299,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
              * <p>The description of the organizational unit.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test organizational unit</p>
+             * <p>Test organization</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -307,7 +307,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -318,7 +318,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the node is a leaf node.</p>
+             * <p>Indicates whether the organizational unit is a leaf node. A value of true indicates that the organizational unit has no child nodes. A value of false indicates that the organizational unit has child nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -329,8 +329,8 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external ID of the organizational unit. The external ID can be used by external data to map the data of the organizational unit in IDaaS EIAM. By default, the external ID is the organizational unit ID.</p>
-             * <p>For organizational units with the same source type and source ID, each organizational unit has a unique external ID.</p>
+             * <p>The external ID of the organizational unit. This ID is used to map the data of the organizational unit to the data of an external system. By default, the value of this parameter is the organizational unit ID.</p>
+             * <p>Note: The external ID must be unique within the same source type and source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -341,7 +341,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the organizational unit.</p>
+             * <p>The organizational unit ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -352,7 +352,7 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组织名称。</p>
+             * <p>The name of the organizational unit.</p>
              * 
              * <strong>example:</strong>
              * <p>test_organizationalUnit_name</p>
@@ -376,10 +376,11 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             /**
              * <p>The source type of the organizational unit. Valid values:</p>
              * <ul>
-             * <li>build_in: The organizational unit was created in IDaaS.</li>
-             * <li>ding_talk: The organizational unit was imported from DingTalk.</li>
-             * <li>ad: The organizational unit was imported from Microsoft Active Directory (AD).</li>
-             * <li>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+             * <li>build_in: The organizational unit is created in IDaaS.</li>
+             * <li>ding_talk: The organizational unit is imported from DingTalk.</li>
+             * <li>ad: The organizational unit is imported from Active Directory (AD).</li>
+             * <li>ldap: The organizational unit is imported from a Lightweight Directory Access Protocol (LDAP) directory.</li>
+             * <li>we_com: The organizational unit is imported from WeCom.</li>
              * </ul>
              * 
              * <strong>example:</strong>

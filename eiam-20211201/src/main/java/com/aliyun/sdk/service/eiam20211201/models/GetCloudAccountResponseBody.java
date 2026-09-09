@@ -67,7 +67,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * CloudAccount.
+         * <p>The cloud account details.</p>
          */
         public Builder cloudAccount(CloudAccount cloudAccount) {
             this.cloudAccount = cloudAccount;
@@ -75,7 +75,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AuthenticationFail.NoPermission</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -149,7 +155,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>There is no permission.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -229,7 +238,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorReason.
+             * <p>The error reason. This field returns a value when the health check status is unhealthy.</p>
              */
             public Builder errorReason(ErrorReason errorReason) {
                 this.errorReason = errorReason;
@@ -237,7 +246,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * LastCheckTime.
+             * <p>The time of the last health check. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder lastCheckTime(Long lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -245,7 +257,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The health check result of the cloud account. Valid values:</p>
+             * <ul>
+             * <li>success: Succeeded.</li>
+             * <li>failed: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -338,7 +357,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>受众标识</p>
+             * <p>The audience identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:cloud:idaas:sts:xxx:xxx</p>
@@ -349,7 +368,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权服务ID</p>
+             * <p>The authorization server ID.</p>
              * 
              * <strong>example:</strong>
              * <p>iauths_system</p>
@@ -371,7 +390,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>验签公钥端点</p>
+             * <p>The signature verification public key endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks">https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks</a></p>
@@ -441,7 +460,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>失败错误码</p>
+             * <p>The failure error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -449,7 +471,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>失败信息</p>
+             * <p>The failure message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test message</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -724,7 +749,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>云账号外部唯一ID</p>
+             * <p>The external unique identifier of the cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567</p>
@@ -735,7 +760,12 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号状态</p>
+             * <p>The health status of the cloud account. Valid values:</p>
+             * <ul>
+             * <li>healthy: Healthy.</li>
+             * <li>unhealthy: Unhealthy.</li>
+             * <li>unknown: Unknown.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>healthy</p>
@@ -746,7 +776,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAccountHealthCheckResult.
+             * <p>The health check result of the cloud account.</p>
              */
             public Builder cloudAccountHealthCheckResult(CloudAccountHealthCheckResult cloudAccountHealthCheckResult) {
                 this.cloudAccountHealthCheckResult = cloudAccountHealthCheckResult;
@@ -754,7 +784,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号ID</p>
+             * <p>The cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -765,7 +795,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号名称</p>
+             * <p>The cloud account name.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_accout_xxxx</p>
@@ -776,7 +806,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号提供商配置</p>
+             * <p>The identity provider configuration information.</p>
              */
             public Builder cloudAccountProviderConfig(CloudAccountProviderConfig cloudAccountProviderConfig) {
                 this.cloudAccountProviderConfig = cloudAccountProviderConfig;
@@ -784,7 +814,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号提供商名称</p>
+             * <p>The identity provider name.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas-eiam-oidc-provider</p>
@@ -795,7 +825,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAccountRoleCreationType.
+             * <p>The cloud account role creation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder cloudAccountRoleCreationType(String cloudAccountRoleCreationType) {
                 this.cloudAccountRoleCreationType = cloudAccountRoleCreationType;
@@ -803,7 +836,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAccountSite.
+             * <p>The cloud account site. Valid values:</p>
+             * <ul>
+             * <li>china_mainland: The Chinese mainland.</li>
+             * <li>global: Global.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>china_mainland</p>
              */
             public Builder cloudAccountSite(String cloudAccountSite) {
                 this.cloudAccountSite = cloudAccountSite;
@@ -811,7 +851,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号类别</p>
+             * <p>The cloud account type. Valid values:</p>
+             * <ul>
+             * <li>alibaba_cloud: Alibaba Cloud.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>alibaba_cloud</p>
@@ -822,7 +865,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830225000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -830,7 +876,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号描述</p>
+             * <p>The cloud account description.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_accout_description</p>
@@ -841,7 +887,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -852,7 +898,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>关联的特权应用ID列表</p>
+             * <p>The list of associated privilege application IDs.</p>
              */
             public Builder privilegeApplicationIds(java.util.List<String> privilegeApplicationIds) {
                 this.privilegeApplicationIds = privilegeApplicationIds;
@@ -860,7 +906,7 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>特权托管或移除失败原因</p>
+             * <p>The reason for the privilege hosting or removal failure.</p>
              */
             public Builder privilegeHostingError(PrivilegeHostingError privilegeHostingError) {
                 this.privilegeHostingError = privilegeHostingError;
@@ -868,7 +914,18 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>特权托管状态，即是否有特权能力</p>
+             * <p>The hosting state of the cloud account. The default value is hosting_unmanaged. Valid values:</p>
+             * <ul>
+             * <li>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</li>
+             * <li>hosting_pending: Hosting in progress. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before the final state is reached.</li>
+             * <li>hosting_completed: Hosting completed. The cloud account hosting process was executed successfully. The related permission templates and hosting bindings have taken effect.</li>
+             * <li>hosting_failed: Hosting failed. The hosting process encountered an exception. View the failure reason and re-initiate hosting.</li>
+             * <li>hosting_removing: Removal in progress. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete before the final state is reached.</li>
+             * <li>hosting_remove_failed: Removal failed. The removal process encountered an exception. View the failure reason and re-initiate removal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hosting_unmanaged</p>
              */
             public Builder privilegeHostingState(String privilegeHostingState) {
                 this.privilegeHostingState = privilegeHostingState;
@@ -876,7 +933,14 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>特权的开关状态，即特权能力是否可用</p>
+             * <p>The privilege switch status. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled. The resource is active and can be used normally.</li>
+             * <li>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore functionality.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder privilegeStatus(String privilegeStatus) {
                 this.privilegeStatus = privilegeStatus;
@@ -884,7 +948,10 @@ public class GetCloudAccountResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The last update time. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830227000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

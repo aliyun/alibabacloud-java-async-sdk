@@ -112,7 +112,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>The domain name of the website.</p>
+         * <p>The domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class CreateDomainRequest extends Request {
         }
 
         /**
-         * <p>Registration information parameters.</p>
+         * <p>The parameters for ICP filing information.</p>
          */
         public Builder filing(Filing filing) {
             this.putQueryParameter("Filing", filing);
@@ -193,10 +193,10 @@ public class CreateDomainRequest extends Request {
             } 
 
             /**
-             * <p>Record number associated with the domain name.</p>
+             * <p>The ICP filing number associated with the domain name.</p>
              * 
              * <strong>example:</strong>
-             * <p>浙xx-xxxxxx</p>
+             * <p>xICPxxxxxx-xx</p>
              */
             public Builder icpNumber(String icpNumber) {
                 this.icpNumber = icpNumber;

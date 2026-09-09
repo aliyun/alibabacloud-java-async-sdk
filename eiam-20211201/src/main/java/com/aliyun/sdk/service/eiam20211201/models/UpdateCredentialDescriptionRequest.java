@@ -128,7 +128,7 @@ public class UpdateCredentialDescriptionRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class UpdateCredentialDescriptionRequest extends Request {
         }
 
         /**
-         * <p>凭据ID。</p>
+         * <p>The credential ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class UpdateCredentialDescriptionRequest extends Request {
         }
 
         /**
-         * <p>描述</p>
+         * <p>The description of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>credential_description</p>
@@ -166,7 +166,7 @@ public class UpdateCredentialDescriptionRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

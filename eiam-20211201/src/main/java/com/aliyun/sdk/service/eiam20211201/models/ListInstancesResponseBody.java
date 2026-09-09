@@ -80,7 +80,7 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information of instances.</p>
+         * <p>The list of instance information.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -168,7 +168,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint of the instance.</p>
+             * <p>The endpoint address of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>example-xxx.aliyunidaas.com</p>
@@ -179,10 +179,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the endpoint. Valid values:</p>
+             * <p>The endpoint status. Valid values:</p>
              * <ul>
-             * <li>resolved</li>
-             * <li>unresolved</li>
+             * <li>resolved: Resolved.</li>
+             * <li>unresolved: Not resolved.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -292,7 +292,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupInstanceId.
+             * <p>The instance ID of the backup instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_xxxxxx</p>
              */
             public Builder backupInstanceId(String backupInstanceId) {
                 this.backupInstanceId = backupInstanceId;
@@ -300,7 +303,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BackupInstanceRegionId.
+             * <p>The region ID of the backup instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder backupInstanceRegionId(String backupInstanceRegionId) {
                 this.backupInstanceRegionId = backupInstanceRegionId;
@@ -308,7 +314,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryInstanceId.
+             * <p>The instance ID of the primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_xxxxxx</p>
              */
             public Builder primaryInstanceId(String primaryInstanceId) {
                 this.primaryInstanceId = primaryInstanceId;
@@ -316,7 +325,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryInstanceRegionId.
+             * <p>The region ID of the primary instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder primaryInstanceRegionId(String primaryInstanceRegionId) {
                 this.primaryInstanceRegionId = primaryInstanceRegionId;
@@ -324,7 +336,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationCreateTime.
+             * <p>The time when the disaster recovery data replication was created. The value is a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778499337000</p>
              */
             public Builder replicationCreateTime(Long replicationCreateTime) {
                 this.replicationCreateTime = replicationCreateTime;
@@ -508,7 +523,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1550115455000</p>
@@ -519,7 +534,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CrossRegionReplication.
+             * <p>Indicates whether cross-region replication is enabled. Valid values: enabled or disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder crossRegionReplication(String crossRegionReplication) {
                 this.crossRegionReplication = crossRegionReplication;
@@ -527,7 +545,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CrossRegionReplicationRole.
+             * <p>The cross-region replication role. Valid values: primary (primary instance) or backup (backup instance).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>primary</p>
              */
             public Builder crossRegionReplicationRole(String crossRegionReplicationRole) {
                 this.crossRegionReplicationRole = crossRegionReplicationRole;
@@ -543,7 +564,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the instance.</p>
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_for_test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -551,7 +575,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceFailoverStatus.
+             * <p>The instance failover activation status. Valid values: active (activated) or inactive (not activated).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inactive</p>
              */
             public Builder instanceFailoverStatus(String instanceFailoverStatus) {
                 this.instanceFailoverStatus = instanceFailoverStatus;
@@ -570,7 +597,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ManagedServiceCode.
+             * <p>The service code of the cloud service that manages the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sase</p>
              */
             public Builder managedServiceCode(String managedServiceCode) {
                 this.managedServiceCode = managedServiceCode;
@@ -578,7 +608,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationConfiguration.
+             * <p>The replication configuration. This parameter is returned only when CrossRegionReplication is set to enabled.</p>
              */
             public Builder replicationConfiguration(ReplicationConfiguration replicationConfiguration) {
                 this.replicationConfiguration = replicationConfiguration;
@@ -586,7 +616,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceManaged.
+             * <p>Indicates whether the instance is managed by a cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -594,10 +627,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li>creating</li>
-             * <li>running</li>
+             * <li>creating: Being created.</li>
+             * <li>running: Running.</li>
              * </ul>
              * 
              * <strong>example:</strong>

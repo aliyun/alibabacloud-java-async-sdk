@@ -119,7 +119,10 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +130,7 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -138,7 +141,10 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
         }
 
         /**
-         * PreviousToken.
+         * <p>The pagination token for the previous page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PTxxxexample</p>
          */
         public Builder previousToken(String previousToken) {
             this.previousToken = previousToken;
@@ -146,7 +152,10 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +163,7 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceServerScopes.
+         * <p>The list of scope permissions under the ResourceServer.</p>
          */
         public Builder resourceServerScopes(java.util.List<ResourceServerScopes> resourceServerScopes) {
             this.resourceServerScopes = resourceServerScopes;
@@ -162,7 +171,10 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -293,7 +305,7 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IDaaS EIAM 应用Id</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_xxxxxxxxxxx</p>
@@ -304,7 +316,10 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizationType.
+             * <p>The authorization type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>authorize_required</p>
              */
             public Builder authorizationType(String authorizationType) {
                 this.authorizationType = authorizationType;
@@ -312,7 +327,7 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_xxxxxxxxxxx</p>
@@ -323,7 +338,7 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM ResourceServer下权限Id</p>
+             * <p>The scope permission ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rss_xxxxxxxxxxx</p>
@@ -334,7 +349,7 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM ResourceServer下权限名称</p>
+             * <p>The scope permission name.</p>
              * 
              * <strong>example:</strong>
              * <p>读取全部用户</p>
@@ -345,7 +360,7 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM ResourceServer下权限类型</p>
+             * <p>The scope permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:resourceserver:scope:delegated</p>
@@ -356,7 +371,7 @@ public class ListResourceServerScopesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM ResourceServer下权限值</p>
+             * <p>The scope permission value.</p>
              * 
              * <strong>example:</strong>
              * <p>User:Write:ALL</p>

@@ -67,7 +67,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
         } 
 
         /**
-         * CustomField.
+         * <p>The custom field information.</p>
          */
         public Builder customField(CustomField customField) {
             this.customField = customField;
@@ -75,7 +75,10 @@ public class GetCustomFieldResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>配置项展示名</p>
+             * <p>The display name of the configuration item.</p>
              * 
              * <strong>example:</strong>
              * <p>hobby</p>
@@ -165,7 +168,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>配置项状态, 枚举值，enabled、disabled</p>
+             * <p>The status of the configuration item.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -176,7 +179,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>配置项值</p>
+             * <p>The value of the configuration item.</p>
              * 
              * <strong>example:</strong>
              * <p>game</p>
@@ -233,7 +236,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>字段配置项列表，displayName、value、status</p>
+             * <p>The list of field configuration items.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -495,7 +498,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>扩展字段创建时间，Unix时间戳格式，单位为毫秒</p>
+             * <p>The time when the extended field was created, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>17642960730</p>
@@ -506,7 +509,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段默认值</p>
+             * <p>The default value of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -517,7 +520,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扩展字段描述</p>
+             * <p>The description of the extended field.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -528,7 +531,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否加密，默认false</p>
+             * <p>Indicates whether the field is encrypted.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -539,7 +542,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段所属实体类型</p>
+             * <p>The entity type to which the field belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>user</p>
@@ -550,7 +553,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段值配置项</p>
+             * <p>The field value configuration items.</p>
              */
             public Builder fieldDataConfig(FieldDataConfig fieldDataConfig) {
                 this.fieldDataConfig = fieldDataConfig;
@@ -558,7 +561,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据类型，枚举值：string、number、boolean</p>
+             * <p>The data type.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -569,7 +572,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段展示名</p>
+             * <p>The display name of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>userId</p>
@@ -580,7 +583,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段展示类型，枚举值，select、checkbox、input、number</p>
+             * <p>The display type of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>input</p>
@@ -591,7 +594,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段ID</p>
+             * <p>The field ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ufd_ncvy5trszg3zajaal5iofauy2q</p>
@@ -602,7 +605,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段标识</p>
+             * <p>The field identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>userId</p>
@@ -613,7 +616,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_z4pwq7v5ankdimdelzo2zbmzo4</p>
@@ -624,7 +627,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否必填，默认false</p>
+             * <p>Indicates whether the field is required.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -635,7 +638,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扩展字段状态, 枚举类型：enabled，disabled</p>
+             * <p>The status of the extended field.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -646,7 +649,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否唯一，默认false</p>
+             * <p>Indicates whether the field is unique.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -657,7 +660,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>扩展字段最近一次更新时间, Unix时间戳格式，单位为毫秒</p>
+             * <p>The time when the extended field was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>17642960730</p>
@@ -668,7 +671,7 @@ public class GetCustomFieldResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户端(portal侧)权限，hide、read_only、read_write，默认read_only</p>
+             * <p>The user-side (portal-side) permission.</p>
              * 
              * <strong>example:</strong>
              * <p>read_only</p>

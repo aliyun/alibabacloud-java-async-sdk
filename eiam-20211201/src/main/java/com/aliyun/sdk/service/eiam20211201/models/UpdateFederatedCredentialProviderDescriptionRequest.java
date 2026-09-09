@@ -113,7 +113,7 @@ public class UpdateFederatedCredentialProviderDescriptionRequest extends Request
         }
 
         /**
-         * <p>联邦凭证提供方描述</p>
+         * <p>The description of the federated trust source.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -125,7 +125,7 @@ public class UpdateFederatedCredentialProviderDescriptionRequest extends Request
         }
 
         /**
-         * <p>联邦凭证提供方ID</p>
+         * <p>The federated trust source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class UpdateFederatedCredentialProviderDescriptionRequest extends Request
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

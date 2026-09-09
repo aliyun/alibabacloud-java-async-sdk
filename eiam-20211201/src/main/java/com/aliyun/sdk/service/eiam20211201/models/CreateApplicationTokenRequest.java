@@ -128,7 +128,7 @@ public class CreateApplicationTokenRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateApplicationTokenRequest extends Request {
         }
 
         /**
-         * <p>应用token类型</p>
+         * <p>The application token type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class CreateApplicationTokenRequest extends Request {
         }
 
         /**
-         * <p>不填，默认1年后到期</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>1735530123762</p>
@@ -166,7 +166,7 @@ public class CreateApplicationTokenRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

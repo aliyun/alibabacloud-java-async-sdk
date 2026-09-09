@@ -119,7 +119,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * CustomPrivacyPolicies.
+         * <p>The list of custom terms.</p>
          */
         public Builder customPrivacyPolicies(java.util.List<CustomPrivacyPolicies> customPrivacyPolicies) {
             this.customPrivacyPolicies = customPrivacyPolicies;
@@ -127,7 +127,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -138,7 +138,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -149,7 +149,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -160,7 +160,10 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -168,7 +171,10 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -286,7 +292,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>自定义条款Id</p>
+             * <p>The custom term ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pp_xxxxx</p>
@@ -297,7 +303,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自定义条款名称</p>
+             * <p>The custom term name.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom Privacy Policy Name</p>
@@ -308,7 +314,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>若显示语言未配置时，门户侧展示默认语言展示条款。</p>
+             * <p>The default language term entry. The value is obtained from the LanguageCode field returned by the ListLanguages operation.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-Hans-CN</p>
@@ -319,7 +325,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -330,7 +336,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自定义条款状态</p>
+             * <p>The custom term status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -341,7 +347,7 @@ public class ListCustomPrivacyPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>自定义条款同意类型，是默认同意，还是用户勾选同意</p>
+             * <p>The consent type of the custom term.</p>
              * 
              * <strong>example:</strong>
              * <p>implied_consent</p>

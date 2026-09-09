@@ -239,7 +239,13 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>同步方向[ingress,egress]</p>
+         * <p>Synchronization job direction. Valid values:</p>
+         * <ul>
+         * <li><p>ingress: inbound</p>
+         * </li>
+         * <li><p>egress: outbound</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ingress</p>
@@ -251,7 +257,7 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>同步结束时间</p>
+         * <p>Synchronization end time in Unix timestamp format, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -263,7 +269,7 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>Filter parameters</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -272,7 +278,7 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +291,7 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * <p>Number of rows per page for paginated queries. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -297,7 +303,7 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>Token for querying the next page. This parameter is not returned when there are no more pages.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -309,7 +315,7 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>当前查询的列表页码，默认为1。</p>
+         * <p>Page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -321,7 +327,7 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>当前查询的列表页码，默认为20。</p>
+         * <p>Page size. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -333,7 +339,7 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>同步开始时间</p>
+         * <p>Synchronization start time in Unix timestamp format, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -345,7 +351,19 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>同步状态[pending,running,suspending,failed,partial_success,success]</p>
+         * <p>Synchronization job status. Valid values:</p>
+         * <ul>
+         * <li><p>pending: initial state</p>
+         * </li>
+         * <li><p>running: running</p>
+         * </li>
+         * <li><p>failed: failed</p>
+         * </li>
+         * <li><p>partial_success: partially succeeded</p>
+         * </li>
+         * <li><p>success: succeeded</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -357,7 +375,7 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>同步目标ID</p>
+         * <p>List of synchronization target IDs. [idp_111XXXX,idp_222XXXX]</p>
          * 
          * <strong>example:</strong>
          * <p>target_001</p>
@@ -369,7 +387,13 @@ public class ListSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * <p>同步目标类型[identity_provider,organizational_unit,application,user]</p>
+         * <p>Synchronization target type. Valid values:</p>
+         * <ul>
+         * <li><p>identity_provider: identity provider</p>
+         * </li>
+         * <li><p>application: application</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>identity_provider</p>
@@ -440,7 +464,10 @@ public class ListSynchronizationJobsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>Dynamic parameter name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qps</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -448,7 +475,7 @@ public class ListSynchronizationJobsRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>Dynamic parameter values</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;

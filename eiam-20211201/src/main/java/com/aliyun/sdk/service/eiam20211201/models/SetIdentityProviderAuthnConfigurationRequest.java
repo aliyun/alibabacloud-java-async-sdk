@@ -154,7 +154,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>自动创建账户账户规则配置。</p>
+         * <p>Automatic account creation rule configuration.</p>
          */
         public Builder autoCreateUserConfig(AutoCreateUserConfig autoCreateUserConfig) {
             this.putQueryParameter("AutoCreateUserConfig", autoCreateUserConfig);
@@ -163,7 +163,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * AutoUpdateUserConfig.
+         * <p>Automatic account update configuration.</p>
          */
         public Builder autoUpdateUserConfig(AutoUpdateUserConfig autoUpdateUserConfig) {
             this.putQueryParameter("AutoUpdateUserConfig", autoUpdateUserConfig);
@@ -172,7 +172,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>账户绑定规则配置</p>
+         * <p>Account binding rule configuration.</p>
          */
         public Builder bindingConfig(BindingConfig bindingConfig) {
             this.putQueryParameter("BindingConfig", bindingConfig);
@@ -181,7 +181,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的身份提供方主键id</p>
+         * <p>Identity provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>AD/LDAP配置</p>
+         * <p>AD/LDAP authentication configuration.</p>
          */
         public Builder ldapAuthnConfig(LdapAuthnConfig ldapAuthnConfig) {
             this.putQueryParameter("LdapAuthnConfig", ldapAuthnConfig);
@@ -275,7 +275,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>自动创建账户是否开启</p>
+             * <p>Indicates whether automatic account creation is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -286,7 +286,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * TargetOrganizationalUnitIds.
+             * <p>The organizational unit IDs.</p>
              */
             public Builder targetOrganizationalUnitIds(java.util.List<String> targetOrganizationalUnitIds) {
                 this.targetOrganizationalUnitIds = targetOrganizationalUnitIds;
@@ -340,7 +340,10 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * AutoUpdateUserStatus.
+             * <p>Indicates whether automatic account update is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder autoUpdateUserStatus(String autoUpdateUserStatus) {
                 this.autoUpdateUserStatus = autoUpdateUserStatus;
@@ -436,11 +439,11 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>表达式的类型</p>
+             * <p>The type of the expression.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>filed</p>
+             * <p>field</p>
              */
             public Builder expressionMappingType(String expressionMappingType) {
                 this.expressionMappingType = expressionMappingType;
@@ -448,7 +451,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>映射属性取值表达式</p>
+             * <p>The value expression of the mapping attribute.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -460,7 +463,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>映射目标属性名称</p>
+             * <p>The name of the mapping target attribute.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -472,7 +475,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>映射目标属性名称</p>
+             * <p>The description of the mapping target attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>username</p>
@@ -555,7 +558,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>自动匹配账户的规则</p>
+             * <p>Rules for automatic account matching.</p>
              */
             public Builder autoMatchUserProfileExpressions(java.util.List<AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions) {
                 this.autoMatchUserProfileExpressions = autoMatchUserProfileExpressions;
@@ -563,7 +566,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>自动匹配账户是否开启</p>
+             * <p>Indicates whether automatic account matching is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -574,7 +577,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>用户手动绑定账户功能是否开启</p>
+             * <p>Indicates whether the manual account binding feature is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -657,7 +660,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>是否支持自动更新密码</p>
+             * <p>Indicates whether automatic password update is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -668,7 +671,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>用户登录标识</p>
+             * <p>The user login identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>email</p>
@@ -679,7 +682,7 @@ public class SetIdentityProviderAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>用户ObjectClass</p>
+             * <p>The user ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>posixAccount</p>

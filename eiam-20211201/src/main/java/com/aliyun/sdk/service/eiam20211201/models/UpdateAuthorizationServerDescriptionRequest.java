@@ -128,7 +128,7 @@ public class UpdateAuthorizationServerDescriptionRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的授权服务器资源ID。</p>
+         * <p>The authorization server ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +141,7 @@ public class UpdateAuthorizationServerDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, refer to References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +154,7 @@ public class UpdateAuthorizationServerDescriptionRequest extends Request {
         }
 
         /**
-         * <p>授权服务器描述，最长128字符。</p>
+         * <p>The description of the authorization server.</p>
          * 
          * <strong>example:</strong>
          * <p>description of authorization server</p>
@@ -165,7 +166,7 @@ public class UpdateAuthorizationServerDescriptionRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

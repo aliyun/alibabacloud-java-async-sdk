@@ -140,7 +140,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>AAGUID及其名称列表</p>
+         * <p>List of AAGUIDs and their names.</p>
          */
         public Builder aaguids(java.util.List<Aaguids> aaguids) {
             this.putQueryParameter("Aaguids", aaguids);
@@ -149,7 +149,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>是否开启AAGUID校验</p>
+         * <p>Enable AAGUID verification.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -161,7 +161,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>是否开启WebAuthn认证器MDS校验</p>
+         * <p>Enable WebAuthn authenticator MDS verification.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -173,7 +173,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>是否允许用户自注册WebAuthn认证器</p>
+         * <p>Allow user self-registration of WebAuthn authenticators.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>AAGUID</p>
+             * <p>AAGUID.</p>
              * 
              * <strong>example:</strong>
              * <p>adce0002-35bc-c60a-648b-0b25f1f05503</p>
@@ -269,7 +269,7 @@ public class SetWebAuthnConfigurationRequest extends Request {
             }
 
             /**
-             * <p>AAGUID名称</p>
+             * <p>AAGUID name.</p>
              * 
              * <strong>example:</strong>
              * <p>Touch ID</p>

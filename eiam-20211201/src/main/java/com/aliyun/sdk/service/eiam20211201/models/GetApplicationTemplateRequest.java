@@ -83,7 +83,7 @@ public class GetApplicationTemplateRequest extends Request {
         }
 
         /**
-         * <p>应用模板id</p>
+         * <p>The application template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

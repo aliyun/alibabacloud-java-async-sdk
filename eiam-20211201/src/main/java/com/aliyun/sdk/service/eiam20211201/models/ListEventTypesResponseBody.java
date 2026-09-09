@@ -80,7 +80,7 @@ public class ListEventTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * EventTypes.
+         * <p>The list of event types.</p>
          */
         public Builder eventTypes(java.util.List<EventTypes> eventTypes) {
             this.eventTypes = eventTypes;
@@ -88,7 +88,10 @@ public class ListEventTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListEventTypesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -149,7 +155,10 @@ public class ListEventTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * EventType.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urn:alibaba:idaas:event:user:create</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;

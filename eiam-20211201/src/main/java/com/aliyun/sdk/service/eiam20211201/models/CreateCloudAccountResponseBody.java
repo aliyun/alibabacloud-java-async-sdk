@@ -67,7 +67,10 @@ public class CreateCloudAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * CloudAccountId.
+         * <p>The cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca_01kmegjc11qa1txxxxx</p>
          */
         public Builder cloudAccountId(String cloudAccountId) {
             this.cloudAccountId = cloudAccountId;
@@ -75,7 +78,10 @@ public class CreateCloudAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

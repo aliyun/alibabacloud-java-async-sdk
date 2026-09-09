@@ -97,7 +97,7 @@ public class SetInstanceControlConfigurationRequest extends Request {
         }
 
         /**
-         * <p>实例控制项。</p>
+         * <p>The instance control elements.</p>
          */
         public Builder controlElements(java.util.List<ControlElements> controlElements) {
             this.putQueryParameter("ControlElements", controlElements);
@@ -106,7 +106,7 @@ public class SetInstanceControlConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,10 @@ public class SetInstanceControlConfigurationRequest extends Request {
             } 
 
             /**
-             * HumanVerificationType.
+             * <p>The CAPTCHA type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urn:alibaba:idaas:humanverification:alibaba-cloud-slider-verification</p>
              */
             public Builder humanVerificationType(String humanVerificationType) {
                 this.humanVerificationType = humanVerificationType;
@@ -247,7 +250,7 @@ public class SetInstanceControlConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>实例控制项名称，如human_verification。</p>
+             * <p>The name of the instance control element.</p>
              * 
              * <strong>example:</strong>
              * <p>human_verification</p>
@@ -258,7 +261,7 @@ public class SetInstanceControlConfigurationRequest extends Request {
             }
 
             /**
-             * HumanVerificationConfig.
+             * <p>The CAPTCHA authenticate configuration.</p>
              */
             public Builder humanVerificationConfig(HumanVerificationConfig humanVerificationConfig) {
                 this.humanVerificationConfig = humanVerificationConfig;
@@ -266,7 +269,7 @@ public class SetInstanceControlConfigurationRequest extends Request {
             }
 
             /**
-             * <p>实例控制项状态。</p>
+             * <p>The status of the instance control element.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>

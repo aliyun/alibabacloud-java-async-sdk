@@ -98,7 +98,7 @@ public class ListConditionalAccessPoliciesForUserRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class ListConditionalAccessPoliciesForUserRequest extends Request {
         }
 
         /**
-         * <p>条件访问策略关联的用户ID</p>
+         * <p>The user ID associated with the conditional access policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

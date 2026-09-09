@@ -67,7 +67,10 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceServerScope.
+         * <p>The scope permission information under the ResourceServer.</p>
          */
         public Builder resourceServerScope(ResourceServerScope resourceServerScope) {
             this.resourceServerScope = resourceServerScope;
@@ -206,7 +209,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IDaaS EIAM 应用Id</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_xxxxxxxxxxx</p>
@@ -217,7 +220,10 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizationType.
+             * <p>The authorization type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>authorize_required</p>
              */
             public Builder authorizationType(String authorizationType) {
                 this.authorizationType = authorizationType;
@@ -225,7 +231,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_xxxxxxxxxxx</p>
@@ -236,7 +242,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM ResourceServer下权限Id</p>
+             * <p>The scope permission ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rss_xxxxxxxxxxx</p>
@@ -247,10 +253,10 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM ResourceServer下权限名称</p>
+             * <p>The scope permission name.</p>
              * 
              * <strong>example:</strong>
-             * <p>读取全部用户</p>
+             * <p>Read User Info</p>
              */
             public Builder resourceServerScopeName(String resourceServerScopeName) {
                 this.resourceServerScopeName = resourceServerScopeName;
@@ -258,7 +264,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM ResourceServer下权限类型</p>
+             * <p>The scope permission type.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:resourceserver:scope:delegated</p>
@@ -269,7 +275,7 @@ public class GetResourceServerScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM ResourceServer下权限值</p>
+             * <p>The scope permission value.</p>
              * 
              * <strong>example:</strong>
              * <p>User:Read:ALL</p>

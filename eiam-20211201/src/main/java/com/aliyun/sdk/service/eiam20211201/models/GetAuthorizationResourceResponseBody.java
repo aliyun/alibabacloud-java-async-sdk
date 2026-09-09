@@ -67,7 +67,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorizationResource.
+         * <p>The authorization resource.</p>
          */
         public Builder authorizationResource(AuthorizationResource authorizationResource) {
             this.authorizationResource = authorizationResource;
@@ -75,7 +75,10 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowSameNameIdentity.
+             * <p>Specifies whether same-name identity accounts are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowSameNameIdentity(Boolean allowSameNameIdentity) {
                 this.allowSameNameIdentity = allowSameNameIdentity;
@@ -182,7 +188,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * CredentialCondition.
+             * <p>The credential condition.</p>
              */
             public Builder credentialCondition(CredentialCondition credentialCondition) {
                 this.credentialCondition = credentialCondition;
@@ -340,7 +346,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>资源实体标识</p>
+             * <p>The resource entity ID associated with the authorization resource.</p>
              * 
              * <strong>example:</strong>
              * <p>carole_01kmek49aqxxxx</p>
@@ -351,7 +357,10 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源实体类型，枚举类型：asset（资产）、credential（凭据）、cloud_identity_role（云账号角色）</p>
+             * <p>The resource entity type associated with the authorization resource. Valid values:</p>
+             * <ul>
+             * <li>cloud_account_role: cloud role.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>cloud_account_role</p>
@@ -362,7 +371,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权资源标识</p>
+             * <p>The authorization resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>arres_01kgh3jvt7pk093rv6giu0c0qxxxx</p>
@@ -373,7 +382,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则标识</p>
+             * <p>The authorization rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>arrule_01kf143ug06fg7m9f43u7vahxxxx</p>
@@ -384,7 +393,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号ID。</p>
+             * <p>The cloud account ID to which the resource entity associated with the authorization resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -395,7 +404,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Condition.
+             * <p>The condition restriction.</p>
              */
             public Builder condition(Condition condition) {
                 this.condition = condition;
@@ -403,7 +412,10 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787023451494</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -411,7 +423,7 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -422,7 +434,10 @@ public class GetAuthorizationResourceResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1787023451494</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

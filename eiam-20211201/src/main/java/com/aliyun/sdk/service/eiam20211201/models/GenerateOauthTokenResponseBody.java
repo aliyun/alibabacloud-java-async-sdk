@@ -67,7 +67,10 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4XXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * TokenResponse.
+         * <p>The token response.</p>
          */
         public Builder tokenResponse(TokenResponse tokenResponse) {
             this.tokenResponse = tokenResponse;
@@ -191,7 +194,10 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiresAt.
+             * <p>The expiration time, in UNIX timestamp format, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1770186372</p>
              */
             public Builder expiresAt(Long expiresAt) {
                 this.expiresAt = expiresAt;
@@ -199,7 +205,10 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiresIn.
+             * <p>The validity period, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder expiresIn(Long expiresIn) {
                 this.expiresIn = expiresIn;
@@ -215,7 +224,10 @@ public class GenerateOauthTokenResponseBody extends TeaModel {
             }
 
             /**
-             * TokenType.
+             * <p>The token type. Currently, only Bearer is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bearer</p>
              */
             public Builder tokenType(String tokenType) {
                 this.tokenType = tokenType;

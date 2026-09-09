@@ -67,7 +67,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkZone.
+         * <p>The network zone object.</p>
          */
         public Builder networkZone(NetworkZone networkZone) {
             this.networkZone = networkZone;
@@ -75,7 +75,10 @@ public class GetNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IDaaS EIAM 网络区域描述</p>
+             * <p>The network zone description.</p>
              * 
              * <strong>example:</strong>
              * <p>test_description</p>
@@ -230,7 +233,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -241,7 +244,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv4Cidrs.
+             * <p>The IPv4 CIDR blocks of the network zone.</p>
              */
             public Builder ipv4Cidrs(java.util.List<String> ipv4Cidrs) {
                 this.ipv4Cidrs = ipv4Cidrs;
@@ -249,7 +252,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Cidrs.
+             * <p>The IPv6 CIDR blocks of the network zone.</p>
              */
             public Builder ipv6Cidrs(java.util.List<String> ipv6Cidrs) {
                 this.ipv6Cidrs = ipv6Cidrs;
@@ -257,7 +260,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 网络区域Id</p>
+             * <p>The network zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>network_m6fbr2bcbcadu3bcdpgzcxxxxx</p>
@@ -268,7 +271,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 网络区域名称</p>
+             * <p>The network zone name.</p>
              * 
              * <strong>example:</strong>
              * <p>test4_name</p>
@@ -279,7 +282,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 网络区域类型</p>
+             * <p>The network zone type.</p>
              * 
              * <strong>example:</strong>
              * <p>arn:alibaba:idaas:network:zone:classic</p>
@@ -290,7 +293,7 @@ public class GetNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 专有网络VpcId</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-25w8wxxxx</p>

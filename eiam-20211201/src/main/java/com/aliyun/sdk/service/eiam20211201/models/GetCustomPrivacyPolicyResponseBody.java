@@ -67,7 +67,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * CustomPrivacyPolicy.
+         * <p>The custom privacy policy.</p>
          */
         public Builder customPrivacyPolicy(CustomPrivacyPolicy customPrivacyPolicy) {
             this.customPrivacyPolicy = customPrivacyPolicy;
@@ -75,7 +75,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomPrivacyPolicyItemName.
+             * <p>The name of the custom privacy policy item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item name</p>
              */
             public Builder customPrivacyPolicyItemName(String customPrivacyPolicyItemName) {
                 this.customPrivacyPolicyItemName = customPrivacyPolicyItemName;
@@ -149,7 +155,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPrivacyPolicyItemUrl.
+             * <p>The URL of the custom privacy policy item. The URL must start with https://.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com">https://example.com</a></p>
              */
             public Builder customPrivacyPolicyItemUrl(String customPrivacyPolicyItemUrl) {
                 this.customPrivacyPolicyItemUrl = customPrivacyPolicyItemUrl;
@@ -229,7 +238,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomPrivacyPolicyItems.
+             * <p>The custom privacy policy items.</p>
              */
             public Builder customPrivacyPolicyItems(java.util.List<CustomPrivacyPolicyItems> customPrivacyPolicyItems) {
                 this.customPrivacyPolicyItems = customPrivacyPolicyItems;
@@ -237,7 +246,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPrivacyPolicyTip.
+             * <p>The tip for the custom privacy policy content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Please read and agree：</p>
              */
             public Builder customPrivacyPolicyTip(String customPrivacyPolicyTip) {
                 this.customPrivacyPolicyTip = customPrivacyPolicyTip;
@@ -245,7 +257,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * LanguageCode.
+             * <p>The language of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-Hans-CN</p>
              */
             public Builder languageCode(String languageCode) {
                 this.languageCode = languageCode;
@@ -377,7 +392,7 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomPrivacyPolicyContents.
+             * <p>The content details of the custom privacy policy.</p>
              */
             public Builder customPrivacyPolicyContents(java.util.List<CustomPrivacyPolicyContents> customPrivacyPolicyContents) {
                 this.customPrivacyPolicyContents = customPrivacyPolicyContents;
@@ -385,7 +400,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPrivacyPolicyId.
+             * <p>The custom privacy policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pp_xxxxx</p>
              */
             public Builder customPrivacyPolicyId(String customPrivacyPolicyId) {
                 this.customPrivacyPolicyId = customPrivacyPolicyId;
@@ -393,7 +411,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPrivacyPolicyName.
+             * <p>The custom privacy policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom Privacy Policy Name</p>
              */
             public Builder customPrivacyPolicyName(String customPrivacyPolicyName) {
                 this.customPrivacyPolicyName = customPrivacyPolicyName;
@@ -401,7 +422,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultLanguageCode.
+             * <p>The language of the custom privacy policy. The value is obtained from the LanguageCode parameter returned by the ListLanguages operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh-Hans-CN</p>
              */
             public Builder defaultLanguageCode(String defaultLanguageCode) {
                 this.defaultLanguageCode = defaultLanguageCode;
@@ -409,7 +433,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -417,7 +444,14 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the custom privacy policy. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -425,7 +459,10 @@ public class GetCustomPrivacyPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserConsentType.
+             * <p>The user consent type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>implied_consent</p>
              */
             public Builder userConsentType(String userConsentType) {
                 this.userConsentType = userConsentType;

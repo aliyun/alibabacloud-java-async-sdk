@@ -119,7 +119,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         } 
 
         /**
-         * ApplicationFederatedCredentials.
+         * <p>The list of application federated credentials.</p>
          */
         public Builder applicationFederatedCredentials(java.util.List<ApplicationFederatedCredentials> applicationFederatedCredentials) {
             this.applicationFederatedCredentials = applicationFederatedCredentials;
@@ -127,7 +127,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -138,7 +138,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -149,7 +149,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -160,7 +160,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -168,7 +171,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -260,7 +266,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             } 
 
             /**
-             * PrincipalId.
+             * <p>The principal ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5dee234a-1b4c-4ad7-a19f-fxxxxx</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -268,7 +277,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The Azure resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_default</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -276,7 +288,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * SubscriptionId.
+             * <p>The subscription ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4342a1f4-7e5d-4371-97dc-d4f33f4xxxx</p>
              */
             public Builder subscriptionId(String subscriptionId) {
                 this.subscriptionId = subscriptionId;
@@ -284,7 +299,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * VmNames.
+             * <p>The list of virtual machine names.</p>
              */
             public Builder vmNames(java.util.List<String> vmNames) {
                 this.vmNames = vmNames;
@@ -364,7 +379,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             } 
 
             /**
-             * <p>VM实例ID列表，最多10个</p>
+             * <p>The list of VM instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -372,7 +387,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * ProjectId.
+             * <p>The GCP project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>turnkey-axiom-475109-xx</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -380,7 +398,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>Service Account对应sub</p>
+             * <p>The subject corresponding to the service account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder serviceAccountId(String serviceAccountId) {
                 this.serviceAccountId = serviceAccountId;
@@ -434,7 +455,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             } 
 
             /**
-             * Subject.
+             * <p>The subject identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_subject</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -514,7 +538,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             } 
 
             /**
-             * <p>K8s命名空间</p>
+             * <p>The K8s namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -522,7 +549,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>Pod名称前缀</p>
+             * <p>The pod name prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pod</p>
              */
             public Builder podNamePrefix(String podNamePrefix) {
                 this.podNamePrefix = podNamePrefix;
@@ -530,7 +560,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>K8s服务账号名称</p>
+             * <p>The K8s service account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder serviceAccountName(String serviceAccountName) {
                 this.serviceAccountName = serviceAccountName;
@@ -636,7 +669,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             } 
 
             /**
-             * <p>Azure VM场景配置</p>
+             * <p>The Azure VM scenario configuration.</p>
              */
             public Builder azureVmConfig(AzureVmConfig azureVmConfig) {
                 this.azureVmConfig = azureVmConfig;
@@ -644,7 +677,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>GCP VM场景配置</p>
+             * <p>The GCP VM scenario configuration.</p>
              */
             public Builder gcpVmConfig(GcpVmConfig gcpVmConfig) {
                 this.gcpVmConfig = gcpVmConfig;
@@ -652,7 +685,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * GenericConfig.
+             * <p>The generic scenario configuration.</p>
              */
             public Builder genericConfig(GenericConfig genericConfig) {
                 this.genericConfig = genericConfig;
@@ -660,7 +693,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>Kubernetes场景配置</p>
+             * <p>The Kubernetes scenario configuration.</p>
              */
             public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
                 this.kubernetesConfig = kubernetesConfig;
@@ -668,7 +701,16 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>OIDC场景Profile：generic / kubernetes / gcp_vm / azure_vm</p>
+             * <p>The OIDC scenario profile. Different profiles correspond to different configurations. Valid values:</p>
+             * <ul>
+             * <li>generic</li>
+             * <li>kubernetes</li>
+             * <li>gcp_vm</li>
+             * <li>azure_vm</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>kubernetes</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -722,7 +764,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             } 
 
             /**
-             * <p>允许的实例ID列表，最多10个</p>
+             * <p>The list of allowed instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -958,7 +1000,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             } 
 
             /**
-             * <p>应用联邦凭证ID</p>
+             * <p>The application federated credential ID.</p>
              * 
              * <strong>example:</strong>
              * <p>afc_dads12sadxxxxx</p>
@@ -969,7 +1011,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>应用联邦凭证名称</p>
+             * <p>The application federated credential name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -980,7 +1022,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>应用联邦凭证类型</p>
+             * <p>The application federated credential type.</p>
              * 
              * <strong>example:</strong>
              * <p>oidc</p>
@@ -991,7 +1033,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>应用ID</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_asda1dsadxxxxx</p>
@@ -1002,7 +1044,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>创建时间</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1758785994982</p>
@@ -1013,7 +1055,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>应用联邦凭证描述</p>
+             * <p>The application federated credential description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1024,7 +1066,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>应用联邦凭证提供者ID</p>
+             * <p>The federated trust source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>fcp_adasd12dxxxxx</p>
@@ -1035,7 +1077,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>EAIM 实例ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -1046,7 +1088,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>最近使用时间</p>
+             * <p>The last used time.</p>
              * 
              * <strong>example:</strong>
              * <p>1758785994982</p>
@@ -1057,7 +1099,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>OIDC结构化配置（structured模式 + oidc类型）</p>
+             * <p>The OIDC structured configuration.</p>
              */
             public Builder oidcVerificationConfig(OidcVerificationConfig oidcVerificationConfig) {
                 this.oidcVerificationConfig = oidcVerificationConfig;
@@ -1065,7 +1107,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>PKCS#7结构化配置（structured模式 + pkcs7类型）</p>
+             * <p>The PKCS#7 structured configuration.</p>
              */
             public Builder pkcs7VerificationConfig(Pkcs7VerificationConfig pkcs7VerificationConfig) {
                 this.pkcs7VerificationConfig = pkcs7VerificationConfig;
@@ -1073,7 +1115,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>应用联邦凭证状态</p>
+             * <p>The application federated credential status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -1084,7 +1126,7 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>更新时间</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1758785994982</p>
@@ -1095,7 +1137,10 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>校验条件（freedom模式为手填值，structured模式为编译后最终值）</p>
+             * <p>The verification condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equals(cert.subject.CN, &quot;test&quot;)</p>
              */
             public Builder verificationCondition(String verificationCondition) {
                 this.verificationCondition = verificationCondition;
@@ -1103,7 +1148,14 @@ public class ListApplicationFederatedCredentialsForProviderResponseBody extends 
             }
 
             /**
-             * <p>校验模式：freedom / structured</p>
+             * <p>The verification mode. Valid values:</p>
+             * <ul>
+             * <li>freedom: free mode.</li>
+             * <li>structured: structured mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>structured</p>
              */
             public Builder verificationMode(String verificationMode) {
                 this.verificationMode = verificationMode;

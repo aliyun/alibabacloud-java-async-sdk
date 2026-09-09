@@ -127,6 +127,7 @@ public class UpdateCloudAccountDescriptionRequest extends Request {
         }
 
         /**
+         * <p>A client token to ensure the idempotence of the request. Generate a unique value for this parameter from your client for each request. The ClientToken can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +140,7 @@ public class UpdateCloudAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>云账号ID。</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class UpdateCloudAccountDescriptionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_account_description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -161,7 +165,7 @@ public class UpdateCloudAccountDescriptionRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

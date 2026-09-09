@@ -143,6 +143,7 @@ public class UpdateCloudAccountRoleDescriptionRequest extends Request {
         }
 
         /**
+         * <p>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class UpdateCloudAccountRoleDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The cloud account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +169,7 @@ public class UpdateCloudAccountRoleDescriptionRequest extends Request {
         }
 
         /**
-         * <p>云账号角色ID。</p>
+         * <p>The cloud role ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +182,7 @@ public class UpdateCloudAccountRoleDescriptionRequest extends Request {
         }
 
         /**
-         * <p>描述</p>
+         * <p>The description of the cloud role.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_account_role_description</p>
@@ -192,7 +194,7 @@ public class UpdateCloudAccountRoleDescriptionRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

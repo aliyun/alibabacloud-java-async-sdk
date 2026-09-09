@@ -170,7 +170,10 @@ public class UpdateNetworkZoneRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotence token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-examplexxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,7 +182,7 @@ public class UpdateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +195,7 @@ public class UpdateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>包含的CIDR</p>
+         * <p>The IPv4 CIDR blocks of the network zone.</p>
          */
         public Builder ipv4Cidrs(java.util.List<String> ipv4Cidrs) {
             this.putQueryParameter("Ipv4Cidrs", ipv4Cidrs);
@@ -201,7 +204,7 @@ public class UpdateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>网络区域ipv6Cidr</p>
+         * <p>The IPv6 CIDR blocks of the network zone.</p>
          */
         public Builder ipv6Cidrs(java.util.List<String> ipv6Cidrs) {
             this.putQueryParameter("Ipv6Cidrs", ipv6Cidrs);
@@ -210,7 +213,7 @@ public class UpdateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的网络区域主键id</p>
+         * <p>The network zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +226,7 @@ public class UpdateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>网络区域名称</p>
+         * <p>The network zone name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +239,7 @@ public class UpdateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>专有网络VpcId</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc_xxxxx</p>

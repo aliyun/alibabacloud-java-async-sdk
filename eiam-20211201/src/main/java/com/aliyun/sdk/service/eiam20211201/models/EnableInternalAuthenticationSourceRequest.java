@@ -98,7 +98,7 @@ public class EnableInternalAuthenticationSourceRequest extends Request {
         }
 
         /**
-         * <p>内部认证源ID，比如 ia_password, ia_otp_sms 等</p>
+         * <p>The ID of the internal authentication source.</p>
          * 
          * <strong>example:</strong>
          * <p>ia_password</p>
@@ -110,7 +110,7 @@ public class EnableInternalAuthenticationSourceRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM的实例id</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

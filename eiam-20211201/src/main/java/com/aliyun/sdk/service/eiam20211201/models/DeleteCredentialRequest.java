@@ -98,7 +98,7 @@ public class DeleteCredentialRequest extends Request {
         }
 
         /**
-         * <p>凭据ID。</p>
+         * <p>Credential ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DeleteCredentialRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

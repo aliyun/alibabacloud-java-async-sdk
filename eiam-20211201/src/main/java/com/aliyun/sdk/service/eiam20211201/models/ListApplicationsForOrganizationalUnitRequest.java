@@ -140,7 +140,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the applications that the EIAM organization can access. You can query a maximum of 100 application IDs at a time.</p>
+         * <p>The list of application IDs. A maximum of 100 application IDs are supported in a single operation.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -152,7 +152,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The ID of the EIAM organization.</p>
+         * <p>The organizational unit ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,7 +190,7 @@ public class ListApplicationsForOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

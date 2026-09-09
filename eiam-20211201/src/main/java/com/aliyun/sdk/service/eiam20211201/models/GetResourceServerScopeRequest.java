@@ -113,7 +113,7 @@ public class GetResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class GetResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class GetResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>ResourceServer下Scope唯一标识。</p>
+         * <p>The scope permission ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

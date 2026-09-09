@@ -67,7 +67,10 @@ public class CreateInstanceTrialLicenseResponseBody extends TeaModel {
         } 
 
         /**
-         * LicenseId.
+         * <p>The unique identifier of the License.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>license_463hfmewi2njxxxx</p>
          */
         public Builder licenseId(String licenseId) {
             this.licenseId = licenseId;
@@ -75,7 +78,10 @@ public class CreateInstanceTrialLicenseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

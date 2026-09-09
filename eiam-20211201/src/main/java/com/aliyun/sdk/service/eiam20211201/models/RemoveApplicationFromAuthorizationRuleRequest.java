@@ -113,7 +113,7 @@ public class RemoveApplicationFromAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>应用 ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class RemoveApplicationFromAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权规则标识。</p>
+         * <p>The authorization rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class RemoveApplicationFromAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -167,7 +167,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * <p>The number of rows per page in a paged query. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -192,7 +192,14 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>专属网络端点连接的状态。NetworkAccessEndpointType取值为shared时不生效。</p>
+         * <p>The status of the network access endpoint. Valid values:</p>
+         * <ul>
+         * <li>pending: pending initialization.</li>
+         * <li>creating: being created.</li>
+         * <li>running: running.</li>
+         * <li>deleting: being deleted.</li>
+         * </ul>
+         * <p>This filter parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -204,7 +211,12 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>专属网络端点连接的类型。取值可选范围：1. private - 专属网络端点；2. shared - 共享网络端点</p>
+         * <p>The type of the network access endpoint. Valid values:</p>
+         * <ul>
+         * <li>shared: shared network access endpoint.</li>
+         * <li>private: dedicated network access endpoint.</li>
+         * </ul>
+         * <p>Default value: private.</p>
          * 
          * <strong>example:</strong>
          * <p>private</p>
@@ -216,7 +228,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -228,7 +240,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>专属网络端点连接的Vpc ID。NetworkAccessEndpointType取值为shared时不生效。</p>
+         * <p>The VPC ID of the dedicated network access endpoint. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-examplexxx</p>
@@ -240,7 +252,7 @@ public class ListNetworkAccessEndpointsRequest extends Request {
         }
 
         /**
-         * <p>专属网络端点连接的Vpc所属地域，该地域取值必须在ListNetworkAccessEndpointAvailableRegions接口中返回。NetworkAccessEndpointType取值为shared时不生效。</p>
+         * <p>The region of the VPC for the dedicated network access endpoint. The region must be one of the regions returned by the ListNetworkAccessEndpointAvailableRegions operation. This parameter does not take effect when NetworkAccessEndpointType is set to shared.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

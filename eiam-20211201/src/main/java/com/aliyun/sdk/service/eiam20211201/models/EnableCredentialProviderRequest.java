@@ -98,7 +98,7 @@ public class EnableCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>认证令牌提供商ID。</p>
+         * <p>The ID of the credential provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class EnableCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

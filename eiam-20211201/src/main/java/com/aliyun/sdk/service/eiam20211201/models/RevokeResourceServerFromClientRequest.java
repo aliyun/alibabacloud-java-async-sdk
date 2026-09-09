@@ -113,7 +113,7 @@ public class RevokeResourceServerFromClientRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The ID of the Client application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class RevokeResourceServerFromClientRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class RevokeResourceServerFromClientRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The ID of the ResourceServer application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

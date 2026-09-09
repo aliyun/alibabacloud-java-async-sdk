@@ -113,7 +113,7 @@ public class DisableDomainProxyTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the domain name.</p>
+         * <p>The domain ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class DisableDomainProxyTokenRequest extends Request {
         }
 
         /**
-         * <p>The ID of the proxy token of the domain name.</p>
+         * <p>The domain proxy token ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

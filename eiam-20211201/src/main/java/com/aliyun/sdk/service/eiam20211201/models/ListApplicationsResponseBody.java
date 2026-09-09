@@ -80,7 +80,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the applications.</p>
+         * <p>The list of application information.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -88,7 +88,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -99,7 +99,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of the returned entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -402,7 +402,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationCreationType.
+             * <p>The application creation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_custom</p>
              */
             public Builder applicationCreationType(String applicationCreationType) {
                 this.applicationCreationType = applicationCreationType;
@@ -410,7 +413,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -421,7 +424,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationIdentityType.
+             * <p>The application identity type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application</p>
              */
             public Builder applicationIdentityType(String applicationIdentityType) {
                 this.applicationIdentityType = applicationIdentityType;
@@ -429,7 +435,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>SAML Application</p>
@@ -440,10 +446,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origin of the application. Valid values:</p>
+             * <p>The application creation source. Valid values:</p>
              * <ul>
-             * <li>urn:alibaba:idaas:app:source:template: The application is created based on a template.</li>
-             * <li>urn:alibaba:idaas: The application is created based on the standard protocol.</li>
+             * <li>urn:alibaba:idaas:app:source:template: Application template.</li>
+             * <li>urn:alibaba:idaas:app:source:standard: Standard protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -477,7 +483,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The application creation time, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -488,10 +494,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the application.</p>
+             * <p>The application description.</p>
              * 
              * <strong>example:</strong>
-             * <p>A single application. The code is pkces.</p>
+             * <p>A test application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -499,19 +505,19 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The features that are supported by the application. The value is a JSON array. Valid values:</p>
+             * <p>The features supported by the application, returned as a JSON array string. Valid values:</p>
              * <ul>
-             * <li>sso: The application supports SSO.</li>
-             * <li>slo: The application supports SLO.</li>
-             * <li>provision: The application supports account synchronization.</li>
-             * <li>api_invoke: The application supports custom APIs.</li>
-             * <li>m2m_client: The application supports M2M Client.</li>
-             * <li>resource_server: The application supports Resource Server.</li>
-             * <li>other: undertake.</li>
+             * <li>sso: Single sign-on.</li>
+             * <li>slo: Single logout.</li>
+             * <li>provision: Account synchronization.</li>
+             * <li>api_invoke: API access. </li>
+             * <li>m2m_client: M2M Client capability.</li>
+             * <li>resource_server: API service capability.</li>
+             * <li>other: Fallback.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;sso&quot;,&quot;slo&quot;, &quot;provision&quot;,&quot;api_invoke&quot;, &quot;m2m_client&quot;,&quot;resource_server&quot;,&quot;other&quot;]</p>
+             * <p>[&quot;sso&quot;, &quot;provision&quot;]</p>
              */
             public Builder features(String features) {
                 this.features = features;
@@ -519,7 +525,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -530,7 +536,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the application icon.</p>
+             * <p>The URL of the application logo.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg">https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg</a></p>
@@ -541,7 +547,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service code of the cloud service that manages the application template.</p>
+             * <p>The ServiceCode of the cloud service that manages the application template.</p>
              * 
              * <strong>example:</strong>
              * <p>rpa</p>
@@ -552,7 +558,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceServerIdentifier.
+             * <p>The unique identifier of the ResourceServer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com">https://example.com</a></p>
              */
             public Builder resourceServerIdentifier(String resourceServerIdentifier) {
                 this.resourceServerIdentifier = resourceServerIdentifier;
@@ -560,7 +569,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceServerSourceType.
+             * <p>The resource server source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urn:cloud:idaas:resourceserver:source:custom</p>
              */
             public Builder resourceServerSourceType(String resourceServerSourceType) {
                 this.resourceServerSourceType = resourceServerSourceType;
@@ -568,7 +580,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceServerStatus.
+             * <p>The resource server status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder resourceServerStatus(String resourceServerStatus) {
                 this.resourceServerStatus = resourceServerStatus;
@@ -576,7 +591,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application template is managed by a cloud service.</p>
+             * <p>Specifies whether the application template is managed by a cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -587,11 +602,12 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the single sign-on (SSO) protocol. Valid values:</p>
+             * <p>The single sign-on protocol. Valid values:</p>
              * <ul>
-             * <li>saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.</li>
-             * <li>oidc: the OpenID Connect (OIDC) protocol.</li>
-             * <li>oauth2/m2m: the OAuth2.0  protocol M2M.</li>
+             * <li>saml2: SAML 2.0 protocol.</li>
+             * <li>oidc: OpenID Connect protocol.</li>
+             * <li>oauth2/m2m: OAuth 2.0 protocol.</li>
+             * <li>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0 protocols.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -603,11 +619,11 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the application. Valid values:</p>
+             * <p>The application status. Valid values:</p>
              * <ul>
-             * <li>enabled: The application is enabled.</li>
-             * <li>disabled: The application is disabled.</li>
-             * <li>deleted: The application is deleted.</li>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * <li>deleted: Soft deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -619,7 +635,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the application was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>

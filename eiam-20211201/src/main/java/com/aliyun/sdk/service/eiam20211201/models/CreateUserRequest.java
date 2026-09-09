@@ -304,13 +304,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The password initialization method. Set the value to random,</p>
-         * <ul>
-         * <li>which indicates that the password is randomly generated.</li>
-         * </ul>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: How to ensure idempotence.</p>
          * 
          * <strong>example:</strong>
-         * <p>client-token-demo</p>
+         * <p>client-token-example</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -319,7 +316,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The custom extended fields.</p>
+         * <p>The list of custom fields.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -331,7 +328,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The description of the organization. The value can be up to 256 characters in length.</p>
+         * <p>The description. The description can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>description text</p>
@@ -343,7 +340,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+         * <p>The display name of the account. The display name can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>name_001</p>
@@ -355,7 +352,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The name of the account. The name can be up to 64 characters in length and can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-).</p>
+         * <p>The email address. The email prefix can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-). The email address can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:example@example.com">example@example.com</a></p>
@@ -367,7 +364,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The description of the account. The description can be up to 256 characters in length.</p>
+         * <p>Specifies whether the email address is verified as a trusted email address. This parameter is required if Email is specified. If no special business requirement exists, set this parameter to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -392,7 +389,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the mobile phone number is a trusted mobile phone number. This parameter is required if the PhoneNumber parameter is specified. If you have no special business requirements, set this parameter to true.</p>
+         * <p>The list of organizational unit IDs to which the account belongs. An account can belong to multiple organizational units.</p>
          */
         public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
             this.putQueryParameter("OrganizationalUnitIds", organizationalUnitIds);
@@ -401,10 +398,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The password of the account. For more information,view the password policyof the instanceinthe IDaaS console.</p>
+         * <p>The password. The password must meet the requirements of the password policy.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456xxx</p>
+         * <p>123456</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -413,7 +410,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The configurations for password initialization.</p>
+         * <p>The password initialization configuration.</p>
          */
         public Builder passwordInitializationConfig(PasswordInitializationConfig passwordInitializationConfig) {
             this.putQueryParameter("PasswordInitializationConfig", passwordInitializationConfig);
@@ -422,10 +419,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account.</p>
+         * <p>The phone number. The value is a 6 to 15-digit number.</p>
          * 
          * <strong>example:</strong>
-         * <p>12345678901xxx</p>
+         * <p>12345678901</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -434,7 +431,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The email address of the user who owns the account. The email address prefix can contain letters, digits, underscores (_), periods (.), and hyphens (-).</p>
+         * <p>Specifies whether the phone number is verified as a trusted phone number. This parameter is required if PhoneNumber is specified. If no special business requirement exists, set this parameter to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -446,7 +443,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The IDs of organizational units to which the account belongs. An account can belong to multiple organizational units.</p>
+         * <p>The phone region code. The value is a 1 to 6-digit number and does not include a plus sign (+).</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -458,7 +455,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>主组织ID。</p>
+         * <p>The ID of the primary organizational unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -471,7 +468,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+         * <p>The external ID of the account. This parameter is used to associate the account with an external system. The value can be up to 128 characters in length. If this parameter is not specified, the account ID is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -483,7 +480,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts &gt; Extended Fields, and then click Create Field on the Extended Fields page.</p>
+         * <p>The username. The username can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-). The username can be up to 256 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -557,7 +554,7 @@ public class CreateUserRequest extends Request {
             } 
 
             /**
-             * <p>The name of the extended field. You must create the extended field in advance. To create an extended field, log on to the IDaaS console. In the left-side navigation pane, choose Accounts &gt; Extended Fields, and then click Create Field on the Extended Fields page.</p>
+             * <p>The identifier of the custom field. Create the custom field in advance. For more information, refer to the custom fields module in the console.</p>
              * 
              * <strong>example:</strong>
              * <p>age</p>
@@ -568,7 +565,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * <p>The value of the extended field. The value follows the limits on the properties of the extended field.</p>
+             * <p>The value of the custom field. The value must comply with the attribute constraints of the corresponding custom field.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -668,10 +665,10 @@ public class CreateUserRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to forcibly change the password status. Default value: disabled. Valid values:</p>
+             * <p>The forced password change status. By default, this feature is not enabled. Valid values:</p>
              * <ul>
-             * <li>enabled:forcibly changes the password status.</li>
-             * <li>disabled: does not forcibly change the password status.</li>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -685,8 +682,8 @@ public class CreateUserRequest extends Request {
             /**
              * <p>The priority of the password initialization policy. By default, this parameter does not take effect. Valid values:</p>
              * <ul>
-             * <li>global:The password initialization policy globally takes effect.</li>
-             * <li>custom: The password initialization policy takes effect based on custom settings.</li>
+             * <li>global: The global policy policy priority. The instance-level password initialization policy is used, and the password initialization policy specified in this request does not take effect. For more information, refer to the password initialization policy in password-related policies.</li>
+             * <li>custom: The custom policy policy priority. The password initialization policy defined in this request is used, including whether to enable forced password change, the password initialization method, and the notification channel.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -698,9 +695,9 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * <p>The password initialization method. Set the value to random,</p>
+             * <p>The password initialization method. Valid values:</p>
              * <ul>
-             * <li>whichindicates that the password is randomly generated.</li>
+             * <li>random: random.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -712,7 +709,7 @@ public class CreateUserRequest extends Request {
             }
 
             /**
-             * <p>The value of the extended field. The value follows the limits on the properties of the extended field.</p>
+             * <p>The list of password notification channels.</p>
              * 
              * <strong>example:</strong>
              * <p>sms</p>

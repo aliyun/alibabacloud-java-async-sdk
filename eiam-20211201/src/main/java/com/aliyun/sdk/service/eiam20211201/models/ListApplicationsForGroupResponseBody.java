@@ -80,7 +80,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Applications.
+         * <p>List of applications authorized for access.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -88,7 +88,10 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -149,7 +155,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用角色标识。</p>
+             * <p>Application role ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -245,7 +251,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用的唯一标识。</p>
+             * <p>Application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -256,7 +262,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用角色列表。</p>
+             * <p>Application role list.</p>
              */
             public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
                 this.applicationRoles = applicationRoles;
@@ -264,7 +270,11 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>直接分配给当前用户的权限，视为直接授权。</p>
+             * <p>Whether direct authorization exists. Valid values:</p>
+             * <ul>
+             * <li>true: A direct authorization relationship record exists between the application and the group.</li>
+             * <li>false: No direct authorization relationship record exists between the application and the group.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -275,7 +285,7 @@ public class ListApplicationsForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>通过用户隶属的组织、组获取的权限，视为继承权限。</p>
+             * <p>Whether inherited authorization exists.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

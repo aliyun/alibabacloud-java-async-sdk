@@ -67,7 +67,10 @@ public class CreateTrustedOriginResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-example</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateTrustedOriginResponseBody extends TeaModel {
         }
 
         /**
-         * TrustedOriginId.
+         * <p>The trusted origin ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>to_example</p>
          */
         public Builder trustedOriginId(String trustedOriginId) {
             this.trustedOriginId = trustedOriginId;

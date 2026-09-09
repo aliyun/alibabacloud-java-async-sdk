@@ -67,7 +67,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Network access paths</p>
+         * <p>The list of network access endpoint paths.</p>
          */
         public Builder networkAccessPaths(java.util.List<NetworkAccessPaths> networkAccessPaths) {
             this.networkAccessPaths = networkAccessPaths;
@@ -274,7 +274,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time of the dedicated network access endpoint path. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -304,7 +304,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Network access endpoint ID.</p>
+             * <p>The ID of the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>nae_examplexxx</p>
@@ -315,7 +315,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Network access path ID</p>
+             * <p>The ID of the dedicated network access endpoint path.</p>
              * 
              * <strong>example:</strong>
              * <p>nap_examplexxx</p>
@@ -326,7 +326,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Network interface ID</p>
+             * <p>The ID of the ENI used by the dedicated network access endpoint path.</p>
              * 
              * <strong>example:</strong>
              * <p>eni-examplexxx</p>
@@ -337,7 +337,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address.</p>
+             * <p>The private endpoint of the ENI used by the dedicated network access endpoint path.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -348,7 +348,13 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Network access path status</p>
+             * <p>The status of the dedicated network access endpoint path. Valid values:</p>
+             * <ul>
+             * <li>pending: Pending initialization.</li>
+             * <li>creating: Being created.</li>
+             * <li>running: Running.</li>
+             * <li>deleting: Being deleted.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -359,7 +365,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The last update time of the dedicated network access endpoint path. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -370,7 +376,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of a vSwitch.</p>
+             * <p>The ID of the vSwitch to which the ENI of the dedicated network access endpoint path belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-examplexxx</p>

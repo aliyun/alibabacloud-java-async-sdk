@@ -106,7 +106,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkZones.
+         * <p>The list of network zones.</p>
          */
         public Builder networkZones(java.util.List<NetworkZones> networkZones) {
             this.networkZones = networkZones;
@@ -114,7 +114,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -125,7 +125,10 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         }
 
         /**
-         * PreviousToken.
+         * <p>The pagination token for the previous page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PTxxxxxexample</p>
          */
         public Builder previousToken(String previousToken) {
             this.previousToken = previousToken;
@@ -133,7 +136,10 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +147,10 @@ public class ListNetworkZonesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -285,7 +294,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IDaaS EIAM 网络区域描述</p>
+             * <p>The network zone description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -296,7 +305,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -307,7 +316,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv4Cidrs.
+             * <p>The IPv4 CIDR blocks of the network zone.</p>
              */
             public Builder ipv4Cidrs(java.util.List<String> ipv4Cidrs) {
                 this.ipv4Cidrs = ipv4Cidrs;
@@ -315,7 +324,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Cidrs.
+             * <p>The IPv6 CIDR blocks of the network zone.</p>
              */
             public Builder ipv6Cidrs(java.util.List<String> ipv6Cidrs) {
                 this.ipv6Cidrs = ipv6Cidrs;
@@ -323,7 +332,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 网络区域Id</p>
+             * <p>The network zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>network_m223wbvc3sn3uakfnxvhbxxxxx</p>
@@ -334,7 +343,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 网络区域名称</p>
+             * <p>The network zone name.</p>
              * 
              * <strong>example:</strong>
              * <p>test_name</p>
@@ -345,7 +354,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 网络区域类型</p>
+             * <p>The network zone type.</p>
              * 
              * <strong>example:</strong>
              * <p>arn:alibaba:idaas:network:zone:classic</p>
@@ -356,7 +365,7 @@ public class ListNetworkZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 专有网络VpcId</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp1usdmfqcgoy5ebxxxxx</p>

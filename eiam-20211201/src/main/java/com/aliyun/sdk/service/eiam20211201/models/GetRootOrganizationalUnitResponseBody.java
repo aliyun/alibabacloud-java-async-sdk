@@ -67,7 +67,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data object of the organizational unit.</p>
+         * <p>The organizational unit data object.</p>
          */
         public Builder organizationalUnit(OrganizationalUnit organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
@@ -75,7 +75,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -196,7 +196,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the organizational unit was created, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -210,7 +210,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
              * <p>The description of the organizational unit.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test organizational unit</p>
+             * <p>Test organization</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +218,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -229,7 +229,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the organizational unit.</p>
+             * <p>The organizational unit ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -240,7 +240,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the organization.</p>
+             * <p>The organizational unit name.</p>
              * 
              * <strong>example:</strong>
              * <p>name001</p>
@@ -251,7 +251,7 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the organizational unit was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>

@@ -98,7 +98,7 @@ public class CreateBrandRequest extends Request {
         }
 
         /**
-         * <p>品牌化名称</p>
+         * <p>The brand name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class CreateBrandRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

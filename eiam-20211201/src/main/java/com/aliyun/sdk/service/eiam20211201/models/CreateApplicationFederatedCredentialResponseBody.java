@@ -67,7 +67,10 @@ public class CreateApplicationFederatedCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationFederatedCredentialId.
+         * <p>The application federated credential ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afc_asd123daxxxx</p>
          */
         public Builder applicationFederatedCredentialId(String applicationFederatedCredentialId) {
             this.applicationFederatedCredentialId = applicationFederatedCredentialId;
@@ -75,7 +78,10 @@ public class CreateApplicationFederatedCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

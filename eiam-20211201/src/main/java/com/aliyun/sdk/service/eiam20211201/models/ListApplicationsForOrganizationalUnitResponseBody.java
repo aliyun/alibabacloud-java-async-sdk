@@ -80,7 +80,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>The applications that the EIAM organization can access.</p>
+         * <p>The list of applications that are authorized for access.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -88,7 +88,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -99,7 +99,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The total number of the returned entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -155,7 +155,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>应用角色标识。</p>
+             * <p>The application role ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -225,7 +225,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>The ID of the application that the EIAM organization can access.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -236,7 +236,7 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
             }
 
             /**
-             * <p>应用角色列表。</p>
+             * <p>The list of application roles.</p>
              */
             public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
                 this.applicationRoles = applicationRoles;

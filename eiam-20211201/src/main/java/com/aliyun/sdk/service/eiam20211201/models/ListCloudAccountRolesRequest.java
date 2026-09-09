@@ -141,6 +141,7 @@ public class ListCloudAccountRolesRequest extends Request {
         }
 
         /**
+         * <p>The cloud account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +154,7 @@ public class ListCloudAccountRolesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -162,6 +163,7 @@ public class ListCloudAccountRolesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +176,13 @@ public class ListCloudAccountRolesRequest extends Request {
         }
 
         /**
-         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * <p>The maximum number of records per page.</p>
+         * <ul>
+         * <li><p>If this parameter is not specified, the default value is 20.</p>
+         * </li>
+         * <li><p>The maximum value is 100.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -186,7 +194,10 @@ public class ListCloudAccountRolesRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The token that specifies the start position of the next page.</p>
+         * <ul>
+         * <li>If this parameter is not specified, the query starts from the first page.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -257,7 +268,16 @@ public class ListCloudAccountRolesRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The filter field name. Valid values:</p>
+             * <ul>
+             * <li>CloudAccountRoleId: the cloud role ID.</li>
+             * <li>CloudAccountRoleName: the cloud role name.</li>
+             * <li>CloudAccountRoleExternalId: the cloud role external identifier.</li>
+             * <li>CloudAccountRoleUsageType: the cloud role usage type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CloudAccountRoleId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -265,7 +285,7 @@ public class ListCloudAccountRolesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The list of filter field values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

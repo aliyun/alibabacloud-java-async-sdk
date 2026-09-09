@@ -67,7 +67,7 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBo
         } 
 
         /**
-         * CheckApplicationProvisioningUserPrimaryOuResult.
+         * <p>The authorization information.</p>
          */
         public Builder checkApplicationProvisioningUserPrimaryOuResult(CheckApplicationProvisioningUserPrimaryOuResult checkApplicationProvisioningUserPrimaryOuResult) {
             this.checkApplicationProvisioningUserPrimaryOuResult = checkApplicationProvisioningUserPrimaryOuResult;
@@ -75,7 +75,10 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBo
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,7 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBo
             } 
 
             /**
-             * <p>是否授权</p>
+             * <p>Indicates whether authorization is allowed.</p>
              */
             public Builder allowAuthorization(Boolean allowAuthorization) {
                 this.allowAuthorization = allowAuthorization;
@@ -162,7 +165,7 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBo
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -173,7 +176,7 @@ public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBo
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>

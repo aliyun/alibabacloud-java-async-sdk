@@ -157,7 +157,7 @@ public class CreateAuthorizationResourceRequest extends Request {
         }
 
         /**
-         * <p>授权资源关联的资源标识。</p>
+         * <p>The ID of the resource entity associated with the authorization resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,10 @@ public class CreateAuthorizationResourceRequest extends Request {
         }
 
         /**
-         * <p>授权资源的资源类型。枚举取值:asset(资产)、credential(凭据)、cloudAccountRole(云账号角色)。</p>
+         * <p>The type of the resource entity associated with the authorization resource. Valid values:</p>
+         * <ul>
+         * <li>cloud_account_role: cloud role</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +186,7 @@ public class CreateAuthorizationResourceRequest extends Request {
         }
 
         /**
-         * <p>授权规则标识。</p>
+         * <p>The authorization rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +199,7 @@ public class CreateAuthorizationResourceRequest extends Request {
         }
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +212,7 @@ public class CreateAuthorizationResourceRequest extends Request {
         }
 
         /**
-         * Condition.
+         * <p>The effective condition.</p>
          */
         public Builder condition(Condition condition) {
             this.putQueryParameter("Condition", condition);
@@ -217,7 +221,7 @@ public class CreateAuthorizationResourceRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +280,7 @@ public class CreateAuthorizationResourceRequest extends Request {
             } 
 
             /**
-             * AllowSameNameIdentity.
+             * <p>Specifies whether same-name identity accounts are supported.</p>
              */
             public Builder allowSameNameIdentity(Boolean allowSameNameIdentity) {
                 this.allowSameNameIdentity = allowSameNameIdentity;
@@ -330,7 +334,7 @@ public class CreateAuthorizationResourceRequest extends Request {
             } 
 
             /**
-             * CredentialCondition.
+             * <p>The effective condition when used as a credential.</p>
              */
             public Builder credentialCondition(CredentialCondition credentialCondition) {
                 this.credentialCondition = credentialCondition;

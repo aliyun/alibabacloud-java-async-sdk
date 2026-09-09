@@ -172,7 +172,8 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+         * <p>The idempotency token that ensures the idempotence of the request.</p>
+         * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,7 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>认证令牌提供商的配置。</p>
+         * <p>The configuration of the credential provider.</p>
          */
         public Builder credentialProviderConfig(CredentialProviderConfig credentialProviderConfig) {
             this.putQueryParameter("CredentialProviderConfig", credentialProviderConfig);
@@ -194,7 +195,10 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>认证令牌提供商的业务标识。是一个具备可读性的唯一标识。</p>
+         * <p>The identifier of the credential provider.</p>
+         * <blockquote>
+         * <p>Allowed characters include uppercase and lowercase letters, digits, and the special characters <code>.-_</code>. The length cannot exceed 64 characters.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +211,10 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>认证令牌提供商名称。</p>
+         * <p>The name of the credential provider.</p>
+         * <blockquote>
+         * <p>The length cannot exceed 64 characters.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +227,11 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>认证令牌提供商的类型。</p>
+         * <p>The type of the credential provider. Valid values:</p>
+         * <ul>
+         * <li>oauth: OAuth credential provider.</li>
+         * <li>jwt: JWT credential provider.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +244,10 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>描述。</p>
+         * <p>The description.</p>
+         * <blockquote>
+         * <p>The length cannot exceed 128 characters.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>This is an example description</p>
@@ -245,7 +259,7 @@ public class CreateCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -343,7 +357,10 @@ public class CreateCredentialProviderRequest extends Request {
             } 
 
             /**
-             * <p>签发出的JWT中的issuer字段的允许列表。</p>
+             * <p>The list of allowed JWT issuers.</p>
+             * <blockquote>
+             * <p>The list length cannot exceed 200.</p>
+             * </blockquote>
              */
             public Builder allowedTokenIssuers(java.util.List<String> allowedTokenIssuers) {
                 this.allowedTokenIssuers = allowedTokenIssuers;
@@ -351,7 +368,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>是否开启JWT派生短令牌能力。</p>
+             * <p>Specifies whether to enable the JWT derived short token capability.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -362,7 +379,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>JWT的有效时长，单位秒。</p>
+             * <p>The validity duration of the JWT. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -373,7 +390,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>是否开启JWT过期清理。</p>
+             * <p>Specifies whether to enable JWT expiration cleanup.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -562,7 +579,7 @@ public class CreateCredentialProviderRequest extends Request {
             } 
 
             /**
-             * <p>用于引导用户进行授权的端点地址。条件必填：当AuthorizationFlow=user_federation且ProviderVendor=custom时必填；预置厂商可通过DiscoveryUrl自动填充</p>
+             * <p>The endpoint address used to guide users through authorization. Conditionally required: required when AuthorizationFlow=user_federation and ProviderVendor=custom. For preset vendors, this can be automatically populated through DiscoveryUrl.</p>
              */
             public Builder authorizationEndpoint(String authorizationEndpoint) {
                 this.authorizationEndpoint = authorizationEndpoint;
@@ -570,7 +587,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>OAuth的具体授权类型。m2m: 机器对机器(2LO, Client Credentials)；user_federation: 用户联邦(3LO, Authorization Code)</p>
+             * <p>The OAuth authorization flow type. Valid values: m2m: machine-to-machine (2LO, Client Credentials). user_federation: user federation (3LO, Authorization Code).</p>
              */
             public Builder authorizationFlow(String authorizationFlow) {
                 this.authorizationFlow = authorizationFlow;
@@ -578,7 +595,10 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>OAuth协议中的client_id，客户端ID。</p>
+             * <p>The client_id in the OAuth protocol.</p>
+             * <blockquote>
+             * <p>The length cannot exceed 128 characters.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -590,7 +610,10 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>OAuth协议中的client_secret，客户端密钥。</p>
+             * <p>The client_secret in the OAuth protocol.</p>
+             * <blockquote>
+             * <p>The length cannot exceed 1024 characters.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -602,7 +625,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>用于自动获取OAuth端点配置的Discovery文档地址。条件可选：当AuthorizationFlow=user_federation时使用，如不提供DiscoveryUrl，则需手动配置TokenEndpoint、AuthorizationEndpoint等字段</p>
+             * <p>The Discovery document URL used to automatically retrieve OAuth endpoint configurations. Conditionally optional: used when AuthorizationFlow=user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</p>
              */
             public Builder discoveryUrl(String discoveryUrl) {
                 this.discoveryUrl = discoveryUrl;
@@ -618,7 +641,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>PKCE code_challenge 生成方法。默认s256</p>
+             * <p>The PKCE code_challenge generation method. Default value: s256.</p>
              */
             public Builder pkceChallengeMethod(String pkceChallengeMethod) {
                 this.pkceChallengeMethod = pkceChallengeMethod;
@@ -626,7 +649,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>是否使用PKCE扩展增强安全性，推荐始终启用</p>
+             * <p>Specifies whether to use the PKCE extension to enhance security. We recommend that you always enable this feature.</p>
              */
             public Builder pkceEnabled(Boolean pkceEnabled) {
                 this.pkceEnabled = pkceEnabled;
@@ -634,7 +657,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>预置厂商或自定义配置。非必填，默认值：custom</p>
+             * <p>The preset vendor or custom configuration. Optional. Default value: custom.</p>
              */
             public Builder providerVendor(String providerVendor) {
                 this.providerVendor = providerVendor;
@@ -642,7 +665,20 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>OAuth协议中的scope，权限范围。</p>
+             * <p>The scope in the OAuth protocol, which defines the permission range.</p>
+             * <blockquote>
+             * <p>The Scope configuration on the credential provider serves as the fallback value. If the scope parameter is not specified when calling the DeveloperAPI to obtain an OAuth Access Token, the Scope configuration on the credential provider is used for issuance.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>Notice: Separate multiple Scope values with spaces.</p>
+             * </blockquote>
+             * <p>Restrictions for each individual Scope value:</p>
+             * <ol>
+             * <li>Allowed characters: lowercase letters, digits, and the special characters <code>|/:_-.</code></li>
+             * <li>Must contain at least one lowercase letter or digit.</li>
+             * <li>Must start with the special character <code>.</code>, a lowercase letter, or a digit.</li>
+             * <li>The length cannot exceed 1024 characters.</li>
+             * </ol>
              * 
              * <strong>example:</strong>
              * <p>example:test_01 example:test_02</p>
@@ -653,7 +689,10 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>OAuth协议的Token端点。</p>
+             * <p>The token endpoint of the OAuth protocol.</p>
+             * <blockquote>
+             * <p>Must start with <code>http://</code> or <code>https://</code>, and the length cannot exceed 1024 characters.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/token">https://example.com/token</a></p>
@@ -723,7 +762,7 @@ public class CreateCredentialProviderRequest extends Request {
             } 
 
             /**
-             * <p>JWT身份提供商配置。</p>
+             * <p>The configuration of the JWT credential provider.</p>
              */
             public Builder jwtProviderConfig(JwtProviderConfig jwtProviderConfig) {
                 this.jwtProviderConfig = jwtProviderConfig;
@@ -731,7 +770,7 @@ public class CreateCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>OAuth 2LO机用类型的提供商的配置。</p>
+             * <p>The configuration of the OAuth credential provider.</p>
              */
             public Builder oAuthProviderConfig(OAuthProviderConfig oAuthProviderConfig) {
                 this.oAuthProviderConfig = oAuthProviderConfig;

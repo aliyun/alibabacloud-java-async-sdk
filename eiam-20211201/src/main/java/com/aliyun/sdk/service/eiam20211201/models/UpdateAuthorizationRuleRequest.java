@@ -143,7 +143,13 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权资源范围，枚举值：global（Project下的所有资源）、custom（自定义资源范围）。</p>
+         * <p>The scope of the authorized resources. Valid values:</p>
+         * <ul>
+         * <li><p>global: global resources within the project.</p>
+         * </li>
+         * <li><p>custom: specified resources within the project.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -155,7 +161,7 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权规则标识。</p>
+         * <p>The authorization rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +174,7 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权规则名称，长度限制最大64个字符。</p>
+         * <p>The name of the authorization rule. The name can be up to 64 characters long.</p>
          * 
          * <strong>example:</strong>
          * <p>test_rule</p>
@@ -180,6 +186,7 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
+         * <p>A client token that ensures the idempotence of the request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +199,7 @@ public class UpdateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
         } 
 
         /**
-         * IdentityProviderMetadata.
+         * <p>The identity provider metadata.</p>
          */
         public Builder identityProviderMetadata(IdentityProviderMetadata identityProviderMetadata) {
             this.identityProviderMetadata = identityProviderMetadata;
@@ -75,7 +75,10 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             } 
 
             /**
-             * <p>oAuth2 授权端点。</p>
+             * <p>The OAuth 2.0 authorization endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/oauth2/default/v1/authorize">https://demo.com/oauth2/default/v1/authorize</a></p>
@@ -191,7 +194,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>OIDC issuer信息。</p>
+             * <p>The OIDC issuer.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/fe974231-3454-4b70-9326-70fb71e41bce/v2.0/">https://demo.com/fe974231-3454-4b70-9326-70fb71e41bce/v2.0/</a></p>
@@ -202,7 +205,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>OIDC jwks地址。</p>
+             * <p>The OIDC JSON Web Key Set (JWKS) URI.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/oauth2/v1/keys">https://demo.com/oauth2/v1/keys</a></p>
@@ -213,7 +216,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>oAuth2 Token端点。</p>
+             * <p>The OAuth 2.0 token endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/api/bff/v1.2/developer/oidc/token">https://demo.com/api/bff/v1.2/developer/oidc/token</a></p>
@@ -224,7 +227,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * <p>OIDC 用户信息端点。</p>
+             * <p>The OIDC userinfo endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://demo.com/api/bff/v1.2/developer/oidc/userinfo">https://demo.com/api/bff/v1.2/developer/oidc/userinfo</a></p>
@@ -281,7 +284,10 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             } 
 
             /**
-             * Content.
+             * <p>The content of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE----- MIIE+zCCA0egAwIBAgIJAJZY0ZY0ZY0Z -----END CERTIFICATE-----</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -361,7 +367,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             } 
 
             /**
-             * Certificates.
+             * <p>The certificates.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -369,7 +375,10 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * IdPEntityId.
+             * <p>The entity ID of the SAML identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
              */
             public Builder idPEntityId(String idPEntityId) {
                 this.idPEntityId = idPEntityId;
@@ -377,7 +386,10 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * IdPSsoUrl.
+             * <p>The SSO URL of the SAML identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
              */
             public Builder idPSsoUrl(String idPSsoUrl) {
                 this.idPSsoUrl = idPSsoUrl;
@@ -444,7 +456,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             } 
 
             /**
-             * <p>OIDC IdP的Meta信息。</p>
+             * <p>The OIDC identity provider metadata.</p>
              */
             public Builder oidcOpenIdConfiguration(OidcOpenIdConfiguration oidcOpenIdConfiguration) {
                 this.oidcOpenIdConfiguration = oidcOpenIdConfiguration;
@@ -452,7 +464,7 @@ public class ExecIdentityProviderMetadataUrlResolutionResponseBody extends TeaMo
             }
 
             /**
-             * SamlMetadataConfiguration.
+             * <p>The SAML identity provider metadata.</p>
              */
             public Builder samlMetadataConfiguration(SamlMetadataConfiguration samlMetadataConfiguration) {
                 this.samlMetadataConfiguration = samlMetadataConfiguration;

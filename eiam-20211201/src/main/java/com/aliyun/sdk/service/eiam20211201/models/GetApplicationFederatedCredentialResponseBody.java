@@ -67,7 +67,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationFederatedCredential.
+         * <p>The application federated credential object.</p>
          */
         public Builder applicationFederatedCredential(ApplicationFederatedCredential applicationFederatedCredential) {
             this.applicationFederatedCredential = applicationFederatedCredential;
@@ -75,7 +75,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>源值表达式</p>
+             * <p>The source value expression.</p>
              * 
              * <strong>example:</strong>
              * <p>Append(client.applicationFederatedCredentialId, &quot;:&quot;, cert.subject.CN, &quot;:&quot;, cert.serialNumber)</p>
@@ -152,7 +155,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目标字段</p>
+             * <p>The target field.</p>
              * 
              * <strong>example:</strong>
              * <p>client.activeSubjectUrn</p>
@@ -248,7 +251,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * PrincipalId.
+             * <p>The principal ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5dee234a-1b4c-4ad7-a19f-fxxxxx</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -256,7 +262,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The Azure resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_default</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -264,7 +273,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionId.
+             * <p>The subscription ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4342a1f4-7e5d-4371-97dc-d4f33f4xxxx</p>
              */
             public Builder subscriptionId(String subscriptionId) {
                 this.subscriptionId = subscriptionId;
@@ -272,7 +284,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * VmNames.
+             * <p>The list of virtual machine names.</p>
              */
             public Builder vmNames(java.util.List<String> vmNames) {
                 this.vmNames = vmNames;
@@ -352,7 +364,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>VM实例ID列表，最多10个</p>
+             * <p>The list of VM instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -360,7 +372,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The GCP project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>turnkey-axiom-475109-xx</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -368,7 +383,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service Account对应sub</p>
+             * <p>The subject corresponding to the service account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder serviceAccountId(String serviceAccountId) {
                 this.serviceAccountId = serviceAccountId;
@@ -422,7 +440,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * Subject.
+             * <p>The subject identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_subject</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -502,7 +523,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>K8s命名空间</p>
+             * <p>The K8s namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -510,7 +534,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pod名称前缀</p>
+             * <p>The pod name prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pod</p>
              */
             public Builder podNamePrefix(String podNamePrefix) {
                 this.podNamePrefix = podNamePrefix;
@@ -518,7 +545,10 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>K8s服务账号名称</p>
+             * <p>The K8s service account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder serviceAccountName(String serviceAccountName) {
                 this.serviceAccountName = serviceAccountName;
@@ -624,7 +654,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Azure VM场景配置</p>
+             * <p>The Azure VM scenario configuration.</p>
              */
             public Builder azureVmConfig(AzureVmConfig azureVmConfig) {
                 this.azureVmConfig = azureVmConfig;
@@ -632,7 +662,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GCP VM场景配置</p>
+             * <p>The GCP VM scenario configuration.</p>
              */
             public Builder gcpVmConfig(GcpVmConfig gcpVmConfig) {
                 this.gcpVmConfig = gcpVmConfig;
@@ -640,7 +670,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * GenericConfig.
+             * <p>The generic scenario configuration.</p>
              */
             public Builder genericConfig(GenericConfig genericConfig) {
                 this.genericConfig = genericConfig;
@@ -648,7 +678,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Kubernetes场景配置</p>
+             * <p>The Kubernetes scenario configuration.</p>
              */
             public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
                 this.kubernetesConfig = kubernetesConfig;
@@ -656,7 +686,16 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OIDC场景Profile：generic / kubernetes / gcp_vm / azure_vm</p>
+             * <p>The OIDC scenario profile. Different profiles correspond to different configurations. Valid values:</p>
+             * <ul>
+             * <li>generic</li>
+             * <li>kubernetes</li>
+             * <li>gcp_vm</li>
+             * <li>azure_vm</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>kubernetes</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -710,7 +749,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>允许的实例ID列表，最多10个</p>
+             * <p>The list of allowed instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -959,7 +998,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用联邦凭证ID</p>
+             * <p>The application federated credential ID.</p>
              * 
              * <strong>example:</strong>
              * <p>afc_aaaaa1111</p>
@@ -970,7 +1009,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用联邦凭证名称</p>
+             * <p>The application federated credential name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -981,7 +1020,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用联邦凭证类型</p>
+             * <p>The application federated credential type.</p>
              * 
              * <strong>example:</strong>
              * <p>oidc</p>
@@ -992,7 +1031,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用ID</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -1003,7 +1042,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>属性映射</p>
+             * <p>The attribute mappings.</p>
              */
             public Builder attributeMappings(java.util.List<AttributeMappings> attributeMappings) {
                 this.attributeMappings = attributeMappings;
@@ -1011,7 +1050,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1758785994982</p>
@@ -1022,7 +1061,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用联邦凭证描述</p>
+             * <p>The application federated credential description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1033,7 +1072,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用联邦凭证提供者ID</p>
+             * <p>The federated trust source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>fcp_asda1dasdxxxx</p>
@@ -1044,7 +1083,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>EAIM 实例ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -1055,7 +1094,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最近使用时间</p>
+             * <p>The last used time.</p>
              * 
              * <strong>example:</strong>
              * <p>1758785994982</p>
@@ -1066,7 +1105,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OIDC结构化配置（structured模式 + oidc类型）</p>
+             * <p>The OIDC structured configuration.</p>
              */
             public Builder oidcVerificationConfig(OidcVerificationConfig oidcVerificationConfig) {
                 this.oidcVerificationConfig = oidcVerificationConfig;
@@ -1074,7 +1113,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PKCS#7结构化配置（structured模式 + pkcs7类型）</p>
+             * <p>The PKCS#7 structured configuration.</p>
              */
             public Builder pkcs7VerificationConfig(Pkcs7VerificationConfig pkcs7VerificationConfig) {
                 this.pkcs7VerificationConfig = pkcs7VerificationConfig;
@@ -1082,7 +1121,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用联邦凭证状态</p>
+             * <p>The application federated credential status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -1093,7 +1132,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新时间</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1758785994982</p>
@@ -1104,7 +1143,7 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>验证条件</p>
+             * <p>The verification condition.</p>
              * 
              * <strong>example:</strong>
              * <p>Equals(cert.subject.CN, &quot;test&quot;)</p>
@@ -1115,7 +1154,14 @@ public class GetApplicationFederatedCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * <p>校验模式：freedom / structured</p>
+             * <p>The verification mode. Valid values:</p>
+             * <ul>
+             * <li>freedom: Free mode.</li>
+             * <li>structured: Structured mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>structured</p>
              */
             public Builder verificationMode(String verificationMode) {
                 this.verificationMode = verificationMode;

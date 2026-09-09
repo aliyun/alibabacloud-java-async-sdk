@@ -93,7 +93,7 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
         } 
 
         /**
-         * ApplicationsForNetworkAccessEndpoint.
+         * <p>The collection of applications under the network access endpoint.</p>
          */
         public Builder applicationsForNetworkAccessEndpoint(java.util.List<ApplicationsForNetworkAccessEndpoint> applicationsForNetworkAccessEndpoint) {
             this.applicationsForNetworkAccessEndpoint = applicationsForNetworkAccessEndpoint;
@@ -101,7 +101,7 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -112,7 +112,10 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +123,10 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -199,7 +205,7 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
             } 
 
             /**
-             * <p>应用ID。</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_m5nzr3kk4njkco2nnc4wjxxxxx</p>
@@ -210,7 +216,10 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
             }
 
             /**
-             * <p>应用名称。</p>
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudSSO</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -218,7 +227,7 @@ public class ListApplicationsForNetworkAccessEndpointResponseBody extends TeaMod
             }
 
             /**
-             * <p>IDaaS EIAM 实例ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_6ed5syotlwdrgmbzn7qn5xxxxx</p>

@@ -67,7 +67,7 @@ public class GetInstanceGlobalizationConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * GlobalizationConfig.
+         * <p>The language and time zone configuration of the instance.</p>
          */
         public Builder globalizationConfig(GlobalizationConfig globalizationConfig) {
             this.globalizationConfig = globalizationConfig;
@@ -75,7 +75,10 @@ public class GetInstanceGlobalizationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,7 @@ public class GetInstanceGlobalizationConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>语言</p>
+             * <p>The language.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-Hans-CN</p>
@@ -152,7 +155,7 @@ public class GetInstanceGlobalizationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>时区</p>
+             * <p>The time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>

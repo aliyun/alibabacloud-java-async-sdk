@@ -67,7 +67,7 @@ public class ListApplicationSupportedProvisionProtocolTypesResponseBody extends 
         } 
 
         /**
-         * ApplicationSupportedProvisionProtocolType.
+         * <p>The list of synchronization types supported by the application.</p>
          */
         public Builder applicationSupportedProvisionProtocolType(ApplicationSupportedProvisionProtocolType applicationSupportedProvisionProtocolType) {
             this.applicationSupportedProvisionProtocolType = applicationSupportedProvisionProtocolType;
@@ -75,7 +75,10 @@ public class ListApplicationSupportedProvisionProtocolTypesResponseBody extends 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,11 @@ public class ListApplicationSupportedProvisionProtocolTypesResponseBody extends 
             } 
 
             /**
-             * <p>账户同步支持类型</p>
+             * <p>The account synchronization type supported by the application. Valid values:</p>
+             * <ul>
+             * <li>idaas_callback: Event callback type.</li>
+             * <li>scim2: System for Cross-domain Identity Management protocol type.</li>
+             * </ul>
              */
             public Builder provisionProtocolType(java.util.List<String> provisionProtocolType) {
                 this.provisionProtocolType = provisionProtocolType;

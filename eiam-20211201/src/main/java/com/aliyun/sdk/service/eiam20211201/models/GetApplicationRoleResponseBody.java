@@ -67,7 +67,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationRole.
+         * <p>The application role information.</p>
          */
         public Builder applicationRole(ApplicationRole applicationRole) {
             this.applicationRole = applicationRole;
@@ -75,7 +75,10 @@ public class GetApplicationRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用唯一标识</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -204,7 +207,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用角色的唯一标识</p>
+             * <p>The application role ID.</p>
              * 
              * <strong>example:</strong>
              * <p>approle_01kh2vuo8v9splv8maak1d22rxxxx</p>
@@ -215,7 +218,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用角色名称</p>
+             * <p>The application role name.</p>
              * 
              * <strong>example:</strong>
              * <p>Admin Role</p>
@@ -226,7 +229,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用角色值</p>
+             * <p>The application role value.</p>
              * 
              * <strong>example:</strong>
              * <p>admin_role</p>
@@ -237,7 +240,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用角色描述</p>
+             * <p>The application role description.</p>
              * 
              * <strong>example:</strong>
              * <p>Admin Role Description</p>
@@ -248,7 +251,7 @@ public class GetApplicationRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>EIAM 实例唯一标识</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxx</p>

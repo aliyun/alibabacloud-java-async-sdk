@@ -67,7 +67,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         } 
 
         /**
-         * <p>The password initialization configurations.</p>
+         * <p>The password initialization configuration.</p>
          */
         public Builder passwordInitializationConfiguration(PasswordInitializationConfiguration passwordInitializationConfiguration) {
             this.passwordInitializationConfiguration = passwordInitializationConfiguration;
@@ -170,10 +170,10 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * <p>Indicates whether forcible password change upon first logon is enabled. Valid values:</p>
+             * <p>The status of forced password update. Valid values:</p>
              * <ul>
-             * <li>enabled</li>
-             * <li>disabled</li>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>The methods for receiving password initialization notifications.</p>
+             * <p>The list of password initialization notification channels.</p>
              * 
              * <strong>example:</strong>
              * <p>email</p>
@@ -196,10 +196,10 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>Indicates whether the password initialization feature is enabled. Valid values:</p>
+             * <p>The status of the password initialization configuration. Valid values:</p>
              * <ul>
-             * <li>enabled</li>
-             * <li>disabled</li>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -211,9 +211,9 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>The password initialization method. Set the value to random.</p>
+             * <p>The password initialization method. Valid values:</p>
              * <ul>
-             * <li>random: A randomly generated password is used.</li>
+             * <li>random: Random.</li>
              * </ul>
              * 
              * <strong>example:</strong>

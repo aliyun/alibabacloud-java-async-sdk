@@ -67,7 +67,7 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Identity provider ID.</p>
+         * <p>The identity provider ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idp_mwpcwnhrimlr2horxXXXX</p>

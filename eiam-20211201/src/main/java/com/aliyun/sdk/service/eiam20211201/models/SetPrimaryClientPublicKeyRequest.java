@@ -128,7 +128,7 @@ public class SetPrimaryClientPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class SetPrimaryClientPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>应用ClientPublicKey的ID</p>
+         * <p>The ID of the client public key for the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +154,7 @@ public class SetPrimaryClientPublicKeyRequest extends Request {
         }
 
         /**
+         * <p>A client token used to ensure the idempotence of a request. You must generate a unique value for this parameter from your client. The token can contain only ASCII characters and cannot be more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,7 @@ public class SetPrimaryClientPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

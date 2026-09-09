@@ -202,7 +202,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Effective authentication sourceIds</p>
+         * <p>The list of effective authentication source IDs.</p>
          */
         public Builder effectiveAuthenticationSourceIds(java.util.List<String> effectiveAuthenticationSourceIds) {
             this.putQueryParameter("EffectiveAuthenticationSourceIds", effectiveAuthenticationSourceIds);
@@ -224,11 +224,11 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The action to take upon password expiration. This parameter must be specified when PasswordExpirationStatus is set to enabled. Valid values:</p>
+         * <p>The action to take when a password expires. This parameter is required when PasswordExpirationStatus is set to enabled. Valid values:</p>
          * <ul>
-         * <li>forbid_login: Users cannot log on to IDaaS.</li>
-         * <li>force_update_password: Users must change the password.</li>
-         * <li>remind_update_password: IDaaS reminds users to change the password upon each logon.</li>
+         * <li>forbid_login: Prohibit logon.</li>
+         * <li>force_update_password: Force password change.</li>
+         * <li>remind_update_password: Remind to change password.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The methods for receiving password expiration notifications. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</p>
+         * <p>The list of password expiration notification channels. This parameter is required when PasswordExpirationNotificationStatus is set to enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>login</p>
@@ -253,7 +253,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The number of days before the expiration date during which password expiration notifications are sent. Unit: day. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</p>
+         * <p>The password expiration notification time, in days. This parameter is required when PasswordExpirationNotificationStatus is set to enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -265,10 +265,10 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the password expiration notification feature. Valid values:</p>
+         * <p>The password expiration notification status. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -281,10 +281,10 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the password expiration feature. Valid values:</p>
+         * <p>The password expiration configuration status. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -298,7 +298,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The number of days before which users must change the password to prevent password expiration. Unit: day. You must set this parameter to a value greater than the value of PasswordExpirationNotificationDuration.</p>
+         * <p>The forced password change time, in days. The value of this parameter must be greater than the value of PasswordExpirationNotificationDuration.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -310,7 +310,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The validity period of a password. Unit: day. This parameter must be specified when PasswordExpirationStatus is set to enabled.</p>
+         * <p>The validity period of a password, in days. This parameter is required when PasswordExpirationStatus is set to enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>

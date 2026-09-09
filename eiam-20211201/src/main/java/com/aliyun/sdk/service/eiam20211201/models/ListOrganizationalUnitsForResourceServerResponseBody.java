@@ -106,7 +106,10 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>A token to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -125,7 +128,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         }
 
         /**
-         * OrganizationalUnits.
+         * <p>A list of organizational units.</p>
          */
         public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
@@ -133,7 +136,10 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +147,10 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -207,7 +216,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             } 
 
             /**
-             * <p>ResourceServerScope唯一标识</p>
+             * <p>The scope ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -218,10 +227,10 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             }
 
             /**
-             * <p>ResourceServerScope名称</p>
+             * <p>The scope name.</p>
              * 
              * <strong>example:</strong>
-             * <p>获取资源信息</p>
+             * <p>Read User Info</p>
              */
             public Builder resourceServerScopeName(String resourceServerScopeName) {
                 this.resourceServerScopeName = resourceServerScopeName;
@@ -301,7 +310,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             } 
 
             /**
-             * <p>实例唯一标识</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</p>
@@ -312,7 +321,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             }
 
             /**
-             * <p>组织的唯一标识</p>
+             * <p>The organizational unit ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_nbsomva32b6utec3hgi7scxxxx</p>
@@ -323,7 +332,7 @@ public class ListOrganizationalUnitsForResourceServerResponseBody extends TeaMod
             }
 
             /**
-             * <p>资源服务Scope权限集合</p>
+             * <p>A list of scopes.</p>
              */
             public Builder resourceServerScopes(java.util.List<ResourceServerScopes> resourceServerScopes) {
                 this.resourceServerScopes = resourceServerScopes;

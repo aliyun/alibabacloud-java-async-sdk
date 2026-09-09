@@ -98,7 +98,7 @@ public class EnableConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Conditional Access Policy ID</p>
+         * <p>The conditional access policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class EnableConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

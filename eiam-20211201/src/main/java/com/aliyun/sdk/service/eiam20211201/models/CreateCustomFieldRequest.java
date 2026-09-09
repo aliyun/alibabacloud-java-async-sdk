@@ -261,7 +261,8 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>字段默认值，必须与数据类型一致</p>
+         * <p>The default value of the field.
+         * If configuration items exist for the type, the default value must be one of the configuration items and must be in the enabled state. Maximum length: 1024 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -273,10 +274,11 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>对字段的描述信息</p>
+         * <p>The field description.
+         * Maximum length: 512 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>字段测试</p>
+         * <p>Field test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -285,7 +287,8 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>是否加密，默认false</p>
+         * <p>Specifies whether to encrypt the field.
+         * If this parameter is set to true, the data value is encrypted at the storage layer.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -297,7 +300,10 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>字段归属实体。实体包括账户、组、组织</p>
+         * <p>The entity to which the field belongs. Valid values:</p>
+         * <ul>
+         * <li>user: account.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,7 +316,7 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>字段值配置项，必须与数据类型一致</p>
+         * <p>The field value configuration items.</p>
          */
         public Builder fieldDataConfig(FieldDataConfig fieldDataConfig) {
             this.putQueryParameter("FieldDataConfig", fieldDataConfig);
@@ -319,7 +325,12 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>数据类型，枚举值：string、number、boolean</p>
+         * <p>The data type of the field. Valid values:</p>
+         * <ul>
+         * <li>string: string.</li>
+         * <li>number: number. Maximum length: 32 characters. Positive integers and decimals are supported.</li>
+         * <li>boolean: Boolean.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +343,8 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>字段展示名，长度不超过128字符</p>
+         * <p>The field display name.
+         * Maximum length: 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,7 +357,12 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>字段展示类型，枚举值，select、checkbox、input</p>
+         * <p>The field display type. Valid values:</p>
+         * <ul>
+         * <li>input: text input box. Supported data types: string and number.</li>
+         * <li>select: drop-down list. Supported data types: string and boolean.</li>
+         * <li>checkbox: multi-select box. Supported data types: string.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -358,7 +375,8 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>字段标识，英文字母、下划线</p>
+         * <p>The field identifier.
+         * Maximum length: 40 characters. The value can contain lowercase letters and underscores, and cannot start with an underscore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -371,7 +389,7 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -384,7 +402,7 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>是否必填，默认false</p>
+         * <p>Specifies whether the field is required.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -396,7 +414,8 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>是否唯一，默认false</p>
+         * <p>Specifies whether the field value is unique.
+         * If this parameter is set to true, the field value must be unique within the corresponding entity type and cannot be duplicated.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -408,7 +427,12 @@ public class CreateCustomFieldRequest extends Request {
         }
 
         /**
-         * <p>用户端(portal侧)权限，hide、read_only、read_write，默认read_only</p>
+         * <p>The field permission on the portal side. Valid values:</p>
+         * <ul>
+         * <li>hide: Not visible on the portal side.</li>
+         * <li>read_only: Visible on the portal side but cannot be edited or updated.</li>
+         * <li>read_write: Visible and editable on the portal side.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -495,7 +519,8 @@ public class CreateCustomFieldRequest extends Request {
             } 
 
             /**
-             * <p>配置项展示名</p>
+             * <p>The display name of the configuration item.
+             * Maximum length: 128 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -506,7 +531,12 @@ public class CreateCustomFieldRequest extends Request {
             }
 
             /**
-             * <p>配置项状态，枚举值，enabled、disabled</p>
+             * <p>The status of the configuration item. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * </ul>
+             * <p>If a configuration item is disabled, it cannot be used when creating or updating entity field values.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -517,7 +547,8 @@ public class CreateCustomFieldRequest extends Request {
             }
 
             /**
-             * <p>配置项展示值</p>
+             * <p>The display value of the configuration item.
+             * Maximum length: 64 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -575,7 +606,7 @@ public class CreateCustomFieldRequest extends Request {
             } 
 
             /**
-             * <p>字段值配置项，必须与数据类型一致，只能新增数据项，不可删除，项字段：displayName、value、status</p>
+             * <p>The list of field configuration items. Maximum number of items: 100.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>

@@ -157,7 +157,7 @@ public class CreateResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,10 @@ public class CreateResourceServerScopeRequest extends Request {
         }
 
         /**
-         * AuthorizationType.
+         * <p>The authorization type. This parameter is required for user permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>authorize_required</p>
          */
         public Builder authorizationType(String authorizationType) {
             this.putQueryParameter("AuthorizationType", authorizationType);
@@ -179,7 +182,7 @@ public class CreateResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,11 +195,11 @@ public class CreateResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>权限名称</p>
+         * <p>The name of the scope permission.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>读取全部用户</p>
+         * <p>Read User Info</p>
          */
         public Builder resourceServerScopeName(String resourceServerScopeName) {
             this.putQueryParameter("ResourceServerScopeName", resourceServerScopeName);
@@ -205,7 +208,7 @@ public class CreateResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>权限类型</p>
+         * <p>The type of the scope permission.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +221,7 @@ public class CreateResourceServerScopeRequest extends Request {
         }
 
         /**
-         * <p>权限值，大小写不敏感，格式(${ResourceType}:${ResourceOption}:${ResourceRestrict})</p>
+         * <p>The value of the scope permission.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

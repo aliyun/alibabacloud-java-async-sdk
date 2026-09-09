@@ -128,7 +128,7 @@ public class RevokeResourceServerScopesFromClientRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The unique identifier of the Client application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class RevokeResourceServerScopesFromClientRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class RevokeResourceServerScopesFromClientRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The unique identifier of the ResourceServer application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class RevokeResourceServerScopesFromClientRequest extends Request {
         }
 
         /**
-         * <p>ResourceServer权限ID。</p>
+         * <p>The list of Scope permission IDs under the ResourceServer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

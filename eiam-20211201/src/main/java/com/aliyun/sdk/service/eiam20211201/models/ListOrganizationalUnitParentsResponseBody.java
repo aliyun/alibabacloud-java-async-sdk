@@ -67,7 +67,7 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The parent organizations.</p>
+         * <p>The list of parent organizations.</p>
          */
         public Builder parents(java.util.List<Parents> parents) {
             this.parents = parents;
@@ -147,7 +147,7 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
              * <p>The organization ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>ou_4lag76zc2km5ssg5vsmm2xxxx</p>
+             * <p>ou_4lag76zc2km5ssg5vsmm2lznvu</p>
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -158,7 +158,7 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
              * <p>The parent organization ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>ou_x3beoyepv2ls5iwuge3xhjxxxx</p>
+             * <p>ou_x3beoyepv2ls5iwuge3xhjkwbm</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;

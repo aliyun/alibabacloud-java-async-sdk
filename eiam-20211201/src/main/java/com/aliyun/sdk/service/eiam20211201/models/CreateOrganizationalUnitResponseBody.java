@@ -67,7 +67,7 @@ public class CreateOrganizationalUnitResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The organization ID.</p>
+         * <p>Organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -78,7 +78,7 @@ public class CreateOrganizationalUnitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>

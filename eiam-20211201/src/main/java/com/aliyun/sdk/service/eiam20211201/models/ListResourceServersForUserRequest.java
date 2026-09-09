@@ -140,7 +140,7 @@ public class ListResourceServersForUserRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The list of filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -149,7 +149,7 @@ public class ListResourceServersForUserRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,10 @@ public class ListResourceServersForUserRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -171,7 +174,7 @@ public class ListResourceServersForUserRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -183,7 +186,7 @@ public class ListResourceServersForUserRequest extends Request {
         }
 
         /**
-         * <p>用户ID。</p>
+         * <p>The account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +258,10 @@ public class ListResourceServersForUserRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApplicationIds</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -263,7 +269,7 @@ public class ListResourceServersForUserRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The list of filter condition values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

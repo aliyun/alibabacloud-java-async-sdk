@@ -97,7 +97,7 @@ public class ListEiamInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID list.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -106,7 +106,7 @@ public class ListEiamInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The region to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

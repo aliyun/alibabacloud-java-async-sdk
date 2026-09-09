@@ -106,7 +106,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>授权服务器列表。</p>
+         * <p>The list of authorization servers.</p>
          */
         public Builder authorizationServers(java.util.List<AuthorizationServers> authorizationServers) {
             this.authorizationServers = authorizationServers;
@@ -114,7 +114,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -136,7 +136,10 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +147,10 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of authorization servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -327,7 +333,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>授权服务器唯一标识</p>
+             * <p>The unique identifier of the authorization server.</p>
              * 
              * <strong>example:</strong>
              * <p>iauths_system</p>
@@ -338,7 +344,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权服务器名称</p>
+             * <p>The name of the authorization server.</p>
              * 
              * <strong>example:</strong>
              * <p>my_authorization_server</p>
@@ -349,7 +355,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -360,7 +366,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建类型：system_init-系统默认创建，jwt_credential_provider-JWT凭据提供商创建，user_custom-用户创建</p>
+             * <p>The creation type.</p>
              * 
              * <strong>example:</strong>
              * <p>user_custom</p>
@@ -371,7 +377,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权服务器描述</p>
+             * <p>The description of the authorization server.</p>
              * 
              * <strong>example:</strong>
              * <p>description of authorization server</p>
@@ -382,7 +388,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -393,7 +399,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前生效的Issuer地址</p>
+             * <p>The currently active issuer address.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token">https://xxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/token</a></p>
@@ -404,7 +410,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Issuer使用的域名，可为初始化域名或已添加的自定义域名</p>
+             * <p>The domain name used by the issuer.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx.aliyunidaas.com</p>
@@ -415,7 +421,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Issuer模式：dynamic-动态基于请求域名，static-使用固定域名</p>
+             * <p>The issuer mode.</p>
              * 
              * <strong>example:</strong>
              * <p>static</p>
@@ -426,7 +432,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>状态：enabled / disabled</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>ENABLE</p>
@@ -437,7 +443,7 @@ public class ListAuthorizationServersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新时间</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>

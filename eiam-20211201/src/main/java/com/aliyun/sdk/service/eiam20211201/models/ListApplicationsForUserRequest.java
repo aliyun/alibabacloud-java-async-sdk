@@ -155,7 +155,7 @@ public class ListApplicationsForUserRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the applications that the EIAM account can access. You can query a maximum of 100 application IDs at a time.</p>
+         * <p>The list of application IDs. You can specify up to 100 application IDs in a single request.</p>
          * 
          * <strong>example:</strong>
          * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -167,7 +167,7 @@ public class ListApplicationsForUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class ListApplicationsForUserRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -206,8 +206,10 @@ public class ListApplicationsForUserRequest extends Request {
         /**
          * <p>The query mode. Default value: <strong>OnlyDirect</strong>. Valid values:</p>
          * <ul>
-         * <li>OnlyDirect: Only the direct permissions are queried. Direct permissions are the permissions that are directly granted to the account.</li>
-         * <li>IncludeInherit: Both the permissions that are directly granted to the account and the inherited permissions are queried. Inherited permissions are the permissions that an account inherits from the parent organization or the group to which the account belongs.</li>
+         * <li><p>OnlyDirect: Queries only the direct permissions of the account. Direct permissions are granted for applications that are directly assigned to the account.</p>
+         * </li>
+         * <li><p>IncludeInherit: Queries both the direct and inherited permissions of the account. Inherited permissions are granted from the parent organizations or groups to which the account belongs.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +222,7 @@ public class ListApplicationsForUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the EIAM account.</p>
+         * <p>The account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

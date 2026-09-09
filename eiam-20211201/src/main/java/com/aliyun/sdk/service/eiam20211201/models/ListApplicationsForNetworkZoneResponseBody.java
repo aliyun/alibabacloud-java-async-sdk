@@ -119,7 +119,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * Applications.
+         * <p>The list of applications.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -127,7 +127,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -138,7 +138,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -149,7 +149,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -160,7 +160,10 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -168,7 +171,10 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -247,7 +253,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IDaaS EIAM 应用Id</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -258,7 +264,10 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 应用名称</p>
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudSSO</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -266,7 +275,7 @@ public class ListApplicationsForNetworkZoneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The IDaaS EIAM instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>

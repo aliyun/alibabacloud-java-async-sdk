@@ -98,7 +98,7 @@ public class GetInstanceQuotaRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetInstanceQuotaRequest extends Request {
         }
 
         /**
-         * <p>配额类型，QuotaEnum</p>
+         * <p>The quota type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

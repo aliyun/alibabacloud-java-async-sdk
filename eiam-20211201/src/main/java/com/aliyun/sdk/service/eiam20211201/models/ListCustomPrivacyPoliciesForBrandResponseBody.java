@@ -119,7 +119,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
         } 
 
         /**
-         * BrandCustomPrivacyPolicies.
+         * <p>The list of custom privacy policies associated with the brand.</p>
          */
         public Builder brandCustomPrivacyPolicies(java.util.List<BrandCustomPrivacyPolicies> brandCustomPrivacyPolicies) {
             this.brandCustomPrivacyPolicies = brandCustomPrivacyPolicies;
@@ -127,7 +127,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -138,7 +138,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The token to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -149,7 +149,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+         * <p>The token to retrieve the previous page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -160,7 +160,10 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -168,7 +171,10 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -221,7 +227,7 @@ public class ListCustomPrivacyPoliciesForBrandResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>条款ID</p>
+             * <p>The privacy policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pp_xxxx</p>

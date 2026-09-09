@@ -106,7 +106,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Collection of conditional access policies</p>
+         * <p>Collection of conditional access policies.</p>
          */
         public Builder conditionalAccessPolicies(java.util.List<ConditionalAccessPolicies> conditionalAccessPolicies) {
             this.conditionalAccessPolicies = conditionalAccessPolicies;
@@ -114,7 +114,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token value returned by this call for the next page query.</p>
+         * <p>The query token value returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -125,7 +125,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Previous page query token (Token)</p>
+         * <p>Previous page query token.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>
@@ -216,7 +216,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Excluded applications</p>
+             * <p>Excluded applications.</p>
              */
             public Builder excludeApplications(java.util.List<String> excludeApplications) {
                 this.excludeApplications = excludeApplications;
@@ -224,7 +224,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Selected applications</p>
+             * <p>Included applications.</p>
              */
             public Builder includeApplications(java.util.List<String> includeApplications) {
                 this.includeApplications = includeApplications;
@@ -291,7 +291,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Excluded network zones</p>
+             * <p>Excluded network zones.</p>
              */
             public Builder excludeNetworkZones(java.util.List<String> excludeNetworkZones) {
                 this.excludeNetworkZones = excludeNetworkZones;
@@ -299,7 +299,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Included network ranges</p>
+             * <p>Included network zones.</p>
              */
             public Builder includeNetworkZones(java.util.List<String> includeNetworkZones) {
                 this.includeNetworkZones = includeNetworkZones;
@@ -418,7 +418,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Excluded user groups</p>
+             * <p>Excluded user groups.</p>
              */
             public Builder excludeGroups(java.util.List<String> excludeGroups) {
                 this.excludeGroups = excludeGroups;
@@ -426,7 +426,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Excluded organizations</p>
+             * <p>Excluded organizational units.</p>
              */
             public Builder excludeOrganizationalUnits(java.util.List<String> excludeOrganizationalUnits) {
                 this.excludeOrganizationalUnits = excludeOrganizationalUnits;
@@ -434,7 +434,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Excluded users</p>
+             * <p>Excluded users.</p>
              */
             public Builder excludeUsers(java.util.List<String> excludeUsers) {
                 this.excludeUsers = excludeUsers;
@@ -442,7 +442,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Included user groups</p>
+             * <p>Included user groups.</p>
              */
             public Builder includeGroups(java.util.List<String> includeGroups) {
                 this.includeGroups = includeGroups;
@@ -450,7 +450,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Included organizations</p>
+             * <p>Included organizational units.</p>
              */
             public Builder includeOrganizationalUnits(java.util.List<String> includeOrganizationalUnits) {
                 this.includeOrganizationalUnits = includeOrganizationalUnits;
@@ -458,7 +458,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Selected users</p>
+             * <p>Included users.</p>
              */
             public Builder includeUsers(java.util.List<String> includeUsers) {
                 this.includeUsers = includeUsers;
@@ -538,7 +538,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Target applications of the conditional access policy</p>
+             * <p>Conditional access policy target applications.</p>
              */
             public Builder applications(Applications applications) {
                 this.applications = applications;
@@ -546,7 +546,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Network zones for conditional access policies</p>
+             * <p>Conditional access policy network zones.</p>
              */
             public Builder networkZones(NetworkZones networkZones) {
                 this.networkZones = networkZones;
@@ -554,7 +554,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Target users of the conditional access policy</p>
+             * <p>Conditional access policy target users.</p>
              */
             public Builder users(Users users) {
                 this.users = users;
@@ -660,7 +660,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether to enable session reuse for secondary authentication</p>
+             * <p>Whether to enable secondary authentication session reuse.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -671,9 +671,9 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Decision action of the conditional access policy:
-             * deny  Deny
-             * allow Allow</p>
+             * <p>Conditional access policy decision action:
+             * deny: Deny access.
+             * allow: Allow access.</p>
              * 
              * <strong>example:</strong>
              * <p>deny</p>
@@ -684,7 +684,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Re-authentication interval for the conditional access policy (in seconds) 300-86400</p>
+             * <p>Conditional access policy re-authentication interval (seconds), ranging from 300 to 86400.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -695,7 +695,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>MFA types allowed by the conditional access policy</p>
+             * <p>MFA types allowed by the conditional access policy.</p>
              */
             public Builder mfaAuthenticationMethods(java.util.List<String> mfaAuthenticationMethods) {
                 this.mfaAuthenticationMethods = mfaAuthenticationMethods;
@@ -703,7 +703,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Conditional Access Policy Mfa Type</p>
+             * <p>Conditional access policy MFA type.</p>
              * 
              * <strong>example:</strong>
              * <p>directly_access</p>
@@ -916,7 +916,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Conditional access policy ID</p>
+             * <p>Conditional access policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cp_xxxxx</p>
@@ -927,10 +927,10 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Conditional access policy name</p>
+             * <p>Conditional access policy name.</p>
              * 
              * <strong>example:</strong>
-             * <p>My Policy</p>
+             * <p>My policy</p>
              */
             public Builder conditionalAccessPolicyName(String conditionalAccessPolicyName) {
                 this.conditionalAccessPolicyName = conditionalAccessPolicyName;
@@ -938,7 +938,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type of the conditional access policy</p>
+             * <p>Conditional access policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>arn:alibaba:idaas:authn:access:policy:system</p>
@@ -949,7 +949,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Content of the conditional access policy</p>
+             * <p>Conditional access policy conditions.</p>
              */
             public Builder conditionsConfig(ConditionsConfig conditionsConfig) {
                 this.conditionsConfig = conditionsConfig;
@@ -957,7 +957,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time</p>
+             * <p>Creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>
@@ -968,7 +968,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Action of the conditional access policy</p>
+             * <p>Conditional access policy execution action.</p>
              */
             public Builder decisionConfig(DecisionConfig decisionConfig) {
                 this.decisionConfig = decisionConfig;
@@ -976,7 +976,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Execution type of the conditional access policy</p>
+             * <p>Conditional access policy execution type.</p>
              * 
              * <strong>example:</strong>
              * <p>enforcement</p>
@@ -987,10 +987,10 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description of the conditional access policy</p>
+             * <p>Conditional access policy description.</p>
              * 
              * <strong>example:</strong>
-             * <p>My Policy Description</p>
+             * <p>My policy description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -998,7 +998,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Execution point of the conditional access policy</p>
+             * <p>Conditional access policy evaluation point.</p>
              * 
              * <strong>example:</strong>
              * <p>arn:alibaba:idaas:authn:access:rule:eval_at:after_step1</p>
@@ -1009,7 +1009,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID</p>
+             * <p>Instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ksvv5c7f2l6uzh6oqspeks23ni</p>
@@ -1020,7 +1020,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last updated time</p>
+             * <p>Update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>
@@ -1031,7 +1031,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Priority, 1-100</p>
+             * <p>Priority, ranging from 1 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1042,7 +1042,7 @@ public class ListConditionalAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Enable or disable status of the conditional access policy</p>
+             * <p>Conditional access policy enabled/disabled status.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>

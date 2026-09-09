@@ -67,7 +67,7 @@ public class GetBrandResponseBody extends TeaModel {
         } 
 
         /**
-         * Brand.
+         * <p>The brand.</p>
          */
         public Builder brand(Brand brand) {
             this.brand = brand;
@@ -75,7 +75,10 @@ public class GetBrandResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,7 @@ public class GetBrandResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>品牌ID</p>
+             * <p>The brand ID.</p>
              * 
              * <strong>example:</strong>
              * <p>brand_xxxx</p>
@@ -217,7 +220,7 @@ public class GetBrandResponseBody extends TeaModel {
             }
 
             /**
-             * <p>品牌名称</p>
+             * <p>The brand name.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom Brand</p>
@@ -228,7 +231,7 @@ public class GetBrandResponseBody extends TeaModel {
             }
 
             /**
-             * <p>品牌类型</p>
+             * <p>The brand type.</p>
              * 
              * <strong>example:</strong>
              * <p>user_custom</p>
@@ -239,7 +242,7 @@ public class GetBrandResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -250,7 +253,10 @@ public class GetBrandResponseBody extends TeaModel {
             }
 
             /**
-             * SmsGatewayId.
+             * <p>The SMS gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smsgw_01l9f0kunrrjhxxx</p>
              */
             public Builder smsGatewayId(String smsGatewayId) {
                 this.smsGatewayId = smsGatewayId;
@@ -258,7 +264,7 @@ public class GetBrandResponseBody extends TeaModel {
             }
 
             /**
-             * <p>品牌状态</p>
+             * <p>The brand status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -269,7 +275,10 @@ public class GetBrandResponseBody extends TeaModel {
             }
 
             /**
-             * SystemNotificationStatus.
+             * <p>The enabling status of system notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder systemNotificationStatus(String systemNotificationStatus) {
                 this.systemNotificationStatus = systemNotificationStatus;

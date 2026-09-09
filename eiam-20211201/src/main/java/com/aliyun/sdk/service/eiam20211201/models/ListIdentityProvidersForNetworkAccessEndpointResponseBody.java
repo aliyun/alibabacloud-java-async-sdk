@@ -93,7 +93,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         } 
 
         /**
-         * IdentityProvidersForNetworkAccessEndpoint.
+         * <p>The collection of IdPs for the network endpoint.</p>
          */
         public Builder identityProvidersForNetworkAccessEndpoint(java.util.List<IdentityProvidersForNetworkAccessEndpoint> identityProvidersForNetworkAccessEndpoint) {
             this.identityProvidersForNetworkAccessEndpoint = identityProvidersForNetworkAccessEndpoint;
@@ -101,7 +101,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The token that is returned from the call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -112,7 +112,10 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +123,10 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -199,7 +205,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
             } 
 
             /**
-             * <p>IdP的ID。</p>
+             * <p>The ID of the IdP.</p>
              * 
              * <strong>example:</strong>
              * <p>idp_nbq7i4ylodmm64iy6t5muxxxxx</p>
@@ -210,7 +216,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
             }
 
             /**
-             * <p>IdP名称。</p>
+             * <p>The name of the IdP.</p>
              * 
              * <strong>example:</strong>
              * <p>OIDC Provider</p>
@@ -221,7 +227,7 @@ public class ListIdentityProvidersForNetworkAccessEndpointResponseBody extends T
             }
 
             /**
-             * <p>IDaaS EIAM 实例ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_elk5evwagodqlmwpfehasxxxxx</p>

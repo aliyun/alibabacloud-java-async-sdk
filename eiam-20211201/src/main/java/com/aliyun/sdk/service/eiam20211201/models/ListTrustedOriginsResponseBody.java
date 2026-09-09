@@ -106,7 +106,10 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page that takes effect for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NT_example</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-example</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
         }
 
         /**
-         * TrustedOrigins.
+         * <p>The list of trusted origins.</p>
          */
         public Builder trustedOrigins(java.util.List<TrustedOrigins> trustedOrigins) {
             this.trustedOrigins = trustedOrigins;
@@ -282,6 +294,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
@@ -293,7 +306,10 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_example</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -301,7 +317,10 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             }
 
             /**
-             * Origin.
+             * <p>The browser origin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://console.qoder.com">https://console.qoder.com</a></p>
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -309,7 +328,10 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -317,7 +339,10 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             }
 
             /**
-             * TrustOriginName.
+             * <p>The trusted origin name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qoder Production Console</p>
              */
             public Builder trustOriginName(String trustOriginName) {
                 this.trustOriginName = trustOriginName;
@@ -325,7 +350,10 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedOriginId.
+             * <p>The trusted origin ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>to_example</p>
              */
             public Builder trustedOriginId(String trustedOriginId) {
                 this.trustedOriginId = trustedOriginId;
@@ -333,7 +361,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedOriginScene.
+             * <p>The trusted origin scene.</p>
              */
             public Builder trustedOriginScene(java.util.List<String> trustedOriginScene) {
                 this.trustedOriginScene = trustedOriginScene;
@@ -341,6 +369,7 @@ public class ListTrustedOriginsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The update time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>

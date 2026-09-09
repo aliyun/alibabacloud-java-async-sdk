@@ -67,7 +67,7 @@ public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The information of region.</p>
+         * <p>The collection of available regions.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -144,7 +144,7 @@ public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region name.</p>
              * 
              * <strong>example:</strong>
              * <p>China (Hangzhou)</p>

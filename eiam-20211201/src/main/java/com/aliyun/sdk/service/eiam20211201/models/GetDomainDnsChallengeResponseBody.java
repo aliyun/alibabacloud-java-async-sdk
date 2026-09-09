@@ -67,7 +67,7 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The DNS challenge records.</p>
+         * <p>The DNS Challenge record.</p>
          */
         public Builder domainDnsChallenge(DomainDnsChallenge domainDnsChallenge) {
             this.domainDnsChallenge = domainDnsChallenge;
@@ -157,10 +157,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the DNS challenge record.</p>
+             * <p>The name of the DNS Challenge.</p>
              * 
              * <strong>example:</strong>
-             * <p>_idaas-challenge.${domain}</p>
+             * <p>_idaas-challenge.login.example.com</p>
              */
             public Builder dnsChallengeName(String dnsChallengeName) {
                 this.dnsChallengeName = dnsChallengeName;
@@ -168,10 +168,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the DNS challenge record.</p>
+             * <p>The value of the DNS Challenge.</p>
              * 
              * <strong>example:</strong>
-             * <p>exmple123xxx</p>
+             * <p>yriov8FD/rIGjQTU3/JjqkwxRbo5dyGftHWOtP5xfCI=</p>
              */
             public Builder dnsChallengeValue(String dnsChallengeValue) {
                 this.dnsChallengeValue = dnsChallengeValue;
@@ -179,7 +179,7 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the DNS challenge record.</p>
+             * <p>The type of the DNS record.</p>
              * 
              * <strong>example:</strong>
              * <p>txt</p>

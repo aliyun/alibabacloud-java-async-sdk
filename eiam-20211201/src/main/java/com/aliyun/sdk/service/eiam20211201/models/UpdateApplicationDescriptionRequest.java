@@ -129,7 +129,7 @@ public class UpdateApplicationDescriptionRequest extends Request {
          * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>A demo application that is used for test.</p>
+         * <p>Demo application for testing</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

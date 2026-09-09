@@ -98,7 +98,7 @@ public class GenerateFileImportTemplateRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,12 @@ public class GenerateFileImportTemplateRequest extends Request {
         }
 
         /**
-         * <p>同步目标类型</p>
+         * <p>The synchronization target type. Valid values:</p>
+         * <ul>
+         * <li>identity_provider: identity provider</li>
+         * <li>application: application</li>
+         * <li>eiam_v2_user_import: IDaaS 2.0 user import.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

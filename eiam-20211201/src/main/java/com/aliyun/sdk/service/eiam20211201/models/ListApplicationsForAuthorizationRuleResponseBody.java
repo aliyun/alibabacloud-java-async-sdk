@@ -106,7 +106,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Applications.
+         * <p>The list of applications.</p>
          */
         public Builder applications(java.util.List<Applications> applications) {
             this.applications = applications;
@@ -114,7 +114,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned in this call. Use this token for the next paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -136,7 +136,10 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +147,10 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -210,7 +216,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>授权生效结束时间。</p>
+             * <p>The end time of the validity period, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1704042061000</p>
@@ -221,7 +227,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权生效开始时间。</p>
+             * <p>The start time of the validity period, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1704042061000</p>
@@ -317,7 +323,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用标识。</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -328,7 +334,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -339,7 +345,7 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>有效周期。</p>
+             * <p>The time range of the validity period. This parameter takes effect only when ValidityType is set to time_bound.</p>
              */
             public Builder validityPeriod(ValidityPeriod validityPeriod) {
                 this.validityPeriod = validityPeriod;
@@ -347,7 +353,11 @@ public class ListApplicationsForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>有效期类型，枚举值：permanent（永久），time_bound（自定义时间范围）。</p>
+             * <p>The validity type of the association. Valid values:</p>
+             * <ul>
+             * <li>permanent: permanent</li>
+             * <li>time_bound: custom time range.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>permanent</p>

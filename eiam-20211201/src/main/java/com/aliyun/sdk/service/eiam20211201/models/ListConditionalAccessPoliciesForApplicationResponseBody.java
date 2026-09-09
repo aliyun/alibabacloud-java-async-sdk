@@ -67,7 +67,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         } 
 
         /**
-         * ConditionalAccessPolicies.
+         * <p>Collection of conditional access policies.</p>
          */
         public Builder conditionalAccessPolicies(java.util.List<ConditionalAccessPolicies> conditionalAccessPolicies) {
             this.conditionalAccessPolicies = conditionalAccessPolicies;
@@ -75,7 +75,10 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             } 
 
             /**
-             * <p>排除的应用</p>
+             * <p>Excluded applications.</p>
              */
             public Builder excludeApplications(java.util.List<String> excludeApplications) {
                 this.excludeApplications = excludeApplications;
@@ -149,7 +152,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>选择的应用</p>
+             * <p>Included applications.</p>
              */
             public Builder includeApplications(java.util.List<String> includeApplications) {
                 this.includeApplications = includeApplications;
@@ -216,7 +219,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             } 
 
             /**
-             * <p>排除的网络区域</p>
+             * <p>Excluded network zones.</p>
              */
             public Builder excludeNetworkZones(java.util.List<String> excludeNetworkZones) {
                 this.excludeNetworkZones = excludeNetworkZones;
@@ -224,7 +227,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>选择的网络区域</p>
+             * <p>Included network zones.</p>
              */
             public Builder includeNetworkZones(java.util.List<String> includeNetworkZones) {
                 this.includeNetworkZones = includeNetworkZones;
@@ -343,7 +346,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             } 
 
             /**
-             * <p>排除的用户组</p>
+             * <p>Excluded groups.</p>
              */
             public Builder excludeGroups(java.util.List<String> excludeGroups) {
                 this.excludeGroups = excludeGroups;
@@ -351,7 +354,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>排除的组织</p>
+             * <p>Excluded organizational units.</p>
              */
             public Builder excludeOrganizationalUnits(java.util.List<String> excludeOrganizationalUnits) {
                 this.excludeOrganizationalUnits = excludeOrganizationalUnits;
@@ -359,7 +362,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>排除的用户</p>
+             * <p>Excluded users.</p>
              */
             public Builder excludeUsers(java.util.List<String> excludeUsers) {
                 this.excludeUsers = excludeUsers;
@@ -367,7 +370,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>选择的用户组</p>
+             * <p>Included groups.</p>
              */
             public Builder includeGroups(java.util.List<String> includeGroups) {
                 this.includeGroups = includeGroups;
@@ -375,7 +378,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>选择的组织</p>
+             * <p>Included organizational units.</p>
              */
             public Builder includeOrganizationalUnits(java.util.List<String> includeOrganizationalUnits) {
                 this.includeOrganizationalUnits = includeOrganizationalUnits;
@@ -383,7 +386,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>选择的用户</p>
+             * <p>Included users.</p>
              */
             public Builder includeUsers(java.util.List<String> includeUsers) {
                 this.includeUsers = includeUsers;
@@ -463,7 +466,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             } 
 
             /**
-             * <p>条件访问策略目标应用</p>
+             * <p>Conditional access policy target applications.</p>
              */
             public Builder applications(Applications applications) {
                 this.applications = applications;
@@ -471,7 +474,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>条件访问策略网络区域</p>
+             * <p>Conditional access policy network zones.</p>
              */
             public Builder networkZones(NetworkZones networkZones) {
                 this.networkZones = networkZones;
@@ -479,7 +482,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>条件访问策略目标用户</p>
+             * <p>Conditional access policy target users.</p>
              */
             public Builder users(Users users) {
                 this.users = users;
@@ -585,7 +588,10 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             } 
 
             /**
-             * ActiveSessionReuseStatus.
+             * <p>Whether session reuse is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder activeSessionReuseStatus(String activeSessionReuseStatus) {
                 this.activeSessionReuseStatus = activeSessionReuseStatus;
@@ -593,7 +599,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略决策Action</p>
+             * <p>Conditional access policy decision action.</p>
              * 
              * <strong>example:</strong>
              * <p>allow</p>
@@ -604,7 +610,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略重复认证时间间隔(秒)</p>
+             * <p>Conditional access policy re-authentication interval (seconds).</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -615,7 +621,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略允许使用的mfa类型</p>
+             * <p>Collection of MFA authentication methods allowed by the conditional access policy.</p>
              */
             public Builder mfaAuthenticationMethods(java.util.List<String> mfaAuthenticationMethods) {
                 this.mfaAuthenticationMethods = mfaAuthenticationMethods;
@@ -623,7 +629,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略Mfa类型</p>
+             * <p>Conditional access policy MFA type.</p>
              * 
              * <strong>example:</strong>
              * <p>directly_access</p>
@@ -836,7 +842,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             } 
 
             /**
-             * <p>IDaaS EIAM 条件访问策略Id</p>
+             * <p>Conditional access policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cap_m5etun43kejxphsbke6mjxxxxx</p>
@@ -847,7 +853,10 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略名称</p>
+             * <p>Conditional access policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myPolicy</p>
              */
             public Builder conditionalAccessPolicyName(String conditionalAccessPolicyName) {
                 this.conditionalAccessPolicyName = conditionalAccessPolicyName;
@@ -855,7 +864,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略类型</p>
+             * <p>Conditional access policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>arn:alibaba:idaas:authn:access:policy:system</p>
@@ -866,7 +875,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略内容</p>
+             * <p>Conditional access policy conditions.</p>
              */
             public Builder conditionsConfig(ConditionsConfig conditionsConfig) {
                 this.conditionsConfig = conditionsConfig;
@@ -874,7 +883,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>创建时间</p>
+             * <p>Creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>
@@ -885,7 +894,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略执行Action</p>
+             * <p>Conditional access policy decision configuration.</p>
              */
             public Builder decisionConfig(DecisionConfig decisionConfig) {
                 this.decisionConfig = decisionConfig;
@@ -893,7 +902,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略执行类型</p>
+             * <p>Conditional access policy decision type.</p>
              * 
              * <strong>example:</strong>
              * <p>enforcement</p>
@@ -904,7 +913,10 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略描述</p>
+             * <p>Conditional access policy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policyTest</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -912,7 +924,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略执行点</p>
+             * <p>Conditional access policy evaluation point.</p>
              * 
              * <strong>example:</strong>
              * <p>arn:alibaba:idaas:authn:access:rule:eval_at:after_step1</p>
@@ -923,7 +935,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>Instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_oynbcyaaejuik6b37eldzxxxxx</p>
@@ -934,7 +946,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>更新时间</p>
+             * <p>Last updated time.</p>
              * 
              * <strong>example:</strong>
              * <p>1741857554000</p>
@@ -945,7 +957,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>优先级</p>
+             * <p>Priority.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -956,7 +968,7 @@ public class ListConditionalAccessPoliciesForApplicationResponseBody extends Tea
             }
 
             /**
-             * <p>IDaaS EIAM 条件访问策略启用禁用状态</p>
+             * <p>Enabled or disabled status of the conditional access policy.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>

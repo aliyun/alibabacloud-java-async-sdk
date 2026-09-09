@@ -158,7 +158,7 @@ public class UpdateAuthorizationServerRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的授权服务器资源ID。</p>
+         * <p>The authorization server ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class UpdateAuthorizationServerRequest extends Request {
         }
 
         /**
-         * <p>授权服务器名称。</p>
+         * <p>The name of the authorization server.</p>
          * 
          * <strong>example:</strong>
          * <p>my_authorization_server</p>
@@ -183,6 +183,7 @@ public class UpdateAuthorizationServerRequest extends Request {
         }
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +196,7 @@ public class UpdateAuthorizationServerRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +209,7 @@ public class UpdateAuthorizationServerRequest extends Request {
         }
 
         /**
-         * <p>Issuer使用的域名，可为初始化域名或已添加的自定义域名；当IssuerMode为static时建议同时配置此值。</p>
+         * <p>The domain name used by the issuer.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx.aliyunidaas.com</p>
@@ -220,7 +221,7 @@ public class UpdateAuthorizationServerRequest extends Request {
         }
 
         /**
-         * <p>Issuer模式，枚举值：dynamic / static。</p>
+         * <p>The issuer mode.</p>
          * 
          * <strong>example:</strong>
          * <p>dynamic</p>

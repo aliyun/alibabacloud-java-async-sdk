@@ -168,7 +168,7 @@ public class ListGroupsForApplicationRequest extends Request {
         }
 
         /**
-         * <p>应用角色ID。</p>
+         * <p>The application role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -180,7 +180,7 @@ public class ListGroupsForApplicationRequest extends Request {
         }
 
         /**
-         * <p>The group IDs. You can specify up to 100 group IDs at a time.</p>
+         * <p>A list of group IDs. You can specify up to 100 group IDs in a single operation.</p>
          * 
          * <strong>example:</strong>
          * <p>group_miu8e4t4d7i4u7uwezgr54xxxx</p>
@@ -205,7 +205,7 @@ public class ListGroupsForApplicationRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

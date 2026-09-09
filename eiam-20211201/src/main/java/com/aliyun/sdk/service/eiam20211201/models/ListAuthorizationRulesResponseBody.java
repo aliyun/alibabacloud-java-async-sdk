@@ -106,7 +106,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorizationRules.
+         * <p>The list of authorization rules.</p>
          */
         public Builder authorizationRules(java.util.List<AuthorizationRules> authorizationRules) {
             this.authorizationRules = authorizationRules;
@@ -114,7 +114,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of entries per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The token returned for the next page query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -136,7 +136,10 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +147,10 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -366,7 +372,11 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>授权资源范围，枚举值：global（项目下所有资源）、custom（指定资源）。</p>
+             * <p>The authorization resource scope. Valid values:</p>
+             * <ul>
+             * <li>global: all resources under the project.</li>
+             * <li>custom: specified resources under the project.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>global</p>
@@ -377,7 +387,11 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则的创建类型，枚举类型：user_created（用户创建)，approval_created（审批创建)。</p>
+             * <p>The creation type of the authorization rule. Valid values:</p>
+             * <ul>
+             * <li>system_init: created by the system.</li>
+             * <li>user_custom: created by the user.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>user_custom</p>
@@ -388,7 +402,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则标识。</p>
+             * <p>The authorization rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>arrule_01kf143ug06fg7m9f43u7vahxxxx</p>
@@ -399,7 +413,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则名称。</p>
+             * <p>The authorization rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-name</p>
@@ -410,7 +424,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则场景标签。</p>
+             * <p>The scenario label of the authorization rule. Valid values:</p>
+             * <ul>
+             * <li>privileged_cloud_account: privileged cloud account scenario.</li>
+             * <li>asset: asset scenario.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Asset</p>
              */
             public Builder authorizationRuleScenarioLabel(String authorizationRuleScenarioLabel) {
                 this.authorizationRuleScenarioLabel = authorizationRuleScenarioLabel;
@@ -418,7 +439,10 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则主体ID，主体类型对应的主体ID。</p>
+             * <p>The subject ID associated with the authorization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder authorizationRuleSubjectId(String authorizationRuleSubjectId) {
                 this.authorizationRuleSubjectId = authorizationRuleSubjectId;
@@ -426,7 +450,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则主体范围，枚举类型：shared（共享型，即支持所有主体，包括账户、应用），exclusive（专属类型）</p>
+             * <p>The subject scope of the authorization rule. Valid values:</p>
+             * <ul>
+             * <li>shared: supports all subjects, including accounts and applications.</li>
+             * <li>exclusive: exclusive type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>shared</p>
              */
             public Builder authorizationRuleSubjectScope(String authorizationRuleSubjectScope) {
                 this.authorizationRuleSubjectScope = authorizationRuleSubjectScope;
@@ -434,7 +465,14 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则主体类型，枚举类型：application（应用)，user（账户)。</p>
+             * <p>The subject type associated with the authorization rule. This parameter takes effect only when the subject scope is exclusive. Valid values:</p>
+             * <ul>
+             * <li>application: application.</li>
+             * <li>user: account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder authorizationRuleSubjectType(String authorizationRuleSubjectType) {
                 this.authorizationRuleSubjectType = authorizationRuleSubjectType;
@@ -442,7 +480,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The creation time, in UNIX timestamp format, measured in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -453,7 +491,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则描述，长度限制为128字符。</p>
+             * <p>The description of the authorization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>this is a test</p>
@@ -464,7 +502,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -475,7 +513,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则关联的项目标识。</p>
+             * <p>The project ID associated with the authorization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>iprj_system_default</p>
@@ -486,7 +524,11 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则状态，枚举值：enabled（启用）、disabled（禁用）。</p>
+             * <p>The authorization rule status. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -497,7 +539,7 @@ public class ListAuthorizationRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最近一次更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The last update time, in UNIX timestamp format, measured in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>

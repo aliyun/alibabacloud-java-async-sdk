@@ -106,7 +106,10 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for paged queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -125,7 +128,10 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +139,10 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -141,7 +150,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>A list of user accounts.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -207,7 +216,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>ResourceServerScope唯一标识</p>
+             * <p>The ID of the scope permission.</p>
              * 
              * <strong>example:</strong>
              * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -218,7 +227,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ResourceServerScope名称</p>
+             * <p>The name of the scope permission.</p>
              * 
              * <strong>example:</strong>
              * <p>Read All User</p>
@@ -301,7 +310,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>实例唯一标识</p>
+             * <p>The ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</p>
@@ -312,7 +321,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源服务Scope权限集合</p>
+             * <p>A list of granted scope permissions.</p>
              */
             public Builder resourceServerScopes(java.util.List<ResourceServerScopes> resourceServerScopes) {
                 this.resourceServerScopes = resourceServerScopes;
@@ -320,7 +329,7 @@ public class ListUsersForResourceServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户的唯一标识</p>
+             * <p>The ID of the user account.</p>
              * 
              * <strong>example:</strong>
              * <p>user_nbsomva32b6utec3hgi7scxxxx</p>

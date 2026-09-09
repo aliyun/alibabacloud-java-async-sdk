@@ -98,7 +98,7 @@ public class UnbindTotpAuthenticatorRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>Instance ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class UnbindTotpAuthenticatorRequest extends Request {
         }
 
         /**
-         * <p>UserID</p>
+         * <p>User ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

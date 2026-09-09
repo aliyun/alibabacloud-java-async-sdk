@@ -91,7 +91,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned. The maximum number of entries that can be returned per page is specified by PageSize.</p>
+         * <p>The total number of entries that match the query.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -102,7 +102,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about accounts.</p>
+         * <p>The list of account objects.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -181,7 +181,8 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Account membership source id</p>
+             * <p>The source ID of the group member relationship.</p>
+             * <p>If the group is created in EIAM, the value of this parameter is the instance ID. For other types of groups, the value is the enterprise ID from the source. For example, if the group is imported from DingTalk, the value is the corpId of the DingTalk enterprise.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -192,7 +193,12 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Account membership source type</p>
+             * <p>The source type of the group member relationship. Valid values:</p>
+             * <p>build_in: The group is created in EIAM.</p>
+             * <p>ding_talk: The group is imported from DingTalk.</p>
+             * <p>ad: The group is imported from Active Directory (AD).</p>
+             * <p>ldap: The group is imported from LDAP.</p>
+             * <p>we_com: The group is imported from WeCom.</p>
              * 
              * <strong>example:</strong>
              * <p>build_in</p>

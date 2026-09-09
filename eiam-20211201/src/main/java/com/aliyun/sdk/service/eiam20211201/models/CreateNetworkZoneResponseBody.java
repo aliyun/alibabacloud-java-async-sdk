@@ -67,7 +67,10 @@ public class CreateNetworkZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkZoneId.
+         * <p>Network zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network_m6a57vre4g3h7m725yrq6pxxxx</p>
          */
         public Builder networkZoneId(String networkZoneId) {
             this.networkZoneId = networkZoneId;
@@ -75,7 +78,10 @@ public class CreateNetworkZoneResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

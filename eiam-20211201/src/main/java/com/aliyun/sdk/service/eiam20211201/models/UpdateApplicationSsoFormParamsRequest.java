@@ -113,7 +113,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用主键id</p>
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
         }
 
         /**
-         * <p>应用模板创建参数，应用创建来源为模板时才可以指定</p>
+         * <p>The parameters for creating the application template.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applicationTemplateParams(java.util.List<ApplicationTemplateParams> applicationTemplateParams) {
@@ -136,7 +136,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM的实例id</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
             } 
 
             /**
-             * <p>应用模板创建参数具体名称</p>
+             * <p>The name of a parameter for creating the application template.</p>
              * 
              * <strong>example:</strong>
              * <p>aliyunUid</p>
@@ -219,7 +219,7 @@ public class UpdateApplicationSsoFormParamsRequest extends Request {
             }
 
             /**
-             * <p>应用模板创建参数真实的取值</p>
+             * <p>The value of the parameter for creating the application template.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>

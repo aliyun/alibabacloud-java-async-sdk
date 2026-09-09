@@ -143,7 +143,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The description of the organization. The value can be up to 256 characters in length.</p>
+         * <p>The description. The maximum length is 256 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -155,7 +155,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +168,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The external ID of the organization, which can be used to associate the organization with an external system. By default, the external ID is the organization ID. The value can be up to 64 characters in length.</p>
+         * <p>External ID of the organization, which is used for association with an external system. The default value is the organization ID. The maximum length is 64 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -180,7 +180,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The name of the organization. The name can be up to 64 characters in length.</p>
+         * <p>Organization name. The maximum length is 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +193,7 @@ public class CreateOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The parent organization ID.</p>
+         * <p>Parent organization ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

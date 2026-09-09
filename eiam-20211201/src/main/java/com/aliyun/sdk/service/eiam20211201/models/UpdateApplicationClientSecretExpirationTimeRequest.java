@@ -128,7 +128,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends Request 
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends Request 
         }
 
         /**
-         * <p>client secret的有效期时间，Unix时间戳格式，单位为毫秒</p>
+         * <p>The expiration time of the client secret. The value is a UNIX timestamp in milliseconds. The minimum validity period that can be set is 1 day, and the maximum validity period is 3 years.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends Request 
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class UpdateApplicationClientSecretExpirationTimeRequest extends Request 
         }
 
         /**
-         * <p>OIDC 场景下用于客户端身份验证的客户端密钥</p>
+         * <p>The client secret.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,10 @@ public class GetInstanceTrialStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class GetInstanceTrialStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TrialStatus.
+         * <p>The trial status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder trialStatus(Boolean trialStatus) {
             this.trialStatus = trialStatus;

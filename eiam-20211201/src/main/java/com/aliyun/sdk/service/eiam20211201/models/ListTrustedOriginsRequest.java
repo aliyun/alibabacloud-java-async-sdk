@@ -173,7 +173,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The ID of the IDaaS EIAM instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>默认20，最大100；传0按默认值处理。</p>
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100. If you set this parameter to 0, the default value is used.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -198,7 +198,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>上一次调用返回的NextToken。</p>
+         * <p>The NextToken returned by the previous call.</p>
          * 
          * <strong>example:</strong>
          * <p>NT_example</p>
@@ -210,7 +210,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>按标准化后的Origin精确筛选。</p>
+         * <p>Filters by the exact normalized origin.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://console.qoder.com">https://console.qoder.com</a></p>
@@ -222,7 +222,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>按Enabled或Disabled精确筛选。</p>
+         * <p>Filters by exact status. Valid values: Enabled or Disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -234,10 +234,10 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>按名称精确筛选。</p>
+         * <p>Filters by exact name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Qoder生产控制台</p>
+         * <p>Qoder Production Console</p>
          */
         public Builder trustOriginName(String trustOriginName) {
             this.putQueryParameter("TrustOriginName", trustOriginName);
@@ -246,7 +246,7 @@ public class ListTrustedOriginsRequest extends Request {
         }
 
         /**
-         * <p>按可信来源场景精确筛选，最多传入一项。</p>
+         * <p>Filters by exact trusted origin scene. You can specify at most one value.</p>
          * 
          * <strong>example:</strong>
          * <p>iframe_embed</p>

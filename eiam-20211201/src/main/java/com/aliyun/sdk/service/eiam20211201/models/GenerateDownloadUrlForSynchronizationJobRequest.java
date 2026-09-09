@@ -98,7 +98,7 @@ public class GenerateDownloadUrlForSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GenerateDownloadUrlForSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>同步任务ID</p>
+         * <p>The synchronization task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

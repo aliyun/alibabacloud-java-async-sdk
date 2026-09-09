@@ -157,6 +157,7 @@ public class CreateCloudAccountRoleRequest extends Request {
         }
 
         /**
+         * <p>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +170,7 @@ public class CreateCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>云账号唯一标识</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +183,7 @@ public class CreateCloudAccountRoleRequest extends Request {
         }
 
         /**
+         * <p>The name of the cloud role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +196,10 @@ public class CreateCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>云账号类型</p>
+         * <p>The type of the cloud role. The format of this parameter depends on the type of the Alibaba Cloud account. The supported value is:</p>
+         * <ul>
+         * <li>role: applies to Alibaba Cloud accounts.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>role</p>
@@ -206,7 +211,10 @@ public class CreateCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the cloud role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_account_role_description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -215,7 +223,7 @@ public class CreateCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The permissions of the Developer API feature.</p>
+         * <p>The authorization scope.</p>
          */
         public Builder applicationGrantScope(ApplicationGrantScope applicationGrantScope) {
             this.applicationGrantScope = applicationGrantScope;
@@ -75,7 +75,7 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -131,7 +131,7 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The permissions of the Developer API feature.</p>
+             * <p>The collection of API authorization scopes.</p>
              */
             public Builder grantScopes(java.util.List<String> grantScopes) {
                 this.grantScopes = grantScopes;

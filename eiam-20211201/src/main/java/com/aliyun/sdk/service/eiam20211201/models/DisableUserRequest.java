@@ -111,7 +111,7 @@ public class DisableUserRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account.</p>
+         * <p>The account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the proxy token.</p>
+         * <p>The proxy token information object.</p>
          */
         public Builder domainProxyToken(DomainProxyToken domainProxyToken) {
             this.domainProxyToken = domainProxyToken;
@@ -222,7 +222,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the proxy token of the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the domain proxy token was created, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -233,7 +233,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the domain name.</p>
+             * <p>The domain name ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dm_examplexxxx</p>
@@ -244,7 +244,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The proxy token of the domain name.</p>
+             * <p>The domain proxy token.</p>
              * 
              * <strong>example:</strong>
              * <p>PTxxxxxxxx</p>
@@ -255,7 +255,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the proxy token of the domain name.</p>
+             * <p>The domain proxy token ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pt_examplexxxx</p>
@@ -277,7 +277,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the proxy token of the domain name was last used. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the domain proxy token was last used, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -288,10 +288,12 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the proxy token. Valid values:</p>
+             * <p>The token status. Valid values:</p>
              * <ul>
-             * <li>enabled</li>
-             * <li>disabled</li>
+             * <li><p>enabled: Enabled.</p>
+             * </li>
+             * <li><p>disabled: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -303,7 +305,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the proxy token of the domain name was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the domain proxy token was last updated, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>

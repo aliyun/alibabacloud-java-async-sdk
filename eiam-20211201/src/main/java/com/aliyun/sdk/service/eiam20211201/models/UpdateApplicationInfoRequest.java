@@ -184,7 +184,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用主键id</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * <p>应用的表示名称</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>Ram Account SSO</p>
@@ -218,7 +218,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * ApplicationVisibility.
+         * <p>The application visibility settings.</p>
          */
         public Builder applicationVisibility(java.util.List<String> applicationVisibility) {
             this.putQueryParameter("ApplicationVisibility", applicationVisibility);
@@ -227,7 +227,10 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotence token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-example</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -245,7 +248,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM的实例id</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +261,7 @@ public class UpdateApplicationInfoRequest extends Request {
         }
 
         /**
-         * <p>应用Logo地址</p>
+         * <p>The URL of the application logo.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.aliyuncs.com/logo.png">https://example.aliyuncs.com/logo.png</a></p>

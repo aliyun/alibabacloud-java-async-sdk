@@ -67,7 +67,7 @@ public class ListEiamRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The region list.</p>
+         * <p>The list of regions.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -144,10 +144,10 @@ public class ListEiamRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region name.</p>
+             * <p>The name of the region.</p>
              * 
              * <strong>example:</strong>
-             * <p>China (Hangzhou)</p>
+             * <p>华东1（杭州）</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -155,7 +155,7 @@ public class ListEiamRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the instance resides.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

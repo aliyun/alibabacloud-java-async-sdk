@@ -80,7 +80,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationAccounts.
+         * <p>The list of application accounts.</p>
          */
         public Builder applicationAccounts(java.util.List<ApplicationAccounts> applicationAccounts) {
             this.applicationAccounts = applicationAccounts;
@@ -88,7 +88,10 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +220,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IDaaS EIAM 应用账号Id</p>
+             * <p>The application account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aac_m66smhbq5krept7nza54hxxxx</p>
@@ -225,7 +231,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 应用Id</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_m43o4h5adeo5klvbbxgxxxxx</p>
@@ -236,7 +242,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 应用账号名称</p>
+             * <p>The application account name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -247,7 +253,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1737510353000</p>
@@ -258,7 +264,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The IDaaS EIAM instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_eznwtkkaucljizh6qqu7ptxxxx</p>
@@ -269,7 +275,7 @@ public class ListApplicationAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 用户Id</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>user_tkmboufpnvpbitdpzrlngxzxxxx</p>

@@ -98,7 +98,7 @@ public class GetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Identity provider ID</p>
+         * <p>The identity provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

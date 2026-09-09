@@ -145,7 +145,7 @@ public class CreateTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>
@@ -157,7 +157,7 @@ public class CreateTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The ID of the IDaaS EIAM instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class CreateTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>格式为scheme://host[:port]，创建后不可修改。</p>
+         * <p>The browser origin in the format of scheme://host[:port]. This value cannot be modified after creation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,10 +183,10 @@ public class CreateTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>用于管理、展示和审计的可信来源名称，不传则为空。</p>
+         * <p>The name of the trusted origin used for management, display, and auditing. If not specified, the value is empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>Qoder生产控制台</p>
+         * <p>Qoder Production Console</p>
          */
         public Builder trustOriginName(String trustOriginName) {
             this.putQueryParameter("TrustOriginName", trustOriginName);
@@ -195,7 +195,7 @@ public class CreateTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>仅支持iframe_embed和cors，至少一项。</p>
+         * <p>The trusted origin scenes. Only iframe_embed and cors are supported. At least one value is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -323,7 +323,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Authentication configuration information.</p>
+         * <p>The authentication configuration.</p>
          */
         public Builder authnConfig(AuthnConfig authnConfig) {
             this.putQueryParameter("AuthnConfig", authnConfig);
@@ -332,7 +332,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Auto-create account rule configuration.</p>
+         * <p>The automatic creation rule configuration for accounts.</p>
          */
         public Builder autoCreateUserConfig(AutoCreateUserConfig autoCreateUserConfig) {
             this.putQueryParameter("AutoCreateUserConfig", autoCreateUserConfig);
@@ -341,7 +341,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Auto-update account rule configuration.</p>
+         * <p>The automatic account update rule configuration.</p>
          */
         public Builder autoUpdateUserConfig(AutoUpdateUserConfig autoUpdateUserConfig) {
             this.putQueryParameter("AutoUpdateUserConfig", autoUpdateUserConfig);
@@ -350,7 +350,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>OIDC identity provider account binding rule configuration.</p>
+         * <p>The account binding rule configuration for the OIDC identity provider.</p>
          */
         public Builder bindingConfig(BindingConfig bindingConfig) {
             this.putQueryParameter("BindingConfig", bindingConfig);
@@ -359,10 +359,10 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Idp client token.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. ClientToken supports only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
          * 
          * <strong>example:</strong>
-         * <p>client-token-example</p>
+         * <p>clientToken_20250704_Axxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -371,7 +371,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>DingTalk configuration information.</p>
+         * <p>The DingTalk configuration.</p>
          */
         public Builder dingtalkAppConfig(DingtalkAppConfig dingtalkAppConfig) {
             this.putQueryParameter("DingtalkAppConfig", dingtalkAppConfig);
@@ -380,7 +380,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Identity provider name.</p>
+         * <p>The name of the identity provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -393,24 +393,16 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Identity provider synchronization type.</p>
+         * <p>The synchronization type of the identity provider. Valid values:</p>
          * <ul>
-         * <li><p>Inbound to DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</p>
-         * </li>
-         * <li><p>Outbound to DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</p>
-         * </li>
-         * <li><p>Inbound to WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</p>
-         * </li>
-         * <li><p>Inbound to Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</p>
-         * </li>
-         * <li><p>Inbound to AD: urn:alibaba:idaas:idp:microsoft:ad:pull</p>
-         * </li>
-         * <li><p>Inbound to LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</p>
-         * </li>
-         * <li><p>Standard OIDC: urn:alibaba:idaas:idp:standard:oidc</p>
-         * </li>
-         * <li><p>SASE Custom OIDC: urn:alibaba:idaas:idp:alibaba:sase</p>
-         * </li>
+         * <li>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: inbound DingTalk</li>
+         * <li>urn:alibaba:idaas:idp:alibaba:dingtalk:push: outbound DingTalk</li>
+         * <li>urn:alibaba:idaas:idp:tencent:wecom:pull: inbound WeCom</li>
+         * <li>urn:alibaba:idaas:idp:bytedance:lark:pull: inbound Lark</li>
+         * <li>urn:alibaba:idaas:idp:microsoft:ad:pull: inbound AD</li>
+         * <li>urn:alibaba:idaas:idp:unknown:ldap:pull: inbound LDAP</li>
+         * <li>urn:alibaba:idaas:idp:standard:oidc: standard OIDC</li>
+         * <li>urn:alibaba:idaas:idp:alibaba:sase: SASE custom OIDC</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -424,7 +416,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -437,7 +429,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Lark (Feishu) configuration information.</p>
+         * <p>The Lark configuration information.</p>
          */
         public Builder larkConfig(LarkConfig larkConfig) {
             this.putQueryParameter("LarkConfig", larkConfig);
@@ -446,7 +438,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>AD/LDAP configuration information.</p>
+         * <p>The AD/LDAP configuration information.</p>
          */
         public Builder ldapConfig(LdapConfig ldapConfig) {
             this.putQueryParameter("LdapConfig", ldapConfig);
@@ -455,10 +447,10 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>IdP logo url.</p>
+         * <p>The URL of the application logo.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx-image://idaas_23aqr2ye554csg33dqpch5eu3q/tmp/d17d9adc-a943-45e7-ba0c-2838dddexxxxx</p>
+         * <p>xxxx-image://xxxx_23aqr2ye554csg33dqpch5eu3q/tmp/d17d9adc-a943-45e7-ba0c-2838dddea678</p>
          */
         public Builder logoUrl(String logoUrl) {
             this.putQueryParameter("LogoUrl", logoUrl);
@@ -467,7 +459,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the network access endpoint.</p>
+         * <p>The network access endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxxx</p>
@@ -479,7 +471,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>OIDC IdP configuration.</p>
+         * <p>The OIDC IdP configuration.</p>
          */
         public Builder oidcConfig(OidcConfig oidcConfig) {
             this.putQueryParameter("OidcConfig", oidcConfig);
@@ -488,7 +480,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * SamlConfig.
+         * <p>The SAML IdP configuration.</p>
          */
         public Builder samlConfig(SamlConfig samlConfig) {
             this.putQueryParameter("SamlConfig", samlConfig);
@@ -497,7 +489,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Inbound synchronization configuration information.</p>
+         * <p>The inbound synchronization configuration.</p>
          */
         public Builder udPullConfig(UdPullConfig udPullConfig) {
             this.putQueryParameter("UdPullConfig", udPullConfig);
@@ -506,7 +498,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>Outbound synchronization configuration information.</p>
+         * <p>The outbound synchronization configuration.</p>
          */
         public Builder udPushConfig(UdPushConfig udPushConfig) {
             this.putQueryParameter("UdPushConfig", udPushConfig);
@@ -515,7 +507,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>WeCom configuration information.</p>
+         * <p>The WeCom configuration information.</p>
          */
         public Builder weComConfig(WeComConfig weComConfig) {
             this.putQueryParameter("WeComConfig", weComConfig);
@@ -584,12 +576,10 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Whether the corresponding IdP supports authentication. Value range:</p>
+             * <p>Specifies whether the corresponding IdP supports authentication. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
-             * </li>
-             * <li><p>Enabled: enabled</p>
-             * </li>
+             * <li>disabled: Disabled.</li>
+             * <li>enabled: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -601,12 +591,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Whether automatic password update is supported. Value range:</p>
+             * <p>Specifies whether automatic password update is supported. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
-             * </li>
-             * <li><p>Enabled: enabled</p>
-             * </li>
+             * <li>disabled: Disabled.</li>
+             * <li>enabled: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -677,11 +665,11 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Whether auto-creation of accounts is enabled. Possible values:</p>
+             * <p>Specifies whether automatic creation of accounts is enabled. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
-             * <li><p>Enabled: enabled</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
              * </ul>
              * 
@@ -694,7 +682,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Target organizational unit IDs collection.</p>
+             * <p>The collection of target organizational unit IDs.</p>
              */
             public Builder targetOrganizationalUnitIds(java.util.List<String> targetOrganizationalUnitIds) {
                 this.targetOrganizationalUnitIds = targetOrganizationalUnitIds;
@@ -748,11 +736,11 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Whether auto-updating of accounts is enabled. Possible values:</p>
+             * <p>Specifies whether automatic account update is enabled. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
-             * <li><p>Enabled: enabled</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
              * </ul>
              * 
@@ -850,16 +838,14 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Type of the expression. Value range:</p>
+             * <p>The type of the expression. Valid values:</p>
              * <ul>
-             * <li><p>Field: filed</p>
-             * </li>
-             * <li><p>Expression: expression</p>
-             * </li>
+             * <li>field: field</li>
+             * <li>expression: expression</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>filed</p>
+             * <p>field</p>
              */
             public Builder expressionMappingType(String expressionMappingType) {
                 this.expressionMappingType = expressionMappingType;
@@ -867,7 +853,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Expression for the mapped attribute value.</p>
+             * <p>The expression for the mapped attribute value.</p>
              * 
              * <strong>example:</strong>
              * <p>idpUser.phoneNumber</p>
@@ -878,7 +864,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Name of the target attribute.</p>
+             * <p>The name of the target attribute for mapping.</p>
              * 
              * <strong>example:</strong>
              * <p>user.username</p>
@@ -889,10 +875,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Description of the target attribute.</p>
+             * <p>The name of the target attribute for mapping.</p>
              * 
              * <strong>example:</strong>
-             * <p>user.username</p>
+             * <p>username</p>
              */
             public Builder targetFieldDescription(String targetFieldDescription) {
                 this.targetFieldDescription = targetFieldDescription;
@@ -972,7 +958,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>List of rules for automatically matching accounts.</p>
+             * <p>The list of rules for automatically matching accounts.</p>
              */
             public Builder autoMatchUserProfileExpressions(java.util.List<AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions) {
                 this.autoMatchUserProfileExpressions = autoMatchUserProfileExpressions;
@@ -980,12 +966,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Whether automatic account matching is enabled. Value range:</p>
+             * <p>Specifies whether automatic account matching is enabled. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
-             * </li>
-             * <li><p>Enabled: enabled</p>
-             * </li>
+             * <li>disabled: Disabled.</li>
+             * <li>enabled: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -997,12 +981,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Whether the user manual account binding function is enabled. Value range:</p>
+             * <p>Specifies whether the manual account binding feature is enabled. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
-             * </li>
-             * <li><p>Enabled: enabled</p>
-             * </li>
+             * <li>disabled: Disabled.</li>
+             * <li>enabled: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1126,7 +1108,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>AppKey of the DingTalk application.</p>
+             * <p>The appKey of the DingTalk first-party application.</p>
              * 
              * <strong>example:</strong>
              * <p>Xczngvfemo4e</p>
@@ -1137,7 +1119,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>AppSecret of the DingTalk application.</p>
+             * <p>The appSecret of the DingTalk first-party application.</p>
              * 
              * <strong>example:</strong>
              * <p>5d405a12a6f84ad4ab05ee09axxxx</p>
@@ -1148,10 +1130,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>CorpId of the DingTalk application.</p>
+             * <p>The corpId of the DingTalk first-party application.</p>
              * 
              * <strong>example:</strong>
-             * <p>3075680424786133505</p>
+             * <p>307568042478613xxxx</p>
              */
             public Builder corpId(String corpId) {
                 this.corpId = corpId;
@@ -1159,9 +1141,13 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>DingTalk edition. Valid values:</p>
-             * <p>public_dingtalk – Standard DingTalk.</p>
-             * <p>private_dingtalk – Dedicated DingTalk.</p>
+             * <p>The DingTalk version. Valid values:</p>
+             * <ul>
+             * <li><p>public_dingtalk: Standard DingTalk.</p>
+             * </li>
+             * <li><p>private_dingtalk: Exclusive DingTalk.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>public_dingtalk</p>
@@ -1172,10 +1158,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>DingTalk encrypt key.</p>
+             * <p>The EncryptKey of the DingTalk application.</p>
              * 
              * <strong>example:</strong>
-             * <p>29003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</p>
+             * <p>VkdWw91mdkrjVFr3ObNwefap21dfxxxx</p>
              */
             public Builder encryptKey(String encryptKey) {
                 this.encryptKey = encryptKey;
@@ -1183,10 +1169,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>DingTalk verification token.</p>
+             * <p>The VerificationToken of the DingTalk application.</p>
              * 
              * <strong>example:</strong>
-             * <p>5ba9c127a7abe029003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</p>
+             * <p>myDingApp_VerifyTokenxxxxx</p>
              */
             public Builder verificationToken(String verificationToken) {
                 this.verificationToken = verificationToken;
@@ -1293,7 +1279,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Lark (Feishu) app appId.</p>
+             * <p>The Lark application AppId.</p>
              * 
              * <strong>example:</strong>
              * <p>cli_xxxx</p>
@@ -1304,7 +1290,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Lark (Feishu) app secret.</p>
+             * <p>The Lark application Secret.</p>
              * 
              * <strong>example:</strong>
              * <p>KiiLzh5Dueh4wbLxxxx</p>
@@ -1315,10 +1301,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Lark (Feishu) encrypt key.</p>
+             * <p>The encryptKey of the Lark custom application.</p>
              * 
              * <strong>example:</strong>
-             * <p>29003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</p>
+             * <p>VkdWw91mdkrjVFr3ObNwefap21dfxxxx</p>
              */
             public Builder encryptKey(String encryptKey) {
                 this.encryptKey = encryptKey;
@@ -1326,7 +1312,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Lark (Feishu) enterprise number.</p>
+             * <p>The Lark enterprise number.</p>
              * 
              * <strong>example:</strong>
              * <p>FSX123111xxx</p>
@@ -1337,10 +1323,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Lark (Feishu)  verification token.</p>
+             * <p>The verificationToken of the Lark custom application.</p>
              * 
              * <strong>example:</strong>
-             * <p>5ba9c127a7abe029003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</p>
+             * <p>feishuVerifyTokenxxxxx</p>
              */
             public Builder verificationToken(String verificationToken) {
                 this.verificationToken = verificationToken;
@@ -1615,7 +1601,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Administrator password.</p>
+             * <p>The administrator password.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx</p>
@@ -1626,7 +1612,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Administrator username.</p>
+             * <p>The administrator account.</p>
              * 
              * <strong>example:</strong>
              * <p>DC=example,DC=com</p>
@@ -1637,11 +1623,11 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Whether to verify the certificate fingerprint. Value range:</p>
+             * <p>Specifies whether to verify the certificate fingerprint. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
-             * <li><p>Enabled: enabled</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
              * </ul>
              * 
@@ -1654,7 +1640,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>List of certificate fingerprints.</p>
+             * <p>The list of certificate fingerprints.</p>
              */
             public Builder certificateFingerprints(java.util.List<String> certificateFingerprints) {
                 this.certificateFingerprints = certificateFingerprints;
@@ -1662,7 +1648,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Group member attribute name.</p>
+             * <p>The group member attribute name.</p>
              * 
              * <strong>example:</strong>
              * <p>member</p>
@@ -1673,7 +1659,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Group ObjectClass.</p>
+             * <p>The group ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>group</p>
@@ -1684,7 +1670,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Custom filter for Group ObjectClass.</p>
+             * <p>The custom filter for groups.</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -1695,7 +1681,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Communication protocol.</p>
+             * <p>The communication protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>ldap</p>
@@ -1706,7 +1692,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>AD/LDAP server address.</p>
+             * <p>The AD/LDAP server address.</p>
              * 
              * <strong>example:</strong>
              * <p>123.xx.xx.89</p>
@@ -1717,7 +1703,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>AD/LDAP port number.</p>
+             * <p>The AD/LDAP port number.</p>
              * 
              * <strong>example:</strong>
              * <p>636</p>
@@ -1728,7 +1714,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Organization Unit ObjectClass.</p>
+             * <p>The organization ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>organizationUnit,top</p>
@@ -1739,7 +1725,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * OrganizationalUnitRdn.
+             * <p>The organization RDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou</p>
              */
             public Builder organizationalUnitRdn(String organizationalUnitRdn) {
                 this.organizationalUnitRdn = organizationalUnitRdn;
@@ -1747,7 +1736,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * PasswordSyncStatus.
+             * <p>Specifies whether password synchronization is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordSyncStatus(String passwordSyncStatus) {
                 this.passwordSyncStatus = passwordSyncStatus;
@@ -1755,11 +1747,11 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Whether startTLS is enabled. Value range:</p>
+             * <p>Specifies whether StartTLS is enabled. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
-             * <li><p>Enabled: enabled</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
              * </ul>
              * 
@@ -1772,7 +1764,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>User login identifier.</p>
+             * <p>The user logon identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>userPrincipalName, mail</p>
@@ -1783,7 +1775,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>User ObjectClass.</p>
+             * <p>The user ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>person,user</p>
@@ -1794,7 +1786,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Custom filter for User ObjectClass.</p>
+             * <p>The custom filter for users.</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -1805,7 +1797,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * UserRdn.
+             * <p>The user RDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder userRdn(String userRdn) {
                 this.userRdn = userRdn;
@@ -1885,7 +1880,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>OIDC authentication method. Value range:</p>
+             * <p>The OIDC authentication method. Valid values:</p>
              * <ul>
              * <li><p>client_secret_basic</p>
              * </li>
@@ -1902,7 +1897,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The ID of the client.</p>
+             * <p>The OIDC client ID.</p>
              * 
              * <strong>example:</strong>
              * <p>mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -1913,7 +1908,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The  secret of the client.</p>
+             * <p>The OIDC client secret.</p>
              * 
              * <strong>example:</strong>
              * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -2022,7 +2017,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>OIDC authorization endpoint.</p>
+             * <p>The OIDC authorization endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth/authorize">https://example.com/auth/authorize</a></p>
@@ -2033,7 +2028,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC issuer information.</p>
+             * <p>The OIDC issuer information.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth">https://example.com/auth</a></p>
@@ -2044,7 +2039,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC jwks uri.</p>
+             * <p>The OIDC JWKS URI.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth/jwks">https://example.com/auth/jwks</a></p>
@@ -2055,7 +2050,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC token endpoint.</p>
+             * <p>The OIDC token endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth/token">https://example.com/auth/token</a></p>
@@ -2066,7 +2061,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC user info endpoint.</p>
+             * <p>The OIDC UserInfo endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth/userinfo">https://example.com/auth/userinfo</a></p>
@@ -2188,7 +2183,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>OIDC client authentication configuration.</p>
+             * <p>The OIDC client authentication configuration.</p>
              */
             public Builder authnParam(AuthnParam authnParam) {
                 this.authnParam = authnParam;
@@ -2196,7 +2191,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC endpoint configuration.</p>
+             * <p>The OIDC endpoint configuration.</p>
              */
             public Builder endpointConfig(EndpointConfig endpointConfig) {
                 this.endpointConfig = endpointConfig;
@@ -2204,7 +2199,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC grant scopes collection.</p>
+             * <p>The collection of OIDC grant scopes.</p>
              * 
              * <strong>example:</strong>
              * <p>openid</p>
@@ -2215,7 +2210,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC grant type.</p>
+             * <p>The OIDC grant type.</p>
              * 
              * <strong>example:</strong>
              * <p>authorization_code</p>
@@ -2226,11 +2221,11 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>PKCE algorithm. Possible values:</p>
+             * <p>The PKCE algorithm. Valid values:</p>
              * <ul>
              * <li><p>SHA256: S256</p>
              * </li>
-             * <li><p>Plain text: plain</p>
+             * <li><p>plaintext: plain</p>
              * </li>
              * </ul>
              * 
@@ -2243,7 +2238,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Whether to use PKCE in the AuthorizationCode grant mode.</p>
+             * <p>Specifies whether to use PKCE in AuthorizationCode grant mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2300,7 +2295,10 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The certificate content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX-----END CERTIFICATE-----</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -2445,7 +2443,10 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * BindingMethod.
+             * <p>The binding type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP-REDIRECT</p>
              */
             public Builder bindingMethod(String bindingMethod) {
                 this.bindingMethod = bindingMethod;
@@ -2453,7 +2454,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * Certificates.
+             * <p>The certificate list of the IdP.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -2461,7 +2462,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * IdPEntityId.
+             * <p>The EntityId of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
              */
             public Builder idPEntityId(String idPEntityId) {
                 this.idPEntityId = idPEntityId;
@@ -2469,7 +2473,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * IdPSsoUrl.
+             * <p>The logon URL of the IdP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
              */
             public Builder idPSsoUrl(String idPSsoUrl) {
                 this.idPSsoUrl = idPSsoUrl;
@@ -2477,7 +2484,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * MaxClockSkew.
+             * <p>The maximum clock skew.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
              */
             public Builder maxClockSkew(Long maxClockSkew) {
                 this.maxClockSkew = maxClockSkew;
@@ -2485,7 +2495,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * RequireRequestSigned.
+             * <p>Specifies whether requests must be signed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder requireRequestSigned(Boolean requireRequestSigned) {
                 this.requireRequestSigned = requireRequestSigned;
@@ -2493,7 +2506,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * WantAssertionsSigned.
+             * <p>Specifies whether the external IdP must sign the Assertion.</p>
              */
             public Builder wantAssertionsSigned(Boolean wantAssertionsSigned) {
                 this.wantAssertionsSigned = wantAssertionsSigned;
@@ -2501,7 +2514,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * WantResponseSigned.
+             * <p>Specifies whether the external IdP must sign the Response.</p>
              */
             public Builder wantResponseSigned(Boolean wantResponseSigned) {
                 this.wantResponseSigned = wantResponseSigned;
@@ -2581,7 +2594,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>cron expression.</p>
+             * <p>The cron expression.</p>
              * 
              * <strong>example:</strong>
              * <p>0 45 1 * * ?</p>
@@ -2592,7 +2605,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Collection of time points.</p>
+             * <p>The collection of execution time points.</p>
              */
             public Builder periodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
                 this.periodicSyncTimes = periodicSyncTimes;
@@ -2600,7 +2613,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>type.</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>cron</p>
@@ -2670,7 +2683,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>List of source nodes for synchronization.</p>
+             * <p>The list of source nodes for synchronization.</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -2678,7 +2691,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Synchronize target node, and fill in the IDaaS organization ID.</p>
+             * <p>The target node for synchronization. Set this parameter to an IDaaS organization ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_lyhyy6p7yf7mdrdiq5xxxx</p>
@@ -2790,12 +2803,10 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Whether group synchronization is supported. The default value is disabled. Possible values:</p>
+             * <p>Specifies whether group synchronization is supported. Default value: disabled. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
-             * </li>
-             * <li><p>Enabled: enabled</p>
-             * </li>
+             * <li>disabled: Disabled.</li>
+             * <li>enabled: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2807,12 +2818,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Incremental callback status, indicating whether to process incremental callback data from the IdP. Possible values:</p>
+             * <p>The incremental callback status. Specifies whether to process incremental callback data from the IdP. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
-             * </li>
-             * <li><p>Enabled: enabled</p>
-             * </li>
+             * <li>disabled</li>
+             * <li>enabled</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2824,7 +2833,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Scheduled configuration verification.</p>
+             * <p>The periodic verification configuration.</p>
              */
             public Builder periodicSyncConfig(PeriodicSyncConfig periodicSyncConfig) {
                 this.periodicSyncConfig = periodicSyncConfig;
@@ -2832,12 +2841,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Periodic check status, indicating whether to periodically check the data differences between EIAM and the identity provider. Possible values:</p>
+             * <p>Specifies whether to periodically verify data differences between EIAM and the identity provider. Valid values:</p>
              * <ul>
-             * <li><p>Disabled: disabled</p>
-             * </li>
-             * <li><p>Enabled: enabled</p>
-             * </li>
+             * <li>disabled: Disabled.</li>
+             * <li>enabled: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2849,7 +2856,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Synchronization scope configuration information.</p>
+             * <p>The synchronization scope configuration.</p>
              */
             public Builder udSyncScopeConfig(UdSyncScopeConfig udSyncScopeConfig) {
                 this.udSyncScopeConfig = udSyncScopeConfig;
@@ -2929,7 +2936,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>cron expression.</p>
+             * <p>The cron expression.</p>
              * 
              * <strong>example:</strong>
              * <p>0 45 1 * * ?</p>
@@ -2940,7 +2947,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Collection of time points.</p>
+             * <p>The collection of execution time points.</p>
              */
             public Builder periodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
                 this.periodicSyncTimes = periodicSyncTimes;
@@ -2948,7 +2955,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>type.</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>cron</p>
@@ -3018,7 +3025,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>List of source nodes for synchronization.</p>
+             * <p>The list of source nodes for synchronization.</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -3026,7 +3033,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Target node for synchronization.</p>
+             * <p>The target node for synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_lyhyy6p7yf7mdrdiq5xxxx</p>
@@ -3124,7 +3131,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Incremental callback status. This field is reserved and currently not in use; please ignore it.</p>
+             * <p>The incremental callback status. This field is not yet enabled. Ignore this field.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -3135,7 +3142,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Scheduled configuration verification.</p>
+             * <p>The periodic verification configuration.</p>
              */
             public Builder periodicSyncConfig(UdPushConfigPeriodicSyncConfig periodicSyncConfig) {
                 this.periodicSyncConfig = periodicSyncConfig;
@@ -3143,7 +3150,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Periodic check status. This field is currently not in use, please ignore it.</p>
+             * <p>The periodic verification status. This field is not yet enabled. Ignore this field.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -3154,7 +3161,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Outbound synchronization configuration information.</p>
+             * <p>The outbound synchronization configuration.</p>
              */
             public Builder udSyncScopeConfigs(java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs) {
                 this.udSyncScopeConfigs = udSyncScopeConfigs;
@@ -3260,7 +3267,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>Agent ID of the self-built WeCom application.</p>
+             * <p>The agentId of the WeCom self-built application.</p>
              * 
              * <strong>example:</strong>
              * <p>278231941749863339</p>
@@ -3271,7 +3278,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Authorization callback domain.</p>
+             * <p>The authorization callback domain.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx.aliyunidaas.com/xxxx">https://xxx.aliyunidaas.com/xxxx</a></p>
@@ -3282,7 +3289,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Corp ID of the self-built WeCom application.</p>
+             * <p>The corpId of the WeCom self-built application.</p>
              * 
              * <strong>example:</strong>
              * <p>3756043633237690761</p>
@@ -3293,7 +3300,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Corp Secret of the self-built WeCom application.</p>
+             * <p>The corpSecret of the WeCom self-built application.</p>
              * 
              * <strong>example:</strong>
              * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -3304,7 +3311,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Trusted domain.</p>
+             * <p>The trusted domain.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx.aliyunidaas.com/">https://xxx.aliyunidaas.com/</a></p>

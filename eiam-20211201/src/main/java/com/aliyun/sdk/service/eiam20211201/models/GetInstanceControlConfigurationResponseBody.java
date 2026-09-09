@@ -67,7 +67,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceControlConfiguration.
+         * <p>The instance control configuration.</p>
          */
         public Builder instanceControlConfiguration(InstanceControlConfiguration instanceControlConfiguration) {
             this.instanceControlConfiguration = instanceControlConfiguration;
@@ -75,7 +75,10 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * HumanVerificationType.
+             * <p>The CAPTCHA type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urn:alibaba:idaas:humanverification:alibaba-cloud-jigsaw-verification</p>
              */
             public Builder humanVerificationType(String humanVerificationType) {
                 this.humanVerificationType = humanVerificationType;
@@ -208,7 +214,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>实例控制项名称，如human_verification。</p>
+             * <p>The name of the instance control item.</p>
              * 
              * <strong>example:</strong>
              * <p>human_verification</p>
@@ -219,7 +225,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * HumanVerificationConfig.
+             * <p>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authenticate configuration.</p>
              */
             public Builder humanVerificationConfig(HumanVerificationConfig humanVerificationConfig) {
                 this.humanVerificationConfig = humanVerificationConfig;
@@ -227,7 +233,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例控制项状态，enabled或者disabled。</p>
+             * <p>The status of the instance control item.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -284,7 +290,7 @@ public class GetInstanceControlConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>实例控制配置项</p>
+             * <p>The instance control configuration.</p>
              */
             public Builder controlElements(java.util.List<ControlElements> controlElements) {
                 this.controlElements = controlElements;

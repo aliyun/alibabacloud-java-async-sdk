@@ -180,7 +180,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * CrossRegionReplication.
+         * <p>The cross-region replication status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder crossRegionReplication(String crossRegionReplication) {
             this.putQueryParameter("CrossRegionReplication", crossRegionReplication);
@@ -189,7 +192,17 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Edition.
+         * <p>The license edition. Valid values:</p>
+         * <ul>
+         * <li>free: Free Edition.</li>
+         * <li>trial: Trial Edition.</li>
+         * <li>scalability: Scalability Edition.</li>
+         * <li>standard: Standard Edition.</li>
+         * <li>enterprise: Enterprise Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>free</p>
          */
         public Builder edition(String edition) {
             this.putQueryParameter("Edition", edition);
@@ -207,7 +220,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ManagedServiceCode.
+         * <p>The service code of the managing cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kms</p>
          */
         public Builder managedServiceCode(String managedServiceCode) {
             this.putQueryParameter("ManagedServiceCode", managedServiceCode);
@@ -216,7 +232,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +244,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -240,7 +256,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ServiceManaged.
+         * <p>Indicates whether the instance is managed by a cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);
@@ -249,10 +268,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status of the instance. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li>creating</li>
-         * <li>running</li>
+         * <li>creating: Being created.</li>
+         * <li>running: Running.</li>
          * </ul>
          * 
          * <strong>example:</strong>

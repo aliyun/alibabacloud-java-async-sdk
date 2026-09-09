@@ -184,6 +184,7 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +197,7 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
+         * <p>The audience identifier of the resource server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +219,7 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,6 +241,7 @@ public class GenerateOauthTokenRequest extends Request {
         }
 
         /**
+         * <p>The permission scopes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder scopeValues(java.util.List<String> scopeValues) {

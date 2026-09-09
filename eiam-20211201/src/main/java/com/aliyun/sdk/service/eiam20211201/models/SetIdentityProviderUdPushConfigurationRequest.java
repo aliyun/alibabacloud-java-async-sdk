@@ -169,7 +169,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的身份提供方主键id</p>
+         * <p>The ID of the identity provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+         * <p>Specifies whether to process incremental callback data from the IdP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM的实例id</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * LdapUdPushConfig.
+         * <p>The configurations for LDAP push synchronization.</p>
          */
         public Builder ldapUdPushConfig(LdapUdPushConfig ldapUdPushConfig) {
             this.putQueryParameter("LdapUdPushConfig", ldapUdPushConfig);
@@ -217,7 +217,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * PeriodicSyncConfig.
+         * <p>The configuration for periodic synchronization.</p>
          */
         public Builder periodicSyncConfig(PeriodicSyncConfig periodicSyncConfig) {
             this.putQueryParameter("PeriodicSyncConfig", periodicSyncConfig);
@@ -226,7 +226,10 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * PeriodicSyncStatus.
+         * <p>The status of periodic synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder periodicSyncStatus(String periodicSyncStatus) {
             this.putQueryParameter("PeriodicSyncStatus", periodicSyncStatus);
@@ -235,7 +238,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
         }
 
         /**
-         * <p>同步出配置信息</p>
+         * <p>The push synchronization configurations.</p>
          */
         public Builder udSyncScopeConfigs(java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs) {
             this.putQueryParameter("UdSyncScopeConfigs", udSyncScopeConfigs);
@@ -342,7 +345,10 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             } 
 
             /**
-             * OrganizationUnitObjectClass.
+             * <p>The object class for organizations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou,top</p>
              */
             public Builder organizationUnitObjectClass(String organizationUnitObjectClass) {
                 this.organizationUnitObjectClass = organizationUnitObjectClass;
@@ -350,7 +356,10 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * OrganizationalUnitRdn.
+             * <p>The RDN for organizations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou</p>
              */
             public Builder organizationalUnitRdn(String organizationalUnitRdn) {
                 this.organizationalUnitRdn = organizationalUnitRdn;
@@ -358,7 +367,10 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * PasswordSyncStatus.
+             * <p>Specifies whether to synchronize passwords.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordSyncStatus(String passwordSyncStatus) {
                 this.passwordSyncStatus = passwordSyncStatus;
@@ -366,7 +378,10 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * UserObjectClass.
+             * <p>The object class for users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user,top</p>
              */
             public Builder userObjectClass(String userObjectClass) {
                 this.userObjectClass = userObjectClass;
@@ -374,7 +389,10 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * UserRdn.
+             * <p>The Relative Distinguished Name (RDN) for users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder userRdn(String userRdn) {
                 this.userRdn = userRdn;
@@ -454,7 +472,10 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             } 
 
             /**
-             * PeriodicSyncCron.
+             * <p>The cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 45 1 * * ?</p>
              */
             public Builder periodicSyncCron(String periodicSyncCron) {
                 this.periodicSyncCron = periodicSyncCron;
@@ -462,7 +483,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * PeriodicSyncTimes.
+             * <p>A collection of time points.</p>
              */
             public Builder periodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
                 this.periodicSyncTimes = periodicSyncTimes;
@@ -470,7 +491,10 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * PeriodicSyncType.
+             * <p>The type of periodic synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
              */
             public Builder periodicSyncType(String periodicSyncType) {
                 this.periodicSyncType = periodicSyncType;
@@ -537,7 +561,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>同步来源节点</p>
+             * <p>The source nodes for synchronization.</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -545,7 +569,7 @@ public class SetIdentityProviderUdPushConfigurationRequest extends Request {
             }
 
             /**
-             * <p>同步目标节点</p>
+             * <p>The target node for synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>6537211</p>

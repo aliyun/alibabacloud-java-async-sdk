@@ -80,7 +80,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -91,7 +91,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -102,7 +102,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of the accounts.</p>
+         * <p>The list of accounts.</p>
          */
         public Builder users(java.util.List<Users> users) {
             this.users = users;
@@ -155,7 +155,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用角色标识。</p>
+             * <p>The application role ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -225,7 +225,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用角色列表。</p>
+             * <p>The list of application roles.</p>
              */
             public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
                 this.applicationRoles = applicationRoles;
@@ -233,7 +233,7 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account.</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

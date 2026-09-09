@@ -199,7 +199,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Group synchronization status.</p>
+         * <p>The group synchronization status. Valid values:</p>
+         * <ul>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -211,7 +217,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Identity provider ID</p>
+         * <p>The identity provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +230,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Incremental callback status, whether to process incremental callback data from IdP.</p>
+         * <p>Specifies whether to process incremental callback data from the IdP. Valid values:</p>
+         * <ul>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +262,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Ldap ud pull config</p>
+         * <p>The LDAP synchronization configuration.</p>
          */
         public Builder ldapUdPullConfig(LdapUdPullConfig ldapUdPullConfig) {
             this.putQueryParameter("LdapUdPullConfig", ldapUdPullConfig);
@@ -259,7 +271,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Periodic synchronize config</p>
+         * <p>The periodic synchronization configuration.</p>
          */
         public Builder periodicSyncConfig(PeriodicSyncConfig periodicSyncConfig) {
             this.putQueryParameter("PeriodicSyncConfig", periodicSyncConfig);
@@ -268,7 +280,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Periodic synchronize status</p>
+         * <p>Specifies whether to periodically verify data differences between IDaaS and the identity provider. Valid values:</p>
+         * <ul>
+         * <li><p>disabled: Disabled.</p>
+         * </li>
+         * <li><p>enabled: Enabled.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -280,7 +298,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Synchronize protected rule</p>
+         * <p>The inbound synchronization protection rule.</p>
          */
         public Builder pullProtectedRule(PullProtectedRule pullProtectedRule) {
             this.putQueryParameter("PullProtectedRule", pullProtectedRule);
@@ -289,7 +307,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Synchronize configuration information.</p>
+         * <p>The inbound synchronization scope configuration.</p>
          */
         public Builder udSyncScopeConfig(UdSyncScopeConfig udSyncScopeConfig) {
             this.putQueryParameter("UdSyncScopeConfig", udSyncScopeConfig);
@@ -409,10 +427,10 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>Group member attribute name</p>
+             * <p>The group member identifier.</p>
              * 
              * <strong>example:</strong>
-             * <p>memberxxx</p>
+             * <p>member</p>
              */
             public Builder groupMemberAttributeName(String groupMemberAttributeName) {
                 this.groupMemberAttributeName = groupMemberAttributeName;
@@ -420,10 +438,10 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>GroupObjectClass</p>
+             * <p>The group ObjectClass.</p>
              * 
              * <strong>example:</strong>
-             * <p>groupxxx</p>
+             * <p>group</p>
              */
             public Builder groupObjectClass(String groupObjectClass) {
                 this.groupObjectClass = groupObjectClass;
@@ -431,7 +449,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>GroupObjectClass custom filter</p>
+             * <p>The custom filter for groups.</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -442,10 +460,10 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>OrganizationUnitObjectClass</p>
+             * <p>The organizational unit ObjectClass.</p>
              * 
              * <strong>example:</strong>
-             * <p>organizationUnitxxx,top</p>
+             * <p>organizationUnit,top</p>
              */
             public Builder organizationUnitObjectClass(String organizationUnitObjectClass) {
                 this.organizationUnitObjectClass = organizationUnitObjectClass;
@@ -453,10 +471,10 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>UserObjectClass</p>
+             * <p>The user ObjectClass.</p>
              * 
              * <strong>example:</strong>
-             * <p>userPrincipalNamexxx, mail</p>
+             * <p>userPrincipalName, mail</p>
              */
             public Builder userObjectClass(String userObjectClass) {
                 this.userObjectClass = userObjectClass;
@@ -464,7 +482,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>UserObjectClass custom filter</p>
+             * <p>The custom filter for users.</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -547,7 +565,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>Periodic synchronize cron</p>
+             * <p>The cron expression. This parameter is required when periodicSyncType is set to cron.</p>
              * 
              * <strong>example:</strong>
              * <p>0 45 1 * * ?</p>
@@ -558,7 +576,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Periodic synchronize times</p>
+             * <p>The execution time points. This parameter is required when periodicSyncType is set to time. For example, [3, 5] indicates that the task runs once between 3:00 and 4:00 and once between 5:00 and 6:00.</p>
              */
             public Builder periodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
                 this.periodicSyncTimes = periodicSyncTimes;
@@ -566,7 +584,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Periodic synchronize type</p>
+             * <p>The type of periodic synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>cron</p>
@@ -649,7 +667,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>Group deleted threshold</p>
+             * <p>The threshold for the number of deleted groups. If the number of deleted groups exceeds this value, the synchronization task is terminated.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -660,7 +678,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>OrganizationalUnit deleted threshold</p>
+             * <p>The threshold for the number of deleted organizational units. If the number of deleted organizational units exceeds this value, the synchronization task is terminated.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -671,7 +689,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>User deleted threshold</p>
+             * <p>The threshold for the number of deleted accounts. If the number of deleted users exceeds this value, the synchronization task is terminated.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -741,7 +759,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>Synchronize source scopes</p>
+             * <p>The list of source nodes for synchronization.</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -749,7 +767,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Synchronize target scope</p>
+             * <p>The target node for synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_asdaq1addsxzdq1XXX</p>

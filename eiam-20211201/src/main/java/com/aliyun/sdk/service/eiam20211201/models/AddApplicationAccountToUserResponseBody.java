@@ -67,7 +67,10 @@ public class AddApplicationAccountToUserResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationAccountId.
+         * <p>The application account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aac_m6z7awz5kresi2ezgajsbkxxxx</p>
          */
         public Builder applicationAccountId(String applicationAccountId) {
             this.applicationAccountId = applicationAccountId;
@@ -75,7 +78,10 @@ public class AddApplicationAccountToUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

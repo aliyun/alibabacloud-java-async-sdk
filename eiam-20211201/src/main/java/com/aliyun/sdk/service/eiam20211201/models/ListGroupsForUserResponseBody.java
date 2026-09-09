@@ -80,7 +80,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried account groups.</p>
+         * <p>The list of account groups.</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -99,7 +99,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned. The maximum number of entries returned at a time depends on the value of PageSize.</p>
+         * <p>The total number of matching records. The maximum number of records returned per page is determined by PageSize.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -181,7 +181,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The group ID.</p>
+             * <p>The account group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -192,7 +192,8 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Account membership source ID</p>
+             * <p>The source ID of the group member relationship.</p>
+             * <p>For the build_in type, this defaults to the instance ID. For other types, this corresponds to the enterprise ID of the respective source. For example, for a DingTalk source, this corresponds to the corpId of the DingTalk enterprise.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -203,7 +204,12 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Account membership source type</p>
+             * <p>The source type of the group member relationship. Valid values:</p>
+             * <p>build_in: built-in.</p>
+             * <p>ding_talk: imported from DingTalk.</p>
+             * <p>ad: imported from AD.</p>
+             * <p>ldap: imported from LDAP.</p>
+             * <p>we_com: imported from WeCom.</p>
              * 
              * <strong>example:</strong>
              * <p>build_in</p>

@@ -106,7 +106,7 @@ public class ListApplicationRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationRoles.
+         * <p>The list of application roles.</p>
          */
         public Builder applicationRoles(java.util.List<ApplicationRoles> applicationRoles) {
             this.applicationRoles = applicationRoles;
@@ -114,7 +114,10 @@ public class ListApplicationRolesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,7 @@ public class ListApplicationRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The token used to start the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxexample</p>
@@ -133,7 +136,10 @@ public class ListApplicationRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +147,10 @@ public class ListApplicationRolesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -259,7 +268,10 @@ public class ListApplicationRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -267,7 +279,7 @@ public class ListApplicationRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用角色的唯一标识</p>
+             * <p>The application role ID.</p>
              * 
              * <strong>example:</strong>
              * <p>approle_01kh2vuo8v9splv8maak1d22rxxxx</p>
@@ -278,7 +290,7 @@ public class ListApplicationRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用角色名称</p>
+             * <p>The name of the application role.</p>
              * 
              * <strong>example:</strong>
              * <p>Admin Role</p>
@@ -289,7 +301,10 @@ public class ListApplicationRolesResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationRoleValue.
+             * <p>The value of the application role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin_role</p>
              */
             public Builder applicationRoleValue(String applicationRoleValue) {
                 this.applicationRoleValue = applicationRoleValue;
@@ -297,7 +312,10 @@ public class ListApplicationRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the application role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin Role Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -305,7 +323,10 @@ public class ListApplicationRolesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

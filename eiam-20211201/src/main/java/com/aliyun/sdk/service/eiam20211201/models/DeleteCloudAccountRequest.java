@@ -98,7 +98,7 @@ public class DeleteCloudAccountRequest extends Request {
         }
 
         /**
-         * <p>云账号ID</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DeleteCloudAccountRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

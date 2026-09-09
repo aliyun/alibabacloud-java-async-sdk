@@ -140,7 +140,7 @@ public class ListGroupsForAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权规则标识。</p>
+         * <p>The authorization rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class ListGroupsForAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>过滤条件</p>
+         * <p>The filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -162,7 +162,7 @@ public class ListGroupsForAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,13 @@ public class ListGroupsForAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * <p>The maximum number of entries to return on each page.</p>
+         * <ul>
+         * <li><p>Default value: 20.</p>
+         * </li>
+         * <li><p>The value cannot exceed 100.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -187,7 +193,10 @@ public class ListGroupsForAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The token that is used to start the next paged query.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, the query starts from the first page.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -258,7 +267,10 @@ public class ListGroupsForAuthorizationRuleRequest extends Request {
             } 
 
             /**
-             * <p>过滤条件名称。</p>
+             * <p>The name of the filter field. Valid values:</p>
+             * <ul>
+             * <li>GroupId: The group ID.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>GroupId</p>
@@ -269,7 +281,7 @@ public class ListGroupsForAuthorizationRuleRequest extends Request {
             }
 
             /**
-             * <p>过滤条件值。</p>
+             * <p>The values of the filter field.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

@@ -106,7 +106,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorizationResources.
+         * <p>The list of authorized resources.</p>
          */
         public Builder authorizationResources(java.util.List<AuthorizationResources> authorizationResources) {
             this.authorizationResources = authorizationResources;
@@ -114,7 +114,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of rows per page in a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned in this call, which is used for the next paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -136,7 +136,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +147,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -197,7 +203,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowSameNameIdentity.
+             * <p>Specifies whether same-name identity accounts are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowSameNameIdentity(Boolean allowSameNameIdentity) {
                 this.allowSameNameIdentity = allowSameNameIdentity;
@@ -251,7 +260,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * CredentialCondition.
+             * <p>The effective condition when used as a credential.</p>
              */
             public Builder credentialCondition(CredentialCondition credentialCondition) {
                 this.credentialCondition = credentialCondition;
@@ -409,7 +418,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>资源实体标识</p>
+             * <p>The ID of the resource entity associated with the authorized resource.</p>
              * 
              * <strong>example:</strong>
              * <p>carole_01kmek49aqxxxx</p>
@@ -420,7 +429,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源实体类型，枚举类型：asset（资产）、credential（凭据）、cloud_identity_role（云账号角色）</p>
+             * <p>The type of the resource entity associated with the authorized resource. Valid values:</p>
+             * <ul>
+             * <li>cloud_account_role: cloud role.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>cloud_account_role</p>
@@ -431,7 +443,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权资源标识</p>
+             * <p>The authorization resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>arres_01kgh3jvt7pk093rv6giu0c0qxxxx</p>
@@ -442,7 +454,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权规则标识</p>
+             * <p>The authorization rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>arrule_01kf143ug06fg7m9f43u7vahxxxx</p>
@@ -453,7 +465,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号ID。</p>
+             * <p>The ID of the cloud account to which the resource entity associated with the authorized resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -464,7 +476,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Condition.
+             * <p>The effective condition.</p>
              */
             public Builder condition(Condition condition) {
                 this.condition = condition;
@@ -472,7 +484,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1768789292000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -480,7 +495,7 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -491,7 +506,10 @@ public class ListAuthorizationResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1768789292000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -113,7 +113,7 @@ public class AddCustomPrivacyPoliciesToBrandRequest extends Request {
         }
 
         /**
-         * <p>品牌化Id</p>
+         * <p>The brand ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class AddCustomPrivacyPoliciesToBrandRequest extends Request {
         }
 
         /**
-         * <p>条款ID列表</p>
+         * <p>The list of term IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder customPrivacyPolicyIds(java.util.List<String> customPrivacyPolicyIds) {
@@ -136,7 +136,7 @@ public class AddCustomPrivacyPoliciesToBrandRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

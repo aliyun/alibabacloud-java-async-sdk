@@ -106,7 +106,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * CloudAccounts.
+         * <p>The list of cloud accounts.</p>
          */
         public Builder cloudAccounts(java.util.List<CloudAccounts> cloudAccounts) {
             this.cloudAccounts = cloudAccounts;
@@ -114,7 +114,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of rows per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The token returned for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -136,7 +136,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +147,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -210,7 +216,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AuthenticationFail.NoPermission</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -218,7 +227,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>There is no permission.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -298,7 +310,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorReason.
+             * <p>The error reason. This field is returned when the health check status is unhealthy.</p>
              */
             public Builder errorReason(ErrorReason errorReason) {
                 this.errorReason = errorReason;
@@ -306,7 +318,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * LastCheckTime.
+             * <p>The last check time, in UNIX timestamp format, measured in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830226000</p>
              */
             public Builder lastCheckTime(Long lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -314,7 +329,14 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The health check result of the cloud account. Valid values:</p>
+             * <ul>
+             * <li>success: Succeeded.</li>
+             * <li>failed: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -381,7 +403,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>失败错误码</p>
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Error</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -389,7 +414,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>失败信息</p>
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test message</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -638,7 +666,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>云账号外部唯一ID</p>
+             * <p>The external unique identifier of the cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567</p>
@@ -649,7 +677,12 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号可用性</p>
+             * <p>The health status of the cloud account. Valid values:</p>
+             * <ul>
+             * <li>healthy: Healthy.</li>
+             * <li>unhealthy: Unhealthy.</li>
+             * <li>unknown: Unknown.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>healthy</p>
@@ -660,7 +693,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAccountHealthCheckResult.
+             * <p>The health check result of the cloud account.</p>
              */
             public Builder cloudAccountHealthCheckResult(CloudAccountHealthCheckResult cloudAccountHealthCheckResult) {
                 this.cloudAccountHealthCheckResult = cloudAccountHealthCheckResult;
@@ -668,7 +701,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号ID</p>
+             * <p>The cloud account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ca_01kmegjc11qa1txxxxx</p>
@@ -679,7 +712,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号名称</p>
+             * <p>The cloud account name.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_accout_xxxx</p>
@@ -690,7 +723,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号提供商名称</p>
+             * <p>The identity provider name.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas-eiam-oidc-provider</p>
@@ -701,7 +734,14 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * CloudAccountSite.
+             * <p>The cloud account site. Valid values:</p>
+             * <ul>
+             * <li>china_mainland: The Chinese mainland.</li>
+             * <li>global: Global.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>china_mainland</p>
              */
             public Builder cloudAccountSite(String cloudAccountSite) {
                 this.cloudAccountSite = cloudAccountSite;
@@ -709,7 +749,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号类别</p>
+             * <p>The cloud account type. Valid values:</p>
+             * <ul>
+             * <li>alibaba_cloud: Alibaba Cloud.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>alibaba_cloud</p>
@@ -720,7 +763,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, in UNIX timestamp format, measured in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830225000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -728,7 +774,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>云账号描述</p>
+             * <p>The cloud account description.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_accout_description</p>
@@ -739,7 +785,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -750,7 +796,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>关联的特权应用ID列表</p>
+             * <p>The list of associated privilege application IDs.</p>
              */
             public Builder privilegeApplicationIds(java.util.List<String> privilegeApplicationIds) {
                 this.privilegeApplicationIds = privilegeApplicationIds;
@@ -758,7 +804,7 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>特权托管或移除失败原因</p>
+             * <p>The reason for the privilege hosting or removal failure.</p>
              */
             public Builder privilegeHostingError(PrivilegeHostingError privilegeHostingError) {
                 this.privilegeHostingError = privilegeHostingError;
@@ -766,7 +812,18 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>特权托管状态，即是否有特权能力</p>
+             * <p>The hosting state of the cloud account. The default value is unmanaged. Valid values:</p>
+             * <ul>
+             * <li>hosting_unmanaged: Unmanaged. The cloud account has not initiated hosting and is in the initial state.</li>
+             * <li>hosting_pending: Hosting in progress. The hosting task has been submitted and is being executed asynchronously. Wait for the hosting process to complete before the final state is reached.</li>
+             * <li>hosting_completed: Hosting completed. The cloud account hosting process was executed successfully, and the related permission templates and hosting bindings have taken effect.</li>
+             * <li>hosting_failed: Hosting failed. The hosting process encountered an exception. View the failure reason and re-initiate hosting.</li>
+             * <li>hosting_removing: Removal in progress. The removal task has been submitted and is being executed asynchronously. Wait for the removal process to complete before the final state is reached.</li>
+             * <li>hosting_remove_failed: Removal failed. The removal process encountered an exception. View the failure reason and re-initiate removal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hosting_unmanaged</p>
              */
             public Builder privilegeHostingState(String privilegeHostingState) {
                 this.privilegeHostingState = privilegeHostingState;
@@ -774,7 +831,14 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>特权的开关状态，即特权能力是否可用</p>
+             * <p>The privilege switch status. Valid values:</p>
+             * <ul>
+             * <li>enabled: Enabled. The resource is active and can be used normally.</li>
+             * <li>disabled: Disabled. The resource is deactivated and no longer takes effect. You can re-enable it to restore functionality.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder privilegeStatus(String privilegeStatus) {
                 this.privilegeStatus = privilegeStatus;
@@ -782,7 +846,10 @@ public class ListCloudAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The last update time, in UNIX timestamp format, measured in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830227000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

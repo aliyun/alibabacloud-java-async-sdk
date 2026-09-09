@@ -67,7 +67,10 @@ public class CreateClientPublicKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * ClientPublicKeyId.
+         * <p>The ID of the application ClientPublicKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KEYCKmEYW9byWTdjuRbmCjd2Bhg6VpkAxxxx</p>
          */
         public Builder clientPublicKeyId(String clientPublicKeyId) {
             this.clientPublicKeyId = clientPublicKeyId;
@@ -75,7 +78,10 @@ public class CreateClientPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

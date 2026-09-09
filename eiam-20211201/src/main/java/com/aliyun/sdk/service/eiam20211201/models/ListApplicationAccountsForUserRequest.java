@@ -113,7 +113,7 @@ public class ListApplicationAccountsForUserRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用主键id</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class ListApplicationAccountsForUserRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM的实例id</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ListApplicationAccountsForUserRequest extends Request {
         }
 
         /**
-         * <p>用户Id</p>
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

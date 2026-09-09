@@ -156,7 +156,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The resource server application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The list of filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -178,7 +178,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,10 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -200,7 +203,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The pagination token. To retrieve the next page of results, set this parameter to the NextToken value from the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -212,7 +215,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>权限唯一标识。</p>
+         * <p>The ID of the resource server scope.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -283,7 +286,10 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The filter key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OrganizationalUnitIds</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,7 +297,7 @@ public class ListOrganizationalUnitsForResourceServerRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The list of filter values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

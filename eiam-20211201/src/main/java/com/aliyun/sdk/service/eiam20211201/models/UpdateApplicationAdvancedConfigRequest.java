@@ -112,7 +112,7 @@ public class UpdateApplicationAdvancedConfigRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class UpdateApplicationAdvancedConfigRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class UpdateApplicationAdvancedConfigRequest extends Request {
         }
 
         /**
-         * <p>Scim Server 高阶配置</p>
+         * <p>The SCIM server advanced configuration.</p>
          */
         public Builder scimServerAdvancedConfig(ScimServerAdvancedConfig scimServerAdvancedConfig) {
             this.putQueryParameter("ScimServerAdvancedConfig", scimServerAdvancedConfig);
@@ -206,7 +206,7 @@ public class UpdateApplicationAdvancedConfigRequest extends Request {
             } 
 
             /**
-             * <p>支持的用户自定义字段ID列表。</p>
+             * <p>The list of supported user custom field IDs.</p>
              */
             public Builder supportedUserCustomFieldIds(java.util.List<String> supportedUserCustomFieldIds) {
                 this.supportedUserCustomFieldIds = supportedUserCustomFieldIds;
@@ -214,7 +214,7 @@ public class UpdateApplicationAdvancedConfigRequest extends Request {
             }
 
             /**
-             * <p>用户扩展字段的命名空间。</p>
+             * <p>The namespace of user extended fields.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:ietf:params:scim:schemas:extension:customfield:2.0:User</p>

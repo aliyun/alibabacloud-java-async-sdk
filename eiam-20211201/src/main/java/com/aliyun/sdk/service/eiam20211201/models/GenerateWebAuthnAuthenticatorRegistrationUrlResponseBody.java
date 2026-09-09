@@ -67,7 +67,10 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody extends Te
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody extends Te
         }
 
         /**
-         * WebAuthnAuthenticatorRegistrationUrl.
+         * <p>Information about the WebAuthn authenticator registration URL.</p>
          */
         public Builder webAuthnAuthenticatorRegistrationUrl(WebAuthnAuthenticatorRegistrationUrl webAuthnAuthenticatorRegistrationUrl) {
             this.webAuthnAuthenticatorRegistrationUrl = webAuthnAuthenticatorRegistrationUrl;
@@ -141,7 +144,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody extends Te
             } 
 
             /**
-             * <p>注册WebAuthn认证器URL</p>
+             * <p>The WebAuthn authenticator registration URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://012cnaliyunidaas..com./login/webauthn/registration">https://012cnaliyunidaas..com./login/webauthn/registration</a></p>
@@ -152,7 +155,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody extends Te
             }
 
             /**
-             * <p>注册WebAuthn认证器URL参数</p>
+             * <p>The parameters for the WebAuthn authenticator registration URL.</p>
              * 
              * <strong>example:</strong>
              * <p>eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoia2V5X29ueWNzbXNib3Y1bmV2anlncHgyZnlsbjdhIn0</p>

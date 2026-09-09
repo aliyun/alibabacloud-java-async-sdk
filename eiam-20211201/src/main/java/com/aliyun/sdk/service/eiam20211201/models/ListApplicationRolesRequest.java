@@ -141,7 +141,7 @@ public class ListApplicationRolesRequest extends Request {
         }
 
         /**
-         * <p>应用ID</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class ListApplicationRolesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -163,7 +163,7 @@ public class ListApplicationRolesRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +176,10 @@ public class ListApplicationRolesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -185,7 +188,7 @@ public class ListApplicationRolesRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The token used to start the next query. Set this parameter to the value of NextToken that is returned in the last API call. Leave this parameter empty for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxexample</p>
@@ -256,7 +259,10 @@ public class ListApplicationRolesRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ApplicationRoleNameStartsWith</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -264,7 +270,7 @@ public class ListApplicationRolesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The values of the filter condition.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

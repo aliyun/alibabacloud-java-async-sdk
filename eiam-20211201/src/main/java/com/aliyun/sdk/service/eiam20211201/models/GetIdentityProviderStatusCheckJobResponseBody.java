@@ -67,7 +67,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
         } 
 
         /**
-         * IdentityProviderStatusCheckJob.
+         * <p>The information about the IdP status check job.</p>
          */
         public Builder identityProviderStatusCheckJob(IdentityProviderStatusCheckJob identityProviderStatusCheckJob) {
             this.identityProviderStatusCheckJob = identityProviderStatusCheckJob;
@@ -75,7 +75,10 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>错误码</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>NetworkAccessPointWarning.SingleNetworkAccessPath</p>
@@ -165,7 +168,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>错误级别</p>
+             * <p>The error level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -176,7 +179,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>错误信息</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>There is only one path in the current network access endpoint.</p>
@@ -272,7 +275,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>错误原因</p>
+             * <p>The reason for the error.</p>
              */
             public Builder errorReason(ErrorReason errorReason) {
                 this.errorReason = errorReason;
@@ -280,7 +283,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>主要检查项</p>
+             * <p>The major check item.</p>
              * 
              * <strong>example:</strong>
              * <p>network_check</p>
@@ -291,7 +294,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>次要检查项</p>
+             * <p>The minor check item.</p>
              * 
              * <strong>example:</strong>
              * <p>network_access_status</p>
@@ -302,7 +305,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>结果</p>
+             * <p>The result.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -450,7 +453,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>任务检查结果</p>
+             * <p>The result of the check task.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -461,7 +464,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>结束时间</p>
+             * <p>The end time.</p>
              * 
              * <strong>example:</strong>
              * <p>1763776265757</p>
@@ -472,7 +475,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IdP身份提供方</p>
+             * <p>The ID of the IdP.</p>
              * 
              * <strong>example:</strong>
              * <p>idp_ncehkms65fiefobrvwy2blrxxx</p>
@@ -483,7 +486,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IdP状态检查任务Id</p>
+             * <p>The ID of the IdP status check job.</p>
              * 
              * <strong>example:</strong>
              * <p>async_000036tfu8cgngmakngrr2rk75qgf87pf3rxxx</p>
@@ -494,7 +497,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ki6hd7ihir4ybawogqk6kqsfxxx</p>
@@ -505,7 +508,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>状态检查子项任务结果信息</p>
+             * <p>The results of the status check subtasks.</p>
              */
             public Builder jobCheckItems(java.util.List<JobCheckItems> jobCheckItems) {
                 this.jobCheckItems = jobCheckItems;
@@ -513,7 +516,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>开始时间</p>
+             * <p>The start time.</p>
              * 
              * <strong>example:</strong>
              * <p>1763776265757</p>
@@ -524,7 +527,7 @@ public class GetIdentityProviderStatusCheckJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务检查状态</p>
+             * <p>The status of the check task.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>

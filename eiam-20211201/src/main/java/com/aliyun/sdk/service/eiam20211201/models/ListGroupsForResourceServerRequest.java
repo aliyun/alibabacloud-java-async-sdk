@@ -155,6 +155,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource server application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +168,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -176,7 +177,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +190,10 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -198,7 +202,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The token for the next page of results. You do not need to provide this parameter for the first request. For subsequent requests, set this to the <code>NextToken</code> value from the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -210,7 +214,7 @@ public class ListGroupsForResourceServerRequest extends Request {
         }
 
         /**
-         * <p>权限唯一标识。</p>
+         * <p>The ID of the scope.</p>
          * 
          * <strong>example:</strong>
          * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -281,7 +285,10 @@ public class ListGroupsForResourceServerRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the filter condition. The only valid value is GroupIds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GroupIds</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -289,7 +296,7 @@ public class ListGroupsForResourceServerRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The values for the filter condition.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

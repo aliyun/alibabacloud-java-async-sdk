@@ -67,7 +67,7 @@ public class CheckInstanceModuleStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The status information.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -75,7 +75,10 @@ public class CheckInstanceModuleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,7 @@ public class CheckInstanceModuleStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>模块状态</p>
+             * <p>The module status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>

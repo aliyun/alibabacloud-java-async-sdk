@@ -67,7 +67,10 @@ public class GenerateFileImportTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * FileDownloadUrl.
+         * <p>The download URL of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.oss-cn-hangzhou.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_v2_user_import_1766469463365.csv">https://test.oss-cn-hangzhou.aliyuncs.com/idaas_ly77wa2oexrciw5v672vxxxx/tmp/eiam_v2_user_import_1766469463365.csv</a></p>
          */
         public Builder fileDownloadUrl(String fileDownloadUrl) {
             this.fileDownloadUrl = fileDownloadUrl;
@@ -75,7 +78,10 @@ public class GenerateFileImportTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

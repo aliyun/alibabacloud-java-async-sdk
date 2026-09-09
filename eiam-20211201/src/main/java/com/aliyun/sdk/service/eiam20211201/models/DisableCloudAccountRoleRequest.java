@@ -128,6 +128,7 @@ public class DisableCloudAccountRoleRequest extends Request {
         }
 
         /**
+         * <p>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class DisableCloudAccountRoleRequest extends Request {
         }
 
         /**
+         * <p>The Alibaba Cloud account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +154,7 @@ public class DisableCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>云账号角色ID</p>
+         * <p>The cloud role ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +167,7 @@ public class DisableCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

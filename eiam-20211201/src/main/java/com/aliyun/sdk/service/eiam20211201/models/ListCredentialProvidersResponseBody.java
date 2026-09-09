@@ -106,7 +106,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         } 
 
         /**
-         * CredentialProviders.
+         * <p>The list of credential providers.</p>
          */
         public Builder credentialProviders(java.util.List<CredentialProviders> credentialProviders) {
             this.credentialProviders = credentialProviders;
@@ -114,7 +114,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -136,7 +136,10 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +147,10 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +268,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>签发出的JWT中的issuer字段的允许列表。</p>
+             * <p>The list of allowed JWT issuers.</p>
              */
             public Builder allowedTokenIssuers(java.util.List<String> allowedTokenIssuers) {
                 this.allowedTokenIssuers = allowedTokenIssuers;
@@ -270,7 +276,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否开启JWT派生短令牌能力。</p>
+             * <p>Specifies whether to enable the JWT-derived short token capability.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -281,7 +287,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>JWT的有效时长，单位秒。</p>
+             * <p>The validity period of the JWT, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -292,7 +298,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否开启JWT过期清理。</p>
+             * <p>Specifies whether to enable JWT expiration cleanup.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -314,7 +320,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>JWKs端点地址。</p>
+             * <p>The JWKs endpoint URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks">https://example123456.aliyunidaas.com/api/v2/auths_ngz2wj35ixxxdyat55nexxxxxx/oauth2/jwks</a></p>
@@ -501,7 +507,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>用于引导用户进行授权的端点地址。条件必填：当AuthorizationFlow=user_federation且ProviderVendor=custom时必填；预置厂商可通过DiscoveryUrl自动填充</p>
+             * <p>The endpoint URL used to guide users through authorization. Conditionally required: this parameter is required when AuthorizationFlow is set to user_federation and ProviderVendor is set to custom. For preset vendors, this value can be automatically populated through DiscoveryUrl.</p>
              */
             public Builder authorizationEndpoint(String authorizationEndpoint) {
                 this.authorizationEndpoint = authorizationEndpoint;
@@ -509,7 +515,11 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OAuth的具体授权类型。m2m: 机器对机器(2LO, Client Credentials)；user_federation: 用户联邦(3LO, Authorization Code)</p>
+             * <p>The OAuth authorization flow type. Valid values:</p>
+             * <ul>
+             * <li>m2m: machine-to-machine (2LO, Client Credentials).</li>
+             * <li>user_federation: user federation (3LO, Authorization Code).</li>
+             * </ul>
              */
             public Builder authorizationFlow(String authorizationFlow) {
                 this.authorizationFlow = authorizationFlow;
@@ -517,7 +527,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OAuth协议中的client_id，客户端ID。</p>
+             * <p>The client_id in the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>client_id_example_xxx</p>
@@ -528,7 +538,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用于自动获取OAuth端点配置的Discovery文档地址。条件可选：当AuthorizationFlow=user_federation时使用，如不提供DiscoveryUrl，则需手动配置TokenEndpoint、AuthorizationEndpoint等字段</p>
+             * <p>The URL of the discovery document used to automatically obtain OAuth endpoint configurations. Conditionally optional: used when AuthorizationFlow is set to user_federation. If DiscoveryUrl is not provided, you must manually configure fields such as TokenEndpoint and AuthorizationEndpoint.</p>
              */
             public Builder discoveryUrl(String discoveryUrl) {
                 this.discoveryUrl = discoveryUrl;
@@ -547,7 +557,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PKCE code_challenge 生成方法。默认s256</p>
+             * <p>The method used to generate the PKCE code_challenge. Default value: s256.</p>
              */
             public Builder pkceChallengeMethod(String pkceChallengeMethod) {
                 this.pkceChallengeMethod = pkceChallengeMethod;
@@ -555,7 +565,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否使用PKCE扩展增强安全性，推荐始终启用</p>
+             * <p>Specifies whether to use the PKCE extension to enhance security. We recommend that you always enable this feature.</p>
              */
             public Builder pkceEnabled(Boolean pkceEnabled) {
                 this.pkceEnabled = pkceEnabled;
@@ -563,7 +573,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>预置厂商或自定义配置。非必填，默认值：custom</p>
+             * <p>The preset vendor or custom configuration. Optional. Default value: custom.</p>
              */
             public Builder providerVendor(String providerVendor) {
                 this.providerVendor = providerVendor;
@@ -571,7 +581,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OAuth协议中的scope，权限范围。</p>
+             * <p>The scope in the OAuth protocol, which specifies the permission scope.</p>
              * 
              * <strong>example:</strong>
              * <p>example:test_01 example:test_02</p>
@@ -582,7 +592,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建凭据提供商时系统自动生成的重定向地址，需在OAuth提供商处配置为redirect_uri</p>
+             * <p>The redirect URI automatically generated by the system when the credential provider is created. Configure this value as the redirect_uri in the OAuth provider.</p>
              */
             public Builder systemRedirectUri(String systemRedirectUri) {
                 this.systemRedirectUri = systemRedirectUri;
@@ -590,7 +600,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OAuth协议的Token端点。</p>
+             * <p>The token endpoint of the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/token">https://example.com/token</a></p>
@@ -673,7 +683,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>JWT身份提供商配置。</p>
+             * <p>The configuration of the JWT-type credential provider.</p>
              */
             public Builder jwtProviderConfig(JwtProviderConfig jwtProviderConfig) {
                 this.jwtProviderConfig = jwtProviderConfig;
@@ -681,7 +691,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OAuth 2LO机用类型的提供商的配置。</p>
+             * <p>The configuration of the OAuth-type credential provider.</p>
              */
             public Builder oAuthProviderConfig(OAuthProviderConfig oAuthProviderConfig) {
                 this.oAuthProviderConfig = oAuthProviderConfig;
@@ -689,7 +699,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>认证令牌提供商的敏感配置对应的凭据ID列表。</p>
+             * <p>The list of credential IDs that correspond to the sensitive configurations of the credential provider.</p>
              */
             public Builder providerCredentialIds(java.util.List<String> providerCredentialIds) {
                 this.providerCredentialIds = providerCredentialIds;
@@ -873,7 +883,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>认证令牌提供商的创建时间，Unix时间戳。</p>
+             * <p>The time when the credential provider was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830225000</p>
@@ -884,7 +894,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>认证令牌提供商的配置。</p>
+             * <p>The configuration of the credential provider.</p>
              */
             public Builder credentialProviderConfig(CredentialProviderConfig credentialProviderConfig) {
                 this.credentialProviderConfig = credentialProviderConfig;
@@ -892,7 +902,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>认证令牌提供商的创建类型。</p>
+             * <p>The creation type of the credential provider. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>user_custom</p>
@@ -903,7 +913,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>认证令牌提供商ID。</p>
+             * <p>The credential provider ID.</p>
              * 
              * <strong>example:</strong>
              * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
@@ -914,7 +924,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>认证令牌提供商的业务标识。</p>
+             * <p>The business identifier of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>test_example_identifier</p>
@@ -925,7 +935,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>认证令牌提供商名称。</p>
+             * <p>The name of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>test_example_name</p>
@@ -936,7 +946,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>认证令牌提供商的类型。</p>
+             * <p>The credential provider type. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>oauth</p>
@@ -947,7 +957,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>描述。</p>
+             * <p>The description of the credential provider.</p>
              * 
              * <strong>example:</strong>
              * <p>This is an example description</p>
@@ -958,7 +968,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>EIAM实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -969,7 +979,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>认证令牌提供商的状态。</p>
+             * <p>The credential provider status. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -980,7 +990,7 @@ public class ListCredentialProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>认证令牌提供商的更新时间，Unix时间戳。</p>
+             * <p>The time when the credential provider was last updated. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830225000</p>

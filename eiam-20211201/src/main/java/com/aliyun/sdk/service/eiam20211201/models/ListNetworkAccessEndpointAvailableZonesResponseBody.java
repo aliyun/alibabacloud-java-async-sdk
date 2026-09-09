@@ -67,7 +67,10 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
         }
 
         /**
-         * Zones.
+         * <p>The list of zones that support network endpoints in the current region.</p>
          */
         public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
@@ -141,10 +144,10 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
             } 
 
             /**
-             * <p>可用区名称。</p>
+             * <p>The zone name.</p>
              * 
              * <strong>example:</strong>
-             * <p>华东1（杭州）可用区J</p>
+             * <p>China (Hangzhou) Zone J</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -152,7 +155,7 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
             }
 
             /**
-             * <p>可用区ID。</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-j</p>

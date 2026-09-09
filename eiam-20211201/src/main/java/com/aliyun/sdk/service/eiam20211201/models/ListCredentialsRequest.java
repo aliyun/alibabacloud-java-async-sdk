@@ -204,7 +204,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * CredentialIds.
+         * <p>The list of credential IDs.</p>
          */
         public Builder credentialIds(java.util.List<String> credentialIds) {
             this.putQueryParameter("CredentialIds", credentialIds);
@@ -231,7 +231,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -240,7 +240,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,11 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * <p>The maximum number of entries per page.</p>
+         * <ul>
+         * <li>Default value: 20.</li>
+         * <li>Maximum value: 100.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -265,7 +269,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -277,7 +281,7 @@ public class ListCredentialsRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>The list of credential statuses.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -345,7 +349,13 @@ public class ListCredentialsRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the filter field. Valid values:</p>
+             * <ul>
+             * <li>CredentialIdentifier: the credential identifier.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CredentialIdentifier</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -353,7 +363,7 @@ public class ListCredentialsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The list of filter field values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

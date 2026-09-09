@@ -67,7 +67,10 @@ public class CreateCustomFieldResponseBody extends TeaModel {
         } 
 
         /**
-         * FieldId.
+         * <p>The field ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ufd_001</p>
          */
         public Builder fieldId(String fieldId) {
             this.fieldId = fieldId;
@@ -75,7 +78,10 @@ public class CreateCustomFieldResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

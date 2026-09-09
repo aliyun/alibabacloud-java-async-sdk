@@ -128,7 +128,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
         }
 
         /**
-         * <p>应用角色ID。</p>
+         * <p>The application role ID.</p>
          * 
          * <strong>example:</strong>
          * <p>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</p>
@@ -153,7 +153,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class RevokeApplicationFromUsersRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the accounts. You can revoke the access permissions from a maximum of 100 accounts at a time.</p>
+         * <p>The list of account IDs. A maximum of 100 account IDs are supported in a single operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

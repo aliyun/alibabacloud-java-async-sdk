@@ -101,7 +101,7 @@ public class DisableTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The ID of the IDaaS EIAM instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DisableTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>可信来源ID。</p>
+         * <p>The ID of the trusted origin.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

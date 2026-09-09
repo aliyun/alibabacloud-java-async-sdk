@@ -168,7 +168,10 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client token used to ensure the idempotence of the request. The client generates this value to make sure that it is unique among different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-example</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -177,7 +180,7 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>自定义条款内容详情</p>
+         * <p>The details of the custom privacy policy content.</p>
          */
         public Builder customPrivacyPolicyContents(java.util.List<CustomPrivacyPolicyContents> customPrivacyPolicyContents) {
             this.putQueryParameter("CustomPrivacyPolicyContents", customPrivacyPolicyContents);
@@ -186,7 +189,7 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>自定义条款名称</p>
+         * <p>The name of the custom privacy policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +202,7 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>默认条款语言，若其他语言未配置条款，则使用默认的</p>
+         * <p>The default language of the privacy policy.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-Hans-CN</p>
@@ -211,7 +214,7 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +227,7 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>自定义条款状态</p>
+         * <p>The status of the custom privacy policy.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -236,7 +239,7 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>手动勾选同意，还是默认同意</p>
+         * <p>The consent type for the privacy policy.</p>
          * 
          * <strong>example:</strong>
          * <p>implied_consent</p>
@@ -307,10 +310,10 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
             } 
 
             /**
-             * <p>自定义条款名称</p>
+             * <p>The name of the custom privacy policy item.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxx隐私政策条款</p>
+             * <p>Custom Privacy Policy Name</p>
              */
             public Builder customPrivacyPolicyItemName(String customPrivacyPolicyItemName) {
                 this.customPrivacyPolicyItemName = customPrivacyPolicyItemName;
@@ -318,7 +321,7 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
             }
 
             /**
-             * <p>自定义条款访问地址</p>
+             * <p>The endpoint of the custom privacy policy item.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.xxxx.com">http://www.xxxx.com</a></p>
@@ -403,7 +406,7 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
             } 
 
             /**
-             * <p>自定义条款项</p>
+             * <p>The items of the custom privacy policy.</p>
              */
             public Builder customPrivacyPolicyItems(java.util.List<CustomPrivacyPolicyItems> customPrivacyPolicyItems) {
                 this.customPrivacyPolicyItems = customPrivacyPolicyItems;
@@ -411,10 +414,10 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
             }
 
             /**
-             * <p>自定义条款提示</p>
+             * <p>The prompt for the custom privacy policy.</p>
              * 
              * <strong>example:</strong>
-             * <p>登录视为同意此条款</p>
+             * <p>Please read and agree：</p>
              */
             public Builder customPrivacyPolicyTip(String customPrivacyPolicyTip) {
                 this.customPrivacyPolicyTip = customPrivacyPolicyTip;
@@ -422,7 +425,7 @@ public class CreateCustomPrivacyPolicyRequest extends Request {
             }
 
             /**
-             * <p>自定义条款所属语言</p>
+             * <p>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-Hans-CN</p>

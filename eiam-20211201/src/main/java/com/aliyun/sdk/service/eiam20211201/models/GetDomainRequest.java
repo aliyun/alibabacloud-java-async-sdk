@@ -98,7 +98,7 @@ public class GetDomainRequest extends Request {
         }
 
         /**
-         * <p>Domain ID.</p>
+         * <p>The ID of the domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetDomainRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

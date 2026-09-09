@@ -67,7 +67,10 @@ public class GetApplicationProvisioningUserPrimaryOrganizationalUnitResponseBody
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class GetApplicationProvisioningUserPrimaryOrganizationalUnitResponseBody
         }
 
         /**
-         * UserPrimaryOrganizationalUnitId.
+         * <p>The user\&quot;s primary organizational unit for application synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_12121xxxxxx</p>
          */
         public Builder userPrimaryOrganizationalUnitId(String userPrimaryOrganizationalUnitId) {
             this.userPrimaryOrganizationalUnitId = userPrimaryOrganizationalUnitId;

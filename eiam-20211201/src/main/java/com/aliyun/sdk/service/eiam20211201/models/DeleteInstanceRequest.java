@@ -83,7 +83,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance to be deleted.</p>
+         * <p>The instance ID of the instance to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

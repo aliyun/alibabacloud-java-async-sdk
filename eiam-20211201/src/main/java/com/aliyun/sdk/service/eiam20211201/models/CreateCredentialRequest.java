@@ -262,7 +262,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +275,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>凭据的内容。</p>
+         * <p>The credential content.</p>
          * <p>This parameter is required.</p>
          */
         public Builder credentialContent(CredentialContent credentialContent) {
@@ -294,7 +294,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>凭据标识。</p>
+         * <p>The credential identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>凭据名称。</p>
+         * <p>The credential name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +320,11 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>凭据的使用场景标签。</p>
+         * <p>The Scenarios label of the credential. Valid values:</p>
+         * <ul>
+         * <li>llm: large language model.</li>
+         * <li>saas: third-party SaaS service.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>llm</p>
@@ -341,7 +345,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>凭据所属的主体ID。</p>
+         * <p>The subject ID of the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>apt_werthgfdsasffxxxxx</p>
@@ -353,7 +357,10 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>凭据所属的主体类型。</p>
+         * <p>The subject type of the credential. Valid values:</p>
+         * <ul>
+         * <li>authentication_token_provider: authentication token provider.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>authentication_token_provider</p>
@@ -365,7 +372,11 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>凭据类型。</p>
+         * <p>The credential type. Valid values:</p>
+         * <ul>
+         * <li>api_key: API key authentication credential.</li>
+         * <li>oauth_client: OAuth client authentication credential.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -378,7 +389,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>描述</p>
+         * <p>The credential description.</p>
          * 
          * <strong>example:</strong>
          * <p>credential_description</p>
@@ -399,7 +410,7 @@ public class CreateCredentialRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -458,7 +469,7 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
-             * <p>API Key 凭证类型的凭据内容。</p>
+             * <p>The API key content.</p>
              * 
              * <strong>example:</strong>
              * <p>nsklnertyt5ddwizncxxxx</p>
@@ -528,7 +539,7 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
-             * <p>OAuth协议的client_id。</p>
+             * <p>The client_id of the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>dmvncmxersdxxxxxx</p>
@@ -539,7 +550,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>OAuth协议的client_secret。</p>
+             * <p>The client_secret of the OAuth protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>nsklncmwizncxxxx</p>
@@ -609,7 +620,7 @@ public class CreateCredentialRequest extends Request {
             } 
 
             /**
-             * <p>Api Key的内容。</p>
+             * <p>The credential content of the API key credential type.</p>
              */
             public Builder apiKeyContent(ApiKeyContent apiKeyContent) {
                 this.apiKeyContent = apiKeyContent;
@@ -617,7 +628,7 @@ public class CreateCredentialRequest extends Request {
             }
 
             /**
-             * <p>OAuth客户端认证凭证类型的凭据内容。</p>
+             * <p>The credential content of the OAuth client authentication credential type.</p>
              */
             public Builder oAuthClientContent(OAuthClientContent oAuthClientContent) {
                 this.oAuthClientContent = oAuthClientContent;

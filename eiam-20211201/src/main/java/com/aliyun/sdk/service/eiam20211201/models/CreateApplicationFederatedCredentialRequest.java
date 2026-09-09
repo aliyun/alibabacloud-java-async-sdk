@@ -229,7 +229,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>应用联邦凭证名称</p>
+         * <p>The application federated credential name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>应用联邦凭证类型</p>
+         * <p>The application federated credential type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,7 +268,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>属性映射</p>
+         * <p>The attribute mappings.</p>
          */
         public Builder attributeMappings(java.util.List<AttributeMappings> attributeMappings) {
             this.putQueryParameter("AttributeMappings", attributeMappings);
@@ -277,10 +277,10 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>描述</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>描述</p>
+         * <p>description_text</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -289,7 +289,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>联邦凭证提供方ID</p>
+         * <p>The federated credential provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +302,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>OIDC结构化配置（structured模式 + oidc类型）</p>
+         * <p>The OIDC structured configuration.</p>
          */
         public Builder oidcVerificationConfig(OidcVerificationConfig oidcVerificationConfig) {
             this.putQueryParameter("OidcVerificationConfig", oidcVerificationConfig);
@@ -324,7 +324,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>PKCS#7结构化配置（structured模式 + pkcs7类型）</p>
+         * <p>The PKCS#7 structured configuration.</p>
          */
         public Builder pkcs7VerificationConfig(Pkcs7VerificationConfig pkcs7VerificationConfig) {
             this.putQueryParameter("Pkcs7VerificationConfig", pkcs7VerificationConfig);
@@ -333,7 +333,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>校验条件</p>
+         * <p>The verification condition.</p>
          * 
          * <strong>example:</strong>
          * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -345,7 +345,11 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
         }
 
         /**
-         * <p>校验模式：freedom（默认）/ structured</p>
+         * <p>The verification mode. Valid values:</p>
+         * <ul>
+         * <li>freedom: free mode</li>
+         * <li>structured: structured mode</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>freedom</p>
@@ -416,7 +420,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             } 
 
             /**
-             * <p>源值表达式</p>
+             * <p>The source value expression.</p>
              * 
              * <strong>example:</strong>
              * <p>Append(client.applicationFederatedCredentialId, &quot;:&quot;, cert.subject.CN, &quot;:&quot;, cert.serialNumber)</p>
@@ -427,7 +431,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>目标字段</p>
+             * <p>The target field.</p>
              * 
              * <strong>example:</strong>
              * <p>client.activeSubjectUrn</p>
@@ -525,7 +529,10 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             } 
 
             /**
-             * PrincipalId.
+             * <p>The principal ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5dee234a-1b4c-4ad7-a19f-fxxxxx</p>
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -533,7 +540,10 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The Azure resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_default</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -541,7 +551,10 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * SubscriptionId.
+             * <p>The subscription ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4342a1f4-7e5d-4371-97dc-d4f33f4xxxx</p>
              */
             public Builder subscriptionId(String subscriptionId) {
                 this.subscriptionId = subscriptionId;
@@ -549,7 +562,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * VmNames.
+             * <p>The list of virtual machine names.</p>
              */
             public Builder vmNames(java.util.List<String> vmNames) {
                 this.vmNames = vmNames;
@@ -631,7 +644,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             } 
 
             /**
-             * InstanceIds.
+             * <p>The list of GCP virtual machine instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -639,7 +652,10 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * ProjectId.
+             * <p>The GCP project ID to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>turnkey-axiom-475109-xx</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -647,7 +663,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>Service Account对应sub</p>
+             * <p>The sub claim corresponding to the service account.</p>
              * 
              * <strong>example:</strong>
              * <p>123456789</p>
@@ -705,7 +721,10 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             } 
 
             /**
-             * Subject.
+             * <p>The subject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_subject</p>
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -788,7 +807,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             } 
 
             /**
-             * <p>K8s命名空间</p>
+             * <p>The K8s namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -799,7 +818,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>Pod名称前缀</p>
+             * <p>The pod name prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>my-pod-</p>
@@ -810,7 +829,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>K8s服务账号名称</p>
+             * <p>The K8s service account name.</p>
              * 
              * <strong>example:</strong>
              * <p>my-sa</p>
@@ -920,7 +939,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             } 
 
             /**
-             * <p>Azure VM场景配置</p>
+             * <p>The Azure VM scenario configuration.</p>
              */
             public Builder azureVmConfig(AzureVmConfig azureVmConfig) {
                 this.azureVmConfig = azureVmConfig;
@@ -928,7 +947,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>GCP VM场景配置</p>
+             * <p>The GCP VM scenario configuration.</p>
              */
             public Builder gcpVmConfig(GcpVmConfig gcpVmConfig) {
                 this.gcpVmConfig = gcpVmConfig;
@@ -936,7 +955,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * GenericConfig.
+             * <p>The generic scenario configuration.</p>
              */
             public Builder genericConfig(GenericConfig genericConfig) {
                 this.genericConfig = genericConfig;
@@ -944,7 +963,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>Kubernetes场景配置</p>
+             * <p>The Kubernetes scenario configuration.</p>
              */
             public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
                 this.kubernetesConfig = kubernetesConfig;
@@ -952,7 +971,13 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             }
 
             /**
-             * <p>OIDC场景Profile：generic / kubernetes / gcp_vm / azure_vm</p>
+             * <p>The OIDC scenario profile. Different profiles correspond to different configurations. Valid values:</p>
+             * <ul>
+             * <li>generic</li>
+             * <li>kubernetes</li>
+             * <li>gcp_vm</li>
+             * <li>azure_vm</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>kubernetes</p>
@@ -1009,7 +1034,7 @@ public class CreateApplicationFederatedCredentialRequest extends Request {
             } 
 
             /**
-             * InstanceIds.
+             * <p>The list of instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;

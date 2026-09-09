@@ -300,7 +300,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * ApplicationCreationType.
+         * <p>The application creation type. If this parameter is left empty, applications of the user_custom type are queried by default. To query applications of all types, set this parameter to all.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_init</p>
          */
         public Builder applicationCreationType(String applicationCreationType) {
             this.putQueryParameter("ApplicationCreationType", applicationCreationType);
@@ -309,7 +312,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * ApplicationIdentityType.
+         * <p>The application identity type. If this parameter is left empty, applications of the application type are queried by default. To query applications of all identity types, set this parameter to all.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder applicationIdentityType(String applicationIdentityType) {
             this.putQueryParameter("ApplicationIdentityType", applicationIdentityType);
@@ -318,7 +324,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the applications.</p>
+         * <p>The list of application IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>Ram Account SSO</p>
@@ -330,7 +336,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The name of the application. Only fuzzy match from the leftmost character is supported.</p>
+         * <p>The application name. Only left fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Ram Account SSO</p>
@@ -342,7 +348,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * ApplicationTemplateId.
+         * <p>The application template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apt_ramuser_xxxx</p>
          */
         public Builder applicationTemplateId(String applicationTemplateId) {
             this.putQueryParameter("ApplicationTemplateId", applicationTemplateId);
@@ -351,10 +360,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The authorization of the application. Valid values:</p>
+         * <p>The application access authorization type. Valid values:</p>
          * <ul>
-         * <li>authorize_required: Only the user with explicit authorization can access the application.</li>
-         * <li>default_all: By default, all users can access the application.</li>
+         * <li>authorize_required: Explicit authorization is required for access.</li>
+         * <li>default_all: All members have access permissions by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -367,7 +376,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * CustomFields.
+         * <p>The list of custom fields.</p>
          */
         public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
@@ -376,7 +385,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -389,11 +398,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Used to determine whether M2M client identity is enabled.</p>
-         * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
-         * </ul>
+         * <p>Specifies whether the M2M Client identity is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -405,7 +410,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * ManagedServiceCode.
+         * <p>The ServiceCode of the cloud service that manages the application template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf</p>
          */
         public Builder managedServiceCode(String managedServiceCode) {
             this.putQueryParameter("ManagedServiceCode", managedServiceCode);
@@ -414,7 +422,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -426,7 +434,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -438,11 +446,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Used to determine whether the ResourceServer capability is enabled.</p>
-         * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
-         * </ul>
+         * <p>Specifies whether the ResourceServer capability is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -454,7 +458,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * ServiceManaged.
+         * <p>Specifies whether the application template is managed by a cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serviceManaged(Boolean serviceManaged) {
             this.putQueryParameter("ServiceManaged", serviceManaged);
@@ -463,12 +470,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>SSO type.</p>
-         * <ul>
-         * <li>oidc</li>
-         * <li>saml2</li>
-         * <li>oauth2/m2m</li>
-         * </ul>
+         * <p>The SSO type filter condition. Multiple types can be separated by commas. Example: oauth2/m2m,oidc+oauth2/m2m.</p>
          * 
          * <strong>example:</strong>
          * <p>oauth2/m2m</p>
@@ -480,10 +482,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * <p>The status of the application. Valid values:</p>
+         * <p>The application status. Valid values:</p>
          * <ul>
-         * <li>Enabled: The application is enabled.</li>
-         * <li>Disabled: The application is disabled.</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -556,7 +558,13 @@ public class ListApplicationsRequest extends Request {
             } 
 
             /**
-             * FieldName.
+             * <p>The custom field identifier. Valid values:</p>
+             * <ul>
+             * <li>agent_type: The agent type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>agent_type</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -564,7 +572,10 @@ public class ListApplicationsRequest extends Request {
             }
 
             /**
-             * FieldValue.
+             * <p>The custom field value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x-claw</p>
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;

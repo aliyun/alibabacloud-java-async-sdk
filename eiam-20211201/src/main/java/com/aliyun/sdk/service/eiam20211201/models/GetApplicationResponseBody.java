@@ -67,7 +67,7 @@ public class GetApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the application.</p>
+         * <p>The returned application information.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -75,7 +75,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -632,10 +632,10 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the Developer API feature. Valid values:</p>
+             * <p>The status of the Developer API feature for the application. Valid values:</p>
              * <ul>
-             * <li>Enabled: The Developer API feature is enabled.</li>
-             * <li>Disabled: The Developer API feature is disabled.</li>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -647,7 +647,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationCreationType.
+             * <p>The application creation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_custom</p>
              */
             public Builder applicationCreationType(String applicationCreationType) {
                 this.applicationCreationType = applicationCreationType;
@@ -655,7 +658,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -666,7 +669,14 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationIdentityType.
+             * <p>The application identity type. Valid values:</p>
+             * <ul>
+             * <li>application: Application.</li>
+             * <li>agent: Agent.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>application</p>
              */
             public Builder applicationIdentityType(String applicationIdentityType) {
                 this.applicationIdentityType = applicationIdentityType;
@@ -674,10 +684,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
-             * <p>SAML Application</p>
+             * <p>SAML application</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -693,10 +703,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origin of the application. Valid values:</p>
+             * <p>The source from which the application was created. Valid values:</p>
              * <ul>
-             * <li>urn:alibaba:idaas:app:source:template: The application is created based on a template.</li>
-             * <li>urn:alibaba:idaas: The application is created based on the standard protocol.</li>
+             * <li>urn:alibaba:idaas:app:source:template: Application template.</li>
+             * <li>urn:alibaba:idaas:app:source:standard: Standard protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -708,7 +718,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the template based on which the application is created. This parameter is returned only if the application is created based on a template.</p>
+             * <p>The ID of the application template associated during creation. This value is returned only when the application was created from an application template.</p>
              * 
              * <strong>example:</strong>
              * <p>apt_rpa_tdsxxx</p>
@@ -719,7 +729,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Application visibility</p>
+             * <p>The application visibility.</p>
              */
             public Builder applicationVisibility(java.util.List<String> applicationVisibility) {
                 this.applicationVisibility = applicationVisibility;
@@ -727,10 +737,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorization type of the EIAM application. Valid values:</p>
+             * <p>The access authorization type of the application. Valid values:</p>
              * <ul>
-             * <li>authorize_required: Only the user with explicit authorization can access the application.</li>
-             * <li>default_all: By default, all users can access the application.</li>
+             * <li>authorize_required: Explicit authorization is required for access.</li>
+             * <li>default_all: All members have access permissions by default.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -753,7 +763,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the application was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -772,7 +782,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CustomSubjectStatus.
+             * <p>Indicates whether the custom Subject field in the token is enabled. After this feature is enabled, the issued Access Token changes from \&lt;clientId\&gt; to \&lt;clientId\&gt;:\&lt;client.activeSubjectUrn\&gt;, where client.activeSubjectUrn is configured in the attribute mapping of the federated identity credential of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder customSubjectStatus(String customSubjectStatus) {
                 this.customSubjectStatus = customSubjectStatus;
@@ -780,10 +793,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the application.</p>
+             * <p>The application description.</p>
              * 
              * <strong>example:</strong>
-             * <p>The application is applicable to the test environment.</p>
+             * <p>An application for test environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -791,11 +804,11 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The features that are supported by the application. The value is a JSON array. Valid values:</p>
+             * <p>The features supported by the application, returned as a JSON array string. Valid values:</p>
              * <ul>
-             * <li>sso: The application supports SSO.</li>
-             * <li>provision: The application supports account synchronization.</li>
-             * <li>api_invoke: The application supports custom APIs.</li>
+             * <li>sso: Single sign-on.</li>
+             * <li>provision: Account synchronization.</li>
+             * <li>api_invoke: API access.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -807,7 +820,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -818,7 +831,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the application icon.</p>
+             * <p>The URL of the application logo.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg">https://img.alicdn.com/imgextra/i4/O1CN01lvYwpv1aGowQXDML9_!!6000000003303-0-tps-580-580.jpg</a></p>
@@ -829,7 +842,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>M2M client status.</p>
+             * <p>The M2MClient status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -840,7 +853,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service code of the cloud service that manages the application template.</p>
+             * <p>The ServiceCode of the cloud service that manages the application template.</p>
              * 
              * <strong>example:</strong>
              * <p>rpa</p>
@@ -851,7 +864,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Unique identifier of the resource server</p>
+             * <p>The unique identifier of the ResourceServer, which corresponds to the ResourceServer audience.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.example.com">https://www.example.com</a></p>
@@ -862,7 +875,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceServerSourceType.
+             * <p>The resource server source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urn:cloud:idaas:resourceserver:source:custom</p>
              */
             public Builder resourceServerSourceType(String resourceServerSourceType) {
                 this.resourceServerSourceType = resourceServerSourceType;
@@ -870,10 +886,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource server status.</p>
+             * <p>The ResourceServer status.</p>
              * 
              * <strong>example:</strong>
-             * <p>disabled	enabled</p>
+             * <p>enabled</p>
              */
             public Builder resourceServerStatus(String resourceServerStatus) {
                 this.resourceServerStatus = resourceServerStatus;
@@ -900,10 +916,12 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the single sign-on (SSO) protocol. Valid values:</p>
+             * <p>The single sign-on protocol. Valid values:</p>
              * <ul>
-             * <li>saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.</li>
-             * <li>oidc: the OpenID Connect (OIDC) protocol.</li>
+             * <li>saml2: SAML 2.0 protocol.</li>
+             * <li>oidc: OpenID Connect protocol.</li>
+             * <li>oauth2/m2m: OAuth 2.0 protocol.</li>
+             * <li>oidc+oauth2/m2m: OpenID Connect and OAuth 2.0 protocols.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -915,10 +933,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the application. Valid values:</p>
+             * <p>The application status. Valid values:</p>
              * <ul>
-             * <li>Enabled: The application is enabled.</li>
-             * <li>Disabled: The application is disabled.</li>
+             * <li>enabled: Enabled.</li>
+             * <li>disabled: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -930,7 +948,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The time when the application was last updated. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>

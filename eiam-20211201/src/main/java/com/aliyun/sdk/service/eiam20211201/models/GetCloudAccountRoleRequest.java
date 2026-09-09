@@ -113,6 +113,7 @@ public class GetCloudAccountRoleRequest extends Request {
         }
 
         /**
+         * <p>The cloud account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +126,7 @@ public class GetCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>云账号角色ID。</p>
+         * <p>The cloud role ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +139,7 @@ public class GetCloudAccountRoleRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

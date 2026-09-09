@@ -67,7 +67,10 @@ public class CreateCustomPrivacyPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * CustomPrivacyPolicyId.
+         * <p>The ID of the custom privacy policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pp_neagxpoznsjdtxxxxx</p>
          */
         public Builder customPrivacyPolicyId(String customPrivacyPolicyId) {
             this.customPrivacyPolicyId = customPrivacyPolicyId;
@@ -75,7 +78,10 @@ public class CreateCustomPrivacyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

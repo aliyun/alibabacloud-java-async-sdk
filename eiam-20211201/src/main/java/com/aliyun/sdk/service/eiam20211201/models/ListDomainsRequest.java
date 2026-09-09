@@ -97,7 +97,10 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * BrandId.
+         * <p>The brand ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>brand_xxxx</p>
          */
         public Builder brandId(String brandId) {
             this.putQueryParameter("BrandId", brandId);

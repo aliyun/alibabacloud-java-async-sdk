@@ -67,7 +67,7 @@ public class CreateApplicationTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationTokens.
+         * <p>The application token.</p>
          */
         public Builder applicationTokens(ApplicationTokens applicationTokens) {
             this.applicationTokens = applicationTokens;
@@ -75,7 +75,10 @@ public class CreateApplicationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,7 @@ public class CreateApplicationTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用token</p>
+             * <p>The application token.</p>
              * 
              * <strong>example:</strong>
              * <p>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBYkt3XXX</p>
@@ -165,7 +168,7 @@ public class CreateApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用token ID</p>
+             * <p>The application token ID.</p>
              * 
              * <strong>example:</strong>
              * <p>token_ndfxxigahelfne2y2hodehrxxxx</p>
@@ -176,7 +179,7 @@ public class CreateApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用token类型</p>
+             * <p>The application token type.</p>
              * 
              * <strong>example:</strong>
              * <p>bearer_token</p>

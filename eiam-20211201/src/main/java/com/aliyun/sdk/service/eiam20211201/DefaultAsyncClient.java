@@ -383,7 +383,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>IDaaS EIAM supports the following two standard single sign-on (SSO) protocols for adding applications: SAML 2.0 and OIDC. You can select an SSO protocol based on your business requirements when you add an application. You cannot change the SSO protocol that you selected after the application is added.</p>
+     * <p>EIAM supports two standard SSO protocols for application access: SAML 2.0 and OIDC. This parameter cannot be changed after it is specified. Create the application based on the SSO protocol type used in your business scenario.</p>
      * 
      * @param request the request parameters of CreateApplication  CreateApplicationRequest
      * @return CreateApplicationResponse
@@ -547,6 +547,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before you call this operation, make sure that you fully understand the billing method of IDaaS EIAM.</strong></p>
+     * 
      * @param request the request parameters of CreateCloudAccount  CreateCloudAccountRequest
      * @return CreateCloudAccountResponse
      */
@@ -584,7 +588,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Create Conditional Access Policy</p>
+     * <p>Creates a conditional access policy.</p>
      * 
      * @param request the request parameters of CreateConditionalAccessPolicy  CreateConditionalAccessPolicyRequest
      * @return CreateConditionalAccessPolicyResponse
@@ -929,7 +933,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the EIAM application that you want to delete is not used before you delete the EIAM application. After you delete the EIAM application, all configurations are deleted and cannot be restored.</p>
+     * <p>Before deleting a specified EIAM application, make sure the application is no longer in use. After the application is deleted, all configuration data is permanently deleted and cannot be recovered.</p>
      * 
      * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
      * @return DeleteApplicationResponse
@@ -1111,6 +1115,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must disable the cloud role before you delete it. After you delete the role, all related data is also deleted and cannot be recovered.</p>
+     * 
      * @param request the request parameters of DeleteCloudAccountRole  DeleteCloudAccountRoleRequest
      * @return DeleteCloudAccountRoleResponse
      */
@@ -1130,7 +1137,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When deleting a specified conditional access policy, please ensure that the policy is no longer in use. After deletion, all configuration data will be removed and cannot be recovered.</p>
+     * <p>Before you delete a conditional access policy, make sure that the policy is no longer in use. After the policy is deleted, all configuration data is permanently removed and cannot be recovered.</p>
      * 
      * @param request the request parameters of DeleteConditionalAccessPolicy  DeleteConditionalAccessPolicyRequest
      * @return DeleteConditionalAccessPolicyResponse
@@ -1313,7 +1320,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Make sure that the instance to be deleted is no longer used. If the instance is deleted, all data related to the instance will be deleted.</p>
+     * <p>Make sure that the instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -1496,7 +1503,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>All features of the EIAM application cannot be used if you disable the EIAM application, such as single sign-on (SSO) and account synchronization. Make sure that you acknowledge the risks of the delete operation.</p>
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable (such as SSO and account synchronization). Confirm that you are aware of the risks that this operation may cause.</p>
      * 
      * @param request the request parameters of DisableApplication  DisableApplicationRequest
      * @return DisableApplicationResponse
@@ -1642,6 +1649,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</p>
+     * 
      * @param request the request parameters of DisableApplicationToken  DisableApplicationTokenRequest
      * @return DisableApplicationTokenResponse
      */
@@ -1733,7 +1743,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When changing a conditional access policy from an enabled state to a disabled state, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * <p>When you change a conditional access policy from the enabled state to the disabled state, the policy no longer intercepts requests. Confirm that you are aware of the security risks that this operation may cause.</p>
      * 
      * @param request the request parameters of DisableConditionalAccessPolicy  DisableConditionalAccessPolicyRequest
      * @return DisableConditionalAccessPolicyResponse
@@ -1879,6 +1889,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that this operation may cause.</p>
+     * 
      * @param request the request parameters of DisableIdentityProviderAuthn  DisableIdentityProviderAuthnRequest
      * @return DisableIdentityProviderAuthnResponse
      */
@@ -2240,7 +2253,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When changing the status of a conditional access policy from enabled to disabled, the policy will no longer intercept. Please confirm that you are aware of the potential risks associated with this action.</p>
+     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Confirm that you are aware of the risks that this operation may cause.</p>
      * 
      * @param request the request parameters of EnableConditionalAccessPolicy  EnableConditionalAccessPolicyRequest
      * @return EnableConditionalAccessPolicyResponse
@@ -2296,6 +2309,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>&lt;props=&quot;china&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of IDaaS EIAM.</strong>
+     * &lt;props=&quot;intl&quot;&gt;<strong>Before using this operation, make sure that you fully understand the billing methods of IDaaS EIAM.</strong></p>
+     * 
      * @param request the request parameters of EnableCustomField  EnableCustomFieldRequest
      * @return EnableCustomFieldResponse
      */
@@ -2386,6 +2403,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you change a conditional access policy from enabled to disabled, the policy no longer intercepts requests. Make sure that you are aware of the risks that this operation may cause.</p>
+     * 
      * @param request the request parameters of EnableIdentityProviderAuthn  EnableIdentityProviderAuthnRequest
      * @return EnableIdentityProviderAuthnResponse
      */
@@ -2945,7 +2965,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Query Conditional Access Policy</p>
+     * <p>Query a conditional access policy.</p>
      * 
      * @param request the request parameters of GetConditionalAccessPolicy  GetConditionalAccessPolicyRequest
      * @return GetConditionalAccessPolicyResponse
@@ -3272,7 +3292,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Please ensure that your current instance is no longer in use. When the EIAM instance is deleted, all related data will be deleted.</p>
+     * <p>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</p>
      * 
      * @param request the request parameters of GetInstanceLicense  GetInstanceLicenseRequest
      * @return GetInstanceLicenseResponse
@@ -3634,6 +3654,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries only applications that are directly assigned to an organization. You can use the <strong>ApplicationIds</strong> parameter to filter the applications.</p>
+     * 
      * @param request the request parameters of ListApplicationAccountsForUser  ListApplicationAccountsForUserRequest
      * @return ListApplicationAccountsForUserResponse
      */
@@ -3851,7 +3874,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can only query the permissions that are directly granted to the EIAM organization by calling the ListApplicationsForOrganizationalUnit operation. You can filter applications by configuring the <strong>ApplicationIds</strong> parameter when you call this operation.</p>
+     * <p>This operation queries only the direct permissions of the organizational unit, that is, applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
      * 
      * @param request the request parameters of ListApplicationsForOrganizationalUnit  ListApplicationsForOrganizationalUnitRequest
      * @return ListApplicationsForOrganizationalUnitResponse
@@ -3889,6 +3912,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * 
      * @param request the request parameters of ListAuthorizationResources  ListAuthorizationResourcesRequest
      * @return ListAuthorizationResourcesResponse
      */
@@ -4070,7 +4096,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Paginated query for the list of conditional access policies</p>
+     * <p>Query the list of conditional access policies with pagination.</p>
      * 
      * @param request the request parameters of ListConditionalAccessPolicies  ListConditionalAccessPoliciesRequest
      * @return ListConditionalAccessPoliciesResponse
@@ -4109,7 +4135,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>List Conditional Access Policies Associated with Network Zones</p>
+     * <p>Retrieves the list of conditional access policies associated with a network zone.</p>
      * 
      * @param request the request parameters of ListConditionalAccessPoliciesForNetworkZone  ListConditionalAccessPoliciesForNetworkZoneRequest
      * @return ListConditionalAccessPoliciesForNetworkZoneResponse
@@ -4687,6 +4713,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The following two methods are supported for viewing returned data:</p>
+     * <ul>
+     * <li>Method 1: When querying the first page, you only need to set MaxResults to limit the number of entries returned. The NextToken in the response serves as the credential for querying subsequent pages. When querying subsequent pages, set the NextToken parameter to the NextToken value obtained from the previous response as the query credential, and set MaxResults to limit the number of entries returned. If there are no more pages, NextToken is no longer returned. The maximum value of MaxResults is 100.</li>
+     * <li>Method 2: Set the number of entries returned per page using PageSize, and set the page number using PageNumber.
+     * You can only choose one of the above two methods. When a large number of entries are returned, Method 1 is recommended. If the MaxResults or NextToken parameter is set, the PageSize and PageNumber request parameters become invalid.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListSynchronizationJobs  ListSynchronizationJobsRequest
      * @return ListSynchronizationJobsResponse
      */
@@ -4723,6 +4757,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries only the applications that are directly assigned to an organization. You can use the <strong>ApplicationIds</strong> parameter to filter the applications.</p>
+     * 
      * @param request the request parameters of ListUserAuthnSourceMappings  ListUserAuthnSourceMappingsRequest
      * @return ListUserAuthnSourceMappingsResponse
      */
@@ -4741,6 +4778,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries only the direct permissions of an organizational unit, which are the applications directly assigned to the organizational unit. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * 
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
      */
@@ -4849,6 +4889,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you change an application from the enabled state to the disabled state, all features of the application become unavailable, such as SSO and account synchronization. Make sure that you are aware of the risks that may result from this operation.</p>
+     * 
      * @param request the request parameters of ObtainApplicationToken  ObtainApplicationTokenRequest
      * @return ObtainApplicationTokenResponse
      */
@@ -4903,6 +4946,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation only queries the direct permissions of the organization, that is, applications directly assigned to the organization. When you call this operation, you can use the <strong>ApplicationIds</strong> parameter to filter applications.</p>
+     * 
      * @param request the request parameters of RemoveApplicationAccountFromUser  RemoveApplicationAccountFromUserRequest
      * @return RemoveApplicationAccountFromUserResponse
      */
@@ -5300,7 +5346,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>In IDaaS EIAM, the application management feature supports multiple SSO protocols for applications, including SAML 2.0 and OIDC protocols. Each application supports only one protocol, and the protocol cannot be changed after the application is created. You can specify the SSO configuration attributes of an application based on the supported SSO protocol.</p>
+     * <p>In EIAM, application management supports adding applications that use multiple single sign-on (SSO) protocols (SAML 2.0 and OIDC). However, each application supports only one SSO protocol, which is specified during creation and cannot be changed afterward. Specify the corresponding SSO configuration property parameters based on the SSO protocol type supported by the current application.</p>
      * 
      * @param request the request parameters of SetApplicationSsoConfig  SetApplicationSsoConfigRequest
      * @return SetApplicationSsoConfigResponse
@@ -5806,6 +5852,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the single sign-on (SSO) parameters for an application template from the marketplace.</p>
+     * 
      * @param request the request parameters of UpdateApplicationSsoFormParams  UpdateApplicationSsoFormParamsRequest
      * @return UpdateApplicationSsoFormParamsResponse
      */
@@ -6041,7 +6090,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Update Conditional Access Policy</p>
+     * <p>Updates a conditional access policy.</p>
      * 
      * @param request the request parameters of UpdateConditionalAccessPolicy  UpdateConditionalAccessPolicyRequest
      * @return UpdateConditionalAccessPolicyResponse
@@ -6062,7 +6111,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Update Conditional Access Policy Description</p>
+     * <p>Updates the description of a conditional access policy.</p>
      * 
      * @param request the request parameters of UpdateConditionalAccessPolicyDescription  UpdateConditionalAccessPolicyDescriptionRequest
      * @return UpdateConditionalAccessPolicyDescriptionResponse

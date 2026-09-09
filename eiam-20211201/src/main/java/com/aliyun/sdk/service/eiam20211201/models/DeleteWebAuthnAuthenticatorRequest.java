@@ -113,7 +113,7 @@ public class DeleteWebAuthnAuthenticatorRequest extends Request {
         }
 
         /**
-         * <p>认证器ID</p>
+         * <p>The authenticator ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class DeleteWebAuthnAuthenticatorRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class DeleteWebAuthnAuthenticatorRequest extends Request {
         }
 
         /**
-         * <p>UserID</p>
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

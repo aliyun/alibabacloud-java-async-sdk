@@ -185,7 +185,7 @@ public class CreateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+         * <p>Idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>
@@ -197,10 +197,10 @@ public class CreateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>网络区域描述</p>
+         * <p>Network zone description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试描述</p>
+         * <p>Test description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -209,7 +209,7 @@ public class CreateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class CreateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>网络区域ipv4Cidr</p>
+         * <p>Network zone IPv4 CIDR blocks.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -234,7 +234,7 @@ public class CreateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>网络区域ipv6Cidr</p>
+         * <p>Network zone IPv6 CIDR blocks.</p>
          * 
          * <strong>example:</strong>
          * <p>::/0</p>
@@ -246,7 +246,7 @@ public class CreateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>网络区域名称</p>
+         * <p>Network zone name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +259,7 @@ public class CreateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>网络区域类型</p>
+         * <p>Network zone type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +272,7 @@ public class CreateNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>专有网络VpcId</p>
+         * <p>VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc_xxxxx</p>

@@ -112,7 +112,7 @@ public class CreateApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application for which you want to create a client key.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,10 @@ public class CreateApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * ExpirationTime.
+         * <p>The expiration time in UNIX timestamp format, in milliseconds. If this parameter is left empty, the client secret is permanently valid. The minimum validity period that you can set is 1 day, and the maximum validity period is 3 years.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1735530123762</p>
          */
         public Builder expirationTime(Long expirationTime) {
             this.putQueryParameter("ExpirationTime", expirationTime);
@@ -134,7 +137,7 @@ public class CreateApplicationClientSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

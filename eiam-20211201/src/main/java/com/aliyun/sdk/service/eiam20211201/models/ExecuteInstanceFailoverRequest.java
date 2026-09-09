@@ -98,7 +98,11 @@ public class ExecuteInstanceFailoverRequest extends Request {
         }
 
         /**
-         * <p>故障转移状态</p>
+         * <p>The failover status. Valid values:</p>
+         * <ul>
+         * <li>inactive: The primary instance is active.</li>
+         * <li>active: The replica instance is active.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +115,7 @@ public class ExecuteInstanceFailoverRequest extends Request {
         }
 
         /**
-         * <p>IDaaS 的副本实例 ID</p>
+         * <p>The replica instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

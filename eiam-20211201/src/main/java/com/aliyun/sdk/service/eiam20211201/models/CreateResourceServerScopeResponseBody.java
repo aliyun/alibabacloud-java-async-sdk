@@ -67,7 +67,10 @@ public class CreateResourceServerScopeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateResourceServerScopeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceServerScopeId.
+         * <p>The ID of the scope permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ress_neg35flu6byysxwutaxu3dxxxx</p>
          */
         public Builder resourceServerScopeId(String resourceServerScopeId) {
             this.resourceServerScopeId = resourceServerScopeId;

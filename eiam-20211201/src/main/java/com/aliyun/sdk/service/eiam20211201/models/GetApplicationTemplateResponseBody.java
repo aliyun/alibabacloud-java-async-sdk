@@ -67,7 +67,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationTemplate.
+         * <p>The application template information.</p>
          */
         public Builder applicationTemplate(ApplicationTemplate applicationTemplate) {
             this.applicationTemplate = applicationTemplate;
@@ -75,7 +75,10 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>是否永久免费</p>
+             * <p>Indicates whether the application template is always free.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -328,7 +331,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>应用模板Id</p>
+             * <p>The application template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>apt_ramintlrole_ixxxxx</p>
@@ -339,7 +342,10 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用模板名称</p>
+             * <p>The application template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud</p>
              */
             public Builder applicationTemplateName(String applicationTemplateName) {
                 this.applicationTemplateName = applicationTemplateName;
@@ -347,7 +353,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用模板创建时间</p>
+             * <p>The time when the application template was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1730341123000</p>
@@ -358,7 +364,10 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用模板描述信息</p>
+             * <p>The application template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud SSO</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -366,7 +375,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用模板对应帮助文档地址</p>
+             * <p>The help document URL of the application template.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/document_detail/409xxx.html">https://example.com/document_detail/409xxx.html</a></p>
@@ -377,7 +386,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用模板Logo地址</p>
+             * <p>The logo URL of the application template.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png">https://example.com/imgextra/i4/O1CN01xTLxLb1WtyKksHW1H_!!6000000002847-2-tps-xxx-xxx.png</a></p>
@@ -388,7 +397,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>托管应用模板的云产品ServiceCode。当且仅当ServiceManaged为true是返回。</p>
+             * <p>The service code of the Alibaba Cloud service that manages the application template.</p>
              * 
              * <strong>example:</strong>
              * <p>bastionhost</p>
@@ -399,7 +408,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用模板售卖信息</p>
+             * <p>The sale information of the application template.</p>
              */
             public Builder saleInfo(SaleInfo saleInfo) {
                 this.saleInfo = saleInfo;
@@ -407,7 +416,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>托管应用模板的云产品控制台地址。当且仅当ServiceManaged为true是返回。</p>
+             * <p>The console URL of the Alibaba Cloud service that manages the application template.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/?p=bastion">https://example.com/?p=bastion</a></p>
@@ -418,7 +427,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用模板是否被云产品托管。</p>
+             * <p>Indicates whether the application template is managed by an Alibaba Cloud service.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -429,7 +438,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>支持SSO协议</p>
+             * <p>The supported SSO protocols.</p>
              */
             public Builder ssoTypes(java.util.List<String> ssoTypes) {
                 this.ssoTypes = ssoTypes;
@@ -437,7 +446,7 @@ public class GetApplicationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用模板更新时间</p>
+             * <p>The time when the application template was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1730341124000</p>

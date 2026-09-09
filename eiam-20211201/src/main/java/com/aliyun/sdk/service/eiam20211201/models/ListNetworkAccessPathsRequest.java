@@ -111,7 +111,7 @@ public class ListNetworkAccessPathsRequest extends Request {
         }
 
         /**
-         * <p>Network access endpoint ID.</p>
+         * <p>The ID of the dedicated network access endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

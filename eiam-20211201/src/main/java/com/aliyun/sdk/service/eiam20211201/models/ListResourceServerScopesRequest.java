@@ -213,7 +213,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,10 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * AuthorizationType.
+         * <p>The authorization type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>authorize_required</p>
          */
         public Builder authorizationType(String authorizationType) {
             this.putQueryParameter("AuthorizationType", authorizationType);
@@ -235,7 +238,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +251,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -260,7 +263,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The pagination token (NextToken) used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -272,7 +275,10 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * PreviousToken.
+         * <p>The pagination token for the previous page. Set this parameter to the PreviousToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PTxxxxxexample</p>
          */
         public Builder previousToken(String previousToken) {
             this.putQueryParameter("PreviousToken", previousToken);
@@ -281,7 +287,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * ResourceServerScopeIds.
+         * <p>The list of scope permission IDs.</p>
          */
         public Builder resourceServerScopeIds(java.util.List<String> resourceServerScopeIds) {
             this.putQueryParameter("ResourceServerScopeIds", resourceServerScopeIds);
@@ -290,7 +296,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>权限名称</p>
+         * <p>The scope permission name.</p>
          * 
          * <strong>example:</strong>
          * <p>读取全部用户</p>
@@ -302,7 +308,10 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * ResourceServerScopeType.
+         * <p>The scope permission type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:alibaba:idaas:resourceserver:scope:delegated</p>
          */
         public Builder resourceServerScopeType(String resourceServerScopeType) {
             this.putQueryParameter("ResourceServerScopeType", resourceServerScopeType);
@@ -311,7 +320,7 @@ public class ListResourceServerScopesRequest extends Request {
         }
 
         /**
-         * <p>权限值，大小写不敏感，格式(${ResourceType}:${ResourceOption}:${ResourceRestrict})</p>
+         * <p>The scope permission value.</p>
          * 
          * <strong>example:</strong>
          * <p>User:Write:ALL</p>

@@ -173,7 +173,11 @@ public class CreateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权资源范围，枚举值：global（Project下的所有资源）、custom（自定义资源范围）。</p>
+         * <p>The authorization resource scope. Valid values:</p>
+         * <ul>
+         * <li>global: all resources under the project.</li>
+         * <li>custom: specified resources under the project.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -185,7 +189,7 @@ public class CreateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权规则名称，长度限制最大64个字符。</p>
+         * <p>The name of the authorization rule. The name can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +202,7 @@ public class CreateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权规则场景标签，长度限制最大64个字符。</p>
+         * <p>The scenario label of the authorization rule. The label can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>privileged_cloud_account</p>
@@ -210,6 +214,7 @@ public class CreateAuthorizationRuleRequest extends Request {
         }
 
         /**
+         * <p>Ensures the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +227,7 @@ public class CreateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权规则备注描述，长度限制最大128个字符。</p>
+         * <p>The description of the authorization rule. The description can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a test rule</p>
@@ -234,7 +239,7 @@ public class CreateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +252,7 @@ public class CreateAuthorizationRuleRequest extends Request {
         }
 
         /**
-         * <p>授权规则关联的项目标识。</p>
+         * <p>The ID of the project associated with the authorization rule. If you are unsure which project to associate, you can associate the default project. The default project ID is iprj_system_default.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

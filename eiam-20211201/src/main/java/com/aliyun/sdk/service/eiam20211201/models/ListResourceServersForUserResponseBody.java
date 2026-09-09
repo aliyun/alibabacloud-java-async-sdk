@@ -106,7 +106,10 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -125,7 +128,10 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +139,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceServers.
+         * <p>The list of ResourceServer applications.</p>
          */
         public Builder resourceServers(java.util.List<ResourceServers> resourceServers) {
             this.resourceServers = resourceServers;
@@ -141,7 +147,10 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -233,7 +242,11 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>直接分配给当前用户的权限，视为直接授权。</p>
+             * <p>Indicates whether direct authorization exists. Valid values:</p>
+             * <ul>
+             * <li>true: Direct authorization exists.</li>
+             * <li>false: Direct authorization does not exist.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -244,7 +257,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>通过用户隶属的组织、组获取的权限，视为继承权限。</p>
+             * <p>Indicates whether inherited authorization exists.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -255,7 +268,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ResourceServerScope唯一标识</p>
+             * <p>The Scope permission ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ress_nbte4bb3qqqnaq73rlmkqixxxx</p>
@@ -266,7 +279,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ResourceServerScope名称</p>
+             * <p>The Scope permission name.</p>
              * 
              * <strong>example:</strong>
              * <p>Read All User</p>
@@ -362,7 +375,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>资源服务应用的唯一标识</p>
+             * <p>The ResourceServer application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_nbsomva32b6utec3hgi7scxxxx</p>
@@ -373,7 +386,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例唯一标识</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</p>
@@ -384,7 +397,10 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceServerIdentifier.
+             * <p>The unique identifier of the ResourceServer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urn:idaas:test</p>
              */
             public Builder resourceServerIdentifier(String resourceServerIdentifier) {
                 this.resourceServerIdentifier = resourceServerIdentifier;
@@ -392,7 +408,7 @@ public class ListResourceServersForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源服务Scope权限集合</p>
+             * <p>The list of authorized Scope permissions.</p>
              */
             public Builder resourceServerScopes(java.util.List<ResourceServerScopes> resourceServerScopes) {
                 this.resourceServerScopes = resourceServerScopes;

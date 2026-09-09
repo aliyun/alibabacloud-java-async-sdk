@@ -67,7 +67,7 @@ public class GetUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -78,7 +78,7 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data object of the account.</p>
+         * <p>The account object data.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -238,7 +238,7 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the organizational unit.</p>
+             * <p>The group description.</p>
              * 
              * <strong>example:</strong>
              * <p>this is a test.</p>
@@ -249,7 +249,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the organizational unit.</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -260,7 +260,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the organizational unit.</p>
+             * <p>The group name.</p>
              * 
              * <strong>example:</strong>
              * <p>group_test_name</p>
@@ -343,7 +343,7 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the organizational unit.</p>
+             * <p>The organizational unit ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -354,7 +354,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the organizational unit.</p>
+             * <p>The organizational unit name.</p>
              * 
              * <strong>example:</strong>
              * <p>test_ou_name</p>
@@ -365,7 +365,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the organization is the primary organization.</p>
+             * <p>Indicates whether this is the primary organizational unit.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -747,7 +747,7 @@ public class GetUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The expiration time of the account, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -758,7 +758,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The creation time of the account, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -769,7 +769,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of custom fields that describe the account.</p>
+             * <p>The list of custom fields of the account.</p>
              */
             public Builder customFields(java.util.List<CustomFields> customFields) {
                 this.customFields = customFields;
@@ -799,7 +799,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the user who owns the account.</p>
+             * <p>The email address of the account.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:user@example.com">user@example.com</a></p>
@@ -810,7 +810,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the email address has been verified. A value of true indicates that the email address has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the email address has not been verified.</p>
+             * <p>Indicates whether the email address is verified. A value of true indicates that the email address has been verified by the user or set as verified by the administrator. A value of false indicates that the email address is not verified.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -821,7 +821,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The organizational units to which the account belongs.</p>
+             * <p>The list of groups to which the account belongs.</p>
              */
             public Builder groups(java.util.List<Groups> groups) {
                 this.groups = groups;
@@ -829,7 +829,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -840,7 +840,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account lock expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The lock expiration time, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -851,7 +851,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The organizational units to which the account belongs.</p>
+             * <p>The list of organizational units to which the account belongs.</p>
              */
             public Builder organizationalUnits(java.util.List<OrganizationalUnits> organizationalUnits) {
                 this.organizationalUnits = organizationalUnits;
@@ -859,11 +859,14 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the password of the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The expiration time of the password, in UNIX timestamp format. Unit: milliseconds.</p>
              * <ul>
-             * <li>If the value -1 is returned, the password does not expire.</li>
-             * <li>If no value is returned, the password does not expire.</li>
-             * <li>If a UNIX timestamp is returned, the password expires at the indicated point of time.</li>
+             * <li><p>A return value of -1 indicates that the password does not expire.</p>
+             * </li>
+             * <li><p>No return value indicates that the password does not expire.</p>
+             * </li>
+             * <li><p>A specific timestamp value indicates the exact password expiration time.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -875,7 +878,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a password is set.</p>
+             * <p>Indicates whether the password is set.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -886,7 +889,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile number of the user who owns the account.</p>
+             * <p>The phone number of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>156xxxxxxx</p>
@@ -897,7 +900,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the mobile number has been verified. A value of true indicates that the mobile number has been verified by the user or has been set to the verified status by the administrator. A value of false indicates that the mobile number has not been verified.</p>
+             * <p>Indicates whether the phone number is verified. A value of true indicates that the phone number has been verified by the user or set as verified by the administrator. A value of false indicates that the phone number is not verified.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -908,7 +911,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
+             * <p>The country calling code of the phone number. Example: 86 for the Chinese mainland. The code does not include the 00 or + prefix.</p>
              * 
              * <strong>example:</strong>
              * <p>86</p>
@@ -919,7 +922,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Preferred language</p>
+             * <p>The preferred language.</p>
              * 
              * <strong>example:</strong>
              * <p>en-US</p>
@@ -941,7 +944,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account was registered. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The registration time of the account, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -954,8 +957,10 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>The status of the account. Valid values:</p>
              * <ul>
-             * <li>enabled: The account is enabled.</li>
-             * <li>disabled: The account is disabled.</li>
+             * <li><p>enabled: enabled.</p>
+             * </li>
+             * <li><p>disabled: disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -967,7 +972,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the account was last updated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The most recent update time of the account, in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1652085686179</p>
@@ -978,8 +983,10 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM. By default, the external ID is the account ID.</p>
-             * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
+             * <p>The external ID of the account. This ID is used to associate external data with the IDaaS account. The default value is the IDaaS account ID.</p>
+             * <blockquote>
+             * <p>Note: The external ID must be unique within the same source type and source ID.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -990,7 +997,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the account.</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -1002,7 +1009,7 @@ public class GetUserResponseBody extends TeaModel {
 
             /**
              * <p>The source ID of the account.</p>
-             * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+             * <p>For the self-built type, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, the DingTalk source corresponds to the corpId of the DingTalk enterprise.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -1015,10 +1022,16 @@ public class GetUserResponseBody extends TeaModel {
             /**
              * <p>The source type of the account. Valid values:</p>
              * <ul>
-             * <li>build_in: The account was created in IDaaS.</li>
-             * <li>ding_talk: The account was imported from DingTalk.</li>
-             * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
-             * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+             * <li><p>build_in: self-built.</p>
+             * </li>
+             * <li><p>ding_talk: imported from DingTalk.</p>
+             * </li>
+             * <li><p>ad: imported from AD.</p>
+             * </li>
+             * <li><p>ldap: imported from LDAP.</p>
+             * </li>
+             * <li><p>we_com: imported from WeCom.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

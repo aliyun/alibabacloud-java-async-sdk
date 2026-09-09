@@ -67,7 +67,10 @@ public class GetServiceQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetServiceQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceQuota.
+         * <p>The service quota.</p>
          */
         public Builder serviceQuota(ServiceQuota serviceQuota) {
             this.serviceQuota = serviceQuota;
@@ -154,7 +157,7 @@ public class GetServiceQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Quota 配额的唯一标识。</p>
+             * <p>The unique identifier of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>instanceTrialNumber</p>
@@ -165,7 +168,7 @@ public class GetServiceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quota 配额的值。</p>
+             * <p>The value of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -176,7 +179,7 @@ public class GetServiceQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quota 配额的当前用量。</p>
+             * <p>The current usage of the quota.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -98,7 +98,7 @@ public class GetCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>自定义条款ID</p>
+         * <p>The custom privacy policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetCustomPrivacyPolicyRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

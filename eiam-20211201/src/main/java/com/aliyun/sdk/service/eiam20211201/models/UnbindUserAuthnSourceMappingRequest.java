@@ -128,7 +128,7 @@ public class UnbindUserAuthnSourceMappingRequest extends Request {
         }
 
         /**
-         * <p>来源ID</p>
+         * <p>The ID of the source identity provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class UnbindUserAuthnSourceMappingRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class UnbindUserAuthnSourceMappingRequest extends Request {
         }
 
         /**
-         * <p>外部关联ID</p>
+         * <p>The external ID associated with the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class UnbindUserAuthnSourceMappingRequest extends Request {
         }
 
         /**
-         * <p>用户ID</p>
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -170,7 +170,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>联邦凭证提供方ID</p>
+         * <p>The federated trust source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>联邦凭证提供方名称</p>
+         * <p>The federated trust source name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>网络端点ID</p>
+         * <p>The network access endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_public</p>
@@ -221,7 +221,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>OIDC配置</p>
+         * <p>The OIDC configuration.</p>
          */
         public Builder oidcProviderConfig(OidcProviderConfig oidcProviderConfig) {
             this.putQueryParameter("OidcProviderConfig", oidcProviderConfig);
@@ -230,7 +230,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>PKCS7配置</p>
+         * <p>The PKCS7 configuration.</p>
          */
         public Builder pkcs7ProviderConfig(Pkcs7ProviderConfig pkcs7ProviderConfig) {
             this.putQueryParameter("Pkcs7ProviderConfig", pkcs7ProviderConfig);
@@ -239,7 +239,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
         }
 
         /**
-         * <p>私有CA配置</p>
+         * <p>The private CA configuration.</p>
          */
         public Builder privateCaProviderConfig(PrivateCaProviderConfig privateCaProviderConfig) {
             this.putQueryParameter("PrivateCaProviderConfig", privateCaProviderConfig);
@@ -349,7 +349,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             } 
 
             /**
-             * Audiences.
+             * <p>The list of audiences.</p>
              */
             public Builder audiences(java.util.List<String> audiences) {
                 this.audiences = audiences;
@@ -357,7 +357,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>Jwks来源</p>
+             * <p>The JWKS source.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -369,7 +369,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>JWKS 端点</p>
+             * <p>The JWKS endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/jwks">https://example.com/jwks</a></p>
@@ -380,7 +380,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>静态获取的jwks</p>
+             * <p>The statically retrieved JWKS.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -401,7 +401,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>信任条件</p>
+             * <p>The trust condition.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -458,7 +458,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             } 
 
             /**
-             * <p>Root证书内容</p>
+             * <p>The content of the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>-----BEGIN CERTIFICATE-----
@@ -585,7 +585,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             } 
 
             /**
-             * <p>pkcs7证书列表</p>
+             * <p>The list of PKCS7 certificates.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -593,7 +593,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>CMS验证模式</p>
+             * <p>The CMS verification mode.</p>
              * 
              * <strong>example:</strong>
              * <p>cert</p>
@@ -604,7 +604,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>签名有效期, 单位秒，1200</p>
+             * <p>The validity period of the signature.</p>
              * 
              * <strong>example:</strong>
              * <p>1200</p>
@@ -615,7 +615,10 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * SigningTimeValueExpression.
+             * <p>The expression used to retrieve the signing time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pkcs7.signingTime</p>
              */
             public Builder signingTimeValueExpression(String signingTimeValueExpression) {
                 this.signingTimeValueExpression = signingTimeValueExpression;
@@ -623,7 +626,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>证书信任锚点来源</p>
+             * <p>The source of the certificate trust anchor.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -635,7 +638,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>信任条件</p>
+             * <p>The trust condition.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>
@@ -692,7 +695,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             } 
 
             /**
-             * <p>Root证书内容</p>
+             * <p>The content of the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>-----BEGIN CERTIFICATE-----
@@ -779,7 +782,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             } 
 
             /**
-             * <p>Root证书列表</p>
+             * <p>The list of root certificates.</p>
              */
             public Builder certificates(java.util.List<PrivateCaProviderConfigCertificates> certificates) {
                 this.certificates = certificates;
@@ -787,7 +790,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>Root证书获取方式</p>
+             * <p>The method used to retrieve the root certificate.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -799,7 +802,7 @@ public class UpdateFederatedCredentialProviderRequest extends Request {
             }
 
             /**
-             * <p>Root证书的信任条件</p>
+             * <p>The trust condition of the root certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>IsNullOrEmpty(&quot;jwt.issuer&quot;)</p>

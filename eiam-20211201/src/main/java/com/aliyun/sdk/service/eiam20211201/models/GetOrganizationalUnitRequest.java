@@ -98,7 +98,7 @@ public class GetOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetOrganizationalUnitRequest extends Request {
         }
 
         /**
-         * <p>The ID of the organizational unit.</p>
+         * <p>Organizational unit ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

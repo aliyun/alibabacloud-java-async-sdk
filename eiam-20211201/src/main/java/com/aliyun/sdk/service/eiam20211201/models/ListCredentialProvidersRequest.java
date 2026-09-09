@@ -167,7 +167,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>认证令牌提供商ID列表。</p>
+         * <p>The list of credential provider IDs.</p>
          */
         public Builder credentialProviderIds(java.util.List<String> credentialProviderIds) {
             this.putQueryParameter("CredentialProviderIds", credentialProviderIds);
@@ -176,7 +176,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>认证令牌提供商类型列表。</p>
+         * <p>The list of credential provider types.</p>
          */
         public Builder credentialProviderTypes(java.util.List<String> credentialProviderTypes) {
             this.putQueryParameter("CredentialProviderTypes", credentialProviderTypes);
@@ -185,7 +185,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The list of filter conditions.</p>
          */
         public Builder filter(java.util.List<Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -194,7 +194,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * <p>The maximum number of entries per page for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -219,7 +219,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -231,7 +231,7 @@ public class ListCredentialProvidersRequest extends Request {
         }
 
         /**
-         * <p>认证令牌提供商状态列表。</p>
+         * <p>The list of credential provider statuses.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -299,7 +299,10 @@ public class ListCredentialProvidersRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The filter condition name. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CredentialProviderName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -307,7 +310,7 @@ public class ListCredentialProvidersRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The list of filter condition values.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

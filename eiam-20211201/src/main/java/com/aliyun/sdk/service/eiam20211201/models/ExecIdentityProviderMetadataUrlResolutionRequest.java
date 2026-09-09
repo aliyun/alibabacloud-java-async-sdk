@@ -140,7 +140,10 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
         }
 
         /**
-         * IdentityProviderId.
+         * <p>The ID of the identity provider in IDaaS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idp_mwpcwnhrimlr2horxXXXX</p>
          */
         public Builder identityProviderId(String identityProviderId) {
             this.putQueryParameter("IdentityProviderId", identityProviderId);
@@ -149,7 +152,7 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +165,10 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
         }
 
         /**
-         * NetworkAccessEndpointId.
+         * <p>The network access endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>inae_public</p>
          */
         public Builder networkAccessEndpointId(String networkAccessEndpointId) {
             this.putQueryParameter("NetworkAccessEndpointId", networkAccessEndpointId);
@@ -171,7 +177,7 @@ public class ExecIdentityProviderMetadataUrlResolutionRequest extends Request {
         }
 
         /**
-         * <p>OIDC Issuer地址。</p>
+         * <p>The OIDC issuer URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://login.example.com/.well-known/openid-configuration">https://login.example.com/.well-known/openid-configuration</a></p>

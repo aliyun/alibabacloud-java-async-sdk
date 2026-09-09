@@ -128,7 +128,7 @@ public class AuthorizeApplicationToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application on which you want to grant permissions.</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class AuthorizeApplicationToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class AuthorizeApplicationToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the organizations to which you want to grant permissions. You can grant permissions to a maximum of 100 organizations at a time.</p>
+         * <p>The list of organization IDs. You can specify a maximum of 100 organization IDs per operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

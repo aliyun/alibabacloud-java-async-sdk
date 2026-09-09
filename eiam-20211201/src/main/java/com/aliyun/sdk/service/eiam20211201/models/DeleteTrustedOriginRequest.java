@@ -115,7 +115,7 @@ public class DeleteTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</p>
+         * <p>A client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. The value of ClientToken can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>
@@ -127,7 +127,7 @@ public class DeleteTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The ID of the IDaaS EIAM instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class DeleteTrustedOriginRequest extends Request {
         }
 
         /**
-         * <p>可信来源ID。</p>
+         * <p>The ID of the trusted origin.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

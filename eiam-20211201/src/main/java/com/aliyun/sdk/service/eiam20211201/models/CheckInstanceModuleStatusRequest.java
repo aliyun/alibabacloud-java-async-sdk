@@ -156,7 +156,7 @@ public class CheckInstanceModuleStatusRequest extends Request {
         }
 
         /**
-         * <p>二级模块标识</p>
+         * <p>The level-2 module identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>urn:alibaba:idaas:license:module:ud:customField</p>
@@ -168,7 +168,7 @@ public class CheckInstanceModuleStatusRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class CheckInstanceModuleStatusRequest extends Request {
         }
 
         /**
-         * <p>一级模块标识，必填</p>
+         * <p>The level-1 module identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,10 @@ public class CheckInstanceModuleStatusRequest extends Request {
         }
 
         /**
-         * ResourceLabelKey.
+         * <p>The resource label URN key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:alibaba:idaas:license:label:template:app</p>
          */
         public Builder resourceLabelKey(String resourceLabelKey) {
             this.putQueryParameter("ResourceLabelKey", resourceLabelKey);
@@ -203,7 +206,10 @@ public class CheckInstanceModuleStatusRequest extends Request {
         }
 
         /**
-         * ResourceLabelValue.
+         * <p>The resource label name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apt_ram_user_sso</p>
          */
         public Builder resourceLabelValue(String resourceLabelValue) {
             this.putQueryParameter("ResourceLabelValue", resourceLabelValue);
@@ -212,7 +218,10 @@ public class CheckInstanceModuleStatusRequest extends Request {
         }
 
         /**
-         * SubFeatureKey.
+         * <p>The level-3 module identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:alibaba:idaas:license:module:idp:alibaba:dingtalk:pull:advanced_configuration</p>
          */
         public Builder subFeatureKey(String subFeatureKey) {
             this.putQueryParameter("SubFeatureKey", subFeatureKey);

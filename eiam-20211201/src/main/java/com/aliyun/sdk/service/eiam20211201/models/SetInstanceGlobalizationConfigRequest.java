@@ -113,7 +113,7 @@ public class SetInstanceGlobalizationConfigRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class SetInstanceGlobalizationConfigRequest extends Request {
         }
 
         /**
-         * <p>语言类型</p>
+         * <p>The language type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class SetInstanceGlobalizationConfigRequest extends Request {
         }
 
         /**
-         * <p>时区</p>
+         * <p>The time zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

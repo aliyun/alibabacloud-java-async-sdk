@@ -83,7 +83,7 @@ public class ListNetworkAccessEndpointAvailableZonesRequest extends Request {
         }
 
         /**
-         * <p>专属网络端点支持的地域</p>
+         * <p>The ID of the region supported by dedicated network endpoints.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

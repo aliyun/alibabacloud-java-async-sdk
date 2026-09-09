@@ -93,7 +93,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkAccessEndpoints.
+         * <p>The list of network access endpoints.</p>
          */
         public Builder networkAccessEndpoints(java.util.List<NetworkAccessEndpoints> networkAccessEndpoints) {
             this.networkAccessEndpoints = networkAccessEndpoints;
@@ -101,7 +101,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -112,7 +112,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,7 +123,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +244,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupEgressPrivateIpAddresses.
+             * <p>The list of private egress IP addresses of the backup network access endpoint.</p>
              */
             public Builder backupEgressPrivateIpAddresses(java.util.List<String> backupEgressPrivateIpAddresses) {
                 this.backupEgressPrivateIpAddresses = backupEgressPrivateIpAddresses;
@@ -246,7 +252,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupEgressPublicIpAddresses.
+             * <p>The list of public egress IP addresses of the backup network access endpoint.</p>
              */
             public Builder backupEgressPublicIpAddresses(java.util.List<String> backupEgressPublicIpAddresses) {
                 this.backupEgressPublicIpAddresses = backupEgressPublicIpAddresses;
@@ -254,7 +260,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSecurityGroupId.
+             * <p>The security group ID of the backup network access endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-examplexxx</p>
              */
             public Builder backupSecurityGroupId(String backupSecurityGroupId) {
                 this.backupSecurityGroupId = backupSecurityGroupId;
@@ -262,7 +271,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupVSwitchIds.
+             * <p>The list of vSwitches for the backup network access endpoint.</p>
              */
             public Builder backupVSwitchIds(java.util.List<String> backupVSwitchIds) {
                 this.backupVSwitchIds = backupVSwitchIds;
@@ -270,7 +279,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupVpcId.
+             * <p>The VPC ID of the backup network access endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-examplexxx</p>
              */
             public Builder backupVpcId(String backupVpcId) {
                 this.backupVpcId = backupVpcId;
@@ -278,7 +290,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupVpcRegionId.
+             * <p>The region of the backup network access endpoint VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder backupVpcRegionId(String backupVpcRegionId) {
                 this.backupVpcRegionId = backupVpcRegionId;
@@ -475,7 +490,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupVpcEndpoint.
+             * <p>The backup network access endpoint VPC configuration.</p>
              */
             public Builder backupVpcEndpoint(BackupVpcEndpoint backupVpcEndpoint) {
                 this.backupVpcEndpoint = backupVpcEndpoint;
@@ -483,7 +498,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The creation time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -494,7 +509,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -505,7 +520,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点ID。</p>
+             * <p>The network access endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>nae_examplexxx</p>
@@ -516,10 +531,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点名称。</p>
+             * <p>The network access endpoint name. For example, the VPC access endpoint for a specific business.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx业务VPC访问端点</p>
+             * <p>VPC access endpoint for xx service</p>
              */
             public Builder networkAccessEndpointName(String networkAccessEndpointName) {
                 this.networkAccessEndpointName = networkAccessEndpointName;
@@ -527,7 +542,11 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点连接的类型。</p>
+             * <p>The type of the network access endpoint. Valid values:</p>
+             * <ul>
+             * <li>shared: shared network access endpoint.</li>
+             * <li>private: dedicated network access endpoint.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>private</p>
@@ -538,7 +557,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点使用的安全组ID。</p>
+             * <p>The security group ID used by the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-examplexxx</p>
@@ -549,7 +568,13 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点状态。</p>
+             * <p>The status of the network access endpoint. Valid values:</p>
+             * <ul>
+             * <li>pending: pending initialization.</li>
+             * <li>creating: being created.</li>
+             * <li>running: running.</li>
+             * <li>deleting: being deleted.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -560,7 +585,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The last update time of the network access endpoint. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -571,7 +596,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点连接的指定vSwitch列表。</p>
+             * <p>The list of vSwitches for the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-examplexxx</p>
@@ -582,7 +607,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点连接的VpcID。</p>
+             * <p>The VPC ID of the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-examplexxx</p>
@@ -593,7 +618,7 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点连接的Vpc所属地域。</p>
+             * <p>The region of the VPC for the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

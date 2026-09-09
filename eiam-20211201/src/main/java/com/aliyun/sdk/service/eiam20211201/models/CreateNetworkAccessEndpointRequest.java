@@ -157,7 +157,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * <p>Idempotent token.</p>
+         * <p>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>
@@ -169,7 +169,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the VPC.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,11 +182,11 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * <p>Private network endpoint name.</p>
+         * <p>Network access endpoint name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>eiam-vpc-access-endpoint</p>
+         * <p>Xx-business VPC access endpoint</p>
          */
         public Builder networkAccessEndpointName(String networkAccessEndpointName) {
             this.putQueryParameter("NetworkAccessEndpointName", networkAccessEndpointName);
@@ -195,7 +195,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * <p>The IDs of vSwitches.</p>
+         * <p>List of specified vSwitches connected to the network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-examplexxx</p>
@@ -207,7 +207,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>VPC ID connected to the network access endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class CreateNetworkAccessEndpointRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the outbound VPC.</p>
+         * <p>Region of the VPC ID connected to the network access endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance list.</p>
+         * <p>The list of instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -248,10 +248,10 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance description.</p>
+             * <p>The description of the instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>instance test</p>
+             * <p>Production environment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -259,7 +259,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private domain name of the instance Developer API.</p>
+             * <p>The private domain name of the developer API for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>eiam-developerapi-cn.vpc-proxy.aliyuncs.com</p>
@@ -270,7 +270,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public domain of the instance Developer API.</p>
+             * <p>The public domain name of the developer API for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>eiam-developerapi.cn-hangzhou.aliyuncs.com</p>
@@ -304,11 +304,6 @@ public class ListEiamInstancesResponseBody extends TeaModel {
 
             /**
              * <p>The instance version.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>EIAM 2.0</li>
-             * <li>EIAM 1.0</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>EIAM 2.0</p>
@@ -319,7 +314,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private domain of the instance OpenAPI.</p>
+             * <p>The private domain name of the OpenAPI for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>eiam-cn.vpc-proxy.aliyuncs.com</p>
@@ -330,7 +325,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public domain of the instance OpenAPI.</p>
+             * <p>The public domain name of the OpenAPI for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>eiam.cn-hangzhou.aliyuncs.com</p>
@@ -341,7 +336,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The single sign-on (SSO) domain  of the instance.</p>
+             * <p>The SSO domain name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx.aliyunidaas.com</p>

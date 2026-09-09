@@ -97,7 +97,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。重试时传入相同值可取回首次调用的完整响应，避免重复创建实例。</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Generate a parameter value from your client to ensure that the value is unique among different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length. If you retry a request with the same ClientToken value, the complete response of the initial call is returned without creating a duplicate instance.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>

@@ -67,7 +67,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Network endpoint information.</p>
+         * <p>The network access endpoint information.</p>
          */
         public Builder networkAccessEndpoint(NetworkAccessEndpoint networkAccessEndpoint) {
             this.networkAccessEndpoint = networkAccessEndpoint;
@@ -75,7 +75,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -467,7 +467,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the baseline was created.</p>
+             * <p>The time when the network access endpoint was created. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -478,8 +478,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Public egress ip address range of the dedicated network endpoint
-             * This field is returned only when NetworkEndpointType is set to private.</p>
+             * <p>The private egress IP address range of the dedicated network access endpoint. This parameter is returned only when NetworkEndpointType is set to private.</p>
              * 
              * <strong>example:</strong>
              * <p>172.168.x.x</p>
@@ -490,11 +489,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Public egress ip address range of the shared network endpoint
-             * This field is returned only when networkEndpointType is set to shared.</p>
+             * <p>The public egress IP address range of the shared network access endpoint. This parameter is returned only when NetworkEndpointType is set to shared.</p>
              * 
              * <strong>example:</strong>
-             * <p>8.xx.xx.xxx/27</p>
+             * <p>203.0.XX.XX/27</p>
              */
             public Builder egressPublicIpAddresses(java.util.List<String> egressPublicIpAddresses) {
                 this.egressPublicIpAddresses = egressPublicIpAddresses;
@@ -502,7 +500,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -513,7 +511,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the network access endpoint.</p>
+             * <p>The ID of the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>nae_examplexxx</p>
@@ -524,10 +522,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Private network endpoint name.</p>
+             * <p>The name of the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx business VPC access endpoint</p>
+             * <p>Xx-business VPC access endpoint</p>
              */
             public Builder networkAccessEndpointName(String networkAccessEndpointName) {
                 this.networkAccessEndpointName = networkAccessEndpointName;
@@ -535,10 +533,11 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type of the Network Endpoint
-             * Possible values:</p>
-             * <p>shared: Shared network endpoint</p>
-             * <p>private: Dedicated network endpoint</p>
+             * <p>The type of the network access endpoint. Valid values:</p>
+             * <ul>
+             * <li>shared: Shared network access endpoint.</li>
+             * <li>private: Dedicated network access endpoint.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>private</p>
@@ -549,7 +548,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the destination security group.</p>
+             * <p>The ID of the security group used by the dedicated network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-examplexxx</p>
@@ -560,12 +559,13 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the Network Endpoint
-             * Possible values:</p>
-             * <p>pending: Pending initialization</p>
-             * <p>creating: Being created</p>
-             * <p>running: Running</p>
-             * <p>deleting: Being deleted</p>
+             * <p>The status of the network access endpoint. Valid values:</p>
+             * <ul>
+             * <li>pending: Pending initialization.</li>
+             * <li>creating: Being created.</li>
+             * <li>running: Running.</li>
+             * <li>deleting: Being deleted.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -576,7 +576,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the endpoint was updated.</p>
+             * <p>The time when the dedicated network access endpoint was last updated. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -587,7 +587,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of specified vSwitches associated with the dedicated network endpoint connection.</p>
+             * <p>The list of vSwitches to which the dedicated network access endpoint is connected.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-examplexxx</p>
@@ -598,7 +598,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The ID of the VPC to which the dedicated network access endpoint is connected.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-examplexxx</p>
@@ -609,7 +609,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the outbound virtual private cloud (VPC).</p>
+             * <p>The region of the VPC to which the dedicated network access endpoint is connected.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

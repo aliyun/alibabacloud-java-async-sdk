@@ -67,7 +67,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationToken.
+         * <p>The application token.</p>
          */
         public Builder applicationToken(ApplicationToken applicationToken) {
             this.applicationToken = applicationToken;
@@ -75,7 +75,10 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IDaaS EIAM 应用Id</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_na2r73a65s7o4zbs7nj5gxxxx</p>
@@ -243,7 +246,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>客户端密钥</p>
+             * <p>The application token.</p>
              * 
              * <strong>example:</strong>
              * <p>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBxxxxx</p>
@@ -254,7 +257,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 客户端ID</p>
+             * <p>The application token ID.</p>
              * 
              * <strong>example:</strong>
              * <p>token_m7aso6v4efvu2otfq3jdzxxxx</p>
@@ -265,7 +268,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 客户端密钥Id</p>
+             * <p>The application token type.</p>
              * 
              * <strong>example:</strong>
              * <p>bearer_token</p>
@@ -276,7 +279,10 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the application token was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735610930000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -284,7 +290,10 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735610950000</p>
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;
@@ -292,7 +301,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The IDaaS EIAM instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ki6hd7ihir4ybawogqk6kqxxxx</p>
@@ -303,7 +312,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 客户端密钥最近使用时间</p>
+             * <p>The last used time.</p>
              * 
              * <strong>example:</strong>
              * <p>1735610930000</p>
@@ -314,7 +323,7 @@ public class ObtainApplicationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 客户端密钥状态</p>
+             * <p>The enabling status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>

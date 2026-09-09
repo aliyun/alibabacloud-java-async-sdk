@@ -67,7 +67,7 @@ public class ListDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the domain names.</p>
+         * <p>The list of domain names.</p>
          */
         public Builder domains(java.util.List<Domains> domains) {
             this.domains = domains;
@@ -131,10 +131,10 @@ public class ListDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ICP number associated with the domain name. Both the entity ICP number and website ICP number are supported.</p>
+             * <p>The ICP filing number associated with the domain name. Both entity and website ICP filing numbers are supported.</p>
              * 
              * <strong>example:</strong>
-             * <p>Zhexx-xxxxxx</p>
+             * <p>xICPxxxxxx-xx</p>
              */
             public Builder icpNumber(String icpNumber) {
                 this.icpNumber = icpNumber;
@@ -305,7 +305,10 @@ public class ListDomainsResponseBody extends TeaModel {
             } 
 
             /**
-             * BrandId.
+             * <p>The brand ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>brand_xxxx</p>
              */
             public Builder brandId(String brandId) {
                 this.brandId = brandId;
@@ -313,7 +316,7 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the domain name was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -324,7 +327,7 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the domain name is the default domain.</p>
+             * <p>Indicates whether the domain name is the default one.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -335,7 +338,7 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain.</p>
+             * <p>The domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -346,7 +349,7 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain ID.</p>
+             * <p>The domain name ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dm_examplexxxxx</p>
@@ -359,8 +362,10 @@ public class ListDomainsResponseBody extends TeaModel {
             /**
              * <p>The type of the domain name. Valid values:</p>
              * <ul>
-             * <li>system_init: an initial domain name.</li>
-             * <li>user_custom: a custom domain name.</li>
+             * <li><p>system_init: The default domain name that is generated during initialization.</p>
+             * </li>
+             * <li><p>user_custom: A custom domain name.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -372,7 +377,7 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the Internet content provider (ICP) filing of the domain name.</p>
+             * <p>The ICP filing information about the domain name.</p>
              */
             public Builder filing(Filing filing) {
                 this.filing = filing;
@@ -391,10 +396,12 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the domain name is locked. Valid values:</p>
+             * <p>The lock status of the domain name. Valid values:</p>
              * <ul>
-             * <li>unlock</li>
-             * <li>lockByLicense</li>
+             * <li><p>unlock: Normal.</p>
+             * </li>
+             * <li><p>lockByLicense: The domain name is unavailable due to license limitations.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -406,7 +413,7 @@ public class ListDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the domain name was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the domain name was last updated. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>

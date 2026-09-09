@@ -67,7 +67,10 @@ public class CreateIdentityProviderStatusCheckJobResponseBody extends TeaModel {
         } 
 
         /**
-         * IdentityProviderStatusCheckJobId.
+         * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>async_000xxxx</p>
          */
         public Builder identityProviderStatusCheckJobId(String identityProviderStatusCheckJobId) {
             this.identityProviderStatusCheckJobId = identityProviderStatusCheckJobId;
@@ -75,7 +78,10 @@ public class CreateIdentityProviderStatusCheckJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

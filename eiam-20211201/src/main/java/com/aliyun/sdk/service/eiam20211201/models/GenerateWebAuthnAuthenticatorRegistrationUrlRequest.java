@@ -112,7 +112,10 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlRequest extends Request
         }
 
         /**
-         * DomainId.
+         * <p>The domain ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dm_nfplcagj5cguo2267bkjxxxx</p>
          */
         public Builder domainId(String domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -121,7 +124,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlRequest extends Request
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +137,7 @@ public class GenerateWebAuthnAuthenticatorRegistrationUrlRequest extends Request
         }
 
         /**
-         * <p>UserID</p>
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

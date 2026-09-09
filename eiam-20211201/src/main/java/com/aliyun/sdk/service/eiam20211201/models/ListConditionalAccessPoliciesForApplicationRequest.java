@@ -98,7 +98,7 @@ public class ListConditionalAccessPoliciesForApplicationRequest extends Request 
         }
 
         /**
-         * <p>条件访问策略关联的应用ID</p>
+         * <p>Application ID associated with the conditional access policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class ListConditionalAccessPoliciesForApplicationRequest extends Request 
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

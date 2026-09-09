@@ -140,7 +140,7 @@ public class ListApplicationsForNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class ListApplicationsForNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>分页查询时每页行数。默认值为20，最大值为100。</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -165,7 +165,7 @@ public class ListApplicationsForNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>应用关联的网络范围ID</p>
+         * <p>The ID of the network zone associated with the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class ListApplicationsForNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxxxexample</p>
@@ -190,7 +190,7 @@ public class ListApplicationsForNetworkZoneRequest extends Request {
         }
 
         /**
-         * <p>查询上一页凭证（Token），取值为上一次API调用返回的previousToken参数值。</p>
+         * <p>The pagination token for the previous page.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxxxexample</p>

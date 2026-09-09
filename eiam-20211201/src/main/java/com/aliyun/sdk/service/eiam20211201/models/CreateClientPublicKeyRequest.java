@@ -143,7 +143,7 @@ public class CreateClientPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用ClientpublicKey算法类型</p>
+         * <p>The algorithm type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +156,7 @@ public class CreateClientPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用资源ID。</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +169,7 @@ public class CreateClientPublicKeyRequest extends Request {
         }
 
         /**
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +182,7 @@ public class CreateClientPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +195,7 @@ public class CreateClientPublicKeyRequest extends Request {
         }
 
         /**
-         * <p>应用ClientpublicKey的公钥，只接收 PEM 格式</p>
+         * <p>The public key in PEM format. The key must be of the SPKI type, starting with &quot;-----BEGIN PUBLIC KEY-----&quot; and ending with &quot;-----END PUBLIC KEY-----&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -78,7 +78,7 @@ public class RunSynchronizationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the synchronization job.</p>
+         * <p>The ID of the synchronization task.</p>
          * 
          * <strong>example:</strong>
          * <p>sync_0000347vjovtcf41li0fgsd98gn24q9nj9xxxxx</p>

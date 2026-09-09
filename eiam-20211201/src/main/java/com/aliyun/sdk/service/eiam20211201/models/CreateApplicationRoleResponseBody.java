@@ -67,7 +67,10 @@ public class CreateApplicationRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationRoleId.
+         * <p>The application role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>approle_01kghbvoptu5262q35aalvq7cxxxx</p>
          */
         public Builder applicationRoleId(String applicationRoleId) {
             this.applicationRoleId = applicationRoleId;
@@ -75,7 +78,10 @@ public class CreateApplicationRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

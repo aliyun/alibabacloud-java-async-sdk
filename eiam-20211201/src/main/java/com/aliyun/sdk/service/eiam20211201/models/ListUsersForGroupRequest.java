@@ -166,7 +166,7 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number. The default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +178,7 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20. Maximum value: 100.</p>
+         * <p>The number of entries per page. The default value is 20. The maximum value is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -190,7 +190,7 @@ public class ListUsersForGroupRequest extends Request {
         }
 
         /**
-         * <p>The account IDs. A maximum of 100 accounts can be queried.</p>
+         * <p>A list of account IDs. The list can contain a maximum of 100 IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[ou_001]</p>

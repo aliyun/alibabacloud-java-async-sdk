@@ -67,7 +67,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The instance information.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -75,7 +75,10 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>二级模块标识</p>
+             * <p>The identifier of the second-level module.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:license:module:application:standard:oidc</p>
@@ -152,7 +155,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>二级模块状态</p>
+             * <p>The status of the second-level module.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -235,7 +238,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>二级模块信息</p>
+             * <p>The second-level module information.</p>
              */
             public Builder features(java.util.List<Features> features) {
                 this.features = features;
@@ -243,7 +246,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>模块状态</p>
+             * <p>The identifier of the first-level module.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:license:module:application</p>
@@ -254,7 +257,7 @@ public class GetInstanceModuleInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>一级模块状态</p>
+             * <p>The status of the first-level module.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>

@@ -127,7 +127,10 @@ public class UpdateNetworkZoneDescriptionRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client token. It is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-examplexxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,11 +139,11 @@ public class UpdateNetworkZoneDescriptionRequest extends Request {
         }
 
         /**
-         * <p>网络区域描述</p>
+         * <p>The description of the network zone.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试描述</p>
+         * <p>Test description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -149,7 +152,7 @@ public class UpdateNetworkZoneDescriptionRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,11 +165,11 @@ public class UpdateNetworkZoneDescriptionRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的网络区域主键id</p>
+         * <p>The network zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>network_11111</p>
+         * <p>network_m5wsaclfvfrf5623xnirgxxxxx</p>
          */
         public Builder networkZoneId(String networkZoneId) {
             this.putQueryParameter("NetworkZoneId", networkZoneId);

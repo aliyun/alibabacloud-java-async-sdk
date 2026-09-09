@@ -214,7 +214,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Idempotent token.</p>
+         * <p>Idempotency token.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-example</p>
@@ -226,11 +226,11 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Conditional access policy name</p>
+         * <p>Conditional access policy name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>My Conditional Access Policy</p>
+         * <p>My conditional access policy</p>
          */
         public Builder conditionalAccessPolicyName(String conditionalAccessPolicyName) {
             this.putQueryParameter("ConditionalAccessPolicyName", conditionalAccessPolicyName);
@@ -239,8 +239,8 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Type of the conditional access policy, with the following options:</p>
-         * <p>arn:alibaba:idaas:authn:access:policy:system: System policy.</p>
+         * <p>Conditional access policy type. Valid values:</p>
+         * <p>arn:alibaba:idaas:authn:access:policy:system: system policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Condition content configuration for the conditional access policy</p>
+         * <p>Conditional access policy condition configuration.</p>
          */
         public Builder conditionsConfig(ConditionsConfig conditionsConfig) {
             this.putQueryParameter("ConditionsConfig", conditionsConfig);
@@ -262,7 +262,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Action configuration for the conditional access policy</p>
+         * <p>Conditional access policy action configuration.</p>
          */
         public Builder decisionConfig(DecisionConfig decisionConfig) {
             this.putQueryParameter("DecisionConfig", decisionConfig);
@@ -271,8 +271,8 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Execution type of the conditional access policy, with the following options:</p>
-         * <p>enforcement: Enforce the policy.</p>
+         * <p>Conditional access policy execution type. Valid values:</p>
+         * <p>enforcement: enforcement policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,10 +285,10 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Description of the conditional access policy</p>
+         * <p>Conditional access policy description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test Description</p>
+         * <p>Test description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -297,9 +297,9 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Execution point of the conditional access policy, with the following options:</p>
+         * <p>Conditional access policy evaluation point. Valid values:</p>
          * <ul>
-         * <li>arn:alibaba:idaas:authn:access:rule:eval_at:after_step1: Allow.</li>
+         * <li>arn:alibaba:idaas:authn:access:rule:eval_at:after_step1: allow.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -326,9 +326,9 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         }
 
         /**
-         * <p>Priority of the conditional access policy, lower values indicate higher priority
-         * Minimum value: 1
-         * Maximum value: 100</p>
+         * <p>Conditional access policy priority. A smaller value indicates a higher priority.
+         * Minimum value: 1.
+         * Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -399,7 +399,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Excluded applications</p>
+             * <p>Excluded applications.</p>
              */
             public Builder excludeApplications(java.util.List<String> excludeApplications) {
                 this.excludeApplications = excludeApplications;
@@ -407,7 +407,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Included applications</p>
+             * <p>Included applications.</p>
              */
             public Builder includeApplications(java.util.List<String> includeApplications) {
                 this.includeApplications = includeApplications;
@@ -474,7 +474,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Excluded network zones</p>
+             * <p>Excluded network zones.</p>
              */
             public Builder excludeNetworkZones(java.util.List<String> excludeNetworkZones) {
                 this.excludeNetworkZones = excludeNetworkZones;
@@ -482,7 +482,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Included network zones</p>
+             * <p>Included network zones.</p>
              */
             public Builder includeNetworkZones(java.util.List<String> includeNetworkZones) {
                 this.includeNetworkZones = includeNetworkZones;
@@ -601,7 +601,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Excluded user groups</p>
+             * <p>Excluded user groups.</p>
              */
             public Builder excludeGroups(java.util.List<String> excludeGroups) {
                 this.excludeGroups = excludeGroups;
@@ -609,7 +609,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Excluded organizations</p>
+             * <p>Excluded organizational units.</p>
              */
             public Builder excludeOrganizationalUnits(java.util.List<String> excludeOrganizationalUnits) {
                 this.excludeOrganizationalUnits = excludeOrganizationalUnits;
@@ -617,7 +617,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Excluded users</p>
+             * <p>Excluded users.</p>
              */
             public Builder excludeUsers(java.util.List<String> excludeUsers) {
                 this.excludeUsers = excludeUsers;
@@ -625,7 +625,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Included user groups</p>
+             * <p>Included user groups.</p>
              */
             public Builder includeGroups(java.util.List<String> includeGroups) {
                 this.includeGroups = includeGroups;
@@ -633,7 +633,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Included organizations</p>
+             * <p>Included organizational units.</p>
              */
             public Builder includeOrganizationalUnits(java.util.List<String> includeOrganizationalUnits) {
                 this.includeOrganizationalUnits = includeOrganizationalUnits;
@@ -641,7 +641,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Selected user</p>
+             * <p>Included users.</p>
              */
             public Builder includeUsers(java.util.List<String> includeUsers) {
                 this.includeUsers = includeUsers;
@@ -721,7 +721,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Target applications for the conditional access policy</p>
+             * <p>Conditional access policy target applications.</p>
              */
             public Builder applications(Applications applications) {
                 this.applications = applications;
@@ -729,7 +729,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Network zones for conditional access policy</p>
+             * <p>Conditional access policy network zones.</p>
              */
             public Builder networkZones(NetworkZones networkZones) {
                 this.networkZones = networkZones;
@@ -737,7 +737,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Target users of the conditional access policy</p>
+             * <p>Conditional access policy target users.</p>
              */
             public Builder users(Users users) {
                 this.users = users;
@@ -843,7 +843,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Whether to enable session reuse</p>
+             * <p>Specifies whether to enable session reuse.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -854,10 +854,10 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Decision action for the conditional access policy, with the following options:</p>
+             * <p>Conditional access policy decision action. Valid values:</p>
              * <ul>
-             * <li>allow: Allow.</li>
-             * <li>deny: Deny.</li>
+             * <li>allow: allow.</li>
+             * <li>deny: deny.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -869,10 +869,10 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Re-authentication interval (in seconds) for the conditional access policy</p>
+             * <p>Conditional access policy re-authentication interval (seconds).</p>
              * <ul>
-             * <li>Maximum MFA re-authentication interval: 86400</li>
-             * <li>Minimum MFA re-authentication interval: 300</li>
+             * <li>Maximum MFA authentication interval: 86400.</li>
+             * <li>Minimum MFA authentication interval: 300.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -884,12 +884,12 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>Allowed MFA types for the conditional access policy, with the following options:</p>
+             * <p>MFA types allowed by the conditional access policy. Valid values:</p>
              * <ul>
-             * <li>ia_otp_sms: SMS verification code</li>
-             * <li>ia_otp_email: Email verification code</li>
-             * <li>ia_totp: OTP dynamic password</li>
-             * <li>ia_webauthn: WebAuthn</li>
+             * <li>ia_otp_sms: SMS verification code.</li>
+             * <li>ia_otp_email: email verification code.</li>
+             * <li>ia_totp: OTP dynamic password.</li>
+             * <li>ia_webauthn: WebAuthn.</li>
              * </ul>
              */
             public Builder mfaAuthenticationMethods(java.util.List<String> mfaAuthenticationMethods) {
@@ -898,10 +898,10 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             }
 
             /**
-             * <p>MFA type for the conditional access policy, with the following options:</p>
+             * <p>Conditional access policy MFA type. Valid values:</p>
              * <ul>
-             * <li>directly_access: Direct access</li>
-             * <li>mfa_required: MFA required</li>
+             * <li>directly_access: direct access.</li>
+             * <li>mfa_required: MFA required.</li>
              * </ul>
              * 
              * <strong>example:</strong>

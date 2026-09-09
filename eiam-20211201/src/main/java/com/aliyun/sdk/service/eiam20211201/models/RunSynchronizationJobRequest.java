@@ -170,10 +170,10 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>Synchronization task description</p>
+         * <p>The description of the synchronization task.</p>
          * 
          * <strong>example:</strong>
-         * <p>描述</p>
+         * <p>description_text</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -195,7 +195,7 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>Whether initialize password</p>
+         * <p>Specifies whether to initialize the password.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -207,7 +207,7 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>Synchronization scope</p>
+         * <p>The configuration of the synchronization scope.</p>
          */
         public Builder synchronizationScopeConfig(SynchronizationScopeConfig synchronizationScopeConfig) {
             this.putQueryParameter("SynchronizationScopeConfig", synchronizationScopeConfig);
@@ -216,7 +216,7 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization destination.</p>
+         * <p>The ID of the synchronization target.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,10 +229,12 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>The type of the synchronization destination. Valid values:</p>
+         * <p>The type of the synchronization target. Valid values:</p>
          * <ul>
-         * <li>identity_provider</li>
-         * <li>application</li>
+         * <li><p>identity_provider: The identity provider.</p>
+         * </li>
+         * <li><p>application: The application.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -246,7 +248,7 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>User identity types</p>
+         * <p>The list of unique user identifiers.</p>
          */
         public Builder userIdentityTypes(java.util.List<String> userIdentityTypes) {
             this.putQueryParameter("UserIdentityTypes", userIdentityTypes);
@@ -327,7 +329,7 @@ public class RunSynchronizationJobRequest extends Request {
             } 
 
             /**
-             * <p>The group IDs.</p>
+             * <p>The list of group IDs.</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -335,7 +337,7 @@ public class RunSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The IDs of organizational units.</p>
+             * <p>The list of organizational unit IDs.</p>
              */
             public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
                 this.organizationalUnitIds = organizationalUnitIds;
@@ -343,7 +345,7 @@ public class RunSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>UserIds</p>
+             * <p>The list of user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

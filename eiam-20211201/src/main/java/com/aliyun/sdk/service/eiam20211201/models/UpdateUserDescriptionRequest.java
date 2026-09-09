@@ -113,7 +113,7 @@ public class UpdateUserDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The description of the account. The value can be up to 256 characters in length.</p>
+         * <p>The description. The maximum length is 256 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a test.</p>
@@ -138,7 +138,7 @@ public class UpdateUserDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account.</p>
+         * <p>The ID of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

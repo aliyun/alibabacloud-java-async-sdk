@@ -119,7 +119,7 @@ public class ListBrandsResponseBody extends TeaModel {
         } 
 
         /**
-         * Brands.
+         * <p>The list of brand data.</p>
          */
         public Builder brands(java.util.List<Brands> brands) {
             this.brands = brands;
@@ -127,7 +127,7 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of entries per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -138,7 +138,7 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -149,7 +149,7 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+         * <p>The pagination token returned by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -160,7 +160,10 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -168,7 +171,10 @@ public class ListBrandsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -299,7 +305,7 @@ public class ListBrandsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>品牌ID</p>
+             * <p>The brand ID.</p>
              * 
              * <strong>example:</strong>
              * <p>brand_xxxx</p>
@@ -310,7 +316,7 @@ public class ListBrandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>品牌名称</p>
+             * <p>The brand name.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom Brand</p>
@@ -321,7 +327,7 @@ public class ListBrandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>品牌类型</p>
+             * <p>The brand type.</p>
              * 
              * <strong>example:</strong>
              * <p>user_custom</p>
@@ -332,7 +338,7 @@ public class ListBrandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -343,7 +349,10 @@ public class ListBrandsResponseBody extends TeaModel {
             }
 
             /**
-             * SmsGatewayId.
+             * <p>The SMS gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smsgw_01l9f0kunrrjhxxx</p>
              */
             public Builder smsGatewayId(String smsGatewayId) {
                 this.smsGatewayId = smsGatewayId;
@@ -351,7 +360,7 @@ public class ListBrandsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>品牌状态</p>
+             * <p>The brand status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -362,7 +371,10 @@ public class ListBrandsResponseBody extends TeaModel {
             }
 
             /**
-             * SystemNotificationStatus.
+             * <p>The enabling status of system notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder systemNotificationStatus(String systemNotificationStatus) {
                 this.systemNotificationStatus = systemNotificationStatus;

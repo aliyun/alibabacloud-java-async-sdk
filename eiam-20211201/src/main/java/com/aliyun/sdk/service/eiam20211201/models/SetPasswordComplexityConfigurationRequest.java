@@ -126,7 +126,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * DisabledWeakPasswordLogin.
+         * <p>Specifies whether to disable logon with a weak password.</p>
          */
         public Builder disabledWeakPasswordLogin(Boolean disabledWeakPasswordLogin) {
             this.putQueryParameter("DisabledWeakPasswordLogin", disabledWeakPasswordLogin);
@@ -148,7 +148,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The password complexity rules.</p>
+         * <p>The list of password complexity rules.</p>
          */
         public Builder passwordComplexityRules(java.util.List<PasswordComplexityRules> passwordComplexityRules) {
             this.putQueryParameter("PasswordComplexityRules", passwordComplexityRules);
@@ -157,7 +157,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of characters in a password.</p>
+         * <p>The minimum password length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,16 +217,24 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The type of the password check. Valid values:</p>
+             * <p>The password check type. Valid values:</p>
              * <ul>
-             * <li>inclusion_upper_case: The password must contain uppercase letters.</li>
-             * <li>inclusion_lower_case: The password must contain lowercase letters.</li>
-             * <li>inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / &quot; ! # $ ^ ? : , ( ) { } [ ] ~ - _ .</li>
-             * <li>inclusion_number: The password must contain digits.</li>
-             * <li>exclusion_username: The password cannot contain a username.</li>
-             * <li>exclusion_email: The password cannot contain an email prefix.</li>
-             * <li>exclusion_phone_number: The password cannot contain a mobile number.</li>
-             * <li>exclusion_display_name: The password cannot contain a display name.</li>
+             * <li><p>inclusion_upper_case: The password must contain uppercase letters.</p>
+             * </li>
+             * <li><p>inclusion_lower_case: The password must contain lowercase letters.</p>
+             * </li>
+             * <li><p>inclusion_special_case: The password must contain special characters. The special characters are \<code>( @ % + \\ / \\&quot; ! # $ ^ ? : , ( ) { } [ ] \\~ - _ . )\\</code>.</p>
+             * </li>
+             * <li><p>inclusion_number: The password must contain digits.</p>
+             * </li>
+             * <li><p>exclusion_username: The password cannot contain the username.</p>
+             * </li>
+             * <li><p>exclusion_email: The password cannot contain the mailbox.</p>
+             * </li>
+             * <li><p>exclusion_phone_number: The password cannot contain the phone number.</p>
+             * </li>
+             * <li><p>exclusion_display_name: The password cannot contain the display name.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -303,10 +303,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>Displayname</p>
+         * <p>The display name prefix. A left-match query is used.</p>
          * 
          * <strong>example:</strong>
-         * <p>name_001</p>
+         * <p>name</p>
          */
         public Builder displayNameStartsWith(String displayNameStartsWith) {
             this.putQueryParameter("DisplayNameStartsWith", displayNameStartsWith);
@@ -315,7 +315,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The email address of the user who owns the account.</p>
+         * <p>The email address of the account.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:user@example.com">user@example.com</a></p>
@@ -327,7 +327,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +340,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -349,7 +352,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxxxexample</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -358,7 +364,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the organizational unit.</p>
+         * <p>The organizational unit ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -370,7 +376,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -382,7 +388,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -394,7 +400,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The mobile number of the user who owns the account.</p>
+         * <p>The phone number of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>156xxxxxxx</p>
@@ -406,7 +412,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</p>
+         * <p>The phone region code. Example: The region code for the Chinese mainland is 86, without the 00 or + prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -418,10 +424,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The status of the account. Valid values:</p>
+         * <p>The account status. Valid values:</p>
          * <ul>
-         * <li>enabled: The account is enabled.</li>
-         * <li>disabled: The account is disabled.</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -434,8 +440,8 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM.</p>
-         * <p>For accounts with the same source type and source ID, each account has a unique external ID.</p>
+         * <p>The external ID, which is used to associate external data with IDaaS accounts.</p>
+         * <p>Note: The external ID must be unique within the same source type and source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>id_wovwffm62xifdziem7an7xxxxx</p>
@@ -447,7 +453,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>User ID set</p>
+         * <p>The list of account IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder userIds(java.util.List<String> userIds) {
             this.putQueryParameter("UserIds", userIds);
@@ -457,7 +466,7 @@ public class ListUsersRequest extends Request {
 
         /**
          * <p>The source ID of the account.</p>
-         * <p>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</p>
+         * <p>For self-built accounts, the default value is the instance ID. For other types, the value corresponds to the enterprise ID of the respective source. For example, for a DingTalk source, the value corresponds to the corpId of the DingTalk enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -471,10 +480,11 @@ public class ListUsersRequest extends Request {
         /**
          * <p>The source type of the account. Valid values:</p>
          * <ul>
-         * <li>build_in: The account was created in IDaaS.</li>
-         * <li>ding_talk: The account was imported from DingTalk.</li>
-         * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
-         * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * <li>build_in: self-built.</li>
+         * <li>ding_talk: imported from DingTalk.</li>
+         * <li>ad: imported from AD.</li>
+         * <li>ldap: imported from LDAP.</li>
+         * <li>we_com: imported from WeCom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,7 +497,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>Username</p>
+         * <p>The username prefix. A left-match query is used.</p>
          * 
          * <strong>example:</strong>
          * <p>name_001</p>

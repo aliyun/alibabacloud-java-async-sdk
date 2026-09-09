@@ -67,7 +67,10 @@ public class CreateCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * CredentialId.
+         * <p>The credential ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cred_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder credentialId(String credentialId) {
             this.credentialId = credentialId;
@@ -75,7 +78,10 @@ public class CreateCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

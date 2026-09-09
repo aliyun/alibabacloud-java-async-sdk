@@ -106,7 +106,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Groups.
+         * <p>The list of groups.</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -114,7 +114,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -125,7 +125,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The token that is returned for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -136,7 +136,10 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +147,10 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -210,7 +216,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>授权生效结束时间。</p>
+             * <p>The end time of the validity period. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1704042061000</p>
@@ -221,7 +227,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权生效开始时间。</p>
+             * <p>The start time of the validity period. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1704042061000</p>
@@ -317,7 +323,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>组标识。</p>
+             * <p>The group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>group_d6sbsuumeta4h66ec3il7yxxxx</p>
@@ -328,7 +334,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -339,7 +345,7 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>有效周期。</p>
+             * <p>The time range of the validity period. This parameter takes effect only when <strong>ValidityType</strong> is set to <strong>time_bound</strong>.</p>
              */
             public Builder validityPeriod(ValidityPeriod validityPeriod) {
                 this.validityPeriod = validityPeriod;
@@ -347,7 +353,13 @@ public class ListGroupsForAuthorizationRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>有效期类型，枚举值：permanent（永久），time_bound（自定义时间范围）。</p>
+             * <p>The type of the validity period of the relationship. Valid values:</p>
+             * <ul>
+             * <li><p>permanent: permanent</p>
+             * </li>
+             * <li><p>time_bound: custom time range</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>permanent</p>

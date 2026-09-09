@@ -67,7 +67,10 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
         }
 
         /**
-         * UdPushConfiguration.
+         * <p>Outbound synchronization configuration</p>
          */
         public Builder udPushConfiguration(UdPushConfiguration udPushConfiguration) {
             this.udPushConfiguration = udPushConfiguration;
@@ -180,7 +183,10 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * OrganizationUnitObjectClass.
+             * <p>Organization ObjectClass</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou,top</p>
              */
             public Builder organizationUnitObjectClass(String organizationUnitObjectClass) {
                 this.organizationUnitObjectClass = organizationUnitObjectClass;
@@ -188,7 +194,10 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * OrganizationalUnitRdn.
+             * <p>Organization RDN</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou</p>
              */
             public Builder organizationalUnitRdn(String organizationalUnitRdn) {
                 this.organizationalUnitRdn = organizationalUnitRdn;
@@ -196,7 +205,10 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * PasswordSyncStatus.
+             * <p>Password synchronization status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder passwordSyncStatus(String passwordSyncStatus) {
                 this.passwordSyncStatus = passwordSyncStatus;
@@ -204,7 +216,10 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * UserObjectClass.
+             * <p>User ObjectClass</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user,top</p>
              */
             public Builder userObjectClass(String userObjectClass) {
                 this.userObjectClass = userObjectClass;
@@ -212,7 +227,10 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * UserRdn.
+             * <p>User RDN</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder userRdn(String userRdn) {
                 this.userRdn = userRdn;
@@ -292,7 +310,10 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * PeriodicSyncCron.
+             * <p>Cron expression</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 45 1 * * ?</p>
              */
             public Builder periodicSyncCron(String periodicSyncCron) {
                 this.periodicSyncCron = periodicSyncCron;
@@ -300,7 +321,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * PeriodicSyncTimes.
+             * <p>Collection of time points</p>
              */
             public Builder periodicSyncTimes(java.util.List<String> periodicSyncTimes) {
                 this.periodicSyncTimes = periodicSyncTimes;
@@ -308,7 +329,10 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * PeriodicSyncType.
+             * <p>Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
              */
             public Builder periodicSyncType(String periodicSyncType) {
                 this.periodicSyncType = periodicSyncType;
@@ -375,7 +399,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * <p>同步来源节点</p>
+             * <p>Source nodes for synchronization</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -383,7 +407,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>同步目标节点</p>
+             * <p>Target node for synchronization</p>
              * 
              * <strong>example:</strong>
              * <p>604352338</p>
@@ -518,7 +542,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             } 
 
             /**
-             * <p>IDaaS EIAM 身份提供方ID</p>
+             * <p>Identity provider ID</p>
              * 
              * <strong>example:</strong>
              * <p>idp_na2rzpyc67zr7ixdfy35zgrxxx</p>
@@ -529,7 +553,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+             * <p>Incremental callback status. Indicates whether incremental callback data from the IdP is processed.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -540,7 +564,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>Instance ID</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_7vdv3olzk36gymwtlaq6fixxxx</p>
@@ -551,7 +575,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * LdapUdPushConfig.
+             * <p>LDAP synchronization-side configuration</p>
              */
             public Builder ldapUdPushConfig(LdapUdPushConfig ldapUdPushConfig) {
                 this.ldapUdPushConfig = ldapUdPushConfig;
@@ -559,7 +583,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * PeriodicSyncConfig.
+             * <p>Periodic verification configuration</p>
              */
             public Builder periodicSyncConfig(PeriodicSyncConfig periodicSyncConfig) {
                 this.periodicSyncConfig = periodicSyncConfig;
@@ -567,7 +591,10 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * PeriodicSyncStatus.
+             * <p>Periodic verification status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder periodicSyncStatus(String periodicSyncStatus) {
                 this.periodicSyncStatus = periodicSyncStatus;
@@ -575,7 +602,7 @@ public class GetIdentityProviderUdPushConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>同步出配置信息</p>
+             * <p>Outbound synchronization configuration details</p>
              */
             public Builder udSyncScopeConfigs(java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs) {
                 this.udSyncScopeConfigs = udSyncScopeConfigs;

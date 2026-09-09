@@ -67,7 +67,7 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the instance.</p>
+         * <p>The instance information.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -144,7 +144,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint of the instance.</p>
+             * <p>The domain name of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>example-xxx.aliyunidaas.com</p>
@@ -155,10 +155,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the endpoint. Valid values:</p>
+             * <p>The status of the instance domain name. Valid values:</p>
              * <ul>
-             * <li>resolved</li>
-             * <li>unresolved</li>
+             * <li>resolved: Resolved.</li>
+             * <li>unresolved: Not resolved.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -242,10 +242,10 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The default domain of the instance.</p>
+             * <p>The default domain name of the instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>example-xxx.example.com</p>
+             * <p>login.example.com</p>
              */
             public Builder defaultDomain(String defaultDomain) {
                 this.defaultDomain = defaultDomain;
@@ -253,10 +253,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The init domain of the instance.</p>
+             * <p>The initialization domain name of the instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>example-xxx.aliyunidaas.com</p>
+             * <p>rx72nxxx.example.com</p>
              */
             public Builder initDomain(String initDomain) {
                 this.initDomain = initDomain;
@@ -264,14 +264,16 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Valid values:</p>
+             * <p>The automatic redirect status of the initialization domain name. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>enabled: Enabled.</p>
+             * </li>
+             * <li><p>disabled: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>disabled</p>
              */
             public Builder initDomainAutoRedirectStatus(String initDomainAutoRedirectStatus) {
                 this.initDomainAutoRedirectStatus = initDomainAutoRedirectStatus;
@@ -619,7 +621,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1550115455000</p>
@@ -646,7 +648,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default endpoint of the instance.</p>
+             * <p>The default domain name of the instance. This field is no longer maintained. Use the DomainConfig fields or refer to the query domain name list operation instead.</p>
              */
             public Builder defaultEndpoint(DefaultEndpoint defaultEndpoint) {
                 this.defaultEndpoint = defaultEndpoint;
@@ -657,7 +659,7 @@ public class GetInstanceResponseBody extends TeaModel {
              * <p>The description of the instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>test_description</p>
+             * <p>instance_for_test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -665,7 +667,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default domain of the instance.</p>
+             * <p>The domain name configuration of the instance.</p>
              */
             public Builder domainConfig(DomainConfig domainConfig) {
                 this.domainConfig = domainConfig;
@@ -673,7 +675,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound public CIDR blocks of the instance. For example, when you synchronize Active Directory (AD) accounts, the IDaaS EIAM instance accesses your AD service by using the outbound public CIDR blocks.</p>
+             * <p>The public egress CIDR blocks of the instance. For example, during Active Directory (AD) account synchronization, the EIAM instance accesses your AD server through these public CIDR blocks.</p>
              */
             public Builder egressAddresses(java.util.List<String> egressAddresses) {
                 this.egressAddresses = egressAddresses;
@@ -700,7 +702,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ManagedServiceCode.
+             * <p>The ServiceCode of the Alibaba Cloud service that manages the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sase</p>
              */
             public Builder managedServiceCode(String managedServiceCode) {
                 this.managedServiceCode = managedServiceCode;
@@ -716,7 +721,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceManaged.
+             * <p>Indicates whether the instance is managed by an Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder serviceManaged(Boolean serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -724,10 +732,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li>creating</li>
-             * <li>running</li>
+             * <li>creating: Being created.</li>
+             * <li>running: Running.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -120,7 +120,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>分页查询时每页行数。</p>
+         * <p>The maximum number of entries returned on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -131,7 +131,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
+         * <p>The token to retrieve the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxxexample</p>
@@ -142,7 +142,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</p>
+         * <p>The token to retrieve the previous page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>PTxxxexample</p>
@@ -153,7 +153,10 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +164,10 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -169,7 +175,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
         }
 
         /**
-         * UserAuthnSourceMappings.
+         * <p>A list of bindings for third-party account logons.</p>
          */
         public Builder userAuthnSourceMappings(java.util.List<UserAuthnSourceMappings> userAuthnSourceMappings) {
             this.userAuthnSourceMappings = userAuthnSourceMappings;
@@ -313,7 +319,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>来源Idp类型</p>
+             * <p>The authentication source type.</p>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:authntype:oidc</p>
@@ -324,7 +330,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间</p>
+             * <p>The time when the binding was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1762309642177</p>
@@ -335,7 +341,10 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalData.
+             * <p>Information about the associated third-party account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;userId\&quot;:\&quot;xxxx\&quot;,\&quot;name\&quot;:\&quot;xxx\&quot;,\&quot;bindTime\&quot;:\&quot;1766050298872\&quot;,\&quot;description\&quot;:\&quot;bind request id: reqpre_xxx\&quot;}</p>
              */
             public Builder externalData(String externalData) {
                 this.externalData = externalData;
@@ -343,7 +352,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>来源Idp Id</p>
+             * <p>The source IdP ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idp_my664lwkhpicbyzirog3xxxxx</p>
@@ -354,7 +363,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例Id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -365,7 +374,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最近一次更新时间</p>
+             * <p>The time when the binding was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1762309642177</p>
@@ -376,7 +385,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>外部ID</p>
+             * <p>The external ID.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxxx</p>
@@ -387,7 +396,7 @@ public class ListUserAuthnSourceMappingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户ID</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>user_ue2jvisn35exxxxx</p>

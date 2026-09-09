@@ -125,7 +125,10 @@ public class ListIdentityProvidersRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>The direction of the identity provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pull</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -134,7 +137,7 @@ public class ListIdentityProvidersRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +150,7 @@ public class ListIdentityProvidersRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>Page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -159,7 +162,7 @@ public class ListIdentityProvidersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>Page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

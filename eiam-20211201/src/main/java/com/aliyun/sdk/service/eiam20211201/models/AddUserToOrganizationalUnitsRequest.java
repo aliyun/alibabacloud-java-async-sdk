@@ -126,7 +126,7 @@ public class AddUserToOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>The organization IDs. You can add an account to a maximum of 100 organizations.</p>
+         * <p>The list of organization IDs. The list can contain up to 100 elements.</p>
          * <p>This parameter is required.</p>
          */
         public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {

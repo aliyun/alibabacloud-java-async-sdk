@@ -67,7 +67,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * ClientPublicKey.
+         * <p>The application ClientPublicKey information.</p>
          */
         public Builder clientPublicKey(ClientPublicKey clientPublicKey) {
             this.clientPublicKey = clientPublicKey;
@@ -75,7 +75,10 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>IDaaS EIAM 应用公私钥对算法类型 rsa2048、ecc256</p>
+             * <p>The algorithm type.</p>
              * 
              * <strong>example:</strong>
              * <p>RSA-2048</p>
@@ -243,7 +246,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 应用Id</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -254,7 +257,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 应用公私钥对Id</p>
+             * <p>The ID of the application ClientPublicKey.</p>
              * 
              * <strong>example:</strong>
              * <p>KEYEqDnDJhztiEAwSin7MZoxGcihzCAuxxxx</p>
@@ -265,7 +268,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 应用公私钥对创建时间</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1731305755000</p>
@@ -276,7 +279,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -287,7 +290,10 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * LastUsedTime.
+             * <p>The last time the key pair was used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1771305755000</p>
              */
             public Builder lastUsedTime(Long lastUsedTime) {
                 this.lastUsedTime = lastUsedTime;
@@ -295,7 +301,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 应用当前是否为首要使用的公私钥对</p>
+             * <p>Indicates whether the key pair is used with priority.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -306,7 +312,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 应用公钥</p>
+             * <p>The public key.</p>
              * 
              * <strong>example:</strong>
              * <p>-----BEGIN PUBLIC KEY-----
@@ -325,7 +331,7 @@ public class GetClientPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 应用公私钥对状态</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>

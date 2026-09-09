@@ -143,7 +143,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,10 +156,10 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable forcible password change upon first logon. Valid values:</p>
+         * <p>The password forced update status. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The methods for receiving password initialization notifications.</p>
+         * <p>The list of password initialization notification channels.</p>
          * 
          * <strong>example:</strong>
          * <p>email</p>
@@ -184,10 +184,10 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable password initialization. Valid values:</p>
+         * <p>The password initialization configuration status. Valid values:</p>
          * <ul>
-         * <li>enabled</li>
-         * <li>disabled</li>
+         * <li>enabled: Enabled.</li>
+         * <li>disabled: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -201,9 +201,9 @@ public class SetPasswordInitializationConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Set the value to random.</p>
+         * <p>The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Valid values:</p>
          * <ul>
-         * <li>random: A randomly generated password is used.</li>
+         * <li>random: Random.</li>
          * </ul>
          * 
          * <strong>example:</strong>

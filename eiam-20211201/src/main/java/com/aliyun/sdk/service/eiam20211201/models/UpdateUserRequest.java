@@ -217,7 +217,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The custom extended fields.</p>
+         * <p>The list of custom field objects.</p>
          */
         public Builder customFields(java.util.List<CustomFields> customFields) {
             this.putQueryParameter("CustomFields", customFields);
@@ -226,7 +226,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The display name of the account. The display name can be up to 64 characters in length.</p>
+         * <p>The display name of the account. The name can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>test_name</p>
@@ -238,7 +238,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The email address. The prefix of the email address can contain uppercase letters, lowercase letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:example@example.com">example@example.com</a></p>
@@ -250,7 +250,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the email address is verified. This parameter must be specified if you specify Email. You can set this parameter to true if you have no special business requirements.</p>
+         * <p>Specifies whether the email address is verified. This parameter is required if an email address is specified. If no special business requirements exist, set this parameter to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -275,7 +275,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The mobile number. The mobile number must be 6 to 15 digits in length.</p>
+         * <p>The phone number. The value must be 6 to 15 digits in length.</p>
          * 
          * <strong>example:</strong>
          * <p>156xxxxxxxxx</p>
@@ -287,7 +287,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the mobile number is verified. This parameter must be specified if you specify PhoneNumber. You can set this parameter to true if you have no special business requirements.</p>
+         * <p>Specifies whether the phone number is verified as a trusted phone number. This parameter is required if a phone number is specified. If no special business requirements exist, set this parameter to true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -299,7 +299,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The area code of the mobile number. For example, the area code of a mobile number in the Chinese mainland is 86 without 00 or the plus sign (+). This parameter must be specified if you specify PhoneNumber.</p>
+         * <p>The phone region code. Example: 86 for the Chinese mainland, without the 00 or + prefix. This parameter is required if a phone number is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>86</p>
@@ -324,7 +324,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: _ . @ -</p>
+         * <p>The account name. The name can contain letters, digits, underscores (_), periods (.), at signs (@), and hyphens (-). The name can be up to 256 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>username_test</p>
@@ -411,7 +411,7 @@ public class UpdateUserRequest extends Request {
             } 
 
             /**
-             * <p>The name of the extended field. You must create an extended field before you specify this parameter. To create an extended field, go to the Extended Fields page of the specified EIAM instance in the IDaaS console.</p>
+             * <p>The identifier of the custom field. Create the custom field in advance. For more information, refer to the custom fields module in the console.</p>
              * 
              * <strong>example:</strong>
              * <p>nick_name</p>
@@ -422,7 +422,7 @@ public class UpdateUserRequest extends Request {
             }
 
             /**
-             * <p>The value of the extended field. The value follows the limits on the properties of the extended field.</p>
+             * <p>The value of the custom field. The value must comply with the property constraints of the corresponding custom field.</p>
              * 
              * <strong>example:</strong>
              * <p>test_value</p>
@@ -433,11 +433,11 @@ public class UpdateUserRequest extends Request {
             }
 
             /**
-             * <p>The operation type of the extended field. Valid values:</p>
+             * <p>The operation type for the custom field. Valid values:</p>
              * <ul>
-             * <li>add: adds a value to the extended field of the account.</li>
-             * <li>replace: replaces the existing value of the extended field of the account. If the existing value to be replaced does not exist, this operation changes to the add operation.</li>
-             * <li>remove: removes a value from the extended field of the account.</li>
+             * <li>add: adds a custom field value to the account.</li>
+             * <li>replace: replaces an existing custom field value of the account. If the custom field value does not exist, the operation is converted to an add operation.</li>
+             * <li>remove: removes the custom field value from the account.</li>
              * </ul>
              * 
              * <strong>example:</strong>

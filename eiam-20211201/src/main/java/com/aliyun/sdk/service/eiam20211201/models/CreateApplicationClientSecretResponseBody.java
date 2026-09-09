@@ -67,7 +67,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the client key.</p>
+         * <p>The client secret information.</p>
          */
         public Builder applicationClientSecret(ApplicationClientSecret applicationClientSecret) {
             this.applicationClientSecret = applicationClientSecret;
@@ -75,7 +75,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
@@ -168,7 +168,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client key secret of the application.</p>
+             * <p>The client secret of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -179,7 +179,7 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The client key ID of the application.</p>
+             * <p>The client secret ID of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>sci_k52x2ru63rlkflina5utgkxxxx</p>
