@@ -67,7 +67,10 @@ public class DeleteRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data. A value of <code>success</code> indicates that the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class DeleteRoleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0adb901117579891946416405d0409</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

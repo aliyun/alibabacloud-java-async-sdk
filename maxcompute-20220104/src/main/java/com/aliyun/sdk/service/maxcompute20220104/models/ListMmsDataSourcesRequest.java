@@ -115,7 +115,10 @@ public class ListMmsDataSourcesRequest extends Request {
         } 
 
         /**
-         * name.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -124,7 +127,10 @@ public class ListMmsDataSourcesRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>The page number. If pagination is not used, all data sources are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -133,7 +139,10 @@ public class ListMmsDataSourcesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. If pagination is not used, all data sources are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -142,7 +151,10 @@ public class ListMmsDataSourcesRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -151,7 +163,10 @@ public class ListMmsDataSourcesRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIGQUERY</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

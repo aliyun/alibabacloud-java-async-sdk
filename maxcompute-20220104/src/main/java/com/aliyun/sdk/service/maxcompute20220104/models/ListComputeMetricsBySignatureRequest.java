@@ -171,7 +171,10 @@ public class ListComputeMetricsBySignatureRequest extends Request {
         } 
 
         /**
-         * endDate.
+         * <p>The end time for the query. This value is a UNIX timestamp representing milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1718590596556</p>
          */
         public Builder endDate(Long endDate) {
             this.putBodyParameter("endDate", endDate);
@@ -180,7 +183,10 @@ public class ListComputeMetricsBySignatureRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20240730****ddlr</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -189,7 +195,10 @@ public class ListComputeMetricsBySignatureRequest extends Request {
         }
 
         /**
-         * jobOwner.
+         * <p>The job owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN$7632***@aliyun.com</p>
          */
         public Builder jobOwner(String jobOwner) {
             this.putBodyParameter("jobOwner", jobOwner);
@@ -198,7 +207,10 @@ public class ListComputeMetricsBySignatureRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -207,7 +219,10 @@ public class ListComputeMetricsBySignatureRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -216,7 +231,7 @@ public class ListComputeMetricsBySignatureRequest extends Request {
         }
 
         /**
-         * projectNames.
+         * <p>The project names.</p>
          */
         public Builder projectNames(java.util.List<String> projectNames) {
             this.putBodyParameter("projectNames", projectNames);
@@ -225,7 +240,10 @@ public class ListComputeMetricsBySignatureRequest extends Request {
         }
 
         /**
-         * signature.
+         * <p>The SQL job signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m4S/2HipBVngCX94MNIAqmM7Ov4=</p>
          */
         public Builder signature(String signature) {
             this.putBodyParameter("signature", signature);
@@ -234,7 +252,10 @@ public class ListComputeMetricsBySignatureRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>The start time for the query. This value is a UNIX timestamp representing milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715393576201</p>
          */
         public Builder startDate(Long startDate) {
             this.putBodyParameter("startDate", startDate);
@@ -243,7 +264,10 @@ public class ListComputeMetricsBySignatureRequest extends Request {
         }
 
         /**
-         * types.
+         * <p>The metering type.</p>
+         * <ul>
+         * <li><code>ComputationSql</code>: the metering data of SQL jobs that are performed on internal tables.</li>
+         * </ul>
          */
         public Builder types(java.util.List<String> types) {
             this.putBodyParameter("types", types);

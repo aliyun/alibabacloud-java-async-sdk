@@ -67,7 +67,7 @@ public class ListMmsTimersResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b87b7e716665825896565060e87a4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 09:29:58</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -253,7 +259,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * dbId.
+             * <p>The source database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -261,7 +270,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The timer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -269,7 +281,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The timer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>migrate_db_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -277,7 +292,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleType.
+             * <p>The schedule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -285,7 +303,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000015</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -293,7 +314,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * srcDbName.
+             * <p>The source database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>db_1</p>
              */
             public Builder srcDbName(String srcDbName) {
                 this.srcDbName = srcDbName;
@@ -301,7 +325,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * stopped.
+             * <p>Indicates whether the timer is stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stopped(Boolean stopped) {
                 this.stopped = stopped;
@@ -309,7 +336,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The job type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TABLES</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -317,7 +347,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The schedule time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -410,7 +443,7 @@ public class ListMmsTimersResponseBody extends TeaModel {
             } 
 
             /**
-             * objectList.
+             * <p>A list of timers.</p>
              */
             public Builder objectList(java.util.List<ObjectList> objectList) {
                 this.objectList = objectList;
@@ -418,7 +451,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * pageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -426,7 +462,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -434,7 +473,10 @@ public class ListMmsTimersResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

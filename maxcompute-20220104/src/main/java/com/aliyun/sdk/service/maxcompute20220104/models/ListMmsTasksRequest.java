@@ -223,6 +223,7 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +236,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * dstDbName.
+         * <p>The destination MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mms_test</p>
          */
         public Builder dstDbName(String dstDbName) {
             this.putQueryParameter("dstDbName", dstDbName);
@@ -244,7 +248,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * dstTableName.
+         * <p>The destination MaxCompute table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table_1</p>
          */
         public Builder dstTableName(String dstTableName) {
             this.putQueryParameter("dstTableName", dstTableName);
@@ -253,7 +260,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * jobId.
+         * <p>The migration job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("jobId", jobId);
@@ -262,7 +272,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * jobName.
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("jobName", jobName);
@@ -271,7 +284,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -280,7 +296,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -289,7 +308,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * partition.
+         * <p>The partition value. Use this parameter to filter migration tasks that migrated a specific partition value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p1=1/p2=abc</p>
          */
         public Builder partition(String partition) {
             this.putQueryParameter("partition", partition);
@@ -298,7 +320,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * srcDbName.
+         * <p>The source database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db_1</p>
          */
         public Builder srcDbName(String srcDbName) {
             this.putQueryParameter("srcDbName", srcDbName);
@@ -307,7 +332,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * srcTableName.
+         * <p>The source table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table_1</p>
          */
         public Builder srcTableName(String srcTableName) {
             this.putQueryParameter("srcTableName", srcTableName);
@@ -316,7 +344,10 @@ public class ListMmsTasksRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The migration task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA_DOING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -384,7 +415,10 @@ public class ListMmsTasksRequest extends Request {
             } 
 
             /**
-             * startTime.
+             * <p>Sorts results by the start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -392,7 +426,10 @@ public class ListMmsTasksRequest extends Request {
             }
 
             /**
-             * status.
+             * <p>Sorts results by status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asc</p>
              */
             public Builder status(String status) {
                 this.status = status;

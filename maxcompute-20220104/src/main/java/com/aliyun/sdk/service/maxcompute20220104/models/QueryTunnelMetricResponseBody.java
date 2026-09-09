@@ -106,7 +106,7 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A3B1E82006A23A918C70905BF08AEC7</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -130,7 +136,10 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>Indicates whether the operation was successful. If this parameter is not empty and the value is not 200, the operation failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +147,10 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc3b4b016674434996033675e71ee</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,7 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * metric.
+             * <p>The metadata of the metric.</p>
              */
             public Builder metric(java.util.Map<String, String> metric) {
                 this.metric = metric;
@@ -212,7 +224,7 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>A list of metric values.</p>
              */
             public Builder values(java.util.List<java.util.List<Double>> values) {
                 this.values = values;
@@ -305,7 +317,10 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * category.
+             * <p>The category of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tunnel</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -313,7 +328,7 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * metrics.
+             * <p>The metric values.</p>
              */
             public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
@@ -321,7 +336,10 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slot_usage</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +347,10 @@ public class QueryTunnelMetricResponseBody extends TeaModel {
             }
 
             /**
-             * period.
+             * <p>The step size of the monitoring data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(Long period) {
                 this.period = period;

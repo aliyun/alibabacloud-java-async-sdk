@@ -67,7 +67,10 @@ public class UpdateMmsTimerResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The result of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class UpdateMmsTimerResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique identifier for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA1320AB-7766-5EC7-B0F6-8B20E2298567</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

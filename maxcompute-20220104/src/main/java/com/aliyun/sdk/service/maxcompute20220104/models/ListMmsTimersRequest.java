@@ -144,6 +144,7 @@ public class ListMmsTimersRequest extends Request {
         } 
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class ListMmsTimersRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The timer name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -165,7 +169,10 @@ public class ListMmsTimersRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -174,7 +181,10 @@ public class ListMmsTimersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -183,7 +193,10 @@ public class ListMmsTimersRequest extends Request {
         }
 
         /**
-         * srcDbName.
+         * <p>The source database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db_1</p>
          */
         public Builder srcDbName(String srcDbName) {
             this.putQueryParameter("srcDbName", srcDbName);
@@ -192,7 +205,10 @@ public class ListMmsTimersRequest extends Request {
         }
 
         /**
-         * srcTableName.
+         * <p>The source table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table_1</p>
          */
         public Builder srcTableName(String srcTableName) {
             this.putQueryParameter("srcTableName", srcTableName);
@@ -201,7 +217,10 @@ public class ListMmsTimersRequest extends Request {
         }
 
         /**
-         * stopped.
+         * <p>Filters timers by their stopped state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder stopped(Boolean stopped) {
             this.putQueryParameter("stopped", stopped);

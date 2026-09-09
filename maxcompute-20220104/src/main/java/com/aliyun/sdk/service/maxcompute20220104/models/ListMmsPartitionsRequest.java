@@ -237,6 +237,7 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +250,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * dbId.
+         * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("dbId", dbId);
@@ -258,7 +262,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * dbName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d1</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("dbName", dbName);
@@ -267,7 +274,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * lastDdlTimeEnd.
+         * <p>The maximum lastDdlTime value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-17 19:44:42</p>
          */
         public Builder lastDdlTimeEnd(String lastDdlTimeEnd) {
             this.putQueryParameter("lastDdlTimeEnd", lastDdlTimeEnd);
@@ -276,7 +286,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * lastDdlTimeStart.
+         * <p>The minimum lastDdlTime value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-17 15:44:42</p>
          */
         public Builder lastDdlTimeStart(String lastDdlTimeStart) {
             this.putQueryParameter("lastDdlTimeStart", lastDdlTimeStart);
@@ -285,7 +298,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>The page number to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -294,7 +310,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -303,7 +322,7 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The migration status.</p>
          */
         public Builder status(java.util.List<String> status) {
             String statusShrink = shrink(status, "status", "json");
@@ -313,7 +332,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * tableId.
+         * <p>The ID of the table that contains the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20323</p>
          */
         public Builder tableId(Long tableId) {
             this.putQueryParameter("tableId", tableId);
@@ -322,7 +344,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * tableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t1</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("tableName", tableName);
@@ -331,7 +356,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * updated.
+         * <p>Filters partitions whose metadata has been updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder updated(Boolean updated) {
             this.putQueryParameter("updated", updated);
@@ -340,7 +368,10 @@ public class ListMmsPartitionsRequest extends Request {
         }
 
         /**
-         * value.
+         * <p>The partition value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p1=1/p2=abc</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("value", value);
@@ -421,7 +452,10 @@ public class ListMmsPartitionsRequest extends Request {
             } 
 
             /**
-             * lastDdlTime.
+             * <p>Sorts by lastDdlTime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder lastDdlTime(String lastDdlTime) {
                 this.lastDdlTime = lastDdlTime;
@@ -429,7 +463,10 @@ public class ListMmsPartitionsRequest extends Request {
             }
 
             /**
-             * numRows.
+             * <p>Sorts by number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder numRows(String numRows) {
                 this.numRows = numRows;
@@ -437,7 +474,10 @@ public class ListMmsPartitionsRequest extends Request {
             }
 
             /**
-             * size.
+             * <p>Sorts by data size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asc</p>
              */
             public Builder size(String size) {
                 this.size = size;

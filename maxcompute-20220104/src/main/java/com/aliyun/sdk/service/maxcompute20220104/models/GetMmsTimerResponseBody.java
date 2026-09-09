@@ -67,7 +67,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06dfe716674588654372173ec0da</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +261,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             } 
 
             /**
-             * columnMapping.
+             * <p>A map of source column names to destination column names.</p>
              */
             public Builder columnMapping(java.util.Map<String, String> columnMapping) {
                 this.columnMapping = columnMapping;
@@ -266,7 +269,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * enableDataMigration.
+             * <p>Whether to migrate table data.</p>
              */
             public Builder enableDataMigration(Boolean enableDataMigration) {
                 this.enableDataMigration = enableDataMigration;
@@ -274,7 +277,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * enableSchemaMigration.
+             * <p>Whether to migrate the table schema.</p>
              */
             public Builder enableSchemaMigration(Boolean enableSchemaMigration) {
                 this.enableSchemaMigration = enableSchemaMigration;
@@ -282,7 +285,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * enableVerification.
+             * <p>Whether to enable verification. The system performs verification by running a <code>SELECT COUNT(*)</code> query on both the source and destination to compare the row count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableVerification(Boolean enableVerification) {
                 this.enableVerification = enableVerification;
@@ -290,7 +296,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * others.
+             * <p>Other configurations.</p>
              */
             public Builder others(java.util.Map<String, ?> others) {
                 this.others = others;
@@ -298,7 +304,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * partitionFilters.
+             * <p>A map of table names to their corresponding partition filter expressions.</p>
              */
             public Builder partitionFilters(java.util.Map<String, String> partitionFilters) {
                 this.partitionFilters = partitionFilters;
@@ -306,7 +312,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * partitions.
+             * <p>If <code>type</code> is set to <code>Partitions</code>, this parameter specifies a list of partition IDs to migrate.</p>
              */
             public Builder partitions(java.util.List<Long> partitions) {
                 this.partitions = partitions;
@@ -314,7 +320,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * tableBlackList.
+             * <p>If <code>type</code> is set to <code>Database</code>, this parameter specifies a table deny list. Tables on this list are excluded from the migration.</p>
              */
             public Builder tableBlackList(java.util.List<String> tableBlackList) {
                 this.tableBlackList = tableBlackList;
@@ -322,7 +328,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * tableMapping.
+             * <p>A map of source table names to destination table names.</p>
              */
             public Builder tableMapping(java.util.Map<String, String> tableMapping) {
                 this.tableMapping = tableMapping;
@@ -330,7 +336,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * tableWhiteList.
+             * <p>If <code>type</code> is set to <code>Database</code>, this parameter specifies a table allowlist. If this parameter is not specified, all tables in the database are migrated.</p>
              */
             public Builder tableWhiteList(java.util.List<String> tableWhiteList) {
                 this.tableWhiteList = tableWhiteList;
@@ -338,7 +344,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * tables.
+             * <p>If <code>type</code> is set to <code>Tables</code>, this parameter specifies a list of table names to migrate.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
@@ -535,7 +541,7 @@ public class GetMmsTimerResponseBody extends TeaModel {
             } 
 
             /**
-             * config.
+             * <p>The configuration of the migration job.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -543,7 +549,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time of the scheduled task. This is a Unix timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1730946421757</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -551,7 +560,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * dbId.
+             * <p>The ID of the source database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -559,7 +571,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The ID of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2523</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -567,7 +582,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sale_detail</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -575,7 +593,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleType.
+             * <p>The scheduling type of the scheduled task. Valid values: <code>Daily</code> and <code>Hourly</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -583,7 +604,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000017</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -591,7 +615,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * srcDbName.
+             * <p>The name of the source database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mms_test</p>
              */
             public Builder srcDbName(String srcDbName) {
                 this.srcDbName = srcDbName;
@@ -599,7 +626,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * stopped.
+             * <p>Indicates whether the scheduled task is stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stopped(Boolean stopped) {
                 this.stopped = stopped;
@@ -607,7 +637,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily, Hourly</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -615,7 +648,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The last update time of the scheduled task, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-01T02:18:01Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -623,7 +659,10 @@ public class GetMmsTimerResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The scheduling time. If <code>scheduleType</code> is <code>Daily</code>, the value is in the <code>HH:MM</code> format. If <code>scheduleType</code> is <code>Hourly</code>, the value is in the <code>MM</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p1=1/p2=abc</p>
              */
             public Builder value(String value) {
                 this.value = value;

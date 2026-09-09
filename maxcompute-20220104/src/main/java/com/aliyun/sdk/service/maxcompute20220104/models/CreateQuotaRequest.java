@@ -103,6 +103,7 @@ public class CreateQuotaRequest extends Request {
         } 
 
         /**
+         * <p>The billing method. Valid values: payasyougo (pay-as-you-go) and subscription.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class CreateQuotaRequest extends Request {
         }
 
         /**
+         * <p>The commodity code. Example: On Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), the commodity code for pay-as-you-go is odps and the commodity code for subscription is odpsplus. On Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>), the commodity code for pay-as-you-go is odps_intl and the commodity code for subscription is odpsplus_intl.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,21 @@ public class CreateQuotaRequest extends Request {
         }
 
         /**
-         * commodityData.
+         * <p>The commodity specifications of the quota.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <ul>
+         * <li><p>This parameter is required only for subscription quotas.
+         * The minimum unit for cu is 50.
+         * ord_time supports monthly (month) and yearly (year) billing.</p>
+         * </li>
+         * <li><p>After creation, commodityData cannot be modified. To modify it, go to the MaxCompute console.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CU&quot;:50,&quot;ord_time&quot;:&quot;1:Month&quot;,&quot;autoRenew&quot;:false}</p>
          */
         public Builder commodityData(String commodityData) {
             this.putQueryParameter("commodityData", commodityData);
@@ -136,7 +152,12 @@ public class CreateQuotaRequest extends Request {
         }
 
         /**
-         * partNickName.
+         * <blockquote>
+         * <p>Notice: This parameter is required only for subscription quotas.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>MyQuota</p>
          */
         public Builder partNickName(String partNickName) {
             this.putQueryParameter("partNickName", partNickName);

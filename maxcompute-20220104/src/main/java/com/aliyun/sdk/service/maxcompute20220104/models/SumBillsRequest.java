@@ -115,7 +115,10 @@ public class SumBillsRequest extends Request {
         } 
 
         /**
-         * endDate.
+         * <p>The end time of the billing cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1776232895313</p>
          */
         public Builder endDate(Long endDate) {
             this.putBodyParameter("endDate", endDate);
@@ -124,7 +127,7 @@ public class SumBillsRequest extends Request {
         }
 
         /**
-         * projectNames.
+         * <p>A list of instance names. This parameter is not required if <code>statsType</code> is set to <code>FEE_ITEM</code>.</p>
          */
         public Builder projectNames(java.util.List<String> projectNames) {
             this.putBodyParameter("projectNames", projectNames);
@@ -133,7 +136,10 @@ public class SumBillsRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>The start time of the billing cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715393576201</p>
          */
         public Builder startDate(Long startDate) {
             this.putBodyParameter("startDate", startDate);
@@ -142,7 +148,10 @@ public class SumBillsRequest extends Request {
         }
 
         /**
-         * statsType.
+         * <p>The dimension by which to summarize costs. Valid values: <code>PROJECT</code> (by instance) and <code>FEE_ITEM</code> (by billable item).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROJECT</p>
          */
         public Builder statsType(String statsType) {
             this.putBodyParameter("statsType", statsType);
@@ -151,7 +160,10 @@ public class SumBillsRequest extends Request {
         }
 
         /**
-         * topN.
+         * <p>The number of top results to return after sorting by cost.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder topN(Integer topN) {
             this.putBodyParameter("topN", topN);

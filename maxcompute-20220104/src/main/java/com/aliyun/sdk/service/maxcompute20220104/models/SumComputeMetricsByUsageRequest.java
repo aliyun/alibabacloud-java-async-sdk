@@ -101,7 +101,10 @@ public class SumComputeMetricsByUsageRequest extends Request {
         } 
 
         /**
-         * endDate.
+         * <p>The end timestamp for the query, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1718590596556</p>
          */
         public Builder endDate(Long endDate) {
             this.putBodyParameter("endDate", endDate);
@@ -110,7 +113,7 @@ public class SumComputeMetricsByUsageRequest extends Request {
         }
 
         /**
-         * projectNames.
+         * <p>The project names.</p>
          */
         public Builder projectNames(java.util.List<String> projectNames) {
             this.putBodyParameter("projectNames", projectNames);
@@ -119,7 +122,10 @@ public class SumComputeMetricsByUsageRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>The start timestamp for the query, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715393576201</p>
          */
         public Builder startDate(Long startDate) {
             this.putBodyParameter("startDate", startDate);
@@ -128,7 +134,10 @@ public class SumComputeMetricsByUsageRequest extends Request {
         }
 
         /**
-         * usageType.
+         * <p>The usage type. Valid values: <code>CU</code> (CU usage) and <code>SCAN</code> (scanned data volume).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCAN</p>
          */
         public Builder usageType(String usageType) {
             this.putBodyParameter("usageType", usageType);

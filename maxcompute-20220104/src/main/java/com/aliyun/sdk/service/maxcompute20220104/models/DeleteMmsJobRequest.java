@@ -75,6 +75,7 @@ public class DeleteMmsJobRequest extends Request {
         } 
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteMmsJobRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

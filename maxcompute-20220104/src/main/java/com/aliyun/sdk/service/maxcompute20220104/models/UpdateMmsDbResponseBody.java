@@ -67,7 +67,10 @@ public class UpdateMmsDbResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class UpdateMmsDbResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b87b7e716665825896565060e87a4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -74,7 +74,10 @@ public class ListMmsDataSourceConfigItemsRequest extends Request {
         } 
 
         /**
-         * lang.
+         * <p>The language for the descriptions of the configuration items. Defaults to Chinese (<code>zh_CN</code>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CN</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);
@@ -83,6 +86,7 @@ public class ListMmsDataSourceConfigItemsRequest extends Request {
         }
 
         /**
+         * <p>The data source type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

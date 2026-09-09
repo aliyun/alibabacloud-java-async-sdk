@@ -88,6 +88,7 @@ public class GetMmsDataSourceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetMmsDataSourceRequest extends Request {
         }
 
         /**
-         * lang.
+         * <p>The language of the description for the configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);
@@ -109,7 +113,10 @@ public class GetMmsDataSourceRequest extends Request {
         }
 
         /**
-         * withConfig.
+         * <p>Specifies whether to obtain the specific configuration items of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withConfig(Boolean withConfig) {
             this.putQueryParameter("withConfig", withConfig);

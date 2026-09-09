@@ -106,7 +106,7 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,16 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The business error code or an empty value.</p>
+         * <ul>
+         * <li><p>If success is false, a business error code is returned.</p>
+         * </li>
+         * <li><p>If success is true, an empty value is returned.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +131,10 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The description of the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this quota is not exist.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -130,7 +142,10 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>Indicates whether the business is successful. If this parameter is not empty and the value is not 200, the business fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +153,10 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0be3e0aa16667684362147582e038f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +248,10 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * date.
+             * <p>The date of statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20241205</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -238,7 +259,10 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The timestamp of the last data update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749090705919</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -246,7 +270,17 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * <p>The unit of the storage metric usage. It includes:</p>
+             * <ul>
+             * <li><p>lowFreqStorage</p>
+             * </li>
+             * <li><p>standardStorage</p>
+             * </li>
+             * <li><p>longTermStorage</p>
+             * </li>
+             * <li><p>totalStorage</p>
+             * </li>
+             * </ul>
              */
             public Builder unit(java.util.Map<String, String> unit) {
                 this.unit = unit;
@@ -254,7 +288,17 @@ public class GetStorageSizeSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The storage metrics. It includes:</p>
+             * <ul>
+             * <li><p>lowFreqStorage</p>
+             * </li>
+             * <li><p>standardStorage</p>
+             * </li>
+             * <li><p>longTermStorage</p>
+             * </li>
+             * <li><p>totalStorage</p>
+             * </li>
+             * </ul>
              */
             public Builder value(java.util.Map<String, Double> value) {
                 this.value = value;

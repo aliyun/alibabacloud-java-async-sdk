@@ -216,6 +216,7 @@ public class QueryTunnelMetricDetailRequest extends Request {
         } 
 
         /**
+         * <p>The metric name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +229,10 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
-         * ascOrder.
+         * <p>Specifies whether to sort the results in ascending order. If you set this parameter to <code>true</code>, the results are sorted in ascending order. If you set this to <code>false</code> or leave it unspecified, the results are sorted in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ascOrder(Boolean ascOrder) {
             this.putBodyParameter("ascOrder", ascOrder);
@@ -237,7 +241,7 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
-         * codeList.
+         * <p>A list of error codes to filter the results.</p>
          */
         public Builder codeList(java.util.List<Long> codeList) {
             this.putBodyParameter("codeList", codeList);
@@ -246,7 +250,7 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
-         * groupList.
+         * <p>The list of grouping dimensions.</p>
          */
         public Builder groupList(java.util.List<String> groupList) {
             this.putBodyParameter("groupList", groupList);
@@ -255,7 +259,10 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The maximum number of entries to return. Default: 10. Maximum: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Long limit) {
             this.putBodyParameter("limit", limit);
@@ -264,7 +271,7 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
-         * operationList.
+         * <p>A list of operation types.</p>
          */
         public Builder operationList(java.util.List<String> operationList) {
             this.putBodyParameter("operationList", operationList);
@@ -273,7 +280,10 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
-         * orderColumn.
+         * <p>The sort column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxValue</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putBodyParameter("orderColumn", orderColumn);
@@ -282,7 +292,10 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project_a</p>
          */
         public Builder project(String project) {
             this.putBodyParameter("project", project);
@@ -291,7 +304,12 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
-         * quotaNickname.
+         * <p>The nickname of the level-2 tunnel quota.</p>
+         * <p>The nickname for a shared quota is <code>default</code>.</p>
+         * <p>For an exclusive quota, the nickname is in the <code>quotaNickname#subQuotaNickname</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quota_A</p>
          */
         public Builder quotaNickname(String quotaNickname) {
             this.putBodyParameter("quotaNickname", quotaNickname);
@@ -300,7 +318,8 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
-         * tableList.
+         * <p>A list of table names.</p>
+         * <p>The <code>project</code> parameter is required if you specify a list of tables. All tables must belong to the specified project.</p>
          */
         public Builder tableList(java.util.List<String> tableList) {
             this.putBodyParameter("tableList", tableList);
@@ -309,6 +328,7 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
+         * <p>The end of the query time range. This is a Unix timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,6 +341,7 @@ public class QueryTunnelMetricDetailRequest extends Request {
         }
 
         /**
+         * <p>The start of the query time range. This is a Unix timestamp in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

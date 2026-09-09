@@ -87,7 +87,10 @@ public class GetStorageSizeSummaryRequest extends Request {
         } 
 
         /**
-         * date.
+         * <p>The date of statistics. The value is at the day level. The format is YYYYMMdd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20241205</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("date", date);
@@ -96,7 +99,10 @@ public class GetStorageSizeSummaryRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -105,7 +111,10 @@ public class GetStorageSizeSummaryRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>483212237127906</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

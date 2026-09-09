@@ -144,6 +144,7 @@ public class UpdateMmsTablesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class UpdateMmsTablesRequest extends Request {
         }
 
         /**
-         * dbName.
+         * <p>The name of the database that contains the source tables to be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("dbName", dbName);
@@ -165,7 +169,10 @@ public class UpdateMmsTablesRequest extends Request {
         }
 
         /**
-         * dstProjectName.
+         * <p>The destination MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pj</p>
          */
         public Builder dstProjectName(String dstProjectName) {
             this.putBodyParameter("dstProjectName", dstProjectName);
@@ -174,7 +181,10 @@ public class UpdateMmsTablesRequest extends Request {
         }
 
         /**
-         * dstSchemaName.
+         * <p>The destination MaxCompute schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dstSchemaName(String dstSchemaName) {
             this.putBodyParameter("dstSchemaName", dstSchemaName);
@@ -183,7 +193,10 @@ public class UpdateMmsTablesRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The migration status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -192,7 +205,7 @@ public class UpdateMmsTablesRequest extends Request {
         }
 
         /**
-         * tableNames.
+         * <p>The list of source tables to be updated.</p>
          */
         public Builder tableNames(java.util.List<String> tableNames) {
             this.putBodyParameter("tableNames", tableNames);
@@ -201,7 +214,7 @@ public class UpdateMmsTablesRequest extends Request {
         }
 
         /**
-         * <p>Deprecated</p>
+         * <p>This parameter is deprecated.</p>
          */
         public Builder tables(java.util.List<Long> tables) {
             this.putBodyParameter("tables", tables);

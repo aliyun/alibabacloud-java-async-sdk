@@ -202,6 +202,7 @@ public class QueryTunnelMetricRequest extends Request {
         } 
 
         /**
+         * <p>The name of the metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +215,7 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
-         * codeList.
+         * <p>A list of HTTP status codes for requests.</p>
          */
         public Builder codeList(java.util.List<Integer> codeList) {
             this.putBodyParameter("codeList", codeList);
@@ -223,7 +224,7 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
-         * groupList.
+         * <p>A list of grouping criteria.</p>
          */
         public Builder groupList(java.util.List<String> groupList) {
             this.putBodyParameter("groupList", groupList);
@@ -232,7 +233,7 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
-         * operationList.
+         * <p>A list of operation types.</p>
          */
         public Builder operationList(java.util.List<String> operationList) {
             this.putBodyParameter("operationList", operationList);
@@ -241,7 +242,10 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project_a</p>
          */
         public Builder project(String project) {
             this.putBodyParameter("project", project);
@@ -250,7 +254,12 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
-         * quotaNickname.
+         * <p>The nickname of the level-2 Tunnel quota.</p>
+         * <p>The nickname of a shared quota is <code>default</code>.</p>
+         * <p>The format of a dedicated quota nickname is <code>quotaNickname#subQuotaNickname</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder quotaNickname(String quotaNickname) {
             this.putBodyParameter("quotaNickname", quotaNickname);
@@ -259,7 +268,8 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
-         * tableList.
+         * <p>A list of table names.</p>
+         * <p>The tables belong to a project. Therefore, if <code>tableList</code> is not empty, <code>project</code> cannot be empty.</p>
          */
         public Builder tableList(java.util.List<String> tableList) {
             this.putBodyParameter("tableList", tableList);
@@ -268,7 +278,12 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
-         * topN.
+         * <p>The maximum number of data entries to return.</p>
+         * <p>This parameter takes effect when the grouping criterion includes <code>table</code> or <code>ip</code>.</p>
+         * <p>The default value is 10. The maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topN(Integer topN) {
             this.putBodyParameter("topN", topN);
@@ -277,6 +292,7 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range for the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,6 +305,7 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
+         * <p>The start of the time range for the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +318,11 @@ public class QueryTunnelMetricRequest extends Request {
         }
 
         /**
-         * strategy.
+         * <p>The data aggregation policy. The default value is <code>max</code>.</p>
+         * <p>Data is collected at a frequency of 1 minute. If you query data over a long time range, the automatic step size for data display may exceed 1 minute. In this case, metrics are aggregated. This parameter specifies the aggregation logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>max</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("strategy", strategy);

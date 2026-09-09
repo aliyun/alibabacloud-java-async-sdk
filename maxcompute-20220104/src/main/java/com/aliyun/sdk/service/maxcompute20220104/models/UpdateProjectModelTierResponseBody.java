@@ -106,7 +106,13 @@ public class UpdateProjectModelTierResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;data&quot;:{
+         *         &quot;data&quot;:&quot;success&quot;,
+         *         &quot;requestId&quot;:&quot;****&quot;
+         *     }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +120,15 @@ public class UpdateProjectModelTierResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <ul>
+         * <li><p>If the request fails, an error code is returned.</p>
+         * </li>
+         * <li><p>If the request is successful, this parameter is empty.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OBJECT_NOT_EXIST</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +136,10 @@ public class UpdateProjectModelTierResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this project is not exist.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -130,7 +147,10 @@ public class UpdateProjectModelTierResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>Indicates whether the operation was successful. A value other than 200 indicates that the operation failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +158,10 @@ public class UpdateProjectModelTierResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73207140-0FD5-588A-B11A-3CE093924196</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

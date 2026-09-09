@@ -223,6 +223,7 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +236,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * dstDbName.
+         * <p>The destination MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mms_test</p>
          */
         public Builder dstDbName(String dstDbName) {
             this.putQueryParameter("dstDbName", dstDbName);
@@ -244,7 +248,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * dstTableName.
+         * <p>The destination MaxCompute table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table_1</p>
          */
         public Builder dstTableName(String dstTableName) {
             this.putQueryParameter("dstTableName", dstTableName);
@@ -253,7 +260,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -262,7 +272,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -271,7 +284,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of items to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -280,7 +296,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * srcDbName.
+         * <p>The name of the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db_1</p>
          */
         public Builder srcDbName(String srcDbName) {
             this.putQueryParameter("srcDbName", srcDbName);
@@ -289,7 +308,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * srcTableName.
+         * <p>The name of the source table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table_1</p>
          */
         public Builder srcTableName(String srcTableName) {
             this.putQueryParameter("srcTableName", srcTableName);
@@ -298,7 +320,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status of the migration job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -307,7 +332,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * stopped.
+         * <p>Indicates whether the job is stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder stopped(Long stopped) {
             this.putQueryParameter("stopped", stopped);
@@ -316,7 +344,10 @@ public class ListMmsJobsRequest extends Request {
         }
 
         /**
-         * timerId.
+         * <p>The timer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder timerId(Long timerId) {
             this.putQueryParameter("timerId", timerId);
@@ -371,7 +402,10 @@ public class ListMmsJobsRequest extends Request {
             } 
 
             /**
-             * status.
+             * <p>Sorting by status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder status(String status) {
                 this.status = status;

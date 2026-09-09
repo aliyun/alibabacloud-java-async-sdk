@@ -80,7 +80,7 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data payload of the response.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,22 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li><p><code>1xx</code>: Informational - The server has received the request and is processing it.</p>
+         * </li>
+         * <li><p><code>2xx</code>: Success - The server successfully received, understood, and accepted the request.</p>
+         * </li>
+         * <li><p><code>3xx</code>: Redirection - Further action is required to complete the request.</p>
+         * </li>
+         * <li><p><code>4xx</code>: Client Error - The request contains invalid syntax or cannot be fulfilled.</p>
+         * </li>
+         * <li><p><code>5xx</code>: Server Error - The server failed to fulfill a valid request.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -96,7 +111,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06dc0a17495216593736061e45a3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +193,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             } 
 
             /**
-             * endTime.
+             * <p>The end time of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1766780295000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -183,7 +204,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20260124052241299gdxd3wveqsj</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -191,7 +215,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765765291000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -297,7 +324,7 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             } 
 
             /**
-             * instances.
+             * <p>A list of instances.</p>
              */
             public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
@@ -305,7 +332,7 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * projectNames.
+             * <p>A list of project names.</p>
              */
             public Builder projectNames(java.util.List<String> projectNames) {
                 this.projectNames = projectNames;
@@ -313,7 +340,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * signature.
+             * <p>The signature of the SQL job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YF3JMiEXEvZVmGzUXz6G4MtWVJk=</p>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -321,7 +351,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * <p>The unit of compute usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GBCplx</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -329,7 +362,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * usage.
+             * <p>The compute usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32.67767215706408</p>
              */
             public Builder usage(Double usage) {
                 this.usage = usage;
@@ -422,7 +458,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             } 
 
             /**
-             * pageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -430,7 +469,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -438,7 +480,7 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * signatureComputeMetrics.
+             * <p>An array containing the compute metrics for each signature.</p>
              */
             public Builder signatureComputeMetrics(java.util.List<SignatureComputeMetrics> signatureComputeMetrics) {
                 this.signatureComputeMetrics = signatureComputeMetrics;
@@ -446,7 +488,10 @@ public class ListComputeMetricsBySignatureResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of entries that match the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

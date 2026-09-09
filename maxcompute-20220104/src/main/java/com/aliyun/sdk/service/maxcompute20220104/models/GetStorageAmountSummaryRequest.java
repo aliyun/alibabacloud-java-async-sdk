@@ -87,7 +87,10 @@ public class GetStorageAmountSummaryRequest extends Request {
         } 
 
         /**
-         * date.
+         * <p>The date for which the statistics are collected. The statistics are collected on a daily basis. Specify the date in the YYYYMMDD format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20241205</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("date", date);
@@ -96,7 +99,10 @@ public class GetStorageAmountSummaryRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -105,7 +111,10 @@ public class GetStorageAmountSummaryRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * <p>The tenant ID. You can log on to the MaxCompute console and choose <strong>Tenant Management</strong> &gt; <strong>Tenant Properties</strong> in the navigation pane on the left to view the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>478403690625249</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

@@ -67,7 +67,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF3F9978-260F-5204-94BE-30A4E6B54443</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -466,7 +469,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>Time created in MMS</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 15:44:42</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -474,7 +480,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * deleted.
+             * <p>Whether deleted</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deleted(Boolean deleted) {
                 this.deleted = deleted;
@@ -482,7 +491,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Database description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>for mms test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -490,7 +502,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * dstName.
+             * <p>The MaxCompute schema corresponding to the source database. If the target MaxCompute project does not have a schema layer enabled, this value is null. By default, it is consistent with the source database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder dstName(String dstName) {
                 this.dstName = dstName;
@@ -498,7 +513,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * dstProjectName.
+             * <p>Target MaxCompute project name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mms_test</p>
              */
             public Builder dstProjectName(String dstProjectName) {
                 this.dstProjectName = dstProjectName;
@@ -506,7 +524,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * extra.
+             * <p>Other information stored in JSON format</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -514,7 +535,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Database ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1530</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -533,7 +557,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * location.
+             * <p>Database storage location</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs://master-1-1.c-6fc187819ed6bae0.cn-shanghai.emr.aliyuncs.com:9000/user/hive/warehouse</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -541,7 +568,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Database name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mms_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -549,7 +579,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * numRows.
+             * <p>Number of database data rows</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23232</p>
              */
             public Builder numRows(Long numRows) {
                 this.numRows = numRows;
@@ -557,7 +590,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * owner.
+             * <p>Database owner</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System user</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -565,7 +601,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * partitions.
+             * <p>Number of partitions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder partitions(Integer partitions) {
                 this.partitions = partitions;
@@ -573,7 +612,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsDoing.
+             * <p>Partitions being migrated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder partitionsDoing(Integer partitionsDoing) {
                 this.partitionsDoing = partitionsDoing;
@@ -581,7 +623,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsDone.
+             * <p>Partitions migrated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder partitionsDone(Integer partitionsDone) {
                 this.partitionsDone = partitionsDone;
@@ -589,7 +634,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsFailed.
+             * <p>Failed partitions</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder partitionsFailed(Integer partitionsFailed) {
                 this.partitionsFailed = partitionsFailed;
@@ -597,7 +645,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>Database data size in bytes</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2342342</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -605,7 +656,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>Data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000015</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -613,7 +667,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceName.
+             * <p>Data source name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -621,7 +678,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Migration status: INIT, DOING, FAILED, DONE, PART_DONE</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -629,7 +689,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * tables.
+             * <p>Number of tables</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder tables(Integer tables) {
                 this.tables = tables;
@@ -637,7 +700,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * tablesDoing.
+             * <p>Tables being migrated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tablesDoing(Integer tablesDoing) {
                 this.tablesDoing = tablesDoing;
@@ -645,7 +711,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * tablesDone.
+             * <p>Tables migrated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tablesDone(Integer tablesDone) {
                 this.tablesDone = tablesDone;
@@ -653,7 +722,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * tablesFailed.
+             * <p>Failed tables</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tablesFailed(Integer tablesFailed) {
                 this.tablesFailed = tablesFailed;
@@ -661,7 +733,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * tablesPartDone.
+             * <p>Partially migrated tables</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tablesPartDone(Integer tablesPartDone) {
                 this.tablesPartDone = tablesPartDone;
@@ -669,7 +744,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>Latest data update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 15:44:42</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -677,7 +755,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * <p>Whether data is updated</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder updated(Boolean updated) {
                 this.updated = updated;
@@ -770,7 +851,7 @@ public class ListMmsDbsResponseBody extends TeaModel {
             } 
 
             /**
-             * objectList.
+             * <p>Database list</p>
              */
             public Builder objectList(java.util.List<ObjectList> objectList) {
                 this.objectList = objectList;
@@ -778,7 +859,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNum.
+             * <p>Page number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -786,7 +870,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>Page size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -794,7 +881,10 @@ public class ListMmsDbsResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -67,7 +67,7 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D9F872FD-5DDE-30A6-8C8A-1B8C6A81059F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -336,7 +339,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * dbId.
+             * <p>The ID of the database that contains the partition. The term &quot;database&quot; refers to different metadata layers across data sources. For example, it maps to Dataset in BigQuery, Database in Hive, Schema in Databricks, and Schema in MaxCompute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -344,7 +350,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * dbName.
+             * <p>The database name. The term &quot;database&quot; refers to different metadata layers across data sources. For example, it maps to Dataset in BigQuery, Database in Hive, Schema in Databricks, and Schema in MaxCompute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d1</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -352,7 +361,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * dstProjectName.
+             * <p>The destination MaxCompute project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mms_test</p>
              */
             public Builder dstProjectName(String dstProjectName) {
                 this.dstProjectName = dstProjectName;
@@ -360,7 +372,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * dstSchemaName.
+             * <p>The destination MaxCompute schema name. This field is empty for MaxCompute projects that do not use schemas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder dstSchemaName(String dstSchemaName) {
                 this.dstSchemaName = dstSchemaName;
@@ -368,7 +383,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * dstTableName.
+             * <p>The destination MaxCompute table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder dstTableName(String dstTableName) {
                 this.dstTableName = dstTableName;
@@ -376,7 +394,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * dstValue.
+             * <p>The destination MaxCompute partition value. By default, this matches the source partition value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p1=1/p2=abc</p>
              */
             public Builder dstValue(String dstValue) {
                 this.dstValue = dstValue;
@@ -384,7 +405,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The partition ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -392,7 +416,7 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>lastDdlTime</p>
+             * <p>The time when the DDL was last changed.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:42</p>
@@ -403,7 +427,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * numRows.
+             * <p>The number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323</p>
              */
             public Builder numRows(Long numRows) {
                 this.numRows = numRows;
@@ -411,7 +438,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The data size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23223</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -419,7 +449,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200018</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -427,7 +460,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceName.
+             * <p>The data source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -435,7 +471,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The migration status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DONE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -443,7 +482,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * tableId.
+             * <p>The table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder tableId(Long tableId) {
                 this.tableId = tableId;
@@ -451,7 +493,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * tableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -459,7 +504,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * <p>Indicates whether the metadata has been updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder updated(Boolean updated) {
                 this.updated = updated;
@@ -467,7 +515,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The partition value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p1=1/p2=abc</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -560,7 +611,7 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * objectList.
+             * <p>The list of partitions.</p>
              */
             public Builder objectList(java.util.List<ObjectList> objectList) {
                 this.objectList = objectList;
@@ -568,7 +619,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -576,7 +630,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -584,7 +641,10 @@ public class ListMmsPartitionsResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

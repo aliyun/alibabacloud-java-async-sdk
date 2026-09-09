@@ -172,7 +172,10 @@ public class ListStorageProjectsInfoRequest extends Request {
         } 
 
         /**
-         * ascOrder.
+         * <p>Specifies whether to sort the results in ascending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ascOrder(Boolean ascOrder) {
             this.putQueryParameter("ascOrder", ascOrder);
@@ -181,6 +184,7 @@ public class ListStorageProjectsInfoRequest extends Request {
         }
 
         /**
+         * <p>The statistics collection date. The date is accurate to the day. The date must be in the <code>YYYYMMdd</code> format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +197,22 @@ public class ListStorageProjectsInfoRequest extends Request {
         }
 
         /**
-         * orderColumn.
+         * <p>The column to sort by. Valid values:</p>
+         * <ul>
+         * <li><p>totalStorage</p>
+         * </li>
+         * <li><p>longTermStorage</p>
+         * </li>
+         * <li><p>lowFreqStorage</p>
+         * </li>
+         * <li><p>standardStorage</p>
+         * </li>
+         * <li><p>recycleBinStorage</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>totalStorage</p>
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("orderColumn", orderColumn);
@@ -202,7 +221,10 @@ public class ListStorageProjectsInfoRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -211,7 +233,10 @@ public class ListStorageProjectsInfoRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -220,7 +245,10 @@ public class ListStorageProjectsInfoRequest extends Request {
         }
 
         /**
-         * projectPrefix.
+         * <p>The prefix of the MaxCompute project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_project</p>
          */
         public Builder projectPrefix(String projectPrefix) {
             this.putQueryParameter("projectPrefix", projectPrefix);
@@ -229,7 +257,10 @@ public class ListStorageProjectsInfoRequest extends Request {
         }
 
         /**
-         * recentDays.
+         * <p>The number of days for year-over-year comparison.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recentDays(Integer recentDays) {
             this.putQueryParameter("recentDays", recentDays);
@@ -238,7 +269,10 @@ public class ListStorageProjectsInfoRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -247,7 +281,10 @@ public class ListStorageProjectsInfoRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * <p>The tenant ID. You can log on to the MaxCompute console and choose <strong>Tenant Property</strong> in the navigation pane on the left to view the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28074710977****</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

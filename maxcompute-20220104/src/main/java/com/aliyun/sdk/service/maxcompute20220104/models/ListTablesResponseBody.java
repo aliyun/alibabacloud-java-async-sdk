@@ -221,7 +221,7 @@ public class ListTablesResponseBody extends TeaModel {
              * <p>The name of the table.</p>
              * 
              * <strong>example:</strong>
-             * <p>dim_odps</p>
+             * <p>sale_detail</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -232,7 +232,7 @@ public class ListTablesResponseBody extends TeaModel {
              * <p>The owner of the table.</p>
              * 
              * <strong>example:</strong>
-             * <p>1887853961230110</p>
+             * <p>188785396123****</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;

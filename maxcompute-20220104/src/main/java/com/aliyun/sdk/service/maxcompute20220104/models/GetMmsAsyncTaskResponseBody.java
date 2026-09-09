@@ -67,7 +67,7 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The asynchronous task object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>688003E1-D1B4-5468-957E-2FFB3AC8D79B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 15:44:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -279,7 +285,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The time when the task stopped running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 17:44:17</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -287,7 +296,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * errorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -295,7 +307,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The asynchronous task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2523</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -303,7 +318,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * objectId.
+             * <p>The ID of the object associated with the asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232</p>
              */
             public Builder objectId(Long objectId) {
                 this.objectId = objectId;
@@ -311,7 +329,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * progress.
+             * <p>The progress of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -319,7 +340,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The result of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -327,7 +351,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * running.
+             * <p>Indicates whether the task is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder running(Boolean running) {
                 this.running = running;
@@ -335,7 +362,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000017</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -343,7 +373,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The time when the task started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 15:44:17</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -351,7 +384,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DONE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +395,10 @@ public class GetMmsAsyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TASK_CREATE</p>
              */
             public Builder type(String type) {
                 this.type = type;

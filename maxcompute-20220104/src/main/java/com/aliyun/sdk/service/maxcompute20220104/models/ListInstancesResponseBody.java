@@ -80,7 +80,7 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>Indicates whether the request was successful. If the value of this parameter is not 200, the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -96,7 +99,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0FC8BA40-C712-5FFD-9AA5-24C8F47F86E9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +155,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>projectAbc</p>
              */
             public Builder name(String name) {
                 this.name = name;

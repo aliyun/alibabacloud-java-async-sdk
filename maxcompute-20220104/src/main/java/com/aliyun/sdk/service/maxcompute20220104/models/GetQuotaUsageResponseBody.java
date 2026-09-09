@@ -138,11 +138,16 @@ public class GetQuotaUsageResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <ul>
-         * <li>1xx: informational response. The request is received and is being processed.</li>
-         * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-         * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
-         * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
-         * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+         * <li><p>1xx: informational response. The request is received and is being processed.</p>
+         * </li>
+         * <li><p>2xx: success. The request is successfully received, understood, and accepted by the server.</p>
+         * </li>
+         * <li><p>3xx: redirection. The request is redirected, and further actions are required to complete the request.</p>
+         * </li>
+         * <li><p>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</p>
+         * </li>
+         * <li><p>5xx: server error. The server cannot meet requirements due to other reasons.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,7 +244,7 @@ public class GetQuotaUsageResponseBody extends TeaModel {
              * <p>The title of the chart.</p>
              * 
              * <strong>example:</strong>
-             * <p>request</p>
+             * <p>Project request concurrency</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -326,6 +331,14 @@ public class GetQuotaUsageResponseBody extends TeaModel {
 
             /**
              * <p>The metric results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;timestamps&quot;: [1668046140000, 1668065220000], //milliseconds</p>
+             * <p>    &quot;project1#upload#request&quot;: [10, 20],
+             *     &quot;project1#download#request&quot;: [20, 30],</p>
+             * <p>    &quot;project1#upload#throughput&quot;: [50, 50],
+             *     &quot;project1#download#throughput&quot;: [60, 70],</p>
+             * <p>    &quot;pro2#errorNum&quot;: [5, 10]</p>
              */
             public Builder metrics(java.util.Map<String, ?> metrics) {
                 this.metrics = metrics;

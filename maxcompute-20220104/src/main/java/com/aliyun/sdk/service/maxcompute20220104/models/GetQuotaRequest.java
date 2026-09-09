@@ -123,7 +123,8 @@ public class GetQuotaRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>quota_a</p>
+         * <p>%E9%BB%98%E8%AE%A4%E9%A2%84%E4%BB%98%E8%B4%B9Quota_p</p>
+         * <h1>Chinese name needs to be UTF-8 URL-encoded</h1>
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);
@@ -132,10 +133,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * <p>The trusted AccessKey pairs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>null</p>
+         * AkProven.
          */
         public Builder akProven(String akProven) {
             this.putQueryParameter("AkProven", akProven);
@@ -144,7 +142,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include submodules. Valid values: -true: The request includes submodules. -false: The request does not include submodules. This is the default value.</p>
+         * <p>Specifies whether to include submodules. Valid values: -true: includes submodules. -false (default): does not include submodules.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -156,10 +154,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-chengdu</p>
+         * region.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -168,10 +163,7 @@ public class GetQuotaRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>520539530998273</p>
+         * tenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

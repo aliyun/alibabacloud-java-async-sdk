@@ -116,7 +116,7 @@ public class UpdateUsersToRoleRequest extends Request {
         }
 
         /**
-         * <p>The role name.</p>
+         * <p>The name of the project role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateUsersToRoleRequest extends Request {
         }
 
         /**
-         * <p>The accounts.</p>
+         * <p>The action to add users to the project role.</p>
          */
         public Builder add(java.util.List<String> add) {
             this.putBodyParameter("add", add);
@@ -138,7 +138,7 @@ public class UpdateUsersToRoleRequest extends Request {
         }
 
         /**
-         * <p>The accounts.</p>
+         * <p>The action to remove users from the project role.</p>
          */
         public Builder remove(java.util.List<String> remove) {
             this.putBodyParameter("remove", remove);

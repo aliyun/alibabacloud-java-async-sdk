@@ -67,7 +67,7 @@ public class CreateMmsFetchMetadataJobResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateMmsFetchMetadataJobResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CC4D05E8-0613-5A8E-9339-A0EBD097A69E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class CreateMmsFetchMetadataJobResponseBody extends TeaModel {
             } 
 
             /**
-             * scanId.
+             * <p>The ID of the asynchronous task that syncs metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000002</p>
              */
             public Builder scanId(Long scanId) {
                 this.scanId = scanId;

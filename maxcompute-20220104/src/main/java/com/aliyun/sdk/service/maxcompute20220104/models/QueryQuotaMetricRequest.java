@@ -160,6 +160,7 @@ public class QueryQuotaMetricRequest extends Request {
         } 
 
         /**
+         * <p>The name of the metric. Valid values: cpu and memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,16 @@ public class QueryQuotaMetricRequest extends Request {
         }
 
         /**
-         * interval.
+         * <p>The fixed interval in seconds. If you leave this parameter empty, the system uses an automatic interval policy.</p>
+         * <ul>
+         * <li><p>Automatic interval policy: The interval is 60 seconds for a time range within 6 hours, 300 seconds for a time range within 24 hours, 900 seconds for a time range within 72 hours, and 1,800 seconds for a time range longer than 72 hours.</p>
+         * </li>
+         * <li><p>Specified interval: Valid values are 60, 300, and 900. The query time range must be within 72 hours.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(Long interval) {
             this.putBodyParameter("interval", interval);
@@ -181,7 +191,10 @@ public class QueryQuotaMetricRequest extends Request {
         }
 
         /**
-         * nickname.
+         * <p>The nickname of the level-1 quota. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os_sns_p</p>
          */
         public Builder nickname(String nickname) {
             this.putBodyParameter("nickname", nickname);
@@ -199,7 +212,10 @@ public class QueryQuotaMetricRequest extends Request {
         }
 
         /**
-         * subQuotaNickname.
+         * <p>The nickname of the level-2 quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os_sns</p>
          */
         public Builder subQuotaNickname(String subQuotaNickname) {
             this.putBodyParameter("subQuotaNickname", subQuotaNickname);
@@ -208,6 +224,7 @@ public class QueryQuotaMetricRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +237,7 @@ public class QueryQuotaMetricRequest extends Request {
         }
 
         /**
+         * <p>The start of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +250,11 @@ public class QueryQuotaMetricRequest extends Request {
         }
 
         /**
-         * strategy.
+         * <p>The aggregation strategy for the data. The default value is max. Valid values: max and avg.</p>
+         * <p>Data is collected at one-minute intervals. If you query a long time range, the system may use an interval longer than one minute and aggregate the data. This parameter specifies how the data is aggregated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>max</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("strategy", strategy);

@@ -118,6 +118,10 @@ public class QueryStorageMetricRequest extends Request {
         } 
 
         /**
+         * <p>The name of the metric. Valid value:</p>
+         * <ul>
+         * <li>summary</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +134,7 @@ public class QueryStorageMetricRequest extends Request {
         }
 
         /**
-         * projectList.
+         * <p>The names of the projects.</p>
          */
         public Builder projectList(java.util.List<String> projectList) {
             this.putBodyParameter("projectList", projectList);
@@ -139,7 +143,19 @@ public class QueryStorageMetricRequest extends Request {
         }
 
         /**
-         * typeList.
+         * <p>The storage class. Valid values include the following:</p>
+         * <ul>
+         * <li><p>totalStorage</p>
+         * </li>
+         * <li><p>longTermStorage</p>
+         * </li>
+         * <li><p>lowFreqStorage</p>
+         * </li>
+         * <li><p>standardStorage</p>
+         * </li>
+         * <li><p>recycleBinStorage</p>
+         * </li>
+         * </ul>
          */
         public Builder typeList(java.util.List<String> typeList) {
             this.putBodyParameter("typeList", typeList);
@@ -148,6 +164,7 @@ public class QueryStorageMetricRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +177,7 @@ public class QueryStorageMetricRequest extends Request {
         }
 
         /**
+         * <p>The start of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

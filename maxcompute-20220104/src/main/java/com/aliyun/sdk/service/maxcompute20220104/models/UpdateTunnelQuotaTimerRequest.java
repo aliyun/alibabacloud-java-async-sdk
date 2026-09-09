@@ -88,7 +88,7 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
         } 
 
         /**
-         * <p>The alias of the level-1 Tunnel quota.</p>
+         * <p>The nickname of the level-1 exclusive resource group for Data Transmission Service (Tunnel Quota).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,10 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
         }
 
         /**
-         * timezone.
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timezone(String timezone) {
             this.putQueryParameter("timezone", timezone);
@@ -178,7 +181,7 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             } 
 
             /**
-             * <p>The number of elastically reserved slots.</p>
+             * <p>The number of elastic reserved concurrent slots.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -189,7 +192,7 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             }
 
             /**
-             * <p>The number of reserved slots.</p>
+             * <p>The number of reserved concurrent slots.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -272,7 +275,7 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             } 
 
             /**
-             * <p>The start time of the time-specific configuration.</p>
+             * <p>The start time of the time-based configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>00:00</p>
@@ -283,7 +286,7 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             }
 
             /**
-             * <p>The end time of the time-specific configuration.</p>
+             * <p>The end time of the time-based configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>08:00</p>
@@ -294,7 +297,7 @@ public class UpdateTunnelQuotaTimerRequest extends Request {
             }
 
             /**
-             * <p>The parameters for the time-specific configuration.</p>
+             * <p>The parameters of the time-based configuration.</p>
              */
             public Builder tunnelQuotaParameter(TunnelQuotaParameter tunnelQuotaParameter) {
                 this.tunnelQuotaParameter = tunnelQuotaParameter;

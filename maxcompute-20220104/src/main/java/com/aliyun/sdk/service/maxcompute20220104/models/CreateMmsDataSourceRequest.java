@@ -101,7 +101,7 @@ public class CreateMmsDataSourceRequest extends Request {
         } 
 
         /**
-         * config.
+         * <p>The configurations of the data source.</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.putBodyParameter("config", config);
@@ -110,7 +110,10 @@ public class CreateMmsDataSourceRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -119,7 +122,10 @@ public class CreateMmsDataSourceRequest extends Request {
         }
 
         /**
-         * networklink.
+         * <p>The ID of the MaxCompute network connectivity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf6pc2vordian33gobzfr:cn-shanghai</p>
          */
         public Builder networklink(String networklink) {
             this.putBodyParameter("networklink", networklink);
@@ -128,7 +134,10 @@ public class CreateMmsDataSourceRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIGQUERY</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

@@ -244,8 +244,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>subscription: the subscription quota.</li>
-             * <li>payasyougo: the pay-as-you-go quota.</li>
+             * <li><p>subscription: the subscription quota.</p>
+             * </li>
+             * <li><p>payasyougo: the pay-as-you-go quota.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -680,8 +682,10 @@ public class QueryQuotaResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>subscription: the subscription quota.</li>
-             * <li>payasyougo: the pay-as-you-go quota.</li>
+             * <li><p>subscription: the subscription quota.</p>
+             * </li>
+             * <li><p>payasyougo: the pay-as-you-go quota.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1384,7 +1388,7 @@ public class QueryQuotaResponseBody extends TeaModel {
              * <p>The quota description.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;maxCU&quot;: 10, &quot;minCU&quot;: 10, &quot;adhocCU&quot;: 0, &quot;schedulerType&quot;: &quot;Fifo&quot;}</p>
+             * <p>{\&quot;maxCU\&quot;: 10, \&quot;minCU\&quot;: 10, \&quot;adhocCU\&quot;: 0, \&quot;schedulerType\&quot;: \&quot;Fifo\&quot;}</p>
              */
             public Builder parameter(java.util.Map<String, ?> parameter) {
                 this.parameter = parameter;

@@ -279,6 +279,7 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,7 +292,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * dbId.
+         * <p>The ID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>197</p>
          */
         public Builder dbId(Long dbId) {
             this.putQueryParameter("dbId", dbId);
@@ -300,7 +304,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * dbName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mms_test</p>
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("dbName", dbName);
@@ -309,7 +316,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * dstName.
+         * <p>The name of the destination MaxCompute table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder dstName(String dstName) {
             this.putQueryParameter("dstName", dstName);
@@ -318,7 +328,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * dstProjectName.
+         * <p>The name of the destination MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mms_test</p>
          */
         public Builder dstProjectName(String dstProjectName) {
             this.putQueryParameter("dstProjectName", dstProjectName);
@@ -327,7 +340,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * dstSchemaName.
+         * <p>The name of the destination MaxCompute schema. This parameter is null if the destination MaxCompute project does not have a schema layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dstSchemaName(String dstSchemaName) {
             this.putQueryParameter("dstSchemaName", dstSchemaName);
@@ -336,7 +352,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * hasPartitions.
+         * <p>The partitioned table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasPartitions(Boolean hasPartitions) {
             this.putQueryParameter("hasPartitions", hasPartitions);
@@ -345,7 +364,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * lastDdlTimeEnd.
+         * <p>The end of the time range for lastDdlTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-19 15:44:42</p>
          */
         public Builder lastDdlTimeEnd(String lastDdlTimeEnd) {
             this.putQueryParameter("lastDdlTimeEnd", lastDdlTimeEnd);
@@ -354,7 +376,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * lastDdlTimeStart.
+         * <p>The start of the time range for lastDdlTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-17 15:44:42</p>
          */
         public Builder lastDdlTimeStart(String lastDdlTimeStart) {
             this.putQueryParameter("lastDdlTimeStart", lastDdlTimeStart);
@@ -363,7 +388,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -372,7 +400,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * onlyName.
+         * <p>Specifies whether to return only the names of the tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder onlyName(Boolean onlyName) {
             this.putQueryParameter("onlyName", onlyName);
@@ -381,7 +412,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -390,7 +424,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -399,7 +436,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The migration status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder status(java.util.List<String> status) {
             String statusShrink = shrink(status, "status", "json");
@@ -409,7 +449,10 @@ public class ListMmsTablesRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The table type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANAGED_TABLE</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
@@ -490,7 +533,10 @@ public class ListMmsTablesRequest extends Request {
             } 
 
             /**
-             * lastDdlTime.
+             * <p>The sort order for lastDdlTime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder lastDdlTime(String lastDdlTime) {
                 this.lastDdlTime = lastDdlTime;
@@ -498,7 +544,10 @@ public class ListMmsTablesRequest extends Request {
             }
 
             /**
-             * numRows.
+             * <p>The sort order for the number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder numRows(String numRows) {
                 this.numRows = numRows;
@@ -506,7 +555,10 @@ public class ListMmsTablesRequest extends Request {
             }
 
             /**
-             * size.
+             * <p>The sort order for the data size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asc</p>
              */
             public Builder size(String size) {
                 this.size = size;

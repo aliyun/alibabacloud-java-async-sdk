@@ -132,6 +132,13 @@ public class GetStorageSummaryComparedRequest extends Request {
         } 
 
         /**
+         * <p>The storage metric for comparison. Valid values:</p>
+         * <ul>
+         * <li><p>size</p>
+         * </li>
+         * <li><p>amount</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +151,7 @@ public class GetStorageSummaryComparedRequest extends Request {
         }
 
         /**
+         * <p>The start date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +164,7 @@ public class GetStorageSummaryComparedRequest extends Request {
         }
 
         /**
+         * <p>The end date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +177,7 @@ public class GetStorageSummaryComparedRequest extends Request {
         }
 
         /**
-         * projects.
+         * <p>The list of projects.</p>
          */
         public Builder projects(java.util.List<String> projects) {
             String projectsShrink = shrink(projects, "projects", "simple");
@@ -178,7 +187,10 @@ public class GetStorageSummaryComparedRequest extends Request {
         }
 
         /**
-         * region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -187,7 +199,10 @@ public class GetStorageSummaryComparedRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * <p>The tenant ID. You can log on to the MaxCompute console and choose <strong>Tenant Property</strong> in the navigation pane on the left to view the tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>483212237127906</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

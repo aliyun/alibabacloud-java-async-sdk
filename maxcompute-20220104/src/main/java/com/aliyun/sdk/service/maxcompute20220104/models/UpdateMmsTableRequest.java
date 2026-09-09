@@ -131,6 +131,7 @@ public class UpdateMmsTableRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class UpdateMmsTableRequest extends Request {
         }
 
         /**
+         * <p>The ID of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,10 @@ public class UpdateMmsTableRequest extends Request {
         }
 
         /**
-         * dstName.
+         * <p>The name of the destination MaxCompute table. If you do not specify this parameter, the source table name is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dst_table_name</p>
          */
         public Builder dstName(String dstName) {
             this.putBodyParameter("dstName", dstName);
@@ -164,7 +169,10 @@ public class UpdateMmsTableRequest extends Request {
         }
 
         /**
-         * dstProjectName.
+         * <p>The name of the destination MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dst_project_name</p>
          */
         public Builder dstProjectName(String dstProjectName) {
             this.putBodyParameter("dstProjectName", dstProjectName);
@@ -173,7 +181,10 @@ public class UpdateMmsTableRequest extends Request {
         }
 
         /**
-         * dstSchemaName.
+         * <p>The schema of the destination MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dstSchemaName(String dstSchemaName) {
             this.putBodyParameter("dstSchemaName", dstSchemaName);
@@ -182,7 +193,10 @@ public class UpdateMmsTableRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The migration status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);

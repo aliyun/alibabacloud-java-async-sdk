@@ -80,7 +80,7 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,22 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li><p>1xx: Informational. The request is received and the process is continuing.</p>
+         * </li>
+         * <li><p>2xx: Success. The request is successfully received, understood, and accepted.</p>
+         * </li>
+         * <li><p>3xx: Redirection. Further action needs to be taken to complete the request.</p>
+         * </li>
+         * <li><p>4xx: Client Error. The request contains bad syntax or cannot be fulfilled.</p>
+         * </li>
+         * <li><p>5xx: Server Error. The server fails to fulfill an apparently valid request.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -96,7 +111,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0abb781a17411408145995819e0dae</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +193,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             } 
 
             /**
-             * itemName.
+             * <p>If the type is PROJECT, this parameter indicates the project name. If the type is STORAGE_TYPE, this parameter indicates the storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prj</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -183,7 +204,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * percentage.
+             * <p>The percentage of the storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91.22</p>
              */
             public Builder percentage(Double percentage) {
                 this.percentage = percentage;
@@ -191,7 +215,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * usage.
+             * <p>The storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300.560392</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -297,7 +324,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             } 
 
             /**
-             * dateTime.
+             * <p>The date of the statistics. The format is yyyyMMdd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250719</p>
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -305,7 +335,7 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * itemStorageMetrics.
+             * <p>The list of storage usage of a specified type.</p>
              */
             public Builder itemStorageMetrics(java.util.List<ItemStorageMetrics> itemStorageMetrics) {
                 this.itemStorageMetrics = itemStorageMetrics;
@@ -313,7 +343,18 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * storageType.
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li><p>Storage: Standard.</p>
+             * </li>
+             * <li><p>LowFreqStorage: Infrequent Access (IA).</p>
+             * </li>
+             * <li><p>ColdStorage: Archive.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Storage</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -321,7 +362,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * <p>The unit of the total storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -329,7 +373,10 @@ public class SumStorageMetricsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * usage.
+             * <p>The total storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>329.503338</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;

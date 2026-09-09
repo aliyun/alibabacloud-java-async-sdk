@@ -102,7 +102,7 @@ public class GetProjectRequest extends Request {
         } 
 
         /**
-         * <p>The name of the MaxCompute project.</p>
+         * <p>The project name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use additional information.</p>
+         * <p>Whether to include additional information (securityProperties, superAdmins).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -127,7 +127,10 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * withQuotaProductType.
+         * <p>Whether to include additional information (productType).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withQuotaProductType(Boolean withQuotaProductType) {
             this.putQueryParameter("withQuotaProductType", withQuotaProductType);
@@ -136,7 +139,10 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * withStorageTierInfo.
+         * <p>Whether to include additional information (properties.storageTierInfo).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withStorageTierInfo(Boolean withStorageTierInfo) {
             this.putQueryParameter("withStorageTierInfo", withStorageTierInfo);

@@ -67,7 +67,7 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>A list of configuration items.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>688003E1-D1B4-5468-957E-2FFB3AC8D79B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +261,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * desc.
+             * <p>The description of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute Default Project</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -266,7 +272,7 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * enums.
+             * <p>The enumerated values for the configuration item.</p>
              */
             public Builder enums(java.util.List<String> enums) {
                 this.enums = enums;
@@ -274,7 +280,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * group.
+             * <p>The group to which the configuration item belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>group.basic</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -282,7 +291,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * key.
+             * <p>The key of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mc.default.project</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -290,7 +302,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute Default Project</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -298,7 +313,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * placeHolder.
+             * <p>The placeholder for the configuration value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project</p>
              */
             public Builder placeHolder(String placeHolder) {
                 this.placeHolder = placeHolder;
@@ -306,7 +324,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * required.
+             * <p>Indicates whether the configuration item is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -314,7 +335,7 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * subItems.
+             * <p>The sub-items of the configuration item.</p>
              */
             public Builder subItems(java.util.Map<String, ?> subItems) {
                 this.subItems = subItems;
@@ -322,7 +343,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * subType.
+             * <p>The file type. This parameter is valid only when <code>type</code> is <code>file</code>. For example, .keytab.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.keytab</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -330,7 +354,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The data type of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -338,7 +365,10 @@ public class ListMmsDataSourceConfigItemsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p1=1/p2=abc</p>
              */
             public Builder value(Object value) {
                 this.value = value;

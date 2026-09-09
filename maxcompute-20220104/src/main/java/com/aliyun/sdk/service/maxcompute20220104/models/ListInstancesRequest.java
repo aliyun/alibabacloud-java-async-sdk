@@ -75,6 +75,7 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the time range for cost analysis.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * <p>The start time of the time range for cost analysis.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

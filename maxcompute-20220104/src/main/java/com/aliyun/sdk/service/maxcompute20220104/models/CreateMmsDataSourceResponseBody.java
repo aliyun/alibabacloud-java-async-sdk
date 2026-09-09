@@ -67,7 +67,7 @@ public class CreateMmsDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateMmsDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B42CA730-8187-50F1-9FE0-6733297036DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class CreateMmsDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * dataSourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;

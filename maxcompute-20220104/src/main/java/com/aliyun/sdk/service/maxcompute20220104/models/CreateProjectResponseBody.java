@@ -67,7 +67,7 @@ public class CreateProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The response result.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -78,7 +78,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0b87b7a316654730544735643e9200</p>

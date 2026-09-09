@@ -75,7 +75,7 @@ public class TriggerMmsTimerRequest extends Request {
         } 
 
         /**
-         * <p>datasource id</p>
+         * <p>The ID of the datasource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class TriggerMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>timer id</p>
+         * <p>The ID of the timer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

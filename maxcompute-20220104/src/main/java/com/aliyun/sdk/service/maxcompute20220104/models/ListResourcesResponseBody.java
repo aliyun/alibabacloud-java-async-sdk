@@ -264,7 +264,7 @@ public class ListResourcesResponseBody extends TeaModel {
              * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
-             * <p>file</p>
+             * <p>Filr type resource</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;

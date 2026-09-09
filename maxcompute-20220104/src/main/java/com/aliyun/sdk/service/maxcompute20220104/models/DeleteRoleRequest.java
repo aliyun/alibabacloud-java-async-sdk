@@ -75,6 +75,7 @@ public class DeleteRoleRequest extends Request {
         } 
 
         /**
+         * <p>The name of the project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteRoleRequest extends Request {
         }
 
         /**
+         * <p>The name of the role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

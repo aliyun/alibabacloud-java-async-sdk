@@ -106,7 +106,7 @@ public class QueryStorageMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class QueryStorageMetricResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class QueryStorageMetricResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A3B1FD2006A24C8D8BE65CDAC028298</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -130,7 +136,22 @@ public class QueryStorageMetricResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li><p>1xx: Informational - The request was received and is being processed.</p>
+         * </li>
+         * <li><p>2xx: Success - The request was successfully received, understood, and accepted by the server.</p>
+         * </li>
+         * <li><p>3xx: Redirection - The request was redirected. Further action is needed to complete the request.</p>
+         * </li>
+         * <li><p>4xx: Client error - The request contains incorrect parameters or syntax, or cannot be fulfilled.</p>
+         * </li>
+         * <li><p>5xx: Server error - The server failed to fulfill the request for other reasons.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +159,10 @@ public class QueryStorageMetricResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0be3e0bb16654558425251398e27a9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +228,7 @@ public class QueryStorageMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * metric.
+             * <p>The metadata of the metric.</p>
              */
             public Builder metric(java.util.Map<String, String> metric) {
                 this.metric = metric;
@@ -212,7 +236,7 @@ public class QueryStorageMetricResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The time series data.</p>
              */
             public Builder values(java.util.List<java.util.List<Double>> values) {
                 this.values = values;
@@ -305,7 +329,10 @@ public class QueryStorageMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * category.
+             * <p>The category of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storage</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -313,7 +340,7 @@ public class QueryStorageMetricResponseBody extends TeaModel {
             }
 
             /**
-             * metrics.
+             * <p>The metric values.</p>
              */
             public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
@@ -321,7 +348,10 @@ public class QueryStorageMetricResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>summary</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +359,10 @@ public class QueryStorageMetricResponseBody extends TeaModel {
             }
 
             /**
-             * period.
+             * <p>The step size of the monitoring data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder period(Long period) {
                 this.period = period;

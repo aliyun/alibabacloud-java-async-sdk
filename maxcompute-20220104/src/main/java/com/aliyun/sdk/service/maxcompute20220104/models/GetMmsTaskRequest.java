@@ -75,6 +75,7 @@ public class GetMmsTaskRequest extends Request {
         } 
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetMmsTaskRequest extends Request {
         }
 
         /**
+         * <p>The migration task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

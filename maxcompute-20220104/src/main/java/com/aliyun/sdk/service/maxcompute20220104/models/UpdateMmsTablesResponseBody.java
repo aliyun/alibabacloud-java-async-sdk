@@ -67,7 +67,10 @@ public class UpdateMmsTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class UpdateMmsTablesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CA6292A-E301-5CD8-B4E2-AF060F99147B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

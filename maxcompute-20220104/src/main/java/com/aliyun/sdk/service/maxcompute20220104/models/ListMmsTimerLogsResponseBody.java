@@ -67,7 +67,7 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b87b7e716665825896565060e87a4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * action.
+             * <p>The logged action for the migration job created by the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start job</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -201,7 +207,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time of the log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 15:44:17</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -209,7 +218,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The ID of the asynchronous task for the migration job created by the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1003476</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -217,7 +229,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             }
 
             /**
-             * msg.
+             * <p>A detailed message about the action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>start job success</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -225,7 +240,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200018</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -233,7 +251,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the migration job created by the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -326,7 +347,7 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * objectList.
+             * <p>The list of logs.</p>
              */
             public Builder objectList(java.util.List<ObjectList> objectList) {
                 this.objectList = objectList;
@@ -334,7 +355,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             }
 
             /**
-             * pageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -342,7 +366,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -350,7 +377,10 @@ public class ListMmsTimerLogsResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -87,7 +87,10 @@ public class SumComputeMetricsByRecordRequest extends Request {
         } 
 
         /**
-         * endDate.
+         * <p>The end of the time range to query, specified as a required Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1718590596556</p>
          */
         public Builder endDate(Long endDate) {
             this.putBodyParameter("endDate", endDate);
@@ -96,7 +99,7 @@ public class SumComputeMetricsByRecordRequest extends Request {
         }
 
         /**
-         * projectNames.
+         * <p>The list of project names.</p>
          */
         public Builder projectNames(java.util.List<String> projectNames) {
             this.putBodyParameter("projectNames", projectNames);
@@ -105,7 +108,10 @@ public class SumComputeMetricsByRecordRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>The start of the time range to query, specified as a required Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715393576201</p>
          */
         public Builder startDate(Long startDate) {
             this.putBodyParameter("startDate", startDate);

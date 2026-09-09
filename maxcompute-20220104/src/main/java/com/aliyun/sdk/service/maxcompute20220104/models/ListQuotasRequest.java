@@ -146,7 +146,7 @@ public class ListQuotasRequest extends Request {
         } 
 
         /**
-         * <p>The billing method of the quota.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>subscription</p>
@@ -158,7 +158,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>Specifies the marker after which the returned list begins.</p>
+         * <p>The token that specifies the position from which to start returning results. The results are sorted in alphabetical order.</p>
          * 
          * <strong>example:</strong>
          * <p>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</p>
@@ -182,10 +182,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The service ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ODPS</p>
+         * productId.
          */
         public Builder productId(String productId) {
             this.putQueryParameter("productId", productId);
@@ -194,10 +191,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-beijing</p>
+         * region.
          */
         public Builder region(String region) {
             this.putQueryParameter("region", region);
@@ -206,7 +200,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The cost tag. You can filter out quota objects based on the cost tag. The cost tag is created when you tag a service.</p>
+         * <p>The cost allocation tags that are used to filter quotas. You can create cost allocation tags in the Tag service.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;tag&quot;:&quot;this_is_tag_demo&quot;}</p>
@@ -218,10 +212,7 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tenant.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>280747109771520</p>
+         * tenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);

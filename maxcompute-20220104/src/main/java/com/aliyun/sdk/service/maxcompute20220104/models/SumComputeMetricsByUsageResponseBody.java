@@ -80,7 +80,7 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The usage data for each metering type.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,22 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li><p><code>1xx</code>: Informational response. The request is received and is being processed.</p>
+         * </li>
+         * <li><p><code>2xx</code>: Success. The request was successfully received, understood, and accepted.</p>
+         * </li>
+         * <li><p><code>3xx</code>: Redirection. Further action is required to complete the request.</p>
+         * </li>
+         * <li><p><code>4xx</code>: Client error. The request has invalid syntax or cannot be fulfilled.</p>
+         * </li>
+         * <li><p><code>5xx</code>: Server error. The server failed to fulfill an otherwise valid request.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -96,7 +111,10 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc0598d17544456742466519e6611</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +193,10 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * dateTime.
+             * <p>The date of the usage, in <code>yyyyMMdd</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20260413</p>
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -183,7 +204,10 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * <p>The unit of compute usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GBCplx</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -191,7 +215,10 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
             }
 
             /**
-             * usage.
+             * <p>The total usage for the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.149683987</p>
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -258,7 +285,7 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * dailyComputeMetrics.
+             * <p>The daily usage statistics.</p>
              */
             public Builder dailyComputeMetrics(java.util.List<DailyComputeMetrics> dailyComputeMetrics) {
                 this.dailyComputeMetrics = dailyComputeMetrics;
@@ -266,7 +293,16 @@ public class SumComputeMetricsByUsageResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The metering type.</p>
+             * <p><code>ComputationSql</code>: Metering data for SQL jobs on internal tables.</p>
+             * <p><code>ComputationSqlOTS</code>: Metering data for SQL jobs on OTS external tables.</p>
+             * <p><code>ComputationSqlOSS</code>: Metering data for SQL jobs on OSS external tables.</p>
+             * <p><code>MapReduce</code>: Metering data for MapReduce jobs.</p>
+             * <p><code>spark</code>: Metering data for Spark jobs.</p>
+             * <p><code>mars</code>: Metering data for Mars jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ComputationSql</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -106,7 +106,8 @@ public class GetQuotaScheduleRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>quotaA</p>
+         * <p>%E9%BB%98%E8%AE%A4%E9%A2%84%E4%BB%98%E8%B4%B9Quota_p</p>
+         * <h1>Chinese name needs to be UTF-8 URL-encoded</h1>
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);

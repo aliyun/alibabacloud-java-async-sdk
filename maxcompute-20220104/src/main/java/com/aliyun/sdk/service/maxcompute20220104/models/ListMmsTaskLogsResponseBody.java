@@ -67,7 +67,7 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>A list of logs.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3AE5649-EF90-54BD-86D0-C632FA950988</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,10 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * action.
+             * <p>The operation performed by the migration task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create schema if not exists mms_test.default;</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -214,7 +220,10 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the log was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 15:44:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -222,7 +231,10 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The log ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -230,7 +242,10 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * msg.
+             * <p>The result of the migration task operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -238,7 +253,10 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000015</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -246,7 +264,10 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The migration task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_DOING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -254,7 +275,10 @@ public class ListMmsTaskLogsResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The migration task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4023</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

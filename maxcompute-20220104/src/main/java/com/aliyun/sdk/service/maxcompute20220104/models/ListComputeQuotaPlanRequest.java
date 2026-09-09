@@ -60,7 +60,7 @@ public class ListComputeQuotaPlanRequest extends Request {
         } 
 
         /**
-         * <p>The nickname of level-1 compute quota.</p>
+         * <p>The nickname of the level-1 quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

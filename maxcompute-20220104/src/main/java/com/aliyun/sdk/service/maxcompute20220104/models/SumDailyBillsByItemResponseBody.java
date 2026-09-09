@@ -80,7 +80,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -96,7 +96,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique identifier for the request.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +188,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             } 
 
             /**
-             * cost.
+             * <p>The cost of the item.</p>
              */
             public Builder cost(String cost) {
                 this.cost = cost;
@@ -196,7 +196,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * currency.
+             * <p>The currency of the cost.</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -204,7 +204,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * itemName.
+             * <p>The name of the billable item.</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -212,7 +212,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * percentage.
+             * <p>The item\&quot;s percentage of the daily total cost.</p>
              */
             public Builder percentage(Double percentage) {
                 this.percentage = percentage;
@@ -305,7 +305,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             } 
 
             /**
-             * cost.
+             * <p>The cost for the day.</p>
              */
             public Builder cost(String cost) {
                 this.cost = cost;
@@ -313,7 +313,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * currency.
+             * <p>The currency of the cost.</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -321,7 +321,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * dateTime.
+             * <p>The date. Format: YYYYMMDD.</p>
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -329,7 +329,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * itemBills.
+             * <p>An array of detailed bills for the item on the specified day.</p>
              */
             public Builder itemBills(java.util.List<ItemBills> itemBills) {
                 this.itemBills = itemBills;
@@ -448,7 +448,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             } 
 
             /**
-             * currency.
+             * <p>The currency of the cost.</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -456,7 +456,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * dailySumBills.
+             * <p>An array of daily cost summaries for the item.</p>
              */
             public Builder dailySumBills(java.util.List<DailySumBills> dailySumBills) {
                 this.dailySumBills = dailySumBills;
@@ -464,7 +464,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * itemName.
+             * <p>The name of the billable item.</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -472,7 +472,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * percentage.
+             * <p>The item\&quot;s percentage of the total cost.</p>
              */
             public Builder percentage(Double percentage) {
                 this.percentage = percentage;
@@ -480,7 +480,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * specCode.
+             * <p>The specification code of the item.</p>
              */
             public Builder specCode(String specCode) {
                 this.specCode = specCode;
@@ -488,7 +488,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * totalCost.
+             * <p>The total cost of the item.</p>
              */
             public Builder totalCost(String totalCost) {
                 this.totalCost = totalCost;
@@ -581,7 +581,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             } 
 
             /**
-             * itemSummaryBills.
+             * <p>An array of item-level cost summaries.</p>
              */
             public Builder itemSummaryBills(java.util.List<ItemSummaryBills> itemSummaryBills) {
                 this.itemSummaryBills = itemSummaryBills;
@@ -589,7 +589,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The current page number.</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -597,7 +597,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -605,7 +605,7 @@ public class SumDailyBillsByItemResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of entries returned.</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

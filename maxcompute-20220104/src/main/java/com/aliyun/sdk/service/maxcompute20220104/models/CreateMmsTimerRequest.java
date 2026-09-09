@@ -271,6 +271,7 @@ public class CreateMmsTimerRequest extends Request {
         } 
 
         /**
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +285,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * columnMapping.
+         * <p>A map of source column names to target column names.</p>
          */
         public Builder columnMapping(java.util.Map<String, String> columnMapping) {
             this.putBodyParameter("columnMapping", columnMapping);
@@ -293,7 +294,10 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * enableDataMigration.
+         * <p>Specifies whether to migrate table data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableDataMigration(Boolean enableDataMigration) {
             this.putBodyParameter("enableDataMigration", enableDataMigration);
@@ -302,7 +306,10 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * enableSchemaMigration.
+         * <p>Specifies whether to migrate the table schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSchemaMigration(Boolean enableSchemaMigration) {
             this.putBodyParameter("enableSchemaMigration", enableSchemaMigration);
@@ -311,7 +318,10 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * enableVerification.
+         * <p>Specifies whether to enable data verification. If set to <code>true</code>, the system runs a <code>SELECT COUNT(*)</code> query on both the source and target tables and compares the row counts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableVerification(Boolean enableVerification) {
             this.putBodyParameter("enableVerification", enableVerification);
@@ -320,7 +330,10 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>planA</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -329,7 +342,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * others.
+         * <p>Other configuration settings.</p>
          */
         public Builder others(java.util.Map<String, ?> others) {
             this.putBodyParameter("others", others);
@@ -338,7 +351,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * partitionFilters.
+         * <p>A map of table names to their corresponding partition filter expressions.</p>
          */
         public Builder partitionFilters(java.util.Map<String, String> partitionFilters) {
             this.putBodyParameter("partitionFilters", partitionFilters);
@@ -347,7 +360,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * partitions.
+         * <p>A list of IDs for the table partitions to migrate. This parameter takes effect only when the <code>type</code> parameter is set to <code>Partitions</code>.</p>
          */
         public Builder partitions(java.util.List<Long> partitions) {
             this.putBodyParameter("partitions", partitions);
@@ -356,7 +369,10 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * scheduleType.
+         * <p>The schedule type for the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder scheduleType(String scheduleType) {
             this.putBodyParameter("scheduleType", scheduleType);
@@ -365,7 +381,10 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * srcDbName.
+         * <p>The name of the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src_db</p>
          */
         public Builder srcDbName(String srcDbName) {
             this.putBodyParameter("srcDbName", srcDbName);
@@ -374,7 +393,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * tableBlackList.
+         * <p>A blacklist of tables to exclude from the migration. This parameter takes effect only when the <code>type</code> parameter is set to <code>Database</code>.</p>
          */
         public Builder tableBlackList(java.util.List<String> tableBlackList) {
             this.putBodyParameter("tableBlackList", tableBlackList);
@@ -383,7 +402,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * tableMapping.
+         * <p>A map of source table names to target table names.</p>
          */
         public Builder tableMapping(java.util.Map<String, String> tableMapping) {
             this.putBodyParameter("tableMapping", tableMapping);
@@ -392,7 +411,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * tableWhiteList.
+         * <p>A whitelist of tables to migrate. This parameter takes effect only when the <code>type</code> parameter is set to <code>Database</code>. If omitted, all tables in the source database are migrated.</p>
          */
         public Builder tableWhiteList(java.util.List<String> tableWhiteList) {
             this.putBodyParameter("tableWhiteList", tableWhiteList);
@@ -401,7 +420,7 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * tables.
+         * <p>A list of table names to migrate. This parameter takes effect only when the <code>type</code> parameter is set to <code>Tables</code>.</p>
          */
         public Builder tables(java.util.List<String> tables) {
             this.putBodyParameter("tables", tables);
@@ -410,7 +429,10 @@ public class CreateMmsTimerRequest extends Request {
         }
 
         /**
-         * value.
+         * <p>The time to run the scheduled task. If <code>scheduleType</code> is set to <code>Daily</code>, the value is the time in <code>HH:MM</code> format. If <code>scheduleType</code> is set to <code>Hourly</code>, the value is the minute of the hour (<code>MM</code>).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12:00</p>
          */
         public Builder value(String value) {
             this.putBodyParameter("value", value);

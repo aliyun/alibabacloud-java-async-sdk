@@ -80,7 +80,7 @@ public class SumBillsResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class SumBillsResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -96,7 +99,10 @@ public class SumBillsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB66A390-4EF7-557E-9489-7F98D6F44002</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +194,10 @@ public class SumBillsResponseBody extends TeaModel {
             } 
 
             /**
-             * cost.
+             * <p>The cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123.56</p>
              */
             public Builder cost(String cost) {
                 this.cost = cost;
@@ -196,7 +205,10 @@ public class SumBillsResponseBody extends TeaModel {
             }
 
             /**
-             * currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -204,7 +216,10 @@ public class SumBillsResponseBody extends TeaModel {
             }
 
             /**
-             * itemName.
+             * <p>The item name. When the request\&quot;s <code>statsType</code> is <code>PROJECT</code>, this is the instance name. When <code>statsType</code> is <code>FEE_ITEM</code>, this is the billable item type (for example, <code>DRStorage</code>, <code>ComputationSql</code>, or <code>Storage</code>).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>projectName</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -212,7 +227,10 @@ public class SumBillsResponseBody extends TeaModel {
             }
 
             /**
-             * percentage.
+             * <p>The percentage of the total cost that this item represents. The value does not include a percent sign (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56.12</p>
              */
             public Builder percentage(Double percentage) {
                 this.percentage = percentage;
@@ -292,7 +310,10 @@ public class SumBillsResponseBody extends TeaModel {
             } 
 
             /**
-             * currency.
+             * <p>The currency used for all cost values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -300,7 +321,7 @@ public class SumBillsResponseBody extends TeaModel {
             }
 
             /**
-             * itemBills.
+             * <p>A list of billable items.</p>
              */
             public Builder itemBills(java.util.List<ItemBills> itemBills) {
                 this.itemBills = itemBills;
@@ -308,7 +329,10 @@ public class SumBillsResponseBody extends TeaModel {
             }
 
             /**
-             * totalCost.
+             * <p>The total cost of all returned billable items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123.56</p>
              */
             public Builder totalCost(String totalCost) {
                 this.totalCost = totalCost;

@@ -80,7 +80,7 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,22 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li><p>1xx: Informational. The server has received the request and is processing it.</p>
+         * </li>
+         * <li><p>2xx: Success. The server successfully received, understood, and accepted the request.</p>
+         * </li>
+         * <li><p>3xx: Redirection. The client must take further action to complete the request.</p>
+         * </li>
+         * <li><p>4xx: Client-side error. The request contains invalid syntax or parameters and cannot be fulfilled.</p>
+         * </li>
+         * <li><p>5xx: Server-side error. The server failed to fulfill a valid request.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -96,7 +111,10 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06dfe517540143853845404e83af</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -175,7 +193,10 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * dateTime.
+             * <p>The statistics date. The format is yyyyMMdd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20260411</p>
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -183,7 +204,10 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * percentage.
+             * <p>This day\&quot;s usage as a percentage of the total usage for the specified period. The value does not include a percent sign (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder percentage(Double percentage) {
                 this.percentage = percentage;
@@ -191,7 +215,10 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * record.
+             * <p>The record count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder record(String record) {
                 this.record = record;
@@ -258,7 +285,7 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * dailyComputeRecords.
+             * <p>A list of daily usage records.</p>
              */
             public Builder dailyComputeRecords(java.util.List<DailyComputeRecords> dailyComputeRecords) {
                 this.dailyComputeRecords = dailyComputeRecords;
@@ -266,7 +293,10 @@ public class SumComputeMetricsByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The usage type. For example: ComputationSql</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ComputationSql</p>
              */
             public Builder type(String type) {
                 this.type = type;

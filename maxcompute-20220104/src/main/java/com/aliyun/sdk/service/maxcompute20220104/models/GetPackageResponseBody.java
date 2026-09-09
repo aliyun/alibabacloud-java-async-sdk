@@ -128,7 +128,7 @@ public class GetPackageResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>error message.</p>
+         * <p>Exception information</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;

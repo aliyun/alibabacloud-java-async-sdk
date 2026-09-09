@@ -355,7 +355,7 @@ public class ListJobInfosRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to sort query results in ascending or descending order.</p>
+         * <p>Specifies whether to sort in ascending or descending order.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -367,7 +367,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The ancestor node IDs.</p>
+         * <p>The list of upstream node IDs.</p>
          */
         public Builder extNodeIdList(java.util.List<String> extNodeIdList) {
             this.putBodyParameter("extNodeIdList", extNodeIdList);
@@ -398,7 +398,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The job instance IDs.</p>
+         * <p>The list of job instance IDs.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putBodyParameter("instanceIdList", instanceIdList);
@@ -407,7 +407,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The job owners.</p>
+         * <p>The list of job owners.</p>
          */
         public Builder jobOwnerList(java.util.List<String> jobOwnerList) {
             this.putBodyParameter("jobOwnerList", jobOwnerList);
@@ -416,7 +416,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The job priorities.</p>
+         * <p>The list of job priorities.</p>
          */
         public Builder priorityList(java.util.List<Long> priorityList) {
             this.putBodyParameter("priorityList", priorityList);
@@ -425,7 +425,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The project names.</p>
+         * <p>The list of project names.</p>
          */
         public Builder projectList(java.util.List<String> projectList) {
             this.putBodyParameter("projectList", projectList);
@@ -446,7 +446,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The intelligent diagnostics tags.</p>
+         * <p>The list of intelligent diagnostics tags.</p>
          */
         public Builder sceneTagList(java.util.List<String> sceneTagList) {
             this.putBodyParameter("sceneTagList", sceneTagList);
@@ -455,7 +455,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The job signatures.</p>
+         * <p>The list of job signatures.</p>
          */
         public Builder signatureList(java.util.List<String> signatureList) {
             this.putBodyParameter("signatureList", signatureList);
@@ -464,7 +464,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The sorting columns.</p>
+         * <p>The list of columns for multi-column sorting.</p>
          */
         public Builder sortByList(java.util.List<String> sortByList) {
             this.putBodyParameter("sortByList", sortByList);
@@ -473,7 +473,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The orders for the sorting columns.</p>
+         * <p>The list of sort orders for multi-column sorting.</p>
          */
         public Builder sortOrderList(java.util.List<String> sortOrderList) {
             this.putBodyParameter("sortOrderList", sortOrderList);
@@ -482,7 +482,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The job states.</p>
+         * <p>The list of job statuses.</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             this.putBodyParameter("statusList", statusList);
@@ -513,7 +513,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The job types.</p>
+         * <p>The list of job types.</p>
          */
         public Builder typeList(java.util.List<String> typeList) {
             this.putBodyParameter("typeList", typeList);
@@ -522,7 +522,7 @@ public class ListJobInfosRequest extends Request {
         }
 
         /**
-         * <p>The column based on which you want to sort query results.</p>
+         * <p>The column used for sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>cuUsage</p>

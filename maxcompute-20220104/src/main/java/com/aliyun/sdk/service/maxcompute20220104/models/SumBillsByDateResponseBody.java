@@ -80,7 +80,7 @@ public class SumBillsByDateResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The list of results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class SumBillsByDateResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -96,7 +99,10 @@ public class SumBillsByDateResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB66A390-4EF7-557E-9489-7F98D6F44002</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +194,10 @@ public class SumBillsByDateResponseBody extends TeaModel {
             } 
 
             /**
-             * cost.
+             * <p>The cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder cost(String cost) {
                 this.cost = cost;
@@ -196,7 +205,10 @@ public class SumBillsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * currency.
+             * <p>The currency. This is a fixed value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RMB</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -204,7 +216,10 @@ public class SumBillsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * itemName.
+             * <p>The name of the item. The value of this parameter depends on the <code>statsType</code> parameter in the request. If <code>statsType</code> is <code>PROJECT</code>, this parameter indicates the instance name. If <code>statsType</code> is <code>FEE_ITEM</code>, this parameter can be a value such as <code>DRStorage</code>, <code>ComputationSql</code>, or <code>Storage</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>projectName</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -212,7 +227,10 @@ public class SumBillsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * percentage.
+             * <p>The item\&quot;s cost as a percentage of the total daily cost. This value does not include a percent sign (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder percentage(Double percentage) {
                 this.percentage = percentage;
@@ -305,7 +323,10 @@ public class SumBillsByDateResponseBody extends TeaModel {
             } 
 
             /**
-             * cost.
+             * <p>The total cost for the specified <code>dateTime</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder cost(String cost) {
                 this.cost = cost;
@@ -313,7 +334,10 @@ public class SumBillsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * currency.
+             * <p>The currency. This is a fixed value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RMB</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -321,7 +345,10 @@ public class SumBillsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * dateTime.
+             * <p>The date of the statistics, in <code>yyyyMMdd</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250719</p>
              */
             public Builder dateTime(String dateTime) {
                 this.dateTime = dateTime;
@@ -329,7 +356,7 @@ public class SumBillsByDateResponseBody extends TeaModel {
             }
 
             /**
-             * itemBills.
+             * <p>A list of billable items.</p>
              */
             public Builder itemBills(java.util.List<ItemBills> itemBills) {
                 this.itemBills = itemBills;

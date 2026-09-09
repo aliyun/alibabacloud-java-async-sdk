@@ -106,7 +106,7 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan \&quot;***\&quot; does not exist</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -130,7 +136,22 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li><p>1xx: informational response. The request is received and is being processed.</p>
+         * </li>
+         * <li><p>2xx: success. The request is successfully received, understood, and accepted by the server.</p>
+         * </li>
+         * <li><p>3xx: redirection. The request is redirected. You must take further action to complete the request.</p>
+         * </li>
+         * <li><p>4xx: client error. The request contains invalid parameters or syntax, or fails to meet specific conditions.</p>
+         * </li>
+         * <li><p>5xx: server error. The server cannot fulfill the request for other reasons.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +159,10 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc3b4b016674434996033675e71ee</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,7 +267,10 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
             } 
 
             /**
-             * beginDate.
+             * <p>The start date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250601</p>
              */
             public Builder beginDate(String beginDate) {
                 this.beginDate = beginDate;
@@ -251,7 +278,10 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
             }
 
             /**
-             * endDate.
+             * <p>The end date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250604</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -259,7 +289,17 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
             }
 
             /**
-             * rate.
+             * <p>The year-on-year (YoY) change rate of the storage usage from the start date to the end date. Valid values:</p>
+             * <ul>
+             * <li><p>lowFreqStorageRate</p>
+             * </li>
+             * <li><p>totalStorageRate</p>
+             * </li>
+             * <li><p>standardStorageRate</p>
+             * </li>
+             * <li><p>longTermStorageRate</p>
+             * </li>
+             * </ul>
              */
             public Builder rate(java.util.Map<String, Double> rate) {
                 this.rate = rate;
@@ -267,7 +307,17 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * <p>The unit of the change in the storage usage from the start date to the end date. Valid values:</p>
+             * <ul>
+             * <li><p>lowFreqStorageUnit</p>
+             * </li>
+             * <li><p>totalStorageUnit</p>
+             * </li>
+             * <li><p>standardStorageUnit</p>
+             * </li>
+             * <li><p>longTermStorageUnit</p>
+             * </li>
+             * </ul>
              */
             public Builder unit(java.util.Map<String, String> unit) {
                 this.unit = unit;
@@ -275,7 +325,17 @@ public class GetStorageSummaryComparedResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The change in the storage usage from the start date to the end date. Valid values:</p>
+             * <ul>
+             * <li><p>lowFreqStorage</p>
+             * </li>
+             * <li><p>totalStorage</p>
+             * </li>
+             * <li><p>standardStorage</p>
+             * </li>
+             * <li><p>longTermStorage</p>
+             * </li>
+             * </ul>
              */
             public Builder value(java.util.Map<String, Double> value) {
                 this.value = value;

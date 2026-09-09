@@ -121,7 +121,7 @@ public class QueryQuotaRequest extends Request {
          * 
          * <strong>example:</strong>
          * <p>%E9%BB%98%E8%AE%A4%E9%A2%84%E4%BB%98%E8%B4%B9Quota_p</p>
-         * <h1>The Chinese name must be encoded and escaped by using UTF-8 URL encoding.</h1>
+         * <h1>Chinese name needs to be UTF-8 URL-encoded</h1>
          */
         public Builder nickname(String nickname) {
             this.putPathParameter("nickname", nickname);

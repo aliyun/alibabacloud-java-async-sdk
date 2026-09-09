@@ -130,6 +130,7 @@ public class ListMmsDbsRequest extends Request {
         } 
 
         /**
+         * <p>Data source ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>Data source name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -151,7 +155,10 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -160,7 +167,10 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>Number of records per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -169,7 +179,7 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * sorter.
+         * <p>Sorting conditions</p>
          */
         public Builder sorter(Sorter sorter) {
             String sorterShrink = shrink(sorter, "sorter", "json");
@@ -179,7 +189,10 @@ public class ListMmsDbsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>Data source status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STARTED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -260,7 +273,10 @@ public class ListMmsDbsRequest extends Request {
             } 
 
             /**
-             * numRows.
+             * <p>Number of data rows in the database</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder numRows(String numRows) {
                 this.numRows = numRows;
@@ -268,7 +284,10 @@ public class ListMmsDbsRequest extends Request {
             }
 
             /**
-             * size.
+             * <p>Size of data in the database</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asc</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -276,7 +295,10 @@ public class ListMmsDbsRequest extends Request {
             }
 
             /**
-             * updateTime.
+             * <p>Update time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 15:44:17</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

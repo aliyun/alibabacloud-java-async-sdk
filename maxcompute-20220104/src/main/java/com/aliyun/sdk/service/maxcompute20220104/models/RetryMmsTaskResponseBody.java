@@ -67,7 +67,10 @@ public class RetryMmsTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class RetryMmsTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06dd4516687375802853481ec9fd</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

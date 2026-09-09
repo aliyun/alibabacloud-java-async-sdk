@@ -88,6 +88,7 @@ public class CreateMmsFetchMetadataJobRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class CreateMmsFetchMetadataJobRequest extends Request {
         }
 
         /**
-         * dbName.
+         * <p>Updates metadata for the specified source database, schema, or dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("dbName", dbName);
@@ -109,7 +113,7 @@ public class CreateMmsFetchMetadataJobRequest extends Request {
         }
 
         /**
-         * tableNames.
+         * <p>Updates metadata for the specified source tables.</p>
          */
         public Builder tableNames(java.util.List<String> tableNames) {
             this.putBodyParameter("tableNames", tableNames);

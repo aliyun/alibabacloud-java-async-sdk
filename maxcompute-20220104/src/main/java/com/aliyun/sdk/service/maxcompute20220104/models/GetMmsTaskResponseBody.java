@@ -67,7 +67,7 @@ public class GetMmsTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The migration task object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73207140-0FD5-588A-B11A-3CE093924196</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -388,7 +391,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-25 04:21:01</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -396,7 +402,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dbId.
+             * <p>The source database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -404,7 +413,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dstDbName.
+             * <p>The destination MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mms_target</p>
              */
             public Builder dstDbName(String dstDbName) {
                 this.dstDbName = dstDbName;
@@ -412,7 +424,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dstSchemaName.
+             * <p>The destination MaxCompute schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder dstSchemaName(String dstSchemaName) {
                 this.dstSchemaName = dstSchemaName;
@@ -420,7 +435,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dstTableName.
+             * <p>The destination MaxCompute table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_1</p>
              */
             public Builder dstTableName(String dstTableName) {
                 this.dstTableName = dstTableName;
@@ -428,7 +446,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * <p>The end time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-25 07:21:01</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -436,7 +457,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The migration task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7680</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -444,7 +468,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * jobId.
+             * <p>The migration job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -452,7 +479,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * jobName.
+             * <p>The migration job name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_odps_spark</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -460,7 +490,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * retriedTimes.
+             * <p>The number of times the task has been retried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder retriedTimes(Integer retriedTimes) {
                 this.retriedTimes = retriedTimes;
@@ -468,7 +501,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * running.
+             * <p>Indicates if the task is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder running(Boolean running) {
                 this.running = running;
@@ -476,7 +512,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000015</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -484,7 +523,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * sourceName.
+             * <p>The data source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -492,7 +534,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * srcDbName.
+             * <p>The source database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mms_test</p>
              */
             public Builder srcDbName(String srcDbName) {
                 this.srcDbName = srcDbName;
@@ -500,7 +545,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * srcSchemaName.
+             * <p>The name of the source schema. This refers to the schema in a Layer 3 namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder srcSchemaName(String srcSchemaName) {
                 this.srcSchemaName = srcSchemaName;
@@ -508,7 +556,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * srcTableName.
+             * <p>The source table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_1</p>
              */
             public Builder srcTableName(String srcTableName) {
                 this.srcTableName = srcTableName;
@@ -516,7 +567,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-25 06:21:01</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -524,7 +578,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The migration task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_DOING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -532,7 +589,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * stopped.
+             * <p>Indicates if the task is stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stopped(Boolean stopped) {
                 this.stopped = stopped;
@@ -540,7 +600,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * tableId.
+             * <p>The source table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323</p>
              */
             public Builder tableId(Long tableId) {
                 this.tableId = tableId;
@@ -548,7 +611,10 @@ public class GetMmsTaskResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGQUERY</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -101,7 +101,10 @@ public class SumStorageMetricsByDateRequest extends Request {
         } 
 
         /**
-         * endDate.
+         * <p>The end of the time range to query. The value must be a timestamp in milliseconds. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1718590596556</p>
          */
         public Builder endDate(Long endDate) {
             this.putBodyParameter("endDate", endDate);
@@ -110,7 +113,7 @@ public class SumStorageMetricsByDateRequest extends Request {
         }
 
         /**
-         * projectNames.
+         * <p>The project names. If this parameter is not specified, the data of all projects is returned.</p>
          */
         public Builder projectNames(java.util.List<String> projectNames) {
             this.putBodyParameter("projectNames", projectNames);
@@ -119,7 +122,10 @@ public class SumStorageMetricsByDateRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>The beginning of the time range to query. The value must be a timestamp in milliseconds. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1715393576201</p>
          */
         public Builder startDate(Long startDate) {
             this.putBodyParameter("startDate", startDate);
@@ -128,7 +134,16 @@ public class SumStorageMetricsByDateRequest extends Request {
         }
 
         /**
-         * statsType.
+         * <p>The dimension for aggregating storage metrics. This parameter is required. Valid values:</p>
+         * <ul>
+         * <li><p><code>PROJECT</code></p>
+         * </li>
+         * <li><p><code>STORAGE_TYPE</code></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROJECT</p>
          */
         public Builder statsType(String statsType) {
             this.putBodyParameter("statsType", statsType);

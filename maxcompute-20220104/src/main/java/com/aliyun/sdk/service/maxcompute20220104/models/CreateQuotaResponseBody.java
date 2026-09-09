@@ -67,7 +67,7 @@ public class CreateQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc520ad17171208978521777d742c</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class CreateQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * nickName.
+             * <p>The alias of the quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>os_PayAsYouGoQuota_p</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;

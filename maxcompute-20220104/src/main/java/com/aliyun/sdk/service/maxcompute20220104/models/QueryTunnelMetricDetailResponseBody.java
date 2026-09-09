@@ -106,7 +106,7 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OBJECT_NOT_EXIST</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan \&quot;***\&quot; does not exist</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -130,7 +136,10 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +147,10 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0a06dd4516687375802853481ec9fd</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,7 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * metric.
+             * <p>The metric metadata.</p>
              */
             public Builder metric(java.util.Map<String, String> metric) {
                 this.metric = metric;
@@ -212,7 +224,10 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The metric\&quot;s numerical values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;avgValue&quot;:&quot;11.5&quot;</p>
              */
             public Builder value(java.util.Map<String, ?> value) {
                 this.value = value;
@@ -279,7 +294,7 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * metrics.
+             * <p>The metric values.</p>
              */
             public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
@@ -287,7 +302,10 @@ public class QueryTunnelMetricDetailResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tableA</p>
              */
             public Builder name(String name) {
                 this.name = name;

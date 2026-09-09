@@ -67,7 +67,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The response payload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C1F7715F-D316-5AB6-BD02-5241083F4003</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * desc.
+             * <p>The description of the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Range partition table migration method</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -253,7 +259,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * enums.
+             * <p>A list of valid values for the configuration.</p>
              */
             public Builder enums(java.util.List<String> enums) {
                 this.enums = enums;
@@ -261,7 +267,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * group.
+             * <p>The configuration group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>basic_group</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -269,7 +278,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * key.
+             * <p>The unique key for the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigquery.range.partition.migrate.type</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -277,7 +289,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The configuration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Range partition table migration method</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -285,7 +300,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * placeHolder.
+             * <p>A placeholder for the configuration value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cluster or Partition</p>
              */
             public Builder placeHolder(String placeHolder) {
                 this.placeHolder = placeHolder;
@@ -293,7 +311,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * required.
+             * <p>Indicates whether the configuration is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -301,7 +322,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * subType.
+             * <p>The required file extension (for example, <code>.keytab</code>) when <code>type</code> is <code>file</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.keytab</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -309,7 +333,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The configuration type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -317,7 +344,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The configuration value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Partition</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -696,7 +726,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * agentIsOnline.
+             * <p>Indicates whether the agent for the data source instance is online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder agentIsOnline(Boolean agentIsOnline) {
                 this.agentIsOnline = agentIsOnline;
@@ -704,7 +737,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * config.
+             * <p>A list of data source configurations.</p>
              */
             public Builder config(java.util.List<Config> config) {
                 this.config = config;
@@ -712,7 +745,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time the data source was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 09:29:58</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -720,7 +756,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * dbNum.
+             * <p>The number of databases in the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dbNum(Integer dbNum) {
                 this.dbNum = dbNum;
@@ -728,7 +767,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * dstProject.
+             * <p>The default destination MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mms_test</p>
              */
             public Builder dstProject(String dstProject) {
                 this.dstProject = dstProject;
@@ -736,7 +778,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * dstProjects.
+             * <p>A list of destination MaxCompute projects.</p>
              */
             public Builder dstProjects(java.util.List<String> dstProjects) {
                 this.dstProjects = dstProjects;
@@ -744,7 +786,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * errMsg.
+             * <p>The reason the data source instance failed to start or stop. This parameter is returned only if the <code>status</code> is <code>START_FAILED</code> or <code>STOP_FAILED</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unexpected exception</p>
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -752,7 +797,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000015</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -760,7 +808,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * lastUpdateTime.
+             * <p>The last metadata synchronization time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-17 15:44:17</p>
              */
             public Builder lastUpdateTime(String lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -768,7 +819,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The data source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -776,7 +830,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * networklink.
+             * <p>The network connection, specified in the <code>VpcId:RegionId</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zebqp6uojhdla46677tl:cn-beijing</p>
              */
             public Builder networklink(String networklink) {
                 this.networklink = networklink;
@@ -784,7 +841,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * partitionNum.
+             * <p>The number of partitions in the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000000</p>
              */
             public Builder partitionNum(Integer partitionNum) {
                 this.partitionNum = partitionNum;
@@ -792,7 +852,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsDoingNum.
+             * <p>The number of partitions currently being migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2332</p>
              */
             public Builder partitionsDoingNum(Integer partitionsDoingNum) {
                 this.partitionsDoingNum = partitionsDoingNum;
@@ -800,7 +863,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsDoneNum.
+             * <p>The number of successfully migrated partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder partitionsDoneNum(Integer partitionsDoneNum) {
                 this.partitionsDoneNum = partitionsDoneNum;
@@ -808,7 +874,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsFailedNum.
+             * <p>The number of partitions that failed to migrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323</p>
              */
             public Builder partitionsFailedNum(Integer partitionsFailedNum) {
                 this.partitionsFailedNum = partitionsFailedNum;
@@ -816,7 +885,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -832,7 +904,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * scanId.
+             * <p>The ID of the metadata synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000253</p>
              */
             public Builder scanId(Long scanId) {
                 this.scanId = scanId;
@@ -848,7 +923,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The data source status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STARTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -856,7 +934,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tableNum.
+             * <p>The number of tables in the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder tableNum(Integer tableNum) {
                 this.tableNum = tableNum;
@@ -864,7 +945,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tablesDoingNum.
+             * <p>The number of tables currently being migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder tablesDoingNum(Integer tablesDoingNum) {
                 this.tablesDoingNum = tablesDoingNum;
@@ -872,7 +956,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tablesDoneNum.
+             * <p>The number of successfully migrated tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323</p>
              */
             public Builder tablesDoneNum(Integer tablesDoneNum) {
                 this.tablesDoneNum = tablesDoneNum;
@@ -880,7 +967,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tablesFailedNum.
+             * <p>The number of tables that failed to migrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder tablesFailedNum(Integer tablesFailedNum) {
                 this.tablesFailedNum = tablesFailedNum;
@@ -888,7 +978,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tablesPartDoneNum.
+             * <p>The number of partially migrated tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder tablesPartDoneNum(Integer tablesPartDoneNum) {
                 this.tablesPartDoneNum = tablesPartDoneNum;
@@ -896,7 +989,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The data source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGQUERY</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -989,7 +1085,7 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * objectList.
+             * <p>The list of data sources.</p>
              */
             public Builder objectList(java.util.List<ObjectList> objectList) {
                 this.objectList = objectList;
@@ -997,7 +1093,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * pageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -1005,7 +1104,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1013,7 +1115,10 @@ public class ListMmsDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of data sources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

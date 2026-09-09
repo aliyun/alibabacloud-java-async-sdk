@@ -67,7 +67,7 @@ public class CreateMmsJobResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateMmsJobResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73207140-0FD5-588A-B11A-3CE093924196</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class CreateMmsJobResponseBody extends TeaModel {
             } 
 
             /**
-             * asyncTaskId.
+             * <p>The ID of the asynchronous task that is created for the migration job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder asyncTaskId(Long asyncTaskId) {
                 this.asyncTaskId = asyncTaskId;

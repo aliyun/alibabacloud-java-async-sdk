@@ -355,7 +355,11 @@ public class CreateMmsJobRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000014</p>
          */
         public Builder sourceId(Long sourceId) {
             this.putPathParameter("sourceId", sourceId);
@@ -365,7 +369,7 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * columnMapping.
+         * <p>{Source column name: Destination column name}</p>
          */
         public Builder columnMapping(java.util.Map<String, String> columnMapping) {
             this.putBodyParameter("columnMapping", columnMapping);
@@ -374,7 +378,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * dstDbName.
+         * <p>The destination MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mms_test</p>
          */
         public Builder dstDbName(String dstDbName) {
             this.putBodyParameter("dstDbName", dstDbName);
@@ -383,7 +390,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * dstSchemaName.
+         * <p>The destination MaxCompute schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dstSchemaName(String dstSchemaName) {
             this.putBodyParameter("dstSchemaName", dstSchemaName);
@@ -392,7 +402,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * enableDataMigration.
+         * <p>Specifies whether to migrate table data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableDataMigration(Boolean enableDataMigration) {
             this.putBodyParameter("enableDataMigration", enableDataMigration);
@@ -401,7 +414,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * enableSchemaMigration.
+         * <p>Specifies whether to migrate table schemas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSchemaMigration(Boolean enableSchemaMigration) {
             this.putBodyParameter("enableSchemaMigration", enableSchemaMigration);
@@ -410,7 +426,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * enableVerification.
+         * <p>Specifies whether to enable data verification. The current verification method is to execute SELECT COUNT(\*) on the source and destination to compare the number of rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableVerification(Boolean enableVerification) {
             this.putBodyParameter("enableVerification", enableVerification);
@@ -419,7 +438,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * eta.
+         * <p>The expected completion time of the migration. Note: A smaller eta value gives the migration task higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02-04</p>
          */
         public Builder eta(String eta) {
             this.putBodyParameter("eta", eta);
@@ -428,7 +450,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * increment.
+         * <p>Specifies whether to perform an incremental migration. In an incremental migration, only new or changed partitions are migrated. Note that changed partitions are re-migrated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder increment(Boolean increment) {
             this.putBodyParameter("increment", increment);
@@ -437,7 +462,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the migration job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>migrate_db_1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -446,7 +474,7 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * others.
+         * <p>Other configuration information.</p>
          */
         public Builder others(java.util.Map<String, ?> others) {
             this.putBodyParameter("others", others);
@@ -455,7 +483,7 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * partitionFilters.
+         * <p>{Table name: Partition filter expression}</p>
          */
         public Builder partitionFilters(java.util.Map<String, String> partitionFilters) {
             this.putBodyParameter("partitionFilters", partitionFilters);
@@ -464,7 +492,7 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * partitions.
+         * <p>The list of partition IDs.</p>
          */
         public Builder partitions(java.util.List<Long> partitions) {
             this.putBodyParameter("partitions", partitions);
@@ -473,7 +501,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * schemaOnly.
+         * <p>Specifies whether to migrate only metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder schemaOnly(Boolean schemaOnly) {
             this.putBodyParameter("schemaOnly", schemaOnly);
@@ -482,7 +513,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * sourceName.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder sourceName(String sourceName) {
             this.putBodyParameter("sourceName", sourceName);
@@ -491,7 +525,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * srcDbName.
+         * <p>The name of the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>src_db</p>
          */
         public Builder srcDbName(String srcDbName) {
             this.putBodyParameter("srcDbName", srcDbName);
@@ -500,7 +537,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * srcSchemaName.
+         * <p>The name of the source schema. This is the schema in a Layer 3 namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder srcSchemaName(String srcSchemaName) {
             this.putBodyParameter("srcSchemaName", srcSchemaName);
@@ -509,7 +549,7 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * tableBlackList.
+         * <p>The blacklist of tables.</p>
          */
         public Builder tableBlackList(java.util.List<String> tableBlackList) {
             this.putBodyParameter("tableBlackList", tableBlackList);
@@ -518,7 +558,7 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * tableMapping.
+         * <p>{Source table: Destination table}</p>
          */
         public Builder tableMapping(java.util.Map<String, String> tableMapping) {
             this.putBodyParameter("tableMapping", tableMapping);
@@ -527,7 +567,7 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * tableWhiteList.
+         * <p>The whitelist of tables. Note: If you configure both a whitelist and a blacklist, only the blacklist takes effect.</p>
          */
         public Builder tableWhiteList(java.util.List<String> tableWhiteList) {
             this.putBodyParameter("tableWhiteList", tableWhiteList);
@@ -536,7 +576,7 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * tables.
+         * <p>The list of table names.</p>
          */
         public Builder tables(java.util.List<String> tables) {
             this.putBodyParameter("tables", tables);
@@ -545,7 +585,10 @@ public class CreateMmsJobRequest extends Request {
         }
 
         /**
-         * <p>MOCK, HIVE: hive udtf task, HIVE_DATAX: hive datax task, COPY_TASK: odps Copy Task, ODPS_INSERT_OVERWRITE: odps simple insert overwrite task, MC2MC_VERIFY, OSS, HIVE_OSS</p>
+         * <p>The type of the migration task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIGQUERY</p>
          */
         public Builder taskType(String taskType) {
             this.putBodyParameter("taskType", taskType);

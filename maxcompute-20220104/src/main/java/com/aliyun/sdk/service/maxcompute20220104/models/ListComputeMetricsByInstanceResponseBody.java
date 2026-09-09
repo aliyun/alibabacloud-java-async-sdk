@@ -90,11 +90,16 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <ul>
-         * <li>1xx: informational response. The request is received and is being processed.</li>
-         * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-         * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
-         * <li>4xx: client error. The request contains invalid request parameters or syntaxes, or specific request conditions cannot be met.</li>
-         * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+         * <li><p>1xx: Informational - The request has been received and is being processed.</p>
+         * </li>
+         * <li><p>2xx: Success - The request was successfully received, understood, and accepted.</p>
+         * </li>
+         * <li><p>3xx: Redirection - Further action is required to complete the request.</p>
+         * </li>
+         * <li><p>4xx: Client Error - The request contains invalid syntax or cannot be fulfilled.</p>
+         * </li>
+         * <li><p>5xx: Server Error - The server failed to fulfill a valid request.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +111,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc059b717363029839908920ea631</p>
@@ -279,7 +284,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the job execution.</p>
+             * <p>The job completion time, as a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1710432000000</p>
@@ -290,7 +295,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job(instance) ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20240730****ddlr</p>
@@ -334,11 +339,11 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifications Type, specifies the resource package that you select when you purchase the MaxCompute service.</p>
+             * <p>The specification type.</p>
              * <ul>
-             * <li><p>OdpsStandard: the pay-as-you-go resource package.</p>
+             * <li><p><code>OdpsStandard</code>: Standard pay-as-you-go specification.</p>
              * </li>
-             * <li><p>OdpsSpot: the pay-as-you-go spot resource package.</p>
+             * <li><p><code>OdpsSpot</code>: Spot pay-as-you-go specification.</p>
              * </li>
              * </ul>
              * 
@@ -351,7 +356,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The submission time of the job.</p>
+             * <p>The job submission time, as a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1610432000000</p>
@@ -362,19 +367,19 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Metering types.</p>
+             * <p>The metering type.</p>
              * <ul>
-             * <li><p>ComputationSql: the metering data of SQL jobs that involve internal tables.</p>
+             * <li><p><code>ComputationSql</code>: Metrics for SQL jobs on internal tables.</p>
              * </li>
-             * <li><p>ComputationSqlOTS: the metering data of SQL jobs that involve Tablestore external tables.</p>
+             * <li><p><code>ComputationSqlOTS</code>: Metrics for SQL jobs on Tablestore external tables.</p>
              * </li>
-             * <li><p>ComputationSqlOSS: the metering data of SQL jobs that involve OSS external tables.</p>
+             * <li><p><code>ComputationSqlOSS</code>: Metrics for SQL jobs on OSS external tables.</p>
              * </li>
-             * <li><p>MapReduce: the metering data of MapReduce jobs.</p>
+             * <li><p><code>MapReduce</code>: Metrics for MapReduce jobs.</p>
              * </li>
-             * <li><p>spark: the metering data of Spark jobs.</p>
+             * <li><p><code>spark</code>: Metrics for Spark jobs.</p>
              * </li>
-             * <li><p>mars: the metering data of Mars jobs.</p>
+             * <li><p><code>mars</code>: Metrics for Mars jobs.</p>
              * </li>
              * </ul>
              * 
@@ -387,7 +392,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of computing resource usage</p>
+             * <p>The unit of compute usage.</p>
              * 
              * <strong>example:</strong>
              * <p>GB</p>
@@ -398,11 +403,11 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The computing resource usage is calculated based on the following items:</p>
+             * <p>The compute usage.</p>
              * <ul>
-             * <li><p>Amount of scanned data in the unit of GB. For the jobs whose metering types are ComputationSql, ComputationSqlOTS, or ComputationSqlOSS, they are billed based on the amount of scanned data. The computing resource usage of such a job is calculated by using the following formula: Amount of scanned data × Complexity. The complexity is fixed at 1 for the jobs whose metering types are ComputationSqlOTS or ComputationSqlOSS.</p>
+             * <li><p>For jobs billed by the amount of data scanned, such as <code>ComputationSql</code>, <code>ComputationSqlOTS</code>, and <code>ComputationSqlOSS</code> jobs, the unit is GB. The usage is calculated as: Amount of scanned data × Complexity. The complexity factor for <code>ComputationSqlOTS</code> and <code>ComputationSqlOSS</code> jobs is 1.</p>
              * </li>
-             * <li><p>CU-hours. For the jobs whose metering types are MapReduce, spark, or mars, they are billed based on CU-hours.</p>
+             * <li><p>For jobs billed by CU-hours (such as <code>MapReduce</code>, <code>spark</code>, and <code>mars</code> jobs), the unit is CU-hour.</p>
              * </li>
              * </ul>
              * 
@@ -500,7 +505,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of pay-as-you-go job compute usage.</p>
+             * <p>Usage metrics for pay-as-you-go jobs.</p>
              */
             public Builder instanceComputeMetrics(java.util.List<InstanceComputeMetrics> instanceComputeMetrics) {
                 this.instanceComputeMetrics = instanceComputeMetrics;
@@ -508,7 +513,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current page number.</p>
+             * <p>The returned page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -530,7 +535,7 @@ public class ListComputeMetricsByInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of results returned.</p>
+             * <p>The total number of entries returned.</p>
              * 
              * <strong>example:</strong>
              * <p>64</p>

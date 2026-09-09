@@ -106,7 +106,7 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,14 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The business error code or an empty value.</p>
+         * <ul>
+         * <li>If success is false, a business error code is returned.</li>
+         * <li>If success is true, an empty value is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +129,10 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this quota is not exist.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -130,7 +140,10 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>Indicates whether the business is successful. If this parameter is not empty and the value is not 200, the business processing failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +151,10 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>688003E1-D1B4-5468-957E-2FFB3AC8D79B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +246,10 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * date.
+             * <p>The date of the statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20241205</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -238,7 +257,12 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The timestamp. This API does not return this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -246,7 +270,7 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * <p>The unit of the storage metrics. This API does not return this parameter.</p>
              */
             public Builder unit(java.util.Map<String, String> unit) {
                 this.unit = unit;
@@ -254,7 +278,13 @@ public class GetStorageAmountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The storage metrics. The metrics include the following:</p>
+             * <ul>
+             * <li>projectAmount</li>
+             * <li>schemaAmount</li>
+             * <li>tableAmount</li>
+             * <li>partitionAmount</li>
+             * </ul>
              */
             public Builder value(java.util.Map<String, Long> value) {
                 this.value = value;

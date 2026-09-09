@@ -67,7 +67,7 @@ public class GetMmsDbResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetMmsDbResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90D64EB6-2962-5B1C-A039-BC41C8176C7F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -427,7 +430,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The database description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>for mms_test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -435,7 +441,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * dstName.
+             * <p>The MaxCompute schema corresponding to the source database. If the destination MaxCompute project does not enable the schema layer, this value is null. By default, this value matches the source database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder dstName(String dstName) {
                 this.dstName = dstName;
@@ -443,7 +452,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * dstProjectName.
+             * <p>The name of the destination MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mma_test</p>
              */
             public Builder dstProjectName(String dstProjectName) {
                 this.dstProjectName = dstProjectName;
@@ -451,7 +463,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * extra.
+             * <p>Other information stored in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -459,7 +474,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>63</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -467,7 +485,7 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>last ddl time</p>
+             * <p>The last DDL time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:42</p>
@@ -478,7 +496,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * location.
+             * <p>The storage location of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hdfs://master-1-1.c-6fc187819ed6bae0.cn-shanghai.emr.aliyuncs.com:9000/user/hive/warehouse</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -486,7 +507,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mms_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -494,7 +518,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * numRows.
+             * <p>The number of rows in the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323</p>
              */
             public Builder numRows(Long numRows) {
                 this.numRows = numRows;
@@ -502,7 +529,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * owner.
+             * <p>The database owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System user</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -510,7 +540,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * partitions.
+             * <p>The number of partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder partitions(Integer partitions) {
                 this.partitions = partitions;
@@ -518,7 +551,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsDoing.
+             * <p>The partitions that are being migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder partitionsDoing(Integer partitionsDoing) {
                 this.partitionsDoing = partitionsDoing;
@@ -526,7 +562,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsDone.
+             * <p>The number of partitions whose migration is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1400</p>
              */
             public Builder partitionsDone(Integer partitionsDone) {
                 this.partitionsDone = partitionsDone;
@@ -534,7 +573,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsFailed.
+             * <p>The partitions that failed during migration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder partitionsFailed(Integer partitionsFailed) {
                 this.partitionsFailed = partitionsFailed;
@@ -542,7 +584,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The size of the database in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323232332</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -550,7 +595,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000017</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -558,7 +606,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * sourceName.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -566,7 +617,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The migration status. Valid values: INIT, DOING, FAILED, DONE, and PART_DONE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DOING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -574,7 +628,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * tables.
+             * <p>The number of tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder tables(Integer tables) {
                 this.tables = tables;
@@ -582,7 +639,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * tablesDoing.
+             * <p>The tables that are being migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tablesDoing(Integer tablesDoing) {
                 this.tablesDoing = tablesDoing;
@@ -590,7 +650,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * tablesDone.
+             * <p>Tables for which migration has completed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder tablesDone(Integer tablesDone) {
                 this.tablesDone = tablesDone;
@@ -598,7 +661,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * tablesFailed.
+             * <p>The tables that failed to migrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tablesFailed(Integer tablesFailed) {
                 this.tablesFailed = tablesFailed;
@@ -606,7 +672,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * tablesPartDone.
+             * <p>The tables whose migration is partially complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder tablesPartDone(Integer tablesPartDone) {
                 this.tablesPartDone = tablesPartDone;
@@ -614,7 +683,10 @@ public class GetMmsDbResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * <p>Indicates whether the metadata is updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder updated(Boolean updated) {
                 this.updated = updated;

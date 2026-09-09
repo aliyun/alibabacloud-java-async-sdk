@@ -117,6 +117,7 @@ public class UpdateMmsTimerRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class UpdateMmsTimerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scheduled task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class UpdateMmsTimerRequest extends Request {
         }
 
         /**
-         * scheduleType.
+         * <p>The scheduling type of the task. Valid values: <code>Daily</code> and <code>Hourly</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder scheduleType(String scheduleType) {
             this.putBodyParameter("scheduleType", scheduleType);
@@ -150,7 +155,7 @@ public class UpdateMmsTimerRequest extends Request {
         }
 
         /**
-         * stopped.
+         * <p>Specifies whether the scheduled task is stopped.</p>
          */
         public Builder stopped(Boolean stopped) {
             this.putBodyParameter("stopped", stopped);
@@ -159,7 +164,10 @@ public class UpdateMmsTimerRequest extends Request {
         }
 
         /**
-         * value.
+         * <p>The execution time of the scheduled task. If <code>scheduleType</code> is set to <code>Daily</code>, specify the time in the HH:mm format. If <code>scheduleType</code> is set to <code>Hourly</code>, specify the minute in the mm format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-20</p>
          */
         public Builder value(String value) {
             this.putBodyParameter("value", value);

@@ -106,7 +106,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,11 +138,16 @@ public class GetJobInfoResponseBody extends TeaModel {
         /**
          * <p>The HTTP status code.</p>
          * <ul>
-         * <li>1xx: informational response. The request is received and is being processed.</li>
-         * <li>2xx: success. The request is successfully received, understood, and accepted by the server.</li>
-         * <li>3xx: redirection. The request is redirected, and further actions are required to complete the request.</li>
-         * <li>4xx: client error. The request contains invalid request parameters and syntaxes, or specific request conditions cannot be met.</li>
-         * <li>5xx: server error. The server cannot meet requirements due to other reasons.</li>
+         * <li><p>1xx: informational. The request is received and being processed.</p>
+         * </li>
+         * <li><p>2xx: success. The request was received, understood, and accepted.</p>
+         * </li>
+         * <li><p>3xx: redirection. Further action is required to complete the request.</p>
+         * </li>
+         * <li><p>4xx: client error. The request contains invalid parameters or syntax, or a precondition cannot be met.</p>
+         * </li>
+         * <li><p>5xx: server error. The server failed to fulfill the request.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +241,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The encoding of the substatus.</p>
+             * <p>The substatus code.</p>
              * 
              * <strong>example:</strong>
              * <p>1010</p>
@@ -391,7 +396,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Information about the nodes where data skew or data expansion is detected. This parameter is returned only when the diagnostics scenario is data skew or data expansion.</p>
+             * <p>Node information for data skew or data expansion diagnostics. Returned only when the scenario is data skew or data expansion.</p>
              */
             public Builder params(java.util.Map<String, String> params) {
                 this.params = params;
@@ -399,7 +404,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The intelligent diagnostics result scenario.</p>
+             * <p>The intelligent diagnostics scenario.</p>
              * 
              * <strong>example:</strong>
              * <p>LackResource</p>
@@ -801,7 +806,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The amount of resources consumed by the job. This parameter is returned only for jobs that are complete.Unit: 100*Core*s.</p>
+             * <p>The resources consumed by the job. Returned only for completed jobs. Unit: 100\*Core\*s.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -878,7 +883,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the job.</p>
+             * <p>The job owner.</p>
              * 
              * <strong>example:</strong>
              * <p>ALIYUN$7632***@aliyun.com</p>
@@ -889,7 +894,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The substatuses of the job lifecycle.</p>
+             * <p>The job lifecycle substatuses.</p>
              */
             public Builder jobSubStatusList(java.util.List<JobSubStatusList> jobSubStatusList) {
                 this.jobSubStatusList = jobSubStatusList;
@@ -897,7 +902,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the job.</p>
+             * <p>The job type.</p>
              * 
              * <strong>example:</strong>
              * <p>SQL</p>
@@ -908,7 +913,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of memory consumed by the job. This parameter is returned only for jobs that are complete.Unit: MB*s.</p>
+             * <p>The memory consumed by the job. Returned only for completed jobs. Unit: MB\*s.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -919,7 +924,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the job.</p>
+             * <p>The job priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -941,7 +946,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nickname of the computing quota that is used by the job.</p>
+             * <p>The nickname of the computing quota used by the job.</p>
              * 
              * <strong>example:</strong>
              * <p>os_bigdata</p>
@@ -974,7 +979,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time, which is the time when the job received the first batch of computing resources. For jobs that run for a short period of time or do not consume computing resources, such as the jobs that involve DDL statements, the job submission time is used instead.</p>
+             * <p>The time when the job received its first computing resources. For short-lived or resource-free jobs (such as DDL jobs), the submission time is used instead.</p>
              * 
              * <strong>example:</strong>
              * <p>1672112113</p>
@@ -985,7 +990,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration, which is the duration from the start time to the end time of the job.</p>
+             * <p>The duration from job start to job end.</p>
              * 
              * <strong>example:</strong>
              * <p>800</p>
@@ -996,7 +1001,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The intelligent diagnostics result.</p>
+             * <p>The intelligent diagnostics results.</p>
              */
             public Builder sceneResults(java.util.List<SceneResults> sceneResults) {
                 this.sceneResults = sceneResults;
@@ -1004,7 +1009,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The signature of the SQL job. You can use the signature to find the instances on which each time an SQL statement is executed.</p>
+             * <p>The SQL job signature. Use this value to locate all instances where an SQL statement was executed.</p>
              * 
              * <strong>example:</strong>
              * <p>20c1efb4a7caca1865f4aa784bb500efae74af04</p>
@@ -1048,7 +1053,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total duration from the time a job is submitted to the time the job is terminated.</p>
+             * <p>The total duration from job submission to termination.</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -1059,7 +1064,7 @@ public class GetJobInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The wait time, which is the duration from the time the job is submitted to the time the job starts to run.</p>
+             * <p>The duration from job submission to execution start.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

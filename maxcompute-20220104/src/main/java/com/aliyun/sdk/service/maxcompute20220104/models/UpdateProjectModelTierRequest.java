@@ -60,6 +60,7 @@ public class UpdateProjectModelTierRequest extends Request {
         } 
 
         /**
+         * <p>The name of the project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

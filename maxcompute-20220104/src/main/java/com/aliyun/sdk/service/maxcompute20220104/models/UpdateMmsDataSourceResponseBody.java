@@ -67,7 +67,7 @@ public class UpdateMmsDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The result of the request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class UpdateMmsDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76CE80C8-7392-5591-BCC8-610AFBF78ADF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class UpdateMmsDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * asyncTaskId.
+             * <p>The ID of the asynchronous task. When you test the data source configuration, this ID is used to obtain the test result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder asyncTaskId(Long asyncTaskId) {
                 this.asyncTaskId = asyncTaskId;
@@ -149,7 +155,10 @@ public class UpdateMmsDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000017</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;

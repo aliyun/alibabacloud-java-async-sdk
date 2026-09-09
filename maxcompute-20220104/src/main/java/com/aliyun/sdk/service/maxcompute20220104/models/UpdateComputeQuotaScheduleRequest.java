@@ -88,7 +88,7 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         } 
 
         /**
-         * <p>The nickname of level-1 compute quota.</p>
+         * <p>The nickname of the level-1 quota.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,13 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
         }
 
         /**
-         * scheduleTimezone.
+         * <p>The time zone.</p>
+         * <blockquote>
+         * <p>The default value is UTC+8.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>UTC+8</p>
          */
         public Builder scheduleTimezone(String scheduleTimezone) {
             this.putQueryParameter("scheduleTimezone", scheduleTimezone);
@@ -166,7 +172,7 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The start time when the quota plan takes effect.</p>
+             * <p>The time when the plan takes effect.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -252,7 +258,7 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
             } 
 
             /**
-             * <p>The value of effective condition.</p>
+             * <p>The condition for the plan to take effect.</p>
              */
             public Builder condition(Condition condition) {
                 this.condition = condition;
@@ -272,10 +278,11 @@ public class UpdateComputeQuotaScheduleRequest extends Request {
             }
 
             /**
-             * <p>The type of the quota plan.</p>
+             * <p>The type.</p>
              * <blockquote>
-             * <p>Notice: Currently, only daily is supported.</notice></p>
+             * <p>Notice: </p>
              * </blockquote>
+             * <p>Only daily is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

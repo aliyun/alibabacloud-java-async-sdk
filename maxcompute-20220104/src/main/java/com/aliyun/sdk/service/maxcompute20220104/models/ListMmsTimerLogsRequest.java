@@ -101,7 +101,10 @@ public class ListMmsTimerLogsRequest extends Request {
         } 
 
         /**
-         * sourceId.
+         * <p>The ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000015</p>
          */
         public Builder sourceId(Long sourceId) {
             this.putPathParameter("sourceId", sourceId);
@@ -110,7 +113,7 @@ public class ListMmsTimerLogsRequest extends Request {
         }
 
         /**
-         * <p>timer id</p>
+         * <p>The ID of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -122,7 +125,10 @@ public class ListMmsTimerLogsRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -131,7 +137,10 @@ public class ListMmsTimerLogsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

@@ -75,6 +75,7 @@ public class GetMmsTimerRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +88,7 @@ public class GetMmsTimerRequest extends Request {
         }
 
         /**
-         * <p>timer id</p>
+         * <p>The ID of the timer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

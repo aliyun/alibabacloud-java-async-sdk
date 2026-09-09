@@ -116,7 +116,11 @@ public class UpdateMmsDataSourceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data source.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000017</p>
          */
         public Builder sourceId(Long sourceId) {
             this.putPathParameter("sourceId", sourceId);
@@ -125,7 +129,16 @@ public class UpdateMmsDataSourceRequest extends Request {
         }
 
         /**
-         * action.
+         * <p>The type of the update operation:</p>
+         * <ol>
+         * <li>UPDATE_CONFIG: updates the data source configuration.</li>
+         * <li>START: starts the data source instance.</li>
+         * <li>STOP: shuts down the data source instance.</li>
+         * <li>RENAME: renames the data source.</li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>UPDATE_CONFIG</p>
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -134,7 +147,7 @@ public class UpdateMmsDataSourceRequest extends Request {
         }
 
         /**
-         * config.
+         * <p>The data source configuration. The configuration items vary based on the data source.</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.putBodyParameter("config", config);
@@ -143,7 +156,10 @@ public class UpdateMmsDataSourceRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The new name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dept1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -152,7 +168,10 @@ public class UpdateMmsDataSourceRequest extends Request {
         }
 
         /**
-         * test.
+         * <p>Tests the data source configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder test(Boolean test) {
             this.putBodyParameter("test", test);

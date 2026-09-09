@@ -58,6 +58,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMmsJobResponse> createMmsJob(CreateMmsJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources in the Data Transmission Service.</p>
+     * 
      * @param request the request parameters of CreateMmsTimer  CreateMmsTimerRequest
      * @return CreateMmsTimerResponse
      */
@@ -76,6 +79,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.aliyun.com/product/maxcompute/pricing?spm=5176.30275541.J_ZGek9Blx07Hclc3Ddt9dg.2.19502f3dPPfezu&scm=20140722.S_card@@%E4%BA%A7%E5%93%81@@143540.S_new~UND~card.ID_card@@%E4%BA%A7%E5%93%81@@143540-RL_MaxCompute-LOC_2024SPSearchCard-OR_ser-PAR1_213c994b17738148516424527d0d07-V_4-RE_new9-P0_0-P1_0">pricing</a> of MaxCompute.</em>*</p>
+     * 
      * @param request the request parameters of CreateQuota  CreateQuotaRequest
      * @return CreateQuotaResponse
      */
@@ -112,6 +118,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMmsJobResponse> deleteMmsJob(DeleteMmsJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources of the Data Transfer Service.</p>
+     * 
      * @param request the request parameters of DeleteMmsTimer  DeleteMmsTimerRequest
      * @return DeleteMmsTimerResponse
      */
@@ -214,6 +224,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMmsTaskResponse> getMmsTask(GetMmsTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before using this API, review the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for dedicated resource groups and elastic reserved computing resources used for data transfer.</p>
+     * 
      * @param request the request parameters of GetMmsTimer  GetMmsTimerRequest
      * @return GetMmsTimerResponse
      */
@@ -322,6 +335,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListComputeMetricsByInstanceResponse> listComputeMetricsByInstance(ListComputeMetricsByInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Gets job details by signature.</p>
+     * 
      * @param request the request parameters of ListComputeMetricsBySignature  ListComputeMetricsBySignatureRequest
      * @return ListComputeMetricsBySignatureResponse
      */
@@ -340,6 +356,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the projects for which cost analysis is required.</p>
+     * 
      * @param request the request parameters of ListInstances  ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -364,6 +383,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJobSnapshotInfosResponse> listJobSnapshotInfos(ListJobSnapshotInfosRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and price</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and price</a> for MaxCompute Reserved CUs.</p>
+     * 
      * @param request the request parameters of ListMmsDataSourceConfigItems  ListMmsDataSourceConfigItemsRequest
      * @return ListMmsDataSourceConfigItemsResponse
      */
@@ -412,12 +435,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMmsTasksResponse> listMmsTasks(ListMmsTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, exclusive resource groups, and elastic reserved computing resources.</p>
+     * 
      * @param request the request parameters of ListMmsTimerLogs  ListMmsTimerLogsRequest
      * @return ListMmsTimerLogsResponse
      */
     CompletableFuture<ListMmsTimerLogsResponse> listMmsTimerLogs(ListMmsTimerLogsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</p>
+     * 
      * @param request the request parameters of ListMmsTimers  ListMmsTimersRequest
      * @return ListMmsTimersResponse
      */
@@ -526,12 +557,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryStorageMetricResponse> queryStorageMetric(QueryStorageMetricRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can use this API to query various Tunnel metrics, such as slot usage (<code>slot_usage</code>), slot usage limit (<code>slot_max</code>), throughput (<code>throughput</code>), throughput rate (<code>throughput_speed</code>), and number of requests (<code>request</code>).</li>
+     * <li>The <code>startTime</code> and <code>endTime</code> parameters are required. They specify the start and end of the time range for the query. The values are UNIX timestamps in seconds.</li>
+     * <li>The <code>metric</code> parameter is also required. It specifies the type of metric to query.</li>
+     * <li>Depending on the value of <code>metric</code>, you may need to specify additional parameters for filtering to refine your query. These parameters include <code>quotaNickname</code>, <code>project</code>, <code>tableList</code>, <code>operationList</code>, <code>codeList</code>, <code>groupList</code>, and <code>topN</code>.</li>
+     * <li>For some <code>metric</code> values, you must specify other parameters. For example, if <code>groupList</code> contains <code>table</code> or <code>ip</code>, you must specify the <code>project</code> parameter and other required parameters. In this case, the system returns only the top N results.</li>
+     * <li>The <code>strategy</code> parameter defines the data aggregation logic. This logic is used when the automatic step size exceeds 60 seconds over a long time range. The default value is <code>max</code>.</li>
+     * <li>Ensure all parameters meet the requirements in this document to prevent request failures.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryTunnelMetric  QueryTunnelMetricRequest
      * @return QueryTunnelMetricResponse
      */
     CompletableFuture<QueryTunnelMetricResponse> queryTunnelMetric(QueryTunnelMetricRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>You can use this API to query Tunnel metrics, including slot usage details (<code>slot_usage_detail</code>), throughput details (<code>throughput_detail</code>), and a throughput summary (<code>throughput_summary</code>).</li>
+     * <li>The <code>quotaNickname</code> and <code>project</code> parameters cannot both be empty.</li>
+     * <li>If the <code>groupList</code> parameter includes <code>table</code> or <code>ip</code>, the <code>project</code> parameter is required. If groupList includes <code>ip</code>, the <code>tableList</code> parameter is also required.</li>
+     * <li>The <code>orderColumn</code> parameter supports <code>maxValue</code>, <code>minValue</code>, <code>avgValue</code>, and <code>sumValue</code> (only for <code>throughput_summary</code>). If this parameter is omitted, the results are not sorted.</li>
+     * <li>The <code>ascOrder</code> parameter defaults to <code>false</code> (descending order).</li>
+     * <li>The <code>limit</code> parameter specifies the number of results to return, with a default of 10 and a maximum of 100.</li>
+     * </ul>
+     * 
      * @param request the request parameters of QueryTunnelMetricDetail  QueryTunnelMetricDetailRequest
      * @return QueryTunnelMetricDetailResponse
      */
@@ -544,6 +597,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RetryMmsJobResponse> retryMmsJob(RetryMmsJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for the data transfer service, dedicated resource groups, and elastic reserved compute resources.</p>
+     * 
      * @param request the request parameters of RetryMmsTask  RetryMmsTaskRequest
      * @return RetryMmsTaskResponse
      */
@@ -562,24 +619,36 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopMmsJobResponse> stopMmsJob(StopMmsJobRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Summarizes cost information by instance or billable item.</p>
+     * 
      * @param request the request parameters of SumBills  SumBillsRequest
      * @return SumBillsResponse
      */
     CompletableFuture<SumBillsResponse> sumBills(SumBillsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a daily summary of costs, grouped by instance or billable item.</p>
+     * 
      * @param request the request parameters of SumBillsByDate  SumBillsByDateRequest
      * @return SumBillsByDateResponse
      */
     CompletableFuture<SumBillsByDateResponse> sumBillsByDate(SumBillsByDateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Calculates the total number of usage records over a specified time range.</p>
+     * 
      * @param request the request parameters of SumComputeMetricsByRecord  SumComputeMetricsByRecordRequest
      * @return SumComputeMetricsByRecordResponse
      */
     CompletableFuture<SumComputeMetricsByRecordResponse> sumComputeMetricsByRecord(SumComputeMetricsByRecordRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Aggregates compute usage by scanned data volume or CU usage.</p>
+     * 
      * @param request the request parameters of SumComputeMetricsByUsage  SumComputeMetricsByUsageRequest
      * @return SumComputeMetricsByUsageResponse
      */
@@ -598,6 +667,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SumStorageMetricsByDateResponse> sumStorageMetricsByDate(SumStorageMetricsByDateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Aggregates storage usage by storage type.</p>
+     * 
      * @param request the request parameters of SumStorageMetricsByType  SumStorageMetricsByTypeRequest
      * @return SumStorageMetricsByTypeResponse
      */
@@ -621,8 +693,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Please ensure that before using this interface, you have fully understood the&lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a>
-     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">Pricing and Billing</a> of MaxCompute Elastic Reserved CU.</p>
+     * <p>Before you call this operation, ensure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/computing-pricing-1">billing methods and pricing</a> of reserved compute units (CUs) in MaxCompute.</p>
      * 
      * @param request the request parameters of UpdateComputeQuotaSchedule  UpdateComputeQuotaScheduleRequest
      * @return UpdateComputeQuotaScheduleResponse
@@ -642,24 +713,39 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMmsDataSourceResponse> updateMmsDataSource(UpdateMmsDataSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of Data Transmission Service dedicated resource groups and elastic reserved computing resources.</p>
+     * 
      * @param request the request parameters of UpdateMmsDb  UpdateMmsDbRequest
      * @return UpdateMmsDbResponse
      */
     CompletableFuture<UpdateMmsDbResponse> updateMmsDb(UpdateMmsDbRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> of exclusive resource groups for data transmission and elastic reserved computing resources.</p>
+     * 
      * @param request the request parameters of UpdateMmsTable  UpdateMmsTableRequest
      * @return UpdateMmsTableResponse
      */
     CompletableFuture<UpdateMmsTableResponse> updateMmsTable(UpdateMmsTableRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this API, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for Data Transmission Service exclusive resource groups and elastic reserved computing resources.</p>
+     * 
      * @param request the request parameters of UpdateMmsTables  UpdateMmsTablesRequest
      * @return UpdateMmsTablesResponse
      */
     CompletableFuture<UpdateMmsTablesResponse> updateMmsTables(UpdateMmsTablesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing method and pricing</a> of exclusive resource groups and elastic reserved computing resources for Data Transmission Service.</p>
+     * 
      * @param request the request parameters of UpdateMmsTimer  UpdateMmsTimerRequest
      * @return UpdateMmsTimerResponse
      */
@@ -709,7 +795,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing and prices</a> of Tunnel quotas and elastically reserved computing resources.</p>
+     * <p>Before you call this operation, ensure that you fully understand the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/maxcompute/product-overview/data-transfer-fees-hourly-billing">billing methods and pricing</a> for exclusive Data Transmission Service resource groups and elastic reserved computing resources.</p>
      * 
      * @param request the request parameters of UpdateTunnelQuotaTimer  UpdateTunnelQuotaTimerRequest
      * @return UpdateTunnelQuotaTimerResponse

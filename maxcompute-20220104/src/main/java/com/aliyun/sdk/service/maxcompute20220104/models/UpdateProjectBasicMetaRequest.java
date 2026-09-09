@@ -88,7 +88,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
         } 
 
         /**
-         * <p>Project name.</p>
+         * <p>The project name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
             } 
 
             /**
-             * <p>The data encryption algorithm that is supported by the key. Valid values: AES256, AESCTR, and RC4.</p>
+             * <p>The data encryption algorithm. The supported encryption algorithms include AES256, AESCTR, and RC4.</p>
              * 
              * <strong>example:</strong>
              * <p>AES256</p>
@@ -205,7 +205,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the data encryption feature needs to be enabled for the project. For more information about data encryption, see
+             * <p>Specifies whether to enable data encryption for the project. For more information about data encryption, see
              * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/security-and-compliance/storage-encryption">Storage Encryption</a>
              * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/security-and-compliance/storage-encryption">Storage Encryption</a>.</p>
              * 
@@ -218,7 +218,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>The type of key that is used for data encryption. You can select MaxCompute Default Key or Bring Your Own Key (BYOK) as the key type. If you select MaxCompute Default Key, the default key that is created by MaxCompute is used.</p>
+             * <p>The type of key used for data encryption, including the default key (MaxCompute Default Key) and Bring Your Own Key (BYOK). The default key (MaxCompute Default Key) is a default key created internally by MaxCompute.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -290,9 +290,9 @@ public class UpdateProjectBasicMetaRequest extends Request {
             /**
              * <p>The lifecycle type. Valid values:</p>
              * <ul>
-             * <li><em>mandatory</em>: The lifecycle clause is required in a table creation statement.</li>
-             * <li><em>optional</em>: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire.</li>
-             * <li><em>inherit</em>: If you do not configure a lifecycle for a table when you create the table, the value of the odps.table.lifecycle.value parameter is used as the table lifecycle by default.</li>
+             * <li><strong>mandatory</strong>: The Lifecycle clause is required. You must configure the lifecycle of a table.</li>
+             * <li><strong>optional</strong>: The Lifecycle clause is optional when you create a table. If the lifecycle of a table is not configured, the table is permanently valid.</li>
+             * <li><strong>inherit</strong>: If the lifecycle of a table is not configured when you create a table, the lifecycle of the table is set to the value of odps.table.lifecycle.value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>The table lifecycle. Unit: days. Valid values: 1 to 37231. Default value: 37231.</p>
+             * <p>The lifecycle of a table. Unit: days. Valid values: 1 to 37231. Default value: 37231.</p>
              * 
              * <strong>example:</strong>
              * <p>37231</p>
@@ -330,6 +330,9 @@ public class UpdateProjectBasicMetaRequest extends Request {
     public static class Properties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allowFullScan")
         private Boolean allowFullScan;
+
+        @com.aliyun.core.annotation.NameInMap("enableDataMasking")
+        private Boolean enableDataMasking;
 
         @com.aliyun.core.annotation.NameInMap("enableDecimal2")
         private Boolean enableDecimal2;
@@ -363,6 +366,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
 
         private Properties(Builder builder) {
             this.allowFullScan = builder.allowFullScan;
+            this.enableDataMasking = builder.enableDataMasking;
             this.enableDecimal2 = builder.enableDecimal2;
             this.enableDr = builder.enableDr;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
@@ -388,6 +392,13 @@ public class UpdateProjectBasicMetaRequest extends Request {
          */
         public Boolean getAllowFullScan() {
             return this.allowFullScan;
+        }
+
+        /**
+         * @return enableDataMasking
+         */
+        public Boolean getEnableDataMasking() {
+            return this.enableDataMasking;
         }
 
         /**
@@ -462,6 +473,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
 
         public static final class Builder {
             private Boolean allowFullScan; 
+            private Boolean enableDataMasking; 
             private Boolean enableDecimal2; 
             private Boolean enableDr; 
             private Boolean enableTunnelQuotaRoute; 
@@ -478,6 +490,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
 
             private Builder(Properties model) {
                 this.allowFullScan = model.allowFullScan;
+                this.enableDataMasking = model.enableDataMasking;
                 this.enableDecimal2 = model.enableDecimal2;
                 this.enableDr = model.enableDr;
                 this.enableTunnelQuotaRoute = model.enableTunnelQuotaRoute;
@@ -491,7 +504,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
             } 
 
             /**
-             * <p>Indicates whether a full table scan is allowed in the project. A full table scan occupies a large number of resources, which reduces data processing efficiency. By default, the full table scan feature is disabled.</p>
+             * <p>Specifies whether to allow full table scans in the project. Full table scans consume a large amount of resources. To improve processing efficiency, this feature is disabled by default.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -502,7 +515,15 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the DECIMAL type of the MaxCompute V2.0 data type edition is enabled.</p>
+             * enableDataMasking.
+             */
+            public Builder enableDataMasking(Boolean enableDataMasking) {
+                this.enableDataMasking = enableDataMasking;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable the Decimal data type of MaxCompute 2.0 for the project.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -521,10 +542,10 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the routing of the Tunnel resource group is enabled.</p>
+             * <p>Specifies whether to enable resource group routing for the data transfer service.</p>
              * <ul>
-             * <li>true: The data transfer tasks that are submitted by the project by default use the Tunnel resource group that is bound to the project.</li>
-             * <li>false: The data transfer tasks that are submitted by the project by default use the Tunnel shared resource group.</li>
+             * <li>true: The data transfer tasks submitted by this project use the bound data transfer service resource group by default.</li>
+             * <li>false: The data transfer tasks submitted by this project use the shared data transfer service resource group by default.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -544,7 +565,8 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>The retention period for backup data. Unit: days. During the retention period, you can restore data of the version in use to the backup data of any version. Valid values: [0,30]. Default value: 1. The value 0 indicates that the backup feature is disabled.</p>
+             * <p>The number of days to retain backup data. During this period, you can restore the current version to any backed-up data version.
+             * Valid values: [0, 30]. Default value: 1. A value of 0 indicates that the backup feature is disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -555,7 +577,8 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>The maximum consumption threshold of a single SQL statement. Formula: Amount of scanned data (GB) × Complexity.</p>
+             * <p>The maximum threshold for a single SQL statement consumption.
+             * Unit: scan volume (GB) × complexity.</p>
              * 
              * <strong>example:</strong>
              * <p>1500</p>
@@ -566,7 +589,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>The table lifecycle properties.</p>
+             * <p>The lifecycle properties of tables.</p>
              */
             public Builder tableLifecycle(TableLifecycle tableLifecycle) {
                 this.tableLifecycle = tableLifecycle;
@@ -574,7 +597,7 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>The time zone that is used by your project. The time zone is the same as the time zone specified by <code>odps.sql.timezone</code> .</p>
+             * <p>The time zone of the project, which is the <code>odps.sql.timezone</code> property.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -585,11 +608,13 @@ public class UpdateProjectBasicMetaRequest extends Request {
             }
 
             /**
-             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/overview-of-dts">Data Transmission Service</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Data Transmission Service</a> resource group that is bound to the project.</p>
+             * <p>The &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/overview-of-dts">Data Transfer Service</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/overview-of-dts">Data Transfer Service</a> resource group bound to the project.</p>
              * <ul>
-             * <li>Default resource group: The Tunnel shared resource group is used. You cannot use the subscription-based Tunnel resource group for the project. The default resource group is automatically used by the Tunnel service of your project, regardless of the parameter setting.</li>
-             * <li>Subscription-based Tunnel resource group: You can use the subscription-based Tunnel resource group for the project.</li>
+             * <li><p>Default (shared data transfer service resource group): The project is not allowed to use subscription-based data transfer service resource groups. Regardless of the default data transfer service resource group setting, data transfer tasks submitted by this project automatically use the Default resource group.</p>
+             * </li>
+             * <li><p>Subscription-based data transfer service resource group: The project is allowed to use subscription-based data transfer service resource groups.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -603,12 +628,12 @@ public class UpdateProjectBasicMetaRequest extends Request {
             /**
              * <p>The data type edition. Valid values:</p>
              * <ul>
-             * <li><em>1</em>: MaxCompute V1.0 data type edition</li>
-             * <li><em>2</em>: MaxCompute V2.0 data type edition</li>
-             * <li><em>hive</em>: Hive-compatible data type edition
-             * For more information about the differences among the three data type editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/data-type-editions">Data Type Versions</a>
-             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data Type Versions</a>.</li>
+             * <li><strong>1</strong>: Edition 1.0</li>
+             * <li><strong>2</strong>: Edition 2.0</li>
+             * <li><strong>hive</strong>: Hive-compatible type</li>
              * </ul>
+             * <p>For more information about the differences among the three data type editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/maxcompute/user-guide/data-type-editions">Data Type Editions</a>
+             * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/data-type-editions">Data Type Editions</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>2.0</p>

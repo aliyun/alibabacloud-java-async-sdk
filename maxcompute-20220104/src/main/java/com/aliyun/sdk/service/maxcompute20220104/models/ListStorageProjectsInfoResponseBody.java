@@ -106,7 +106,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OBJECT_NOT_EXIST</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this quota is not exist.</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -130,7 +136,22 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li><p>1xx: an informational response. The request has been received and is being processed.</p>
+         * </li>
+         * <li><p>2xx: a success response. The request has been successfully received, understood, and accepted by the server.</p>
+         * </li>
+         * <li><p>3xx: a redirection response. The request is redirected. You must take further action to complete the request.</p>
+         * </li>
+         * <li><p>4xx: a client error. The request contains invalid request parameters or syntax, or cannot be fulfilled.</p>
+         * </li>
+         * <li><p>5xx: a server error. The server fails to fulfill the request for other reasons.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +159,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0bc3b4b016674434996033675e71ee</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -360,7 +384,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * date.
+             * <p>The statistics collection date. The date is accurate to the day. The date must be in the <code>YYYYMMdd</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250528</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -368,7 +395,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * longTermStorage.
+             * <p>The Long Term storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder longTermStorage(Double longTermStorage) {
                 this.longTermStorage = longTermStorage;
@@ -376,7 +406,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * longTermStorageUnit.
+             * <p>The unit of the Long Term storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder longTermStorageUnit(String longTermStorageUnit) {
                 this.longTermStorageUnit = longTermStorageUnit;
@@ -384,7 +417,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * lowFreqStorage.
+             * <p>The IA storage class usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder lowFreqStorage(Double lowFreqStorage) {
                 this.lowFreqStorage = lowFreqStorage;
@@ -392,7 +428,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * lowFreqStorageUnit.
+             * <p>The unit of the IA storage class usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder lowFreqStorageUnit(String lowFreqStorageUnit) {
                 this.lowFreqStorageUnit = lowFreqStorageUnit;
@@ -400,7 +439,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * projectName.
+             * <p>The name of the MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>max_testproject</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -408,7 +450,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * rate.
+             * <p>The year-over-year change rate of the total storage usage in the last {$recentDays} days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.011872406445069006</p>
              */
             public Builder rate(Double rate) {
                 this.rate = rate;
@@ -416,7 +461,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * recycleBinStorage.
+             * <p>The recycle bin storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder recycleBinStorage(Double recycleBinStorage) {
                 this.recycleBinStorage = recycleBinStorage;
@@ -424,7 +472,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * recycleBinStorageUnit.
+             * <p>The unit of the recycle bin storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B</p>
              */
             public Builder recycleBinStorageUnit(String recycleBinStorageUnit) {
                 this.recycleBinStorageUnit = recycleBinStorageUnit;
@@ -432,7 +483,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * standardStorage.
+             * <p>The Standard storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder standardStorage(Double standardStorage) {
                 this.standardStorage = standardStorage;
@@ -440,7 +494,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * standardStorageUnit.
+             * <p>The unit of the Standard storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder standardStorageUnit(String standardStorageUnit) {
                 this.standardStorageUnit = standardStorageUnit;
@@ -448,7 +505,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The timestamp of the last data update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1749105045512</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -456,7 +516,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalStorage.
+             * <p>The total storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalStorage(Double totalStorage) {
                 this.totalStorage = totalStorage;
@@ -464,7 +527,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalStorageUnit.
+             * <p>The unit of the total storage usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TB</p>
              */
             public Builder totalStorageUnit(String totalStorageUnit) {
                 this.totalStorageUnit = totalStorageUnit;
@@ -570,7 +636,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * date.
+             * <p>The statistics collection date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20241205</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -578,7 +647,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * pageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -586,7 +658,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries on each page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -594,7 +669,7 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * storageProjectInfoList.
+             * <p>The list of project-level storage information.</p>
              */
             public Builder storageProjectInfoList(java.util.List<StorageProjectInfoList> storageProjectInfoList) {
                 this.storageProjectInfoList = storageProjectInfoList;
@@ -602,7 +677,10 @@ public class ListStorageProjectsInfoResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of returned entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

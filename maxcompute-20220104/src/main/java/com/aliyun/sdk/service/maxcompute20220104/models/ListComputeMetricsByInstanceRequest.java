@@ -185,7 +185,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The end time for the period.</p>
+         * <p>The end of the query time range, specified as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1718590596556</p>
@@ -197,7 +197,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The job(instance) ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20240730****ddlr</p>
@@ -209,7 +209,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account that is used to run the MaxCompute job.</p>
+         * <p>The job owner.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN$7632***@aliyun.com</p>
@@ -233,7 +233,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page. The default value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -245,7 +245,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of MaxCompute project.</p>
+         * <p>The names of the projects.</p>
          */
         public Builder projectNames(java.util.List<String> projectNames) {
             this.putBodyParameter("projectNames", projectNames);
@@ -254,7 +254,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The signature of the SQL job.</p>
+         * <p>The SQL job signature.</p>
          * 
          * <strong>example:</strong>
          * <p>ghijkl789012</p>
@@ -266,7 +266,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specification types.</p>
+         * <p>The specification types.</p>
          */
         public Builder specCodes(java.util.List<String> specCodes) {
             this.putBodyParameter("specCodes", specCodes);
@@ -275,7 +275,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>The start time for the period.</p>
+         * <p>The start of the query time range, specified as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1715393576201</p>
@@ -287,7 +287,7 @@ public class ListComputeMetricsByInstanceRequest extends Request {
         }
 
         /**
-         * <p>Metering types.</p>
+         * <p>The metering types.</p>
          */
         public Builder types(java.util.List<String> types) {
             this.putBodyParameter("types", types);

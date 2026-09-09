@@ -106,7 +106,7 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -122,7 +125,10 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
         }
 
         /**
-         * errorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan \&quot;***\&quot; does not exist</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -130,7 +136,22 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * <p>The HTTP status code.</p>
+         * <ul>
+         * <li><p>1xx: informational response. The request was received and is being processed.</p>
+         * </li>
+         * <li><p>2xx: success. The request was successfully received, understood, and accepted by the server.</p>
+         * </li>
+         * <li><p>3xx: redirection. The request was redirected. Further action needs to be taken to complete the request.</p>
+         * </li>
+         * <li><p>4xx: client error. The request contains incorrect request parameters or syntax, or specific request conditions cannot be met.</p>
+         * </li>
+         * <li><p>5xx: server error. The server failed to fulfill the request for other reasons.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +159,10 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b87b7b316643495896551555e855b</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +228,7 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * metric.
+             * <p>The metadata of the metric.</p>
              */
             public Builder metric(java.util.Map<String, String> metric) {
                 this.metric = metric;
@@ -212,7 +236,7 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The time series data.</p>
              */
             public Builder values(java.util.List<java.util.List<Double>> values) {
                 this.values = values;
@@ -305,7 +329,10 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * category.
+             * <p>This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not supported.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -313,7 +340,7 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
             }
 
             /**
-             * metrics.
+             * <p>The metric values.</p>
              */
             public Builder metrics(java.util.List<Metrics> metrics) {
                 this.metrics = metrics;
@@ -321,7 +348,10 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +359,10 @@ public class QueryQuotaMetricResponseBody extends TeaModel {
             }
 
             /**
-             * period.
+             * <p>The step size of the monitoring data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(Long period) {
                 this.period = period;

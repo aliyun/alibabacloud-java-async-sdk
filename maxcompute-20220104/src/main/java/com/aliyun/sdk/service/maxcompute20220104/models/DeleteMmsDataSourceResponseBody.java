@@ -67,7 +67,10 @@ public class DeleteMmsDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The ID of the deleted data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000015</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -75,7 +78,10 @@ public class DeleteMmsDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EA1320AB-7766-5EC7-B0F6-8B20E2298567</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

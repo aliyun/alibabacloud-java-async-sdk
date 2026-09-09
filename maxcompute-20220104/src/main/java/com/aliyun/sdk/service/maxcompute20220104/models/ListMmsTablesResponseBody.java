@@ -67,7 +67,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E7FB14F1-4ACD-5C73-A755-B302D70AB9AD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * comment.
+             * <p>The comment on the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user id</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -188,7 +194,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * defaultValue.
+             * <p>The default value of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -196,7 +205,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +216,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * nullable.
+             * <p>Indicates whether the column can be null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -212,7 +227,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The column type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -318,7 +336,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * comment.
+             * <p>The comment on the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>第一分区</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -326,7 +347,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * defaultValue.
+             * <p>The default value of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -334,7 +358,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +369,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * nullable.
+             * <p>Indicates whether the column can be null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -350,7 +380,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The column type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -443,7 +476,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * columns.
+             * <p>All non-partition key columns of the table.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -451,7 +484,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * comment.
+             * <p>The comment on the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>for mms test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -459,7 +495,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -467,7 +506,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * partitions.
+             * <p>All partition key columns.</p>
              */
             public Builder partitions(java.util.List<Partitions> partitions) {
                 this.partitions = partitions;
@@ -859,7 +898,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * dbId.
+             * <p>The database ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196</p>
              */
             public Builder dbId(Long dbId) {
                 this.dbId = dbId;
@@ -867,7 +909,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * dbName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -875,7 +920,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * dstName.
+             * <p>The name of the destination MaxCompute table. By default, this name is the same as the source table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder dstName(String dstName) {
                 this.dstName = dstName;
@@ -883,7 +931,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * dstProjectName.
+             * <p>The name of the destination MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mms_test</p>
              */
             public Builder dstProjectName(String dstProjectName) {
                 this.dstProjectName = dstProjectName;
@@ -891,7 +942,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * dstSchemaName.
+             * <p>The name of the destination MaxCompute schema. This parameter is null if the destination MaxCompute project does not have a schema layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder dstSchemaName(String dstSchemaName) {
                 this.dstSchemaName = dstSchemaName;
@@ -899,7 +953,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * extra.
+             * <p>Other information stored in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;mapkey.delim&quot;:&quot;:&quot;,&quot;collection.delim&quot;:&quot;,&quot;,&quot;serialization.format&quot;:&quot;|&quot;,&quot;field.delim&quot;:&quot;|&quot;}</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -907,7 +964,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * hasPartitions.
+             * <p>Indicates whether the table is a partitioned table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPartitions(Boolean hasPartitions) {
                 this.hasPartitions = hasPartitions;
@@ -915,7 +975,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>table ID</p>
+             * <p>The table ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1003476</p>
@@ -926,7 +986,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>inputFormat</p>
+             * <p>The input format.</p>
              * 
              * <strong>example:</strong>
              * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat</p>
@@ -937,7 +997,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>lastDdlTime</p>
+             * <p>The last DDL time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-12-17 15:44:42</p>
@@ -948,7 +1008,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * location.
+             * <p>The storage location of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>| hdfs://master-1-1.c-c127cd184bb029ea.cn-zhangjiakou.emr.aliyuncs.com:9000/user/hive/warehouse/demo</p>
              */
             public Builder location(String location) {
                 this.location = location;
@@ -956,7 +1019,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -964,7 +1030,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * numRows.
+             * <p>The number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232323</p>
              */
             public Builder numRows(Long numRows) {
                 this.numRows = numRows;
@@ -972,7 +1041,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>outFormat</p>
+             * <p>The output format.</p>
              * 
              * <strong>example:</strong>
              * <p>org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat</p>
@@ -983,7 +1052,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * owner.
+             * <p>The owner of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hive</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -991,7 +1063,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * partitions.
+             * <p>The number of partitions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder partitions(Integer partitions) {
                 this.partitions = partitions;
@@ -999,7 +1074,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsDoing.
+             * <p>The number of partitions that are being migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder partitionsDoing(Integer partitionsDoing) {
                 this.partitionsDoing = partitionsDoing;
@@ -1007,7 +1085,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsDone.
+             * <p>The number of partitions that are migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder partitionsDone(Integer partitionsDone) {
                 this.partitionsDone = partitionsDone;
@@ -1015,7 +1096,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * partitionsFailed.
+             * <p>The number of partitions that failed to be migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder partitionsFailed(Integer partitionsFailed) {
                 this.partitionsFailed = partitionsFailed;
@@ -1023,7 +1107,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * schema.
+             * <p>The table schema.</p>
              */
             public Builder schema(Schema schema) {
                 this.schema = schema;
@@ -1031,7 +1115,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>serde</p>
+             * <p>The serializer/deserializer (SerDe).</p>
              * 
              * <strong>example:</strong>
              * <p>org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe</p>
@@ -1042,7 +1126,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The data size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2985028</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1050,7 +1137,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * sourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000028</p>
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -1058,7 +1148,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * sourceName.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder sourceName(String sourceName) {
                 this.sourceName = sourceName;
@@ -1066,7 +1159,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The migration status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DONE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1074,7 +1170,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The table type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED_TABLE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1082,7 +1181,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * <p>Indicates whether the metadata is updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder updated(Boolean updated) {
                 this.updated = updated;
@@ -1175,7 +1277,7 @@ public class ListMmsTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * objectList.
+             * <p>The list of tables.</p>
              */
             public Builder objectList(java.util.List<ObjectList> objectList) {
                 this.objectList = objectList;
@@ -1183,7 +1285,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * pageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -1191,7 +1296,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * pageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1199,7 +1307,10 @@ public class ListMmsTablesResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

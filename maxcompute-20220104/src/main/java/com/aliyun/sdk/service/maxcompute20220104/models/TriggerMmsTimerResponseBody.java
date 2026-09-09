@@ -67,7 +67,7 @@ public class TriggerMmsTimerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>timer id</p>
+         * <p>The ID of the timer.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -78,7 +78,10 @@ public class TriggerMmsTimerResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0be3e0b716671885050924814e3623</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
