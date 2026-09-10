@@ -93,7 +93,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The return code. A value of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The moderation results.</p>
+         * <p>The data that is returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned in response to the request.</p>
+         * <p>A human-readable description of the error.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -123,7 +123,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -205,7 +205,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The answer.</p>
+             * <p>The suggested answer.</p>
              * 
              * <strong>example:</strong>
              * <p>XXX</p>
@@ -216,10 +216,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Hit Label</p>
+             * <p>The label that was hit.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>XXX</p>
              */
             public Builder hitLabel(String hitLabel) {
                 this.hitLabel = hitLabel;
@@ -227,10 +227,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Hit Library Name</p>
+             * <p>The name of the keyword library that was hit.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>XXX</p>
              */
             public Builder hitLibName(String hitLibName) {
                 this.hitLibName = hitLibName;
@@ -323,7 +323,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The level of prompt attack</p>
+             * <p>The attack level.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -334,7 +334,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The confidence</p>
+             * <p>The confidence score.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -345,7 +345,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>safe</p>
@@ -356,7 +356,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label</p>
+             * <p>The label.</p>
              * 
              * <strong>example:</strong>
              * <p>safe</p>
@@ -413,7 +413,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * OutputText.
+             * <p>The output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>正常。文本中无风险内容。</p>
              */
             public Builder outputText(String outputText) {
                 this.outputText = outputText;
@@ -467,7 +470,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * LlmContent.
+             * <p>The LLM output.</p>
              */
             public Builder llmContent(LlmContent llmContent) {
                 this.llmContent = llmContent;
@@ -534,7 +537,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The terms that are hit. Multiple terms are separated by commas (,).</p>
+             * <p>The keywords that were hit, separated by commas.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -545,10 +548,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The library name.</p>
+             * <p>The name of the keyword library.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>测试词库</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -628,7 +631,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * EndPos.
+             * <p>The end position of the non-compliant word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder endPos(Integer endPos) {
                 this.endPos = endPos;
@@ -636,7 +642,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWord.
+             * <p>The non-compliant word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>词A</p>
              */
             public Builder riskWord(String riskWord) {
                 this.riskWord = riskWord;
@@ -644,7 +653,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * StartPos.
+             * <p>The start position of the non-compliant word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder startPos(Integer startPos) {
                 this.startPos = startPos;
@@ -763,7 +775,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * <p>The confidence score. The value ranges from 0 to 100. The value is accurate to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>81.22</p>
@@ -774,7 +786,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom term hit by the moderated content.</p>
+             * <p>The custom keywords that were hit.</p>
              */
             public Builder customizedHit(java.util.List<CustomizedHit> customizedHit) {
                 this.customizedHit = customizedHit;
@@ -785,7 +797,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
              * <p>The description of the label.</p>
              * 
              * <strong>example:</strong>
-             * <p>none</p>
+             * <p>未检测出风险</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -804,7 +816,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskPositions.
+             * <p>The position information of the risk words.</p>
              */
             public Builder riskPositions(java.util.List<RiskPositions> riskPositions) {
                 this.riskPositions = riskPositions;
@@ -812,7 +824,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The term hit by the moderated content.</p>
+             * <p>The risk keywords that were hit.</p>
              * 
              * <strong>example:</strong>
              * <p>XXX</p>
@@ -908,10 +920,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Description</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxx</p>
+             * <p>省份</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -919,7 +931,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label</p>
+             * <p>The label.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -930,7 +942,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive data.</p>
+             * <p>The list of sensitive data.</p>
              */
             public Builder sensitiveData(java.util.List<String> sensitiveData) {
                 this.sensitiveData = sensitiveData;
@@ -938,7 +950,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of sensitivity data</p>
+             * <p>The sensitivity level.</p>
              * 
              * <strong>example:</strong>
              * <p>S1</p>
@@ -1164,7 +1176,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The AccountId from the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -1172,7 +1187,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The suggestion.</p>
+             * <p>The suggested actions.</p>
              */
             public Builder advice(java.util.List<Advice> advice) {
                 this.advice = advice;
@@ -1180,7 +1195,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of prompt attack</p>
+             * <p>The attack level.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -1191,7 +1206,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of prompt attack detect</p>
+             * <p>The prompt attack detection results.</p>
              */
             public Builder attackResult(java.util.List<AttackResult> attackResult) {
                 this.attackResult = attackResult;
@@ -1199,7 +1214,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The id of data</p>
+             * <p>The ID of the data that was moderated.</p>
+             * <blockquote>
+             * <p>If you specify the \<code>dataId\\</code> parameter in the request, the value of this parameter is returned.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>text1234</p>
@@ -1210,7 +1228,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * DetectedLanguage.
+             * <p>The detected language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder detectedLanguage(String detectedLanguage) {
                 this.detectedLanguage = detectedLanguage;
@@ -1218,7 +1239,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * Ext.
+             * <p>The auxiliary information.</p>
              */
             public Builder ext(Ext ext) {
                 this.ext = ext;
@@ -1226,7 +1247,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * ManualTaskId.
+             * <p>The ID of the manual review task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx-xxxxx</p>
              */
             public Builder manualTaskId(String manualTaskId) {
                 this.manualTaskId = manualTaskId;
@@ -1234,7 +1258,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results.</p>
+             * <p>The moderation results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -1242,7 +1266,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level</p>
+             * <p>The risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1264,7 +1288,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of sensitivity data</p>
+             * <p>The sensitivity level.</p>
              * 
              * <strong>example:</strong>
              * <p>S0</p>
@@ -1275,7 +1299,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result of sensitivity data detect</p>
+             * <p>The sensitive data detection results.</p>
              */
             public Builder sensitiveResult(java.util.List<SensitiveResult> sensitiveResult) {
                 this.sensitiveResult = sensitiveResult;
@@ -1283,7 +1307,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * TranslatedContent.
+             * <p>The translated content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello</p>
              */
             public Builder translatedContent(String translatedContent) {
                 this.translatedContent = translatedContent;

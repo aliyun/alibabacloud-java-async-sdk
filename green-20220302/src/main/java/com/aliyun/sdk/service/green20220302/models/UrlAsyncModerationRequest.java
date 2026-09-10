@@ -73,10 +73,10 @@ public class UrlAsyncModerationRequest extends Request {
         } 
 
         /**
-         * <p>The type of the moderation service.</p>
+         * <p>Service name: URL threat detection</p>
          * 
          * <strong>example:</strong>
-         * <p>url_detection</p>
+         * <p>url_detection_pro</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);
@@ -85,7 +85,7 @@ public class UrlAsyncModerationRequest extends Request {
         }
 
         /**
-         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * <p>The parameter set for the content moderation object. This parameter is a JSON string. For more information, see the description of ServiceParameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{

@@ -80,7 +80,7 @@ public class VoiceModerationCancelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code.</p>
+         * <p>The return code. A return code of 200 indicates that the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,7 +91,7 @@ public class VoiceModerationCancelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned in response to the request.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -102,7 +102,7 @@ public class VoiceModerationCancelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4A926AE2-4C96-573F-824F-0532960799F8</p>

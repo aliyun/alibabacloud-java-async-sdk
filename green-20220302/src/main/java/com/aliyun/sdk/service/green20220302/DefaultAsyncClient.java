@@ -51,10 +51,10 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-shanghai-finance-1", "green.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "green.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "green-cip.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "green-cip.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "green-cip.cn-hangzhou.aliyuncs.com"),
             new TeaPair("cn-beijing", "green-cip.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "green-cip.ap-southeast-1.aliyuncs.com")
+            new TeaPair("cn-shanghai", "green-cip.cn-shanghai.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "green-cip.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "green-cip.cn-hangzhou.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -84,9 +84,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Billing: This operation is free of charge.</p>
      * <ul>
-     * <li>QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</li>
+     * <li>Billing information: This operation is not billed.</li>
+     * <li>QPS limit: This operation is limited to 100 queries per second (QPS) for each user. If you exceed this limit, your API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeImageModerationResult  DescribeImageModerationResultRequest
@@ -107,6 +107,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation must be used with the enhanced image moderation API. After you call the enhanced image moderation API operation, you can call this API operation to obtain additional detection information. This API operation is free of charge.</p>
+     * 
      * @param request the request parameters of DescribeImageResultExt  DescribeImageResultExtRequest
      * @return DescribeImageResultExtResponse
      */
@@ -125,6 +128,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Billing information: This API call is free.</li>
+     * <li>Query timeout: Wait 30 seconds after you submit an asynchronous moderation task before querying the result. Do not wait longer than 24 hours, or the result will be automatically deleted.</li>
+     * <li>This API has a per-user rate limiting limit of 10 requests per second. Exceeding this limit triggers rate limiting, which may affect your service. Call the API responsibly.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeMultimodalModerationResult  DescribeMultimodalModerationResultRequest
      * @return DescribeMultimodalModerationResultResponse
      */
@@ -162,10 +172,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Billing: This operation is free of charge.</p>
      * <ul>
-     * <li>Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.</li>
-     * <li>You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</li>
+     * <li>Billing information: This operation is free of charge.</li>
+     * <li>Query timeout: We recommend that you set the query interval to 480 seconds (query the results 480 seconds after you submit the asynchronous moderation task). The maximum timeout period is 3 days. After this period, the results are automatically deleted.</li>
+     * <li>The QPS limit for this operation is 100 queries per second (QPS) per user. If the limit is exceeded, your API calls will be throttled, which may affect your business. Make sure you call the operation at a reasonable rate.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeUrlModerationResult  DescribeUrlModerationResultRequest
@@ -204,6 +214,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The following image formats are supported: PNG, JPG, JPEG, BMP, WEBP, TIFF, ICO, HEIC, and SVG.</li>
+     * <li>The image size cannot exceed 10 MB. The recommended image resolution is greater than 200 × 200 pixels. A low resolution may compromise the accuracy of the Content Moderation algorithm.</li>
+     * <li>The timeout period for image downloads is 3 seconds. If an image download exceeds this duration, a download timeout error is returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ImageAsyncModeration  ImageAsyncModerationRequest
      * @return ImageAsyncModerationResponse
      */
@@ -241,7 +258,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/467826.html">billing</a><a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag"></a> of Image Moderation 2.0.</p>
+     * <p>Before you call this operation, complete the following steps:</p>
+     * <ol>
+     * <li><a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">Activate AI Guardrails-Enhanced Edition</a>.</li>
+     * <li>Understand the <a href="https://help.aliyun.com/document_detail/467826.html?#section-h06-qz6-1pt">billing methods and pricing</a> of the enhanced image moderation feature.</li>
+     * <li>For more information about API usage and parameters, see the <a href="https://help.aliyun.com/document_detail/467829.html">API reference</a>.</li>
+     * </ol>
      * 
      * @param request the request parameters of ImageModeration  ImageModerationRequest
      * @return ImageModerationResponse
@@ -333,6 +355,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The content moderation agent.</p>
+     * 
      * @param request the request parameters of MultiModalAgent  MultiModalAgentRequest
      * @return MultiModalAgentResponse
      */
@@ -351,6 +376,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The content moderation Agent.</p>
+     * 
      * @param request the request parameters of MultiModalAgentSSE  MultiModalAgentSSERequest
      * @return MultiModalAgentSSEResponse
      */
@@ -397,6 +425,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If an API is subject to billing, add the following sentence in bold: &quot;Before using this API, ensure that you fully understand the billing methods and pricing of the XXX product.&quot; The word &quot;pricing&quot; must be a hyperlink to https\://www\.aliyun.com/price/product#/ecs/detail.</p>
+     * 
      * @param request the request parameters of MultiModalGuardAsync  MultiModalGuardAsyncRequest
      * @return MultiModalGuardAsyncResponse
      */
@@ -415,6 +446,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>If the API incurs fees, add the following bold statement as the first sentence: <strong>Before using this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ecs/detail">pricing</a> of XXX.</strong></p>
+     * 
      * @param request the request parameters of MultiModalGuardAsyncResult  MultiModalGuardAsyncResultRequest
      * @return MultiModalGuardAsyncResultResponse
      */
@@ -469,6 +503,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The asynchronous URL moderation service supports two billing methods: pay-as-you-go and resource plan usage.</p>
+     * <ul>
+     * <li>After you activate the enhanced text moderation service, the default billing method is pay-as-you-go. You are billed daily based on actual usage. No charges apply if you do not invoke the service.</li>
+     * <li>If your moderation volume is large or your moderation needs are relatively stable, purchase a resource plan in advance. Larger resource plans offer greater discounts. You can stack multiple resource plans.</li>
+     * </ul>
+     * 
      * @param request the request parameters of MultimodalAsyncModeration  MultimodalAsyncModerationRequest
      * @return MultimodalAsyncModerationResponse
      */
@@ -488,7 +529,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing</a> of Text Moderation 2.0.</p>
+     * <p>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing methods and pricing</a> for Text Moderation Plus.</p>
      * 
      * @param request the request parameters of TextModeration  TextModerationRequest
      * @return TextModerationResponse
@@ -509,7 +550,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you have <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activated the Content Moderation 2.0 service</a> and are familiar with the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing</a> of the Text Moderation 2.0 Plus service.</p>
+     * <p>Before you use this API, <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">activate AI Guardrails Pro</a> and make sure that you understand the <a href="https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n">billing methods and pricing</a> for Text Moderation Plus.</p>
      * 
      * @param request the request parameters of TextModerationPlus  TextModerationPlusRequest
      * @return TextModerationPlusResponse
@@ -529,6 +570,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The URL asynchronous moderation service supports the pay-as-you-go and resource plan billing methods.</p>
+     * <ul>
+     * <li>After you activate the enhanced edition of Text Moderation, the default billing method is pay-as-you-go. You are charged CNY 30 per 10,000 calls based on your daily usage. No fees are incurred if you do not call the service.</li>
+     * <li>If you have many moderation requests or relatively fixed moderation requirements, we recommend that you purchase resource plans in advance. The larger the resource plan you purchase, the greater the discount you receive. You can purchase and use multiple resource plans.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UrlAsyncModeration  UrlAsyncModerationRequest
      * @return UrlAsyncModerationResponse
      */
@@ -547,6 +595,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you have activated the <a href="https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn">enhanced Content Moderation</a> service and understand the <a href="https://help.aliyun.com/document_detail/2505807.html">billing methods</a> and <a href="https://www.aliyun.com/price/product?#/lvwang/detail/cdibag">pricing</a> of the enhanced video moderation feature.</p>
+     * 
      * @param request the request parameters of VideoModeration  VideoModerationRequest
      * @return VideoModerationResponse
      */
@@ -565,6 +616,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, you must activate Content Moderation Enhanced Edition. Activation link: <a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&commodityCode=lvwang_cip_public_cn">https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.14652963KTpjic&amp;commodityCode=lvwang_cip_public_cn</a>. You must grant the required RAM access policy (such as AliyunYundunGreenWebFullAccess) and use the correct endpoint (green-cip.{region}.aliyuncs.com).</p>
+     * 
      * @param request the request parameters of VideoModerationCancel  VideoModerationCancelRequest
      * @return VideoModerationCancelResponse
      */
@@ -584,7 +638,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation is free of charge. We recommend that you query moderation results at least 30 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for at most 24 hours. After 24 hours, the results are deleted.</p>
+     * <p>This operation is not billed. Set the polling interval to 30 seconds (query results 30 seconds after submitting the asynchronous detection task). The maximum query window is 24 hours. After 24 hours, results are automatically deleted.</p>
      * 
      * @param request the request parameters of VideoModerationResult  VideoModerationResultRequest
      * @return VideoModerationResultResponse

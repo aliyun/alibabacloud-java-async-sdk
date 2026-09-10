@@ -104,7 +104,7 @@ public class ManualModerationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -123,7 +123,7 @@ public class ManualModerationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>The ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -192,7 +192,7 @@ public class ManualModerationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value of dataId passed during the API request. This field will not be present if it was not provided during the request.</p>
+             * <p>The value of dataId passed in the API request. This field is not present if no dataId was passed in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>2a5389eb-4ff8-4584-ac99-644e2a539aa1</p>
@@ -203,7 +203,7 @@ public class ManualModerationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task ID</p>
+             * <p>The task ID</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxx-xxxxx</p>

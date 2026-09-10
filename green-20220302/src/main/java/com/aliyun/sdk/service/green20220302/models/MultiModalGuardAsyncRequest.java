@@ -73,7 +73,10 @@ public class MultiModalGuardAsyncRequest extends Request {
         } 
 
         /**
-         * Service.
+         * <p>The moderation service type. Valid values: <code>audio_security_check</code> and <code>video_security_check</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audio_security_check</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -82,7 +85,10 @@ public class MultiModalGuardAsyncRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * <p>The parameter set required for the moderation service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;url&quot;: &quot;<a href="https://testxxx.oss-cn-shanghai.aliyuncs.com/xxx.mp4">https://testxxx.oss-cn-shanghai.aliyuncs.com/xxx.mp4</a>&quot;, &quot;dataId&quot;: &quot;data1234&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

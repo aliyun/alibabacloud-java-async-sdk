@@ -73,7 +73,7 @@ public class VoiceModerationResultRequest extends Request {
         } 
 
         /**
-         * <p>The type of the moderation service. Valid values: nickname_detection: user nickname</p>
+         * <p>The moderation service type. Supported values include <code>nickname_detection</code> for user nickname moderation. Support for more types is planned.</p>
          * 
          * <strong>example:</strong>
          * <p>nickname_detection</p>
@@ -85,11 +85,11 @@ public class VoiceModerationResultRequest extends Request {
         }
 
         /**
-         * <p>The parameters of API requests that are sent from API Gateway to the backend service.</p>
+         * <p>Parameters that the gateway sends to the backend service.</p>
          * <p>For more information, see <a href="https://help.aliyun.com/document_detail/43988.html">ServiceParameter</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;taskId&quot;:&quot;xxxxx-xxxx&quot;}</p>
+         * <p>暂无</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

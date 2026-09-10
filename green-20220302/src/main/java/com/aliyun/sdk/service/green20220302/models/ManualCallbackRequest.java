@@ -129,7 +129,7 @@ public class ManualCallbackRequest extends Request {
         } 
 
         /**
-         * <p>Channel field</p>
+         * <p>The channel field.</p>
          * 
          * <strong>example:</strong>
          * <p>ant</p>
@@ -141,7 +141,7 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * <p>Checksum.</p>
+         * <p>The checksum.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -153,7 +153,7 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * <p>Code value</p>
+         * <p>The code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -165,10 +165,10 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Result&quot;: [{&quot;Confidence&quot;: 100.0, &quot;CustomizedHit&quot;: [{&quot;KeyWords&quot;: u&quot;\u4fdd\u969c,\u6700\u5927,\u9ad8\u7ea7&quot;, &quot;LibName&quot;: u&quot;\u4f18\u8def\u654f\u611f\u8bcd&quot;}], &quot;Label&quot;: &quot;customized&quot;}]}</p>
+         * <p>{\&quot;Result\&quot;: [{\&quot;Confidence\&quot;: 100.0, \&quot;CustomizedHit\&quot;: [{\&quot;KeyWords\&quot;: u\&quot;\u4fdd\u969c,\u6700\u5927,\u9ad8\u7ea7\&quot;, \&quot;LibName\&quot;: u\&quot;\u4f18\u8def\u654f\u611f\u8bcd\&quot;}], \&quot;Label\&quot;: \&quot;customized\&quot;}]}</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -177,7 +177,7 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * <p>Message information</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -189,7 +189,7 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * <p>Platform request ID, used for troubleshooting assistance</p>
+         * <p>The ID of the platform request. This ID is used to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>

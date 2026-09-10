@@ -59,7 +59,10 @@ public class DescribeMultimodalModerationResultRequest extends Request {
         } 
 
         /**
-         * ReqId.
+         * <p>The ReqId field returned by the asynchronous moderation API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAA-BBBBB-AIXI-1314-CCCCC</p>
          */
         public Builder reqId(String reqId) {
             this.putQueryParameter("ReqId", reqId);

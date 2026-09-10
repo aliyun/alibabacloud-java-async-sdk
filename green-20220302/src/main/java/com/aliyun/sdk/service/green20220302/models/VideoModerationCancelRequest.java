@@ -85,10 +85,10 @@ public class VideoModerationCancelRequest extends Request {
         }
 
         /**
-         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * <p>The TaskId of the task to cancel.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;taskId&quot;:&quot;vi_s_4O9gp7GfNQdx9GOqdekFmk-1z2RJT&quot;}</p>
+         * <p>{\&quot;taskId\&quot;:\&quot;vi_s_4O9gp7GfNQdx9GOqdekFmk-1z2RJT\&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

@@ -73,7 +73,7 @@ public class VoiceModerationCancelRequest extends Request {
         } 
 
         /**
-         * <p>The type of the moderation service.</p>
+         * <p>The type of moderation service. Valid values include \<code>nickname_detection\\</code> for user nicknames. Other values are to be determined.</p>
          * 
          * <strong>example:</strong>
          * <p>nickname_detection</p>
@@ -85,10 +85,12 @@ public class VoiceModerationCancelRequest extends Request {
         }
 
         /**
-         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * <p>The ID of the task that you want to cancel.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;taskId&quot;:&quot;xxxxx-xxxx&quot;}</p>
+         * <p>{
+         *         &quot;taskId&quot;: &quot;xxxxx-xxxx&quot;
+         *     }</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

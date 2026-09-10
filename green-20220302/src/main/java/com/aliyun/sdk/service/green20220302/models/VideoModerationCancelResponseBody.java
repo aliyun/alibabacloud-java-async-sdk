@@ -80,7 +80,7 @@ public class VideoModerationCancelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,7 +91,7 @@ public class VideoModerationCancelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned in response to the request.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -102,7 +102,7 @@ public class VideoModerationCancelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>6CF2815C-<strong><strong>-</strong></strong>-B52E-FF6E2****492</p>

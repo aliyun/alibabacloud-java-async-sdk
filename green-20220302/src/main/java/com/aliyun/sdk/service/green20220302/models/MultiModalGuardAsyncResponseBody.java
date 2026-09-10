@@ -93,7 +93,10 @@ public class MultiModalGuardAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class MultiModalGuardAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class MultiModalGuardAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class MultiModalGuardAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -186,7 +192,10 @@ public class MultiModalGuardAsyncResponseBody extends TeaModel {
             } 
 
             /**
-             * DataId.
+             * <p>The custom data ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataIdxxx</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -194,7 +203,10 @@ public class MultiModalGuardAsyncResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the asynchronous task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>au_f_xxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

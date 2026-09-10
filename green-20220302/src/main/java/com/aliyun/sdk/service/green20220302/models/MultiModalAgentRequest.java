@@ -73,7 +73,10 @@ public class MultiModalAgentRequest extends Request {
         } 
 
         /**
-         * AppID.
+         * <p>The unique identifier of the whiteboard application. To obtain the whiteboard application ID, see <a href="https://help.aliyun.com/document_detail/204234.html">CreateApp</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>txt_check_agent_01</p>
          */
         public Builder appID(String appID) {
             this.putBodyParameter("AppID", appID);
@@ -82,7 +85,10 @@ public class MultiModalAgentRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * <p>The parameter set required by the moderation service. taskId specifies the taskId of the detection task to query. Only one taskId can be specified per request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;content&quot;:&quot;Test text&quot;,&quot;dataId&quot;:&quot;img1234567&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

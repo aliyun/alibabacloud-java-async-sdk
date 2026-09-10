@@ -80,7 +80,7 @@ public class ManualCallbackResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,7 +91,7 @@ public class ManualCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Message information</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -102,7 +102,7 @@ public class ManualCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

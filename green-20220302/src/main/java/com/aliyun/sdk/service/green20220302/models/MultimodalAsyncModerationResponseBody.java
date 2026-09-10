@@ -93,7 +93,10 @@ public class MultimodalAsyncModerationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class MultimodalAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class MultimodalAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The response message for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -186,7 +192,10 @@ public class MultimodalAsyncModerationResponseBody extends TeaModel {
             } 
 
             /**
-             * DataId.
+             * <p>The value of dataId passed in the API request. This field is absent if dataId was not included in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26769ada6e264e7ba9aa048241e12be9</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -194,7 +203,10 @@ public class MultimodalAsyncModerationResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * <p>The ReqId field returned by the URL asynchronous enhanced moderation API. Use this field to query moderation results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A07B3DB9-D762-5C56-95B1-8EC55CF176D2</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;

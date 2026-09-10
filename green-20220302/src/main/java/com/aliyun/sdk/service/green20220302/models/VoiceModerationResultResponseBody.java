@@ -93,7 +93,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -112,7 +112,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned in response to the request.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -123,7 +123,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
@@ -192,7 +192,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * KeyWords.
+             * <p>The custom keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fxxk</p>
              */
             public Builder keyWords(String keyWords) {
                 this.keyWords = keyWords;
@@ -200,7 +203,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LibName.
+             * <p>The name of the custom library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>insultLib</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -280,7 +286,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * EndPos.
+             * <p>The end position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder endPos(Integer endPos) {
                 this.endPos = endPos;
@@ -288,7 +297,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWord.
+             * <p>The detected sensitive word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fxxk</p>
              */
             public Builder riskWord(String riskWord) {
                 this.riskWord = riskWord;
@@ -296,7 +308,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartPos.
+             * <p>The start position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder startPos(Integer startPos) {
                 this.startPos = startPos;
@@ -428,7 +443,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Confidence.
+             * <p>The confidence score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -436,7 +454,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * CustomizedHit.
+             * <p>The matched custom libraries.</p>
              */
             public Builder customizedHit(java.util.List<CustomizedHit> customizedHit) {
                 this.customizedHit = customizedHit;
@@ -444,7 +462,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>profanity</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -452,7 +473,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -460,7 +484,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -468,7 +495,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskPositions.
+             * <p>A list of risk positions.</p>
              */
             public Builder riskPositions(java.util.List<RiskPositions> riskPositions) {
                 this.riskPositions = riskPositions;
@@ -476,7 +503,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWords.
+             * <p>The matched risky content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX</p>
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -712,10 +742,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the labels.</p>
+             * <p>The description of the label.</p>
              * 
              * <strong>example:</strong>
-             * <p>no risk</p>
+             * <p>疑似违禁内容</p>
              */
             public Builder descriptions(String descriptions) {
                 this.descriptions = descriptions;
@@ -723,7 +753,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the audio segment in seconds.</p>
+             * <p>The end time of the slice, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -734,7 +764,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end timestamp of the segment. Unit: milliseconds.</p>
+             * <p>The end timestamp of the slice, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1678854649720</p>
@@ -745,10 +775,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Extended fields.</p>
+             * <p>Extended information.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;riskTips&quot;:&quot;sexuality_Suggestive&quot;,&quot;riskWords&quot;:&quot;pxxxxy&quot;}</p>
+             * <p>{\&quot;riskWords\&quot;:\&quot;色情服务\&quot;,&quot;adNums&quot;:&quot;\&quot;,&quot;riskTips&quot;:&quot;涉政_人物，涉政_红歌&quot;}</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -756,7 +786,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the labels.</p>
+             * <p>The matched violation labels.</p>
              * 
              * <strong>example:</strong>
              * <p>sexual_sounds</p>
@@ -767,10 +797,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reserved parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{}</p>
+             * <p>A reserved field.</p>
              */
             public Builder originAlgoResult(java.util.Map<String, ?> originAlgoResult) {
                 this.originAlgoResult = originAlgoResult;
@@ -778,7 +805,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The text detection results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -786,7 +813,17 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level.</p>
+             * <p>The risk level, which is determined based on the configured thresholds for high and low risk scores. Valid values:</p>
+             * <ul>
+             * <li><p><code>high</code>: high risk</p>
+             * </li>
+             * <li><p><code>medium</code>: medium risk</p>
+             * </li>
+             * <li><p><code>low</code>: low risk</p>
+             * </li>
+             * <li><p><code>none</code>: no risk detected</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -797,10 +834,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the risky content.</p>
+             * <p>Details about the matched risk.</p>
              * 
              * <strong>example:</strong>
-             * <p>sexuality_Suggestive</p>
+             * <p>涉政_人物</p>
              */
             public Builder riskTips(String riskTips) {
                 this.riskTips = riskTips;
@@ -808,10 +845,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The term hit by the risky content.</p>
+             * <p>The matched risk keywords.</p>
              * 
              * <strong>example:</strong>
-             * <p>AAA,BBB,CCC</p>
+             * <p>色情服务</p>
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -819,7 +856,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk score. Default range: 0 to 99.</p>
+             * <p>The risk score. The value ranges from 0 to 99.</p>
              * 
              * <strong>example:</strong>
              * <p>87.01</p>
@@ -830,7 +867,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the audio segment in seconds.</p>
+             * <p>The start time of the slice, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -841,7 +878,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start timestamp of the segment. Unit: milliseconds.</p>
+             * <p>The start timestamp of the slice, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1678854649720</p>
@@ -852,10 +889,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text converted from the audio segment.</p>
+             * <p>The transcribed text of the audio slice.</p>
              * 
              * <strong>example:</strong>
-             * <p>Disgusting</p>
+             * <p>今天天气真不错</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -863,10 +900,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temporary URL of the audio segment.</p>
+             * <p>The temporary URL of the audio slice.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+             * <p>暂无</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -998,10 +1035,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the moderated object.</p>
+             * <p>The value of the <code>dataId</code> parameter you specified in the request. This parameter is returned only if you specified it in the request.</p>
              * 
              * <strong>example:</strong>
-             * <p>26769ada6e264e7ba9aa048241e12be9</p>
+             * <p>data1234</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -1020,7 +1057,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ManualTaskId.
+             * <p>The ID of the manual review task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx-xxxxx</p>
              */
             public Builder manualTaskId(String manualTaskId) {
                 this.manualTaskId = manualTaskId;
@@ -1028,7 +1068,17 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level.</p>
+             * <p>The risk level, which is determined based on the configured thresholds for high and low risk scores. Valid values:</p>
+             * <ul>
+             * <li><p><code>high</code>: high risk</p>
+             * </li>
+             * <li><p><code>medium</code>: medium risk</p>
+             * </li>
+             * <li><p><code>low</code>: low risk</p>
+             * </li>
+             * <li><p><code>none</code>: no risk detected</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1039,7 +1089,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation results of audio segments.</p>
+             * <p>The slice results.</p>
              */
             public Builder sliceDetails(java.util.List<SliceDetails> sliceDetails) {
                 this.sliceDetails = sliceDetails;
@@ -1058,10 +1108,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the moderated content.</p>
+             * <p>The task URL.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
+             * <p>暂无</p>
              */
             public Builder url(String url) {
                 this.url = url;

@@ -93,7 +93,10 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +179,10 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
             } 
 
             /**
-             * Credits.
+             * <p>The number of credits consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.23</p>
              */
             public Builder credits(Double credits) {
                 this.credits = credits;
@@ -279,7 +288,10 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
             } 
 
             /**
-             * Created.
+             * <p>The timestamp when the session was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1783328536</p>
              */
             public Builder created(Long created) {
                 this.created = created;
@@ -287,7 +299,10 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
             }
 
             /**
-             * DataId.
+             * <p>The value of DataId passed in the API request. This field is not returned if DataId is not specified in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataId-XXX</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -295,7 +310,10 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
             }
 
             /**
-             * FinishReason.
+             * <p>For streaming output, this value is null during generation. When generation ends, the value is stop if the generation stopped due to a stop token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder finishReason(String finishReason) {
                 this.finishReason = finishReason;
@@ -303,7 +321,10 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The output result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;Violation, reason XX&quot;</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -311,7 +332,7 @@ public class MultiModalAgentSSEResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The credits usage information.</p>
              */
             public Builder usage(Usage usage) {
                 this.usage = usage;

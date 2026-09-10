@@ -59,7 +59,7 @@ public class DescribeUrlModerationResultRequest extends Request {
         } 
 
         /**
-         * <p>The ReqId field returned by an asynchronous URL moderation operation.</p>
+         * <p>The ReqId field returned by the asynchronous URL moderation operation</p>
          * 
          * <strong>example:</strong>
          * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>

@@ -93,7 +93,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned in response to the request.</p>
+         * <p>The response message of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -284,7 +284,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Identified person coding information.</p>
+             * <p>The figure ID.</p>
              * 
              * <strong>example:</strong>
              * <p>yzazhzou</p>
@@ -367,10 +367,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Custom words, multiple words separated by commas.</p>
+             * <p>The custom words, multiple words are separated by commas.</p>
              * 
              * <strong>example:</strong>
-             * <p>aaa,bbb</p>
+             * <p>自定义词1,自定义词2</p>
              */
             public Builder keyWords(String keyWords) {
                 this.keyWords = keyWords;
@@ -378,7 +378,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Custom library ID.</p>
+             * <p>The custom library ID</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -389,10 +389,10 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Custom library name.</p>
+             * <p>The custom library name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>自定义库1</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -472,7 +472,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.</p>
+             * <p>When a custom text library is hit, the custom library ID, custom library name, and custom words are returned.</p>
              */
             public Builder customTexts(java.util.List<CustomTexts> customTexts) {
                 this.customTexts = customTexts;
@@ -480,7 +480,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returns the text information in the recognized image.</p>
+             * <p>The text information detected in the image.</p>
              */
             public Builder ocrDatas(java.util.List<String> ocrDatas) {
                 this.ocrDatas = ocrDatas;
@@ -488,7 +488,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
+             * <p>The hit risk keywords</p>
              */
             public Builder riskWords(java.util.List<String> riskWords) {
                 this.riskWords = riskWords;
@@ -568,7 +568,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>If a custom image library is hit, information about the hit custom image library is returned.</p>
+             * <p>The list of custom image library hit information.</p>
              */
             public Builder customImage(java.util.List<CustomImage> customImage) {
                 this.customImage = customImage;
@@ -576,7 +576,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Person information list.</p>
+             * <p>The list of figure information.</p>
              */
             public Builder publicFigure(java.util.List<PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
@@ -584,7 +584,7 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returns the text information in the hit image.</p>
+             * <p>The text information in the hit image.</p>
              */
             public Builder textInImage(TextInImage textInImage) {
                 this.textInImage = textInImage;

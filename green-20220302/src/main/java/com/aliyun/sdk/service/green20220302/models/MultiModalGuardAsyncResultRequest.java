@@ -73,7 +73,10 @@ public class MultiModalGuardAsyncResultRequest extends Request {
         } 
 
         /**
-         * Service.
+         * <p>The moderation service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audio_security_check</p>
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -82,7 +85,12 @@ public class MultiModalGuardAsyncResultRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;taskId&quot;: &quot;au_f_xxxxx&quot;
+         * }</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

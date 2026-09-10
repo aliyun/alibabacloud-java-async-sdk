@@ -93,7 +93,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The return code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned in response to the request.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -205,7 +205,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * <p>The risk score.</p>
              * 
              * <strong>example:</strong>
              * <p>25.0</p>
@@ -219,7 +219,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is a title.</p>
+             * <p>This is a title</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -227,7 +227,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the labels.</p>
+             * <p>The label.</p>
              * 
              * <strong>example:</strong>
              * <p>nonlabel</p>
@@ -468,7 +468,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is a title.</p>
+             * <p>This is a title</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -484,7 +484,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location information</p>
+             * <p>The location information.</p>
              */
             public Builder location(Location location) {
                 this.location = location;
@@ -492,7 +492,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level</p>
+             * <p>The risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -503,7 +503,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation service.</p>
+             * <p>The invoked service.</p>
              * 
              * <strong>example:</strong>
              * <p>baselineCheck</p>
@@ -526,6 +526,387 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
      *
      * <p>DescribeFileModerationResultResponseBody</p>
      */
+    public static class CustomizedHit extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
+        private String keyWords;
+
+        @com.aliyun.core.annotation.NameInMap("LibName")
+        private String libName;
+
+        private CustomizedHit(Builder builder) {
+            this.keyWords = builder.keyWords;
+            this.libName = builder.libName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomizedHit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keyWords
+         */
+        public String getKeyWords() {
+            return this.keyWords;
+        }
+
+        /**
+         * @return libName
+         */
+        public String getLibName() {
+            return this.libName;
+        }
+
+        public static final class Builder {
+            private String keyWords; 
+            private String libName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomizedHit model) {
+                this.keyWords = model.keyWords;
+                this.libName = model.libName;
+            } 
+
+            /**
+             * <p>The hit keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Popular among everyone</p>
+             */
+            public Builder keyWords(String keyWords) {
+                this.keyWords = keyWords;
+                return this;
+            }
+
+            /**
+             * <p>The vocabulary name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestVocabulary22</p>
+             */
+            public Builder libName(String libName) {
+                this.libName = libName;
+                return this;
+            }
+
+            public CustomizedHit build() {
+                return new CustomizedHit(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
+    public static class RiskPositions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndPos")
+        private Long endPos;
+
+        @com.aliyun.core.annotation.NameInMap("RiskWord")
+        private String riskWord;
+
+        @com.aliyun.core.annotation.NameInMap("StartPos")
+        private Long startPos;
+
+        private RiskPositions(Builder builder) {
+            this.endPos = builder.endPos;
+            this.riskWord = builder.riskWord;
+            this.startPos = builder.startPos;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RiskPositions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endPos
+         */
+        public Long getEndPos() {
+            return this.endPos;
+        }
+
+        /**
+         * @return riskWord
+         */
+        public String getRiskWord() {
+            return this.riskWord;
+        }
+
+        /**
+         * @return startPos
+         */
+        public Long getStartPos() {
+            return this.startPos;
+        }
+
+        public static final class Builder {
+            private Long endPos; 
+            private String riskWord; 
+            private Long startPos; 
+
+            private Builder() {
+            } 
+
+            private Builder(RiskPositions model) {
+                this.endPos = model.endPos;
+                this.riskWord = model.riskWord;
+                this.startPos = model.startPos;
+            } 
+
+            /**
+             * <p>The end position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
+             */
+            public Builder endPos(Long endPos) {
+                this.endPos = endPos;
+                return this;
+            }
+
+            /**
+             * <p>The violation word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Visit pornographic website</p>
+             */
+            public Builder riskWord(String riskWord) {
+                this.riskWord = riskWord;
+                return this;
+            }
+
+            /**
+             * <p>The start position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17</p>
+             */
+            public Builder startPos(Long startPos) {
+                this.startPos = startPos;
+                return this;
+            }
+
+            public RiskPositions build() {
+                return new RiskPositions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
+    public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("CustomizedHit")
+        private java.util.List<CustomizedHit> customizedHit;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
+        @com.aliyun.core.annotation.NameInMap("RiskPositions")
+        private java.util.List<RiskPositions> riskPositions;
+
+        @com.aliyun.core.annotation.NameInMap("RiskWords")
+        private String riskWords;
+
+        private Result(Builder builder) {
+            this.confidence = builder.confidence;
+            this.customizedHit = builder.customizedHit;
+            this.description = builder.description;
+            this.label = builder.label;
+            this.riskLevel = builder.riskLevel;
+            this.riskPositions = builder.riskPositions;
+            this.riskWords = builder.riskWords;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Result create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return customizedHit
+         */
+        public java.util.List<CustomizedHit> getCustomizedHit() {
+            return this.customizedHit;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
+         * @return riskPositions
+         */
+        public java.util.List<RiskPositions> getRiskPositions() {
+            return this.riskPositions;
+        }
+
+        /**
+         * @return riskWords
+         */
+        public String getRiskWords() {
+            return this.riskWords;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private java.util.List<CustomizedHit> customizedHit; 
+            private String description; 
+            private String label; 
+            private String riskLevel; 
+            private java.util.List<RiskPositions> riskPositions; 
+            private String riskWords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.confidence = model.confidence;
+                this.customizedHit = model.customizedHit;
+                this.description = model.description;
+                this.label = model.label;
+                this.riskLevel = model.riskLevel;
+                this.riskPositions = model.riskPositions;
+                this.riskWords = model.riskWords;
+            } 
+
+            /**
+             * <p>The label confidence score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90.50</p>
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * <p>The custom vocabulary hit results.</p>
+             */
+            public Builder customizedHit(java.util.List<CustomizedHit> customizedHit) {
+                this.customizedHit = customizedHit;
+                return this;
+            }
+
+            /**
+             * <p>The description corresponding to the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pornography</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The text label in page results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Political sensitivity</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
+            /**
+             * <p>The positions of the violation words.</p>
+             */
+            public Builder riskPositions(java.util.List<RiskPositions> riskPositions) {
+                this.riskPositions = riskPositions;
+                return this;
+            }
+
+            /**
+             * <p>The hit violation words.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Popular among everyone</p>
+             */
+            public Builder riskWords(String riskWords) {
+                this.riskWords = riskWords;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeFileModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileModerationResultResponseBody</p>
+     */
     public static class TextResult extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -535,6 +916,9 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
+
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private java.util.List<Result> result;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -558,6 +942,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             this.description = builder.description;
             this.descriptions = builder.descriptions;
             this.labels = builder.labels;
+            this.result = builder.result;
             this.riskLevel = builder.riskLevel;
             this.riskTips = builder.riskTips;
             this.riskWords = builder.riskWords;
@@ -593,6 +978,13 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
          */
         public String getLabels() {
             return this.labels;
+        }
+
+        /**
+         * @return result
+         */
+        public java.util.List<Result> getResult() {
+            return this.result;
         }
 
         /**
@@ -641,6 +1033,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String description; 
             private String descriptions; 
             private String labels; 
+            private java.util.List<Result> result; 
             private String riskLevel; 
             private String riskTips; 
             private String riskWords; 
@@ -655,6 +1048,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
                 this.description = model.description;
                 this.descriptions = model.descriptions;
                 this.labels = model.labels;
+                this.result = model.result;
                 this.riskLevel = model.riskLevel;
                 this.riskTips = model.riskTips;
                 this.riskWords = model.riskWords;
@@ -667,7 +1061,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is a title.</p>
+             * <p>This is a title</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -675,10 +1069,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the labels.</p>
+             * <p>The label descriptions.</p>
              * 
              * <strong>example:</strong>
-             * <p>no risk</p>
+             * <p>Suspected advertising content</p>
              */
             public Builder descriptions(String descriptions) {
                 this.descriptions = descriptions;
@@ -686,7 +1080,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the labels.</p>
+             * <p>The label values.</p>
              * 
              * <strong>example:</strong>
              * <p>porn</p>
@@ -697,7 +1091,15 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level</p>
+             * <p>The text plus version result.</p>
+             */
+            public Builder result(java.util.List<Result> result) {
+                this.result = result;
+                return this;
+            }
+
+            /**
+             * <p>The risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -708,7 +1110,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk details that are hit.</p>
+             * <p>The hit risk details.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -719,7 +1121,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk words that are hit.</p>
+             * <p>The hit risk keywords.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx</p>
@@ -730,7 +1132,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation service.</p>
+             * <p>The service.</p>
              * 
              * <strong>example:</strong>
              * <p>chat_detection</p>
@@ -744,7 +1146,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
              * <p>The text content.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is a text.</p>
+             * <p>blah blah</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -861,7 +1263,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The image moderation results.</p>
+             * <p>The image detection results.</p>
              */
             public Builder imageResult(java.util.List<ImageResult> imageResult) {
                 this.imageResult = imageResult;
@@ -899,7 +1301,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text URL.</p>
+             * <p>The URL where the text content is stored.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt</a></p>
@@ -982,7 +1384,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description.</p>
+             * <p>The label description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -993,7 +1395,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the labels.</p>
+             * <p>The label.</p>
              * 
              * <strong>example:</strong>
              * <p>contraband</p>
@@ -1004,7 +1406,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the label is matched.</p>
+             * <p>The number of times the label appears.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1074,7 +1476,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Image Label</p>
+             * <p>The image labels.</p>
              */
             public Builder imageLabels(java.util.List<ImageLabels> imageLabels) {
                 this.imageLabels = imageLabels;
@@ -1082,7 +1484,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level</p>
+             * <p>The risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1217,7 +1619,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * ContentProducer.
+             * <p>The content producer code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00119144030008867405X210001</p>
              */
             public Builder contentProducer(String contentProducer) {
                 this.contentProducer = contentProducer;
@@ -1225,7 +1630,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ContentPropagator.
+             * <p>The content propagator code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00119144030008867405X220001</p>
              */
             public Builder contentPropagator(String contentPropagator) {
                 this.contentPropagator = contentPropagator;
@@ -1233,10 +1641,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the labels.</p>
+             * <p>The content attribute declared by the implicit label.</p>
              * 
              * <strong>example:</strong>
-             * <p>contraband</p>
+             * <p>AI-generated or synthetic content</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1244,7 +1652,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ProduceID.
+             * <p>The content production ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tos-cn-i-tb4s082cfz/ad88d9b125694f57b2c72235e5c42af1</p>
              */
             public Builder produceID(String produceID) {
                 this.produceID = produceID;
@@ -1252,7 +1663,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * PropagateID.
+             * <p>The content propagation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tos-cn-i-tb4s082cfz/ad88d9b125694f57b2c72235e5c42af1</p>
              */
             public Builder propagateID(String propagateID) {
                 this.propagateID = propagateID;
@@ -1260,7 +1674,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedCode1.
+             * <p>Reserved field 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder reservedCode1(String reservedCode1) {
                 this.reservedCode1 = reservedCode1;
@@ -1268,7 +1685,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedCode2.
+             * <p>Reserved field 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder reservedCode2(String reservedCode2) {
                 this.reservedCode2 = reservedCode2;
@@ -1335,7 +1755,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AIGC.
+             * <p>The implicit label information of AI-generated or synthetic content.</p>
              */
             public Builder AIGC(AIGC AIGC) {
                 this.AIGC = AIGC;
@@ -1343,7 +1763,14 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Explain.
+             * <p>The comprehensive analysis report for forgery detection by the large language model.</p>
+             * 
+             * <strong>example:</strong>
+             * <h3>Comprehensive Report for Users</h3>
+             * <h4>Quick Image Overview</h4>
+             * <ul>
+             * <li><strong>Image Subject</strong>: A scanned document titled &quot;Letter of Authorization&quot;, containing the names of the authorizing and authorized companies and red official seals</li>
+             * </ul>
              */
             public Builder explain(String explain) {
                 this.explain = explain;
@@ -1397,7 +1824,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AigcData.
+             * <p>The details of AI-generated or synthetic content detection.</p>
              */
             public Builder aigcData(AigcData aigcData) {
                 this.aigcData = aigcData;
@@ -1477,10 +1904,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * <p>The confidence score of the label.</p>
              * 
              * <strong>example:</strong>
-             * <p>25.0</p>
+             * <p>95.96</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -1488,10 +1915,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
+             * <p>The description of the risk label in Chinese.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>疑似AI生成合成内容</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1499,10 +1926,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the labels.</p>
+             * <p>The risk label.</p>
              * 
              * <strong>example:</strong>
-             * <p>contraband</p>
+             * <p>tamper_aigc</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1582,7 +2009,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Ext.
+             * <p>The extended information.</p>
              */
             public Builder ext(Ext ext) {
                 this.ext = ext;
@@ -1590,7 +2017,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLabels.
+             * <p>The list of matched forgery detection risk labels.</p>
              */
             public Builder riskLabels(java.util.List<RiskLabels> riskLabels) {
                 this.riskLabels = riskLabels;
@@ -1598,7 +2025,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level</p>
+             * <p>The overall risk level of the document, which is the highest level among all matched labels.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1681,10 +2108,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the labels.</p>
+             * <p>The label descriptions.</p>
              * 
              * <strong>example:</strong>
-             * <p>no risk</p>
+             * <p>No risk detected</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1692,7 +2119,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the labels.</p>
+             * <p>The label.</p>
              * 
              * <strong>example:</strong>
              * <p>contraband</p>
@@ -1703,7 +2130,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the label is matched.</p>
+             * <p>The number of times the label appears.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1773,7 +2200,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Risk Level</p>
+             * <p>The risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1784,7 +2211,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Text Label</p>
+             * <p>The text labels.</p>
              */
             public Builder textLabels(java.util.List<TextLabels> textLabels) {
                 this.textLabels = textLabels;
@@ -1877,7 +2304,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Image Results Summary</p>
+             * <p>The image summary information.</p>
              */
             public Builder imageSummary(ImageSummary imageSummary) {
                 this.imageSummary = imageSummary;
@@ -1885,7 +2312,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of pages</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1896,7 +2323,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskSummary.
+             * <p>The document forgery detection risk summary.</p>
              */
             public Builder riskSummary(RiskSummary riskSummary) {
                 this.riskSummary = riskSummary;
@@ -1904,7 +2331,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Text Results Summary</p>
+             * <p>The text summary information.</p>
              */
             public Builder textSummary(TextSummary textSummary) {
                 this.textSummary = textSummary;
@@ -2036,7 +2463,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The AccountId specified by the caller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accountIdtest123</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -2044,7 +2474,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the moderated object.</p>
+             * <p>The data ID.</p>
              * 
              * <strong>example:</strong>
              * <p>26769ada6e264e7ba9aa048241e12be9</p>
@@ -2055,7 +2485,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Optional. The document type.</p>
+             * <p>The document type. This parameter is optional.</p>
              * 
              * <strong>example:</strong>
              * <p>doc</p>
@@ -2066,7 +2496,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the moderation results.</p>
+             * <p>The list of detection results.</p>
              */
             public Builder pageResult(java.util.List<PageResult> pageResult) {
                 this.pageResult = pageResult;
@@ -2074,7 +2504,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Summary of results</p>
+             * <p>The summary information.</p>
              */
             public Builder pageSummary(PageSummary pageSummary) {
                 this.pageSummary = pageSummary;
@@ -2082,7 +2512,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level</p>
+             * <p>The risk level.</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -2093,7 +2523,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the moderated object.</p>
+             * <p>The URL for downloading the file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf</a></p>

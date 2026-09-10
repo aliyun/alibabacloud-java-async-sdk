@@ -87,7 +87,10 @@ public class MultiModalAgentSSERequest extends Request {
         } 
 
         /**
-         * AppID.
+         * <p>The unique identifier of the whiteboard application. To obtain the whiteboard application ID, refer to <a href="https://help.aliyun.com/document_detail/204234.html">CreateApp</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>txt_check_pro_agent_01</p>
          */
         public Builder appID(String appID) {
             this.putBodyParameter("AppID", appID);
@@ -96,7 +99,14 @@ public class MultiModalAgentSSERequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * <p>The parameter set required by the moderation service, in JSON string format. The text content input parameter is content (String), the custom data ID is DataId (String), and the cache type is CacheType (String, valid value: ephemeral).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;content&quot;: &quot;Text content to be moderated&quot;,
+         *     &quot;DataId&quot;: &quot;data123***&quot;,
+         *     &quot;CacheType&quot;:&quot;ephemeral&quot;
+         *     }</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);
@@ -105,7 +115,10 @@ public class MultiModalAgentSSERequest extends Request {
         }
 
         /**
-         * Stream.
+         * <p>Specifies whether to use streaming output.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stream(String stream) {
             this.putBodyParameter("Stream", stream);

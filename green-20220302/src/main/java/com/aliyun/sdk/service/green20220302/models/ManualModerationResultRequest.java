@@ -59,13 +59,13 @@ public class ManualModerationResultRequest extends Request {
         } 
 
         /**
-         * <p>Set of parameters required by the service, in JSON string format.</p>
+         * <p>The set of parameters required by the service, in JSON string format.</p>
          * <ul>
-         * <li>TaskId: The task ID returned when the task was submitted.</li>
+         * <li>taskId: The task ID returned when the task was submitted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;TaskId&quot;:&quot;e5f2d886-4c23-440d-999c-bd98acde11b6&quot;}</p>
+         * <p>\&quot;taskId\&quot;:\&quot;m_tx_8oaprwnGUKuuLYNwV21JRf-VQjzQX3\&quot;</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

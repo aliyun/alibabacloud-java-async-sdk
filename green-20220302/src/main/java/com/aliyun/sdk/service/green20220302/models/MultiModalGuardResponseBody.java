@@ -93,7 +93,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class MultiModalGuardResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +231,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             } 
 
             /**
-             * Confidence.
+             * <p>The confidence score. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -230,7 +242,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>疑似违禁行为</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +253,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             }
 
             /**
-             * Ext.
+             * <p>The extended information about the detection results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder ext(Object ext) {
                 this.ext = ext;
@@ -246,7 +264,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contraband_act</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -254,7 +275,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -347,7 +371,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             } 
 
             /**
-             * Level.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -355,7 +382,7 @@ public class MultiModalGuardResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The detection results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -363,7 +390,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The moderation suggestion. Valid values: -<strong>block</strong>: The content is non-compliant. -<strong>pass</strong>: The content is compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -371,7 +401,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contentModeration</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -451,7 +484,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             } 
 
             /**
-             * DataId.
+             * <p>The data ID of the detection object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data1234</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -459,7 +495,7 @@ public class MultiModalGuardResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The detection details.</p>
              */
             public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
@@ -467,7 +503,10 @@ public class MultiModalGuardResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The moderation suggestion. Valid values: -block: The content is non-compliant. -pass: The content is compliant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;

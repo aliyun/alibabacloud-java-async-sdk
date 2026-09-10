@@ -93,7 +93,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code, which matches the HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * <p>The response message for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -117,7 +123,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Description of the Label field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>疑似含有烟火类内容元素</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -191,7 +203,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>Risk label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violent_explosion</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -245,7 +260,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Results.
+             * <p>Comment moderation results.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;
@@ -312,7 +327,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Description of the Label field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>疑似含有烟火类内容元素</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -320,7 +338,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>Risk label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violent_explosion</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -387,7 +408,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * CommentDatas.
+             * <p>Moderation results.</p>
              */
             public Builder commentDatas(java.util.List<CommentDatas> commentDatas) {
                 this.commentDatas = commentDatas;
@@ -395,7 +416,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>Comment moderation results.</p>
              */
             public Builder results(java.util.List<CommentDatasResults> results) {
                 this.results = results;
@@ -462,7 +483,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Description of the Label field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>疑似含有烟火类内容元素</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -470,7 +494,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>Risk label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violent_explosion</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -524,7 +551,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Results.
+             * <p>Main post moderation results.</p>
              */
             public Builder results(java.util.List<MainDataResults> results) {
                 this.results = results;
@@ -630,7 +657,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * CommentDatas.
+             * <p>Comment moderation results.</p>
              */
             public Builder commentDatas(java.util.List<DataCommentDatas> commentDatas) {
                 this.commentDatas = commentDatas;
@@ -638,7 +665,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * DataId.
+             * <p>The dataId value passed in the API request. This field is absent if no dataId was provided in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data1234</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -646,7 +676,7 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * MainData.
+             * <p>Main post moderation results.</p>
              */
             public Builder mainData(MainData mainData) {
                 this.mainData = mainData;
@@ -654,7 +684,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * <p>The ReqId field returned by the asynchronous moderation API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -662,7 +695,10 @@ public class DescribeMultimodalModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

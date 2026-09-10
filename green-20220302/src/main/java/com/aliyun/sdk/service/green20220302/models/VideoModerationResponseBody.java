@@ -93,7 +93,7 @@ public class VideoModerationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code.</p>
+         * <p>The return code. A return code of 200 indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned in response to the request.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -123,7 +123,7 @@ public class VideoModerationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -192,7 +192,7 @@ public class VideoModerationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the moderated object.</p>
+             * <p>The value of the dataId parameter that you specified in the API request. This parameter is not returned if you did not specify the dataId parameter in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>data1234</p>

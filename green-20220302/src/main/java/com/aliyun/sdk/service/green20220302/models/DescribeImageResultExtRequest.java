@@ -73,7 +73,13 @@ public class DescribeImageResultExtRequest extends Request {
         } 
 
         /**
-         * <p>The content of the information to be obtained. Multiple values are separated by commas.</p>
+         * <p>The type of information to obtain. Multiple values are separated by commas. Valid values:</p>
+         * <ul>
+         * <li><p>customImage: custom image library hit information</p>
+         * </li>
+         * <li><p>textInImage: text information in the image</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>customImage,textInImage</p>
@@ -85,7 +91,7 @@ public class DescribeImageResultExtRequest extends Request {
         }
 
         /**
-         * <p>The reqId field returned by the Url Async Moderation API.</p>
+         * <p>The requestId field returned by the enhanced image moderation API</p>
          * 
          * <strong>example:</strong>
          * <p>638EDDC65C82AB39319A9F60</p>

@@ -73,7 +73,7 @@ public class DescribeFileModerationResultRequest extends Request {
         } 
 
         /**
-         * <p>The type of the moderation service.</p>
+         * <p>The service supported by the enhanced file moderation feature.</p>
          * 
          * <strong>example:</strong>
          * <p>document_detection</p>
@@ -85,13 +85,13 @@ public class DescribeFileModerationResultRequest extends Request {
         }
 
         /**
-         * <p>The parameters required by the moderation service. The value is a JSON string.</p>
+         * <p>The set of parameters required by the moderation service, in JSON character string format.</p>
          * <ul>
-         * <li>taskId: required. The URL of the object that you want to moderate. Make sure that the URL can be accessed over the Internet.</li>
+         * <li>taskId: Required. The URL of the object to be moderated. Make sure that the URL is accessible through public network access.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;taskId&quot;:&quot;vi_f_hPgx9PFIQISdlfA888hOFG-1yJq8v&quot;}</p>
+         * <p>{\&quot;taskId\&quot;:\&quot;vi_f_hPgx9PFIQISdlfA888hOFG-1yJq8v\&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

@@ -93,7 +93,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error code.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -123,7 +123,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -192,10 +192,10 @@ public class ManualModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Label description</p>
+             * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>no risk</p>
+             * <p>No risk detected</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -203,7 +203,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk label</p>
+             * <p>The risk label.</p>
              * 
              * <strong>example:</strong>
              * <p>violent_explosion</p>
@@ -312,7 +312,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value of dataId passed during the API request. This field will not be present if it was not provided during the request.</p>
+             * <p>The value of dataId passed in the API request. This field is not returned if dataId was not specified in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>data1234</p>
@@ -323,7 +323,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detailed label results.</p>
+             * <p>The detailed label results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -331,7 +331,10 @@ public class ManualModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReviewCount.
+             * <p>The number of reviews.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder reviewCount(String reviewCount) {
                 this.reviewCount = reviewCount;
@@ -339,13 +342,13 @@ public class ManualModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk level, returned based on the set high and low risk scores. Possible values include:</p>
+             * <p>The risk level, returned based on the configured high and low risk thresholds. Valid values:</p>
              * <ul>
-             * <li><p>high: High risk</p>
+             * <li><p>high: High risk.</p>
              * </li>
-             * <li><p>low: Low risk</p>
+             * <li><p>low: Low risk.</p>
              * </li>
-             * <li><p>none: No risk detected</p>
+             * <li><p>none: No risk detected.</p>
              * </li>
              * </ul>
              * 
@@ -358,7 +361,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task ID</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxx-xxxxx</p>

@@ -93,7 +93,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +231,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             } 
 
             /**
-             * Confidence.
+             * <p>The confidence level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -230,7 +242,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No risk detected</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +253,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             }
 
             /**
-             * Ext.
+             * <p>The extension information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON-formatted data</p>
              */
             public Builder ext(Object ext) {
                 this.ext = ext;
@@ -246,7 +264,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nonLable</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -254,7 +275,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -347,7 +371,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             } 
 
             /**
-             * Level.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -355,7 +382,7 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The result.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -363,7 +390,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The suggested action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -371,7 +401,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contentModeration</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -451,7 +484,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             } 
 
             /**
-             * DataId.
+             * <p>The data ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -459,7 +495,7 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The details.</p>
              */
             public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
@@ -467,7 +503,10 @@ public class MultiModalGuardForBase64ResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>The suggested action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pass</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;

@@ -93,7 +93,10 @@ public class MultiModalAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class MultiModalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the image content detection.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class MultiModalAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +205,10 @@ public class MultiModalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The label description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No risk detected</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -207,7 +216,10 @@ public class MultiModalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The risk label.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violent_explosion</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -215,7 +227,20 @@ public class MultiModalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The result description when the session is terminated.</p>
+             * <ul>
+             * <li><strong>SESSION_KILLED</strong>: The session is terminated.</li>
+             * <li><strong>SESSION_EXPIRED</strong>: The session has expired.</li>
+             * <li><strong>SESSION_NO_PERMISSION</strong>: The account used to terminate the session has insufficient permissions.</li>
+             * <li><strong>SESSION_ACCOUNT_ERROR</strong>: The account or password used to terminate the session is incorrect.</li>
+             * <li><strong>SESSION_IGNORED_USER</strong>: The session belongs to an account that does not need to be terminated.</li>
+             * <li><strong>SESSION_INTERNAL_USER_OR_COMMAND</strong>: The session or command belongs to an Alibaba Cloud operations account.</li>
+             * <li><strong>SESSION_KILL_TASK_TIMEOUT</strong>: The session termination timed out.</li>
+             * <li><strong>SESSION_OTHER_ERROR</strong>: Other errors.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TRACER_SLB_ALL_DEST_WEIGHT_0</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -308,7 +333,7 @@ public class MultiModalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentDetail.
+             * <p>The agent details.</p>
              */
             public Builder agentDetail(java.util.Map<String, ?> agentDetail) {
                 this.agentDetail = agentDetail;
@@ -316,7 +341,10 @@ public class MultiModalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ContentLength.
+             * <p>The content length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder contentLength(Long contentLength) {
                 this.contentLength = contentLength;
@@ -324,7 +352,10 @@ public class MultiModalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Credits.
+             * <p>The credits consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.23</p>
              */
             public Builder credits(Double credits) {
                 this.credits = credits;
@@ -332,7 +363,10 @@ public class MultiModalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * PromptLength.
+             * <p>The prompt length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder promptLength(Long promptLength) {
                 this.promptLength = promptLength;
@@ -425,7 +459,10 @@ public class MultiModalAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * DataId.
+             * <p>The data ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26769ada6e264e7ba9aa048241e12be9</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -433,7 +470,7 @@ public class MultiModalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The label item structure.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -441,7 +478,20 @@ public class MultiModalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level, which is returned based on the configured high and low risk scores. Valid values:</p>
+             * <ul>
+             * <li><p>high: high risk.</p>
+             * </li>
+             * <li><p>medium: medium risk.</p>
+             * </li>
+             * <li><p>low: low risk.</p>
+             * </li>
+             * <li><p>none: no risk detected.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -449,7 +499,7 @@ public class MultiModalAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>The token usage.</p>
              */
             public Builder usage(Usage usage) {
                 this.usage = usage;

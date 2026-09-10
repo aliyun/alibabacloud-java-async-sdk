@@ -93,7 +93,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
+         * <p>The response code. A value of 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The moderation results.</p>
+         * <p>The moderation result data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned in response to the request.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success finished</p>
@@ -205,10 +205,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the labels.</p>
+             * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>no risk</p>
+             * <p>Suspected prohibited content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -216,7 +216,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The voice label.</p>
+             * <p>The video audio label.</p>
              * 
              * <strong>example:</strong>
              * <p>profanity</p>
@@ -227,7 +227,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the label is matched.</p>
+             * <p>The number of times the label appears.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -297,7 +297,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * KeyWords.
+             * <p>The custom keywords.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fxxk</p>
              */
             public Builder keyWords(String keyWords) {
                 this.keyWords = keyWords;
@@ -305,7 +308,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LibName.
+             * <p>The name of the custom library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Backup_Lexicon_02</p>
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -385,7 +391,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * EndPos.
+             * <p>The end position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder endPos(Integer endPos) {
                 this.endPos = endPos;
@@ -393,7 +402,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWord.
+             * <p>The detected sensitive word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fxxk</p>
              */
             public Builder riskWord(String riskWord) {
                 this.riskWord = riskWord;
@@ -401,7 +413,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartPos.
+             * <p>The start position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startPos(Integer startPos) {
                 this.startPos = startPos;
@@ -533,7 +548,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Confidence.
+             * <p>The confidence level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.9</p>
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -541,7 +559,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * CustomizedHit.
+             * <p>The list of hit custom libraries.</p>
              */
             public Builder customizedHit(java.util.List<CustomizedHit> customizedHit) {
                 this.customizedHit = customizedHit;
@@ -549,10 +567,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the labels.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>no risk</p>
+             * <p>Suspected prohibited content</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -560,7 +578,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The voice label.</p>
+             * <p>The label.</p>
              * 
              * <strong>example:</strong>
              * <p>profanity</p>
@@ -571,7 +589,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -579,7 +600,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskPositions.
+             * <p>The list of risk positions.</p>
              */
             public Builder riskPositions(java.util.List<RiskPositions> riskPositions) {
                 this.riskPositions = riskPositions;
@@ -587,7 +608,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWords.
+             * <p>The hit risk content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fxxk</p>
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -810,10 +834,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the labels.</p>
+             * <p>The label description.</p>
              * 
              * <strong>example:</strong>
-             * <p>no risk</p>
+             * <p>Suspected prohibited content</p>
              */
             public Builder descriptions(String descriptions) {
                 this.descriptions = descriptions;
@@ -821,7 +845,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the text after voice-to-text conversion. Unit: seconds.</p>
+             * <p>The end time of the segment, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -832,7 +856,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end timestamp of the segment. Unit: milliseconds.</p>
+             * <p>The end timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1685245261939</p>
@@ -843,10 +867,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
+             * <p>The extended field.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;consoleProduct&quot;:&quot;slbnext&quot;}</p>
+             * <p>{\&quot;consoleProduct\&quot;:\&quot;slbnext\&quot;}</p>
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -854,7 +878,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the labels.</p>
+             * <p>The violated labels that were hit.</p>
              * 
              * <strong>example:</strong>
              * <p>porn</p>
@@ -865,7 +889,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The text detection result.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -873,7 +897,17 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level.</p>
+             * <p>The risk level, which is returned based on the configured risk score thresholds. Valid values:</p>
+             * <ul>
+             * <li><p>high: high risk.</p>
+             * </li>
+             * <li><p>medium: medium risk.</p>
+             * </li>
+             * <li><p>low: low risk.</p>
+             * </li>
+             * <li><p>none: no risk detected.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -884,7 +918,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Subcategory labels. Multiple labels are separated by commas (,).</p>
+             * <p>The details of the hit risk.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;&quot;</p>
@@ -895,7 +929,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk words that are hit. Multiple words are separated by commas (,).</p>
+             * <p>The risk keywords that were hit.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;&quot;</p>
@@ -906,7 +940,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk score. Default range: 0 to 99.</p>
+             * <p>The risk score. The default range is 0-99.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -917,7 +951,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the text after voice-to-text conversion. Unit: seconds.</p>
+             * <p>The start time of the segment, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -928,7 +962,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start timestamp of the segment. Unit: milliseconds.</p>
+             * <p>The start timestamp, accurate to milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1659935002123</p>
@@ -939,10 +973,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text converted from voice.</p>
+             * <p>The transcribed text of the audio segment.</p>
              * 
              * <strong>example:</strong>
-             * <p>Disgusting</p>
+             * <p>The weather is really nice today</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -950,7 +984,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the moderation object is a voice stream, this parameter indicates the temporary access URL of the voice stream to which the text entry corresponds. The validity period of the URL is 30 minutes. You must prepare another URL to store the voice stream at the earliest opportunity.</p>
+             * <p>The temporary URL of the audio segment file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxx.abc.img">http://xxxx.abc.img</a></p>
@@ -1033,7 +1067,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Summary of voice labels.</p>
+             * <p>The audio label summary.</p>
              */
             public Builder audioSummarys(java.util.List<AudioSummarys> audioSummarys) {
                 this.audioSummarys = audioSummarys;
@@ -1041,7 +1075,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level.</p>
+             * <p>The risk level, returned based on the configured high and low risk score thresholds. Valid values:</p>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -1052,7 +1086,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the text in the moderated voice. The value is a JSON array that contains one or more elements. Each element corresponds to a text entry.</p>
+             * <p>The list of audio segments.</p>
              */
             public Builder sliceDetails(java.util.List<SliceDetails> sliceDetails) {
                 this.sliceDetails = sliceDetails;
@@ -1184,7 +1218,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * ContentProducer.
+             * <p>The code or name of the service provider, used to identify the content producer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>001191******M000100Y43</p>
              */
             public Builder contentProducer(String contentProducer) {
                 this.contentProducer = contentProducer;
@@ -1192,7 +1229,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ContentPropagator.
+             * <p>The name, ID, or code of the propagation platform. For services that provide artificial intelligence generated or synthesized content, this value can be the same as ContentProducer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>001191******M000100Y43</p>
              */
             public Builder contentPropagator(String contentPropagator) {
                 this.contentPropagator = contentPropagator;
@@ -1200,10 +1240,18 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The voice label.</p>
+             * <p>Indicates whether the content is AI-generated. Valid values:</p>
+             * <ul>
+             * <li><p>1: The content is AI-generated.</p>
+             * </li>
+             * <li><p>2: (Dissemination platforms only) The content is likely AI-generated.</p>
+             * </li>
+             * <li><p>3: (Dissemination platforms only) The content is suspected to be AI-generated.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>profanity</p>
+             * <p>1</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1211,7 +1259,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ProduceID.
+             * <p>The content production ID, which is a unique identifier used by the production platform to trace synthesized content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123******456</p>
              */
             public Builder produceID(String produceID) {
                 this.produceID = produceID;
@@ -1219,7 +1270,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * PropagateID.
+             * <p>The content propagation ID, which is a unique identifier assigned by the propagation platform to the generated or synthesized content being distributed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123******456</p>
              */
             public Builder propagateID(String propagateID) {
                 this.propagateID = propagateID;
@@ -1227,7 +1281,11 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedCode1.
+             * <p>A reserved field.</p>
+             * <p>This field can store information used by the content synthesis service provider to independently conduct security protection and protect the integrity of content and identifiers. Secure storage and verification of critical information can be achieved through a hash mechanism based on ContentProducer and ProduceID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d41d**********427e</p>
              */
             public Builder reservedCode1(String reservedCode1) {
                 this.reservedCode1 = reservedCode1;
@@ -1235,7 +1293,11 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedCode2.
+             * <p>A reserved field.</p>
+             * <p>This field can be used by content distribution service providers to independently implement security protection and preserve the integrity of content and identifiers. A hashing mechanism based on ContentProducer and ProduceID can be used to achieve secure storage and verification of critical information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d41d**********427e</p>
              */
             public Builder reservedCode2(String reservedCode2) {
                 this.reservedCode2 = reservedCode2;
@@ -1302,7 +1364,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AIGC.
+             * <p>The AIGC metadata.</p>
              */
             public Builder AIGC(AIGC AIGC) {
                 this.AIGC = AIGC;
@@ -1310,7 +1372,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The detection result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -1364,7 +1429,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AigcData.
+             * <p>The AIGC metadata detection result.</p>
              */
             public Builder aigcData(AigcData aigcData) {
                 this.aigcData = aigcData;
@@ -1444,10 +1509,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the result.</p>
+             * <p>The description of the Label field.</p>
              * 
              * <strong>example:</strong>
-             * <p>no risk</p>
+             * <p>No risk detected</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1455,7 +1520,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label against which a captured frame is matched.</p>
+             * <p>The video frame label.</p>
              * 
              * <strong>example:</strong>
              * <p>violent_armedForces</p>
@@ -1466,7 +1531,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the label is matched.</p>
+             * <p>The number of times the label appears.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -1523,7 +1588,15 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Explain.
+             * <p>The detailed explanation.</p>
+             * 
+             * <strong>example:</strong>
+             * <h4>AIGC General Detection Analysis</h4>
+             * <ul>
+             * <li><strong>Tool Rating</strong>: Low (0.152)</li>
+             * <li><strong>AI Visible Watermark</strong>: None</li>
+             * <li><strong>Visual Key Points</strong>: The document layout is standard, font rendering is normal, and no structural distortion or logical errors commonly seen in AIGC are detected.</li>
+             * </ul>
              */
             public Builder explain(String explain) {
                 this.explain = explain;
@@ -1590,7 +1663,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the custom image that is hit.</p>
+             * <p>The ID of the matched custom image.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -1601,7 +1674,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the custom image library that is hit.</p>
+             * <p>The ID of the matched custom image library.</p>
              * 
              * <strong>example:</strong>
              * <p>12345678</p>
@@ -1719,7 +1792,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distance from the top-left corner of the text area to the y-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+             * <p>The distance from the upper-left corner of the text area to the y-axis, with the upper-left corner of the image as the origin. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -1730,7 +1803,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distance from the top-left corner of the text area to the x-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+             * <p>The distance from the upper-left corner of the text area to the x-axis, with the upper-left corner of the image as the origin. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -1813,10 +1886,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Confidence score, ranging from 0 to 100, with two decimal places.</p>
+             * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
              * 
              * <strong>example:</strong>
-             * <p>99.10</p>
+             * <p>99.1</p>
              */
             public Builder confidence(Long confidence) {
                 this.confidence = confidence;
@@ -1824,7 +1897,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>label</p>
+             * <p>The matched label.</p>
              * 
              * <strong>example:</strong>
              * <p>pt_logotoSocialNetwork</p>
@@ -1835,10 +1908,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Logo name.</p>
+             * <p>The logo name.</p>
              * 
              * <strong>example:</strong>
-             * <p>**logo</p>
+             * <p>**卫视</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1905,7 +1978,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The location of the logo.</p>
+             * <p>The text line and coordinate information.</p>
              */
             public Builder location(Location location) {
                 this.location = location;
@@ -1913,7 +1986,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Logo information.</p>
+             * <p>The logo identification information.</p>
              */
             public Builder logo(java.util.List<Logo> logo) {
                 this.logo = logo;
@@ -2006,10 +2079,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The height of the text area. Unit: pixels.</p>
+             * <p>The height.</p>
              * 
              * <strong>example:</strong>
-             * <p>111</p>
+             * <p>222</p>
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -2017,7 +2090,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The width of the text area. Unit: pixels.</p>
+             * <p>The width.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -2028,7 +2101,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distance from the top-left corner of the text area to the y-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+             * <p>The x-coordinate of the starting point.</p>
              * 
              * <strong>example:</strong>
              * <p>111</p>
@@ -2039,7 +2112,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The distance from the top-left corner of the text area to the x-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+             * <p>The y-coordinate of the starting point.</p>
              * 
              * <strong>example:</strong>
              * <p>222</p>
@@ -2122,7 +2195,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the code of the identified figure.</p>
+             * <p>The code of the identified public figure.</p>
              * 
              * <strong>example:</strong>
              * <p>xxx001</p>
@@ -2133,7 +2206,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * FigureName.
+             * <p>The name of the identified public figure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Smith</p>
              */
             public Builder figureName(String figureName) {
                 this.figureName = figureName;
@@ -2141,7 +2217,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location of the logo.</p>
+             * <p>The location of the identified public figure.</p>
              */
             public Builder location(java.util.List<PublicFigureLocation> location) {
                 this.location = location;
@@ -2221,7 +2297,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
+             * <p>The confidence score, ranging from 0 to 100, rounded to two decimal places.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -2232,10 +2308,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the result.</p>
+             * <p>The description of the Label field.</p>
              * 
              * <strong>example:</strong>
-             * <p>no risk</p>
+             * <p>No risk detected</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2243,7 +2319,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label returned after a frame is moderated. Multiple risk labels and the corresponding scores of confidence levels may be returned for a frame.</p>
+             * <p>The classification of the detection result.</p>
              * 
              * <strong>example:</strong>
              * <p>bloody</p>
@@ -2300,7 +2376,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * OutputText.
+             * <p>The output text generated by the large model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>in the picture XXX</p>
              */
             public Builder outputText(String outputText) {
                 this.outputText = outputText;
@@ -2445,7 +2524,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AigcData.
+             * <p>The AIGC-related detection result.</p>
              */
             public Builder aigcData(ResultsAigcData aigcData) {
                 this.aigcData = aigcData;
@@ -2453,7 +2532,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If a custom image library is hit, information about the custom image library is returned.</p>
+             * <p>The custom image library information returned when a custom image library is matched.</p>
              */
             public Builder customImage(java.util.List<CustomImage> customImage) {
                 this.customImage = customImage;
@@ -2461,7 +2540,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Returns logo information when the video contains a logo.</p>
+             * <p>The logo information returned when the video contains logos.</p>
              */
             public Builder logoData(java.util.List<LogoData> logoData) {
                 this.logoData = logoData;
@@ -2469,7 +2548,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If the video contains a specific figure, the code of the identified figure is returned.</p>
+             * <p>The identified public figure codes returned when the video contains specific public figures.</p>
              */
             public Builder publicFigure(java.util.List<PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
@@ -2477,7 +2556,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of frame moderation parameters such as the label parameter and the confidence parameter.</p>
+             * <p>The hit result details.</p>
              */
             public Builder result(java.util.List<ResultsResult> result) {
                 this.result = result;
@@ -2485,7 +2564,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The moderation service that is called.</p>
+             * <p>The image moderation service type.</p>
              * 
              * <strong>example:</strong>
              * <p>tonalityImprove</p>
@@ -2496,7 +2575,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the text hit in the image is returned.</p>
+             * <p>The text information in the image that was hit.</p>
              */
             public Builder textInImage(java.util.Map<String, ?> textInImage) {
                 this.textInImage = textInImage;
@@ -2504,7 +2583,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * VlContent.
+             * <p>The large model result.</p>
              */
             public Builder vlContent(VlContent vlContent) {
                 this.vlContent = vlContent;
@@ -2610,7 +2689,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The interval between the start of the video file and the captured frame. Unit: seconds.</p>
+             * <p>The offset value of the captured frame.</p>
              * 
              * <strong>example:</strong>
              * <p>338</p>
@@ -2621,7 +2700,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of frame moderation parameters such as the label parameter and the confidence parameter.</p>
+             * <p>The frame detection result details.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;
@@ -2629,7 +2708,17 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level.</p>
+             * <p>The risk level, returned based on the configured high and low risk scores. Valid values:</p>
+             * <ul>
+             * <li><p>high: High risk.</p>
+             * </li>
+             * <li><p>medium: Medium risk.</p>
+             * </li>
+             * <li><p>low: Low risk.</p>
+             * </li>
+             * <li><p>none: No risk detected.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -2640,7 +2729,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The temporary URL of a captured frame.</p>
+             * <p>The temporary access URL of the captured frame image.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxx.abc.jpg">http://xxxx.abc.jpg</a></p>
@@ -2747,7 +2836,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of captured frames that are returned for the video file.</p>
+             * <p>The number of result frames.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2758,7 +2847,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The summary of the labels against which captured frames are matched.</p>
+             * <p>The summary of video frame labels.</p>
              */
             public Builder frameSummarys(java.util.List<FrameSummarys> frameSummarys) {
                 this.frameSummarys = frameSummarys;
@@ -2766,7 +2855,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the frames that match the labels.</p>
+             * <p>The information about video frames that contain hit labels.</p>
              */
             public Builder frames(java.util.List<Frames> frames) {
                 this.frames = frames;
@@ -2774,7 +2863,17 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level.</p>
+             * <p>The risk level, which is returned based on the configured high and low risk scores. Valid values:</p>
+             * <ul>
+             * <li><p>high: high risk.</p>
+             * </li>
+             * <li><p>medium: medium risk.</p>
+             * </li>
+             * <li><p>low: low risk.</p>
+             * </li>
+             * <li><p>none: no risk detected.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>high</p>
@@ -2922,7 +3021,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The voice moderation results. The moderation results contain a structure.</p>
+             * <p>The segmented audio moderation results for the video.</p>
              */
             public Builder audioResult(AudioResult audioResult) {
                 this.audioResult = audioResult;
@@ -2930,7 +3029,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, the dataId field is not available in the response.</p>
+             * <p>The value of dataId passed in the API request. This field is not returned if dataId was not specified in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>product_content-2055763</p>
@@ -2941,7 +3040,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Ext.
+             * <p>The extended information.</p>
              */
             public Builder ext(Ext ext) {
                 this.ext = ext;
@@ -2949,7 +3048,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image moderation results. If the call is successful, the HTTP status code 200 and moderation results are returned. The moderation results contain a structure.</p>
+             * <p>The list of video frame capture results.</p>
              */
             public Builder frameResult(FrameResult frameResult) {
                 this.frameResult = frameResult;
@@ -2968,7 +3067,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ManualTaskId.
+             * <p>The manual review task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx-xxxxx</p>
              */
             public Builder manualTaskId(String manualTaskId) {
                 this.manualTaskId = manualTaskId;
@@ -2976,7 +3078,17 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Risk Level.</p>
+             * <p>The risk level, returned based on the configured high and low risk scores. Valid values:</p>
+             * <ul>
+             * <li><p>high: High risk.</p>
+             * </li>
+             * <li><p>medium: Medium risk.</p>
+             * </li>
+             * <li><p>low: Low risk.</p>
+             * </li>
+             * <li><p>none: No risk detected.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>high</p>

@@ -73,14 +73,7 @@ public class VideoModerationResultRequest extends Request {
         } 
 
         /**
-         * <p>The type of the moderation service.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>liveStreamDetection: live stream moderation</li>
-         * <li>videoDetection: video file moderation</li>
-         * <li>liveStreamDetection_cb: live stream moderation_For regions outside the Chinese mainland</li>
-         * <li>videoDetection_cb: video file moderation_For regions outside the Chinese mainland.</li>
-         * </ul>
+         * <p>The service code for video moderation.</p>
          * 
          * <strong>example:</strong>
          * <p>videoDetection</p>
@@ -92,7 +85,7 @@ public class VideoModerationResultRequest extends Request {
         }
 
         /**
-         * <p>The parameters required by the moderation service. The ID of the task that you want to query. You can specify one task ID at a time.</p>
+         * <p>The parameter set required by the moderation service. taskId specifies the task ID of the detection task to query. Only one taskId can be specified per request.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;taskId&quot;:&quot;au_f_8PoWiZKoLbczp5HRn69VdT-1y8@U5&quot;}</p>

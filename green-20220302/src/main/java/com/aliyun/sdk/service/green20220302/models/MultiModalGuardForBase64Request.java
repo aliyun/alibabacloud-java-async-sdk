@@ -101,7 +101,10 @@ public class MultiModalGuardForBase64Request extends Request {
         } 
 
         /**
-         * FileBase64Str.
+         * <p>The base64-encoded string of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{base64}</p>
          */
         public Builder fileBase64Str(String fileBase64Str) {
             this.putBodyParameter("FileBase64Str", fileBase64Str);
@@ -110,7 +113,10 @@ public class MultiModalGuardForBase64Request extends Request {
         }
 
         /**
-         * ImageBase64Str.
+         * <p>The base64-encoded string of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{base64}</p>
          */
         public Builder imageBase64Str(String imageBase64Str) {
             this.putBodyParameter("ImageBase64Str", imageBase64Str);
@@ -131,7 +137,10 @@ public class MultiModalGuardForBase64Request extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * <p>The service parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;content&quot;:&quot;test&quot;}</p>
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);
