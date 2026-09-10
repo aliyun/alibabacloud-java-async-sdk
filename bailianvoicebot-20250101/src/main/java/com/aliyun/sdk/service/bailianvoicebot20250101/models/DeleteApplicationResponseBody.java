@@ -106,7 +106,10 @@ public class DeleteApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status or POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response result, which is the ID of the deleted application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a395011f-a247-400f-bc69-28796749fd52</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class DeleteApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

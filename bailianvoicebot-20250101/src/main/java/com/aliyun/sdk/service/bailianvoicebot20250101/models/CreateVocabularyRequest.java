@@ -101,7 +101,10 @@ public class CreateVocabularyRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The ID of the Bailian business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-baployoyopf22m2r</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -110,7 +113,10 @@ public class CreateVocabularyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Contains financial industry terminology</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -119,7 +125,10 @@ public class CreateVocabularyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the hot word list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Financial industry hot words</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -128,7 +137,7 @@ public class CreateVocabularyRequest extends Request {
         }
 
         /**
-         * Words.
+         * <p>The hot word list.</p>
          */
         public Builder words(java.util.Map<String, String> words) {
             String wordsShrink = shrink(words, "Words", "json");

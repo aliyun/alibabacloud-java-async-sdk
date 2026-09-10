@@ -73,7 +73,10 @@ public class ImportVocabularyRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The ID of the Bailian business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-zop7ukgtksltamo4</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -82,7 +85,10 @@ public class ImportVocabularyRequest extends Request {
         }
 
         /**
-         * FileKey.
+         * <p>The path of the uploaded file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vocabulary/热词导入单元测试.zip</p>
          */
         public Builder fileKey(String fileKey) {
             this.putBodyParameter("FileKey", fileKey);

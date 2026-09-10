@@ -119,7 +119,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated results of third-party voice configurations.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance llm-xdne77rxe14ziszr does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -293,7 +302,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessKey.
+             * <p>The AccessKey for Doubao calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HwRnTXgwnQOlsj68URDS5_VMm4Wtapq9</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -301,7 +313,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * ApiKey.
+             * <p>The ApiKey for Bailian or iFLYTEK calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-12341e259b1049e8872b47981e545f78</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -309,7 +324,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * ApiSecret.
+             * <p>The ApiSecret for iFLYTEK calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c0358c6e51c1013b446fdeb21a3a1234</p>
              */
             public Builder apiSecret(String apiSecret) {
                 this.apiSecret = apiSecret;
@@ -317,7 +335,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The AppId for iFLYTEK calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5b123bfb</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -325,7 +346,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * AppKey.
+             * <p>The AppKey for Doubao calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2541370123</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -333,7 +357,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * AsrAppKey.
+             * <p>Not currently in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暂无使用</p>
              */
             public Builder asrAppKey(String asrAppKey) {
                 this.asrAppKey = asrAppKey;
@@ -341,7 +368,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * TtsApiKey.
+             * <p>Not currently in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暂无使用</p>
              */
             public Builder ttsApiKey(String ttsApiKey) {
                 this.ttsApiKey = ttsApiKey;
@@ -486,7 +516,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessProfileId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
              */
             public Builder accessProfileId(String accessProfileId) {
                 this.accessProfileId = accessProfileId;
@@ -494,7 +527,7 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Capabilities.
+             * <p>The list of voice engine capabilities.</p>
              */
             public Builder capabilities(java.util.List<String> capabilities) {
                 this.capabilities = capabilities;
@@ -502,7 +535,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747620752000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -510,7 +546,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The Bailian business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm-c11iig67g863rih8</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -518,7 +557,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>The voice engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VOLC</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -526,7 +568,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngineName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>豆包</p>
              */
             public Builder nlsEngineName(String nlsEngineName) {
                 this.nlsEngineName = nlsEngineName;
@@ -534,7 +579,7 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The parameter settings.</p>
              */
             public Builder profile(Profile profile) {
                 this.profile = profile;
@@ -542,7 +587,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747620752000</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -635,7 +683,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -643,7 +694,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -651,7 +705,10 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -659,7 +716,7 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
             }
 
             /**
-             * VoiceAccessProfiles.
+             * <p>The list of third-party voice configurations.</p>
              */
             public Builder voiceAccessProfiles(java.util.List<VoiceAccessProfiles> voiceAccessProfiles) {
                 this.voiceAccessProfiles = voiceAccessProfiles;

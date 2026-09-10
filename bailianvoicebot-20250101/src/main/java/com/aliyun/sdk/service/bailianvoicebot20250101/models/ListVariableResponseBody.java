@@ -119,7 +119,10 @@ public class ListVariableResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListVariableResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated data of the variable list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListVariableResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListVariableResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance llm-rj6aqmctjcit4acy does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class ListVariableResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class ListVariableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -303,7 +315,10 @@ public class ListVariableResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1754013825102</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -311,7 +326,10 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Current age of the user</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -319,7 +337,10 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Age</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -327,7 +348,10 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The Bailian business workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llm-zop7ukgtksltamo4</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -335,7 +359,10 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The variable name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +370,10 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1308144684576655</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -351,7 +381,10 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1754013825102</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -359,7 +392,10 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * VariableId.
+             * <p>The variable ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
              */
             public Builder variableId(String variableId) {
                 this.variableId = variableId;
@@ -452,7 +488,10 @@ public class ListVariableResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -460,7 +499,10 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -468,7 +510,10 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -476,7 +521,7 @@ public class ListVariableResponseBody extends TeaModel {
             }
 
             /**
-             * Variables.
+             * <p>The list of variable objects.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;

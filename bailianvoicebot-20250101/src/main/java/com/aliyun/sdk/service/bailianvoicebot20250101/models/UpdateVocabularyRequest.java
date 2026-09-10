@@ -115,7 +115,10 @@ public class UpdateVocabularyRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The ID of the Model Studio business unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-c11iig67g863rih8</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -124,7 +127,10 @@ public class UpdateVocabularyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the vocabulary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>包含金融场景专业术语</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -133,7 +139,10 @@ public class UpdateVocabularyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the vocabulary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>金融场景热词</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -142,7 +151,10 @@ public class UpdateVocabularyRequest extends Request {
         }
 
         /**
-         * VocabularyId.
+         * <p>The ID of the vocabulary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4061</p>
          */
         public Builder vocabularyId(String vocabularyId) {
             this.putBodyParameter("VocabularyId", vocabularyId);
@@ -151,7 +163,7 @@ public class UpdateVocabularyRequest extends Request {
         }
 
         /**
-         * Words.
+         * <p>An object containing the words in the vocabulary and their corresponding weights.</p>
          */
         public Builder words(java.util.Map<String, String> words) {
             String wordsShrink = shrink(words, "Words", "json");

@@ -106,7 +106,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code or POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +136,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -308,7 +320,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a395011f-a247-400f-bc69-28796749fd52</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -316,7 +331,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Concurrency.
+             * <p>The concurrency settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -324,7 +342,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729909690</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -332,7 +353,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Describe this application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -340,7 +364,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * DraftVersionId.
+             * <p>The draft version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20904943-f711-494f-9f1f-e7f340f37707</p>
              */
             public Builder draftVersionId(String draftVersionId) {
                 this.draftVersionId = draftVersionId;
@@ -348,7 +375,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test001</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -356,7 +386,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessType.
+             * <p>The NLU invocation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nluAccessType(String nluAccessType) {
                 this.nluAccessType = nluAccessType;
@@ -364,7 +397,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>The NLU engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROMPTS</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -372,7 +408,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishedVersionId.
+             * <p>The published version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20904943-f711-494f-9f1f-e7f340f37707</p>
              */
             public Builder publishedVersionId(String publishedVersionId) {
                 this.publishedVersionId = publishedVersionId;
@@ -380,7 +419,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729909348</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -473,7 +515,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Applications.
+             * <p>The application list information.</p>
              */
             public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
@@ -481,7 +523,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -489,7 +534,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -497,7 +545,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

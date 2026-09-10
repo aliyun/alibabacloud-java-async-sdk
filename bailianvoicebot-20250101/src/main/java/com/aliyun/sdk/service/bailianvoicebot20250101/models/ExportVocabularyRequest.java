@@ -73,7 +73,10 @@ public class ExportVocabularyRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The ID of the Bailian business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-c11iig67g863rih8</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -82,7 +85,7 @@ public class ExportVocabularyRequest extends Request {
         }
 
         /**
-         * VocabularyIds.
+         * <p>The list of hot word IDs.</p>
          */
         public Builder vocabularyIds(java.util.List<String> vocabularyIds) {
             String vocabularyIdsShrink = shrink(vocabularyIds, "VocabularyIds", "json");

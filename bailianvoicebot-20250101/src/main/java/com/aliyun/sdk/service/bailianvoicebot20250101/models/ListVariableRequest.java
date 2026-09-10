@@ -101,7 +101,10 @@ public class ListVariableRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The Bailian business workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-zop7ukgtksltamo4</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -110,7 +113,10 @@ public class ListVariableRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -119,7 +125,10 @@ public class ListVariableRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -128,7 +137,10 @@ public class ListVariableRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>Performs a fuzzy match based on the variable name or display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putBodyParameter("SearchPattern", searchPattern);

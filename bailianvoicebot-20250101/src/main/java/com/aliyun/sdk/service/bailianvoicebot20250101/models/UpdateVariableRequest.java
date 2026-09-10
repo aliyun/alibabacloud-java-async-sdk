@@ -101,7 +101,10 @@ public class UpdateVariableRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The ID of the Model Studio business unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-0rxabdztx7rsdi7n</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -110,7 +113,10 @@ public class UpdateVariableRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户当前年龄</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -119,7 +125,10 @@ public class UpdateVariableRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -128,7 +137,10 @@ public class UpdateVariableRequest extends Request {
         }
 
         /**
-         * VariableId.
+         * <p>The ID of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
         public Builder variableId(String variableId) {
             this.putBodyParameter("VariableId", variableId);

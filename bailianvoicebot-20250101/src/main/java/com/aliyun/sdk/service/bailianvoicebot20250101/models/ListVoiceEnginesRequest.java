@@ -73,7 +73,10 @@ public class ListVoiceEnginesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. The default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -82,7 +85,10 @@ public class ListVoiceEnginesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The default is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

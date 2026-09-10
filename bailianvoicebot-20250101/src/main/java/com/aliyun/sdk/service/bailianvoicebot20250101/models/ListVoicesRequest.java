@@ -115,7 +115,10 @@ public class ListVoicesRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The Bailian workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-c11iig67g863rih8</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -124,7 +127,10 @@ public class ListVoicesRequest extends Request {
         }
 
         /**
-         * NlsAccessType.
+         * <p>The TTS call method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANAGED</p>
          */
         public Builder nlsAccessType(String nlsAccessType) {
             this.putBodyParameter("NlsAccessType", nlsAccessType);
@@ -133,7 +139,10 @@ public class ListVoicesRequest extends Request {
         }
 
         /**
-         * NlsEngine.
+         * <p>The TTS engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BAILIAN</p>
          */
         public Builder nlsEngine(String nlsEngine) {
             this.putBodyParameter("NlsEngine", nlsEngine);
@@ -142,7 +151,10 @@ public class ListVoicesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -151,7 +163,10 @@ public class ListVoicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The value is fixed at 1000 and cannot be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

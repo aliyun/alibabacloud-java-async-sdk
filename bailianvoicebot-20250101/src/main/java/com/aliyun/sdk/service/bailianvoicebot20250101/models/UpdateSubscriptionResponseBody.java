@@ -119,7 +119,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The request status code. A value of <code>OK</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data, which is the application ID for this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a395011f-a247-400f-bc69-28796749fd52</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. If the request fails, this parameter contains the error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance llm-rj6aqmctjcit4acy does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,7 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>A list of dynamic parameters used in the error message.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +171,7 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>

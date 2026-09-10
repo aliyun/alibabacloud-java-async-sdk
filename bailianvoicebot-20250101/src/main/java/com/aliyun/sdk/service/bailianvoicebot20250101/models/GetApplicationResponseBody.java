@@ -29,6 +29,9 @@ public class GetApplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("Params")
+    private java.util.List<String> params;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -37,6 +40,7 @@ public class GetApplicationResponseBody extends TeaModel {
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
+        this.params = builder.params;
         this.requestId = builder.requestId;
     }
 
@@ -81,6 +85,13 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     /**
+     * @return params
+     */
+    public java.util.List<String> getParams() {
+        return this.params;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -92,6 +103,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private Data data; 
         private Integer httpStatusCode; 
         private String message; 
+        private java.util.List<String> params; 
         private String requestId; 
 
         private Builder() {
@@ -102,11 +114,15 @@ public class GetApplicationResponseBody extends TeaModel {
             this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
             this.message = model.message;
+            this.params = model.params;
             this.requestId = model.requestId;
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +130,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +138,10 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +149,10 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +160,18 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Params.
+         */
+        public Builder params(java.util.List<String> params) {
+            this.params = params;
+            return this;
+        }
+
+        /**
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,11 +190,207 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class Triggers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClosingStatement")
+        private String closingStatement;
+
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
+        private java.util.List<String> keyWords;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
+        private String triggerType;
+
+        @com.aliyun.core.annotation.NameInMap("TurnLimit")
+        private Integer turnLimit;
+
+        private Triggers(Builder builder) {
+            this.closingStatement = builder.closingStatement;
+            this.keyWords = builder.keyWords;
+            this.triggerType = builder.triggerType;
+            this.turnLimit = builder.turnLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Triggers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return closingStatement
+         */
+        public String getClosingStatement() {
+            return this.closingStatement;
+        }
+
+        /**
+         * @return keyWords
+         */
+        public java.util.List<String> getKeyWords() {
+            return this.keyWords;
+        }
+
+        /**
+         * @return triggerType
+         */
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+        /**
+         * @return turnLimit
+         */
+        public Integer getTurnLimit() {
+            return this.turnLimit;
+        }
+
+        public static final class Builder {
+            private String closingStatement; 
+            private java.util.List<String> keyWords; 
+            private String triggerType; 
+            private Integer turnLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Triggers model) {
+                this.closingStatement = model.closingStatement;
+                this.keyWords = model.keyWords;
+                this.triggerType = model.triggerType;
+                this.turnLimit = model.turnLimit;
+            } 
+
+            /**
+             * ClosingStatement.
+             */
+            public Builder closingStatement(String closingStatement) {
+                this.closingStatement = closingStatement;
+                return this;
+            }
+
+            /**
+             * KeyWords.
+             */
+            public Builder keyWords(java.util.List<String> keyWords) {
+                this.keyWords = keyWords;
+                return this;
+            }
+
+            /**
+             * TriggerType.
+             */
+            public Builder triggerType(String triggerType) {
+                this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * TurnLimit.
+             */
+            public Builder turnLimit(Integer turnLimit) {
+                this.turnLimit = turnLimit;
+                return this;
+            }
+
+            public Triggers build() {
+                return new Triggers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class EndConversationConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Delay")
+        private Integer delay;
+
+        @com.aliyun.core.annotation.NameInMap("Triggers")
+        private java.util.List<Triggers> triggers;
+
+        private EndConversationConfig(Builder builder) {
+            this.delay = builder.delay;
+            this.triggers = builder.triggers;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EndConversationConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return delay
+         */
+        public Integer getDelay() {
+            return this.delay;
+        }
+
+        /**
+         * @return triggers
+         */
+        public java.util.List<Triggers> getTriggers() {
+            return this.triggers;
+        }
+
+        public static final class Builder {
+            private Integer delay; 
+            private java.util.List<Triggers> triggers; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndConversationConfig model) {
+                this.delay = model.delay;
+                this.triggers = model.triggers;
+            } 
+
+            /**
+             * Delay.
+             */
+            public Builder delay(Integer delay) {
+                this.delay = delay;
+                return this;
+            }
+
+            /**
+             * Triggers.
+             */
+            public Builder triggers(java.util.List<Triggers> triggers) {
+                this.triggers = triggers;
+                return this;
+            }
+
+            public EndConversationConfig build() {
+                return new EndConversationConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class SilenceDetectionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxRepeats")
+        private Integer maxRepeats;
+
         @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
         private SilenceDetectionConfig(Builder builder) {
+            this.maxRepeats = builder.maxRepeats;
             this.timeout = builder.timeout;
         }
 
@@ -174,6 +403,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxRepeats
+         */
+        public Integer getMaxRepeats() {
+            return this.maxRepeats;
+        }
+
+        /**
          * @return timeout
          */
         public Integer getTimeout() {
@@ -181,17 +417,30 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer maxRepeats; 
             private Integer timeout; 
 
             private Builder() {
             } 
 
             private Builder(SilenceDetectionConfig model) {
+                this.maxRepeats = model.maxRepeats;
                 this.timeout = model.timeout;
             } 
 
             /**
-             * Timeout.
+             * MaxRepeats.
+             */
+            public Builder maxRepeats(Integer maxRepeats) {
+                this.maxRepeats = maxRepeats;
+                return this;
+            }
+
+            /**
+             * <p>The task execution timeout period, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -212,10 +461,22 @@ public class GetApplicationResponseBody extends TeaModel {
      * <p>GetApplicationResponseBody</p>
      */
     public static class InteractionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackgroundMusicId")
+        private String backgroundMusicId;
+
+        @com.aliyun.core.annotation.NameInMap("EndConversationConfig")
+        private EndConversationConfig endConversationConfig;
+
+        @com.aliyun.core.annotation.NameInMap("InitialGreetingDelayMilliseconds")
+        private Integer initialGreetingDelayMilliseconds;
+
         @com.aliyun.core.annotation.NameInMap("SilenceDetectionConfig")
         private SilenceDetectionConfig silenceDetectionConfig;
 
         private InteractionConfig(Builder builder) {
+            this.backgroundMusicId = builder.backgroundMusicId;
+            this.endConversationConfig = builder.endConversationConfig;
+            this.initialGreetingDelayMilliseconds = builder.initialGreetingDelayMilliseconds;
             this.silenceDetectionConfig = builder.silenceDetectionConfig;
         }
 
@@ -228,6 +489,27 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return backgroundMusicId
+         */
+        public String getBackgroundMusicId() {
+            return this.backgroundMusicId;
+        }
+
+        /**
+         * @return endConversationConfig
+         */
+        public EndConversationConfig getEndConversationConfig() {
+            return this.endConversationConfig;
+        }
+
+        /**
+         * @return initialGreetingDelayMilliseconds
+         */
+        public Integer getInitialGreetingDelayMilliseconds() {
+            return this.initialGreetingDelayMilliseconds;
+        }
+
+        /**
          * @return silenceDetectionConfig
          */
         public SilenceDetectionConfig getSilenceDetectionConfig() {
@@ -235,17 +517,47 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String backgroundMusicId; 
+            private EndConversationConfig endConversationConfig; 
+            private Integer initialGreetingDelayMilliseconds; 
             private SilenceDetectionConfig silenceDetectionConfig; 
 
             private Builder() {
             } 
 
             private Builder(InteractionConfig model) {
+                this.backgroundMusicId = model.backgroundMusicId;
+                this.endConversationConfig = model.endConversationConfig;
+                this.initialGreetingDelayMilliseconds = model.initialGreetingDelayMilliseconds;
                 this.silenceDetectionConfig = model.silenceDetectionConfig;
             } 
 
             /**
-             * SilenceDetectionConfig.
+             * BackgroundMusicId.
+             */
+            public Builder backgroundMusicId(String backgroundMusicId) {
+                this.backgroundMusicId = backgroundMusicId;
+                return this;
+            }
+
+            /**
+             * EndConversationConfig.
+             */
+            public Builder endConversationConfig(EndConversationConfig endConversationConfig) {
+                this.endConversationConfig = endConversationConfig;
+                return this;
+            }
+
+            /**
+             * InitialGreetingDelayMilliseconds.
+             */
+            public Builder initialGreetingDelayMilliseconds(Integer initialGreetingDelayMilliseconds) {
+                this.initialGreetingDelayMilliseconds = initialGreetingDelayMilliseconds;
+                return this;
+            }
+
+            /**
+             * <p>The silence detection configuration.</p>
              */
             public Builder silenceDetectionConfig(SilenceDetectionConfig silenceDetectionConfig) {
                 this.silenceDetectionConfig = silenceDetectionConfig;
@@ -254,6 +566,102 @@ public class GetApplicationResponseBody extends TeaModel {
 
             public InteractionConfig build() {
                 return new InteractionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class LabelConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CandidateValues")
+        private java.util.List<String> candidateValues;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private LabelConfig(Builder builder) {
+            this.candidateValues = builder.candidateValues;
+            this.description = builder.description;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LabelConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return candidateValues
+         */
+        public java.util.List<String> getCandidateValues() {
+            return this.candidateValues;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> candidateValues; 
+            private String description; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelConfig model) {
+                this.candidateValues = model.candidateValues;
+                this.description = model.description;
+                this.name = model.name;
+            } 
+
+            /**
+             * CandidateValues.
+             */
+            public Builder candidateValues(java.util.List<String> candidateValues) {
+                this.candidateValues = candidateValues;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public LabelConfig build() {
+                return new LabelConfig(this);
             } 
 
         } 
@@ -351,7 +759,10 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether RAG is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -359,7 +770,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeBaseIds.
+             * <p>The list of knowledge base IDs.</p>
              */
             public Builder knowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
                 this.knowledgeBaseIds = knowledgeBaseIds;
@@ -367,7 +778,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * MaxContentLength.
+             * <p>The maximum concatenation length of RAG content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxContentLength(Integer maxContentLength) {
                 this.maxContentLength = maxContentLength;
@@ -375,7 +789,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * RagEngine.
+             * <p>The RAG engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder ragEngine(String ragEngine) {
                 this.ragEngine = ragEngine;
@@ -383,7 +800,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * TopN.
+             * <p>The maximum number of data entries to retrieve.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder topN(Integer topN) {
                 this.topN = topN;
@@ -410,6 +830,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
         @com.aliyun.core.annotation.NameInMap("PromptsJson")
         private String promptsJson;
 
@@ -419,6 +842,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private AgentProfile(Builder builder) {
             this.agentProfileId = builder.agentProfileId;
             this.description = builder.description;
+            this.name = builder.name;
             this.promptsJson = builder.promptsJson;
             this.scriptProfileTemplateId = builder.scriptProfileTemplateId;
         }
@@ -446,6 +870,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return promptsJson
          */
         public String getPromptsJson() {
@@ -462,6 +893,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public static final class Builder {
             private String agentProfileId; 
             private String description; 
+            private String name; 
             private String promptsJson; 
             private String scriptProfileTemplateId; 
 
@@ -471,12 +903,16 @@ public class GetApplicationResponseBody extends TeaModel {
             private Builder(AgentProfile model) {
                 this.agentProfileId = model.agentProfileId;
                 this.description = model.description;
+                this.name = model.name;
                 this.promptsJson = model.promptsJson;
                 this.scriptProfileTemplateId = model.scriptProfileTemplateId;
             } 
 
             /**
-             * AgentProfileId.
+             * <p>The agent configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6a50b67072d44788951de29758432d94</p>
              */
             public Builder agentProfileId(String agentProfileId) {
                 this.agentProfileId = agentProfileId;
@@ -484,7 +920,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The agent description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chatbot</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -492,7 +931,18 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * PromptsJson.
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The prompt in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;prompts&quot;:&quot;I am a chatbot.&quot;}</p>
              */
             public Builder promptsJson(String promptsJson) {
                 this.promptsJson = promptsJson;
@@ -500,7 +950,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptProfileTemplateId.
+             * <p>The application template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SFM_PROMPTS_DEFAULT</p>
              */
             public Builder scriptProfileTemplateId(String scriptProfileTemplateId) {
                 this.scriptProfileTemplateId = scriptProfileTemplateId;
@@ -520,12 +973,225 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class FunctionMeta extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FunctionId")
+        private String functionId;
+
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
+        private String functionName;
+
+        @com.aliyun.core.annotation.NameInMap("HttpTriggerName")
+        private String httpTriggerName;
+
+        @com.aliyun.core.annotation.NameInMap("HttpTriggerUrl")
+        private String httpTriggerUrl;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        private FunctionMeta(Builder builder) {
+            this.functionId = builder.functionId;
+            this.functionName = builder.functionName;
+            this.httpTriggerName = builder.httpTriggerName;
+            this.httpTriggerUrl = builder.httpTriggerUrl;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FunctionMeta create() {
+            return builder().build();
+        }
+
+        /**
+         * @return functionId
+         */
+        public String getFunctionId() {
+            return this.functionId;
+        }
+
+        /**
+         * @return functionName
+         */
+        public String getFunctionName() {
+            return this.functionName;
+        }
+
+        /**
+         * @return httpTriggerName
+         */
+        public String getHttpTriggerName() {
+            return this.httpTriggerName;
+        }
+
+        /**
+         * @return httpTriggerUrl
+         */
+        public String getHttpTriggerUrl() {
+            return this.httpTriggerUrl;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String functionId; 
+            private String functionName; 
+            private String httpTriggerName; 
+            private String httpTriggerUrl; 
+            private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionMeta model) {
+                this.functionId = model.functionId;
+                this.functionName = model.functionName;
+                this.httpTriggerName = model.httpTriggerName;
+                this.httpTriggerUrl = model.httpTriggerUrl;
+                this.regionId = model.regionId;
+            } 
+
+            /**
+             * FunctionId.
+             */
+            public Builder functionId(String functionId) {
+                this.functionId = functionId;
+                return this;
+            }
+
+            /**
+             * FunctionName.
+             */
+            public Builder functionName(String functionName) {
+                this.functionName = functionName;
+                return this;
+            }
+
+            /**
+             * HttpTriggerName.
+             */
+            public Builder httpTriggerName(String httpTriggerName) {
+                this.httpTriggerName = httpTriggerName;
+                return this;
+            }
+
+            /**
+             * HttpTriggerUrl.
+             */
+            public Builder httpTriggerUrl(String httpTriggerUrl) {
+                this.httpTriggerUrl = httpTriggerUrl;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public FunctionMeta build() {
+                return new FunctionMeta(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class NluAccessProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessProfileId")
+        private String accessProfileId;
+
+        private NluAccessProfile(Builder builder) {
+            this.accessProfileId = builder.accessProfileId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NluAccessProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessProfileId
+         */
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+        public static final class Builder {
+            private String accessProfileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NluAccessProfile model) {
+                this.accessProfileId = model.accessProfileId;
+            } 
+
+            /**
+             * AccessProfileId.
+             */
+            public Builder accessProfileId(String accessProfileId) {
+                this.accessProfileId = accessProfileId;
+                return this;
+            }
+
+            public NluAccessProfile build() {
+                return new NluAccessProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class ScriptProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentKey")
+        private String agentKey;
+
         @com.aliyun.core.annotation.NameInMap("AgentProfile")
         private AgentProfile agentProfile;
 
+        @com.aliyun.core.annotation.NameInMap("ChatbotId")
+        private String chatbotId;
+
+        @com.aliyun.core.annotation.NameInMap("FunctionMeta")
+        private FunctionMeta functionMeta;
+
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
+
+        @com.aliyun.core.annotation.NameInMap("NluAccessProfile")
+        private NluAccessProfile nluAccessProfile;
+
+        @com.aliyun.core.annotation.NameInMap("NluAccessType")
+        private String nluAccessType;
+
+        @com.aliyun.core.annotation.NameInMap("NluEngine")
+        private String nluEngine;
+
+        @com.aliyun.core.annotation.NameInMap("OmniModel")
+        private Boolean omniModel;
 
         @com.aliyun.core.annotation.NameInMap("Temperature")
         private String temperature;
@@ -534,8 +1200,15 @@ public class GetApplicationResponseBody extends TeaModel {
         private String topP;
 
         private ScriptProfile(Builder builder) {
+            this.agentKey = builder.agentKey;
             this.agentProfile = builder.agentProfile;
+            this.chatbotId = builder.chatbotId;
+            this.functionMeta = builder.functionMeta;
             this.model = builder.model;
+            this.nluAccessProfile = builder.nluAccessProfile;
+            this.nluAccessType = builder.nluAccessType;
+            this.nluEngine = builder.nluEngine;
+            this.omniModel = builder.omniModel;
             this.temperature = builder.temperature;
             this.topP = builder.topP;
         }
@@ -549,6 +1222,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return agentKey
+         */
+        public String getAgentKey() {
+            return this.agentKey;
+        }
+
+        /**
          * @return agentProfile
          */
         public AgentProfile getAgentProfile() {
@@ -556,10 +1236,52 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return chatbotId
+         */
+        public String getChatbotId() {
+            return this.chatbotId;
+        }
+
+        /**
+         * @return functionMeta
+         */
+        public FunctionMeta getFunctionMeta() {
+            return this.functionMeta;
+        }
+
+        /**
          * @return model
          */
         public String getModel() {
             return this.model;
+        }
+
+        /**
+         * @return nluAccessProfile
+         */
+        public NluAccessProfile getNluAccessProfile() {
+            return this.nluAccessProfile;
+        }
+
+        /**
+         * @return nluAccessType
+         */
+        public String getNluAccessType() {
+            return this.nluAccessType;
+        }
+
+        /**
+         * @return nluEngine
+         */
+        public String getNluEngine() {
+            return this.nluEngine;
+        }
+
+        /**
+         * @return omniModel
+         */
+        public Boolean getOmniModel() {
+            return this.omniModel;
         }
 
         /**
@@ -577,8 +1299,15 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentKey; 
             private AgentProfile agentProfile; 
+            private String chatbotId; 
+            private FunctionMeta functionMeta; 
             private String model; 
+            private NluAccessProfile nluAccessProfile; 
+            private String nluAccessType; 
+            private String nluEngine; 
+            private Boolean omniModel; 
             private String temperature; 
             private String topP; 
 
@@ -586,14 +1315,29 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             private Builder(ScriptProfile model) {
+                this.agentKey = model.agentKey;
                 this.agentProfile = model.agentProfile;
+                this.chatbotId = model.chatbotId;
+                this.functionMeta = model.functionMeta;
                 this.model = model.model;
+                this.nluAccessProfile = model.nluAccessProfile;
+                this.nluAccessType = model.nluAccessType;
+                this.nluEngine = model.nluEngine;
+                this.omniModel = model.omniModel;
                 this.temperature = model.temperature;
                 this.topP = model.topP;
             } 
 
             /**
-             * AgentProfile.
+             * AgentKey.
+             */
+            public Builder agentKey(String agentKey) {
+                this.agentKey = agentKey;
+                return this;
+            }
+
+            /**
+             * <p>The agent configuration information.</p>
              */
             public Builder agentProfile(AgentProfile agentProfile) {
                 this.agentProfile = agentProfile;
@@ -601,7 +1345,26 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * ChatbotId.
+             */
+            public Builder chatbotId(String chatbotId) {
+                this.chatbotId = chatbotId;
+                return this;
+            }
+
+            /**
+             * FunctionMeta.
+             */
+            public Builder functionMeta(FunctionMeta functionMeta) {
+                this.functionMeta = functionMeta;
+                return this;
+            }
+
+            /**
+             * <p>The model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -609,7 +1372,50 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Temperature.
+             * NluAccessProfile.
+             */
+            public Builder nluAccessProfile(NluAccessProfile nluAccessProfile) {
+                this.nluAccessProfile = nluAccessProfile;
+                return this;
+            }
+
+            /**
+             * NluAccessType.
+             */
+            public Builder nluAccessType(String nluAccessType) {
+                this.nluAccessType = nluAccessType;
+                return this;
+            }
+
+            /**
+             * NluEngine.
+             */
+            public Builder nluEngine(String nluEngine) {
+                this.nluEngine = nluEngine;
+                return this;
+            }
+
+            /**
+             * OmniModel.
+             */
+            public Builder omniModel(Boolean omniModel) {
+                this.omniModel = omniModel;
+                return this;
+            }
+
+            /**
+             * <p>The probability threshold for nucleus sampling during generation.</p>
+             * <blockquote>
+             * <ul>
+             * <li>For example, when the value is set to 0.8, only the smallest set of most likely tokens whose cumulative probability is greater than or equal to 0.8 is retained as the candidate set.<ul>
+             * <li>Valid values: (0, 1.0). A higher value increases randomness in generation. A lower value increases determinism in generation.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder temperature(String temperature) {
                 this.temperature = temperature;
@@ -617,7 +1423,16 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * TopP.
+             * <p>Controls the randomness and diversity of model responses.</p>
+             * <blockquote>
+             * <ul>
+             * <li>Specifically, the temperature value controls the degree of smoothing applied to the probability distribution of each candidate token during text generation. A higher temperature value flattens the probability distribution, allowing more low-probability tokens to be selected, which produces more diverse results. A lower temperature value sharpens the probability distribution, making high-probability tokens more likely to be selected, which produces more deterministic results.</li>
+             * <li>Valid values: [0, 2). Setting the value to 0 is not recommended because it is meaningless.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder topP(String topP) {
                 this.topP = topP;
@@ -904,7 +1719,10 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * Model.
+             * <p>The model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -920,7 +1738,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessType.
+             * <p>The TTS invocation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -928,7 +1749,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>The TTS engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -936,7 +1760,13 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * PitchRate.
+             * <p>The pitch rate.</p>
+             * <blockquote>
+             * <p>Valid values: -500 to 500.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder pitchRate(Integer pitchRate) {
                 this.pitchRate = pitchRate;
@@ -952,7 +1782,13 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>The speech rate.</p>
+             * <blockquote>
+             * <p>Valid values: -500 to 500.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -960,7 +1796,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>The voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aixia</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -968,7 +1807,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>The volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -1048,7 +1890,10 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * BaseUrl.
+             * <p>The base URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com">https://example.com</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -1056,7 +1901,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone-ai-call</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1064,7 +1912,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SseEndpoint.
+             * <p>The SSE endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/phone-ai-call/mcp/sse?key=value</p>
              */
             public Builder sseEndpoint(String sseEndpoint) {
                 this.sseEndpoint = sseEndpoint;
@@ -1118,7 +1969,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * McpServers.
+             * <p>The list of MCP server configurations.</p>
              */
             public Builder mcpServers(java.util.List<McpServers> mcpServers) {
                 this.mcpServers = mcpServers;
@@ -1429,7 +2280,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1445,7 +2299,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessType.
+             * <p>The ASR invocation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -1453,7 +2310,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>The ASR engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -1493,6 +2353,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InteractionConfig")
         private InteractionConfig interactionConfig;
 
+        @com.aliyun.core.annotation.NameInMap("LabelConfig")
+        private java.util.List<LabelConfig> labelConfig;
+
         @com.aliyun.core.annotation.NameInMap("RagConfig")
         private RagConfig ragConfig;
 
@@ -1513,6 +2376,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         private DraftVersion(Builder builder) {
             this.interactionConfig = builder.interactionConfig;
+            this.labelConfig = builder.labelConfig;
             this.ragConfig = builder.ragConfig;
             this.scriptProfile = builder.scriptProfile;
             this.synthesizerConfig = builder.synthesizerConfig;
@@ -1534,6 +2398,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public InteractionConfig getInteractionConfig() {
             return this.interactionConfig;
+        }
+
+        /**
+         * @return labelConfig
+         */
+        public java.util.List<LabelConfig> getLabelConfig() {
+            return this.labelConfig;
         }
 
         /**
@@ -1580,6 +2451,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private InteractionConfig interactionConfig; 
+            private java.util.List<LabelConfig> labelConfig; 
             private RagConfig ragConfig; 
             private ScriptProfile scriptProfile; 
             private SynthesizerConfig synthesizerConfig; 
@@ -1592,6 +2464,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
             private Builder(DraftVersion model) {
                 this.interactionConfig = model.interactionConfig;
+                this.labelConfig = model.labelConfig;
                 this.ragConfig = model.ragConfig;
                 this.scriptProfile = model.scriptProfile;
                 this.synthesizerConfig = model.synthesizerConfig;
@@ -1601,7 +2474,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * InteractionConfig.
+             * <p>The interaction configuration.</p>
              */
             public Builder interactionConfig(InteractionConfig interactionConfig) {
                 this.interactionConfig = interactionConfig;
@@ -1609,7 +2482,15 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * RagConfig.
+             * LabelConfig.
+             */
+            public Builder labelConfig(java.util.List<LabelConfig> labelConfig) {
+                this.labelConfig = labelConfig;
+                return this;
+            }
+
+            /**
+             * <p>The RAG configuration.</p>
              */
             public Builder ragConfig(RagConfig ragConfig) {
                 this.ragConfig = ragConfig;
@@ -1617,7 +2498,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptProfile.
+             * <p>The application model configuration.</p>
              */
             public Builder scriptProfile(ScriptProfile scriptProfile) {
                 this.scriptProfile = scriptProfile;
@@ -1625,7 +2506,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SynthesizerConfig.
+             * <p>The text-to-speech (TTS) configuration.</p>
              */
             public Builder synthesizerConfig(SynthesizerConfig synthesizerConfig) {
                 this.synthesizerConfig = synthesizerConfig;
@@ -1633,7 +2514,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ToolConfig.
+             * <p>The tool configuration.</p>
              */
             public Builder toolConfig(ToolConfig toolConfig) {
                 this.toolConfig = toolConfig;
@@ -1641,7 +2522,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * TranscriberConfig.
+             * <p>The automatic speech recognition (ASR) configuration.</p>
              */
             public Builder transcriberConfig(TranscriberConfig transcriberConfig) {
                 this.transcriberConfig = transcriberConfig;
@@ -1649,7 +2530,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>The version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>743219815472857088</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -1669,11 +2553,207 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class EndConversationConfigTriggers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClosingStatement")
+        private String closingStatement;
+
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
+        private java.util.List<String> keyWords;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
+        private String triggerType;
+
+        @com.aliyun.core.annotation.NameInMap("TurnLimit")
+        private Integer turnLimit;
+
+        private EndConversationConfigTriggers(Builder builder) {
+            this.closingStatement = builder.closingStatement;
+            this.keyWords = builder.keyWords;
+            this.triggerType = builder.triggerType;
+            this.turnLimit = builder.turnLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EndConversationConfigTriggers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return closingStatement
+         */
+        public String getClosingStatement() {
+            return this.closingStatement;
+        }
+
+        /**
+         * @return keyWords
+         */
+        public java.util.List<String> getKeyWords() {
+            return this.keyWords;
+        }
+
+        /**
+         * @return triggerType
+         */
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+        /**
+         * @return turnLimit
+         */
+        public Integer getTurnLimit() {
+            return this.turnLimit;
+        }
+
+        public static final class Builder {
+            private String closingStatement; 
+            private java.util.List<String> keyWords; 
+            private String triggerType; 
+            private Integer turnLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndConversationConfigTriggers model) {
+                this.closingStatement = model.closingStatement;
+                this.keyWords = model.keyWords;
+                this.triggerType = model.triggerType;
+                this.turnLimit = model.turnLimit;
+            } 
+
+            /**
+             * ClosingStatement.
+             */
+            public Builder closingStatement(String closingStatement) {
+                this.closingStatement = closingStatement;
+                return this;
+            }
+
+            /**
+             * KeyWords.
+             */
+            public Builder keyWords(java.util.List<String> keyWords) {
+                this.keyWords = keyWords;
+                return this;
+            }
+
+            /**
+             * TriggerType.
+             */
+            public Builder triggerType(String triggerType) {
+                this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * TurnLimit.
+             */
+            public Builder turnLimit(Integer turnLimit) {
+                this.turnLimit = turnLimit;
+                return this;
+            }
+
+            public EndConversationConfigTriggers build() {
+                return new EndConversationConfigTriggers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class InteractionConfigEndConversationConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Delay")
+        private Integer delay;
+
+        @com.aliyun.core.annotation.NameInMap("Triggers")
+        private java.util.List<EndConversationConfigTriggers> triggers;
+
+        private InteractionConfigEndConversationConfig(Builder builder) {
+            this.delay = builder.delay;
+            this.triggers = builder.triggers;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InteractionConfigEndConversationConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return delay
+         */
+        public Integer getDelay() {
+            return this.delay;
+        }
+
+        /**
+         * @return triggers
+         */
+        public java.util.List<EndConversationConfigTriggers> getTriggers() {
+            return this.triggers;
+        }
+
+        public static final class Builder {
+            private Integer delay; 
+            private java.util.List<EndConversationConfigTriggers> triggers; 
+
+            private Builder() {
+            } 
+
+            private Builder(InteractionConfigEndConversationConfig model) {
+                this.delay = model.delay;
+                this.triggers = model.triggers;
+            } 
+
+            /**
+             * Delay.
+             */
+            public Builder delay(Integer delay) {
+                this.delay = delay;
+                return this;
+            }
+
+            /**
+             * Triggers.
+             */
+            public Builder triggers(java.util.List<EndConversationConfigTriggers> triggers) {
+                this.triggers = triggers;
+                return this;
+            }
+
+            public InteractionConfigEndConversationConfig build() {
+                return new InteractionConfigEndConversationConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class InteractionConfigSilenceDetectionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxRepeats")
+        private Integer maxRepeats;
+
         @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
         private InteractionConfigSilenceDetectionConfig(Builder builder) {
+            this.maxRepeats = builder.maxRepeats;
             this.timeout = builder.timeout;
         }
 
@@ -1686,6 +2766,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return maxRepeats
+         */
+        public Integer getMaxRepeats() {
+            return this.maxRepeats;
+        }
+
+        /**
          * @return timeout
          */
         public Integer getTimeout() {
@@ -1693,17 +2780,30 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer maxRepeats; 
             private Integer timeout; 
 
             private Builder() {
             } 
 
             private Builder(InteractionConfigSilenceDetectionConfig model) {
+                this.maxRepeats = model.maxRepeats;
                 this.timeout = model.timeout;
             } 
 
             /**
-             * Timeout.
+             * MaxRepeats.
+             */
+            public Builder maxRepeats(Integer maxRepeats) {
+                this.maxRepeats = maxRepeats;
+                return this;
+            }
+
+            /**
+             * <p>The timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -1724,10 +2824,22 @@ public class GetApplicationResponseBody extends TeaModel {
      * <p>GetApplicationResponseBody</p>
      */
     public static class PublishedVersionInteractionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackgroundMusicId")
+        private String backgroundMusicId;
+
+        @com.aliyun.core.annotation.NameInMap("EndConversationConfig")
+        private InteractionConfigEndConversationConfig endConversationConfig;
+
+        @com.aliyun.core.annotation.NameInMap("InitialGreetingDelayMilliseconds")
+        private Integer initialGreetingDelayMilliseconds;
+
         @com.aliyun.core.annotation.NameInMap("SilenceDetectionConfig")
         private InteractionConfigSilenceDetectionConfig silenceDetectionConfig;
 
         private PublishedVersionInteractionConfig(Builder builder) {
+            this.backgroundMusicId = builder.backgroundMusicId;
+            this.endConversationConfig = builder.endConversationConfig;
+            this.initialGreetingDelayMilliseconds = builder.initialGreetingDelayMilliseconds;
             this.silenceDetectionConfig = builder.silenceDetectionConfig;
         }
 
@@ -1740,6 +2852,27 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return backgroundMusicId
+         */
+        public String getBackgroundMusicId() {
+            return this.backgroundMusicId;
+        }
+
+        /**
+         * @return endConversationConfig
+         */
+        public InteractionConfigEndConversationConfig getEndConversationConfig() {
+            return this.endConversationConfig;
+        }
+
+        /**
+         * @return initialGreetingDelayMilliseconds
+         */
+        public Integer getInitialGreetingDelayMilliseconds() {
+            return this.initialGreetingDelayMilliseconds;
+        }
+
+        /**
          * @return silenceDetectionConfig
          */
         public InteractionConfigSilenceDetectionConfig getSilenceDetectionConfig() {
@@ -1747,17 +2880,47 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String backgroundMusicId; 
+            private InteractionConfigEndConversationConfig endConversationConfig; 
+            private Integer initialGreetingDelayMilliseconds; 
             private InteractionConfigSilenceDetectionConfig silenceDetectionConfig; 
 
             private Builder() {
             } 
 
             private Builder(PublishedVersionInteractionConfig model) {
+                this.backgroundMusicId = model.backgroundMusicId;
+                this.endConversationConfig = model.endConversationConfig;
+                this.initialGreetingDelayMilliseconds = model.initialGreetingDelayMilliseconds;
                 this.silenceDetectionConfig = model.silenceDetectionConfig;
             } 
 
             /**
-             * SilenceDetectionConfig.
+             * BackgroundMusicId.
+             */
+            public Builder backgroundMusicId(String backgroundMusicId) {
+                this.backgroundMusicId = backgroundMusicId;
+                return this;
+            }
+
+            /**
+             * EndConversationConfig.
+             */
+            public Builder endConversationConfig(InteractionConfigEndConversationConfig endConversationConfig) {
+                this.endConversationConfig = endConversationConfig;
+                return this;
+            }
+
+            /**
+             * InitialGreetingDelayMilliseconds.
+             */
+            public Builder initialGreetingDelayMilliseconds(Integer initialGreetingDelayMilliseconds) {
+                this.initialGreetingDelayMilliseconds = initialGreetingDelayMilliseconds;
+                return this;
+            }
+
+            /**
+             * <p>The silence detection configuration.</p>
              */
             public Builder silenceDetectionConfig(InteractionConfigSilenceDetectionConfig silenceDetectionConfig) {
                 this.silenceDetectionConfig = silenceDetectionConfig;
@@ -1766,6 +2929,108 @@ public class GetApplicationResponseBody extends TeaModel {
 
             public PublishedVersionInteractionConfig build() {
                 return new PublishedVersionInteractionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class PublishedVersionLabelConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CandidateValues")
+        private java.util.List<String> candidateValues;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private PublishedVersionLabelConfig(Builder builder) {
+            this.candidateValues = builder.candidateValues;
+            this.description = builder.description;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PublishedVersionLabelConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return candidateValues
+         */
+        public java.util.List<String> getCandidateValues() {
+            return this.candidateValues;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> candidateValues; 
+            private String description; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishedVersionLabelConfig model) {
+                this.candidateValues = model.candidateValues;
+                this.description = model.description;
+                this.name = model.name;
+            } 
+
+            /**
+             * CandidateValues.
+             */
+            public Builder candidateValues(java.util.List<String> candidateValues) {
+                this.candidateValues = candidateValues;
+                return this;
+            }
+
+            /**
+             * <p>The agent description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chatbot</p>
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone-ai-call</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public PublishedVersionLabelConfig build() {
+                return new PublishedVersionLabelConfig(this);
             } 
 
         } 
@@ -1863,7 +3128,10 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether RAG is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1871,7 +3139,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeBaseIds.
+             * <p>The list of knowledge base IDs.</p>
              */
             public Builder knowledgeBaseIds(java.util.List<String> knowledgeBaseIds) {
                 this.knowledgeBaseIds = knowledgeBaseIds;
@@ -1879,7 +3147,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * MaxContentLength.
+             * <p>The maximum concatenation length of RAG content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder maxContentLength(Integer maxContentLength) {
                 this.maxContentLength = maxContentLength;
@@ -1887,7 +3158,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * RagEngine.
+             * <p>The RAG engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder ragEngine(String ragEngine) {
                 this.ragEngine = ragEngine;
@@ -1895,7 +3169,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * TopN.
+             * <p>The maximum number of data entries to retrieve.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder topN(Integer topN) {
                 this.topN = topN;
@@ -1922,6 +3199,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
         @com.aliyun.core.annotation.NameInMap("PromptsJson")
         private String promptsJson;
 
@@ -1931,6 +3211,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private ScriptProfileAgentProfile(Builder builder) {
             this.agentProfileId = builder.agentProfileId;
             this.description = builder.description;
+            this.name = builder.name;
             this.promptsJson = builder.promptsJson;
             this.scriptProfileTemplateId = builder.scriptProfileTemplateId;
         }
@@ -1958,6 +3239,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
          * @return promptsJson
          */
         public String getPromptsJson() {
@@ -1974,6 +3262,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public static final class Builder {
             private String agentProfileId; 
             private String description; 
+            private String name; 
             private String promptsJson; 
             private String scriptProfileTemplateId; 
 
@@ -1983,12 +3272,16 @@ public class GetApplicationResponseBody extends TeaModel {
             private Builder(ScriptProfileAgentProfile model) {
                 this.agentProfileId = model.agentProfileId;
                 this.description = model.description;
+                this.name = model.name;
                 this.promptsJson = model.promptsJson;
                 this.scriptProfileTemplateId = model.scriptProfileTemplateId;
             } 
 
             /**
-             * AgentProfileId.
+             * <p>The agent configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b97b6822dd624c32b6c2a54d717db718</p>
              */
             public Builder agentProfileId(String agentProfileId) {
                 this.agentProfileId = agentProfileId;
@@ -1996,7 +3289,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The agent description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I am a chatbot</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2004,7 +3300,21 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * PromptsJson.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone-ai-call</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The prompt in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;prompts&quot;:&quot;I am a chatbot.&quot;}</p>
              */
             public Builder promptsJson(String promptsJson) {
                 this.promptsJson = promptsJson;
@@ -2012,7 +3322,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptProfileTemplateId.
+             * <p>The agent configuration template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SFM_PROMPTS_DEFAULT</p>
              */
             public Builder scriptProfileTemplateId(String scriptProfileTemplateId) {
                 this.scriptProfileTemplateId = scriptProfileTemplateId;
@@ -2032,12 +3345,225 @@ public class GetApplicationResponseBody extends TeaModel {
      *
      * <p>GetApplicationResponseBody</p>
      */
+    public static class ScriptProfileFunctionMeta extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FunctionId")
+        private String functionId;
+
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
+        private String functionName;
+
+        @com.aliyun.core.annotation.NameInMap("HttpTriggerName")
+        private String httpTriggerName;
+
+        @com.aliyun.core.annotation.NameInMap("HttpTriggerUrl")
+        private String httpTriggerUrl;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        private ScriptProfileFunctionMeta(Builder builder) {
+            this.functionId = builder.functionId;
+            this.functionName = builder.functionName;
+            this.httpTriggerName = builder.httpTriggerName;
+            this.httpTriggerUrl = builder.httpTriggerUrl;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScriptProfileFunctionMeta create() {
+            return builder().build();
+        }
+
+        /**
+         * @return functionId
+         */
+        public String getFunctionId() {
+            return this.functionId;
+        }
+
+        /**
+         * @return functionName
+         */
+        public String getFunctionName() {
+            return this.functionName;
+        }
+
+        /**
+         * @return httpTriggerName
+         */
+        public String getHttpTriggerName() {
+            return this.httpTriggerName;
+        }
+
+        /**
+         * @return httpTriggerUrl
+         */
+        public String getHttpTriggerUrl() {
+            return this.httpTriggerUrl;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String functionId; 
+            private String functionName; 
+            private String httpTriggerName; 
+            private String httpTriggerUrl; 
+            private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScriptProfileFunctionMeta model) {
+                this.functionId = model.functionId;
+                this.functionName = model.functionName;
+                this.httpTriggerName = model.httpTriggerName;
+                this.httpTriggerUrl = model.httpTriggerUrl;
+                this.regionId = model.regionId;
+            } 
+
+            /**
+             * FunctionId.
+             */
+            public Builder functionId(String functionId) {
+                this.functionId = functionId;
+                return this;
+            }
+
+            /**
+             * FunctionName.
+             */
+            public Builder functionName(String functionName) {
+                this.functionName = functionName;
+                return this;
+            }
+
+            /**
+             * HttpTriggerName.
+             */
+            public Builder httpTriggerName(String httpTriggerName) {
+                this.httpTriggerName = httpTriggerName;
+                return this;
+            }
+
+            /**
+             * HttpTriggerUrl.
+             */
+            public Builder httpTriggerUrl(String httpTriggerUrl) {
+                this.httpTriggerUrl = httpTriggerUrl;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public ScriptProfileFunctionMeta build() {
+                return new ScriptProfileFunctionMeta(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
+    public static class ScriptProfileNluAccessProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessProfileId")
+        private String accessProfileId;
+
+        private ScriptProfileNluAccessProfile(Builder builder) {
+            this.accessProfileId = builder.accessProfileId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScriptProfileNluAccessProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessProfileId
+         */
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+        public static final class Builder {
+            private String accessProfileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScriptProfileNluAccessProfile model) {
+                this.accessProfileId = model.accessProfileId;
+            } 
+
+            /**
+             * AccessProfileId.
+             */
+            public Builder accessProfileId(String accessProfileId) {
+                this.accessProfileId = accessProfileId;
+                return this;
+            }
+
+            public ScriptProfileNluAccessProfile build() {
+                return new ScriptProfileNluAccessProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetApplicationResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetApplicationResponseBody</p>
+     */
     public static class PublishedVersionScriptProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentKey")
+        private String agentKey;
+
         @com.aliyun.core.annotation.NameInMap("AgentProfile")
         private ScriptProfileAgentProfile agentProfile;
 
+        @com.aliyun.core.annotation.NameInMap("ChatbotId")
+        private String chatbotId;
+
+        @com.aliyun.core.annotation.NameInMap("FunctionMeta")
+        private ScriptProfileFunctionMeta functionMeta;
+
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
+
+        @com.aliyun.core.annotation.NameInMap("NluAccessProfile")
+        private ScriptProfileNluAccessProfile nluAccessProfile;
+
+        @com.aliyun.core.annotation.NameInMap("NluAccessType")
+        private String nluAccessType;
+
+        @com.aliyun.core.annotation.NameInMap("NluEngine")
+        private String nluEngine;
+
+        @com.aliyun.core.annotation.NameInMap("OmniModel")
+        private Boolean omniModel;
 
         @com.aliyun.core.annotation.NameInMap("Temperature")
         private String temperature;
@@ -2046,8 +3572,15 @@ public class GetApplicationResponseBody extends TeaModel {
         private String topP;
 
         private PublishedVersionScriptProfile(Builder builder) {
+            this.agentKey = builder.agentKey;
             this.agentProfile = builder.agentProfile;
+            this.chatbotId = builder.chatbotId;
+            this.functionMeta = builder.functionMeta;
             this.model = builder.model;
+            this.nluAccessProfile = builder.nluAccessProfile;
+            this.nluAccessType = builder.nluAccessType;
+            this.nluEngine = builder.nluEngine;
+            this.omniModel = builder.omniModel;
             this.temperature = builder.temperature;
             this.topP = builder.topP;
         }
@@ -2061,6 +3594,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return agentKey
+         */
+        public String getAgentKey() {
+            return this.agentKey;
+        }
+
+        /**
          * @return agentProfile
          */
         public ScriptProfileAgentProfile getAgentProfile() {
@@ -2068,10 +3608,52 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return chatbotId
+         */
+        public String getChatbotId() {
+            return this.chatbotId;
+        }
+
+        /**
+         * @return functionMeta
+         */
+        public ScriptProfileFunctionMeta getFunctionMeta() {
+            return this.functionMeta;
+        }
+
+        /**
          * @return model
          */
         public String getModel() {
             return this.model;
+        }
+
+        /**
+         * @return nluAccessProfile
+         */
+        public ScriptProfileNluAccessProfile getNluAccessProfile() {
+            return this.nluAccessProfile;
+        }
+
+        /**
+         * @return nluAccessType
+         */
+        public String getNluAccessType() {
+            return this.nluAccessType;
+        }
+
+        /**
+         * @return nluEngine
+         */
+        public String getNluEngine() {
+            return this.nluEngine;
+        }
+
+        /**
+         * @return omniModel
+         */
+        public Boolean getOmniModel() {
+            return this.omniModel;
         }
 
         /**
@@ -2089,8 +3671,15 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentKey; 
             private ScriptProfileAgentProfile agentProfile; 
+            private String chatbotId; 
+            private ScriptProfileFunctionMeta functionMeta; 
             private String model; 
+            private ScriptProfileNluAccessProfile nluAccessProfile; 
+            private String nluAccessType; 
+            private String nluEngine; 
+            private Boolean omniModel; 
             private String temperature; 
             private String topP; 
 
@@ -2098,14 +3687,29 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             private Builder(PublishedVersionScriptProfile model) {
+                this.agentKey = model.agentKey;
                 this.agentProfile = model.agentProfile;
+                this.chatbotId = model.chatbotId;
+                this.functionMeta = model.functionMeta;
                 this.model = model.model;
+                this.nluAccessProfile = model.nluAccessProfile;
+                this.nluAccessType = model.nluAccessType;
+                this.nluEngine = model.nluEngine;
+                this.omniModel = model.omniModel;
                 this.temperature = model.temperature;
                 this.topP = model.topP;
             } 
 
             /**
-             * AgentProfile.
+             * AgentKey.
+             */
+            public Builder agentKey(String agentKey) {
+                this.agentKey = agentKey;
+                return this;
+            }
+
+            /**
+             * <p>The agent configuration information.</p>
              */
             public Builder agentProfile(ScriptProfileAgentProfile agentProfile) {
                 this.agentProfile = agentProfile;
@@ -2113,7 +3717,26 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * ChatbotId.
+             */
+            public Builder chatbotId(String chatbotId) {
+                this.chatbotId = chatbotId;
+                return this;
+            }
+
+            /**
+             * FunctionMeta.
+             */
+            public Builder functionMeta(ScriptProfileFunctionMeta functionMeta) {
+                this.functionMeta = functionMeta;
+                return this;
+            }
+
+            /**
+             * <p>The model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -2121,7 +3744,50 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Temperature.
+             * NluAccessProfile.
+             */
+            public Builder nluAccessProfile(ScriptProfileNluAccessProfile nluAccessProfile) {
+                this.nluAccessProfile = nluAccessProfile;
+                return this;
+            }
+
+            /**
+             * NluAccessType.
+             */
+            public Builder nluAccessType(String nluAccessType) {
+                this.nluAccessType = nluAccessType;
+                return this;
+            }
+
+            /**
+             * NluEngine.
+             */
+            public Builder nluEngine(String nluEngine) {
+                this.nluEngine = nluEngine;
+                return this;
+            }
+
+            /**
+             * OmniModel.
+             */
+            public Builder omniModel(Boolean omniModel) {
+                this.omniModel = omniModel;
+                return this;
+            }
+
+            /**
+             * <p>The probability threshold for nucleus sampling during generation.</p>
+             * <blockquote>
+             * <ul>
+             * <li>For example, when the value is set to 0.8, only the smallest set of most likely tokens whose cumulative probability is greater than or equal to 0.8 is retained as the candidate set.<ul>
+             * <li>Valid values: (0, 1.0). A higher value increases randomness in generation. A lower value increases determinism in generation.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.8</p>
              */
             public Builder temperature(String temperature) {
                 this.temperature = temperature;
@@ -2129,7 +3795,16 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * TopP.
+             * <p>Controls the randomness and diversity of model responses.</p>
+             * <blockquote>
+             * <ul>
+             * <li>Specifically, the temperature value controls the degree of smoothing applied to the probability distribution of each candidate token during text generation. A higher temperature value flattens the probability distribution, allowing more low-probability tokens to be selected, which produces more diverse results. A lower temperature value sharpens the probability distribution, making high-probability tokens more likely to be selected, which produces more deterministic results.</li>
+             * <li>Valid values: [0, 2). Setting the value to 0 is not recommended because it is meaningless.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder topP(String topP) {
                 this.topP = topP;
@@ -2416,7 +4091,10 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * Model.
+             * <p>The model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -2432,7 +4110,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessType.
+             * <p>The TTS invocation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -2440,7 +4121,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>The TTS engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -2448,7 +4132,13 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * PitchRate.
+             * <p>The pitch rate.</p>
+             * <blockquote>
+             * <p>Valid values: -500 to 500.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder pitchRate(Integer pitchRate) {
                 this.pitchRate = pitchRate;
@@ -2464,7 +4154,13 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SpeechRate.
+             * <p>The speech rate.</p>
+             * <blockquote>
+             * <p>Valid values: -500 to 500.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>-20</p>
              */
             public Builder speechRate(Integer speechRate) {
                 this.speechRate = speechRate;
@@ -2472,7 +4168,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>The voice.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aixia</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -2480,7 +4179,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Volume.
+             * <p>The volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder volume(Integer volume) {
                 this.volume = volume;
@@ -2560,7 +4262,10 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * BaseUrl.
+             * <p>The base URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com">https://example.com</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -2568,7 +4273,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone-ai-call</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2576,7 +4284,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SseEndpoint.
+             * <p>The SSE endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/phone-ai-call/mcp/sse?key=value</p>
              */
             public Builder sseEndpoint(String sseEndpoint) {
                 this.sseEndpoint = sseEndpoint;
@@ -2630,7 +4341,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * McpServers.
+             * <p>The list of MCP server configurations.</p>
              */
             public Builder mcpServers(java.util.List<ToolConfigMcpServers> mcpServers) {
                 this.mcpServers = mcpServers;
@@ -2941,7 +4652,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -2957,7 +4671,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NlsAccessType.
+             * <p>The ASR invocation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nlsAccessType(String nlsAccessType) {
                 this.nlsAccessType = nlsAccessType;
@@ -2965,7 +4682,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>The ASR engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -3005,6 +4725,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InteractionConfig")
         private PublishedVersionInteractionConfig interactionConfig;
 
+        @com.aliyun.core.annotation.NameInMap("LabelConfig")
+        private java.util.List<PublishedVersionLabelConfig> labelConfig;
+
         @com.aliyun.core.annotation.NameInMap("RagConfig")
         private PublishedVersionRagConfig ragConfig;
 
@@ -3025,6 +4748,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         private PublishedVersion(Builder builder) {
             this.interactionConfig = builder.interactionConfig;
+            this.labelConfig = builder.labelConfig;
             this.ragConfig = builder.ragConfig;
             this.scriptProfile = builder.scriptProfile;
             this.synthesizerConfig = builder.synthesizerConfig;
@@ -3046,6 +4770,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public PublishedVersionInteractionConfig getInteractionConfig() {
             return this.interactionConfig;
+        }
+
+        /**
+         * @return labelConfig
+         */
+        public java.util.List<PublishedVersionLabelConfig> getLabelConfig() {
+            return this.labelConfig;
         }
 
         /**
@@ -3092,6 +4823,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private PublishedVersionInteractionConfig interactionConfig; 
+            private java.util.List<PublishedVersionLabelConfig> labelConfig; 
             private PublishedVersionRagConfig ragConfig; 
             private PublishedVersionScriptProfile scriptProfile; 
             private PublishedVersionSynthesizerConfig synthesizerConfig; 
@@ -3104,6 +4836,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
             private Builder(PublishedVersion model) {
                 this.interactionConfig = model.interactionConfig;
+                this.labelConfig = model.labelConfig;
                 this.ragConfig = model.ragConfig;
                 this.scriptProfile = model.scriptProfile;
                 this.synthesizerConfig = model.synthesizerConfig;
@@ -3113,7 +4846,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * InteractionConfig.
+             * <p>The interaction configuration.</p>
              */
             public Builder interactionConfig(PublishedVersionInteractionConfig interactionConfig) {
                 this.interactionConfig = interactionConfig;
@@ -3121,7 +4854,15 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * RagConfig.
+             * LabelConfig.
+             */
+            public Builder labelConfig(java.util.List<PublishedVersionLabelConfig> labelConfig) {
+                this.labelConfig = labelConfig;
+                return this;
+            }
+
+            /**
+             * <p>The RAG configuration.</p>
              */
             public Builder ragConfig(PublishedVersionRagConfig ragConfig) {
                 this.ragConfig = ragConfig;
@@ -3129,7 +4870,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptProfile.
+             * <p>The application model configuration.</p>
              */
             public Builder scriptProfile(PublishedVersionScriptProfile scriptProfile) {
                 this.scriptProfile = scriptProfile;
@@ -3137,7 +4878,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SynthesizerConfig.
+             * <p>The text-to-speech (TTS) configuration.</p>
              */
             public Builder synthesizerConfig(PublishedVersionSynthesizerConfig synthesizerConfig) {
                 this.synthesizerConfig = synthesizerConfig;
@@ -3145,7 +4886,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ToolConfig.
+             * <p>The tool configuration.</p>
              */
             public Builder toolConfig(PublishedVersionToolConfig toolConfig) {
                 this.toolConfig = toolConfig;
@@ -3153,7 +4894,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * TranscriberConfig.
+             * <p>The automatic speech recognition (ASR) configuration.</p>
              */
             public Builder transcriberConfig(PublishedVersionTranscriberConfig transcriberConfig) {
                 this.transcriberConfig = transcriberConfig;
@@ -3161,7 +4902,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>The version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47889c1f-dd3f-4ace-9587-a13a3563e678</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -3209,6 +4953,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublishedVersion")
         private PublishedVersion publishedVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("UpdatedTime")
         private Long updatedTime;
 
@@ -3222,6 +4969,7 @@ public class GetApplicationResponseBody extends TeaModel {
             this.nluAccessType = builder.nluAccessType;
             this.nluEngine = builder.nluEngine;
             this.publishedVersion = builder.publishedVersion;
+            this.status = builder.status;
             this.updatedTime = builder.updatedTime;
         }
 
@@ -3297,6 +5045,13 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return updatedTime
          */
         public Long getUpdatedTime() {
@@ -3313,6 +5068,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String nluAccessType; 
             private String nluEngine; 
             private PublishedVersion publishedVersion; 
+            private String status; 
             private Long updatedTime; 
 
             private Builder() {
@@ -3328,11 +5084,15 @@ public class GetApplicationResponseBody extends TeaModel {
                 this.nluAccessType = model.nluAccessType;
                 this.nluEngine = model.nluEngine;
                 this.publishedVersion = model.publishedVersion;
+                this.status = model.status;
                 this.updatedTime = model.updatedTime;
             } 
 
             /**
-             * ApplicationId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a395011f-a247-400f-bc69-28796749fd52</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -3340,7 +5100,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Concurrency.
+             * <p>The call concurrency, which is the number of calls being made simultaneously.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
@@ -3348,7 +5111,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the application was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1730081561000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -3356,7 +5122,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The application description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Describe this application</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3364,7 +5133,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * DraftVersion.
+             * <p>The draft version configuration content.</p>
              */
             public Builder draftVersion(DraftVersion draftVersion) {
                 this.draftVersion = draftVersion;
@@ -3372,7 +5141,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test001</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3380,7 +5152,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NluAccessType.
+             * <p>The NLU access method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGED</p>
              */
             public Builder nluAccessType(String nluAccessType) {
                 this.nluAccessType = nluAccessType;
@@ -3388,7 +5163,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * NluEngine.
+             * <p>The NLU engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROMPTS</p>
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
@@ -3396,7 +5174,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * PublishedVersion.
+             * <p>The published application version.</p>
              */
             public Builder publishedVersion(PublishedVersion publishedVersion) {
                 this.publishedVersion = publishedVersion;
@@ -3404,7 +5182,18 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The time when the application was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1730081561000</p>
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;

@@ -73,7 +73,10 @@ public class DeleteVocabularyRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The Bailian workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-c11iig67g863rih8</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -82,7 +85,10 @@ public class DeleteVocabularyRequest extends Request {
         }
 
         /**
-         * VocabularyId.
+         * <p>The hot word ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
         public Builder vocabularyId(String vocabularyId) {
             this.putBodyParameter("VocabularyId", vocabularyId);

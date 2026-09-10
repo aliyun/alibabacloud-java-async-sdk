@@ -73,7 +73,10 @@ public class DeleteCloneVoiceRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The ID of the Bailian business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-zzu528i29ecnprcl</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -82,7 +85,10 @@ public class DeleteCloneVoiceRequest extends Request {
         }
 
         /**
-         * CloneVoiceId.
+         * <p>The ID of the cloned voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8ee1160a-6999-478f-8df6-f33ef21f27d5</p>
          */
         public Builder cloneVoiceId(String cloneVoiceId) {
             this.putBodyParameter("CloneVoiceId", cloneVoiceId);

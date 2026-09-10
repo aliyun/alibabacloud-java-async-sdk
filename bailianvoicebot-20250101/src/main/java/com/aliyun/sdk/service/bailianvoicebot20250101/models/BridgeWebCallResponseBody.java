@@ -119,7 +119,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class BridgeWebCallResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connect timed out</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -143,7 +149,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +292,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>894526715106764802</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -285,7 +303,13 @@ public class BridgeWebCallResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The token expiration time.</p>
+             * <blockquote>
+             * <p>The value is in timestamp format.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1744964682422</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -293,7 +317,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-uf6abxo1tuuwarrtffpp</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -301,7 +328,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
             }
 
             /**
-             * ServerUrl.
+             * <p>The server URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wss://sh-voicebot.aliyuncs.com:443/audio</p>
              */
             public Builder serverUrl(String serverUrl) {
                 this.serverUrl = serverUrl;
@@ -309,7 +339,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ws-4b7c263f-9b4c-4b28-baae-a65e9155e380</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -317,7 +350,10 @@ public class BridgeWebCallResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>The authentication signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83480f806b48f022313de37b691e167e</p>
              */
             public Builder token(String token) {
                 this.token = token;

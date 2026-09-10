@@ -101,7 +101,10 @@ public class ListVocabularyRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The Bailian business workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-c11iig67g863rih8</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -110,7 +113,10 @@ public class ListVocabularyRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The hot word name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finance</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -119,7 +125,10 @@ public class ListVocabularyRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -128,7 +137,10 @@ public class ListVocabularyRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

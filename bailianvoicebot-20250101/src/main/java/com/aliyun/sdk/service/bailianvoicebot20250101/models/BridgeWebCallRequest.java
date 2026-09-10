@@ -174,6 +174,7 @@ public class BridgeWebCallRequest extends Request {
         } 
 
         /**
+         * <p>The Bailian application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,14 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * AudioCodec.
+         * <p>The encoding type. If this parameter is not specified, PCM encoding is used by default. Valid values:</p>
+         * <ul>
+         * <li>PCM</li>
+         * <li>OPUS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PCM</p>
          */
         public Builder audioCodec(String audioCodec) {
             this.putQueryParameter("AudioCodec", audioCodec);
@@ -195,6 +203,7 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
+         * <p>The Bailian business space ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +216,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * Caller.
+         * <p>The caller number for inbound calls (used for display purposes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13052253537</p>
          */
         public Builder caller(String caller) {
             this.putQueryParameter("Caller", caller);
@@ -216,6 +228,7 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
+         * <p>The device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +241,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * SampleRate.
+         * <p>The sampling rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         public Builder sampleRate(Integer sampleRate) {
             this.putQueryParameter("SampleRate", sampleRate);
@@ -237,7 +253,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * Sandbox.
+         * <p>Specifies whether the call is in a test environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sandbox(Boolean sandbox) {
             this.putQueryParameter("Sandbox", sandbox);
@@ -246,7 +265,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The pass-through data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;ENV\&quot;: \&quot;production\&quot;}</p>
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -255,7 +277,10 @@ public class BridgeWebCallRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>The timeout period. If the call is not connected within the specified time, the call is automatically hung up. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putQueryParameter("TimeoutSeconds", timeoutSeconds);

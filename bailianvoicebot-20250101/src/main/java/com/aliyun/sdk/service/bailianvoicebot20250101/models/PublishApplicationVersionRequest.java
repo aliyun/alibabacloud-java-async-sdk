@@ -90,6 +90,7 @@ public class PublishApplicationVersionRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class PublishApplicationVersionRequest extends Request {
         }
 
         /**
+         * <p>The Bailian business workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class PublishApplicationVersionRequest extends Request {
         }
 
         /**
+         * <p>The version ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

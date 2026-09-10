@@ -118,6 +118,7 @@ public class UpdateApplicationRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
+         * <p>The Model Studio workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +144,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * Concurrency.
+         * <p>The concurrency setting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder concurrency(Integer concurrency) {
             this.putQueryParameter("Concurrency", concurrency);
@@ -151,7 +156,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The application\&quot;s new description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述一下这个应用</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -160,7 +168,11 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
+         * <p>The new name for the application.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试001</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

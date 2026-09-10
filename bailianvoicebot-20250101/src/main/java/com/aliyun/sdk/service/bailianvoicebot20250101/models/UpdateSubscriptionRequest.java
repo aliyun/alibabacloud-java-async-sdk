@@ -177,7 +177,10 @@ public class UpdateSubscriptionRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The ID of the Model Studio business space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-c11iig67g863rih8</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -186,7 +189,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * <p>The endpoint. This parameter is required if <code>MqType</code> is set to <code>ROCKET_MQ_4</code> or <code>ROCKET_MQ_5</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-l4p89zajz67.cn-hangzhou.rmq.aliyuncs.com:8080</p>
          */
         public Builder endpoint(String endpoint) {
             this.putBodyParameter("Endpoint", endpoint);
@@ -195,7 +201,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * EventSubscriptions.
+         * <p>A list of events to subscribe to.</p>
          */
         public Builder eventSubscriptions(java.util.List<String> eventSubscriptions) {
             String eventSubscriptionsShrink = shrink(eventSubscriptions, "EventSubscriptions", "json");
@@ -205,7 +211,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * MqInstanceId.
+         * <p>The ID of the ApsaraMQ for RocketMQ instance. This parameter is required if <code>MqType</code> is set to <code>ROCKET_MQ_5</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-l4p89zajz67.cn</p>
          */
         public Builder mqInstanceId(String mqInstanceId) {
             this.putBodyParameter("MqInstanceId", mqInstanceId);
@@ -214,7 +223,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * MqType.
+         * <p>The type of the message queue service. Valid values are <code>ROCKET_MQ_4</code> and <code>ROCKET_MQ_5</code>, which correspond to ApsaraMQ for RocketMQ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ROCKET_MQ_4</p>
          */
         public Builder mqType(String mqType) {
             this.putBodyParameter("MqType", mqType);
@@ -223,7 +235,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password for authentication. This parameter is required if <code>MqType</code> is set to <code>ROCKET_MQ_5</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pwd</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -232,7 +247,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * ProducerId.
+         * <p>The ID of the producer. This parameter is required if <code>MqType</code> is set to <code>ROCKET_MQ_4</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder producerId(String producerId) {
             this.putBodyParameter("ProducerId", producerId);
@@ -241,7 +259,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * Topic.
+         * <p>The topic of the queue. This parameter is required if <code>MqType</code> is set to <code>ROCKET_MQ_4</code> or <code>ROCKET_MQ_5</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder topic(String topic) {
             this.putBodyParameter("Topic", topic);
@@ -250,7 +271,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username for authentication. This parameter is required if <code>MqType</code> is set to <code>ROCKET_MQ_5</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>username</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

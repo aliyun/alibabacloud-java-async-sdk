@@ -75,6 +75,7 @@ public class GetDataChannelCredentialRequest extends Request {
         } 
 
         /**
+         * <p>The Bailian business workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetDataChannelCredentialRequest extends Request {
         }
 
         /**
+         * <p>The device ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

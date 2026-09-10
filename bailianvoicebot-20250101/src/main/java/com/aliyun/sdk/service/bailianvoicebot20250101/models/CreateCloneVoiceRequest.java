@@ -87,7 +87,10 @@ public class CreateCloneVoiceRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The Bailian workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-xdne77rxe14ziszr</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -96,7 +99,10 @@ public class CreateCloneVoiceRequest extends Request {
         }
 
         /**
-         * FileKey.
+         * <p>The path of the uploaded file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>voice_clone/voice_clone_unit_test.wav</p>
          */
         public Builder fileKey(String fileKey) {
             this.putBodyParameter("FileKey", fileKey);
@@ -105,7 +111,10 @@ public class CreateCloneVoiceRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The clone model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CosyVoice</p>
          */
         public Builder model(String model) {
             this.putBodyParameter("Model", model);

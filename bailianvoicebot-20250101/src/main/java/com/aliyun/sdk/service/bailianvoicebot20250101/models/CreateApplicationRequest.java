@@ -117,6 +117,7 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Bailian business workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Concurrency.
+         * <p>The number of concurrent connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder concurrency(Integer concurrency) {
             this.putQueryParameter("Concurrency", concurrency);
@@ -138,7 +142,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Describe this application</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -147,7 +154,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * <p>The application name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test001</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -156,7 +167,13 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * NluAccessType.
+         * <p>The NLU access method.</p>
+         * <ul>
+         * <li>Managed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MANAGED</p>
          */
         public Builder nluAccessType(String nluAccessType) {
             this.putQueryParameter("NluAccessType", nluAccessType);

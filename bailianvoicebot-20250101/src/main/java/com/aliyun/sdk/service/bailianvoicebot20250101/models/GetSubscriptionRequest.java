@@ -59,7 +59,10 @@ public class GetSubscriptionRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The Bailian business workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-3pptowd2olrctsvc</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);

@@ -119,7 +119,10 @@ public class CreateVocabularyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The hot word list ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a395011f-a247-400f-bc69-28796749fd52</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class CreateVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,11 @@ public class CreateVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance llm-zzu528i29ecnprcl
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +164,7 @@ public class CreateVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +172,10 @@ public class CreateVocabularyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -119,7 +119,10 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status or POP error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The response parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +168,10 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D771A1B6-3D5F-174A-BEE1-98CE1000D337</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +302,10 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientId.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26c2f022-b6c0-4ab0-9019-6e1a42dc5582</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -298,7 +313,10 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device-3i5x4234f2j4w55e</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -306,7 +324,10 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mqtt-cn-ux146hgtt04.mqtt.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -314,7 +335,13 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The validity period of the connection.</p>
+             * <blockquote>
+             * <p>The value is in timestamp format.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1745004535507</p>
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;
@@ -322,7 +349,10 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -341,7 +371,10 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Token|LTAI5tRYzHUYYi4XstgMCsL4|mqtt-cn-ux146hgtt04</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

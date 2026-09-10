@@ -73,7 +73,10 @@ public class GetVocabularyRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The ID of the Model Studio business space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-zop7ukgtksltamo4</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -82,7 +85,10 @@ public class GetVocabularyRequest extends Request {
         }
 
         /**
-         * VocabularyId.
+         * <p>The hot word vocabulary ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4061</p>
          */
         public Builder vocabularyId(String vocabularyId) {
             this.putBodyParameter("VocabularyId", vocabularyId);

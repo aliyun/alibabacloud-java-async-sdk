@@ -119,7 +119,10 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The cloned voice object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance llm-xdne77rxe14ziszr
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +238,10 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
             } 
 
             /**
-             * CloneVoiceId.
+             * <p>The cloned voice ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8ee1160a-6999-478f-8df6-f33ef21f27d5</p>
              */
             public Builder cloneVoiceId(String cloneVoiceId) {
                 this.cloneVoiceId = cloneVoiceId;
@@ -233,7 +249,10 @@ public class CreateCloneVoiceResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>The voice speaker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cosyvoice-v3-plus-voicebot2-3666e4bbb2b94832ac4f4107b5804c34</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;

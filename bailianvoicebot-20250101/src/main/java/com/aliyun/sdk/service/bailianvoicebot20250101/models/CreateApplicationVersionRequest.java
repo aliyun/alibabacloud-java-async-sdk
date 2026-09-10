@@ -32,6 +32,10 @@ public class CreateApplicationVersionRequest extends Request {
     private InteractionConfig interactionConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelConfig")
+    private java.util.List<LabelConfig> labelConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RagConfig")
     private RagConfig ragConfig;
 
@@ -60,6 +64,7 @@ public class CreateApplicationVersionRequest extends Request {
         this.applicationId = builder.applicationId;
         this.businessUnitId = builder.businessUnitId;
         this.interactionConfig = builder.interactionConfig;
+        this.labelConfig = builder.labelConfig;
         this.ragConfig = builder.ragConfig;
         this.scriptProfile = builder.scriptProfile;
         this.sourceVersionId = builder.sourceVersionId;
@@ -100,6 +105,13 @@ public class CreateApplicationVersionRequest extends Request {
      */
     public InteractionConfig getInteractionConfig() {
         return this.interactionConfig;
+    }
+
+    /**
+     * @return labelConfig
+     */
+    public java.util.List<LabelConfig> getLabelConfig() {
+        return this.labelConfig;
     }
 
     /**
@@ -148,6 +160,7 @@ public class CreateApplicationVersionRequest extends Request {
         private String applicationId; 
         private String businessUnitId; 
         private InteractionConfig interactionConfig; 
+        private java.util.List<LabelConfig> labelConfig; 
         private RagConfig ragConfig; 
         private ScriptProfile scriptProfile; 
         private String sourceVersionId; 
@@ -164,6 +177,7 @@ public class CreateApplicationVersionRequest extends Request {
             this.applicationId = request.applicationId;
             this.businessUnitId = request.businessUnitId;
             this.interactionConfig = request.interactionConfig;
+            this.labelConfig = request.labelConfig;
             this.ragConfig = request.ragConfig;
             this.scriptProfile = request.scriptProfile;
             this.sourceVersionId = request.sourceVersionId;
@@ -174,9 +188,6 @@ public class CreateApplicationVersionRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a395011f-a247-400f-bc69-28796749fd52</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -186,9 +197,6 @@ public class CreateApplicationVersionRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>llm-c11iig67g863rih8</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putQueryParameter("BusinessUnitId", businessUnitId);
@@ -203,6 +211,16 @@ public class CreateApplicationVersionRequest extends Request {
             String interactionConfigShrink = shrink(interactionConfig, "InteractionConfig", "json");
             this.putQueryParameter("InteractionConfig", interactionConfigShrink);
             this.interactionConfig = interactionConfig;
+            return this;
+        }
+
+        /**
+         * LabelConfig.
+         */
+        public Builder labelConfig(java.util.List<LabelConfig> labelConfig) {
+            String labelConfigShrink = shrink(labelConfig, "LabelConfig", "json");
+            this.putQueryParameter("LabelConfig", labelConfigShrink);
+            this.labelConfig = labelConfig;
             return this;
         }
 
@@ -278,11 +296,207 @@ public class CreateApplicationVersionRequest extends Request {
      *
      * <p>CreateApplicationVersionRequest</p>
      */
+    public static class Triggers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClosingStatement")
+        private String closingStatement;
+
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
+        private java.util.List<String> keyWords;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
+        private String triggerType;
+
+        @com.aliyun.core.annotation.NameInMap("TurnLimit")
+        private Integer turnLimit;
+
+        private Triggers(Builder builder) {
+            this.closingStatement = builder.closingStatement;
+            this.keyWords = builder.keyWords;
+            this.triggerType = builder.triggerType;
+            this.turnLimit = builder.turnLimit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Triggers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return closingStatement
+         */
+        public String getClosingStatement() {
+            return this.closingStatement;
+        }
+
+        /**
+         * @return keyWords
+         */
+        public java.util.List<String> getKeyWords() {
+            return this.keyWords;
+        }
+
+        /**
+         * @return triggerType
+         */
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+        /**
+         * @return turnLimit
+         */
+        public Integer getTurnLimit() {
+            return this.turnLimit;
+        }
+
+        public static final class Builder {
+            private String closingStatement; 
+            private java.util.List<String> keyWords; 
+            private String triggerType; 
+            private Integer turnLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Triggers model) {
+                this.closingStatement = model.closingStatement;
+                this.keyWords = model.keyWords;
+                this.triggerType = model.triggerType;
+                this.turnLimit = model.turnLimit;
+            } 
+
+            /**
+             * ClosingStatement.
+             */
+            public Builder closingStatement(String closingStatement) {
+                this.closingStatement = closingStatement;
+                return this;
+            }
+
+            /**
+             * KeyWords.
+             */
+            public Builder keyWords(java.util.List<String> keyWords) {
+                this.keyWords = keyWords;
+                return this;
+            }
+
+            /**
+             * TriggerType.
+             */
+            public Builder triggerType(String triggerType) {
+                this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * TurnLimit.
+             */
+            public Builder turnLimit(Integer turnLimit) {
+                this.turnLimit = turnLimit;
+                return this;
+            }
+
+            public Triggers build() {
+                return new Triggers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationVersionRequest</p>
+     */
+    public static class EndConversationConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Delay")
+        private Integer delay;
+
+        @com.aliyun.core.annotation.NameInMap("Triggers")
+        private java.util.List<Triggers> triggers;
+
+        private EndConversationConfig(Builder builder) {
+            this.delay = builder.delay;
+            this.triggers = builder.triggers;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EndConversationConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return delay
+         */
+        public Integer getDelay() {
+            return this.delay;
+        }
+
+        /**
+         * @return triggers
+         */
+        public java.util.List<Triggers> getTriggers() {
+            return this.triggers;
+        }
+
+        public static final class Builder {
+            private Integer delay; 
+            private java.util.List<Triggers> triggers; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndConversationConfig model) {
+                this.delay = model.delay;
+                this.triggers = model.triggers;
+            } 
+
+            /**
+             * Delay.
+             */
+            public Builder delay(Integer delay) {
+                this.delay = delay;
+                return this;
+            }
+
+            /**
+             * Triggers.
+             */
+            public Builder triggers(java.util.List<Triggers> triggers) {
+                this.triggers = triggers;
+                return this;
+            }
+
+            public EndConversationConfig build() {
+                return new EndConversationConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationVersionRequest</p>
+     */
     public static class SilenceDetectionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxRepeats")
+        private Integer maxRepeats;
+
         @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
         private SilenceDetectionConfig(Builder builder) {
+            this.maxRepeats = builder.maxRepeats;
             this.timeout = builder.timeout;
         }
 
@@ -295,6 +509,13 @@ public class CreateApplicationVersionRequest extends Request {
         }
 
         /**
+         * @return maxRepeats
+         */
+        public Integer getMaxRepeats() {
+            return this.maxRepeats;
+        }
+
+        /**
          * @return timeout
          */
         public Integer getTimeout() {
@@ -302,14 +523,24 @@ public class CreateApplicationVersionRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer maxRepeats; 
             private Integer timeout; 
 
             private Builder() {
             } 
 
             private Builder(SilenceDetectionConfig model) {
+                this.maxRepeats = model.maxRepeats;
                 this.timeout = model.timeout;
             } 
+
+            /**
+             * MaxRepeats.
+             */
+            public Builder maxRepeats(Integer maxRepeats) {
+                this.maxRepeats = maxRepeats;
+                return this;
+            }
 
             /**
              * Timeout.
@@ -333,10 +564,22 @@ public class CreateApplicationVersionRequest extends Request {
      * <p>CreateApplicationVersionRequest</p>
      */
     public static class InteractionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BackgroundMusicId")
+        private String backgroundMusicId;
+
+        @com.aliyun.core.annotation.NameInMap("EndConversationConfig")
+        private EndConversationConfig endConversationConfig;
+
+        @com.aliyun.core.annotation.NameInMap("InitialGreetingDelayMilliseconds")
+        private Integer initialGreetingDelayMilliseconds;
+
         @com.aliyun.core.annotation.NameInMap("SilenceDetectionConfig")
         private SilenceDetectionConfig silenceDetectionConfig;
 
         private InteractionConfig(Builder builder) {
+            this.backgroundMusicId = builder.backgroundMusicId;
+            this.endConversationConfig = builder.endConversationConfig;
+            this.initialGreetingDelayMilliseconds = builder.initialGreetingDelayMilliseconds;
             this.silenceDetectionConfig = builder.silenceDetectionConfig;
         }
 
@@ -349,6 +592,27 @@ public class CreateApplicationVersionRequest extends Request {
         }
 
         /**
+         * @return backgroundMusicId
+         */
+        public String getBackgroundMusicId() {
+            return this.backgroundMusicId;
+        }
+
+        /**
+         * @return endConversationConfig
+         */
+        public EndConversationConfig getEndConversationConfig() {
+            return this.endConversationConfig;
+        }
+
+        /**
+         * @return initialGreetingDelayMilliseconds
+         */
+        public Integer getInitialGreetingDelayMilliseconds() {
+            return this.initialGreetingDelayMilliseconds;
+        }
+
+        /**
          * @return silenceDetectionConfig
          */
         public SilenceDetectionConfig getSilenceDetectionConfig() {
@@ -356,14 +620,44 @@ public class CreateApplicationVersionRequest extends Request {
         }
 
         public static final class Builder {
+            private String backgroundMusicId; 
+            private EndConversationConfig endConversationConfig; 
+            private Integer initialGreetingDelayMilliseconds; 
             private SilenceDetectionConfig silenceDetectionConfig; 
 
             private Builder() {
             } 
 
             private Builder(InteractionConfig model) {
+                this.backgroundMusicId = model.backgroundMusicId;
+                this.endConversationConfig = model.endConversationConfig;
+                this.initialGreetingDelayMilliseconds = model.initialGreetingDelayMilliseconds;
                 this.silenceDetectionConfig = model.silenceDetectionConfig;
             } 
+
+            /**
+             * BackgroundMusicId.
+             */
+            public Builder backgroundMusicId(String backgroundMusicId) {
+                this.backgroundMusicId = backgroundMusicId;
+                return this;
+            }
+
+            /**
+             * EndConversationConfig.
+             */
+            public Builder endConversationConfig(EndConversationConfig endConversationConfig) {
+                this.endConversationConfig = endConversationConfig;
+                return this;
+            }
+
+            /**
+             * InitialGreetingDelayMilliseconds.
+             */
+            public Builder initialGreetingDelayMilliseconds(Integer initialGreetingDelayMilliseconds) {
+                this.initialGreetingDelayMilliseconds = initialGreetingDelayMilliseconds;
+                return this;
+            }
 
             /**
              * SilenceDetectionConfig.
@@ -375,6 +669,102 @@ public class CreateApplicationVersionRequest extends Request {
 
             public InteractionConfig build() {
                 return new InteractionConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationVersionRequest</p>
+     */
+    public static class LabelConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CandidateValues")
+        private java.util.List<String> candidateValues;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private LabelConfig(Builder builder) {
+            this.candidateValues = builder.candidateValues;
+            this.description = builder.description;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LabelConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return candidateValues
+         */
+        public java.util.List<String> getCandidateValues() {
+            return this.candidateValues;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> candidateValues; 
+            private String description; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelConfig model) {
+                this.candidateValues = model.candidateValues;
+                this.description = model.description;
+                this.name = model.name;
+            } 
+
+            /**
+             * CandidateValues.
+             */
+            public Builder candidateValues(java.util.List<String> candidateValues) {
+                this.candidateValues = candidateValues;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public LabelConfig build() {
+                return new LabelConfig(this);
             } 
 
         } 
@@ -643,16 +1033,232 @@ public class CreateApplicationVersionRequest extends Request {
      *
      * <p>CreateApplicationVersionRequest</p>
      */
+    public static class FunctionMeta extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FunctionId")
+        private String functionId;
+
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
+        private String functionName;
+
+        @com.aliyun.core.annotation.NameInMap("HttpTriggerName")
+        private String httpTriggerName;
+
+        @com.aliyun.core.annotation.NameInMap("HttpTriggerUrl")
+        private String httpTriggerUrl;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        private FunctionMeta(Builder builder) {
+            this.functionId = builder.functionId;
+            this.functionName = builder.functionName;
+            this.httpTriggerName = builder.httpTriggerName;
+            this.httpTriggerUrl = builder.httpTriggerUrl;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FunctionMeta create() {
+            return builder().build();
+        }
+
+        /**
+         * @return functionId
+         */
+        public String getFunctionId() {
+            return this.functionId;
+        }
+
+        /**
+         * @return functionName
+         */
+        public String getFunctionName() {
+            return this.functionName;
+        }
+
+        /**
+         * @return httpTriggerName
+         */
+        public String getHttpTriggerName() {
+            return this.httpTriggerName;
+        }
+
+        /**
+         * @return httpTriggerUrl
+         */
+        public String getHttpTriggerUrl() {
+            return this.httpTriggerUrl;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String functionId; 
+            private String functionName; 
+            private String httpTriggerName; 
+            private String httpTriggerUrl; 
+            private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionMeta model) {
+                this.functionId = model.functionId;
+                this.functionName = model.functionName;
+                this.httpTriggerName = model.httpTriggerName;
+                this.httpTriggerUrl = model.httpTriggerUrl;
+                this.regionId = model.regionId;
+            } 
+
+            /**
+             * FunctionId.
+             */
+            public Builder functionId(String functionId) {
+                this.functionId = functionId;
+                return this;
+            }
+
+            /**
+             * FunctionName.
+             */
+            public Builder functionName(String functionName) {
+                this.functionName = functionName;
+                return this;
+            }
+
+            /**
+             * HttpTriggerName.
+             */
+            public Builder httpTriggerName(String httpTriggerName) {
+                this.httpTriggerName = httpTriggerName;
+                return this;
+            }
+
+            /**
+             * HttpTriggerUrl.
+             */
+            public Builder httpTriggerUrl(String httpTriggerUrl) {
+                this.httpTriggerUrl = httpTriggerUrl;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public FunctionMeta build() {
+                return new FunctionMeta(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationVersionRequest</p>
+     */
+    public static class NluAccessProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessProfileId")
+        private String accessProfileId;
+
+        private NluAccessProfile(Builder builder) {
+            this.accessProfileId = builder.accessProfileId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NluAccessProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessProfileId
+         */
+        public String getAccessProfileId() {
+            return this.accessProfileId;
+        }
+
+        public static final class Builder {
+            private String accessProfileId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NluAccessProfile model) {
+                this.accessProfileId = model.accessProfileId;
+            } 
+
+            /**
+             * AccessProfileId.
+             */
+            public Builder accessProfileId(String accessProfileId) {
+                this.accessProfileId = accessProfileId;
+                return this;
+            }
+
+            public NluAccessProfile build() {
+                return new NluAccessProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateApplicationVersionRequest} extends {@link TeaModel}
+     *
+     * <p>CreateApplicationVersionRequest</p>
+     */
     public static class ScriptProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentKey")
+        private String agentKey;
+
         @com.aliyun.core.annotation.NameInMap("AgentProfile")
         private AgentProfile agentProfile;
+
+        @com.aliyun.core.annotation.NameInMap("ChatbotId")
+        private String chatbotId;
+
+        @com.aliyun.core.annotation.NameInMap("FunctionMeta")
+        private FunctionMeta functionMeta;
 
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
 
+        @com.aliyun.core.annotation.NameInMap("NluAccessProfile")
+        private NluAccessProfile nluAccessProfile;
+
+        @com.aliyun.core.annotation.NameInMap("NluAccessType")
+        private String nluAccessType;
+
+        @com.aliyun.core.annotation.NameInMap("OmniModel")
+        private Boolean omniModel;
+
         private ScriptProfile(Builder builder) {
+            this.agentKey = builder.agentKey;
             this.agentProfile = builder.agentProfile;
+            this.chatbotId = builder.chatbotId;
+            this.functionMeta = builder.functionMeta;
             this.model = builder.model;
+            this.nluAccessProfile = builder.nluAccessProfile;
+            this.nluAccessType = builder.nluAccessType;
+            this.omniModel = builder.omniModel;
         }
 
         public static Builder builder() {
@@ -664,10 +1270,31 @@ public class CreateApplicationVersionRequest extends Request {
         }
 
         /**
+         * @return agentKey
+         */
+        public String getAgentKey() {
+            return this.agentKey;
+        }
+
+        /**
          * @return agentProfile
          */
         public AgentProfile getAgentProfile() {
             return this.agentProfile;
+        }
+
+        /**
+         * @return chatbotId
+         */
+        public String getChatbotId() {
+            return this.chatbotId;
+        }
+
+        /**
+         * @return functionMeta
+         */
+        public FunctionMeta getFunctionMeta() {
+            return this.functionMeta;
         }
 
         /**
@@ -677,17 +1304,58 @@ public class CreateApplicationVersionRequest extends Request {
             return this.model;
         }
 
+        /**
+         * @return nluAccessProfile
+         */
+        public NluAccessProfile getNluAccessProfile() {
+            return this.nluAccessProfile;
+        }
+
+        /**
+         * @return nluAccessType
+         */
+        public String getNluAccessType() {
+            return this.nluAccessType;
+        }
+
+        /**
+         * @return omniModel
+         */
+        public Boolean getOmniModel() {
+            return this.omniModel;
+        }
+
         public static final class Builder {
+            private String agentKey; 
             private AgentProfile agentProfile; 
+            private String chatbotId; 
+            private FunctionMeta functionMeta; 
             private String model; 
+            private NluAccessProfile nluAccessProfile; 
+            private String nluAccessType; 
+            private Boolean omniModel; 
 
             private Builder() {
             } 
 
             private Builder(ScriptProfile model) {
+                this.agentKey = model.agentKey;
                 this.agentProfile = model.agentProfile;
+                this.chatbotId = model.chatbotId;
+                this.functionMeta = model.functionMeta;
                 this.model = model.model;
+                this.nluAccessProfile = model.nluAccessProfile;
+                this.nluAccessType = model.nluAccessType;
+                this.omniModel = model.omniModel;
             } 
+
+            /**
+             * AgentKey.
+             */
+            public Builder agentKey(String agentKey) {
+                this.agentKey = agentKey;
+                return this;
+            }
 
             /**
              * AgentProfile.
@@ -698,10 +1366,50 @@ public class CreateApplicationVersionRequest extends Request {
             }
 
             /**
+             * ChatbotId.
+             */
+            public Builder chatbotId(String chatbotId) {
+                this.chatbotId = chatbotId;
+                return this;
+            }
+
+            /**
+             * FunctionMeta.
+             */
+            public Builder functionMeta(FunctionMeta functionMeta) {
+                this.functionMeta = functionMeta;
+                return this;
+            }
+
+            /**
              * Model.
              */
             public Builder model(String model) {
                 this.model = model;
+                return this;
+            }
+
+            /**
+             * NluAccessProfile.
+             */
+            public Builder nluAccessProfile(NluAccessProfile nluAccessProfile) {
+                this.nluAccessProfile = nluAccessProfile;
+                return this;
+            }
+
+            /**
+             * NluAccessType.
+             */
+            public Builder nluAccessType(String nluAccessType) {
+                this.nluAccessType = nluAccessType;
+                return this;
+            }
+
+            /**
+             * OmniModel.
+             */
+            public Builder omniModel(Boolean omniModel) {
+                this.omniModel = omniModel;
                 return this;
             }
 

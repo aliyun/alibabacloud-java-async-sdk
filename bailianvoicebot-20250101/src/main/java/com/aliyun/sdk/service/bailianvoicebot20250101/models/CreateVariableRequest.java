@@ -101,7 +101,10 @@ public class CreateVariableRequest extends Request {
         } 
 
         /**
-         * BusinessUnitId.
+         * <p>The ID of the Bailian business workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>llm-baployoyopf22m2r</p>
          */
         public Builder businessUnitId(String businessUnitId) {
             this.putBodyParameter("BusinessUnitId", businessUnitId);
@@ -110,7 +113,10 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Indicates the user type, including VIP and regular users</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -119,7 +125,10 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserType</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("DisplayName", displayName);
@@ -128,7 +137,10 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userType</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

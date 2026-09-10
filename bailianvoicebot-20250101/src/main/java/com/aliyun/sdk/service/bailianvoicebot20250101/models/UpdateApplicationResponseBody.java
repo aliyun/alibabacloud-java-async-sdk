@@ -106,7 +106,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The ID of the updated application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a395011f-a247-400f-bc69-28796749fd52</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +139,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +150,10 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID used for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

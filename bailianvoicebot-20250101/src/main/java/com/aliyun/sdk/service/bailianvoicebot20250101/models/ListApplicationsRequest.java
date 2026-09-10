@@ -104,6 +104,7 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
+         * <p>The Bailian business workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * SearchPattern.
+         * <p>The template name for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General</p>
          */
         public Builder searchPattern(String searchPattern) {
             this.putQueryParameter("SearchPattern", searchPattern);

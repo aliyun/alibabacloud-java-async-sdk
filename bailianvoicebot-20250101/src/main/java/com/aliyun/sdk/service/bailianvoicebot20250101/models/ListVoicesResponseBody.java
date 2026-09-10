@@ -119,7 +119,10 @@ public class ListVoicesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The internal error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListVoicesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated result of voice timbres.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListVoicesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,11 @@ public class ListVoicesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance llm-xdne77rxe14ziszr
+         *  does not exist.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +161,7 @@ public class ListVoicesResponseBody extends TeaModel {
         }
 
         /**
-         * Params.
+         * <p>The list of dynamic error parameters.</p>
          */
         public Builder params(java.util.List<String> params) {
             this.params = params;
@@ -159,7 +169,10 @@ public class ListVoicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CF6D3484-19A1-5C77-863B-AC8B5754D37C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -303,7 +316,10 @@ public class ListVoicesResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>通义千问音色.</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -311,7 +327,10 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * <p>The supported languages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Chinese and Chinese-English mixed.</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -319,7 +338,10 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The TTS model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -327,7 +349,10 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The voice timbre name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>芊悦.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -335,7 +360,10 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * NlsEngine.
+             * <p>The TTS engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder nlsEngine(String nlsEngine) {
                 this.nlsEngine = nlsEngine;
@@ -343,7 +371,10 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * Style.
+             * <p>The style.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Female voice.</p>
              */
             public Builder style(String style) {
                 this.style = style;
@@ -351,7 +382,7 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedParams.
+             * <p>The list of supported parameters.</p>
              */
             public Builder supportedParams(java.util.List<String> supportedParams) {
                 this.supportedParams = supportedParams;
@@ -359,7 +390,10 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * Voice.
+             * <p>The speaker.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cherry</p>
              */
             public Builder voice(String voice) {
                 this.voice = voice;
@@ -452,7 +486,10 @@ public class ListVoicesResponseBody extends TeaModel {
             } 
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -460,7 +497,10 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -468,7 +508,10 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -476,7 +519,7 @@ public class ListVoicesResponseBody extends TeaModel {
             }
 
             /**
-             * Voices.
+             * <p>The list of voice timbres.</p>
              */
             public Builder voices(java.util.List<Voices> voices) {
                 this.voices = voices;
