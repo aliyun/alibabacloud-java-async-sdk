@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Regions.
+         * <p>The list of regions.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -75,7 +75,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. A request ID is returned regardless of whether the API call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019F6DDC-3845-542D-8E2C-60C4CC733BBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * LocalName.
+             * <p>The localized name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -162,7 +168,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionEndpoint.
+             * <p>The endpoint of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kvcachestore.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -170,7 +179,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -67,7 +67,7 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * DetachResults.
+         * <p>The list of unmount results.</p>
          */
         public Builder detachResults(java.util.List<DetachResults> detachResults) {
             this.detachResults = detachResults;
@@ -75,7 +75,10 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. A request ID is returned regardless of whether the API call succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B127704C-ECB1-5B0A-AA9C-8F394A6F179F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code when the operation fails. This value is null when the operation succeeds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KVCacheInstance.NotAttached</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -188,7 +194,10 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message when the operation fails. This value is null when the operation succeeds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The KVCacheInstance is not in ATTACHED status.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -207,7 +216,15 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The operation result. Valid values:</p>
+             * <ul>
+             * <li>DETACHING: The request has been accepted and the asynchronous unmount is in progress. This value is also returned for idempotent calls.</li>
+             * <li>Success: The synchronous validation passed and the asynchronous operation completed.</li>
+             * <li>Failed: The operation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DETACHING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -215,7 +232,10 @@ public class DetachKVCacheStoreResponseBody extends TeaModel {
             }
 
             /**
-             * VscId.
+             * <p>The VSC ID on the compute side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-001</p>
              */
             public Builder vscId(String vscId) {
                 this.vscId = vscId;

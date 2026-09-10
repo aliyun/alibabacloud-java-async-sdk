@@ -78,7 +78,10 @@ public class DeleteKVCacheStoreResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B127704C-ECB1-5B0A-AA9C-8F394A6F179F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

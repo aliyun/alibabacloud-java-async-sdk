@@ -75,6 +75,7 @@ public class DeleteKVCacheStoreRequest extends Request {
         } 
 
         /**
+         * <p>The KvCacheStore instance ID. Only instances in the following states can be deleted: Available and Stopped. Instances in other states cannot be deleted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteKVCacheStoreRequest extends Request {
         }
 
         /**
+         * <p>The region ID, such as cn-hangzhou.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

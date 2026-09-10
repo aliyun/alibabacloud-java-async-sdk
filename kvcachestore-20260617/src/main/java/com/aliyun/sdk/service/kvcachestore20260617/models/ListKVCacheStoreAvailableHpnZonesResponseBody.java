@@ -67,7 +67,7 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceHpnZones.
+         * <p>The list of available HpnZone information for instances.</p>
          */
         public Builder instanceHpnZones(java.util.List<InstanceHpnZones> instanceHpnZones) {
             this.instanceHpnZones = instanceHpnZones;
@@ -75,7 +75,10 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. A request ID is returned regardless of whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019FB5E9-F9E8-52F5-9C56-2CDF479CBEB2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * HpnZone.
+             * <p>The cluster ID, such as default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder hpnZone(String hpnZone) {
                 this.hpnZone = hpnZone;
@@ -208,7 +214,7 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableHpnZones.
+             * <p>The list of available HpnZones for the instance.</p>
              */
             public Builder availableHpnZones(java.util.List<AvailableHpnZones> availableHpnZones) {
                 this.availableHpnZones = availableHpnZones;
@@ -216,7 +222,10 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
             }
 
             /**
-             * KvcsId.
+             * <p>The KVCacheStore instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kvcs-xxxxx</p>
              */
             public Builder kvcsId(String kvcsId) {
                 this.kvcsId = kvcsId;
@@ -224,7 +233,10 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

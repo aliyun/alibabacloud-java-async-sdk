@@ -145,7 +145,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         } 
 
         /**
-         * KVCacheStores.
+         * <p>The list of KVCacheStore instances. Each element contains the following fields: KvcsId, Name, Status, ExtraStatus, RegionId, ZoneId, HpnZone, Type, Capacity, PaymentType, MountPointId, CreateTime, and Description.</p>
          */
         public Builder KVCacheStores(java.util.List<KVCacheStores> KVCacheStores) {
             this.KVCacheStores = KVCacheStores;
@@ -153,7 +153,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned per pagination request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -161,7 +164,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. This value is empty when no more data is available. This parameter is valid only for cursor-based pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -169,7 +175,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number. This parameter is valid only for page number-based pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -177,7 +186,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. This parameter is valid only for page number-based pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -185,7 +197,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * PageTotal.
+         * <p>The total number of pages. This value is returned only for page number-based pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageTotal(Integer pageTotal) {
             this.pageTotal = pageTotal;
@@ -193,7 +208,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. A request ID is returned regardless of whether the API call succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56AC37CD-388E-5D21-951B-C50D16D8E812</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +219,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances. This value is returned only for page number-based pagination. For cursor-based pagination, the value is -1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -267,7 +288,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chapter</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -275,7 +299,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-value-1766542011</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -511,7 +538,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             } 
 
             /**
-             * Capacity.
+             * <p>The storage capacity. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -519,7 +549,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-18T10:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -527,7 +560,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The instance description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production kvcachestore</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -535,7 +571,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraStatus.
+             * <p>The extra status information. Valid values: CapacityExpanding, CapacityExpandSuccess, and CapacityExpandFail.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CapacityExpanding</p>
              */
             public Builder extraStatus(String extraStatus) {
                 this.extraStatus = extraStatus;
@@ -543,7 +582,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * HpnZone.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder hpnZone(String hpnZone) {
                 this.hpnZone = hpnZone;
@@ -551,7 +593,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * KvcsId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kvcs-xxxxx</p>
              */
             public Builder kvcsId(String kvcsId) {
                 this.kvcsId = kvcsId;
@@ -559,7 +604,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointId.
+             * <p>The file system-level mount point ID. Instances under the same file system share this mount point. For more information, call ListKVCacheInstanceAttachInfo.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp-xxxxx</p>
              */
             public Builder mountPointId(String mountPointId) {
                 this.mountPointId = mountPointId;
@@ -567,7 +615,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production-instance</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -575,7 +626,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentType.
+             * <p>The payment type. Valid values: PREPAY and POSTPAY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -583,7 +637,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -591,7 +648,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek3dnrvdxj2dvq</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -599,7 +659,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -607,7 +670,7 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of resource tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -615,7 +678,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The instance type. Valid values: kvcs (KVCacheStore, CPFS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preview</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -623,7 +689,10 @@ public class ListKVCacheStoresResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

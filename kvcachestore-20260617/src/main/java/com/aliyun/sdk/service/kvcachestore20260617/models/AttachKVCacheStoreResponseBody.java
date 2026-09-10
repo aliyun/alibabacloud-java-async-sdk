@@ -67,7 +67,7 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * AttachResults.
+         * <p>The list of mount results.</p>
          */
         public Builder attachResults(java.util.List<AttachResults> attachResults) {
             this.attachResults = attachResults;
@@ -75,7 +75,10 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. A request ID is returned regardless of whether the API call succeeds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7BEF1E2-7E56-5BF1-8E36-77A51C5812F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code returned when the operation fails. This value is null when the operation succeeds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidStatus.OperationDenied</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -188,7 +194,10 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned when the operation fails. This value is null when the operation succeeds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The operation is not allowed for instance in ATTACHED status.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -207,7 +216,16 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The operation result. Valid values:</p>
+             * <ul>
+             * <li>ATTACHING: The request has been accepted and the asynchronous mount is in progress.</li>
+             * <li>ATTACHED: The resource is already mounted (idempotent).</li>
+             * <li>Success: The synchronous verification passed and the asynchronous operation is complete.</li>
+             * <li>Failed: The operation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ATTACHING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -215,7 +233,10 @@ public class AttachKVCacheStoreResponseBody extends TeaModel {
             }
 
             /**
-             * VscId.
+             * <p>The VSC ID on the compute side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-001</p>
              */
             public Builder vscId(String vscId) {
                 this.vscId = vscId;

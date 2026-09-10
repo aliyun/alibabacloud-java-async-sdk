@@ -145,7 +145,10 @@ public class UpdateKVCacheStoreRequest extends Request {
         } 
 
         /**
-         * Capacity.
+         * <p>The new storage capacity in GiB. The value must be a multiple of 300 TiB and greater than the current capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096</p>
          */
         public Builder capacity(Long capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -154,7 +157,10 @@ public class UpdateKVCacheStoreRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YOUR_CLIENT_TOKEN</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +169,10 @@ public class UpdateKVCacheStoreRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new KVCacheStore description. The description must be 2 to 256 characters in length and can contain English and Chinese characters. The description cannot start with http:// or https://. Default value: empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project name pass the check</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -172,6 +181,7 @@ public class UpdateKVCacheStoreRequest extends Request {
         }
 
         /**
+         * <p>The KVCacheStore instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +194,10 @@ public class UpdateKVCacheStoreRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new KVCacheStore name. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode (including English and Chinese characters) and digits. The name can contain colons (:), underscores (_), periods (.), and hyphens (-). If this parameter is not specified, the default value is the KVCacheStore ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1633730290118313-HD-m3u8</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -193,6 +206,7 @@ public class UpdateKVCacheStoreRequest extends Request {
         }
 
         /**
+         * <p>The region ID, such as cn-hangzhou.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +219,7 @@ public class UpdateKVCacheStoreRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of resource tag key-value pairs. A maximum of 20 tags are supported.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -273,7 +287,10 @@ public class UpdateKVCacheStoreRequest extends Request {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>projectId</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -281,7 +298,10 @@ public class UpdateKVCacheStoreRequest extends Request {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>projectName</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

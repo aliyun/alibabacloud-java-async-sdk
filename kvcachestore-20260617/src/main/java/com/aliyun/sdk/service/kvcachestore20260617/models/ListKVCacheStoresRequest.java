@@ -173,7 +173,10 @@ public class ListKVCacheStoresRequest extends Request {
         } 
 
         /**
-         * KvcsIds.
+         * <p>The list of KvcsId values. Separate multiple IDs with commas. A maximum of 100 IDs are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kvcs-87djda131</p>
          */
         public Builder kvcsIds(String kvcsIds) {
             this.putQueryParameter("KvcsIds", kvcsIds);
@@ -182,7 +185,10 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page for cursor-based pagination. Default value: 10. Maximum value: 100. This parameter is used together with NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -191,7 +197,10 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The instance name filter. Prefix matching is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>obj-detect</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -200,7 +209,10 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response. This parameter is mutually exclusive with PageNumber.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a24c3a9cc8e6da77b10cffc4c93c7922e0b5e8707e68181f</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -209,7 +221,10 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1. This parameter takes precedence over NextToken if both are specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -218,7 +233,10 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100. This parameter is used together with PageNumber.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -227,6 +245,7 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
+         * <p>The region ID, such as cn-hangzhou.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +258,10 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The instance status filter. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -248,7 +270,10 @@ public class ListKVCacheStoresRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID, such as cn-hangzhou-a.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

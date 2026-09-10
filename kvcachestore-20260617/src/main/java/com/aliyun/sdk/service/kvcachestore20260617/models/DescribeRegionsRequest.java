@@ -59,7 +59,10 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID, such as cn-hangzhou.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

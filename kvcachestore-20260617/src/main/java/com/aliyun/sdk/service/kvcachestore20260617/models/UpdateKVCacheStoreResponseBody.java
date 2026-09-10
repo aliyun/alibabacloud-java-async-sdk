@@ -80,7 +80,7 @@ public class UpdateKVCacheStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>KVCacheStore KvcsId</p>
+         * <p>The ID of the modified KVCacheStore.</p>
          * 
          * <strong>example:</strong>
          * <p>kvs-xxxxx</p>
@@ -91,7 +91,10 @@ public class UpdateKVCacheStoreResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The specification change order ID. Returned only when Capacity is modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order-xxxxx</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -99,7 +102,10 @@ public class UpdateKVCacheStoreResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. The request ID is returned regardless of whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6AA27F1A-A62C-59C3-BCC7-D1DFA4E7EEA0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

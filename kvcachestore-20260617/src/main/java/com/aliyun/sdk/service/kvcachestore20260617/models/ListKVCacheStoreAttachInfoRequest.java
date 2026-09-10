@@ -131,6 +131,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         } 
 
         /**
+         * <p>The list of KVCacheStore KvcsIds to query. You can specify up to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder kvcsIds(java.util.List<String> kvcsIds) {
@@ -140,7 +141,11 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return per query. Valid values: 1 to 500.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -149,7 +154,10 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters become ineffective, and TotalCount in the response is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>your-client-token</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -158,7 +166,10 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for a paged query. Used together with PageSize. If the specified page number exceeds the total number of pages, the last page of data is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +178,10 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,6 +190,7 @@ public class ListKVCacheStoreAttachInfoRequest extends Request {
         }
 
         /**
+         * <p>The region ID, such as cn-hangzhou.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

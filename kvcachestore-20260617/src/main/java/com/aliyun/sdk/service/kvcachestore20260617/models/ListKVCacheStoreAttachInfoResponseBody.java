@@ -119,7 +119,7 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * AttachInfos.
+         * <p>The list of mount information.</p>
          */
         public Builder attachInfos(java.util.List<AttachInfos> attachInfos) {
             this.attachInfos = attachInfos;
@@ -127,7 +127,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Used to query the next batch of data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3NUkN7qf+fcWj7joK8M6tU</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +138,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -143,7 +149,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. A request ID is returned regardless of whether the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B127704C-ECB1-5B0A-AA9C-8F394A6F179F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned for the paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -316,7 +331,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AttachedAt.
+             * <p>The time of the most recent attach operation, in ISO 8601 format. This value is null if the instance has not been attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-20T08:30:00Z</p>
              */
             public Builder attachedAt(String attachedAt) {
                 this.attachedAt = attachedAt;
@@ -324,7 +342,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * <p>The file system capacity, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -343,7 +364,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MountPointId.
+             * <p>The file system-level mount point ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp-xxxxx</p>
              */
             public Builder mountPointId(String mountPointId) {
                 this.mountPointId = mountPointId;
@@ -351,7 +375,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region where the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -359,7 +386,16 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The attach status. Valid values:</p>
+             * <ul>
+             * <li>Attaching: The instance is being mounted.</li>
+             * <li>Attached: The instance is mounted.</li>
+             * <li>Detaching: The instance is being unmounted.</li>
+             * </ul>
+             * <p>After unmounting is complete, the record is deleted and not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ATTACHED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -367,7 +403,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The instance type. Valid values: kvcs (KVCacheStore, CPFS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preview</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -375,7 +414,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VscId.
+             * <p>The VSC ID on the compute side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-001</p>
              */
             public Builder vscId(String vscId) {
                 this.vscId = vscId;
@@ -383,7 +425,10 @@ public class ListKVCacheStoreAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone where the instance is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

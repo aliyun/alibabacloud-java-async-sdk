@@ -60,6 +60,7 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
+         * <p>The region ID, such as cn-hangzhou.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
