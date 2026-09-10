@@ -87,7 +87,10 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -96,7 +99,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJNYXhSZXN1bHRzIjoxMH0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -105,7 +111,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88a4c762-b0ce-4661-9413-578b2309e60f</p>
          */
         public Builder teamID(String teamID) {
             this.putQueryParameter("teamID", teamID);

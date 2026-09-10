@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>E2BVolume</p>
  */
 public class E2BVolume extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agenticBucketVolumeConfig")
+    private AgenticBucketVolumeConfig agenticBucketVolumeConfig;
+
     @com.aliyun.core.annotation.NameInMap("agenticFSVolumeConfig")
     private AgenticFSVolumeConfig agenticFSVolumeConfig;
 
@@ -57,6 +60,7 @@ public class E2BVolume extends TeaModel {
     private String volumeName;
 
     private E2BVolume(Builder builder) {
+        this.agenticBucketVolumeConfig = builder.agenticBucketVolumeConfig;
         this.agenticFSVolumeConfig = builder.agenticFSVolumeConfig;
         this.createdAt = builder.createdAt;
         this.mountConfig = builder.mountConfig;
@@ -82,6 +86,13 @@ public class E2BVolume extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agenticBucketVolumeConfig
+     */
+    public AgenticBucketVolumeConfig getAgenticBucketVolumeConfig() {
+        return this.agenticBucketVolumeConfig;
     }
 
     /**
@@ -176,6 +187,7 @@ public class E2BVolume extends TeaModel {
     }
 
     public static final class Builder {
+        private AgenticBucketVolumeConfig agenticBucketVolumeConfig; 
         private AgenticFSVolumeConfig agenticFSVolumeConfig; 
         private String createdAt; 
         private MountConfig mountConfig; 
@@ -194,6 +206,7 @@ public class E2BVolume extends TeaModel {
         } 
 
         private Builder(E2BVolume model) {
+            this.agenticBucketVolumeConfig = model.agenticBucketVolumeConfig;
             this.agenticFSVolumeConfig = model.agenticFSVolumeConfig;
             this.createdAt = model.createdAt;
             this.mountConfig = model.mountConfig;
@@ -210,7 +223,15 @@ public class E2BVolume extends TeaModel {
         } 
 
         /**
-         * agenticFSVolumeConfig.
+         * agenticBucketVolumeConfig.
+         */
+        public Builder agenticBucketVolumeConfig(AgenticBucketVolumeConfig agenticBucketVolumeConfig) {
+            this.agenticBucketVolumeConfig = agenticBucketVolumeConfig;
+            return this;
+        }
+
+        /**
+         * <p>The AgenticFS configuration.</p>
          */
         public Builder agenticFSVolumeConfig(AgenticFSVolumeConfig agenticFSVolumeConfig) {
             this.agenticFSVolumeConfig = agenticFSVolumeConfig;
@@ -218,7 +239,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The time when the volume was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-10T11:05:55Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -226,7 +250,7 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * mountConfig.
+         * <p>The mount configuration.</p>
          */
         public Builder mountConfig(MountConfig mountConfig) {
             this.mountConfig = mountConfig;
@@ -234,7 +258,7 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * ossVolumeConfig.
+         * <p>The OSS configuration.</p>
          */
         public Builder ossVolumeConfig(OSSVolumeConfig ossVolumeConfig) {
             this.ossVolumeConfig = ossVolumeConfig;
@@ -242,7 +266,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -250,7 +277,16 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>CREATING</li>
+         * <li>AVAILABLE</li>
+         * <li>ERROR</li>
+         * <li>DELETING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -258,7 +294,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * statusReason.
+         * <p>The reason for the status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder statusReason(String statusReason) {
             this.statusReason = statusReason;
@@ -266,7 +305,14 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * storageClass.
+         * <p>The storage type. Valid values:</p>
+         * <ul>
+         * <li>OSS</li>
+         * <li>AGENTIC_FS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;
@@ -274,7 +320,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88a4c762-b0ce-4661-9413-578b2309e60f</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -282,7 +331,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the volume was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-10T11:05:55Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -290,7 +342,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The UID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2190856988355929</p>
          */
         public Builder userID(String userID) {
             this.userID = userID;
@@ -298,7 +353,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * volumeID.
+         * <p>The unique identifier of the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82c8c42e-cf7a-46d0-8b58-9024409c1579</p>
          */
         public Builder volumeID(String volumeID) {
             this.volumeID = volumeID;
@@ -306,7 +364,10 @@ public class E2BVolume extends TeaModel {
         }
 
         /**
-         * volumeName.
+         * <p>The name, which is unique within the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace</p>
          */
         public Builder volumeName(String volumeName) {
             this.volumeName = volumeName;
@@ -385,7 +446,10 @@ public class E2BVolume extends TeaModel {
             } 
 
             /**
-             * securityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -393,7 +457,7 @@ public class E2BVolume extends TeaModel {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The list of vSwitches.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -401,7 +465,10 @@ public class E2BVolume extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze4l2vyhej6a6dwapm4q</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -468,7 +535,10 @@ public class E2BVolume extends TeaModel {
             } 
 
             /**
-             * role.
+             * <p>The RAM role that the user grants to the sandboxed container. After this role is set, the sandboxed container assumes the role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the sandboxed container, such as OSS and AgenticFS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1673427197867277:role/aliyunfcdefaultrole</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -476,7 +546,7 @@ public class E2BVolume extends TeaModel {
             }
 
             /**
-             * vpcConfig.
+             * <p>The virtual private cloud (VPC) ID.</p>
              */
             public Builder vpcConfig(VpcConfig vpcConfig) {
                 this.vpcConfig = vpcConfig;

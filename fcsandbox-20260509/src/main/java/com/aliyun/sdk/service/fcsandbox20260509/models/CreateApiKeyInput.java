@@ -106,7 +106,10 @@ public class CreateApiKeyInput extends TeaModel {
         } 
 
         /**
-         * apiKeyName.
+         * <p>The API key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -114,7 +117,10 @@ public class CreateApiKeyInput extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-24T16:00:00.000Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -138,7 +144,10 @@ public class CreateApiKeyInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;

@@ -67,7 +67,7 @@ public class EffectivePermissions extends TeaModel {
         } 
 
         /**
-         * actions.
+         * <p>The actions.</p>
          */
         public Builder actions(java.util.List<String> actions) {
             this.actions = actions;
@@ -75,7 +75,7 @@ public class EffectivePermissions extends TeaModel {
         }
 
         /**
-         * capabilities.
+         * <p>The capabilities.</p>
          */
         public Builder capabilities(java.util.List<String> capabilities) {
             this.capabilities = capabilities;

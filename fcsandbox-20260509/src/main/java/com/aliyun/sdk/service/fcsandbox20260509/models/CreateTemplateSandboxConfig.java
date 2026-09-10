@@ -158,7 +158,10 @@ public class CreateTemplateSandboxConfig extends TeaModel {
         } 
 
         /**
-         * acrInstanceId.
+         * <p>The Container Registry Enterprise instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-abcd1234efgh</p>
          */
         public Builder acrInstanceId(String acrInstanceId) {
             this.acrInstanceId = acrInstanceId;
@@ -166,7 +169,10 @@ public class CreateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * generation.
+         * <p>The sandbox generation. A value of 1 indicates the first-generation sandbox. A value of 2 indicates the second-generation sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder generation(Integer generation) {
             this.generation = generation;
@@ -174,7 +180,10 @@ public class CreateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * image.
+         * <p>The image address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-hangzhou.aliyuncs.com/demo/nginx:latest</p>
          */
         public Builder image(String image) {
             this.image = image;
@@ -182,7 +191,10 @@ public class CreateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * osType.
+         * <p>The operating system type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         public Builder osType(String osType) {
             this.osType = osType;
@@ -190,7 +202,10 @@ public class CreateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * readyCommand.
+         * <p>The sandbox readiness probe command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>curl -sf <a href="http://127.0.0.1:8080/healthz">http://127.0.0.1:8080/healthz</a></p>
          */
         public Builder readyCommand(String readyCommand) {
             this.readyCommand = readyCommand;
@@ -198,7 +213,7 @@ public class CreateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * registryConfig.
+         * <p>The image repository configuration.</p>
          */
         public Builder registryConfig(CreateTemplateRegistryConfig registryConfig) {
             this.registryConfig = registryConfig;
@@ -206,7 +221,10 @@ public class CreateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * registryType.
+         * <p>The image repository type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acr</p>
          */
         public Builder registryType(String registryType) {
             this.registryType = registryType;
@@ -214,7 +232,10 @@ public class CreateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * startCommand.
+         * <p>The sandbox startup command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sleep infinity</p>
          */
         public Builder startCommand(String startCommand) {
             this.startCommand = startCommand;
@@ -222,7 +243,7 @@ public class CreateTemplateSandboxConfig extends TeaModel {
         }
 
         /**
-         * steps.
+         * <p>The list of custom build steps.</p>
          */
         public Builder steps(java.util.List<CreateTemplateStep> steps) {
             this.steps = steps;

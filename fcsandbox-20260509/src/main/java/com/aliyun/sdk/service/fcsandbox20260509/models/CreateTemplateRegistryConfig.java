@@ -80,7 +80,7 @@ public class CreateTemplateRegistryConfig extends TeaModel {
         } 
 
         /**
-         * authConfig.
+         * <p>The image repository authentication configuration.</p>
          */
         public Builder authConfig(CreateTemplateRegistryAuthConfig authConfig) {
             this.authConfig = authConfig;
@@ -88,7 +88,7 @@ public class CreateTemplateRegistryConfig extends TeaModel {
         }
 
         /**
-         * certConfig.
+         * <p>The image repository certificate configuration.</p>
          */
         public Builder certConfig(CreateTemplateRegistryCertConfig certConfig) {
             this.certConfig = certConfig;
@@ -96,7 +96,7 @@ public class CreateTemplateRegistryConfig extends TeaModel {
         }
 
         /**
-         * networkConfig.
+         * <p>The image repository network configuration.</p>
          */
         public Builder networkConfig(CreateTemplateRegistryNetworkConfig networkConfig) {
             this.networkConfig = networkConfig;

@@ -120,9 +120,6 @@ public class CreateApiKeyResponseBody extends TeaModel {
 
         /**
          * <p>API Key。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>{&quot;gmtCreate&quot;: 1776997128000, &quot;workspaceId&quot;: &quot;ws-3w77kird5sblwwfk&quot;, &quot;apiKeyId&quot;: 4808780, &quot;createdBy&quot;: &quot;AssumedRoleUser300873166069492100&quot;, &quot;apiKeyValue&quot;: &quot;sk-110ff0028ad64a24b9453c8955c4c191&quot;}</p>
          */
         public Builder apiKey(ApiKey apiKey) {
             this.apiKey = apiKey;
@@ -130,7 +127,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -154,7 +154,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;

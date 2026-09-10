@@ -73,7 +73,10 @@ public class UpdateVolumeRequest extends Request {
         } 
 
         /**
-         * volumeID.
+         * <p>The unique identifier of the volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82c8c42e-cf7a-46d0-8b58-9024409c1579</p>
          */
         public Builder volumeID(String volumeID) {
             this.putPathParameter("volumeID", volumeID);
@@ -82,7 +85,7 @@ public class UpdateVolumeRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The parameters for updating the volume.</p>
          */
         public Builder body(UpdateVolumeInput body) {
             this.putBodyParameter("body", body);

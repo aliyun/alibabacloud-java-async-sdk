@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVolumeInput</p>
  */
 public class CreateVolumeInput extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agenticBucketVolumeConfig")
+    private AgenticBucketVolumeConfig agenticBucketVolumeConfig;
+
     @com.aliyun.core.annotation.NameInMap("agenticFSVolumeConfig")
     private AgenticFSVolumeConfig agenticFSVolumeConfig;
 
@@ -33,6 +36,7 @@ public class CreateVolumeInput extends TeaModel {
     private String volumeName;
 
     private CreateVolumeInput(Builder builder) {
+        this.agenticBucketVolumeConfig = builder.agenticBucketVolumeConfig;
         this.agenticFSVolumeConfig = builder.agenticFSVolumeConfig;
         this.mountConfig = builder.mountConfig;
         this.ossVolumeConfig = builder.ossVolumeConfig;
@@ -50,6 +54,13 @@ public class CreateVolumeInput extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agenticBucketVolumeConfig
+     */
+    public AgenticBucketVolumeConfig getAgenticBucketVolumeConfig() {
+        return this.agenticBucketVolumeConfig;
     }
 
     /**
@@ -88,6 +99,7 @@ public class CreateVolumeInput extends TeaModel {
     }
 
     public static final class Builder {
+        private AgenticBucketVolumeConfig agenticBucketVolumeConfig; 
         private AgenticFSVolumeConfig agenticFSVolumeConfig; 
         private MountConfig mountConfig; 
         private OSSVolumeConfig ossVolumeConfig; 
@@ -98,6 +110,7 @@ public class CreateVolumeInput extends TeaModel {
         } 
 
         private Builder(CreateVolumeInput model) {
+            this.agenticBucketVolumeConfig = model.agenticBucketVolumeConfig;
             this.agenticFSVolumeConfig = model.agenticFSVolumeConfig;
             this.mountConfig = model.mountConfig;
             this.ossVolumeConfig = model.ossVolumeConfig;
@@ -106,7 +119,15 @@ public class CreateVolumeInput extends TeaModel {
         } 
 
         /**
-         * agenticFSVolumeConfig.
+         * agenticBucketVolumeConfig.
+         */
+        public Builder agenticBucketVolumeConfig(AgenticBucketVolumeConfig agenticBucketVolumeConfig) {
+            this.agenticBucketVolumeConfig = agenticBucketVolumeConfig;
+            return this;
+        }
+
+        /**
+         * <p>The AgenticFS configuration.</p>
          */
         public Builder agenticFSVolumeConfig(AgenticFSVolumeConfig agenticFSVolumeConfig) {
             this.agenticFSVolumeConfig = agenticFSVolumeConfig;
@@ -114,7 +135,7 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * mountConfig.
+         * <p>The mount configuration.</p>
          */
         public Builder mountConfig(MountConfig mountConfig) {
             this.mountConfig = mountConfig;
@@ -122,7 +143,7 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * ossVolumeConfig.
+         * <p>The OSS configuration.</p>
          */
         public Builder ossVolumeConfig(OSSVolumeConfig ossVolumeConfig) {
             this.ossVolumeConfig = ossVolumeConfig;
@@ -130,7 +151,10 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -138,7 +162,10 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * volumeName.
+         * <p>The name, which must be unique within the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace</p>
          */
         public Builder volumeName(String volumeName) {
             this.volumeName = volumeName;
@@ -217,7 +244,10 @@ public class CreateVolumeInput extends TeaModel {
             } 
 
             /**
-             * securityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -225,7 +255,7 @@ public class CreateVolumeInput extends TeaModel {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The list of vSwitches.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -233,7 +263,10 @@ public class CreateVolumeInput extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-8vbq8hbepimf6lr7uyqub</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -300,7 +333,10 @@ public class CreateVolumeInput extends TeaModel {
             } 
 
             /**
-             * role.
+             * <p>The RAM role that the user grants to the cloud sandbox. After this role is set, the cloud sandbox assumes the role to generate temporary access credentials. You can use the temporary access credentials of this role to mount storage in the cloud sandbox, such as OSS and AgenticFS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1338904783509062:role/aliyunfcdefaultrole</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -308,7 +344,7 @@ public class CreateVolumeInput extends TeaModel {
             }
 
             /**
-             * vpcConfig.
+             * <p>The VPC configuration.</p>
              */
             public Builder vpcConfig(VpcConfig vpcConfig) {
                 this.vpcConfig = vpcConfig;

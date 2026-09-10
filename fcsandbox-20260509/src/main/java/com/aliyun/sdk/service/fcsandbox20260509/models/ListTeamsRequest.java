@@ -115,7 +115,10 @@ public class ListTeamsRequest extends Request {
         } 
 
         /**
-         * pageNumber.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -124,7 +127,10 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of teams displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -133,7 +139,15 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * plan.
+         * <p>The subscription plan of the team. Valid values:</p>
+         * <ul>
+         * <li>eco</li>
+         * <li>std</li>
+         * <li>pro</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pro</p>
          */
         public Builder plan(String plan) {
             this.putQueryParameter("plan", plan);
@@ -142,7 +156,10 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putQueryParameter("resourceGroupID", resourceGroupID);
@@ -151,7 +168,10 @@ public class ListTeamsRequest extends Request {
         }
 
         /**
-         * teamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DevTeam</p>
          */
         public Builder teamName(String teamName) {
             this.putQueryParameter("teamName", teamName);

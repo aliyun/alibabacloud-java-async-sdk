@@ -67,7 +67,10 @@ public class CreateTemplateRegistryAuthConfig extends TeaModel {
         } 
 
         /**
-         * password.
+         * <p>The password of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.password = password;
@@ -75,7 +78,10 @@ public class CreateTemplateRegistryAuthConfig extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>The username of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-user</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;

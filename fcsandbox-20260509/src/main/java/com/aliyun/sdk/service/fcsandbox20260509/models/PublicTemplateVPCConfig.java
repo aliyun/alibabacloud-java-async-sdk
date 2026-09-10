@@ -93,7 +93,10 @@ public class PublicTemplateVPCConfig extends TeaModel {
         } 
 
         /**
-         * role.
+         * <p>The VPC authorization role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunFCSandboxDefaultRole</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -101,7 +104,10 @@ public class PublicTemplateVPCConfig extends TeaModel {
         }
 
         /**
-         * securityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1gx7yj8ud5mabcde</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -109,7 +115,7 @@ public class PublicTemplateVPCConfig extends TeaModel {
         }
 
         /**
-         * vSwitchIds.
+         * <p>The list of vSwitch IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -117,7 +123,10 @@ public class PublicTemplateVPCConfig extends TeaModel {
         }
 
         /**
-         * vpcId.
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1mwrqm3wkq7abcde</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

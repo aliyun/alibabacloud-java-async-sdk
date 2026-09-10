@@ -93,7 +93,7 @@ public class CreateTemplateInput extends TeaModel {
         } 
 
         /**
-         * buildConfig.
+         * <p>The template build configuration.</p>
          */
         public Builder buildConfig(CreateTemplateBuildConfig buildConfig) {
             this.buildConfig = buildConfig;
@@ -101,7 +101,10 @@ public class CreateTemplateInput extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-template</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,7 +112,7 @@ public class CreateTemplateInput extends TeaModel {
         }
 
         /**
-         * runtimeConfig.
+         * <p>The template runtime configuration.</p>
          */
         public Builder runtimeConfig(CreateTemplateRuntimeConfig runtimeConfig) {
             this.runtimeConfig = runtimeConfig;
@@ -117,7 +120,10 @@ public class CreateTemplateInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;

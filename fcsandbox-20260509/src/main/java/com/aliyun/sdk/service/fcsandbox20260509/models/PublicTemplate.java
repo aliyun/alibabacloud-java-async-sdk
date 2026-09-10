@@ -145,7 +145,10 @@ public class PublicTemplate extends TeaModel {
         } 
 
         /**
-         * createdTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-28T12:00:00.000Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -153,7 +156,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-template</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -161,7 +167,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmz7h4ocksp5y</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -169,7 +178,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * runtimeConfig.
+         * <p>The template runtime configuration.</p>
          */
         public Builder runtimeConfig(PublicTemplateRuntimeConfig runtimeConfig) {
             this.runtimeConfig = runtimeConfig;
@@ -177,7 +186,7 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The template build status.</p>
          */
         public Builder status(PublicTemplateStatus status) {
             this.status = status;
@@ -185,7 +194,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -193,7 +205,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-team</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -201,7 +216,10 @@ public class PublicTemplate extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w0aipmi0rvn5xqdnsihg</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;

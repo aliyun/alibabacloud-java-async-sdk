@@ -59,7 +59,7 @@ public class CreateTeamRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request struct.</p>
          */
         public Builder body(CreateTeamInput body) {
             this.putBodyParameter("body", body);

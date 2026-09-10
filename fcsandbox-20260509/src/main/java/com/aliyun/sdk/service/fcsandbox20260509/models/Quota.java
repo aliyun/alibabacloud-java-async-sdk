@@ -80,7 +80,10 @@ public class Quota extends TeaModel {
         } 
 
         /**
-         * cpuCores.
+         * <p>The vCPU quota limit. Unit: cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder cpuCores(Integer cpuCores) {
             this.cpuCores = cpuCores;
@@ -88,7 +91,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * memoryGB.
+         * <p>The memory quota limit. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         public Builder memoryGB(Integer memoryGB) {
             this.memoryGB = memoryGB;
@@ -96,7 +102,10 @@ public class Quota extends TeaModel {
         }
 
         /**
-         * tagValue.
+         * <p>Team ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f79d6a95-abcd-47a8-9167-eccf0622a998</p>
          */
         public Builder tagValue(String tagValue) {
             this.tagValue = tagValue;

@@ -67,7 +67,7 @@ public class CreateTemplateBuildConfig extends TeaModel {
         } 
 
         /**
-         * copy.
+         * <p>The image copy build action.</p>
          */
         public Builder copy(CreateTemplateCopyAction copy) {
             this.copy = copy;
@@ -75,7 +75,7 @@ public class CreateTemplateBuildConfig extends TeaModel {
         }
 
         /**
-         * envdInject.
+         * <p>The envd injection build action.</p>
          */
         public Builder envdInject(CreateTemplateEnvdInjectAction envdInject) {
             this.envdInject = envdInject;

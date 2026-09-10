@@ -93,7 +93,10 @@ public class UpdateQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class UpdateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * quota.
+         * <p>The Quota configuration information.</p>
          */
         public Builder quota(Quota quota) {
             this.quota = quota;

@@ -143,7 +143,10 @@ public class ListApiKeysRequest extends Request {
         } 
 
         /**
-         * apiKeyName.
+         * <p>The API key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.putQueryParameter("apiKeyName", apiKeyName);
@@ -152,7 +155,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -161,7 +167,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of teams to display per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -170,7 +179,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putQueryParameter("resourceGroupID", resourceGroupID);
@@ -179,7 +191,14 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>active</li>
+         * <li>inactive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -188,7 +207,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.putQueryParameter("teamID", teamID);
@@ -197,7 +219,10 @@ public class ListApiKeysRequest extends Request {
         }
 
         /**
-         * userID.
+         * <p>The UID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder userID(String userID) {
             this.putQueryParameter("userID", userID);

@@ -106,7 +106,10 @@ public class UpdateApiKeyInput extends TeaModel {
         } 
 
         /**
-         * apiKeyName.
+         * <p>The API key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -114,7 +117,10 @@ public class UpdateApiKeyInput extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-24T16:00:00.000Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -138,7 +144,14 @@ public class UpdateApiKeyInput extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>active</li>
+         * <li>inactive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;

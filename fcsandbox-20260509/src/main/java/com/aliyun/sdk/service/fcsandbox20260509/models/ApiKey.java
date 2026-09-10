@@ -262,7 +262,10 @@ public class ApiKey extends TeaModel {
         } 
 
         /**
-         * apiKeyID.
+         * <p>The unique identifier of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34f6a4c4-499f-4bbd-baa0-0e699f53abcd</p>
          */
         public Builder apiKeyID(String apiKeyID) {
             this.apiKeyID = apiKeyID;
@@ -270,7 +273,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * apiKeyMask.
+         * <p>The masked display value of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2b_xxxx****xxxx</p>
          */
         public Builder apiKeyMask(String apiKeyMask) {
             this.apiKeyMask = apiKeyMask;
@@ -278,7 +284,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * apiKeyName.
+         * <p>The name of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -286,7 +295,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * apiKeyValue.
+         * <p>The value of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2b_xxxxxx79cd777ef8exxxxxx4ad6f1b567cxxxxxx</p>
          */
         public Builder apiKeyValue(String apiKeyValue) {
             this.apiKeyValue = apiKeyValue;
@@ -294,7 +306,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * createdTime.
+         * <p>The time when the API key was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-13T08:27:20Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -302,7 +317,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-10-13T08:27:20Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -326,7 +344,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * lastUsedTime.
+         * <p>The time when the API key was last used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-14T08:27:20Z</p>
          */
         public Builder lastUsedTime(String lastUsedTime) {
             this.lastUsedTime = lastUsedTime;
@@ -334,7 +355,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -350,7 +374,14 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>active</li>
+         * <li>inactive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -358,7 +389,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -366,7 +400,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The name of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Development Team</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -382,7 +419,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The UID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder userID(String userID) {
             this.userID = userID;
@@ -390,7 +430,10 @@ public class ApiKey extends TeaModel {
         }
 
         /**
-         * username.
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder username(String username) {
             this.username = username;

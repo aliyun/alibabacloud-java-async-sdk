@@ -93,7 +93,7 @@ public class PermissionPolicy extends TeaModel {
         } 
 
         /**
-         * allow.
+         * <p>The allow policy.</p>
          */
         public Builder allow(Allow allow) {
             this.allow = allow;
@@ -101,7 +101,7 @@ public class PermissionPolicy extends TeaModel {
         }
 
         /**
-         * catalogVersion.
+         * <p>catalog version</p>
          */
         public Builder catalogVersion(Long catalogVersion) {
             this.catalogVersion = catalogVersion;
@@ -109,7 +109,7 @@ public class PermissionPolicy extends TeaModel {
         }
 
         /**
-         * deny.
+         * <p>The deny policy.</p>
          */
         public Builder deny(Deny deny) {
             this.deny = deny;
@@ -117,7 +117,7 @@ public class PermissionPolicy extends TeaModel {
         }
 
         /**
-         * schemaVersion.
+         * <p>schema version</p>
          */
         public Builder schemaVersion(Long schemaVersion) {
             this.schemaVersion = schemaVersion;
@@ -183,7 +183,7 @@ public class PermissionPolicy extends TeaModel {
             } 
 
             /**
-             * actions.
+             * <p>The actions.</p>
              */
             public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
@@ -191,7 +191,7 @@ public class PermissionPolicy extends TeaModel {
             }
 
             /**
-             * capabilities.
+             * <p>The capabilities.</p>
              */
             public Builder capabilities(java.util.List<String> capabilities) {
                 this.capabilities = capabilities;
@@ -258,7 +258,7 @@ public class PermissionPolicy extends TeaModel {
             } 
 
             /**
-             * actions.
+             * <p>The actions.</p>
              */
             public Builder actions(java.util.List<String> actions) {
                 this.actions = actions;
@@ -266,7 +266,7 @@ public class PermissionPolicy extends TeaModel {
             }
 
             /**
-             * capabilities.
+             * <p>The capabilities.</p>
              */
             public Builder capabilities(java.util.List<String> capabilities) {
                 this.capabilities = capabilities;

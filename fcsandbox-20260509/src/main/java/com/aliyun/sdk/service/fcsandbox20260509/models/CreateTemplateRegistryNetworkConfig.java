@@ -80,7 +80,10 @@ public class CreateTemplateRegistryNetworkConfig extends TeaModel {
         } 
 
         /**
-         * securityGroupId.
+         * <p>The ID of the security group where the image repository resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1gx7yj8ud5mabcde</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -88,7 +91,10 @@ public class CreateTemplateRegistryNetworkConfig extends TeaModel {
         }
 
         /**
-         * vSwitchId.
+         * <p>The ID of the vSwitch where the image repository resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1s5fnlk4jl2abcde</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -96,7 +102,10 @@ public class CreateTemplateRegistryNetworkConfig extends TeaModel {
         }
 
         /**
-         * vpcId.
+         * <p>The ID of the VPC where the image repository resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1mwrqm3wkq7abcde</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

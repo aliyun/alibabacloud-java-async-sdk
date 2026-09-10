@@ -59,7 +59,7 @@ public class CreateApiKeyRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The template base structure.</p>
          */
         public Builder body(CreateApiKeyInput body) {
             this.putBodyParameter("body", body);

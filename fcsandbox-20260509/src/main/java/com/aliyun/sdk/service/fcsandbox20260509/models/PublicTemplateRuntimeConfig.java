@@ -132,7 +132,10 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         } 
 
         /**
-         * cpu.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpu(Float cpu) {
             this.cpu = cpu;
@@ -140,7 +143,10 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * diskSize.
+         * <p>The disk size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
@@ -148,7 +154,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * internetAccess.
+         * <p>Specifies whether to allow access to the Internet.</p>
          */
         public Builder internetAccess(Boolean internetAccess) {
             this.internetAccess = internetAccess;
@@ -156,7 +162,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * logConfig.
+         * <p>The log configuration.</p>
          */
         public Builder logConfig(PublicTemplateLogConfig logConfig) {
             this.logConfig = logConfig;
@@ -164,7 +170,10 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * memorySize.
+         * <p>The memory size. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder memorySize(Integer memorySize) {
             this.memorySize = memorySize;
@@ -172,7 +181,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * sandboxConfig.
+         * <p>The sandbox configuration.</p>
          */
         public Builder sandboxConfig(PublicTemplateSandboxConfig sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
@@ -180,7 +189,7 @@ public class PublicTemplateRuntimeConfig extends TeaModel {
         }
 
         /**
-         * vpcConfig.
+         * <p>The VPC configuration.</p>
          */
         public Builder vpcConfig(PublicTemplateVPCConfig vpcConfig) {
             this.vpcConfig = vpcConfig;

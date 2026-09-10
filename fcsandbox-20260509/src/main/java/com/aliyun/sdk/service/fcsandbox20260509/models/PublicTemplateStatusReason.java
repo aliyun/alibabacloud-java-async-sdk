@@ -67,7 +67,10 @@ public class PublicTemplateStatusReason extends TeaModel {
         } 
 
         /**
-         * message.
+         * <p>The details of the failure reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pull image failed: timeout</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -75,7 +78,10 @@ public class PublicTemplateStatusReason extends TeaModel {
         }
 
         /**
-         * step.
+         * <p>The identity of the failed step.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>build</p>
          */
         public Builder step(String step) {
             this.step = step;

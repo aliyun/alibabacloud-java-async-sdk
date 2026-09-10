@@ -67,7 +67,10 @@ public class CreateTemplateLogConfig extends TeaModel {
         } 
 
         /**
-         * logstore.
+         * <p>The name of the SLS Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-logstore</p>
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -75,7 +78,10 @@ public class CreateTemplateLogConfig extends TeaModel {
         }
 
         /**
-         * project.
+         * <p>The name of the Simple Log Service (SLS) project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-sls-project</p>
          */
         public Builder project(String project) {
             this.project = project;

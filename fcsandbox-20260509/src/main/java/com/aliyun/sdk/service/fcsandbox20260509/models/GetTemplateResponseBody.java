@@ -184,7 +184,10 @@ public class GetTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -192,7 +195,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * createdTime.
+         * <p>The time when the template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-31T12:00:00Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -200,7 +206,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -208,7 +217,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-template</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -227,7 +239,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -235,7 +250,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * runtimeConfig.
+         * <p>The runtime configuration of the template.</p>
          */
         public Builder runtimeConfig(PublicTemplateRuntimeConfig runtimeConfig) {
             this.runtimeConfig = runtimeConfig;
@@ -243,7 +258,7 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The template status.</p>
          */
         public Builder status(PublicTemplateStatus status) {
             this.status = status;
@@ -251,7 +266,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88a4c762-b0ce-4661-9413-578b2309e60f</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -259,7 +277,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>codeclaw-localenv</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -267,7 +288,10 @@ public class GetTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * templateID.
+         * <p>The unique identifier of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpl-9f3a2b7c8d1e4f5a6b0c7d8e9f1a2b3c</p>
          */
         public Builder templateID(String templateID) {
             this.templateID = templateID;

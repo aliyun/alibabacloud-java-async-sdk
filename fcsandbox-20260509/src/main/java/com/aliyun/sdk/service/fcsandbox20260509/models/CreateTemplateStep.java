@@ -67,7 +67,7 @@ public class CreateTemplateStep extends TeaModel {
         } 
 
         /**
-         * args.
+         * <p>The list of step parameters.</p>
          */
         public Builder args(java.util.List<String> args) {
             this.args = args;
@@ -75,7 +75,10 @@ public class CreateTemplateStep extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The step type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUN</p>
          */
         public Builder type(String type) {
             this.type = type;

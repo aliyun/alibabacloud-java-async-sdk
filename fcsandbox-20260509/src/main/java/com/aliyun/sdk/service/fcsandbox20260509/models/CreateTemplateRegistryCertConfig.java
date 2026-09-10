@@ -54,7 +54,7 @@ public class CreateTemplateRegistryCertConfig extends TeaModel {
         } 
 
         /**
-         * insecure.
+         * <p>Specifies whether to skip certificate verification.</p>
          */
         public Builder insecure(Boolean insecure) {
             this.insecure = insecure;

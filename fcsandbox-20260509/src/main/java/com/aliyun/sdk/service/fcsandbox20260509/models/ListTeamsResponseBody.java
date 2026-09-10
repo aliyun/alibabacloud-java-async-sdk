@@ -132,7 +132,10 @@ public class ListTeamsResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -148,7 +154,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +165,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -175,7 +187,7 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * teams.
+         * <p>The list of teams.</p>
          */
         public Builder teams(java.util.List<E2BTeam> teams) {
             this.teams = teams;
@@ -183,7 +195,10 @@ public class ListTeamsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65</p>
          */
         public Builder total(Integer total) {
             this.total = total;

@@ -54,7 +54,7 @@ public class PublicTemplateRegistryConfig extends TeaModel {
         } 
 
         /**
-         * networkConfig.
+         * <p>The network configuration of the image repository.</p>
          */
         public Builder networkConfig(PublicTemplateRegistryNetworkConfig networkConfig) {
             this.networkConfig = networkConfig;

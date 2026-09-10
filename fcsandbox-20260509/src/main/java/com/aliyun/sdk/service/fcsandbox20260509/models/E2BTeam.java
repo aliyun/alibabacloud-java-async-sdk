@@ -171,7 +171,10 @@ public class E2BTeam extends TeaModel {
         } 
 
         /**
-         * allowUpdateTeamName.
+         * <p>Indicates whether the team name can be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder allowUpdateTeamName(Boolean allowUpdateTeamName) {
             this.allowUpdateTeamName = allowUpdateTeamName;
@@ -179,7 +182,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * createdTime.
+         * <p>The time when the team was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-23T11:26:25Z</p>
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -187,7 +193,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open team</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -211,7 +220,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -219,7 +231,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -227,7 +242,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -235,7 +253,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The name of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;
@@ -243,7 +264,10 @@ public class E2BTeam extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The UID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder userID(String userID) {
             this.userID = userID;

@@ -73,7 +73,10 @@ public class ListQuotaRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -82,7 +85,10 @@ public class ListQuotaRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token obtained from the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Trigger_fasdatalake_deductionfee</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

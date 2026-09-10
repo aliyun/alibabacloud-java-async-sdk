@@ -93,7 +93,10 @@ public class CreateTeamInput extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Development only</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -109,7 +112,10 @@ public class CreateTeamInput extends TeaModel {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
@@ -117,7 +123,10 @@ public class CreateTeamInput extends TeaModel {
         }
 
         /**
-         * teamName.
+         * <p>The team name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder teamName(String teamName) {
             this.teamName = teamName;

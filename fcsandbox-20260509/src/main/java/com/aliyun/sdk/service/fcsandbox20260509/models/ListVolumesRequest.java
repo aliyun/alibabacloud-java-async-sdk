@@ -143,7 +143,10 @@ public class ListVolumesRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -152,7 +155,10 @@ public class ListVolumesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qxGrXje86XMrYQ51aJMy</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -161,7 +167,10 @@ public class ListVolumesRequest extends Request {
         }
 
         /**
-         * resourceGroupID.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmwxqyrgwabcd</p>
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.putQueryParameter("resourceGroupID", resourceGroupID);
@@ -170,7 +179,16 @@ public class ListVolumesRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status of the volume. Valid values:</p>
+         * <ul>
+         * <li>CREATING</li>
+         * <li>AVAILABLE</li>
+         * <li>ERROR</li>
+         * <li>DELETING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATING</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -179,7 +197,10 @@ public class ListVolumesRequest extends Request {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70d1c834-0383-58d8-97ac-5336eb91abcd</p>
          */
         public Builder teamID(String teamID) {
             this.putQueryParameter("teamID", teamID);
@@ -188,7 +209,10 @@ public class ListVolumesRequest extends Request {
         }
 
         /**
-         * userID.
+         * <p>The UID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210000000</p>
          */
         public Builder userID(String userID) {
             this.putQueryParameter("userID", userID);
@@ -197,7 +221,10 @@ public class ListVolumesRequest extends Request {
         }
 
         /**
-         * volumeName.
+         * <p>The name of the volume. The name must be unique within a team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace</p>
          */
         public Builder volumeName(String volumeName) {
             this.putQueryParameter("volumeName", volumeName);

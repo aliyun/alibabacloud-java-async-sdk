@@ -80,7 +80,10 @@ public class PublicTemplateStatus extends TeaModel {
         } 
 
         /**
-         * finishedAt.
+         * <p>The time when the build is completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-28T12:00:00.000Z</p>
          */
         public Builder finishedAt(String finishedAt) {
             this.finishedAt = finishedAt;
@@ -88,7 +91,7 @@ public class PublicTemplateStatus extends TeaModel {
         }
 
         /**
-         * reason.
+         * <p>The reason for the build failure.</p>
          */
         public Builder reason(PublicTemplateStatusReason reason) {
             this.reason = reason;
@@ -96,7 +99,10 @@ public class PublicTemplateStatus extends TeaModel {
         }
 
         /**
-         * state.
+         * <p>The build status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ready</p>
          */
         public Builder state(String state) {
             this.state = state;
