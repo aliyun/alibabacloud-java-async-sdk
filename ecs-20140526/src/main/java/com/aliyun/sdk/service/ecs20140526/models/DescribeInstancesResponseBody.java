@@ -127,7 +127,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The query token returned in this call.</p>
+         * <p>The pagination token returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -149,7 +149,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page as specified in the request.</p>
+         * <p>The number of entries per page that was specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -200,11 +200,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableHighDensityMode")
         private Boolean enableHighDensityMode;
 
+        @com.aliyun.core.annotation.NameInMap("ManagedHostId")
+        private String managedHostId;
+
         @com.aliyun.core.annotation.NameInMap("NodeSerialNumber")
         private String nodeSerialNumber;
 
         private AdditionalInfo(Builder builder) {
             this.enableHighDensityMode = builder.enableHighDensityMode;
+            this.managedHostId = builder.managedHostId;
             this.nodeSerialNumber = builder.nodeSerialNumber;
         }
 
@@ -224,6 +228,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return managedHostId
+         */
+        public String getManagedHostId() {
+            return this.managedHostId;
+        }
+
+        /**
          * @return nodeSerialNumber
          */
         public String getNodeSerialNumber() {
@@ -232,6 +243,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enableHighDensityMode; 
+            private String managedHostId; 
             private String nodeSerialNumber; 
 
             private Builder() {
@@ -239,6 +251,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
             private Builder(AdditionalInfo model) {
                 this.enableHighDensityMode = model.enableHighDensityMode;
+                this.managedHostId = model.managedHostId;
                 this.nodeSerialNumber = model.nodeSerialNumber;
             } 
 
@@ -247,6 +260,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder enableHighDensityMode(Boolean enableHighDensityMode) {
                 this.enableHighDensityMode = enableHighDensityMode;
+                return this;
+            }
+
+            /**
+             * ManagedHostId.
+             */
+            public Builder managedHostId(String managedHostId) {
+                this.managedHostId = managedHostId;
                 return this;
             }
 

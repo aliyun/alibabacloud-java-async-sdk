@@ -571,7 +571,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * <p>The final price, which is the original price minus the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>3712.8</p>
@@ -702,7 +702,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * <p>The final price, which is the original price minus the discount.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

@@ -156,6 +156,10 @@ public class CreateInstanceRequest extends Request {
     private String keyPairName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagedHostId")
+    private String managedHostId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeControllerId")
     private String nodeControllerId;
 
@@ -305,6 +309,7 @@ public class CreateInstanceRequest extends Request {
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
         this.ioOptimized = builder.ioOptimized;
         this.keyPairName = builder.keyPairName;
+        this.managedHostId = builder.managedHostId;
         this.nodeControllerId = builder.nodeControllerId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -587,6 +592,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return managedHostId
+     */
+    public String getManagedHostId() {
+        return this.managedHostId;
+    }
+
+    /**
      * @return nodeControllerId
      */
     public String getNodeControllerId() {
@@ -817,6 +829,7 @@ public class CreateInstanceRequest extends Request {
         private Integer internetMaxBandwidthOut; 
         private String ioOptimized; 
         private String keyPairName; 
+        private String managedHostId; 
         private String nodeControllerId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -886,6 +899,7 @@ public class CreateInstanceRequest extends Request {
             this.internetMaxBandwidthOut = request.internetMaxBandwidthOut;
             this.ioOptimized = request.ioOptimized;
             this.keyPairName = request.keyPairName;
+            this.managedHostId = request.managedHostId;
             this.nodeControllerId = request.nodeControllerId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -955,9 +969,9 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>Specifies whether the instance on a dedicated host is associated with the dedicated host. Valid values:</p>
          * <ul>
-         * <li><p>default: The instance is not associated with the dedicated host. When an instance that has economical mode enabled is restarted after it is stopped, the instance is deployed to another dedicated host in the automatic deployment resource pool if the resources of the original dedicated host are insufficient.</p>
+         * <li><p>default: The instance is not associated with the dedicated host. When an instance that has economical mode enabled is restarted after it is stopped, the instance is deployed on another dedicated host in the automatic deployment resource pool if the resources of the original dedicated host are insufficient.</p>
          * </li>
-         * <li><p>host: The instance is associated with the dedicated host. When an instance that has economical mode enabled is restarted after it is stopped, the instance remains on the original dedicated host. If the resources of the original dedicated host are insufficient, the instance fails to restart.</p>
+         * <li><p>host: The instance is associated with the dedicated host. When an instance that has economical mode enabled is restarted after it is stopped, the instance is still deployed on the original dedicated host. If the resources of the original dedicated host are insufficient, the instance fails to restart.</p>
          * </li>
          * </ul>
          * <p>Default value: default.</p>
@@ -1027,7 +1041,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The ID of the cluster in which to create the instance.</p>
          * <blockquote>
-         * <p>This parameter will be deprecated soon. To ensure future compatibility, use other parameters instead.</p>
+         * <p>This parameter will be deprecated. To improve compatibility, use other parameters instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1042,8 +1056,8 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The performance mode of the burstable instance. Valid values:</p>
          * <ul>
-         * <li>Standard: the standard mode. For more information, see the performance constrained mode section in <a href="https://help.aliyun.com/document_detail/59977.html">What are burstable instances</a>.</li>
-         * <li>Unlimited: the unlimited mode. For more information, see the unlimited mode section in <a href="https://help.aliyun.com/document_detail/59977.html">What are burstable instances</a>.</li>
+         * <li>Standard: the standard mode. For more information, see the performance constrained mode section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * <li>Unlimited: the unlimited mode. For more information, see the unlimited mode section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1088,7 +1102,7 @@ public class CreateInstanceRequest extends Request {
          * <li>false (default): disables release protection.</li>
          * </ul>
          * <blockquote>
-         * <p>This attribute is applicable only to pay-as-you-go instances. It can only restrict manual release operations, not system-initiated release operations.</p>
+         * <p>This attribute is applicable only to pay-as-you-go instances. It can only prevent manual release, not system-initiated release.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1140,7 +1154,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run. The system checks whether the required parameters are specified, whether the request format is valid, whether the business restrictions are met, and whether the ECS inventory is sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+         * <li>true: performs only a dry run. The system checks whether the required parameters are specified, whether the request format is valid, whether the service limits are not exceeded, and whether the specified ECS resources are available. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
          * <li>false (default): performs a dry run and sends the request. If the check succeeds, the instance is created.</li>
          * </ul>
          * 
@@ -1156,8 +1170,8 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The hostname of the server.</p>
          * <ul>
-         * <li>A period (.) or a hyphen (-) cannot be used as the first or last character, or used consecutively.</li>
-         * <li>Windows instances: The hostname must be 2 to 15 characters in length and cannot contain periods (.). It cannot consist of only digits. The hostname can contain letters, digits, and hyphens (-).</li>
+         * <li>The hostname cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods or hyphens.</li>
+         * <li>Windows instances: The hostname must be 2 to 15 characters in length and cannot contain periods (.) or consist entirely of digits. It can contain letters, digits, and hyphens (-).</li>
          * <li>Instances that run other operating systems such as Linux: The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment separated by a period can contain letters, digits, and hyphens (-).</li>
          * </ul>
          * 
@@ -1279,7 +1293,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that your account supports credit payment. Otherwise, an <code>InvalidPayMethod</code> error is returned.</li>
+         * <li>PrePaid: subscription. If you set this parameter to PrePaid, make sure that your account supports credit payment or balance payment. Otherwise, an <code>InvalidPayMethod</code> error is returned.</li>
          * <li>PostPaid (default): pay-as-you-go.</li>
          * </ul>
          * 
@@ -1293,7 +1307,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters in the Unicode letter category (including English and Chinese characters) and digits. The name can contain colons (:), underscores (_), periods (.), or hyphens (-). If this parameter is not specified, the default value is the instance ID.</p>
+         * <p>The name of the instance. The name must be 2 to 128 characters in length and can contain letters, digits, and Unicode characters classified under the letter category (including Chinese characters). The name can also contain colons (:), underscores (_), periods (.), and hyphens (-). If this parameter is not specified, the default value is the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>k8s-node-[1,4]-alibabacloud</p>
@@ -1328,7 +1342,7 @@ public class CreateInstanceRequest extends Request {
          * <li>PayByTraffic (default): pay-by-traffic.</li>
          * </ul>
          * <blockquote>
-         * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are used as bandwidth upper limits instead of guaranteed service metrics. When resource contention occurs, the peak bandwidth may be limited. If your business requires guaranteed bandwidth, use the <strong>pay-by-bandwidth</strong> mode.</p>
+         * <p>In <strong>pay-by-traffic</strong> mode, the peak inbound and outbound bandwidths are both upper limits and are not guaranteed. When resource contention occurs, the peak bandwidth may be throttled. If your workloads require guaranteed bandwidth, use <strong>pay-by-bandwidth</strong> mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1388,7 +1402,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the key pair.</p>
+         * <p>The name of the SSH key pair.</p>
          * <blockquote>
          * <p>For Windows instances, this parameter is ignored. The default value is empty. Even if you specify this parameter, only the <code>Password</code> content is used.</p>
          * </blockquote>
@@ -1399,6 +1413,18 @@ public class CreateInstanceRequest extends Request {
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
             this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
+         * <p>The unique ID of the platform-managed host, such as mh-f2d3647ca21****.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mh-f2d3647ca21****</p>
+         */
+        public Builder managedHostId(String managedHostId) {
+            this.putQueryParameter("ManagedHostId", managedHostId);
+            this.managedHostId = managedHostId;
             return this;
         }
 
@@ -1440,7 +1466,7 @@ public class CreateInstanceRequest extends Request {
          * </code></pre>
          * <p>Note the following items:</p>
          * <ul>
-         * <li>For security reasons, we recommend that you use HTTPS to send requests if the Password parameter is specified.</li>
+         * <li>For security reasons, use HTTPS to send requests if the Password parameter is specified.</li>
          * <li>For Windows instances, the password cannot start with a forward slash (/).</li>
          * <li>For instances that run certain operating systems, passwords are not supported. Only key pairs are supported. Examples: Others Linux and Fedora CoreOS.</li>
          * </ul>
@@ -1455,7 +1481,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use the preset password of the image. When you use this parameter, the Password parameter must be empty. Make sure that the image you use has a preset password.</p>
+         * <p>Specifies whether to use the preset password of the image. If you use this parameter, leave Password empty and make sure that the image has a preset password.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1467,7 +1493,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription period of the resource. The unit is specified by <code>PeriodUnit</code>. This parameter is required and takes effect only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. If <code>DedicatedHostId</code> is specified, the value of this parameter cannot exceed the subscription period of the dedicated host. Valid values:</p>
+         * <p>The subscription period of the instance. The unit is specified by <code>PeriodUnit</code>. This parameter is required and takes effect only when <code>InstanceChargeType</code> is set to <code>PrePaid</code>. If <code>DedicatedHostId</code> is specified, the value of this parameter cannot exceed the subscription period of the dedicated host. Valid values:</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
          * <li>If PeriodUnit is set to Week, valid values of Period are 1, 2, 3, and 4.</li>
@@ -1575,8 +1601,8 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>Specifies whether to enable security hardening. Valid values:</p>
          * <ul>
-         * <li>Active: Enables security hardening. This value is applicable only to public images.</li>
-         * <li>Deactive: Disables security hardening. This value is applicable to all image types.</li>
+         * <li>Active: enables security hardening. This value is applicable only to public images.</li>
+         * <li>Deactive: disables security hardening. This value is applicable to all image types.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1603,7 +1629,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The protection period of the spot instance, in hours. Default value: 1. Valid values:</p>
          * <ul>
-         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
+         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
          * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain automatic release the instance.</li>
          * </ul>
          * <blockquote>
@@ -1626,7 +1652,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The interruption pattern of the spot instance. Valid values:</p>
          * <ul>
-         * <li><p>Terminate: The instance is directly released.</p>
+         * <li><p>Terminate: The instance is released.</p>
          * </li>
          * <li><p>Stop: The instance enters economical mode.</p>
          * <p>For more information about economical mode, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode for pay-as-you-go instances</a>.</p>
@@ -1685,7 +1711,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of partitions in the storage set. Valid values: greater than or equal to 2.</p>
+         * <p>The maximum number of partitions in the storage set. Valid values: 2 and greater.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1737,7 +1763,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Instance user data of the instance. Instance user data must be encoded in Base64. The raw data can be up to 32 KB in size.</p>
+         * <p>The instance user data. The data must be encoded in Base64. The raw data can be up to 32 KB in size.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -1749,9 +1775,9 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch. This parameter is required if you are creating a VPC-connected instance. You can invoke <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> to query active vSwitches.</p>
+         * <p>The ID of the vSwitch. This parameter is required if you are creating a VPC-type instance. You can invoke <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> to query active vSwitches.</p>
          * <blockquote>
-         * <p>If you specify <code>VSwitchId</code>, the specified <code>ZoneId</code> must be the same as the zone of the vSwitch. You can also leave <code>ZoneId</code> empty. The system then automatically selects the zone of the specified vSwitch.</p>
+         * <p>If you specify <code>VSwitchId</code>, the specified <code>ZoneId</code> must be in the same zone as the vSwitch. You can also leave <code>ZoneId</code> empty, and the system automatically selects the zone of the specified vSwitch.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1778,7 +1804,7 @@ public class CreateInstanceRequest extends Request {
         /**
          * <p>The ID of the zone in which to create the instance. For more information, call <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> to query the zone list.</p>
          * <blockquote>
-         * <p>If you specify <code>VSwitchId</code>, the specified <code>ZoneId</code> must be the same as the zone of the vSwitch. You can also leave <code>ZoneId</code> empty. The system then automatically selects the zone of the specified vSwitch.</p>
+         * <p>If you specify <code>VSwitchId</code>, the specified <code>ZoneId</code> must be in the same zone as the vSwitch. You can also leave <code>ZoneId</code> empty, and the system automatically selects the zone of the specified vSwitch.</p>
          * </blockquote>
          * <p>Default value: empty. The system automatically selects a zone.</p>
          * 
@@ -1921,14 +1947,14 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The private pool option for launching the instance. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool when you start an instance. Valid values:</p>
+             * <p>The private pool option for launching the instance. A private pool is generated after an elasticity assurance or capacity reservation takes effect. You can select a private pool when you start an instance. Valid values:</p>
              * <ul>
-             * <li>Open: open mode. The system automatically matches an open private pool. If no matching private pools are available, the public pool resources are used. You do not need to specify <code>PrivatePoolOptions.Id</code>.</li>
-             * <li>Target: specified mode. The instance is started by using the capacity of the specified private pool. If the specified private pool is unavailable, the instance fails to start. In this mode, you must specify the private pool ID. Set <code>PrivatePoolOptions.Id</code> to the ID of the private pool.</li>
-             * <li>None: no private pool is used. The instance does not use the capacity of a private pool.</li>
+             * <li>Open: open mode. The system automatically matches an open private pool. If no matching private pool is available, the public pool is used to launch the instance. You do not need to specify <code>PrivatePoolOptions.Id</code>.</li>
+             * <li>Target: specified mode. The instance is launched by using the capacity of the specified private pool. If the specified private pool is unavailable, the instance fails to be launched. In this mode, you must specify the private pool ID. Set <code>PrivatePoolOptions.Id</code> to the ID of the private pool.</li>
+             * <li>None: no private pool is used. The instance is not launched by using the capacity of a private pool.</li>
              * </ul>
              * <p>Default value: None.</p>
-             * <p>In the following scenarios, the private pool option for launching the instance can only be set to <code>None</code> or left empty:</p>
+             * <p>In the following scenarios, the private pool option can only be set to <code>None</code> or left empty:</p>
              * <ul>
              * <li>Creating a spot instance.</li>
              * <li>Creating an ECS instance on a dedicated host.</li>
@@ -2089,7 +2115,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters in the Unicode letter category (including English and Chinese characters and digits). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+             * <p>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, and Unicode characters classified under the letter category (including Chinese characters). The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
              * <p>Default value: empty.</p>
              * 
              * <strong>example:</strong>
@@ -2103,10 +2129,10 @@ public class CreateInstanceRequest extends Request {
             /**
              * <p>The performance level of the ESSD used as the system disk. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * <li>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1 (default): a single disk can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</li>
              * </ul>
              * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
@@ -2464,7 +2490,7 @@ public class CreateInstanceRequest extends Request {
              * <li>elastic_ephemeral_disk_standard: elastic ephemeral disk - standard.</li>
              * <li>elastic_ephemeral_disk_premium: elastic ephemeral disk - premium.</li>
              * </ul>
-             * <p>The default value for I/O optimized instances is cloud_efficiency. The default value for non-I/O optimized instances is cloud.</p>
+             * <p>Default value for I/O optimized instances: cloud_efficiency. Default value for non-I/O optimized instances: cloud.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -2475,10 +2501,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the data disk is released when the instance is released.</p>
+             * <p>Specifies whether to release data disk N when the instance is released.</p>
              * <ul>
-             * <li>true: The data disk is released when the instance is released.</li>
-             * <li>false: The data disk is not released when the instance is released.</li>
+             * <li>true: releases the data disk.</li>
+             * <li>false: does not release the data disk.</li>
              * </ul>
              * <p>Default value: true.</p>
              * 
@@ -2504,7 +2530,7 @@ public class CreateInstanceRequest extends Request {
             /**
              * <p>The mount point of the data disk.</p>
              * <blockquote>
-             * <p>This parameter is applicable only to full image (system image) scenarios. You can set this parameter to the mount point of the data disk in the full image and modify the corresponding <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the category and size of the data disk in the full image.</p>
+             * <p>This parameter is applicable only to full image (whole-machine image) scenarios. You can set this parameter to the mount point of the data disk in the full image and modify the corresponding <code>DataDisk.N.Size</code> and <code>DataDisk.N.Category</code> parameters to change the category and size of the data disk in the full image.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -2516,7 +2542,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters in the Unicode letter category (including English and Chinese characters and digits). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</p>
+             * <p>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, and Unicode characters classified under the letter category (including Chinese characters). The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>DataDiskName</p>
@@ -2540,11 +2566,11 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether data disk N is encrypted.</p>
+             * <p>Specifies whether to encrypt data disk N.</p>
              * <ul>
-             * <li><p>true: The data disk is encrypted.</p>
+             * <li><p>true: encrypts the data disk.</p>
              * </li>
-             * <li><p>false: The data disk is not encrypted.</p>
+             * <li><p>false: does not encrypt the data disk.</p>
              * </li>
              * </ul>
              * <p>Default value: false.</p>
@@ -2569,12 +2595,12 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the ESSD used as the Nth data disk. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
+             * <p>The performance level of the ESSD used as data disk N. The value of N must be the same as that in <code>DataDisk.N.Category=cloud_essd</code>. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * <li>PL0: a single disk can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1 (default): a single disk can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: a single disk can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: a single disk can deliver up to 1,000,000 random read/write IOPS.</li>
              * </ul>
              * <p>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
@@ -2587,7 +2613,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The size of the Nth data disk. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+             * <p>The size of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
              * <ul>
              * <li>cloud_efficiency: 20 to 32768.</li>
              * <li>cloud_ssd: 20 to 32768.</li>
@@ -2630,7 +2656,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as data disks when you create an ECS instance, set this parameter.</p>
+             * <p>The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as data disks when you create the ECS instance, specify this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>dbsc-j5e1sf2vaf5he8m2****</p>
