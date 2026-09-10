@@ -23,12 +23,18 @@ public class DeleteHttpApiRequest extends Request {
     private String httpApiId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private DeleteHttpApiRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
     }
 
@@ -53,6 +59,13 @@ public class DeleteHttpApiRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -61,6 +74,7 @@ public class DeleteHttpApiRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteHttpApiRequest, Builder> {
         private String httpApiId; 
+        private String clientToken; 
         private Boolean dryRun; 
 
         private Builder() {
@@ -70,6 +84,7 @@ public class DeleteHttpApiRequest extends Request {
         private Builder(DeleteHttpApiRequest request) {
             super(request);
             this.httpApiId = request.httpApiId;
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
         } 
 
@@ -87,7 +102,19 @@ public class DeleteHttpApiRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to an actual deletion are executed (including admission checks such as whether a published API cannot be deleted), but the API is not deleted, no associated configurations are cleaned up, and no side effects are produced. If this parameter is not specified or is set to false, the behavior is the same as the existing version.</p>
+         * <p>The idempotence token. If you call this operation multiple times for the same HTTP API by using the same clientToken value and the same delete request parameters, the result of the first successful call is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>delete-http-api-client-token-001</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to an actual deletion are executed (including admission checks such as whether a published API can be deleted), but the API is not deleted, no associated configurations are cleaned up, and no side effects are produced. If this parameter is not specified or is set to false, the behavior is the same as the existing version.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
