@@ -108,7 +108,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Maximum number of records to return.</p>
+         * <p>The maximum number of records to return.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -119,7 +119,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Token for the next query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxxxx</p>
@@ -130,7 +130,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of Prometheus instances.</p>
+         * <p>The list of Prometheus instances.</p>
          */
         public Builder prometheusInstances(java.util.List<PrometheusInstances> prometheusInstances) {
             this.prometheusInstances = prometheusInstances;
@@ -138,7 +138,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -149,7 +149,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of instances</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>66</p>
@@ -387,8 +387,12 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Access type:
-             * readWrite, readOnly, httpReadOnly</p>
+             * <p>The access type. Valid values:</p>
+             * <ul>
+             * <li>readWrite</li>
+             * <li>readOnly</li>
+             * <li>httpReadOnly</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>readWrite</p>
@@ -399,7 +403,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance creation time, using UTC+0 time, formatted as yyyy-MM-ddTHH:mmZ</p>
+             * <p>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-10T02:07:53Z</p>
@@ -410,7 +414,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance type.</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>remote-write</p>
@@ -421,10 +425,13 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>POSTPAY: Postpaid by metric.
-             * POSTPAY_GB: Postpaid by write volume.
-             * PREPAY: Prepaid.
-             * FREE: Free.</p>
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>POSTPAY: pay-as-you-go by metric volume.</li>
+             * <li>POSTPAY_GB: pay-as-you-go by write volume.</li>
+             * <li>PREPAY: subscription.</li>
+             * <li>FREE: free.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>POSTPAY_GB</p>
@@ -435,7 +442,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Product to which the prom instance belongs</p>
+             * <p>The product to which the Prometheus instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>arms</p>
@@ -446,7 +453,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rw-63549e054ff596a4149927961dff</p>
@@ -457,7 +464,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance name.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-prom-name</p>
@@ -468,7 +475,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-nanjing</p>
@@ -479,7 +486,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource group ID.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aek2bhocin5e2na</p>
@@ -490,7 +497,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource type.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>Prometheus</p>
@@ -501,7 +508,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backend data storage status</p>
+             * <p>The backend data storage status.</p>
              * 
              * <strong>example:</strong>
              * <p>Pending2Running</p>
@@ -512,7 +519,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Supported authentication types.</p>
+             * <p>The supported authentication types.</p>
              */
             public Builder supportAuthTypes(java.util.List<String> supportAuthTypes) {
                 this.supportAuthTypes = supportAuthTypes;
@@ -520,7 +527,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>17073812345</p>
@@ -531,7 +538,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Version</p>
+             * <p>The version.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -544,7 +551,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace to which the Prometheus instance belongs</p>
+             * <p>The workspace to which the Prometheus instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>default-cms-115214006-cn-hangzhou</p>

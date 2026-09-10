@@ -93,7 +93,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Total list of returned data</p>
+         * <p>The list of returned data.</p>
          */
         public Builder data(java.util.List<java.util.List<String>> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of request headers</p>
+         * <p>The list of request headers.</p>
          */
         public Builder header(java.util.List<String> header) {
             this.header = header;
@@ -109,7 +109,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -120,7 +120,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Result status</p>
+         * <p>The result status.</p>
          */
         public Builder responseStatus(ResponseStatus responseStatus) {
             this.responseStatus = responseStatus;
@@ -212,7 +212,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Status code</p>
+             * <p>The status code.</p>
              * 
              * <strong>example:</strong>
              * <p>Success,ExecuteTimeout,UModelNotExist</p>
@@ -223,7 +223,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status level</p>
+             * <p>The status level.</p>
              * 
              * <strong>example:</strong>
              * <p>Info,Warn,Error</p>
@@ -234,7 +234,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Calculation execution information</p>
+             * <p>The execution information.</p>
              * 
              * <strong>example:</strong>
              * <p>Query execution timeout after 30 seconds</p>
@@ -245,7 +245,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Suggestions when an error occurs during execution</p>
+             * <p>The suggestion provided when an execution fault occurs.</p>
              * 
              * <strong>example:</strong>
              * <p>Try to reduce the query scope or increase timeout limit, then retry</p>
@@ -354,7 +354,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Information during the execution process</p>
+             * <p>Information about the execution procedure.</p>
              * 
              * <strong>example:</strong>
              * <p>{}</p>
@@ -365,7 +365,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status level</p>
+             * <p>The status level.</p>
              * 
              * <strong>example:</strong>
              * <p>Info,Warn,Error</p>
@@ -376,7 +376,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Execution result</p>
+             * <p>The execution result.</p>
              * 
              * <strong>example:</strong>
              * <p>Success,PartialSuccess,Error</p>
@@ -387,7 +387,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Retry policy</p>
+             * <p>The retry policy.</p>
              * 
              * <strong>example:</strong>
              * <p>None,Once,Continuous</p>
@@ -398,7 +398,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detailed status information list</p>
+             * <p>A list of detailed status information.</p>
              */
             public Builder statusItem(java.util.List<StatusItem> statusItem) {
                 this.statusItem = statusItem;

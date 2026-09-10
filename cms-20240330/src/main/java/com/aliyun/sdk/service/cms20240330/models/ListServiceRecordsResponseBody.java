@@ -106,7 +106,10 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * records.
+         * <p>The list of operation records.</p>
          */
         public Builder records(java.util.List<Records> records) {
             this.records = records;
@@ -141,7 +147,10 @@ public class ListServiceRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -246,7 +255,16 @@ public class ListServiceRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * recordContent.
+             * <p>The entry content in JSON string format. The format varies depending on the recordType.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;project&quot;: &quot;proj-xtrace-16c988dcfe21fcb73c5e6f234927d998-cn-hangzhou&quot;,
+             *   &quot;storeName&quot;: &quot;app-biz-log&quot;,
+             *   &quot;regionId&quot;: &quot;cn-hangzhou&quot;,
+             *   &quot;bindType&quot;: &quot;logstore&quot;,
+             *   &quot;traceIdRelateField&quot;: &quot;&quot;
+             * }</p>
              */
             public Builder recordContent(String recordContent) {
                 this.recordContent = recordContent;
@@ -254,7 +272,11 @@ public class ListServiceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * recordType.
+             * <p>The type of the linked entry. Currently supported:
+             * logCorrelation, which indicates application log association.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logCorrelation</p>
              */
             public Builder recordType(String recordType) {
                 this.recordType = recordType;
@@ -262,7 +284,10 @@ public class ListServiceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The unique identifier of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gaddp9ap8q@f8ca37734da3eda787dbb</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -270,7 +295,10 @@ public class ListServiceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * serviceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentrun-ai-customer-sales-test-qa</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -278,7 +306,10 @@ public class ListServiceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-test</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

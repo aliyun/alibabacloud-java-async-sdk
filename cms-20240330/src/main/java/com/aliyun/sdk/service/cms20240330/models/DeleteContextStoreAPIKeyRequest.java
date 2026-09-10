@@ -87,7 +87,10 @@ public class DeleteContextStoreAPIKeyRequest extends Request {
         } 
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putPathParameter("workspace", workspace);
@@ -96,7 +99,10 @@ public class DeleteContextStoreAPIKeyRequest extends Request {
         }
 
         /**
-         * contextStoreName.
+         * <p>The context store name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.putPathParameter("contextStoreName", contextStoreName);
@@ -105,7 +111,10 @@ public class DeleteContextStoreAPIKeyRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The API key\&quot;s display name, which identifies its purpose.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Production Service Key</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

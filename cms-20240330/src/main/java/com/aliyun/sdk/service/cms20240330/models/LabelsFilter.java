@@ -67,7 +67,7 @@ public class LabelsFilter extends TeaModel {
         } 
 
         /**
-         * allOf.
+         * <p>An array of <code>LabelMatcher</code> requirements. An object is selected only if it satisfies all of the requirements in this list (a logical AND). If provided, the list cannot be empty.</p>
          */
         public Builder allOf(java.util.List<LabelMatcher> allOf) {
             this.allOf = allOf;
@@ -75,7 +75,7 @@ public class LabelsFilter extends TeaModel {
         }
 
         /**
-         * anyOf.
+         * <p>An array of <code>LabelMatcher</code> requirements. An object is selected if it satisfies at least one of the requirements in this list (a logical OR). If provided, the list cannot be empty.</p>
          */
         public Builder anyOf(java.util.List<LabelMatcher> anyOf) {
             this.anyOf = anyOf;

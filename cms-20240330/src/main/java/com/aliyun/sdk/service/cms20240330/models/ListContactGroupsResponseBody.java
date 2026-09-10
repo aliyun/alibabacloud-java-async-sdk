@@ -106,7 +106,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * contactGroups.
+         * <p>The contact groups.</p>
          */
         public Builder contactGroups(java.util.List<ContactGroups> contactGroups) {
             this.contactGroups = contactGroups;
@@ -114,7 +114,10 @@ public class ListContactGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListContactGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -141,7 +147,10 @@ public class ListContactGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -233,7 +242,10 @@ public class ListContactGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * contactGroupId.
+             * <p>The unique identifier of the contact group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder contactGroupId(String contactGroupId) {
                 this.contactGroupId = contactGroupId;
@@ -241,7 +253,7 @@ public class ListContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * contactIds.
+             * <p>The contact IDs.</p>
              */
             public Builder contactIds(java.util.List<String> contactIds) {
                 this.contactIds = contactIds;
@@ -249,7 +261,10 @@ public class ListContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The contact name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +272,10 @@ public class ListContactGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-cms-1641973317055299-cn-hangzhou</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

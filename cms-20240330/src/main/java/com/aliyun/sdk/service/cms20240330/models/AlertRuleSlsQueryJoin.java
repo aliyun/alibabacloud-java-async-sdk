@@ -68,7 +68,7 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
         } 
 
         /**
-         * conditions.
+         * <p>The list of join conditions.</p>
          */
         public Builder conditions(java.util.List<Conditions> conditions) {
             this.conditions = conditions;
@@ -76,18 +76,32 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
         }
 
         /**
-         * <p>集合操作类型。
-         *   ● CrossJoin： 笛卡尔积
-         *   ● FullJoin：全联
-         *   ● InnerJoin：内联
-         *   ● LeftExclude： 左斥
-         *   ● RightExclude：右斥
-         *   ● LeftJoin：左联
-         *   ● RightJoin：右联
-         *   ● NoJoin：不合并
-         *   ● Concat： 拼接
-         *   <a href="https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement">https://help.aliyun.com/zh/sls/user-guide/set-query-statistics-statement</a></p>
+         * <p>The type of the collection operation.</p>
+         * <ul>
+         * <li><p>CrossJoin: The Cartesian product.</p>
+         * </li>
+         * <li><p>FullJoin: The full join.</p>
+         * </li>
+         * <li><p>InnerJoin: The inner join.</p>
+         * </li>
+         * <li><p>LeftExclude: The left exclusion.</p>
+         * </li>
+         * <li><p>RightExclude: The right exclusion.</p>
+         * </li>
+         * <li><p>LeftJoin: The left join.</p>
+         * </li>
+         * <li><p>RightJoin: The right join.</p>
+         * </li>
+         * <li><p>NoJoin: No merge operation is performed.</p>
+         * </li>
+         * <li><p>Concat: Concatenation.</p>
+         * </li>
+         * </ul>
+         * <p>For more information, see https\://www\.alibabacloud.com/help/en/sls/user-guide/set-operations.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CrossJoin</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -166,7 +180,10 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
             } 
 
             /**
-             * <p>条件的左操作参数，格式为$<query_idx>.&lt;结果集字段名&gt;</p>
+             * <p>The left operand of the condition. The format is $\<query_idx>.\<field_name_in_result_set>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$0.<strong>topic</strong></p>
              */
             public Builder firstField(String firstField) {
                 this.firstField = firstField;
@@ -174,7 +191,10 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
             }
 
             /**
-             * <p>&lt;, &gt;, ==, !=, &lt;=, &gt;=</p>
+             * <p>The comparison operator. Valid values are &lt;, &gt;, ==, !=, &lt;=, and &gt;=.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>==</p>
              */
             public Builder oper(String oper) {
                 this.oper = oper;
@@ -182,7 +202,10 @@ public class AlertRuleSlsQueryJoin extends TeaModel {
             }
 
             /**
-             * <p>条件的右操作参数，格式为$<query_idx>.&lt;结果集字段名&gt;</p>
+             * <p>The right operand of the condition. The format is $\<query_idx>.\<field_name_in_result_set>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$0.<strong>topic</strong></p>
              */
             public Builder secondField(String secondField) {
                 this.secondField = secondField;

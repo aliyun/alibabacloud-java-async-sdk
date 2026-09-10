@@ -80,7 +80,7 @@ public class PushingSetting extends TeaModel {
         } 
 
         /**
-         * alertActionIds.
+         * <p>The list of alert action IDs.</p>
          */
         public Builder alertActionIds(java.util.List<String> alertActionIds) {
             this.alertActionIds = alertActionIds;
@@ -88,7 +88,7 @@ public class PushingSetting extends TeaModel {
         }
 
         /**
-         * restoreActionIds.
+         * <p>The list of restore action IDs.</p>
          */
         public Builder restoreActionIds(java.util.List<String> restoreActionIds) {
             this.restoreActionIds = restoreActionIds;
@@ -96,7 +96,10 @@ public class PushingSetting extends TeaModel {
         }
 
         /**
-         * templateUuid.
+         * <p>The UUID of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;template-abc123&quot;</p>
          */
         public Builder templateUuid(String templateUuid) {
             this.templateUuid = templateUuid;

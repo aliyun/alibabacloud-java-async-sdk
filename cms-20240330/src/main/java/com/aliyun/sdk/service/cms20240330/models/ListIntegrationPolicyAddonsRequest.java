@@ -60,6 +60,7 @@ public class ListIntegrationPolicyAddonsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

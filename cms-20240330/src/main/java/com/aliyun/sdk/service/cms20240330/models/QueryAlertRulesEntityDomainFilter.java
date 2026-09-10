@@ -54,7 +54,10 @@ public class QueryAlertRulesEntityDomainFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_monitor</p>
          */
         public Builder eq(String eq) {
             this.eq = eq;

@@ -106,7 +106,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         } 
 
         /**
-         * datasets.
+         * <p>A list of dataset objects.</p>
          */
         public Builder datasets(java.util.List<Datasets> datasets) {
             this.datasets = datasets;
@@ -114,7 +114,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>A token to retrieve the next page of results. This element is returned only when the result set is truncated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d9a48d977f45aa6fcf6981ed13b885b3fab0b124c12dcbbe70edce5d81ba****************</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of datasets that match the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -256,6 +268,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The time the dataset was created, as a UNIX timestamp.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -267,7 +280,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * datasetName.
+             * <p>The name of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_dataset</p>
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -275,7 +291,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test dataset</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -283,7 +302,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The ID of the region where the dataset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -291,6 +313,7 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time the dataset was last updated, as a UNIX timestamp.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -302,7 +325,10 @@ public class ListDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The ID of the workspace that contains the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-test</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

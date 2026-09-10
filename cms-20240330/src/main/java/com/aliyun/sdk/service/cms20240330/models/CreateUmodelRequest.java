@@ -74,7 +74,7 @@ public class CreateUmodelRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class CreateUmodelRequest extends Request {
         }
 
         /**
-         * <p>Umodel description</p>
+         * <p>The description of the Umodel.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace test</p>

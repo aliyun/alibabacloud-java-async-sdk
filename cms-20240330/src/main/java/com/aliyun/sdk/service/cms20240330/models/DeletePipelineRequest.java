@@ -73,7 +73,10 @@ public class DeletePipelineRequest extends Request {
         } 
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putPathParameter("workspace", workspace);
@@ -82,7 +85,10 @@ public class DeletePipelineRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the pipeline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline-name-1</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putPathParameter("pipelineName", pipelineName);

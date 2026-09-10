@@ -93,7 +93,7 @@ public class EffectTimeRange extends TeaModel {
         } 
 
         /**
-         * dayInWeek.
+         * <p>The values 0 to 6 indicate Sunday to Saturday.</p>
          */
         public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
             this.dayInWeek = dayInWeek;
@@ -101,7 +101,10 @@ public class EffectTimeRange extends TeaModel {
         }
 
         /**
-         * endTimeInMinute.
+         * <p>The end time in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         public Builder endTimeInMinute(Integer endTimeInMinute) {
             this.endTimeInMinute = endTimeInMinute;
@@ -109,7 +112,10 @@ public class EffectTimeRange extends TeaModel {
         }
 
         /**
-         * startTimeInMinute.
+         * <p>The start time in minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
          */
         public Builder startTimeInMinute(Integer startTimeInMinute) {
             this.startTimeInMinute = startTimeInMinute;
@@ -117,7 +123,10 @@ public class EffectTimeRange extends TeaModel {
         }
 
         /**
-         * timeZone.
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Asia/Shanghai&quot;</p>
          */
         public Builder timeZone(String timeZone) {
             this.timeZone = timeZone;

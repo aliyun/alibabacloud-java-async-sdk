@@ -106,7 +106,10 @@ public class PrometheusInstanceStoreConfig extends TeaModel {
         } 
 
         /**
-         * parallelCountPerHost.
+         * <p>The concurrency per host. If this parameter is not specified, the default value is 2. Valid values: 1 to 8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder parallelCountPerHost(Integer parallelCountPerHost) {
             this.parallelCountPerHost = parallelCountPerHost;
@@ -114,7 +117,7 @@ public class PrometheusInstanceStoreConfig extends TeaModel {
         }
 
         /**
-         * parallelEnable.
+         * <p>Specifies whether to enable parallel query. If this parameter is not specified, the value is considered as false.</p>
          */
         public Builder parallelEnable(Boolean parallelEnable) {
             this.parallelEnable = parallelEnable;
@@ -122,7 +125,15 @@ public class PrometheusInstanceStoreConfig extends TeaModel {
         }
 
         /**
-         * parallelMode.
+         * <p>The parallel query mode. Valid values:</p>
+         * <ul>
+         * <li>auto</li>
+         * <li>static</li>
+         * </ul>
+         * <p>If this parameter is not specified, the default value is auto.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>static</p>
          */
         public Builder parallelMode(String parallelMode) {
             this.parallelMode = parallelMode;
@@ -130,7 +141,7 @@ public class PrometheusInstanceStoreConfig extends TeaModel {
         }
 
         /**
-         * queryCacheEnable.
+         * <p>Specifies whether to enable query cache. If this parameter is not specified, the value is considered as false.</p>
          */
         public Builder queryCacheEnable(Boolean queryCacheEnable) {
             this.queryCacheEnable = queryCacheEnable;
@@ -138,7 +149,10 @@ public class PrometheusInstanceStoreConfig extends TeaModel {
         }
 
         /**
-         * totalParallelCount.
+         * <p>The global concurrency. If this parameter is not specified, the default value is 8. Valid values: 2 to 64.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalParallelCount(Integer totalParallelCount) {
             this.totalParallelCount = totalParallelCount;

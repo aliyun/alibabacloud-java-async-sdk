@@ -138,7 +138,7 @@ public class ListContactGroupsRequest extends Request {
         }
 
         /**
-         * contactGroupIds.
+         * <p>The contact group IDs.</p>
          */
         public Builder contactGroupIds(java.util.List<String> contactGroupIds) {
             String contactGroupIdsShrink = shrink(contactGroupIds, "contactGroupIds", "json");
@@ -148,7 +148,10 @@ public class ListContactGroupsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -157,7 +160,10 @@ public class ListContactGroupsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -166,7 +172,10 @@ public class ListContactGroupsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -175,7 +184,10 @@ public class ListContactGroupsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-xxxxxx-cn-beijing</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

@@ -302,7 +302,7 @@ public class CreateAggTaskGroupRequest extends Request {
         } 
 
         /**
-         * <p>The source Prometheus instance ID of the aggregation task group.</p>
+         * <p>Source Prometheus instance ID of the aggregation task group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +316,7 @@ public class CreateAggTaskGroupRequest extends Request {
 
         /**
          * <p>Aggregation task group configuration.
-         * Currently, only the “RecordingRuleYaml” format is supported, which must comply with the format requirements of open-source Prometheus RecordingRules.</p>
+         * Currently only the &quot;RecordingRuleYaml&quot; format is supported, which must conform to the RecordingRule format requirements of open-source Prometheus.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -326,7 +326,8 @@ public class CreateAggTaskGroupRequest extends Request {
          * interval: &quot;60s&quot;
          * rules:<ul>
          * <li>record: &quot;node_namespace_pod:kube_pod_info:&quot;
-         * expr: &quot;max(label_replace(kube_pod_info{job=&quot;kubernetes-pods-kube-state-metrics&quot;<br>  }, &quot;pod&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (node, namespace, pod, cluster)&quot;</li>
+         * expr: &quot;max(label_replace(kube_pod_info{job=\&quot;kubernetes-pods-kube-state-metrics\&quot;\
+         *   }, \&quot;pod\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (node, namespace, pod, cluster)&quot;</li>
          * </ul>
          * </li>
          * </ul>
@@ -338,7 +339,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Aggregation task group configuration type, default is “RecordingRuleYaml” (open-source Prometheus RecordingRule format).</p>
+         * <p>Aggregation task group configuration type. Default: &quot;RecordingRuleYaml&quot; (open-source Prometheus RecordingRule format).</p>
          * 
          * <strong>example:</strong>
          * <p>RecordingRuleYaml</p>
@@ -363,7 +364,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>When the scheduling mode is selected as “Cron”, this is the specific scheduling expression. For example, “0/1 * * * *” means starting from 0 minutes and scheduling every 1 minute.</p>
+         * <p>The specific scheduling expression when the scheduling mode is set to &quot;Cron&quot;. For example, &quot;0/1 * * * *&quot; means scheduling every 1 minute starting from minute 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0/1 * * * *</p>
@@ -375,7 +376,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Fixed delay time for scheduling, in seconds, default is 30.</p>
+         * <p>Fixed delay time for scheduling. Unit: seconds. Default: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -387,7 +388,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Description of the aggregation task group.</p>
+         * <p>Aggregation task group description.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -399,7 +400,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>The second-level timestamp corresponding to the start time of the schedule.</p>
+         * <p>Second-level timestamp corresponding to the scheduling start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1724996015</p>
@@ -411,7 +412,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Maximum number of retries for executing the aggregation task, default is 20.</p>
+         * <p>Maximum number of retries for executing aggregation tasks. Default: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -423,7 +424,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Maximum retry time for executing the aggregation task, in seconds, default is 600.</p>
+         * <p>Maximum retry duration for executing aggregation tasks. Unit: seconds. Default: 600.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -435,10 +436,10 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Pre-check configuration, no configuration by default. The input string needs to be correctly parsed as JSON.</p>
+         * <p>Pre-check configuration. Not configured by default. The input string must be valid JSON.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=&quot;_arms/kubelet/cadvisor&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</p>
+         * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=\&quot;_arms/kubelet/cadvisor\&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</p>
          */
         public Builder precheckString(String precheckString) {
             this.putBodyParameter("precheckString", precheckString);
@@ -447,7 +448,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Scheduling mode, either “Cron” or “FixedRate”, default is “FixedRate”.</p>
+         * <p>Scheduling mode. &quot;Cron&quot; or &quot;FixedRate&quot;. Default: &quot;FixedRate&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>FixedRate</p>
@@ -459,7 +460,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Scheduling time expression, recommended “@s” or “@m”, indicating the alignment granularity of the scheduling time window, default is “@m”.</p>
+         * <p>Scheduling time expression. &quot;@s&quot; or &quot;@m&quot; is recommended, indicating the granularity of scheduling time window alignment. Default: &quot;@m&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>@m</p>
@@ -471,7 +472,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Status of the aggregation task group, either “Running” or “Stopped”. Default is Running.</p>
+         * <p>Aggregation task group status. &quot;Running&quot; or &quot;Stopped&quot;. Default: Running.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -492,7 +493,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>The target Prometheus instance ID of the aggregation task group.</p>
+         * <p>Target Prometheus instance ID of the aggregation task group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -505,7 +506,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>The second-level timestamp corresponding to the end time of the schedule, 0 indicates that the scheduling does not stop.</p>
+         * <p>Second-level timestamp corresponding to the scheduling end time. 0 means scheduling will not stop.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -517,7 +518,7 @@ public class CreateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Whether to overwrite and update if a resource with the same name exists when creating an aggregation task group.</p>
+         * <p>Whether to override and update when a resource with the same name exists during aggregation task group creation.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

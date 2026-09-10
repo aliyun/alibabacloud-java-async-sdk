@@ -75,7 +75,7 @@ public class GetServiceObservabilityRequest extends Request {
         } 
 
         /**
-         * <p>CMS2.0 Workspace</p>
+         * <p>The Cloud Monitor 2.0 workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetServiceObservabilityRequest extends Request {
         }
 
         /**
-         * <p>Application Observability Type</p>
+         * <p>The application observability type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

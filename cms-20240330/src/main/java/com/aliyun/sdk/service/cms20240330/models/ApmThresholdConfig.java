@@ -94,7 +94,10 @@ public class ApmThresholdConfig extends TeaModel {
         } 
 
         /**
-         * max.
+         * <p>The upper bound of the range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder max(Double max) {
             this.max = max;
@@ -102,7 +105,10 @@ public class ApmThresholdConfig extends TeaModel {
         }
 
         /**
-         * min.
+         * <p>The lower bound of the range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder min(Double min) {
             this.min = min;
@@ -110,7 +116,11 @@ public class ApmThresholdConfig extends TeaModel {
         }
 
         /**
+         * <p>The warning level.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -118,7 +128,10 @@ public class ApmThresholdConfig extends TeaModel {
         }
 
         /**
-         * threshold.
+         * <p>The threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder threshold(Float threshold) {
             this.threshold = threshold;

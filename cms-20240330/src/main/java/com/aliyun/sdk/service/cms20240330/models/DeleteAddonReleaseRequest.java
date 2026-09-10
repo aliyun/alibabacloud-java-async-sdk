@@ -28,6 +28,7 @@ public class DeleteAddonReleaseRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("force")
+    @Deprecated
     private Boolean force;
 
     @com.aliyun.core.annotation.Query
@@ -102,7 +103,7 @@ public class DeleteAddonReleaseRequest extends Request {
         } 
 
         /**
-         * <p>Environment ID.</p>
+         * <p>The environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class DeleteAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Addon name. When AddonName is provided, it will ignore the ReleaseName parameter and batch uninstall all AddonReleases belonging to the same Addon.</p>
+         * <p>The addon name. If AddonName is specified, the ReleaseName parameter is ignored and all AddonRelease instances that belong to the same addon are uninstalled in a batch.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-gpu</p>
@@ -127,7 +128,7 @@ public class DeleteAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Whether to force deletion, default is false.</p>
+         * <p>Specifies whether to force delete the addon release. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

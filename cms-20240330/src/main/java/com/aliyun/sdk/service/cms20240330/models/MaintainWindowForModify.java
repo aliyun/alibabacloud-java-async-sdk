@@ -133,7 +133,10 @@ public class MaintainWindowForModify extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -141,7 +144,7 @@ public class MaintainWindowForModify extends TeaModel {
         }
 
         /**
-         * effectTimeRange.
+         * <p>The effective time range.</p>
          */
         public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
             this.effectTimeRange = effectTimeRange;
@@ -149,7 +152,15 @@ public class MaintainWindowForModify extends TeaModel {
         }
 
         /**
-         * effective.
+         * <p>The Crontab expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li><ul>
+         * <li>14-18 ? * *</li>
+         * </ul>
+         * </li>
+         * </ul>
          */
         public Builder effective(String effective) {
             this.effective = effective;
@@ -157,7 +168,10 @@ public class MaintainWindowForModify extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>The time when the policy stops taking effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-05 09:30:40</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -165,7 +179,7 @@ public class MaintainWindowForModify extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter conditions.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -173,7 +187,11 @@ public class MaintainWindowForModify extends TeaModel {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test strategy</p>
          */
         public Builder maintainWindowName(String maintainWindowName) {
             this.maintainWindowName = maintainWindowName;
@@ -181,7 +199,10 @@ public class MaintainWindowForModify extends TeaModel {
         }
 
         /**
-         * startTime.
+         * <p>The time when the policy starts to take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-11 07:55:00</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -275,7 +296,7 @@ public class MaintainWindowForModify extends TeaModel {
             } 
 
             /**
-             * dayInWeek.
+             * <p>The days of the week when the policy is effective (Monday to Sunday).</p>
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
@@ -283,7 +304,10 @@ public class MaintainWindowForModify extends TeaModel {
             }
 
             /**
-             * endTimeInMinute.
+             * <p>The end time in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder endTimeInMinute(Integer endTimeInMinute) {
                 this.endTimeInMinute = endTimeInMinute;
@@ -291,7 +315,10 @@ public class MaintainWindowForModify extends TeaModel {
             }
 
             /**
-             * startTimeInMinute.
+             * <p>The start time in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder startTimeInMinute(Integer startTimeInMinute) {
                 this.startTimeInMinute = startTimeInMinute;
@@ -299,7 +326,10 @@ public class MaintainWindowForModify extends TeaModel {
             }
 
             /**
-             * timeZone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>+08:00</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

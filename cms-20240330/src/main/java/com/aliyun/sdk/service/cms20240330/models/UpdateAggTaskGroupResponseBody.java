@@ -119,7 +119,7 @@ public class UpdateAggTaskGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Summary of the aggregation task group configuration.</p>
+         * <p>The summary of the aggregation task group configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>a54136014dc386a92c83a6ef1e97ff22</p>
@@ -130,7 +130,7 @@ public class UpdateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Aggregation task group ID</p>
+         * <p>The ID of the aggregation task group.</p>
          * 
          * <strong>example:</strong>
          * <p>aggTaskGroup-5fb2c3ade63a4709bcb059d13493b7b8</p>
@@ -141,7 +141,7 @@ public class UpdateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Aggregation task group name</p>
+         * <p>The name of the aggregation task group.</p>
          * 
          * <strong>example:</strong>
          * <p>pipeline-aggtask-group</p>
@@ -152,7 +152,7 @@ public class UpdateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -163,7 +163,7 @@ public class UpdateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Source Prometheus instance ID of the aggregation task group</p>
+         * <p>The ID of the source Prometheus instance for the aggregation task group.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-083e17834e279f8c627fe91a2d72</p>
@@ -174,7 +174,7 @@ public class UpdateAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current status of the aggregation task group</p>
+         * <p>The current status of the aggregation task group.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

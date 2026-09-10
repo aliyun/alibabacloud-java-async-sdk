@@ -90,6 +90,7 @@ public class DeleteMemoryRequest extends Request {
         } 
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteMemoryRequest extends Request {
         }
 
         /**
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteMemoryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>An array of log entries. Each object in the array represents a log entry.</p>
          */
         public Builder data(java.util.List<java.util.Map<String, String>> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         }
 
         /**
-         * meta.
+         * <p>Metadata about the query execution.</p>
          */
         public Builder meta(Meta meta) {
             this.meta = meta;
@@ -96,7 +96,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3B311FD9-A60B-55E0-A896-A0C73*********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -188,7 +191,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
             } 
 
             /**
-             * affectedRows.
+             * <p>The number of scanned or processed log entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder affectedRows(Integer affectedRows) {
                 this.affectedRows = affectedRows;
@@ -196,7 +202,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
             }
 
             /**
-             * count.
+             * <p>The number of log entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -204,7 +213,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
             }
 
             /**
-             * elapsedMillisecond.
+             * <p>The query execution time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231243</p>
              */
             public Builder elapsedMillisecond(Long elapsedMillisecond) {
                 this.elapsedMillisecond = elapsedMillisecond;
@@ -212,7 +224,10 @@ public class ExecuteQueryResponseBody extends TeaModel {
             }
 
             /**
-             * progress.
+             * <p>The query completion status. A value of <code>Complete</code> indicates that the query has finished.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Complete</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;

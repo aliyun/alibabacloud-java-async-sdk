@@ -172,7 +172,7 @@ public class NotifyConfigUnified extends TeaModel {
         } 
 
         /**
-         * activeDays.
+         * <p>The days of the week on which notifications are sent, 1-7.</p>
          */
         public Builder activeDays(java.util.List<Integer> activeDays) {
             this.activeDays = activeDays;
@@ -180,7 +180,10 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * activeEndTime.
+         * <p>The daily notification effective end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20:00</p>
          */
         public Builder activeEndTime(String activeEndTime) {
             this.activeEndTime = activeEndTime;
@@ -188,7 +191,10 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * activeStartTime.
+         * <p>The daily notification effective start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:00</p>
          */
         public Builder activeStartTime(String activeStartTime) {
             this.activeStartTime = activeStartTime;
@@ -196,7 +202,7 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * channels.
+         * <p>The list of notification channels.</p>
          */
         public Builder channels(java.util.List<DirectNotifyChannel> channels) {
             this.channels = channels;
@@ -204,7 +210,7 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * notifyStrategies.
+         * <p>The list of notification policy IDs (type=NOTIFY_POLICY, currently a maximum of 1 is supported. Mutually exclusive with the DIRECT_NOTIFY fields channels/silenceTimeSecs/activeDays/activeStartTime/activeEndTime/utcOffset).</p>
          */
         public Builder notifyStrategies(java.util.List<String> notifyStrategies) {
             this.notifyStrategies = notifyStrategies;
@@ -212,7 +218,10 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * sendRecoverNotification.
+         * <p>Specifies whether to send recovery notifications (type=DIRECT_NOTIFY). Default value: true. Each severity level in severityChannels can independently override this setting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sendRecoverNotification(Boolean sendRecoverNotification) {
             this.sendRecoverNotification = sendRecoverNotification;
@@ -220,7 +229,7 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * severityChannels.
+         * <p>The Notification Recipients and channels configured by severity level (type=DIRECT_NOTIFY, new mode, mutually exclusive with channels). The key is the severity level: CRITICAL/ERROR/WARNING/INFO.</p>
          */
         public Builder severityChannels(java.util.Map<String, SeverityNotifyConfig> severityChannels) {
             this.severityChannels = severityChannels;
@@ -228,7 +237,10 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * silenceTimeSecs.
+         * <p>The mute for epoch in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder silenceTimeSecs(Integer silenceTimeSecs) {
             this.silenceTimeSecs = silenceTimeSecs;
@@ -236,7 +248,11 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
+         * <p>The notification configuration type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DIRECT_NOTIFY</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -244,7 +260,10 @@ public class NotifyConfigUnified extends TeaModel {
         }
 
         /**
-         * utcOffset.
+         * <p>The UTC time zone offset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>+08:00</p>
          */
         public Builder utcOffset(String utcOffset) {
             this.utcOffset = utcOffset;

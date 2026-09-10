@@ -187,7 +187,7 @@ public class ListPrometheusViewsRequest extends Request {
         } 
 
         /**
-         * <p>Filter by RegionID.</p>
+         * <p>Filters by region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou,cn-beijing</p>
@@ -199,7 +199,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>Maximum number of records to return.</p>
+         * <p>The maximum number of records to return.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -211,7 +211,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>Query token.</p>
+         * <p>The query token.</p>
          * 
          * <strong>example:</strong>
          * <p>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</p>
@@ -223,7 +223,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>List of Prometheus view instance IDs.</p>
+         * <p>The list of Prometheus view instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>view-xxx</p>
@@ -235,7 +235,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>Prometheus view name.</p>
+         * <p>The Prometheus view name.</p>
          * 
          * <strong>example:</strong>
          * <p>view1</p>
@@ -247,7 +247,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm3gn5i6bigbi</p>
@@ -259,7 +259,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>Resource type.</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>PROMETHEUSVIEW</p>
@@ -271,7 +271,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>List of tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -281,7 +281,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>Instance version: V1 or V2</p>
+         * <p>The instance version: V1 or V2.</p>
          * 
          * <strong>example:</strong>
          * <p>V2</p>
@@ -293,7 +293,7 @@ public class ListPrometheusViewsRequest extends Request {
         }
 
         /**
-         * <p>Workspace name</p>
+         * <p>The workspace name.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
@@ -364,7 +364,7 @@ public class ListPrometheusViewsRequest extends Request {
             } 
 
             /**
-             * <p>Tag key</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -375,7 +375,7 @@ public class ListPrometheusViewsRequest extends Request {
             }
 
             /**
-             * <p>Match value.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>

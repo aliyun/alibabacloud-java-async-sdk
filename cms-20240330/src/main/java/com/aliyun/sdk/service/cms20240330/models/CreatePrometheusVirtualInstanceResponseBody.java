@@ -67,7 +67,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -75,7 +75,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0B9377D9-C56B-5C2E-A8A4-************</p>
@@ -196,7 +196,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Creation time</p>
+             * <p>The time when the instance was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1751520976660</p>
@@ -207,7 +207,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>HTTP API query address</p>
+             * <p>The HTTP API query URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
@@ -218,7 +218,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rw-e815960b4c9ebc5c3d89790c7e82</p>
@@ -229,7 +229,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cloud product</p>
+             * <p>The cloud product.</p>
              * 
              * <strong>example:</strong>
              * <p>ack-csi-fuse</p>
@@ -240,7 +240,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID</p>
+             * <p>Region ID</p>
              * 
              * <strong>example:</strong>
              * <p>cn-zhengzhou-jva</p>
@@ -251,7 +251,7 @@ public class CreatePrometheusVirtualInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>167212345678</p>

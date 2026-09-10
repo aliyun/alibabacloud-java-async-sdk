@@ -80,7 +80,7 @@ public class QueryAlertRulesInput extends TeaModel {
         } 
 
         /**
-         * filter.
+         * <p>The filter criteria. Only alert rules that match these criteria are returned.</p>
          */
         public Builder filter(QueryAlertRulesFilter filter) {
             this.filter = filter;
@@ -88,7 +88,7 @@ public class QueryAlertRulesInput extends TeaModel {
         }
 
         /**
-         * pagination.
+         * <p>The pagination settings for the query. If omitted, the system returns the first page of results with the default page size.</p>
          */
         public Builder pagination(Pagination pagination) {
             this.pagination = pagination;
@@ -96,7 +96,7 @@ public class QueryAlertRulesInput extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The ID of the workspace that contains the alert rules.</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

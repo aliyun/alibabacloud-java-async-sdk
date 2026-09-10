@@ -67,7 +67,7 @@ public class LabelMatcher extends TeaModel {
         } 
 
         /**
-         * key.
+         * <p>The label key to match.</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -75,7 +75,7 @@ public class LabelMatcher extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The label value to match.</p>
          */
         public Builder value(String value) {
             this.value = value;

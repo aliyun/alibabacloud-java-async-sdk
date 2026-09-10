@@ -138,7 +138,10 @@ public class ListAlertWebhooksRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -147,7 +150,10 @@ public class ListAlertWebhooksRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -156,7 +162,10 @@ public class ListAlertWebhooksRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -165,7 +174,7 @@ public class ListAlertWebhooksRequest extends Request {
         }
 
         /**
-         * webhookIds.
+         * <p>The unique ID of the webhook.</p>
          */
         public Builder webhookIds(java.util.List<String> webhookIds) {
             String webhookIdsShrink = shrink(webhookIds, "webhookIds", "json");

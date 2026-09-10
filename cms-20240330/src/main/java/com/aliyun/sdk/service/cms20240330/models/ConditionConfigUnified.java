@@ -17,11 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConditionConfigUnified</p>
  */
 public class ConditionConfigUnified extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("absDeviation")
+    private Double absDeviation;
+
     @com.aliyun.core.annotation.NameInMap("aggregate")
     private String aggregate;
 
     @com.aliyun.core.annotation.NameInMap("alertCount")
     private Integer alertCount;
+
+    @com.aliyun.core.annotation.NameInMap("baselinePeriod")
+    private String baselinePeriod;
 
     @com.aliyun.core.annotation.NameInMap("compareList")
     private java.util.List<CompareList> compareList;
@@ -89,6 +95,9 @@ public class ConditionConfigUnified extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("relation")
     private String relation;
 
+    @com.aliyun.core.annotation.NameInMap("sensitivity")
+    private String sensitivity;
+
     @com.aliyun.core.annotation.NameInMap("severity")
     private String severity;
 
@@ -115,8 +124,10 @@ public class ConditionConfigUnified extends TeaModel {
     private Integer yoyTimeValue;
 
     private ConditionConfigUnified(Builder builder) {
+        this.absDeviation = builder.absDeviation;
         this.aggregate = builder.aggregate;
         this.alertCount = builder.alertCount;
+        this.baselinePeriod = builder.baselinePeriod;
         this.compareList = builder.compareList;
         this.compositeEscalation = builder.compositeEscalation;
         this.countOperator = builder.countOperator;
@@ -139,6 +150,7 @@ public class ConditionConfigUnified extends TeaModel {
         this.operator = builder.operator;
         this.prometheus = builder.prometheus;
         this.relation = builder.relation;
+        this.sensitivity = builder.sensitivity;
         this.severity = builder.severity;
         this.simpleEscalation = builder.simpleEscalation;
         this.threshold = builder.threshold;
@@ -162,6 +174,13 @@ public class ConditionConfigUnified extends TeaModel {
     }
 
     /**
+     * @return absDeviation
+     */
+    public Double getAbsDeviation() {
+        return this.absDeviation;
+    }
+
+    /**
      * @return aggregate
      */
     public String getAggregate() {
@@ -173,6 +192,13 @@ public class ConditionConfigUnified extends TeaModel {
      */
     public Integer getAlertCount() {
         return this.alertCount;
+    }
+
+    /**
+     * @return baselinePeriod
+     */
+    public String getBaselinePeriod() {
+        return this.baselinePeriod;
     }
 
     /**
@@ -330,6 +356,13 @@ public class ConditionConfigUnified extends TeaModel {
     }
 
     /**
+     * @return sensitivity
+     */
+    public String getSensitivity() {
+        return this.sensitivity;
+    }
+
+    /**
      * @return severity
      */
     public String getSeverity() {
@@ -386,8 +419,10 @@ public class ConditionConfigUnified extends TeaModel {
     }
 
     public static final class Builder {
+        private Double absDeviation; 
         private String aggregate; 
         private Integer alertCount; 
+        private String baselinePeriod; 
         private java.util.List<CompareList> compareList; 
         private CloudMonitoringCompositeEscalation compositeEscalation; 
         private String countOperator; 
@@ -410,6 +445,7 @@ public class ConditionConfigUnified extends TeaModel {
         private String operator; 
         private CloudMonitoringPrometheusEscalation prometheus; 
         private String relation; 
+        private String sensitivity; 
         private String severity; 
         private CloudMonitoringSimpleEscalation simpleEscalation; 
         private Double threshold; 
@@ -423,8 +459,10 @@ public class ConditionConfigUnified extends TeaModel {
         } 
 
         private Builder(ConditionConfigUnified model) {
+            this.absDeviation = model.absDeviation;
             this.aggregate = model.aggregate;
             this.alertCount = model.alertCount;
+            this.baselinePeriod = model.baselinePeriod;
             this.compareList = model.compareList;
             this.compositeEscalation = model.compositeEscalation;
             this.countOperator = model.countOperator;
@@ -447,6 +485,7 @@ public class ConditionConfigUnified extends TeaModel {
             this.operator = model.operator;
             this.prometheus = model.prometheus;
             this.relation = model.relation;
+            this.sensitivity = model.sensitivity;
             this.severity = model.severity;
             this.simpleEscalation = model.simpleEscalation;
             this.threshold = model.threshold;
@@ -458,7 +497,21 @@ public class ConditionConfigUnified extends TeaModel {
         } 
 
         /**
-         * aggregate.
+         * <p>The dynamic baseline minimum deviation or absolute deviation dead zone (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only for baseline operators. If |current value − boundary| &lt; absDeviation, no alert is fired. The unit is the same as the metric. The value must be &gt;= 0. A value of 0 means no restriction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
+        public Builder absDeviation(Double absDeviation) {
+            this.absDeviation = absDeviation;
+            return this;
+        }
+
+        /**
+         * <p>The aggregate functions (APM_SIMPLE_CONDITION).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVG</p>
          */
         public Builder aggregate(String aggregate) {
             this.aggregate = aggregate;
@@ -466,7 +519,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * alertCount.
+         * <p>The consecutive trigger count threshold (type=SLS_MULTI_CONDITION). An alert is fired only after the condition is met N times. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder alertCount(Integer alertCount) {
             this.alertCount = alertCount;
@@ -474,7 +530,18 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * compareList.
+         * <p>The baseline period. Takes effect only for baseline operators. Valid values: AUTO (automatic detection), DAILY (daily), WEEKLY (weekly), and NONE (no period). When set to WEEKLY, the backend automatically expands the historical training window to at least 14 days. Automatic detection does not return the specific detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO</p>
+         */
+        public Builder baselinePeriod(String baselinePeriod) {
+            this.baselinePeriod = baselinePeriod;
+            return this;
+        }
+
+        /**
+         * <p>The multiple comparisons (APM_COMPOSITE_CONDITION).</p>
          */
         public Builder compareList(java.util.List<CompareList> compareList) {
             this.compareList = compareList;
@@ -482,7 +549,7 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * compositeEscalation.
+         * <p>The multi-metric composite trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to COMPOSITE. Required fields: relation, severity, times, and escalations.</p>
          */
         public Builder compositeEscalation(CloudMonitoringCompositeEscalation compositeEscalation) {
             this.compositeEscalation = compositeEscalation;
@@ -490,7 +557,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * countOperator.
+         * <p>The count comparison operator (type=UMODEL_LOGSET_CONDITION).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GTE</p>
          */
         public Builder countOperator(String countOperator) {
             this.countOperator = countOperator;
@@ -498,7 +568,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * countThreshold.
+         * <p>The count threshold (type=UMODEL_LOGSET_CONDITION).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder countThreshold(Long countThreshold) {
             this.countThreshold = countThreshold;
@@ -506,7 +579,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * durationSecs.
+         * <p>The duration in seconds. Used by PROMETHEUS_SIMPLE and UMODEL_METRICSET.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder durationSecs(Integer durationSecs) {
             this.durationSecs = durationSecs;
@@ -514,7 +590,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * enableSeveritySuppression.
+         * <p>Specifies whether to enable severity suppression to the highest level (type=UMODEL_METRICSET_MULTI_CONDITION / PROMETHEUS_MULTI_CONDITION). Default value: true. When enabled, only the highest severity trigger is reported for the same entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableSeveritySuppression(Boolean enableSeveritySuppression) {
             this.enableSeveritySuppression = enableSeveritySuppression;
@@ -522,7 +601,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * escalationType.
+         * <p>The expression type for CLOUD_MONITORING_CONDITION. Valid values: SIMPLE, COMPOSITE, EXPRESS, and PROMETHEUS. Only SIMPLE and COMPOSITE are supported in write paths. Specify the corresponding escalation sub-object based on the type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         public Builder escalationType(String escalationType) {
             this.escalationType = escalationType;
@@ -530,7 +612,7 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * expressEscalation.
+         * <p>The expression-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to EXPRESS. This field is output only in read paths.</p>
          */
         public Builder expressEscalation(CloudMonitoringExpressEscalation expressEscalation) {
             this.expressEscalation = expressEscalation;
@@ -538,7 +620,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * legacyRaw.
+         * <p>The raw V1 condition JSON string returned when type is set to UNKNOWN_CONDITION and the read path fails to parse the condition. When the frontend detects that this field is not empty, display it as read-only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder legacyRaw(String legacyRaw) {
             this.legacyRaw = legacyRaw;
@@ -546,7 +631,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * legacyType.
+         * <p>Returned when type is set to UNKNOWN_CONDITION. Indicates that this rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder legacyType(String legacyType) {
             this.legacyType = legacyType;
@@ -554,7 +642,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * matchField.
+         * <p>The log field name (used when type is set to UMODEL_LOGSET_CONDITION and matchOperator is set to CONTAINS, EQUALS, or REGEX).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder matchField(String matchField) {
             this.matchField = matchField;
@@ -562,7 +653,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * matchOperator.
+         * <p>The log match operator (type=UMODEL_LOGSET_CONDITION).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRESENT</p>
          */
         public Builder matchOperator(String matchOperator) {
             this.matchOperator = matchOperator;
@@ -570,7 +664,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * matchValue.
+         * <p>The log match value (used when type is set to UMODEL_LOGSET_CONDITION and matchOperator is set to CONTAINS, EQUALS, or REGEX).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder matchValue(String matchValue) {
             this.matchValue = matchValue;
@@ -578,7 +675,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * max.
+         * <p>The upper bound of the range (used when UMODEL_METRICSET_CONDITION operator is set to IN_RANGE or OUT_OF_RANGE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder max(Double max) {
             this.max = max;
@@ -586,7 +686,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * min.
+         * <p>The lower bound of the range (used when UMODEL_METRICSET_CONDITION operator is set to IN_RANGE or OUT_OF_RANGE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder min(Double min) {
             this.min = min;
@@ -594,7 +697,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * noDataAlertLevel.
+         * <p>The no-data alert level (SLS_MULTI_CONDITION). APM and Prometheus conditions have migrated to noDataPolicy and noDataAlertSeverity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder noDataAlertLevel(String noDataAlertLevel) {
             this.noDataAlertLevel = noDataAlertLevel;
@@ -602,7 +708,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * noDataAlertSeverity.
+         * <p>The no-data alert severity level (PROMETHEUS_SIMPLE_CONDITION / PROMETHEUS_MULTI_CONDITION). Takes effect only when noDataPolicy is set to NO_DATA_TO_ALERT. SLS_MULTI_CONDITION still uses noDataAlertLevel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder noDataAlertSeverity(String noDataAlertSeverity) {
             this.noDataAlertSeverity = noDataAlertSeverity;
@@ -610,7 +719,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * noDataAppendValue.
+         * <p>The value to substitute when no data is available (APM_SIMPLE_CONDITION / APM_COMPOSITE_CONDITION). Nullable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder noDataAppendValue(Double noDataAppendValue) {
             this.noDataAppendValue = noDataAppendValue;
@@ -618,7 +730,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * noDataPolicy.
+         * <p>The no-data handling policy (CLOUD_MONITORING_CONDITION / PROMETHEUS_MULTI_CONDITION / PROMETHEUS_SIMPLE_CONDITION / APM_SIMPLE_CONDITION / APM_COMPOSITE_CONDITION). Valid values: NO_DATA_TO_OK, NO_DATA_TO_ALERT, KEEP_LAST_STATE, and APPEND_VALUE (APM only).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder noDataPolicy(String noDataPolicy) {
             this.noDataPolicy = noDataPolicy;
@@ -626,7 +741,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The comparison operator (UMODEL_METRICSET_CONDITION or APM_SIMPLE_CONDITION).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GT</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -634,7 +752,7 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * prometheus.
+         * <p>The PromQL-based trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to PROMETHEUS. This field is output only in read paths.</p>
          */
         public Builder prometheus(CloudMonitoringPrometheusEscalation prometheus) {
             this.prometheus = prometheus;
@@ -642,7 +760,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * relation.
+         * <p>The logical relationship between conditions (APM_COMPOSITE_CONDITION).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
          */
         public Builder relation(String relation) {
             this.relation = relation;
@@ -650,7 +771,21 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The dynamic baseline sensitivity (UMODEL_METRICSET_CONDITION / APM_SIMPLE_CONDITION). Takes effect only when operator is set to ABOVE_UPPER, BELOW_LOWER, or OUT_OF_BAND. Valid values: HIGH (narrowest band, most sensitive), MEDIUM, and LOW (widest band, least sensitive).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MEDIUM</p>
+         */
+        public Builder sensitivity(String sensitivity) {
+            this.sensitivity = sensitivity;
+            return this;
+        }
+
+        /**
+         * <p>The severity level (UMODEL / PROMETHEUS_SIMPLE / APM_COMPOSITE).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -658,7 +793,7 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * simpleEscalation.
+         * <p>The single-metric multi-level trigger configuration for CLOUD_MONITORING_CONDITION when escalationType is set to SIMPLE. Required fields: metricName, period, and escalations.</p>
          */
         public Builder simpleEscalation(CloudMonitoringSimpleEscalation simpleEscalation) {
             this.simpleEscalation = simpleEscalation;
@@ -666,7 +801,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * threshold.
+         * <p>The threshold (UMODEL_METRICSET_CONDITION).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder threshold(Double threshold) {
             this.threshold = threshold;
@@ -674,7 +812,7 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * thresholdList.
+         * <p>The multi-threshold list (APM_SIMPLE_CONDITION).</p>
          */
         public Builder thresholdList(java.util.List<ThresholdList> thresholdList) {
             this.thresholdList = thresholdList;
@@ -682,7 +820,7 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * triggers.
+         * <p>The trigger list. This field is polymorphic based on type. CLOUD_MONITORING_CONDITION does not use this field. Use simpleEscalation.escalations or compositeEscalation.escalations instead. For SLS_MULTI_CONDITION, each case contains matchField, matchOperator, matchValue, countOperator, countThreshold, and severity. At least one case is required. For UMODEL_METRICSET_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). For PROMETHEUS_MULTI_CONDITION, each trigger contains severity, durationSecs, and an expression (SIMPLE or COMPOSITE). Triggers are sorted by severity priority, and the first match fires.</p>
          */
         public Builder triggers(java.util.List<Triggers> triggers) {
             this.triggers = triggers;
@@ -690,7 +828,11 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
+         * <p>The detection condition type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROMETHEUS_SIMPLE_CONDITION</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -698,7 +840,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * yoyTimeUnit.
+         * <p>The year-over-year time unit (APM_SIMPLE_CONDITION). Takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>minute</p>
          */
         public Builder yoyTimeUnit(String yoyTimeUnit) {
             this.yoyTimeUnit = yoyTimeUnit;
@@ -706,7 +851,10 @@ public class ConditionConfigUnified extends TeaModel {
         }
 
         /**
-         * yoyTimeValue.
+         * <p>The year-over-year time value (APM_SIMPLE_CONDITION). Takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder yoyTimeValue(Integer yoyTimeValue) {
             this.yoyTimeValue = yoyTimeValue;

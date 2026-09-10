@@ -82,7 +82,11 @@ public class AlertRuleAlertMetricInputFilterValue extends TeaModel {
         } 
 
         /**
+         * <p>The dimension of the filter condition.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rootIp</p>
          */
         public Builder dim(String dim) {
             this.dim = dim;
@@ -90,7 +94,11 @@ public class AlertRuleAlertMetricInputFilterValue extends TeaModel {
         }
 
         /**
+         * <p>The operator for the filter condition.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder opt(String opt) {
             this.opt = opt;
@@ -98,7 +106,10 @@ public class AlertRuleAlertMetricInputFilterValue extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The value of the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder value(String value) {
             this.value = value;

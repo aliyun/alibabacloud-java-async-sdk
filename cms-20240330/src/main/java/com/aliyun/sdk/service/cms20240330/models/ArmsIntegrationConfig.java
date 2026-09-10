@@ -54,7 +54,10 @@ public class ArmsIntegrationConfig extends TeaModel {
         } 
 
         /**
-         * enabled.
+         * <p>Indicates whether ARMS integration is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;

@@ -210,6 +210,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         } 
 
         /**
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +222,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * customExtractionStrategies.
+         * <p>The custom extraction strategies.</p>
          */
         public Builder customExtractionStrategies(java.util.List<CustomExtractionStrategy> customExtractionStrategies) {
             this.customExtractionStrategies = customExtractionStrategies;
@@ -229,7 +230,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -237,7 +241,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * extractionStrategies.
+         * <p>The extraction strategies. Valid values: Episodic, Summary, and Fact.</p>
          */
         public Builder extractionStrategies(java.util.List<String> extractionStrategies) {
             this.extractionStrategies = extractionStrategies;
@@ -245,7 +249,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * memoryStoreName.
+         * <p>The memory store name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-memory-store</p>
          */
         public Builder memoryStoreName(String memoryStoreName) {
             this.memoryStoreName = memoryStoreName;
@@ -253,7 +260,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -261,7 +271,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +282,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * shortTermStorage.
+         * <p>The short-term memory storage.</p>
          */
         public Builder shortTermStorage(ShortTermStorage shortTermStorage) {
             this.shortTermStorage = shortTermStorage;
@@ -277,7 +290,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * shortTermTtl.
+         * <p>The retention period of short-term memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder shortTermTtl(Integer shortTermTtl) {
             this.shortTermTtl = shortTermTtl;
@@ -285,7 +301,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * sourceType.
+         * <p>The memory source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Trace</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -293,7 +312,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * traceSourceConfig.
+         * <p>The configuration used when sourceType is set to Trace.</p>
          */
         public Builder traceSourceConfig(TraceSourceConfig traceSourceConfig) {
             this.traceSourceConfig = traceSourceConfig;
@@ -301,6 +320,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -312,7 +332,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-xxxxxx-cn-beijing</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -378,7 +401,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * logstore.
+             * <p>The Simple Log Service Logstore name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>memory-store</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -386,7 +412,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * project.
+             * <p>The Simple Log Service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wk_cms_data_warehouse</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -466,7 +495,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * includeOutput.
+             * <p>Specifies whether to include LLM output in memory extraction.</p>
              */
             public Builder includeOutput(Boolean includeOutput) {
                 this.includeOutput = includeOutput;
@@ -474,7 +503,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * query.
+             * <p>The Simple Log Service query statement used to filter traces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(serviceName : &quot;langchain-rag&quot; or serviceName : &quot;agentscope-code-correction&quot;) and hostname = frontend-proxy-999c48c8d-hvk6c</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -482,7 +514,10 @@ public class GetMemoryStoreResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace where the trace resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-workspace</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

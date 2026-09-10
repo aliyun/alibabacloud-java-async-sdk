@@ -67,7 +67,16 @@ public class IndexJsonKey extends TeaModel {
         } 
 
         /**
-         * chn.
+         * <p>Specifies whether the field contains Chinese characters.</p>
+         * <ul>
+         * <li><p><code>true</code>: The field contains Chinese characters.</p>
+         * </li>
+         * <li><p><code>false</code>: The field does not contain Chinese characters.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder chn(Boolean chn) {
             this.chn = chn;
@@ -75,7 +84,10 @@ public class IndexJsonKey extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder type(String type) {
             this.type = type;

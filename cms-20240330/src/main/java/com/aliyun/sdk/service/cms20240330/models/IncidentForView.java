@@ -327,7 +327,10 @@ public class IncidentForView extends TeaModel {
         } 
 
         /**
-         * content.
+         * <p>The details of the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;description&quot;:&quot;ECS实例CPU过高&quot;,&quot;impact&quot;:&quot;支付服务延迟&quot;}&quot;</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -335,7 +338,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * escalations.
+         * <p>The list of escalation policies.</p>
          */
         public Builder escalations(java.util.List<IncidentEscalationPolicyForView> escalations) {
             this.escalations = escalations;
@@ -343,7 +346,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * groupUuid.
+         * <p>The group identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;group-123456&quot;</p>
          */
         public Builder groupUuid(String groupUuid) {
             this.groupUuid = groupUuid;
@@ -351,7 +357,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * groupingKeys.
+         * <p>The key-value pairs for grouping.</p>
          */
         public Builder groupingKeys(java.util.Map<String, String> groupingKeys) {
             this.groupingKeys = groupingKeys;
@@ -359,7 +365,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * incidentId.
+         * <p>The unique identifier of the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;incident-abc123&quot;</p>
          */
         public Builder incidentId(String incidentId) {
             this.incidentId = incidentId;
@@ -367,7 +376,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * notifyStrategyName.
+         * <p>The name of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;contactId&quot;: &quot;contact-123&quot;, &quot;name&quot;: &quot;张三&quot; }</p>
          */
         public Builder notifyStrategyName(String notifyStrategyName) {
             this.notifyStrategyName = notifyStrategyName;
@@ -375,7 +387,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * notifyStrategyUuid.
+         * <p>The UUID of the associated notification policy, which is used to trigger notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;notify-strategy-789&quot;</p>
          */
         public Builder notifyStrategyUuid(String notifyStrategyUuid) {
             this.notifyStrategyUuid = notifyStrategyUuid;
@@ -383,7 +398,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The information about the operator.</p>
          */
         public Builder operator(ContactForIncidentView operator) {
             this.operator = operator;
@@ -391,7 +406,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * owners.
+         * <p>The list of owners.</p>
          */
         public Builder owners(java.util.List<ContactForIncidentView> owners) {
             this.owners = owners;
@@ -399,7 +414,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * participants.
+         * <p>The list of participants.</p>
          */
         public Builder participants(java.util.List<ContactForIncidentView> participants) {
             this.participants = participants;
@@ -407,7 +422,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * plan.
+         * <p>The response plan.</p>
          */
         public Builder plan(IncidentResponsePlanForView plan) {
             this.plan = plan;
@@ -415,7 +430,7 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * relatedResources.
+         * <p>The list of associated resources.</p>
          */
         public Builder relatedResources(java.util.List<EventResourceForIncidentView> relatedResources) {
             this.relatedResources = relatedResources;
@@ -423,7 +438,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * rootCauseCategory.
+         * <p>The root cause category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Network&quot;</p>
          */
         public Builder rootCauseCategory(String rootCauseCategory) {
             this.rootCauseCategory = rootCauseCategory;
@@ -431,7 +449,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The severity level of the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Critical&quot;</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -439,7 +460,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * solution.
+         * <p>The description of the solution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;重启ECS实例后恢复正常&quot;</p>
          */
         public Builder solution(String solution) {
             this.solution = solution;
@@ -447,7 +471,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * state.
+         * <p>The current state of the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Open&quot;</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -455,7 +482,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * subscriptionName.
+         * <p>The name of the subscription policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;P1-Alert-Notification&quot;</p>
          */
         public Builder subscriptionName(String subscriptionName) {
             this.subscriptionName = subscriptionName;
@@ -463,7 +493,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * subscriptionUuid.
+         * <p>The UUID of the subscription policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;subscription-abc&quot;</p>
          */
         public Builder subscriptionUuid(String subscriptionUuid) {
             this.subscriptionUuid = subscriptionUuid;
@@ -471,7 +504,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp when the incident was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743876000000</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -479,7 +515,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The title of the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;支付服务不可用&quot;</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -487,7 +526,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The ID of the user who created the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;user-abc123&quot;</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -495,7 +537,10 @@ public class IncidentForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ws-xyz789&quot;</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

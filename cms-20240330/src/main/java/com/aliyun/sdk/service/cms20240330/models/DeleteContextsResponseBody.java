@@ -67,7 +67,10 @@ public class DeleteContextsResponseBody extends TeaModel {
         } 
 
         /**
-         * deletedCount.
+         * <p>The number of deleted contexts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder deletedCount(Integer deletedCount) {
             this.deletedCount = deletedCount;
@@ -75,7 +78,10 @@ public class DeleteContextsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -80,7 +80,10 @@ public class NotifyChannel extends TeaModel {
         } 
 
         /**
-         * channelType.
+         * <p>The type of the notification channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;DingTalk&quot;</p>
          */
         public Builder channelType(String channelType) {
             this.channelType = channelType;
@@ -88,7 +91,7 @@ public class NotifyChannel extends TeaModel {
         }
 
         /**
-         * enabledSubChannels.
+         * <p>The list of enabled sub-channels.</p>
          */
         public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
             this.enabledSubChannels = enabledSubChannels;
@@ -96,7 +99,7 @@ public class NotifyChannel extends TeaModel {
         }
 
         /**
-         * receivers.
+         * <p>The list of receivers.</p>
          */
         public Builder receivers(java.util.List<String> receivers) {
             this.receivers = receivers;

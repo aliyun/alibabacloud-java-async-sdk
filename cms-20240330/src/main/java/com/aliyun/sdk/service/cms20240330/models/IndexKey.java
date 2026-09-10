@@ -93,7 +93,16 @@ public class IndexKey extends TeaModel {
         } 
 
         /**
-         * chn.
+         * <p>Indicates whether the value contains Chinese characters.</p>
+         * <ul>
+         * <li><p><code>true</code>: Contains Chinese characters.</p>
+         * </li>
+         * <li><p><code>false</code>: Does not contain Chinese characters.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder chn(Boolean chn) {
             this.chn = chn;
@@ -101,7 +110,10 @@ public class IndexKey extends TeaModel {
         }
 
         /**
-         * embedding.
+         * <p>Specifies the model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-embedding-v4</p>
          */
         public Builder embedding(String embedding) {
             this.embedding = embedding;
@@ -109,7 +121,7 @@ public class IndexKey extends TeaModel {
         }
 
         /**
-         * jsonKeys.
+         * <p>Describes the json keys.</p>
          */
         public Builder jsonKeys(java.util.Map<String, IndexJsonKey> jsonKeys) {
             this.jsonKeys = jsonKeys;
@@ -117,7 +129,10 @@ public class IndexKey extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>Specifies the field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder type(String type) {
             this.type = type;

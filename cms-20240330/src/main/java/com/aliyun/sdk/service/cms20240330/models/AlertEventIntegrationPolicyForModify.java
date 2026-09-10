@@ -120,7 +120,11 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
         } 
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test integration</p>
          */
         public Builder alertEventIntegrationPolicyName(String alertEventIntegrationPolicyName) {
             this.alertEventIntegrationPolicyName = alertEventIntegrationPolicyName;
@@ -128,7 +132,10 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -136,7 +143,7 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter settings.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -144,7 +151,10 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
         }
 
         /**
-         * integrationSetting.
+         * <p>The subscription settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
          */
         public Builder integrationSetting(String integrationSetting) {
             this.integrationSetting = integrationSetting;
@@ -152,7 +162,7 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
         }
 
         /**
-         * transformerSetting.
+         * <p>The transform settings.</p>
          */
         public Builder transformerSetting(java.util.List<TransformAction> transformerSetting) {
             this.transformerSetting = transformerSetting;
@@ -160,7 +170,10 @@ public class AlertEventIntegrationPolicyForModify extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALERT_CUSTOM</p>
          */
         public Builder type(String type) {
             this.type = type;

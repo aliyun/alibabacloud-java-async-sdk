@@ -103,6 +103,7 @@ public class DeleteContextsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class DeleteContextsRequest extends Request {
         }
 
         /**
+         * <p>The name of the ContextStore.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class DeleteContextsRequest extends Request {
         }
 
         /**
-         * contextIds.
+         * <p>A comma-separated list of context IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mem_long_01,mem_long_02</p>
          */
         public Builder contextIds(String contextIds) {
             this.putQueryParameter("contextIds", contextIds);
@@ -136,7 +141,10 @@ public class DeleteContextsRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>The filter condition, specified as a JSON string in the query. The syntax is the same as the <code>filter</code> parameter of the <code>SearchContext</code> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;userId&quot;:&quot;u-10001&quot;}</p>
          */
         public Builder filter(String filter) {
             this.putQueryParameter("filter", filter);

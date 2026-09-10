@@ -106,7 +106,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Page size
+         * <p>The number of entries per page.
          * Default value:
          *     50
          * Maximum value:
@@ -121,7 +121,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Pagination Token</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxxxx</p>
@@ -132,7 +132,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -143,7 +143,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total count</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +154,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of workspaces</p>
+         * <p>The list of workspaces.</p>
          */
         public Builder workspaces(java.util.List<Workspaces> workspaces) {
             this.workspaces = workspaces;
@@ -220,7 +220,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -228,7 +228,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -387,7 +387,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Creation time</p>
+             * <p>The time when the workspace was created.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -399,7 +399,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace description</p>
+             * <p>The description of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace test</p>
@@ -410,7 +410,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace display name</p>
+             * <p>The display name of the workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace-test</p>
@@ -421,7 +421,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modified time</p>
+             * <p>The time when the workspace was last modified.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -433,7 +433,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-heyuan</p>
@@ -444,7 +444,10 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-ae******ey</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -452,7 +455,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Log Service project name</p>
+             * <p>The Simple Log Service project name.</p>
              * 
              * <strong>example:</strong>
              * <p>sls-project-test-001</p>
@@ -463,7 +466,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -471,7 +474,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace name</p>
+             * <p>The workspace name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class GetAddonCodeTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * codes.
+         * <p>The list of code templates.</p>
          */
         public Builder codes(java.util.List<Codes> codes) {
             this.codes = codes;
@@ -75,7 +75,7 @@ public class GetAddonCodeTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-***</p>
@@ -144,7 +144,10 @@ public class GetAddonCodeTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * codeTemplate.
+             * <p>The code template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>javascript\nnpm install @arms/rum-miniapp --save</p>
              */
             public Builder codeTemplate(String codeTemplate) {
                 this.codeTemplate = codeTemplate;
@@ -152,7 +155,10 @@ public class GetAddonCodeTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the code template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cs-default-CS-cs-default-1753236205394-cs-default-CS-kubeApiserver</p>
              */
             public Builder name(String name) {
                 this.name = name;

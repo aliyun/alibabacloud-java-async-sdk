@@ -54,7 +54,10 @@ public class BizSourceFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>managed_service_for_prometheus</p>
          */
         public Builder eq(String eq) {
             this.eq = eq;

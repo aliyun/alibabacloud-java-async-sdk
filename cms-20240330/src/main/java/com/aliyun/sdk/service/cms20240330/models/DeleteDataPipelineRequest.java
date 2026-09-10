@@ -75,7 +75,7 @@ public class DeleteDataPipelineRequest extends Request {
         } 
 
         /**
-         * <p>待删除数据流水线所属的工作空间名称。</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DeleteDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>工作空间内唯一的数据流水线名称。</p>
+         * <p>The pipeline name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

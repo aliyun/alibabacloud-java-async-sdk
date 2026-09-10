@@ -138,7 +138,7 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * <p>Unique identifier for the action integration.</p>
+         * <p>The unique IDs of the alert action integrations.</p>
          */
         public Builder alertActionIds(java.util.List<String> alertActionIds) {
             String alertActionIdsShrink = shrink(alertActionIds, "alertActionIds", "json");
@@ -148,7 +148,7 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * <p>Name of the action integration.</p>
+         * <p>The name of the alert action integration.</p>
          * 
          * <strong>example:</strong>
          * <p>testName</p>
@@ -160,7 +160,7 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * <p>Page number. Default is 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -172,7 +172,7 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * <p>Page size. Default is 100.</p>
+         * <p>The number of entries per page. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -184,7 +184,7 @@ public class ListAlertActionsRequest extends Request {
         }
 
         /**
-         * <p>Type of the action integration.</p>
+         * <p>The type of the alert action integration.</p>
          * 
          * <strong>example:</strong>
          * <p>FC</p>

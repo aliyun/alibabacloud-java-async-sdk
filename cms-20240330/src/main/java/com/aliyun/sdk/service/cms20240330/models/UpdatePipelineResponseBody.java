@@ -54,7 +54,10 @@ public class UpdatePipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E99F1CCD-256A-5DF9-9B67-8F4A7ACE7132</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

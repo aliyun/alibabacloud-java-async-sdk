@@ -67,7 +67,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3B311FD9-A60B-55E0-A896-A0C73*********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>Return value.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -141,7 +144,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>Message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My name is Zhang San and I live in Hangzhou.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -149,7 +155,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>Message sender role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -320,7 +329,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764556182850</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -328,7 +340,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * event.
+             * <p>Event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADD</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -336,7 +351,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>Memory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b25d6ad7-306f-4040-9890-4dddd2505a2e</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -344,7 +362,7 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * input.
+             * <p>Original message.</p>
              */
             public Builder input(java.util.List<Input> input) {
                 this.input = input;
@@ -352,7 +370,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * memoryId.
+             * <p>Memory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>019cacf6-7b39-7f61-8314-548f07ca449a</p>
              */
             public Builder memoryId(String memoryId) {
                 this.memoryId = memoryId;
@@ -360,7 +381,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * metadata.
+             * <p>Metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -368,7 +392,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * newMemory.
+             * <p>New memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I really like Python.</p>
              */
             public Builder newMemory(String newMemory) {
                 this.newMemory = newMemory;
@@ -376,7 +403,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * oldMemory.
+             * <p>Old memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>I really don\&quot;t like Python at all.</p>
              */
             public Builder oldMemory(String oldMemory) {
                 this.oldMemory = oldMemory;
@@ -384,7 +414,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1771036123785</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -392,7 +425,10 @@ public class GetMemoryHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_session_001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

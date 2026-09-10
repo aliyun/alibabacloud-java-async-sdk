@@ -93,7 +93,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         } 
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>et15prod-et15storage</p>
@@ -104,7 +104,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         }
 
         /**
-         * <p>Custom scraping job rules</p>
+         * <p>The custom scrape job rules.</p>
          */
         public Builder customScrapeJobRules(java.util.List<CustomScrapeJobRules> customScrapeJobRules) {
             this.customScrapeJobRules = customScrapeJobRules;
@@ -112,7 +112,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         }
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-15abcc24c06f4797832b5954198e1ed1</p>
@@ -123,7 +123,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -257,7 +257,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             } 
 
             /**
-             * <p>Scraping job name</p>
+             * <p>The scrape job name.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql-exporter</p>
@@ -268,7 +268,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Detailed information.</p>
+             * <p>The detailed information.</p>
              * 
              * <strong>example:</strong>
              * <p>successful</p>
@@ -279,7 +279,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Metrics path</p>
+             * <p>The metrics path.</p>
              * 
              * <strong>example:</strong>
              * <p>/metrics</p>
@@ -290,7 +290,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Call method.</p>
+             * <p>The invocation method.</p>
              * 
              * <strong>example:</strong>
              * <p>http</p>
@@ -301,7 +301,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Scrape interval</p>
+             * <p>The scrape interval.</p>
              * 
              * <strong>example:</strong>
              * <p>30s</p>
@@ -312,7 +312,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Scrape timeout</p>
+             * <p>The scrape timeout period.</p>
              * 
              * <strong>example:</strong>
              * <p>60s</p>
@@ -323,7 +323,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Service discovery configuration</p>
+             * <p>The service discovery configurations.</p>
              */
             public Builder serviceDiscoveryConfigs(java.util.List<String> serviceDiscoveryConfigs) {
                 this.serviceDiscoveryConfigs = serviceDiscoveryConfigs;
@@ -507,7 +507,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             } 
 
             /**
-             * <p>Addon name.</p>
+             * <p>The addon name.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud-ecs</p>
@@ -518,7 +518,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Addon Release name</p>
+             * <p>The addon release name.</p>
              * 
              * <strong>example:</strong>
              * <p>release-12345678</p>
@@ -529,7 +529,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Addon version</p>
+             * <p>The addon version.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.1</p>
@@ -540,7 +540,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Configuration yaml</p>
+             * <p>The configuration YAML.</p>
              * 
              * <strong>example:</strong>
              * <p>scrape_cofnigs:</p>
@@ -554,7 +554,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Enable status</p>
+             * <p>The enabling status.</p>
              * 
              * <strong>example:</strong>
              * <p>mini</p>
@@ -565,7 +565,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Encrypt yaml</p>
+             * <p>The encrypted YAML.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -576,7 +576,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Matched pod count</p>
+             * <p>The number of matched pods.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -587,7 +587,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Detailed information.</p>
+             * <p>The detailed information.</p>
              * 
              * <strong>example:</strong>
              * <p>ok</p>
@@ -598,7 +598,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Service name.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>dlab1</p>
@@ -609,7 +609,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Namespace</p>
+             * <p>The namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>prod-data</p>
@@ -620,7 +620,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
             }
 
             /**
-             * <p>Custom configurations</p>
+             * <p>The custom configurations.</p>
              */
             public Builder scrapeConfigs(java.util.List<ScrapeConfigs> scrapeConfigs) {
                 this.scrapeConfigs = scrapeConfigs;

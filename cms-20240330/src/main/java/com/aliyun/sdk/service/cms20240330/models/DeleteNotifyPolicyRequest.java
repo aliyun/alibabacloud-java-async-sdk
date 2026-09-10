@@ -98,6 +98,7 @@ public class DeleteNotifyPolicyRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the notification policy, returned by the creation operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteNotifyPolicyRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID. Used to isolate notification policy resources across different business spaces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

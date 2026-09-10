@@ -119,6 +119,7 @@ public class AddContextsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class AddContextsRequest extends Request {
         }
 
         /**
+         * <p>The context store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +145,7 @@ public class AddContextsRequest extends Request {
         }
 
         /**
+         * <p>The context type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +158,7 @@ public class AddContextsRequest extends Request {
         }
 
         /**
+         * <p>An array of context items.</p>
          * <p>This parameter is required.</p>
          */
         public Builder items(java.util.List<Items> items) {
@@ -164,7 +168,10 @@ public class AddContextsRequest extends Request {
         }
 
         /**
-         * memoryType.
+         * <p>The memory type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>short</p>
          */
         public Builder memoryType(String memoryType) {
             this.putBodyParameter("memoryType", memoryType);
@@ -414,7 +421,10 @@ public class AddContextsRequest extends Request {
             } 
 
             /**
-             * agentId.
+             * <p>The unique agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>952730733889060865</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -422,7 +432,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * appId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mm_480d961a1b5e4efe84603f4cbc0f</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -430,7 +443,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * categories.
+             * <p>A list of categories to apply to the context item.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -438,7 +451,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * content.
+             * <p>The content of the context item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a conversation assistant.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -446,7 +462,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * customInstructions.
+             * <p>The custom instructions for processing the context.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Your custom instructions here</p>
              */
             public Builder customInstructions(String customInstructions) {
                 this.customInstructions = customInstructions;
@@ -454,7 +473,14 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * experience.
+             * <p>An object containing experience information for the context.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;taskType&quot;: &quot;troubleshooting&quot;,
+             *     &quot;complexity&quot;: &quot;medium&quot;,
+             *     &quot;confidence&quot;: 0.95
+             * }</p>
              */
             public Builder experience(java.util.Map<String, ?> experience) {
                 this.experience = experience;
@@ -462,7 +488,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * expirationDate.
+             * <p>The expiration timestamp for the context item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1731231212334396</p>
              */
             public Builder expirationDate(String expirationDate) {
                 this.expirationDate = expirationDate;
@@ -470,7 +499,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * immutable.
+             * <p>Specifies whether the context item is immutable. If set to <code>true</code>, the item cannot be changed after it is created. The default value is <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder immutable(Boolean immutable) {
                 this.immutable = immutable;
@@ -478,7 +510,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * infer.
+             * <p>Specifies whether to perform inference based on the context. The default value is <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder infer(Boolean infer) {
                 this.infer = infer;
@@ -486,7 +521,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * labels.
+             * <p>A map of key-value pairs to apply as labels.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -494,7 +529,7 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * messages.
+             * <p>An array of message objects.</p>
              */
             public Builder messages(java.util.List<java.util.Map<String, ?>> messages) {
                 this.messages = messages;
@@ -502,7 +537,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * metadata.
+             * <p>Key-value pairs to store as metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -510,7 +548,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * runId.
+             * <p>The run ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jr-80ded1d6953c64ea</p>
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -518,7 +559,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * timestamp.
+             * <p>The timestamp of the context item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1774578167</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -526,7 +570,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * triggerCondition.
+             * <p>The condition that triggers the context.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Identify and troubleshoot SLs issues</p>
              */
             public Builder triggerCondition(String triggerCondition) {
                 this.triggerCondition = triggerCondition;
@@ -534,7 +581,10 @@ public class AddContextsRequest extends Request {
             }
 
             /**
-             * userId.
+             * <p>The unique user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user_001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

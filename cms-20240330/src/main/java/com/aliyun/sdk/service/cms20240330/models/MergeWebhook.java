@@ -197,7 +197,10 @@ public class MergeWebhook extends TeaModel {
         } 
 
         /**
-         * contentType.
+         * <p>The content type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application/json</p>
          */
         public Builder contentType(String contentType) {
             this.contentType = contentType;
@@ -205,7 +208,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * extend.
+         * <p>An extension field used to store additional configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;timeout&quot;: 3000}</p>
          */
         public Builder extend(String extend) {
             this.extend = extend;
@@ -213,7 +219,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58.789Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -221,7 +230,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The last modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58.789Z</p>
          */
         public Builder gmtModified(java.util.Map<String, ?> gmtModified) {
             this.gmtModified = gmtModified;
@@ -229,7 +241,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * headers.
+         * <p>The request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Authorization&quot;: &quot;Bearer abc123&quot;}</p>
          */
         public Builder headers(String headers) {
             this.headers = headers;
@@ -237,7 +252,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * identifier.
+         * <p>The unique identifier of the webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>webhook-12345</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -245,7 +263,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * lang.
+         * <p>The language preference.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder lang(String lang) {
             this.lang = lang;
@@ -253,7 +274,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * method.
+         * <p>The HTTP request method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         public Builder method(String method) {
             this.method = method;
@@ -261,7 +285,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>运维告警通知</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -269,7 +296,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source system of the webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -277,7 +307,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type of the webhook. It indicates the destination platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -285,7 +318,10 @@ public class MergeWebhook extends TeaModel {
         }
 
         /**
-         * webhook.
+         * <p>The webhook URL used to send requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>
          */
         public Builder webhook(String webhook) {
             this.webhook = webhook;

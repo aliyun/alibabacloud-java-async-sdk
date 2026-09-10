@@ -194,7 +194,7 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * contactIds.
+         * <p>The contact IDs.</p>
          */
         public Builder contactIds(java.util.List<String> contactIds) {
             String contactIdsShrink = shrink(contactIds, "contactIds", "json");
@@ -204,7 +204,10 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * email.
+         * <p>The email address of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("email", email);
@@ -213,7 +216,10 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * groupId.
+         * <p>The ID of the contact group to which the contact belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group-id-123</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("groupId", groupId);
@@ -222,7 +228,10 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -231,7 +240,10 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -240,7 +252,10 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -249,7 +264,10 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * phone.
+         * <p>The phone number of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15012345678</p>
          */
         public Builder phone(String phone) {
             this.putQueryParameter("phone", phone);
@@ -258,7 +276,10 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * queryUngroupedContacts.
+         * <p>Specifies whether to query only ungrouped contacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder queryUngroupedContacts(Boolean queryUngroupedContacts) {
             this.putQueryParameter("queryUngroupedContacts", queryUngroupedContacts);
@@ -267,7 +288,10 @@ public class ListContactsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-1744108686100472-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

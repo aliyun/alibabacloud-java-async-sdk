@@ -111,6 +111,7 @@ public class UpdateNotifyStrategyRequest extends Request {
         }
 
         /**
+         * <p>The UUID of the notification policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +124,7 @@ public class UpdateNotifyStrategyRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body parameters.</p>
          */
         public Builder body(NotifyStrategyForModify body) {
             this.putBodyParameter("body", body);
@@ -132,7 +133,10 @@ public class UpdateNotifyStrategyRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

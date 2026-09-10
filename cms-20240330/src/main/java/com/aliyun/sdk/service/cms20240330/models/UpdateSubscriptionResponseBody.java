@@ -67,7 +67,7 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-******</p>
@@ -78,7 +78,10 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * subscriptionId.
+         * <p>The subscription ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123123</p>
          */
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = subscriptionId;

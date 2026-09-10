@@ -116,7 +116,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         } 
 
         /**
-         * <p>Access center policy ID.</p>
+         * <p>The ID of the Provisioning policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         }
 
         /**
-         * <p>Addon Release name.</p>
+         * <p>The name of the addon release.</p>
          * 
          * <strong>example:</strong>
          * <p>release12345678</p>
@@ -141,7 +141,10 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         }
 
         /**
-         * collectorReleaseName.
+         * <p>The probe identifier. If a release exists, pass the release name. If no release exists, pass the component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collector:metric-agent:policy:policy-bfd3d455fd6f4bc8</p>
          */
         public Builder collectorReleaseName(String collectorReleaseName) {
             this.putQueryParameter("collectorReleaseName", collectorReleaseName);
@@ -150,7 +153,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         }
 
         /**
-         * <p>Whether to encrypt Yaml.</p>
+         * <p>Specifies whether to encrypt the YAML content.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -162,7 +165,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesRequest extends Request {
         }
 
         /**
-         * <p>Namespace.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>arms-prom</p>

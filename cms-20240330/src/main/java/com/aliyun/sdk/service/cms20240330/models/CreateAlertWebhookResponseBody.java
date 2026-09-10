@@ -67,7 +67,10 @@ public class CreateAlertWebhookResponseBody extends TeaModel {
         } 
 
         /**
-         * alertWebhookId.
+         * <p>The unique identifier of the webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder alertWebhookId(String alertWebhookId) {
             this.alertWebhookId = alertWebhookId;
@@ -75,7 +78,10 @@ public class CreateAlertWebhookResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

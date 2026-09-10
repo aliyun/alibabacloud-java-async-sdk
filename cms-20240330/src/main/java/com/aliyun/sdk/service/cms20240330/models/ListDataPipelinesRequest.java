@@ -89,7 +89,7 @@ public class ListDataPipelinesRequest extends Request {
         } 
 
         /**
-         * <p>要查询数据流水线的工作空间名称。</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class ListDataPipelinesRequest extends Request {
         }
 
         /**
-         * <p>本次请求最多返回的数据流水线数量，取值范围为 1～100。</p>
+         * <p>The maximum number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -114,7 +114,7 @@ public class ListDataPipelinesRequest extends Request {
         }
 
         /**
-         * <p>用于获取下一页数据的令牌。首次查询时无需设置。</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJvZmZzZXQiOjEwfQ==</p>

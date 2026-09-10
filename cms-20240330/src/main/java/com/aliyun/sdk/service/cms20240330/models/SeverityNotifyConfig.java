@@ -67,7 +67,7 @@ public class SeverityNotifyConfig extends TeaModel {
         } 
 
         /**
-         * receivers.
+         * <p>The list of Notification Recipients. Each recipient specifies the type, identifier, and enabled channels.</p>
          */
         public Builder receivers(java.util.List<DirectNotifyReceiver> receivers) {
             this.receivers = receivers;
@@ -75,7 +75,10 @@ public class SeverityNotifyConfig extends TeaModel {
         }
 
         /**
-         * sendRecoverNotification.
+         * <p>Specifies whether to send recovery notifications for this severity level. If this parameter is empty, the value falls back to the top-level sendRecoverNotification parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sendRecoverNotification(Boolean sendRecoverNotification) {
             this.sendRecoverNotification = sendRecoverNotification;

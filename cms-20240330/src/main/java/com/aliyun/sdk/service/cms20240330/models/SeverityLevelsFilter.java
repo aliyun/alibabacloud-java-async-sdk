@@ -54,7 +54,7 @@ public class SeverityLevelsFilter extends TeaModel {
         } 
 
         /**
-         * contains.
+         * <p>Matches a log entry if its severity level appears in this array of strings.</p>
          */
         public Builder contains(java.util.List<String> contains) {
             this.contains = contains;

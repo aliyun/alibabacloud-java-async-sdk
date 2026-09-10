@@ -91,7 +91,7 @@ public class EnableNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -99,7 +99,7 @@ public class EnableNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>已启用的 NotifyPolicy uuid</p>
+         * <p>The unique identifier of the notification policy.</p>
          * 
          * <strong>example:</strong>
          * <p>7076c75c-c804-461e-975f-c6f9ed5af745</p>

@@ -67,7 +67,7 @@ public class WorkspaceFilterSetting extends TeaModel {
         } 
 
         /**
-         * tagSelector.
+         * <p>The label filter. This parameter is not supported and does not take effect if specified.</p>
          */
         public Builder tagSelector(FilterSetting tagSelector) {
             this.tagSelector = tagSelector;
@@ -75,7 +75,7 @@ public class WorkspaceFilterSetting extends TeaModel {
         }
 
         /**
-         * workspaceUuids.
+         * <p>The list of workspace UUIDs.</p>
          */
         public Builder workspaceUuids(java.util.List<String> workspaceUuids) {
             this.workspaceUuids = workspaceUuids;

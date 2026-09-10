@@ -152,7 +152,10 @@ public class ListAlertRobotsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The robot name. Prefix fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -161,7 +164,10 @@ public class ListAlertRobotsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -170,7 +176,10 @@ public class ListAlertRobotsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -179,7 +188,7 @@ public class ListAlertRobotsRequest extends Request {
         }
 
         /**
-         * robotIds.
+         * <p>The robot IDs.</p>
          */
         public Builder robotIds(java.util.List<String> robotIds) {
             String robotIdsShrink = shrink(robotIds, "robotIds", "json");
@@ -189,7 +198,7 @@ public class ListAlertRobotsRequest extends Request {
         }
 
         /**
-         * types.
+         * <p>The robot type.</p>
          */
         public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "types", "json");
@@ -199,7 +208,10 @@ public class ListAlertRobotsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-1423134313712421-cn-shanghai</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

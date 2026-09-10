@@ -98,6 +98,7 @@ public class EnableNotifyPolicyRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the notification policy, returned by the create operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class EnableNotifyPolicyRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

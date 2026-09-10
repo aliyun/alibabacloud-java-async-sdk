@@ -171,7 +171,10 @@ public class NotifyPolicySummary extends TeaModel {
         } 
 
         /**
-         * createTime.
+         * <p>The creation time, represented as a UNIX millisecond timestamp string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000000</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -179,7 +182,10 @@ public class NotifyPolicySummary extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A notification policy for testing</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -187,7 +193,10 @@ public class NotifyPolicySummary extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Indicates whether the notification policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -195,7 +204,10 @@ public class NotifyPolicySummary extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The Policy Name of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample notification policy</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -203,7 +215,7 @@ public class NotifyPolicySummary extends TeaModel {
         }
 
         /**
-         * notifyStrategy.
+         * <p>The configuration details of the notification policy.</p>
          */
         public Builder notifyStrategy(NotifyStrategyDetail notifyStrategy) {
             this.notifyStrategy = notifyStrategy;
@@ -211,7 +223,10 @@ public class NotifyPolicySummary extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The update time, represented as a UNIX millisecond timestamp string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000000</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -219,7 +234,10 @@ public class NotifyPolicySummary extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The Alibaba Cloud account UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -227,7 +245,10 @@ public class NotifyPolicySummary extends TeaModel {
         }
 
         /**
-         * uuid.
+         * <p>The unique identifier of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns-uuid-001</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -235,7 +256,10 @@ public class NotifyPolicySummary extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version number of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder version(Integer version) {
             this.version = version;
@@ -243,7 +267,10 @@ public class NotifyPolicySummary extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

@@ -80,7 +80,10 @@ public class PrometheusSimpleExpression extends TeaModel {
         } 
 
         /**
-         * operator.
+         * <p>The comparison operator. Valid values: GT (greater than), GE (greater than or equal to), LT (less than), LE (less than or equal to), EQ (equal to), and NE (not equal to).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GT</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -88,7 +91,10 @@ public class PrometheusSimpleExpression extends TeaModel {
         }
 
         /**
-         * queryName.
+         * <p>The referenced query name, corresponding to QueryConfigUnified.queries[].name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuQuery</p>
          */
         public Builder queryName(String queryName) {
             this.queryName = queryName;
@@ -96,7 +102,10 @@ public class PrometheusSimpleExpression extends TeaModel {
         }
 
         /**
-         * threshold.
+         * <p>The comparison threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder threshold(Double threshold) {
             this.threshold = threshold;

@@ -80,7 +80,7 @@ public class IncidentContactStruct extends TeaModel {
         } 
 
         /**
-         * channel.
+         * <p>The channel list.</p>
          */
         public Builder channel(java.util.List<String> channel) {
             this.channel = channel;
@@ -88,7 +88,10 @@ public class IncidentContactStruct extends TeaModel {
         }
 
         /**
-         * contactId.
+         * <p>The contact ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>627415</p>
          */
         public Builder contactId(String contactId) {
             this.contactId = contactId;
@@ -96,7 +99,10 @@ public class IncidentContactStruct extends TeaModel {
         }
 
         /**
-         * contactType.
+         * <p>The contact type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GROUP</p>
          */
         public Builder contactType(String contactType) {
             this.contactType = contactType;

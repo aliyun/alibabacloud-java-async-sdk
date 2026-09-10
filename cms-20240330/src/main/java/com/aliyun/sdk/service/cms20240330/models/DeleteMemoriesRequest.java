@@ -131,6 +131,7 @@ public class DeleteMemoriesRequest extends Request {
         } 
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class DeleteMemoriesRequest extends Request {
         }
 
         /**
+         * <p>The name of the memory store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,10 @@ public class DeleteMemoriesRequest extends Request {
         }
 
         /**
-         * agentId.
+         * <p>The agent ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952730733889060865</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("agentId", agentId);
@@ -164,7 +169,10 @@ public class DeleteMemoriesRequest extends Request {
         }
 
         /**
-         * appId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98ea19fe-128b-4841-b318-0359bec3c65d</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("appId", appId);
@@ -173,7 +181,10 @@ public class DeleteMemoriesRequest extends Request {
         }
 
         /**
-         * runId.
+         * <p>The run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jr-dd7c645fd6fe50d4</p>
          */
         public Builder runId(String runId) {
             this.putQueryParameter("runId", runId);
@@ -182,7 +193,10 @@ public class DeleteMemoriesRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user_001</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("userId", userId);

@@ -106,7 +106,7 @@ public class AlertRuleSend extends TeaModel {
         } 
 
         /**
-         * action.
+         * <p>The alert action integration configuration.</p>
          */
         public Builder action(AlertRuleAction action) {
             this.action = action;
@@ -114,7 +114,7 @@ public class AlertRuleSend extends TeaModel {
         }
 
         /**
-         * notification.
+         * <p>The alert notification configuration.</p>
          */
         public Builder notification(AlertRuleNotification notification) {
             this.notification = notification;
@@ -122,7 +122,7 @@ public class AlertRuleSend extends TeaModel {
         }
 
         /**
-         * notifyStrategies.
+         * <p>The list of notification policies that define the notification methods or Policy Name values to use for different alert states, such as triggered and recover.</p>
          */
         public Builder notifyStrategies(java.util.List<String> notifyStrategies) {
             this.notifyStrategies = notifyStrategies;
@@ -130,7 +130,7 @@ public class AlertRuleSend extends TeaModel {
         }
 
         /**
-         * rcaConfig.
+         * <p>The root cause analysis (RCA) configuration. After this feature is enabled, root cause analysis is automatically performed when an alert is triggered.</p>
          */
         public Builder rcaConfig(AlertRuleRcaConfig rcaConfig) {
             this.rcaConfig = rcaConfig;
@@ -138,7 +138,10 @@ public class AlertRuleSend extends TeaModel {
         }
 
         /**
-         * sendToArms.
+         * <p>Indicates whether event delivery of alert events to ARMS alert management is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder sendToArms(Boolean sendToArms) {
             this.sendToArms = sendToArms;

@@ -80,7 +80,10 @@ public class DisableNotifyPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The unique ID of the request. Used for troubleshooting and ticket tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70D52620-2609-1802-9788-6BC592C83F03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DisableNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the operation was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -96,7 +99,7 @@ public class DisableNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>已禁用的 NotifyPolicy uuid</p>
+         * <p>The uuid of the notification policy that was operated on.</p>
          * 
          * <strong>example:</strong>
          * <p>04779a183add4f2ca06ab440f16cc580</p>

@@ -229,6 +229,7 @@ public class SearchMemoriesRequest extends Request {
         } 
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +242,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
+         * <p>The memory store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +255,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * agentId.
+         * <p>The agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>972772996913709056</p>
          */
         public Builder agentId(String agentId) {
             this.putBodyParameter("agentId", agentId);
@@ -262,7 +267,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * appId.
+         * <p>The app key of the project assigned by the merchant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mm_480d961a1b5e4efe84603f4cbc0f</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("appId", appId);
@@ -271,7 +279,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * filters.
+         * <p>The filter conditions.</p>
          */
         public Builder filters(java.util.Map<String, ?> filters) {
             this.putBodyParameter("filters", filters);
@@ -280,7 +288,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * query.
+         * <p>The query content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>What I like</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);
@@ -289,7 +300,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * rerank.
+         * <p>Specifies whether to enable reranking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder rerank(Boolean rerank) {
             this.putBodyParameter("rerank", rerank);
@@ -298,7 +312,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * retrievalOption.
+         * <p>The retrieval option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reranker,llm_rank</p>
          */
         public Builder retrievalOption(String retrievalOption) {
             this.putBodyParameter("retrievalOption", retrievalOption);
@@ -307,7 +324,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * runId.
+         * <p>The run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_session_001</p>
          */
         public Builder runId(String runId) {
             this.putBodyParameter("runId", runId);
@@ -316,7 +336,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * searchType.
+         * <p>The search type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>experience</p>
          */
         public Builder searchType(String searchType) {
             this.putBodyParameter("searchType", searchType);
@@ -325,7 +348,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * threshold.
+         * <p>The similarity threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.3</p>
          */
         public Builder threshold(Double threshold) {
             this.putBodyParameter("threshold", threshold);
@@ -334,7 +360,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * topK.
+         * <p>The top-K entries to return in the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder topK(Integer topK) {
             this.putBodyParameter("topK", topK);
@@ -343,7 +372,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_session_001</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);

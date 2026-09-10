@@ -132,7 +132,10 @@ public class IncidentNoteStruct extends TeaModel {
         } 
 
         /**
-         * content.
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The operations team has been contacted and is currently investigating the issue.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -140,7 +143,10 @@ public class IncidentNoteStruct extends TeaModel {
         }
 
         /**
-         * format.
+         * <p>The content format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>markdown</p>
          */
         public Builder format(String format) {
             this.format = format;
@@ -148,7 +154,10 @@ public class IncidentNoteStruct extends TeaModel {
         }
 
         /**
-         * incidentId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>incident-001</p>
          */
         public Builder incidentId(String incidentId) {
             this.incidentId = incidentId;
@@ -156,7 +165,10 @@ public class IncidentNoteStruct extends TeaModel {
         }
 
         /**
-         * noteId.
+         * <p>The record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>note-001</p>
          */
         public Builder noteId(String noteId) {
             this.noteId = noteId;
@@ -164,7 +176,7 @@ public class IncidentNoteStruct extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The operator.</p>
          */
         public Builder operator(Operator operator) {
             this.operator = operator;
@@ -172,7 +184,10 @@ public class IncidentNoteStruct extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -180,7 +195,10 @@ public class IncidentNoteStruct extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apm</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -272,7 +290,10 @@ public class IncidentNoteStruct extends TeaModel {
             } 
 
             /**
-             * contact.
+             * <p>The contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;mobile_phone_num\&quot;:\&quot;153xxxx8040\&quot;,\&quot;mobile_country_code\&quot;:\&quot;86\&quot;,\&quot;email\&quot;:\&quot;<a href="mailto:flightxxg@dida.com">flightxxg@dida.com</a>\&quot;}</p>
              */
             public Builder contact(String contact) {
                 this.contact = contact;
@@ -280,7 +301,10 @@ public class IncidentNoteStruct extends TeaModel {
             }
 
             /**
-             * contactId.
+             * <p>The contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-12345</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -288,7 +312,10 @@ public class IncidentNoteStruct extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Zhang San.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +323,10 @@ public class IncidentNoteStruct extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4123456</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

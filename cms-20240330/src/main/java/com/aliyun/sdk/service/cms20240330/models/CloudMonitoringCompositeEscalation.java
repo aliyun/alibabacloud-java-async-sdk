@@ -93,7 +93,7 @@ public class CloudMonitoringCompositeEscalation extends TeaModel {
         } 
 
         /**
-         * escalations.
+         * <p>The list of multi-condition configurations.</p>
          */
         public Builder escalations(java.util.List<CloudMonitoringCompositeEscalationEntry> escalations) {
             this.escalations = escalations;
@@ -101,7 +101,10 @@ public class CloudMonitoringCompositeEscalation extends TeaModel {
         }
 
         /**
-         * relation.
+         * <p>The logical relationship between conditions (AND/OR).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
          */
         public Builder relation(String relation) {
             this.relation = relation;
@@ -109,7 +112,10 @@ public class CloudMonitoringCompositeEscalation extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -117,7 +123,10 @@ public class CloudMonitoringCompositeEscalation extends TeaModel {
         }
 
         /**
-         * times.
+         * <p>The number of consecutive times the condition is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder times(Integer times) {
             this.times = times;

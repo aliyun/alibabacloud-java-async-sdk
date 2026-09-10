@@ -67,7 +67,7 @@ public class DisplayNameFilter extends TeaModel {
         } 
 
         /**
-         * contains.
+         * <p>Returns only resources whose display name contains the specified string. The match is case-sensitive.</p>
          */
         public Builder contains(String contains) {
             this.contains = contains;
@@ -75,7 +75,7 @@ public class DisplayNameFilter extends TeaModel {
         }
 
         /**
-         * notContains.
+         * <p>Returns only resources whose display name does not contain the specified string. The match is case-sensitive.</p>
          */
         public Builder notContains(String notContains) {
             this.notContains = notContains;

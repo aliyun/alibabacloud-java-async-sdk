@@ -264,7 +264,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         } 
 
         /**
-         * bizSource.
+         * <p>The filter condition for the business source.</p>
          */
         public Builder bizSource(BizSourceFilter bizSource) {
             this.bizSource = bizSource;
@@ -272,7 +272,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * datasourceType.
+         * <p>The filter condition for the data source type.</p>
          */
         public Builder datasourceType(DatasourceTypeFilter datasourceType) {
             this.datasourceType = datasourceType;
@@ -280,7 +280,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * displayName.
+         * <p>The filter for alert rule names.</p>
          */
         public Builder displayName(DisplayNameFilter displayName) {
             this.displayName = displayName;
@@ -288,7 +288,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>The filter for whether the alert rule is enabled.</p>
          */
         public Builder enabled(EnabledFilter enabled) {
             this.enabled = enabled;
@@ -296,7 +296,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * labels.
+         * <p>The filter for labels.</p>
          */
         public Builder labels(LabelsFilter labels) {
             this.labels = labels;
@@ -304,7 +304,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * migrationStatus.
+         * <p>The migration status filter. Set isMigrated to true to query migrated rules (migration_status is not 0 or NULL). Set isMigrated to false to query native rules (migration_status=0).</p>
          */
         public Builder migrationStatus(MigrationStatusFilter migrationStatus) {
             this.migrationStatus = migrationStatus;
@@ -312,7 +312,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * notificationChannels.
+         * <p>The filter condition for notification channels.</p>
          */
         public Builder notificationChannels(NotificationChannelsFilter notificationChannels) {
             this.notificationChannels = notificationChannels;
@@ -320,7 +320,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * notifyStrategyId.
+         * <p>The filter condition for the notification policy ID.</p>
          */
         public Builder notifyStrategyId(NotifyStrategyIdFilter notifyStrategyId) {
             this.notifyStrategyId = notifyStrategyId;
@@ -328,7 +328,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * observeResourceConfig.
+         * <p>The composite filter based on the observeResourceConfig structure. This filter takes priority over the standalone observeResourceType, observeResourceGlobalScope, and observeResourceList fields. If both are specified and their semantics conflict, the request is rejected.</p>
          */
         public Builder observeResourceConfig(ObserveResourceConfigFilter observeResourceConfig) {
             this.observeResourceConfig = observeResourceConfig;
@@ -336,7 +336,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * observeResourceGlobalScope.
+         * <p>The filter condition for the global scope of observable resources.</p>
          */
         public Builder observeResourceGlobalScope(ObserveResourceGlobalScopeFilter observeResourceGlobalScope) {
             this.observeResourceGlobalScope = observeResourceGlobalScope;
@@ -344,7 +344,10 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * observeResourceInstanceId.
+         * <p><strong>[Deprecated]</strong> The single-value filter for the resource instance ID. This field is retained only for compatibility with legacy SDKs. Use observeResourceList.contains instead for new integrations. If this field is not empty and observeResourceList is not specified, it is equivalent to observeResourceList.contains=[observeResourceInstanceId].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1abcxxxxxxxx</p>
          */
         public Builder observeResourceInstanceId(String observeResourceInstanceId) {
             this.observeResourceInstanceId = observeResourceInstanceId;
@@ -352,7 +355,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * observeResourceList.
+         * <p>The filter condition for the list of observable resources.</p>
          */
         public Builder observeResourceList(ObserveResourceListFilter observeResourceList) {
             this.observeResourceList = observeResourceList;
@@ -360,7 +363,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * observeResourceType.
+         * <p><strong>[Deprecated]</strong> The filter for the observable resource type. Use observeResourceConfig.entityType instead for new integrations.</p>
          */
         public Builder observeResourceType(ObserveResourceTypeFilter observeResourceType) {
             this.observeResourceType = observeResourceType;
@@ -368,7 +371,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * partitionKey.
+         * <p>The filter condition for the partition key.</p>
          */
         public Builder partitionKey(PartitionKeyFilter partitionKey) {
             this.partitionKey = partitionKey;
@@ -376,7 +379,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * severityLevels.
+         * <p>The filter condition for alert severity levels.</p>
          */
         public Builder severityLevels(SeverityLevelsFilter severityLevels) {
             this.severityLevels = severityLevels;
@@ -384,7 +387,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The filter for statuses.</p>
          */
         public Builder status(StatusFilter status) {
             this.status = status;
@@ -392,7 +395,7 @@ public class QueryAlertRulesFilter extends TeaModel {
         }
 
         /**
-         * uuid.
+         * <p>The filter for alert rule UUIDs.</p>
          */
         public Builder uuid(UuidFilter uuid) {
             this.uuid = uuid;

@@ -223,7 +223,10 @@ public class IncidentPlanStruct extends TeaModel {
         } 
 
         /**
-         * autoRecoverSeconds.
+         * <p>The wait time for automatic recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder autoRecoverSeconds(Integer autoRecoverSeconds) {
             this.autoRecoverSeconds = autoRecoverSeconds;
@@ -231,7 +234,10 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * closeExpire.
+         * <p>The timeout period for closing an event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400000</p>
          */
         public Builder closeExpire(Long closeExpire) {
             this.closeExpire = closeExpire;
@@ -239,7 +245,7 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * corporation.
+         * <p>A list of collaborating teams or roles.</p>
          */
         public Builder corporation(java.util.List<IncidentPlanCorporationStruct> corporation) {
             this.corporation = corporation;
@@ -247,7 +253,10 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Emergency response plan for excessively high database connection count.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -255,7 +264,7 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * escalationId.
+         * <p>A list of escalation policy IDs.</p>
          */
         public Builder escalationId(java.util.List<String> escalationId) {
             this.escalationId = escalationId;
@@ -263,7 +272,10 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The time when the plan was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -271,7 +283,10 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The time when the plan was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -279,7 +294,7 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * groupBy.
+         * <p>The grouping field path.</p>
          */
         public Builder groupBy(java.util.List<IncidentPlanFieldPath> groupBy) {
             this.groupBy = groupBy;
@@ -287,7 +302,10 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * incidentPlanId.
+         * <p>The incident plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-001</p>
          */
         public Builder incidentPlanId(String incidentPlanId) {
             this.incidentPlanId = incidentPlanId;
@@ -295,7 +313,10 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Database connection count alert contingency plan.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -303,7 +324,7 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * resourceFiled.
+         * <p>A list of resource field mapping paths.</p>
          */
         public Builder resourceFiled(java.util.List<IncidentPlanFieldPath> resourceFiled) {
             this.resourceFiled = resourceFiled;
@@ -311,7 +332,10 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -319,7 +343,10 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uesr-12345</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;
@@ -327,7 +354,10 @@ public class IncidentPlanStruct extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

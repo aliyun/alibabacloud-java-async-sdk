@@ -132,7 +132,10 @@ public class PrometheusManagedInstance extends TeaModel {
         } 
 
         /**
-         * createTime.
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -140,7 +143,10 @@ public class PrometheusManagedInstance extends TeaModel {
         }
 
         /**
-         * instanceType.
+         * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -148,7 +154,10 @@ public class PrometheusManagedInstance extends TeaModel {
         }
 
         /**
-         * prometheusInstanceId.
+         * <p>The ID of the Prometheus instance that is associated with Real User Monitoring (RUM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rum-xxx</p>
          */
         public Builder prometheusInstanceId(String prometheusInstanceId) {
             this.prometheusInstanceId = prometheusInstanceId;
@@ -156,7 +165,10 @@ public class PrometheusManagedInstance extends TeaModel {
         }
 
         /**
-         * prometheusInstanceName.
+         * <p>The name of the Prometheus instance that is associated with RUM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rum-xxx</p>
          */
         public Builder prometheusInstanceName(String prometheusInstanceName) {
             this.prometheusInstanceName = prometheusInstanceName;
@@ -164,7 +176,10 @@ public class PrometheusManagedInstance extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The ID of the Alibaba Cloud region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -172,7 +187,10 @@ public class PrometheusManagedInstance extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -180,7 +198,10 @@ public class PrometheusManagedInstance extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The Cloud Monitor 2.0 workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

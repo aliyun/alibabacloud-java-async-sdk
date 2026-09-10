@@ -80,7 +80,7 @@ public class GetMemoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * relations.
+         * <p>A list of relations.</p>
          */
         public Builder relations(java.util.List<Relations> relations) {
             this.relations = relations;
@@ -88,7 +88,10 @@ public class GetMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class GetMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>A list of results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -175,7 +178,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * destination.
+             * <p>The destination of the relation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -183,7 +189,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * relationship.
+             * <p>The type of the relation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder relationship(String relationship) {
                 this.relationship = relationship;
@@ -191,7 +200,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The source of the relation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_namespace/RegistryModule-test2153b9f3-0be6-455e-9efd-05fd31f62885/alicloud</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -401,7 +413,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * actorId.
+             * <p>The actor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_session_001</p>
              */
             public Builder actorId(String actorId) {
                 this.actorId = actorId;
@@ -409,7 +424,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * agentId.
+             * <p>The agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>980565235819266048</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -417,7 +435,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * appId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_user_001</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -425,7 +446,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747623093939</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -433,7 +457,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * hash.
+             * <p>The memory hash.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73ad89f2d56c2f8615e5dd0cef7b4c41c074277c91fa0e31fc5b41802c0481f2</p>
              */
             public Builder hash(String hash) {
                 this.hash = hash;
@@ -441,7 +468,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The memory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>019ca1e5-7307-7d50-b943-5e628326a8ed</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -449,7 +479,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My name is Zhang San and I live in Hangzhou.</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -457,7 +490,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;<strong>strategy_type</strong>&quot;:&quot;Fact&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -465,7 +501,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>The role that sent the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -473,7 +512,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * runId.
+             * <p>The run ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jr-965a0b00cb42a43b</p>
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -481,7 +523,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>The similarity score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.12</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -489,7 +534,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1752825865045</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -497,7 +545,10 @@ public class GetMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_session_001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

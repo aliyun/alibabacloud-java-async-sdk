@@ -239,7 +239,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The time when the memory was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751595283143</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -247,7 +250,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * expirationDate.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751595283143</p>
          */
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = expirationDate;
@@ -255,7 +261,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The memory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019ca1e5-7307-7d50-b943-5e628326a8ed</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -263,7 +272,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * immutable.
+         * <p>This property is mutable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder immutable(String immutable) {
             this.immutable = immutable;
@@ -271,7 +283,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * memory.
+         * <p>The memory content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My name is Zhang San and I live in Hangzhou.</p>
          */
         public Builder memory(String memory) {
             this.memory = memory;
@@ -279,7 +294,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * metadata.
+         * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
          */
         public Builder metadata(String metadata) {
             this.metadata = metadata;
@@ -287,7 +305,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * organization.
+         * <p>The organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder organization(String organization) {
             this.organization = organization;
@@ -295,7 +316,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * owner.
+         * <p>The owner of the memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -303,7 +327,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -319,7 +346,10 @@ public class GetMemoryResponseBody extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the memory was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744428159434</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;

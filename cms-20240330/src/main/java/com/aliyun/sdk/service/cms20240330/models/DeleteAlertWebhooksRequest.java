@@ -83,6 +83,7 @@ public class DeleteAlertWebhooksRequest extends Request {
         }
 
         /**
+         * <p>Unique webhook identifiers.</p>
          * <p>This parameter is required.</p>
          */
         public Builder webhookIds(java.util.List<String> webhookIds) {

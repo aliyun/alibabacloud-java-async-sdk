@@ -54,7 +54,10 @@ public class EnabledFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder eq(Boolean eq) {
             this.eq = eq;

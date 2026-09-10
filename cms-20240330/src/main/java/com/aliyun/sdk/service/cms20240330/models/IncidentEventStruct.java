@@ -223,7 +223,10 @@ public class IncidentEventStruct extends TeaModel {
         } 
 
         /**
-         * autoRecoverTime.
+         * <p>The time of automatic recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
          */
         public Builder autoRecoverTime(Long autoRecoverTime) {
             this.autoRecoverTime = autoRecoverTime;
@@ -231,7 +234,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * content.
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Detected that the CPU usage of the user-service instance i-abc123 has reached 95%, triggering an alert.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -239,7 +245,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * count.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -247,7 +256,7 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * dimension.
+         * <p>The dimension.</p>
          */
         public Builder dimension(java.util.Map<String, String> dimension) {
             this.dimension = dimension;
@@ -255,7 +264,7 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * groupBy.
+         * <p>The dimension for grouping.</p>
          */
         public Builder groupBy(java.util.Map<String, String> groupBy) {
             this.groupBy = groupBy;
@@ -263,7 +272,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * incidentEventId.
+         * <p>The incident event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event-001</p>
          */
         public Builder incidentEventId(String incidentEventId) {
             this.incidentEventId = incidentEventId;
@@ -271,7 +283,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * incidentId.
+         * <p>The incident ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>incident-001</p>
          */
         public Builder incidentId(String incidentId) {
             this.incidentId = incidentId;
@@ -279,7 +294,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * lastTime.
+         * <p>The time of the last occurrence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
          */
         public Builder lastTime(Long lastTime) {
             this.lastTime = lastTime;
@@ -287,7 +305,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * recoverTime.
+         * <p>The time of manual recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
          */
         public Builder recoverTime(Long recoverTime) {
             this.recoverTime = recoverTime;
@@ -295,7 +316,7 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * resource.
+         * <p>The resource associated with the event.</p>
          */
         public Builder resource(java.util.Map<String, String> resource) {
             this.resource = resource;
@@ -303,7 +324,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(Long status) {
             this.status = status;
@@ -311,7 +335,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58Z</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -319,7 +346,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User service CPU usage is too high.</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -327,7 +357,10 @@ public class IncidentEventStruct extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-12345</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

@@ -158,7 +158,7 @@ public class TransformAction extends TeaModel {
         } 
 
         /**
-         * filterSetting.
+         * <p>The filter configuration.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -166,7 +166,10 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * labelKey.
+         * <p>The label name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>labelkey1</p>
          */
         public Builder labelKey(String labelKey) {
             this.labelKey = labelKey;
@@ -174,7 +177,7 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * mapping.
+         * <p>The mapping configuration.</p>
          */
         public Builder mapping(java.util.Map<String, String> mapping) {
             this.mapping = mapping;
@@ -182,7 +185,10 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * regExp.
+         * <p>The regular expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(.<em>):(.</em>)</p>
          */
         public Builder regExp(String regExp) {
             this.regExp = regExp;
@@ -190,7 +196,10 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The reference path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data.subject</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -198,7 +207,10 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * target.
+         * <p>The target location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUBJECT</p>
          */
         public Builder target(String target) {
             this.target = target;
@@ -206,7 +218,10 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The transform type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SET_FIELD</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -214,7 +229,10 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The value to set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value1</p>
          */
         public Builder value(String value) {
             this.value = value;
@@ -222,7 +240,10 @@ public class TransformAction extends TeaModel {
         }
 
         /**
-         * variable.
+         * <p>The variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>var1</p>
          */
         public Builder variable(String variable) {
             this.variable = variable;

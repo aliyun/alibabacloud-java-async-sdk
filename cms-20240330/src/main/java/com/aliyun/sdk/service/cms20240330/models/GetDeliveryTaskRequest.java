@@ -60,6 +60,7 @@ public class GetDeliveryTaskRequest extends Request {
         } 
 
         /**
+         * <p>The delivery task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

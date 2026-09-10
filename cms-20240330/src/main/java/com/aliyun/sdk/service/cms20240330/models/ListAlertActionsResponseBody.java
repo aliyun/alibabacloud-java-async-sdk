@@ -106,7 +106,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of alert action configurations.</p>
+         * <p>The list of alert action integration configurations.</p>
          */
         public Builder alertActions(java.util.List<AlertActions> alertActions) {
             this.alertActions = alertActions;
@@ -114,7 +114,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -136,7 +136,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -147,7 +147,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -242,7 +242,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Event source.</p>
+             * <p>The event provider.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -253,7 +253,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Event bus name.</p>
+             * <p>The name of the event bus.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -264,7 +264,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-heyuan</p>
@@ -275,7 +275,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Subject.</p>
+             * <p>The subject.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -358,7 +358,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Elastic scaling group ID.</p>
+             * <p>The ID of the Auto Scaling group.</p>
              * 
              * <strong>example:</strong>
              * <p>testId</p>
@@ -369,7 +369,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Elastic scaling rule ID.</p>
+             * <p>The ID of the scaling rule.</p>
              * 
              * <strong>example:</strong>
              * <p>testId</p>
@@ -380,7 +380,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -463,7 +463,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Function name of the Function Compute service.</p>
+             * <p>The function name of the Function Compute service.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -474,7 +474,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Version or alias of the function.</p>
+             * <p>The version or alias of the function.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -485,7 +485,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-qingdao</p>
@@ -568,7 +568,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Function name in the Function Compute service.</p>
+             * <p>The function name of the Function Compute service.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -579,7 +579,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -590,7 +590,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Function Compute service name.</p>
+             * <p>The service name of Function Compute.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -673,7 +673,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Resource type of the Lightweight Message Queue (formerly MNS).</p>
+             * <p>The resource type of Simple Message Queue (formerly MNS).</p>
              * 
              * <strong>example:</strong>
              * <p>queue</p>
@@ -684,10 +684,12 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource name.</p>
+             * <p>The name of the resource.</p>
              * <ul>
-             * <li>If the resource type is queue, the resource name is the queue name.</li>
-             * <li>If the resource type is topic, the resource name is the topic name.</li>
+             * <li><p>If the resource type is \<code>queue\\</code>, this parameter specifies the queue name.</p>
+             * </li>
+             * <li><p>If the resource type is \<code>topic\\</code>, this parameter specifies the topic name.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -699,7 +701,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -769,7 +771,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Integration key for PagerDuty.</p>
+             * <p>The integration key of PagerDuty.</p>
              * 
              * <strong>example:</strong>
              * <p>fsfer4543t5t65g4t4</p>
@@ -780,7 +782,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Integration webhook for PagerDuty. Supports V1 and V2 versions.</p>
+             * <p>The integration webhook of PagerDuty. Versions 1 and 2 are supported.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -863,7 +865,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Logstore name of the Log Service.</p>
+             * <p>The name of the Simple Log Service Logstore.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -874,7 +876,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Log Service project name.</p>
+             * <p>The name of the Simple Log Service project.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -885,7 +887,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -981,7 +983,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data format, effective when the request method is POST.</p>
+             * <p>The data format. This parameter is valid only when the request method is POST.</p>
              * 
              * <strong>example:</strong>
              * <p>JSON</p>
@@ -992,7 +994,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Request headers.</p>
+             * <p>The request headers.</p>
              */
             public Builder headers(java.util.Map<String, String> headers) {
                 this.headers = headers;
@@ -1000,7 +1002,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Webhook request method.</p>
+             * <p>The request method of the webhook.</p>
              * 
              * <strong>example:</strong>
              * <p>GET</p>
@@ -1011,7 +1013,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL address for the alarm callback.</p>
+             * <p>The callback URL for alerts.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.test.com">http://www.test.com</a></p>
@@ -1198,7 +1200,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Unique identifier for the action integration.</p>
+             * <p>The unique ID of the alert action integration.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1209,7 +1211,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Alert action name.</p>
+             * <p>The name of the alert action integration.</p>
              * 
              * <strong>example:</strong>
              * <p>testName</p>
@@ -1220,7 +1222,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Event Bridge parameters.</p>
+             * <p>Specifies the event bus.</p>
              */
             public Builder ebParam(EbParam ebParam) {
                 this.ebParam = ebParam;
@@ -1228,7 +1230,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Elastic scaling parameters.</p>
+             * <p>The parameters of Auto Scaling.</p>
              */
             public Builder essParam(EssParam essParam) {
                 this.essParam = essParam;
@@ -1236,7 +1238,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Function Compute 3.0 parameters.</p>
+             * <p>The parameters of Function Compute 3.0.</p>
              */
             public Builder fc3Param(Fc3Param fc3Param) {
                 this.fc3Param = fc3Param;
@@ -1244,7 +1246,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Function Compute parameters.</p>
+             * <p>The parameters of Function Compute.</p>
              */
             public Builder fcParam(FcParam fcParam) {
                 this.fcParam = fcParam;
@@ -1252,7 +1254,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Lightweight Message Queue (formerly MNS) parameters.</p>
+             * <p>The parameters of Simple Message Queue (formerly MNS).</p>
              */
             public Builder mnsParam(MnsParam mnsParam) {
                 this.mnsParam = mnsParam;
@@ -1260,7 +1262,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PagerDuty parameters</p>
+             * <p>The PagerDuty parameters.</p>
              */
             public Builder pagerDutyParam(PagerDutyParam pagerDutyParam) {
                 this.pagerDutyParam = pagerDutyParam;
@@ -1268,7 +1270,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Log Service parameters.</p>
+             * <p>The parameters of Simple Log Service.</p>
              */
             public Builder slsParam(SlsParam slsParam) {
                 this.slsParam = slsParam;
@@ -1276,7 +1278,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Action integration type.</p>
+             * <p>The type of the alert action integration.</p>
              * 
              * <strong>example:</strong>
              * <p>FC</p>
@@ -1287,7 +1289,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Webhook parameters</p>
+             * <p>The webhook parameters.</p>
              */
             public Builder webhookParam(WebhookParam webhookParam) {
                 this.webhookParam = webhookParam;

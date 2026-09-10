@@ -116,7 +116,7 @@ public class ListAddonReleasesRequest extends Request {
         } 
 
         /**
-         * <p>Policy environment ID.</p>
+         * <p>The policy environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListAddonReleasesRequest extends Request {
         }
 
         /**
-         * <p>Addon component name.</p>
+         * <p>The name of the add-on.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-gpu</p>
@@ -159,7 +159,7 @@ public class ListAddonReleasesRequest extends Request {
         }
 
         /**
-         * <p>Parent AddonReleaseId.</p>
+         * <p>The parent AddonRelease ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxxxxxxxxxxxx</p>

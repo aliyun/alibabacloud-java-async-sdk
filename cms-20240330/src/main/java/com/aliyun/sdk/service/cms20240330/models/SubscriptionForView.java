@@ -250,7 +250,7 @@ public class SubscriptionForView extends TeaModel {
         } 
 
         /**
-         * agentConfig.
+         * <p>The Agent configuration information.</p>
          */
         public Builder agentConfig(AgentConfig agentConfig) {
             this.agentConfig = agentConfig;
@@ -258,7 +258,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -266,7 +269,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -274,7 +280,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the subscription is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -282,7 +291,7 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter settings.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -290,7 +299,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * notifyStrategyId.
+         * <p>The UUID of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23123123</p>
          */
         public Builder notifyStrategyId(String notifyStrategyId) {
             this.notifyStrategyId = notifyStrategyId;
@@ -298,7 +310,7 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * pushingSetting.
+         * <p>The push settings.</p>
          */
         public Builder pushingSetting(PushingSetting pushingSetting) {
             this.pushingSetting = pushingSetting;
@@ -306,7 +318,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * <p>是否订阅老产品事件（workspace=null 的 cms 1.0 / ARMS / SLS 事件）：true=订阅，false 或 null=不订阅</p>
+         * <p>Indicates whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace=null). Valid values: true: Subscribed. false or null: Not subscribed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder subscribeLegacyEvent(Boolean subscribeLegacyEvent) {
             this.subscribeLegacyEvent = subscribeLegacyEvent;
@@ -314,7 +329,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * subscriptionId.
+         * <p>The unique identifier of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123123</p>
          */
         public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = subscriptionId;
@@ -322,7 +340,11 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SubscriptionTest</p>
          */
         public Builder subscriptionName(String subscriptionName) {
             this.subscriptionName = subscriptionName;
@@ -330,7 +352,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * subscriptionType.
+         * <p>The subscription type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.subscriptionType = subscriptionType;
@@ -338,7 +363,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * syncFromType.
+         * <p>The source type of the synchronization policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ARMS&quot;</p>
          */
         public Builder syncFromType(String syncFromType) {
             this.syncFromType = syncFromType;
@@ -346,7 +374,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-23T02:29:02Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -354,7 +385,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -362,7 +396,10 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -370,7 +407,7 @@ public class SubscriptionForView extends TeaModel {
         }
 
         /**
-         * workspaceFilterSetting.
+         * <p>The workspace filter settings.</p>
          */
         public Builder workspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
             this.workspaceFilterSetting = workspaceFilterSetting;
@@ -436,7 +473,10 @@ public class SubscriptionForView extends TeaModel {
             } 
 
             /**
-             * agentUuid.
+             * <p>The unique identifier of the Agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-uuid-001</p>
              */
             public Builder agentUuid(String agentUuid) {
                 this.agentUuid = agentUuid;
@@ -444,7 +484,7 @@ public class SubscriptionForView extends TeaModel {
             }
 
             /**
-             * routes.
+             * <p>The list of Agent routing configurations.</p>
              */
             public Builder routes(java.util.List<NotifyRouteForSubscription> routes) {
                 this.routes = routes;
@@ -537,7 +577,7 @@ public class SubscriptionForView extends TeaModel {
             } 
 
             /**
-             * alertActionIds.
+             * <p>The list of action integration IDs for alert pushing.</p>
              */
             public Builder alertActionIds(java.util.List<String> alertActionIds) {
                 this.alertActionIds = alertActionIds;
@@ -545,7 +585,10 @@ public class SubscriptionForView extends TeaModel {
             }
 
             /**
-             * responsePlanId.
+             * <p>The action plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123123</p>
              */
             public Builder responsePlanId(String responsePlanId) {
                 this.responsePlanId = responsePlanId;
@@ -553,7 +596,7 @@ public class SubscriptionForView extends TeaModel {
             }
 
             /**
-             * restoreActionIds.
+             * <p>The list of action integration IDs for recovery pushing.</p>
              */
             public Builder restoreActionIds(java.util.List<String> restoreActionIds) {
                 this.restoreActionIds = restoreActionIds;
@@ -561,7 +604,10 @@ public class SubscriptionForView extends TeaModel {
             }
 
             /**
-             * templateUuid.
+             * <p>The UUID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123123</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;

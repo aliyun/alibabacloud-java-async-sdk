@@ -67,7 +67,7 @@ public class QueryAlertRulesResult extends TeaModel {
         } 
 
         /**
-         * alertRules.
+         * <p>The list of alert rules for the current page.</p>
          */
         public Builder alertRules(java.util.List<AlertRuleV2> alertRules) {
             this.alertRules = alertRules;
@@ -75,7 +75,7 @@ public class QueryAlertRulesResult extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of alert rules that match the query.</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

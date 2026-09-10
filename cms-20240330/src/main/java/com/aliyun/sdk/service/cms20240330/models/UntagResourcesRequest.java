@@ -126,7 +126,14 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * all.
+         * <p>Specifies whether to unbind all labels from the specified resource. Valid values:</p>
+         * <ul>
+         * <li>false (default): No.</li>
+         * <li>true: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -135,6 +142,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -145,6 +153,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +166,8 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * tagKey.
+         * <p>The label key.</p>
+         * <p>You can unbind up to 20 label keys at a time.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             String tagKeyShrink = shrink(tagKey, "tagKey", "json");

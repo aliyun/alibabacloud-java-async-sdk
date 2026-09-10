@@ -67,7 +67,10 @@ public class PrometheusMetricParamValue extends TeaModel {
         } 
 
         /**
-         * name.
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>threshold</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -75,7 +78,10 @@ public class PrometheusMetricParamValue extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -173,6 +173,7 @@ public class GetMemoriesRequest extends Request {
         } 
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +186,7 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
+         * <p>The memory store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +199,10 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * agentId.
+         * <p>The application\&quot;s agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952730652285943809</p>
          */
         public Builder agentId(String agentId) {
             this.putBodyParameter("agentId", agentId);
@@ -206,7 +211,10 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * appId.
+         * <p>The Application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150130323</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("appId", appId);
@@ -215,7 +223,10 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * filters.
+         * <p>The filter criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;<strong>strategy_type</strong>&quot;:&quot;Fact&quot;}</p>
          */
         public Builder filters(java.util.Map<String, ?> filters) {
             this.putBodyParameter("filters", filters);
@@ -224,7 +235,10 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putBodyParameter("page", page);
@@ -233,7 +247,10 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -242,7 +259,10 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * runId.
+         * <p>The Run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jr-80ded1d6953c64ea</p>
          */
         public Builder runId(String runId) {
             this.putBodyParameter("runId", runId);
@@ -251,7 +271,10 @@ public class GetMemoriesRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>The User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user_001</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);

@@ -80,7 +80,7 @@ public class MetricSetTriggerCompositeExpression extends TeaModel {
         } 
 
         /**
-         * conditions.
+         * <p>The list of sub-conditions. Each item is a simple comparison expression.</p>
          */
         public Builder conditions(java.util.List<MetricSetTriggerSimpleExpression> conditions) {
             this.conditions = conditions;
@@ -88,7 +88,10 @@ public class MetricSetTriggerCompositeExpression extends TeaModel {
         }
 
         /**
-         * expressionType.
+         * <p>The expression type, fixed as COMPOSITE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPOSITE</p>
          */
         public Builder expressionType(String expressionType) {
             this.expressionType = expressionType;
@@ -96,7 +99,15 @@ public class MetricSetTriggerCompositeExpression extends TeaModel {
         }
 
         /**
-         * logicOperator.
+         * <p>The logical operator. Valid values:</p>
+         * <ul>
+         * <li>AND: All conditions are met.</li>
+         * <li>OR: Any condition is met.</li>
+         * <li>UNLESS: The first condition is met and none of the remaining conditions are met.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
          */
         public Builder logicOperator(String logicOperator) {
             this.logicOperator = logicOperator;

@@ -213,7 +213,10 @@ public class NotifyStrategyForModify extends TeaModel {
         } 
 
         /**
-         * autoRecoverSeconds.
+         * <p>The automatic recovery time in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder autoRecoverSeconds(Integer autoRecoverSeconds) {
             this.autoRecoverSeconds = autoRecoverSeconds;
@@ -221,7 +224,7 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * customTemplateEntries.
+         * <p>The notification channel templates.</p>
          */
         public Builder customTemplateEntries(java.util.List<CustomTemplateEntries> customTemplateEntries) {
             this.customTemplateEntries = customTemplateEntries;
@@ -229,7 +232,10 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -237,7 +243,10 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * enableIncidentManagement.
+         * <p>Indicates whether incident management is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableIncidentManagement(Boolean enableIncidentManagement) {
             this.enableIncidentManagement = enableIncidentManagement;
@@ -245,7 +254,7 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * escalationId.
+         * <p>The list of escalation policy IDs.</p>
          */
         public Builder escalationId(java.util.List<String> escalationId) {
             this.escalationId = escalationId;
@@ -253,7 +262,7 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter settings.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -261,6 +270,7 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
+         * <p>The grouping settings.</p>
          * <p>This parameter is required.</p>
          */
         public Builder groupingSetting(GroupingSetting groupingSetting) {
@@ -269,7 +279,10 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * ignoreRestoredNotification.
+         * <p>Indicates whether to send a notification when the alert is restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder ignoreRestoredNotification(Boolean ignoreRestoredNotification) {
             this.ignoreRestoredNotification = ignoreRestoredNotification;
@@ -277,7 +290,11 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
+         * <p>The name of the notification policy.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Policy Name</p>
          */
         public Builder notifyStrategyName(String notifyStrategyName) {
             this.notifyStrategyName = notifyStrategyName;
@@ -285,7 +302,7 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * pushingSetting.
+         * <p>The push settings.</p>
          */
         public Builder pushingSetting(PushingSetting pushingSetting) {
             this.pushingSetting = pushingSetting;
@@ -293,7 +310,7 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * repeatNotifySetting.
+         * <p>The repeat notification settings.</p>
          */
         public Builder repeatNotifySetting(RepeatNotifySetting repeatNotifySetting) {
             this.repeatNotifySetting = repeatNotifySetting;
@@ -301,6 +318,7 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
+         * <p>The notification channel route settings.</p>
          * <p>This parameter is required.</p>
          */
         public Builder routes(java.util.List<Routes> routes) {
@@ -309,7 +327,7 @@ public class NotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * workspaceFilterSetting.
+         * <p>The workspace filter settings.</p>
          */
         public Builder workspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
             this.workspaceFilterSetting = workspaceFilterSetting;
@@ -377,7 +395,11 @@ public class NotifyStrategyForModify extends TeaModel {
             } 
 
             /**
+             * <p>The notification type.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -385,7 +407,11 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
+             * <p>The template UUID.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123-12-31-231-23-12-3123</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;
@@ -478,7 +504,7 @@ public class NotifyStrategyForModify extends TeaModel {
             } 
 
             /**
-             * groupingKeys.
+             * <p>The grouping keys.</p>
              */
             public Builder groupingKeys(java.util.List<String> groupingKeys) {
                 this.groupingKeys = groupingKeys;
@@ -486,7 +512,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * periodMin.
+             * <p>The check period in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder periodMin(Integer periodMin) {
                 this.periodMin = periodMin;
@@ -494,7 +523,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * silenceSec.
+             * <p>The silence duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder silenceSec(Integer silenceSec) {
                 this.silenceSec = silenceSec;
@@ -502,7 +534,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * times.
+             * <p>The number of times the alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -582,7 +617,7 @@ public class NotifyStrategyForModify extends TeaModel {
             } 
 
             /**
-             * alertActionIds.
+             * <p>The list of alert action IDs.</p>
              */
             public Builder alertActionIds(java.util.List<String> alertActionIds) {
                 this.alertActionIds = alertActionIds;
@@ -590,7 +625,7 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * restoreActionIds.
+             * <p>The list of recovery action IDs.</p>
              */
             public Builder restoreActionIds(java.util.List<String> restoreActionIds) {
                 this.restoreActionIds = restoreActionIds;
@@ -598,7 +633,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The message template UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template UUID</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;
@@ -665,7 +703,10 @@ public class NotifyStrategyForModify extends TeaModel {
             } 
 
             /**
-             * endIncidentState.
+             * <p>The end incident state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;Resolved&quot;</p>
              */
             public Builder endIncidentState(String endIncidentState) {
                 this.endIncidentState = endIncidentState;
@@ -673,7 +714,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * repeatInterval.
+             * <p>The time interval for repeat notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder repeatInterval(Integer repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -755,7 +799,11 @@ public class NotifyStrategyForModify extends TeaModel {
             } 
 
             /**
+             * <p>The channel type.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTACT</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -763,7 +811,7 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * enabledSubChannels.
+             * <p>The enabled notification types.</p>
              */
             public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
                 this.enabledSubChannels = enabledSubChannels;
@@ -771,6 +819,7 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
+             * <p>The channel receivers.</p>
              * <p>This parameter is required.</p>
              */
             public Builder receivers(java.util.List<String> receivers) {
@@ -866,7 +915,7 @@ public class NotifyStrategyForModify extends TeaModel {
             } 
 
             /**
-             * dayInWeek.
+             * <p>The effective days (Monday to Sunday).</p>
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
@@ -874,7 +923,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * endTimeInMinute.
+             * <p>The end time in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder endTimeInMinute(Integer endTimeInMinute) {
                 this.endTimeInMinute = endTimeInMinute;
@@ -882,7 +934,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * startTimeInMinute.
+             * <p>The start time in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder startTimeInMinute(Integer startTimeInMinute) {
                 this.startTimeInMinute = startTimeInMinute;
@@ -890,7 +945,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * timeZone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>+08:00</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -1009,7 +1067,7 @@ public class NotifyStrategyForModify extends TeaModel {
             } 
 
             /**
-             * channels.
+             * <p>The notification channels.</p>
              */
             public Builder channels(java.util.List<Channels> channels) {
                 this.channels = channels;
@@ -1017,7 +1075,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * digitalEmployeeName.
+             * <p>The name of the digital employee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>On-call Assistant</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;
@@ -1025,7 +1086,7 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * effectTimeRange.
+             * <p>The effective time range.</p>
              */
             public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
                 this.effectTimeRange = effectTimeRange;
@@ -1033,7 +1094,10 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * enableRca.
+             * <p>Indicates whether root cause analysis is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableRca(Boolean enableRca) {
                 this.enableRca = enableRca;
@@ -1041,7 +1105,7 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * filterSetting.
+             * <p>The route condition.</p>
              */
             public Builder filterSetting(FilterSetting filterSetting) {
                 this.filterSetting = filterSetting;
@@ -1049,7 +1113,7 @@ public class NotifyStrategyForModify extends TeaModel {
             }
 
             /**
-             * severities.
+             * <p>The list of severity levels.</p>
              */
             public Builder severities(java.util.List<String> severities) {
                 this.severities = severities;

@@ -59,7 +59,10 @@ public class GetPrometheusUserSettingRequest extends Request {
         } 
 
         /**
-         * aliyunLang.
+         * <p>The language of the response. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("aliyunLang", aliyunLang);

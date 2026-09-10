@@ -104,6 +104,7 @@ public class CreateDatasetRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The name of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -137,6 +142,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The schema of the dataset.</p>
          * <p>This parameter is required.</p>
          */
         public Builder schema(java.util.Map<String, IndexKey> schema) {

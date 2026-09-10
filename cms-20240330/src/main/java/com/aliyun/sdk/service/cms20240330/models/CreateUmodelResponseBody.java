@@ -67,7 +67,7 @@ public class CreateUmodelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123-0F43-23423-AC43-34234</p>
@@ -78,7 +78,7 @@ public class CreateUmodelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Workspace name</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>

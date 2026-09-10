@@ -144,7 +144,7 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * <p>Page size
+         * <p>The number of entries per page.
          * Default value:
          *     50
          * Maximum value:
@@ -160,7 +160,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>Pagination Token</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxxxxxx</p>
@@ -172,7 +172,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>Region</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -184,7 +184,10 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******ey</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -193,7 +196,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -203,7 +206,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>Workspace name, fuzzy search</p>
+         * <p>The workspace name. Fuzzy match is used.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test-001</p>
@@ -215,7 +218,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * <p>Workspace name, exact match</p>
+         * <p>The workspace name. Exact match is used.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test-001</p>
@@ -287,7 +290,7 @@ public class ListWorkspacesRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -295,7 +298,7 @@ public class ListWorkspacesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -93,7 +93,10 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
         } 
 
         /**
-         * autoRecoverSeconds.
+         * <p>The auto-recovery time. Unit: seconds. After this is configured, if no new events are generated for the incident within this period, the incident is automatically marked as resolved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder autoRecoverSeconds(Long autoRecoverSeconds) {
             this.autoRecoverSeconds = autoRecoverSeconds;
@@ -101,7 +104,7 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
         }
 
         /**
-         * escalationId.
+         * <p>The list of escalation policy IDs. Associates with IncidentEscalationPolicy to define step-by-step escalation rules when an incident is not handled as expected, such as notifying a supervisor if the incident is not acknowledged within 30 minutes.</p>
          */
         public Builder escalationId(java.util.List<String> escalationId) {
             this.escalationId = escalationId;
@@ -109,7 +112,7 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
         }
 
         /**
-         * pushingSetting.
+         * <p>The action integration execution configuration that defines automated actions to trigger when an incident occurs and when it is recovered.</p>
          */
         public Builder pushingSetting(PushingSetting pushingSetting) {
             this.pushingSetting = pushingSetting;
@@ -117,7 +120,7 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
         }
 
         /**
-         * repeatNotifySetting.
+         * <p>The repeat notification settings. When an incident remains unresolved, notifications are sent repeatedly at a fixed interval.</p>
          */
         public Builder repeatNotifySetting(RepeatNotifySetting repeatNotifySetting) {
             this.repeatNotifySetting = repeatNotifySetting;
@@ -196,7 +199,7 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
             } 
 
             /**
-             * alertActionIds.
+             * <p>The list of action IDs to execute when an event is triggered. Actions must be created in advance by calling CreateAlertAction.</p>
              */
             public Builder alertActionIds(java.util.List<String> alertActionIds) {
                 this.alertActionIds = alertActionIds;
@@ -204,7 +207,7 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
             }
 
             /**
-             * restoreActionIds.
+             * <p>The list of action IDs to execute when an event is recovered.</p>
              */
             public Builder restoreActionIds(java.util.List<String> restoreActionIds) {
                 this.restoreActionIds = restoreActionIds;
@@ -212,7 +215,10 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
             }
 
             /**
-             * templateUuid.
+             * <p>Deprecated. This parameter does not take effect even if a value is passed in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>uuid</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;
@@ -279,7 +285,10 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
             } 
 
             /**
-             * endIncidentState.
+             * <p>The incident status at which repeat notifications stop. Repeat notifications are no longer sent after the incident reaches this status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>resolved</p>
              */
             public Builder endIncidentState(String endIncidentState) {
                 this.endIncidentState = endIncidentState;
@@ -287,7 +296,10 @@ public class IncidentResponsePlanForSNSModify extends TeaModel {
             }
 
             /**
-             * repeatInterval.
+             * <p>The repeat notification interval. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder repeatInterval(Integer repeatInterval) {
                 this.repeatInterval = repeatInterval;

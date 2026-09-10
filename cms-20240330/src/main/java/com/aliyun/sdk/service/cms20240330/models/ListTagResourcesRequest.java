@@ -139,7 +139,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -148,7 +151,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -157,7 +163,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * <p>The list of resource IDs.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             String resourceIdShrink = shrink(resourceId, "resourceId", "json");
@@ -167,6 +173,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +186,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The labels. Used as filter conditions for the query.</p>
+         * <p>You can specify up to 20 labels.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");

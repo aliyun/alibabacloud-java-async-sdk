@@ -138,7 +138,7 @@ public class QueryAlertRulesRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for querying alert rules.</p>
          */
         public Builder body(QueryAlertRulesInput body) {
             String bodyShrink = shrink(body, "body", "json");
@@ -148,7 +148,10 @@ public class QueryAlertRulesRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxx-xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -157,7 +160,10 @@ public class QueryAlertRulesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of data records to read in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -166,7 +172,10 @@ public class QueryAlertRulesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token that marks the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

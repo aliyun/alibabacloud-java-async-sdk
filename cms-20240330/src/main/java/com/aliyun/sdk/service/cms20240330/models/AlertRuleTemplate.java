@@ -314,7 +314,10 @@ public class AlertRuleTemplate extends TeaModel {
         } 
 
         /**
-         * alertType.
+         * <p>The alert type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>METRIC_SET</p>
          */
         public Builder alertType(String alertType) {
             this.alertType = alertType;
@@ -322,7 +325,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * applyCount.
+         * <p>The number of rules that have been applied from this template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder applyCount(Long applyCount) {
             this.applyCount = applyCount;
@@ -330,7 +336,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * bizType.
+         * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALERT</p>
          */
         public Builder bizType(String bizType) {
             this.bizType = bizType;
@@ -338,7 +347,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * datasource.
+         * <p>The data source, in JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;SLS&quot;,&quot;project&quot;:&quot;my-project&quot;}</p>
          */
         public Builder datasource(String datasource) {
             this.datasource = datasource;
@@ -346,7 +358,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The template description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Triggers an alert when the CPU usage of an ECS instance exceeds the threshold</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -354,7 +369,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time, in UNIX millisecond timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000000</p>
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -362,7 +380,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The last modified time, in UNIX millisecond timestamp format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000000</p>
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -370,7 +391,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -378,7 +402,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * isSystem.
+         * <p>Indicates whether the template is a system template. Valid values: 1: yes. 0: no.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder isSystem(Integer isSystem) {
             this.isSystem = isSystem;
@@ -386,7 +413,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * labels.
+         * <p>The labels, in JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;env&quot;:&quot;prod&quot;,&quot;team&quot;:&quot;ops&quot;}</p>
          */
         public Builder labels(String labels) {
             this.labels = labels;
@@ -394,7 +424,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -402,7 +435,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * productCategory.
+         * <p>The cloud service category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCategory(String productCategory) {
             this.productCategory = productCategory;
@@ -410,7 +446,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * ruleConfigs.
+         * <p>The rule configurations, in JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;threshold&quot;:80,&quot;duration&quot;:60}</p>
          */
         public Builder ruleConfigs(String ruleConfigs) {
             this.ruleConfigs = ruleConfigs;
@@ -418,7 +457,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * scenes.
+         * <p>The applicable scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder scenes(String scenes) {
             this.scenes = scenes;
@@ -426,7 +468,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * schemaVersion.
+         * <p>The schema version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = schemaVersion;
@@ -434,7 +479,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * sourceType.
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;
@@ -442,7 +490,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The template status. Valid values: 1: enabled. 0: disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -450,7 +501,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * subType.
+         * <p>The subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>THRESHOLD</p>
          */
         public Builder subType(String subType) {
             this.subType = subType;
@@ -458,7 +512,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * templateName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS CPU Usage Alert Template</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -466,7 +523,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The ID of the user to whom the template belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -474,7 +534,10 @@ public class AlertRuleTemplate extends TeaModel {
         }
 
         /**
-         * uuid.
+         * <p>The template UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4-e5f6-7890-abcd-ef1234567890</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;

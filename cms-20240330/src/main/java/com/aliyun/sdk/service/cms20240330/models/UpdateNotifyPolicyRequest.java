@@ -97,7 +97,7 @@ public class UpdateNotifyPolicyRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body. This is the complete notification policy configuration object NotifyPolicyConfig.</p>
          */
         public Builder body(NotifyPolicyConfig body) {
             this.putBodyParameter("body", body);
@@ -106,6 +106,7 @@ public class UpdateNotifyPolicyRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID. This parameter is used to isolate notification policy resources across different business spaces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -112,6 +112,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -121,6 +122,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +135,8 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The labels.</p>
+         * <p>You can attach up to 20 labels.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("tag", tag);

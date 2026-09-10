@@ -143,7 +143,10 @@ public class CreatePipelineRequest extends Request {
         } 
 
         /**
-         * workspace.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putPathParameter("workspace", workspace);
@@ -152,7 +155,10 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The pipeline description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -161,7 +167,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * executePolicy.
+         * <p>The execution policy.</p>
          */
         public Builder executePolicy(ExecutePolicy executePolicy) {
             this.putBodyParameter("executePolicy", executePolicy);
@@ -170,7 +176,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * pipeline.
+         * <p>The pipeline configuration.</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.putBodyParameter("pipeline", pipeline);
@@ -179,7 +185,10 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The pipeline name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline-name-1</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putBodyParameter("pipelineName", pipelineName);
@@ -188,7 +197,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * sink.
+         * <p>The data sink for the processed output.</p>
          */
         public Builder sink(Sink sink) {
             this.putBodyParameter("sink", sink);
@@ -197,7 +206,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The data source.</p>
          */
         public Builder source(Source source) {
             this.putBodyParameter("source", source);
@@ -265,7 +274,10 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * fromTime.
+             * <p>The start timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772519013</p>
              */
             public Builder fromTime(Long fromTime) {
                 this.fromTime = fromTime;
@@ -273,7 +285,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * toTime.
+             * <p>The end timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772519013</p>
              */
             public Builder toTime(Long toTime) {
                 this.toTime = toTime;
@@ -340,7 +355,10 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * fromTime.
+             * <p>The start timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772519013</p>
              */
             public Builder fromTime(Long fromTime) {
                 this.fromTime = fromTime;
@@ -348,7 +366,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * interval.
+             * <p>The execution interval in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -428,7 +449,10 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * mode.
+             * <p>The execution mode. Set to <code>runOnce</code> for a single execution, or <code>scheduled</code> for a recurring execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>runOnce</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -436,7 +460,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * runOnce.
+             * <p>The configuration for a one-time execution. This parameter is required when <code>executePolicy.mode</code> is set to <code>runOnce</code>.</p>
              */
             public Builder runOnce(RunOnce runOnce) {
                 this.runOnce = runOnce;
@@ -444,7 +468,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * scheduled.
+             * <p>The configuration for a scheduled execution. This parameter is required when <code>executePolicy.mode</code> is set to <code>scheduled</code>.</p>
              */
             public Builder scheduled(Scheduled scheduled) {
                 this.scheduled = scheduled;
@@ -524,7 +548,10 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node_1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -532,7 +559,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * parameters.
+             * <p>The node parameters.</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -540,7 +567,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dedup-fuzzy</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -594,7 +624,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * nodes.
+             * <p>The pipeline nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -661,7 +691,10 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * dataset.
+             * <p>The dataset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset_1</p>
              */
             public Builder dataset(String dataset) {
                 this.dataset = dataset;
@@ -669,7 +702,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * workspace.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-test</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;
@@ -736,7 +772,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * dataset.
+             * <p>The destination dataset configuration. This parameter is required when <code>sink.type</code> is set to <code>dataset</code>.</p>
              */
             public Builder dataset(Dataset dataset) {
                 this.dataset = dataset;
@@ -744,7 +780,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The sink type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -824,7 +863,10 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * logstore.
+             * <p>The Logstore name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -832,7 +874,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * project.
+             * <p>The Log Service Project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -840,7 +885,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * query.
+             * <p>The query statement to filter logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status:500 and method:GET</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -907,7 +955,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * logstore.
+             * <p>The Log Service Logstore configuration. This parameter is required when <code>source.type</code> is set to <code>logstore</code>.</p>
              */
             public Builder logstore(Logstore logstore) {
                 this.logstore = logstore;
@@ -915,7 +963,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The data source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstore</p>
              */
             public Builder type(String type) {
                 this.type = type;

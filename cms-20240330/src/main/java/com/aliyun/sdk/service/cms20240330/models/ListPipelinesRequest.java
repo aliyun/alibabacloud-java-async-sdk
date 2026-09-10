@@ -101,7 +101,10 @@ public class ListPipelinesRequest extends Request {
         } 
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putPathParameter("workspace", workspace);
@@ -110,7 +113,10 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -119,7 +125,10 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fff3442dac1de7950f44d5afc0c735ebd12e27f603b21d17ec30cb1d5c735b1ba7c4fb3a1c124bce</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -128,7 +137,10 @@ public class ListPipelinesRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The name of the pipeline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline-name-1</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putQueryParameter("pipelineName", pipelineName);

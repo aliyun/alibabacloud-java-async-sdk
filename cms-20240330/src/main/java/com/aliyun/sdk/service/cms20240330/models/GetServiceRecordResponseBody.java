@@ -67,7 +67,7 @@ public class GetServiceRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * record.
+         * <p>The record.</p>
          */
         public Builder record(Record record) {
             this.record = record;
@@ -170,7 +170,10 @@ public class GetServiceRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * recordContent.
+             * <p>The entry content in JSON string format. The returned content varies depending on the recordType.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;project&quot;:&quot;proj-xtrace-16c988dcfe21fcb73c5e6f234927d998-cn-hangzhou&quot;,&quot;storeName&quot;:&quot;app-biz-log&quot;,&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;bindType&quot;:&quot;logstore&quot;,&quot;traceIdRelateField&quot;:&quot;&quot;}</p>
              */
             public Builder recordContent(String recordContent) {
                 this.recordContent = recordContent;
@@ -178,7 +181,11 @@ public class GetServiceRecordResponseBody extends TeaModel {
             }
 
             /**
-             * recordType.
+             * <p>The type of the linked entry. Currently supported values:
+             * logCorrelation: indicates application log association.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logCorrelation</p>
              */
             public Builder recordType(String recordType) {
                 this.recordType = recordType;
@@ -186,7 +193,10 @@ public class GetServiceRecordResponseBody extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * <p>The unique identifier of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ckj0xn6ma3@b96491402f8e1f15a8c79</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -194,7 +204,10 @@ public class GetServiceRecordResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-cms-1610600919225911-cn-beijing</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

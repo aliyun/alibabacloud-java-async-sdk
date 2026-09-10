@@ -236,7 +236,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         } 
 
         /**
-         * autoRecoverSeconds.
+         * <p>The automatic recovery time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder autoRecoverSeconds(Long autoRecoverSeconds) {
             this.autoRecoverSeconds = autoRecoverSeconds;
@@ -244,7 +247,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The time when the plan was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2025-04-05T10:30:00Z&quot;</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -252,7 +258,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the response plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;针对支付服务不可用的紧急响应流程&quot;</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -260,7 +269,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Indicates whether the response plan is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -268,7 +280,7 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * escalationId.
+         * <p>A list of the IDs of associated escalation policies.</p>
          */
         public Builder escalationId(java.util.List<String> escalationId) {
             this.escalationId = escalationId;
@@ -276,7 +288,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * mode.
+         * <p>The response pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Manual&quot;</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -284,7 +299,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the response plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;P1-Critical-Response-Plan&quot;</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -292,7 +310,7 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * pushingSetting.
+         * <p>The push notification settings.</p>
          */
         public Builder pushingSetting(PushingSetting pushingSetting) {
             this.pushingSetting = pushingSetting;
@@ -300,7 +318,7 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * repeatNotifySetting.
+         * <p>The settings for repeated notifications.</p>
          */
         public Builder repeatNotifySetting(RepeatNotifySetting repeatNotifySetting) {
             this.repeatNotifySetting = repeatNotifySetting;
@@ -308,7 +326,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;MANUAL&quot;</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -316,7 +337,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * syncFromType.
+         * <p>The source type of the synchronization policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ARMS&quot;</p>
          */
         public Builder syncFromType(String syncFromType) {
             this.syncFromType = syncFromType;
@@ -324,7 +348,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type of the response plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Standard&quot;</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -332,7 +359,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The time when the plan was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2025-04-06T09:15:00Z&quot;</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -340,7 +370,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * uuid.
+         * <p>The globally unique identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -348,7 +381,10 @@ public class IncidentResponsePlanForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ws-xyz789&quot;</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

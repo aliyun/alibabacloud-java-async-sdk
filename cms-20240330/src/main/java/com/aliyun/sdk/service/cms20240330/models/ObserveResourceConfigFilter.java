@@ -119,7 +119,7 @@ public class ObserveResourceConfigFilter extends TeaModel {
         } 
 
         /**
-         * entityDomain.
+         * <p>The UModel resource domain filter (exact match).</p>
          */
         public Builder entityDomain(QueryAlertRulesEntityDomainFilter entityDomain) {
             this.entityDomain = entityDomain;
@@ -127,7 +127,7 @@ public class ObserveResourceConfigFilter extends TeaModel {
         }
 
         /**
-         * entityType.
+         * <p>The UModel entity type filter (set inclusion/exclusion).</p>
          */
         public Builder entityType(QueryAlertRulesEntityTypeFilter entityType) {
             this.entityType = entityType;
@@ -135,7 +135,7 @@ public class ObserveResourceConfigFilter extends TeaModel {
         }
 
         /**
-         * namespace.
+         * <p>The CloudMonitor namespace filter (exact match).</p>
          */
         public Builder namespace(QueryAlertRulesNamespaceFilter namespace) {
             this.namespace = namespace;
@@ -143,7 +143,7 @@ public class ObserveResourceConfigFilter extends TeaModel {
         }
 
         /**
-         * productCategory.
+         * <p>The CloudMonitor product category filter (exact match).</p>
          */
         public Builder productCategory(QueryAlertRulesProductCategoryFilter productCategory) {
             this.productCategory = productCategory;
@@ -151,7 +151,7 @@ public class ObserveResourceConfigFilter extends TeaModel {
         }
 
         /**
-         * relationType.
+         * <p>The relationship type filter (set inclusion/exclusion): ALL/UMODEL_ENTITY/CLOUD_INSTANCE/GROUP_V1/GROUP_V2/TAG.</p>
          */
         public Builder relationType(QueryAlertRulesRelationTypeFilter relationType) {
             this.relationType = relationType;
@@ -159,7 +159,7 @@ public class ObserveResourceConfigFilter extends TeaModel {
         }
 
         /**
-         * resources.
+         * <p>The resources filter (contains uses OR matching; notContains excludes all).</p>
          */
         public Builder resources(QueryAlertRulesResourcesFilter resources) {
             this.resources = resources;

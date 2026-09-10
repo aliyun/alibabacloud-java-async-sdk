@@ -158,7 +158,10 @@ public class Queries extends TeaModel {
         } 
 
         /**
-         * end.
+         * <p>The end offset of the time range for SLS_MULTI_QUERY. This parameter is mutually exclusive with window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder end(Long end) {
             this.end = end;
@@ -166,7 +169,10 @@ public class Queries extends TeaModel {
         }
 
         /**
-         * expr.
+         * <p>The query expression. For PROMETHEUS_MULTI_QUERY, this is a PromQL expression. For SLS_MULTI_QUERY, this is an SPL expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValue</p>
          */
         public Builder expr(String expr) {
             this.expr = expr;
@@ -174,7 +180,7 @@ public class Queries extends TeaModel {
         }
 
         /**
-         * labelFilters.
+         * <p>The label filter conditions for UMODEL_METRICSET_MULTI_QUERY. This parameter is optional and independent for each query.</p>
          */
         public Builder labelFilters(java.util.List<LabelFilters> labelFilters) {
             this.labelFilters = labelFilters;
@@ -182,7 +188,10 @@ public class Queries extends TeaModel {
         }
 
         /**
-         * metric.
+         * <p>The metric name for UMODEL_METRICSET_MULTI_QUERY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleName</p>
          */
         public Builder metric(String metric) {
             this.metric = metric;
@@ -190,7 +199,10 @@ public class Queries extends TeaModel {
         }
 
         /**
-         * metricSet.
+         * <p>The metric set name for UMODEL_METRICSET_MULTI_QUERY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleName</p>
          */
         public Builder metricSet(String metricSet) {
             this.metricSet = metricSet;
@@ -198,7 +210,10 @@ public class Queries extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The query name used by PROMETHEUS_MULTI_QUERY and UMODEL_METRICSET_MULTI_QUERY, such as $A or $B, which can be referenced by condition triggers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -206,7 +221,10 @@ public class Queries extends TeaModel {
         }
 
         /**
-         * start.
+         * <p>The start offset of the time range for SLS_MULTI_QUERY. This parameter is mutually exclusive with window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder start(Long start) {
             this.start = start;
@@ -214,7 +232,10 @@ public class Queries extends TeaModel {
         }
 
         /**
-         * timeUnit.
+         * <p>The time unit for SLS_MULTI_QUERY. Valid values: day, hour, minute, and second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>second</p>
          */
         public Builder timeUnit(String timeUnit) {
             this.timeUnit = timeUnit;
@@ -222,7 +243,10 @@ public class Queries extends TeaModel {
         }
 
         /**
-         * window.
+         * <p>The snap window size for SLS_MULTI_QUERY. This parameter is mutually exclusive with start and end.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder window(Long window) {
             this.window = window;

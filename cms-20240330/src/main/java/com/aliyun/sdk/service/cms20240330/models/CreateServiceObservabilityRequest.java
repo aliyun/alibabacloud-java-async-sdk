@@ -89,6 +89,7 @@ public class CreateServiceObservabilityRequest extends Request {
         } 
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class CreateServiceObservabilityRequest extends Request {
         }
 
         /**
+         * <p>The type of application observability.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

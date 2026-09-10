@@ -93,7 +93,7 @@ public class AlertRuleAlertMetricInput extends TeaModel {
         } 
 
         /**
-         * filterValues.
+         * <p>A list of filter conditions. Call the ListAlertMetrics operation to query the lists of parameters and filter conditions that the metric supports.</p>
          */
         public Builder filterValues(java.util.List<AlertRuleAlertMetricInputFilterValue> filterValues) {
             this.filterValues = filterValues;
@@ -101,7 +101,10 @@ public class AlertRuleAlertMetricInput extends TeaModel {
         }
 
         /**
-         * groupId.
+         * <p>The key of the metric group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apm.jvm</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -109,7 +112,10 @@ public class AlertRuleAlertMetricInput extends TeaModel {
         }
 
         /**
-         * metricId.
+         * <p>The key of the predefined metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstat.jvm.GcPsMarkSweepCount</p>
          */
         public Builder metricId(String metricId) {
             this.metricId = metricId;
@@ -117,7 +123,7 @@ public class AlertRuleAlertMetricInput extends TeaModel {
         }
 
         /**
-         * paramValues.
+         * <p>A list of parameters. Call the ListAlertMetrics operation to query the lists of parameters and filter conditions that the metric supports.</p>
          */
         public Builder paramValues(java.util.List<AlertRuleAlertMetricInputParamValue> paramValues) {
             this.paramValues = paramValues;

@@ -153,7 +153,10 @@ public class ListNotifyPoliciesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -162,7 +165,10 @@ public class ListNotifyPoliciesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The policy name used for fuzzy filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod-alert</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -171,7 +177,10 @@ public class ListNotifyPoliciesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Leave this parameter empty for the first page. For subsequent pages, set this parameter to the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJjdXJzb3IiOjEwfQ==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -180,7 +189,10 @@ public class ListNotifyPoliciesRequest extends Request {
         }
 
         /**
-         * orderBy.
+         * <p>The field used for sorting. Valid values: createTime, updateTime, and name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>createTime</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("orderBy", orderBy);
@@ -189,7 +201,14 @@ public class ListNotifyPoliciesRequest extends Request {
         }
 
         /**
-         * orderDesc.
+         * <p>Specifies whether to sort results in descending order. Valid values:</p>
+         * <ul>
+         * <li>true: descending order.</li>
+         * <li>false: ascending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder orderDesc(String orderDesc) {
             this.putQueryParameter("orderDesc", orderDesc);
@@ -198,6 +217,7 @@ public class ListNotifyPoliciesRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID. This parameter is used to isolate notify policy resources across different business spaces.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

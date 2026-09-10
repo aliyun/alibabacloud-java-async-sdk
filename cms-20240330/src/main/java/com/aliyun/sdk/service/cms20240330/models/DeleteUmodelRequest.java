@@ -60,7 +60,7 @@ public class DeleteUmodelRequest extends Request {
         } 
 
         /**
-         * <p>workspace name</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

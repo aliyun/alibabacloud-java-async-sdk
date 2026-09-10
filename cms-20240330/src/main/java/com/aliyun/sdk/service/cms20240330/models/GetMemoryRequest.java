@@ -90,6 +90,7 @@ public class GetMemoryRequest extends Request {
         } 
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetMemoryRequest extends Request {
         }
 
         /**
+         * <p>The memory store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetMemoryRequest extends Request {
         }
 
         /**
+         * <p>The memory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

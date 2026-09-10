@@ -119,7 +119,10 @@ public class CloudMonitoringCompositeEscalationEntry extends TeaModel {
         } 
 
         /**
-         * comparisonOperator.
+         * <p>The comparison operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GT</p>
          */
         public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
@@ -127,7 +130,10 @@ public class CloudMonitoringCompositeEscalationEntry extends TeaModel {
         }
 
         /**
-         * metricName.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuUsage</p>
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -135,7 +141,10 @@ public class CloudMonitoringCompositeEscalationEntry extends TeaModel {
         }
 
         /**
-         * period.
+         * <p>The collection period, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.period = period;
@@ -143,7 +152,10 @@ public class CloudMonitoringCompositeEscalationEntry extends TeaModel {
         }
 
         /**
-         * preCondition.
+         * <p>The precondition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3 consecutive times</p>
          */
         public Builder preCondition(String preCondition) {
             this.preCondition = preCondition;
@@ -151,7 +163,10 @@ public class CloudMonitoringCompositeEscalationEntry extends TeaModel {
         }
 
         /**
-         * statistics.
+         * <p>The statistical method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         public Builder statistics(String statistics) {
             this.statistics = statistics;
@@ -159,7 +174,10 @@ public class CloudMonitoringCompositeEscalationEntry extends TeaModel {
         }
 
         /**
-         * threshold.
+         * <p>The threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder threshold(String threshold) {
             this.threshold = threshold;

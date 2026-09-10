@@ -80,7 +80,7 @@ public class DirectNotifyReceiver extends TeaModel {
         } 
 
         /**
-         * channels.
+         * <p>The list of notification channels. This parameter is valid only for person types (CONTACT/GROUP/DUTY). Valid values: SMS, CALL, EMAIL.</p>
          */
         public Builder channels(java.util.List<String> channels) {
             this.channels = channels;
@@ -88,7 +88,7 @@ public class DirectNotifyReceiver extends TeaModel {
         }
 
         /**
-         * identifiers.
+         * <p>The list of notification recipient identifiers. For person types, this is the identifier of the contact, contact group, or on-call schedule. For IM types, this is the webhook identifier.</p>
          */
         public Builder identifiers(java.util.List<String> identifiers) {
             this.identifiers = identifiers;
@@ -96,7 +96,10 @@ public class DirectNotifyReceiver extends TeaModel {
         }
 
         /**
-         * targetType.
+         * <p>The Notification Recipient type. For person types (CONTACT/GROUP/DUTY), you must specify notification channels by using the channels parameter. For IM types (DINGTALK/FEISHU/SLACK/WEIXIN/WEBHOOK), the channels parameter is not required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTACT</p>
          */
         public Builder targetType(String targetType) {
             this.targetType = targetType;

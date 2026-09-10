@@ -106,7 +106,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         } 
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -133,7 +139,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * resources.
+         * <p>The metric configuration information of the resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -141,7 +147,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6370</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +203,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_id</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -378,7 +390,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS CPU Utilization</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -386,7 +401,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * dimensionDescription.
+             * <p>The dimension information description.</p>
              */
             public Builder dimensionDescription(java.util.List<DimensionDescription> dimensionDescription) {
                 this.dimensionDescription = dimensionDescription;
@@ -394,7 +409,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * dimensions.
+             * <p>The resource filtering dimensions of CloudMonitor Basic.</p>
              */
             public Builder dimensions(java.util.List<String> dimensions) {
                 this.dimensions = dimensions;
@@ -402,7 +417,7 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * labels.
+             * <p>The CloudMonitor labels. This parameter is returned only when metaFormat is set to CMS.</p>
              */
             public Builder labels(java.util.Map<String, String> labels) {
                 this.labels = labels;
@@ -410,7 +425,15 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * metaFormat.
+             * <p>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics. PROM_BASIC indicates Prometheus CloudMonitor Basic monitoring metrics.</p>
+             * <p>Example value:
+             * CMS
+             * Valid values:
+             * CMS
+             * PROM_BASIC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROM_BASIC</p>
              */
             public Builder metaFormat(String metaFormat) {
                 this.metaFormat = metaFormat;
@@ -418,7 +441,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * metricName.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPUUtilization</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -426,7 +452,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs_ecs_dashboard</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -434,7 +463,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * periods.
+             * <p>The period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder periods(String periods) {
                 this.periods = periods;
@@ -442,7 +474,15 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * statistics.
+             * <p>The statistical method of the metric. Example values:</p>
+             * <ul>
+             * <li>Maximum: the maximum value.</li>
+             * <li>Minimum: the minimum value.</li>
+             * <li>Average: the average value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Maximum</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -450,7 +490,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The metric type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Gauge</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -458,7 +501,10 @@ public class DescribeMetricMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * <p>The unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;

@@ -119,7 +119,10 @@ public class CloudMonitoringSimpleEscalationEntry extends TeaModel {
         } 
 
         /**
-         * comparisonOperator.
+         * <p>The comparison operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GT</p>
          */
         public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
@@ -127,7 +130,10 @@ public class CloudMonitoringSimpleEscalationEntry extends TeaModel {
         }
 
         /**
-         * preCondition.
+         * <p>The precondition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3 consecutive times</p>
          */
         public Builder preCondition(String preCondition) {
             this.preCondition = preCondition;
@@ -135,7 +141,10 @@ public class CloudMonitoringSimpleEscalationEntry extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -143,7 +152,10 @@ public class CloudMonitoringSimpleEscalationEntry extends TeaModel {
         }
 
         /**
-         * statistics.
+         * <p>The statistical method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         public Builder statistics(String statistics) {
             this.statistics = statistics;
@@ -151,7 +163,10 @@ public class CloudMonitoringSimpleEscalationEntry extends TeaModel {
         }
 
         /**
-         * threshold.
+         * <p>The threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder threshold(String threshold) {
             this.threshold = threshold;
@@ -159,7 +174,10 @@ public class CloudMonitoringSimpleEscalationEntry extends TeaModel {
         }
 
         /**
-         * times.
+         * <p>The number of consecutive times the condition must be met to trigger an alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder times(Integer times) {
             this.times = times;

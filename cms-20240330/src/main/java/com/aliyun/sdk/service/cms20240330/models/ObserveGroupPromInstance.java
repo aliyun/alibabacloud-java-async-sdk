@@ -93,7 +93,10 @@ public class ObserveGroupPromInstance extends TeaModel {
         } 
 
         /**
-         * <p>Prometheus 实例 ID，如 rw-xxxxxxxxxx。</p>
+         * <p>The ID of the Managed Service for Prometheus instance, such as rw-xxxxxxxxxx.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prom-12345</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -101,7 +104,14 @@ public class ObserveGroupPromInstance extends TeaModel {
         }
 
         /**
-         * <p>实例来源：system 表示系统根据 workspace/UModel 自动识别，custom 表示用户在控制台手动选择。</p>
+         * <p>The source of the instance. Valid values:</p>
+         * <ul>
+         * <li>system: The system automatically identifies the instance based on the workspace or UModel.</li>
+         * <li>custom: The user manually selects the instance in the console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prometheus</p>
          */
         public Builder kind(String kind) {
             this.kind = kind;
@@ -109,7 +119,10 @@ public class ObserveGroupPromInstance extends TeaModel {
         }
 
         /**
-         * <p>Prometheus 实例所在地域。为空时后端按观测分组所属 workspace 地域补齐。</p>
+         * <p>The region where the Managed Service for Prometheus instance resides. If this parameter is left empty, the backend automatically populates the region based on the workspace to which the observation group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -117,7 +130,10 @@ public class ObserveGroupPromInstance extends TeaModel {
         }
 
         /**
-         * <p>记录写入或选择时间，格式 yyyy-MM-dd HH:mm:ss。</p>
+         * <p>The time when the record was written or selected. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-15 10:30:00</p>
          */
         public Builder time(String time) {
             this.time = time;

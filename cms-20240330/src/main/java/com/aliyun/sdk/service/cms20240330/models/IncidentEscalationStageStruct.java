@@ -158,7 +158,7 @@ public class IncidentEscalationStageStruct extends TeaModel {
         } 
 
         /**
-         * contact.
+         * <p>The list of contacts.</p>
          */
         public Builder contact(java.util.List<IncidentContactStruct> contact) {
             this.contact = contact;
@@ -166,7 +166,10 @@ public class IncidentEscalationStageStruct extends TeaModel {
         }
 
         /**
-         * cycleNotifyCount.
+         * <p>The number of notifications sent per cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder cycleNotifyCount(Integer cycleNotifyCount) {
             this.cycleNotifyCount = cycleNotifyCount;
@@ -174,7 +177,10 @@ public class IncidentEscalationStageStruct extends TeaModel {
         }
 
         /**
-         * cycleNotifyTime.
+         * <p>The notification interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder cycleNotifyTime(Integer cycleNotifyTime) {
             this.cycleNotifyTime = cycleNotifyTime;
@@ -182,7 +188,10 @@ public class IncidentEscalationStageStruct extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary owner responsible for handling production environment alerts.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -190,7 +199,10 @@ public class IncidentEscalationStageStruct extends TeaModel {
         }
 
         /**
-         * effectTime.
+         * <p>The effective time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-05T00:00:00Z</p>
          */
         public Builder effectTime(String effectTime) {
             this.effectTime = effectTime;
@@ -198,7 +210,10 @@ public class IncidentEscalationStageStruct extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Operations team.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -206,7 +221,10 @@ public class IncidentEscalationStageStruct extends TeaModel {
         }
 
         /**
-         * stageIndex.
+         * <p>The stage index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder stageIndex(Integer stageIndex) {
             this.stageIndex = stageIndex;
@@ -214,7 +232,10 @@ public class IncidentEscalationStageStruct extends TeaModel {
         }
 
         /**
-         * timeZone.
+         * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         public Builder timeZone(String timeZone) {
             this.timeZone = timeZone;
@@ -222,7 +243,10 @@ public class IncidentEscalationStageStruct extends TeaModel {
         }
 
         /**
-         * waitToNextStageTime.
+         * <p>The waiting time before the next stage begins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder waitToNextStageTime(Integer waitToNextStageTime) {
             this.waitToNextStageTime = waitToNextStageTime;

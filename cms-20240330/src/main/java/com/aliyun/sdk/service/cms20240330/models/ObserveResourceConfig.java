@@ -119,7 +119,10 @@ public class ObserveResourceConfig extends TeaModel {
         } 
 
         /**
-         * entityDomain.
+         * <p>The UModel entity domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_monitor</p>
          */
         public Builder entityDomain(String entityDomain) {
             this.entityDomain = entityDomain;
@@ -127,7 +130,10 @@ public class ObserveResourceConfig extends TeaModel {
         }
 
         /**
-         * entityType.
+         * <p>The UModel entity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -135,7 +141,10 @@ public class ObserveResourceConfig extends TeaModel {
         }
 
         /**
-         * namespace.
+         * <p>The CloudMonitor namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -143,7 +152,10 @@ public class ObserveResourceConfig extends TeaModel {
         }
 
         /**
-         * productCategory.
+         * <p>The CloudMonitor product category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCategory(String productCategory) {
             this.productCategory = productCategory;
@@ -151,7 +163,10 @@ public class ObserveResourceConfig extends TeaModel {
         }
 
         /**
-         * relationType.
+         * <p>The relation type. TAG is supported only for alert rules where datasourceConfig.type is set to APM and queryConfig.type is set to APM_MULTI_QUERY. UMODEL_ENTITY does not support writes and is used only for reading existing data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder relationType(String relationType) {
             this.relationType = relationType;
@@ -159,7 +174,7 @@ public class ObserveResourceConfig extends TeaModel {
         }
 
         /**
-         * resources.
+         * <p>The list of resources. If relationType is set to ALL, this parameter can be left empty, which indicates all resources. If relationType is set to TAG, this parameter is a list of labels in key=value format (such as [&quot;env=prod&quot;, &quot;app=foo&quot;]). This is supported only for APM data sources with APM_MULTI_QUERY.</p>
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;

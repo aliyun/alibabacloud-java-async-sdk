@@ -80,7 +80,10 @@ public class PrometheusMetricFilterValue extends TeaModel {
         } 
 
         /**
-         * dim.
+         * <p>The filter dimension name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host</p>
          */
         public Builder dim(String dim) {
             this.dim = dim;
@@ -88,7 +91,10 @@ public class PrometheusMetricFilterValue extends TeaModel {
         }
 
         /**
-         * opt.
+         * <p>The filter operator, such as eq, neq, contain, not_contain, all, or disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
          */
         public Builder opt(String opt) {
             this.opt = opt;
@@ -96,7 +102,10 @@ public class PrometheusMetricFilterValue extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The filter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web-01</p>
          */
         public Builder value(String value) {
             this.value = value;

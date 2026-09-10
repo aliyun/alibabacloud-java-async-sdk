@@ -102,7 +102,7 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
         } 
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
         }
 
         /**
-         * <p>Addon Name.</p>
+         * <p>The add-on name.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-default</p>
@@ -127,7 +127,7 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
         }
 
         /**
-         * <p>Query Language</p>
+         * <p>The query language.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -139,7 +139,7 @@ public class ListIntegrationPolicyDashboardsRequest extends Request {
         }
 
         /**
-         * <p>Component Scenario.</p>
+         * <p>The component scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>databse</p>

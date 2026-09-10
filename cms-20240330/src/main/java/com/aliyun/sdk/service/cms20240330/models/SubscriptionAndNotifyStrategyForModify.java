@@ -158,7 +158,10 @@ public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description of the alert policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Used to monitor the CPU utilization of ECS instances</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -166,7 +169,10 @@ public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Read-only. This parameter does not take effect even if specified. The backend forcibly sets this parameter to true during creation and retains the current value during updates. To enable or disable the policy, call the EnableAlertPolicy or DisableAlertPolicy operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -174,7 +180,10 @@ public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * <p>可省略，后端会从 notifyStrategy 派生</p>
+         * <p>Policy Name of the alert policy. If this parameter is not specified, the backend derives Policy Name from notifyStrategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-alert-policy</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -182,7 +191,7 @@ public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * notifyStrategy.
+         * <p>The notification configuration that defines noise reduction rules, notification channel routing, and templates. This parameter is required for Create operations.</p>
          */
         public Builder notifyStrategy(NotifyStrategyForSNSModify notifyStrategy) {
             this.notifyStrategy = notifyStrategy;
@@ -190,7 +199,7 @@ public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * responsePlan.
+         * <p>The event management configuration that defines recovery notifications, repeat notifications, automatic recovery, and escalation policies.</p>
          */
         public Builder responsePlan(IncidentResponsePlanForSNSModify responsePlan) {
             this.responsePlan = responsePlan;
@@ -198,7 +207,7 @@ public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * subscription.
+         * <p>The single primary subscription configuration that defines event filter conditions. This parameter is mutually exclusive with subscriptions. Do not specify both parameters at the same time.</p>
          */
         public Builder subscription(SubscriptionForSNSModify subscription) {
             this.subscription = subscription;
@@ -206,7 +215,7 @@ public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * <p>Update 专用，对成员订阅做 create/update/remove 批量调整</p>
+         * <p>Dedicated to Update operations. Performs batch create, update, or remove adjustments on member subscriptions.</p>
          */
         public Builder subscriptions(java.util.List<SubscriptionOp> subscriptions) {
             this.subscriptions = subscriptions;
@@ -214,7 +223,10 @@ public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * <p>Update 必填，Create 可省略由后端生成</p>
+         * <p>The unique identifier of the alert policy. This parameter is required for Update operations. Do not specify this parameter for Create operations because the backend automatically generates the value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7076c75c-c804-461e-975f-c6f9ed5af745</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -222,7 +234,10 @@ public class SubscriptionAndNotifyStrategyForModify extends TeaModel {
         }
 
         /**
-         * <p>Update 必填，与后端记录一致才能写入；不一致返回 OPTIMISTIC_LOCK_FAILED</p>
+         * <p>The optimistic lock version number. This parameter is required for Update operations and must match the current value on the backend. Otherwise, a 409 VersionConflict error is returned. The version number increments by 1 after each successful update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder version(Integer version) {
             this.version = version;

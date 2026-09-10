@@ -80,7 +80,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>按逻辑 Dataset 分组的字段元数据和样例行。</p>
+         * <p>The dataset preview results.</p>
          */
         public Builder datasets(java.util.List<Datasets> datasets) {
             this.datasets = datasets;
@@ -88,7 +88,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前编译器为本次候选配置生成并实际执行的公开 Processing SPL。</p>
+         * <p>The effective SPL.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -101,7 +101,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用于排查问题的请求唯一标识。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>req-01j2example</p>
@@ -170,7 +170,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>预览样例中的字段名称。</p>
+             * <p>The field name.</p>
              * 
              * <strong>example:</strong>
              * <p>trace_id</p>
@@ -181,7 +181,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>预览样例中该字段的数据类型。</p>
+             * <p>The field type.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -277,7 +277,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>本 Dataset 返回的只读预览样例行。</p>
+             * <p>The preview data.</p>
              */
             public Builder data(java.util.List<java.util.Map<String, ?>> data) {
                 this.data = data;
@@ -285,7 +285,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>本 Dataset 预览样例的字段名称和类型列表。</p>
+             * <p>The field metadata.</p>
              */
             public Builder meta(java.util.List<Meta> meta) {
                 this.meta = meta;
@@ -293,7 +293,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>产生本组预览样例的逻辑 Dataset 名称。</p>
+             * <p>The dataset name.</p>
              * 
              * <strong>example:</strong>
              * <p>error_spans</p>
@@ -304,7 +304,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>本 Dataset 返回的预览样例行数。</p>
+             * <p>The number of samples.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -106,7 +106,10 @@ public class NotifyStrategyDetail extends TeaModel {
         } 
 
         /**
-         * customTemplateEntries.
+         * <p>The list of custom notification templates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder customTemplateEntries(java.util.List<CustomTemplateEntries> customTemplateEntries) {
             this.customTemplateEntries = customTemplateEntries;
@@ -114,7 +117,10 @@ public class NotifyStrategyDetail extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>生产环境告警通知策略</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -122,7 +128,7 @@ public class NotifyStrategyDetail extends TeaModel {
         }
 
         /**
-         * groupingSetting.
+         * <p>The grouping and merging settings.</p>
          */
         public Builder groupingSetting(GroupingSetting groupingSetting) {
             this.groupingSetting = groupingSetting;
@@ -130,7 +136,10 @@ public class NotifyStrategyDetail extends TeaModel {
         }
 
         /**
-         * ignoreRestoredNotification.
+         * <p>Specifies whether to ignore notifications for recovery events. A value of true indicates that recovery notifications are not sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ignoreRestoredNotification(Boolean ignoreRestoredNotification) {
             this.ignoreRestoredNotification = ignoreRestoredNotification;
@@ -138,7 +147,10 @@ public class NotifyStrategyDetail extends TeaModel {
         }
 
         /**
-         * routes.
+         * <p>The list of notification channel routing settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder routes(java.util.List<Routes> routes) {
             this.routes = routes;
@@ -191,7 +203,10 @@ public class NotifyStrategyDetail extends TeaModel {
             } 
 
             /**
-             * templateUuid.
+             * <p>The UUID of the notification template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template-uuid-xxx</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;
@@ -284,7 +299,10 @@ public class NotifyStrategyDetail extends TeaModel {
             } 
 
             /**
-             * groupingKeys.
+             * <p>The event fields by which events are grouped for noise reduction. Events in the same group are merged into a single notification. An empty array indicates no grouping.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;alertname&quot;]</p>
              */
             public Builder groupingKeys(java.util.List<String> groupingKeys) {
                 this.groupingKeys = groupingKeys;
@@ -292,7 +310,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * periodMin.
+             * <p>The check period in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder periodMin(Integer periodMin) {
                 this.periodMin = periodMin;
@@ -300,7 +321,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * silenceSec.
+             * <p>The silence duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder silenceSec(Integer silenceSec) {
                 this.silenceSec = silenceSec;
@@ -308,7 +332,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * times.
+             * <p>The number of trigger times.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -388,7 +415,10 @@ public class NotifyStrategyDetail extends TeaModel {
             } 
 
             /**
-             * channelType.
+             * <p>The channel type. Valid values: DING, WEIXIN, FEISHU, SLACK, TEAMS, WEBHOOK, CONTACT, GROUP, DUTY, and DING_COOL_APP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEBHOOK</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -396,7 +426,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * enabledSubChannels.
+             * <p>The enabled sub-channels. Valid values: EMAIL, SMS, VOICE, DING, WEIXIN, FEISHU, and WEBHOOK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;EMAIL&quot;,&quot;SMS&quot;]</p>
              */
             public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
                 this.enabledSubChannels = enabledSubChannels;
@@ -404,7 +437,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * receivers.
+             * <p>The list of receiver identifiers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;webhook-uuid-xxx&quot;]</p>
              */
             public Builder receivers(java.util.List<String> receivers) {
                 this.receivers = receivers;
@@ -497,7 +533,10 @@ public class NotifyStrategyDetail extends TeaModel {
             } 
 
             /**
-             * dayInWeek.
+             * <p>The effective days of the week. Valid values: 0 to 6 (0 = Sunday, 6 = Saturday). The value 7 is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[0,1,2,3,4,5,6]</p>
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
@@ -505,7 +544,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * endTimeInMinute.
+             * <p>The end time of the day in minutes. Valid values: 0 to 1439.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1439</p>
              */
             public Builder endTimeInMinute(Integer endTimeInMinute) {
                 this.endTimeInMinute = endTimeInMinute;
@@ -513,7 +555,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * startTimeInMinute.
+             * <p>The start time of the day in minutes. Valid values: 0 to 1438.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTimeInMinute(Integer startTimeInMinute) {
                 this.startTimeInMinute = startTimeInMinute;
@@ -521,7 +566,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * timeZone.
+             * <p>The IANA time zone identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -627,7 +675,10 @@ public class NotifyStrategyDetail extends TeaModel {
             } 
 
             /**
-             * channels.
+             * <p>The list of notification channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder channels(java.util.List<Channels> channels) {
                 this.channels = channels;
@@ -635,7 +686,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * digitalEmployeeName.
+             * <p>The digital employee name. This parameter is required when enableRca is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数字员工名</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;
@@ -643,7 +697,7 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * effectTimeRange.
+             * <p>The effective time range.</p>
              */
             public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
                 this.effectTimeRange = effectTimeRange;
@@ -651,7 +705,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * enableRca.
+             * <p>Specifies whether to enable root cause analysis (RCA).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableRca(Boolean enableRca) {
                 this.enableRca = enableRca;
@@ -659,7 +716,10 @@ public class NotifyStrategyDetail extends TeaModel {
             }
 
             /**
-             * filterSetting.
+             * <p>The route-level event filter conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder filterSetting(FilterSetting filterSetting) {
                 this.filterSetting = filterSetting;

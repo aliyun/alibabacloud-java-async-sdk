@@ -158,7 +158,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The response code.</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +174,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The error message.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +182,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -190,7 +190,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -198,7 +198,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -206,7 +206,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -222,7 +222,7 @@ public class ServerResponseManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of entries.</p>
          */
         public Builder total(Integer total) {
             this.total = total;

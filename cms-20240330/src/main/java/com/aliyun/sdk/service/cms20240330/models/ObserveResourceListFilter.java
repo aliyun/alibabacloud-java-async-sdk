@@ -54,7 +54,7 @@ public class ObserveResourceListFilter extends TeaModel {
         } 
 
         /**
-         * contains.
+         * <p>Returns resources if a specified property contains any string in this array.</p>
          */
         public Builder contains(java.util.List<String> contains) {
             this.contains = contains;

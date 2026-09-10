@@ -88,7 +88,7 @@ public class GetPrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class GetPrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Language setting, default is Chinese zh | en</p>
+         * <p>The language. Default value: zh. Valid values: zh and en.</p>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -113,7 +113,7 @@ public class GetPrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2bhocin5e2na</p>

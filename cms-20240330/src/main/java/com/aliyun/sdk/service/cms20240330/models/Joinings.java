@@ -67,7 +67,7 @@ public class Joinings extends TeaModel {
         } 
 
         /**
-         * conditions.
+         * <p>The list of join conditions.</p>
          */
         public Builder conditions(java.util.List<JoinConditions> conditions) {
             this.conditions = conditions;
@@ -75,7 +75,10 @@ public class Joinings extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The set operation type. Valid values: InnerJoin, LeftJoin, RightJoin, FullJoin, LeftExclude, RightExclude, CrossJoin, NoJoin, and Concat.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INNER</p>
          */
         public Builder type(String type) {
             this.type = type;

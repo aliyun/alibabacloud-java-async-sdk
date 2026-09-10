@@ -102,6 +102,7 @@ public class ListMemoryStoresRequest extends Request {
         } 
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListMemoryStoresRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return. The maximum value is 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -123,7 +127,10 @@ public class ListMemoryStoresRequest extends Request {
         }
 
         /**
-         * memoryStoreName.
+         * <p>The name of the memory store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qianyi_test_1</p>
          */
         public Builder memoryStoreName(String memoryStoreName) {
             this.putQueryParameter("memoryStoreName", memoryStoreName);
@@ -132,7 +139,10 @@ public class ListMemoryStoresRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

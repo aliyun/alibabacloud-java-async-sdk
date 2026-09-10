@@ -106,7 +106,10 @@ public class SlsNamedQueryEntry extends TeaModel {
         } 
 
         /**
-         * end.
+         * <p>The end offset of the time range. This parameter is mutually exclusive with window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000300000</p>
          */
         public Builder end(Long end) {
             this.end = end;
@@ -114,7 +117,10 @@ public class SlsNamedQueryEntry extends TeaModel {
         }
 
         /**
-         * expr.
+         * <p>The SPL query expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logLevel: error</p>
          */
         public Builder expr(String expr) {
             this.expr = expr;
@@ -122,7 +128,10 @@ public class SlsNamedQueryEntry extends TeaModel {
         }
 
         /**
-         * start.
+         * <p>The start offset of the time range. This parameter is mutually exclusive with window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000000</p>
          */
         public Builder start(Long start) {
             this.start = start;
@@ -130,7 +139,10 @@ public class SlsNamedQueryEntry extends TeaModel {
         }
 
         /**
-         * timeUnit.
+         * <p>The time unit. Valid values: day, hour, minute, and second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>second</p>
          */
         public Builder timeUnit(String timeUnit) {
             this.timeUnit = timeUnit;
@@ -138,7 +150,10 @@ public class SlsNamedQueryEntry extends TeaModel {
         }
 
         /**
-         * window.
+         * <p>The snap window size. This parameter is mutually exclusive with start and end.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder window(Long window) {
             this.window = window;

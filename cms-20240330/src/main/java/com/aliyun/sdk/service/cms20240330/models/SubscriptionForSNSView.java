@@ -236,7 +236,10 @@ public class SubscriptionForSNSView extends TeaModel {
         } 
 
         /**
-         * createTime.
+         * <p>The time when the subscription was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -244,7 +247,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the subscription is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -252,7 +258,7 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter configuration.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -260,7 +266,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * mode.
+         * <p>The lifecycle mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -268,7 +277,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The subscription name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -276,7 +288,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * notifyStrategyUuid.
+         * <p>The reverse association to the SNS (= snsUuid).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder notifyStrategyUuid(String notifyStrategyUuid) {
             this.notifyStrategyUuid = notifyStrategyUuid;
@@ -284,7 +299,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -292,7 +310,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * <p>是否订阅老产品事件（workspace=null 的 cms 1.0 / ARMS / SLS 事件）：true=订阅，false 或 null=不订阅</p>
+         * <p>Indicates whether the subscription includes legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values: true: Subscribed. false or null: Not subscribed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder subscribeLegacyEvent(Boolean subscribeLegacyEvent) {
             this.subscribeLegacyEvent = subscribeLegacyEvent;
@@ -300,7 +321,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * subscriptionType.
+         * <p>The subscription type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder subscriptionType(String subscriptionType) {
             this.subscriptionType = subscriptionType;
@@ -308,7 +332,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * syncFromType.
+         * <p>The sync source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder syncFromType(String syncFromType) {
             this.syncFromType = syncFromType;
@@ -316,7 +343,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The time when the subscription was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -324,7 +354,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -332,7 +365,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * uuid.
+         * <p>The subscription UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -340,7 +376,10 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -348,7 +387,7 @@ public class SubscriptionForSNSView extends TeaModel {
         }
 
         /**
-         * workspaceFilterSetting.
+         * <p>The workspace filter configuration.</p>
          */
         public Builder workspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
             this.workspaceFilterSetting = workspaceFilterSetting;

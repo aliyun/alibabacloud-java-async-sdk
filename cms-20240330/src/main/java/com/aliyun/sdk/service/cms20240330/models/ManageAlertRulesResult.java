@@ -106,7 +106,7 @@ public class ManageAlertRulesResult extends TeaModel {
         } 
 
         /**
-         * alertRule.
+         * <p>The alert rule V2.</p>
          */
         public Builder alertRule(AlertRuleV2 alertRule) {
             this.alertRule = alertRule;
@@ -114,7 +114,10 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * deletedCount.
+         * <p>The number of rules that were successfully deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder deletedCount(Integer deletedCount) {
             this.deletedCount = deletedCount;
@@ -122,7 +125,7 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * deletedUuidList.
+         * <p>The list of UUIDs of rules that were successfully deleted.</p>
          */
         public Builder deletedUuidList(java.util.List<String> deletedUuidList) {
             this.deletedUuidList = deletedUuidList;
@@ -130,7 +133,10 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * updatedCount.
+         * <p>The number of rules that were successfully enabled or disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder updatedCount(Integer updatedCount) {
             this.updatedCount = updatedCount;
@@ -138,7 +144,7 @@ public class ManageAlertRulesResult extends TeaModel {
         }
 
         /**
-         * updatedUuidList.
+         * <p>The list of UUIDs of rules that were successfully enabled or disabled.</p>
          */
         public Builder updatedUuidList(java.util.List<String> updatedUuidList) {
             this.updatedUuidList = updatedUuidList;

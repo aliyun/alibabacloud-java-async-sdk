@@ -211,7 +211,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         } 
 
         /**
-         * alertEventIntegrationPolicyId.
+         * <p>The universally unique identifier (UUID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123</p>
          */
         public Builder alertEventIntegrationPolicyId(String alertEventIntegrationPolicyId) {
             this.alertEventIntegrationPolicyId = alertEventIntegrationPolicyId;
@@ -219,7 +222,11 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>集成名</p>
          */
         public Builder alertEventIntegrationPolicyName(String alertEventIntegrationPolicyName) {
             this.alertEventIntegrationPolicyName = alertEventIntegrationPolicyName;
@@ -227,7 +234,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The time when the policy was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -235,7 +245,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -243,7 +256,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -251,7 +267,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter configuration.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -259,7 +275,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * integrationSetting.
+         * <p>The subscription settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</p>
          */
         public Builder integrationSetting(String integrationSetting) {
             this.integrationSetting = integrationSetting;
@@ -267,7 +286,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * token.
+         * <p>The key for the integration\&quot;s reporting endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10-16818f1445e10a1d012922b285bfb334</p>
          */
         public Builder token(String token) {
             this.token = token;
@@ -275,7 +297,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * transformerSetting.
+         * <p>The transformation settings.</p>
          */
         public Builder transformerSetting(java.util.List<TransformAction> transformerSetting) {
             this.transformerSetting = transformerSetting;
@@ -283,7 +305,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALERT_CUSTOM</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -291,7 +316,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The time when the policy was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-12-16T02:00:23Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -299,7 +327,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -307,7 +338,10 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

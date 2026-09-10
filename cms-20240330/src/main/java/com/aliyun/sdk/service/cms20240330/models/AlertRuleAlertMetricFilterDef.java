@@ -145,7 +145,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         } 
 
         /**
-         * dim.
+         * <p>The dimension in APM metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status</p>
          */
         public Builder dim(String dim) {
             this.dim = dim;
@@ -153,7 +156,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         }
 
         /**
-         * dimDisabled.
+         * <p>If set to \<code>true\\</code>, the filter item does not appear in the \<code>group by\\</code> clause of a PromQL query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dimDisabled(Boolean dimDisabled) {
             this.dimDisabled = dimDisabled;
@@ -161,7 +167,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         }
 
         /**
-         * displayNameCn.
+         * <p>The display name in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application Status</p>
          */
         public Builder displayNameCn(String displayNameCn) {
             this.displayNameCn = displayNameCn;
@@ -169,7 +178,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         }
 
         /**
-         * displayNameEn.
+         * <p>The display name in English.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Application Status</p>
          */
         public Builder displayNameEn(String displayNameEn) {
             this.displayNameEn = displayNameEn;
@@ -177,7 +189,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         }
 
         /**
-         * hidden.
+         * <p>Specifies whether to hide the filter. If hidden, the filter does not appear in the frontend UI. However, its value can be uploaded when rendering a PromQL query. For example, in an Application Performance Management (APM) scenario, the pid filter is typically hidden from the configuration UI. The frontend displays it as a separate application search list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hidden(Boolean hidden) {
             this.hidden = hidden;
@@ -185,7 +200,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         }
 
         /**
-         * labelDisabled.
+         * <p>If set to \<code>true\\</code>, the filter item does not appear in the label filter of a PromQL query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder labelDisabled(Boolean labelDisabled) {
             this.labelDisabled = labelDisabled;
@@ -193,7 +211,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         }
 
         /**
-         * opt.
+         * <p>The operator for the filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
          */
         public Builder opt(String opt) {
             this.opt = opt;
@@ -201,7 +222,7 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
         }
 
         /**
-         * supportedOpts.
+         * <p>A list of supported options.</p>
          */
         public Builder supportedOpts(java.util.List<SupportedOpts> supportedOpts) {
             this.supportedOpts = supportedOpts;
@@ -280,7 +301,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
             } 
 
             /**
-             * displayNameCn.
+             * <p>The display name in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder displayNameCn(String displayNameCn) {
                 this.displayNameCn = displayNameCn;
@@ -288,7 +312,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
             }
 
             /**
-             * displayNameEn.
+             * <p>The display name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder displayNameEn(String displayNameEn) {
                 this.displayNameEn = displayNameEn;
@@ -296,7 +323,10 @@ public class AlertRuleAlertMetricFilterDef extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The matching value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -67,7 +67,10 @@ public class ContactForIncidentView extends TeaModel {
         } 
 
         /**
-         * contactId.
+         * <p>The contact ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;contact-123456&quot;</p>
          */
         public Builder contactId(String contactId) {
             this.contactId = contactId;
@@ -75,7 +78,10 @@ public class ContactForIncidentView extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;张三&quot;</p>
          */
         public Builder name(String name) {
             this.name = name;

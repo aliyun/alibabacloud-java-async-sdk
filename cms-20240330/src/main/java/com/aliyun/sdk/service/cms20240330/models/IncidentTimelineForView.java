@@ -171,7 +171,10 @@ public class IncidentTimelineForView extends TeaModel {
         } 
 
         /**
-         * changeType.
+         * <p>The type of status change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Open -&gt; In Progress&quot;</p>
          */
         public Builder changeType(String changeType) {
             this.changeType = changeType;
@@ -179,7 +182,10 @@ public class IncidentTimelineForView extends TeaModel {
         }
 
         /**
-         * content.
+         * <p>The content of the timeline event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;action&quot;:&quot;restart&quot;,&quot;resourceId&quot;:&quot;i-bp123456&quot;}&quot;</p>
          */
         public Builder content(Object content) {
             this.content = content;
@@ -187,7 +193,10 @@ public class IncidentTimelineForView extends TeaModel {
         }
 
         /**
-         * incidentUuid.
+         * <p>The unique identifier of the incident.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
          */
         public Builder incidentUuid(String incidentUuid) {
             this.incidentUuid = incidentUuid;
@@ -195,7 +204,7 @@ public class IncidentTimelineForView extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>Information about the operator.</p>
          */
         public Builder operator(ContactForIncidentView operator) {
             this.operator = operator;
@@ -203,7 +212,10 @@ public class IncidentTimelineForView extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The UNIX timestamp when the timeline event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743876000000</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -211,7 +223,10 @@ public class IncidentTimelineForView extends TeaModel {
         }
 
         /**
-         * timelineUuid.
+         * <p>The unique identifier of the timeline record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;x1y2z3a4-b5c6-d7e8-f9g0-h1i2j3k4l5m6&quot;</p>
          */
         public Builder timelineUuid(String timelineUuid) {
             this.timelineUuid = timelineUuid;
@@ -219,7 +234,10 @@ public class IncidentTimelineForView extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The title of the timeline event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;故障已升级至值班主管&quot;</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -227,7 +245,10 @@ public class IncidentTimelineForView extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type of the timeline event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Comment&quot;</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -235,7 +256,10 @@ public class IncidentTimelineForView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;user-abc123&quot;</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -243,7 +267,10 @@ public class IncidentTimelineForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ws-xyz789&quot;</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

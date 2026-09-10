@@ -143,7 +143,10 @@ public class UpdatePipelineRequest extends Request {
         } 
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putPathParameter("workspace", workspace);
@@ -152,7 +155,10 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * pipelineName.
+         * <p>The pipeline name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pipeline-name-1</p>
          */
         public Builder pipelineName(String pipelineName) {
             this.putPathParameter("pipelineName", pipelineName);
@@ -161,7 +167,10 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The pipeline description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test pipeline</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -170,7 +179,7 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * executePolicy.
+         * <p>The execution policy.</p>
          */
         public Builder executePolicy(ExecutePolicy executePolicy) {
             this.putBodyParameter("executePolicy", executePolicy);
@@ -179,7 +188,7 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * pipeline.
+         * <p>The pipeline configuration.</p>
          */
         public Builder pipeline(Pipeline pipeline) {
             this.putBodyParameter("pipeline", pipeline);
@@ -188,7 +197,7 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * sink.
+         * <p>The data sink configuration.</p>
          */
         public Builder sink(Sink sink) {
             this.putBodyParameter("sink", sink);
@@ -197,7 +206,7 @@ public class UpdatePipelineRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The data source configuration.</p>
          */
         public Builder source(Source source) {
             this.putBodyParameter("source", source);
@@ -265,7 +274,10 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * fromTime.
+             * <p>The start timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772519013</p>
              */
             public Builder fromTime(Long fromTime) {
                 this.fromTime = fromTime;
@@ -273,7 +285,10 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * toTime.
+             * <p>The end timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772605413</p>
              */
             public Builder toTime(Long toTime) {
                 this.toTime = toTime;
@@ -340,7 +355,10 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * fromTime.
+             * <p>The start timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772519013</p>
              */
             public Builder fromTime(Long fromTime) {
                 this.fromTime = fromTime;
@@ -348,7 +366,10 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * interval.
+             * <p>The execution interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -428,7 +449,10 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * mode.
+             * <p>The execution mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>runOnce</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -436,7 +460,7 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * runOnce.
+             * <p>The one-time execution configuration.</p>
              */
             public Builder runOnce(RunOnce runOnce) {
                 this.runOnce = runOnce;
@@ -444,7 +468,7 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * scheduled.
+             * <p>The scheduled execution configuration.</p>
              */
             public Builder scheduled(Scheduled scheduled) {
                 this.scheduled = scheduled;
@@ -524,7 +548,10 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node_1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -532,7 +559,7 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * parameters.
+             * <p>The node parameters.</p>
              */
             public Builder parameters(java.util.Map<String, ?> parameters) {
                 this.parameters = parameters;
@@ -540,7 +567,10 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dedup-fuzzy</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -594,7 +624,7 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * nodes.
+             * <p>The pipeline nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -661,7 +691,10 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * dataset.
+             * <p>The dataset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset_1</p>
              */
             public Builder dataset(String dataset) {
                 this.dataset = dataset;
@@ -669,7 +702,10 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * workspace.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-test</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;
@@ -736,7 +772,7 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * dataset.
+             * <p>The destination dataset configuration.</p>
              */
             public Builder dataset(Dataset dataset) {
                 this.dataset = dataset;
@@ -744,7 +780,10 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The sink type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -811,7 +850,10 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * logstore.
+             * <p>The Logstore name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -819,7 +861,10 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * query.
+             * <p>The filter query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status:500 and method:GET</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -886,7 +931,7 @@ public class UpdatePipelineRequest extends Request {
             } 
 
             /**
-             * logstore.
+             * <p>The Log Service Logstore configuration.</p>
              */
             public Builder logstore(Logstore logstore) {
                 this.logstore = logstore;
@@ -894,7 +939,10 @@ public class UpdatePipelineRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstore</p>
              */
             public Builder type(String type) {
                 this.type = type;

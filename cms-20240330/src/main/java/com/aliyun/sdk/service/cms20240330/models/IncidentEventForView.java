@@ -301,7 +301,10 @@ public class IncidentEventForView extends TeaModel {
         } 
 
         /**
-         * autoRecoverTime.
+         * <p>The UNIX timestamp of the automatic recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743876600000</p>
          */
         public Builder autoRecoverTime(Long autoRecoverTime) {
             this.autoRecoverTime = autoRecoverTime;
@@ -309,7 +312,7 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * content.
+         * <p>The details of the event.</p>
          */
         public Builder content(CmsEventForView content) {
             this.content = content;
@@ -317,7 +320,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * count.
+         * <p>The number of times the event was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -325,7 +331,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * dimension.
+         * <p>The dimension information of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;env&quot;: &quot;prod&quot;, &quot;module&quot;: &quot;payment&quot; }</p>
          */
         public Builder dimension(java.util.Map<String, ?> dimension) {
             this.dimension = dimension;
@@ -333,7 +342,7 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * eventResource.
+         * <p>The information about the associated resource.</p>
          */
         public Builder eventResource(EventResourceForIncidentView eventResource) {
             this.eventResource = eventResource;
@@ -341,7 +350,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * groupBy.
+         * <p>The criteria for grouping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;resourceId&quot;: &quot;i-bp123456&quot;, &quot;severity&quot;: &quot;Critical&quot; }</p>
          */
         public Builder groupBy(java.util.Map<String, ?> groupBy) {
             this.groupBy = groupBy;
@@ -349,7 +361,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * incidentEventUuid.
+         * <p>The unique ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;x1y2z3a4-b5c6-d7e8-f9g0-h1i2j3k4l5m6&quot;</p>
          */
         public Builder incidentEventUuid(String incidentEventUuid) {
             this.incidentEventUuid = incidentEventUuid;
@@ -357,7 +372,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * incidentUuid.
+         * <p>The unique ID of the incident to which the event belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
          */
         public Builder incidentUuid(String incidentUuid) {
             this.incidentUuid = incidentUuid;
@@ -365,7 +383,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * labels.
+         * <p>The key-value pairs of custom tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;project&quot;: &quot;payment-gateway&quot;, &quot;owner&quot;: &quot;ops-team&quot; }</p>
          */
         public Builder labels(java.util.Map<String, ?> labels) {
             this.labels = labels;
@@ -373,7 +394,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * lastTime.
+         * <p>The UNIX timestamp of the last occurrence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743876000000</p>
          */
         public Builder lastTime(Long lastTime) {
             this.lastTime = lastTime;
@@ -381,7 +405,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * recoverTime.
+         * <p>The UNIX timestamp of the recovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743876600000</p>
          */
         public Builder recoverTime(Long recoverTime) {
             this.recoverTime = recoverTime;
@@ -389,7 +416,7 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * searchIndex.
+         * <p>The list of search index fields.</p>
          */
         public Builder searchIndex(java.util.List<String> searchIndex) {
             this.searchIndex = searchIndex;
@@ -397,7 +424,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The severity level of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Critical&quot;</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -405,7 +435,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * severityCountMap.
+         * <p>The statistics on the number of events for each severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Critical&quot;: 2, &quot;High&quot;: 1 }</p>
          */
         public Builder severityCountMap(java.util.Map<String, ?> severityCountMap) {
             this.severityCountMap = severityCountMap;
@@ -413,7 +446,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * state.
+         * <p>The current status code of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder state(Integer state) {
             this.state = state;
@@ -421,7 +457,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * textIndex.
+         * <p>The text index field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ECS 实例 CPU 使用率过高&quot;</p>
          */
         public Builder textIndex(String textIndex) {
             this.textIndex = textIndex;
@@ -429,7 +468,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The UNIX timestamp when the event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743876000000</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -437,7 +479,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The title of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ECS 实例 i-bp123456 CPU 使用率超过 90%&quot;</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -445,7 +490,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The ID of the user who created or triggered the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;user-abc123&quot;</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -453,7 +501,10 @@ public class IncidentEventForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ws-xyz789&quot;</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

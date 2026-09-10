@@ -54,7 +54,7 @@ public class DeleteAddonReleaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-BE6E-5F82-A484-CE9C2196C7DC</p>

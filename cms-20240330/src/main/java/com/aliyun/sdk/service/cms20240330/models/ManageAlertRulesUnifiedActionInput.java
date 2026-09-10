@@ -330,7 +330,11 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         } 
 
         /**
+         * <p>The action type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -338,7 +342,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * actionIntegrationConfig.
+         * <p>The action integration configuration.</p>
          */
         public Builder actionIntegrationConfig(ActionIntegrationConfig actionIntegrationConfig) {
             this.actionIntegrationConfig = actionIntegrationConfig;
@@ -346,7 +350,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * annotations.
+         * <p>The annotations.</p>
          */
         public Builder annotations(java.util.Map<String, String> annotations) {
             this.annotations = annotations;
@@ -354,7 +358,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * armsIntegrationConfig.
+         * <p>The ARMS integration configuration.</p>
          */
         public Builder armsIntegrationConfig(ArmsIntegrationConfig armsIntegrationConfig) {
             this.armsIntegrationConfig = armsIntegrationConfig;
@@ -362,7 +366,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * bizSource.
+         * <p>The business source (optional). Examples: managed_service_for_prometheus, umodel, application_insights, cloud_monitoring, sls. Provide as needed for CREATE/UPDATE/PATCH.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder bizSource(String bizSource) {
             this.bizSource = bizSource;
@@ -370,7 +377,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * conditionConfig.
+         * <p>The aggregated condition configuration.</p>
          */
         public Builder conditionConfig(ConditionConfigUnified conditionConfig) {
             this.conditionConfig = conditionConfig;
@@ -378,7 +385,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * contentTemplate.
+         * <p>The content template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance {{instance}} CPU usage exceeds {{threshold}}%</p>
          */
         public Builder contentTemplate(String contentTemplate) {
             this.contentTemplate = contentTemplate;
@@ -386,7 +396,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * datasourceConfig.
+         * <p>The aggregated data source configuration.</p>
          */
         public Builder datasourceConfig(DatasourceConfigUnified datasourceConfig) {
             this.datasourceConfig = datasourceConfig;
@@ -394,7 +404,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * displayName.
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -402,7 +415,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Specifies whether the rule is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -410,7 +426,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * labels.
+         * <p>The labels.</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
@@ -418,7 +434,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * notifyConfig.
+         * <p>The aggregated notification configuration.</p>
          */
         public Builder notifyConfig(NotifyConfigUnified notifyConfig) {
             this.notifyConfig = notifyConfig;
@@ -426,7 +442,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * observeResourceConfig.
+         * <p>The observable resource configuration.</p>
          */
         public Builder observeResourceConfig(ObserveResourceConfig observeResourceConfig) {
             this.observeResourceConfig = observeResourceConfig;
@@ -434,7 +450,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * observeResourceInstanceId.
+         * <p><strong>[Deprecated]</strong> The monitored object instance ID. Use observeResourceConfig.resources instead. Retained only for backward compatibility with legacy SDKs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder observeResourceInstanceId(String observeResourceInstanceId) {
             this.observeResourceInstanceId = observeResourceInstanceId;
@@ -442,7 +461,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * observeResourceType.
+         * <p><strong>[Deprecated]</strong> The monitored object resource type. Use observeResourceConfig.entityType instead. Retained only for backward compatibility with legacy SDKs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder observeResourceType(String observeResourceType) {
             this.observeResourceType = observeResourceType;
@@ -450,7 +472,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * queryConfig.
+         * <p>The aggregated query configuration.</p>
          */
         public Builder queryConfig(QueryConfigUnified queryConfig) {
             this.queryConfig = queryConfig;
@@ -458,7 +480,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * rcaConfig.
+         * <p>The root cause analysis (RCA) configuration (optional). Provide as needed for CREATE/UPDATE/PATCH.</p>
          */
         public Builder rcaConfig(AlertRuleRcaConfig rcaConfig) {
             this.rcaConfig = rcaConfig;
@@ -466,7 +488,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID. Aligned with V1 AlertRule.regionId. If not provided, the gateway callerRegionId is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -474,7 +499,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * scheduleConfig.
+         * <p>The aggregated schedule configuration.</p>
          */
         public Builder scheduleConfig(ScheduleConfigUnified scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
@@ -482,7 +507,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * uuid.
+         * <p>The UUID of the rule. Required for UPDATE/PATCH.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx-xxx-xxx</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -490,7 +518,7 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * uuidList.
+         * <p>The list of rule UUIDs to delete (BATCH_DELETE).</p>
          */
         public Builder uuidList(java.util.List<String> uuidList) {
             this.uuidList = uuidList;
@@ -498,7 +526,10 @@ public class ManageAlertRulesUnifiedActionInput extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace. Required for CREATE/UPDATE and other actions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

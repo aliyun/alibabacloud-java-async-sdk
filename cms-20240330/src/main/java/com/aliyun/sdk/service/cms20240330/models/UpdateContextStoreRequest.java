@@ -131,6 +131,7 @@ public class UpdateContextStoreRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
+         * <p>The name of the context store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,7 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
-         * config.
+         * <p>The configuration information.</p>
          */
         public Builder config(Config config) {
             this.putBodyParameter("config", config);
@@ -164,7 +166,10 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
-         * contextType.
+         * <p>The context type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memory</p>
          */
         public Builder contextType(String contextType) {
             this.putBodyParameter("contextType", contextType);
@@ -173,7 +178,7 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
-         * dataset.
+         * <p>The dataset information.</p>
          */
         public Builder dataset(Dataset dataset) {
             this.putBodyParameter("dataset", dataset);
@@ -182,7 +187,10 @@ public class UpdateContextStoreRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -263,7 +271,10 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * logstore.
+             * <p>The name of the Simple Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-test-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -271,7 +282,10 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * project.
+             * <p>The name of the Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-test-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -279,7 +293,10 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * startTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1776824891000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -346,7 +363,7 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * metadataField.
+             * <p>The metadata field.</p>
              */
             public Builder metadataField(java.util.Map<String, String> metadataField) {
                 this.metadataField = metadataField;
@@ -354,7 +371,7 @@ public class UpdateContextStoreRequest extends Request {
             }
 
             /**
-             * source.
+             * <p>The reference path.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -408,7 +425,10 @@ public class UpdateContextStoreRequest extends Request {
             } 
 
             /**
-             * name.
+             * <p>The name of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_dataset</p>
              */
             public Builder name(String name) {
                 this.name = name;

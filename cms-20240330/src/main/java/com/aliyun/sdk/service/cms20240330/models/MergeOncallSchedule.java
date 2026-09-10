@@ -132,7 +132,7 @@ public class MergeOncallSchedule extends TeaModel {
         } 
 
         /**
-         * detail.
+         * <p>The extension details.</p>
          */
         public Builder detail(java.util.Map<String, ?> detail) {
             this.detail = detail;
@@ -140,7 +140,10 @@ public class MergeOncallSchedule extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -148,7 +151,10 @@ public class MergeOncallSchedule extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The last modified time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -156,7 +162,10 @@ public class MergeOncallSchedule extends TeaModel {
         }
 
         /**
-         * identifier.
+         * <p>The unique identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValue</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -164,7 +173,10 @@ public class MergeOncallSchedule extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The schedule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -172,7 +184,10 @@ public class MergeOncallSchedule extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValue</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -180,7 +195,10 @@ public class MergeOncallSchedule extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValue</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

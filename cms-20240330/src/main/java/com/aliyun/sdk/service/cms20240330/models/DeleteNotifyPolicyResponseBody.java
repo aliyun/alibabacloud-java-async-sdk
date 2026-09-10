@@ -80,7 +80,10 @@ public class DeleteNotifyPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The unique ID of the request. Used for troubleshooting and ticket tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1234567-1234-1234-1234-123456789012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DeleteNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the operation is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -96,7 +99,7 @@ public class DeleteNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>已删除 NotifyPolicy 的 uuid</p>
+         * <p>The uuid of the notification policy that was operated on.</p>
          * 
          * <strong>example:</strong>
          * <p>np-12345678-1234-1234-1234-123456789012</p>

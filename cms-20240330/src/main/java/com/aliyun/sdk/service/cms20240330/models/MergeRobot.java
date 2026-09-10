@@ -158,7 +158,10 @@ public class MergeRobot extends TeaModel {
         } 
 
         /**
-         * createTime.
+         * <p>The time when the bot was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58.789Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -166,7 +169,7 @@ public class MergeRobot extends TeaModel {
         }
 
         /**
-         * extend.
+         * <p>The extension fields.</p>
          */
         public Builder extend(Extend extend) {
             this.extend = extend;
@@ -174,7 +177,10 @@ public class MergeRobot extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The time when the bot was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58.789Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -182,7 +188,10 @@ public class MergeRobot extends TeaModel {
         }
 
         /**
-         * identifier.
+         * <p>The unique identifier of the bot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>robot-12345</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -190,7 +199,10 @@ public class MergeRobot extends TeaModel {
         }
 
         /**
-         * lang.
+         * <p>The language preference.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder lang(String lang) {
             this.lang = lang;
@@ -198,7 +210,10 @@ public class MergeRobot extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the bot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>运维告警机器人</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -206,7 +221,10 @@ public class MergeRobot extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source system of the bot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -214,7 +232,10 @@ public class MergeRobot extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type of the bot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -222,7 +243,10 @@ public class MergeRobot extends TeaModel {
         }
 
         /**
-         * webhook.
+         * <p>The webhook address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>
          */
         public Builder webhook(String webhook) {
             this.webhook = webhook;
@@ -340,7 +364,10 @@ public class MergeRobot extends TeaModel {
             } 
 
             /**
-             * cardTemplate.
+             * <p>The card template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>incident-card-template</p>
              */
             public Builder cardTemplate(String cardTemplate) {
                 this.cardTemplate = cardTemplate;
@@ -348,7 +375,10 @@ public class MergeRobot extends TeaModel {
             }
 
             /**
-             * dailyNoc.
+             * <p>Specifies whether to enable the daily on-duty report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dailyNoc(Boolean dailyNoc) {
                 this.dailyNoc = dailyNoc;
@@ -356,7 +386,10 @@ public class MergeRobot extends TeaModel {
             }
 
             /**
-             * dailyNocTime.
+             * <p>The time for the daily on-duty report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00</p>
              */
             public Builder dailyNocTime(String dailyNocTime) {
                 this.dailyNocTime = dailyNocTime;
@@ -364,7 +397,10 @@ public class MergeRobot extends TeaModel {
             }
 
             /**
-             * dingSignKey.
+             * <p>The signature key for DingTalk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc123</p>
              */
             public Builder dingSignKey(String dingSignKey) {
                 this.dingSignKey = dingSignKey;
@@ -372,7 +408,10 @@ public class MergeRobot extends TeaModel {
             }
 
             /**
-             * enableOutgoing.
+             * <p>Specifies whether to enable outbound requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableOutgoing(Boolean enableOutgoing) {
                 this.enableOutgoing = enableOutgoing;
@@ -380,7 +419,10 @@ public class MergeRobot extends TeaModel {
             }
 
             /**
-             * token.
+             * <p>The authentication token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>token-abc123</p>
              */
             public Builder token(String token) {
                 this.token = token;

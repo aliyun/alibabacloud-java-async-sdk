@@ -80,7 +80,10 @@ public class IncidentResourceDetail extends TeaModel {
         } 
 
         /**
-         * extraId.
+         * <p>An additional resource identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-prod-web-01</p>
          */
         public Builder extraId(String extraId) {
             this.extraId = extraId;
@@ -88,7 +91,10 @@ public class IncidentResourceDetail extends TeaModel {
         }
 
         /**
-         * resourceId.
+         * <p>The resource ID object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;type&quot;: &quot;ecs&quot;, &quot;id&quot;: &quot;i-bp1234567890abcdef&quot; }</p>
          */
         public Builder resourceId(java.util.Map<String, ?> resourceId) {
             this.resourceId = resourceId;
@@ -96,7 +102,10 @@ public class IncidentResourceDetail extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The resource type. This indicates the cloud product to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder type(String type) {
             this.type = type;

@@ -113,6 +113,8 @@ public class GetCloudResourceDataRequest extends Request {
         }
 
         /**
+         * <p>The start of the query time range.</p>
+         * <p>The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,10 +127,11 @@ public class GetCloudResourceDataRequest extends Request {
         }
 
         /**
+         * <p>The query statement.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>.entity with(domain=&quot;acs&quot;, type=&quot;acs.k8s.node&quot;) | limit 0, 10</p>
+         * <p>.entity with(domain=\&quot;acs\&quot;, type=\&quot;acs.k8s.node\&quot;) | limit 0, 10</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -137,6 +140,8 @@ public class GetCloudResourceDataRequest extends Request {
         }
 
         /**
+         * <p>The end of the query time range.</p>
+         * <p>The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

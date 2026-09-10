@@ -67,7 +67,10 @@ public class CreateServiceTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1B2C3D4-E5F6-7890-ABCD-EF1234567890</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateServiceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * taskId.
+         * <p>The ID of the created task. Use this ID for subsequent query or deletion operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a1b2c3d4-e5f6-7890-abcd-ef1234567890</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

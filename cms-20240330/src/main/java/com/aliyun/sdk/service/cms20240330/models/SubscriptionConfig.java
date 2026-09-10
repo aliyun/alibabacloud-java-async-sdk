@@ -80,7 +80,10 @@ public class SubscriptionConfig extends TeaModel {
         } 
 
         /**
-         * filterSetting.
+         * <p>The event content filtering conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -88,7 +91,14 @@ public class SubscriptionConfig extends TeaModel {
         }
 
         /**
-         * subscribeLegacyEvent.
+         * <p>Specifies whether to subscribe to legacy product events (events with an empty workspace from CMS 1.0, ARMS, or SLS). Valid values:</p>
+         * <ul>
+         * <li>true: Subscribe.</li>
+         * <li>false/null: Do not subscribe.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder subscribeLegacyEvent(Boolean subscribeLegacyEvent) {
             this.subscribeLegacyEvent = subscribeLegacyEvent;
@@ -96,7 +106,10 @@ public class SubscriptionConfig extends TeaModel {
         }
 
         /**
-         * workspaceFilterSetting.
+         * <p>The cross-workspace event routing (global subscription) settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder workspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
             this.workspaceFilterSetting = workspaceFilterSetting;

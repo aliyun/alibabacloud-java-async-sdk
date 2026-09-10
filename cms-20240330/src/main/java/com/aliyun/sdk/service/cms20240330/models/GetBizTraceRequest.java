@@ -73,7 +73,10 @@ public class GetBizTraceRequest extends Request {
         } 
 
         /**
-         * bizTraceId.
+         * <p>The ID of the business trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e339260ed64c95d</p>
          */
         public Builder bizTraceId(String bizTraceId) {
             this.putPathParameter("bizTraceId", bizTraceId);

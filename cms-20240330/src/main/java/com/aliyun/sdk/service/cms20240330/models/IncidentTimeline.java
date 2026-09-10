@@ -158,7 +158,10 @@ public class IncidentTimeline extends TeaModel {
         } 
 
         /**
-         * childType.
+         * <p>The child type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder childType(String childType) {
             this.childType = childType;
@@ -166,7 +169,10 @@ public class IncidentTimeline extends TeaModel {
         }
 
         /**
-         * content.
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The operations team has been notified to investigate.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -174,7 +180,10 @@ public class IncidentTimeline extends TeaModel {
         }
 
         /**
-         * incidentId.
+         * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>incident-001</p>
          */
         public Builder incidentId(String incidentId) {
             this.incidentId = incidentId;
@@ -182,7 +191,10 @@ public class IncidentTimeline extends TeaModel {
         }
 
         /**
-         * incidentTimelineId.
+         * <p>The unique ID of the timeline node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timeline-001</p>
          */
         public Builder incidentTimelineId(String incidentTimelineId) {
             this.incidentTimelineId = incidentTimelineId;
@@ -190,7 +202,10 @@ public class IncidentTimeline extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -198,7 +213,10 @@ public class IncidentTimeline extends TeaModel {
         }
 
         /**
-         * timelineId.
+         * <p>The ID of the timeline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timeline-main-001</p>
          */
         public Builder timelineId(String timelineId) {
             this.timelineId = timelineId;
@@ -206,7 +224,10 @@ public class IncidentTimeline extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The timeline title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The operations team has been contacted.</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -214,7 +235,10 @@ public class IncidentTimeline extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTION</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -222,7 +246,10 @@ public class IncidentTimeline extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-12345</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

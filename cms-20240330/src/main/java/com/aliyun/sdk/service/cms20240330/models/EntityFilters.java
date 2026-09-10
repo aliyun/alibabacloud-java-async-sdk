@@ -80,7 +80,10 @@ public class EntityFilters extends TeaModel {
         } 
 
         /**
-         * field.
+         * <p>The name of the filter field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         public Builder field(String field) {
             this.field = field;
@@ -88,7 +91,10 @@ public class EntityFilters extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The filter operator. Only = or != is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -96,7 +102,10 @@ public class EntityFilters extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The filter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -160,6 +160,7 @@ public class SearchContextRequest extends Request {
         } 
 
         /**
+         * <p>Workspace ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +173,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
+         * <p>Context store name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +186,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * filter.
+         * <p>Filter conditions</p>
          */
         public Builder filter(java.util.Map<String, ?> filter) {
             this.putBodyParameter("filter", filter);
@@ -193,7 +195,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * formatted.
+         * <p>Whether to format</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder formatted(Boolean formatted) {
             this.putBodyParameter("formatted", formatted);
@@ -202,7 +207,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>Limit the number of items returned</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -211,6 +219,7 @@ public class SearchContextRequest extends Request {
         }
 
         /**
+         * <p>Query content</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +232,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * retrievalOption.
+         * <p>Retrieval option</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reranker,llm_rank</p>
          */
         public Builder retrievalOption(String retrievalOption) {
             this.putBodyParameter("retrievalOption", retrievalOption);
@@ -232,7 +244,10 @@ public class SearchContextRequest extends Request {
         }
 
         /**
-         * threshold.
+         * <p>Similarity threshold</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.3</p>
          */
         public Builder threshold(Double threshold) {
             this.putBodyParameter("threshold", threshold);

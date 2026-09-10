@@ -198,7 +198,7 @@ public class TransformerForView extends TeaModel {
         } 
 
         /**
-         * actions.
+         * <p>The transform operations.</p>
          */
         public Builder actions(java.util.List<TransformAction> actions) {
             this.actions = actions;
@@ -206,7 +206,10 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The time when the converter was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -214,7 +217,10 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -222,7 +228,10 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the converter is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -230,7 +239,7 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter settings.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -238,7 +247,10 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * quitAfterMatch.
+         * <p>Indicates whether to exit after a match is processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder quitAfterMatch(Boolean quitAfterMatch) {
             this.quitAfterMatch = quitAfterMatch;
@@ -246,7 +258,10 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * sortId.
+         * <p>The sort ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sortId(Integer sortId) {
             this.sortId = sortId;
@@ -254,7 +269,10 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * transformerId.
+         * <p>The transformer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1123123123123</p>
          */
         public Builder transformerId(String transformerId) {
             this.transformerId = transformerId;
@@ -262,7 +280,11 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test processing flow.</p>
          */
         public Builder transformerName(String transformerName) {
             this.transformerName = transformerName;
@@ -270,7 +292,10 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The time when the converter was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-16T02:27:01Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -278,7 +303,10 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123**</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -286,7 +314,10 @@ public class TransformerForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

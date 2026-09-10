@@ -211,7 +211,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         } 
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -219,7 +222,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace api monitor update test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -227,7 +233,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -235,7 +244,7 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * escalationStageList.
+         * <p>The list of escalation stages.</p>
          */
         public Builder escalationStageList(java.util.List<IncidentEscalationStageForView> escalationStageList) {
             this.escalationStageList = escalationStageList;
@@ -243,7 +252,11 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Critical-Alert-Escalation&quot;</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -251,7 +264,16 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * ownerType.
+         * <p>The owner type.</p>
+         * <ul>
+         * <li><p><strong>USER</strong>: User. This is the default value.</p>
+         * </li>
+         * <li><p><strong>APP</strong>: Application.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;USER&quot;</p>
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -259,7 +281,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;cn-hangzhou&quot;</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -267,7 +292,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;MANUAL&quot;</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -275,7 +303,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * syncFromType.
+         * <p>The source type of the synchronization policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ARMS&quot;</p>
          */
         public Builder syncFromType(String syncFromType) {
             this.syncFromType = syncFromType;
@@ -283,7 +314,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-15T02:02:50Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -291,7 +325,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;user-abc123&quot;</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -299,7 +336,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * uuid.
+         * <p>The globally unique identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -307,7 +347,10 @@ public class IncidentEscalationPolicyForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ws-xyz789&quot;</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

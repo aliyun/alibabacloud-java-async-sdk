@@ -93,7 +93,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CEC5375-C554-562B-A65F-***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * tagResources.
+         * <p>The label list.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -209,7 +218,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * resourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -217,7 +229,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -225,7 +240,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tagKey.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -233,7 +251,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

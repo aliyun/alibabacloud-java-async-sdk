@@ -93,7 +93,10 @@ public class ListPipelinesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3f0d6785770d5fb308f0605d718d422a227c38f96117633678f029842acd19039329e8281583b3da7bc598dfc4c1973e</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * pipelines.
+         * <p>The pipelines.</p>
          */
         public Builder pipelines(java.util.List<Pipelines> pipelines) {
             this.pipelines = pipelines;
@@ -238,6 +244,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -249,7 +256,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test pipeline</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -257,7 +267,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineName.
+             * <p>The name of the pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pipeline-name-1</p>
              */
             public Builder pipelineName(String pipelineName) {
                 this.pipelineName = pipelineName;
@@ -265,7 +278,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -273,6 +289,7 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The update time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -284,7 +301,10 @@ public class ListPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace-test</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

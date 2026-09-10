@@ -67,7 +67,10 @@ public class EntityFields extends TeaModel {
         } 
 
         /**
-         * field.
+         * <p>The entity field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         public Builder field(String field) {
             this.field = field;
@@ -75,7 +78,10 @@ public class EntityFields extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The field alias or display value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder value(String value) {
             this.value = value;

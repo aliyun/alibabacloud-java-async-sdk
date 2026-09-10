@@ -116,6 +116,7 @@ public class ListContextStoresRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * contextStoreName.
+         * <p>The name of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.putQueryParameter("contextStoreName", contextStoreName);
@@ -137,7 +141,10 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * contextType.
+         * <p>The context type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memory</p>
          */
         public Builder contextType(String contextType) {
             this.putQueryParameter("contextType", contextType);
@@ -146,7 +153,10 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -155,7 +165,10 @@ public class ListContextStoresRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OCAQV0pBqldexv7EidbIZw==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

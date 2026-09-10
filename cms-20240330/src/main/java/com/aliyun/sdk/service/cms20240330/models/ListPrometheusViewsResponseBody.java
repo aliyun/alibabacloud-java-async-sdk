@@ -108,7 +108,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Maximum number of records to return.</p>
+         * <p>The maximum number of records to return.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -119,7 +119,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Token for the next query.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
@@ -130,7 +130,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of Prometheus view instances.</p>
+         * <p>The list of Prometheus view instances.</p>
          */
         public Builder prometheusViews(java.util.List<PrometheusViews> prometheusViews) {
             this.prometheusViews = prometheusViews;
@@ -138,7 +138,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
@@ -149,7 +149,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of instances</p>
+         * <p>The total number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>66</p>
@@ -374,7 +374,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Instance creation time, using UTC+0 time, formatted as yyyy-MM-ddTHH:mmZ</p>
+             * <p>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-07-12T02:18:36Z</p>
@@ -385,9 +385,9 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance type:
-             * prom-view: new version aggregated view
-             * global-view: old version aggregated view</p>
+             * <p>The instance type:
+             * prom-view: aggregated view of the new version.
+             * global-view: aggregated view of the legacy version.</p>
              * 
              * <strong>example:</strong>
              * <p>prom-view</p>
@@ -398,7 +398,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Payment type. Currently, the fixed value is FREE (free).</p>
+             * <p>The billing type. Currently, the fixed value is FREE.</p>
              * 
              * <strong>example:</strong>
              * <p>FREE</p>
@@ -409,7 +409,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Product that the prom instance belongs to (arms or cms).</p>
+             * <p>The product to which the Prometheus instance belongs (arms or cms).</p>
              * 
              * <strong>example:</strong>
              * <p>cms</p>
@@ -420,7 +420,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of Prometheus instances in the view.</p>
+             * <p>The number of Prometheus instances included in the view.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -431,7 +431,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Prometheus view ID.</p>
+             * <p>The Prometheus view ID.</p>
              * 
              * <strong>example:</strong>
              * <p>view-xxx</p>
@@ -442,7 +442,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Prometheus view name.</p>
+             * <p>The Prometheus view name.</p>
              * 
              * <strong>example:</strong>
              * <p>view1</p>
@@ -453,7 +453,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-zhangjiakou</p>
@@ -464,7 +464,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource group ID.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-acfm3gn5i6bigbi</p>
@@ -475,7 +475,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Fixed value: PrometheusView.</p>
+             * <p>The fixed value: PrometheusView.</p>
              * 
              * <strong>example:</strong>
              * <p>PrometheusView</p>
@@ -486,7 +486,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Backend data storage status.</p>
+             * <p>The backend data storage status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -497,7 +497,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>User ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123xxx</p>
@@ -508,7 +508,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Version.</p>
+             * <p>The version.</p>
              * 
              * <strong>example:</strong>
              * <p>V2</p>
@@ -519,7 +519,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace that the prom instance belongs to.</p>
+             * <p>The workspace to which the Prometheus instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>default-cms-1490404746278495-cn-hangzhou</p>

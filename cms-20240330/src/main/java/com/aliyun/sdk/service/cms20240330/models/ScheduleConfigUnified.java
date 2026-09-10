@@ -68,7 +68,7 @@ public class ScheduleConfigUnified extends TeaModel {
         } 
 
         /**
-         * intervalSecs.
+         * <p>The interval between scheduled runs, in seconds.</p>
          */
         public Builder intervalSecs(Integer intervalSecs) {
             this.intervalSecs = intervalSecs;
@@ -76,6 +76,7 @@ public class ScheduleConfigUnified extends TeaModel {
         }
 
         /**
+         * <p>The type of the schedule.</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {

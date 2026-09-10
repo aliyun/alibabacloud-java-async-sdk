@@ -74,7 +74,7 @@ public class DeleteIntegrationPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Policy environment ID.</p>
+         * <p>The policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,8 +87,8 @@ public class DeleteIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Whether to forcibly delete the cloud-native all-in-one machine,
-         * default value: <code>false</code>.</p>
+         * <p>Specifies whether to force delete the cloud native appliance.
+         * Default: <code>false</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

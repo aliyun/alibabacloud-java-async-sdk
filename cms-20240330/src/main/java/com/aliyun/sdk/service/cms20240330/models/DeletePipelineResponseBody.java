@@ -54,7 +54,10 @@ public class DeletePipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

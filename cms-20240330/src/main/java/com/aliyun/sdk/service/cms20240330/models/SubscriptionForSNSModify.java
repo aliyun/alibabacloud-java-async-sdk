@@ -80,7 +80,7 @@ public class SubscriptionForSNSModify extends TeaModel {
         } 
 
         /**
-         * filterSetting.
+         * <p>The event content filter that matches conditions based on event fields such as labels, source, and severity. If this parameter is not specified, no events are received.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -88,7 +88,11 @@ public class SubscriptionForSNSModify extends TeaModel {
         }
 
         /**
-         * <p>是否订阅老产品事件（workspace=null 的 cms 1.0 / ARMS / SLS 事件）：true=订阅，false 或 null=不订阅</p>
+         * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</p>
+         * <ul>
+         * <li>true: Subscribe to legacy product events.</li>
+         * <li>false or null: Do not subscribe to legacy product events.</li>
+         * </ul>
          */
         public Builder subscribeLegacyEvent(Boolean subscribeLegacyEvent) {
             this.subscribeLegacyEvent = subscribeLegacyEvent;
@@ -96,7 +100,7 @@ public class SubscriptionForSNSModify extends TeaModel {
         }
 
         /**
-         * workspaceFilterSetting.
+         * <p>The global subscription configuration. If the subscription needs to receive events from other workspaces, specify the target workspace list by using workspaceUuids. If this parameter is not configured, only events from the current workspace are received.</p>
          */
         public Builder workspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
             this.workspaceFilterSetting = workspaceFilterSetting;

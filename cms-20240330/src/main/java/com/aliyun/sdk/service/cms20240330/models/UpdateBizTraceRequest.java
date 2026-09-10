@@ -138,7 +138,10 @@ public class UpdateBizTraceRequest extends Request {
         }
 
         /**
-         * bizTraceId.
+         * <p>The ID of the business trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e339260ed64c95d</p>
          */
         public Builder bizTraceId(String bizTraceId) {
             this.putPathParameter("bizTraceId", bizTraceId);
@@ -147,7 +150,10 @@ public class UpdateBizTraceRequest extends Request {
         }
 
         /**
-         * advancedConfig.
+         * <p>The advanced configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sample&quot;:{&quot;strategy&quot;:&quot;BY_APP&quot;}}</p>
          */
         public Builder advancedConfig(String advancedConfig) {
             this.putBodyParameter("advancedConfig", advancedConfig);
@@ -156,7 +162,10 @@ public class UpdateBizTraceRequest extends Request {
         }
 
         /**
-         * bizTraceName.
+         * <p>The name of the business trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>just test</p>
          */
         public Builder bizTraceName(String bizTraceName) {
             this.putBodyParameter("bizTraceName", bizTraceName);
@@ -165,7 +174,10 @@ public class UpdateBizTraceRequest extends Request {
         }
 
         /**
-         * ruleConfig.
+         * <p>The list of configuration rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;entrancePid&quot;:&quot;xxx@d9w3jd9j3&quot;,&quot;rpcMatcher&quot;:{&quot;matchType&quot;:&quot;EQUALS&quot;,&quot;pattern&quot;:&quot;/&quot;},&quot;characteristics&quot;:{&quot;operation&quot;:&quot;OR&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;CUSTOM_EXTRACT&quot;,&quot;id&quot;:&quot;oi0b3bb7&quot;,&quot;key&quot;:&quot;biz.test&quot;,&quot;matcher&quot;:{&quot;matchType&quot;:&quot;CONTAINS&quot;,&quot;pattern&quot;:[&quot;1&quot;]}}]}}]</p>
          */
         public Builder ruleConfig(String ruleConfig) {
             this.putBodyParameter("ruleConfig", ruleConfig);
@@ -174,7 +186,10 @@ public class UpdateBizTraceRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-xxxxxxx-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);

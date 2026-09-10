@@ -54,7 +54,7 @@ public class GetUmodelCommonSchemaRefResponseBody extends TeaModel {
         } 
 
         /**
-         * commonSchemaRef.
+         * <p>The referenced common Umodel Schema.</p>
          */
         public Builder commonSchemaRef(java.util.List<CommonSchemaRef> commonSchemaRef) {
             this.commonSchemaRef = commonSchemaRef;
@@ -120,7 +120,10 @@ public class GetUmodelCommonSchemaRefResponseBody extends TeaModel {
             } 
 
             /**
-             * group.
+             * <p>The common Umodel Schema group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apm-common</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -128,7 +131,10 @@ public class GetUmodelCommonSchemaRefResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

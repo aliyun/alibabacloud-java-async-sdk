@@ -54,7 +54,10 @@ public class DatasourceTypeFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>APM_DS</p>
          */
         public Builder eq(String eq) {
             this.eq = eq;

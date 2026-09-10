@@ -59,7 +59,10 @@ public class DeletePrometheusVirtualInstanceRequest extends Request {
         } 
 
         /**
-         * prometheusInstanceId.
+         * <p>The ID of the Prometheus virtual instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>virtual-xxxxxxxxxxxxxxxx</p>
          */
         public Builder prometheusInstanceId(String prometheusInstanceId) {
             this.putPathParameter("prometheusInstanceId", prometheusInstanceId);

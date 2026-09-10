@@ -75,10 +75,11 @@ public class UpdatePrometheusUserSettingRequest extends Request {
         } 
 
         /**
+         * <p>The key of the user setting.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>key1</p>
+         * <p>financeUsageRegion</p>
          */
         public Builder settingKey(String settingKey) {
             this.putPathParameter("settingKey", settingKey);
@@ -87,10 +88,11 @@ public class UpdatePrometheusUserSettingRequest extends Request {
         }
 
         /**
+         * <p>The value of the user setting.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>abc</p>
+         * <p>ap-southeast-1</p>
          */
         public Builder settingValue(String settingValue) {
             this.putQueryParameter("settingValue", settingValue);

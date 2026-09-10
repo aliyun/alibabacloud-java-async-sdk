@@ -67,7 +67,7 @@ public class UpdatePrometheusInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-abc123</p>
@@ -78,7 +78,7 @@ public class UpdatePrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>1E92F783-E057-58F1-BD5C-92DED088E7A5</p>

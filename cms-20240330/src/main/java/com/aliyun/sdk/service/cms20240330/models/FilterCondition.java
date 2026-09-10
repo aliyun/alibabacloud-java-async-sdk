@@ -80,7 +80,10 @@ public class FilterCondition extends TeaModel {
         } 
 
         /**
-         * field.
+         * <p>The field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         public Builder field(String field) {
             this.field = field;
@@ -88,7 +91,10 @@ public class FilterCondition extends TeaModel {
         }
 
         /**
-         * op.
+         * <p>The operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EQ</p>
          */
         public Builder op(String op) {
             this.op = op;
@@ -96,7 +102,10 @@ public class FilterCondition extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The comparison value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder value(String value) {
             this.value = value;

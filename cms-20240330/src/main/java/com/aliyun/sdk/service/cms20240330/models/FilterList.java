@@ -82,7 +82,11 @@ public class FilterList extends TeaModel {
         } 
 
         /**
+         * <p>The dimension key.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -90,7 +94,11 @@ public class FilterList extends TeaModel {
         }
 
         /**
+         * <p>The filter type.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -98,7 +106,10 @@ public class FilterList extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The filter value. This parameter can be left empty when type is set to ALL or DISABLED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder value(String value) {
             this.value = value;

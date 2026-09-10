@@ -54,7 +54,10 @@ public class QueryAlertRulesNamespaceFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder eq(String eq) {
             this.eq = eq;

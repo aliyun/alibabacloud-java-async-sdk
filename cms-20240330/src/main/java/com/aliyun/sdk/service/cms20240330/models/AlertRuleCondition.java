@@ -354,7 +354,11 @@ public class AlertRuleCondition extends TeaModel {
         } 
 
         /**
-         * <p>type=SLS_CONDITION时指定，满足条件几次后告警，默认为1</p>
+         * <p>Applicable condition type: SLS_CONDITION.</p>
+         * <p>The number of times the condition must be met before an alert is triggered. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder alertCount(Integer alertCount) {
             this.alertCount = alertCount;
@@ -362,7 +366,8 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * <p>type=SLS_CONDITION时指定</p>
+         * <p>Applicable condition type: SLS_CONDITION.</p>
+         * <p>The list of Simple Log Service (SLS) alert conditions.</p>
          */
         public Builder caseList(java.util.List<CaseList> caseList) {
             this.caseList = caseList;
@@ -370,7 +375,8 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * compareList.
+         * <p>Applicable condition type: APM_CONDITION.</p>
+         * <p>The list of Application Performance Monitoring (APM) alert comparison conditions.</p>
          */
         public Builder compareList(java.util.List<CompareList> compareList) {
             this.compareList = compareList;
@@ -378,7 +384,8 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * compositeEscalation.
+         * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
+         * <p>Valid when escalationType is set to composite. The composite metric alert condition.</p>
          */
         public Builder compositeEscalation(CompositeEscalation compositeEscalation) {
             this.compositeEscalation = compositeEscalation;
@@ -386,7 +393,10 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * countOperator.
+         * <p>The count comparison operator, specified when type=LOG_SET_CONDITION. Valid values: GTE / GT / EQ / LTE / LT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GTE</p>
          */
         public Builder countOperator(String countOperator) {
             this.countOperator = countOperator;
@@ -394,7 +404,10 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * countThreshold.
+         * <p>The count threshold, specified when type=LOG_SET_CONDITION.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder countThreshold(Long countThreshold) {
             this.countThreshold = countThreshold;
@@ -402,7 +415,7 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * enableSeveritySuppression.
+         * <p>Used when type=UMODEL_METRICSET_MULTI_CONDITION. Specifies whether to enable severity suppression to the highest level. Default value: true. Only the highest severity level is reported for the same entity.</p>
          */
         public Builder enableSeveritySuppression(Boolean enableSeveritySuppression) {
             this.enableSeveritySuppression = enableSeveritySuppression;
@@ -410,7 +423,16 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * escalationType.
+         * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>simple: simple metric condition</li>
+         * <li>composite: composite metric condition</li>
+         * <li>express: expression condition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>simple</p>
          */
         public Builder escalationType(String escalationType) {
             this.escalationType = escalationType;
@@ -418,7 +440,8 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * expressEscalation.
+         * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
+         * <p>Valid when escalationType=composite. Specifies the multi-metric composite alert conditions.</p>
          */
         public Builder expressEscalation(ExpressEscalation expressEscalation) {
             this.expressEscalation = expressEscalation;
@@ -426,7 +449,10 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * matchField.
+         * <p>The log field name, specified when type=LOG_SET_CONDITION and matchOperator=CONTAINS/EQUALS/REGEX.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logLevel</p>
          */
         public Builder matchField(String matchField) {
             this.matchField = matchField;
@@ -434,7 +460,10 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * matchOperator.
+         * <p>The match operator, specified when type=LOG_SET_CONDITION. Valid values: PRESENT / NOT_PRESENT / CONTAINS / EQUALS / REGEX.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTAINS</p>
          */
         public Builder matchOperator(String matchOperator) {
             this.matchOperator = matchOperator;
@@ -442,7 +471,10 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * matchValue.
+         * <p>The match value, specified when type=LOG_SET_CONDITION and matchOperator=CONTAINS/EQUALS/REGEX.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
          */
         public Builder matchValue(String matchValue) {
             this.matchValue = matchValue;
@@ -450,7 +482,10 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * max.
+         * <p>The upper bound of the range specified when type=BASIC_CONDITION and oper=IN_RANGE/OUT_OF_RANGE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder max(Double max) {
             this.max = max;
@@ -458,7 +493,10 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * min.
+         * <p>The lower bound of the range specified when type=BASIC_CONDITION and oper=IN_RANGE/OUT_OF_RANGE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder min(Double min) {
             this.min = min;
@@ -466,7 +504,11 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * <p>无数据时按什么级别告警，不指定则不对无数据报警</p>
+         * <p>Applicable condition type: APM_CONDITION.</p>
+         * <p>The alert level when no data is available. If not specified, no alert is triggered for no-data scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder noDataAlertLevel(String noDataAlertLevel) {
             this.noDataAlertLevel = noDataAlertLevel;
@@ -474,7 +516,11 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * noDataAppendValue.
+         * <p>Applicable condition type: APM_CONDITION.</p>
+         * <p>The value to use as compensation when no data is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder noDataAppendValue(String noDataAppendValue) {
             this.noDataAppendValue = noDataAppendValue;
@@ -482,7 +528,16 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * noDataPolicy.
+         * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
+         * <p>Specifies how to handle alerts when no monitoring data is available. Valid values:</p>
+         * <ul>
+         * <li>KEEP_LAST_STATE (default): No action is taken.</li>
+         * <li>INSUFFICIENT_DATA: The alert content indicates no data.</li>
+         * <li>OK: Normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>KEEP_LAST_STATE</p>
          */
         public Builder noDataPolicy(String noDataPolicy) {
             this.noDataPolicy = noDataPolicy;
@@ -490,7 +545,20 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * oper.
+         * <p>The comparison operator. Determines whether year-over-year or period-over-period comparison is used.</p>
+         * <ul>
+         * <li>Greater than: GT</li>
+         * <li>Greater than or equal to: GTE</li>
+         * <li>Less than: LT</li>
+         * <li>Less than or equal to: LTE</li>
+         * <li>Equal to: EQ</li>
+         * <li>Not equal to: NE</li>
+         * <li>Year-over-year increase: YOY_UP</li>
+         * <li>Year-over-year decrease: YOY_DOWN</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LT</p>
          */
         public Builder oper(String oper) {
             this.oper = oper;
@@ -498,7 +566,15 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * relation.
+         * <p>Applicable condition type: APM_CONDITION.</p>
+         * <p>The logical relationship between multiple conditions. Valid values:</p>
+         * <ul>
+         * <li>and</li>
+         * <li>or</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder relation(String relation) {
             this.relation = relation;
@@ -506,7 +582,8 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * simpleEscalation.
+         * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
+         * <p>Valid only when escalationType is set to simple. The alert condition for a single metric.</p>
          */
         public Builder simpleEscalation(SimpleEscalation simpleEscalation) {
             this.simpleEscalation = simpleEscalation;
@@ -514,7 +591,7 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * thresholdList.
+         * <p>The list of multi-level thresholds and severity levels, used to map different thresholds to corresponding alert levels.</p>
          */
         public Builder thresholdList(java.util.List<ThresholdList> thresholdList) {
             this.thresholdList = thresholdList;
@@ -522,7 +599,7 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * triggers.
+         * <p>Specified when type=UMODEL_METRICSET_MULTI_CONDITION. The list of trigger conditions. Each item contains severity, durationSecs, and an expression (SIMPLE for single-metric or COMPOSITE for multi-metric AND/OR/UNLESS).</p>
          */
         public Builder triggers(java.util.List<Triggers> triggers) {
             this.triggers = triggers;
@@ -530,8 +607,16 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * <p>规则条件类型，可选值：SLS_CONDITION/APM_CONDITION/CMS_BASIC_CONDITION/PROMETHEUS_MULTI_CONDITION/BASIC_CONDITION/LOG_SET_CONDITION</p>
+         * <p>The rule condition type. Valid values:</p>
+         * <ul>
+         * <li>SLS_CONDITION: SLS alert condition.</li>
+         * <li>APM_CONDITION: APM alert condition.</li>
+         * <li>CMS_BASIC_CONDITION: CloudMonitor Basic CloudMonitor alerts condition.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS_CONDITION</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -539,7 +624,10 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The threshold for triggering an alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder value(Double value) {
             this.value = value;
@@ -631,7 +719,10 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * condition.
+             * <p>The match expression. Example: logLevel: error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logLevel: error</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -639,7 +730,12 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * countCondition.
+             * <p>The count match expression. Examples:
+             * Range combination: <strong>count</strong> &gt;= 3 &amp;&amp; <strong>count</strong> &lt;= 10
+             * Single range: __count__ &gt;= 3</p>
+             * 
+             * <strong>example:</strong>
+             * <p>count &gt;= 3</p>
              */
             public Builder countCondition(String countCondition) {
                 this.countCondition = countCondition;
@@ -647,7 +743,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The alert level when the condition is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -655,8 +754,17 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * <p>规则条件类型，可选值：SLS_CONDITION/APM_CONDITION/CMS_BASIC_CONDITION/PROMETHEUS_MULTI_CONDITION/BASIC_CONDITION/LOG_SET_CONDITION</p>
-             * <p>This parameter is required.</p>
+             * <p>The match type: has data, has specific count of data, has data match, or has specific count of data match.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>HasData: has data</li>
+             * <li>HasDataCount: has specific count of data</li>
+             * <li>HasDataMatch: has data match</li>
+             * <li>HasDataMatchCount: has specific count of data match</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HasData</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -723,7 +831,10 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * level.
+             * <p>The level corresponding to the threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -731,7 +842,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The comparison threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -876,7 +990,20 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * aggregate.
+             * <p>The aggregation function applied after time series.</p>
+             * <ul>
+             * <li>count</li>
+             * <li>sum</li>
+             * <li>avg</li>
+             * <li>min</li>
+             * <li>max</li>
+             * <li>p90</li>
+             * <li>p95</li>
+             * <li>p99</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>count</p>
              */
             public Builder aggregate(String aggregate) {
                 this.aggregate = aggregate;
@@ -884,7 +1011,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * baseUnit.
+             * <p>The data unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder baseUnit(String baseUnit) {
                 this.baseUnit = baseUnit;
@@ -892,7 +1022,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * displayUnit.
+             * <p>The display unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>%</p>
              */
             public Builder displayUnit(String displayUnit) {
                 this.displayUnit = displayUnit;
@@ -900,7 +1033,20 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * oper.
+             * <p>The comparison operator. Determines whether year-over-year or period-over-period comparison is used.</p>
+             * <ul>
+             * <li>Greater than: GT</li>
+             * <li>Greater than or equal to: GTE</li>
+             * <li>Less than: LT</li>
+             * <li>Less than or equal to: LTE</li>
+             * <li>Equal to: EQ</li>
+             * <li>Not equal to: NE</li>
+             * <li>Year-over-year increase: YOY_UP</li>
+             * <li>Year-over-year decrease: YOY_DOWN</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GT</p>
              */
             public Builder oper(String oper) {
                 this.oper = oper;
@@ -908,7 +1054,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The comparison threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -916,7 +1065,7 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * valueLevelList.
+             * <p>The list of alert levels for different values.</p>
              */
             public Builder valueLevelList(java.util.List<ValueLevelList> valueLevelList) {
                 this.valueLevelList = valueLevelList;
@@ -924,7 +1073,11 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * yoyTimeUnit.
+             * <p>The year-over-year time unit. Valid only when oper is set to YOY_UP or YOY_DOWN.
+             * Valid values: minute, hour, day, week, month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>month</p>
              */
             public Builder yoyTimeUnit(String yoyTimeUnit) {
                 this.yoyTimeUnit = yoyTimeUnit;
@@ -932,7 +1085,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * yoyTimeValue.
+             * <p>The year-over-year time value. Used together with yoyTimeUnit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder yoyTimeValue(Integer yoyTimeValue) {
                 this.yoyTimeValue = yoyTimeValue;
@@ -1038,7 +1194,24 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * comparisonOperator.
+             * <p>The threshold comparison operator. Valid values:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: Greater than or equal to.</li>
+             * <li>GreaterThanThreshold: Greater than.</li>
+             * <li>LessThanOrEqualToThreshold: Less than or equal to.</li>
+             * <li>LessThanThreshold: Less than.</li>
+             * <li>NotEqualToThreshold: Not equal to.</li>
+             * <li>EqualToThreshold: Equal to.</li>
+             * <li>GreaterThanYesterday: Year-over-year increase compared with the same time yesterday.</li>
+             * <li>LessThanYesterday: Year-over-year decrease compared with the same time yesterday.</li>
+             * <li>GreaterThanLastWeek: Year-over-year increase compared with the same time last week.</li>
+             * <li>LessThanLastWeek: Year-over-year decrease compared with the same time last week.</li>
+             * <li>GreaterThanLastPeriod: Period-over-period increase compared with the previous period.</li>
+             * <li>LessThanLastPeriod: Period-over-period decrease compared with the previous period.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -1046,7 +1219,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * metricName.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1054,7 +1230,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * period.
+             * <p>The time window of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -1062,7 +1241,17 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * statistics.
+             * <p>The statistical method. The value of this parameter is determined by the Statistics column corresponding to the MetricName of the specified cloud service. Example values for the statistical method of a metric:</p>
+             * <ul>
+             * <li>$Maximum: maximum value.</li>
+             * <li>$Minimum: minimum value.</li>
+             * <li>$Average: average value.</li>
+             * <li>$Availability: availability rate (typically used for site monitoring).</li>
+             * </ul>
+             * <p>Note: $ is the unified prefix symbol for metrics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>$Maximum</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -1070,7 +1259,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * threshold.
+             * <p>The alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder threshold(Double threshold) {
                 this.threshold = threshold;
@@ -1163,7 +1355,7 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * escalations.
+             * <p>The list of composite conditions for multiple metrics.</p>
              */
             public Builder escalations(java.util.List<Escalations> escalations) {
                 this.escalations = escalations;
@@ -1171,7 +1363,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The alert level triggered when the condition is met. Composite metric alerts support only one level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1179,7 +1374,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * relation.
+             * <p>The relationship between multiple metric conditions. Valid values: and, or.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -1187,7 +1385,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * times.
+             * <p>The number of times the condition must be met to trigger an alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -1267,7 +1468,15 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * level.
+             * <p>The alert level triggered when the condition is met. Expression-based alerts support only one level.</p>
+             * <ul>
+             * <li>CRITICAL</li>
+             * <li>WARNING</li>
+             * <li>INFO</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1275,7 +1484,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * rawExpression.
+             * <p>The alert conditional expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>@cpu_total[60].$Average &gt; 60</p>
              */
             public Builder rawExpression(String rawExpression) {
                 this.rawExpression = rawExpression;
@@ -1283,7 +1495,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * times.
+             * <p>The number of times the condition must be met to trigger an alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -1389,7 +1604,24 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * comparisonOperator.
+             * <p>The threshold comparison operator. Valid values:</p>
+             * <ul>
+             * <li>GreaterThanOrEqualToThreshold: Greater than or equal to.</li>
+             * <li>GreaterThanThreshold: Greater than.</li>
+             * <li>LessThanOrEqualToThreshold: Less than or equal to.</li>
+             * <li>LessThanThreshold: Less than.</li>
+             * <li>NotEqualToThreshold: Not equal to.</li>
+             * <li>EqualToThreshold: Equal to.</li>
+             * <li>GreaterThanYesterday: Year-over-year increase compared with the same time yesterday.</li>
+             * <li>LessThanYesterday: Year-over-year decrease compared with the same time yesterday.</li>
+             * <li>GreaterThanLastWeek: Year-over-year increase compared with the same time last week.</li>
+             * <li>LessThanLastWeek: Year-over-year decrease compared with the same time last week.</li>
+             * <li>GreaterThanLastPeriod: Period-over-period increase compared with the previous period.</li>
+             * <li>LessThanLastPeriod: Period-over-period decrease compared with the previous period.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GreaterThanOrEqualToThreshold</p>
              */
             public Builder comparisonOperator(String comparisonOperator) {
                 this.comparisonOperator = comparisonOperator;
@@ -1397,7 +1629,15 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The alert level triggered when the condition is met. Expression-based alerts support only one level.</p>
+             * <ul>
+             * <li>CRITICAL</li>
+             * <li>WARNING</li>
+             * <li>INFO</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1405,7 +1645,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * statistics.
+             * <p>The statistical method. The valid values of this parameter are determined by the Statistics column corresponding to the MetricName of the specified cloud service. Examples: Maximum, Minimum, and Average.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Average</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;
@@ -1413,7 +1656,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * threshold.
+             * <p>The alert threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder threshold(Double threshold) {
                 this.threshold = threshold;
@@ -1421,7 +1667,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * times.
+             * <p>The number of times the condition must be met to trigger an alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -1501,7 +1750,7 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * escalations.
+             * <p>The list of conditions. If an alert rule corresponds to multiple levels, each level has a condition object.</p>
              */
             public Builder escalations(java.util.List<SimpleEscalationEscalations> escalations) {
                 this.escalations = escalations;
@@ -1509,7 +1758,11 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * metricName.
+             * <p>Applicable condition type: CMS_BASIC_CONDITION.</p>
+             * <p>The metric associated with the alert condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu_total</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1517,7 +1770,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * period.
+             * <p>The time window of the metric, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -1610,7 +1866,10 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * max.
+             * <p>The upper bound of the range (required when operator=IN_RANGE/OUT_OF_RANGE).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder max(Double max) {
                 this.max = max;
@@ -1618,7 +1877,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * min.
+             * <p>The lower bound of the range (required when operator=IN_RANGE/OUT_OF_RANGE).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder min(Double min) {
                 this.min = min;
@@ -1626,7 +1888,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * severity.
+             * <p>The severity level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CRITICAL</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -1634,7 +1899,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * threshold.
+             * <p>The threshold (required when the operator is not a range operator).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder threshold(Double threshold) {
                 this.threshold = threshold;
@@ -1727,7 +1995,10 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * expressionType.
+             * <p>The conditional expression type of the sub-condition, typically SIMPLE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder expressionType(String expressionType) {
                 this.expressionType = expressionType;
@@ -1735,7 +2006,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>The comparison operator of the sub-condition, used to compare the query result with the threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GT</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1743,7 +2017,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * queryName.
+             * <p>The query name referenced by the sub-condition, corresponding to the name in queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpuUsageQuery</p>
              */
             public Builder queryName(String queryName) {
                 this.queryName = queryName;
@@ -1751,7 +2028,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * threshold.
+             * <p>The threshold value of the sub-condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder threshold(Double threshold) {
                 this.threshold = threshold;
@@ -1831,7 +2111,7 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * conditions.
+             * <p>The list of sub-conditions for the trigger condition. Multiple sub-conditions are evaluated based on the logicOperator of the parent expression.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -1839,7 +2119,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * expressionType.
+             * <p>The expression type. SIMPLE indicates a single-metric condition. COMPOSITE indicates a multi-metric composite condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SIMPLE</p>
              */
             public Builder expressionType(String expressionType) {
                 this.expressionType = expressionType;
@@ -1847,7 +2130,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * logicOperator.
+             * <p>The multi-metric composite operator. Valid only when expressionType=COMPOSITE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder logicOperator(String logicOperator) {
                 this.logicOperator = logicOperator;
@@ -1927,7 +2213,10 @@ public class AlertRuleCondition extends TeaModel {
             } 
 
             /**
-             * durationSecs.
+             * <p>The duration in seconds that the condition must be continuously met before an alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder durationSecs(Integer durationSecs) {
                 this.durationSecs = durationSecs;
@@ -1935,7 +2224,7 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * expression.
+             * <p>The expression of the trigger condition. Supports two forms: SIMPLE (single-metric) and COMPOSITE (multi-metric AND/OR/UNLESS combination).</p>
              */
             public Builder expression(Expression expression) {
                 this.expression = expression;
@@ -1943,7 +2232,10 @@ public class AlertRuleCondition extends TeaModel {
             }
 
             /**
-             * severity.
+             * <p>The alert severity level that corresponds to this trigger condition when it is met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CRITICAL</p>
              */
             public Builder severity(String severity) {
                 this.severity = severity;

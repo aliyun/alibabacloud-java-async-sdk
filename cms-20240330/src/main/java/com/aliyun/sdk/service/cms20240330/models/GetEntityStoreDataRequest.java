@@ -133,7 +133,7 @@ public class GetEntityStoreDataRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
-         * <p>Content encoding type for the compression algorithm</p>
+         * <p>The content encoding type of the compression algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>gzip</p>
@@ -167,8 +167,8 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
-         * <p>Start time of the query.</p>
-         * <p>Unix timestamp format, representing the number of seconds since 1970-1-1 00:00:00 UTC.</p>
+         * <p>The start point in time for the query.</p>
+         * <p>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,11 +181,11 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
-         * <p>Query statement</p>
+         * <p>The search statement.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>.entity with(domain=&quot;acs&quot;, type=&quot;acs.k8s.node&quot;) | limit 0, 10</p>
+         * <p>.entity with(domain=\&quot;acs\&quot;, type=\&quot;acs.k8s.node\&quot;) | limit 0, 10</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);
@@ -194,8 +194,8 @@ public class GetEntityStoreDataRequest extends Request {
         }
 
         /**
-         * <p>End time of the query.</p>
-         * <p>Unix timestamp format, representing the number of seconds since 1970-1-1 00:00:00 UTC.</p>
+         * <p>The end point in time for the query.</p>
+         * <p>This is a UNIX timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

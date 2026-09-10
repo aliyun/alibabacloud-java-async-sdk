@@ -223,7 +223,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         } 
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -231,7 +234,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -239,7 +245,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Indicates whether the policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -247,7 +256,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * migrationBatchId.
+         * <p>The migration batch ID. This field is empty for user-created entries and has a value for migration artifacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder migrationBatchId(String migrationBatchId) {
             this.migrationBatchId = migrationBatchId;
@@ -255,7 +267,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * migrationMeta.
+         * <p>The migration metadata JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder migrationMeta(String migrationMeta) {
             this.migrationMeta = migrationMeta;
@@ -263,7 +278,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -271,7 +289,7 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * notifyStrategy.
+         * <p>The notification policy snapshot.</p>
          */
         public Builder notifyStrategy(NotifyStrategyForSNSView notifyStrategy) {
             this.notifyStrategy = notifyStrategy;
@@ -279,7 +297,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * notifyStrategyUuid.
+         * <p>The UUID of the associated notifyStrategy, which is shared with the responsePlan UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder notifyStrategyUuid(String notifyStrategyUuid) {
             this.notifyStrategyUuid = notifyStrategyUuid;
@@ -287,7 +308,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * subscriptionUuid.
+         * <p>The UUID of the directly bound primary subscription, which has a 1:1 association in the NOTIFY mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder subscriptionUuid(String subscriptionUuid) {
             this.subscriptionUuid = subscriptionUuid;
@@ -295,7 +319,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -303,7 +330,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -311,7 +341,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * uuid.
+         * <p>The UUID of the aggregate entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -319,7 +352,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The optimistic lock version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder version(Integer version) {
             this.version = version;
@@ -327,7 +363,10 @@ public class SubscriptionAndNotifyStrategyForListView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

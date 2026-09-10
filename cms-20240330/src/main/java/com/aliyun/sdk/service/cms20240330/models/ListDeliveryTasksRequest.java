@@ -116,7 +116,10 @@ public class ListDeliveryTasksRequest extends Request {
         } 
 
         /**
-         * keyWords.
+         * <p>Fuzzy search by task name or task ID (like semantics).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-task</p>
          */
         public Builder keyWords(String keyWords) {
             this.putQueryParameter("keyWords", keyWords);
@@ -125,7 +128,10 @@ public class ListDeliveryTasksRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -134,7 +140,10 @@ public class ListDeliveryTasksRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass in the nextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -143,7 +152,10 @@ public class ListDeliveryTasksRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2bhocin5e2na</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -152,7 +164,7 @@ public class ListDeliveryTasksRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -221,7 +233,10 @@ public class ListDeliveryTasksRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -229,7 +244,10 @@ public class ListDeliveryTasksRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -367,7 +367,10 @@ public class AlertRuleQuery extends TeaModel {
         } 
 
         /**
-         * aggregate.
+         * <p>Specified when type=METRIC_SET_QUERY or LOG_SET_QUERY. The aggregation function: AVG, MAX, MIN, SUM, or LAST.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVG</p>
          */
         public Builder aggregate(String aggregate) {
             this.aggregate = aggregate;
@@ -375,7 +378,11 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * checkAfterDataComplete.
+         * <p>Applicable query type: PROMQL_QUERY.</p>
+         * <p>Specifies whether to perform alert detection after data is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkAfterDataComplete(Boolean checkAfterDataComplete) {
             this.checkAfterDataComplete = checkAfterDataComplete;
@@ -383,7 +390,8 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * dimensions.
+         * <p>Applicable query type: CMS_BASIC_QUERY.  </p>
+         * <p>The list of resource filter dimensions.</p>
          */
         public Builder dimensions(java.util.List<java.util.Map<String, String>> dimensions) {
             this.dimensions = dimensions;
@@ -391,7 +399,10 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * domain.
+         * <p>The domain to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rum</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -399,7 +410,11 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * duration.
+         * <p>Applicable query type: PROMQL_QUERY.</p>
+         * <p>The alert data duration, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -407,7 +422,7 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * entityFields.
+         * <p>The array of entity field filters.</p>
          */
         public Builder entityFields(java.util.List<EntityFields> entityFields) {
             this.entityFields = entityFields;
@@ -415,7 +430,7 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * entityFilter.
+         * <p>The resource filter used to filter target resources.</p>
          */
         public Builder entityFilter(EntityFilter entityFilter) {
             this.entityFilter = entityFilter;
@@ -423,7 +438,11 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * expr.
+         * <p>Applicable query type: PROMQL_QUERY.</p>
+         * <p>The query expression (PromQL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sum(sum(max_over_time(kube_pod_status_phase{phase=~\&quot;Pending\&quot;,job=\&quot;_kube-state-metrics\&quot;}[5m])) by (pod)) &gt; 1000</p>
          */
         public Builder expr(String expr) {
             this.expr = expr;
@@ -431,7 +450,8 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * firstJoin.
+         * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+         * <p>The set join operation configuration for the results of subquery 1 (queries[0]) and subquery 2 (queries[1]).</p>
          */
         public Builder firstJoin(AlertRuleSlsQueryJoin firstJoin) {
             this.firstJoin = firstJoin;
@@ -439,7 +459,8 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * groupFieldList.
+         * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+         * <p>The list of group field names.</p>
          */
         public Builder groupFieldList(java.util.List<String> groupFieldList) {
             this.groupFieldList = groupFieldList;
@@ -447,7 +468,11 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * groupId.
+         * <p>Applicable query type: CMS_BASIC_QUERY.</p>
+         * <p>The associated application group ID. Valid only when relationType=GROUP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23423</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -455,7 +480,16 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * groupType.
+         * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+         * <p>The grouping type. Valid values:</p>
+         * <ul>
+         * <li>none: no grouping</li>
+         * <li>label: automatic label-based grouping</li>
+         * <li>custom: custom label-based grouping</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>label</p>
          */
         public Builder groupType(String groupType) {
             this.groupType = groupType;
@@ -463,7 +497,7 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * labelFilters.
+         * <p>The array of label filters.</p>
          */
         public Builder labelFilters(java.util.List<LabelFilters> labelFilters) {
             this.labelFilters = labelFilters;
@@ -471,7 +505,10 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * logSet.
+         * <p>Specified when type=LOG_SET_QUERY. The log set name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>china-log-set</p>
          */
         public Builder logSet(String logSet) {
             this.logSet = logSet;
@@ -479,7 +516,7 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * markTags.
+         * <p>The list of mark tags for the alert rule, used for categorization and retrieval.</p>
          */
         public Builder markTags(java.util.List<MarkTags> markTags) {
             this.markTags = markTags;
@@ -487,7 +524,10 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * metric.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memory</p>
          */
         public Builder metric(String metric) {
             this.metric = metric;
@@ -495,7 +535,10 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * metricSet.
+         * <p>The monitoring metrics set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_usage</p>
          */
         public Builder metricSet(String metricSet) {
             this.metricSet = metricSet;
@@ -503,7 +546,11 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * namespace.
+         * <p>Applicable query type: CMS_BASIC_QUERY.</p>
+         * <p>The namespace of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -511,7 +558,10 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * offsetSecs.
+         * <p>Specified when type=METRIC_SET_QUERY or LOG_SET_QUERY. The query time offset in seconds. Used together with windowSecs to implement an offset query of [T - windowSecs - offsetSecs, T - offsetSecs]. Valid range: 0 to 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder offsetSecs(Long offsetSecs) {
             this.offsetSecs = offsetSecs;
@@ -519,7 +569,9 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * queries.
+         * <p>Applicable query types: SLS_MULTI_QUERY, APM_MULTI_QUERY.</p>
+         * <p>The list of subqueries.</p>
+         * <p>For the SLS_MULTI_QUERY query type, a maximum of three subqueries are supported. The number and order of subqueries must match the sub-datasource configurations in datasource.dsList.</p>
          */
         public Builder queries(java.util.List<Queries> queries) {
             this.queries = queries;
@@ -527,7 +579,16 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * relationType.
+         * <p>Applicable query type: CMS_BASIC_QUERY.</p>
+         * <p>The resource scope for the rule query. Valid values:</p>
+         * <ul>
+         * <li>USER: All resources under the user UID.</li>
+         * <li>GROUP: Application group.</li>
+         * <li>INSTANCE: Specified instance list.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         public Builder relationType(String relationType) {
             this.relationType = relationType;
@@ -535,7 +596,8 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * secondJoin.
+         * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+         * <p>The set join operation configuration for the results of subquery 2 (queries[2]) and subquery 3 (queries[3]).</p>
          */
         public Builder secondJoin(AlertRuleSlsQueryJoin secondJoin) {
             this.secondJoin = secondJoin;
@@ -543,7 +605,7 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * serviceIds.
+         * <p>The list of service IDs.</p>
          */
         public Builder serviceIds(java.util.List<String> serviceIds) {
             this.serviceIds = serviceIds;
@@ -551,8 +613,26 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * <p>查询类型，可选值：PROMQL_QUERY / APM_MULTI_QUERY / SLS_MULTI_QUERY / CMS_BASIC_QUERY / METRIC_SET_QUERY / LOG_SET_QUERY / PROMETHEUS_MULTI_QUERY / METRIC_SET_MULTI_QUERY</p>
+         * <p>The query type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PROMQL_QUERY: PromQL query.</li>
+         * <li>SLS_MULTI_QUERY: SLS query.</li>
+         * <li>APM_MULTI_QUERY: APM query.</li>
+         * <li>CMS_BASIC_QUERY: CloudMonitor Basic monitoring query.</li>
+         * </ul>
+         * <p>Different query types have different valid fields in the query object. Refer to the &quot;Applicable query type&quot; description in each field for details.</p>
+         * <p>The query type must match the datasource type. The mapping is as follows:</p>
+         * <ul>
+         * <li>Prometheus datasource (PROMETHEUS_DS): PROMQL_QUERY</li>
+         * <li>APM datasource (APM_DS): APM_MULTI_QUERY</li>
+         * <li>SLS datasource (SLS_MULTI_DS): SLS_MULTI_QUERY</li>
+         * <li>CloudMonitor Basic monitoring data datasource (CMS_BASIC_DS): CMS_BASIC_QUERY</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROMQL_QUERY</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -560,7 +640,10 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
-         * windowSecs.
+         * <p>Specified when type=METRIC_SET_QUERY or LOG_SET_QUERY. The aggregation time window in seconds. Valid range: 60 to 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder windowSecs(Long windowSecs) {
             this.windowSecs = windowSecs;
@@ -626,7 +709,10 @@ public class AlertRuleQuery extends TeaModel {
             } 
 
             /**
-             * field.
+             * <p>The entity field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceId</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -634,7 +720,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The field value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-abc123</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -714,7 +803,10 @@ public class AlertRuleQuery extends TeaModel {
             } 
 
             /**
-             * field.
+             * <p>The field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceId</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -722,7 +814,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>The comparison operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -730,7 +825,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The matching value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wait_throw</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -810,7 +908,10 @@ public class AlertRuleQuery extends TeaModel {
             } 
 
             /**
-             * domain.
+             * <p>The resource type domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rum</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -818,7 +919,7 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * filters.
+             * <p>The list of filter conditions used to further filter resources.</p>
              */
             public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
@@ -826,8 +927,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * <p>查询类型，可选值：PROMQL_QUERY / APM_MULTI_QUERY / SLS_MULTI_QUERY / CMS_BASIC_QUERY / METRIC_SET_QUERY / LOG_SET_QUERY / PROMETHEUS_MULTI_QUERY / METRIC_SET_MULTI_QUERY</p>
-             * <p>This parameter is required.</p>
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apm</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -907,7 +1010,10 @@ public class AlertRuleQuery extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -915,7 +1021,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>The comparison operator that determines how to match the label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -923,7 +1032,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -990,7 +1102,10 @@ public class AlertRuleQuery extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -998,7 +1113,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1078,7 +1196,10 @@ public class AlertRuleQuery extends TeaModel {
             } 
 
             /**
-             * dim.
+             * <p>The dimension in the APM metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rpcType</p>
              */
             public Builder dim(String dim) {
                 this.dim = dim;
@@ -1086,8 +1207,16 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * <p>查询类型，可选值：PROMQL_QUERY / APM_MULTI_QUERY / SLS_MULTI_QUERY / CMS_BASIC_QUERY / METRIC_SET_QUERY / LOG_SET_QUERY / PROMETHEUS_MULTI_QUERY / METRIC_SET_MULTI_QUERY</p>
-             * <p>This parameter is required.</p>
+             * <p>The filter operation type. Valid values:</p>
+             * <ul>
+             * <li>eq: Equal to.</li>
+             * <li>neq: Not equal to.</li>
+             * <li>match: Regex match.</li>
+             * <li>nmatch: Regex not match.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1095,7 +1224,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value corresponding to the filter operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>h3ji7a0y9i@2ac80e27fdfd0a2</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1175,7 +1307,10 @@ public class AlertRuleQuery extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The key (label name) for the label filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1183,7 +1318,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * operator.
+             * <p>The label filter operator, such as =, !=, =<del>, or !</del>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1191,7 +1329,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value for the label filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web-01</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1414,7 +1555,11 @@ public class AlertRuleQuery extends TeaModel {
             } 
 
             /**
-             * apmAlertMetricId.
+             * <p>Applicable query type: APM_MULTI_QUERY.</p>
+             * <p>The ID of the APM predefined metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appstat.jvm.ThreadNewCount</p>
              */
             public Builder apmAlertMetricId(String apmAlertMetricId) {
                 this.apmAlertMetricId = apmAlertMetricId;
@@ -1422,7 +1567,8 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * apmFilters.
+             * <p>Applicable query type: ARMS_MULTI_QUERY.</p>
+             * <p>The dimension filter configuration for APM metrics. Must be used together with apmAlertMetricId.</p>
              */
             public Builder apmFilters(java.util.List<ApmFilters> apmFilters) {
                 this.apmFilters = apmFilters;
@@ -1430,7 +1576,8 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * apmGroupBy.
+             * <p>Applicable query type: ARMS_MULTI_QUERY.</p>
+             * <p>The list of aggregation dimensions for the query, specifying which dimensions of the metric to aggregate by.</p>
              */
             public Builder apmGroupBy(java.util.List<String> apmGroupBy) {
                 this.apmGroupBy = apmGroupBy;
@@ -1438,7 +1585,11 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * duration.
+             * <p>Applicable query type: ARMS_MULTI_QUERY.</p>
+             * <p>The alert data duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -1446,7 +1597,12 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * <p>时间偏移结束时间(相对)，如果指定了start、end，则不指定window。</p>
+             * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+             * <p>The relative time offset end time.</p>
+             * <p>If start and end are specified, do not specify window.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -1454,7 +1610,15 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * <p>查询表达式</p>
+             * <p>Applicable query types: APM_MULTI_QUERY, SLS_MULTI_QUERY.</p>
+             * <p>The query expression.</p>
+             * <ul>
+             * <li>For APM_MULTI_QUERY, this field is optional and contains the PromQL generated for predefined metrics (used for data preview).</li>
+             * <li>For SLS_MULTI_QUERY, this field contains the SQL query statement.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>sum by (rpc,acs_arms_service_id,pid,rpcType) (sum_over_time_lorc(arms_app_requests_count_ign_destid_endpoint_parent_ppid_prpc{callKind=~\&quot;http|rpc|custom_entry|server|consumer\&quot;,pid=\&quot;gaddp9ap8q@cb005ffdf44b8ac\&quot;,source=\&quot;apm\&quot;}[1m]))</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -1462,7 +1626,7 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * labelFilters.
+             * <p>Valid only for METRIC_SET_MULTI_QUERY. The label filter conditions (optional, independent for each query).</p>
              */
             public Builder labelFilters(java.util.List<QueriesLabelFilters> labelFilters) {
                 this.labelFilters = labelFilters;
@@ -1470,7 +1634,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * metric.
+             * <p>Valid only for METRIC_SET_MULTI_QUERY. The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpuUsage</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -1478,7 +1645,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * metricSet.
+             * <p>Valid only for METRIC_SET_MULTI_QUERY. The metric set name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs_metrics</p>
              */
             public Builder metricSet(String metricSet) {
                 this.metricSet = metricSet;
@@ -1486,7 +1656,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The subquery name. Uniquely identifies the query within the same alert rule and can be referenced by the expression conditions in triggers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpuUsageQuery</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1494,7 +1667,10 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * promQl.
+             * <p>The PromQL query statement. Used when type=APM_MULTI_QUERY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>avg(rate(http_requests_total[5m]))</p>
              */
             public Builder promQl(String promQl) {
                 this.promQl = promQl;
@@ -1502,7 +1678,12 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * <p>sls查询的时间偏移开始时间(相对)，如果指定了start、end，则不指定window。  例如：start=15， timeUnit=minute，表示15分钟前</p>
+             * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+             * <p>The relative time offset start time for SLS queries.</p>
+             * <p>If start and end are specified, do not specify window. Example: start=15, timeUnit=minute indicates 15 minutes ago.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder start(Long start) {
                 this.start = start;
@@ -1510,7 +1691,11 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * <p>start和end、window的时间单位： day/hour/minute/second</p>
+             * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+             * <p>The time unit for the start, end, and window parameters: day/hour/minute/second.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hour</p>
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -1518,7 +1703,11 @@ public class AlertRuleQuery extends TeaModel {
             }
 
             /**
-             * <p>整点时间查询区间。  如果指定了window则不指定start、end</p>
+             * <p>Applicable query type: SLS_MULTI_QUERY.</p>
+             * <p>The time frame query interval. If window is specified, do not specify start or end.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder window(Long window) {
                 this.window = window;

@@ -93,7 +93,10 @@ public class ResponsePlanDetail extends TeaModel {
         } 
 
         /**
-         * autoRecoverSeconds.
+         * <p>The number of seconds for automatic recovery. If no new trigger occurs within this duration, the event is automatically recovered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder autoRecoverSeconds(Long autoRecoverSeconds) {
             this.autoRecoverSeconds = autoRecoverSeconds;
@@ -101,7 +104,10 @@ public class ResponsePlanDetail extends TeaModel {
         }
 
         /**
-         * escalationId.
+         * <p>The list of escalation plan IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;esc-uuid-xxx&quot;]</p>
          */
         public Builder escalationId(java.util.List<String> escalationId) {
             this.escalationId = escalationId;
@@ -109,7 +115,7 @@ public class ResponsePlanDetail extends TeaModel {
         }
 
         /**
-         * pushingSetting.
+         * <p>The action integration push settings.</p>
          */
         public Builder pushingSetting(PushingSetting pushingSetting) {
             this.pushingSetting = pushingSetting;
@@ -117,7 +123,7 @@ public class ResponsePlanDetail extends TeaModel {
         }
 
         /**
-         * repeatNotifySetting.
+         * <p>The repeat notification configuration.</p>
          */
         public Builder repeatNotifySetting(RepeatNotifySetting repeatNotifySetting) {
             this.repeatNotifySetting = repeatNotifySetting;
@@ -183,7 +189,10 @@ public class ResponsePlanDetail extends TeaModel {
             } 
 
             /**
-             * alertActionIds.
+             * <p>The list of action integration IDs triggered by alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;action-uuid-xxx&quot;]</p>
              */
             public Builder alertActionIds(java.util.List<String> alertActionIds) {
                 this.alertActionIds = alertActionIds;
@@ -191,7 +200,10 @@ public class ResponsePlanDetail extends TeaModel {
             }
 
             /**
-             * restoreActionIds.
+             * <p>The list of action integration IDs triggered by recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;action-uuid-yyy&quot;]</p>
              */
             public Builder restoreActionIds(java.util.List<String> restoreActionIds) {
                 this.restoreActionIds = restoreActionIds;
@@ -258,7 +270,10 @@ public class ResponsePlanDetail extends TeaModel {
             } 
 
             /**
-             * endIncidentState.
+             * <p>The target event status at which repeated notifications stop.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RECOVERED</p>
              */
             public Builder endIncidentState(String endIncidentState) {
                 this.endIncidentState = endIncidentState;
@@ -266,7 +281,10 @@ public class ResponsePlanDetail extends TeaModel {
             }
 
             /**
-             * repeatInterval.
+             * <p>The interval for repeated notifications, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder repeatInterval(Integer repeatInterval) {
                 this.repeatInterval = repeatInterval;

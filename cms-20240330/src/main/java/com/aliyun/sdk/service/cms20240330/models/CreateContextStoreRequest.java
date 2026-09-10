@@ -132,6 +132,7 @@ public class CreateContextStoreRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,7 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
-         * config.
+         * <p>The configuration.</p>
          */
         public Builder config(Config config) {
             this.putBodyParameter("config", config);
@@ -153,6 +154,7 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
+         * <p>The name of the context store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +167,7 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
+         * <p>The type of the context store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +180,7 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
-         * dataset.
+         * <p>The properties of the dataset.</p>
          */
         public Builder dataset(Dataset dataset) {
             this.putBodyParameter("dataset", dataset);
@@ -186,7 +189,10 @@ public class CreateContextStoreRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -267,7 +273,10 @@ public class CreateContextStoreRequest extends Request {
             } 
 
             /**
-             * logstore.
+             * <p>The name of the Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-test-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -275,7 +284,10 @@ public class CreateContextStoreRequest extends Request {
             }
 
             /**
-             * project.
+             * <p>The name of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-test-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -283,6 +295,7 @@ public class CreateContextStoreRequest extends Request {
             }
 
             /**
+             * <p>The effective start time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -353,7 +366,7 @@ public class CreateContextStoreRequest extends Request {
             } 
 
             /**
-             * metadataField.
+             * <p>The metadata fields.</p>
              */
             public Builder metadataField(java.util.Map<String, String> metadataField) {
                 this.metadataField = metadataField;
@@ -361,7 +374,7 @@ public class CreateContextStoreRequest extends Request {
             }
 
             /**
-             * source.
+             * <p>The configuration source.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -415,7 +428,10 @@ public class CreateContextStoreRequest extends Request {
             } 
 
             /**
-             * name.
+             * <p>The name of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_dataset</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -106,7 +106,10 @@ public class EventResourceForIncidentView extends TeaModel {
         } 
 
         /**
-         * domain.
+         * <p>The domain of the resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rum</p>
          */
         public Builder domain(String domain) {
             this.domain = domain;
@@ -114,7 +117,10 @@ public class EventResourceForIncidentView extends TeaModel {
         }
 
         /**
-         * entityId.
+         * <p>The entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder entityId(String entityId) {
             this.entityId = entityId;
@@ -122,7 +128,10 @@ public class EventResourceForIncidentView extends TeaModel {
         }
 
         /**
-         * entityType.
+         * <p>The entity type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Instance&quot;</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -130,7 +139,10 @@ public class EventResourceForIncidentView extends TeaModel {
         }
 
         /**
-         * probs.
+         * <p>The string that describes the properties of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;name&quot;:&quot;web-server-01&quot;,&quot;ip&quot;:&quot;10.0.0.1&quot;}&quot;</p>
          */
         public Builder probs(String probs) {
             this.probs = probs;
@@ -138,7 +150,10 @@ public class EventResourceForIncidentView extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;value\&quot;:\&quot;测试\&quot;,\&quot;key\&quot;:\&quot;环境\&quot;}]</p>
          */
         public Builder tags(String tags) {
             this.tags = tags;

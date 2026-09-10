@@ -67,7 +67,7 @@ public class EventResourceForEventView extends TeaModel {
         } 
 
         /**
-         * entity.
+         * <p>The resource entity.</p>
          */
         public Builder entity(Entity entity) {
             this.entity = entity;
@@ -75,7 +75,10 @@ public class EventResourceForEventView extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;env&quot;: &quot;prod&quot;, &quot;project&quot;: &quot;payment-gateway&quot; }</p>
          */
         public Builder tags(java.util.Map<String, ?> tags) {
             this.tags = tags;
@@ -167,7 +170,10 @@ public class EventResourceForEventView extends TeaModel {
             } 
 
             /**
-             * domain.
+             * <p>The product domain to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;ECS&quot;</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -175,7 +181,10 @@ public class EventResourceForEventView extends TeaModel {
             }
 
             /**
-             * entityId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;i-bp123456&quot;</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -183,7 +192,10 @@ public class EventResourceForEventView extends TeaModel {
             }
 
             /**
-             * entityType.
+             * <p>The specific type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;Instance&quot;</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -191,7 +203,10 @@ public class EventResourceForEventView extends TeaModel {
             }
 
             /**
-             * prop.
+             * <p>Extra properties of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;name&quot;: &quot;web-server-01&quot;, &quot;ip&quot;: &quot;10.0.0.1&quot; }</p>
              */
             public Builder prop(java.util.Map<String, ?> prop) {
                 this.prop = prop;

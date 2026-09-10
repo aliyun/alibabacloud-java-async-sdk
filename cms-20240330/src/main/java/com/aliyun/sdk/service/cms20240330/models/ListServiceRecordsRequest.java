@@ -131,6 +131,7 @@ public class ListServiceRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class ListServiceRecordsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -161,7 +165,10 @@ public class ListServiceRecordsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -170,6 +177,8 @@ public class ListServiceRecordsRequest extends Request {
         }
 
         /**
+         * <p>The type of the linked entry. Currently supported:
+         * logCorrelation, which indicates application log association.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +191,13 @@ public class ListServiceRecordsRequest extends Request {
         }
 
         /**
-         * search.
+         * <p>The filter information for service-linked entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;serviceName&quot;: &quot;my-service&quot;,
+         *   &quot;storeName&quot;: &quot;my-logstore&quot;
+         * }</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("search", search);

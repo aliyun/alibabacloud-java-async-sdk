@@ -80,7 +80,10 @@ public class CloudMonitoringExpressEscalation extends TeaModel {
         } 
 
         /**
-         * rawExpression.
+         * <p>The raw expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_usage &gt; 90</p>
          */
         public Builder rawExpression(String rawExpression) {
             this.rawExpression = rawExpression;
@@ -88,7 +91,10 @@ public class CloudMonitoringExpressEscalation extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -96,7 +102,10 @@ public class CloudMonitoringExpressEscalation extends TeaModel {
         }
 
         /**
-         * times.
+         * <p>The number of consecutive times the alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder times(Integer times) {
             this.times = times;

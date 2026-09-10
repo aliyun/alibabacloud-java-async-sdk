@@ -197,7 +197,10 @@ public class IncidentResponsePlanForModify extends TeaModel {
         } 
 
         /**
-         * autoRecoverSeconds.
+         * <p>The auto-recovery time in seconds when no events occur.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder autoRecoverSeconds(Long autoRecoverSeconds) {
             this.autoRecoverSeconds = autoRecoverSeconds;
@@ -205,7 +208,10 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -213,7 +219,10 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Indicates whether the response plan is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -221,7 +230,7 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * escalationId.
+         * <p>The list of escalation plan IDs.</p>
          */
         public Builder escalationId(java.util.List<String> escalationId) {
             this.escalationId = escalationId;
@@ -229,7 +238,10 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * mode.
+         * <p>The lifecycle mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValue</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -237,7 +249,10 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -245,7 +260,7 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * pushingSetting.
+         * <p>The push settings.</p>
          */
         public Builder pushingSetting(PushingSetting pushingSetting) {
             this.pushingSetting = pushingSetting;
@@ -253,7 +268,7 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * repeatNotifySetting.
+         * <p>The repeat notification configuration.</p>
          */
         public Builder repeatNotifySetting(RepeatNotifySetting repeatNotifySetting) {
             this.repeatNotifySetting = repeatNotifySetting;
@@ -261,7 +276,10 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SampleValue</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -269,7 +287,10 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * syncFromType.
+         * <p>The synchronization source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder syncFromType(String syncFromType) {
             this.syncFromType = syncFromType;
@@ -277,7 +298,10 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -285,7 +309,10 @@ public class IncidentResponsePlanForModify extends TeaModel {
         }
 
         /**
-         * <p>Update 必填；Create 可省略由后端生成；与 NotifyStrategy 共享 uuid</p>
+         * <p>Required for Update. Can be omitted for Create, in which case the backend generates it. The UUID is shared with NotifyStrategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;

@@ -103,6 +103,7 @@ public class ListIntegrationPolicyCollectorsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Integration Center policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class ListIntegrationPolicyCollectorsRequest extends Request {
         }
 
         /**
-         * addonReleaseName.
+         * <p>The name of the add-on release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release-1234567</p>
          */
         public Builder addonReleaseName(String addonReleaseName) {
             this.putQueryParameter("addonReleaseName", addonReleaseName);
@@ -124,6 +128,7 @@ public class ListIntegrationPolicyCollectorsRequest extends Request {
         }
 
         /**
+         * <p>The collector type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class ListIntegrationPolicyCollectorsRequest extends Request {
         }
 
         /**
-         * language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("language", language);

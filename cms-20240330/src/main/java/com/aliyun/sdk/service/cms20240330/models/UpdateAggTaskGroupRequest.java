@@ -302,7 +302,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Prometheus instance to which the aggregation task group belongs. The aggregation tasks read data from this instance.</p>
+         * <p>The ID of the Prometheus instance to which the aggregation task group belongs. The aggregation task reads data from this instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Aggregation task group ID.</p>
+         * <p>The ID of the aggregation task group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,7 +328,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Aggregation task group configuration. Currently, only the “RecordingRuleYaml” format is supported, and it must comply with the format requirements of open-source Prometheus RecordingRules.</p>
+         * <p>The configuration of the aggregation task group. Currently, only the RecordingRuleYaml format is supported. The configuration must comply with the RecordingRule format of open source Prometheus.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -338,7 +338,8 @@ public class UpdateAggTaskGroupRequest extends Request {
          * interval: &quot;60s&quot;
          * rules:<ul>
          * <li>record: &quot;node_namespace_pod:kube_pod_info:&quot;
-         * expr: &quot;max(label_replace(kube_pod_info{job=&quot;kubernetes-pods-kube-state-metrics&quot;<br>  }, &quot;pod&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (node, namespace, pod, cluster)&quot;</li>
+         * expr: &quot;max(label_replace(kube_pod_info{job=\&quot;kubernetes-pods-kube-state-metrics\&quot;\
+         *   }, \&quot;pod\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (node, namespace, pod, cluster)&quot;</li>
          * </ul>
          * </li>
          * </ul>
@@ -350,7 +351,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Aggregation task group configuration type, default is “RecordingRuleYaml” (open-source Prometheus RecordingRule format).</p>
+         * <p>The type of the aggregation task group configuration. The default value is RecordingRuleYaml, which is the RecordingRule format of open source Prometheus.</p>
          * 
          * <strong>example:</strong>
          * <p>RecordingRuleYaml</p>
@@ -362,7 +363,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Aggregation task group name.</p>
+         * <p>The name of the aggregation task group.</p>
          * 
          * <strong>example:</strong>
          * <p>test-group</p>
@@ -374,7 +375,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>When the scheduling mode is set to “Cron”, this is the specific scheduling expression. For example, “0/1 * * * *” means starting from 0 minutes, schedule every 1 minute.</p>
+         * <p>The cron expression for scheduling when the scheduling mode is set to Cron. For example, \<code>0/1 \\* \\* \\* \\*\\</code> indicates that the task is scheduled every 1 minute, starting from the 0th minute.</p>
          * 
          * <strong>example:</strong>
          * <p>0/1 * * * *</p>
@@ -386,7 +387,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Fixed delay time for scheduling, in seconds, default is 30.</p>
+         * <p>The fixed delay for scheduling. Unit: seconds. The default value is 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -398,7 +399,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Description of the aggregation task group.</p>
+         * <p>The description of the aggregation task group.</p>
          * 
          * <strong>example:</strong>
          * <p>desc</p>
@@ -410,7 +411,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>The second-level timestamp corresponding to the start time of the scheduling.</p>
+         * <p>The UNIX timestamp in seconds that indicates the start time of the scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>1724996015</p>
@@ -422,7 +423,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Maximum number of retries for executing the aggregation task, default is 20.</p>
+         * <p>The maximum number of retries to execute the aggregation task. The default value is 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -434,7 +435,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Maximum retry time for executing the aggregation task, in seconds, default is 600.</p>
+         * <p>The maximum retry time to execute the aggregation task. Unit: seconds. The default value is 600.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -446,10 +447,10 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Pre-check configuration, no configuration by default. The input string needs to be correctly parsed as JSON.</p>
+         * <p>The dry run configuration. This parameter is not configured by default. The input string must be a valid JSON string.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=&quot;_arms/kubelet/cadvisor&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</p>
+         * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=\&quot;_arms/kubelet/cadvisor\&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</p>
          */
         public Builder precheckString(String precheckString) {
             this.putBodyParameter("precheckString", precheckString);
@@ -458,7 +459,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Scheduling mode, either “Cron” or “FixedRate”, default is “FixedRate”.</p>
+         * <p>The scheduling mode. Valid values: Cron and FixedRate. The default value is FixedRate.</p>
          * 
          * <strong>example:</strong>
          * <p>FixedRate</p>
@@ -470,7 +471,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Scheduling time expression, recommended values are “@s” or “@m”, indicating the granularity of the scheduling time window alignment, default is “@m”.</p>
+         * <p>The scheduling time expression. Recommended values are \<code>@s\\</code> and \<code>@m\\</code>. This expression indicates the granularity at which the scheduling time window is snapped. The default value is \<code>@m\\</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>@m</p>
@@ -482,7 +483,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Status of the aggregation task group, either “Running” or “Stopped”. Default is Running.</p>
+         * <p>The status of the aggregation task group. Valid values: Running and Stopped. The default value is Running.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -494,7 +495,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource group tags.</p>
+         * <p>The tags of the resource group.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -503,7 +504,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>Target Prometheus instance ID of the aggregation task group.</p>
+         * <p>The ID of the target Prometheus instance for the aggregation task group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -516,7 +517,7 @@ public class UpdateAggTaskGroupRequest extends Request {
         }
 
         /**
-         * <p>The second-level timestamp corresponding to the end time of the scheduling, 0 indicates that the scheduling does not stop.</p>
+         * <p>The UNIX timestamp in seconds that indicates the end time of the scheduling. A value of 0 indicates that the scheduling does not stop.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -587,7 +588,7 @@ public class UpdateAggTaskGroupRequest extends Request {
             } 
 
             /**
-             * <p>Key of the resource group tag.</p>
+             * <p>The key of the resource group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -598,7 +599,7 @@ public class UpdateAggTaskGroupRequest extends Request {
             }
 
             /**
-             * <p>Value of the resource group tag.</p>
+             * <p>The value of the resource group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>

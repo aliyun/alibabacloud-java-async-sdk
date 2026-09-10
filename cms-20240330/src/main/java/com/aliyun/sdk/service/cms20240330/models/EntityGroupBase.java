@@ -145,7 +145,10 @@ public class EntityGroupBase extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The entity description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS 实例</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -153,7 +156,10 @@ public class EntityGroupBase extends TeaModel {
         }
 
         /**
-         * entityGroupId.
+         * <p>The entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eg-1234567890</p>
          */
         public Builder entityGroupId(String entityGroupId) {
             this.entityGroupId = entityGroupId;
@@ -161,7 +167,10 @@ public class EntityGroupBase extends TeaModel {
         }
 
         /**
-         * entityGroupName.
+         * <p>The entity name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS 全部实体</p>
          */
         public Builder entityGroupName(String entityGroupName) {
             this.entityGroupName = entityGroupName;
@@ -169,7 +178,7 @@ public class EntityGroupBase extends TeaModel {
         }
 
         /**
-         * entityQueries.
+         * <p>A collection of entity query rules.</p>
          */
         public Builder entityQueries(java.util.List<EntityQueries> entityQueries) {
             this.entityQueries = entityQueries;
@@ -177,7 +186,7 @@ public class EntityGroupBase extends TeaModel {
         }
 
         /**
-         * entityRules.
+         * <p>The rule for entity discovery.</p>
          */
         public Builder entityRules(EntityDiscoverRule entityRules) {
             this.entityRules = entityRules;
@@ -185,7 +194,10 @@ public class EntityGroupBase extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-heyuan</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -193,7 +205,10 @@ public class EntityGroupBase extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1654218***343050</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -201,7 +216,10 @@ public class EntityGroupBase extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-1654218***343050-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -267,7 +285,10 @@ public class EntityGroupBase extends TeaModel {
             } 
 
             /**
-             * entityType.
+             * <p>The entity type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs.ecs.instance</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -275,7 +296,10 @@ public class EntityGroupBase extends TeaModel {
             }
 
             /**
-             * spl.
+             * <p>The Structured Process Language (SPL) search statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</p>
              */
             public Builder spl(String spl) {
                 this.spl = spl;

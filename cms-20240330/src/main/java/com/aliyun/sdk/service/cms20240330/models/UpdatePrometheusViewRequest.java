@@ -158,7 +158,7 @@ public class UpdatePrometheusViewRequest extends Request {
         } 
 
         /**
-         * <p>Prometheus view instance ID.</p>
+         * <p>The ID of the Prometheus view instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Password-free read policy (supports IP segments and VpcId).</p>
+         * <p>The policy for password-free read access. IP address segments and VPC IDs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -192,7 +192,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Whether to support password-free read.</p>
+         * <p>Specifies whether to enable password-free read access.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -204,7 +204,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Whether to support authToken.</p>
+         * <p>Specifies whether to enable authentication tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -216,7 +216,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>List of Prometheus instances.</p>
+         * <p>A list of Prometheus instances.</p>
          */
         public Builder prometheusInstances(java.util.List<PrometheusInstances> prometheusInstances) {
             this.putBodyParameter("prometheusInstances", prometheusInstances);
@@ -225,7 +225,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Prometheus view name.</p>
+         * <p>The name of the Prometheus view.</p>
          * 
          * <strong>example:</strong>
          * <p>test-prom-view-name</p>
@@ -237,7 +237,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Running status.</p>
+         * <p>The status of the Prometheus view.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -249,7 +249,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Belonging workspace.</p>
+         * <p>The workspace to which the view belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-108490012345-cn-heyuan</p>
@@ -333,7 +333,7 @@ public class UpdatePrometheusViewRequest extends Request {
             } 
 
             /**
-             * <p>Instance ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c7ba84651c71e442c8d0653085d862164</p>
@@ -344,7 +344,7 @@ public class UpdatePrometheusViewRequest extends Request {
             }
 
             /**
-             * <p>Region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-north-2-gov-1</p>
@@ -355,7 +355,7 @@ public class UpdatePrometheusViewRequest extends Request {
             }
 
             /**
-             * <p>User ID.</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>16727123456789</p>

@@ -130,7 +130,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Entity group for creating the policy. Policies can be quickly created using the entity group, and <code>clusterId</code> and <code>vpcId</code> are independent of each other.</p>
+         * <p>The entity group used to create the policy. You can quickly create a policy using an entity group. The clusterId and vpcId parameters are independent of each other.</p>
          */
         public Builder entityGroup(EntityGroup entityGroup) {
             this.putBodyParameter("entityGroup", entityGroup);
@@ -139,7 +139,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Policy name</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>prod-database</p>
@@ -151,7 +151,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Policy type: CS/ECS/Cloud</p>
+         * <p>The policy type. Valid values: CS, ECS, and Cloud.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz2km4kmhtbii</p>
@@ -176,7 +176,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Resource tags.</p>
+         * <p>The resource tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -185,7 +185,7 @@ public class CreateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Workspace.</p>
+         * <p>The workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>prometheus</p>
@@ -321,7 +321,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Cluster entity type, such as acs.ack.cluster/acs.one.cluster/acs.asi.cluster or others.</p>
+             * <p>The cluster entity type. Examples: acs.ack.cluster, acs.one.cluster, and acs.asi.cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>acs.ack.cluster</p>
@@ -332,7 +332,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>Cluster ID.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>na61prod3-na61cloudhdfsssd</p>
@@ -351,7 +351,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>Whether to disable the unique binding of the Policy. If enabled, multiple Policies can be created for a single container cluster.</p>
+             * <p>Specifies whether to disable unique policy binding. If this parameter is set to true, you can create multiple policies for a container cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>ture</p>
@@ -362,7 +362,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>Entity group ID.</p>
+             * <p>The entity group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>eg-b79f65d11fb94e779867cf937c3a3002</p>
@@ -373,7 +373,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>User ID to which the cluster belongs.</p>
+             * <p>The ID of the user who owns the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>12xxxx</p>
@@ -384,7 +384,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>VPC ID.</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp18fgg3ffxa9czna40xt</p>
@@ -454,7 +454,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Tag <code>key</code> value.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>use</p>
@@ -465,7 +465,7 @@ public class CreateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>Tag <code>value</code> value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>database</p>

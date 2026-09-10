@@ -82,7 +82,7 @@ public class ApmMeasureConfig extends TeaModel {
         } 
 
         /**
-         * groupBy.
+         * <p>The grouping dimension.</p>
          */
         public Builder groupBy(java.util.List<String> groupBy) {
             this.groupBy = groupBy;
@@ -90,6 +90,7 @@ public class ApmMeasureConfig extends TeaModel {
         }
 
         /**
+         * <p>The metric code.</p>
          * <p>This parameter is required.</p>
          */
         public Builder measureCode(String measureCode) {
@@ -98,6 +99,7 @@ public class ApmMeasureConfig extends TeaModel {
         }
 
         /**
+         * <p>The query time window in seconds.</p>
          * <p>This parameter is required.</p>
          */
         public Builder windowSecs(Integer windowSecs) {

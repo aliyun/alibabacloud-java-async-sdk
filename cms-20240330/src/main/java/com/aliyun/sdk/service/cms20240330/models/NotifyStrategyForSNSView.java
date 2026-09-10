@@ -249,7 +249,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         } 
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -257,7 +260,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * customTemplateEntries.
+         * <p>The notification channel templates.</p>
          */
         public Builder customTemplateEntries(java.util.List<CustomTemplateEntries> customTemplateEntries) {
             this.customTemplateEntries = customTemplateEntries;
@@ -265,7 +268,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -273,7 +279,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the notification policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -281,7 +290,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * enableIncidentManagement.
+         * <p>Indicates whether incident management is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableIncidentManagement(Boolean enableIncidentManagement) {
             this.enableIncidentManagement = enableIncidentManagement;
@@ -289,7 +301,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * groupingSetting.
+         * <p>The grouping settings.</p>
          */
         public Builder groupingSetting(GroupingSetting groupingSetting) {
             this.groupingSetting = groupingSetting;
@@ -297,7 +309,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * ignoreRestoredNotification.
+         * <p>Indicates whether recovery notifications are sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ignoreRestoredNotification(Boolean ignoreRestoredNotification) {
             this.ignoreRestoredNotification = ignoreRestoredNotification;
@@ -305,7 +320,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * incidentResponsePlanId.
+         * <p>The UUID of the associated response plan, which equals notifyStrategyId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder incidentResponsePlanId(String incidentResponsePlanId) {
             this.incidentResponsePlanId = incidentResponsePlanId;
@@ -313,7 +331,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * mode.
+         * <p>The lifecycle mode. Within SNS, this value is always BundleStrategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -321,7 +342,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * notifyStrategyId.
+         * <p>The notification policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder notifyStrategyId(String notifyStrategyId) {
             this.notifyStrategyId = notifyStrategyId;
@@ -329,7 +353,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * notifyStrategyName.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample name</p>
          */
         public Builder notifyStrategyName(String notifyStrategyName) {
             this.notifyStrategyName = notifyStrategyName;
@@ -337,7 +364,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * routes.
+         * <p>The notification channel routing settings.</p>
          */
         public Builder routes(java.util.List<Routes> routes) {
             this.routes = routes;
@@ -345,7 +372,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * syncFromType.
+         * <p>The synchronization source. For SNS creation, this value is always OBS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder syncFromType(String syncFromType) {
             this.syncFromType = syncFromType;
@@ -353,7 +383,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700000000</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -361,7 +394,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-id-001</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -369,7 +405,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -435,7 +474,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             } 
 
             /**
-             * targetType.
+             * <p>The notification type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -443,7 +485,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * templateUuid.
+             * <p>The template UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-id-001</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;
@@ -536,7 +581,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             } 
 
             /**
-             * groupingKeys.
+             * <p>The grouping keys.</p>
              */
             public Builder groupingKeys(java.util.List<String> groupingKeys) {
                 this.groupingKeys = groupingKeys;
@@ -544,7 +589,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * periodMin.
+             * <p>The check period in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodMin(Integer periodMin) {
                 this.periodMin = periodMin;
@@ -552,7 +600,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * silenceSec.
+             * <p>The silence duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder silenceSec(Integer silenceSec) {
                 this.silenceSec = silenceSec;
@@ -560,7 +611,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * times.
+             * <p>The number of times the condition is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -640,7 +694,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             } 
 
             /**
-             * channelType.
+             * <p>The channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DING</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -648,7 +705,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * enabledSubChannels.
+             * <p>The enabled notification types.</p>
              */
             public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
                 this.enabledSubChannels = enabledSubChannels;
@@ -656,7 +713,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * receivers.
+             * <p>The channel receivers.</p>
              */
             public Builder receivers(java.util.List<String> receivers) {
                 this.receivers = receivers;
@@ -751,7 +808,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             } 
 
             /**
-             * dayInWeek.
+             * <p>The effective days, from Monday to Sunday.</p>
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
@@ -759,7 +816,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * endTimeInMinute.
+             * <p>The start time in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder endTimeInMinute(Integer endTimeInMinute) {
                 this.endTimeInMinute = endTimeInMinute;
@@ -767,7 +827,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * startTimeInMinute.
+             * <p>The start time in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder startTimeInMinute(Integer startTimeInMinute) {
                 this.startTimeInMinute = startTimeInMinute;
@@ -775,7 +838,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * timeZone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700000000</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -894,7 +960,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             } 
 
             /**
-             * channels.
+             * <p>The notification channels.</p>
              */
             public Builder channels(java.util.List<Channels> channels) {
                 this.channels = channels;
@@ -902,7 +968,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * digitalEmployeeName.
+             * <p>The digital employee name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample name</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;
@@ -910,7 +979,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * effectTimeRange.
+             * <p>The effective time range.</p>
              */
             public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
                 this.effectTimeRange = effectTimeRange;
@@ -918,7 +987,10 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * enableRca.
+             * <p>Indicates whether root cause analysis (RCA) is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableRca(Boolean enableRca) {
                 this.enableRca = enableRca;
@@ -926,7 +998,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * filterSetting.
+             * <p>The route-level filter.</p>
              */
             public Builder filterSetting(FilterSetting filterSetting) {
                 this.filterSetting = filterSetting;
@@ -934,7 +1006,7 @@ public class NotifyStrategyForSNSView extends TeaModel {
             }
 
             /**
-             * severities.
+             * <p>The severity filter.</p>
              */
             public Builder severities(java.util.List<String> severities) {
                 this.severities = severities;

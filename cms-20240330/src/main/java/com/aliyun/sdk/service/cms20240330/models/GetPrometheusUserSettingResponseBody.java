@@ -67,7 +67,7 @@ public class GetPrometheusUserSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * prometheusUserSetting.
+         * <p>The details of the user settings for Prometheus.</p>
          */
         public Builder prometheusUserSetting(java.util.Map<String, String> prometheusUserSetting) {
             this.prometheusUserSetting = prometheusUserSetting;
@@ -75,7 +75,7 @@ public class GetPrometheusUserSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>058550FA-DDBE-519E-9C6D-93521B9A5E90</p>

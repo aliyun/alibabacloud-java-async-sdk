@@ -67,7 +67,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         } 
 
         /**
-         * collectors.
+         * <p>The list of collectors.</p>
          */
         public Builder collectors(java.util.List<Collectors> collectors) {
             this.collectors = collectors;
@@ -75,7 +75,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * firstTransitionTime.
+             * <p>The time of the first transition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-27T13:59:23+08:00</p>
              */
             public Builder firstTransitionTime(String firstTransitionTime) {
                 this.firstTransitionTime = firstTransitionTime;
@@ -201,7 +207,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * lastTransitionTime.
+             * <p>The time of the last transition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-27T13:59:23+08:00</p>
              */
             public Builder lastTransitionTime(String lastTransitionTime) {
                 this.lastTransitionTime = lastTransitionTime;
@@ -209,7 +218,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -217,7 +229,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * reason.
+             * <p>The reason for the failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Probe</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -225,7 +240,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The phase status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -233,7 +251,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The phase type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -300,7 +321,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * securityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -308,7 +332,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxxxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -505,7 +532,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * hostIp.
+             * <p>The host IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.10.10</p>
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -513,7 +543,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * ip.
+             * <p>The IP address of the workload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11.193.82.198</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -521,7 +554,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * managed.
+             * <p>Indicates whether the component is a managed component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -529,7 +565,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * managedInfo.
+             * <p>The policy management information.</p>
              */
             public Builder managedInfo(ManagedInfo managedInfo) {
                 this.managedInfo = managedInfo;
@@ -537,7 +573,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -545,7 +584,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The workload name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exporter-xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -553,7 +595,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The workload namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod-db</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -561,7 +606,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * ownerReferenceKind.
+             * <p>The kind of the parent reference.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployment</p>
              */
             public Builder ownerReferenceKind(String ownerReferenceKind) {
                 this.ownerReferenceKind = ownerReferenceKind;
@@ -569,7 +617,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * ownerReferenceName.
+             * <p>The name of the parent reference.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exporter</p>
              */
             public Builder ownerReferenceName(String ownerReferenceName) {
                 this.ownerReferenceName = ownerReferenceName;
@@ -577,7 +628,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * startTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-27T13:59:23+08:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -585,7 +639,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -593,7 +650,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The workload version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2.4.4</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -751,7 +811,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             } 
 
             /**
-             * addonMeta.
+             * <p>The add-on details.</p>
              */
             public Builder addonMeta(AddonMeta addonMeta) {
                 this.addonMeta = addonMeta;
@@ -759,7 +819,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * collectorName.
+             * <p>The collector name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>collector-kkxx</p>
              */
             public Builder collectorName(String collectorName) {
                 this.collectorName = collectorName;
@@ -767,7 +830,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * collectorType.
+             * <p>The collector type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Exporter</p>
              */
             public Builder collectorType(String collectorType) {
                 this.collectorType = collectorType;
@@ -775,7 +841,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * conditions.
+             * <p>The phase status.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -783,7 +849,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * managed.
+             * <p>Indicates whether the component is a managed component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -791,7 +860,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * releaseName.
+             * <p>The name of the add-on release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-loong-collector-i-f8z1176fg57rlwmc1rfi</p>
              */
             public Builder releaseName(String releaseName) {
                 this.releaseName = releaseName;
@@ -799,7 +871,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The collector status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -807,7 +882,10 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The component version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.6.2</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -815,7 +893,7 @@ public class ListIntegrationPolicyCollectorsResponseBody extends TeaModel {
             }
 
             /**
-             * workloads.
+             * <p>The list of workloads.</p>
              */
             public Builder workloads(java.util.List<Workloads> workloads) {
                 this.workloads = workloads;

@@ -96,7 +96,7 @@ public class ManageAlertRulesRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body for managing alert rules. This body is shared by CREATE, UPDATE, PATCH, and BATCH_DELETE operations. Specify fields based on the action.</p>
          */
         public Builder body(ManageAlertRulesUnifiedActionInput body) {
             String bodyShrink = shrink(body, "body", "json");

@@ -33,6 +33,7 @@ public class CreateAddonReleaseRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dryRun")
+    @Deprecated
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Body
@@ -202,7 +203,7 @@ public class CreateAddonReleaseRequest extends Request {
         } 
 
         /**
-         * <p>Environment policy ID.</p>
+         * <p>The environment policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +216,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The Addon name of the component that needs to be monitored.</p>
+         * <p>The name of the addon component to be connected to monitoring.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,7 +241,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Whether it is a dry run, default is false.</p>
+         * <p>Specifies whether to perform a dry run. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -252,7 +253,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Field rules</p>
+         * <p>The field rules.</p>
          */
         public Builder entityRules(EntityDiscoverRule entityRules) {
             this.putBodyParameter("entityRules", entityRules);
@@ -261,7 +262,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Environment type. If the Policy type is CS and ECS, use accordingly; otherwise, it is unified as Cloud.</p>
+         * <p>The environment type. If the policy type is CS or ECS, the corresponding value is used. For other types, the value is Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -273,7 +274,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Parent AddonReleaseId.</p>
+         * <p>The parent AddonReleaseId.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-xxxxxxxxxxx</p>
@@ -285,7 +286,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The plugin name after access. If not specified, a default rule name will be generated.</p>
+         * <p>The name of the plugin after access. If this parameter is not specified, a default rule name is generated.</p>
          * 
          * <strong>example:</strong>
          * <p>test-gpu-integration-name</p>
@@ -297,7 +298,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Input metadata.</p>
+         * <p>The input metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>
@@ -309,7 +310,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The version of the Addon component that needs to be monitored.</p>
+         * <p>The version of the addon component to be connected to monitoring.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +323,7 @@ public class CreateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>The workspace name for installing the component resources.</p>
+         * <p>The name of the workspace where the component resources are installed.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

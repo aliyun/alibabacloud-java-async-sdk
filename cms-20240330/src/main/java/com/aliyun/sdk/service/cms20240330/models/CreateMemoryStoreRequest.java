@@ -160,6 +160,7 @@ public class CreateMemoryStoreRequest extends Request {
         } 
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,7 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
-         * customExtractionStrategies.
+         * <p>A list of custom extraction strategies.</p>
          */
         public Builder customExtractionStrategies(java.util.List<CustomExtractionStrategy> customExtractionStrategies) {
             this.putBodyParameter("customExtractionStrategies", customExtractionStrategies);
@@ -181,7 +182,10 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the MemoryStore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test memory store for demonstration.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -190,7 +194,7 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
-         * extractionStrategies.
+         * <p>The extraction strategies to use. Valid values include <code>Episodic</code>, <code>Summary</code>, and <code>Fact</code>.</p>
          */
         public Builder extractionStrategies(java.util.List<String> extractionStrategies) {
             this.putBodyParameter("extractionStrategies", extractionStrategies);
@@ -199,6 +203,7 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
+         * <p>The name of the MemoryStore. The name must be unique within the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +216,7 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
+         * <p>The short-term TTL, which is the number of conversation rounds to retain.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +229,10 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
-         * sourceType.
+         * <p>The source type of the memory. Valid values are <code>None</code> and <code>Trace</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None/Trace</p>
          */
         public Builder sourceType(String sourceType) {
             this.putBodyParameter("sourceType", sourceType);
@@ -232,7 +241,7 @@ public class CreateMemoryStoreRequest extends Request {
         }
 
         /**
-         * traceSourceConfig.
+         * <p>Configuration for the trace source. Required if <code>sourceType</code> is <code>Trace</code>.</p>
          */
         public Builder traceSourceConfig(TraceSourceConfig traceSourceConfig) {
             this.putBodyParameter("traceSourceConfig", traceSourceConfig);
@@ -313,7 +322,7 @@ public class CreateMemoryStoreRequest extends Request {
             } 
 
             /**
-             * includeOutput.
+             * <p>Specifies whether to include the output in the trace.</p>
              */
             public Builder includeOutput(Boolean includeOutput) {
                 this.includeOutput = includeOutput;
@@ -321,7 +330,10 @@ public class CreateMemoryStoreRequest extends Request {
             }
 
             /**
-             * query.
+             * <p>The query to filter traces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(serviceName : &quot;langchain-rag&quot; or serviceName : &quot;agentscope-code-correction&quot;) and hostname = frontend-proxy-999c48c8d-hvk6c</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -329,10 +341,10 @@ public class CreateMemoryStoreRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The name of the workspace that contains the trace source.</p>
              * 
              * <strong>example:</strong>
-             * <p>workspace-test</p>
+             * <p>test-workspace</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

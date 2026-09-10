@@ -54,7 +54,10 @@ public class PartitionKeyFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace</p>
          */
         public Builder eq(String eq) {
             this.eq = eq;

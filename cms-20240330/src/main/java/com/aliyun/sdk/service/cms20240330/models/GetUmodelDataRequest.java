@@ -103,7 +103,7 @@ public class GetUmodelDataRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class GetUmodelDataRequest extends Request {
         }
 
         /**
-         * <p>Query conditions</p>
+         * <p>The query conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -143,7 +143,7 @@ public class GetUmodelDataRequest extends Request {
         }
 
         /**
-         * <p>Method</p>
+         * <p>The method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

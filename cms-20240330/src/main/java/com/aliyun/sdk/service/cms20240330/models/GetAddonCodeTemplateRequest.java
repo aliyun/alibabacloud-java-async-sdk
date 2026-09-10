@@ -125,6 +125,7 @@ public class GetAddonCodeTemplateRequest extends Request {
         }
 
         /**
+         * <p>The name of the add-on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,10 @@ public class GetAddonCodeTemplateRequest extends Request {
         }
 
         /**
-         * aliyunLang.
+         * <p>The language. Valid values: zh (Chinese) and en (English). Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("aliyunLang", aliyunLang);
@@ -146,7 +150,10 @@ public class GetAddonCodeTemplateRequest extends Request {
         }
 
         /**
-         * environmentType.
+         * <p>The type of environment. Valid values: CS (Container Service) and ECS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Client</p>
          */
         public Builder environmentType(String environmentType) {
             this.putQueryParameter("environmentType", environmentType);
@@ -155,7 +162,10 @@ public class GetAddonCodeTemplateRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

@@ -80,7 +80,10 @@ public class CloudMonitoringPrometheusEscalation extends TeaModel {
         } 
 
         /**
-         * promQl.
+         * <p>The PromQL query statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rate(http_errors_total[5m]) &gt; 0.1</p>
          */
         public Builder promQl(String promQl) {
             this.promQl = promQl;
@@ -88,7 +91,10 @@ public class CloudMonitoringPrometheusEscalation extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CRITICAL</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -96,7 +102,10 @@ public class CloudMonitoringPrometheusEscalation extends TeaModel {
         }
 
         /**
-         * times.
+         * <p>The number of consecutive times the alert is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder times(Integer times) {
             this.times = times;

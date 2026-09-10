@@ -125,6 +125,7 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
+         * <p>The name of the add-on.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,10 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * aliyunLang.
+         * <p>The language of the response. Valid values: \<code>zh\\</code> and \<code>en\\</code>. The default value is \<code>zh\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("aliyunLang", aliyunLang);
@@ -146,7 +150,10 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * environmentType.
+         * <p>The environment type. Valid values: \<code>CS\\</code> (container) and \<code>ECS\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CS</p>
          */
         public Builder environmentType(String environmentType) {
             this.putQueryParameter("environmentType", environmentType);
@@ -155,7 +162,10 @@ public class GetAddonSchemaRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.1</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

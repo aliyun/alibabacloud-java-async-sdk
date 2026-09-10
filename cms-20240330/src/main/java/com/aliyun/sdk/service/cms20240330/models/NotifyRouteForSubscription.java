@@ -67,7 +67,7 @@ public class NotifyRouteForSubscription extends TeaModel {
         } 
 
         /**
-         * channels.
+         * <p>The list of notification channels.</p>
          */
         public Builder channels(java.util.List<Channels> channels) {
             this.channels = channels;
@@ -75,7 +75,7 @@ public class NotifyRouteForSubscription extends TeaModel {
         }
 
         /**
-         * effectTimeRange.
+         * <p>The effective period configuration.</p>
          */
         public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
             this.effectTimeRange = effectTimeRange;
@@ -154,7 +154,10 @@ public class NotifyRouteForSubscription extends TeaModel {
             } 
 
             /**
-             * channelType.
+             * <p>The channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -162,7 +165,7 @@ public class NotifyRouteForSubscription extends TeaModel {
             }
 
             /**
-             * enabledSubChannels.
+             * <p>The list of enabled sub-channels.</p>
              */
             public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
                 this.enabledSubChannels = enabledSubChannels;
@@ -170,7 +173,7 @@ public class NotifyRouteForSubscription extends TeaModel {
             }
 
             /**
-             * receivers.
+             * <p>The list of receivers.</p>
              */
             public Builder receivers(java.util.List<String> receivers) {
                 this.receivers = receivers;
@@ -263,7 +266,7 @@ public class NotifyRouteForSubscription extends TeaModel {
             } 
 
             /**
-             * dayInWeek.
+             * <p>The effective days of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday).</p>
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
@@ -271,7 +274,10 @@ public class NotifyRouteForSubscription extends TeaModel {
             }
 
             /**
-             * endTimeInMinute.
+             * <p>The end time of the day, in minutes from 0:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder endTimeInMinute(Integer endTimeInMinute) {
                 this.endTimeInMinute = endTimeInMinute;
@@ -279,7 +285,10 @@ public class NotifyRouteForSubscription extends TeaModel {
             }
 
             /**
-             * startTimeInMinute.
+             * <p>The start time of the day, in minutes from 0:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder startTimeInMinute(Integer startTimeInMinute) {
                 this.startTimeInMinute = startTimeInMinute;
@@ -287,7 +296,10 @@ public class NotifyRouteForSubscription extends TeaModel {
             }
 
             /**
-             * timeZone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1700000000</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

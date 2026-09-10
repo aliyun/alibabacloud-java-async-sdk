@@ -67,7 +67,7 @@ public class ActionIntegrationConfig extends TeaModel {
         } 
 
         /**
-         * actions.
+         * <p>The list of action integration configurations. An action integration is an automated action that is executed after an alert rule is triggered, such as sending a notification or invoking a webhook. Each action integration is referenced by its action integration ID.</p>
          */
         public Builder actions(java.util.List<String> actions) {
             this.actions = actions;
@@ -75,7 +75,10 @@ public class ActionIntegrationConfig extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Indicates whether action integration is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;

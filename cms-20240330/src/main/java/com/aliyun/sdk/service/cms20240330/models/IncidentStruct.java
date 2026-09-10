@@ -171,7 +171,10 @@ public class IncidentStruct extends TeaModel {
         } 
 
         /**
-         * content.
+         * <p>The content of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Detected that the connection count of RDS instance rds-bp1234567890abcdef has reached 1000, triggering an alert.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -179,7 +182,7 @@ public class IncidentStruct extends TeaModel {
         }
 
         /**
-         * escalations.
+         * <p>The list of escalation policies.</p>
          */
         public Builder escalations(java.util.List<IncidentEscalationStruct> escalations) {
             this.escalations = escalations;
@@ -187,7 +190,10 @@ public class IncidentStruct extends TeaModel {
         }
 
         /**
-         * incidentId.
+         * <p>The unique ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>incident-001</p>
          */
         public Builder incidentId(String incidentId) {
             this.incidentId = incidentId;
@@ -195,7 +201,7 @@ public class IncidentStruct extends TeaModel {
         }
 
         /**
-         * incidentPlan.
+         * <p>The associated incident plan.</p>
          */
         public Builder incidentPlan(IncidentPlanStruct incidentPlan) {
             this.incidentPlan = incidentPlan;
@@ -203,7 +209,7 @@ public class IncidentStruct extends TeaModel {
         }
 
         /**
-         * resource.
+         * <p>The details of the associated resource.</p>
          */
         public Builder resource(IncidentResourceDetail resource) {
             this.resource = resource;
@@ -211,7 +217,10 @@ public class IncidentStruct extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The severity level of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>P1</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -219,7 +228,10 @@ public class IncidentStruct extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The current status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -227,7 +239,10 @@ public class IncidentStruct extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -235,7 +250,10 @@ public class IncidentStruct extends TeaModel {
         }
 
         /**
-         * title.
+         * <p>The title of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Excessively high database connection count.</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -243,7 +261,10 @@ public class IncidentStruct extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-12345</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

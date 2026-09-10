@@ -96,7 +96,10 @@ public class GetCmsServiceRequest extends Request {
         }
 
         /**
-         * product.
+         * <p>prometheus: Checks the activation status of the Prometheus service. The service is billed by reported data volume or written data volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prometheus</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("product", product);
@@ -105,7 +108,10 @@ public class GetCmsServiceRequest extends Request {
         }
 
         /**
-         * service.
+         * <p>prometheus: Checks whether the Prometheus product that is billed by reported data volume is activated.prometheusgb: Checks whether the Prometheus product that is billed by written data volume is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prometheus</p>
          */
         public Builder service(String service) {
             this.putQueryParameter("service", service);

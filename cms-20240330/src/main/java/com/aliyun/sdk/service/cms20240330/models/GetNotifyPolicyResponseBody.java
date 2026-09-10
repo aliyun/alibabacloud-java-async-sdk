@@ -67,7 +67,7 @@ public class GetNotifyPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * notifyPolicy.
+         * <p>The notification policy object details, including the policy UUID, name, description, enabled status, and sub-entities such as notification policies (noise reduction, notification routing, and channels), subscriptions (event filtering, cross-workspace routing, and legacy product event subscriptions), and response plans (escalation, repeated notifications, automatic recovery, and action integration).</p>
          */
         public Builder notifyPolicy(NotifyPolicy notifyPolicy) {
             this.notifyPolicy = notifyPolicy;

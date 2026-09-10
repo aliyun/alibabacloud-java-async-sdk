@@ -174,6 +174,7 @@ public class CreateDeliveryTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Prometheus instance that serves as the data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * externalLabels.
+         * <p>A map of key-value pairs to attach as additional labels to all delivered metrics.</p>
          */
         public Builder externalLabels(java.util.Map<String, String> externalLabels) {
             this.putBodyParameter("externalLabels", externalLabels);
@@ -195,7 +196,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * labelFilters.
+         * <p>The label conditions for filtering metrics. The key is the label name and the value is the value to match. The filtering behavior is controlled by <code>labelFiltersType</code>.</p>
          */
         public Builder labelFilters(java.util.Map<String, String> labelFilters) {
             this.putBodyParameter("labelFilters", labelFilters);
@@ -204,7 +205,10 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * labelFiltersType.
+         * <p>The mode for applying the label filters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Allow</p>
          */
         public Builder labelFiltersType(String labelFiltersType) {
             this.putBodyParameter("labelFiltersType", labelFiltersType);
@@ -213,7 +217,10 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ae******ey</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -222,6 +229,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>An array of delivery destination objects.</p>
          * <p>This parameter is required.</p>
          */
         public Builder sinkList(java.util.List<SinkList> sinkList) {
@@ -231,7 +239,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>An array of resource tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -240,7 +248,10 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * taskDescription.
+         * <p>The task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my delivery task</p>
          */
         public Builder taskDescription(String taskDescription) {
             this.putBodyParameter("taskDescription", taskDescription);
@@ -249,6 +260,7 @@ public class CreateDeliveryTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the task. The name can contain Chinese characters, English letters, underscores (_), and hyphens (-).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -321,7 +333,7 @@ public class CreateDeliveryTaskRequest extends Request {
             } 
 
             /**
-             * sinkConfigs.
+             * <p>The configuration for the sink, specified as key-value pairs. The valid keys and values depend on the value of <code>sinkType</code>.</p>
              */
             public Builder sinkConfigs(java.util.Map<String, String> sinkConfigs) {
                 this.sinkConfigs = sinkConfigs;
@@ -329,6 +341,7 @@ public class CreateDeliveryTaskRequest extends Request {
             }
 
             /**
+             * <p>The type of the delivery destination (sink).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -399,7 +412,10 @@ public class CreateDeliveryTaskRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The key of the resource tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>_cms_workspace</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -407,7 +423,10 @@ public class CreateDeliveryTaskRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the resource tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

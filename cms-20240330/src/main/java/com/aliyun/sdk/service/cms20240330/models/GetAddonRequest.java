@@ -111,6 +111,7 @@ public class GetAddonRequest extends Request {
         }
 
         /**
+         * <p>This is a query parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +124,10 @@ public class GetAddonRequest extends Request {
         }
 
         /**
-         * aliyunLang.
+         * <p>The language of the response. Valid values: zh and en. Default value: zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("aliyunLang", aliyunLang);
@@ -132,7 +136,12 @@ public class GetAddonRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The version number of the add-on.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

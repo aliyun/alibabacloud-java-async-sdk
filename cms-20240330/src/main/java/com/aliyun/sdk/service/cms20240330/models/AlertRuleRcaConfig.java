@@ -67,7 +67,10 @@ public class AlertRuleRcaConfig extends TeaModel {
         } 
 
         /**
-         * digitalEmployeeName.
+         * <p>The digital employee name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>O&amp;M Assistant</p>
          */
         public Builder digitalEmployeeName(String digitalEmployeeName) {
             this.digitalEmployeeName = digitalEmployeeName;
@@ -75,7 +78,7 @@ public class AlertRuleRcaConfig extends TeaModel {
         }
 
         /**
-         * enableRca.
+         * <p>Indicates whether RCA is enabled.</p>
          */
         public Builder enableRca(Boolean enableRca) {
             this.enableRca = enableRca;

@@ -228,10 +228,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The number of days to automatically archive and save after the storage expires, 0 means no archiving. The range of archiving days is as follows:</p>
+         * <p>The number of days that data is automatically archived after the storage period expires. A value of 0 indicates that data is not archived. Valid values for the archive duration:</p>
          * <ul>
-         * <li>V1: 60~365 days.</li>
-         * <li>V2: 60~3650 days (3650 indicates permanent storage).</li>
+         * <li>V1: 60 to 365 days.</li>
+         * <li>V2: 60 to 3650 days (3650 indicates permanent retention).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Password-free read policy (supports IP segments and VpcId).</p>
+         * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -265,7 +265,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Password-free write policy.</p>
+         * <p>The authentication-free write policy.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -286,7 +286,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable password-free read (only supported in V2 version).</p>
+         * <p>Specifies whether to enable authentication-free read. This parameter is supported only for V2 instances.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -298,7 +298,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable password-free write (only supported in V2 version).</p>
+         * <p>Specifies whether to enable authentication-free write. This parameter is supported only for V2 instances.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -310,7 +310,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable authorization Token (only supported in V1 version).</p>
+         * <p>Specifies whether to enable the authorization token. This parameter is supported only for V1 instances.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -322,11 +322,11 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Billing method:</p>
+         * <p>The billable methods. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: Postpaid by metric reporting volume.</li>
-         * <li>POSTPAY_GB: Postpaid by metric write volume.
-         * Note, if left blank, the user&quot;s default billing method configuration will be used. If the user has not configured a default, the system defaults to billing by metric reporting volume.</li>
+         * <li>POSTPAY: pay-as-you-go by metric reporting volume.</li>
+         * <li>POSTPAY_GB: pay-as-you-go by metric write volume.
+         * If this parameter is left empty, the default billing method configured by the user is used. If the user has not configured a default billing method, the system uses pay-as-you-go by metric reporting volume.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -339,7 +339,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Instance name.</p>
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +352,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekz5qqvjyatgoy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -361,7 +364,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Instance status.</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -373,10 +376,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Storage duration (days):</p>
+         * <p>The storage duration (in days):</p>
          * <ul>
-         * <li>By write volume: 90, 180.</li>
-         * <li>By metric reporting volume: 15, 30, 60, 90, 180.</li>
+         * <li>By write volume: 90 or 180.</li>
+         * <li>By metric reporting volume: 15, 30, 60, 90, or 180.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -389,7 +392,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Tag values.</p>
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -398,7 +401,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Belonging workspace, default value: default-cms-{userId}-{regionId}.</p>
+         * <p>The workspace to which the instance belongs. Default value: default-cms-{userId}-{regionId}.</p>
          * 
          * <strong>example:</strong>
          * <p>wokspace1</p>
@@ -469,7 +472,7 @@ public class CreatePrometheusInstanceRequest extends Request {
             } 
 
             /**
-             * <p>Tag key.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -480,7 +483,7 @@ public class CreatePrometheusInstanceRequest extends Request {
             }
 
             /**
-             * <p>Tag value.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>110109200001214284</p>

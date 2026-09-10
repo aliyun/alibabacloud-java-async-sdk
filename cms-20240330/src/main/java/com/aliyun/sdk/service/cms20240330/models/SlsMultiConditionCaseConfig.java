@@ -177,7 +177,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         } 
 
         /**
-         * condition.
+         * <p>The match expression (corresponds to V1 condition, preserved as-is without structured parsing).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder condition(String condition) {
             this.condition = condition;
@@ -185,7 +188,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         }
 
         /**
-         * countCondition.
+         * <p>The count match expression (corresponds to V1 countCondition, preserved as-is without structured parsing).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder countCondition(String countCondition) {
             this.countCondition = countCondition;
@@ -193,7 +199,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         }
 
         /**
-         * countOperator.
+         * <p><strong>[Deprecated]</strong> The write path is disabled. Use countCondition instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GTE</p>
          */
         public Builder countOperator(String countOperator) {
             this.countOperator = countOperator;
@@ -201,7 +210,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         }
 
         /**
-         * countThreshold.
+         * <p><strong>[Deprecated]</strong> The write path is disabled. Use countCondition instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder countThreshold(Long countThreshold) {
             this.countThreshold = countThreshold;
@@ -209,7 +221,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         }
 
         /**
-         * matchField.
+         * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder matchField(String matchField) {
             this.matchField = matchField;
@@ -217,7 +232,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         }
 
         /**
-         * matchOperator.
+         * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRESENT</p>
          */
         public Builder matchOperator(String matchOperator) {
             this.matchOperator = matchOperator;
@@ -225,7 +243,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         }
 
         /**
-         * matchValue.
+         * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder matchValue(String matchValue) {
             this.matchValue = matchValue;
@@ -233,7 +254,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The detection operator (aligned with V1 caseList.type): HAS_DATA / HAS_DATA_COUNT / HAS_DATA_MATCH / HAS_DATA_MATCH_COUNT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HAS_DATA</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -241,7 +265,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         }
 
         /**
-         * rawCondition.
+         * <p><strong>[Deprecated]</strong> The write path is disabled. Use condition instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample value</p>
          */
         public Builder rawCondition(String rawCondition) {
             this.rawCondition = rawCondition;
@@ -249,7 +276,10 @@ public class SlsMultiConditionCaseConfig extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The severity level (corresponds to V1 level).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;

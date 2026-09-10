@@ -67,7 +67,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * deliveryTask.
+         * <p>The delivery task details.</p>
          */
         public Builder deliveryTask(DeliveryTask deliveryTask) {
             this.deliveryTask = deliveryTask;
@@ -75,7 +75,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * taskNameList.
+             * <p>The EventBridge task list.</p>
              */
             public Builder taskNameList(java.util.List<String> taskNameList) {
                 this.taskNameList = taskNameList;
@@ -195,7 +198,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * sinkConfigs.
+             * <p>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType. For more information, see CreateDeliveryTask.</p>
              */
             public Builder sinkConfigs(java.util.Map<String, String> sinkConfigs) {
                 this.sinkConfigs = sinkConfigs;
@@ -203,7 +206,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * sinkType.
+             * <p>The delivery target type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus</p>
              */
             public Builder sinkType(String sinkType) {
                 this.sinkType = sinkType;
@@ -270,7 +276,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sourcetype</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -278,7 +287,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -501,6 +513,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The creation time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -512,7 +525,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * dataSourceId.
+             * <p>The data source ID (Managed Service for Prometheus instance ID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rw-xxxxxx</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -520,7 +536,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * externalLabels.
+             * <p>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</p>
              */
             public Builder externalLabels(java.util.Map<String, String> externalLabels) {
                 this.externalLabels = externalLabels;
@@ -528,7 +544,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * extraInfo.
+             * <p>The extended information.</p>
              */
             public Builder extraInfo(ExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -536,7 +552,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * labelFilters.
+             * <p>The metric filter conditions. Used together with labelFiltersType. The key is the metric label name, and the value is the match value.</p>
              */
             public Builder labelFilters(java.util.Map<String, String> labelFilters) {
                 this.labelFilters = labelFilters;
@@ -544,7 +560,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * labelFiltersType.
+             * <p>The metric filtering mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Allow</p>
              */
             public Builder labelFiltersType(String labelFiltersType) {
                 this.labelFiltersType = labelFiltersType;
@@ -552,7 +571,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -560,7 +582,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * sinkList.
+             * <p>The list of delivery targets.</p>
              */
             public Builder sinkList(java.util.List<SinkList> sinkList) {
                 this.sinkList = sinkList;
@@ -568,7 +590,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The current status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -576,7 +601,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The resource group tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -584,7 +609,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskDescription.
+             * <p>The task description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my delivery task</p>
              */
             public Builder taskDescription(String taskDescription) {
                 this.taskDescription = taskDescription;
@@ -592,7 +620,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The delivery task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8b07eeac8249866d</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -600,7 +631,10 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-task</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -608,6 +642,7 @@ public class GetDeliveryTaskResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The update time.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>

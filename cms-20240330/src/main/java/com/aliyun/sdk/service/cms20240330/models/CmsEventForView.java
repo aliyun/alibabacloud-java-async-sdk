@@ -327,7 +327,10 @@ public class CmsEventForView extends TeaModel {
         } 
 
         /**
-         * annotations.
+         * <p>Additional annotations for the event. This is an unstructured description field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;description&quot;: &quot;High load detected on server&quot;, &quot;operator&quot;: &quot;auto&quot; }</p>
          */
         public Builder annotations(java.util.Map<String, ?> annotations) {
             this.annotations = annotations;
@@ -335,7 +338,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The raw data of the event. The format depends on the event type and dataschema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;metricName&quot;: &quot;cpu_usage&quot;, &quot;value&quot;: 95.2, &quot;threshold&quot;: 80 }</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -343,7 +349,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * datacontenttype.
+         * <p>The content type of the data field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;application/json&quot;</p>
          */
         public Builder datacontenttype(String datacontenttype) {
             this.datacontenttype = datacontenttype;
@@ -351,7 +360,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * dataschema.
+         * <p>The data schema definition, which describes the structure of the data field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="https://schema.alibabacloud.com/cms/alert/v1">https://schema.alibabacloud.com/cms/alert/v1</a>&quot;</p>
          */
         public Builder dataschema(String dataschema) {
             this.dataschema = dataschema;
@@ -359,7 +371,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * dedupId.
+         * <p>The deduplication ID. It identifies different instances of the same event, such as a repeatedly reported event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;dedup-abc123&quot;</p>
          */
         public Builder dedupId(String dedupId) {
             this.dedupId = dedupId;
@@ -367,7 +382,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The unique identifier for the event. The system generates this globally unique ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;event-1234567890&quot;</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -375,7 +393,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * integrationUuid.
+         * <p>The unique integration identifier. It is used for identity recognition in cross-system integrations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;integration-xyz&quot;</p>
          */
         public Builder integrationUuid(String integrationUuid) {
             this.integrationUuid = integrationUuid;
@@ -383,7 +404,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * labels.
+         * <p>The key-value pairs of the event labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;source\&quot;: \&quot;system\&quot;}</p>
          */
         public Builder labels(java.util.Map<String, ?> labels) {
             this.labels = labels;
@@ -391,7 +415,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * receiveTime.
+         * <p>The timestamp when the event was received and processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743846610000</p>
          */
         public Builder receiveTime(Long receiveTime) {
             this.receiveTime = receiveTime;
@@ -399,7 +426,7 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * resource.
+         * <p>Information about the resource associated with the event, such as the instance ID, IP address, and region.</p>
          */
         public Builder resource(EventResourceForEventView resource) {
             this.resource = resource;
@@ -407,7 +434,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * severity.
+         * <p>The severity level of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;CRITICAL&quot;</p>
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -415,7 +445,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The name of the source system or service, such as ECS, RDS, or VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ECS&quot;</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -423,7 +456,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * sourcetype.
+         * <p>The type of event source. It distinguishes between sources such as monitoring systems, Simple Log Service, and application observability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;CloudMonitor&quot;</p>
          */
         public Builder sourcetype(String sourcetype) {
             this.sourcetype = sourcetype;
@@ -431,7 +467,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The current status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -439,7 +478,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * subject.
+         * <p>The subject or title of the event. It briefly describes the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Instance cpu usage exceeds threshold&quot;</p>
          */
         public Builder subject(String subject) {
             this.subject = subject;
@@ -447,7 +489,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * subtype.
+         * <p>The event subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;HighCPUUsage&quot;</p>
          */
         public Builder subtype(String subtype) {
             this.subtype = subtype;
@@ -455,7 +500,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * sysId.
+         * <p>The internal system event ID. It is used for internal tracking and log association.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;sys-event-987654321&quot;</p>
          */
         public Builder sysId(String sysId) {
             this.sysId = sysId;
@@ -463,7 +511,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The time when the event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;2025-04-05T10:30:00Z&quot;</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -471,7 +522,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * timestamp.
+         * <p>The timestamp of the event occurrence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743846600000</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;
@@ -479,7 +533,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Alert&quot;</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -487,7 +544,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The ID or name of the workspace. It is used for multi-tenant or organization fencing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ws-abc123&quot;</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -495,7 +555,10 @@ public class CmsEventForView extends TeaModel {
         }
 
         /**
-         * workspaceTags.
+         * <p>The workspace tags. They help you manage events by tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;department&quot;: &quot;finance&quot;, &quot;project&quot;: &quot;payment-gateway&quot; }</p>
          */
         public Builder workspaceTags(java.util.Map<String, ?> workspaceTags) {
             this.workspaceTags = workspaceTags;

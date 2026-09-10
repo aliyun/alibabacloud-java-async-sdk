@@ -80,7 +80,7 @@ public class TagSelector extends TeaModel {
         } 
 
         /**
-         * conditions.
+         * <p>The list of label filter conditions.</p>
          */
         public Builder conditions(java.util.List<TagCondition> conditions) {
             this.conditions = conditions;
@@ -88,7 +88,10 @@ public class TagSelector extends TeaModel {
         }
 
         /**
-         * expression.
+         * <p>The custom expression in advanced mode, which overwrites conditions and relation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env=prod AND region=cn-hangzhou</p>
          */
         public Builder expression(String expression) {
             this.expression = expression;
@@ -96,7 +99,10 @@ public class TagSelector extends TeaModel {
         }
 
         /**
-         * relation.
+         * <p>The condition relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
          */
         public Builder relation(String relation) {
             this.relation = relation;

@@ -102,7 +102,7 @@ public class UpsertUmodelDataRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class UpsertUmodelDataRequest extends Request {
         }
 
         /**
-         * <p>Element content</p>
+         * <p>The content of the element.</p>
          */
         public Builder elements(java.util.List<?> elements) {
             this.putBodyParameter("elements", elements);
@@ -133,7 +133,7 @@ public class UpsertUmodelDataRequest extends Request {
         }
 
         /**
-         * <p>Method</p>
+         * <p>The method.</p>
          * 
          * <strong>example:</strong>
          * <p>Upsert</p>

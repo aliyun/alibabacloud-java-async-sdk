@@ -184,7 +184,7 @@ public class ObserveGroupInstance extends TeaModel {
         } 
 
         /**
-         * <p>实体分类（由 entityType 适配）。</p>
+         * <p>The entity category (adapted by entityType).</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -192,7 +192,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>监控维度键值对。</p>
+         * <p>The key-value pairs of monitoring dimensions.</p>
          */
         public Builder dimension(java.util.Map<String, String> dimension) {
             this.dimension = dimension;
@@ -200,7 +200,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>实体域（如 acs）。</p>
+         * <p>The entity domain (such as acs).</p>
          */
         public Builder entityDomain(String entityDomain) {
             this.entityDomain = entityDomain;
@@ -208,7 +208,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>实体类型（如 acs.ecs.instance）。</p>
+         * <p>The entity type (such as acs.ecs.instance).</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -216,7 +216,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>所属观测分组 ID。</p>
+         * <p>The ID of the observation group to which the entity belongs.</p>
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -224,7 +224,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>实例 ID。</p>
+         * <p>The instance ID.</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -232,7 +232,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>实例名称。</p>
+         * <p>The instance name.</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -240,7 +240,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>实例所属地域 ID。</p>
+         * <p>The region ID of the instance.</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -248,7 +248,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>实例所属资源组 ID。</p>
+         * <p>The resource group ID of the instance.</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -256,7 +256,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>实例标签键值对。</p>
+         * <p>The key-value pairs of instance tags.</p>
          */
         public Builder tags(java.util.Map<String, String> tags) {
             this.tags = tags;
@@ -264,7 +264,7 @@ public class ObserveGroupInstance extends TeaModel {
         }
 
         /**
-         * <p>实例归属的用户 UID。</p>
+         * <p>The UID of the user to which the instance belongs.</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;

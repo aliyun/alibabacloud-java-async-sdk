@@ -116,7 +116,7 @@ public class UpdateIntegrationPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Access center policy ID</p>
+         * <p>The ID of the Integration Center policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class UpdateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Fee package type, CS_Pro/CS_Basic/empty.</p>
+         * <p>The type of the paid plan. Valid values: CS_Pro, CS_Basic, and empty.</p>
          * 
          * <strong>example:</strong>
          * <p>CS_Pro</p>
@@ -141,7 +141,7 @@ public class UpdateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Rule name, minimum 3 characters, maximum 63 characters, must start with a letter.</p>
+         * <p>The name of the rule. The name must be 3 to 63 characters in length and start with a letter.</p>
          * 
          * <strong>example:</strong>
          * <p>metrics-inner-manage</p>
@@ -153,7 +153,7 @@ public class UpdateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID of the instance.</p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzoiafjtr7zyq</p>
@@ -165,7 +165,7 @@ public class UpdateIntegrationPolicyRequest extends Request {
         }
 
         /**
-         * <p>Resource tags.</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -233,7 +233,7 @@ public class UpdateIntegrationPolicyRequest extends Request {
             } 
 
             /**
-             * <p>Tag <code>key</code> value.</p>
+             * <p>The key of the tag.</p>
              * 
              * <strong>example:</strong>
              * <p>algo_bhv_expose_in_airec_exposure</p>
@@ -244,10 +244,10 @@ public class UpdateIntegrationPolicyRequest extends Request {
             }
 
             /**
-             * <p>Tag <code>value</code> value.</p>
+             * <p>The value of the tag.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;Id&quot;: &quot;kgqie6hm&quot;, &quot;Name&quot;: &quot;Sheet1&quot;}]</p>
+             * <p>[{\&quot;Id\&quot;: \&quot;kgqie6hm\&quot;, \&quot;Name\&quot;: \&quot;Sheet1\&quot;}]</p>
              */
             public Builder value(String value) {
                 this.value = value;

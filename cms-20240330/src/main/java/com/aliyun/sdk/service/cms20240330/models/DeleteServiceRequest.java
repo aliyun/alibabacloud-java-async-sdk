@@ -89,7 +89,7 @@ public class DeleteServiceRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * <p>Service ID</p>
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

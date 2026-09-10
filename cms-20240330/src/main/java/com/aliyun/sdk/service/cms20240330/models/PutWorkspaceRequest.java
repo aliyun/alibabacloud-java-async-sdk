@@ -133,7 +133,7 @@ public class PutWorkspaceRequest extends Request {
         } 
 
         /**
-         * <p>Name of the workspace</p>
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>Description of the workspace</p>
+         * <p>The description of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace test</p>
@@ -158,7 +158,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>Display name of the workspace</p>
+         * <p>The display name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>
@@ -170,7 +170,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>创建工作空间时指定的资源组 ID</p>
+         * <p>The ID of the resource group specified when the workspace is created.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-ae******ey</p>
@@ -182,7 +182,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>Name of the Log Service project</p>
+         * <p>The name of the Simple Log Service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class PutWorkspaceRequest extends Request {
         }
 
         /**
-         * <p>创建工作空间时绑定的标签</p>
+         * <p>The tags attached to the workspace when it is created.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -263,7 +263,7 @@ public class PutWorkspaceRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The key of the tag.</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -271,7 +271,7 @@ public class PutWorkspaceRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The value of the tag.</p>
              */
             public Builder value(String value) {
                 this.value = value;

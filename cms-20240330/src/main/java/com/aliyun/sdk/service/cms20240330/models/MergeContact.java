@@ -197,7 +197,10 @@ public class MergeContact extends TeaModel {
         } 
 
         /**
-         * email.
+         * <p>The email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:zhangsan@company.com">zhangsan@company.com</a></p>
          */
         public Builder email(String email) {
             this.email = email;
@@ -205,7 +208,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * emailVerify.
+         * <p>Specifies whether the email address is authenticated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder emailVerify(Boolean emailVerify) {
             this.emailVerify = emailVerify;
@@ -213,7 +219,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * extend.
+         * <p>An extension field used to store additional information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;department&quot;: &quot;运维部&quot;, &quot;role&quot;: &quot;工程师&quot; }</p>
          */
         public Builder extend(java.util.Map<String, ?> extend) {
             this.extend = extend;
@@ -221,7 +230,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The time when the contact was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58.789Z</p>
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -229,7 +241,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * gmtModified.
+         * <p>The time when the contact was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58.789Z</p>
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -237,7 +252,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * identifier.
+         * <p>The unique identifier of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-12345</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -245,7 +263,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * lang.
+         * <p>The language preference.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder lang(String lang) {
             this.lang = lang;
@@ -253,7 +274,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -261,7 +285,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * phone.
+         * <p>The mobile phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13800138000</p>
          */
         public Builder phone(String phone) {
             this.phone = phone;
@@ -269,7 +296,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * phoneCode.
+         * <p>The country code for the mobile phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder phoneCode(String phoneCode) {
             this.phoneCode = phoneCode;
@@ -277,7 +307,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * phoneVerify.
+         * <p>Specifies whether the mobile phone number is authenticated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder phoneVerify(Boolean phoneVerify) {
             this.phoneVerify = phoneVerify;
@@ -285,7 +318,10 @@ public class MergeContact extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source system of the contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dingtalk</p>
          */
         public Builder source(String source) {
             this.source = source;

@@ -119,7 +119,10 @@ public class TriggerConditions extends TeaModel {
         } 
 
         /**
-         * expressionType.
+         * <p>The expression type. Fixed as SIMPLE (used for MetricSet multi-threshold triggers).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         public Builder expressionType(String expressionType) {
             this.expressionType = expressionType;
@@ -127,7 +130,10 @@ public class TriggerConditions extends TeaModel {
         }
 
         /**
-         * max.
+         * <p>The upper bound of the range. Required when operator is IN_RANGE or OUT_OF_RANGE. Must be greater than or equal to min.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder max(Double max) {
             this.max = max;
@@ -135,7 +141,10 @@ public class TriggerConditions extends TeaModel {
         }
 
         /**
-         * min.
+         * <p>The lower bound of the range. Required when operator is IN_RANGE or OUT_OF_RANGE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder min(Double min) {
             this.min = min;
@@ -143,7 +152,10 @@ public class TriggerConditions extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The comparison operator. Valid values: GT, GE, LT, LE, EQ, NE, IN_RANGE (requires both min and max), OUT_OF_RANGE (requires both min and max), PRESENT, and NOT_PRESENT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GT</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -151,7 +163,10 @@ public class TriggerConditions extends TeaModel {
         }
 
         /**
-         * queryName.
+         * <p>The referenced query name, corresponding to QueryConfigUnified.queries[].name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuQuery</p>
          */
         public Builder queryName(String queryName) {
             this.queryName = queryName;
@@ -159,7 +174,10 @@ public class TriggerConditions extends TeaModel {
         }
 
         /**
-         * threshold.
+         * <p>The comparison threshold. Used when operator is GT, GE, LT, LE, EQ, or NE. For IN_RANGE or OUT_OF_RANGE, use min and max instead. Not required for PRESENT or NOT_PRESENT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder threshold(Double threshold) {
             this.threshold = threshold;

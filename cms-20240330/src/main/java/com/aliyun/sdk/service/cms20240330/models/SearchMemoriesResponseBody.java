@@ -80,7 +80,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * relations.
+         * <p>The relations.</p>
          */
         public Builder relations(java.util.List<Relations> relations) {
             this.relations = relations;
@@ -88,7 +88,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CEC5375-C554-562B-A65F-9A629907C1F0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>The returned results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -175,7 +178,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * destination.
+             * <p>The destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -183,7 +189,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * relationship.
+             * <p>The relations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder relationship(String relationship) {
                 this.relationship = relationship;
@@ -191,7 +200,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>todo_open_dingoj06pvqfeayy3lkr</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -388,7 +400,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * actorId.
+             * <p>The actor ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_session_001</p>
              */
             public Builder actorId(String actorId) {
                 this.actorId = actorId;
@@ -396,7 +411,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * agentId.
+             * <p>The agent ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>972772996913709056</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -404,7 +422,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1762773128968</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -412,7 +433,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * hash.
+             * <p>The memory hash value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d791bf27236c5532056a13279baad3517042bb8d5b1bdb02e7871fa632debffe</p>
              */
             public Builder hash(String hash) {
                 this.hash = hash;
@@ -420,7 +444,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * <p>The memory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>019ca1e5-7307-7d50-b943-5e628326a8ed</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -428,7 +455,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * memory.
+             * <p>The memory content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My name is Zhang San and I live in Hangzhou.</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -436,7 +466,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;<strong>strategy_type</strong>&quot;:&quot;Fact&quot;}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -444,7 +477,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * role.
+             * <p>The role that initiated the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -452,7 +488,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * runId.
+             * <p>The run ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_session_001</p>
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -460,7 +499,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * score.
+             * <p>The similarity score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13.21</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -468,7 +510,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1764902557784</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -476,7 +521,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * userId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_session_001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

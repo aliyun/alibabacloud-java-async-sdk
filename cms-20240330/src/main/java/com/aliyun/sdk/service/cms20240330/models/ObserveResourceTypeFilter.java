@@ -54,7 +54,10 @@ public class ObserveResourceTypeFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         public Builder eq(String eq) {
             this.eq = eq;

@@ -106,7 +106,10 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         } 
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8A33DBEA-<em><strong><strong>-</strong></strong></em>-<em><strong><strong>-</strong></strong></em></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -138,7 +150,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>webhooks</p>
+         * <p>The list of webhooks.</p>
          */
         public Builder webhooks(java.util.List<Webhooks> webhooks) {
             this.webhooks = webhooks;
@@ -282,7 +294,14 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             } 
 
             /**
-             * contentType.
+             * <p>The content type of the data. Valid values:</p>
+             * <ul>
+             * <li>JSON</li>
+             * <li>FORM</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -290,7 +309,7 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>headers</p>
+             * <p>The collection of HTTP request headers.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -301,7 +320,14 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             }
 
             /**
-             * lang.
+             * <p>The language. Valid values:</p>
+             * <ul>
+             * <li>zh_CN</li>
+             * <li>en_US</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh_CN</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -309,7 +335,14 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             }
 
             /**
-             * method.
+             * <p>The request method. Valid values:</p>
+             * <ul>
+             * <li>GET</li>
+             * <li>POST</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -317,7 +350,10 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -325,7 +361,10 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The URL of the alert callback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://aliyun.com/test">http://aliyun.com/test</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -333,7 +372,10 @@ public class ListAlertWebhooksResponseBody extends TeaModel {
             }
 
             /**
-             * webhookId.
+             * <p>The unique ID of the webhook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder webhookId(String webhookId) {
                 this.webhookId = webhookId;

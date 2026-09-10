@@ -145,7 +145,7 @@ public class UpdateServiceRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>Service ID</p>
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>Extended attributes.</p>
+         * <p>The extended properties.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;language&quot;:&quot;java&quot;}</p>
@@ -192,7 +192,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>Service description, only valid when serviceType=RUM.</p>
+         * <p>The service description. This parameter is valid only when serviceType is set to RUM.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -204,7 +204,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>Display name, only valid when serviceType=RUM.</p>
+         * <p>The display name. This parameter is valid only when serviceType is set to RUM.</p>
          * 
          * <strong>example:</strong>
          * <p>api-monitor-test</p>
@@ -216,7 +216,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * <p>Service status, only valid when serviceType=RUM.</p>
+         * <p>The service status. This parameter is valid only when serviceType is set to RUM.</p>
          * 
          * <strong>example:</strong>
          * <p>Stopped</p>

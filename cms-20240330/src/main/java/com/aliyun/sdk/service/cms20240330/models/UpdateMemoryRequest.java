@@ -118,6 +118,7 @@ public class UpdateMemoryRequest extends Request {
         } 
 
         /**
+         * <p>The name of the Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
+         * <p>The name of the Memory Store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,10 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * metadata.
+         * <p>The metadata of the Memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.putBodyParameter("metadata", metadata);
@@ -163,7 +169,10 @@ public class UpdateMemoryRequest extends Request {
         }
 
         /**
-         * text.
+         * <p>The new text for the Memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Likes to play tennis on weekends</p>
          */
         public Builder text(String text) {
             this.putBodyParameter("text", text);

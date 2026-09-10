@@ -184,7 +184,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * config.
+         * <p>The configuration of the context store.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -192,7 +192,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * contextStoreName.
+         * <p>The context store name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.contextStoreName = contextStoreName;
@@ -200,7 +203,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * contextType.
+         * <p>The type of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memory</p>
          */
         public Builder contextType(String contextType) {
             this.contextType = contextType;
@@ -208,6 +214,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The creation time of the context store. This value is a Unix timestamp in seconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +226,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * dataset.
+         * <p>Information about the associated dataset.</p>
          */
         public Builder dataset(Dataset dataset) {
             this.dataset = dataset;
@@ -227,7 +234,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -235,7 +245,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -243,7 +256,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -251,7 +267,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -259,6 +278,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The last update time of the context store. This value is a Unix timestamp in seconds.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +290,10 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -336,7 +359,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * logstore.
+             * <p>The name of the Log Service logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-test-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -344,7 +370,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * project.
+             * <p>The name of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-test-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -424,7 +453,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * logstore.
+             * <p>The name of the Log Service logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-test-logstore</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -432,7 +464,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * project.
+             * <p>The name of the Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls-test-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -440,6 +475,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the configuration takes effect. This value is a Unix timestamp in milliseconds.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -523,7 +559,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * innerSource.
+             * <p>The internal source.</p>
              */
             public Builder innerSource(InnerSource innerSource) {
                 this.innerSource = innerSource;
@@ -531,7 +567,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * metadataField.
+             * <p>The metadata fields.</p>
              */
             public Builder metadataField(java.util.Map<String, String> metadataField) {
                 this.metadataField = metadataField;
@@ -539,7 +575,7 @@ public class GetContextStoreResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The configuration source.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -593,7 +629,10 @@ public class GetContextStoreResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_dataset</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -106,7 +106,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         } 
 
         /**
-         * pageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -133,7 +139,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * robots.
+         * <p>The robot IDs.</p>
          */
         public Builder robots(java.util.List<Robots> robots) {
             this.robots = robots;
@@ -141,7 +147,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -285,7 +294,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             } 
 
             /**
-             * digitalEmployeeName.
+             * <p>The digital employee name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apsara-ops</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;
@@ -293,7 +305,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh_CN</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -301,7 +316,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The robot name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,7 +327,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * robotId.
+             * <p>The unique ID of the robot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder robotId(String robotId) {
                 this.robotId = robotId;
@@ -325,7 +346,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The robot type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DING</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -333,7 +357,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The webhook URL of the robot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>*******</p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -341,7 +368,10 @@ public class ListAlertRobotsResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-cms-5551847274244273-cn-hangzhou</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

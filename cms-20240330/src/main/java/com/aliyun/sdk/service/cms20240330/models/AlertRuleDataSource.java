@@ -133,7 +133,14 @@ public class AlertRuleDataSource extends TeaModel {
         } 
 
         /**
-         * appType.
+         * <p>Applicable data source type: APM_DS.</p>
+         * <p>The application type. Valid values:</p>
+         * <ul>
+         * <li>apm</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>apm</p>
          */
         public Builder appType(String appType) {
             this.appType = appType;
@@ -141,7 +148,8 @@ public class AlertRuleDataSource extends TeaModel {
         }
 
         /**
-         * dsList.
+         * <p>Applicable data source type: SLS_MULTI_DS.</p>
+         * <p>The list of sub-data sources.</p>
          */
         public Builder dsList(java.util.List<DsList> dsList) {
             this.dsList = dsList;
@@ -149,7 +157,11 @@ public class AlertRuleDataSource extends TeaModel {
         }
 
         /**
-         * <p>实例id，当type=PROMETHEUS_DS/ENTERPRISE_DS时必填，为prometheus实例的clusterId或指标仓库名称</p>
+         * <p>Applicable data source type: PROMETHEUS_DS.</p>
+         * <p>The Prometheus instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rw-bbe8961b4a59be0</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -157,7 +169,11 @@ public class AlertRuleDataSource extends TeaModel {
         }
 
         /**
-         * namespace.
+         * <p>Applicable data source type: ENTERPRISE_DS.</p>
+         * <p>The name of the Hybrid Cloud Monitoring metric repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun-default</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -165,7 +181,11 @@ public class AlertRuleDataSource extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>Applicable data source types: APM_DS and PROMETHEUS_DS.</p>
+         * <p>The region ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -173,7 +193,11 @@ public class AlertRuleDataSource extends TeaModel {
         }
 
         /**
-         * tenantId.
+         * <p>Applicable data source type: ENTERPRISE_DS.</p>
+         * <p>The tenant ID of the Hybrid Cloud Monitoring data source. Identifies the tenant in the Hybrid Cloud Monitoring environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -181,8 +205,19 @@ public class AlertRuleDataSource extends TeaModel {
         }
 
         /**
-         * <p>数据源类型</p>
+         * <p>The data source type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PROMETHEUS_DS: Prometheus data source.</li>
+         * <li>SLS_MULTI_DS: SLS data source.</li>
+         * <li>APM_DS: Application monitoring data source.</li>
+         * <li>CMS_BASIC_DS: CloudMonitor Basic data source.</li>
+         * <li>ENTERPRISE_DS: Hybrid Cloud Monitoring data source.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROMETHEUS_DS</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -274,7 +309,10 @@ public class AlertRuleDataSource extends TeaModel {
             } 
 
             /**
-             * project.
+             * <p>The name of the Simple Log Service (SLS) project. Specifies the project where the logs or metrics reside.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mySlsProject</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -282,7 +320,10 @@ public class AlertRuleDataSource extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region where the SLS project resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -290,7 +331,10 @@ public class AlertRuleDataSource extends TeaModel {
             }
 
             /**
-             * store.
+             * <p>The name of the LogStore or MetricStore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mySlsLogStore</p>
              */
             public Builder store(String store) {
                 this.store = store;
@@ -298,8 +342,14 @@ public class AlertRuleDataSource extends TeaModel {
             }
 
             /**
-             * <p>数据源类型</p>
-             * <p>This parameter is required.</p>
+             * <p>The type of the SLS sub-data source. Valid values:</p>
+             * <ul>
+             * <li>SLS_LOG_DS: LogStore data source.</li>
+             * <li>SLS_METRIC_DS: MetricStore data source.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SLS_LOG_DS</p>
              */
             public Builder type(String type) {
                 this.type = type;

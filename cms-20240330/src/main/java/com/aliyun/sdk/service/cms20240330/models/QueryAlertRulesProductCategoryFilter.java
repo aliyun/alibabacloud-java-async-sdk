@@ -54,7 +54,10 @@ public class QueryAlertRulesProductCategoryFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder eq(String eq) {
             this.eq = eq;

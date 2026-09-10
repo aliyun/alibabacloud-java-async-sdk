@@ -241,7 +241,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         } 
 
         /**
-         * <p>Addon name.</p>
+         * <p>The addon name.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-default</p>
@@ -253,7 +253,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Bound resource ID</p>
+         * <p>The ID of the bound resource.</p>
          * 
          * <strong>example:</strong>
          * <p>622d27c2e87d49debceeebc7c642610e</p>
@@ -265,7 +265,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Filter for entity IDs, separated by commas</p>
+         * <p>The entity IDs used for filtering. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>eg-1,eg-2,eg-3</p>
@@ -277,7 +277,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Used for Region query, separated by commas</p>
+         * <p>The region IDs used for region-based queries. Separate multiple region IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing,cn-hangzhou</p>
@@ -289,7 +289,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Maximum number of results to return. Default is 30, with a maximum of 100.</p>
+         * <p>The maximum number of results to return. Default value: 30. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -301,7 +301,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Used to return more results. This parameter is not required for the first query. For subsequent queries, use the Token obtained from the response.</p>
+         * <p>The token used to retrieve more results. You do not need to specify this parameter for the first query. For subsequent queries, use the token obtained from the previous response.</p>
          * 
          * <strong>example:</strong>
          * <p>mvnX6zqg3P</p>
@@ -313,7 +313,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>policy-93817a401f78435596d745a97d2e85a1</p>
@@ -325,7 +325,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Rule name.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>prod-database</p>
@@ -337,7 +337,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Policy type</p>
+         * <p>The policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -349,7 +349,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cmee-622d27c2e87d49debceeebc7c642610e</p>
@@ -361,7 +361,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Used for general queries</p>
+         * <p>The general query string.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -373,7 +373,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-xxxxx</p>
@@ -385,7 +385,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Tag list.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -395,7 +395,7 @@ public class ListIntegrationPoliciesRequest extends Request {
         }
 
         /**
-         * <p>Workspace.</p>
+         * <p>The workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -466,7 +466,7 @@ public class ListIntegrationPoliciesRequest extends Request {
             } 
 
             /**
-             * <p>Tag key</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -477,7 +477,7 @@ public class ListIntegrationPoliciesRequest extends Request {
             }
 
             /**
-             * <p>Tag value</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>

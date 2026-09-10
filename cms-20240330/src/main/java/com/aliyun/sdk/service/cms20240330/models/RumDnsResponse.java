@@ -95,7 +95,10 @@ public class RumDnsResponse extends Response {
         } 
 
         /**
-         * domain.
+         * <p>The domain name for RUM reporting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rum</p>
          */
         @Override
         public Builder domain(String domain) {
@@ -104,7 +107,10 @@ public class RumDnsResponse extends Response {
         }
 
         /**
-         * message.
+         * <p>The message returned if initialization fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @Override
         public Builder message(String message) {
@@ -113,7 +119,10 @@ public class RumDnsResponse extends Response {
         }
 
         /**
-         * result.
+         * <p>The DNS initialization status of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @Override
         public Builder result(Boolean result) {

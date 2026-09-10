@@ -116,7 +116,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends Request {
         } 
 
         /**
-         * <p>Access center policy ID.</p>
+         * <p>The ID of the access center policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends Request {
         }
 
         /**
-         * <p>Addon Release name.</p>
+         * <p>The name of the addon release.</p>
          * 
          * <strong>example:</strong>
          * <p>release-123456789</p>
@@ -141,7 +141,10 @@ public class ListIntegrationPolicyPodMonitorsRequest extends Request {
         }
 
         /**
-         * collectorReleaseName.
+         * <p>The identifier of the collector. If a release exists, pass the release name. If no release exists, pass the component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collector:metric-agent:policy:policy-bfd3d455fd6f4bc8</p>
          */
         public Builder collectorReleaseName(String collectorReleaseName) {
             this.putQueryParameter("collectorReleaseName", collectorReleaseName);
@@ -150,7 +153,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends Request {
         }
 
         /**
-         * <p>Whether to encrypt Yaml.</p>
+         * <p>Specifies whether to encrypt the YAML.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -162,7 +165,7 @@ public class ListIntegrationPolicyPodMonitorsRequest extends Request {
         }
 
         /**
-         * <p>Namespace.</p>
+         * <p>The namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

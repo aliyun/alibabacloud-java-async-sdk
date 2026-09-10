@@ -146,7 +146,7 @@ public class SubscriptionForModify extends TeaModel {
         } 
 
         /**
-         * agentConfig.
+         * <p>The agent configuration information.</p>
          */
         public Builder agentConfig(AgentConfig agentConfig) {
             this.agentConfig = agentConfig;
@@ -154,7 +154,10 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -162,7 +165,7 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter settings.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -170,7 +173,10 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         /**
-         * notifyStrategyId.
+         * <p>The UUID of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder notifyStrategyId(String notifyStrategyId) {
             this.notifyStrategyId = notifyStrategyId;
@@ -178,7 +184,7 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         /**
-         * pushingSetting.
+         * <p>The push settings.</p>
          */
         public Builder pushingSetting(PushingSetting pushingSetting) {
             this.pushingSetting = pushingSetting;
@@ -186,7 +192,14 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         /**
-         * <p>是否订阅老产品事件（workspace=null 的 cms 1.0 / ARMS / SLS 事件）：true=订阅，false 或 null=不订阅</p>
+         * <p>Specifies whether to subscribe to legacy product events (CMS 1.0, ARMS, or SLS events where workspace is null). Valid values:</p>
+         * <ul>
+         * <li>true: Subscribe.</li>
+         * <li>false or null: Do not subscribe.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder subscribeLegacyEvent(Boolean subscribeLegacyEvent) {
             this.subscribeLegacyEvent = subscribeLegacyEvent;
@@ -194,7 +207,11 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestSubscription</p>
          */
         public Builder subscriptionName(String subscriptionName) {
             this.subscriptionName = subscriptionName;
@@ -202,7 +219,7 @@ public class SubscriptionForModify extends TeaModel {
         }
 
         /**
-         * workspaceFilterSetting.
+         * <p>The workspace filter settings.</p>
          */
         public Builder workspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
             this.workspaceFilterSetting = workspaceFilterSetting;
@@ -268,7 +285,10 @@ public class SubscriptionForModify extends TeaModel {
             } 
 
             /**
-             * agentUuid.
+             * <p>The unique identifier of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent-uuid-001</p>
              */
             public Builder agentUuid(String agentUuid) {
                 this.agentUuid = agentUuid;
@@ -276,7 +296,7 @@ public class SubscriptionForModify extends TeaModel {
             }
 
             /**
-             * routes.
+             * <p>The list of agent routing configurations.</p>
              */
             public Builder routes(java.util.List<NotifyRouteForSubscription> routes) {
                 this.routes = routes;
@@ -369,7 +389,7 @@ public class SubscriptionForModify extends TeaModel {
             } 
 
             /**
-             * alertActionIds.
+             * <p>The list of action plan IDs for alert push.</p>
              */
             public Builder alertActionIds(java.util.List<String> alertActionIds) {
                 this.alertActionIds = alertActionIds;
@@ -377,7 +397,10 @@ public class SubscriptionForModify extends TeaModel {
             }
 
             /**
-             * responsePlanId.
+             * <p>The action plan ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123123</p>
              */
             public Builder responsePlanId(String responsePlanId) {
                 this.responsePlanId = responsePlanId;
@@ -385,7 +408,7 @@ public class SubscriptionForModify extends TeaModel {
             }
 
             /**
-             * restoreActionIds.
+             * <p>The list of action integration plan IDs for recovery push.</p>
              */
             public Builder restoreActionIds(java.util.List<String> restoreActionIds) {
                 this.restoreActionIds = restoreActionIds;
@@ -393,7 +416,10 @@ public class SubscriptionForModify extends TeaModel {
             }
 
             /**
-             * templateUuid.
+             * <p>The UUID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123123</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;

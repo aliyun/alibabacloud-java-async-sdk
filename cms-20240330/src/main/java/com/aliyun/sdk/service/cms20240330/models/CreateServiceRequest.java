@@ -202,7 +202,7 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>Extended attributes.</p>
+         * <p>The extended attributes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;language&quot;:&quot;java&quot;}</p>
@@ -236,10 +236,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>Service description, only valid when <code>serviceType=RUM</code>.</p>
+         * <p>The service description. This parameter is valid only when serviceType is set to RUM.</p>
          * 
          * <strong>example:</strong>
-         * <p>mag测试应用</p>
+         * <p>Mag test application</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -248,10 +248,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>Display name, only valid when <code>serviceType=RUM</code>.</p>
+         * <p>The display name. This parameter is valid only when serviceType is set to RUM.</p>
          * 
          * <strong>example:</strong>
-         * <p>mag测试应用</p>
+         * <p>Mag test application</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -260,7 +260,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>Application ID, generally not required to be specified.</p>
+         * <p>The application ID. Generally, you do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>bx3udsi5ie@ed2ba6beebdb6de</p>
@@ -272,7 +272,10 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -281,7 +284,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>Service name</p>
+         * <p>The service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,7 +297,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>Service status, not required for service creation.</p>
+         * <p>The service status. You do not need to specify this parameter when creating a service.</p>
          * 
          * <strong>example:</strong>
          * <p>Created</p>
@@ -306,7 +309,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * <p>Service type</p>
+         * <p>The service type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,7 +322,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -387,7 +390,10 @@ public class CreateServiceRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag <code>key</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -395,7 +401,10 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag <code>value</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;

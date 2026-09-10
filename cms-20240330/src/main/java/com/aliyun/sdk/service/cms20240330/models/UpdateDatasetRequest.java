@@ -89,6 +89,7 @@ public class UpdateDatasetRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The dataset name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The new description for the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test dataset</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

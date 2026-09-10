@@ -67,7 +67,10 @@ public class IncidentPlanCorporationStruct extends TeaModel {
         } 
 
         /**
-         * channel.
+         * <p>The channel name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder channel(String channel) {
             this.channel = channel;
@@ -75,7 +78,10 @@ public class IncidentPlanCorporationStruct extends TeaModel {
         }
 
         /**
-         * robotId.
+         * <p>The unique ID of the robot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>robotId-cs-api-test</p>
          */
         public Builder robotId(String robotId) {
             this.robotId = robotId;

@@ -67,7 +67,10 @@ public class PrometheusNamedQueryEntry extends TeaModel {
         } 
 
         /**
-         * expr.
+         * <p>The PromQL query expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>avg(cpu_usage) &gt; 80</p>
          */
         public Builder expr(String expr) {
             this.expr = expr;
@@ -75,7 +78,10 @@ public class PrometheusNamedQueryEntry extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The query name, such as $A or $B, referenced by the condition trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuQuery</p>
          */
         public Builder name(String name) {
             this.name = name;

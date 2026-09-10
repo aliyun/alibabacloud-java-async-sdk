@@ -54,7 +54,7 @@ public class AlertRuleAction extends TeaModel {
         } 
 
         /**
-         * actions.
+         * <p>A list of action integration IDs.</p>
          */
         public Builder actions(java.util.List<String> actions) {
             this.actions = actions;

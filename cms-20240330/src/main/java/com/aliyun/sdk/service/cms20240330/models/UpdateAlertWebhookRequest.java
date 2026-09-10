@@ -167,6 +167,7 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the webhook.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +180,16 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * contentType.
+         * <p>The content type of the data. Supported values:</p>
+         * <ul>
+         * <li><p>JSON</p>
+         * </li>
+         * <li><p>FORM</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         public Builder contentType(String contentType) {
             this.putBodyParameter("contentType", contentType);
@@ -188,7 +198,7 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * <p>headers</p>
+         * <p>The headers.</p>
          */
         public Builder headers(java.util.Map<String, String> headers) {
             this.putBodyParameter("headers", headers);
@@ -197,7 +207,16 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * lang.
+         * <p>The language. Supported values:</p>
+         * <ul>
+         * <li><p>zh_CN</p>
+         * </li>
+         * <li><p>en_US</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CN</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("lang", lang);
@@ -206,7 +225,16 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * method.
+         * <p>The request method. Supported values:</p>
+         * <ul>
+         * <li><p>GET</p>
+         * </li>
+         * <li><p>POST</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         public Builder method(String method) {
             this.putBodyParameter("method", method);
@@ -215,7 +243,10 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -224,7 +255,10 @@ public class UpdateAlertWebhookRequest extends Request {
         }
 
         /**
-         * url.
+         * <p>The URL of the alert callback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://aliyun.com/test">http://aliyun.com/test</a></p>
          */
         public Builder url(String url) {
             this.putBodyParameter("url", url);

@@ -120,7 +120,7 @@ public class TransformerForModify extends TeaModel {
         } 
 
         /**
-         * actions.
+         * <p>The transform operations.</p>
          */
         public Builder actions(java.util.List<TransformAction> actions) {
             this.actions = actions;
@@ -128,7 +128,10 @@ public class TransformerForModify extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -136,7 +139,7 @@ public class TransformerForModify extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter criteria.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -144,7 +147,10 @@ public class TransformerForModify extends TeaModel {
         }
 
         /**
-         * quitAfterMatch.
+         * <p>Specifies whether to exit after a match is processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder quitAfterMatch(Boolean quitAfterMatch) {
             this.quitAfterMatch = quitAfterMatch;
@@ -152,7 +158,10 @@ public class TransformerForModify extends TeaModel {
         }
 
         /**
-         * sortId.
+         * <p>The sort number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sortId(Integer sortId) {
             this.sortId = sortId;
@@ -160,7 +169,11 @@ public class TransformerForModify extends TeaModel {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder transformerName(String transformerName) {
             this.transformerName = transformerName;

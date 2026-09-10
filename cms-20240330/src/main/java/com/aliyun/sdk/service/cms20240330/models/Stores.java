@@ -95,7 +95,10 @@ public class Stores extends TeaModel {
         } 
 
         /**
-         * project.
+         * <p><strong>[Deprecated]</strong> The SLS project name. This field has been moved to DatasourceConfigUnified.project. Using this field in write paths returns HTTP status code 400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-sls-project</p>
          */
         public Builder project(String project) {
             this.project = project;
@@ -103,7 +106,10 @@ public class Stores extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p><strong>[Deprecated]</strong> The region ID. This field has been moved to DatasourceConfigUnified.regionId. Using this field in write paths returns HTTP status code 400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -111,7 +117,10 @@ public class Stores extends TeaModel {
         }
 
         /**
-         * store.
+         * <p>The name of the SLS Store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-log-store</p>
          */
         public Builder store(String store) {
             this.store = store;
@@ -119,7 +128,14 @@ public class Stores extends TeaModel {
         }
 
         /**
-         * storeType.
+         * <p>The store type. Valid values:</p>
+         * <ul>
+         * <li>LOG: Logstore.</li>
+         * <li>METRIC: Metricstore.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LOG</p>
          */
         public Builder storeType(String storeType) {
             this.storeType = storeType;

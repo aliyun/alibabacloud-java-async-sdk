@@ -67,7 +67,10 @@ public class UpdateNotifyStrategyResponseBody extends TeaModel {
         } 
 
         /**
-         * notifyStrategyId.
+         * <p>The UUID of the notification policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312-31-23-123-1-23123</p>
          */
         public Builder notifyStrategyId(String notifyStrategyId) {
             this.notifyStrategyId = notifyStrategyId;
@@ -75,7 +78,7 @@ public class UpdateNotifyStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique ID of the request, which is used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>

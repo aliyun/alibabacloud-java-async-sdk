@@ -119,7 +119,7 @@ public class CreateAggTaskGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Summary of the aggregation task group configuration.</p>
+         * <p>Digest of the aggregation task group configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>a54136014dc386a92c83a6ef1e97ff22</p>

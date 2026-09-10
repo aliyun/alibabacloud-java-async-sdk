@@ -186,7 +186,7 @@ public class PreviewDataPipelineRequest extends Request {
         } 
 
         /**
-         * <p>执行数据流水线预览的工作空间名称。</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>候选数据流水线的用户说明。</p>
+         * <p>The pipeline description.</p>
          * 
          * <strong>example:</strong>
          * <p>Preview error span routing.</p>
@@ -211,7 +211,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>预览查询窗口的开始时间，使用 Unix 秒。</p>
+         * <p>The start time of the preview.</p>
          * 
          * <strong>example:</strong>
          * <p>1784563200</p>
@@ -223,7 +223,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>候选数据流水线的类型。可选值为 default、custom 或 export。</p>
+         * <p>The pipeline type.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>
@@ -235,7 +235,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>候选配置中的单层命名输出列表。</p>
+         * <p>The named outputs.</p>
          */
         public Builder outputs(java.util.List<Outputs> outputs) {
             this.putBodyParameter("outputs", outputs);
@@ -244,7 +244,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>用于预览的数据流水线名称。</p>
+         * <p>The pipeline name.</p>
          * 
          * <strong>example:</strong>
          * <p>trace-archive-routing</p>
@@ -256,7 +256,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>候选配置中所有命名输出共享的有序处理器列表。</p>
+         * <p>The common processors.</p>
          */
         public Builder processors(java.util.List<Processors> processors) {
             this.putBodyParameter("processors", processors);
@@ -265,7 +265,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>候选配置中的 Dataset 到客户 Logstore 绑定；预览不会实际写入。</p>
+         * <p>The output destinations.</p>
          */
         public Builder sinks(java.util.List<Sinks> sinks) {
             this.putBodyParameter("sinks", sinks);
@@ -274,7 +274,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>候选数据流水线读取的逻辑遥测数据源。</p>
+         * <p>The data source.</p>
          */
         public Builder source(Source source) {
             this.putBodyParameter("source", source);
@@ -283,7 +283,7 @@ public class PreviewDataPipelineRequest extends Request {
         }
 
         /**
-         * <p>预览查询窗口的结束时间，使用 Unix 秒；与开始时间的差值不得超过 3600 秒。</p>
+         * <p>The end time of the preview.</p>
          * 
          * <strong>example:</strong>
          * <p>1784566800</p>
@@ -406,7 +406,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>脱敏后保留的前缀字符数。</p>
+             * <p>The prefix length to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -417,7 +417,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>脱敏后保留的后缀字符数。</p>
+             * <p>The suffix length to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -428,7 +428,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>keyword 模式下要匹配的敏感关键词。</p>
+             * <p>The sensitive keywords.</p>
              */
             public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
@@ -436,7 +436,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>替换敏感内容时使用的单个掩码字符。</p>
+             * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -449,7 +449,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>脱敏规则模式。可选值为 buildin 或 keyword。</p>
+             * <p>The masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -460,7 +460,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>buildin 模式下要识别的内置敏感数据类型。</p>
+             * <p>The built-in sensitive types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -514,7 +514,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>用于匹配源工作空间服务的 glob 模式列表；仅支持星号（*）通配符。</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -571,7 +571,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>service_export 处理器要导入数据的目标工作空间名称。</p>
+             * <p>The target workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>target-checkout-ws</p>
@@ -706,7 +706,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>数据安全处理器生效的应用名称列表；星号（*）表示全部应用。</p>
+             * <p>The application list.</p>
              */
             public Builder applications(java.util.List<String> applications) {
                 this.applications = applications;
@@ -714,7 +714,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>filter 处理器使用的 SPL 条件表达式。</p>
+             * <p>The filter expression.</p>
              * 
              * <strong>example:</strong>
              * <p>attributes[&quot;http.route&quot;] != &quot;/health&quot;</p>
@@ -725,7 +725,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>字段处理器要处理的遥测字段路径列表。</p>
+             * <p>The field list.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -733,7 +733,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>mask_fields 处理器按顺序使用的脱敏规则。</p>
+             * <p>The masking rule list.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -741,7 +741,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>spl 处理器执行的 ETL SPL pipeline expression，必须以星号（*）开头。</p>
+             * <p>The SPL script.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -754,7 +754,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>service_export 处理器的源服务名称选择器。</p>
+             * <p>The service selector.</p>
              */
             public Builder selector(Selector selector) {
                 this.selector = selector;
@@ -762,7 +762,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>service_export 处理器的目标工作空间配置。</p>
+             * <p>The processing target.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -842,7 +842,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>与处理器类型对应的配置。</p>
+             * <p>The processor configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -850,7 +850,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>处理器在所在有序处理链中的唯一名称。</p>
+             * <p>The processor name.</p>
              * 
              * <strong>example:</strong>
              * <p>drop-health-check</p>
@@ -861,7 +861,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>平台注册的处理器类型，例如 filter、spl 或 service_export。</p>
+             * <p>The processor type.</p>
              * 
              * <strong>example:</strong>
              * <p>filter</p>
@@ -931,7 +931,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>命名输出的唯一名称，也是公开 Dataset 名称。</p>
+             * <p>The output name.</p>
              * 
              * <strong>example:</strong>
              * <p>checkout_route</p>
@@ -942,7 +942,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>该命名输出按数组顺序执行的处理器列表。</p>
+             * <p>The branch processors.</p>
              */
             public Builder processors(java.util.List<OutputsProcessors> processors) {
                 this.processors = processors;
@@ -1061,7 +1061,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>脱敏后保留的前缀字符数。</p>
+             * <p>The prefix length to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1072,7 +1072,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>脱敏后保留的后缀字符数。</p>
+             * <p>The suffix length to retain.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1083,7 +1083,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>keyword 模式下要匹配的敏感关键词。</p>
+             * <p>The sensitive keywords.</p>
              */
             public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
@@ -1091,7 +1091,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>替换敏感内容时使用的单个掩码字符。</p>
+             * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1104,7 +1104,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>脱敏规则模式。可选值为 buildin 或 keyword。</p>
+             * <p>The masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -1115,7 +1115,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>buildin 模式下要识别的内置敏感数据类型。</p>
+             * <p>The built-in sensitive types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -1169,7 +1169,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>用于匹配源工作空间服务的 glob 模式列表；仅支持星号（*）通配符。</p>
+             * <p>The service name list.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1226,7 +1226,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>service_export 处理器要导入数据的目标工作空间名称。</p>
+             * <p>The target workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>target-checkout-ws</p>
@@ -1361,7 +1361,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>数据安全处理器生效的应用名称列表；星号（*）表示全部应用。</p>
+             * <p>The application list.</p>
              */
             public Builder applications(java.util.List<String> applications) {
                 this.applications = applications;
@@ -1369,7 +1369,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>filter 处理器使用的 SPL 条件表达式。</p>
+             * <p>The filter expression.</p>
              * 
              * <strong>example:</strong>
              * <p>attributes[&quot;http.route&quot;] != &quot;/health&quot;</p>
@@ -1380,7 +1380,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>字段处理器要处理的遥测字段路径列表。</p>
+             * <p>The field list.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -1388,7 +1388,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>mask_fields 处理器按顺序使用的脱敏规则。</p>
+             * <p>The masking rule list.</p>
              */
             public Builder rules(java.util.List<ConfigRules> rules) {
                 this.rules = rules;
@@ -1396,7 +1396,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>spl 处理器执行的 ETL SPL pipeline expression，必须以星号（*）开头。</p>
+             * <p>The SPL script.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1409,7 +1409,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>service_export 处理器的源服务名称选择器。</p>
+             * <p>The service selector.</p>
              */
             public Builder selector(ConfigSelector selector) {
                 this.selector = selector;
@@ -1417,7 +1417,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>service_export 处理器的目标工作空间配置。</p>
+             * <p>The processing target.</p>
              */
             public Builder target(ConfigTarget target) {
                 this.target = target;
@@ -1497,7 +1497,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>与处理器类型对应的配置。</p>
+             * <p>The processor configuration.</p>
              */
             public Builder config(ProcessorsConfig config) {
                 this.config = config;
@@ -1505,7 +1505,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>处理器在所在有序处理链中的唯一名称。</p>
+             * <p>The processor name.</p>
              * 
              * <strong>example:</strong>
              * <p>drop-health-check</p>
@@ -1516,7 +1516,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>平台注册的处理器类型，例如 filter、spl 或 service_export。</p>
+             * <p>The processor type.</p>
              * 
              * <strong>example:</strong>
              * <p>filter</p>
@@ -1625,7 +1625,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>该输出目标消费的非空、去重 Dataset 名称列表。</p>
+             * <p>The list of datasets.</p>
              */
             public Builder datasets(java.util.List<String> datasets) {
                 this.datasets = datasets;
@@ -1644,7 +1644,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>输出目标在流水线内的唯一名称。</p>
+             * <p>The name of the output destination.</p>
              * 
              * <strong>example:</strong>
              * <p>error-archive</p>
@@ -1666,7 +1666,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>输出目标类型。第一版仅支持 logstore。</p>
+             * <p>The type of the output destination.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore</p>
@@ -1736,7 +1736,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>回填范围的开始时间，使用 Unix 秒并对齐到 5 分钟边界。</p>
+             * <p>The start time.</p>
              * 
              * <strong>example:</strong>
              * <p>1722844800</p>
@@ -1747,7 +1747,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>回填范围的结束时间，使用 Unix 秒并对齐到 5 分钟边界。</p>
+             * <p>The end time.</p>
              * 
              * <strong>example:</strong>
              * <p>1722848400</p>
@@ -1830,7 +1830,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>数据源读取模式。可选值为 continuous 或 backfill。</p>
+             * <p>The run mode.</p>
              * 
              * <strong>example:</strong>
              * <p>continuous</p>
@@ -1841,7 +1841,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>continuous 模式的读取起点，支持 latest、earliest 或 Unix 秒时间戳。</p>
+             * <p>The read start point.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -1852,7 +1852,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>backfill 模式使用的有限时间范围。</p>
+             * <p>The backfill time range.</p>
              */
             public Builder timeRange(TimeRange timeRange) {
                 this.timeRange = timeRange;
@@ -1919,7 +1919,7 @@ public class PreviewDataPipelineRequest extends Request {
             } 
 
             /**
-             * <p>数据源的读取模式与起始范围配置。</p>
+             * <p>The datasource config.</p>
              */
             public Builder config(SourceConfig config) {
                 this.config = config;
@@ -1927,7 +1927,7 @@ public class PreviewDataPipelineRequest extends Request {
             }
 
             /**
-             * <p>平台注册的逻辑数据源类型。首版 export 流水线使用 traces-default。</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>traces-default</p>

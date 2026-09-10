@@ -93,7 +93,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
         } 
 
         /**
-         * clusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ea119prod-ea119blinkcptssd1</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -101,7 +104,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * policyId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-ac38a7cb02d14ff48bc9f97d0a75063e</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;
@@ -109,7 +115,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD8BA7D6-995D-578D-9941-78B0FECD14B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * serviceMonitors.
+         * <p>The list of ServiceMonitors.</p>
          */
         public Builder serviceMonitors(java.util.List<ServiceMonitors> serviceMonitors) {
             this.serviceMonitors = serviceMonitors;
@@ -222,7 +231,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             } 
 
             /**
-             * interval.
+             * <p>The collection interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30s</p>
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -230,7 +242,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * matchedTargetCount.
+             * <p>The number of matched targets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65</p>
              */
             public Builder matchedTargetCount(Long matchedTargetCount) {
                 this.matchedTargetCount = matchedTargetCount;
@@ -238,7 +253,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * path.
+             * <p>The sampling path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/metrics</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -246,7 +264,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The collection port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9100</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -254,7 +275,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * targetPort.
+             * <p>The target port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder targetPort(String targetPort) {
                 this.targetPort = targetPort;
@@ -425,7 +449,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             } 
 
             /**
-             * addonName.
+             * <p>The addon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud-acs-ecs</p>
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -433,7 +460,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * addonReleaseName.
+             * <p>The addon release name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>release-1234567</p>
              */
             public Builder addonReleaseName(String addonReleaseName) {
                 this.addonReleaseName = addonReleaseName;
@@ -441,7 +471,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * addonVersion.
+             * <p>The addon version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.1</p>
              */
             public Builder addonVersion(String addonVersion) {
                 this.addonVersion = addonVersion;
@@ -449,7 +482,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * configYaml.
+             * <p>The configuration YAML.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiVersion: xxxxx</p>
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -457,7 +493,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * enableStatus.
+             * <p>The enabling status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>run</p>
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;
@@ -465,7 +504,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * encryptYaml.
+             * <p>The encrypted YAML.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YXBpVmVyc2lvbjogeHh4eHgK</p>
              */
             public Builder encryptYaml(Boolean encryptYaml) {
                 this.encryptYaml = encryptYaml;
@@ -473,7 +515,7 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * endpoints.
+             * <p>The list of endpoints.</p>
              */
             public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -481,7 +523,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * matchedServiceCount.
+             * <p>The number of matched services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder matchedServiceCount(Long matchedServiceCount) {
                 this.matchedServiceCount = matchedServiceCount;
@@ -489,7 +534,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The ServiceMonitor name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62a526c5-f6ca-4cfb-b5a4-b76974cffe51</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -497,7 +545,10 @@ public class ListIntegrationPolicyServiceMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>arms-prom</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

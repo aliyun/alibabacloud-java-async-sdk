@@ -80,7 +80,10 @@ public class LabelFilters extends TeaModel {
         } 
 
         /**
-         * name.
+         * <p>The label name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -88,7 +91,10 @@ public class LabelFilters extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The label filter operator. Supported operators: = (equal to), != (not equal to), =~ (regular expression match), and !~ (regular expression not match).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -96,7 +102,10 @@ public class LabelFilters extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The label value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder value(String value) {
             this.value = value;

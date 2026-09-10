@@ -80,7 +80,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * addons.
+         * <p>A list of add-ons.</p>
          */
         public Builder addons(java.util.List<Addons> addons) {
             this.addons = addons;
@@ -88,7 +88,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7E00EF90-CEF9-57C9-9AE9-5AA937D37C03</p>
@@ -99,7 +99,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -178,7 +181,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用于mysql的监控大盘</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,7 +192,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL Overview</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +203,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The URL of the dashboard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxxxxx">http://xxxxxxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -274,7 +286,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * clusterTypes.
+             * <p>The dependencies on cluster types.</p>
              */
             public Builder clusterTypes(java.util.List<String> clusterTypes) {
                 this.clusterTypes = clusterTypes;
@@ -282,7 +294,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * features.
+             * <p>The dependencies on probes.</p>
              */
             public Builder features(java.util.Map<String, Boolean> features) {
                 this.features = features;
@@ -290,7 +302,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * services.
+             * <p>The dependencies on product codes.</p>
              */
             public Builder services(java.util.List<String> services) {
                 this.services = services;
@@ -344,7 +356,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * promQl.
+             * <p>The PromQL search statements.</p>
              */
             public Builder promQl(java.util.List<String> promQl) {
                 this.promQl = promQl;
@@ -437,7 +449,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -445,7 +460,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * icon.
+             * <p>The icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.alixxxx">https://img.alixxxx</a></p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -453,7 +471,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * label.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Golang</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -461,7 +482,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The protocol name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>golang</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -593,7 +617,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * alertDefaultStatus.
+             * <p>The default status of the alert rule policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder alertDefaultStatus(String alertDefaultStatus) {
                 this.alertDefaultStatus = alertDefaultStatus;
@@ -601,7 +628,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * defaultInstall.
+             * <p>Indicates whether the add-on is installed by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultInstall(Boolean defaultInstall) {
                 this.defaultInstall = defaultInstall;
@@ -609,7 +639,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * enableServiceAccount.
+             * <p>Indicates whether to assign a Service Account for communication with the console API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableServiceAccount(Boolean enableServiceAccount) {
                 this.enableServiceAccount = enableServiceAccount;
@@ -617,7 +650,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * metricCheckRule.
+             * <p>The metric check rule.</p>
              */
             public Builder metricCheckRule(MetricCheckRule metricCheckRule) {
                 this.metricCheckRule = metricCheckRule;
@@ -625,7 +658,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * needRestartAfterIntegration.
+             * <p>Indicates whether a pod restart is required after the add-on is installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needRestartAfterIntegration(Boolean needRestartAfterIntegration) {
                 this.needRestartAfterIntegration = needRestartAfterIntegration;
@@ -633,7 +669,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * protocols.
+             * <p>The protocols.</p>
              */
             public Builder protocols(java.util.List<Protocols> protocols) {
                 this.protocols = protocols;
@@ -641,7 +677,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * targetAddonName.
+             * <p>The name of the target add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder targetAddonName(String targetAddonName) {
                 this.targetAddonName = targetAddonName;
@@ -760,7 +799,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * dependencies.
+             * <p>The dependencies.</p>
              */
             public Builder dependencies(Dependencies dependencies) {
                 this.dependencies = dependencies;
@@ -768,7 +807,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>o11y-demo-cn-heyuan</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -776,7 +818,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -784,7 +829,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * label.
+             * <p>The display name of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -792,7 +840,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -800,7 +851,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * policies.
+             * <p>The policy.</p>
              */
             public Builder policies(Policies policies) {
                 this.policies = policies;
@@ -1023,7 +1074,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             } 
 
             /**
-             * alias.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -1031,7 +1085,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * categories.
+             * <p>The categories.</p>
              */
             public Builder categories(java.util.List<String> categories) {
                 this.categories = categories;
@@ -1039,7 +1093,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * dashboards.
+             * <p>A list of dashboards.</p>
              */
             public Builder dashboards(java.util.List<Dashboards> dashboards) {
                 this.dashboards = dashboards;
@@ -1047,7 +1101,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Observability integration.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1055,7 +1112,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * environments.
+             * <p>A list of supported environments.</p>
              */
             public Builder environments(java.util.List<Environments> environments) {
                 this.environments = environments;
@@ -1063,7 +1120,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * icon.
+             * <p>The icon of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asert/mysql.svg</p>
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -1071,7 +1131,7 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * keywords.
+             * <p>The keywords.</p>
              */
             public Builder keywords(java.util.List<String> keywords) {
                 this.keywords = keywords;
@@ -1079,7 +1139,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * language.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -1087,7 +1150,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * latestReleaseCreateTime.
+             * <p>The time when the latest version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-03T03:15:56Z</p>
              */
             public Builder latestReleaseCreateTime(String latestReleaseCreateTime) {
                 this.latestReleaseCreateTime = latestReleaseCreateTime;
@@ -1095,7 +1161,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1103,7 +1172,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * once.
+             * <p>Indicates whether the add-on can be installed only once.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder once(Boolean once) {
                 this.once = once;
@@ -1111,7 +1183,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * scene.
+             * <p>The scenario of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>container</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -1119,7 +1194,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1127,7 +1205,10 @@ public class ListIntegrationPolicyAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * weight.
+             * <p>The weight.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

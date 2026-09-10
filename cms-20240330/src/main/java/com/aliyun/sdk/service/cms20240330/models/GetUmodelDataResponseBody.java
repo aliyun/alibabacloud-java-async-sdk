@@ -119,7 +119,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Error information</p>
+         * <p>The error messages.</p>
          */
         public Builder errors(java.util.List<Errors> errors) {
             this.errors = errors;
@@ -127,7 +127,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of node link relationships</p>
+         * <p>The list of links between nodes.</p>
          */
         public Builder links(java.util.List<?> links) {
             this.links = links;
@@ -135,7 +135,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of nodes</p>
+         * <p>The list of nodes.</p>
          */
         public Builder nodes(java.util.List<?> nodes) {
             this.nodes = nodes;
@@ -143,7 +143,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123-123-234-345-123</p>
@@ -154,7 +154,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of node links</p>
+         * <p>The total number of links between nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -165,7 +165,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of nodes</p>
+         * <p>The total number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -234,7 +234,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Details.</p>
+             * <p>The detailed information.</p>
              * 
              * <strong>example:</strong>
              * <p>ok</p>
@@ -245,7 +245,7 @@ public class GetUmodelDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Error type</p>
+             * <p>The type of the error.</p>
              * 
              * <strong>example:</strong>
              * <p>external</p>

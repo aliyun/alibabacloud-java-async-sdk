@@ -132,7 +132,7 @@ public class AlertRuleNotificationFilter extends TeaModel {
         } 
 
         /**
-         * contacts.
+         * <p>A list of contact IDs for filtering.</p>
          */
         public Builder contacts(java.util.List<String> contacts) {
             this.contacts = contacts;
@@ -140,7 +140,7 @@ public class AlertRuleNotificationFilter extends TeaModel {
         }
 
         /**
-         * customWebhooks.
+         * <p>A list of custom webhook IDs for filtering.</p>
          */
         public Builder customWebhooks(java.util.List<String> customWebhooks) {
             this.customWebhooks = customWebhooks;
@@ -148,7 +148,7 @@ public class AlertRuleNotificationFilter extends TeaModel {
         }
 
         /**
-         * dingWebhooks.
+         * <p>A list of DingTalk webhook IDs for filtering.</p>
          */
         public Builder dingWebhooks(java.util.List<String> dingWebhooks) {
             this.dingWebhooks = dingWebhooks;
@@ -156,7 +156,7 @@ public class AlertRuleNotificationFilter extends TeaModel {
         }
 
         /**
-         * fsWebhooks.
+         * <p>A list of Lark webhook IDs for filtering.</p>
          */
         public Builder fsWebhooks(java.util.List<String> fsWebhooks) {
             this.fsWebhooks = fsWebhooks;
@@ -164,7 +164,7 @@ public class AlertRuleNotificationFilter extends TeaModel {
         }
 
         /**
-         * groups.
+         * <p>A list of contact group IDs for filtering.</p>
          */
         public Builder groups(java.util.List<String> groups) {
             this.groups = groups;
@@ -172,7 +172,7 @@ public class AlertRuleNotificationFilter extends TeaModel {
         }
 
         /**
-         * slackWebhooks.
+         * <p>A list of Slack webhook IDs for filtering.</p>
          */
         public Builder slackWebhooks(java.util.List<String> slackWebhooks) {
             this.slackWebhooks = slackWebhooks;
@@ -180,7 +180,7 @@ public class AlertRuleNotificationFilter extends TeaModel {
         }
 
         /**
-         * wxWebhooks.
+         * <p>A list of WeChat webhook IDs for filtering.</p>
          */
         public Builder wxWebhooks(java.util.List<String> wxWebhooks) {
             this.wxWebhooks = wxWebhooks;

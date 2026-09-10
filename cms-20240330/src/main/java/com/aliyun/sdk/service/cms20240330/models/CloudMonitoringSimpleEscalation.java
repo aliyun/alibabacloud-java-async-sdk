@@ -80,7 +80,7 @@ public class CloudMonitoringSimpleEscalation extends TeaModel {
         } 
 
         /**
-         * escalations.
+         * <p>The multi-level trigger list.</p>
          */
         public Builder escalations(java.util.List<CloudMonitoringSimpleEscalationEntry> escalations) {
             this.escalations = escalations;
@@ -88,7 +88,10 @@ public class CloudMonitoringSimpleEscalation extends TeaModel {
         }
 
         /**
-         * metricName.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuUsage</p>
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -96,7 +99,10 @@ public class CloudMonitoringSimpleEscalation extends TeaModel {
         }
 
         /**
-         * period.
+         * <p>The collection period, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.period = period;

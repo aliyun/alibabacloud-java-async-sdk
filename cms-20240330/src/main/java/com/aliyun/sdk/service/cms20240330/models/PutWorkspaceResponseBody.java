@@ -67,7 +67,7 @@ public class PutWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -78,7 +78,7 @@ public class PutWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Name of the workspace.</p>
+         * <p>The name of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test-001</p>

@@ -106,7 +106,7 @@ public class ListBizTracesResponseBody extends TeaModel {
         } 
 
         /**
-         * items.
+         * <p>The list of business traces.</p>
          */
         public Builder items(java.util.List<BizTraceConfig> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class ListBizTracesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results returned. The maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListBizTracesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token to use to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa9d0e569b88098a0e3155c29b473201a</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListBizTracesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0CEC5375-C554-562B-A65F-*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListBizTracesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

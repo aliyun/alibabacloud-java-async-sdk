@@ -133,7 +133,10 @@ public class IncidentEscalationStageForView extends TeaModel {
         } 
 
         /**
-         * cycleNotifyCount.
+         * <p>The number of loop notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder cycleNotifyCount(Integer cycleNotifyCount) {
             this.cycleNotifyCount = cycleNotifyCount;
@@ -141,7 +144,10 @@ public class IncidentEscalationStageForView extends TeaModel {
         }
 
         /**
-         * cycleNotifyInterval.
+         * <p>The loop notification interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder cycleNotifyInterval(Integer cycleNotifyInterval) {
             this.cycleNotifyInterval = cycleNotifyInterval;
@@ -149,7 +155,7 @@ public class IncidentEscalationStageForView extends TeaModel {
         }
 
         /**
-         * effectTimeRange.
+         * <p>The effective time range.</p>
          */
         public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
             this.effectTimeRange = effectTimeRange;
@@ -157,7 +163,11 @@ public class IncidentEscalationStageForView extends TeaModel {
         }
 
         /**
+         * <p>The stage index.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -165,7 +175,7 @@ public class IncidentEscalationStageForView extends TeaModel {
         }
 
         /**
-         * notifyChannels.
+         * <p>The list of notification channels.</p>
          */
         public Builder notifyChannels(java.util.List<NotifyChannel> notifyChannels) {
             this.notifyChannels = notifyChannels;
@@ -173,7 +183,10 @@ public class IncidentEscalationStageForView extends TeaModel {
         }
 
         /**
-         * targetIncidentState.
+         * <p>The target event state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Open&quot;</p>
          */
         public Builder targetIncidentState(String targetIncidentState) {
             this.targetIncidentState = targetIncidentState;
@@ -181,7 +194,10 @@ public class IncidentEscalationStageForView extends TeaModel {
         }
 
         /**
-         * triggerDelay.
+         * <p>The trigger delay time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder triggerDelay(Integer triggerDelay) {
             this.triggerDelay = triggerDelay;

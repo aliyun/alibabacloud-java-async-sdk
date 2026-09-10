@@ -67,7 +67,7 @@ public class SlsQueryJoin extends TeaModel {
         } 
 
         /**
-         * conditions.
+         * <p>The list of join conditions.</p>
          */
         public Builder conditions(java.util.List<SlsJoinCondition> conditions) {
             this.conditions = conditions;
@@ -75,7 +75,10 @@ public class SlsQueryJoin extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The set operation type. Valid values: InnerJoin, LeftJoin, RightJoin, FullJoin, LeftExclude, RightExclude, CrossJoin, NoJoin, and Concat.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LEFT</p>
          */
         public Builder type(String type) {
             this.type = type;

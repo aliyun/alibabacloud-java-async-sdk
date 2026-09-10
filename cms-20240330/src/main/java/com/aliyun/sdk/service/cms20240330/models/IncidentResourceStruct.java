@@ -132,7 +132,10 @@ public class IncidentResourceStruct extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Production environment web server.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -140,7 +143,10 @@ public class IncidentResourceStruct extends TeaModel {
         }
 
         /**
-         * incidentId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>incident-001</p>
          */
         public Builder incidentId(String incidentId) {
             this.incidentId = incidentId;
@@ -148,7 +154,10 @@ public class IncidentResourceStruct extends TeaModel {
         }
 
         /**
-         * incidentResourceId.
+         * <p>The unique ID of the resource in the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>res-001</p>
          */
         public Builder incidentResourceId(String incidentResourceId) {
             this.incidentResourceId = incidentResourceId;
@@ -156,7 +165,7 @@ public class IncidentResourceStruct extends TeaModel {
         }
 
         /**
-         * resource.
+         * <p>The details object for the event resource.</p>
          */
         public Builder resource(IncidentResourceDetail resource) {
             this.resource = resource;
@@ -164,7 +173,10 @@ public class IncidentResourceStruct extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloudmonitor</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -172,7 +184,10 @@ public class IncidentResourceStruct extends TeaModel {
         }
 
         /**
-         * time.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741234567890</p>
          */
         public Builder time(Long time) {
             this.time = time;
@@ -180,7 +195,10 @@ public class IncidentResourceStruct extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-12345</p>
          */
         public Builder userId(Long userId) {
             this.userId = userId;

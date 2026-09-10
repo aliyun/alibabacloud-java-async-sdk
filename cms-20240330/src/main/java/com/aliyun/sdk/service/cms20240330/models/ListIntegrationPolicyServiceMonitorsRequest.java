@@ -116,6 +116,7 @@ public class ListIntegrationPolicyServiceMonitorsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the Provisioning policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListIntegrationPolicyServiceMonitorsRequest extends Request {
         }
 
         /**
-         * addonReleaseName.
+         * <p>The name of the addon release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>release-12345678</p>
          */
         public Builder addonReleaseName(String addonReleaseName) {
             this.putQueryParameter("addonReleaseName", addonReleaseName);
@@ -137,7 +141,10 @@ public class ListIntegrationPolicyServiceMonitorsRequest extends Request {
         }
 
         /**
-         * collectorReleaseName.
+         * <p>The probe identifier. If a release exists, pass the release name. If no release exists, pass the component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>collector:metric-agent:policy:policy-bfd3d455fd6f4bc8</p>
          */
         public Builder collectorReleaseName(String collectorReleaseName) {
             this.putQueryParameter("collectorReleaseName", collectorReleaseName);
@@ -146,7 +153,10 @@ public class ListIntegrationPolicyServiceMonitorsRequest extends Request {
         }
 
         /**
-         * encryptYaml.
+         * <p>Specifies whether to encrypt the YAML.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder encryptYaml(Boolean encryptYaml) {
             this.putQueryParameter("encryptYaml", encryptYaml);
@@ -155,7 +165,10 @@ public class ListIntegrationPolicyServiceMonitorsRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prom</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);

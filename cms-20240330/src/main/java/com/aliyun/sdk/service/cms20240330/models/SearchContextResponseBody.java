@@ -67,7 +67,10 @@ public class SearchContextResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123-0F43-23423-AC43-34234</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class SearchContextResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>Return value</p>
          */
         public Builder results(java.util.List<java.util.Map<String, ?>> results) {
             this.results = results;

@@ -80,7 +80,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Aggregation task group.</p>
+         * <p>The aggregation task group.</p>
          */
         public Builder aggTaskGroup(AggTaskGroup aggTaskGroup) {
             this.aggTaskGroup = aggTaskGroup;
@@ -88,7 +88,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>68DAF543-35DF-5762-BE90-F5C00B5DC036</p>
@@ -99,7 +99,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -168,7 +168,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Key of the resource group tag.</p>
+             * <p>The key of the resource group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -496,7 +496,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Aggregation task group configuration.</p>
+             * <p>The configuration of the aggregation task group.</p>
              * 
              * <strong>example:</strong>
              * <p>groups:</p>
@@ -505,7 +505,8 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
              * interval: &quot;60s&quot;
              * rules:<ul>
              * <li>record: &quot;node_namespace_pod:kube_pod_info:&quot;
-             * expr: &quot;max(label_replace(kube_pod_info{job=&quot;kubernetes-pods-kube-state-metrics&quot;<br>  }, &quot;pod&quot;, &quot;$1&quot;, &quot;pod&quot;, &quot;(.*)&quot;)) by (node, namespace, pod, cluster)&quot;</li>
+             * expr: &quot;max(label_replace(kube_pod_info{job=\&quot;kubernetes-pods-kube-state-metrics\&quot;\
+             *   }, \&quot;pod\&quot;, \&quot;$1\&quot;, \&quot;pod\&quot;, \&quot;(.*)\&quot;)) by (node, namespace, pod, cluster)&quot;</li>
              * </ul>
              * </li>
              * </ul>
@@ -516,7 +517,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Summary of the aggregation task group configuration.</p>
+             * <p>The summary of the aggregation task group configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>a54136xxx</p>
@@ -527,7 +528,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID of the aggregation task group.</p>
+             * <p>The ID of the aggregation task group.</p>
              * 
              * <strong>example:</strong>
              * <p>aggTaskGroup-xx</p>
@@ -538,7 +539,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Name of the aggregation task group.</p>
+             * <p>The name of the aggregation task group.</p>
              * 
              * <strong>example:</strong>
              * <p>pipeline-aggtask-group</p>
@@ -549,7 +550,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scheduling expression for the aggregation task group when the scheduling mode is &quot;Cron&quot;.</p>
+             * <p>The scheduling expression of the aggregation task group when the scheduling mode is set to Cron.</p>
              * 
              * <strong>example:</strong>
              * <p>0 1 3 * * ? *</p>
@@ -560,7 +561,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Fixed delay time (in seconds) for scheduling.</p>
+             * <p>The fixed delay time for scheduling, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -571,7 +572,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description of the aggregation task group.</p>
+             * <p>The description of the aggregation task group.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -582,7 +583,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Second-level timestamp corresponding to the start time of scheduling (not yet effective).</p>
+             * <p>The UNIX timestamp in seconds that corresponds to the start time of the scheduling. This parameter is not yet in effect.</p>
              * 
              * <strong>example:</strong>
              * <p>1757409495</p>
@@ -593,7 +594,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maximum number of retries for executing the aggregation task.</p>
+             * <p>The maximum number of retries to execute the aggregation task.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -604,7 +605,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maximum retry time for executing the aggregation task.</p>
+             * <p>The maximum runtime of the aggregation task, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -615,7 +616,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pre-check configuration.</p>
+             * <p>The dry run configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;rw-xx&quot;,&quot;query&quot;:&quot;noPrecheck&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;none&quot;}</p>
@@ -626,7 +627,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-zhangjiakou</p>
@@ -637,7 +638,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scheduling mode.</p>
+             * <p>The scheduling mode.</p>
              * 
              * <strong>example:</strong>
              * <p>FixedRate</p>
@@ -648,7 +649,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scheduling time expression.</p>
+             * <p>The scheduling time expression.</p>
              * 
              * <strong>example:</strong>
              * <p>@m</p>
@@ -659,7 +660,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID of the source Prometheus instance for the aggregation task group.</p>
+             * <p>The ID of the source Prometheus instance for the aggregation task group.</p>
              * 
              * <strong>example:</strong>
              * <p>rw-xxx</p>
@@ -670,7 +671,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the aggregation task group.</p>
+             * <p>The status of the aggregation task group.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -681,7 +682,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource group tags</p>
+             * <p>The tags of the resource group.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -689,7 +690,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The target Prometheus instance ID of the aggregation task group.</p>
+             * <p>The ID of the target Prometheus instance for the aggregation task group.</p>
              * 
              * <strong>example:</strong>
              * <p>rw-xxx</p>
@@ -700,7 +701,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The second-level timestamp corresponding to the end time of the scheduling.</p>
+             * <p>The UNIX timestamp in seconds that corresponds to the end time of the scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>1757409495</p>
@@ -711,7 +712,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time (timestamp) of the aggregation task group.</p>
+             * <p>The time when the aggregation task group was updated. This is a timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1757409499000</p>
@@ -722,7 +723,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user to whom the aggregation task group belongs.</p>
+             * <p>The user to which the aggregation task group belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>123xxx</p>

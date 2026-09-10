@@ -75,6 +75,7 @@ public class DeleteDatasetRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteDatasetRequest extends Request {
         }
 
         /**
+         * <p>The name of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

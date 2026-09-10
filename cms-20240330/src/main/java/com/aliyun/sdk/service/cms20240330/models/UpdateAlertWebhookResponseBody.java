@@ -54,7 +54,10 @@ public class UpdateAlertWebhookResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8A33DBEA-<em><strong><strong>-</strong></strong></em>-<em><strong><strong>-</strong></strong></em></p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

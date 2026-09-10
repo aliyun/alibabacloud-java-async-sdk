@@ -110,7 +110,10 @@ public class ListBizTracesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return. The maximum value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -119,7 +122,10 @@ public class ListBizTracesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa9d0e569b88098a0e3155c29b473201a</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -128,7 +134,10 @@ public class ListBizTracesRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-xxxxxx-cn-beijing</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("workspace", workspace);

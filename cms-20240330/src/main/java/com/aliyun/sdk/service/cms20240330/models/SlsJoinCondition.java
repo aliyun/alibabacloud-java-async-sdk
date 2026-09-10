@@ -80,7 +80,10 @@ public class SlsJoinCondition extends TeaModel {
         } 
 
         /**
-         * lhsField.
+         * <p>The left field in the format $<query_idx>.<field>, such as $0.hostIp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>request_id</p>
          */
         public Builder lhsField(String lhsField) {
             this.lhsField = lhsField;
@@ -88,7 +91,10 @@ public class SlsJoinCondition extends TeaModel {
         }
 
         /**
-         * operator.
+         * <p>The comparison operator. Valid values: ==, !=, &lt;, &gt;, &lt;=, and &gt;=.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -96,7 +102,10 @@ public class SlsJoinCondition extends TeaModel {
         }
 
         /**
-         * rhsField.
+         * <p>The right field in the format $<query_idx>.<field>, such as $1.hostIp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trace_id</p>
          */
         public Builder rhsField(String rhsField) {
             this.rhsField = rhsField;

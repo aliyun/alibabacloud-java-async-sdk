@@ -106,7 +106,10 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         }
 
         /**
-         * memoryStores.
+         * <p>The list of memory stores.</p>
          */
         public Builder memoryStores(java.util.List<MemoryStores> memoryStores) {
             this.memoryStores = memoryStores;
@@ -122,7 +125,10 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16C0A6D6-C3E7-511D-A60B-A87FD85F5BA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,6 +265,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The time when the memory store was created.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -267,7 +277,10 @@ public class ListMemoryStoresResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the memory store.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created by taishan-module-recovery</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -275,7 +288,10 @@ public class ListMemoryStoresResponseBody extends TeaModel {
             }
 
             /**
-             * memoryStoreName.
+             * <p>The name of the memory store.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qianyi_test_1</p>
              */
             public Builder memoryStoreName(String memoryStoreName) {
                 this.memoryStoreName = memoryStoreName;
@@ -283,7 +299,10 @@ public class ListMemoryStoresResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -291,6 +310,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the memory store was last updated.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -302,7 +322,10 @@ public class ListMemoryStoresResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>Workspace</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-cms-1646467597142798-cn-shenzhen</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

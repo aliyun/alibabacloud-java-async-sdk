@@ -67,7 +67,10 @@ public class IncidentPlanFieldPath extends TeaModel {
         } 
 
         /**
-         * fieldAlias.
+         * <p>The field alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Service name.</p>
          */
         public Builder fieldAlias(String fieldAlias) {
             this.fieldAlias = fieldAlias;
@@ -75,7 +78,7 @@ public class IncidentPlanFieldPath extends TeaModel {
         }
 
         /**
-         * fieldPath.
+         * <p>A list of field paths.</p>
          */
         public Builder fieldPath(java.util.List<String> fieldPath) {
             this.fieldPath = fieldPath;

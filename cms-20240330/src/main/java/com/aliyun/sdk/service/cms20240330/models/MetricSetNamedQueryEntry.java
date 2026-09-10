@@ -93,7 +93,7 @@ public class MetricSetNamedQueryEntry extends TeaModel {
         } 
 
         /**
-         * labelFilters.
+         * <p>The label filter conditions. This parameter is optional and independent for each query.</p>
          */
         public Builder labelFilters(java.util.List<LabelFilters> labelFilters) {
             this.labelFilters = labelFilters;
@@ -101,7 +101,10 @@ public class MetricSetNamedQueryEntry extends TeaModel {
         }
 
         /**
-         * metric.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuUsage</p>
          */
         public Builder metric(String metric) {
             this.metric = metric;
@@ -109,7 +112,10 @@ public class MetricSetNamedQueryEntry extends TeaModel {
         }
 
         /**
-         * metricSet.
+         * <p>The metric set name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs_metrics</p>
          */
         public Builder metricSet(String metricSet) {
             this.metricSet = metricSet;
@@ -117,7 +123,10 @@ public class MetricSetNamedQueryEntry extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The query name, such as $A or $B, referenced by condition triggers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpuQuery</p>
          */
         public Builder name(String name) {
             this.name = name;

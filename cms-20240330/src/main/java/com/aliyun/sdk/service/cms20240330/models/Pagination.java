@@ -67,7 +67,7 @@ public class Pagination extends TeaModel {
         } 
 
         /**
-         * pageNumber.
+         * <p>The current page number.</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -75,7 +75,7 @@ public class Pagination extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries returned per page.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;

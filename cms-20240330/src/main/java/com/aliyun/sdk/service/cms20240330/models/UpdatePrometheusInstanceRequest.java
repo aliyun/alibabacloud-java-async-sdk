@@ -228,7 +228,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Prometheus instance ID</p>
+         * <p>The Prometheus instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,9 +241,9 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of days to automatically archive and save after the storage expires, 0 means no archiving. The range of archiving days:
-         * V1: 1<del>365 days. Only supported for metric write volume.
-         * V2: 1</del>3650 days (3650 indicates permanent storage).</p>
+         * <p>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving. Valid values for archive days:
+         * V1: 1 to 365 days. Only supported for billing by metric write volume.
+         * V2: 1 to 3650 days (3650 indicates permanent retention).</p>
          * 
          * <strong>example:</strong>
          * <p>365</p>
@@ -255,7 +255,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Password-free read policy (supports IP segments and VpcId).</p>
+         * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -276,7 +276,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Password-free write policy (supports IP segments and VpcId).</p>
+         * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -297,7 +297,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable password-free read.</p>
+         * <p>Specifies whether to enable authentication-free read.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -309,7 +309,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable password-free write.</p>
+         * <p>Specifies whether to enable authentication-free write.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -321,7 +321,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable access token authentication.</p>
+         * <p>Specifies whether to enable access token authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -333,9 +333,9 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Billing method (can only be modified once during the instance&quot;s lifecycle):
-         * POSTPAY: Postpaid by metric reporting volume.
-         * POSTPAY_GB: Postpaid by metric write volume.</p>
+         * <p>The billing method. This can be modified only once during the instance lifetime:
+         * POSTPAY: pay-as-you-go by metric reporting volume.
+         * POSTPAY_GB: pay-as-you-go by metric write volume.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTPAY_GB</p>
@@ -347,7 +347,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Instance name.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-prom-name</p>
@@ -359,7 +359,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Instance storage DB status (only supports RUNNING). If empty, the storage DB status will not be changed.</p>
+         * <p>Instance storage database status of the instance. Only RUNNING is supported. If left empty, instance storage database status is not changed.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -371,7 +371,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Storage duration (days):
+         * <p>The storage duration (days):
          * By write volume: 90, 180.
          * By metric reporting volume: 15, 30, 60, 90, 180.</p>
          * 
@@ -385,7 +385,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * storeConfig.
+         * <p>The Prometheus storage configuration.</p>
          */
         public Builder storeConfig(PrometheusInstanceStoreConfig storeConfig) {
             this.putBodyParameter("storeConfig", storeConfig);
@@ -394,7 +394,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>Belonging workspace.</p>
+         * <p>The workspace to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-1500199863951574-cn-shanghai</p>

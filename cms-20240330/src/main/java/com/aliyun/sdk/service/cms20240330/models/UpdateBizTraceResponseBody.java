@@ -67,7 +67,10 @@ public class UpdateBizTraceResponseBody extends TeaModel {
         } 
 
         /**
-         * bizTraceId.
+         * <p>The ID of the business trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e339260ed64c95d</p>
          */
         public Builder bizTraceId(String bizTraceId) {
             this.bizTraceId = bizTraceId;
@@ -75,7 +78,10 @@ public class UpdateBizTraceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

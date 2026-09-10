@@ -172,7 +172,10 @@ public class DatasourceConfigUnified extends TeaModel {
         } 
 
         /**
-         * instanceId.
+         * <p>The Prometheus instance ID. Used when type is set to PROMETHEUS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rw-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -180,7 +183,10 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * legacyRaw.
+         * <p>The raw V1 datasource JSON string returned as a read-path fallback when type is set to UNKNOWN and parsing fails. The frontend displays this field as read-only when the value is not empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;SLS&quot;}</p>
          */
         public Builder legacyRaw(String legacyRaw) {
             this.legacyRaw = legacyRaw;
@@ -188,7 +194,10 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * legacyType.
+         * <p>Returned when type is set to UNKNOWN. Indicates that the rule cannot be edited through the new API. Submit a ticket to contact the CloudMonitor team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder legacyType(String legacyType) {
             this.legacyType = legacyType;
@@ -196,7 +205,10 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * namespace.
+         * <p>The namespace. Optional when type is set to VIRTUAL_PROMETHEUS. Identifies the namespace to which the virtual Prometheus instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>selectdb</p>
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -204,7 +216,10 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * productCategory.
+         * <p>The Alibaba Cloud service category. Optional when type is set to CLOUD_MONITORING. Returns unknown when the source does not contain this information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder productCategory(String productCategory) {
             this.productCategory = productCategory;
@@ -212,7 +227,10 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * project.
+         * <p>The Simple Log Service (SLS) project name. Required when type is set to SLS. All stores share the same project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-project</p>
          */
         public Builder project(String project) {
             this.project = project;
@@ -220,7 +238,10 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID. Optional for all types. Defaults to the region of the rule or gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -228,7 +249,7 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * stores.
+         * <p>The list of SLS stores. Used when type is set to SLS. At least one store is required. Each store contains store and storeType fields. The project and regionId fields have been moved to the top level. The deprecated fields with the same names that remain in stores return a 400 error if used in write paths.</p>
          */
         public Builder stores(java.util.List<Stores> stores) {
             this.stores = stores;
@@ -236,7 +257,10 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
-         * tenantId.
+         * <p>The tenant ID. Optional when type is set to VIRTUAL_PROMETHEUS. Identifies the tenant to which the virtual Prometheus instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-xxxxxxx</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -244,6 +268,7 @@ public class DatasourceConfigUnified extends TeaModel {
         }
 
         /**
+         * <p>The datasource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

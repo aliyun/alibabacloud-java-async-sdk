@@ -109,7 +109,11 @@ public class ApmCompositeCompareConfig extends TeaModel {
         } 
 
         /**
+         * <p>The aggregate functions.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVG</p>
          */
         public Builder aggregate(String aggregate) {
             this.aggregate = aggregate;
@@ -117,7 +121,11 @@ public class ApmCompositeCompareConfig extends TeaModel {
         }
 
         /**
+         * <p>The comparison operator.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GT</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -125,7 +133,11 @@ public class ApmCompositeCompareConfig extends TeaModel {
         }
 
         /**
+         * <p>The threshold.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder threshold(Float threshold) {
             this.threshold = threshold;
@@ -133,7 +145,10 @@ public class ApmCompositeCompareConfig extends TeaModel {
         }
 
         /**
-         * yoyTimeUnit.
+         * <p>The year-over-year time unit. This parameter takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder yoyTimeUnit(String yoyTimeUnit) {
             this.yoyTimeUnit = yoyTimeUnit;
@@ -141,7 +156,10 @@ public class ApmCompositeCompareConfig extends TeaModel {
         }
 
         /**
-         * yoyTimeValue.
+         * <p>The year-over-year time value. This parameter takes effect only when operator is set to YOY_UP or YOY_DOWN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder yoyTimeValue(Integer yoyTimeValue) {
             this.yoyTimeValue = yoyTimeValue;

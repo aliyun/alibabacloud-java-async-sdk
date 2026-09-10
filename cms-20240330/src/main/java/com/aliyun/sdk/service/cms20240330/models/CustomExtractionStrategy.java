@@ -106,7 +106,10 @@ public class CustomExtractionStrategy extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -114,7 +117,10 @@ public class CustomExtractionStrategy extends TeaModel {
         }
 
         /**
-         * extractionPrompt.
+         * <p>Extraction prompt</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder extractionPrompt(String extractionPrompt) {
             this.extractionPrompt = extractionPrompt;
@@ -122,7 +128,10 @@ public class CustomExtractionStrategy extends TeaModel {
         }
 
         /**
-         * strategyName.
+         * <p>Policy Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder strategyName(String strategyName) {
             this.strategyName = strategyName;
@@ -130,7 +139,10 @@ public class CustomExtractionStrategy extends TeaModel {
         }
 
         /**
-         * strategyType.
+         * <p>Policy type. Supports &quot;Episodic&quot;, &quot;Summary&quot;, and &quot;Fact&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Fact</p>
          */
         public Builder strategyType(String strategyType) {
             this.strategyType = strategyType;
@@ -138,7 +150,10 @@ public class CustomExtractionStrategy extends TeaModel {
         }
 
         /**
-         * updatePrompt.
+         * <p>Update prompt</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder updatePrompt(String updatePrompt) {
             this.updatePrompt = updatePrompt;

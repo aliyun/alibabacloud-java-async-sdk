@@ -194,7 +194,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * aliyunLang.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("aliyunLang", aliyunLang);
@@ -203,7 +206,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>The category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -212,7 +218,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * keywords.
+         * <p>The keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance theory</p>
          */
         public Builder keywords(String keywords) {
             this.putQueryParameter("keywords", keywords);
@@ -221,7 +230,15 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * labels.
+         * <p>Filters resources by label. The following labels are available:</p>
+         * <ul>
+         * <li>metricCategory: the metric category description.</li>
+         * <li>alertEnable: specifies whether alerting is required.</li>
+         * <li>alertUnit: the recommended alert unit.</li>
+         * <li>unitFactor: the unit conversion factor.</li>
+         * <li>minAlertPeriod: the minimum alert period.</li>
+         * <li>productCategory: the product type category.</li>
+         * </ul>
          */
         public Builder labels(java.util.List<Labels> labels) {
             String labelsShrink = shrink(labels, "labels", "json");
@@ -231,7 +248,14 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * metaFormat.
+         * <p>The metadata source. Valid values:</p>
+         * <ul>
+         * <li>CMS: CloudMonitor Basic monitoring metrics.</li>
+         * <li>PROM_BASIC: Prometheus CloudMonitor Basic monitoring metrics.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CMS</p>
          */
         public Builder metaFormat(String metaFormat) {
             this.putQueryParameter("metaFormat", metaFormat);
@@ -240,7 +264,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * metricName.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPUUtilization</p>
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("metricName", metricName);
@@ -249,7 +276,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The namespace, which is used to distinguish between services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_ecs_dashboard</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -258,7 +288,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -267,7 +300,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 2000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -335,7 +371,10 @@ public class DescribeMetricMetaListRequest extends Request {
             } 
 
             /**
-             * name.
+             * <p>The label name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>productCategory</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +382,10 @@ public class DescribeMetricMetaListRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -54,7 +54,10 @@ public class CreateContextStoreResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5B1D3D4-BB28-5996-8AD2-***********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -262,7 +262,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         } 
 
         /**
-         * createTime.
+         * <p>The creation time. The value is a UNIX timestamp string in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719820800000</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -270,7 +273,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description of the alert policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alert policy for ECS faults in the production environment. Notifications are sent to the on-duty group</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -278,7 +284,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * enabled.
+         * <p>Indicates whether the alert policy is enabled. This field is controlled by the EnableAlertPolicy and DisableAlertPolicy operations. The Create and Update operations do not directly set this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -286,7 +295,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * migrationBatchId.
+         * <p>The migration batch ID. This is an internal system field. The value is an empty string for user-created policies and is populated for policies migrated from the legacy version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder migrationBatchId(String migrationBatchId) {
             this.migrationBatchId = migrationBatchId;
@@ -294,7 +306,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * migrationMeta.
+         * <p>The migration metadata JSON string. This is an internal system field. You do not need to configure this field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder migrationMeta(String migrationMeta) {
             this.migrationMeta = migrationMeta;
@@ -302,7 +317,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the alert policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS Fault Notification Policy</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -310,7 +328,7 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * notifyStrategy.
+         * <p>The snapshot of the notification strategy details, including notification routes (routes), notification channels (channels), grouping settings (groupingSetting), and custom templates (customTemplateEntries).</p>
          */
         public Builder notifyStrategy(NotifyStrategyForSNSView notifyStrategy) {
             this.notifyStrategy = notifyStrategy;
@@ -318,7 +336,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * notifyStrategyUuid.
+         * <p>The UUID of the associated notifyStrategy. This UUID is shared with the responsePlan UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7076c75c-c804-461e-975f-c6f9ed5af745</p>
          */
         public Builder notifyStrategyUuid(String notifyStrategyUuid) {
             this.notifyStrategyUuid = notifyStrategyUuid;
@@ -326,7 +347,7 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * responsePlan.
+         * <p>The snapshot of the event response plan details, including escalation policy (escalationId), repeat notification (repeatNotifySetting), automatic recovery (autoRecoverSeconds), and action integration (pushingSetting).</p>
          */
         public Builder responsePlan(IncidentResponsePlanForSNSView responsePlan) {
             this.responsePlan = responsePlan;
@@ -334,7 +355,7 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * subscription.
+         * <p>The snapshot of the primary subscription details, including filter conditions (filterSetting) and cross-workspace subscription configuration (workspaceFilterSetting).</p>
          */
         public Builder subscription(SubscriptionForSNSView subscription) {
             this.subscription = subscription;
@@ -342,7 +363,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * subscriptionUuid.
+         * <p>The UUID of the primary subscription. This UUID is generated when the alert policy is bound to a subscription in a 1:1 relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7076c75c-c804-461e-975f-c6f9ed5af745</p>
          */
         public Builder subscriptionUuid(String subscriptionUuid) {
             this.subscriptionUuid = subscriptionUuid;
@@ -350,7 +374,7 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * subscriptions.
+         * <p>The list of all associated subscriptions, including the primary subscription. This list is generated by the backend through a reverse lookup. The array length is greater than 1 only when workspace-level subscriptions are added in addition to the primary subscription.</p>
          */
         public Builder subscriptions(java.util.List<SubscriptionForView> subscriptions) {
             this.subscriptions = subscriptions;
@@ -358,7 +382,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The last update time. The value is a UNIX timestamp string in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719820800000</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -366,7 +393,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The userId of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123456</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -374,7 +404,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * uuid.
+         * <p>The UUID of the alert policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7076c75c-c804-461e-975f-c6f9ed5af745</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;
@@ -382,7 +415,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The optimistic lock version number. You must pass in the current value during an Update operation to prevent concurrent conflicts. The value is incremented by 1 after each successful Update operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder version(Integer version) {
             this.version = version;
@@ -390,7 +426,10 @@ public class SubscriptionAndNotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-1234567890-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

@@ -174,7 +174,7 @@ public class ListAggTaskGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Prometheus instance to which the aggregation task group belongs. The aggregation tasks read data from this instance.</p>
+         * <p>The instance ID of the Managed Service for Prometheus instance to which the aggregation node group belongs. The aggregation node reads data from this instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>List of IDs for the aggregation task groups, which must be JSON parseable.</p>
+         * <p>The list of aggregation task group IDs. The value must be a JSON-parsable string.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;aggTaskGroup-xxx&quot;]</p>
@@ -199,7 +199,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>List of names for the aggregation task groups, which must be JSON parseable.</p>
+         * <p>The list of aggregation task group names. The value must be a JSON-parsable string.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;apiserver_request_total&quot;]</p>
@@ -211,7 +211,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>Maximum number of records to return.</p>
+         * <p>The maximum number of records to return.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -223,7 +223,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>Query token.</p>
+         * <p>The query token.</p>
          * 
          * <strong>example:</strong>
          * <p>28036394xxx</p>
@@ -235,7 +235,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>Name search, supports fuzzy matching.</p>
+         * <p>The name to search for. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -247,7 +247,12 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>Status of the aggregation task group, either &quot;Running&quot; or &quot;Stopped&quot;. Default is Running.</p>
+         * <p>The status of the aggregation task group. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Stopped</li>
+         * </ul>
+         * <p>Default value: Running.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -259,7 +264,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>Resource group tags.</p>
+         * <p>The resource group tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -269,7 +274,7 @@ public class ListAggTaskGroupsRequest extends Request {
         }
 
         /**
-         * <p>The target Prometheus instance ID for the aggregation task group.</p>
+         * <p>The instance ID of the target Managed Service for Prometheus instance for the aggregation node group.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-pq4apob9jm</p>
@@ -340,7 +345,7 @@ public class ListAggTaskGroupsRequest extends Request {
             } 
 
             /**
-             * <p>Key of the resource group tag.</p>
+             * <p>The key of the resource group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -351,7 +356,7 @@ public class ListAggTaskGroupsRequest extends Request {
             }
 
             /**
-             * <p>Value of the resource group tag.</p>
+             * <p>The value of the resource group tag.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>

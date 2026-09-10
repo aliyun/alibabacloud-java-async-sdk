@@ -80,7 +80,10 @@ public class GetCmsServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * enabled.
+         * <p>Indicates whether the service or product is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -88,7 +91,10 @@ public class GetCmsServiceResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>PROM_NOT_OPEN: Prometheus is not activated.SLS_NOT_OPEN: Simple Log Service (SLS), a dependency of Prometheus, is not activated.CMS_SLR_NOT_EXIST: The service-linked role (SLR) for CloudMonitor does not exist.SLS_SLR_NOT_EXIST: The SLR for SLS does not exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROM_NOT_OPEN</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -96,7 +102,7 @@ public class GetCmsServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8FDE2569-626B-5176-9844-28877A*****</p>

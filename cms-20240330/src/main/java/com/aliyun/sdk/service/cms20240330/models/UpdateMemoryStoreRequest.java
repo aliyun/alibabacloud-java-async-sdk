@@ -131,6 +131,7 @@ public class UpdateMemoryStoreRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
+         * <p>Memory store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +157,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * customExtractionStrategies.
+         * <p>Custom extraction strategies.</p>
          */
         public Builder customExtractionStrategies(java.util.List<CustomExtractionStrategy> customExtractionStrategies) {
             this.putBodyParameter("customExtractionStrategies", customExtractionStrategies);
@@ -164,7 +166,10 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memoryStore test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -173,7 +178,7 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * extractionStrategies.
+         * <p>Extraction strategies. Supports &quot;Episodic&quot;, &quot;Summary&quot;, and &quot;Fact&quot;.</p>
          */
         public Builder extractionStrategies(java.util.List<String> extractionStrategies) {
             this.putBodyParameter("extractionStrategies", extractionStrategies);
@@ -182,7 +187,10 @@ public class UpdateMemoryStoreRequest extends Request {
         }
 
         /**
-         * shortTermTtl.
+         * <p>Short-term memory retention time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder shortTermTtl(Integer shortTermTtl) {
             this.putBodyParameter("shortTermTtl", shortTermTtl);

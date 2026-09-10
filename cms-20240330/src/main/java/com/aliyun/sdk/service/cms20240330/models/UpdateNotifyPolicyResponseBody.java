@@ -67,7 +67,7 @@ public class UpdateNotifyPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * notifyPolicy.
+         * <p>The notification policy object details, including the policy uuid, name, description, enabled status, and sub-entities such as notification policies (noise reduction, notification routing, and channels), subscriptions (event filtering, cross-workspace routing, and legacy product event subscriptions), and response plans (escalation, repeated notifications, automatic recovery, and action integration).</p>
          */
         public Builder notifyPolicy(NotifyPolicy notifyPolicy) {
             this.notifyPolicy = notifyPolicy;
@@ -75,7 +75,10 @@ public class UpdateNotifyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The unique ID of the request. You can use this ID for troubleshooting and ticket locating.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70D52620-2609-1802-9788-6BC592C83F03</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

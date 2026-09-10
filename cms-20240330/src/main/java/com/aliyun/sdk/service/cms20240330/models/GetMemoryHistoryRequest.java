@@ -90,6 +90,7 @@ public class GetMemoryHistoryRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetMemoryHistoryRequest extends Request {
         }
 
         /**
+         * <p>Memory store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetMemoryHistoryRequest extends Request {
         }
 
         /**
+         * <p>Memory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

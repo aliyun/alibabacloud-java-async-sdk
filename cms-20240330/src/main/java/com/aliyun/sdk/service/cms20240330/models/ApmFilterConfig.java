@@ -82,6 +82,7 @@ public class ApmFilterConfig extends TeaModel {
         } 
 
         /**
+         * <p>The dimension key.</p>
          * <p>This parameter is required.</p>
          */
         public Builder key(String key) {
@@ -90,6 +91,7 @@ public class ApmFilterConfig extends TeaModel {
         }
 
         /**
+         * <p>The filter type.</p>
          * <p>This parameter is required.</p>
          */
         public Builder type(String type) {
@@ -98,7 +100,7 @@ public class ApmFilterConfig extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The filter value. This can be empty when type is ALL or DISABLED.</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -119,6 +119,7 @@ public class UpdateServiceRecordRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class UpdateServiceRecordRequest extends Request {
         }
 
         /**
+         * <p>The service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class UpdateServiceRecordRequest extends Request {
         }
 
         /**
+         * <p>The entry content in JSON string format. The format varies depending on the recordType value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +173,8 @@ public class UpdateServiceRecordRequest extends Request {
         }
 
         /**
+         * <p>The type of the linked entry. Currently supported value:
+         * logCorrelation, which indicates application log association.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

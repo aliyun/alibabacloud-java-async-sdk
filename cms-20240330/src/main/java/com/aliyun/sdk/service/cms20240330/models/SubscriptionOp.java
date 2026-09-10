@@ -80,7 +80,7 @@ public class SubscriptionOp extends TeaModel {
         } 
 
         /**
-         * op.
+         * <p>The operation type.</p>
          */
         public Builder op(String op) {
             this.op = op;
@@ -88,7 +88,7 @@ public class SubscriptionOp extends TeaModel {
         }
 
         /**
-         * <p>create/update 必填</p>
+         * <p>Required for create and update operations.</p>
          */
         public Builder payload(SubscriptionForModify payload) {
             this.payload = payload;
@@ -96,7 +96,7 @@ public class SubscriptionOp extends TeaModel {
         }
 
         /**
-         * <p>update/remove 必填</p>
+         * <p>Required for update and remove operations.</p>
          */
         public Builder uuid(String uuid) {
             this.uuid = uuid;

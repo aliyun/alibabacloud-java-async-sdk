@@ -97,7 +97,7 @@ public class CreatePrometheusVirtualInstanceRequest extends Request {
         }
 
         /**
-         * <p>Each cloud product can only create one virtual instance in each region.</p>
+         * <p>Each cloud product supports only one virtual instance per region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

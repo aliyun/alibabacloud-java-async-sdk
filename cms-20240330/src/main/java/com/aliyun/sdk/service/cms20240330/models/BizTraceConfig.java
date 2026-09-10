@@ -145,7 +145,10 @@ public class BizTraceConfig extends TeaModel {
         } 
 
         /**
-         * advancedConfig.
+         * <p>The advanced configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sample&quot;:{&quot;strategy&quot;:&quot;BY_APP&quot;}}</p>
          */
         public Builder advancedConfig(String advancedConfig) {
             this.advancedConfig = advancedConfig;
@@ -153,7 +156,10 @@ public class BizTraceConfig extends TeaModel {
         }
 
         /**
-         * bizTraceCode.
+         * <p>The business trace identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>label_env</p>
          */
         public Builder bizTraceCode(String bizTraceCode) {
             this.bizTraceCode = bizTraceCode;
@@ -161,7 +167,10 @@ public class BizTraceConfig extends TeaModel {
         }
 
         /**
-         * bizTraceId.
+         * <p>The business trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e339260ed64c95d</p>
          */
         public Builder bizTraceId(String bizTraceId) {
             this.bizTraceId = bizTraceId;
@@ -169,7 +178,10 @@ public class BizTraceConfig extends TeaModel {
         }
 
         /**
-         * bizTraceName.
+         * <p>The business trace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>just test</p>
          */
         public Builder bizTraceName(String bizTraceName) {
             this.bizTraceName = bizTraceName;
@@ -177,7 +189,10 @@ public class BizTraceConfig extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-12-12 00:00:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -185,7 +200,10 @@ public class BizTraceConfig extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -193,7 +211,10 @@ public class BizTraceConfig extends TeaModel {
         }
 
         /**
-         * ruleConfig.
+         * <p>The list of configuration rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;entrancePid&quot;:&quot;xxxxx@b57c44xx6e86&quot;,&quot;rpcMatcher&quot;:{&quot;matchType&quot;:&quot;EQUALS&quot;,&quot;pattern&quot;:&quot;/createApp&quot;},&quot;characteristics&quot;:{&quot;operation&quot;:&quot;AND&quot;,&quot;rules&quot;:[{&quot;target&quot;:&quot;CUSTOM_EXTRACT&quot;,&quot;matcher&quot;:{&quot;matchType&quot;:&quot;CONTAINS&quot;,&quot;pattern&quot;:[]}}]}}]</p>
          */
         public Builder ruleConfig(String ruleConfig) {
             this.ruleConfig = ruleConfig;
@@ -201,7 +222,10 @@ public class BizTraceConfig extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-cms-xxxxxxx-cn-hangzhou</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

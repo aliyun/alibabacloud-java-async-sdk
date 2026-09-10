@@ -145,7 +145,7 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * <p>Workspace name</p>
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of records to return in this request.</p>
+         * <p>The maximum number of entries to return in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -170,7 +170,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>Token for the next query, an empty value indicates the last page.</p>
+         * <p>The token for the next query. An empty value indicates the last page.</p>
          * 
          * <strong>example:</strong>
          * <p>7-b81a-4bc9-bbfa-a50cc6988667</p>
@@ -182,7 +182,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekxxzuad5zzzz</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -191,7 +194,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * serviceName.
+         * <p>The application service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-demo</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("serviceName", serviceName);
@@ -200,10 +206,10 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * <p>Service type</p>
+         * <p>The service type.</p>
          * 
          * <strong>example:</strong>
-         * <p>apm</p>
+         * <p>TRACE</p>
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("serviceType", serviceType);
@@ -212,7 +218,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -281,7 +287,10 @@ public class ListServicesRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>evn</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -289,7 +298,10 @@ public class ListServicesRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;

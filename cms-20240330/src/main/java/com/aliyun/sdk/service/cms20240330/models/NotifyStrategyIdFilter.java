@@ -54,7 +54,10 @@ public class NotifyStrategyIdFilter extends TeaModel {
         } 
 
         /**
-         * eq.
+         * <p>The exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns_1234567890</p>
          */
         public Builder eq(String eq) {
             this.eq = eq;

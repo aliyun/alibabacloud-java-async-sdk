@@ -67,7 +67,10 @@ public class RepeatNotifySetting extends TeaModel {
         } 
 
         /**
-         * endIncidentState.
+         * <p>The state that ends the management event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Resolved&quot;</p>
          */
         public Builder endIncidentState(String endIncidentState) {
             this.endIncidentState = endIncidentState;
@@ -75,7 +78,10 @@ public class RepeatNotifySetting extends TeaModel {
         }
 
         /**
-         * repeatInterval.
+         * <p>The interval between repeated notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder repeatInterval(String repeatInterval) {
             this.repeatInterval = repeatInterval;

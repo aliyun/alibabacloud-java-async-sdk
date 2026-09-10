@@ -215,6 +215,7 @@ public class AddMemoriesRequest extends Request {
         } 
 
         /**
+         * <p>Workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,6 +228,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
+         * <p>Memory store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +241,10 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * agentId.
+         * <p>Application agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952730733889060865</p>
          */
         public Builder agentId(String agentId) {
             this.putBodyParameter("agentId", agentId);
@@ -248,7 +253,10 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * appId.
+         * <p>Application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mm_480d961a1b5e4efe84603f4cbc0f</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("appId", appId);
@@ -257,7 +265,10 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * asyncMode.
+         * <p>Asynchronous mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder asyncMode(Boolean asyncMode) {
             this.putBodyParameter("asyncMode", asyncMode);
@@ -266,7 +277,10 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * customInstructions.
+         * <p>Custom instructions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Your custom instructions here</p>
          */
         public Builder customInstructions(String customInstructions) {
             this.putBodyParameter("customInstructions", customInstructions);
@@ -275,7 +289,10 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * infer.
+         * <p>Infer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder infer(Boolean infer) {
             this.putBodyParameter("infer", infer);
@@ -284,7 +301,7 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * messages.
+         * <p>Messages.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.putBodyParameter("messages", messages);
@@ -293,7 +310,10 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * metadata.
+         * <p>Metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.putBodyParameter("metadata", metadata);
@@ -302,7 +322,10 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * runId.
+         * <p>Run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jr-80ded1d6953c64ea</p>
          */
         public Builder runId(String runId) {
             this.putBodyParameter("runId", runId);
@@ -320,7 +343,10 @@ public class AddMemoriesRequest extends Request {
         }
 
         /**
-         * userId.
+         * <p>User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user_001</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);
@@ -388,7 +414,10 @@ public class AddMemoriesRequest extends Request {
             } 
 
             /**
-             * content.
+             * <p>Content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My name is Zhang San and I live in Hangzhou.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -396,7 +425,10 @@ public class AddMemoriesRequest extends Request {
             }
 
             /**
-             * role.
+             * <p>Role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder role(String role) {
                 this.role = role;

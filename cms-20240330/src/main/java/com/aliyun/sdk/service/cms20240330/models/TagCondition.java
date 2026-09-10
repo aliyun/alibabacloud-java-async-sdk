@@ -80,7 +80,10 @@ public class TagCondition extends TeaModel {
         } 
 
         /**
-         * key.
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -88,7 +91,10 @@ public class TagCondition extends TeaModel {
         }
 
         /**
-         * op.
+         * <p>The operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EQ</p>
          */
         public Builder op(String op) {
             this.op = op;
@@ -96,7 +102,10 @@ public class TagCondition extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -102,7 +102,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         } 
 
         /**
-         * <p>Access Center Policy ID</p>
+         * <p>The ID of the Integration Center policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         }
 
         /**
-         * <p>Addon Release Name</p>
+         * <p>The name of the add-on release.</p>
          * 
          * <strong>example:</strong>
          * <p>release-1234357</p>
@@ -127,7 +127,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         }
 
         /**
-         * <p>Name of AddonRelease.</p>
+         * <p>The name of the AddonRelease.</p>
          * 
          * <strong>example:</strong>
          * <p>kafka-17201012937917</p>
@@ -139,7 +139,7 @@ public class ListIntegrationPolicyStorageRequirementsRequest extends Request {
         }
 
         /**
-         * <p>Storage Type, LogStore/Prometheus/TraceStore/EventStore/EntityStore.</p>
+         * <p>The storage type. Valid values: LogStore, Prometheus, TraceStore, EventStore, and EntityStore.</p>
          * 
          * <strong>example:</strong>
          * <p>LogStore</p>

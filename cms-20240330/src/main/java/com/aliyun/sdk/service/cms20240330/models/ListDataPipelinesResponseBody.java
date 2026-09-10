@@ -106,7 +106,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>本次请求允许返回的最大数据流水线数量。</p>
+         * <p>The maximum number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -117,7 +117,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用于获取下一页数据的令牌；为空表示没有下一页。</p>
+         * <p>The token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJvZmZzZXQiOjIwfQ==</p>
@@ -128,7 +128,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页返回的数据流水线完整配置与运行状态。</p>
+         * <p>The list of data pipelines.</p>
          */
         public Builder pipelines(java.util.List<Pipelines> pipelines) {
             this.pipelines = pipelines;
@@ -136,7 +136,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用于排查问题的请求唯一标识。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -147,7 +147,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>符合查询条件的数据流水线总数。</p>
+         * <p>The total number of data pipelines.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -268,7 +268,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>脱敏后保留的前缀字符数。</p>
+             * <p>The length of the prefix to keep.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -279,7 +279,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脱敏后保留的后缀字符数。</p>
+             * <p>The length of the suffix to keep.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -290,7 +290,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>keyword 模式下要匹配的敏感关键词。</p>
+             * <p>The sensitive keywords.</p>
              */
             public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
@@ -298,7 +298,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>替换敏感内容时使用的单个掩码字符。</p>
+             * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -311,7 +311,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脱敏规则模式。可选值为 buildin 或 keyword。</p>
+             * <p>The masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -322,7 +322,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>buildin 模式下要识别的内置敏感数据类型。</p>
+             * <p>The built-in sensitive types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -376,7 +376,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>用于匹配源工作空间服务的 glob 模式列表；仅支持星号（*）通配符。</p>
+             * <p>The list of service names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -433,7 +433,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>service_export 处理器要导入数据的目标工作空间名称。</p>
+             * <p>The target workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>target-checkout-ws</p>
@@ -568,7 +568,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>数据安全处理器生效的应用名称列表；星号（*）表示全部应用。</p>
+             * <p>The list of applications.</p>
              */
             public Builder applications(java.util.List<String> applications) {
                 this.applications = applications;
@@ -576,7 +576,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>filter 处理器使用的 SPL 条件表达式。</p>
+             * <p>The filter expression.</p>
              * 
              * <strong>example:</strong>
              * <p>attributes[&quot;http.route&quot;] != &quot;/health&quot;</p>
@@ -587,7 +587,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段处理器要处理的遥测字段路径列表。</p>
+             * <p>The list of fields.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -595,7 +595,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>mask_fields 处理器按顺序使用的脱敏规则。</p>
+             * <p>The list of masking rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -603,7 +603,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>spl 处理器执行的 ETL SPL pipeline expression，必须以星号（*）开头。</p>
+             * <p>The SPL script.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -616,7 +616,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>service_export 处理器的源服务名称选择器。</p>
+             * <p>The service selector.</p>
              */
             public Builder selector(Selector selector) {
                 this.selector = selector;
@@ -624,7 +624,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>service_export 处理器的目标工作空间配置。</p>
+             * <p>The processing target.</p>
              */
             public Builder target(Target target) {
                 this.target = target;
@@ -704,7 +704,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>与处理器类型对应的配置。</p>
+             * <p>The processor configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -712,7 +712,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>处理器在所在有序处理链中的唯一名称。</p>
+             * <p>The name of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>drop-health-check</p>
@@ -723,7 +723,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>平台注册的处理器类型，例如 filter、spl 或 service_export。</p>
+             * <p>The type of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>filter</p>
@@ -793,7 +793,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>命名输出的唯一名称，也是公开 Dataset 名称。</p>
+             * <p>The output name.</p>
              * 
              * <strong>example:</strong>
              * <p>checkout_route</p>
@@ -804,7 +804,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>该命名输出按数组顺序执行的处理器列表。</p>
+             * <p>The branch processors.</p>
              */
             public Builder processors(java.util.List<Processors> processors) {
                 this.processors = processors;
@@ -923,7 +923,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>脱敏后保留的前缀字符数。</p>
+             * <p>The length of the prefix to keep.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -934,7 +934,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脱敏后保留的后缀字符数。</p>
+             * <p>The length of the suffix to keep.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -945,7 +945,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>keyword 模式下要匹配的敏感关键词。</p>
+             * <p>The sensitive keywords.</p>
              */
             public Builder keys(java.util.List<String> keys) {
                 this.keys = keys;
@@ -953,7 +953,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>替换敏感内容时使用的单个掩码字符。</p>
+             * <p>The mask character.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -966,7 +966,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>脱敏规则模式。可选值为 buildin 或 keyword。</p>
+             * <p>The masking mode.</p>
              * 
              * <strong>example:</strong>
              * <p>keyword</p>
@@ -977,7 +977,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>buildin 模式下要识别的内置敏感数据类型。</p>
+             * <p>The built-in sensitive types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -1031,7 +1031,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>用于匹配源工作空间服务的 glob 模式列表；仅支持星号（*）通配符。</p>
+             * <p>The list of service names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1088,7 +1088,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>service_export 处理器要导入数据的目标工作空间名称。</p>
+             * <p>The target workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>target-checkout-ws</p>
@@ -1223,7 +1223,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>数据安全处理器生效的应用名称列表；星号（*）表示全部应用。</p>
+             * <p>The list of applications.</p>
              */
             public Builder applications(java.util.List<String> applications) {
                 this.applications = applications;
@@ -1231,7 +1231,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>filter 处理器使用的 SPL 条件表达式。</p>
+             * <p>The filter expression.</p>
              * 
              * <strong>example:</strong>
              * <p>attributes[&quot;http.route&quot;] != &quot;/health&quot;</p>
@@ -1242,7 +1242,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段处理器要处理的遥测字段路径列表。</p>
+             * <p>The list of fields.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -1250,7 +1250,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>mask_fields 处理器按顺序使用的脱敏规则。</p>
+             * <p>The list of masking rules.</p>
              */
             public Builder rules(java.util.List<ConfigRules> rules) {
                 this.rules = rules;
@@ -1258,7 +1258,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>spl 处理器执行的 ETL SPL pipeline expression，必须以星号（*）开头。</p>
+             * <p>The SPL script.</p>
              * 
              * <strong>example:</strong>
              * <ul>
@@ -1271,7 +1271,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>service_export 处理器的源服务名称选择器。</p>
+             * <p>The service selector.</p>
              */
             public Builder selector(ConfigSelector selector) {
                 this.selector = selector;
@@ -1279,7 +1279,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>service_export 处理器的目标工作空间配置。</p>
+             * <p>The processing target.</p>
              */
             public Builder target(ConfigTarget target) {
                 this.target = target;
@@ -1359,7 +1359,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>与处理器类型对应的配置。</p>
+             * <p>The processor configuration.</p>
              */
             public Builder config(ProcessorsConfig config) {
                 this.config = config;
@@ -1367,7 +1367,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>处理器在所在有序处理链中的唯一名称。</p>
+             * <p>The name of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>drop-health-check</p>
@@ -1378,7 +1378,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>平台注册的处理器类型，例如 filter、spl 或 service_export。</p>
+             * <p>The type of the processor.</p>
              * 
              * <strong>example:</strong>
              * <p>filter</p>
@@ -1487,7 +1487,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>该输出目标消费的非空、去重 Dataset 名称列表。</p>
+             * <p>The list of datasets.</p>
              */
             public Builder datasets(java.util.List<String> datasets) {
                 this.datasets = datasets;
@@ -1506,7 +1506,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输出目标在流水线内的唯一名称。</p>
+             * <p>The name of the output destination.</p>
              * 
              * <strong>example:</strong>
              * <p>error-archive</p>
@@ -1528,7 +1528,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>输出目标类型。第一版仅支持 logstore。</p>
+             * <p>The type of the output destination.</p>
              * 
              * <strong>example:</strong>
              * <p>logstore</p>
@@ -1598,7 +1598,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>回填范围的开始时间，使用 Unix 秒并对齐到 5 分钟边界。</p>
+             * <p>The start time.</p>
              * 
              * <strong>example:</strong>
              * <p>1722844800</p>
@@ -1609,7 +1609,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>回填范围的结束时间，使用 Unix 秒并对齐到 5 分钟边界。</p>
+             * <p>The end time.</p>
              * 
              * <strong>example:</strong>
              * <p>1722848400</p>
@@ -1692,7 +1692,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>数据源读取模式。可选值为 continuous 或 backfill。</p>
+             * <p>The run mode.</p>
              * 
              * <strong>example:</strong>
              * <p>continuous</p>
@@ -1703,7 +1703,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>continuous 模式的读取起点，支持 latest、earliest 或 Unix 秒时间戳。</p>
+             * <p>The read start point.</p>
              * 
              * <strong>example:</strong>
              * <p>latest</p>
@@ -1714,7 +1714,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>backfill 模式使用的有限时间范围。</p>
+             * <p>The backfill time range.</p>
              */
             public Builder timeRange(TimeRange timeRange) {
                 this.timeRange = timeRange;
@@ -1781,7 +1781,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>数据源的读取模式与起始范围配置。</p>
+             * <p>The datasource config.</p>
              */
             public Builder config(SourceConfig config) {
                 this.config = config;
@@ -1789,7 +1789,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>平台注册的逻辑数据源类型。首版 export 流水线使用 traces-default。</p>
+             * <p>The type of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>traces-default</p>
@@ -2013,7 +2013,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>数据流水线的创建时间，使用 ISO 8601 UTC 格式。</p>
+             * <p>The time when the pipeline was created.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
@@ -2026,7 +2026,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户提供的数据流水线说明。</p>
+             * <p>The description of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>Export selected trace services to the target workspace.</p>
@@ -2037,7 +2037,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据流水线类型。可选值为 default、custom 或 export。</p>
+             * <p>The type of the pipeline.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2049,7 +2049,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>从公共处理链结果分出的单层命名输出列表。</p>
+             * <p>The named outputs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder outputs(java.util.List<Outputs> outputs) {
@@ -2058,7 +2058,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>工作空间内唯一的数据流水线名称。</p>
+             * <p>The name of the pipeline.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2070,7 +2070,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>所有命名输出共享并按数组顺序执行的处理器列表。</p>
+             * <p>The common processors.</p>
              * <p>This parameter is required.</p>
              */
             public Builder processors(java.util.List<PipelinesProcessors> processors) {
@@ -2079,7 +2079,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>由 source.type 推导的只读遥测信号类型。</p>
+             * <p>The signal type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2091,7 +2091,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Dataset 到客户 Logstore 的绑定列表；default 和 export 流水线返回空数组。</p>
+             * <p>The output destinations.</p>
              * <p>This parameter is required.</p>
              */
             public Builder sinks(java.util.List<Sinks> sinks) {
@@ -2100,7 +2100,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据流水线读取的逻辑遥测数据源。</p>
+             * <p>The data source.</p>
              * <p>This parameter is required.</p>
              */
             public Builder source(Source source) {
@@ -2109,7 +2109,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据流水线的运行健康状态。</p>
+             * <p>The running status.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2121,7 +2121,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>运行状态的补充说明。</p>
+             * <p>The status message.</p>
              * 
              * <strong>example:</strong>
              * <p>Pipeline is running.</p>
@@ -2132,7 +2132,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据流水线的最后更新时间，使用 ISO 8601 UTC 格式。</p>
+             * <p>The time when the pipeline was last updated.</p>
              * <p>This parameter is required.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
@@ -2145,7 +2145,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最新成功提交的完整配置版本。</p>
+             * <p>The configuration version.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -145,7 +145,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         } 
 
         /**
-         * maxWidth.
+         * <p>The maximum width of the input control. This parameter is valid only for SELECT_PARAM and INPUT_PARAM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder maxWidth(Integer maxWidth) {
             this.maxWidth = maxWidth;
@@ -153,7 +156,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * minWidth.
+         * <p>The minimum width of the input control. This parameter is valid only for SELECT_PARAM and INPUT_PARAM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder minWidth(Integer minWidth) {
             this.minWidth = minWidth;
@@ -161,7 +167,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -169,7 +178,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * placeholderCn.
+         * <p>The Chinese placeholder text displayed on the frontend. This parameter is valid only for INPUT_PARAM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请输入值</p>
          */
         public Builder placeholderCn(String placeholderCn) {
             this.placeholderCn = placeholderCn;
@@ -177,7 +189,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * placeholderEn.
+         * <p>The English placeholder text displayed on the frontend. This parameter is valid only for INPUT_PARAM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enter value</p>
          */
         public Builder placeholderEn(String placeholderEn) {
             this.placeholderEn = placeholderEn;
@@ -185,7 +200,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>● TEXT_PARAM: A read-only text parameter defined by the backend. No user input control is displayed on the frontend.● INPUT_PARAM: An input box parameter.● SELECT_PARAM: A selection box parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT_PARAM</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -193,7 +211,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>staging</p>
          */
         public Builder value(String value) {
             this.value = value;
@@ -201,7 +222,7 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
         }
 
         /**
-         * values.
+         * <p>The list of available options in the drop-down list. This parameter is valid only for SELECT_PARAM.</p>
          */
         public Builder values(java.util.List<Values> values) {
             this.values = values;
@@ -280,7 +301,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
             } 
 
             /**
-             * labelCn.
+             * <p>The Chinese display name of the option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试环境</p>
              */
             public Builder labelCn(String labelCn) {
                 this.labelCn = labelCn;
@@ -288,7 +312,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
             }
 
             /**
-             * labelEn.
+             * <p>The English display name of the option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Staging</p>
              */
             public Builder labelEn(String labelEn) {
                 this.labelEn = labelEn;
@@ -296,7 +323,10 @@ public class AlertRuleAlertMetricParamDef extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>staging</p>
              */
             public Builder value(String value) {
                 this.value = value;

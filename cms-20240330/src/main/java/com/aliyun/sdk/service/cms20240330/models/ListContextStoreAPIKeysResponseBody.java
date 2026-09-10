@@ -106,7 +106,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>A pagination token. To retrieve the next page of results, include this value in the <code>nextToken</code> parameter of your next request. If this parameter is not returned, there are no more results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xCs4wJD41qEejNkappMSJ1OL2Ky2GeKLqmBLJrC61WrgUOj9F-31jHbo5Kgqzifv</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>The list of API keys.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -138,7 +147,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total count of entries that match the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>454</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -243,7 +255,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * apiKey.
+             * <p>The complete API key value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-3ac8d45d741e4f31b81aa6ee984ce9fd</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -251,7 +266,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
-             * contextStoreName.
+             * <p>The name of the context store.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-context-Store</p>
              */
             public Builder contextStoreName(String contextStoreName) {
                 this.contextStoreName = contextStoreName;
@@ -259,6 +277,7 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The time when the API key was created, represented as a Unix timestamp.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
              * 
              * <strong>example:</strong>
@@ -270,7 +289,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The display name of the API key. This name helps you identify the purpose of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Production Service Key</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,7 +300,10 @@ public class ListContextStoreAPIKeysResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-workspace</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

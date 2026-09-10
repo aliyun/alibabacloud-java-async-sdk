@@ -94,7 +94,10 @@ public class IncidentEscalationPolicyForModify extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace api monitor create test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -102,7 +105,10 @@ public class IncidentEscalationPolicyForModify extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the policy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -110,7 +116,7 @@ public class IncidentEscalationPolicyForModify extends TeaModel {
         }
 
         /**
-         * escalationStageList.
+         * <p>The list of escalation stages. This list defines multiple progressive escalation steps. Each stage contains trigger conditions and notification targets.</p>
          */
         public Builder escalationStageList(java.util.List<IncidentEscalationStageForView> escalationStageList) {
             this.escalationStageList = escalationStageList;
@@ -118,7 +124,11 @@ public class IncidentEscalationPolicyForModify extends TeaModel {
         }
 
         /**
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Critical-Alert-Escalation&quot;</p>
          */
         public Builder name(String name) {
             this.name = name;

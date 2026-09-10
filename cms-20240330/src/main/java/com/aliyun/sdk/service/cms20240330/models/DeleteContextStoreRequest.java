@@ -75,7 +75,11 @@ public class DeleteContextStoreRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putPathParameter("workspace", workspace);
@@ -84,7 +88,11 @@ public class DeleteContextStoreRequest extends Request {
         }
 
         /**
+         * <p>The context store name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-context-store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.putPathParameter("contextStoreName", contextStoreName);

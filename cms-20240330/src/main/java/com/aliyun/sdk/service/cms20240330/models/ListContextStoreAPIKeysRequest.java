@@ -101,7 +101,10 @@ public class ListContextStoreAPIKeysRequest extends Request {
         } 
 
         /**
-         * workspace.
+         * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.putPathParameter("workspace", workspace);
@@ -110,7 +113,10 @@ public class ListContextStoreAPIKeysRequest extends Request {
         }
 
         /**
-         * contextStoreName.
+         * <p>The name of the context store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-context-Store</p>
          */
         public Builder contextStoreName(String contextStoreName) {
             this.putPathParameter("contextStoreName", contextStoreName);
@@ -119,7 +125,10 @@ public class ListContextStoreAPIKeysRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries to return in a single request. If this parameter is not specified, the service returns a default number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -128,7 +137,10 @@ public class ListContextStoreAPIKeysRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token used to retrieve the next page of results. Leave this parameter empty to retrieve the first page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>615dfe7fd00f699ea94d5e63ba564aaf22450858c58f1387cc78f883b2254ab47232ce40fa95d9cb</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

@@ -105,6 +105,7 @@ public class ExecuteQueryRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
+         * <p>The dataset name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
+         * <p>The query statement to execute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class ExecuteQueryRequest extends Request {
         }
 
         /**
+         * <p>The query type. Valid values: SQL and SPL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

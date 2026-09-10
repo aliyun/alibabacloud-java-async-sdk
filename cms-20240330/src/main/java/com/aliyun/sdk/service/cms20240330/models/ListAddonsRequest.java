@@ -124,7 +124,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * aliyunLang.
+         * <p>The language. Valid values: zh and en. The default value is zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("aliyunLang", aliyunLang);
@@ -133,7 +136,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * category.
+         * <p>Tag filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -142,7 +148,7 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * regexp.
+         * <p>Specifies whether to use regular expressions for the search. The default value is false.</p>
          */
         public Builder regexp(Boolean regexp) {
             this.putQueryParameter("regexp", regexp);
@@ -151,7 +157,10 @@ public class ListAddonsRequest extends Request {
         }
 
         /**
-         * search.
+         * <p>The search keyword. You can search for add-ons by name, description, or keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105095</p>
          */
         public Builder search(String search) {
             this.putQueryParameter("search", search);

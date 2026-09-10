@@ -186,6 +186,7 @@ public class UpdateDeliveryTaskRequest extends Request {
         } 
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,10 @@ public class UpdateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * dataSourceId.
+         * <p>The data source ID (Prometheus instance ID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rw-5f2b4sc7es4d66</p>
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putBodyParameter("dataSourceId", dataSourceId);
@@ -207,7 +211,7 @@ public class UpdateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * externalLabels.
+         * <p>The additional labels attached to all delivered metrics. The key is the label name and the value is the label value.</p>
          */
         public Builder externalLabels(java.util.Map<String, String> externalLabels) {
             this.putBodyParameter("externalLabels", externalLabels);
@@ -216,7 +220,7 @@ public class UpdateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * labelFilters.
+         * <p>The metric filter conditions. The entire value is replaced and incremental merging is not performed.</p>
          */
         public Builder labelFilters(java.util.Map<String, String> labelFilters) {
             this.putBodyParameter("labelFilters", labelFilters);
@@ -225,7 +229,10 @@ public class UpdateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * labelFiltersType.
+         * <p>The metric filtering mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Deny</p>
          */
         public Builder labelFiltersType(String labelFiltersType) {
             this.putBodyParameter("labelFiltersType", labelFiltersType);
@@ -234,7 +241,10 @@ public class UpdateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzoiafjtr7zyq</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -243,7 +253,7 @@ public class UpdateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * sinkList.
+         * <p>The list of delivery targets.</p>
          */
         public Builder sinkList(java.util.List<SinkList> sinkList) {
             this.putBodyParameter("sinkList", sinkList);
@@ -252,7 +262,15 @@ public class UpdateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The task status. This parameter is used to start or stop a task. Valid values:</p>
+         * <ul>
+         * <li>Enable: enables the task.</li>
+         * <li>Disable: disables the task.</li>
+         * <li>Running: the task is running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -261,7 +279,10 @@ public class UpdateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * taskDescription.
+         * <p>The task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>updated desc</p>
          */
         public Builder taskDescription(String taskDescription) {
             this.putBodyParameter("taskDescription", taskDescription);
@@ -270,7 +291,10 @@ public class UpdateDeliveryTaskRequest extends Request {
         }
 
         /**
-         * taskName.
+         * <p>The task name. The name can contain letters, digits, underscores (_), and hyphens (-), and can be in Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new-task-name</p>
          */
         public Builder taskName(String taskName) {
             this.putBodyParameter("taskName", taskName);
@@ -338,7 +362,7 @@ public class UpdateDeliveryTaskRequest extends Request {
             } 
 
             /**
-             * sinkConfigs.
+             * <p>The detailed configuration of the delivery target. The meanings of key/value pairs vary depending on the sinkType.</p>
              */
             public Builder sinkConfigs(java.util.Map<String, String> sinkConfigs) {
                 this.sinkConfigs = sinkConfigs;
@@ -346,7 +370,10 @@ public class UpdateDeliveryTaskRequest extends Request {
             }
 
             /**
-             * sinkType.
+             * <p>The delivery target type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Prometheus</p>
              */
             public Builder sinkType(String sinkType) {
                 this.sinkType = sinkType;

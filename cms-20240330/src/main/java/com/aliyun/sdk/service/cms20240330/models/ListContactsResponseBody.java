@@ -106,7 +106,7 @@ public class ListContactsResponseBody extends TeaModel {
         } 
 
         /**
-         * contacts.
+         * <p>The list of contacts.</p>
          */
         public Builder contacts(java.util.List<Contacts> contacts) {
             this.contacts = contacts;
@@ -114,7 +114,10 @@ public class ListContactsResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListContactsResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of entries per page. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +147,10 @@ public class ListContactsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
          */
         public Builder total(Long total) {
             this.total = total;
@@ -324,7 +333,10 @@ public class ListContactsResponseBody extends TeaModel {
             } 
 
             /**
-             * contactId.
+             * <p>The contact ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -332,7 +344,10 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * email.
+             * <p>The email address of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -340,7 +355,10 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * emailVerify.
+             * <p>Indicates whether the email address is verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailVerify(Boolean emailVerify) {
                 this.emailVerify = emailVerify;
@@ -348,7 +366,7 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * groupList.
+             * <p>The contact groups to which the contact belongs.</p>
              */
             public Builder groupList(java.util.List<String> groupList) {
                 this.groupList = groupList;
@@ -356,7 +374,7 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * imUserIds.
+             * <p>The instant messaging user ID mappings. Multiple instant messaging tools are supported.</p>
              */
             public Builder imUserIds(java.util.Map<String, String> imUserIds) {
                 this.imUserIds = imUserIds;
@@ -364,7 +382,10 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * lang.
+             * <p>The language.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh_CN</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -372,7 +393,10 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The contact name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -380,7 +404,10 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * phone.
+             * <p>The phone number of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>130123456789</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -388,7 +415,10 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * phoneVerify.
+             * <p>Indicates whether the phone number of the contact is verified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder phoneVerify(Boolean phoneVerify) {
                 this.phoneVerify = phoneVerify;
@@ -396,7 +426,10 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-22 02:21:51</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -404,7 +437,10 @@ public class ListContactsResponseBody extends TeaModel {
             }
 
             /**
-             * workspace.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-cms-5884500827389836-cn-hangzhou</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

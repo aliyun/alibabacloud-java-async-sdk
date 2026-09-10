@@ -67,7 +67,10 @@ public class OpenCmsServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * enabled.
+         * <p>Indicates whether the service or commodity is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;

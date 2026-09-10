@@ -145,7 +145,10 @@ public class IncidentEscalationStruct extends TeaModel {
         } 
 
         /**
-         * createTime.
+         * <p>The time when the event escalation was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58Z</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -153,7 +156,10 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>When an alert is not acknowledged, notify the operations team, on-duty manager, and CTO sequentially.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -161,7 +167,10 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * incidentEscalationId.
+         * <p>The ID of the event escalation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52631388567</p>
          */
         public Builder incidentEscalationId(String incidentEscalationId) {
             this.incidentEscalationId = incidentEscalationId;
@@ -169,7 +178,10 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * modifyTime.
+         * <p>The time when the event escalation was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58Z</p>
          */
         public Builder modifyTime(Long modifyTime) {
             this.modifyTime = modifyTime;
@@ -177,7 +189,10 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Production Environment Alert Escalation Policy.</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -185,7 +200,10 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -193,7 +211,7 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * stage.
+         * <p>The stages.</p>
          */
         public Builder stage(java.util.List<IncidentEscalationStageStruct> stage) {
             this.stage = stage;
@@ -201,7 +219,10 @@ public class IncidentEscalationStruct extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;

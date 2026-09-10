@@ -67,7 +67,7 @@ public class AlertRuleLabelFilter extends TeaModel {
         } 
 
         /**
-         * labels.
+         * <p>The label filter.</p>
          */
         public Builder labels(java.util.Map<String, String> labels) {
             this.labels = labels;
@@ -75,7 +75,10 @@ public class AlertRuleLabelFilter extends TeaModel {
         }
 
         /**
-         * opt.
+         * <p>The relationship operator between multiple labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
          */
         public Builder opt(String opt) {
             this.opt = opt;

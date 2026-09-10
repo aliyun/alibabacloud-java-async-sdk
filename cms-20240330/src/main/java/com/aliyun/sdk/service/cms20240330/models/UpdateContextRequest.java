@@ -160,6 +160,7 @@ public class UpdateContextRequest extends Request {
         } 
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +173,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
+         * <p>The context store name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +186,7 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
+         * <p>The context ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +199,10 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * content.
+         * <p>The updated text for the long-term memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Users prefer to first view the SLS error logs, index configuration, and the most recent Agent execution trace.</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -205,7 +211,14 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * experience.
+         * <p>The experience object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;taskType&quot;: &quot;troubleshooting&quot;,
+         *     &quot;complexity&quot;: &quot;medium&quot;,
+         *     &quot;confidence&quot;: 0.95
+         * }</p>
          */
         public Builder experience(java.util.Map<String, ?> experience) {
             this.putBodyParameter("experience", experience);
@@ -214,7 +227,10 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * metadata.
+         * <p>A set of key-value pairs to attach to an object for storing custom information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.putBodyParameter("metadata", metadata);
@@ -223,7 +239,22 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * payload.
+         * <p>The payload to update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;userId&quot;: &quot;u-10001&quot;,
+         *     &quot;agentId&quot;: &quot;sls-agent&quot;,
+         *     &quot;appId&quot;: &quot;console&quot;,
+         *     &quot;categories&quot;: [
+         *       &quot;preference&quot;
+         *     ],
+         *     &quot;source&quot;: &quot;user_confirmed&quot;,
+         *     &quot;topic&quot;: &quot;debugging_preference&quot;,
+         *     &quot;immutable&quot;: false,
+         *     &quot;createdAt&quot;: 1776319200,
+         *     &quot;updatedAt&quot;: 1776319200
+         *   }</p>
          */
         public Builder payload(java.util.Map<String, ?> payload) {
             this.putBodyParameter("payload", payload);
@@ -232,7 +263,10 @@ public class UpdateContextRequest extends Request {
         }
 
         /**
-         * triggerCondition.
+         * <p>The trigger condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Identify and troubleshoot SLs issues</p>
          */
         public Builder triggerCondition(String triggerCondition) {
             this.putBodyParameter("triggerCondition", triggerCondition);

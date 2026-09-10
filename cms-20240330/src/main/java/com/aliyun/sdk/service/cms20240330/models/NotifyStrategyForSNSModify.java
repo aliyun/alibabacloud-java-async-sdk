@@ -121,7 +121,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         } 
 
         /**
-         * customTemplateEntries.
+         * <p>The notification channel templates.</p>
          */
         public Builder customTemplateEntries(java.util.List<CustomTemplateEntries> customTemplateEntries) {
             this.customTemplateEntries = customTemplateEntries;
@@ -129,7 +129,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -137,7 +140,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         }
 
         /**
-         * enableIncidentManagement.
+         * <p>Specifies whether to enable incident management.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableIncidentManagement(Boolean enableIncidentManagement) {
             this.enableIncidentManagement = enableIncidentManagement;
@@ -145,6 +151,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         }
 
         /**
+         * <p>The grouping settings.</p>
          * <p>This parameter is required.</p>
          */
         public Builder groupingSetting(GroupingSetting groupingSetting) {
@@ -153,7 +160,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         }
 
         /**
-         * ignoreRestoredNotification.
+         * <p>Specifies whether to send a notification when the alert is recovered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ignoreRestoredNotification(Boolean ignoreRestoredNotification) {
             this.ignoreRestoredNotification = ignoreRestoredNotification;
@@ -161,6 +171,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
         }
 
         /**
+         * <p>The notification channel routing settings.</p>
          * <p>This parameter is required.</p>
          */
         public Builder routes(java.util.List<Routes> routes) {
@@ -227,7 +238,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * targetType.
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not take effect. The actual purpose of the template is determined by the type field of the template object referenced by templateUuid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DING</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -235,7 +249,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * templateUuid.
+             * <p>The UUID of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>adef12efca3f-8728-1928-eeaac12ef9ad92</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;
@@ -328,7 +345,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * groupingKeys.
+             * <p>The grouping keys.</p>
              */
             public Builder groupingKeys(java.util.List<String> groupingKeys) {
                 this.groupingKeys = groupingKeys;
@@ -336,7 +353,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * periodMin.
+             * <p>The check period in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodMin(Integer periodMin) {
                 this.periodMin = periodMin;
@@ -344,7 +364,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * silenceSec.
+             * <p>The silence duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder silenceSec(Integer silenceSec) {
                 this.silenceSec = silenceSec;
@@ -352,7 +375,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * times.
+             * <p>The number of times the condition is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -434,11 +460,11 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * <p>通知渠道类型，必须为以下大写枚举值之一：DING（钉钉机器人）、WEIXIN（企业微信机器人）、FEISHU（飞书机器人）、SLACK、TEAMS、WEBHOOK（自定义 Webhook）、CONTACT（联系人，需配合 enabledSubChannels 指定子渠道）、GROUP（联系人组）、DUTY（值班表）、DING_COOL_APP（钉钉酷应用）。注意：不支持 EMAIL/SMS 等小写值，邮件/短信/电话通知请使用 channelType=CONTACT 并在 enabledSubChannels 中指定 EMAIL/SMS/VOICE。</p>
+             * <p>The channel type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>WEBHOOK</p>
+             * <p>DING</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -446,7 +472,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>仅当 channelType 为 CONTACT/GROUP/DUTY 时必填。可选值：EMAIL（邮件）、SMS（短信）、VOICE（电话）、DING（钉钉工作通知）、WEIXIN（企微消息）、FEISHU（飞书消息）、WEBHOOK。例如要邮件+短信通知联系人，设 channelType=CONTACT, enabledSubChannels=[&quot;EMAIL&quot;,&quot;SMS&quot;]。其他 channelType（如 WEBHOOK/DING）无需设置此字段。</p>
+             * <p>The enabled notification types.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;EMAIL&quot;,&quot;SMS&quot;]</p>
@@ -457,7 +483,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>接收方标识列表。WEBHOOK 类型填 webhook uuid；DING/WEIXIN/FEISHU 填机器人 uuid；CONTACT 填联系人 ID；GROUP 填联系人组 ID；DUTY 填排班 uuid。至少一个元素。</p>
+             * <p>The channel receivers.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -554,7 +580,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * <p>一周中哪几天生效，数组元素取值范围 0-6（0=周日，1=周一，2=周二...6=周六）。注意：不支持 7，最大值为 6。全周生效示例：[0,1,2,3,4,5,6]；仅工作日：[1,2,3,4,5]</p>
+             * <p>The effective days of the week (Monday through Sunday).</p>
              * 
              * <strong>example:</strong>
              * <p>[0,1,2,3,4,5,6]</p>
@@ -565,10 +591,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>当天结束时间，从00:00起的分钟数，范围 0-1439（23*60+59=1439 表示 23:59）</p>
+             * <p>The end time in minutes.</p>
              * 
              * <strong>example:</strong>
-             * <p>1439</p>
+             * <p>1</p>
              */
             public Builder endTimeInMinute(Integer endTimeInMinute) {
                 this.endTimeInMinute = endTimeInMinute;
@@ -576,10 +602,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>当天开始时间，从00:00起的分钟数，范围 0-1439（0 表示 00:00）</p>
+             * <p>The start time in minutes.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>59</p>
              */
             public Builder startTimeInMinute(Integer startTimeInMinute) {
                 this.startTimeInMinute = startTimeInMinute;
@@ -587,7 +613,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>IANA 时区标识，如 Asia/Shanghai、America/Los_Angeles</p>
+             * <p>The time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -670,7 +696,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * field.
+             * <p>The JSON path of the field, such as labels._cms_rule_name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>subject</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -678,7 +707,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * op.
+             * <p>The comparison operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EQ</p>
              */
             public Builder op(String op) {
                 this.op = op;
@@ -686,7 +718,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pod OOM</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -766,7 +801,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * conditions.
+             * <p>The subscription conditions.</p>
              */
             public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
@@ -774,7 +809,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * expression.
+             * <p>If expression is not empty, it takes precedence and relation is ignored. If expression is empty or not specified, the system uses relation (AND or OR) to perform a simple AND/OR operation on all conditions. Condition numbers correspond to the indexes of the conditions array (starting from 1). Each condition evaluates whether a single event field matches by using field (the event field path, which supports dot-separated nesting such as resource.tags.pod), op (the operator, such as CONTAIN, EQ, or IN), and value (the match value).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(1 AND 2 )OR 3</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -782,7 +820,10 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * relation.
+             * <p>The relationship between conditions. If an expression is configured, the expression takes higher precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -901,7 +942,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             } 
 
             /**
-             * channels.
+             * <p>The notification channels.</p>
              */
             public Builder channels(java.util.List<Channels> channels) {
                 this.channels = channels;
@@ -909,7 +950,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * digitalEmployeeName.
+             * <p>The digital employee name.</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;
@@ -917,7 +958,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * <p>通知生效时间段设置，定义在哪些天的哪个时间范围内发送通知</p>
+             * <p>The effective time range.</p>
              */
             public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
                 this.effectTimeRange = effectTimeRange;
@@ -925,7 +966,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * enableRca.
+             * <p>Specifies whether to enable root cause analysis (RCA).</p>
              */
             public Builder enableRca(Boolean enableRca) {
                 this.enableRca = enableRca;
@@ -933,7 +974,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * filterSetting.
+             * <p>The route-level filter. This is different from the top-level subscription.filterSetting.</p>
              */
             public Builder filterSetting(FilterSetting filterSetting) {
                 this.filterSetting = filterSetting;
@@ -941,7 +982,7 @@ public class NotifyStrategyForSNSModify extends TeaModel {
             }
 
             /**
-             * severities.
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not take effect. Route matching only checks filterSetting and effectTimeRange.</p>
              */
             public Builder severities(java.util.List<String> severities) {
                 this.severities = severities;

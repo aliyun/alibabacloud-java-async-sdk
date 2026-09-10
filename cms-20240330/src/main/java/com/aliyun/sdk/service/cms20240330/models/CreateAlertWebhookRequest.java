@@ -182,7 +182,14 @@ public class CreateAlertWebhookRequest extends Request {
         }
 
         /**
-         * contentType.
+         * <p>The content type of the data. Valid values:</p>
+         * <ul>
+         * <li>JSON (default)</li>
+         * <li>FORM</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>JSON</p>
          */
         public Builder contentType(String contentType) {
             this.putBodyParameter("contentType", contentType);
@@ -191,7 +198,7 @@ public class CreateAlertWebhookRequest extends Request {
         }
 
         /**
-         * <p>headers</p>
+         * <p>The collection of HTTP request headers.</p>
          */
         public Builder headers(java.util.Map<String, String> headers) {
             this.putBodyParameter("headers", headers);
@@ -200,7 +207,14 @@ public class CreateAlertWebhookRequest extends Request {
         }
 
         /**
-         * lang.
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li>zh_CN</li>
+         * <li>en_US</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_CN</p>
          */
         public Builder lang(String lang) {
             this.putBodyParameter("lang", lang);
@@ -209,7 +223,14 @@ public class CreateAlertWebhookRequest extends Request {
         }
 
         /**
-         * method.
+         * <p>The request method. Valid values:</p>
+         * <ul>
+         * <li>GET</li>
+         * <li>POST</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         public Builder method(String method) {
             this.putBodyParameter("method", method);
@@ -218,6 +239,7 @@ public class CreateAlertWebhookRequest extends Request {
         }
 
         /**
+         * <p>The webhook name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +252,7 @@ public class CreateAlertWebhookRequest extends Request {
         }
 
         /**
+         * <p>The alert callback URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +265,10 @@ public class CreateAlertWebhookRequest extends Request {
         }
 
         /**
-         * webhookId.
+         * <p>The unique identifier of the webhook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder webhookId(String webhookId) {
             this.putBodyParameter("webhookId", webhookId);
@@ -251,7 +277,10 @@ public class CreateAlertWebhookRequest extends Request {
         }
 
         /**
-         * workspace.
+         * <p>The workspace identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-workspace</p>
          */
         public Builder workspace(String workspace) {
             this.putBodyParameter("workspace", workspace);

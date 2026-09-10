@@ -82,7 +82,7 @@ public class MeasureList extends TeaModel {
         } 
 
         /**
-         * groupBy.
+         * <p>The grouping dimension.</p>
          */
         public Builder groupBy(java.util.List<String> groupBy) {
             this.groupBy = groupBy;
@@ -90,7 +90,11 @@ public class MeasureList extends TeaModel {
         }
 
         /**
+         * <p>The metric code.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu_usage</p>
          */
         public Builder measureCode(String measureCode) {
             this.measureCode = measureCode;
@@ -98,7 +102,11 @@ public class MeasureList extends TeaModel {
         }
 
         /**
+         * <p>The query time window, in seconds.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder windowSecs(Integer windowSecs) {
             this.windowSecs = windowSecs;

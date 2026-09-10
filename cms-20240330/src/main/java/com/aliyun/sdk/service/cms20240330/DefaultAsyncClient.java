@@ -138,7 +138,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Used to create a site monitoring task</p>
+     * <p>Creates a site monitoring task.</p>
      * 
      * @param request the request parameters of CreateAddonRelease  CreateAddonReleaseRequest
      * @return CreateAddonReleaseResponse
@@ -176,6 +176,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a webhook notification recipient.</p>
+     * 
      * @param request the request parameters of CreateAlertWebhook  CreateAlertWebhookRequest
      * @return CreateAlertWebhookResponse
      */
@@ -267,7 +270,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>在指定工作空间中创建一条数据流水线。</p>
+     * <p>Creates a data pipeline in a specified workspace.</p>
      * 
      * @param request the request parameters of CreateDataPipeline  CreateDataPipelineRequest
      * @return CreateDataPipelineResponse
@@ -342,7 +345,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This interface is used to support users in creating event integration.</p>
+     * <p>This operation creates an event integration.</p>
      * 
      * @param request the request parameters of CreateIntegrationPolicy  CreateIntegrationPolicyRequest
      * @return CreateIntegrationPolicyResponse
@@ -356,6 +359,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateIntegrationPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateMaintainWindow  CreateMaintainWindowRequest
+     * @return CreateMaintainWindowResponse
+     */
+    @Override
+    public CompletableFuture<CreateMaintainWindowResponse> createMaintainWindow(CreateMaintainWindowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMaintainWindow").setMethod(HttpMethod.POST).setPathRegex("/maintainWindows").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMaintainWindowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMaintainWindowResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -380,6 +401,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a notification policy in a specified workspace. The notifyStrategy field in the request body NotifyPolicyConfig is required, while subscription and responsePlan are optional. After the policy is created, the generated policy UUID and complete policy details are returned. If a policy with the same Policy Name already exists in the workspace, a ConflictName error is returned.</p>
+     * 
      * @param request the request parameters of CreateNotifyPolicy  CreateNotifyPolicyRequest
      * @return CreateNotifyPolicyResponse
      */
@@ -435,7 +459,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Used to create a site monitoring task</p>
+     * <p>Creates a site monitoring task.</p>
      * 
      * @param request the request parameters of CreatePrometheusView  CreatePrometheusViewRequest
      * @return CreatePrometheusViewResponse
@@ -456,7 +480,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Create a Prometheus monitoring virtual instance.</p>
+     * <p>Creates a virtual instance for Prometheus monitoring.</p>
      * 
      * @param request the request parameters of CreatePrometheusVirtualInstance  CreatePrometheusVirtualInstanceRequest
      * @return CreatePrometheusVirtualInstanceResponse
@@ -530,6 +554,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a service task for an application in a specified workspace.
+     * Common use cases:</p>
+     * <ul>
+     * <li>heapdump: Triggers a JVM heap dump.</li>
+     * <li>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</li>
+     * <li>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</li>
+     * <li>LiveDebug Code Replace: Performs hot code replacement.
+     * After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateServiceTask  CreateServiceTaskRequest
      * @return CreateServiceTaskResponse
      */
@@ -567,7 +602,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Create Umodel configuration in the specified workspace</p>
+     * <p>Creates a Umodel configuration in a specified workspace.</p>
      * 
      * @param request the request parameters of CreateUmodel  CreateUmodelRequest
      * @return CreateUmodelResponse
@@ -750,7 +785,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>删除指定工作空间中的一条数据流水线。</p>
+     * <p>Deletes a data pipeline from a specified workspace.</p>
      * 
      * @param request the request parameters of DeleteDataPipeline  DeleteDataPipelineRequest
      * @return DeleteDataPipelineResponse
@@ -842,6 +877,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>删除指定的静默策略。删除成功后，服务通过异步消息刷新运行时缓存，因此短时间内仍可能按删除前的策略处理事件。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * @param request the request parameters of DeleteMaintainWindow  DeleteMaintainWindowRequest
+     * @return DeleteMaintainWindowResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMaintainWindowResponse> deleteMaintainWindow(DeleteMaintainWindowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMaintainWindow").setMethod(HttpMethod.DELETE).setPathRegex("/maintainWindows/{maintainWindowId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMaintainWindowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMaintainWindowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteMemories  DeleteMemoriesRequest
      * @return DeleteMemoriesResponse
      */
@@ -896,6 +952,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a notification policy by specifying the workspace and uuid. Returns success to indicate the deletion result and the uuid of the deleted policy.</p>
+     * 
      * @param request the request parameters of DeleteNotifyPolicy  DeleteNotifyPolicyRequest
      * @return DeleteNotifyPolicyResponse
      */
@@ -933,7 +992,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Delete a Prometheus instance.</p>
+     * <p>Deletes a Prometheus instance.</p>
      * 
      * @param request the request parameters of DeletePrometheusInstance  DeletePrometheusInstanceRequest
      * @return DeletePrometheusInstanceResponse
@@ -954,7 +1013,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Delete prometheus view instance.</p>
+     * <p>Deletes a Prometheus view instance.</p>
      * 
      * @param request the request parameters of DeletePrometheusView  DeletePrometheusViewRequest
      * @return DeletePrometheusViewResponse
@@ -1010,6 +1069,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a created service association entry.</p>
+     * 
      * @param request the request parameters of DeleteServiceRecord  DeleteServiceRecordRequest
      * @return DeleteServiceRecordResponse
      */
@@ -1028,6 +1090,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified service task by taskId.
+     * heapdump: Simultaneously deletes the corresponding heap dump record.
+     * LiveDebug: After deleting the task record, synchronously updates the live_debug aggregation configuration on ConfigServer.</p>
+     * 
      * @param request the request parameters of DeleteServiceTask  DeleteServiceTaskRequest
      * @return DeleteServiceTaskResponse
      */
@@ -1047,7 +1114,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Delete the Umodel under the specified workspace</p>
+     * <p>Deletes a Umodel from a specified workspace.</p>
      * 
      * @param request the request parameters of DeleteUmodel  DeleteUmodelRequest
      * @return DeleteUmodelResponse
@@ -1086,7 +1153,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Delete the Umodel Data under a specified workspace</p>
+     * <p>Deletes Umodel data from a specified workspace.</p>
      * 
      * @param request the request parameters of DeleteUmodelData  DeleteUmodelDataRequest
      * @return DeleteUmodelDataResponse
@@ -1124,6 +1191,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of CloudMonitor monitoring metrics metadata.</p>
+     * 
      * @param request the request parameters of DescribeMetricMetaList  DescribeMetricMetaListRequest
      * @return DescribeMetricMetaListResponse
      */
@@ -1160,6 +1230,30 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>暂停指定的静默策略。暂停成功后，服务通过异步消息刷新运行时缓存；刷新完成后该策略不再参与事件静默判断，短时间内仍可能按暂停前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * @param request the request parameters of DisableMaintainWindow  DisableMaintainWindowRequest
+     * @return DisableMaintainWindowResponse
+     */
+    @Override
+    public CompletableFuture<DisableMaintainWindowResponse> disableMaintainWindow(DisableMaintainWindowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DisableMaintainWindow").setMethod(HttpMethod.PUT).setPathRegex("/maintainWindows/{maintainWindowId}/disable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableMaintainWindowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableMaintainWindowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Disables a notification policy by specifying the workspace and uuid (path parameter). Returns success and the policy uuid.</p>
+     * 
      * @param request the request parameters of DisableNotifyPolicy  DisableNotifyPolicyRequest
      * @return DisableNotifyPolicyResponse
      */
@@ -1178,6 +1272,30 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>启用指定的静默策略。启用成功后，服务通过异步消息刷新运行时缓存；刷新完成后，命中该策略过滤条件且处于生效时间内的事件不会触发通知，短时间内仍可能按启用前状态处理事件。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * @param request the request parameters of EnableMaintainWindow  EnableMaintainWindowRequest
+     * @return EnableMaintainWindowResponse
+     */
+    @Override
+    public CompletableFuture<EnableMaintainWindowResponse> enableMaintainWindow(EnableMaintainWindowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EnableMaintainWindow").setMethod(HttpMethod.PUT).setPathRegex("/maintainWindows/{maintainWindowId}/enable").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableMaintainWindowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableMaintainWindowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enables a notification policy by specifying the workspace and uuid path parameters. Returns success and the policy uuid.</p>
+     * 
      * @param request the request parameters of EnableNotifyPolicy  EnableNotifyPolicyRequest
      * @return EnableNotifyPolicyResponse
      */
@@ -1214,6 +1332,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of an add-on.</p>
+     * 
      * @param request the request parameters of GetAddon  GetAddonRequest
      * @return GetAddonResponse
      */
@@ -1232,6 +1353,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of how to modify version <code>1</code> of alert template <code>123456</code>. In this example, the alert level is set to <code>Critical</code>, the statistical method is set to <code>Average</code>, the comparison operator for the alert threshold is set to <code>GreaterThanOrEqualToThreshold</code>, the alert threshold is set to <code>90</code>, and the number of retries is set to <code>3</code>. The response indicates that the alert template was successfully modified.</p>
+     * 
      * @param request the request parameters of GetAddonCodeTemplate  GetAddonCodeTemplateRequest
      * @return GetAddonCodeTemplateResponse
      */
@@ -1268,6 +1392,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the schema of an add-on.</p>
+     * 
      * @param request the request parameters of GetAddonSchema  GetAddonSchemaRequest
      * @return GetAddonSchemaResponse
      */
@@ -1340,6 +1467,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation queries all entities of a specific cloud service within a specified time range.</li>
+     * <li>The <code>from</code> and <code>to</code> parameters specify the time range of the query in seconds-level timestamps.</li>
+     * <li>The <code>spl</code> parameter supports entityStore query statements to filter or select the required entities and their properties.</li>
+     * <li>If you need only specific fields, use the <code>project</code> clause in <code>spl</code> to filter them.</li>
+     * <li>The response contains the specific property values of each entity and the corresponding list of property names for easy parsing and processing.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetCloudResourceData  GetCloudResourceDataRequest
      * @return GetCloudResourceDataResponse
      */
@@ -1358,6 +1495,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The product and service request parameters cannot be specified in the same request.</p>
+     * 
      * @param request the request parameters of GetCmsService  GetCmsServiceRequest
      * @return GetCmsServiceResponse
      */
@@ -1413,7 +1553,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>查询指定工作空间中一条数据流水线的配置与运行状态。</p>
+     * <p>Queries the configuration and running status of a data pipeline in a specified workspace.</p>
      * 
      * @param request the request parameters of GetDataPipeline  GetDataPipelineRequest
      * @return GetDataPipelineResponse
@@ -1451,6 +1591,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified site monitoring task.</p>
+     * 
      * @param request the request parameters of GetDeliveryTask  GetDeliveryTaskRequest
      * @return GetDeliveryTaskResponse
      */
@@ -1523,6 +1666,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is not available in the API Explorer.</p>
+     * 
      * @param request the request parameters of GetIntegrationVersionForCS  GetIntegrationVersionForCSRequest
      * @return GetIntegrationVersionForCSResponse
      */
@@ -1535,6 +1681,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetIntegrationVersionForCSResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询指定静默策略的详细配置，包括策略名称、描述、启用状态、过滤条件、生效时间配置以及创建时间和更新时间。当前查询结果不返回 workspaceFilterSetting。指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * @param request the request parameters of GetMaintainWindow  GetMaintainWindowRequest
+     * @return GetMaintainWindowResponse
+     */
+    @Override
+    public CompletableFuture<GetMaintainWindowResponse> getMaintainWindow(GetMaintainWindowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMaintainWindow").setMethod(HttpMethod.GET).setPathRegex("/maintainWindows/{maintainWindowId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMaintainWindowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMaintainWindowResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1595,6 +1762,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Typically used together with the QueryMetricMeta operation for querying metrics and the QueryMetricList/QueryMetricLast operation for querying monitoring data.</p>
+     * <h2>Request type</h2>
+     * <p>POST|GET.</p>
+     * 
      * @param request the request parameters of GetMemoryStore  GetMemoryStoreRequest
      * @return GetMemoryStoreResponse
      */
@@ -1613,6 +1785,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a specified notification policy by workspace and UUID. If the UUID does not exist, a ResourceNotFound error is returned.</p>
+     * 
      * @param request the request parameters of GetNotifyPolicy  GetNotifyPolicyRequest
      * @return GetNotifyPolicyResponse
      */
@@ -1650,7 +1825,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve details of a Prometheus instance.</p>
+     * <p>Retrieves the details of a Managed Service for Prometheus instance.</p>
      * 
      * @param request the request parameters of GetPrometheusInstance  GetPrometheusInstanceRequest
      * @return GetPrometheusInstanceResponse
@@ -1689,7 +1864,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Query a specified Prometheus view instance.</p>
+     * <p>Queries a specified Prometheus view instance.</p>
      * 
      * @param request the request parameters of GetPrometheusView  GetPrometheusViewRequest
      * @return GetPrometheusViewResponse
@@ -1745,6 +1920,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves a service-linked entry.</p>
+     * 
      * @param request the request parameters of GetServiceRecord  GetServiceRecordRequest
      * @return GetServiceRecordResponse
      */
@@ -1763,6 +1941,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a single service task based on the taskId.
+     * The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</p>
+     * 
      * @param request the request parameters of GetServiceTask  GetServiceTaskRequest
      * @return GetServiceTaskResponse
      */
@@ -1782,7 +1964,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Get Umodel configuration information</p>
+     * <p>Retrieves the configuration of a Umodel.</p>
      * 
      * @param request the request parameters of GetUmodel  GetUmodelRequest
      * @return GetUmodelResponse
@@ -1821,7 +2003,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Find Umodel</p>
+     * <p>This operation retrieves the graph data associated with a Umodel.</p>
      * 
      * @param request the request parameters of GetUmodelData  GetUmodelDataRequest
      * @return GetUmodelDataResponse
@@ -1860,7 +2042,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Query the list of access configurations</p>
+     * <p>This operation retrieves a list of integration configurations.</p>
      * 
      * @param request the request parameters of ListAddonReleases  ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
@@ -1880,6 +2062,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates a site monitoring job.</p>
+     * 
      * @param request the request parameters of ListAddons  ListAddonsRequest
      * @return ListAddonsResponse
      */
@@ -1934,6 +2119,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation can only query alert history from the last year.
+     * This topic provides an example of querying the alert history of Elastic Computing Service from the cloud service <code>product</code> dimension.</p>
+     * 
      * @param request the request parameters of ListAlertRobots  ListAlertRobotsRequest
      * @return ListAlertRobotsResponse
      */
@@ -1988,6 +2177,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of how to create an alert contact group named <code>ECS_Group</code>.</p>
+     * 
      * @param request the request parameters of ListContactGroups  ListContactGroupsRequest
      * @return ListContactGroupsResponse
      */
@@ -2006,6 +2198,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of how to create an alert contact group named <code>ECS_Group</code>.</p>
+     * 
      * @param request the request parameters of ListContacts  ListContactsRequest
      * @return ListContactsResponse
      */
@@ -2061,7 +2256,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>分页查询指定工作空间中的数据流水线。</p>
+     * <p>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</p>
      * 
      * @param request the request parameters of ListDataPipelines  ListDataPipelinesRequest
      * @return ListDataPipelinesResponse
@@ -2118,7 +2313,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Query integration list</p>
+     * <p>Queries the integration list.</p>
      * 
      * @param request the request parameters of ListIntegrationPolicies  ListIntegrationPoliciesRequest
      * @return ListIntegrationPoliciesResponse
@@ -2138,6 +2333,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists the add-ons that are installed for a specified policy.</p>
+     * 
      * @param request the request parameters of ListIntegrationPolicyAddons  ListIntegrationPolicyAddonsRequest
      * @return ListIntegrationPolicyAddonsResponse
      */
@@ -2193,7 +2391,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This article provides an example of querying the alarm template list. The result shows that there are 2 alarm templates in the list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of how to query a list of integration policy dashboards.</p>
      * 
      * @param request the request parameters of ListIntegrationPolicyDashboards  ListIntegrationPolicyDashboardsRequest
      * @return ListIntegrationPolicyDashboardsResponse
@@ -2214,7 +2412,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This article provides an example to query the alarm template list. The result shows that there are 2 alarm templates in the alarm template list, which are <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example on how to query the list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * @param request the request parameters of ListIntegrationPolicyPodMonitors  ListIntegrationPolicyPodMonitorsRequest
      * @return ListIntegrationPolicyPodMonitorsResponse
@@ -2253,8 +2451,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>During the effective period of the policy, all alarms within the application group will no longer send notifications.</p>
-     * <p>This article provides an example of creating a pause alarm notification policy <code>PauseNotify</code> for the application group <code>7301****</code>. This application group will pause alarms from <code>1622949300000</code> to <code>1623208500000</code> (Beijing Time <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
+     * <p>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
+     * This topic provides an example of creating a policy named <code>PauseNotify</code>. This policy pauses alert notifications for application group <code>7301****</code> from <code>1622949300000</code> to <code>1623208500000</code> (from <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code> UTC+8).</p>
      * 
      * @param request the request parameters of ListIntegrationPolicyStorageRequirements  ListIntegrationPolicyStorageRequirementsRequest
      * @return ListIntegrationPolicyStorageRequirementsResponse
@@ -2268,6 +2466,28 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListIntegrationPolicyStorageRequirementsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>分页查询指定工作空间下的静默策略列表，支持按策略名称模糊匹配、按策略 ID 精确匹配、按启用状态过滤，并支持按创建时间、更新时间或启用状态排序。没有匹配项时正常返回空列表；列表项不返回 workspaceFilterSetting。
+     * 当本次返回条数达到 maxResults 时，响应可能包含非空 nextToken；非空 nextToken 仅表示可以继续查询，不保证下一页一定包含数据。nextToken 为空表示分页结束。</p>
+     * 
+     * @param request the request parameters of ListMaintainWindows  ListMaintainWindowsRequest
+     * @return ListMaintainWindowsResponse
+     */
+    @Override
+    public CompletableFuture<ListMaintainWindowsResponse> listMaintainWindows(ListMaintainWindowsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMaintainWindows").setMethod(HttpMethod.GET).setPathRegex("/maintainWindows").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMaintainWindowsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMaintainWindowsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2292,6 +2512,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</p>
+     * 
      * @param request the request parameters of ListNotifyPolicies  ListNotifyPoliciesRequest
      * @return ListNotifyPoliciesResponse
      */
@@ -2329,7 +2552,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Get the list of Prometheus instance dashboards.</p>
+     * <p>Retrieves a list of dashboards for a Prometheus instance.</p>
      * 
      * @param request the request parameters of ListPrometheusDashboards  ListPrometheusDashboardsRequest
      * @return ListPrometheusDashboardsResponse
@@ -2350,7 +2573,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Get the list of Prometheus instances.</p>
+     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
      * 
      * @param request the request parameters of ListPrometheusInstances  ListPrometheusInstancesRequest
      * @return ListPrometheusInstancesResponse
@@ -2371,7 +2594,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Retrieve a list of Prometheus view instance information.</p>
+     * <p>Queries the list of Prometheus view instances.</p>
      * 
      * @param request the request parameters of ListPrometheusViews  ListPrometheusViewsRequest
      * @return ListPrometheusViewsResponse
@@ -2391,9 +2614,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>Used for creating a site monitoring task</p>
-     * 
      * @param request the request parameters of ListPrometheusVirtualInstances  ListPrometheusVirtualInstancesRequest
      * @return ListPrometheusVirtualInstancesResponse
      */
@@ -2412,6 +2632,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a paginated list of service-linked entries.</p>
+     * 
      * @param request the request parameters of ListServiceRecords  ListServiceRecordsRequest
      * @return ListServiceRecordsResponse
      */
@@ -2430,6 +2653,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Lists service tasks under an application by task type.</p>
+     * <ul>
+     * <li>type=heapdump: Returns the list of heap dump tasks.</li>
+     * <li>type=pprof: Returns the list of pprof dumps (requires searchCondition).</li>
+     * <li>type=live_debug_*: Returns the list of corresponding LiveDebug tasks.
+     * Supports nextToken/maxResults pagination and searchCondition filtering.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListServiceTask  ListServiceTaskRequest
      * @return ListServiceTaskResponse
      */
@@ -2539,7 +2771,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>编译候选配置，并查询指定时间窗口内按 Dataset 分组的只读样例。</p>
+     * <p>Compiles a candidate configuration and queries read-only samples grouped by dataset within a specified time window.</p>
      * 
      * @param request the request parameters of PreviewDataPipeline  PreviewDataPipelineRequest
      * @return PreviewDataPipelineResponse
@@ -2577,6 +2809,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query a list of alert templates. The response shows that the alert template list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * 
      * @param request the request parameters of QueryAlertRules  QueryAlertRulesRequest
      * @return QueryAlertRulesResponse
      */
@@ -2613,6 +2848,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <code>acs_ecs_dashboard</code> instance <code>i-uf6j91r34rnwawoo****</code>. The alert contact group of the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the retry count for the Critical level is <code>3</code>.</p>
+     * <blockquote>
+     * <p>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of SearchMemories  SearchMemoriesRequest
      * @return SearchMemoriesResponse
      */
@@ -2775,6 +3016,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Only Alibaba Cloud accounts that have activated Network Analysis and Monitoring can create one-time detection tasks.
+     * This topic provides an example of how to create a one-time detection task. The detection task is named <code>task1</code>, the detection address is <code>http://www.aliyun.com</code>, the detection type is <code>HTTP</code>, and the number of detection points is <code>1</code>.</p>
+     * 
      * @param request the request parameters of UpdateContextStore  UpdateContextStoreRequest
      * @return UpdateContextStoreResponse
      */
@@ -2794,7 +3039,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>使用完整候选配置修改指定的数据流水线。</p>
+     * <p>Modifies a specified data pipeline by using a complete candidate configuration.</p>
      * 
      * @param request the request parameters of UpdateDataPipeline  UpdateDataPipelineRequest
      * @return UpdateDataPipelineResponse
@@ -2868,6 +3113,28 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>更新指定静默策略的配置。maintainWindowName 为空时保留原名称；description、filterSetting、effective、effectTimeRange、startTime、endTime 按请求体中的值更新，未提供时写为空。建议先通过 GetMaintainWindow 获取当前配置后再提交修改。
+     * 本接口不修改策略的启用状态，启用或暂停请使用 EnableMaintainWindow、DisableMaintainWindow。时间配置校验与 CreateMaintainWindow 一致；同一工作空间下策略名称重复时返回 InvalidParameterValue；指定的静默策略不存在时返回 ResourceNotFound。</p>
+     * 
+     * @param request the request parameters of UpdateMaintainWindow  UpdateMaintainWindowRequest
+     * @return UpdateMaintainWindowResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMaintainWindowResponse> updateMaintainWindow(UpdateMaintainWindowRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMaintainWindow").setMethod(HttpMethod.PUT).setPathRegex("/maintainWindows/{maintainWindowId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMaintainWindowResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMaintainWindowResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateMemory  UpdateMemoryRequest
      * @return UpdateMemoryResponse
      */
@@ -2904,6 +3171,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates a notification policy by workspace and body (containing uuid and version). The version field is an optimistic lock version number that must match the current record on the backend. Otherwise, OptimisticLockFailed is returned. After a successful update, the latest policy details are returned.</p>
+     * 
      * @param request the request parameters of UpdateNotifyPolicy  UpdateNotifyPolicyRequest
      * @return UpdateNotifyPolicyResponse
      */
@@ -2959,7 +3229,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Update Prometheus instance information.</p>
+     * <p>Updates the information of a Managed Service for Prometheus instance.</p>
      * 
      * @param request the request parameters of UpdatePrometheusInstance  UpdatePrometheusInstanceRequest
      * @return UpdatePrometheusInstanceResponse
@@ -2998,7 +3268,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Update Prometheus view instance information.</p>
+     * <p>Updates the information about a Prometheus view instance.</p>
      * 
      * @param request the request parameters of UpdatePrometheusView  UpdatePrometheusViewRequest
      * @return UpdatePrometheusViewResponse
@@ -3036,6 +3306,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates an existing service-linked entry.</p>
+     * 
      * @param request the request parameters of UpdateServiceRecord  UpdateServiceRecordRequest
      * @return UpdateServiceRecordResponse
      */
@@ -3073,7 +3346,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Update Umodel configuration information</p>
+     * <p>Updates the configuration of a Umodel.</p>
      * 
      * @param request the request parameters of UpdateUmodel  UpdateUmodelRequest
      * @return UpdateUmodelResponse

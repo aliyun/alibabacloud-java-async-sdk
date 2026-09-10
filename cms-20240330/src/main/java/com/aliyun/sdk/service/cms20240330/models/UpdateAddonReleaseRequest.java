@@ -33,6 +33,7 @@ public class UpdateAddonReleaseRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dryRun")
+    @Deprecated
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Body
@@ -131,7 +132,7 @@ public class UpdateAddonReleaseRequest extends Request {
         } 
 
         /**
-         * <p>The name of the Release.</p>
+         * <p>The name of the release.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,7 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Policy environment ID.</p>
+         * <p>The policy environment ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,7 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Addon version information.</p>
+         * <p>The version of the addon.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.2</p>
@@ -169,7 +170,11 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Whether to pre-check this request.</p>
+         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <ul>
+         * <li>true: Performs a dry run.</li>
+         * <li>false: Does not perform a dry run.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -181,7 +186,7 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Entity discovery rules.</p>
+         * <p>The entity discovery rules.</p>
          */
         public Builder entityRules(EntityDiscoverRule entityRules) {
             this.putBodyParameter("entityRules", entityRules);
@@ -190,7 +195,7 @@ public class UpdateAddonReleaseRequest extends Request {
         }
 
         /**
-         * <p>Metadata information.</p>
+         * <p>The metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>

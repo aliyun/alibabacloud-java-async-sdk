@@ -67,7 +67,7 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>264C3E89-BE6E-5F82-A484-CE9C2196C7DC</p>
@@ -78,7 +78,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Service object.</p>
+         * <p>The service object.</p>
          */
         public Builder service(Service service) {
             this.service = service;
@@ -144,7 +144,10 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -152,7 +155,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -362,7 +368,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Extended information.</p>
+             * <p>The extended information.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;language&quot;:&quot;java&quot;}</p>
@@ -373,7 +379,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-13T03:32:55Z</p>
@@ -384,7 +390,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Description, only valid when serviceType=RUM.</p>
+             * <p>The description. This parameter is valid only when serviceType is set to RUM.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -395,10 +401,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Display name, only valid when serviceType=RUM.</p>
+             * <p>The display name. This parameter is valid only when serviceType is set to RUM.</p>
              * 
              * <strong>example:</strong>
-             * <p>demo应用</p>
+             * <p>Demo application</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -406,7 +412,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Legacy ARMS application ID</p>
+             * <p>The ARMS application ID for backward compatibility.</p>
              * 
              * <strong>example:</strong>
              * <p>by6rjzro2j@0fe8dfa799e5906</p>
@@ -417,7 +423,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-heyuan</p>
@@ -428,7 +434,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekxxzuad5zzzz</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -436,7 +445,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service ID.</p>
+             * <p>The service ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cwzxvuc6uo@4bc6b15ad81f166174ffb</p>
@@ -447,7 +456,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service name</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>demo-app</p>
@@ -458,7 +467,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service status, only valid when serviceType=RUM.</p>
+             * <p>The service status. This parameter is valid only when serviceType is set to RUM.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -469,7 +478,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service type.</p>
+             * <p>The service type.</p>
              * 
              * <strong>example:</strong>
              * <p>TRACE</p>
@@ -480,7 +489,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -488,7 +497,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workspace name</p>
+             * <p>The workspace name.</p>
              * 
              * <strong>example:</strong>
              * <p>default-cms-1106439496876715-cn-hangzhou</p>

@@ -304,7 +304,10 @@ public class NotifyStrategyForView extends TeaModel {
         } 
 
         /**
-         * autoRecoverSeconds.
+         * <p>The automatic recovery time in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder autoRecoverSeconds(Integer autoRecoverSeconds) {
             this.autoRecoverSeconds = autoRecoverSeconds;
@@ -312,7 +315,10 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-11T08:21:58Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -320,7 +326,7 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * customTemplateEntries.
+         * <p>The notification channel templates.</p>
          */
         public Builder customTemplateEntries(java.util.List<CustomTemplateEntries> customTemplateEntries) {
             this.customTemplateEntries = customTemplateEntries;
@@ -328,7 +334,10 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -336,7 +345,10 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * enable.
+         * <p>Indicates whether the notification strategy is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -344,7 +356,7 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * filterSetting.
+         * <p>The filter settings.</p>
          */
         public Builder filterSetting(FilterSetting filterSetting) {
             this.filterSetting = filterSetting;
@@ -352,6 +364,7 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
+         * <p>The grouping settings.</p>
          * <p>This parameter is required.</p>
          */
         public Builder groupingSetting(GroupingSetting groupingSetting) {
@@ -360,7 +373,10 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * ignoreRestoredNotification.
+         * <p>Indicates whether recovery notifications are sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ignoreRestoredNotification(Boolean ignoreRestoredNotification) {
             this.ignoreRestoredNotification = ignoreRestoredNotification;
@@ -368,7 +384,7 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * incidentEscalationPolicies.
+         * <p>The list of associated escalation policies.</p>
          */
         public Builder incidentEscalationPolicies(java.util.List<?> incidentEscalationPolicies) {
             this.incidentEscalationPolicies = incidentEscalationPolicies;
@@ -376,7 +392,10 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * notifyStrategyId.
+         * <p>The unique identifier of the notification strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312-31-23-123-1-23123</p>
          */
         public Builder notifyStrategyId(String notifyStrategyId) {
             this.notifyStrategyId = notifyStrategyId;
@@ -384,7 +403,11 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
+         * <p>The name of the notification strategy.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestStrategy</p>
          */
         public Builder notifyStrategyName(String notifyStrategyName) {
             this.notifyStrategyName = notifyStrategyName;
@@ -392,7 +415,7 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * pushingSetting.
+         * <p>The push settings.</p>
          */
         public Builder pushingSetting(PushingSetting pushingSetting) {
             this.pushingSetting = pushingSetting;
@@ -400,7 +423,7 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * receiverNames.
+         * <p>The list of recipient names.</p>
          */
         public Builder receiverNames(java.util.List<String> receiverNames) {
             this.receiverNames = receiverNames;
@@ -408,7 +431,7 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * repeatNotifySetting.
+         * <p>The repeat notification settings.</p>
          */
         public Builder repeatNotifySetting(RepeatNotifySetting repeatNotifySetting) {
             this.repeatNotifySetting = repeatNotifySetting;
@@ -416,6 +439,7 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
+         * <p>The notification channel routing settings.</p>
          * <p>This parameter is required.</p>
          */
         public Builder routes(java.util.List<Routes> routes) {
@@ -424,7 +448,10 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * syncFromType.
+         * <p>The source type of the synchronization policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ARMS&quot;</p>
          */
         public Builder syncFromType(String syncFromType) {
             this.syncFromType = syncFromType;
@@ -432,7 +459,10 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-30T02:29:09Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -440,7 +470,10 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123****</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -448,7 +481,10 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * workspace.
+         * <p>The workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace-test</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -456,7 +492,7 @@ public class NotifyStrategyForView extends TeaModel {
         }
 
         /**
-         * workspaceFilterSetting.
+         * <p>The workspace filter settings.</p>
          */
         public Builder workspaceFilterSetting(WorkspaceFilterSetting workspaceFilterSetting) {
             this.workspaceFilterSetting = workspaceFilterSetting;
@@ -524,7 +560,11 @@ public class NotifyStrategyForView extends TeaModel {
             } 
 
             /**
+             * <p>The notification type.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -532,7 +572,11 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
+             * <p>The template UUID.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123-12-312-312-31-23</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;
@@ -625,7 +669,7 @@ public class NotifyStrategyForView extends TeaModel {
             } 
 
             /**
-             * groupingKeys.
+             * <p>The grouping keys.</p>
              */
             public Builder groupingKeys(java.util.List<String> groupingKeys) {
                 this.groupingKeys = groupingKeys;
@@ -633,7 +677,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * periodMin.
+             * <p>The check period in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder periodMin(Integer periodMin) {
                 this.periodMin = periodMin;
@@ -641,7 +688,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * silenceSec.
+             * <p>The silence duration in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder silenceSec(Integer silenceSec) {
                 this.silenceSec = silenceSec;
@@ -649,7 +699,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * times.
+             * <p>The number of times the alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder times(Integer times) {
                 this.times = times;
@@ -729,7 +782,7 @@ public class NotifyStrategyForView extends TeaModel {
             } 
 
             /**
-             * alertActionIds.
+             * <p>The list of alert action IDs.</p>
              */
             public Builder alertActionIds(java.util.List<String> alertActionIds) {
                 this.alertActionIds = alertActionIds;
@@ -737,7 +790,7 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * restoreActionIds.
+             * <p>The list of recovery action IDs.</p>
              */
             public Builder restoreActionIds(java.util.List<String> restoreActionIds) {
                 this.restoreActionIds = restoreActionIds;
@@ -745,7 +798,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The template UUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;template-abc123&quot;</p>
              */
             public Builder templateUuid(String templateUuid) {
                 this.templateUuid = templateUuid;
@@ -812,7 +868,10 @@ public class NotifyStrategyForView extends TeaModel {
             } 
 
             /**
-             * endIncidentState.
+             * <p>The end incident state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;Resolved&quot;</p>
              */
             public Builder endIncidentState(String endIncidentState) {
                 this.endIncidentState = endIncidentState;
@@ -820,7 +879,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * repeatInterval.
+             * <p>The time interval for repeat notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder repeatInterval(Integer repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -902,7 +964,11 @@ public class NotifyStrategyForView extends TeaModel {
             } 
 
             /**
+             * <p>The channel type.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONTACT</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -910,7 +976,7 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * enabledSubChannels.
+             * <p>The enabled notification types.</p>
              */
             public Builder enabledSubChannels(java.util.List<String> enabledSubChannels) {
                 this.enabledSubChannels = enabledSubChannels;
@@ -918,6 +984,7 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
+             * <p>The channel receivers.</p>
              * <p>This parameter is required.</p>
              */
             public Builder receivers(java.util.List<String> receivers) {
@@ -1013,7 +1080,7 @@ public class NotifyStrategyForView extends TeaModel {
             } 
 
             /**
-             * dayInWeek.
+             * <p>The effective days (Monday to Sunday).</p>
              */
             public Builder dayInWeek(java.util.List<Integer> dayInWeek) {
                 this.dayInWeek = dayInWeek;
@@ -1021,7 +1088,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * endTimeInMinute.
+             * <p>The end time in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder endTimeInMinute(Integer endTimeInMinute) {
                 this.endTimeInMinute = endTimeInMinute;
@@ -1029,7 +1099,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * startTimeInMinute.
+             * <p>The start time in minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder startTimeInMinute(Integer startTimeInMinute) {
                 this.startTimeInMinute = startTimeInMinute;
@@ -1037,7 +1110,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * timeZone.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>+08:00</p>
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -1156,7 +1232,7 @@ public class NotifyStrategyForView extends TeaModel {
             } 
 
             /**
-             * channels.
+             * <p>The notification channels.</p>
              */
             public Builder channels(java.util.List<Channels> channels) {
                 this.channels = channels;
@@ -1164,7 +1240,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * digitalEmployeeName.
+             * <p>The name of the digital employee.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OnCallAssistant</p>
              */
             public Builder digitalEmployeeName(String digitalEmployeeName) {
                 this.digitalEmployeeName = digitalEmployeeName;
@@ -1172,7 +1251,7 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * effectTimeRange.
+             * <p>The effective time range.</p>
              */
             public Builder effectTimeRange(EffectTimeRange effectTimeRange) {
                 this.effectTimeRange = effectTimeRange;
@@ -1180,7 +1259,10 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * enableRca.
+             * <p>Indicates whether root cause analysis is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableRca(Boolean enableRca) {
                 this.enableRca = enableRca;
@@ -1188,7 +1270,7 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * filterSetting.
+             * <p>The routing settings.</p>
              */
             public Builder filterSetting(FilterSetting filterSetting) {
                 this.filterSetting = filterSetting;
@@ -1196,7 +1278,7 @@ public class NotifyStrategyForView extends TeaModel {
             }
 
             /**
-             * severities.
+             * <p>The list of severity levels.</p>
              */
             public Builder severities(java.util.List<String> severities) {
                 this.severities = severities;

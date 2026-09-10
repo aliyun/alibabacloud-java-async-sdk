@@ -104,6 +104,7 @@ public class GetContextRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class GetContextRequest extends Request {
         }
 
         /**
+         * <p>The name of the context store.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class GetContextRequest extends Request {
         }
 
         /**
+         * <p>The ID of the context.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class GetContextRequest extends Request {
         }
 
         /**
-         * formatted.
+         * <p>Whether to return the context in a formatted structure. Valid values: <code>true</code> and <code>false</code>. Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder formatted(Boolean formatted) {
             this.putQueryParameter("formatted", formatted);

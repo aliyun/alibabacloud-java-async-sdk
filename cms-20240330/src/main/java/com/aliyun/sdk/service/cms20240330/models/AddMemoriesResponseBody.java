@@ -67,7 +67,10 @@ public class AddMemoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8FDE2569-626B-5176-9844-28877A*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class AddMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>Request results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -154,7 +157,10 @@ public class AddMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * eventId.
+             * <p>Event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>897294a7-67a4-4f60-976c-e136edc5f97e</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -162,7 +168,10 @@ public class AddMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>Details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Memory processing has been queued for background execution</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -170,7 +179,10 @@ public class AddMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>Processing status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
