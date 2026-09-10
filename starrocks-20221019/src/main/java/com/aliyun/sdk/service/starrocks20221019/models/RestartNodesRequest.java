@@ -96,7 +96,10 @@ public class RestartNodesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +108,7 @@ public class RestartNodesRequest extends Request {
         }
 
         /**
-         * RestartNodeGroups.
+         * <p>Information about compute group nodes to restart.</p>
          */
         public Builder restartNodeGroups(java.util.List<RestartNodeGroups> restartNodeGroups) {
             this.putBodyParameter("RestartNodeGroups", restartNodeGroups);
@@ -186,7 +189,16 @@ public class RestartNodesRequest extends Request {
             } 
 
             /**
-             * FastMode.
+             * <p>Whether to use fast restart mode. Default is false.</p>
+             * <ul>
+             * <li><p>true: Restart compute nodes in fast mode. Nodes restart in multiple batches. Within each batch, nodes restart in parallel. Batches execute sequentially.</p>
+             * </li>
+             * <li><p>false: Restart compute nodes using rolling restart.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fastMode(Boolean fastMode) {
                 this.fastMode = fastMode;
@@ -194,7 +206,10 @@ public class RestartNodesRequest extends Request {
             }
 
             /**
-             * NodeGroupId.
+             * <p>The compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-dcc7450e06a271b9</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -202,7 +217,7 @@ public class RestartNodesRequest extends Request {
             }
 
             /**
-             * NodeIds.
+             * <p>List of node IDs.</p>
              */
             public Builder nodeIds(java.util.List<String> nodeIds) {
                 this.nodeIds = nodeIds;

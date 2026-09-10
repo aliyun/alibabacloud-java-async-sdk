@@ -82,7 +82,10 @@ public class EnableInternalSlbRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the EMR Serverless StarRocks instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

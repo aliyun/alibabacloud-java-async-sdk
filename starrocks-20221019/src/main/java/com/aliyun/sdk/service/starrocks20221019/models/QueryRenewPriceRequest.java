@@ -142,6 +142,7 @@ public class QueryRenewPriceRequest extends Request {
         }
 
         /**
+         * <p>List of billing instance IDs to renew. Separate multiple IDs with commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class QueryRenewPriceRequest extends Request {
         }
 
         /**
+         * <p>Renewal period.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class QueryRenewPriceRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,6 +181,7 @@ public class QueryRenewPriceRequest extends Request {
         }
 
         /**
+         * <p>Renewal unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,10 @@ public class QueryRenewPriceRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>Coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_12378dfj6</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);

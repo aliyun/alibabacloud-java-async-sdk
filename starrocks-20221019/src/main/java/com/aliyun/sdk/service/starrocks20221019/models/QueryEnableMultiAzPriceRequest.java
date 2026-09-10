@@ -110,7 +110,10 @@ public class QueryEnableMultiAzPriceRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-8dsy12g*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -119,7 +122,7 @@ public class QueryEnableMultiAzPriceRequest extends Request {
         }
 
         /**
-         * observers.
+         * <p>The list of observers.</p>
          */
         public Builder observers(java.util.List<Observers> observers) {
             this.putBodyParameter("observers", observers);
@@ -128,7 +131,10 @@ public class QueryEnableMultiAzPriceRequest extends Request {
         }
 
         /**
-         * promotionOptionNo.
+         * <p>The coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_12378dfj6</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putBodyParameter("promotionOptionNo", promotionOptionNo);
@@ -196,7 +202,10 @@ public class QueryEnableMultiAzPriceRequest extends Request {
             } 
 
             /**
-             * vswId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-9sdur12t27s</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -204,7 +213,10 @@ public class QueryEnableMultiAzPriceRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -143,7 +143,10 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24151320976****</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -151,7 +154,10 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -159,7 +165,10 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -167,7 +176,10 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -175,7 +187,10 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +198,10 @@ public class ModifyScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

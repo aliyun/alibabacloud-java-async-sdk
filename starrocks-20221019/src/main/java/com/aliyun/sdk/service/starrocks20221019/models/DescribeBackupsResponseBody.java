@@ -132,7 +132,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -140,7 +140,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -148,7 +151,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -156,7 +162,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +195,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -324,7 +342,22 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentType.
+             * <p>The compute group type. Includes the following values:</p>
+             * <ul>
+             * <li><p>FE</p>
+             * </li>
+             * <li><p>BE</p>
+             * </li>
+             * <li><p>CN</p>
+             * </li>
+             * <li><p>OBSERVER</p>
+             * </li>
+             * <li><p>AGENT</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FE</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -332,7 +365,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The number of CUs. A CU (Compute Unit) is the basic unit of measurement for the service. 1 CU equals 1 CPU core + 4 GiB memory. If SpecType is memory-enhanced instance family, 1 CU equals 1 CPU core + 8 GiB memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -340,7 +376,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskNumber.
+             * <p>The number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder diskNumber(String diskNumber) {
                 this.diskNumber = diskNumber;
@@ -348,7 +387,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalStorageInstanceType.
+             * <p>The node group\&quot;s local SSD instance type. This value is only meaningful for ECS instances where SpecType is local SSD or large-capacity storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder localStorageInstanceType(String localStorageInstanceType) {
                 this.localStorageInstanceType = localStorageInstanceType;
@@ -356,7 +398,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResidentNodeNumber.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder residentNodeNumber(String residentNodeNumber) {
                 this.residentNodeNumber = residentNodeNumber;
@@ -364,7 +409,22 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * <p>The compute group specification type. Includes the following types:</p>
+             * <ul>
+             * <li><p>standard: Standard Edition.</p>
+             * </li>
+             * <li><p>localSSD: Local SSD.</p>
+             * </li>
+             * <li><p>bigData: Large-capacity storage.</p>
+             * </li>
+             * <li><p>ramEnhanced: Memory-enhanced instance family.</p>
+             * </li>
+             * <li><p>networkEnhanced: Network-enhanced.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -372,7 +432,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * StoragePerformanceLevel.
+             * <p>The performance level (PL) of the cloud disk. Includes the following values:</p>
+             * <ul>
+             * <li><p>pl0: Maximum random read/write IOPS of 10,000 per disk.</p>
+             * </li>
+             * <li><p>pl1: Maximum random read/write IOPS of 50,000 per disk.</p>
+             * </li>
+             * <li><p>pl2: Maximum random read/write IOPS of 100,000 per disk.</p>
+             * </li>
+             * <li><p>pl3: Maximum random read/write IOPS of 1,000,000 per disk.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pl1</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -380,7 +453,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The storage size in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -447,7 +523,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bk-time</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -455,7 +534,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747708000</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -626,7 +708,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-37708ec80b5****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -634,7 +719,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * MinorVersion.
+             * <p>The minor version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.3.13-1.0-1.7.2</p>
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -642,7 +730,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroups.
+             * <p>The compute group information.</p>
              */
             public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
                 this.nodeGroups = nodeGroups;
@@ -650,7 +738,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -658,7 +749,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzd7frphchx3a</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -666,7 +760,16 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * RunMode.
+             * <p>The cluster\&quot;s running mode:</p>
+             * <ul>
+             * <li><p>Shared-nothing.</p>
+             * </li>
+             * <li><p>Shared-data.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>shared_data</p>
              */
             public Builder runMode(String runMode) {
                 this.runMode = runMode;
@@ -674,7 +777,22 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * <p>The compute group specification type. Includes the following types:</p>
+             * <ul>
+             * <li><p>standard: Standard Edition.</p>
+             * </li>
+             * <li><p>localSSD: Local SSD.</p>
+             * </li>
+             * <li><p>bigData: Large-capacity storage.</p>
+             * </li>
+             * <li><p>ramEnhanced: Memory-enhanced instance family.</p>
+             * </li>
+             * <li><p>networkEnhanced: Network-enhanced.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -682,7 +800,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -690,7 +808,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The cluster version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.3</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -698,7 +819,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-2ze0cez8106f2n85c2d7i</p>
@@ -846,7 +967,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataBase.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder dataBase(String dataBase) {
                 this.dataBase = dataBase;
@@ -854,7 +978,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * <p>The snapshot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -862,7 +989,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTime.
+             * <p>The task end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747718190</p>
              */
             public Builder finishedTime(Long finishedTime) {
                 this.finishedTime = finishedTime;
@@ -870,7 +1000,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The data size in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -878,7 +1011,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotName.
+             * <p>The snapshot name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-10_backup</p>
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -886,7 +1022,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The task start date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747708190</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -894,7 +1033,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The backup job status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -902,7 +1044,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Table.
+             * <p>The data table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdc_ods_t2030_lcpf_api_topic_msg</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -1099,7 +1244,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupFinishedTime.
+             * <p>The end time of this backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742179028000</p>
              */
             public Builder backupFinishedTime(Long backupFinishedTime) {
                 this.backupFinishedTime = backupFinishedTime;
@@ -1107,7 +1255,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * <p>The start time of this backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742179018000</p>
              */
             public Builder backupStartTime(Long backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -1115,7 +1266,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupTaskId.
+             * <p>The backup task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bt-12sui21312dd</p>
              */
             public Builder backupTaskId(String backupTaskId) {
                 this.backupTaskId = backupTaskId;
@@ -1123,7 +1277,16 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * <p>The backup type:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Fast backup.</p>
+             * </li>
+             * <li><p><strong>1</strong>: Consistent backup.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FullBackup</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -1131,7 +1294,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The task description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>任务描述</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1139,7 +1305,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the backup data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742189008000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -1147,7 +1316,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-d4be777ff5e8cXXX</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1155,7 +1327,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSnapshot.
+             * <p>The backup instance information.</p>
              */
             public Builder instanceSnapshot(InstanceSnapshot instanceSnapshot) {
                 this.instanceSnapshot = instanceSnapshot;
@@ -1163,7 +1335,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1171,7 +1346,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The cloud disk size in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1179,7 +1357,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The backup job status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1187,7 +1368,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * SubTasks.
+             * <p>The list of backup subtasks.</p>
              */
             public Builder subTasks(java.util.List<SubTasks> subTasks) {
                 this.subTasks = subTasks;

@@ -74,6 +74,7 @@ public class ListOperationActivityRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class ListOperationActivityRequest extends Request {
         }
 
         /**
-         * OperationId.
+         * <p>The operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>op-f49743caa809****</p>
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);

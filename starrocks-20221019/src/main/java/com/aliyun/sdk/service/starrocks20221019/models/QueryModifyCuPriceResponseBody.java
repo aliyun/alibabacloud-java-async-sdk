@@ -143,7 +143,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -159,7 +162,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -167,7 +173,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -175,7 +184,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B67D142D-D54E-184F-A306-22BDC01B2XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +195,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -275,7 +290,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentName.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cu_num</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -283,7 +301,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -291,7 +312,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7986</p>
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -299,7 +323,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * <p>The final price, which is the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7986</p>
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;
@@ -392,7 +419,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * CheapRate.
+             * <p>The price reduction information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cheapRate(Float cheapRate) {
                 this.cheapRate = cheapRate;
@@ -400,7 +430,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * CheapStandAmount.
+             * <p>The total list price after the price reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7986</p>
              */
             public Builder cheapStandAmount(Float cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
@@ -408,7 +441,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsShow.
+             * <p>Indicates whether to display the price reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isShow(Boolean isShow) {
                 this.isShow = isShow;
@@ -416,7 +452,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalStandAmount.
+             * <p>The original total list price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7986</p>
              */
             public Builder originalStandAmount(Float originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
@@ -496,7 +535,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_desc</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -504,7 +546,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_promotion_option_id_for_blank</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -512,7 +557,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionOptionNo.
+             * <p>The coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_12378dfj6</p>
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -592,7 +640,11 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The price for purchasing Elastic Computing Service (ECS) servers of a specific configuration in bulk. Valid values: 1 to 1000.</p>
+             * <p>Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Float amount) {
                 this.amount = amount;
@@ -600,7 +652,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_123123</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -608,7 +663,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDescId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak72hajsd</p>
              */
             public Builder ruleDescId(String ruleDescId) {
                 this.ruleDescId = ruleDescId;
@@ -779,7 +837,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentPrices.
+             * <p>The component prices.</p>
              */
             public Builder componentPrices(java.util.List<ComponentPrices> componentPrices) {
                 this.componentPrices = componentPrices;
@@ -787,7 +845,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -795,7 +856,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DepreciateInfo.
+             * <p>The price reduction information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder depreciateInfo(DepreciateInfo depreciateInfo) {
                 this.depreciateInfo = depreciateInfo;
@@ -803,7 +867,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * <p>The discount amount, which is the original amount minus the payable amount (including coupon deductions).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -811,7 +878,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionalPromotions.
+             * <p>The coupon information.</p>
              */
             public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
@@ -819,7 +886,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * <p>The original amount, which is the catalog price multiplied by the billable usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7986</p>
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -827,7 +897,7 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The returned data structure.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -835,7 +905,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandDiscountPrice.
+             * <p>The discounted price based on the list price discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7986</p>
              */
             public Builder standDiscountPrice(Float standDiscountPrice) {
                 this.standDiscountPrice = standDiscountPrice;
@@ -843,7 +916,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandPrice.
+             * <p>The list discount price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7986</p>
              */
             public Builder standPrice(Float standPrice) {
                 this.standPrice = standPrice;
@@ -851,7 +927,10 @@ public class QueryModifyCuPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * <p>The transaction amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7986</p>
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;

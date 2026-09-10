@@ -142,6 +142,7 @@ public class QueryModifyDiskTypePriceRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class QueryModifyDiskTypePriceRequest extends Request {
         }
 
         /**
+         * <p>Compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +168,10 @@ public class QueryModifyDiskTypePriceRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>Coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_12378dfj6</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -175,6 +180,7 @@ public class QueryModifyDiskTypePriceRequest extends Request {
         }
 
         /**
+         * <p>Target disk type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +193,7 @@ public class QueryModifyDiskTypePriceRequest extends Request {
         }
 
         /**
+         * <p>Target disk performance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

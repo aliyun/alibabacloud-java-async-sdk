@@ -119,7 +119,7 @@ public class ListGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -342,7 +357,10 @@ public class ListGatewayResponseBody extends TeaModel {
             } 
 
             /**
-             * EnablePublicNet.
+             * <p>Indicates whether public network access is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enablePublicNet(Boolean enablePublicNet) {
                 this.enablePublicNet = enablePublicNet;
@@ -350,7 +368,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * FeNodeNumber.
+             * <p>The number of gateway nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder feNodeNumber(Integer feNodeNumber) {
                 this.feNodeNumber = feNodeNumber;
@@ -358,7 +379,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * <p>The gateway ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13822</p>
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -366,7 +390,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayName.
+             * <p>The gateway name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Gateway 1</p>
              */
             public Builder gatewayName(String gatewayName) {
                 this.gatewayName = gatewayName;
@@ -374,7 +401,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayType.
+             * <p>The gateway type. Valid values are \<code>Slb\\</code> and \<code>Privatezone\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slb</p>
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -382,7 +412,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * InternalDomain.
+             * <p>The internal endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe-c-b25e21e24388****-ab8sjd-internal.starrocks.aliyuncs.com</p>
              */
             public Builder internalDomain(String internalDomain) {
                 this.internalDomain = internalDomain;
@@ -390,7 +423,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * InternalSlbId.
+             * <p>The ID of the internal-facing Server Load Balancer (SLB) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-123abc</p>
              */
             public Builder internalSlbId(String internalSlbId) {
                 this.internalSlbId = internalSlbId;
@@ -398,7 +434,7 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PrivatezoneId</p>
+             * <p>The ID of the PrivateZone.</p>
              * 
              * <strong>example:</strong>
              * <p>a62des2123243881b9s2sa220k2l38m9</p>
@@ -409,7 +445,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * PublicDomain.
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe-c-b25e21e24388****-8s272d.starrocks.aliyuncs.com</p>
              */
             public Builder publicDomain(String publicDomain) {
                 this.publicDomain = publicDomain;
@@ -417,7 +456,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * PublicSlbAclId.
+             * <p>The ID of the access control list (ACL) for public network access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-hsb123ksi2</p>
              */
             public Builder publicSlbAclId(String publicSlbAclId) {
                 this.publicSlbAclId = publicSlbAclId;
@@ -425,7 +467,10 @@ public class ListGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * PublicSlbId.
+             * <p>The ID of the public-facing SLB instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lb-abc123</p>
              */
             public Builder publicSlbId(String publicSlbId) {
                 this.publicSlbId = publicSlbId;

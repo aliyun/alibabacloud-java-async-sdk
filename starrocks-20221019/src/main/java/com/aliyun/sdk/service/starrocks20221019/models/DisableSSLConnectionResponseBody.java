@@ -119,7 +119,10 @@ public class DisableSSLConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The version number that you can upgrade to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class DisableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class DisableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class DisableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class DisableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class DisableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -132,7 +132,10 @@ public class ResourceSpec extends TeaModel {
         } 
 
         /**
-         * cu.
+         * <p>The number of CUs. A compute unit (CU) is the basic metering unit of a service. 1 CU = 1 CPU core + 4 GiB of memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder cu(Integer cu) {
             this.cu = cu;
@@ -140,7 +143,10 @@ public class ResourceSpec extends TeaModel {
         }
 
         /**
-         * diskNumber.
+         * <p>The number of disk blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder diskNumber(Integer diskNumber) {
             this.diskNumber = diskNumber;
@@ -148,7 +154,10 @@ public class ResourceSpec extends TeaModel {
         }
 
         /**
-         * localStorageInstanceType.
+         * <p>Local SSD Instance Specification for the node group. This parameter is applicable only when the node group is based on ECS instances and the SpecType is set to \&quot;Local SSD / Large-capacity Storage\&quot;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd_4_4xlarge</p>
          */
         public Builder localStorageInstanceType(String localStorageInstanceType) {
             this.localStorageInstanceType = localStorageInstanceType;
@@ -156,7 +165,10 @@ public class ResourceSpec extends TeaModel {
         }
 
         /**
-         * nodeNumber.
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder nodeNumber(Integer nodeNumber) {
             this.nodeNumber = nodeNumber;
@@ -164,7 +176,15 @@ public class ResourceSpec extends TeaModel {
         }
 
         /**
-         * specType.
+         * <p>The type of the node group. The following types are included:</p>
+         * <ul>
+         * <li>standard, Standard Edition, ECS + cloud disk.</li>
+         * <li>localSSD , local SSD.</li>
+         * <li>bigData, which stores large specifications.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder specType(String specType) {
             this.specType = specType;
@@ -172,7 +192,16 @@ public class ResourceSpec extends TeaModel {
         }
 
         /**
-         * storagePerformanceLevel.
+         * <p>The performance level of the disks. Valid values:</p>
+         * <ul>
+         * <li>PL0: A single disk can achieve up to 10,000 random read/write IOPS.</li>
+         * <li>PL1: A single disk can achieve up to 50,000 random read/write IOPS.</li>
+         * <li>PL2: A single disk can achieve up to 100,000 random read/write IOPS.</li>
+         * <li>PL3: A single disk can achieve up to 1 million random read/write IOPS.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pl1</p>
          */
         public Builder storagePerformanceLevel(String storagePerformanceLevel) {
             this.storagePerformanceLevel = storagePerformanceLevel;
@@ -180,7 +209,10 @@ public class ResourceSpec extends TeaModel {
         }
 
         /**
-         * storageSize.
+         * <p>The storage size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder storageSize(Integer storageSize) {
             this.storageSize = storageSize;

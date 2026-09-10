@@ -104,6 +104,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the destination resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -137,6 +142,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Only instance is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

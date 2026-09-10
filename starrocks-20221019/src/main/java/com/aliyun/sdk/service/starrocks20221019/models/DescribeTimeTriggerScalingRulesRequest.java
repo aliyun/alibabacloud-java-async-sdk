@@ -105,7 +105,10 @@ public class DescribeTimeTriggerScalingRulesRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>The ID of the compute group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-d332aa8bca48****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);

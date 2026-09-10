@@ -96,7 +96,10 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * <p>The gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-2r69r8kpmn56k5s3</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -105,7 +108,10 @@ public class DeleteGatewayRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

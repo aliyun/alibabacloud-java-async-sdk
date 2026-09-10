@@ -125,6 +125,7 @@ public class ModifyInstanceConfigPreCheckRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,7 @@ public class ModifyInstanceConfigPreCheckRequest extends Request {
         }
 
         /**
-         * configsToAdd.
+         * <p>The configurations to add.</p>
          */
         public Builder configsToAdd(java.util.List<InstanceConfigDto> configsToAdd) {
             this.putBodyParameter("configsToAdd", configsToAdd);
@@ -146,7 +147,7 @@ public class ModifyInstanceConfigPreCheckRequest extends Request {
         }
 
         /**
-         * configsToDelete.
+         * <p>The configurations to delete.</p>
          */
         public Builder configsToDelete(java.util.List<InstanceConfigDto> configsToDelete) {
             this.putBodyParameter("configsToDelete", configsToDelete);
@@ -155,7 +156,7 @@ public class ModifyInstanceConfigPreCheckRequest extends Request {
         }
 
         /**
-         * configsToUpdate.
+         * <p>The configurations to update.</p>
          */
         public Builder configsToUpdate(java.util.List<InstanceConfigDto> configsToUpdate) {
             this.putBodyParameter("configsToUpdate", configsToUpdate);

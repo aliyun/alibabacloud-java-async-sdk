@@ -119,7 +119,10 @@ public class EnableSSLConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Upgradable version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24151320976****</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class EnableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +141,10 @@ public class EnableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +152,10 @@ public class EnableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class EnableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class EnableSSLConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Is the request successful?</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

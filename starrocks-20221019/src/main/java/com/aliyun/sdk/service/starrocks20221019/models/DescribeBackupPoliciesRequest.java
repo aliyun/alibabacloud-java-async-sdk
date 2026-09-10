@@ -87,7 +87,10 @@ public class DescribeBackupPoliciesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -96,7 +99,10 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bk-policy-26ec5bc0ea67b5ef</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -105,7 +111,10 @@ public class DescribeBackupPoliciesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

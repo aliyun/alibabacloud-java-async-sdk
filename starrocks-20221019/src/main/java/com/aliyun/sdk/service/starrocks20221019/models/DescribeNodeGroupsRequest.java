@@ -196,7 +196,10 @@ public class DescribeNodeGroupsRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-718fb04c7112****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -205,7 +208,10 @@ public class DescribeNodeGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for paging. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -214,7 +220,10 @@ public class DescribeNodeGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for paging. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,7 +232,17 @@ public class DescribeNodeGroupsRequest extends Request {
         }
 
         /**
-         * componentType.
+         * <p>The compute group type. Valid values:</p>
+         * <ul>
+         * <li>FE</li>
+         * <li>BE</li>
+         * <li>CN</li>
+         * <li>OBSERVER</li>
+         * <li>AGENT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FE</p>
          */
         public Builder componentType(String componentType) {
             this.putBodyParameter("componentType", componentType);
@@ -232,7 +251,10 @@ public class DescribeNodeGroupsRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p><strong>[Deprecated]</strong> The instance ID. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -241,7 +263,7 @@ public class DescribeNodeGroupsRequest extends Request {
         }
 
         /**
-         * nodeGroupIds.
+         * <p>The list of compute group IDs to query.</p>
          */
         public Builder nodeGroupIds(java.util.List<String> nodeGroupIds) {
             this.putBodyParameter("nodeGroupIds", nodeGroupIds);
@@ -250,7 +272,10 @@ public class DescribeNodeGroupsRequest extends Request {
         }
 
         /**
-         * nodeGroupName.
+         * <p>The compute group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng_1</p>
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.putBodyParameter("nodeGroupName", nodeGroupName);
@@ -259,7 +284,33 @@ public class DescribeNodeGroupsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The compute group status. Valid values:</p>
+         * <ul>
+         * <li>UNPAID: Unpaid.</li>
+         * <li>PAID: Paid.</li>
+         * <li>CREATING_FAILED: Creation failed.</li>
+         * <li>CREATING: Being created.</li>
+         * <li>RUNNING: Running.</li>
+         * <li>MODIFYING_CONFIG: Configuration being modified.</li>
+         * <li>MODIFYING_TIMEZONE: Time zone being modified.</li>
+         * <li>ELASTIC_SCALING_OUT: Elastic scale-out in progress.</li>
+         * <li>ELASTIC_SCALING_IN: Elastic scale-in in progress.</li>
+         * <li>SCALING_OUT: Scale-out in progress.</li>
+         * <li>RESTARTING: Restarting.</li>
+         * <li>SCALING_IN: Scale-in in progress.</li>
+         * <li>SCALING_UP: Scaling up.</li>
+         * <li>SCALING_DOWN: Scaling down.</li>
+         * <li>UPGRADING: Upgrading.</li>
+         * <li>ENABLE_PUBLIC_NETWORK: Enabling public network access.</li>
+         * <li>DISABLE_PUBLIC_NETWORK: Disabling public network access.</li>
+         * <li>SWITCH_AZ: Switching zone.</li>
+         * <li>DISABLE: Disabled.</li>
+         * <li>DELETING: Being deleted.</li>
+         * <li>DELETED: Deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -268,7 +319,7 @@ public class DescribeNodeGroupsRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -336,7 +387,10 @@ public class DescribeNodeGroupsRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -344,7 +398,10 @@ public class DescribeNodeGroupsRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

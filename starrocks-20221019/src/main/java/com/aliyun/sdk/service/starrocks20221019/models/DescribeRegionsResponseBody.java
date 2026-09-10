@@ -132,7 +132,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>AccessDeniedDetail</p>
+         * <p>Details about access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -143,7 +143,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The instance information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -151,7 +151,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -159,7 +162,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -167,7 +173,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -175,7 +184,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +195,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -275,7 +290,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -283,7 +301,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * DescriptionEn.
+             * <p>The English description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder descriptionEn(String descriptionEn) {
                 this.descriptionEn = descriptionEn;
@@ -291,7 +312,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -299,7 +323,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>华东1（杭州）</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

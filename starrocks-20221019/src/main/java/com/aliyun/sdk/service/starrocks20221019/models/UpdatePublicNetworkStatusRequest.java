@@ -125,7 +125,10 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * ComponentType.
+         * <p>Data returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE</p>
          */
         public Builder componentType(String componentType) {
             this.putQueryParameter("ComponentType", componentType);
@@ -134,6 +137,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
+         * <p>Data returned by the operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +150,10 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-3d5ce6454354****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -155,7 +162,10 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         }
 
         /**
-         * PublicNetworkEnabled.
+         * <p>Enable or disable the public network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder publicNetworkEnabled(Boolean publicNetworkEnabled) {
             this.putQueryParameter("PublicNetworkEnabled", publicNetworkEnabled);

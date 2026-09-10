@@ -143,7 +143,7 @@ public class EnableMultiAzResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Order information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,10 @@ public class EnableMultiAzResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -159,7 +162,10 @@ public class EnableMultiAzResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -167,7 +173,10 @@ public class EnableMultiAzResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -175,7 +184,10 @@ public class EnableMultiAzResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +195,10 @@ public class EnableMultiAzResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -249,7 +264,10 @@ public class EnableMultiAzResponseBody extends TeaModel {
             } 
 
             /**
-             * NodeGroupId.
+             * <p>Compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-a9b2e9148196****</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -257,7 +275,10 @@ public class EnableMultiAzResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>Order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24782976697****</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

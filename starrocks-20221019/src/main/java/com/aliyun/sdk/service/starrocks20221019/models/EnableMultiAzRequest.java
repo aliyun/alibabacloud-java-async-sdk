@@ -110,7 +110,10 @@ public class EnableMultiAzRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-238sjh237s12***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -119,7 +122,7 @@ public class EnableMultiAzRequest extends Request {
         }
 
         /**
-         * observers.
+         * <p>Multi-zone information.</p>
          */
         public Builder observers(java.util.List<Observers> observers) {
             this.putBodyParameter("observers", observers);
@@ -128,7 +131,10 @@ public class EnableMultiAzRequest extends Request {
         }
 
         /**
-         * promotionOptionNo.
+         * <p>Coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_12378dfj6</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putBodyParameter("promotionOptionNo", promotionOptionNo);
@@ -196,7 +202,10 @@ public class EnableMultiAzRequest extends Request {
             } 
 
             /**
-             * vswId.
+             * <p>vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-x1232js012</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -204,7 +213,10 @@ public class EnableMultiAzRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>Zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

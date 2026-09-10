@@ -87,7 +87,10 @@ public class UpdateNodeGroupDescriptionRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the compute group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>okcc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -96,7 +99,10 @@ public class UpdateNodeGroupDescriptionRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>The ID of the compute group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-3d5ce6454354****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -105,7 +111,10 @@ public class UpdateNodeGroupDescriptionRequest extends Request {
         }
 
         /**
-         * X-Acs-Ram-Auth-Context.
+         * <p>The RAM authorization information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Optional</p>
          */
         public Builder xAcsRamAuthContext(String xAcsRamAuthContext) {
             this.putQueryParameter("X-Acs-Ram-Auth-Context", xAcsRamAuthContext);

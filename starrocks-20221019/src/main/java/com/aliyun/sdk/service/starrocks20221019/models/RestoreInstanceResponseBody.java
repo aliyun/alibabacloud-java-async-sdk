@@ -143,7 +143,7 @@ public class RestoreInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -159,7 +162,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -167,7 +173,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -175,7 +184,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +195,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -249,7 +264,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-b25e21e243889XXX</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -257,7 +275,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>Order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>241526000650XXX</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

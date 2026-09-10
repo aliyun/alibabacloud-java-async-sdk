@@ -154,7 +154,10 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * Dimension.
+         * <p>Evaluation dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_analysis</p>
          */
         public Builder dimension(String dimension) {
             this.putQueryParameter("Dimension", dimension);
@@ -163,7 +166,10 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -172,7 +178,10 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for paged queries. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -181,7 +190,10 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of authorized entries displayed per page for paged queries. The default value is 10, and the maximum value is 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -190,7 +202,10 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * ReportDate.
+         * <p>Report time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-03-08</p>
          */
         public Builder reportDate(String reportDate) {
             this.putQueryParameter("ReportDate", reportDate);
@@ -199,7 +214,10 @@ public class DescribeInstanceDiagnosisResultRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>Status collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         public Builder statuses(String statuses) {
             this.putQueryParameter("Statuses", statuses);

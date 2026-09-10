@@ -112,6 +112,7 @@ public class ModifySpecTypePreCheckRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class ModifySpecTypePreCheckRequest extends Request {
         }
 
         /**
+         * <p>The compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +138,10 @@ public class ModifySpecTypePreCheckRequest extends Request {
         }
 
         /**
-         * TargetSpecType.
+         * <p>The target specification type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder targetSpecType(String targetSpecType) {
             this.putQueryParameter("TargetSpecType", targetSpecType);

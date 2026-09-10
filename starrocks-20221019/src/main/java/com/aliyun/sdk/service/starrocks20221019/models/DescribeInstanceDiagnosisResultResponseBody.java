@@ -156,7 +156,7 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -164,7 +164,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -172,7 +175,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -180,7 +186,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -188,7 +197,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +208,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +219,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>Total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -413,7 +431,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             } 
 
             /**
-             * BestPractice.
+             * <p>Best Practices.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>无</p>
              */
             public Builder bestPractice(String bestPractice) {
                 this.bestPractice = bestPractice;
@@ -421,7 +442,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Diagnosis item description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Evaluate unreasonable partition and bucket configuration</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -429,7 +453,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Dimension.
+             * <p>Evaluation dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_analysis</p>
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -437,7 +464,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * EvaluationTime.
+             * <p>Evaluation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-08T02:12:32Z</p>
              */
             public Builder evaluationTime(Long evaluationTime) {
                 this.evaluationTime = evaluationTime;
@@ -445,7 +475,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * FullScore.
+             * <p>Full score for the evaluation item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder fullScore(Double fullScore) {
                 this.fullScore = fullScore;
@@ -453,7 +486,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-b25e21e243889XXX</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -461,7 +497,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Introduction.
+             * <p>Evaluation item introduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>for autotest</p>
              */
             public Builder introduction(String introduction) {
                 this.introduction = introduction;
@@ -469,7 +508,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * ItemId.
+             * <p>Evaluation item ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02cf887a</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -477,7 +519,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * ItemName.
+             * <p>Evaluation item name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Evaluate unreasonable partition and bucket configuration</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -485,7 +530,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReportDate.
+             * <p>Report date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-08</p>
              */
             public Builder reportDate(String reportDate) {
                 this.reportDate = reportDate;
@@ -493,7 +541,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>Diagnosis score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -501,7 +552,20 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status list.</p>
+             * <ul>
+             * <li><p>healthy</p>
+             * </li>
+             * <li><p>info</p>
+             * </li>
+             * <li><p>medium</p>
+             * </li>
+             * <li><p>critical</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>healthy</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -509,7 +573,10 @@ public class DescribeInstanceDiagnosisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * <p>Diagnosis suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>未出现分桶大小超过5GB的情况，评估结果为健康。</p>
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;

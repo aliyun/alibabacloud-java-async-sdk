@@ -73,7 +73,10 @@ public class ModifyHostAliasRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -82,7 +85,7 @@ public class ModifyHostAliasRequest extends Request {
         }
 
         /**
-         * hostAliases.
+         * <p>Host alias list.</p>
          */
         public Builder hostAliases(java.util.List<HostAliases> hostAliases) {
             this.putBodyParameter("hostAliases", hostAliases);
@@ -150,7 +153,7 @@ public class ModifyHostAliasRequest extends Request {
             } 
 
             /**
-             * hostnames.
+             * <p>Host alias.</p>
              */
             public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
@@ -158,7 +161,10 @@ public class ModifyHostAliasRequest extends Request {
             }
 
             /**
-             * ip.
+             * <p>Machine IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26.15.54.221</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;

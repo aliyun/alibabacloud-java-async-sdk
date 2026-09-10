@@ -22,6 +22,10 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -43,6 +47,7 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
     private ModifyDiskPerformanceLevelRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.autoPay = builder.autoPay;
         this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
         this.promotionOptionNo = builder.promotionOptionNo;
@@ -67,6 +72,13 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -99,6 +111,7 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDiskPerformanceLevelRequest, Builder> {
         private String regionId; 
+        private Boolean autoPay; 
         private String instanceId; 
         private String nodeGroupId; 
         private String promotionOptionNo; 
@@ -111,6 +124,7 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
         private Builder(ModifyDiskPerformanceLevelRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.autoPay = request.autoPay;
             this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
             this.promotionOptionNo = request.promotionOptionNo;
@@ -123,6 +137,22 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</p>
+         * <ul>
+         * <li>true: Automatic payment.</li>
+         * <li>false: No automatic payment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
             return this;
         }
 
@@ -140,7 +170,7 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
         }
 
         /**
-         * <p>The warehouse ID.</p>
+         * <p>The compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +183,10 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -162,14 +195,7 @@ public class ModifyDiskPerformanceLevelRequest extends Request {
         }
 
         /**
-         * <p>The disk performance level to which you want to change.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>pl0</li>
-         * <li>pl1</li>
-         * <li>pl2</li>
-         * <li>pl3</li>
-         * </ul>
+         * <p>The target disk performance level (PL).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -156,7 +156,7 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -164,7 +164,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -172,7 +175,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -180,7 +186,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -188,7 +197,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +208,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Is the request successful?</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +219,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>Total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -296,7 +314,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
             } 
 
             /**
-             * NeedRestartAfterModifyDiskSize.
+             * <p>Node restart required after modifying disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needRestartAfterModifyDiskSize(Boolean needRestartAfterModifyDiskSize) {
                 this.needRestartAfterModifyDiskSize = needRestartAfterModifyDiskSize;
@@ -304,7 +325,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportFastModeModifyResource.
+             * <p>Supports modifying resources with fast restart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportFastModeModifyResource(Boolean supportFastModeModifyResource) {
                 this.supportFastModeModifyResource = supportFastModeModifyResource;
@@ -312,7 +336,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportFastRestart.
+             * <p>Supports fast restart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportFastRestart(Boolean supportFastRestart) {
                 this.supportFastRestart = supportFastRestart;
@@ -320,7 +347,10 @@ public class GetNodeGroupFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportModifySpecType.
+             * <p>Supports modifying specification type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportModifySpecType(Boolean supportModifySpecType) {
                 this.supportModifySpecType = supportModifySpecType;

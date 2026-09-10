@@ -168,7 +168,10 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * ExpireDays.
+         * <p>The number of days to retain the backup data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder expireDays(Integer expireDays) {
             this.putBodyParameter("ExpireDays", expireDays);
@@ -177,7 +180,10 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * Hour.
+         * <p>The hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder hour(Integer hour) {
             this.putBodyParameter("Hour", hour);
@@ -186,7 +192,10 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-0104730e9de40215</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -195,7 +204,10 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * Minute.
+         * <p>The minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder minute(Integer minute) {
             this.putBodyParameter("Minute", minute);
@@ -204,7 +216,18 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * RecurrenceType.
+         * <p>The recurrence type for the policy. Valid values:</p>
+         * <ul>
+         * <li><p>DAILY: Daily.</p>
+         * </li>
+         * <li><p>WEEKLY: Weekly.</p>
+         * </li>
+         * <li><p>MONTHLY: Monthly.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MONTHLY</p>
          */
         public Builder recurrenceType(String recurrenceType) {
             this.putBodyParameter("RecurrenceType", recurrenceType);
@@ -213,7 +236,7 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * RecurrenceValues.
+         * <p>The values for the recurrence.</p>
          */
         public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
             this.putBodyParameter("RecurrenceValues", recurrenceValues);
@@ -222,7 +245,10 @@ public class AddBackupPolicyRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>The timeout period for the backup job in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putBodyParameter("TimeoutSeconds", timeoutSeconds);

@@ -96,7 +96,10 @@ public class IsolateLeaderRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +108,10 @@ public class IsolateLeaderRequest extends Request {
         }
 
         /**
-         * IsolateLeader.
+         * <p>Enable read/write splitting. The Leader FE node handles write requests, and other nodes handle read requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isolateLeader(Boolean isolateLeader) {
             this.putQueryParameter("IsolateLeader", isolateLeader);

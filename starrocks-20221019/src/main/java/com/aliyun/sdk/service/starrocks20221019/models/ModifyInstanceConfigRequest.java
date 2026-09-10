@@ -209,7 +209,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * AddConfigList.
+         * <p>[Deprecated] List of configurations to add</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder addConfigList(String addConfigList) {
             this.putQueryParameter("AddConfigList", addConfigList);
@@ -218,7 +221,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * ConfigList.
+         * <p>Additional information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;type\&quot;:\&quot;sas_analysis_online-sas-operation-log-sh-sas-event-rasp\&quot;,\&quot;configItemList\&quot;:[{\&quot;key\&quot;:\&quot;item_level\&quot;,\&quot;valueList\&quot;:[\&quot;all\&quot;]},{\&quot;key\&quot;:\&quot;alert_type\&quot;,\&quot;valueList\&quot;:[\&quot;all\&quot;]}]}]</p>
          */
         public Builder configList(String configList) {
             this.putQueryParameter("ConfigList", configList);
@@ -227,7 +233,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * DeleteConfigList.
+         * <p>[Deprecated] List of configurations to delete</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder deleteConfigList(String deleteConfigList) {
             this.putQueryParameter("DeleteConfigList", deleteConfigList);
@@ -236,6 +245,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
+         * <p>Sample ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,7 +258,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * Reason.
+         * <p>Reason for modification</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -257,7 +270,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * configsToAdd.
+         * <p>Configurations to add</p>
          */
         public Builder configsToAdd(java.util.List<InstanceConfigDto> configsToAdd) {
             this.putBodyParameter("configsToAdd", configsToAdd);
@@ -266,7 +279,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * configsToDelete.
+         * <p>Configurations to delete</p>
          */
         public Builder configsToDelete(java.util.List<InstanceConfigDto> configsToDelete) {
             this.putBodyParameter("configsToDelete", configsToDelete);
@@ -275,7 +288,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * configsToUpdate.
+         * <p>Configurations to update</p>
          */
         public Builder configsToUpdate(java.util.List<InstanceConfigDto> configsToUpdate) {
             this.putBodyParameter("configsToUpdate", configsToUpdate);
@@ -284,7 +297,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * fastMode.
+         * <p>Whether to restart quickly</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fastMode(Boolean fastMode) {
             this.putBodyParameter("fastMode", fastMode);
@@ -293,7 +309,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * restart.
+         * <p>Whether to restart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putBodyParameter("restart", restart);

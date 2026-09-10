@@ -90,6 +90,7 @@ public class UpdateInnerIpWhitelistGroupRequest extends Request {
         } 
 
         /**
+         * <p>The list of CIDR blocks for the whitelist.</p>
          * <p>This parameter is required.</p>
          */
         public Builder cidrIpList(java.util.List<String> cidrIpList) {
@@ -99,6 +100,7 @@ public class UpdateInnerIpWhitelistGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the private network whitelist group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +113,7 @@ public class UpdateInnerIpWhitelistGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

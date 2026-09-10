@@ -157,7 +157,10 @@ public class DescribeBackupsRequest extends Request {
         } 
 
         /**
-         * BackupTaskId.
+         * <p>The backup task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bt-2389hsdui12m</p>
          */
         public Builder backupTaskId(String backupTaskId) {
             this.putQueryParameter("BackupTaskId", backupTaskId);
@@ -166,7 +169,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -175,7 +181,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The query page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -184,7 +193,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,7 +205,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,7 +217,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * Statuses.
+         * <p>The list of statuses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         public Builder statuses(String statuses) {
             this.putQueryParameter("Statuses", statuses);
@@ -211,7 +229,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * TimePeriodEndTime.
+         * <p>The end time for querying backup jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1747728000</p>
          */
         public Builder timePeriodEndTime(Long timePeriodEndTime) {
             this.putQueryParameter("TimePeriodEndTime", timePeriodEndTime);
@@ -220,7 +241,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * TimePeriodStartTime.
+         * <p>The start time for querying backup jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1747708000</p>
          */
         public Builder timePeriodStartTime(Long timePeriodStartTime) {
             this.putQueryParameter("TimePeriodStartTime", timePeriodStartTime);

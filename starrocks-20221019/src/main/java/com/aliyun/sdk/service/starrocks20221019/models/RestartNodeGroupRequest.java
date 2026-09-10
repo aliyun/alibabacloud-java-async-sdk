@@ -110,7 +110,16 @@ public class RestartNodeGroupRequest extends Request {
         }
 
         /**
-         * FastMode.
+         * <p>Whether to restart in fast mode. Default value: false.</p>
+         * <ul>
+         * <li><p>true: Restart compute nodes in fast mode. Nodes restart in batches. Within each batch, nodes restart in parallel. Between batches, restarts run sequentially.</p>
+         * </li>
+         * <li><p>false: Restart compute nodes using rolling restart.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fastMode(Boolean fastMode) {
             this.putQueryParameter("FastMode", fastMode);
@@ -119,7 +128,10 @@ public class RestartNodeGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,7 +140,10 @@ public class RestartNodeGroupRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>The ID of the compute group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-3d5ce6454354****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);

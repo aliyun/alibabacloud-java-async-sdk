@@ -152,7 +152,10 @@ public class EnableSSLConnectionRequest extends Request {
         }
 
         /**
-         * CustomSSLCertificate.
+         * <p>Custom SSL certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIIP0wIBAzCCD4wGCSqGSIb3DQEHAaCCD30Egg95MIIPdTCCBbwGCSqGSIb3DQEHAaCCBa0EggWpMIIFpTCCBaEGCyqGSIb3DQEMCgECoIIFQDCCBTwwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFHkQJTDaeFabOsRTB4Q7hgW6if7hAgInEAIBIDAMBggqhkiG9w0CCQU</p>
          */
         public Builder customSSLCertificate(String customSSLCertificate) {
             this.putBodyParameter("CustomSSLCertificate", customSSLCertificate);
@@ -161,7 +164,10 @@ public class EnableSSLConnectionRequest extends Request {
         }
 
         /**
-         * EnableCustom.
+         * <p>Specifies whether to use a custom certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableCustom(Boolean enableCustom) {
             this.putBodyParameter("EnableCustom", enableCustom);
@@ -170,7 +176,10 @@ public class EnableSSLConnectionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-0104730e9de40215</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -179,7 +188,10 @@ public class EnableSSLConnectionRequest extends Request {
         }
 
         /**
-         * Renewal.
+         * <p>Indicates whether this request renews an existing certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder renewal(Boolean renewal) {
             this.putBodyParameter("Renewal", renewal);
@@ -188,7 +200,10 @@ public class EnableSSLConnectionRequest extends Request {
         }
 
         /**
-         * SslKeyPassword.
+         * <p>Key password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KoZ13vcNAQ</p>
          */
         public Builder sslKeyPassword(String sslKeyPassword) {
             this.putBodyParameter("SslKeyPassword", sslKeyPassword);
@@ -197,7 +212,10 @@ public class EnableSSLConnectionRequest extends Request {
         }
 
         /**
-         * SslKeystorePassword.
+         * <p>Keystore password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21esSd9Ao</p>
          */
         public Builder sslKeystorePassword(String sslKeystorePassword) {
             this.putBodyParameter("SslKeystorePassword", sslKeystorePassword);

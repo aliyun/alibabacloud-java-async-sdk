@@ -96,7 +96,10 @@ public class QueryRefundPriceRequest extends Request {
         }
 
         /**
-         * billingInstanceIds.
+         * <p>A comma-separated list of instance IDs to cancel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-1syeu23,ng-81293sa</p>
          */
         public Builder billingInstanceIds(String billingInstanceIds) {
             this.putQueryParameter("billingInstanceIds", billingInstanceIds);
@@ -105,7 +108,10 @@ public class QueryRefundPriceRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID. This field is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-82su12s0kl12</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);

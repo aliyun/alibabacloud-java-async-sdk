@@ -143,7 +143,7 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -159,7 +162,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -167,7 +173,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -175,7 +184,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +195,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Is the request successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -275,7 +290,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentName.
+             * <p>Resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disk_type</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -283,7 +301,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * <p>Discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -291,7 +312,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * <p>Original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10923</p>
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -299,7 +323,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * <p>Final price, which is the original price minus the discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10923</p>
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;
@@ -392,7 +419,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * CheapRate.
+             * <p>Price reduction ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cheapRate(Float cheapRate) {
                 this.cheapRate = cheapRate;
@@ -400,7 +430,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * CheapStandAmount.
+             * <p>Total official website price after reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10923</p>
              */
             public Builder cheapStandAmount(Float cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
@@ -408,7 +441,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsShow.
+             * <p>Display price reduction range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isShow(Boolean isShow) {
                 this.isShow = isShow;
@@ -416,7 +452,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalStandAmount.
+             * <p>Original total official website price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10923</p>
              */
             public Builder originalStandAmount(Float originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
@@ -496,7 +535,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * PromotionDesc.
+             * <p>The description of the coupon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_desc</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -504,7 +546,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>Coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_promotion_option_id_for_blank</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -512,7 +557,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionOptionNo.
+             * <p>Coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_12378dfj6</p>
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -592,7 +640,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>Quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder amount(Float amount) {
                 this.amount = amount;
@@ -600,7 +651,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule-928shy23sa</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -608,7 +662,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDescId.
+             * <p>Rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7dsu230ks23</p>
              */
             public Builder ruleDescId(String ruleDescId) {
                 this.ruleDescId = ruleDescId;
@@ -779,7 +836,7 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentPrices.
+             * <p>Component prices.</p>
              */
             public Builder componentPrices(java.util.List<ComponentPrices> componentPrices) {
                 this.componentPrices = componentPrices;
@@ -787,7 +844,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>Currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -795,7 +855,7 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DepreciateInfo.
+             * <p>Price reduction ratio.</p>
              */
             public Builder depreciateInfo(DepreciateInfo depreciateInfo) {
                 this.depreciateInfo = depreciateInfo;
@@ -803,7 +863,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * <p>Discount amount = original amount - bill payable amount (including coupon deduction amount).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -811,7 +874,7 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionalPromotions.
+             * <p>Coupon information.</p>
              */
             public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
@@ -819,7 +882,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * <p>Original price (original amount) = catalog price × usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10923</p>
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -827,7 +893,7 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>Returned data structure.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -835,7 +901,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandDiscountPrice.
+             * <p>Discounted price based on the official website discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10923</p>
              */
             public Builder standDiscountPrice(Float standDiscountPrice) {
                 this.standDiscountPrice = standDiscountPrice;
@@ -843,7 +912,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandPrice.
+             * <p>Official website discount price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10923</p>
              */
             public Builder standPrice(Float standPrice) {
                 this.standPrice = standPrice;
@@ -851,7 +923,10 @@ public class QueryModifyDiskTypePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * <p>Amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10923</p>
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;

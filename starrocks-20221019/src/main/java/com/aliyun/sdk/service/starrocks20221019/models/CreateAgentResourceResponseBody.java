@@ -119,7 +119,7 @@ public class CreateAgentResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class CreateAgentResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -135,7 +138,10 @@ public class CreateAgentResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -143,7 +149,10 @@ public class CreateAgentResourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +160,10 @@ public class CreateAgentResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B67D142D-D54E-184F-A306-22BDC01B2XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class CreateAgentResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class CreateAgentResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * NodeGroupId.
+             * <p>Compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-5e2ba600fee3****</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -233,7 +251,10 @@ public class CreateAgentResourceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>Order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>241526000650XXX</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

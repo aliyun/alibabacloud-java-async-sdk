@@ -143,7 +143,7 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -159,7 +162,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -167,7 +173,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -175,7 +184,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +195,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -275,7 +290,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentName.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>multi-zone</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -283,7 +301,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * <p>The discount amount for the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -291,7 +312,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * <p>The original price of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -299,7 +323,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * <p>The final price, which is the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;
@@ -392,7 +419,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * CheapRate.
+             * <p>The price reduction percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cheapRate(Float cheapRate) {
                 this.cheapRate = cheapRate;
@@ -400,7 +430,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * CheapStandAmount.
+             * <p>The total official price after the price reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder cheapStandAmount(Float cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
@@ -408,7 +441,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsShow.
+             * <p>Indicates whether to show the price reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isShow(Boolean isShow) {
                 this.isShow = isShow;
@@ -416,7 +452,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalStandAmount.
+             * <p>The original total official price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder originalStandAmount(Float originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
@@ -509,7 +548,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * ModuleCode.
+             * <p>The identifier of the billing module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>multi-zone</p>
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -517,7 +559,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zone</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -525,7 +570,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandPrice.
+             * <p>The discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder standPrice(String standPrice) {
                 this.standPrice = standPrice;
@@ -533,7 +581,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalProductFee.
+             * <p>The original price of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder totalProductFee(String totalProductFee) {
                 this.totalProductFee = totalProductFee;
@@ -613,7 +664,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_desc</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -621,7 +675,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_promotion_option_id_for_blank</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -629,7 +686,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionOptionNo.
+             * <p>The coupon ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>youhuiquan_12378dfj6</p>
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -709,7 +769,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The quantity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder amount(Float amount) {
                 this.amount = amount;
@@ -717,7 +780,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule_28sdhsu2320t</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -725,7 +791,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDescId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2ju2sd9dss</p>
              */
             public Builder ruleDescId(String ruleDescId) {
                 this.ruleDescId = ruleDescId;
@@ -909,7 +978,7 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentPrices.
+             * <p>The component prices.</p>
              */
             public Builder componentPrices(java.util.List<ComponentPrices> componentPrices) {
                 this.componentPrices = componentPrices;
@@ -917,7 +986,18 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency. Valid values:</p>
+             * <ul>
+             * <li><p>CNY: Chinese Yuan.</p>
+             * </li>
+             * <li><p>USD: U.S. dollar.</p>
+             * </li>
+             * <li><p>JPY: Japanese Yen.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -925,7 +1005,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DepreciateInfo.
+             * <p>The total official price after the price reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder depreciateInfo(DepreciateInfo depreciateInfo) {
                 this.depreciateInfo = depreciateInfo;
@@ -933,7 +1016,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * <p>The discount amount. This is the original amount minus the bill\&quot;s payable amount, which includes coupon deductions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -941,7 +1027,7 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleInstance.
+             * <p>The module ID.</p>
              */
             public Builder moduleInstance(java.util.List<ModuleInstance> moduleInstance) {
                 this.moduleInstance = moduleInstance;
@@ -949,7 +1035,7 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionalPromotions.
+             * <p>The coupon information.</p>
              */
             public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
@@ -957,7 +1043,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * <p>The original price. This is the list price multiplied by the usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -965,7 +1054,7 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The returned data structure.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -973,7 +1062,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandDiscountPrice.
+             * <p>The discounted price based on the official discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder standDiscountPrice(Float standDiscountPrice) {
                 this.standDiscountPrice = standDiscountPrice;
@@ -981,7 +1073,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandPrice.
+             * <p>The official discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder standPrice(Float standPrice) {
                 this.standPrice = standPrice;
@@ -989,7 +1084,10 @@ public class QueryEnableMultiAzPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * <p>The amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7641</p>
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;

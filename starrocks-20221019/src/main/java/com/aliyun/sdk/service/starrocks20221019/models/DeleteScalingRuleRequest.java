@@ -90,6 +90,7 @@ public class DeleteScalingRuleRequest extends Request {
         } 
 
         /**
+         * <p>Compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteScalingRuleRequest extends Request {
         }
 
         /**
+         * <p>ID of the scaling rule to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteScalingRuleRequest extends Request {
         }
 
         /**
+         * <p>Trigger type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

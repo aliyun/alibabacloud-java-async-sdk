@@ -110,7 +110,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * FeNodeNumber.
+         * <p>The number of gateway nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder feNodeNumber(Integer feNodeNumber) {
             this.putQueryParameter("FeNodeNumber", feNodeNumber);
@@ -119,7 +122,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * GatewayName.
+         * <p>The alias for the private gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas_automation_test</p>
          */
         public Builder gatewayName(String gatewayName) {
             this.putQueryParameter("GatewayName", gatewayName);
@@ -128,7 +134,10 @@ public class AddGatewayRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

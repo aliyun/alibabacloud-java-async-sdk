@@ -184,7 +184,10 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Enable auto-renewal. This parameter is valid only when payType is set to PrePaid. Auto-renewal is disabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -193,6 +196,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
+         * <p>Number of CUs. A CU (Compute Unit) is the basic unit of service measurement. 1 CU = 1 CPU core + 4 GiB memory. For memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +209,10 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>Duration. This parameter is valid only when payType is set to PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -214,6 +221,7 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +234,13 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
+         * <p>Payment type:</p>
+         * <ol>
+         * <li><p>Subscription (prePaid).</p>
+         * </li>
+         * <li><p>Pay-as-you-go (postPaid).</p>
+         * </li>
+         * </ol>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +253,17 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>Unit of subscription duration:</p>
+         * <ul>
+         * <li><p>Month</p>
+         * </li>
+         * <li><p>Year</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is valid only when payType is set to PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -247,7 +272,10 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>Coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2345</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -256,7 +284,10 @@ public class CreateAgentResourceRequest extends Request {
         }
 
         /**
-         * SpecType.
+         * <p>Compute group specification type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);

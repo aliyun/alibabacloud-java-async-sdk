@@ -127,6 +127,7 @@ public class QueryModifyDiskNumberPriceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class QueryModifyDiskNumberPriceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the compute group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +153,10 @@ public class QueryModifyDiskNumberPriceRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The ID of the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_12378dfj6</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -160,6 +165,7 @@ public class QueryModifyDiskNumberPriceRequest extends Request {
         }
 
         /**
+         * <p>The target number of nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -127,7 +130,10 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -135,7 +141,10 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>List of devices.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -225,7 +240,7 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * CidrIpList.
+             * <p>The list of CIDR blocks.</p>
              */
             public Builder cidrIpList(java.util.List<String> cidrIpList) {
                 this.cidrIpList = cidrIpList;
@@ -233,7 +248,10 @@ public class DescribeInnerIpWhitelistGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InnerIpWhitelistGroupId.
+             * <p>The name of the whitelist group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test1</p>
              */
             public Builder innerIpWhitelistGroupId(String innerIpWhitelistGroupId) {
                 this.innerIpWhitelistGroupId = innerIpWhitelistGroupId;

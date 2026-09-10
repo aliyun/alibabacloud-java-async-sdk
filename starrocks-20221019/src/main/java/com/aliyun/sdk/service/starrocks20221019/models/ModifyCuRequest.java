@@ -22,6 +22,10 @@ public class ModifyCuRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FastMode")
     private Boolean fastMode;
 
@@ -41,12 +45,13 @@ public class ModifyCuRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Target")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 64, minimum = 4)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 128, minimum = 4)
     private Integer target;
 
     private ModifyCuRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.autoPay = builder.autoPay;
         this.fastMode = builder.fastMode;
         this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
@@ -72,6 +77,13 @@ public class ModifyCuRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -111,6 +123,7 @@ public class ModifyCuRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyCuRequest, Builder> {
         private String regionId; 
+        private Boolean autoPay; 
         private Boolean fastMode; 
         private String instanceId; 
         private String nodeGroupId; 
@@ -124,6 +137,7 @@ public class ModifyCuRequest extends Request {
         private Builder(ModifyCuRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.autoPay = request.autoPay;
             this.fastMode = request.fastMode;
             this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
@@ -141,10 +155,26 @@ public class ModifyCuRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restart compute nodes in quick restart mode. Default value: false. Valid values:</p>
+         * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
          * <ul>
-         * <li>true: Compute nodes are restarted in quick restart mode in multiple batches. The batches are executed in parallel, and the nodes in each batch are restarted at the same time.</li>
-         * <li>false: Compute nodes are restarted in rolling restart mode.</li>
+         * <li>true: Automatic payment.</li>
+         * <li>false: No automatic payment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to use the fast restart mode. Default value: false.</p>
+         * <ul>
+         * <li>true: Restarts compute nodes in the fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute sequentially.</li>
+         * <li>false: Restarts compute nodes in the rolling restart mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +200,7 @@ public class ModifyCuRequest extends Request {
         }
 
         /**
-         * <p>The warehouse ID.</p>
+         * <p>The compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +213,10 @@ public class ModifyCuRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -192,15 +225,7 @@ public class ModifyCuRequest extends Request {
         }
 
         /**
-         * <p>The number of CUs to which you want to change.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>4</li>
-         * <li>8</li>
-         * <li>16</li>
-         * <li>32</li>
-         * <li>64</li>
-         * </ul>
+         * <p>The target number of CUs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -118,7 +118,10 @@ public class UnTagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Specifies whether to remove all tags from the resources. This parameter is valid only when the TagKey parameter is left empty. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -127,6 +130,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +143,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>A list of resource IDs. The list can contain up to 50 resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -149,6 +154,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +167,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>A list of tag keys to remove. The list can contain up to 20 tag keys.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             String tagKeyShrink = shrink(tagKey, "TagKey", "json");

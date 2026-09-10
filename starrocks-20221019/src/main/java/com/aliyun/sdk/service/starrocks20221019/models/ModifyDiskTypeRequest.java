@@ -22,6 +22,10 @@ public class ModifyDiskTypeRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -48,6 +52,7 @@ public class ModifyDiskTypeRequest extends Request {
     private ModifyDiskTypeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.autoPay = builder.autoPay;
         this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
         this.promotionOptionNo = builder.promotionOptionNo;
@@ -73,6 +78,13 @@ public class ModifyDiskTypeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -112,6 +124,7 @@ public class ModifyDiskTypeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDiskTypeRequest, Builder> {
         private String regionId; 
+        private Boolean autoPay; 
         private String instanceId; 
         private String nodeGroupId; 
         private String promotionOptionNo; 
@@ -125,6 +138,7 @@ public class ModifyDiskTypeRequest extends Request {
         private Builder(ModifyDiskTypeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.autoPay = request.autoPay;
             this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
             this.promotionOptionNo = request.promotionOptionNo;
@@ -142,6 +156,23 @@ public class ModifyDiskTypeRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</p>
+         * <ul>
+         * <li>true: Automatic payment is enabled.</li>
+         * <li>false: Automatic payment is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +185,7 @@ public class ModifyDiskTypeRequest extends Request {
         }
 
         /**
+         * <p>The compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +198,10 @@ public class ModifyDiskTypeRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -175,6 +210,7 @@ public class ModifyDiskTypeRequest extends Request {
         }
 
         /**
+         * <p>The target disk type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +223,7 @@ public class ModifyDiskTypeRequest extends Request {
         }
 
         /**
+         * <p>The target disk performance level.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

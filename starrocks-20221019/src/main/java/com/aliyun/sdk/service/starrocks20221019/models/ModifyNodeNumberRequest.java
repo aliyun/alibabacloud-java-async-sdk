@@ -22,6 +22,10 @@ public class ModifyNodeNumberRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -51,6 +55,7 @@ public class ModifyNodeNumberRequest extends Request {
     private ModifyNodeNumberRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.autoPay = builder.autoPay;
         this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
         this.parallelism = builder.parallelism;
@@ -77,6 +82,13 @@ public class ModifyNodeNumberRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -123,6 +135,7 @@ public class ModifyNodeNumberRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyNodeNumberRequest, Builder> {
         private String regionId; 
+        private Boolean autoPay; 
         private String instanceId; 
         private String nodeGroupId; 
         private Integer parallelism; 
@@ -137,6 +150,7 @@ public class ModifyNodeNumberRequest extends Request {
         private Builder(ModifyNodeNumberRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.autoPay = request.autoPay;
             this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
             this.parallelism = request.parallelism;
@@ -155,6 +169,22 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter. Valid values:</p>
+         * <ul>
+         * <li>true: Automatic payment.</li>
+         * <li>false: No automatic payment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
          * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
@@ -168,7 +198,7 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
-         * <p>The warehouse ID.</p>
+         * <p>The compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +211,10 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
-         * Parallelism.
+         * <p>The decommission concurrency for BE scale-in scenarios in compute-storage coupled mode. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder parallelism(Integer parallelism) {
             this.putQueryParameter("Parallelism", parallelism);
@@ -190,7 +223,10 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -199,7 +235,7 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
-         * <p>The number of nodes to which you want to change to.</p>
+         * <p>The target number of nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,7 +248,10 @@ public class ModifyNodeNumberRequest extends Request {
         }
 
         /**
-         * TerminationGracePeriodSeconds.
+         * <p>The wait time for running tasks to complete before dropping nodes during CN scale-in scenarios in compute-storage decoupled mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder terminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
             this.putQueryParameter("TerminationGracePeriodSeconds", terminationGracePeriodSeconds);

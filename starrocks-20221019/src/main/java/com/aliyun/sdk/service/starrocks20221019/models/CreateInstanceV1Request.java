@@ -526,6 +526,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * <p>The administrator password of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -538,7 +539,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * AgentNodeGroup.
+         * <p>The agent compute group.</p>
          */
         public Builder agentNodeGroup(AgentNodeGroup agentNodeGroup) {
             this.putBodyParameter("AgentNodeGroup", agentNodeGroup);
@@ -547,7 +548,15 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true: Automatic payment.</li>
+         * <li>false: No automatic payment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putBodyParameter("AutoPay", autoPay);
@@ -556,7 +565,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when payType is set to PrePaid. Auto-renewal is disabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -565,7 +577,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * BackendNodeGroups.
+         * <p>The BE or CN node group information.</p>
          */
         public Builder backendNodeGroups(java.util.List<BackendNodeGroups> backendNodeGroups) {
             this.putBodyParameter("BackendNodeGroups", backendNodeGroups);
@@ -574,7 +586,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Ensures the idempotence of the request. Generate a unique parameter value from your client. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -583,7 +598,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * DlfCatalogName.
+         * <p>The name of the DLF Catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paimon_test</p>
          */
         public Builder dlfCatalogName(String dlfCatalogName) {
             this.putBodyParameter("DlfCatalogName", dlfCatalogName);
@@ -592,7 +610,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * DlfCatalogType.
+         * <p>The type of the DLF Catalog. Valid values: paimon and iceberg.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paimon</p>
          */
         public Builder dlfCatalogType(String dlfCatalogType) {
             this.putBodyParameter("DlfCatalogType", dlfCatalogType);
@@ -601,7 +622,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The subscription duration. This parameter takes effect only when payType is set to PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
@@ -610,7 +634,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * EnableAiFunction.
+         * <p>Specifies whether to enable the AI Center. Default value: false.</p>
          */
         public Builder enableAiFunction(Boolean enableAiFunction) {
             this.putBodyParameter("EnableAiFunction", enableAiFunction);
@@ -619,7 +643,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * EnableMultiAz.
+         * <p>Specifies whether to enable disaster recovery.</p>
          */
         public Builder enableMultiAz(Boolean enableMultiAz) {
             this.putBodyParameter("EnableMultiAz", enableMultiAz);
@@ -628,7 +652,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * Encrypted.
+         * <p>Specifies whether to enable encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder encrypted(Boolean encrypted) {
             this.putBodyParameter("Encrypted", encrypted);
@@ -637,7 +664,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * FrontendNodeGroups.
+         * <p>The FE node group information.</p>
          */
         public Builder frontendNodeGroups(java.util.List<FrontendNodeGroups> frontendNodeGroups) {
             this.putBodyParameter("FrontendNodeGroups", frontendNodeGroups);
@@ -646,7 +673,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * GatewayType.
+         * <p>The gateway type. Valid values: Slb and Privatezone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Traditional\&quot;\&quot;</p>
          */
         public Builder gatewayType(String gatewayType) {
             this.putBodyParameter("GatewayType", gatewayType);
@@ -655,6 +685,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -667,7 +698,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * KmsKeyId.
+         * <p>The KMS key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fdsdf****</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putBodyParameter("KmsKeyId", kmsKeyId);
@@ -676,7 +710,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * LinkedRamUserName.
+         * <p>The username of the associated Resource Access Management (RAM) user or the name of the associated RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun.test1</p>
          */
         public Builder linkedRamUserName(String linkedRamUserName) {
             this.putBodyParameter("LinkedRamUserName", linkedRamUserName);
@@ -685,7 +722,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * ObserverNodeGroups.
+         * <p>The Observer node group information. Specify this parameter only when you need to enable multi-zone disaster recovery. The Observer node group specifications must be the same as those of the FE node group.</p>
          */
         public Builder observerNodeGroups(java.util.List<ObserverNodeGroups> observerNodeGroups) {
             this.putBodyParameter("ObserverNodeGroups", observerNodeGroups);
@@ -694,7 +731,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * OssAccessingRoleName.
+         * <p>The name of the role used for password-free access to OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunEMRStarRocksAccessingOSSRole</p>
          */
         public Builder ossAccessingRoleName(String ossAccessingRoleName) {
             this.putBodyParameter("OssAccessingRoleName", ossAccessingRoleName);
@@ -703,6 +743,12 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * <p>The instance edition:</p>
+         * <ul>
+         * <li>  Entry edition (trial).</li>
+         * <li> Standard edition (official).</li>
+         * </ul>
+         * 
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -715,6 +761,12 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ol>
+         * <li>prePaid: subscription.</li>
+         * <li>postPaid: pay-as-you-go.</li>
+         * </ol>
+         * 
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -727,7 +779,15 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The unit of the subscription duration. Valid values:</p>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
+         * This parameter takes effect only when payType is set to PrePaid.
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("PricingCycle", pricingCycle);
@@ -736,7 +796,14 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * PrincipalType.
+         * <p>The RAM authentication type. Valid values:</p>
+         * <ul>
+         * <li>RS: Resource Access Management (RAM) user.</li>
+         * <li>RR: RAM role.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RR</p>
          */
         public Builder principalType(String principalType) {
             this.putBodyParameter("PrincipalType", principalType);
@@ -745,7 +812,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>165445235634</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putBodyParameter("PromotionOptionNo", promotionOptionNo);
@@ -754,7 +824,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * RamUserId.
+         * <p>The ID of the Resource Access Management (RAM) user or RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder ramUserId(String ramUserId) {
             this.putBodyParameter("RamUserId", ramUserId);
@@ -763,7 +836,10 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzllkih7jqxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -772,6 +848,11 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * <p>The running mode of the cluster. Valid values:</p>
+         * <ul>
+         * <li>shared_nothing: compute-storage coupled.</li>
+         * <li>shared_data: compute-storage decoupled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -784,7 +865,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The instance tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
@@ -793,7 +874,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
-         * VSwitches.
+         * <p>The vSwitch and zone information.</p>
          */
         public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
             this.putBodyParameter("VSwitches", vSwitches);
@@ -802,6 +883,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * <p>The major version of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -827,6 +909,7 @@ public class CreateInstanceV1Request extends Request {
         }
 
         /**
+         * <p>The primary zone ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -885,7 +968,10 @@ public class CreateInstanceV1Request extends Request {
             } 
 
             /**
-             * cu.
+             * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -1030,7 +1116,10 @@ public class CreateInstanceV1Request extends Request {
             } 
 
             /**
-             * cu.
+             * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory. When SpecType is set to memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -1038,7 +1127,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * diskNumber.
+             * <p>The number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diskNumber(Integer diskNumber) {
                 this.diskNumber = diskNumber;
@@ -1046,7 +1138,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * localStorageInstanceType.
+             * <p>The local SSD instance type of the node group. This parameter takes effect only when the instance is ECS-based and SpecType is set to local SSD or large-scale storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd_4_4xlarge</p>
              */
             public Builder localStorageInstanceType(String localStorageInstanceType) {
                 this.localStorageInstanceType = localStorageInstanceType;
@@ -1054,7 +1149,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * residentNodeNumber.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder residentNodeNumber(Integer residentNodeNumber) {
                 this.residentNodeNumber = residentNodeNumber;
@@ -1062,7 +1160,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * specType.
+             * <p>The specification type of the node group. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -1070,7 +1171,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * storagePerformanceLevel.
+             * <p>The performance level (PL) of the cloud disk. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl1</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -1078,7 +1182,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * storageSize.
+             * <p>The storage size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -1086,7 +1193,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1231,7 +1341,10 @@ public class CreateInstanceV1Request extends Request {
             } 
 
             /**
-             * cu.
+             * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -1239,7 +1352,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * diskNumber.
+             * <p>The number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diskNumber(Integer diskNumber) {
                 this.diskNumber = diskNumber;
@@ -1247,7 +1363,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * localStorageInstanceType.
+             * <p>The local SSD instance type. This parameter does not need to be set for the FE node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder localStorageInstanceType(String localStorageInstanceType) {
                 this.localStorageInstanceType = localStorageInstanceType;
@@ -1255,7 +1374,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * residentNodeNumber.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder residentNodeNumber(Integer residentNodeNumber) {
                 this.residentNodeNumber = residentNodeNumber;
@@ -1263,7 +1385,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * specType.
+             * <p>The specification type of the node group. Only standard is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -1271,7 +1396,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * storagePerformanceLevel.
+             * <p>The performance level (PL) of the cloud disk. Only pl1 is supported, which provides up to 50,000 random read/write IOPS per disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl1</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -1279,7 +1407,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * storageSize.
+             * <p>The storage size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -1287,7 +1418,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1432,7 +1566,10 @@ public class CreateInstanceV1Request extends Request {
             } 
 
             /**
-             * cu.
+             * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -1440,7 +1577,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * diskNumber.
+             * <p>The number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diskNumber(Integer diskNumber) {
                 this.diskNumber = diskNumber;
@@ -1448,7 +1588,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * localStorageInstanceType.
+             * <p>The local SSD instance type. This parameter does not need to be set for the Observer node group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder localStorageInstanceType(String localStorageInstanceType) {
                 this.localStorageInstanceType = localStorageInstanceType;
@@ -1456,7 +1599,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * residentNodeNumber.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder residentNodeNumber(Integer residentNodeNumber) {
                 this.residentNodeNumber = residentNodeNumber;
@@ -1464,7 +1610,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * specType.
+             * <p>The specification type of the node group. Only standard is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -1472,7 +1621,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * storagePerformanceLevel.
+             * <p>The performance level (PL) of the cloud disk. Only pl1 is supported, which provides up to 50,000 random read/write IOPS per disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl1</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -1480,7 +1632,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * storageSize.
+             * <p>The storage size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -1488,7 +1643,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1555,7 +1713,10 @@ public class CreateInstanceV1Request extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1563,7 +1724,10 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1631,6 +1795,7 @@ public class CreateInstanceV1Request extends Request {
             } 
 
             /**
+             * <p>The vSwitch ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1642,7 +1807,7 @@ public class CreateInstanceV1Request extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The zone ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-i</p>

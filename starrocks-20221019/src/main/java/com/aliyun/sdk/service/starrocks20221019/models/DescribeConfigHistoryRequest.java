@@ -167,7 +167,10 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * EffectStatuses.
+         * <p>Filters the results by the effective status of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>effective</p>
          */
         public Builder effectStatuses(String effectStatuses) {
             this.putQueryParameter("EffectStatuses", effectStatuses);
@@ -176,7 +179,10 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for the query, specified as a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1742178604000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -185,6 +191,7 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +204,10 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * NeedTotal.
+         * <p>Specifies whether to return the total number of configuration history records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needTotal(Boolean needTotal) {
             this.putQueryParameter("NeedTotal", needTotal);
@@ -206,7 +216,10 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +228,10 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. The default value is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +240,10 @@ public class DescribeConfigHistoryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for the query, specified as a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1742178604000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

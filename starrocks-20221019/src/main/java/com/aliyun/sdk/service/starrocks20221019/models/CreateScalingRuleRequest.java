@@ -90,6 +90,7 @@ public class CreateScalingRuleRequest extends Request {
         } 
 
         /**
+         * <p>The compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
+         * <p>The rule content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +141,7 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
+         * <p>The trigger type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

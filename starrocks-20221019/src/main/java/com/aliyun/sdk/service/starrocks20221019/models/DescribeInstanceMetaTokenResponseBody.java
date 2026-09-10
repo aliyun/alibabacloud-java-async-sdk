@@ -145,7 +145,7 @@ public class DescribeInstanceMetaTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>AccessDeniedDetail</p>
+         * <p>Details about an access-denied error.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -156,7 +156,10 @@ public class DescribeInstanceMetaTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The token value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4ac66c5b-f3ef-4fce-8b52-d7f5f9*******</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -164,7 +167,10 @@ public class DescribeInstanceMetaTokenResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -172,7 +178,10 @@ public class DescribeInstanceMetaTokenResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -180,7 +189,10 @@ public class DescribeInstanceMetaTokenResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -188,7 +200,10 @@ public class DescribeInstanceMetaTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +211,10 @@ public class DescribeInstanceMetaTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +222,10 @@ public class DescribeInstanceMetaTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;

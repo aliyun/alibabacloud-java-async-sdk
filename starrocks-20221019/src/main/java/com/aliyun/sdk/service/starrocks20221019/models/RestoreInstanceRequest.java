@@ -224,7 +224,10 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * AdminPassword.
+         * <p>Cluster administrator password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password_example</p>
          */
         public Builder adminPassword(String adminPassword) {
             this.putBodyParameter("AdminPassword", adminPassword);
@@ -233,7 +236,10 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Enable auto-renewal. This parameter applies only when PayType is prePaid. Default: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -242,7 +248,10 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * BackupTaskId.
+         * <p>Backup job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bk-adskj23hd9s</p>
          */
         public Builder backupTaskId(String backupTaskId) {
             this.putBodyParameter("BackupTaskId", backupTaskId);
@@ -251,7 +260,10 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>Subscription duration. This parameter applies only when PayType is prePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
@@ -260,7 +272,10 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>Instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c1</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -269,7 +284,12 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>Payment type:
+         * prePaid for subscription
+         * postPaid for pay-as-you-go</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prePaid</p>
          */
         public Builder payType(String payType) {
             this.putBodyParameter("PayType", payType);
@@ -278,7 +298,12 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>Billing cycle unit. This parameter applies only when PayType is prePaid.
+         * Month for monthly billing
+         * Year for yearly billing</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("PricingCycle", pricingCycle);
@@ -287,7 +312,10 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzllkih7jqxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -296,7 +324,7 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>Tag struct.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("Tags", tags);
@@ -305,7 +333,7 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * VSwitches.
+         * <p>VSwitch and zone information.</p>
          */
         public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
             this.putBodyParameter("VSwitches", vSwitches);
@@ -314,7 +342,7 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * <p>vpc ID</p>
+         * <p>VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1fll2mci6d7pw8m****</p>
@@ -385,7 +413,10 @@ public class RestoreInstanceRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>Tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dukang-chengdu-sgueg</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -393,7 +424,10 @@ public class RestoreInstanceRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;reasons\&quot;: [], \&quot;patterns\&quot;: [], \&quot;aggregates\&quot;: [], \&quot;event_statistic\&quot;: {\&quot;statistic\&quot;: {}}}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -460,7 +494,10 @@ public class RestoreInstanceRequest extends Request {
             } 
 
             /**
-             * VswId.
+             * <p>VSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp19mlh98tm9teyyd****</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -468,7 +505,10 @@ public class RestoreInstanceRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * <p>Zone ID of the VSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

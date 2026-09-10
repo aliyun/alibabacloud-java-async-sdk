@@ -145,7 +145,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denied error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -153,7 +156,7 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -169,7 +175,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -177,7 +186,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +197,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -436,7 +457,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowModify.
+             * <p>Indicates whether the configuration item can be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowModify(String allowModify) {
                 this.allowModify = allowModify;
@@ -444,7 +468,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigKey.
+             * <p>The key of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable_udf</p>
              */
             public Builder configKey(String configKey) {
                 this.configKey = configKey;
@@ -452,7 +479,18 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>The type of the configuration item. Valid values:</p>
+             * <ul>
+             * <li><p>FE</p>
+             * </li>
+             * <li><p>BE</p>
+             * </li>
+             * <li><p>CORE</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FE</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -460,7 +498,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigValue.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;
@@ -468,7 +509,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Custom.
+             * <p>Indicates whether the item is a custom configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder custom(Boolean custom) {
                 this.custom = custom;
@@ -476,7 +520,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultNodeGroup.
+             * <p>Indicates whether it is the default compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultNodeGroup(Boolean defaultNodeGroup) {
                 this.defaultNodeGroup = defaultNodeGroup;
@@ -484,7 +531,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -492,7 +542,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the configuration item\&quot;s feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Whether to enable UDF.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -500,7 +553,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DescriptionEn.
+             * <p>The English description of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A boolean value to control whether to enable the synchronization of the tablet metadata. true indicates enabling synchronization, and false indicates disabling it.</p>
              */
             public Builder descriptionEn(String descriptionEn) {
                 this.descriptionEn = descriptionEn;
@@ -508,7 +564,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupId.
+             * <p>The compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-3d5ce6454354****</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -516,7 +575,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupName.
+             * <p>The name of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng_1</p>
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
@@ -524,7 +586,16 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Restart.
+             * <p>Indicates whether the instance needs to be restarted after the configuration item is changed. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: Restart.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Do not restart.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder restart(Boolean restart) {
                 this.restart = restart;
@@ -532,7 +603,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * <p>The unit of the configuration item. An empty string is returned if no unit is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s</p>
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -540,7 +614,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueRange.
+             * <p>The value range of the configuration item. An empty string is returned if no value range is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true,false</p>
              */
             public Builder valueRange(String valueRange) {
                 this.valueRange = valueRange;
@@ -548,7 +625,10 @@ public class DescribeInstanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueType.
+             * <p>The data type of the configuration item\&quot;s value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INT</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;

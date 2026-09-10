@@ -145,7 +145,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>AccessDeniedDetail</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -156,7 +156,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -164,7 +164,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -172,7 +175,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -180,7 +186,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -188,7 +197,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B67D142D-D54E-184F-A306-22BDC01B2XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +208,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +219,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -517,7 +535,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             } 
 
             /**
-             * ConsoleControlRestart.
+             * <p>Whether the restart process can be controlled from the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder consoleControlRestart(Boolean consoleControlRestart) {
                 this.consoleControlRestart = consoleControlRestart;
@@ -525,7 +546,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * EnableManageMv.
+             * <p>Whether materialized views can be managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableManageMv(Boolean enableManageMv) {
                 this.enableManageMv = enableManageMv;
@@ -533,7 +557,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * FullManagedSecurityGroup.
+             * <p>Whether managed security groups are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullManagedSecurityGroup(Boolean fullManagedSecurityGroup) {
                 this.fullManagedSecurityGroup = fullManagedSecurityGroup;
@@ -541,7 +568,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * MountDlfMetaToken.
+             * <p>Whether DLF meta tokens can be mounted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mountDlfMetaToken(Boolean mountDlfMetaToken) {
                 this.mountDlfMetaToken = mountDlfMetaToken;
@@ -549,7 +579,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAddConfigTypes.
+             * <p>A list of new configuration types.</p>
              */
             public Builder supportAddConfigTypes(java.util.List<String> supportAddConfigTypes) {
                 this.supportAddConfigTypes = supportAddConfigTypes;
@@ -557,7 +587,16 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportBackup.
+             * <p>Whether data backup is supported.</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Supports data backup.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Does not support data backup.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportBackup(Boolean supportBackup) {
                 this.supportBackup = supportBackup;
@@ -565,7 +604,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportCreateAgent.
+             * <p>Whether agents can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportCreateAgent(Boolean supportCreateAgent) {
                 this.supportCreateAgent = supportCreateAgent;
@@ -573,7 +615,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportCreateNonStandardNodeGroup.
+             * <p>Whether compute groups with specifications other than <code>standard</code> can be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportCreateNonStandardNodeGroup(Boolean supportCreateNonStandardNodeGroup) {
                 this.supportCreateNonStandardNodeGroup = supportCreateNonStandardNodeGroup;
@@ -581,7 +626,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportEed.
+             * <p>Whether elastic ephemeral disks are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportEed(Boolean supportEed) {
                 this.supportEed = supportEed;
@@ -589,7 +637,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportEnableAi.
+             * <p>Whether the AI function is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportEnableAi(Boolean supportEnableAi) {
                 this.supportEnableAi = supportEnableAi;
@@ -597,7 +648,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportEnableSSL.
+             * <p>Whether SSL can be enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportEnableSSL(Boolean supportEnableSSL) {
                 this.supportEnableSSL = supportEnableSSL;
@@ -605,7 +659,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportFastModeModifyConfig.
+             * <p>Whether fast restart is supported for configuration changes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportFastModeModifyConfig(Boolean supportFastModeModifyConfig) {
                 this.supportFastModeModifyConfig = supportFastModeModifyConfig;
@@ -613,7 +670,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportFastModeModifyResource.
+             * <p>Whether resources can be modified by using fast restart.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportFastModeModifyResource(Boolean supportFastModeModifyResource) {
                 this.supportFastModeModifyResource = supportFastModeModifyResource;
@@ -621,7 +681,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportFastRestart.
+             * <p>Whether fast restart is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportFastRestart(Boolean supportFastRestart) {
                 this.supportFastRestart = supportFastRestart;
@@ -629,7 +692,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportFeGateway.
+             * <p>Whether the FE gateway is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportFeGateway(Boolean supportFeGateway) {
                 this.supportFeGateway = supportFeGateway;
@@ -637,7 +703,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportHostAlias.
+             * <p>Whether custom domain names are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportHostAlias(Boolean supportHostAlias) {
                 this.supportHostAlias = supportHostAlias;
@@ -645,7 +714,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportModifyTimezone.
+             * <p>Whether the time zone can be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportModifyTimezone(Boolean supportModifyTimezone) {
                 this.supportModifyTimezone = supportModifyTimezone;
@@ -653,7 +725,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportMultiAZ.
+             * <p>Whether observers can be deployed across multiple availability zones (AZs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportMultiAZ(Boolean supportMultiAZ) {
                 this.supportMultiAZ = supportMultiAZ;
@@ -661,7 +736,10 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * UseComputeNode.
+             * <p>Whether the instance uses compute nodes (CNs).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useComputeNode(Boolean useComputeNode) {
                 this.useComputeNode = useComputeNode;
@@ -677,7 +755,7 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否支持Compaction Service白名单功能</p>
+             * <p>Whether the Compaction Service allowlist feature is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

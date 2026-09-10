@@ -143,6 +143,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
+         * <p>New trigger type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
+         * <p>Compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +169,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
+         * <p>Old trigger type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +182,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
+         * <p>Rule content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +220,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
+         * <p>ID of the scaling rule to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

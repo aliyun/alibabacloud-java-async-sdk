@@ -73,7 +73,10 @@ public class QueryMinorVersionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,10 @@ public class QueryMinorVersionRequest extends Request {
         }
 
         /**
-         * Version.
+         * <p>The major version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.3</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);

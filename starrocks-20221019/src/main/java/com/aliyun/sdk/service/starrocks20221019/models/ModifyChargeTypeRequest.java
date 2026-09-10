@@ -152,7 +152,10 @@ public class ModifyChargeTypeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Whether to enable auto-renewal. This parameter takes effect only when payType is PrePaid. Default: disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -161,7 +164,10 @@ public class ModifyChargeTypeRequest extends Request {
         }
 
         /**
-         * BillingInstanceIds.
+         * <p>List of billing instance IDs that require renewal. Separate multiple IDs with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-3d6dc31ba67b1839</p>
          */
         public Builder billingInstanceIds(String billingInstanceIds) {
             this.putQueryParameter("BillingInstanceIds", billingInstanceIds);
@@ -170,7 +176,10 @@ public class ModifyChargeTypeRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>Subscription duration. This parameter takes effect only when payType is PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -179,7 +188,10 @@ public class ModifyChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -188,7 +200,17 @@ public class ModifyChargeTypeRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>Subscription duration unit:</p>
+         * <ul>
+         * <li><p>Month</p>
+         * </li>
+         * <li><p>Year</p>
+         * </li>
+         * </ul>
+         * <p>This parameter takes effect only when payType is PrePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -197,7 +219,10 @@ public class ModifyChargeTypeRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>Coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2345</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);

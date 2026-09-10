@@ -132,7 +132,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>AccessDeniedDetail</p>
+         * <p>Details about the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -143,7 +143,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -159,7 +162,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. A value of <code>Success</code> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -167,7 +173,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -175,7 +184,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B67D142D-D54E-184F-A306-22BDC01B2XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +195,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -275,7 +290,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Default.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder _default(Integer _default) {
                 this._default = _default;
@@ -283,7 +301,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Max.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -291,7 +312,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -299,7 +323,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * <p>The step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -392,7 +419,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Default.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder _default(Integer _default) {
                 this._default = _default;
@@ -400,7 +430,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Max.
+             * <p>The maximum number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -408,7 +441,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * <p>The minimum number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -416,7 +452,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * <p>The step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -509,7 +548,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Default.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder _default(Integer _default) {
                 this._default = _default;
@@ -517,7 +559,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Max.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -525,7 +570,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -533,7 +581,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * <p>The step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -639,7 +690,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Desc.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BE 存储约束描述</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -647,7 +701,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskNumberConstraint.
+             * <p>The disk count constraint.</p>
              */
             public Builder diskNumberConstraint(DiskNumberConstraint diskNumberConstraint) {
                 this.diskNumberConstraint = diskNumberConstraint;
@@ -655,7 +709,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether this is the default option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -663,7 +720,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The disk performance level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -671,7 +731,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueConstraint.
+             * <p>The value constraint.</p>
              */
             public Builder valueConstraint(ValueConstraint valueConstraint) {
                 this.valueConstraint = valueConstraint;
@@ -816,7 +876,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -824,7 +887,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskNumber.
+             * <p>The disk count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder diskNumber(String diskNumber) {
                 this.diskNumber = diskNumber;
@@ -832,7 +898,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Display.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20核 88GiB 8*7300GiB 本地HDD盘</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -840,7 +909,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * EcsInstanceType.
+             * <p>The corresponding ECS instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.d2s.5xlarge</p>
              */
             public Builder ecsInstanceType(String ecsInstanceType) {
                 this.ecsInstanceType = ecsInstanceType;
@@ -848,7 +920,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_hdd_2s_5xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -856,7 +931,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether this is the default option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -864,7 +942,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -872,7 +953,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The storage size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7300</p>
              */
             public Builder storageSize(String storageSize) {
                 this.storageSize = storageSize;
@@ -965,7 +1049,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Default.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder _default(Integer _default) {
                 this._default = _default;
@@ -973,7 +1060,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Max.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -981,7 +1071,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -989,7 +1082,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * <p>The step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -1056,7 +1152,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Display.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标准版</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -1064,7 +1163,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1157,7 +1259,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Default.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder _default(Integer _default) {
                 this._default = _default;
@@ -1165,7 +1270,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Max.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -1173,7 +1281,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -1181,7 +1292,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * <p>The step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -1261,7 +1375,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Cu.
+             * <p>The CU (Compute Unit) size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -1269,7 +1386,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeNumber.
+             * <p>The total number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder nodeNumber(Integer nodeNumber) {
                 this.nodeNumber = nodeNumber;
@@ -1277,7 +1397,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The storage size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -1422,7 +1545,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1430,7 +1556,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskNumber.
+             * <p>The disk count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diskNumber(String diskNumber) {
                 this.diskNumber = diskNumber;
@@ -1438,7 +1567,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Display.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[i2g]16核 64GiB 1*1788GiB 本地SSD盘</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -1446,7 +1578,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * EcsInstanceType.
+             * <p>The corresponding ECS instance family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs.i2g.4xlarge</p>
              */
             public Builder ecsInstanceType(String ecsInstanceType) {
                 this.ecsInstanceType = ecsInstanceType;
@@ -1454,7 +1589,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd_2g_4xlarge</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1462,7 +1600,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether this is the default option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -1470,7 +1611,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -1478,7 +1622,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The storage size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788</p>
              */
             public Builder storageSize(String storageSize) {
                 this.storageSize = storageSize;
@@ -1558,7 +1705,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Cu.
+             * <p>The CU (Compute Unit) size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -1566,7 +1716,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeNumber.
+             * <p>The total number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder nodeNumber(Integer nodeNumber) {
                 this.nodeNumber = nodeNumber;
@@ -1574,7 +1727,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The storage size, in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -1641,7 +1797,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * Display.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>标准版</p>
              */
             public Builder display(String display) {
                 this.display = display;
@@ -1649,7 +1808,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1729,7 +1891,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * BetaVersions.
+             * <p>The beta versions.</p>
              */
             public Builder betaVersions(java.util.List<String> betaVersions) {
                 this.betaVersions = betaVersions;
@@ -1737,7 +1899,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * <p>The default version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.3</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -1745,7 +1910,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * Versions.
+             * <p>The available versions.</p>
              */
             public Builder versions(java.util.List<String> versions) {
                 this.versions = versions;
@@ -1838,7 +2003,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * def.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder def(Integer def) {
                 this.def = def;
@@ -1846,7 +2014,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * max.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -1854,7 +2025,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * min.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -1862,7 +2036,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * step.
+             * <p>The step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -2176,7 +2353,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentCu.
+             * <p>The CU sizes for agents.</p>
              */
             public Builder agentCu(java.util.List<Integer> agentCu) {
                 this.agentCu = agentCu;
@@ -2184,7 +2361,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * BeCu.
+             * <p>The available CU (Compute Unit) sizes for BE nodes.</p>
              */
             public Builder beCu(java.util.List<Integer> beCu) {
                 this.beCu = beCu;
@@ -2192,7 +2369,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * BeCuOnEcs.
+             * <p>The CU sizes for BE nodes on ECS.</p>
              */
             public Builder beCuOnEcs(java.util.List<Integer> beCuOnEcs) {
                 this.beCuOnEcs = beCuOnEcs;
@@ -2200,7 +2377,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * BeNumber.
+             * <p>The BE node configuration.</p>
              */
             public Builder beNumber(BeNumber beNumber) {
                 this.beNumber = beNumber;
@@ -2208,7 +2385,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * BeStorageConstraints.
+             * <p>The storage constraints for BE nodes.</p>
              */
             public Builder beStorageConstraints(java.util.List<BeStorageConstraints> beStorageConstraints) {
                 this.beStorageConstraints = beStorageConstraints;
@@ -2216,7 +2393,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * BigDataInstanceTypeConstraints.
+             * <p>The specification constraints for big data instance types.</p>
              */
             public Builder bigDataInstanceTypeConstraints(java.util.List<BigDataInstanceTypeConstraints> bigDataInstanceTypeConstraints) {
                 this.bigDataInstanceTypeConstraints = bigDataInstanceTypeConstraints;
@@ -2224,7 +2401,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * FeCu.
+             * <p>The available CU sizes for FE nodes.</p>
              */
             public Builder feCu(java.util.List<Integer> feCu) {
                 this.feCu = feCu;
@@ -2232,7 +2409,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * FeCuOnEcs.
+             * <p>The CU sizes for FE nodes on ECS.</p>
              */
             public Builder feCuOnEcs(java.util.List<Integer> feCuOnEcs) {
                 this.feCuOnEcs = feCuOnEcs;
@@ -2240,7 +2417,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * FeNumber.
+             * <p>The number of FE nodes.</p>
              */
             public Builder feNumber(FeNumber feNumber) {
                 this.feNumber = feNumber;
@@ -2248,7 +2425,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * FeSpecType.
+             * <p>The instance types for FE nodes.</p>
              */
             public Builder feSpecType(java.util.List<FeSpecType> feSpecType) {
                 this.feSpecType = feSpecType;
@@ -2256,7 +2433,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * FeStorage.
+             * <p>The storage size for the FE node.</p>
              */
             public Builder feStorage(FeStorage feStorage) {
                 this.feStorage = feStorage;
@@ -2264,7 +2441,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * HaFeResourceSpec.
+             * <p>The high availability (HA) FE node configuration.</p>
              */
             public Builder haFeResourceSpec(HaFeResourceSpec haFeResourceSpec) {
                 this.haFeResourceSpec = haFeResourceSpec;
@@ -2272,7 +2449,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalSSDInstanceTypeConstraints.
+             * <p>The specification constraints for local SSD instance types.</p>
              */
             public Builder localSSDInstanceTypeConstraints(java.util.List<LocalSSDInstanceTypeConstraints> localSSDInstanceTypeConstraints) {
                 this.localSSDInstanceTypeConstraints = localSSDInstanceTypeConstraints;
@@ -2280,7 +2457,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * NormalFeResourceSpec.
+             * <p>The standard FE resource configuration.</p>
              */
             public Builder normalFeResourceSpec(NormalFeResourceSpec normalFeResourceSpec) {
                 this.normalFeResourceSpec = normalFeResourceSpec;
@@ -2288,7 +2465,22 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * <p>The instance type for compute nodes. Valid values:</p>
+             * <ul>
+             * <li><p><code>standard</code>: Standard.</p>
+             * </li>
+             * <li><p><code>localSSD</code>: Local SSD.</p>
+             * </li>
+             * <li><p><code>bigData</code>: Large-capacity storage.</p>
+             * </li>
+             * <li><p><code>ramEnhanced</code>: Memory-enhanced.</p>
+             * </li>
+             * <li><p><code>networkEnhanced</code>: Network-enhanced.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(java.util.List<SpecType> specType) {
                 this.specType = specType;
@@ -2296,7 +2488,10 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * SplitDiskThresholdMap.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deprecated.</p>
              */
             public Builder splitDiskThresholdMap(java.util.Map<String, java.util.Map<String, ?>> splitDiskThresholdMap) {
                 this.splitDiskThresholdMap = splitDiskThresholdMap;
@@ -2304,7 +2499,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionConstraint.
+             * <p>The version constraint.</p>
              */
             public Builder versionConstraint(VersionConstraint versionConstraint) {
                 this.versionConstraint = versionConstraint;
@@ -2312,7 +2507,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneSupportedEedTypes.
+             * <p>The EED types supported in each availability zone.</p>
              */
             public Builder zoneSupportedEedTypes(java.util.Map<String, java.util.List<String>> zoneSupportedEedTypes) {
                 this.zoneSupportedEedTypes = zoneSupportedEedTypes;
@@ -2320,7 +2515,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneSupportedSpecTypes.
+             * <p>The instance types supported in each availability zone.</p>
              */
             public Builder zoneSupportedSpecTypes(java.util.Map<String, java.util.List<String>> zoneSupportedSpecTypes) {
                 this.zoneSupportedSpecTypes = zoneSupportedSpecTypes;
@@ -2328,7 +2523,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * compactionServiceCuConstraint.
+             * <p>The CU constraints for the compaction service.</p>
              */
             public Builder compactionServiceCuConstraint(CompactionServiceCuConstraint compactionServiceCuConstraint) {
                 this.compactionServiceCuConstraint = compactionServiceCuConstraint;
@@ -2336,7 +2531,7 @@ public class DescribeResourceConstraintsResponseBody extends TeaModel {
             }
 
             /**
-             * zoneSupportCompactionService.
+             * <p>The compaction services supported in each availability zone.</p>
              */
             public Builder zoneSupportCompactionService(java.util.Map<String, java.util.List<DataZoneSupportCompactionServiceValue>> zoneSupportCompactionService) {
                 this.zoneSupportCompactionService = zoneSupportCompactionService;

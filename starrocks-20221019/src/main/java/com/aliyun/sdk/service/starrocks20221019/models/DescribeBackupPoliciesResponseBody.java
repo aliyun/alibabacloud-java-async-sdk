@@ -145,7 +145,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>AccessDeniedDetail</p>
+         * <p>Details about the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
@@ -156,7 +156,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Information about the instance.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -164,7 +164,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -172,7 +175,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [Region id should be select from set [cn-beijing, cn-hangzhou]]</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -180,7 +186,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -188,7 +197,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -196,7 +208,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +219,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -335,7 +353,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * ExpireDays.
+             * <p>The number of days to retain backup data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder expireDays(Integer expireDays) {
                 this.expireDays = expireDays;
@@ -343,7 +364,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Hour.
+             * <p>The hour.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hour(String hour) {
                 this.hour = hour;
@@ -351,7 +375,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-96f3bc7f04b2****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -359,7 +386,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Minute.
+             * <p>The minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder minute(String minute) {
                 this.minute = minute;
@@ -367,7 +397,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The backup policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -375,7 +408,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * RecurrenceValues.
+             * <p>The numeric values for the policy execution cycle.</p>
              */
             public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
                 this.recurrenceValues = recurrenceValues;
@@ -383,7 +416,10 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutSeconds.
+             * <p>The timeout period for the backup job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;

@@ -195,7 +195,10 @@ public class DescribeInstanceConfigsRequest extends Request {
         }
 
         /**
-         * AllowModify.
+         * <p>Indicates whether the configuration item can be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowModify(Boolean allowModify) {
             this.putQueryParameter("AllowModify", allowModify);
@@ -204,7 +207,10 @@ public class DescribeInstanceConfigsRequest extends Request {
         }
 
         /**
-         * ConfigKey.
+         * <p>The key of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enable_udf</p>
          */
         public Builder configKey(String configKey) {
             this.putQueryParameter("ConfigKey", configKey);
@@ -213,7 +219,18 @@ public class DescribeInstanceConfigsRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>The type of the configuration item. Valid values:</p>
+         * <ul>
+         * <li><p>FE</p>
+         * </li>
+         * <li><p>BE</p>
+         * </li>
+         * <li><p>CORE</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FE</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -222,7 +239,10 @@ public class DescribeInstanceConfigsRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the configuration item\&quot;s feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Whether to enable UDF.</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -231,6 +251,7 @@ public class DescribeInstanceConfigsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +264,10 @@ public class DescribeInstanceConfigsRequest extends Request {
         }
 
         /**
-         * NeedTotal.
+         * <p>Indicates whether to return all configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needTotal(Boolean needTotal) {
             this.putQueryParameter("NeedTotal", needTotal);
@@ -252,7 +276,10 @@ public class DescribeInstanceConfigsRequest extends Request {
         }
 
         /**
-         * NodeGroupId.
+         * <p>The compute group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-3d5ce6454354****</p>
          */
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
@@ -261,7 +288,10 @@ public class DescribeInstanceConfigsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for the query. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -270,7 +300,10 @@ public class DescribeInstanceConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for a paged query. The default value is 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -132,7 +132,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The query results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -140,7 +140,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -148,7 +151,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -156,7 +162,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -164,7 +173,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE74XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +195,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -246,7 +264,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +275,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -334,7 +358,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Primary.
+             * <p>Indicates whether this is the primary vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -342,7 +369,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VswId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1p0mldwx5av55v0xXXX</p>
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;
@@ -350,7 +380,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -373,6 +406,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
+
+        @com.aliyun.core.annotation.NameInMap("AiFunctionClusterId")
+        private String aiFunctionClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("AiFunctionEndpoint")
+        private String aiFunctionEndpoint;
 
         @com.aliyun.core.annotation.NameInMap("AiFunctionInstanceId")
         private String aiFunctionInstanceId;
@@ -469,6 +508,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.aclId = builder.aclId;
+            this.aiFunctionClusterId = builder.aiFunctionClusterId;
+            this.aiFunctionEndpoint = builder.aiFunctionEndpoint;
             this.aiFunctionInstanceId = builder.aiFunctionInstanceId;
             this.architecture = builder.architecture;
             this.beginTime = builder.beginTime;
@@ -515,6 +556,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getAclId() {
             return this.aclId;
+        }
+
+        /**
+         * @return aiFunctionClusterId
+         */
+        public String getAiFunctionClusterId() {
+            return this.aiFunctionClusterId;
+        }
+
+        /**
+         * @return aiFunctionEndpoint
+         */
+        public String getAiFunctionEndpoint() {
+            return this.aiFunctionEndpoint;
         }
 
         /**
@@ -736,6 +791,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aclId; 
+            private String aiFunctionClusterId; 
+            private String aiFunctionEndpoint; 
             private String aiFunctionInstanceId; 
             private String architecture; 
             private Long beginTime; 
@@ -773,6 +830,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.aclId = model.aclId;
+                this.aiFunctionClusterId = model.aiFunctionClusterId;
+                this.aiFunctionEndpoint = model.aiFunctionEndpoint;
                 this.aiFunctionInstanceId = model.aiFunctionInstanceId;
                 this.architecture = model.architecture;
                 this.beginTime = model.beginTime;
@@ -807,7 +866,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AclId.
+             * <p>The network access control list (ACL) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acl-bp1xc6b9vs013jjtp****</p>
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -815,7 +877,29 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AiFunctionInstanceId.
+             * <p>The AI dedicated cluster ID, prefixed with af-. This value is returned if an unreleased dedicated cluster exists (including clusters being created). This value is empty if no dedicated cluster has been created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>af-498ae4af</p>
+             */
+            public Builder aiFunctionClusterId(String aiFunctionClusterId) {
+                this.aiFunctionClusterId = aiFunctionClusterId;
+                return this;
+            }
+
+            /**
+             * <p>The internal network connection endpoint of the AI dedicated cluster, in the format fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This value is returned only after the dedicated cluster is created. This value is empty if no dedicated cluster has been created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe-af-498ae4af-internal.starrocks.aliyuncs.com</p>
+             */
+            public Builder aiFunctionEndpoint(String aiFunctionEndpoint) {
+                this.aiFunctionEndpoint = aiFunctionEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>The billing instance ID for the AI function.</p>
              */
             public Builder aiFunctionInstanceId(String aiFunctionInstanceId) {
                 this.aiFunctionInstanceId = aiFunctionInstanceId;
@@ -823,7 +907,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Architecture.
+             * <p>The instance architecture. Valid values:</p>
+             * <ul>
+             * <li>onEci: deployed on Elastic Container Instance (ECI).</li>
+             * <li>onECS: deployed on Elastic Compute Service (ECS).</li>
+             * <li>onBareMetal: deployed on a bare metal resource pool.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>onECS</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -831,7 +923,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTime.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1733292921000</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -839,7 +934,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAiFunction.
+             * <p>Indicates whether the AI center is enabled. Default value: false.</p>
              */
             public Builder enableAiFunction(Boolean enableAiFunction) {
                 this.enableAiFunction = enableAiFunction;
@@ -847,7 +942,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAutoMinorVersionUpgrade.
+             * <p>Indicates whether automatic minor version upgrades are enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAutoMinorVersionUpgrade(Boolean enableAutoMinorVersionUpgrade) {
                 this.enableAutoMinorVersionUpgrade = enableAutoMinorVersionUpgrade;
@@ -863,7 +961,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableSSL.
+             * <p>Indicates whether SSL is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableSSL(Boolean enableSSL) {
                 this.enableSSL = enableSSL;
@@ -871,7 +972,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnabledAuditLoader.
+             * <p>Indicates whether the audit plug-in is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabledAuditLoader(Boolean enabledAuditLoader) {
                 this.enabledAuditLoader = enabledAuditLoader;
@@ -879,7 +983,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Encrypted.
+             * <p>Indicates whether encryption is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -887,7 +994,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The time when the cluster expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4889001600000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -895,7 +1005,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-d4be777ff5e8cXXX</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -903,7 +1016,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sr_test_1</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -911,7 +1027,42 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * <p>The instance status. Valid values:</p>
+             * <ul>
+             * <li>not_init: Not initialized.</li>
+             * <li>unpaid: Pending payment.</li>
+             * <li>paid: Paid.</li>
+             * <li>creating: Being created.</li>
+             * <li>creating_failed: Creation failed.</li>
+             * <li>created: Created.</li>
+             * <li>running: Running.</li>
+             * <li>updating: Being upgraded.</li>
+             * <li>agent_creating: Agent is being created.</li>
+             * <li>agent_scaling_up: Agent specifications are being upgraded.</li>
+             * <li>modifying_config: Configuration is being updated.</li>
+             * <li>scaling_out: Scaling out.</li>
+             * <li>restarting: Restarting.</li>
+             * <li>scaling_in: Scaling in.</li>
+             * <li>scaling_up: Specifications are being upgraded.</li>
+             * <li>scaling_down: Specifications are being downgraded.</li>
+             * <li>upgrading: Version is being upgraded.</li>
+             * <li>enable_public_network: Public network access is being enabled.</li>
+             * <li>disable_public_network: Public network access is being disabled.</li>
+             * <li>convert_from_trial_to_official: Edition is being converted.</li>
+             * <li>migration_cluster_to_serverless: Cluster is being migrated.</li>
+             * <li>modifying_timezone: Time zone is being modified.</li>
+             * <li>switch_az: Primary/secondary zone switchover is in progress.</li>
+             * <li>enabling: Being resumed.</li>
+             * <li>disable: Unavailable.</li>
+             * <li>actively_disabled: Unavailable.</li>
+             * <li>deleting: Being deleted.</li>
+             * <li>deleting_failed: Deletion failed.</li>
+             * <li>deleted_with_error: Creation failed and terminated.</li>
+             * <li>deleted: Deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -919,7 +1070,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IsolateLeader.
+             * <p>Indicates whether read/write splitting is enabled. When enabled, the Leader FE node handles write requests and other nodes handle read requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isolateLeader(Boolean isolateLeader) {
                 this.isolateLeader = isolateLeader;
@@ -927,7 +1081,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyId.
+             * <p>The KMS key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rewqfds****</p>
              */
             public Builder kmsKeyId(String kmsKeyId) {
                 this.kmsKeyId = kmsKeyId;
@@ -935,7 +1092,31 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainablePeriod.
+             * <p>The maintenance window of the instance. Valid values:</p>
+             * <ul>
+             * <li>00:00-06:00</li>
+             * <li>06:00-07:00</li>
+             * <li>07:00-08:00</li>
+             * <li>08:00-09:00</li>
+             * <li>09:00-10:00</li>
+             * <li>10:00-11:00</li>
+             * <li>11:00-12:00</li>
+             * <li>12:00-13:00</li>
+             * <li>13:00-14:00</li>
+             * <li>14:00-15:00</li>
+             * <li>15:00-16:00</li>
+             * <li>16:00-17:00</li>
+             * <li>17:00-18:00</li>
+             * <li>18:00-19:00</li>
+             * <li>19:00-20:00</li>
+             * <li>20:00-21:00</li>
+             * <li>21:00-22:00</li>
+             * <li>22:00-23:00</li>
+             * <li>23:00-24:00</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00-06:00</p>
              */
             public Builder maintainablePeriod(String maintainablePeriod) {
                 this.maintainablePeriod = maintainablePeriod;
@@ -943,7 +1124,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MinorVersion.
+             * <p>The minor version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.2.11-1.79-1.6.5</p>
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -951,7 +1135,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorType.
+             * <p>The monitoring service type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms</p>
              */
             public Builder monitorType(String monitorType) {
                 this.monitorType = monitorType;
@@ -959,7 +1146,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OssLocation.
+             * <p>The OSS path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://sr-c-****</p>
              */
             public Builder ossLocation(String ossLocation) {
                 this.ossLocation = ossLocation;
@@ -967,7 +1157,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageType.
+             * <p>The instance edition. Valid values:</p>
+             * <ul>
+             * <li>trial: Trial Edition.</li>
+             * <li>official: Standard Edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>official</p>
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -975,7 +1172,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>prePaid: subscription.</li>
+             * <li>postPaid: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>postPaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -983,7 +1187,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -991,7 +1198,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmytyuofb****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -999,7 +1209,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RunMode.
+             * <p>The running mode of the cluster. Valid values:</p>
+             * <ul>
+             * <li>shared_nothing: Shared-nothing architecture.</li>
+             * <li>shared_data: Storage-compute disaggregation.</li>
+             * <li>lakehouse: Data lakehouse analytics.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>shared_nothing</p>
              */
             public Builder runMode(String runMode) {
                 this.runMode = runMode;
@@ -1007,7 +1225,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RunningTime.
+             * <p>The duration that the cluster has been running. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3645445</p>
              */
             public Builder runningTime(Long runningTime) {
                 this.runningTime = runningTime;
@@ -1015,7 +1236,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupManaged.
+             * <p>Indicates whether the security group is a managed security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder securityGroupManaged(Boolean securityGroupManaged) {
                 this.securityGroupManaged = securityGroupManaged;
@@ -1023,7 +1247,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SgId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-8vbaz2etr66a62b9****</p>
              */
             public Builder sgId(String sgId) {
                 this.sgId = sgId;
@@ -1031,7 +1258,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags that are bound to the instance.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1039,7 +1266,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitches.
+             * <p>The vSwitches.</p>
              */
             public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;
@@ -1047,7 +1274,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The cluster version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.2</p>
              */
             public Builder version(String version) {
                 this.version = version;

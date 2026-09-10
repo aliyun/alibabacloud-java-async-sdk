@@ -98,6 +98,13 @@ public class ToggleAutoMinorVersionUpgradeRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable automatic minor version upgrades. Valid values:</p>
+         * <ul>
+         * <li><p>true: Enables automatic upgrades.</p>
+         * </li>
+         * <li><p>false: Disables automatic upgrades.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +117,7 @@ public class ToggleAutoMinorVersionUpgradeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

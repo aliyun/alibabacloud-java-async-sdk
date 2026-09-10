@@ -126,7 +126,7 @@ public class UpgradeVersionRequest extends Request {
         }
 
         /**
-         * FastMode.
+         * <p>Specifies whether to perform a fast restart.</p>
          */
         public Builder fastMode(Boolean fastMode) {
             this.putQueryParameter("FastMode", fastMode);
@@ -148,10 +148,11 @@ public class UpgradeVersionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the minor version is upgraded. Default value: true. Valid values:</p>
+         * <p>Specifies whether this upgrade is a minor version upgrade. Default value: true.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>true: The minor version is upgraded.</li>
-         * <li>false: The major version is upgraded.</li>
+         * <li>true: minor version upgrade.</li>
+         * <li>false: major engine version upgrade.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,7 +165,7 @@ public class UpgradeVersionRequest extends Request {
         }
 
         /**
-         * <p>The version to which you want to upgrade.</p>
+         * <p>The target version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -127,6 +127,7 @@ public class QueryModifyNodeNumberPriceRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class QueryModifyNodeNumberPriceRequest extends Request {
         }
 
         /**
+         * <p>The compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +153,10 @@ public class QueryModifyNodeNumberPriceRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_12378dfj6</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -160,6 +165,7 @@ public class QueryModifyNodeNumberPriceRequest extends Request {
         }
 
         /**
+         * <p>The target number of nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

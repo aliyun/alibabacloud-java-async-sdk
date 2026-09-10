@@ -132,7 +132,7 @@ public class QueryRefundPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>AccessDeniedDetail</p>
+         * <p>The access denied detail.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -143,7 +143,10 @@ public class QueryRefundPriceResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The refund amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18837</p>
          */
         public Builder data(Double data) {
             this.data = data;
@@ -151,7 +154,10 @@ public class QueryRefundPriceResponseBody extends TeaModel {
         }
 
         /**
-         * errCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -159,7 +165,10 @@ public class QueryRefundPriceResponseBody extends TeaModel {
         }
 
         /**
-         * errMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -167,7 +176,10 @@ public class QueryRefundPriceResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -175,7 +187,10 @@ public class QueryRefundPriceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C69A6D0-49B7-54B9-BF21-9AF52172A5F7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +198,10 @@ public class QueryRefundPriceResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

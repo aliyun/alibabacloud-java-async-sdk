@@ -152,7 +152,10 @@ public class QueryModifyChargeTypePriceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. This parameter is valid only when \<code>payType\\</code> is set to \<code>PrePaid\\</code>. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -161,7 +164,10 @@ public class QueryModifyChargeTypePriceRequest extends Request {
         }
 
         /**
-         * BillingInstanceIds.
+         * <p>A list of billing instance IDs to modify. Separate multiple IDs with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-3d6dc31ba67b1839</p>
          */
         public Builder billingInstanceIds(String billingInstanceIds) {
             this.putQueryParameter("BillingInstanceIds", billingInstanceIds);
@@ -170,7 +176,10 @@ public class QueryModifyChargeTypePriceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The subscription duration. This parameter is valid only when \<code>payType\\</code> is set to \<code>PrePaid\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -179,7 +188,10 @@ public class QueryModifyChargeTypePriceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -188,7 +200,17 @@ public class QueryModifyChargeTypePriceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The unit of the subscription duration:</p>
+         * <ul>
+         * <li><p>Month</p>
+         * </li>
+         * <li><p>Year</p>
+         * </li>
+         * </ul>
+         * <p>This parameter is valid only when \<code>payType\\</code> is set to \<code>PrePaid\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -197,7 +219,10 @@ public class QueryModifyChargeTypePriceRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);

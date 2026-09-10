@@ -96,7 +96,10 @@ public class DeleteBackupPolicyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-0104730e9d*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -105,7 +108,10 @@ public class DeleteBackupPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bp-298ahiu289</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);

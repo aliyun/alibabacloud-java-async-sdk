@@ -110,7 +110,10 @@ public class RebootECSRequest extends Request {
         }
 
         /**
-         * EventId.
+         * <p>The system event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8c96a3fc8a0d4a48b5db5fdb9742fbbc</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -119,7 +122,10 @@ public class RebootECSRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,7 +134,10 @@ public class RebootECSRequest extends Request {
         }
 
         /**
-         * RebootTime.
+         * <p>The reboot time for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1772076782</p>
          */
         public Builder rebootTime(Long rebootTime) {
             this.putQueryParameter("RebootTime", rebootTime);

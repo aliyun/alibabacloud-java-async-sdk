@@ -210,7 +210,7 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * AgentNodeGroup.
+         * <p>Agent compute group.</p>
          */
         public Builder agentNodeGroup(AgentNodeGroup agentNodeGroup) {
             this.putBodyParameter("AgentNodeGroup", agentNodeGroup);
@@ -219,7 +219,7 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * BackendNodeGroups.
+         * <p>BE or CN compute group information.</p>
          */
         public Builder backendNodeGroups(java.util.List<BackendNodeGroups> backendNodeGroups) {
             this.putBodyParameter("BackendNodeGroups", backendNodeGroups);
@@ -228,7 +228,10 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * Duration.
+         * <p>Subscription duration. Valid only when PayType is prePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
@@ -237,7 +240,7 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * FrontendNodeGroups.
+         * <p>FE node group information.</p>
          */
         public Builder frontendNodeGroups(java.util.List<FrontendNodeGroups> frontendNodeGroups) {
             this.putBodyParameter("FrontendNodeGroups", frontendNodeGroups);
@@ -246,7 +249,7 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * ObserverNodeGroups.
+         * <p>Observer compute group information.</p>
          */
         public Builder observerNodeGroups(java.util.List<ObserverNodeGroups> observerNodeGroups) {
             this.putBodyParameter("ObserverNodeGroups", observerNodeGroups);
@@ -255,7 +258,16 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * PackageType.
+         * <p>Instance edition:</p>
+         * <ul>
+         * <li><p>Trial Edition (trial).</p>
+         * </li>
+         * <li><p>Standard Edition (official).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>official</p>
          */
         public Builder packageType(String packageType) {
             this.putBodyParameter("PackageType", packageType);
@@ -264,7 +276,16 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * PayType.
+         * <p>Payment type:</p>
+         * <ol>
+         * <li><p>Subscription (prePaid).</p>
+         * </li>
+         * <li><p>Pay-as-you-go (postPaid).</p>
+         * </li>
+         * </ol>
+         * 
+         * <strong>example:</strong>
+         * <p>prePaid</p>
          */
         public Builder payType(String payType) {
             this.putBodyParameter("PayType", payType);
@@ -273,7 +294,17 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>Subscription duration unit:</p>
+         * <ul>
+         * <li><p>Month (Month)</p>
+         * </li>
+         * <li><p>Year (Year)</p>
+         * </li>
+         * </ul>
+         * <p>Valid only when PayType is prePaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("PricingCycle", pricingCycle);
@@ -282,7 +313,10 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>Coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_12378dfj6</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putBodyParameter("PromotionOptionNo", promotionOptionNo);
@@ -291,7 +325,16 @@ public class QueryPriceV1Request extends Request {
         }
 
         /**
-         * RunMode.
+         * <p>Cluster run mode:</p>
+         * <ul>
+         * <li><p>Shared-nothing (shared_nothing).</p>
+         * </li>
+         * <li><p>Shared-data (shared_data).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>shared_data</p>
          */
         public Builder runMode(String runMode) {
             this.putBodyParameter("RunMode", runMode);
@@ -346,7 +389,10 @@ public class QueryPriceV1Request extends Request {
             } 
 
             /**
-             * cu.
+             * <p>Number of CUs. A Compute Unit (CU) is the basic billing unit. One CU equals one vCPU plus 4 GiB of memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -478,7 +524,10 @@ public class QueryPriceV1Request extends Request {
             } 
 
             /**
-             * cu.
+             * <p>Number of CUs. A Compute Unit (CU) is the basic billing unit. One CU equals one vCPU plus 4 GiB of memory. For ramEnhanced instances, one CU equals one vCPU plus 8 GiB of memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -486,7 +535,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * diskNumber.
+             * <p>Number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diskNumber(Integer diskNumber) {
                 this.diskNumber = diskNumber;
@@ -494,7 +546,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * localStorageInstanceType.
+             * <p>Local SSD instance type for the node group. This field applies only to ECS-based instances with specType set to localSSD or bigData.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd_4_4xlarge</p>
              */
             public Builder localStorageInstanceType(String localStorageInstanceType) {
                 this.localStorageInstanceType = localStorageInstanceType;
@@ -502,7 +557,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * residentNodeNumber.
+             * <p>Number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder residentNodeNumber(Integer residentNodeNumber) {
                 this.residentNodeNumber = residentNodeNumber;
@@ -510,7 +568,22 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * specType.
+             * <p>Compute group specification type. Supported types include the following:</p>
+             * <ul>
+             * <li><p>standard: Standard Edition.</p>
+             * </li>
+             * <li><p>localSSD: Local SSD.</p>
+             * </li>
+             * <li><p>bigData: Large-storage Edition.</p>
+             * </li>
+             * <li><p>ramEnhanced: Memory-enhanced instance family.</p>
+             * </li>
+             * <li><p>networkEnhanced: Network-enhanced instance family.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -518,7 +591,20 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * storagePerformanceLevel.
+             * <p>Disk performance level. Supported values include the following:</p>
+             * <ul>
+             * <li><p>pl0: Maximum random read/write IOPS per disk is 10,000.</p>
+             * </li>
+             * <li><p>pl1: Maximum random read/write IOPS per disk is 50,000.</p>
+             * </li>
+             * <li><p>pl2: Maximum random read/write IOPS per disk is 100,000.</p>
+             * </li>
+             * <li><p>pl3: Maximum random read/write IOPS per disk is 1,000,000.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pl1</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -526,7 +612,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * storageSize.
+             * <p>Storage size in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -658,7 +747,10 @@ public class QueryPriceV1Request extends Request {
             } 
 
             /**
-             * cu.
+             * <p>Number of CUs. A Compute Unit (CU) is the basic billing unit. One CU equals one vCPU plus 4 GiB of memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -666,7 +758,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * diskNumber.
+             * <p>Number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diskNumber(Integer diskNumber) {
                 this.diskNumber = diskNumber;
@@ -674,7 +769,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * localStorageInstanceType.
+             * <p>Local SSD instance type. Do not set this field for FE compute groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder localStorageInstanceType(String localStorageInstanceType) {
                 this.localStorageInstanceType = localStorageInstanceType;
@@ -682,7 +780,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * residentNodeNumber.
+             * <p>Number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder residentNodeNumber(Integer residentNodeNumber) {
                 this.residentNodeNumber = residentNodeNumber;
@@ -690,7 +791,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * specType.
+             * <p>Compute group specification type. Only standard is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -698,7 +802,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * storagePerformanceLevel.
+             * <p>Disk performance level. Only pl1 is supported. Maximum random read/write IOPS per disk is 50,000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl1</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -706,7 +813,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * storageSize.
+             * <p>Storage size in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -838,7 +948,10 @@ public class QueryPriceV1Request extends Request {
             } 
 
             /**
-             * cu.
+             * <p>Number of CUs. A Compute Unit (CU) is the basic billing unit. One CU equals one vCPU plus 4 GiB of memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cu(String cu) {
                 this.cu = cu;
@@ -846,7 +959,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * diskNumber.
+             * <p>Number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diskNumber(Integer diskNumber) {
                 this.diskNumber = diskNumber;
@@ -854,7 +970,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * localStorageInstanceType.
+             * <p>Local SSD instance type. Do not set this field for Observer compute groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder localStorageInstanceType(String localStorageInstanceType) {
                 this.localStorageInstanceType = localStorageInstanceType;
@@ -862,7 +981,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * residentNodeNumber.
+             * <p>Number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder residentNodeNumber(Integer residentNodeNumber) {
                 this.residentNodeNumber = residentNodeNumber;
@@ -870,7 +992,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * specType.
+             * <p>Compute group specification type. Only standard is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -878,7 +1003,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * storagePerformanceLevel.
+             * <p>Disk performance level. Only pl1 is supported. Maximum random read/write IOPS per disk is 50,000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pl1</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -886,7 +1014,10 @@ public class QueryPriceV1Request extends Request {
             }
 
             /**
-             * storageSize.
+             * <p>Storage size in GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;

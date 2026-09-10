@@ -145,7 +145,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the permission verification failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -153,7 +156,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -169,7 +175,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -177,7 +186,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +197,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F285E0EC-E928-5E0B-B2C3-7F3FE42F2BE5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -254,7 +275,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-e1733d44-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -321,7 +345,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -329,7 +356,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -799,7 +829,14 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountStatus.
+             * <p>The account status. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The account is in a normal state.</li>
+             * <li>OVERDUE: The account has an overdue payment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OVERDUE</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -807,7 +844,15 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Architecture.
+             * <p>The compute group architecture. Valid values:</p>
+             * <ul>
+             * <li>onEci: Deployed on ECI.</li>
+             * <li>onECS: Deployed on ECS.</li>
+             * <li>onBareMetal: Deployed on a bare metal resource pool.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>onEci</p>
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -815,7 +860,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTime.
+             * <p>The creation time of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742179008000</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -823,7 +871,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingInstanceId.
+             * <p>The instance ID associated with the bill. For default compute groups (FE compute group and the default BE compute group), this value is the instance ID. Otherwise, it is the compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-96f3bc7f04b2****</p>
              */
             public Builder billingInstanceId(String billingInstanceId) {
                 this.billingInstanceId = billingInstanceId;
@@ -831,7 +882,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>emapreduce_starrockspost_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -839,7 +893,17 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentType.
+             * <p>The compute group type. Valid values:</p>
+             * <ul>
+             * <li>FE</li>
+             * <li>BE</li>
+             * <li>CN</li>
+             * <li>OBSERVER</li>
+             * <li>AGENT</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FE</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -847,7 +911,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The number of CUs. A CU (Compute Unit) is the basic metering unit of the service. 1 CU = 1 CPU core + 4 GiB memory. When SpecType is memory-enhanced instance family, 1 CU = 1 CPU core + 8 GiB memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cu(Integer cu) {
                 this.cu = cu;
@@ -855,7 +922,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultGroup.
+             * <p>Indicates whether this is the default compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder defaultGroup(Boolean defaultGroup) {
                 this.defaultGroup = defaultGroup;
@@ -863,7 +933,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The compute group description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ETL compute group</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -871,7 +944,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskNumber.
+             * <p>The number of disks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder diskNumber(Integer diskNumber) {
                 this.diskNumber = diskNumber;
@@ -879,7 +955,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticNodeNumber.
+             * <p>The number of elastic nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder elasticNodeNumber(Integer elasticNodeNumber) {
                 this.elasticNodeNumber = elasticNodeNumber;
@@ -887,7 +966,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EnablePublicNetwork.
+             * <p>Indicates whether public network access is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enablePublicNetwork(Boolean enablePublicNetwork) {
                 this.enablePublicNetwork = enablePublicNetwork;
@@ -895,7 +977,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The compute group endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>be-c-79b0bb9f58ef****-internal.starrocks.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -903,7 +988,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742179008000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -911,7 +999,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpPort.
+             * <p>The HTTP port of the compute group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8030</p>
              */
             public Builder httpPort(Integer httpPort) {
                 this.httpPort = httpPort;
@@ -919,7 +1010,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-96f3bc7f04b2****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -927,7 +1021,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalStorageInstanceType.
+             * <p>The local SSD instance type of the node group. This value is meaningful only when the deployment is based on ECS instances and SpecType is local SSD or large-scale storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_ssd_4_4xlarge</p>
              */
             public Builder localStorageInstanceType(String localStorageInstanceType) {
                 this.localStorageInstanceType = localStorageInstanceType;
@@ -935,7 +1032,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryCpuRatio.
+             * <p>The ratio of memory size to the number of CUs. The value is 8 when SpecType is memory-enhanced instance family, and 4 for other specification types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memoryCpuRatio(Integer memoryCpuRatio) {
                 this.memoryCpuRatio = memoryCpuRatio;
@@ -943,7 +1043,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupId.
+             * <p>The compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-5e2ba600fee3****</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -951,7 +1054,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupName.
+             * <p>The compute group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng_1</p>
              */
             public Builder nodeGroupName(String nodeGroupName) {
                 this.nodeGroupName = nodeGroupName;
@@ -959,7 +1065,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInfo.
+             * <p>The information about nodes in the compute group.</p>
              */
             public Builder nodeInfo(java.util.List<NodeInfo> nodeInfo) {
                 this.nodeInfo = nodeInfo;
@@ -967,7 +1073,14 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing type:</p>
+             * <ol>
+             * <li>Subscription (prePaid).</li>
+             * <li>Pay-as-you-go (postPaid).</li>
+             * </ol>
+             * 
+             * <strong>example:</strong>
+             * <p>prePaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -975,7 +1088,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicAddress.
+             * <p>The public network address. This field has a value only when EnablePublicNetwork is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe-c-79b0bb9f58ef****.starrocks.aliyuncs.com</p>
              */
             public Builder publicAddress(String publicAddress) {
                 this.publicAddress = publicAddress;
@@ -983,7 +1099,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -991,7 +1110,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ResidentNodeNumber.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder residentNodeNumber(Integer residentNodeNumber) {
                 this.residentNodeNumber = residentNodeNumber;
@@ -999,7 +1121,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RunningTime.
+             * <p>The running time of the compute group. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder runningTime(Long runningTime) {
                 this.runningTime = runningTime;
@@ -1007,7 +1132,17 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SpecType.
+             * <p>The compute group specification type. Valid values:</p>
+             * <ul>
+             * <li>standard: Standard.</li>
+             * <li>localSSD: Local SSD.</li>
+             * <li>bigData: Large-scale storage.</li>
+             * <li>ramEnhanced: Memory-enhanced instance family.</li>
+             * <li>networkEnhanced: Network-enhanced.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>standard</p>
              */
             public Builder specType(String specType) {
                 this.specType = specType;
@@ -1015,7 +1150,33 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The compute group status. Valid values:</p>
+             * <ul>
+             * <li>UNPAID: Unpaid.</li>
+             * <li>PAID: Paid.</li>
+             * <li>CREATING_FAILED: Creation failed.</li>
+             * <li>CREATING: Being created.</li>
+             * <li>RUNNING: Running.</li>
+             * <li>MODIFYING_CONFIG: Configuration being modified.</li>
+             * <li>MODIFYING_TIMEZONE: Time zone being modified.</li>
+             * <li>ELASTIC_SCALING_OUT: Elastic scale-out in progress.</li>
+             * <li>ELASTIC_SCALING_IN: Elastic scale-in in progress.</li>
+             * <li>SCALING_OUT: Scale-out in progress.</li>
+             * <li>RESTARTING: Restarting.</li>
+             * <li>SCALING_IN: Scale-in in progress.</li>
+             * <li>SCALING_UP: Scaling up.</li>
+             * <li>SCALING_DOWN: Scaling down.</li>
+             * <li>UPGRADING: Upgrading.</li>
+             * <li>ENABLE_PUBLIC_NETWORK: Enabling public network access.</li>
+             * <li>DISABLE_PUBLIC_NETWORK: Disabling public network access.</li>
+             * <li>SWITCH_AZ: Switching zone.</li>
+             * <li>DISABLE: Disabled.</li>
+             * <li>DELETING: Being deleted.</li>
+             * <li>DELETED: Deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1023,7 +1184,16 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StoragePerformanceLevel.
+             * <p>The performance level (PL) of the cloud disk. Valid values:</p>
+             * <ul>
+             * <li>pl0: Maximum random read/write IOPS of 10,000 per disk.</li>
+             * <li>pl1: Maximum random read/write IOPS of 50,000 per disk.</li>
+             * <li>pl2: Maximum random read/write IOPS of 100,000 per disk.</li>
+             * <li>pl3: Maximum random read/write IOPS of 1,000,000 per disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pl1</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -1031,7 +1201,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The storage size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -1039,7 +1212,7 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1047,7 +1220,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetElasticNodeNumber.
+             * <p>The target number of elastic nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder targetElasticNodeNumber(Integer targetElasticNodeNumber) {
                 this.targetElasticNodeNumber = targetElasticNodeNumber;
@@ -1055,7 +1231,10 @@ public class DescribeNodeGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

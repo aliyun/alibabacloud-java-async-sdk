@@ -168,7 +168,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * ExpireDays.
+         * <p>Validity period in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder expireDays(Integer expireDays) {
             this.putBodyParameter("ExpireDays", expireDays);
@@ -177,7 +180,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * Hour.
+         * <p>Trigger time: hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder hour(Integer hour) {
             this.putBodyParameter("Hour", hour);
@@ -186,7 +192,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-0104730e9de40215</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -195,7 +204,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * Minute.
+         * <p>Trigger time: minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder minute(Integer minute) {
             this.putBodyParameter("Minute", minute);
@@ -204,7 +216,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>Backup policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bk-9812023</p>
          */
         public Builder policyId(String policyId) {
             this.putBodyParameter("PolicyId", policyId);
@@ -213,7 +228,7 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * RecurrenceValues.
+         * <p>Numerical values for the policy execution cycle.</p>
          */
         public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
             this.putBodyParameter("RecurrenceValues", recurrenceValues);
@@ -222,7 +237,10 @@ public class UpdateBackupPolicyRequest extends Request {
         }
 
         /**
-         * TimeoutSeconds.
+         * <p>Timeout duration for the backup policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.putBodyParameter("TimeoutSeconds", timeoutSeconds);

@@ -87,7 +87,10 @@ public class UpdateBackupRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the cluster is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -96,7 +99,10 @@ public class UpdateBackupRequest extends Request {
         }
 
         /**
-         * backupTaskId.
+         * <p>The ID of the backup job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bk-t1232839</p>
          */
         public Builder backupTaskId(String backupTaskId) {
             this.putBodyParameter("backupTaskId", backupTaskId);
@@ -105,7 +111,10 @@ public class UpdateBackupRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backupTask-desc1</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

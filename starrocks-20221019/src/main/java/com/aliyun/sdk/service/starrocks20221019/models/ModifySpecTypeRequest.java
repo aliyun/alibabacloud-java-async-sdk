@@ -22,6 +22,10 @@ public class ModifySpecTypeRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FastMode")
     private Boolean fastMode;
 
@@ -47,6 +51,7 @@ public class ModifySpecTypeRequest extends Request {
     private ModifySpecTypeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.autoPay = builder.autoPay;
         this.fastMode = builder.fastMode;
         this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
@@ -72,6 +77,13 @@ public class ModifySpecTypeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -111,6 +123,7 @@ public class ModifySpecTypeRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifySpecTypeRequest, Builder> {
         private String regionId; 
+        private Boolean autoPay; 
         private Boolean fastMode; 
         private String instanceId; 
         private String nodeGroupId; 
@@ -124,6 +137,7 @@ public class ModifySpecTypeRequest extends Request {
         private Builder(ModifySpecTypeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.autoPay = request.autoPay;
             this.fastMode = request.fastMode;
             this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
@@ -141,7 +155,30 @@ public class ModifySpecTypeRequest extends Request {
         }
 
         /**
-         * FastMode.
+         * <p>Specifies whether to automatically purchase (pay for) all products specified in the Products parameter.</p>
+         * <ul>
+         * <li>true: Automatic payment.</li>
+         * <li>false: No automatic payment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to use the fast restart mode. Default value: false.</p>
+         * <ul>
+         * <li>true: Restarts compute nodes in fast restart mode. Compute nodes are restarted in multiple batches. Nodes within a batch are restarted in parallel, and batches execute sequentially.</li>
+         * <li>false: Restarts compute nodes in rolling restart mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fastMode(Boolean fastMode) {
             this.putQueryParameter("FastMode", fastMode);
@@ -150,6 +187,7 @@ public class ModifySpecTypeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +200,7 @@ public class ModifySpecTypeRequest extends Request {
         }
 
         /**
+         * <p>The compute group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +213,10 @@ public class ModifySpecTypeRequest extends Request {
         }
 
         /**
-         * PromotionOptionNo.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>youhuiquan_promotion_option_id_for_blank</p>
          */
         public Builder promotionOptionNo(String promotionOptionNo) {
             this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
@@ -183,6 +225,7 @@ public class ModifySpecTypeRequest extends Request {
         }
 
         /**
+         * <p>The target specification type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

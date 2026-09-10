@@ -145,7 +145,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -153,7 +156,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParams</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -169,7 +175,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid params: [instance not exists].</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -177,7 +186,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +197,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +219,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -280,7 +301,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * EffectStatus.
+             * <p>The effective status on the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>effective</p>
              */
             public Builder effectStatus(String effectStatus) {
                 this.effectStatus = effectStatus;
@@ -288,7 +312,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * NodeGroupId.
+             * <p>The compute group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ng-e6e15d2cdefdb38c</p>
              */
             public Builder nodeGroupId(String nodeGroupId) {
                 this.nodeGroupId = nodeGroupId;
@@ -296,7 +323,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000367486</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -402,7 +432,18 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action performed. Valid values:</p>
+             * <ul>
+             * <li><p><code>MODIFY</code></p>
+             * </li>
+             * <li><p><code>ADD</code></p>
+             * </li>
+             * <li><p><code>DELETE</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MODIFY</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -410,7 +451,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * After.
+             * <p>The new value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder after(String after) {
                 this.after = after;
@@ -418,7 +462,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Before.
+             * <p>The previous value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder before(String before) {
                 this.before = before;
@@ -426,7 +473,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigKey.
+             * <p>The name of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_tablet_worker_count</p>
              */
             public Builder configKey(String configKey) {
                 this.configKey = configKey;
@@ -434,7 +484,30 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>The configuration type. Valid values:</p>
+             * <ul>
+             * <li><p><code>FE</code></p>
+             * </li>
+             * <li><p><code>BE</code></p>
+             * </li>
+             * <li><p><code>core-site.xml</code></p>
+             * </li>
+             * <li><p><code>hdfs-site.xml</code></p>
+             * </li>
+             * <li><p><code>kerberos.keytab</code></p>
+             * </li>
+             * <li><p><code>krb5.conf</code></p>
+             * </li>
+             * <li><p><code>jindosdk.cfg</code></p>
+             * </li>
+             * <li><p><code>hadoop-env.sh</code></p>
+             * </li>
+             * <li><p><code>hive-site.xml</code></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FE</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -592,7 +665,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigHistoryEffectDetails.
+             * <p>Details about the effect of the configuration change.</p>
              */
             public Builder configHistoryEffectDetails(java.util.List<ConfigHistoryEffectDetails> configHistoryEffectDetails) {
                 this.configHistoryEffectDetails = configHistoryEffectDetails;
@@ -600,7 +673,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigHistoryId.
+             * <p>The configuration history ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6838</p>
              */
             public Builder configHistoryId(String configHistoryId) {
                 this.configHistoryId = configHistoryId;
@@ -608,7 +684,7 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigMementos.
+             * <p>A list of configuration mementos.</p>
              */
             public Builder configMementos(java.util.List<ConfigMementos> configMementos) {
                 this.configMementos = configMementos;
@@ -616,7 +692,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * EffectStatus.
+             * <p>The effective status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>effective</p>
              */
             public Builder effectStatus(String effectStatus) {
                 this.effectStatus = effectStatus;
@@ -624,7 +703,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Effected.
+             * <p>Indicates whether the configuration modification has taken effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder effected(Boolean effected) {
                 this.effected = effected;
@@ -632,7 +714,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742178604000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -640,7 +725,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorId.
+             * <p>The ID of the user who modified the configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>149920818483****</p>
              */
             public Builder operatorId(String operatorId) {
                 this.operatorId = operatorId;
@@ -648,7 +736,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason for the configuration modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -656,7 +747,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Rollback.
+             * <p>Indicates whether the change was a rollback.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder rollback(Boolean rollback) {
                 this.rollback = rollback;

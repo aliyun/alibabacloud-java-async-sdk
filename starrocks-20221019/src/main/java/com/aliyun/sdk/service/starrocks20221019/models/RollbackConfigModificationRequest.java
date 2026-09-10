@@ -110,7 +110,10 @@ public class RollbackConfigModificationRequest extends Request {
         }
 
         /**
-         * ConfigHistoryId.
+         * <p>The ID of the configuration modification history.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>187291</p>
          */
         public Builder configHistoryId(Long configHistoryId) {
             this.putQueryParameter("ConfigHistoryId", configHistoryId);
@@ -119,7 +122,10 @@ public class RollbackConfigModificationRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b25e21e24388****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -128,7 +134,16 @@ public class RollbackConfigModificationRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the instance after the configuration is changed. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Restart the instance.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Do not restart the instance.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);
