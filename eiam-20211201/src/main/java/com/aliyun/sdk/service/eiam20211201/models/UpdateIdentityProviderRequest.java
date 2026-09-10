@@ -1591,7 +1591,12 @@ public class UpdateIdentityProviderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AuthorizeCallbackDomain")
         private String authorizeCallbackDomain;
 
+        @com.aliyun.core.annotation.NameInMap("ContactSecret")
+        @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 1)
+        private String contactSecret;
+
         @com.aliyun.core.annotation.NameInMap("CorpSecret")
+        @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 1)
         private String corpSecret;
 
         @com.aliyun.core.annotation.NameInMap("TrustableDomain")
@@ -1600,6 +1605,7 @@ public class UpdateIdentityProviderRequest extends Request {
         private WeComConfig(Builder builder) {
             this.agentId = builder.agentId;
             this.authorizeCallbackDomain = builder.authorizeCallbackDomain;
+            this.contactSecret = builder.contactSecret;
             this.corpSecret = builder.corpSecret;
             this.trustableDomain = builder.trustableDomain;
         }
@@ -1627,6 +1633,13 @@ public class UpdateIdentityProviderRequest extends Request {
         }
 
         /**
+         * @return contactSecret
+         */
+        public String getContactSecret() {
+            return this.contactSecret;
+        }
+
+        /**
          * @return corpSecret
          */
         public String getCorpSecret() {
@@ -1643,6 +1656,7 @@ public class UpdateIdentityProviderRequest extends Request {
         public static final class Builder {
             private String agentId; 
             private String authorizeCallbackDomain; 
+            private String contactSecret; 
             private String corpSecret; 
             private String trustableDomain; 
 
@@ -1652,6 +1666,7 @@ public class UpdateIdentityProviderRequest extends Request {
             private Builder(WeComConfig model) {
                 this.agentId = model.agentId;
                 this.authorizeCallbackDomain = model.authorizeCallbackDomain;
+                this.contactSecret = model.contactSecret;
                 this.corpSecret = model.corpSecret;
                 this.trustableDomain = model.trustableDomain;
             } 
@@ -1675,6 +1690,14 @@ public class UpdateIdentityProviderRequest extends Request {
              */
             public Builder authorizeCallbackDomain(String authorizeCallbackDomain) {
                 this.authorizeCallbackDomain = authorizeCallbackDomain;
+                return this;
+            }
+
+            /**
+             * ContactSecret.
+             */
+            public Builder contactSecret(String contactSecret) {
+                this.contactSecret = contactSecret;
                 return this;
             }
 

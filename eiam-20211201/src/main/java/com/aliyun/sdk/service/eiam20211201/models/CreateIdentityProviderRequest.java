@@ -853,7 +853,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The expression for the mapped attribute value.</p>
+             * <p>The expression for the mapping attribute value.</p>
              * 
              * <strong>example:</strong>
              * <p>idpUser.phoneNumber</p>
@@ -864,7 +864,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The name of the target attribute for mapping.</p>
+             * <p>The name of the mapping target attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>user.username</p>
@@ -875,7 +875,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The name of the target attribute for mapping.</p>
+             * <p>The name of the mapping target attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>username</p>
@@ -1143,9 +1143,9 @@ public class CreateIdentityProviderRequest extends Request {
             /**
              * <p>The DingTalk version. Valid values:</p>
              * <ul>
-             * <li><p>public_dingtalk: Standard DingTalk.</p>
+             * <li><p>public_dingtalk: standard DingTalk</p>
              * </li>
-             * <li><p>private_dingtalk: Exclusive DingTalk.</p>
+             * <li><p>private_dingtalk: exclusive DingTalk</p>
              * </li>
              * </ul>
              * 
@@ -1736,7 +1736,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether password synchronization is enabled.</p>
+             * <p>The password synchronization switch.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -2454,7 +2454,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The certificate list of the IdP.</p>
+             * <p>The list of IdP certificates.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -2506,7 +2506,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the external IdP must sign the Assertion.</p>
+             * <p>Specifies whether the external IdP must sign assertions.</p>
              */
             public Builder wantAssertionsSigned(Boolean wantAssertionsSigned) {
                 this.wantAssertionsSigned = wantAssertionsSigned;
@@ -2514,7 +2514,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the external IdP must sign the Response.</p>
+             * <p>Specifies whether the external IdP must sign responses.</p>
              */
             public Builder wantResponseSigned(Boolean wantResponseSigned) {
                 this.wantResponseSigned = wantResponseSigned;
@@ -2818,10 +2818,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The incremental callback status. Specifies whether to process incremental callback data from the IdP. Valid values:</p>
+             * <p>Specifies whether to process incremental callback data from the IdP. Valid values:</p>
              * <ul>
-             * <li>disabled</li>
-             * <li>enabled</li>
+             * <li>disabled: Disabled.</li>
+             * <li>enabled: Enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3131,7 +3131,7 @@ public class CreateIdentityProviderRequest extends Request {
             } 
 
             /**
-             * <p>The incremental callback status. This field is not yet enabled. Ignore this field.</p>
+             * <p>The incremental callback status. This field is not yet available. Ignore this field.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -3150,7 +3150,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>The periodic verification status. This field is not yet enabled. Ignore this field.</p>
+             * <p>The periodic verification status. This field is not yet available. Ignore this field.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -3188,10 +3188,15 @@ public class CreateIdentityProviderRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AuthorizeCallbackDomain")
         private String authorizeCallbackDomain;
 
+        @com.aliyun.core.annotation.NameInMap("ContactSecret")
+        @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 1)
+        private String contactSecret;
+
         @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
         @com.aliyun.core.annotation.NameInMap("CorpSecret")
+        @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 1)
         private String corpSecret;
 
         @com.aliyun.core.annotation.NameInMap("TrustableDomain")
@@ -3200,6 +3205,7 @@ public class CreateIdentityProviderRequest extends Request {
         private WeComConfig(Builder builder) {
             this.agentId = builder.agentId;
             this.authorizeCallbackDomain = builder.authorizeCallbackDomain;
+            this.contactSecret = builder.contactSecret;
             this.corpId = builder.corpId;
             this.corpSecret = builder.corpSecret;
             this.trustableDomain = builder.trustableDomain;
@@ -3228,6 +3234,13 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
+         * @return contactSecret
+         */
+        public String getContactSecret() {
+            return this.contactSecret;
+        }
+
+        /**
          * @return corpId
          */
         public String getCorpId() {
@@ -3251,6 +3264,7 @@ public class CreateIdentityProviderRequest extends Request {
         public static final class Builder {
             private String agentId; 
             private String authorizeCallbackDomain; 
+            private String contactSecret; 
             private String corpId; 
             private String corpSecret; 
             private String trustableDomain; 
@@ -3261,6 +3275,7 @@ public class CreateIdentityProviderRequest extends Request {
             private Builder(WeComConfig model) {
                 this.agentId = model.agentId;
                 this.authorizeCallbackDomain = model.authorizeCallbackDomain;
+                this.contactSecret = model.contactSecret;
                 this.corpId = model.corpId;
                 this.corpSecret = model.corpSecret;
                 this.trustableDomain = model.trustableDomain;
@@ -3285,6 +3300,17 @@ public class CreateIdentityProviderRequest extends Request {
              */
             public Builder authorizeCallbackDomain(String authorizeCallbackDomain) {
                 this.authorizeCallbackDomain = authorizeCallbackDomain;
+                return this;
+            }
+
+            /**
+             * <p>The WeCom address book secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mPLLiWv-_9wittxxxEJCpk1xkF5hOgBzpRt4kBkxxx</p>
+             */
+            public Builder contactSecret(String contactSecret) {
+                this.contactSecret = contactSecret;
                 return this;
             }
 

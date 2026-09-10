@@ -255,8 +255,10 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>The DingTalk version. Valid values:</p>
              * <ul>
-             * <li>public_dingtalk: Standard DingTalk.</li>
-             * <li>private_dingtalk: Dedicated DingTalk.</li>
+             * <li><p>public_dingtalk: Standard DingTalk.</p>
+             * </li>
+             * <li><p>private_dingtalk: Dedicated DingTalk.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -981,7 +983,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The AD/LDAP administrator account.</p>
+             * <p>The AD/LDAP administrator username.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -994,8 +996,10 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>Indicates whether certificate fingerprint verification is enabled. Valid values:</p>
              * <ul>
-             * <li>disabled</li>
-             * <li>enabled</li>
+             * <li><p>disabled: Disabled.</p>
+             * </li>
+             * <li><p>enabled: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1050,9 +1054,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>Indicates whether StartTLS is enabled. Valid values:</p>
              * <ul>
-             * <li><p>disabled: StartTLS is disabled.</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
-             * <li><p>enabled: StartTLS is enabled.</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
              * </ul>
              * 
@@ -1472,11 +1476,11 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PKCE challenge method. Valid values:</p>
+             * <p>The PKCE algorithm. Valid values:</p>
              * <ul>
              * <li><p>S256: SHA-256.</p>
              * </li>
-             * <li><p>plain: Plaintext.</p>
+             * <li><p>plain: plaintext.</p>
              * </li>
              * </ul>
              * 
@@ -1489,7 +1493,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether PKCE is used in the authorization code grant mode.</p>
+             * <p>Indicates whether PKCE is used in the AuthorizationCode grant mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1559,7 +1563,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date after which the certificate is not valid.</p>
+             * <p>The date after which the certificate is no longer valid.</p>
              * 
              * <strong>example:</strong>
              * <p>1704067200000</p>
@@ -1815,7 +1819,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The EntityId of the IdP.</p>
+             * <p>The entity ID of the IdP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></p>
@@ -1826,7 +1830,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon URL of the IdP.</p>
+             * <p>The SSO URL of the IdP.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></p>
@@ -1848,7 +1852,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether request signing is required.</p>
+             * <p>Indicates whether requests are required to be signed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1859,7 +1863,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the external IdP is required to sign the Assertion.</p>
+             * <p>Indicates whether the external IdP is required to sign assertions.</p>
              */
             public Builder wantAssertionsSigned(Boolean wantAssertionsSigned) {
                 this.wantAssertionsSigned = wantAssertionsSigned;
@@ -2027,9 +2031,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>Indicates whether group synchronization is enabled. Valid values:</p>
              * <ul>
-             * <li><p>disabled: Group synchronization is disabled.</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
-             * <li><p>enabled: Group synchronization is enabled.</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
              * </ul>
              * 
@@ -2044,9 +2048,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>The incremental callback status, which indicates whether incremental callback data from the IdP is processed. Valid values:</p>
              * <ul>
-             * <li><p>disabled: Incremental callback processing is disabled.</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
-             * <li><p>enabled: Incremental callback processing is enabled.</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
              * </ul>
              * 
@@ -2059,7 +2063,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synchronization scope configuration.</p>
+             * <p>The sync scope configuration.</p>
              */
             public Builder udSyncScopeConfig(UdSyncScopeConfig udSyncScopeConfig) {
                 this.udSyncScopeConfig = udSyncScopeConfig;
@@ -2215,7 +2219,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of synchronization scope configurations.</p>
+             * <p>The list of sync scope configurations.</p>
              */
             public Builder udSyncScopeConfigs(java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs) {
                 this.udSyncScopeConfigs = udSyncScopeConfigs;
@@ -2242,6 +2246,9 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthorizeCallbackDomain")
         private String authorizeCallbackDomain;
 
+        @com.aliyun.core.annotation.NameInMap("ContactSecret")
+        private String contactSecret;
+
         @com.aliyun.core.annotation.NameInMap("CorpId")
         private String corpId;
 
@@ -2254,6 +2261,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         private WeComConfig(Builder builder) {
             this.agentId = builder.agentId;
             this.authorizeCallbackDomain = builder.authorizeCallbackDomain;
+            this.contactSecret = builder.contactSecret;
             this.corpId = builder.corpId;
             this.corpSecret = builder.corpSecret;
             this.trustableDomain = builder.trustableDomain;
@@ -2282,6 +2290,13 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return contactSecret
+         */
+        public String getContactSecret() {
+            return this.contactSecret;
+        }
+
+        /**
          * @return corpId
          */
         public String getCorpId() {
@@ -2305,6 +2320,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
         public static final class Builder {
             private String agentId; 
             private String authorizeCallbackDomain; 
+            private String contactSecret; 
             private String corpId; 
             private String corpSecret; 
             private String trustableDomain; 
@@ -2315,6 +2331,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             private Builder(WeComConfig model) {
                 this.agentId = model.agentId;
                 this.authorizeCallbackDomain = model.authorizeCallbackDomain;
+                this.contactSecret = model.contactSecret;
                 this.corpId = model.corpId;
                 this.corpSecret = model.corpSecret;
                 this.trustableDomain = model.trustableDomain;
@@ -2343,6 +2360,17 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The WeCom contacts secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mPLLiWv-_9witxxxEJCpk1xkF5hOgBzpRt4kBkxxxx</p>
+             */
+            public Builder contactSecret(String contactSecret) {
+                this.contactSecret = contactSecret;
+                return this;
+            }
+
+            /**
              * <p>The corpId of the WeCom self-built application.</p>
              * 
              * <strong>example:</strong>
@@ -2365,7 +2393,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trusted domain name.</p>
+             * <p>The trusted domain.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com">https://example.com</a></p>
@@ -2775,8 +2803,10 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>The advanced configuration capability. Valid values:</p>
              * <ul>
-             * <li>disabled</li>
-             * <li>enabled</li>
+             * <li><p>disabled: Disabled.</p>
+             * </li>
+             * <li><p>enabled: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2790,14 +2820,22 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>The authentication source product, such as Okta, Google, or Azure AD. Valid values:</p>
              * <ul>
-             * <li>urn:alibaba:idaas:idp:alibaba:dingtalk: DingTalk.</li>
-             * <li>urn:alibaba:idaas:idp:unknown:ldap: LDAP.</li>
-             * <li>urn:alibaba:idaas:idp:alibaba:idaas: Alibaba Cloud IDaaS.</li>
-             * <li>urn:alibaba:idaas:idp:tencent:wecom: WeCom.</li>
-             * <li>urn:alibaba:idaas:idp:bytedance:lark: Lark.</li>
-             * <li>urn:alibaba:idaas:idp:microsoft:ad: Active Directory.</li>
-             * <li>urn:alibaba:idaas:idp:microsoft:aad: Azure Active Directory.</li>
-             * <li>urn:alibaba:idaas:idp:alibaba:sase: Alibaba Cloud SASE.</li>
+             * <li><p>urn:alibaba:idaas:idp:alibaba:dingtalk: DingTalk.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:unknown:ldap: LDAP.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:alibaba:idaas: Alibaba Cloud IDaaS.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:tencent:wecom: WeCom.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:bytedance:lark: Lark.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:microsoft:ad: Active Directory.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:microsoft:aad: Azure Active Directory.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:alibaba:sase: Alibaba Cloud SASE.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2811,8 +2849,10 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>The authentication type, OIDC or SAML. Valid values:</p>
              * <ul>
-             * <li>urn:alibaba:idaas:authntype:oidc: OIDC.</li>
-             * <li>urn:alibaba:idaas:authntype:saml2: SAML.</li>
+             * <li><p>urn:alibaba:idaas:authntype:oidc: OIDC.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:authntype:saml2: SAML.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2826,8 +2866,10 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the corresponding IdP supports authentication. Valid values:</p>
              * <ul>
-             * <li>disabled</li>
-             * <li>enabled</li>
+             * <li><p>disabled: Disabled.</p>
+             * </li>
+             * <li><p>enabled: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2850,7 +2892,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity provider description.</p>
+             * <p>The description of the identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>for poc test</p>
@@ -2907,7 +2949,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity provider name.</p>
+             * <p>The name of the identity provider.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -2918,16 +2960,24 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The identity provider synchronization type. Valid values:</p>
+             * <p>The synchronization type of the identity provider. Valid values:</p>
              * <ul>
-             * <li>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: Inbound DingTalk.</li>
-             * <li>urn:alibaba:idaas:idp:alibaba:dingtalk:push: Outbound DingTalk.</li>
-             * <li>urn:alibaba:idaas:idp:tencent:wecom:pull: Inbound WeCom.</li>
-             * <li>urn:alibaba:idaas:idp:bytedance:lark:pull: Inbound Lark.</li>
-             * <li>urn:alibaba:idaas:idp:microsoft:ad:pull: Inbound AD.</li>
-             * <li>urn:alibaba:idaas:idp:unknown:ldap:pull: Inbound LDAP.</li>
-             * <li>urn:alibaba:idaas:idp:standard:oidc: Standard OIDC.</li>
-             * <li>urn:alibaba:idaas:idp:alibaba:sase: SASE custom OIDC.</li>
+             * <li><p>urn:alibaba:idaas:idp:alibaba:dingtalk:pull: Inbound DingTalk.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:alibaba:dingtalk:push: Outbound DingTalk.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:tencent:wecom:pull: Inbound WeCom.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:bytedance:lark:pull: Inbound Lark.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:microsoft:ad:pull: Inbound AD.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:unknown:ldap:pull: Inbound LDAP.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:standard:oidc: Standard OIDC.</p>
+             * </li>
+             * <li><p>urn:alibaba:idaas:idp:alibaba:sase: SASE custom OIDC.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2999,7 +3049,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network endpoint ID.</p>
+             * <p>The network access endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>nae_mx4vsadfe6govkqkwckxxxx</p>
@@ -3026,7 +3076,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The inbound synchronization configuration.</p>
+             * <p>The inbound sync configuration.</p>
              */
             public Builder udPullConfig(UdPullConfig udPullConfig) {
                 this.udPullConfig = udPullConfig;
@@ -3034,11 +3084,11 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether inbound synchronization is supported. Valid values:</p>
+             * <p>Indicates whether the inbound sync feature is supported. Valid values:</p>
              * <ul>
-             * <li><p>disabled: Inbound synchronization is disabled.</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
-             * <li><p>enabled: Inbound synchronization is enabled.</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
              * </ul>
              * 
@@ -3051,7 +3101,7 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The outbound synchronization configuration.</p>
+             * <p>The outbound sync configuration.</p>
              */
             public Builder udPushConfig(UdPushConfig udPushConfig) {
                 this.udPushConfig = udPushConfig;
@@ -3059,11 +3109,11 @@ public class GetIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether outbound synchronization is enabled. Valid values:</p>
+             * <p>Indicates whether the outbound sync capability is enabled. Valid values:</p>
              * <ul>
-             * <li><p>disabled: Outbound synchronization is disabled.</p>
+             * <li><p>disabled: Disabled.</p>
              * </li>
-             * <li><p>enabled: Outbound synchronization is enabled.</p>
+             * <li><p>enabled: Enabled.</p>
              * </li>
              * </ul>
              * 
