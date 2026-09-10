@@ -73,7 +73,10 @@ public class GetModuleVersionRequest extends Request {
         } 
 
         /**
-         * moduleId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod-14e80de4866bf71c92a04fe353b1</p>
          */
         public Builder moduleId(String moduleId) {
             this.putPathParameter("moduleId", moduleId);
@@ -82,7 +85,10 @@ public class GetModuleVersionRequest extends Request {
         }
 
         /**
-         * moduleVersion.
+         * <p>The template version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder moduleVersion(String moduleVersion) {
             this.putPathParameter("moduleVersion", moduleVersion);

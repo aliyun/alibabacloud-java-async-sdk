@@ -59,7 +59,10 @@ public class DeleteDetectConfigRequest extends Request {
         } 
 
         /**
-         * detectConfigId.
+         * <p>The ID of the bias detection configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-xxxx</p>
          */
         public Builder detectConfigId(String detectConfigId) {
             this.putPathParameter("detectConfigId", detectConfigId);

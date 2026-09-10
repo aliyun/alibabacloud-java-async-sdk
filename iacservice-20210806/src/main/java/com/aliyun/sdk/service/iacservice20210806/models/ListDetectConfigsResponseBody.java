@@ -106,7 +106,7 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * detectConfigs.
+         * <p>List of drift detection configurations</p>
          */
         public Builder detectConfigs(java.util.List<DetectConfigs> detectConfigs) {
             this.detectConfigs = detectConfigs;
@@ -114,7 +114,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>Maximum number of records to retrieve in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>Paging nextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30BaZ9ekYWXJdqshYecA++coNg7qT1Zbm3RfLyFIZeY=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,7 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>79284133-D4BA-56B3-954C-D538256F7EAA</p>
@@ -141,7 +147,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -207,7 +216,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * address.
+             * <p>Alerting address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx">https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx</a></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -215,7 +227,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Alerting method. Currently only <code>cms</code> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -360,7 +375,7 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * alarmConfigs.
+             * <p>List of alerting addresses</p>
              */
             public Builder alarmConfigs(java.util.List<AlarmConfigs> alarmConfigs) {
                 this.alarmConfigs = alarmConfigs;
@@ -368,7 +383,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>Creation Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-10T02:30:04Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -376,7 +394,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * cronExpression.
+             * <p>Cron expression (UTC+8). Required when the trigger type is Cron.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 0 ? * 1</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -384,7 +405,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -392,7 +416,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * detectConfigId.
+             * <p>Drift detection configuration ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc-xxxx</p>
              */
             public Builder detectConfigId(String detectConfigId) {
                 this.detectConfigId = detectConfigId;
@@ -400,7 +427,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * detectConfigName.
+             * <p>Name of the drift detection configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder detectConfigName(String detectConfigName) {
                 this.detectConfigName = detectConfigName;
@@ -408,7 +438,10 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Whether drift detection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -416,7 +449,14 @@ public class ListDetectConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * triggerType.
+             * <p>Trigger type  </p>
+             * <ul>
+             * <li>Manual: Execute manually  </li>
+             * <li>Cron: Trigger on schedule</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Cron</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;

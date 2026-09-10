@@ -59,7 +59,10 @@ public class GetTerraformStateDetectionRequest extends Request {
         } 
 
         /**
-         * detectionId.
+         * <p>The ID of the detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-ascxxxxx</p>
          */
         public Builder detectionId(String detectionId) {
             this.putPathParameter("detectionId", detectionId);

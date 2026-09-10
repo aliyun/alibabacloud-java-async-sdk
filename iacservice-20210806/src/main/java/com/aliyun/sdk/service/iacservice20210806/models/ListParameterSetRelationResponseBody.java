@@ -80,7 +80,7 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * parameterSets.
+         * <p>The list of parameter sets.</p>
          */
         public Builder parameterSets(java.util.List<ParameterSets> parameterSets) {
             this.parameterSets = parameterSets;
@@ -88,7 +88,10 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2F24E990-E8D3-5C18-ABEA-C7A3F1831C57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +207,10 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The time when the parameter set was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-14T10:05:19Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -209,7 +218,10 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123111</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +229,10 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the parameter set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alb_enable_ipv6_4.2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +240,10 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
             }
 
             /**
-             * parameterSetId.
+             * <p>The ID of the parameter set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pts-kw1b11jlssrabb638ptums</p>
              */
             public Builder parameterSetId(String parameterSetId) {
                 this.parameterSetId = parameterSetId;
@@ -233,7 +251,7 @@ public class ListParameterSetRelationResponseBody extends TeaModel {
             }
 
             /**
-             * parameters.
+             * <p>The content of the parameter set.</p>
              */
             public Builder parameters(java.util.Map<String, String> parameters) {
                 this.parameters = parameters;

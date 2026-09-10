@@ -67,7 +67,7 @@ public class GetGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * group.
+         * <p>The group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -75,7 +75,10 @@ public class GetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6ED9F71-7FA8-598E-B64D-4606FB3FCCC9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * notifyPath.
+             * <p>The path configuration for notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder notifyPath(String notifyPath) {
                 this.notifyPath = notifyPath;
@@ -149,7 +155,11 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * notifyType.
+             * <p>The notification type. Valid values:
+             * DingDing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingDing</p>
              */
             public Builder notifyType(String notifyType) {
                 this.notifyType = notifyType;
@@ -216,7 +226,14 @@ public class GetGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * triggerStrategy.
+             * <p>The trigger strategy. Valid values:</p>
+             * <ul>
+             * <li>ProviderNewVersion: triggered when a new provider version is released</li>
+             * <li>Cron: triggered on a schedule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Cron</p>
              */
             public Builder triggerStrategy(String triggerStrategy) {
                 this.triggerStrategy = triggerStrategy;
@@ -224,7 +241,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * triggerValue.
+             * <p>The policy value that must be maintained for scheduled triggering. This value is a cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 8 * * ?</p>
              */
             public Builder triggerValue(String triggerValue) {
                 this.triggerValue = triggerValue;
@@ -486,7 +506,10 @@ public class GetGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * autoDestroy.
+             * <p>Indicates whether automatic deletion is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoDestroy(Boolean autoDestroy) {
                 this.autoDestroy = autoDestroy;
@@ -494,7 +517,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * autoTrigger.
+             * <p>Indicates whether automatic triggering is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoTrigger(Boolean autoTrigger) {
                 this.autoTrigger = autoTrigger;
@@ -502,7 +528,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-21T10:57:11Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -510,7 +539,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The group description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -518,7 +550,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * forcedSetting.
+             * <p>Indicates whether the group configuration is forcibly used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder forcedSetting(Boolean forcedSetting) {
                 this.forcedSetting = forcedSetting;
@@ -526,7 +561,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-14e80de4866bf7ffed0bab6154d738</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -534,7 +572,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -542,7 +583,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * notifyConfig.
+             * <p>The notification configuration.</p>
              */
             public Builder notifyConfig(java.util.List<NotifyConfig> notifyConfig) {
                 this.notifyConfig = notifyConfig;
@@ -550,7 +591,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * notifyOperationTypes.
+             * <p>The list of notification operation types.</p>
              */
             public Builder notifyOperationTypes(java.util.List<String> notifyOperationTypes) {
                 this.notifyOperationTypes = notifyOperationTypes;
@@ -558,7 +599,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-4267dcfbf1b6d126edcadf0e949</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -566,7 +610,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ramRole.
+             * <p>The RAM role (1 to 128 characters). The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger mode is not manual.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ramRoleName</p>
              */
             public Builder ramRole(String ramRole) {
                 this.ramRole = ramRole;
@@ -574,7 +621,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * reportExportField.
+             * <p>The list of report export field options.</p>
              */
             public Builder reportExportField(java.util.List<String> reportExportField) {
                 this.reportExportField = reportExportField;
@@ -582,7 +629,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * reportExportPath.
+             * <p>The export address for the execution report. OSS addresses are supported. Format: https://<OSS bucket address>/<path>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder reportExportPath(String reportExportPath) {
                 this.reportExportPath = reportExportPath;
@@ -590,7 +640,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * taskCnt.
+             * <p>The number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder taskCnt(Long taskCnt) {
                 this.taskCnt = taskCnt;
@@ -598,7 +651,10 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * terraformProviderVersion.
+             * <p>The Terraform provider version. Select a Terraform provider version. Tasks in the group are executed based on the specified Terraform provider version. The version configured on a task takes higher priority. This version may conflict with the Terraform provider version specified in the module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.191.0</p>
              */
             public Builder terraformProviderVersion(String terraformProviderVersion) {
                 this.terraformProviderVersion = terraformProviderVersion;
@@ -606,7 +662,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * triggerConfig.
+             * <p>The trigger policy. This parameter cannot be empty when autoTrigger is set to true.</p>
              */
             public Builder triggerConfig(java.util.List<TriggerConfig> triggerConfig) {
                 this.triggerConfig = triggerConfig;
@@ -614,7 +670,11 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * triggerResourceType.
+             * <p>The resource type that triggers execution. Valid values:</p>
+             * <ul>
+             * <li>Task: regular task</li>
+             * <li>SceneTestingTask: scenario-based testing task.</li>
+             * </ul>
              */
             public Builder triggerResourceType(java.util.List<String> triggerResourceType) {
                 this.triggerResourceType = triggerResourceType;

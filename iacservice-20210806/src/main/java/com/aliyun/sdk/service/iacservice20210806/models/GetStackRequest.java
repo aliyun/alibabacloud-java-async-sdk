@@ -60,6 +60,7 @@ public class GetStackRequest extends Request {
         } 
 
         /**
+         * <p>The unique identifier of the stack, which is generated after the stack is created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

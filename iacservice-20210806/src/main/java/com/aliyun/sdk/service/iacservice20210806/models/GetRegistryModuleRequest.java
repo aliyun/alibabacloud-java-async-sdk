@@ -75,10 +75,11 @@ public class GetRegistryModuleRequest extends Request {
         } 
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>terraform-alicloud-modules</p>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putPathParameter("namespaceName", namespaceName);
@@ -87,10 +88,11 @@ public class GetRegistryModuleRequest extends Request {
         }
 
         /**
+         * <p>The module name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs-rds-redis</p>
+         * <p>ModuleName</p>
          */
         public Builder moduleName(String moduleName) {
             this.putPathParameter("moduleName", moduleName);

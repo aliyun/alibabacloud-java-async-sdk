@@ -80,7 +80,10 @@ public class UpdateResourceExportTaskAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * exportTaskId.
+         * <p>The ID of the resource export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex-kw161ol8te1n701e1igt8q8</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.exportTaskId = exportTaskId;
@@ -88,7 +91,10 @@ public class UpdateResourceExportTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * exportVersion.
+         * <p>The version of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder exportVersion(String exportVersion) {
             this.exportVersion = exportVersion;
@@ -96,7 +102,10 @@ public class UpdateResourceExportTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B43F08A7-F2A3-54D3-BDA4-69C9F32A7B9F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

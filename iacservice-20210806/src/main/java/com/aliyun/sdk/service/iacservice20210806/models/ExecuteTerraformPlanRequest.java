@@ -88,6 +88,7 @@ public class ExecuteTerraformPlanRequest extends Request {
         } 
 
         /**
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,25 @@ public class ExecuteTerraformPlanRequest extends Request {
         }
 
         /**
-         * code.
+         * <p>The Terraform code to execute. If the execution content has not changed, you can specify only stateId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terraform {
+         *   required_providers {
+         *     alicloud = {
+         *       source   = &quot;aliyun/alicloud&quot;
+         *       version  = &quot;1.254.0&quot;
+         *     }
+         *   }
+         * }</p>
+         * <p>resource &quot;alicloud_vpc&quot; &quot;default&quot; {
+         *   is_default                                  = false
+         *   enable_ipv6                                 = false
+         *   classic_link_enabled                        = false
+         *   force_delete                                = false
+         *   system_route_table_route_propagation_enable = false
+         *   dry_run                                     = false
+         * }</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -109,7 +128,10 @@ public class ExecuteTerraformPlanRequest extends Request {
         }
 
         /**
-         * stateId.
+         * <p>The ID of the state file. If this parameter is specified, the Plan command continues to run based on the existing state file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-xxx</p>
          */
         public Builder stateId(String stateId) {
             this.putBodyParameter("stateId", stateId);

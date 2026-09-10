@@ -90,6 +90,7 @@ public class DissociateParameterSetRequest extends Request {
         } 
 
         /**
+         * <p>The list of parameter set IDs to be associated with the resource. Maximum length: 5.</p>
          * <p>This parameter is required.</p>
          */
         public Builder parameterSetIds(java.util.List<String> parameterSetIds) {
@@ -99,6 +100,7 @@ public class DissociateParameterSetRequest extends Request {
         }
 
         /**
+         * <p>The resource ID. If the resource type is ModuleVersion, the value is a combination of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +113,13 @@ public class DissociateParameterSetRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>Module: template</li>
+         * <li>ModuleVersion: template version</li>
+         * <li>Task: node</li>
+         * <li>Stack: resource stack.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

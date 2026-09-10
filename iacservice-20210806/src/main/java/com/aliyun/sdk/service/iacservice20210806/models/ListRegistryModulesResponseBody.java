@@ -106,7 +106,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         } 
 
         /**
-         * count.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -114,7 +117,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +128,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page. A value of null indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iRdnbADPQp4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,7 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         }
 
         /**
-         * registryModules.
+         * <p>The list of Registry modules.</p>
          */
         public Builder registryModules(java.util.List<RegistryModules> registryModules) {
             this.registryModules = registryModules;
@@ -138,7 +147,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D25216A9-C0F7-5A3A-A7E4-2B3D4F3A355D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -334,7 +346,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             } 
 
             /**
-             * acl.
+             * <p>The permission. private: private.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -342,7 +357,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time in the format of YYYY-MM-DD HH:mm:ss. The returned value does not include a time zone identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-10 16:16:04</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -350,7 +368,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the Registry module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -358,7 +379,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * downloads.
+             * <p>The number of downloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder downloads(Integer downloads) {
                 this.downloads = downloads;
@@ -366,7 +390,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * moduleName.
+             * <p>The name of the Registry module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ModuleName</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -374,7 +401,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NamespaceName</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -382,7 +412,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * provider.
+             * <p>The provider type. alicloud: Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -390,7 +423,7 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * sharedAccounts.
+             * <p>The list of accounts with which the Registry module is shared.</p>
              */
             public Builder sharedAccounts(java.util.List<Long> sharedAccounts) {
                 this.sharedAccounts = sharedAccounts;
@@ -398,7 +431,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The module source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespaceName/ModuleName</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -406,7 +442,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * sourceUrl.
+             * <p>The module source URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -414,7 +453,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The templatetype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -422,7 +464,10 @@ public class ListRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The latest version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

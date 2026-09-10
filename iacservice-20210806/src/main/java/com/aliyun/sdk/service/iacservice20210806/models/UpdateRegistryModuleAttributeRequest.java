@@ -118,10 +118,11 @@ public class UpdateRegistryModuleAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_namespace</p>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putPathParameter("namespaceName", namespaceName);
@@ -130,10 +131,11 @@ public class UpdateRegistryModuleAttributeRequest extends Request {
         }
 
         /**
+         * <p>The Registry template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>mns-queue</p>
+         * <p>ModuleName</p>
          */
         public Builder moduleName(String moduleName) {
             this.putPathParameter("moduleName", moduleName);
@@ -142,7 +144,13 @@ public class UpdateRegistryModuleAttributeRequest extends Request {
         }
 
         /**
-         * acl.
+         * <p>The access permission. Valid values:</p>
+         * <ul>
+         * <li>private: private.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder acl(String acl) {
             this.putBodyParameter("acl", acl);
@@ -151,7 +159,11 @@ public class UpdateRegistryModuleAttributeRequest extends Request {
         }
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -160,7 +172,10 @@ public class UpdateRegistryModuleAttributeRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the Registry template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

@@ -80,7 +80,10 @@ public class JobsStatusDetailValue extends TeaModel {
         } 
 
         /**
-         * comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -88,7 +91,10 @@ public class JobsStatusDetailValue extends TeaModel {
         }
 
         /**
-         * jobResult.
+         * <p>The job execution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apply complete! Resources: 0 added, 0 changed, 0 destroyed.</p>
          */
         public Builder jobResult(String jobResult) {
             this.jobResult = jobResult;
@@ -96,7 +102,10 @@ public class JobsStatusDetailValue extends TeaModel {
         }
 
         /**
-         * timeStamps.
+         * <p>The time when the status was reached, in the format of YYYY-MM-DD HH:mm:ss. The returned value does not include a time zone identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-13 17:11:34</p>
          */
         public Builder timeStamps(String timeStamps) {
             this.timeStamps = timeStamps;

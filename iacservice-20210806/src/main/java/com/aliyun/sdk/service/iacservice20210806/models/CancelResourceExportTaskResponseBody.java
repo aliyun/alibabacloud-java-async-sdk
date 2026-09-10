@@ -80,7 +80,10 @@ public class CancelResourceExportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * exportTaskId.
+         * <p>The ID of the resource export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex-3b6cb9fa4751a6e5cdc6460282</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.exportTaskId = exportTaskId;
@@ -88,7 +91,10 @@ public class CancelResourceExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * exportVersion.
+         * <p>The version of the export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder exportVersion(String exportVersion) {
             this.exportVersion = exportVersion;
@@ -96,7 +102,10 @@ public class CancelResourceExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136B3926-DD90-5DB2-96EC-8BAD6407D1C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -118,6 +118,7 @@ public class OperateJobRequest extends Request {
         } 
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class OperateJobRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +144,15 @@ public class OperateJobRequest extends Request {
         }
 
         /**
-         * operationType.
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>execute: continues the Apply operation after the Plan is complete.</li>
+         * <li>abolish: abandons a job that has completed the Plan preview.</li>
+         * <li>cancel: cancels a job that is running or queued.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>execute</p>
          */
         public Builder operationType(String operationType) {
             this.putPathParameter("operationType", operationType);
@@ -151,6 +161,7 @@ public class OperateJobRequest extends Request {
         }
 
         /**
+         * <p>The description. The length is 0 to 128 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +174,14 @@ public class OperateJobRequest extends Request {
         }
 
         /**
-         * taskType.
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>Task: regular task (default).</li>
+         * <li>SceneTestingTask: scenario-based testing task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Task</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("taskType", taskType);

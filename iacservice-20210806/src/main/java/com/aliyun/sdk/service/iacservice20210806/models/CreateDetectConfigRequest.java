@@ -145,7 +145,7 @@ public class CreateDetectConfigRequest extends Request {
         } 
 
         /**
-         * alarmConfigs.
+         * <p>List of alerting addresses</p>
          */
         public Builder alarmConfigs(java.util.List<AlarmConfigs> alarmConfigs) {
             this.putBodyParameter("alarmConfigs", alarmConfigs);
@@ -154,6 +154,7 @@ public class CreateDetectConfigRequest extends Request {
         }
 
         /**
+         * <p>Idempotence token, format: <code>[0-9a-zA-Z-]{1,64}</code>. It is recommended to use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,10 @@ public class CreateDetectConfigRequest extends Request {
         }
 
         /**
-         * cronExpression.
+         * <p>Cron expression (UTC+8). Required when trigger type is <code>Cron</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 0 ? * 1</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putBodyParameter("cronExpression", cronExpression);
@@ -175,7 +179,10 @@ public class CreateDetectConfigRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>Description, up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -184,6 +191,7 @@ public class CreateDetectConfigRequest extends Request {
         }
 
         /**
+         * <p>Detection configuration Name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +204,7 @@ public class CreateDetectConfigRequest extends Request {
         }
 
         /**
-         * enabled.
+         * <p>Whether the Detection feature is Enabled. The default value is <code>true</code>.</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("enabled", enabled);
@@ -205,7 +213,14 @@ public class CreateDetectConfigRequest extends Request {
         }
 
         /**
-         * triggerType.
+         * <p>Trigger type  </p>
+         * <ul>
+         * <li>Manual: Execute manually  </li>
+         * <li>Cron: Trigger on a schedule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder triggerType(String triggerType) {
             this.putBodyParameter("triggerType", triggerType);
@@ -273,7 +288,10 @@ public class CreateDetectConfigRequest extends Request {
             } 
 
             /**
-             * address.
+             * <p>Alerting address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx">https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx</a></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -281,7 +299,10 @@ public class CreateDetectConfigRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>Alerting method. Currently only <code>cms</code> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -102,6 +102,7 @@ public class ListModuleVersionRequest extends Request {
         } 
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListModuleVersionRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The search keyword. Fuzzy match on version names is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -123,7 +127,10 @@ public class ListModuleVersionRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -132,7 +139,10 @@ public class ListModuleVersionRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

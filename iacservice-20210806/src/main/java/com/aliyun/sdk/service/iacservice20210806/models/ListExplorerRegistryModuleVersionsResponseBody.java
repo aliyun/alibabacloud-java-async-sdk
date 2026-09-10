@@ -106,7 +106,7 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * explorerRegistryModuleVersions.
+         * <p>The list of Explorer community module versions.</p>
          */
         public Builder explorerRegistryModuleVersions(java.util.List<ExplorerRegistryModuleVersions> explorerRegistryModuleVersions) {
             this.explorerRegistryModuleVersions = explorerRegistryModuleVersions;
@@ -114,7 +114,12 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 0 to 200.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +127,11 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page of results.</p>
+         * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oIM6ssGyh00noi5zoDR1hJ4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2D40488-3F74-568B-87EC-1C04D098DF8B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +284,10 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * moduleDetail.
+             * <p>The module details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder moduleDetail(java.util.Map<String, ?> moduleDetail) {
                 this.moduleDetail = moduleDetail;
@@ -277,7 +295,10 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * moduleFile.
+             * <p>The module file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder moduleFile(java.util.Map<String, ?> moduleFile) {
                 this.moduleFile = moduleFile;
@@ -285,7 +306,10 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * moduleName.
+             * <p>The module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-slb-ecs-polardb</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -293,7 +317,10 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespace-test</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -301,7 +328,10 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * properties.
+             * <p>The resource properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
@@ -309,7 +339,10 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_namespace/RegistryModule-test4</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -317,7 +350,10 @@ public class ListExplorerRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

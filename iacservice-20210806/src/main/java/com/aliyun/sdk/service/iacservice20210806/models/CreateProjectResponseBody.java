@@ -67,7 +67,10 @@ public class CreateProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-433aead7560572f8d95b25775c</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -75,7 +78,10 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E49127A-BB65-5CCD-AB93-0EC0A43E5446</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

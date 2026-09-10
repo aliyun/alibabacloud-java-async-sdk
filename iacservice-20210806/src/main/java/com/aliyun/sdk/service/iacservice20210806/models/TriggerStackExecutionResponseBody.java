@@ -78,7 +78,10 @@ public class TriggerStackExecutionResponseBody extends TeaModel {
         }
 
         /**
-         * triggerId.
+         * <p>The unique ID of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event-xxxx</p>
          */
         public Builder triggerId(String triggerId) {
             this.triggerId = triggerId;

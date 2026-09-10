@@ -187,6 +187,7 @@ public class CreateResourceExportTaskRequest extends Request {
         } 
 
         /**
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +200,10 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the resource export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -208,7 +212,7 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
-         * exportToModule.
+         * <p>Saves the exported template as a module. If this parameter is not specified, the template is automatically saved in the Registry.</p>
          */
         public Builder exportToModule(ExportToModule exportToModule) {
             this.putBodyParameter("exportToModule", exportToModule);
@@ -217,7 +221,7 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
-         * includeRules.
+         * <p>The list of inclusion rules used when exporting resources.</p>
          */
         public Builder includeRules(java.util.List<IncludeRules> includeRules) {
             this.putBodyParameter("includeRules", includeRules);
@@ -226,6 +230,12 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the resource export task. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 3 to 63 characters in length.</li>
+         * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
+         * <li>The name must be unique among resource export tasks within the current account.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +248,10 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
-         * ramRole.
+         * <p>The RAM role (1 to 128 characters). The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role-name</p>
          */
         public Builder ramRole(String ramRole) {
             this.putBodyParameter("ramRole", ramRole);
@@ -247,7 +260,10 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
-         * terraformProviderVersion.
+         * <p>The Terraform provider version. Call <strong>ListTerraformProviderVersions</strong> to view the list of supported versions. Default value: the latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.247.0</p>
          */
         public Builder terraformProviderVersion(String terraformProviderVersion) {
             this.putBodyParameter("terraformProviderVersion", terraformProviderVersion);
@@ -256,7 +272,10 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
-         * terraformVersion.
+         * <p>The Terraform version. Call <strong>ListAvailableTerraformVersions</strong> to view the list of supported versions. Default value: 1.5.7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.5.7</p>
          */
         public Builder terraformVersion(String terraformVersion) {
             this.putBodyParameter("terraformVersion", terraformVersion);
@@ -265,7 +284,15 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
-         * triggerStrategy.
+         * <p>The trigger strategy. Valid values:</p>
+         * <ul>
+         * <li>Auto: triggered when rules are modified or the trigger strategy is changed to Auto.</li>
+         * <li>Manual: manually triggered.</li>
+         * </ul>
+         * <p>Default value: Manual.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Auto</p>
          */
         public Builder triggerStrategy(String triggerStrategy) {
             this.putBodyParameter("triggerStrategy", triggerStrategy);
@@ -274,7 +301,7 @@ public class CreateResourceExportTaskRequest extends Request {
         }
 
         /**
-         * variables.
+         * <p>The list of variables. Exported resource parameters are set as variables.</p>
          */
         public Builder variables(java.util.List<Variables> variables) {
             this.putBodyParameter("variables", variables);
@@ -355,7 +382,14 @@ public class CreateResourceExportTaskRequest extends Request {
             } 
 
             /**
-             * source.
+             * <p>The module type in which the exported template is saved. Valid values:</p>
+             * <ul>
+             * <li>OSS: OSS.</li>
+             * <li>Registry: Terraform Registry.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Registry</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -363,7 +397,10 @@ public class CreateResourceExportTaskRequest extends Request {
             }
 
             /**
-             * sourcePath.
+             * <p>The path for saving the template content. Set this parameter when source is set to OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss::<a href="https://iac-daily.oss-ap-southeast-1.aliyuncs.com/iacservice/vpc.zip">https://iac-daily.oss-ap-southeast-1.aliyuncs.com/iacservice/vpc.zip</a></p>
              */
             public Builder sourcePath(String sourcePath) {
                 this.sourcePath = sourcePath;
@@ -371,7 +408,10 @@ public class CreateResourceExportTaskRequest extends Request {
             }
 
             /**
-             * statePath.
+             * <p>The path for saving the template state file. Set this parameter when source is set to OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss::<a href="https://iac-daily.oss-ap-southeast-1.aliyuncs.com/default/terraform.tfstate">https://iac-daily.oss-ap-southeast-1.aliyuncs.com/default/terraform.tfstate</a></p>
              */
             public Builder statePath(String statePath) {
                 this.statePath = statePath;
@@ -438,7 +478,18 @@ public class CreateResourceExportTaskRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The name of the inclusion rule used when exporting resources. Valid values:</p>
+             * <ul>
+             * <li>ResourceType: required. The resource type. Call <strong>ListResourceTypes</strong> to view the list of supported resources. Example: ALIYUN::VPC::VPC.</li>
+             * <li>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</li>
+             * <li>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</li>
+             * <li>ResourceGroupId: the resource group ID. Example: rg-1234.</li>
+             * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</li>
+             * </ul>
+             * <p>By default, multiple filter conditions are evaluated using the AND operator. A resource is considered a match only when all filter conditions are met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -446,7 +497,7 @@ public class CreateResourceExportTaskRequest extends Request {
             }
 
             /**
-             * values.
+             * <p>The list of values for the inclusion rule used when exporting resources.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -513,7 +564,7 @@ public class CreateResourceExportTaskRequest extends Request {
             } 
 
             /**
-             * properties.
+             * <p>The list of properties of the Terraform resource that corresponds to the resource type.</p>
              */
             public Builder properties(java.util.List<String> properties) {
                 this.properties = properties;
@@ -521,7 +572,10 @@ public class CreateResourceExportTaskRequest extends Request {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type. Call <strong>ListResourceTypes</strong> to view the list of supported resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::VPC::VSwitch</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

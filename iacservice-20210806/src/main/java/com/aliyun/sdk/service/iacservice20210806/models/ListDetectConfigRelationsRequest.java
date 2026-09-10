@@ -87,7 +87,10 @@ public class ListDetectConfigRelationsRequest extends Request {
         } 
 
         /**
-         * detectConfigId.
+         * <p>Drift detection configuration ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-xxxx</p>
          */
         public Builder detectConfigId(String detectConfigId) {
             this.putQueryParameter("detectConfigId", detectConfigId);
@@ -96,7 +99,10 @@ public class ListDetectConfigRelationsRequest extends Request {
         }
 
         /**
-         * targetId.
+         * <p>Target ID to associate. StackId or TaskId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stack-xxxxx</p>
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("targetId", targetId);
@@ -105,7 +111,14 @@ public class ListDetectConfigRelationsRequest extends Request {
         }
 
         /**
-         * targetType.
+         * <p>Type of the association target</p>
+         * <ul>
+         * <li>Task: orchestration Job  </li>
+         * <li>Stack: resource stack</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stack</p>
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("targetType", targetType);

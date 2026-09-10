@@ -101,7 +101,10 @@ public class GetResourceTypeRequest extends Request {
         } 
 
         /**
-         * resourceType.
+         * <p>The resource code used to retrieve detailed information about a specified resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud_vpc</p>
          */
         public Builder resourceType(String resourceType) {
             this.putPathParameter("resourceType", resourceType);
@@ -110,7 +113,15 @@ public class GetResourceTypeRequest extends Request {
         }
 
         /**
-         * acceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese.</li>
+         * <li>en-US: English.</li>
+         * </ul>
+         * <p>Default value: zh-CN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("acceptLanguage", acceptLanguage);
@@ -119,7 +130,10 @@ public class GetResourceTypeRequest extends Request {
         }
 
         /**
-         * filterReadOnly.
+         * <p>Specifies whether to filter read-only properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder filterReadOnly(Boolean filterReadOnly) {
             this.putQueryParameter("filterReadOnly", filterReadOnly);
@@ -128,7 +142,10 @@ public class GetResourceTypeRequest extends Request {
         }
 
         /**
-         * terraformProviderVersion.
+         * <p>The Terraform provider version. If this parameter is left empty, the latest version is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.227.0</p>
          */
         public Builder terraformProviderVersion(String terraformProviderVersion) {
             this.putQueryParameter("terraformProviderVersion", terraformProviderVersion);

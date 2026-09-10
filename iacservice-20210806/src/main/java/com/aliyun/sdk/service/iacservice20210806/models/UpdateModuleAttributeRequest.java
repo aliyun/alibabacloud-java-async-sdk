@@ -173,6 +173,7 @@ public class UpdateModuleAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,11 @@ public class UpdateModuleAttributeRequest extends Request {
         }
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -194,7 +199,10 @@ public class UpdateModuleAttributeRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The template description. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -203,7 +211,7 @@ public class UpdateModuleAttributeRequest extends Request {
         }
 
         /**
-         * groupInfo.
+         * <p>The project group information.</p>
          */
         public Builder groupInfo(GroupInfo groupInfo) {
             this.putBodyParameter("groupInfo", groupInfo);
@@ -212,7 +220,15 @@ public class UpdateModuleAttributeRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The template name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). It cannot start or end with a hyphen, underscore, or period.</li>
+         * <li>The name must be unique among all templates within the current account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ModuleName</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -221,7 +237,15 @@ public class UpdateModuleAttributeRequest extends Request {
         }
 
         /**
-         * sourcePath.
+         * <p>The path of the template source.</p>
+         * <ul>
+         * <li>If the source is Registry, set this parameter to <workspace name>/<module name>:<module version>. Example: terraform-alicloud-modules/rds:1.0.0.</li>
+         * <li>If the source is OSS, set this parameter to oss::<file URL>. The file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+         * <li>If the source is ExportTask, set this parameter to <export task ID>:<exported version>. Example: ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></p>
          */
         public Builder sourcePath(String sourcePath) {
             this.putBodyParameter("sourcePath", sourcePath);
@@ -230,7 +254,10 @@ public class UpdateModuleAttributeRequest extends Request {
         }
 
         /**
-         * statePath.
+         * <p>The path of the state file that corresponds to the template. Currently, only OSS paths are supported. Set this parameter to oss::<OSS file path>/terraform.tfstate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></p>
          */
         public Builder statePath(String statePath) {
             this.putBodyParameter("statePath", statePath);
@@ -239,7 +266,7 @@ public class UpdateModuleAttributeRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The tags of the template.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -248,7 +275,14 @@ public class UpdateModuleAttributeRequest extends Request {
         }
 
         /**
-         * versionStrategy.
+         * <p>The version generation strategy. Valid values:</p>
+         * <ul>
+         * <li>Manual: manually generate versions. This is the default value.</li>
+         * <li>SourcePathUpdated: a new version is generated when sourcePath is modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder versionStrategy(String versionStrategy) {
             this.putBodyParameter("versionStrategy", versionStrategy);
@@ -316,7 +350,10 @@ public class UpdateModuleAttributeRequest extends Request {
             } 
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-433aead7560571e66e31274ffd3</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -324,7 +361,10 @@ public class UpdateModuleAttributeRequest extends Request {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-433aead75605713865c386cb9d</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -391,7 +431,10 @@ public class UpdateModuleAttributeRequest extends Request {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -399,7 +442,10 @@ public class UpdateModuleAttributeRequest extends Request {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -54,7 +54,10 @@ public class DeleteParameterSetResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>708D670B-67C4-5653-9F88-8F7800429EE1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

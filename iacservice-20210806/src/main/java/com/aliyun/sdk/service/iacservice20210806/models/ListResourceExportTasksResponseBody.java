@@ -106,7 +106,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * exportTasks.
+         * <p>The list of export tasks.</p>
          */
         public Builder exportTasks(java.util.List<ExportTasks> exportTasks) {
             this.exportTasks = exportTasks;
@@ -114,7 +114,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65287CB9-AC46-5FE7-B785-0106C159DA42</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>330</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,14 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * source.
+             * <p>The module type to which the exported template is saved. Valid values:</p>
+             * <ul>
+             * <li>OSS: OSS</li>
+             * <li>Registry: Terraform Registry.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -225,7 +244,16 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * sourcePath.
+             * <p>The path where the template content is saved.</p>
+             * <ul>
+             * <li><p>If Source is set to Registry, the format is: &quot;cloudregistry::iacservice//&quot;</p>
+             * </li>
+             * <li><p>If Source is set to OSS, the format is: &quot;oss::https://.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip</p>
              */
             public Builder sourcePath(String sourcePath) {
                 this.sourcePath = sourcePath;
@@ -233,7 +261,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * statePath.
+             * <p>The path where the template state file is saved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder statePath(String statePath) {
                 this.statePath = statePath;
@@ -300,7 +331,18 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The name of the include rule for resource export. Valid values:</p>
+             * <ul>
+             * <li>ResourceType: required. The resource type, such as ALIYUN::VPC::VPC.</li>
+             * <li>RegionId: required. The region to which the resource belongs. Only one region is supported, such as ap-southeast-1.</li>
+             * <li>\<ResourceType>:Id: the resource ID, such as ALIYUN::VPC::VPC:Id.</li>
+             * <li>ResourceGroupId: the resource group ID, such as rg-1234.</li>
+             * <li>ZoneId: the zone to which the resource belongs. Only one zone is supported, such as ap-southeast-1h.</li>
+             * </ul>
+             * <p>By default, the relationship between multiple filter conditions is AND. A resource is considered matched only when all filter conditions are met.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RegionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -308,7 +350,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * <p>The values of the include rules for resource export.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -388,7 +430,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * source.
+             * <p>The module type where the exported template is stored. Two formats are supported: CloudRegistry and OSS. If the ExportToModule parameter is specified, both formats are returned. Otherwise, only CloudRegistry is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -396,7 +441,16 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * sourcePath.
+             * <p>The download URL of the module where the exported template is stored.</p>
+             * <ul>
+             * <li><p>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice/<exportTaskId>/<Provider Name>&quot;</p>
+             * </li>
+             * <li><p>If Source is set to OSS, the format is: &quot;oss::https://<BucketName>.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip</p>
              */
             public Builder sourcePath(String sourcePath) {
                 this.sourcePath = sourcePath;
@@ -404,7 +458,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the module where the exported template is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v3</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -471,7 +528,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * properties.
+             * <p>The list of Terraform resource properties corresponding to the resource type.</p>
              */
             public Builder properties(java.util.List<String> properties) {
                 this.properties = properties;
@@ -479,7 +536,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::VPC::VSwitch</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -676,7 +736,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-20T02:10:06Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -684,7 +747,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -692,7 +758,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * elapsedTime.
+             * <p>The execution duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4243</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -700,7 +769,17 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * exportStatus.
+             * <p>The export status. Valid values:</p>
+             * <ul>
+             * <li>Queue: queued</li>
+             * <li>Pending: preparing to run</li>
+             * <li>Success: succeeded</li>
+             * <li>Errored: failed</li>
+             * <li>Canceled: canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder exportStatus(String exportStatus) {
                 this.exportStatus = exportStatus;
@@ -708,7 +787,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * exportTaskId.
+             * <p>The ID of the resource export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ex-kw1a1ol8c0pngjav17q8eri</p>
              */
             public Builder exportTaskId(String exportTaskId) {
                 this.exportTaskId = exportTaskId;
@@ -716,7 +798,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * exportToModule.
+             * <p>The module to which the exported template is saved. If this parameter is not set, the template is automatically saved in the Registry.</p>
              */
             public Builder exportToModule(ExportToModule exportToModule) {
                 this.exportToModule = exportToModule;
@@ -724,7 +806,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * exportVersion.
+             * <p>The export version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder exportVersion(String exportVersion) {
                 this.exportVersion = exportVersion;
@@ -732,7 +817,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * includeRules.
+             * <p>The values of the include rules for resource export.</p>
              */
             public Builder includeRules(java.util.List<IncludeRules> includeRules) {
                 this.includeRules = includeRules;
@@ -740,7 +825,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * modules.
+             * <p>The module configuration of the exported resources.</p>
              */
             public Builder modules(java.util.List<Modules> modules) {
                 this.modules = modules;
@@ -748,7 +833,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the export task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TaskName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -756,7 +844,14 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Available: available</li>
+             * <li>Running: running.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -764,7 +859,7 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * variables.
+             * <p>The list of variables. The parameters of the exported resources are set as variables.</p>
              */
             public Builder variables(java.util.List<Variables> variables) {
                 this.variables = variables;

@@ -54,7 +54,10 @@ public class UpdateTaskAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17793D91-A26F-520D-A948-3452A45D15B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

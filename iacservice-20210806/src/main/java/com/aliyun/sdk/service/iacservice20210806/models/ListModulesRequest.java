@@ -144,7 +144,10 @@ public class ListModulesRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-kw1a50tj8rk7cki2q8bbat</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("groupId", groupId);
@@ -153,7 +156,10 @@ public class ListModulesRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The search keyword. Supports fuzzy match on template names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -162,7 +168,10 @@ public class ListModulesRequest extends Request {
         }
 
         /**
-         * moduleName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModuleName</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("moduleName", moduleName);
@@ -171,7 +180,10 @@ public class ListModulesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -180,7 +192,10 @@ public class ListModulesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -189,7 +204,10 @@ public class ListModulesRequest extends Request {
         }
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-al1c58tb2lu9oej36kclvf</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("projectId", projectId);
@@ -198,7 +216,7 @@ public class ListModulesRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The list of template tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -267,7 +285,10 @@ public class ListModulesRequest extends Request {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -275,7 +296,10 @@ public class ListModulesRequest extends Request {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

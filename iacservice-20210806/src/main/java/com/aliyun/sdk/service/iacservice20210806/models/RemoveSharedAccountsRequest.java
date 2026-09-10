@@ -90,6 +90,7 @@ public class RemoveSharedAccountsRequest extends Request {
         } 
 
         /**
+         * <p>The list of Alibaba Cloud account IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder accountIds(java.util.List<Long> accountIds) {
@@ -100,10 +101,17 @@ public class RemoveSharedAccountsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource to unshare.</p>
+         * <ul>
+         * <li><p>If the type is Namespace, set this parameter to the workspace name. </p>
+         * </li>
+         * <li><p>If the type is RegistryModule, set this parameter to \<namespaceName>/\<ModuleName>.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_namespace</p>
+         * <p>terraform-alicloud-modules/mongodb</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("resourceId", resourceId);
@@ -112,10 +120,15 @@ public class RemoveSharedAccountsRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>RegistryModule: Registry template.</li>
+         * <li>Namespace: workspace.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Namespace</p>
+         * <p>RegistryModule</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

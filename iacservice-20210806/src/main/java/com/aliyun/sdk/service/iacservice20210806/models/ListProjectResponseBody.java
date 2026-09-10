@@ -106,7 +106,10 @@ public class ListProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * count.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -114,7 +117,10 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +128,10 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +139,7 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * projects.
+         * <p>The list of projects.</p>
          */
         public Builder projects(java.util.List<Projects> projects) {
             this.projects = projects;
@@ -138,7 +147,10 @@ public class ListProjectResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136B3926-DD90-5DB2-96EC-8BAD6407D1C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,10 @@ public class ListProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +227,10 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -331,7 +349,10 @@ public class ListProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-10T10:08:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -339,7 +360,10 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The project description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -347,7 +371,10 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -355,7 +382,10 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-148e7853433574fffe9fec72ed9b72</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -363,7 +393,7 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -371,7 +401,10 @@ public class ListProjectResponseBody extends TeaModel {
             }
 
             /**
-             * taskCnt.
+             * <p>The number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder taskCnt(Long taskCnt) {
                 this.taskCnt = taskCnt;

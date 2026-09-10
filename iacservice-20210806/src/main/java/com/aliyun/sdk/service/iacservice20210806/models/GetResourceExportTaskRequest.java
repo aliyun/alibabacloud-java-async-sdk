@@ -74,6 +74,7 @@ public class GetResourceExportTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the resource export task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetResourceExportTaskRequest extends Request {
         }
 
         /**
-         * exportVersion.
+         * <p>The export version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v3</p>
          */
         public Builder exportVersion(String exportVersion) {
             this.putQueryParameter("exportVersion", exportVersion);

@@ -67,7 +67,7 @@ public class GetDetectConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * detectConfig.
+         * <p>Drift detection configuration information</p>
          */
         public Builder detectConfig(DetectConfig detectConfig) {
             this.detectConfig = detectConfig;
@@ -75,7 +75,7 @@ public class GetDetectConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>BF72A6FB-B071-5F2E-A036-9D62545B962C</p>
@@ -144,7 +144,10 @@ public class GetDetectConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * address.
+             * <p>Alerting address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx">https://metrichub-cms-cn-hangzhou.aliyuncs.com/event/notify?xxxxx</a></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -152,7 +155,10 @@ public class GetDetectConfigResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>Alerting method. Currently, only <code>cms</code> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -297,7 +303,7 @@ public class GetDetectConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * alarmConfigs.
+             * <p>List of alerting addresses</p>
              */
             public Builder alarmConfigs(java.util.List<AlarmConfigs> alarmConfigs) {
                 this.alarmConfigs = alarmConfigs;
@@ -305,7 +311,10 @@ public class GetDetectConfigResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>Creation Time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-10T02:30:04Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -313,7 +322,10 @@ public class GetDetectConfigResponseBody extends TeaModel {
             }
 
             /**
-             * cronExpression.
+             * <p>Cron expression (UTC+8). Required when the trigger type is Cron.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 0 ? * 1</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -321,7 +333,10 @@ public class GetDetectConfigResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -329,7 +344,10 @@ public class GetDetectConfigResponseBody extends TeaModel {
             }
 
             /**
-             * detectConfigId.
+             * <p>Drift detection configuration ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc-xxxx</p>
              */
             public Builder detectConfigId(String detectConfigId) {
                 this.detectConfigId = detectConfigId;
@@ -337,7 +355,10 @@ public class GetDetectConfigResponseBody extends TeaModel {
             }
 
             /**
-             * detectConfigName.
+             * <p>Drift detection configuration name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder detectConfigName(String detectConfigName) {
                 this.detectConfigName = detectConfigName;
@@ -345,7 +366,10 @@ public class GetDetectConfigResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Is scheduled detection enabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -353,7 +377,14 @@ public class GetDetectConfigResponseBody extends TeaModel {
             }
 
             /**
-             * triggerType.
+             * <p>Trigger type  </p>
+             * <ul>
+             * <li>Manual: Execute manually  </li>
+             * <li>Cron: Trigger on schedule</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Cron</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;

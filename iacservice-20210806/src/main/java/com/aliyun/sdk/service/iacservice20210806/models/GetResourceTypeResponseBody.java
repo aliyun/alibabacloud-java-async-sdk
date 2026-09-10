@@ -67,7 +67,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9bcaac3c-420d-4303-87ab-7638c07b0a0b</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * resourceType.
+         * <p>The detailed information about the resource type.</p>
          */
         public Builder resourceType(ResourceType resourceType) {
             this.resourceType = resourceType;
@@ -167,7 +170,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * apiName.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CreateVSwitch</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -175,7 +181,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * apiVersion.
+             * <p>The API version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-04-28</p>
              */
             public Builder apiVersion(String apiVersion) {
                 this.apiVersion = apiVersion;
@@ -183,7 +192,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * operationType.
+             * <p>The operation type. Valid values: Write, Read.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Write</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -443,7 +455,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -451,7 +466,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * operations.
+             * <p>The collection of APIs associated with the resource.</p>
              */
             public Builder operations(java.util.List<Operations> operations) {
                 this.operations = operations;
@@ -459,7 +474,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * product.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -467,7 +485,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * productName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>专有网络VPC</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -475,7 +496,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * productNameEn.
+             * <p>The English name of the product.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder productNameEn(String productNameEn) {
                 this.productNameEn = productNameEn;
@@ -483,7 +507,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * properties.
+             * <p>The resource properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
@@ -491,7 +518,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * resourceDetailPageUrl.
+             * <p>The URL of the resource details page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://vpc.console.aliyun.com/vpc/$%7BRegionId%7D/route-tables/$%7BRouteTableId%7D">https://vpc.console.aliyun.com/vpc/${RegionId}/route-tables/${RouteTableId}</a></p>
              */
             public Builder resourceDetailPageUrl(String resourceDetailPageUrl) {
                 this.resourceDetailPageUrl = resourceDetailPageUrl;
@@ -499,7 +529,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * resourceListPageUrl.
+             * <p>The URL of the resources page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://vpc.console.aliyun.com/vpc/$%7BRegionId%7D/route-tables">https://vpc.console.aliyun.com/vpc/${RegionId}/route-tables</a></p>
              */
             public Builder resourceListPageUrl(String resourceListPageUrl) {
                 this.resourceListPageUrl = resourceListPageUrl;
@@ -507,7 +540,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The Alibaba Cloud resource type, in the format of ALIYUN::<cloud service>::<resource type>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::VPC::VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -515,7 +551,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -523,7 +562,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * statusStartVersion.
+             * <p>The version from which the status takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.227.0</p>
              */
             public Builder statusStartVersion(String statusStartVersion) {
                 this.statusStartVersion = statusStartVersion;
@@ -531,7 +573,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * subcategory.
+             * <p>The product category in Terraform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>network</p>
              */
             public Builder subcategory(String subcategory) {
                 this.subcategory = subcategory;
@@ -539,7 +584,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * supportExported.
+             * <p>Indicates whether export is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportExported(Boolean supportExported) {
                 this.supportExported = supportExported;
@@ -547,7 +595,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * terraformProviderVersion.
+             * <p>The Terraform provider version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.227.0</p>
              */
             public Builder terraformProviderVersion(String terraformProviderVersion) {
                 this.terraformProviderVersion = terraformProviderVersion;
@@ -555,7 +606,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * terraformResourceType.
+             * <p>The resource code in Terraform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud_vpc</p>
              */
             public Builder terraformResourceType(String terraformResourceType) {
                 this.terraformResourceType = terraformResourceType;
@@ -563,7 +617,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>路由表</p>
              */
             public Builder title(String title) {
                 this.title = title;

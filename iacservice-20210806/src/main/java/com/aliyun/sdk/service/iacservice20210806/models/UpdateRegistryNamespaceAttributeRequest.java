@@ -103,10 +103,16 @@ public class UpdateRegistryNamespaceAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The name of the workspace. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 3 to 63 characters in length.</li>
+         * <li>The name can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (_). It cannot start or end with a hyphen.</li>
+         * <li>The name must be unique within the global workspace resources.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putPathParameter("namespaceName", namespaceName);
@@ -115,7 +121,13 @@ public class UpdateRegistryNamespaceAttributeRequest extends Request {
         }
 
         /**
-         * acl.
+         * <p>The access permission. Valid values:</p>
+         * <ul>
+         * <li>private: private access.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder acl(String acl) {
             this.putBodyParameter("acl", acl);
@@ -124,7 +136,11 @@ public class UpdateRegistryNamespaceAttributeRequest extends Request {
         }
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2da11a5501f18cc5e004</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -133,7 +149,10 @@ public class UpdateRegistryNamespaceAttributeRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

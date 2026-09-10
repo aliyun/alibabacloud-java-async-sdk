@@ -104,6 +104,7 @@ public class CreateModuleVersionRequest extends Request {
         } 
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class CreateModuleVersionRequest extends Request {
         }
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,10 @@ public class CreateModuleVersionRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The version description. The description can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -137,10 +142,15 @@ public class CreateModuleVersionRequest extends Request {
         }
 
         /**
+         * <p>The template version name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>versionName</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);

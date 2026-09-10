@@ -90,6 +90,7 @@ public class DetectTerraformStateRequest extends Request {
         } 
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DetectTerraformStateRequest extends Request {
         }
 
         /**
+         * <p>The task identifier. For a Stack task, the format is &lt;$stackId&gt;:&lt;$deploymentName&gt;. For a Task task, the format is &lt;$TaskId&gt;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,11 @@ public class DetectTerraformStateRequest extends Request {
         }
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>Stack</li>
+         * <li>Task.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

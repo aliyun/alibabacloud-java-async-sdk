@@ -67,7 +67,10 @@ public class CreateModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * moduleId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod-518855d9a058cfffcc446d8fe3c99</p>
          */
         public Builder moduleId(String moduleId) {
             this.moduleId = moduleId;
@@ -75,7 +78,10 @@ public class CreateModuleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D797DC3-FF04-5C21-81EB-92C7799512E3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

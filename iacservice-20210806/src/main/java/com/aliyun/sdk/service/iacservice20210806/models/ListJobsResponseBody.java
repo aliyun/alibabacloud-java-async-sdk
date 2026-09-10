@@ -106,7 +106,7 @@ public class ListJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * jobs.
+         * <p>The list of job information.</p>
          */
         public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
@@ -114,7 +114,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>882304F9-6DB1-5593-A719-33473D082B9C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * isDestroy.
+             * <p>Indicates whether the job is a destroy job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDestroy(Boolean isDestroy) {
                 this.isDestroy = isDestroy;
@@ -251,7 +266,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * moduleDescription.
+             * <p>The template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>moduleDescription</p>
              */
             public Builder moduleDescription(String moduleDescription) {
                 this.moduleDescription = moduleDescription;
@@ -259,7 +277,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * moduleVersion.
+             * <p>The template version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v4</p>
              */
             public Builder moduleVersion(String moduleVersion) {
                 this.moduleVersion = moduleVersion;
@@ -267,7 +288,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * resourcesChanged.
+             * <p>The resource change content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>+0 ~0 -0</p>
              */
             public Builder resourcesChanged(String resourcesChanged) {
                 this.resourcesChanged = resourcesChanged;
@@ -275,7 +299,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * subCommand.
+             * <p>The operation command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>destroy</p>
              */
             public Builder subCommand(String subCommand) {
                 this.subCommand = subCommand;
@@ -459,7 +486,7 @@ public class ListJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * config.
+             * <p>The job configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -467,7 +494,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the job was created, in UTC in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-05T02:13:43Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -475,7 +505,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The job description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plan</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -483,7 +516,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * elapsedTime.
+             * <p>The execution duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5m</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -491,7 +527,14 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * executeType.
+             * <p>The execution type. Valid values:</p>
+             * <ul>
+             * <li>Manual: Manual execution (default).</li>
+             * <li>Auto: Automatic execution.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder executeType(String executeType) {
                 this.executeType = executeType;
@@ -499,7 +542,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * isPassAssertCheck.
+             * <p>Indicates whether the assertion check passed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPassAssertCheck(Boolean isPassAssertCheck) {
                 this.isPassAssertCheck = isPassAssertCheck;
@@ -507,7 +553,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * jobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-433aff9e4dca57b147c</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -515,7 +564,27 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>Pending: The initial status after the job is created.</li>
+             * <li>PlanQueued: After the job is created, if no workflow is available, the job is queued.</li>
+             * <li>Planning: The resource job is in the Plan execution phase.</li>
+             * <li>ConfigProactiveInProgress: Compliance pre-check is in progress. The account must have the compliance pre-check feature enabled.</li>
+             * <li>ConfigProactiveSuccess: Compliance pre-check succeeded. The account must have the compliance pre-check feature enabled.</li>
+             * <li>Planned: The resource job has completed Plan execution.</li>
+             * <li>PlannedAndFinished: After Plan execution is completed, no diff is found. This is a final status.</li>
+             * <li>Confirmed: The resource job is waiting for confirmation after Plan execution is completed.</li>
+             * <li>ApplyQueued: During job execution, if no workflow is available, the job is queued.</li>
+             * <li>Applying: The resource job is in the Apply execution phase.</li>
+             * <li>Applied: The resource job has completed Apply execution. This is a final status.</li>
+             * <li>Errored: The job execution encountered an error. This is a final status.</li>
+             * <li>Canceled: The job execution was canceled. This is a final status.</li>
+             * <li>Discarded: The plan of the resource job was discarded. This is a final status.</li>
+             * <li>ConfigProactiveFailure: Compliance pre-check failed. The account must have the compliance pre-check feature enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Errored</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -523,7 +592,7 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * statusDetail.
+             * <p>The status details.</p>
              */
             public Builder statusDetail(java.util.Map<String, JobsStatusDetailValue> statusDetail) {
                 this.statusDetail = statusDetail;
@@ -531,7 +600,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-518876866c2c3efb</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -539,7 +611,10 @@ public class ListJobsResponseBody extends TeaModel {
             }
 
             /**
-             * terraformProviderVersion.
+             * <p>The Terraform provider version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.240.0</p>
              */
             public Builder terraformProviderVersion(String terraformProviderVersion) {
                 this.terraformProviderVersion = terraformProviderVersion;

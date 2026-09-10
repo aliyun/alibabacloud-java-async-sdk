@@ -106,7 +106,10 @@ public class ListProductsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The maximum number of results per page. Valid values: 0 to 200. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30BaZ9ekYWXJdqshYecA++coNg7qT1Zbm3RfLyFIZeY=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * products.
+         * <p>The product list.</p>
          */
         public Builder products(java.util.List<Products> products) {
             this.products = products;
@@ -130,7 +136,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9bcaac3c-420d-4303-87ab-7638c07b0a0b</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListProductsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>134</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -321,7 +333,10 @@ public class ListProductsResponseBody extends TeaModel {
             } 
 
             /**
-             * firstCategoryName.
+             * <p>The first-level category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>企业应用</p>
              */
             public Builder firstCategoryName(String firstCategoryName) {
                 this.firstCategoryName = firstCategoryName;
@@ -329,7 +344,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * firstCategoryNameEn.
+             * <p>The first-level category name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enterprise application</p>
              */
             public Builder firstCategoryNameEn(String firstCategoryNameEn) {
                 this.firstCategoryNameEn = firstCategoryNameEn;
@@ -337,7 +355,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * product.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MSE</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -345,7 +366,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * productName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>微服务引擎</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -353,7 +377,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * productNameEn.
+             * <p>The product name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Microservices Engine</p>
              */
             public Builder productNameEn(String productNameEn) {
                 this.productNameEn = productNameEn;
@@ -361,7 +388,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * secondCategoryName.
+             * <p>The second-level category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>应用服务</p>
              */
             public Builder secondCategoryName(String secondCategoryName) {
                 this.secondCategoryName = secondCategoryName;
@@ -369,7 +399,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * secondCategoryNameEn.
+             * <p>The second-level category name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Application service</p>
              */
             public Builder secondCategoryNameEn(String secondCategoryNameEn) {
                 this.secondCategoryNameEn = secondCategoryNameEn;
@@ -377,7 +410,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -385,7 +421,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * subcategory.
+             * <p>The product category in Terraform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Microservice_Engine(MSE)</p>
              */
             public Builder subcategory(String subcategory) {
                 this.subcategory = subcategory;
@@ -393,7 +432,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * supportTerraformer.
+             * <p>Specifies whether Terraformer is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportTerraformer(Boolean supportTerraformer) {
                 this.supportTerraformer = supportTerraformer;
@@ -401,7 +443,10 @@ public class ListProductsResponseBody extends TeaModel {
             }
 
             /**
-             * terraformProviderVersion.
+             * <p>The Terraform Provider version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.229.0</p>
              */
             public Builder terraformProviderVersion(String terraformProviderVersion) {
                 this.terraformProviderVersion = terraformProviderVersion;

@@ -143,7 +143,16 @@ public class GenerateModuleRequest extends Request {
         } 
 
         /**
-         * generateSource.
+         * <p>The generation source. Valid values:</p>
+         * <ul>
+         * <li>Resource: Generates a Terraform HCL template based on resource properties.</li>
+         * <li>VariableToCode: Generates a final Terraform HCL template by combining variables with an existing Terraform HCL template.</li>
+         * <li>CodeToVariable: Extracts variable information from a Terraform HCL template.</li>
+         * <li>Module: Generates Terraform Module code based on variables.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource</p>
          */
         public Builder generateSource(String generateSource) {
             this.putBodyParameter("generateSource", generateSource);
@@ -152,7 +161,7 @@ public class GenerateModuleRequest extends Request {
         }
 
         /**
-         * parameters.
+         * <p>The collection of parameters, passed in key:value format, such as {&quot;vpc_name&quot;:&quot;vpc-test&quot;}.</p>
          */
         public Builder parameters(java.util.Map<String, ?> parameters) {
             this.putBodyParameter("parameters", parameters);
@@ -161,7 +170,10 @@ public class GenerateModuleRequest extends Request {
         }
 
         /**
-         * regionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("regionId", regionId);
@@ -170,7 +182,13 @@ public class GenerateModuleRequest extends Request {
         }
 
         /**
-         * syntax.
+         * <p>The syntax. Valid values:</p>
+         * <ul>
+         * <li>hcl (default).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>hcl</p>
          */
         public Builder syntax(String syntax) {
             this.putBodyParameter("syntax", syntax);
@@ -179,7 +197,11 @@ public class GenerateModuleRequest extends Request {
         }
 
         /**
-         * template.
+         * <p>The existing Terraform HCL template content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terraform {
+         * }</p>
          */
         public Builder template(String template) {
             this.putBodyParameter("template", template);
@@ -188,7 +210,10 @@ public class GenerateModuleRequest extends Request {
         }
 
         /**
-         * terraformProviderVersion.
+         * <p>The Terraform provider version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.260.0</p>
          */
         public Builder terraformProviderVersion(String terraformProviderVersion) {
             this.putBodyParameter("terraformProviderVersion", terraformProviderVersion);
@@ -197,7 +222,10 @@ public class GenerateModuleRequest extends Request {
         }
 
         /**
-         * terraformResourceType.
+         * <p>The Terraform resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud_vpc</p>
          */
         public Builder terraformResourceType(String terraformResourceType) {
             this.putBodyParameter("terraformResourceType", terraformResourceType);

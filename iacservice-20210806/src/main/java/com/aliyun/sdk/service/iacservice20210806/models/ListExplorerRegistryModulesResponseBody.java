@@ -106,7 +106,7 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         } 
 
         /**
-         * explorerRegistryModules.
+         * <p>The list of Explorer community modules.</p>
          */
         public Builder explorerRegistryModules(java.util.List<ExplorerRegistryModules> explorerRegistryModules) {
             this.explorerRegistryModules = explorerRegistryModules;
@@ -114,7 +114,12 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 0 to 200.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +127,11 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page of results.</p>
+         * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DxEkv+3w0EDAQgcRFBp8Ep4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A662F56-CA76-55F6-869D-7F26293B8E67</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +284,10 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -277,7 +295,10 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * downloads.
+             * <p>The number of downloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder downloads(Long downloads) {
                 this.downloads = downloads;
@@ -285,7 +306,10 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * latestVersion.
+             * <p>The latest version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -293,7 +317,10 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * moduleName.
+             * <p>The module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>terraform-alicloud-modules/mongodb</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -301,7 +328,10 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_namespace</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -309,7 +339,10 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>terraform-alicloud-modules/mongodb/alicloud</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -317,7 +350,10 @@ public class ListExplorerRegistryModulesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder status(String status) {
                 this.status = status;

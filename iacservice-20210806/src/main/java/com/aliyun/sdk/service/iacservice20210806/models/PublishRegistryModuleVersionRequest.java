@@ -105,6 +105,7 @@ public class PublishRegistryModuleVersionRequest extends Request {
         } 
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,10 +118,11 @@ public class PublishRegistryModuleVersionRequest extends Request {
         }
 
         /**
+         * <p>The template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss-bucket</p>
+         * <p>ModuleName</p>
          */
         public Builder moduleName(String moduleName) {
             this.putBodyParameter("moduleName", moduleName);
@@ -129,10 +131,11 @@ public class PublishRegistryModuleVersionRequest extends Request {
         }
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>terraform-alicloud-modules</p>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putBodyParameter("namespaceName", namespaceName);
@@ -141,6 +144,7 @@ public class PublishRegistryModuleVersionRequest extends Request {
         }
 
         /**
+         * <p>The version number. The value must conform to the <a href="http://semver.org/">semantic version</a> specification, such as 1.0.1. The initial version is 1.0.0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

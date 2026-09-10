@@ -80,7 +80,20 @@ public class GenerateModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * module.
+         * <p>The generated Terraform HCL template code content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>terraform {
+         *   required_providers {
+         *     alicloud = {
+         *       source   = &quot;aliyun/alicloud&quot;
+         *       version  = &quot;1.260.0&quot;
+         *     }
+         *   }
+         * }</p>
+         * <p>resource &quot;alicloud_vpc&quot; &quot;default&quot; {
+         *  vpc_name = &quot;vpc-test&quot;
+         * }</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -88,7 +101,10 @@ public class GenerateModuleResponseBody extends TeaModel {
         }
 
         /**
-         * properties.
+         * <p>The variables and resource properties in the generated template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;vpc_name&quot;:&quot;vpc-test&quot;}</p>
          */
         public Builder properties(java.util.Map<String, ?> properties) {
             this.properties = properties;
@@ -96,7 +112,10 @@ public class GenerateModuleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B40D088-E929-504B-8802-C1759A993FA2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

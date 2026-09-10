@@ -158,6 +158,7 @@ public class UpdateDetectConfigRequest extends Request {
         } 
 
         /**
+         * <p>Drift detection configuration ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,7 @@ public class UpdateDetectConfigRequest extends Request {
         }
 
         /**
-         * alarmConfigs.
+         * <p><strong>Alert address list</strong></p>
          */
         public Builder alarmConfigs(java.util.List<AlarmConfigs> alarmConfigs) {
             this.putBodyParameter("alarmConfigs", alarmConfigs);
@@ -179,7 +180,10 @@ public class UpdateDetectConfigRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>Idempotent token, format: [0-9a-zA-Z-]{1,64}. We recommend using a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -188,7 +192,10 @@ public class UpdateDetectConfigRequest extends Request {
         }
 
         /**
-         * cronExpression.
+         * <p><strong>Cron expression (UTC+8)</strong>. Required when the trigger type is Cron.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 0 ? * 1</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putBodyParameter("cronExpression", cronExpression);
@@ -197,7 +204,10 @@ public class UpdateDetectConfigRequest extends Request {
         }
 
         /**
-         * description.
+         * <p><strong>Description</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -206,7 +216,10 @@ public class UpdateDetectConfigRequest extends Request {
         }
 
         /**
-         * detectConfigName.
+         * <p>Drift detection name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder detectConfigName(String detectConfigName) {
             this.putBodyParameter("detectConfigName", detectConfigName);
@@ -215,7 +228,10 @@ public class UpdateDetectConfigRequest extends Request {
         }
 
         /**
-         * enabled.
+         * <p><strong>Whether the detection feature is enabled. The default value is true.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("enabled", enabled);
@@ -224,7 +240,14 @@ public class UpdateDetectConfigRequest extends Request {
         }
 
         /**
-         * triggerType.
+         * <p><strong>Trigger type</strong>  </p>
+         * <ul>
+         * <li>Manual: Execute manually  </li>
+         * <li>Cron: Trigger periodically</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder triggerType(String triggerType) {
             this.putBodyParameter("triggerType", triggerType);
@@ -292,7 +315,10 @@ public class UpdateDetectConfigRequest extends Request {
             } 
 
             /**
-             * address.
+             * <p>Alert address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:example@example.com">example@example.com</a></p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -300,7 +326,10 @@ public class UpdateDetectConfigRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>Alerting method.<br>Currently, only <code>cms</code> is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cms</p>
              */
             public Builder type(String type) {
                 this.type = type;

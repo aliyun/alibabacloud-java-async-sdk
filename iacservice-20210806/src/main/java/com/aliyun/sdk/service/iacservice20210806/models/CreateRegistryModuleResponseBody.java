@@ -67,7 +67,10 @@ public class CreateRegistryModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C896FE0A-1BEA-5D01-BFF4-B03B82B9CA3D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateRegistryModuleResponseBody extends TeaModel {
         }
 
         /**
-         * source.
+         * <p>The template source, which is a concatenation of \<namespaceName>/\<ModuleName>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespaceName/ModuleName</p>
          */
         public Builder source(String source) {
             this.source = source;

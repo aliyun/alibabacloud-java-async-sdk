@@ -67,7 +67,10 @@ public class PublishRegistryModuleVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36E1679B-4D91-5AF6-B505-B5D4ACDF75BD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class PublishRegistryModuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1</p>
          */
         public Builder version(String version) {
             this.version = version;

@@ -67,7 +67,10 @@ public class CreateDetectConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * detectConfigId.
+         * <p>Drift detection configuration ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-xxxx</p>
          */
         public Builder detectConfigId(String detectConfigId) {
             this.detectConfigId = detectConfigId;
@@ -75,7 +78,10 @@ public class CreateDetectConfigResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

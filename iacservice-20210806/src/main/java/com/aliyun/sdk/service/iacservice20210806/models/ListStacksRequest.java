@@ -143,7 +143,10 @@ public class ListStacksRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The keyword used to perform a fuzzy search by stack name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -152,7 +155,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * kmsKeyId.
+         * <p>The key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putQueryParameter("kmsKeyId", kmsKeyId);
@@ -161,7 +167,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results to return. Default value: 100. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -170,7 +179,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. This parameter is empty if no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LC4NJL3Ru2bIiRdnbADPQp4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -179,7 +191,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -188,7 +203,10 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -197,7 +215,58 @@ public class ListStacksRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The stack status.</p>
+         * <table>
+         * <thead>
+         * <tr>
+         * <th>Name</th>
+         * <th>Description</th>
+         * </tr>
+         * </thead>
+         * <tbody><tr>
+         * <td>Creating</td>
+         * <td>Being created.</td>
+         * </tr>
+         * <tr>
+         * <td>Created</td>
+         * <td>Created.</td>
+         * </tr>
+         * <tr>
+         * <td>Waiting</td>
+         * <td>Waiting for deployment.</td>
+         * </tr>
+         * <tr>
+         * <td>Deploying</td>
+         * <td>Being deployed.</td>
+         * </tr>
+         * <tr>
+         * <td>Deployed</td>
+         * <td>Deployed.</td>
+         * </tr>
+         * <tr>
+         * <td>Errored</td>
+         * <td>Deployment failed.</td>
+         * </tr>
+         * <tr>
+         * <td>Deleting</td>
+         * <td>Being deleted.</td>
+         * </tr>
+         * <tr>
+         * <td>Deleted</td>
+         * <td>Deleted.</td>
+         * </tr>
+         * <tr>
+         * <td>DeleteFailed</td>
+         * <td>Deletion failed.</td>
+         * </tr>
+         * <tr>
+         * <td>DetectTriggered</td>
+         * <td>Drift detection triggered.</td>
+         * </tr>
+         * </tbody></table>
+         * 
+         * <strong>example:</strong>
+         * <p>Deployed</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

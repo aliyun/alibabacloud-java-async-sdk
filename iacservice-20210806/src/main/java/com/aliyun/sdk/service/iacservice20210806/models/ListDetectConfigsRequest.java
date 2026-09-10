@@ -87,7 +87,10 @@ public class ListDetectConfigsRequest extends Request {
         } 
 
         /**
-         * detectConfigName.
+         * <p>Name of the drift detection configuration (fuzzy match).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder detectConfigName(String detectConfigName) {
             this.putQueryParameter("detectConfigName", detectConfigName);
@@ -96,7 +99,10 @@ public class ListDetectConfigsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>Maximum number of records to retrieve in a single request. Valid range: 1–200. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -105,7 +111,10 @@ public class ListDetectConfigsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Query credential (Token). Set this parameter to the NextToken value returned by the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30BaZ9ekYWXJdqshYecA++coNg7qT1Zbm3RfLyFIZeY=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

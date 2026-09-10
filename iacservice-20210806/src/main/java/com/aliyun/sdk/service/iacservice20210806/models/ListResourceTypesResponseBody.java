@@ -106,7 +106,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page. Valid values: 0 to 200. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LC4NJL3Ru2bIiRdnbADPQp4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9bcaac3c-420d-4303-87ab-7638c07b0a0b</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * resourceTypes.
+         * <p>The list of resources.</p>
          */
         public Builder resourceTypes(java.util.List<ResourceTypes> resourceTypes) {
             this.resourceTypes = resourceTypes;
@@ -138,7 +147,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -347,7 +359,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Route Table</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -355,7 +370,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * product.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -363,7 +381,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * productName.
+             * <p>The product name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>专有网络VPC</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -371,7 +392,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceDetailPageUrl.
+             * <p>The URL of the resource details page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://vpc.console.aliyun.com/vpc/$%7BRegionId%7D/route-tables/$%7BRouteTableId%7D">https://vpc.console.aliyun.com/vpc/${RegionId}/route-tables/${RouteTableId}</a></p>
              */
             public Builder resourceDetailPageUrl(String resourceDetailPageUrl) {
                 this.resourceDetailPageUrl = resourceDetailPageUrl;
@@ -379,7 +403,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceListPageUrl.
+             * <p>The URL of the resources page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://vpc.console.aliyun.com/vpc/$%7BRegionId%7D/route-tables">https://vpc.console.aliyun.com/vpc/${RegionId}/route-tables</a></p>
              */
             public Builder resourceListPageUrl(String resourceListPageUrl) {
                 this.resourceListPageUrl = resourceListPageUrl;
@@ -387,7 +414,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The Alibaba Cloud resource type in the format of ALIYUN::\<cloud service>::\<resource type>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::VPC::VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -395,7 +425,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The resource status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -403,7 +436,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * statusStartVersion.
+             * <p>The version from which the resource status takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder statusStartVersion(String statusStartVersion) {
                 this.statusStartVersion = statusStartVersion;
@@ -411,7 +447,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * subcategory.
+             * <p>The product subcategory in Terraform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder subcategory(String subcategory) {
                 this.subcategory = subcategory;
@@ -419,7 +458,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * supportTerraformer.
+             * <p>Specifies whether Terraformer is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportTerraformer(String supportTerraformer) {
                 this.supportTerraformer = supportTerraformer;
@@ -427,7 +469,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * terraformProviderVersion.
+             * <p>The Terraform Provider version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.248.0</p>
              */
             public Builder terraformProviderVersion(String terraformProviderVersion) {
                 this.terraformProviderVersion = terraformProviderVersion;
@@ -435,7 +480,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * terraformResourceType.
+             * <p>The resource type in Terraform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud_route_table</p>
              */
             public Builder terraformResourceType(String terraformResourceType) {
                 this.terraformResourceType = terraformResourceType;
@@ -443,7 +491,10 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Route Table</p>
              */
             public Builder title(String title) {
                 this.title = title;

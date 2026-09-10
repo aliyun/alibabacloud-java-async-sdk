@@ -107,7 +107,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * configs.
+         * <p>The list of stack configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -115,7 +115,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -123,6 +126,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The position from which the current call starts reading. An empty value indicates that all data has been read.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +138,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9BEDBCF8-03BE-5A59-AC93-9263942B37E8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +149,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records that match the request conditions. This parameter is optional and may not be returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -195,7 +205,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The component name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +301,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The output description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the name of sls project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -296,7 +312,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The output name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -304,7 +323,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The output type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -312,7 +334,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The output value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log-test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -418,7 +443,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * default.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-3</p>
              */
             public Builder _default(String _default) {
                 this._default = _default;
@@ -426,7 +454,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region of sls project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -434,7 +465,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The variable name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -450,7 +484,15 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The variable type, such as:</p>
+             * <ul>
+             * <li>string</li>
+             * <li>list(string)</li>
+             * <li>map(string).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -530,7 +572,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * component.
+             * <p>The list of components.</p>
              */
             public Builder component(java.util.List<Component> component) {
                 this.component = component;
@@ -538,7 +580,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * output.
+             * <p>The list of component outputs.</p>
              */
             public Builder output(java.util.List<Output> output) {
                 this.output = output;
@@ -546,7 +588,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * variable.
+             * <p>The list of component variables.</p>
              */
             public Builder variable(java.util.List<Variable> variable) {
                 this.variable = variable;
@@ -600,7 +642,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The deployment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -706,7 +751,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The output description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the name of sls project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -714,7 +762,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The output name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -722,7 +773,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The actual output value after the stack deployment is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log-test</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -730,7 +784,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The output type, such as string or list(string).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -738,7 +795,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The original definition of the output value. Currently, string or list(string) is supported. You can reference a deployment output in the format: deployment.{deploymentName}.{deploymentOutputName}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deployment.production.project_name</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -805,7 +865,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The input name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>network</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -813,7 +876,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The input source. Currently, only an upstream stack can be specified. The format is {iacEndpoint}/{accountId}/{upstreamStackName}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IacEndpoint/156718871222312/stack_network</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -893,7 +959,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * deployment.
+             * <p>The list of deployments.</p>
              */
             public Builder deployment(java.util.List<Deployment> deployment) {
                 this.deployment = deployment;
@@ -901,7 +967,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * publishOutput.
+             * <p>The list of outputs.</p>
              */
             public Builder publishOutput(java.util.List<PublishOutput> publishOutput) {
                 this.publishOutput = publishOutput;
@@ -909,7 +975,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * upstreamInput.
+             * <p>The list of upstream inputs.</p>
              */
             public Builder upstreamInput(java.util.List<UpstreamInput> upstreamInput) {
                 this.upstreamInput = upstreamInput;
@@ -1054,7 +1120,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * componentConfig.
+             * <p>The component configuration.</p>
              */
             public Builder componentConfig(ComponentConfig componentConfig) {
                 this.componentConfig = componentConfig;
@@ -1062,7 +1128,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * componentContent.
+             * <p>The content of the component configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>format_version: IaCService/2021-08-06\ndescription: create ALB \nvariable:\n  - name: region\n    type: string\n ...</p>
              */
             public Builder componentContent(String componentContent) {
                 this.componentContent = componentContent;
@@ -1070,7 +1139,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-15T16:14:06Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1078,7 +1150,7 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * deploymentConfig.
+             * <p>The deployment configuration.</p>
              */
             public Builder deploymentConfig(DeploymentConfig deploymentConfig) {
                 this.deploymentConfig = deploymentConfig;
@@ -1086,7 +1158,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * deploymentContent.
+             * <p>The content of the deployment configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>format_version: IaCService/2021-08-06\ndescription: create ALB\nupstream_input:\n  - name: stack_network\n ...</p>
              */
             public Builder deploymentContent(String deploymentContent) {
                 this.deploymentContent = deploymentContent;
@@ -1102,7 +1177,58 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the stack configuration.</p>
+             * <table>
+             * <thead>
+             * <tr>
+             * <th>Name</th>
+             * <th>Description</th>
+             * </tr>
+             * </thead>
+             * <tbody><tr>
+             * <td>Creating</td>
+             * <td>Being created.</td>
+             * </tr>
+             * <tr>
+             * <td>Created</td>
+             * <td>Created.</td>
+             * </tr>
+             * <tr>
+             * <td>Waiting</td>
+             * <td>Waiting for deployment.</td>
+             * </tr>
+             * <tr>
+             * <td>Deploying</td>
+             * <td>Being deployed.</td>
+             * </tr>
+             * <tr>
+             * <td>Deployed</td>
+             * <td>Deployed.</td>
+             * </tr>
+             * <tr>
+             * <td>Errored</td>
+             * <td>Deployment failed.</td>
+             * </tr>
+             * <tr>
+             * <td>Deleting</td>
+             * <td>Being deleted.</td>
+             * </tr>
+             * <tr>
+             * <td>Deleted</td>
+             * <td>Deleted.</td>
+             * </tr>
+             * <tr>
+             * <td>DeleteFailed</td>
+             * <td>Deletion failed.</td>
+             * </tr>
+             * <tr>
+             * <td>DetectTriggered</td>
+             * <td>Drift detection triggered.</td>
+             * </tr>
+             * </tbody></table>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1110,7 +1236,10 @@ public class ListStackConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The configuration version number, such as v1. The initial value is v1. The version number increments each time the stack is updated or refreshed and the configuration changes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder version(String version) {
                 this.version = version;

@@ -59,7 +59,10 @@ public class GetStackExecutionResultRequest extends Request {
         } 
 
         /**
-         * triggerId.
+         * <p>The unique ID of the trigger. Obtained through the TriggerStackExecution operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event-xxxx</p>
          */
         public Builder triggerId(String triggerId) {
             this.putPathParameter("triggerId", triggerId);

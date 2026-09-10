@@ -67,7 +67,10 @@ public class CreateRegistryNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * namespaceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.namespaceName = namespaceName;
@@ -75,7 +78,10 @@ public class CreateRegistryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B4672AE3-C313-5B7A-BB24-45345570D398</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

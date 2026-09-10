@@ -106,7 +106,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
         } 
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class ListParameterSetsResponseBody extends TeaModel {
         }
 
         /**
-         * parameterSets.
+         * <p>The parameter sets.</p>
          */
         public Builder parameterSets(java.util.List<ParameterSets> parameterSets) {
             this.parameterSets = parameterSets;
@@ -130,7 +136,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E188A8C-D77A-53F2-9578-E9AD8ABF2FA9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +255,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,7 +266,7 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * secret.
+             * <p>Specifies whether the parameter is a secret parameter. Secret parameters are hidden in API responses and console displays, and are stored with encryption.</p>
              */
             public Builder secret(Boolean secret) {
                 this.secret = secret;
@@ -259,7 +274,16 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The parameter set status. Valid values:</p>
+             * <ul>
+             * <li><p>HAS_VALUE (default): A specific value is defined.</p>
+             * </li>
+             * <li><p>EXPLICIT_NULL: Explicitly set to null.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HAS_VALUE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -267,7 +291,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The parameter type (string/number/bool/map(string)/list(string)).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -275,7 +302,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -355,7 +385,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-09T03:46:18Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -363,7 +396,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceId.
+             * <p>The resource ID. When the resource type is ModuleVersion, the ID is composed of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-433aead756057ffdf5326bf1e12ed</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -371,7 +407,15 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li>Module: template.</li>
+             * <li>ModuleVersion: template version.</li>
+             * <li>Task: task.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Module</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -503,7 +547,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-14T10:05:19Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -511,7 +558,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * deletionProtection.
+             * <p>Indicates whether deletion protection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -519,7 +569,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the parameter set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is parameterSet</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -527,7 +580,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the parameter set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -535,7 +591,10 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * parameterSetId.
+             * <p>The ID of the parameter set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pts-433aead756057ea135b21e89c</p>
              */
             public Builder parameterSetId(String parameterSetId) {
                 this.parameterSetId = parameterSetId;
@@ -543,7 +602,7 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * parameters.
+             * <p>The parameters in the parameter set.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
@@ -551,7 +610,7 @@ public class ListParameterSetsResponseBody extends TeaModel {
             }
 
             /**
-             * relationList.
+             * <p>The associated resources.</p>
              */
             public Builder relationList(java.util.List<RelationList> relationList) {
                 this.relationList = relationList;

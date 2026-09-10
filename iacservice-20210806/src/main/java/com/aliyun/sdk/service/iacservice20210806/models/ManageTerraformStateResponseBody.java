@@ -67,7 +67,10 @@ public class ManageTerraformStateResponseBody extends TeaModel {
         } 
 
         /**
-         * jobId.
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-5fd38c9xxxxx</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;

@@ -134,6 +134,11 @@ public class ManageTerraformStateRequest extends Request {
         } 
 
         /**
+         * <p>The action to perform on the state file. Supports import and removal. Valid values:</p>
+         * <ul>
+         * <li>Import</li>
+         * <li>StateRemove.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +151,7 @@ public class ManageTerraformStateRequest extends Request {
         }
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +164,7 @@ public class ManageTerraformStateRequest extends Request {
         }
 
         /**
+         * <p>The task identifier. For Stack tasks, the format is &lt;$stackId&gt;:&lt;$deploymentName&gt;. For Task tasks, the format is &lt;$TaskId&gt;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +177,10 @@ public class ManageTerraformStateRequest extends Request {
         }
 
         /**
-         * importResourceId.
+         * <p>The actual resource ID of the Terraform resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxx</p>
          */
         public Builder importResourceId(String importResourceId) {
             this.putBodyParameter("importResourceId", importResourceId);
@@ -179,6 +189,7 @@ public class ManageTerraformStateRequest extends Request {
         }
 
         /**
+         * <p>The resource identifier in the Terraform template. For Stack tasks, the format is &lt;$componetName&gt;:&lt;$resourceName&gt;. For Task tasks, the format is &lt;$resourceName&gt;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +202,11 @@ public class ManageTerraformStateRequest extends Request {
         }
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>Stack</li>
+         * <li>Task.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

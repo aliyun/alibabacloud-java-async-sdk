@@ -54,7 +54,10 @@ public class OperateJobResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E602681C-A811-5787-9DC3-48BED7537071</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

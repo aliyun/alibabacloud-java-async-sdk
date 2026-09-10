@@ -67,7 +67,7 @@ public class GetModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * module.
+         * <p>The template information.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -75,7 +75,7 @@ public class GetModuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1E7BA3EB-B0EF-53F5-9999-07CAD6D9F8A3</p>
@@ -170,7 +170,10 @@ public class GetModuleResponseBody extends TeaModel {
             } 
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-fu1a1ol8cob1oni01ekcloi</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -178,7 +181,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>groupName</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -186,7 +192,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-al1d11jlvlsbvr11lf3pqo</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -194,7 +203,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * projectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>projectName</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -261,7 +273,10 @@ public class GetModuleResponseBody extends TeaModel {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -269,7 +284,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -479,7 +497,10 @@ public class GetModuleResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The time when the template was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T06:11:27Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -487,7 +508,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -495,7 +519,7 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * groupInfo.
+             * <p>The group information.</p>
              */
             public Builder groupInfo(GroupInfo groupInfo) {
                 this.groupInfo = groupInfo;
@@ -503,7 +527,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * latestVersion.
+             * <p>The latest version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -511,7 +538,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * moduleId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mod-4267dcfbf1b6d14625614ddbe15</p>
              */
             public Builder moduleId(String moduleId) {
                 this.moduleId = moduleId;
@@ -519,7 +549,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ModuleName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -527,7 +560,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * outputPath.
+             * <p>The storage path of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder outputPath(String outputPath) {
                 this.outputPath = outputPath;
@@ -535,7 +571,18 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The template source. Valid values:</p>
+             * <ul>
+             * <li>OSS: Imported from OSS.</li>
+             * <li>Registry: Created from a template in the template center.</li>
+             * <li>ExportTask: Exported from a resource export task.</li>
+             * <li>Upload: Uploaded as a file.</li>
+             * <li>Shared: Cloned from a shared template.</li>
+             * <li>Editor: Created by using the online editor.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -543,7 +590,15 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * sourcePath.
+             * <p>The source path of the template.</p>
+             * <ul>
+             * <li>If the source is Registry, the value is in the format of <workspace name>/<module name>:<module version>, such as terraform-alicloud-modules/rds:1.0.0.</li>
+             * <li>If the source is OSS, the value is in the format of oss::<file link>, such as oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+             * <li>If the source is ExportTask, the value is in the format of <export task ID>:<exported version>, such as ex-3b6cb9fa4751afff298da723c24ac:v1.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></p>
              */
             public Builder sourcePath(String sourcePath) {
                 this.sourcePath = sourcePath;
@@ -551,7 +606,10 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * statePath.
+             * <p>The path of the state file that corresponds to the template. Currently, only OSS paths are supported. The value is in the format of oss::<file OSS path>/terraform.tfstate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/terraform.tfstate</a></p>
              */
             public Builder statePath(String statePath) {
                 this.statePath = statePath;
@@ -559,7 +617,15 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The template status. Valid values:</p>
+             * <ul>
+             * <li>Creating: The template is being created.</li>
+             * <li>Created: The template is created.</li>
+             * </ul>
+             * <p>After the template is created, you can publish a version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -567,7 +633,7 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The tags of the template.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -575,7 +641,14 @@ public class GetModuleResponseBody extends TeaModel {
             }
 
             /**
-             * versionStrategy.
+             * <p>The version generation strategy. Valid values:</p>
+             * <ul>
+             * <li>Manual: Versions are generated manually. This is the default value.</li>
+             * <li>SourcePathUpdated: A new version is generated when the sourcePath is modified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder versionStrategy(String versionStrategy) {
                 this.versionStrategy = versionStrategy;

@@ -67,7 +67,7 @@ public class GetTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C24C498A-09CF-54D3-8972-8DC074CF8614</p>
@@ -78,7 +78,7 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * task.
+         * <p>The task information.</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -170,7 +170,10 @@ public class GetTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-59d8d22e78792ffe3d3eb6154d727</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -178,7 +181,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -186,7 +192,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-433aead756057fff47ecbfd94d76</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -194,7 +203,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * projectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -261,7 +273,10 @@ public class GetTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -269,7 +284,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -349,7 +367,10 @@ public class GetTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * bucketEndpoint.
+             * <p>The endpoint information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ss-cn-beijing.aliyuncs.com</p>
              */
             public Builder bucketEndpoint(String bucketEndpoint) {
                 this.bucketEndpoint = bucketEndpoint;
@@ -357,7 +378,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * bucketName.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iac-runtime-test</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -365,7 +389,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * objectPath.
+             * <p>The object path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/log</p>
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -731,7 +758,10 @@ public class GetTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * autoApply.
+             * <p>Indicates whether the task is automatically executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoApply(Boolean autoApply) {
                 this.autoApply = autoApply;
@@ -739,7 +769,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * autoDestroy.
+             * <p>Indicates whether automatic deletion is enabled. When enabled, resources are automatically destroyed after the task is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoDestroy(Boolean autoDestroy) {
                 this.autoDestroy = autoDestroy;
@@ -747,7 +780,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the task was created, in UTC in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-06-15T02:44:37Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -755,7 +791,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * currentJobId.
+             * <p>The job ID of the current task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-absdf</p>
              */
             public Builder currentJobId(String currentJobId) {
                 this.currentJobId = currentJobId;
@@ -763,7 +802,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * currentJobStatus.
+             * <p>The current job status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Planned</p>
              */
             public Builder currentJobStatus(String currentJobStatus) {
                 this.currentJobStatus = currentJobStatus;
@@ -771,7 +813,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * deletionProtection.
+             * <p>Indicates whether deletion protection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -779,7 +824,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -787,7 +835,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * groupInfo.
+             * <p>The group information.</p>
              */
             public Builder groupInfo(GroupInfo groupInfo) {
                 this.groupInfo = groupInfo;
@@ -795,7 +843,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * initModuleState.
+             * <p>Specifies whether to use a state file. Default value: false. This parameter applies to templates that originate from resource export. Only one task can use this parameter at a time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder initModuleState(Boolean initModuleState) {
                 this.initModuleState = initModuleState;
@@ -803,7 +854,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * latestModuleVersion.
+             * <p>The latest version number of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v3</p>
              */
             public Builder latestModuleVersion(String latestModuleVersion) {
                 this.latestModuleVersion = latestModuleVersion;
@@ -811,7 +865,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * moduleId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mod-4267dcfbf1b6d14625614ddbe15</p>
              */
             public Builder moduleId(String moduleId) {
                 this.moduleId = moduleId;
@@ -819,7 +876,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * moduleName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>moduleName</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -827,7 +887,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * moduleVersion.
+             * <p>The template version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder moduleVersion(String moduleVersion) {
                 this.moduleVersion = moduleVersion;
@@ -835,7 +898,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TaskName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -843,7 +909,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * protectionStrategy.
+             * <p>The list of resource protection strategies.</p>
              */
             public Builder protectionStrategy(java.util.List<String> protectionStrategy) {
                 this.protectionStrategy = protectionStrategy;
@@ -851,7 +917,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ramRole.
+             * <p>The RAM role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role</p>
              */
             public Builder ramRole(String ramRole) {
                 this.ramRole = ramRole;
@@ -859,7 +928,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * skipPropertyValidation.
+             * <p>Specifies whether to skip enumeration value validation. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder skipPropertyValidation(Boolean skipPropertyValidation) {
                 this.skipPropertyValidation = skipPropertyValidation;
@@ -867,7 +939,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * skipRegionValidation.
+             * <p>Specifies whether to skip region validation. Valid values: true and false.</p>
              */
             public Builder skipRegionValidation(Boolean skipRegionValidation) {
                 this.skipRegionValidation = skipRegionValidation;
@@ -875,7 +947,14 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Available: the task is available and no job is running.</li>
+             * <li>Running: the task is running and a job is in progress.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -883,7 +962,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The list of task tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -891,7 +970,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskBackend.
+             * <p>The task backend configuration. After this parameter is configured, runtime log information is saved to the specified OSS bucket.</p>
              */
             public Builder taskBackend(TaskBackend taskBackend) {
                 this.taskBackend = taskBackend;
@@ -899,7 +978,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-433aead756057154bda7f1c2e98</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -907,7 +989,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * taskOutputPath.
+             * <p>The task output path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder taskOutputPath(String taskOutputPath) {
                 this.taskOutputPath = taskOutputPath;
@@ -915,7 +1000,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * terraformVersion.
+             * <p>The Terraform version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.5.7</p>
              */
             public Builder terraformVersion(String terraformVersion) {
                 this.terraformVersion = terraformVersion;
@@ -923,7 +1011,16 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * triggerStrategy.
+             * <p>The job trigger method. Valid values:</p>
+             * <ul>
+             * <li>Manual: manually triggered (default).</li>
+             * <li>NewVersion: triggered when a new template version is published.</li>
+             * <li>ParameterSetUpdated: triggered when the parameter set content changes or the parameter set attach relationship changes.</li>
+             * <li>Auto: automatically triggered when the task properties change, such as task creation, execution version change, or job trigger policy change (when changed from another value to Auto).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder triggerStrategy(String triggerStrategy) {
                 this.triggerStrategy = triggerStrategy;

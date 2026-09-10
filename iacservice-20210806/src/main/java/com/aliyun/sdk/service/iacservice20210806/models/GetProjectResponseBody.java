@@ -67,7 +67,7 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * project.
+         * <p>The project details.</p>
          */
         public Builder project(Project project) {
             this.project = project;
@@ -75,7 +75,10 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FA0FF4A-ABD4-54F6-BEAC-B4273EBA10A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class GetProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-06T06:11:27Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -188,7 +194,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The project description. Length: 0 to 1024 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -196,7 +205,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +216,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-433aead7560572f8d95b25775c</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -212,7 +227,10 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
-             * taskCnt.
+             * <p>The number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder taskCnt(Long taskCnt) {
                 this.taskCnt = taskCnt;

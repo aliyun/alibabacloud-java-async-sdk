@@ -104,7 +104,7 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         }
 
         /**
-         * stackResults.
+         * <p>The execution results of the triggered Stacks.</p>
          */
         public Builder stackResults(java.util.List<StackResults> stackResults) {
             this.stackResults = stackResults;
@@ -112,7 +112,10 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         }
 
         /**
-         * triggerId.
+         * <p>The unique ID of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>event-xxx</p>
          */
         public Builder triggerId(String triggerId) {
             this.triggerId = triggerId;
@@ -120,7 +123,15 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
         }
 
         /**
-         * triggeredStatus.
+         * <p>The overall execution status of this trigger task. Valid values:</p>
+         * <ul>
+         * <li>Waiting: Processing.</li>
+         * <li>Success: Processing succeeded.</li>
+         * <li>Errored: Processing failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder triggeredStatus(String triggeredStatus) {
             this.triggeredStatus = triggeredStatus;
@@ -212,7 +223,10 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             } 
 
             /**
-             * deploymentName.
+             * <p>The deployment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder deploymentName(String deploymentName) {
                 this.deploymentName = deploymentName;
@@ -220,7 +234,10 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             }
 
             /**
-             * jobResult.
+             * <p>The result of the deployment task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Service returned null result</p>
              */
             public Builder jobResult(String jobResult) {
                 this.jobResult = jobResult;
@@ -228,7 +245,10 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The deployment status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Applied</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -236,7 +256,10 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             }
 
             /**
-             * url.
+             * <p>The URL for viewing deployment details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://iacnext.console.aliyun.com/stack/stack-al181av2bloah5s53hacbp4/details?deploymentName=production&deploymentNo=6&configVersion=v1">https://iacnext.console.aliyun.com/stack/stack-al181av2bloah5s53hacbp4/details?deploymentName=production&amp;deploymentNo=6&amp;configVersion=v1</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -355,7 +378,7 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             } 
 
             /**
-             * deployments.
+             * <p>The deployment results of the Stack.</p>
              */
             public Builder deployments(java.util.List<Deployments> deployments) {
                 this.deployments = deployments;
@@ -363,7 +386,7 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             }
 
             /**
-             * errorCode.
+             * <p>Error code of the stack execution</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -371,7 +394,10 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No corresponding Stack found.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -379,7 +405,10 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             }
 
             /**
-             * stackId.
+             * <p>The unique identifier of the Stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stack-al181av2bloah5s53hacbp4</p>
              */
             public Builder stackId(String stackId) {
                 this.stackId = stackId;
@@ -387,7 +416,10 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             }
 
             /**
-             * stackName.
+             * <p>The Stack name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stack-demo</p>
              */
             public Builder stackName(String stackName) {
                 this.stackName = stackName;
@@ -395,7 +427,10 @@ public class GetStackExecutionResultResponseBody extends TeaModel {
             }
 
             /**
-             * stackStatus.
+             * <p>The execution status of the Stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deployed</p>
              */
             public Builder stackStatus(String stackStatus) {
                 this.stackStatus = stackStatus;

@@ -257,6 +257,7 @@ public class UpdateGroupRequest extends Request {
         } 
 
         /**
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +270,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * autoDestroy.
+         * <p>Specifies whether to automatically delete the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoDestroy(Boolean autoDestroy) {
             this.putBodyParameter("autoDestroy", autoDestroy);
@@ -278,7 +282,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * autoTrigger.
+         * <p>Specifies whether to enable the automatic trigger policy. Valid values: - <strong>true</strong>: enabled. - <strong>false</strong>: disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoTrigger(Boolean autoTrigger) {
             this.putBodyParameter("autoTrigger", autoTrigger);
@@ -287,6 +294,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +307,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -308,7 +319,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * forcedSetting.
+         * <p>Specifies whether to forcibly use the group configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder forcedSetting(Boolean forcedSetting) {
             this.putBodyParameter("forcedSetting", forcedSetting);
@@ -317,7 +331,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -326,7 +343,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * notifyConfig.
+         * <p>The notification configuration.</p>
          */
         public Builder notifyConfig(java.util.List<NotifyConfig> notifyConfig) {
             this.putBodyParameter("notifyConfig", notifyConfig);
@@ -335,7 +352,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * notifyOperationTypes.
+         * <p>The list of notification operation types.</p>
          */
         public Builder notifyOperationTypes(java.util.List<String> notifyOperationTypes) {
             this.putBodyParameter("notifyOperationTypes", notifyOperationTypes);
@@ -344,7 +361,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * ramRole.
+         * <p>The RAM role (1-128 characters). The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder ramRole(String ramRole) {
             this.putBodyParameter("ramRole", ramRole);
@@ -353,7 +373,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * reportExportField.
+         * <p>The list of export fields for the report.</p>
          */
         public Builder reportExportField(java.util.List<String> reportExportField) {
             this.putBodyParameter("reportExportField", reportExportField);
@@ -362,7 +382,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * reportExportPath.
+         * <p>The export path for the execution report. OSS paths are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder reportExportPath(String reportExportPath) {
             this.putBodyParameter("reportExportPath", reportExportPath);
@@ -371,7 +394,10 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * terraformProviderVersion.
+         * <p>The Terraform Provider version. Select a Terraform Provider version. Nodes in the group execute plans based on the specified Terraform Provider version. The version configured on a node takes higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.183.0</p>
          */
         public Builder terraformProviderVersion(String terraformProviderVersion) {
             this.putBodyParameter("terraformProviderVersion", terraformProviderVersion);
@@ -380,7 +406,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * triggerConfig.
+         * <p>The trigger policy. This parameter cannot be empty when autoTrigger is set to true.</p>
          */
         public Builder triggerConfig(java.util.List<TriggerConfig> triggerConfig) {
             this.putBodyParameter("triggerConfig", triggerConfig);
@@ -389,7 +415,11 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * triggerResourceType.
+         * <p>The resource type that triggers execution. Valid values:</p>
+         * <ul>
+         * <li>Task: regular node.</li>
+         * <li>SceneTestingTask: scenario-based testing node.</li>
+         * </ul>
          */
         public Builder triggerResourceType(java.util.List<String> triggerResourceType) {
             this.putBodyParameter("triggerResourceType", triggerResourceType);
@@ -457,7 +487,10 @@ public class UpdateGroupRequest extends Request {
             } 
 
             /**
-             * notifyPath.
+             * <p>The path configuration for notifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder notifyPath(String notifyPath) {
                 this.notifyPath = notifyPath;
@@ -465,7 +498,10 @@ public class UpdateGroupRequest extends Request {
             }
 
             /**
-             * notifyType.
+             * <p>The notification type. Valid values: DingDing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DingDing</p>
              */
             public Builder notifyType(String notifyType) {
                 this.notifyType = notifyType;
@@ -532,7 +568,14 @@ public class UpdateGroupRequest extends Request {
             } 
 
             /**
-             * triggerStrategy.
+             * <p>The trigger strategy. Valid values:</p>
+             * <ul>
+             * <li>ProviderNewVersion: triggered when a new Provider version is released.</li>
+             * <li>Cron: triggered on a schedule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Cron</p>
              */
             public Builder triggerStrategy(String triggerStrategy) {
                 this.triggerStrategy = triggerStrategy;
@@ -540,7 +583,10 @@ public class UpdateGroupRequest extends Request {
             }
 
             /**
-             * triggerValue.
+             * <p>The policy value that must be maintained for scheduled triggers. This value is a cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 * * * ？</p>
              */
             public Builder triggerValue(String triggerValue) {
                 this.triggerValue = triggerValue;

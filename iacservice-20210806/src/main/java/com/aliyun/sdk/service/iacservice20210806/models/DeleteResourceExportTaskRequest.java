@@ -59,7 +59,10 @@ public class DeleteResourceExportTaskRequest extends Request {
         } 
 
         /**
-         * exportTaskId.
+         * <p>The ID of the resource export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex-3b6cb9fa4751a16b006b03333a</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.putPathParameter("exportTaskId", exportTaskId);

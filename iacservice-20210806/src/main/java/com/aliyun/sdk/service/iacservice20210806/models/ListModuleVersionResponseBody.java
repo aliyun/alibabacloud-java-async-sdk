@@ -106,7 +106,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>792171BB-1A68-5148-8B9B-C7C728E1E98B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListModuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * versions.
+         * <p>The list of version information.</p>
          */
         public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
@@ -256,7 +268,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The time when the version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-13T02:21:49Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -264,7 +279,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The version description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -272,7 +290,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * moduleId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mod-55f1739d9050fffed3ec3a2c4a5e5</p>
              */
             public Builder moduleId(String moduleId) {
                 this.moduleId = moduleId;
@@ -280,7 +301,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * moduleVersion.
+             * <p>The template version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v3</p>
              */
             public Builder moduleVersion(String moduleVersion) {
                 this.moduleVersion = moduleVersion;
@@ -288,7 +312,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>versionName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +323,10 @@ public class ListModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * sourcePath.
+             * <p>The source path of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></p>
              */
             public Builder sourcePath(String sourcePath) {
                 this.sourcePath = sourcePath;

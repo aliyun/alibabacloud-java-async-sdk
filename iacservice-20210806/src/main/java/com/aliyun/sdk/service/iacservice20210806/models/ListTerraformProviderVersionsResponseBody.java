@@ -106,7 +106,10 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of records retrieved in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. An empty value indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rnD7wyAII+yDi0UGlV519J4dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73588ebb-9d40-4660-a59f-764636ae6034</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * versions.
+         * <p>The list of versions.</p>
          */
         public Builder versions(java.util.List<Versions> versions) {
             this.versions = versions;
@@ -217,7 +229,10 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * publishedTime.
+             * <p>The publish time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-24T05:06:51Z</p>
              */
             public Builder publishedTime(String publishedTime) {
                 this.publishedTime = publishedTime;
@@ -225,7 +240,10 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -233,7 +251,10 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.242.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

@@ -106,7 +106,7 @@ public class ListModulesResponseBody extends TeaModel {
         } 
 
         /**
-         * modules.
+         * <p>The list of templates.</p>
          */
         public Builder modules(java.util.List<Modules> modules) {
             this.modules = modules;
@@ -114,7 +114,10 @@ public class ListModulesResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListModulesResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListModulesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C617E03B-3DD2-5F0C-A6CF-3028B499A2D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListModulesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2790</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +242,10 @@ public class ListModulesResponseBody extends TeaModel {
             } 
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-kw1a58tb5m2j7rpsa6j25</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -238,7 +253,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>groupName</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -246,7 +264,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-fu1a50tjdaff2lppddqsm</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -254,7 +275,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * projectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>projectName</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -347,7 +371,10 @@ public class ListModulesResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -355,7 +382,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * tagKey.
+             * <p>The tag key of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -363,7 +393,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -371,7 +404,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -542,7 +578,10 @@ public class ListModulesResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-30T02:14:16Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -550,7 +589,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * deletionProtection.
+             * <p>Indicates whether deletion protection is enabled. When the template is associated with a task, deletion protection is enabled and the template cannot be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -558,7 +600,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -566,7 +611,7 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * groupInfo.
+             * <p>The group information.</p>
              */
             public Builder groupInfo(GroupInfo groupInfo) {
                 this.groupInfo = groupInfo;
@@ -574,7 +619,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * latestVersion.
+             * <p>The latest version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -582,7 +630,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * moduleId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mod-518855d9a058cdbd3fd6951d59</p>
              */
             public Builder moduleId(String moduleId) {
                 this.moduleId = moduleId;
@@ -590,7 +641,10 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ModuleName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -598,7 +652,18 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The template source. Valid values:</p>
+             * <ul>
+             * <li>OSS: imported from OSS.</li>
+             * <li>Registry: created from a template in the template center.</li>
+             * <li>ExportTask: exported from a resource export task.</li>
+             * <li>Upload: uploaded as a file.</li>
+             * <li>Shared: cloned from a shared template.</li>
+             * <li>Editor: created using the online editor.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -606,7 +671,14 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The template status. Valid values:</p>
+             * <ul>
+             * <li>Creating: the template is being created.</li>
+             * <li>Created: the template has been created. A version can be published after the template is created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -614,7 +686,7 @@ public class ListModulesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The list of template tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

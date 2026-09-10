@@ -54,7 +54,10 @@ public class AddSharedAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0D797DC3-FF04-5C21-81EB-XXXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

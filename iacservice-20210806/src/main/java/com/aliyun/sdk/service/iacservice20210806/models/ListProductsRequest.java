@@ -144,7 +144,10 @@ public class ListProductsRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The keyword for searching products. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -153,7 +156,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of results per page. Valid values: 0 to 200. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -162,7 +168,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJ0b2tlbiI6IjEwMjM0NTY3ODkwIn0=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -171,7 +180,14 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * sort.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>Normal: default sorting (default value)</li>
+         * <li>Top: sorted by popularity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("sort", sort);
@@ -180,7 +196,14 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>Available</li>
+         * <li>Deprecated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -189,7 +212,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * supportTerraformer.
+         * <p>Specifies whether Terraformer is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportTerraformer(Boolean supportTerraformer) {
             this.putQueryParameter("supportTerraformer", supportTerraformer);
@@ -198,7 +224,10 @@ public class ListProductsRequest extends Request {
         }
 
         /**
-         * terraformProviderVersion.
+         * <p>The Terraform Provider version. If this parameter is left empty, the latest version is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.227.0</p>
          */
         public Builder terraformProviderVersion(String terraformProviderVersion) {
             this.putQueryParameter("terraformProviderVersion", terraformProviderVersion);

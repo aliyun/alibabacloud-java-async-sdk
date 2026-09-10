@@ -60,6 +60,7 @@ public class DeleteRegistryNamespaceRequest extends Request {
         } 
 
         /**
+         * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

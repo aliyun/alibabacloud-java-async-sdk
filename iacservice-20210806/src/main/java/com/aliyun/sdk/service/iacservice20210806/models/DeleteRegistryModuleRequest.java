@@ -75,10 +75,11 @@ public class DeleteRegistryModuleRequest extends Request {
         } 
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test_namespace</p>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putPathParameter("namespaceName", namespaceName);
@@ -87,10 +88,11 @@ public class DeleteRegistryModuleRequest extends Request {
         }
 
         /**
+         * <p>The template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ess-scaling-rule</p>
+         * <p>ModuleName</p>
          */
         public Builder moduleName(String moduleName) {
             this.putPathParameter("moduleName", moduleName);

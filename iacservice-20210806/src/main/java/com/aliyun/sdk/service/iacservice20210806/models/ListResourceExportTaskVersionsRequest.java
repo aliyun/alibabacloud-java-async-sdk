@@ -131,6 +131,7 @@ public class ListResourceExportTaskVersionsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the resource export task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,10 @@ public class ListResourceExportTaskVersionsRequest extends Request {
         }
 
         /**
-         * exportVersion.
+         * <p>The export version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder exportVersion(String exportVersion) {
             this.putQueryParameter("exportVersion", exportVersion);
@@ -152,7 +156,10 @@ public class ListResourceExportTaskVersionsRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The search keyword. Fuzzy search on export version names is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -161,7 +168,10 @@ public class ListResourceExportTaskVersionsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -170,7 +180,10 @@ public class ListResourceExportTaskVersionsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -179,7 +192,17 @@ public class ListResourceExportTaskVersionsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The export status. Valid values:</p>
+         * <ul>
+         * <li>Queue: queued</li>
+         * <li>Pending: preparing to run</li>
+         * <li>Success: succeeded</li>
+         * <li>Errored: failed</li>
+         * <li>Canceled: canceled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Errored</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

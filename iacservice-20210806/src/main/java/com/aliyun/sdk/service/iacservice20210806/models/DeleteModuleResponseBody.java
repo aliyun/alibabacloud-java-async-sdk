@@ -54,7 +54,10 @@ public class DeleteModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49DA6457-E545-5095-A930-EB8F0BCD4DAA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

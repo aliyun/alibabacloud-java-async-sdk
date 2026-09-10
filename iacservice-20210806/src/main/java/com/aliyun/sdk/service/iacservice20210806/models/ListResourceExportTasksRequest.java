@@ -102,7 +102,10 @@ public class ListResourceExportTasksRequest extends Request {
         } 
 
         /**
-         * exportTaskId.
+         * <p>The ID of the resource export task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex-al1c11jl9g2tbte727otp85</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.putQueryParameter("exportTaskId", exportTaskId);
@@ -111,7 +114,10 @@ public class ListResourceExportTasksRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The search keyword. Fuzzy search by task name is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -120,7 +126,10 @@ public class ListResourceExportTasksRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -129,7 +138,10 @@ public class ListResourceExportTasksRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

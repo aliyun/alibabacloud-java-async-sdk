@@ -67,7 +67,10 @@ public class DetectTerraformStateResponseBody extends TeaModel {
         } 
 
         /**
-         * detectionId.
+         * <p>The ID of the detection task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job-dcsdxxxxxx</p>
          */
         public Builder detectionId(String detectionId) {
             this.detectionId = detectionId;

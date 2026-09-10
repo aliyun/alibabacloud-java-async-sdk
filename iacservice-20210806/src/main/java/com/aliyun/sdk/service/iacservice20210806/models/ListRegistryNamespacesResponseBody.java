@@ -106,7 +106,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         } 
 
         /**
-         * count.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -114,7 +117,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records returned at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +128,7 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * namespaces.
+         * <p>The list of workspaces.</p>
          */
         public Builder namespaces(java.util.List<Namespaces> namespaces) {
             this.namespaces = namespaces;
@@ -130,7 +136,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token for the next page. A value of null indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPTL1XAYFTgtpI04QQpc5dyKpESXBc=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -138,7 +147,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFB0033-A016-5A9D-9283-C123AAA7F71D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +294,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * acl.
+             * <p>The permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -290,7 +305,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-15T02:16:58Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -298,7 +316,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The workspace description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +327,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * maintainer.
+             * <p>The administrator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder maintainer(String maintainer) {
                 this.maintainer = maintainer;
@@ -314,7 +338,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * modules.
+             * <p>The number of Registry templates in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder modules(Integer modules) {
                 this.modules = modules;
@@ -322,7 +349,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NamespaceName</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -330,7 +360,7 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * sharedAccounts.
+             * <p>The list of shared accounts.</p>
              */
             public Builder sharedAccounts(java.util.List<Long> sharedAccounts) {
                 this.sharedAccounts = sharedAccounts;
@@ -338,7 +368,10 @@ public class ListRegistryNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The workspace type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shared</p>
              */
             public Builder type(String type) {
                 this.type = type;

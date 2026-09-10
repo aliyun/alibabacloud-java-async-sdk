@@ -93,7 +93,10 @@ public class JobStatusDetailValue extends TeaModel {
         } 
 
         /**
-         * comment.
+         * <p>备注</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -101,7 +104,10 @@ public class JobStatusDetailValue extends TeaModel {
         }
 
         /**
-         * jobResult.
+         * <p>执行结果</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apply complete! Resources: 0 added, 0 changed, 0 destroyed.</p>
          */
         public Builder jobResult(String jobResult) {
             this.jobResult = jobResult;
@@ -109,7 +115,10 @@ public class JobStatusDetailValue extends TeaModel {
         }
 
         /**
-         * timeStamps.
+         * <p>到达状态时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-06-13 17:11:34</p>
          */
         public Builder timeStamps(String timeStamps) {
             this.timeStamps = timeStamps;
@@ -117,7 +126,10 @@ public class JobStatusDetailValue extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>错误详情</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error：Cannot import non-existent remote object</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;

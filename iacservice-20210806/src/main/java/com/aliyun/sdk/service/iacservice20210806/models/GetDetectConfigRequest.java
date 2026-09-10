@@ -60,6 +60,7 @@ public class GetDetectConfigRequest extends Request {
         } 
 
         /**
+         * <p>Drift detection configuration ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

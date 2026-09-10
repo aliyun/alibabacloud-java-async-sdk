@@ -78,7 +78,10 @@ public class ExecuteTerraformApplyResponseBody extends TeaModel {
         }
 
         /**
-         * stateId.
+         * <p>The state file ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-xxxx</p>
          */
         public Builder stateId(String stateId) {
             this.stateId = stateId;

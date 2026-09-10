@@ -89,6 +89,7 @@ public class GetJobRequest extends Request {
         } 
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class GetJobRequest extends Request {
         }
 
         /**
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,15 @@ public class GetJobRequest extends Request {
         }
 
         /**
-         * taskType.
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>Task: regular task (default)</li>
+         * <li>SceneTestingTask: scenario-based testing task</li>
+         * <li>Stack: resource stack.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SceneTestingTask</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("taskType", taskType);

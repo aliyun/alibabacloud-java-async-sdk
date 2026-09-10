@@ -59,7 +59,10 @@ public class DeleteProjectRequest extends Request {
         } 
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-148e7853433574fffe9fec72ed9b72</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);

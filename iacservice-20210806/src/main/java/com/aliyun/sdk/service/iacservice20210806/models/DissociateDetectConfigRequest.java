@@ -89,7 +89,10 @@ public class DissociateDetectConfigRequest extends Request {
         } 
 
         /**
-         * detectConfigId.
+         * <p>The ID of the drift detection configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-xxxx</p>
          */
         public Builder detectConfigId(String detectConfigId) {
             this.putBodyParameter("detectConfigId", detectConfigId);
@@ -98,6 +101,7 @@ public class DissociateDetectConfigRequest extends Request {
         }
 
         /**
+         * <p>The ID of the association target. The value is a StackId or TaskId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,11 @@ public class DissociateDetectConfigRequest extends Request {
         }
 
         /**
+         * <p>The type of the association target. Valid values:</p>
+         * <ul>
+         * <li>Task: orchestration task.</li>
+         * <li>Stack: resource stack.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

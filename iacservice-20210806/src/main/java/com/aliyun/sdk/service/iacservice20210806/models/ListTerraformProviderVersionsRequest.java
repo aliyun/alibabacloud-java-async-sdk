@@ -102,7 +102,10 @@ public class ListTerraformProviderVersionsRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The keyword for searching versions. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -111,7 +114,10 @@ public class ListTerraformProviderVersionsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to retrieve in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -120,7 +126,10 @@ public class ListTerraformProviderVersionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page. A value of null indicates that no more pages are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ar9lHbaidqWequN5orMba54dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -129,7 +138,10 @@ public class ListTerraformProviderVersionsRequest extends Request {
         }
 
         /**
-         * usage.
+         * <p>The usage. Set to Explorer to retrieve meta information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Explorer</p>
          */
         public Builder usage(String usage) {
             this.putQueryParameter("usage", usage);

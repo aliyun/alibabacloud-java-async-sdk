@@ -93,7 +93,10 @@ public class ValidateModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * message.
+         * <p>The validation message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +104,10 @@ public class ValidateModuleResponseBody extends TeaModel {
         }
 
         /**
-         * moduleValidationId.
+         * <p>The validation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF72A6FB-B07</p>
          */
         public Builder moduleValidationId(String moduleValidationId) {
             this.moduleValidationId = moduleValidationId;
@@ -109,7 +115,10 @@ public class ValidateModuleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF72A6FB-B071-5F2E-A036-9D62545B962C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,16 @@ public class ValidateModuleResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The validation result. Valid values:</p>
+         * <ul>
+         * <li>Initializing: initialization in progress.</li>
+         * <li>Validating: validation in progress.</li>
+         * <li>Validated: validation succeeded.</li>
+         * <li>Errored: validation failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Validating</p>
          */
         public Builder status(String status) {
             this.status = status;

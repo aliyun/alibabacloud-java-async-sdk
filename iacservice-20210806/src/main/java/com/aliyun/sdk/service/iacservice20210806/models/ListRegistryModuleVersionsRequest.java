@@ -103,7 +103,10 @@ public class ListRegistryModuleVersionsRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -112,10 +115,11 @@ public class ListRegistryModuleVersionsRequest extends Request {
         }
 
         /**
+         * <p>The Registry template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs-rds</p>
+         * <p>ModuleName</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("moduleName", moduleName);
@@ -124,10 +128,11 @@ public class ListRegistryModuleVersionsRequest extends Request {
         }
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>terraform-alicloud-modules</p>
+         * <p>MamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("namespaceName", namespaceName);
@@ -136,7 +141,10 @@ public class ListRegistryModuleVersionsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TRkuCaTw/VsEHrnCZgrBA0ftQSEJU/lzo2ei7MJjplg=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

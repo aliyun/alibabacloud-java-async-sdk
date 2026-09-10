@@ -200,7 +200,15 @@ public class ListResourceTypesRequest extends Request {
         } 
 
         /**
-         * acceptLanguage.
+         * <p>The language of the response. Valid values:</p>
+         * <ul>
+         * <li>zh-CN: Chinese.</li>
+         * <li>en-US: English.</li>
+         * </ul>
+         * <p>Default value: zh-CN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("acceptLanguage", acceptLanguage);
@@ -209,7 +217,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The keyword for searching resource code or name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -218,7 +229,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page. Valid values: 0 to 200. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -227,7 +241,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tokenForNextPage</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -236,7 +253,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * product.
+         * <p>The product code. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("product", product);
@@ -245,7 +265,14 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * sort.
+         * <p>The order in which resource types are returned. Valid values:</p>
+         * <ul>
+         * <li>Normal (default): returned in normal order.</li>
+         * <li>Top: returned in order of popular access.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder sort(String sort) {
             this.putQueryParameter("sort", sort);
@@ -254,7 +281,14 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The status list for filtering. Valid values:</p>
+         * <ul>
+         * <li>Available</li>
+         * <li>Deprecated</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available,Deprecated</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -263,7 +297,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * subcategory.
+         * <p>The product subcategory in Terraform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compute</p>
          */
         public Builder subcategory(String subcategory) {
             this.putQueryParameter("subcategory", subcategory);
@@ -272,7 +309,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * supportTerraformer.
+         * <p>Specifies whether Terraformer is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportTerraformer(Boolean supportTerraformer) {
             this.putQueryParameter("supportTerraformer", supportTerraformer);
@@ -281,7 +321,10 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * terraformProviderVersion.
+         * <p>The Terraform Provider version. If this parameter is left empty, the latest version is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.227.0</p>
          */
         public Builder terraformProviderVersion(String terraformProviderVersion) {
             this.putQueryParameter("terraformProviderVersion", terraformProviderVersion);
@@ -290,7 +333,7 @@ public class ListResourceTypesRequest extends Request {
         }
 
         /**
-         * terraformResourceTypes.
+         * <p>The list of Terraform resources.</p>
          */
         public Builder terraformResourceTypes(java.util.List<String> terraformResourceTypes) {
             String terraformResourceTypesShrink = shrink(terraformResourceTypes, "terraformResourceTypes", "simple");

@@ -106,7 +106,10 @@ public class ListTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98610149-488B-5E48-B981-8D4CE1AF77CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * tasks.
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -138,7 +147,10 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +242,10 @@ public class ListTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-4267dcfbf1b6d1e0652bfbbe995</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -238,7 +253,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * groupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -246,7 +264,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-433aead7560571cf1b2bfbbe92b</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -254,7 +275,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * projectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -347,7 +371,10 @@ public class ListTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The task tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -355,7 +382,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * tagKey.
+             * <p>The tag key of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -363,7 +393,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iac-demo</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -371,7 +404,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The task tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iac-demo</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -594,7 +630,10 @@ public class ListTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * autoApply.
+             * <p>Indicates whether the task is automatically executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoApply(Boolean autoApply) {
                 this.autoApply = autoApply;
@@ -602,7 +641,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the task was created, in UTC in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-11T15:09:53Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -610,7 +652,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * currentJobId.
+             * <p>The job ID of the current task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-123asd</p>
              */
             public Builder currentJobId(String currentJobId) {
                 this.currentJobId = currentJobId;
@@ -618,7 +663,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * currentJobStatus.
+             * <p>The status of the current job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder currentJobStatus(String currentJobStatus) {
                 this.currentJobStatus = currentJobStatus;
@@ -626,7 +674,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * deletionProtection.
+             * <p>Indicates whether deletion protection is enabled. Deletion protection is automatically enabled when managed resources exist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -634,7 +685,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * groupInfo.
+             * <p>The task group information.</p>
              */
             public Builder groupInfo(GroupInfo groupInfo) {
                 this.groupInfo = groupInfo;
@@ -642,7 +693,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * latestModuleVersion.
+             * <p>The latest version number of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v3</p>
              */
             public Builder latestModuleVersion(String latestModuleVersion) {
                 this.latestModuleVersion = latestModuleVersion;
@@ -650,7 +704,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * moduleId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mod-518855d9a058c331e9c60bc0ce</p>
              */
             public Builder moduleId(String moduleId) {
                 this.moduleId = moduleId;
@@ -658,7 +715,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * moduleName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mod-name</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -666,7 +726,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * moduleVersion.
+             * <p>The template version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder moduleVersion(String moduleVersion) {
                 this.moduleVersion = moduleVersion;
@@ -674,7 +737,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TaskName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -682,7 +748,14 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>Available: The task is in an available state with no job running.</li>
+             * <li>Running: The task is in a running state with a current job in progress.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -690,7 +763,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The list of task tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -698,7 +771,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-1525e992f1b621b0ca51647876e</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

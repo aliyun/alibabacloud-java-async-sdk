@@ -143,7 +143,10 @@ public class ListExplorerRegistryModuleExamplesRequest extends Request {
         } 
 
         /**
-         * exampleName.
+         * <p>The example name of the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>complete</p>
          */
         public Builder exampleName(String exampleName) {
             this.putQueryParameter("exampleName", exampleName);
@@ -152,7 +155,10 @@ public class ListExplorerRegistryModuleExamplesRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The search keyword. Supports fuzzy match based on the module name or module example name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -161,7 +167,12 @@ public class ListExplorerRegistryModuleExamplesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 0 to 200.</p>
+         * <p>Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -170,7 +181,10 @@ public class ListExplorerRegistryModuleExamplesRequest extends Request {
         }
 
         /**
-         * moduleName.
+         * <p>The name of the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("moduleName", moduleName);
@@ -179,7 +193,10 @@ public class ListExplorerRegistryModuleExamplesRequest extends Request {
         }
 
         /**
-         * moduleVersion.
+         * <p>The version of the module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.11.0</p>
          */
         public Builder moduleVersion(String moduleVersion) {
             this.putQueryParameter("moduleVersion", moduleVersion);
@@ -188,7 +205,10 @@ public class ListExplorerRegistryModuleExamplesRequest extends Request {
         }
 
         /**
-         * namespaceName.
+         * <p>The name of the workspace to which the module belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("namespaceName", namespaceName);
@@ -197,7 +217,11 @@ public class ListExplorerRegistryModuleExamplesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token for the next page of results.</p>
+         * <p>If the total number of entries exceeds the maxResults limit, the data is truncated. You can use nextToken to query the next page of data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IbuvZbAXFOiB4nKg8iOH447bhHWDavGTOMijI2Jep7c=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

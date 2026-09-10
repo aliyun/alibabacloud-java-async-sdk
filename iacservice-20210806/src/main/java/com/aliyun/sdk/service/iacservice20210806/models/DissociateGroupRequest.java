@@ -117,7 +117,10 @@ public class DissociateGroupRequest extends Request {
         } 
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-433aead7560572f8d95b25775c</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);
@@ -126,6 +129,7 @@ public class DissociateGroupRequest extends Request {
         }
 
         /**
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +142,10 @@ public class DissociateGroupRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2daf4227f747cbf11a5501f18cc5e004</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -147,6 +154,7 @@ public class DissociateGroupRequest extends Request {
         }
 
         /**
+         * <p>The list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
@@ -156,7 +164,15 @@ public class DissociateGroupRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>Module: template.</li>
+         * <li>SceneTestingTask: scenario-based testing task.</li>
+         * <li>Task: regular task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Task</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);

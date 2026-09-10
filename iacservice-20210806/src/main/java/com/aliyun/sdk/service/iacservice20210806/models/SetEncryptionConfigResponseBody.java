@@ -55,6 +55,9 @@ public class SetEncryptionConfigResponseBody extends TeaModel {
 
         /**
          * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7FA0FF4A-ABD4-54F6-BEAC-B4273EBA10A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

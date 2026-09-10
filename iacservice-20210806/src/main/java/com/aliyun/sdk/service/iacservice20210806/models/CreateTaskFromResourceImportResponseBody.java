@@ -67,7 +67,7 @@ public class CreateTaskFromResourceImportResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

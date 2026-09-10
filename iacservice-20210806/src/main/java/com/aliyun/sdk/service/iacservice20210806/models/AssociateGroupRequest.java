@@ -117,6 +117,7 @@ public class AssociateGroupRequest extends Request {
         } 
 
         /**
+         * <p>The group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +130,10 @@ public class AssociateGroupRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -138,7 +142,10 @@ public class AssociateGroupRequest extends Request {
         }
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-433aead7560571a87349d054b4</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("projectId", projectId);
@@ -147,6 +154,7 @@ public class AssociateGroupRequest extends Request {
         }
 
         /**
+         * <p>The list of resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
@@ -156,7 +164,15 @@ public class AssociateGroupRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>SceneTestingTask: scenario-based testing task.</li>
+         * <li>Task: regular task.</li>
+         * <li>Module: template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Task</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);

@@ -90,10 +90,11 @@ public class GetRegistryModuleVersionRequest extends Request {
         } 
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>alibabacloud</p>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putPathParameter("namespaceName", namespaceName);
@@ -102,10 +103,11 @@ public class GetRegistryModuleVersionRequest extends Request {
         }
 
         /**
+         * <p>The template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ram-user</p>
+         * <p>ModuleName</p>
          */
         public Builder moduleName(String moduleName) {
             this.putPathParameter("moduleName", moduleName);
@@ -114,6 +116,7 @@ public class GetRegistryModuleVersionRequest extends Request {
         }
 
         /**
+         * <p>The version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

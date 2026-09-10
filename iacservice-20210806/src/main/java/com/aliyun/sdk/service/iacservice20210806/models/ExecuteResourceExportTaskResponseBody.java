@@ -80,7 +80,10 @@ public class ExecuteResourceExportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * exportTaskId.
+         * <p>The resource export ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ex-3b6cb9fa4751a6e645ad8365e6</p>
          */
         public Builder exportTaskId(String exportTaskId) {
             this.exportTaskId = exportTaskId;
@@ -88,7 +91,10 @@ public class ExecuteResourceExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * exportVersion.
+         * <p>The resource export version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder exportVersion(String exportVersion) {
             this.exportVersion = exportVersion;
@@ -96,7 +102,10 @@ public class ExecuteResourceExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0B0A7C19-9077-5975-ACBD-DEE718787992</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

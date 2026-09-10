@@ -67,7 +67,7 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * namespace.
+         * <p>The workspace information.</p>
          */
         public Builder namespace(Namespace namespace) {
             this.namespace = namespace;
@@ -75,7 +75,10 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26684763-5BAB-58C8-BA4F-9D622AB7AD14</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             } 
 
             /**
-             * acl.
+             * <p>The permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -227,7 +233,10 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-20T02:18:29Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -235,7 +244,10 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +255,10 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * maintainer.
+             * <p>The name of the administrator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder maintainer(String maintainer) {
                 this.maintainer = maintainer;
@@ -251,7 +266,10 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * modules.
+             * <p>The number of Registry templates in the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder modules(Integer modules) {
                 this.modules = modules;
@@ -259,7 +277,10 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The name of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NamespaceName</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -267,7 +288,7 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * sharedAccounts.
+             * <p>The list of shared accounts.</p>
              */
             public Builder sharedAccounts(java.util.List<Long> sharedAccounts) {
                 this.sharedAccounts = sharedAccounts;
@@ -275,7 +296,10 @@ public class GetRegistryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>share</p>
              */
             public Builder type(String type) {
                 this.type = type;

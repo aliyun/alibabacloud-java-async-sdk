@@ -117,7 +117,13 @@ public class CreateRegistryNamespaceRequest extends Request {
         } 
 
         /**
-         * acl.
+         * <p>The access permission. Valid values:</p>
+         * <ul>
+         * <li>private: private access.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder acl(String acl) {
             this.putBodyParameter("acl", acl);
@@ -126,6 +132,7 @@ public class CreateRegistryNamespaceRequest extends Request {
         }
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +145,10 @@ public class CreateRegistryNamespaceRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The workspace description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -147,7 +157,10 @@ public class CreateRegistryNamespaceRequest extends Request {
         }
 
         /**
-         * maintainer.
+         * <p>The administrator name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder maintainer(String maintainer) {
             this.putBodyParameter("maintainer", maintainer);
@@ -156,10 +169,16 @@ public class CreateRegistryNamespaceRequest extends Request {
         }
 
         /**
+         * <p>The workspace name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 3 to 63 characters in length.</li>
+         * <li>The name can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (_), and cannot start or end with a hyphen.</li>
+         * <li>The name must be unique within the global workspace resources.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>iac</p>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putBodyParameter("namespaceName", namespaceName);

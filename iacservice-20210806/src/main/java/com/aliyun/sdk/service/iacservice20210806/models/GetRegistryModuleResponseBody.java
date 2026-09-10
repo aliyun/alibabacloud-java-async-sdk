@@ -67,7 +67,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
         } 
 
         /**
-         * registryModule.
+         * <p>The Registry module.</p>
          */
         public Builder registryModule(RegistryModule registryModule) {
             this.registryModule = registryModule;
@@ -75,7 +75,10 @@ public class GetRegistryModuleResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5B5AD471-5036-581B-AC9B-7D5EECED877A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -271,7 +274,13 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             } 
 
             /**
-             * acl.
+             * <p>The permission. Valid values:</p>
+             * <ul>
+             * <li>private: private.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -279,7 +288,10 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-28 13:39:05</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -287,7 +299,10 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The module description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -295,7 +310,10 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * downloads.
+             * <p>The number of downloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder downloads(Integer downloads) {
                 this.downloads = downloads;
@@ -303,7 +321,10 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * moduleName.
+             * <p>The module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-cluster</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -311,7 +332,10 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NamespaceName</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -319,7 +343,13 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * provider.
+             * <p>The provider type. Valid values:</p>
+             * <ul>
+             * <li>alicloud: Alibaba Cloud.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -327,7 +357,7 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * sharedAccounts.
+             * <p>The list of accounts with which the Registry module is shared.</p>
              */
             public Builder sharedAccounts(java.util.List<Long> sharedAccounts) {
                 this.sharedAccounts = sharedAccounts;
@@ -335,7 +365,10 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The module source, which is a concatenation of <NamespaceName>/<ModuleName>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespaceName/ModuleName</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -343,7 +376,10 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * sourceUrl.
+             * <p>The module source URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -351,7 +387,16 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The workspace type. Valid values:</p>
+             * <ul>
+             * <li>system: public module</li>
+             * <li>self: custom module</li>
+             * <li>shared: shared module</li>
+             * <li>community: community module.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -359,7 +404,10 @@ public class GetRegistryModuleResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

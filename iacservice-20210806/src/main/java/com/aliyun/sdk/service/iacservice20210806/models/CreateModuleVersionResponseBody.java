@@ -67,7 +67,10 @@ public class CreateModuleVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * moduleVersion.
+         * <p>The template version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder moduleVersion(String moduleVersion) {
             this.moduleVersion = moduleVersion;
@@ -75,7 +78,10 @@ public class CreateModuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6ED9F71-7FA8-598E-B64D-4606FB3FCCC9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

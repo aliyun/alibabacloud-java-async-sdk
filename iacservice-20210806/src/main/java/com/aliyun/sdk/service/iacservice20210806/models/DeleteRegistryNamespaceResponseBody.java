@@ -54,7 +54,10 @@ public class DeleteRegistryNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1D0CD708-E433-5F13-8A42-823C95FC756C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

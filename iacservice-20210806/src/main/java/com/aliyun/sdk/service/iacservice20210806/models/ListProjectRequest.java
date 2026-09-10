@@ -101,7 +101,10 @@ public class ListProjectRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The search keyword. Name-based search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-case2</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -110,7 +113,10 @@ public class ListProjectRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -119,7 +125,10 @@ public class ListProjectRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -128,7 +137,7 @@ public class ListProjectRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -197,7 +206,10 @@ public class ListProjectRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -205,7 +217,10 @@ public class ListProjectRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder value(String value) {
                 this.value = value;

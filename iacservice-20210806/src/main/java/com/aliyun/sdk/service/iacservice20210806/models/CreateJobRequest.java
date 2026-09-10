@@ -118,6 +118,7 @@ public class CreateJobRequest extends Request {
         } 
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,10 +144,11 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * <p>The job description. Length: 1 to 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -154,7 +157,15 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * subCommand.
+         * <p>The operation command. Valid values:</p>
+         * <ul>
+         * <li>plan: performs a preview. This is the default value.</li>
+         * <li>refresh: refreshes the resource status.</li>
+         * <li>destroy: destroys resources.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>refresh</p>
          */
         public Builder subCommand(String subCommand) {
             this.putBodyParameter("subCommand", subCommand);
@@ -163,7 +174,14 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * taskType.
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>Task: regular task. This is the default value.</li>
+         * <li>SceneTestingTask: scenario-based testing task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Task</p>
          */
         public Builder taskType(String taskType) {
             this.putBodyParameter("taskType", taskType);

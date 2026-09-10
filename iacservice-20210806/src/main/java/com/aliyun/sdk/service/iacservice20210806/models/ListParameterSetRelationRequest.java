@@ -75,6 +75,7 @@ public class ListParameterSetRelationRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the resource. For ModuleVersion, concatenate <moduleId>-<versionId>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,14 @@ public class ListParameterSetRelationRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>Module</li>
+         * <li>ModuleVersion</li>
+         * <li>Task</li>
+         * <li>SceneTestingTask</li>
+         * <li>Stack.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

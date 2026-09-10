@@ -67,7 +67,7 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * moduleVersion.
+         * <p>The version information.</p>
          */
         public Builder moduleVersion(ModuleVersion moduleVersion) {
             this.moduleVersion = moduleVersion;
@@ -75,7 +75,10 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62DF26B0-53F0-5747-9D7F-FEF444FB4E24</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,10 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-08T02:22:16Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -240,7 +246,10 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * detailUrl.
+             * <p>The product page URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder detailUrl(String detailUrl) {
                 this.detailUrl = detailUrl;
@@ -248,7 +257,10 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * downloads.
+             * <p>The number of downloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder downloads(String downloads) {
                 this.downloads = downloads;
@@ -256,7 +268,10 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * moduleName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-cluster</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -264,7 +279,10 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibabacloud</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -272,7 +290,13 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * provider.
+             * <p>The provider type. Valid values:</p>
+             * <ul>
+             * <li>alicloud: Alibaba Cloud.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -280,7 +304,10 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The template source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>namespaceName/ModuleName</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -288,7 +315,10 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * sourceUrl.
+             * <p>The template source URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -296,7 +326,10 @@ public class GetRegistryModuleVersionResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

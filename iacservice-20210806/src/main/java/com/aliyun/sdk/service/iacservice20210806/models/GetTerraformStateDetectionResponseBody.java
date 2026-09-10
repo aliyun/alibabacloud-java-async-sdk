@@ -67,7 +67,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
         } 
 
         /**
-         * job.
+         * <p>The job details.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -157,7 +157,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * attributePath.
+             * <p>The attribute name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_name</p>
              */
             public Builder attributePath(String attributePath) {
                 this.attributePath = attributePath;
@@ -165,7 +168,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * remoteValue.
+             * <p>The server-side state value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_remote</p>
              */
             public Builder remoteValue(String remoteValue) {
                 this.remoteValue = remoteValue;
@@ -173,7 +179,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * templateValue.
+             * <p>The template-declared value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_hcl</p>
              */
             public Builder templateValue(String templateValue) {
                 this.templateValue = templateValue;
@@ -279,7 +288,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * attributeChanges.
+             * <p>The collection of attribute changes.</p>
              */
             public Builder attributeChanges(java.util.List<AttributeChanges> attributeChanges) {
                 this.attributeChanges = attributeChanges;
@@ -287,7 +296,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * changedType.
+             * <p>The change type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create</p>
              */
             public Builder changedType(String changedType) {
                 this.changedType = changedType;
@@ -295,7 +307,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * hasDrift.
+             * <p>Indicates whether resource drift exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasDrift(Boolean hasDrift) {
                 this.hasDrift = hasDrift;
@@ -303,7 +318,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * resourceId.
+             * <p>The Terraform resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-axxxxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -311,7 +329,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * resourceIdentifier.
+             * <p>The identifier of the resource in the Terraform template. For a Stack task, the value is in the format of &lt;$componetName&gt;:&lt;$resourceName&gt;. For a Task task, the value is &lt;$resourceName&gt;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc:alicloud_vpc.default</p>
              */
             public Builder resourceIdentifier(String resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;
@@ -391,7 +412,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * attributePath.
+             * <p>The attribute name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc_name</p>
              */
             public Builder attributePath(String attributePath) {
                 this.attributePath = attributePath;
@@ -399,7 +423,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * remoteValue.
+             * <p>The server-side state value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_remote</p>
              */
             public Builder remoteValue(String remoteValue) {
                 this.remoteValue = remoteValue;
@@ -407,7 +434,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * stateValue.
+             * <p>The value stored in the state file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_state</p>
              */
             public Builder stateValue(String stateValue) {
                 this.stateValue = stateValue;
@@ -500,7 +530,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * attributeDrifts.
+             * <p>The collection of attribute drifts.</p>
              */
             public Builder attributeDrifts(java.util.List<AttributeDrifts> attributeDrifts) {
                 this.attributeDrifts = attributeDrifts;
@@ -508,7 +538,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * driftedType.
+             * <p>The drift type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>update</p>
              */
             public Builder driftedType(String driftedType) {
                 this.driftedType = driftedType;
@@ -516,7 +549,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * resourceId.
+             * <p>The Terraform resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bxxxxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -524,7 +560,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * resourceIdentifier.
+             * <p>The identifier of the resource in the Terraform template. For a Stack task, the value is in the format of &lt;$componetName&gt;:&lt;$resourceName&gt;. For a Task task, the value is &lt;$resourceName&gt;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc:alicloud_vpc.default2</p>
              */
             public Builder resourceIdentifier(String resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;
@@ -643,7 +682,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             } 
 
             /**
-             * changedResources.
+             * <p>The collection of resources with state changes.</p>
              */
             public Builder changedResources(java.util.List<ChangedResources> changedResources) {
                 this.changedResources = changedResources;
@@ -651,7 +690,7 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * driftedResources.
+             * <p>The collection of resources with state drift.</p>
              */
             public Builder driftedResources(java.util.List<DriftedResources> driftedResources) {
                 this.driftedResources = driftedResources;
@@ -659,7 +698,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * errorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>planned failed</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -667,7 +709,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * identifier.
+             * <p>The task identifier. For a Stack task, the value is in the format of &lt;$stackId&gt;:&lt;$deploymentName&gt;. For a Task task, the value is &lt;$TaskId&gt;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stack-as181axxxxxx:development_xxxx</p>
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -675,7 +720,18 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>Pending: the initial status after the job is created.</li>
+             * <li>PlanQueued: the job is queued because no containers are available after the job is created.</li>
+             * <li>Planning: the resource job is in the Plan execution phase.</li>
+             * <li>Planned: the resource job has completed the Plan execution.</li>
+             * <li>PlannedAndFinished: no differences are found after the Plan execution is complete. The job is in a final status.</li>
+             * <li>Errored: the job execution encountered an error and entered a final status.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Errored</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -683,7 +739,10 @@ public class GetTerraformStateDetectionResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Stack</p>
              */
             public Builder type(String type) {
                 this.type = type;

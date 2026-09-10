@@ -67,7 +67,7 @@ public class GetParameterSetResponseBody extends TeaModel {
         } 
 
         /**
-         * parameterSet.
+         * <p>The parameter set details.</p>
          */
         public Builder parameterSet(ParameterSet parameterSet) {
             this.parameterSet = parameterSet;
@@ -75,7 +75,10 @@ public class GetParameterSetResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99905C7C-1320-5E7F-A798-3071482EB08E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class GetParameterSetResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -188,7 +194,7 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * secret.
+             * <p>Specifies whether the parameter is secret. Secret parameters are hidden in API responses and console displays, and are stored with encryption.</p>
              */
             public Builder secret(Boolean secret) {
                 this.secret = secret;
@@ -196,7 +202,14 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The parameter set status. Valid values:</p>
+             * <ul>
+             * <li>HAS_VALUE (default): A specific value is defined.</li>
+             * <li>EXPLICIT_NULL: Explicitly set to null.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HAS_VALUE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -204,7 +217,10 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the parameter (string/number/bool/map(string)/list(string)).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -212,7 +228,10 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -292,7 +311,10 @@ public class GetParameterSetResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-24T22:58:50Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -300,7 +322,10 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * resourceId.
+             * <p>The resource ID. When the resource type is ModuleVersion, the ID is composed of <moduleId>-<moduleversion>, such as mod-34535345df123fr-v3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mod-433aead756057101546eb5d50c1</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -308,7 +333,15 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li>Module: template.</li>
+             * <li>ModuleVersion: template version.</li>
+             * <li>Task: task.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Module</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -427,7 +460,10 @@ public class GetParameterSetResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-30T02:14:16Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -435,7 +471,10 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description of the parameter set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is parameterSet</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -443,7 +482,10 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the parameter set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -451,7 +493,10 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * parameterSetId.
+             * <p>The parameter set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pts-3b6cb9fa4751afff9c5e4e01624b9</p>
              */
             public Builder parameterSetId(String parameterSetId) {
                 this.parameterSetId = parameterSetId;
@@ -459,7 +504,7 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * parameters.
+             * <p>The parameters in the parameter set.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
@@ -467,7 +512,7 @@ public class GetParameterSetResponseBody extends TeaModel {
             }
 
             /**
-             * relationList.
+             * <p>The association relationships.</p>
              */
             public Builder relationList(java.util.List<RelationList> relationList) {
                 this.relationList = relationList;

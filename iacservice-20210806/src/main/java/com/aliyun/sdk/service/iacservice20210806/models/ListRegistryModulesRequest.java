@@ -129,7 +129,10 @@ public class ListRegistryModulesRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The search keyword. Fuzzy match on module names is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -138,7 +141,10 @@ public class ListRegistryModulesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -147,7 +153,10 @@ public class ListRegistryModulesRequest extends Request {
         }
 
         /**
-         * namespaceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("namespaceName", namespaceName);
@@ -156,7 +165,10 @@ public class ListRegistryModulesRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NFzbQCa7/yd7rAuSo5xZb54dD+2BRJj42DLT6GrZysw=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -165,7 +177,10 @@ public class ListRegistryModulesRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The filter condition for Registry module status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -174,7 +189,21 @@ public class ListRegistryModulesRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The workspace type. Valid values:</p>
+         * <ul>
+         * <li><p>system: public module</p>
+         * </li>
+         * <li><p>self: custom module</p>
+         * </li>
+         * <li><p>shared: shared module</p>
+         * </li>
+         * <li><p>community: community module</p>
+         * </li>
+         * </ul>
+         * <p>By default, all types are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

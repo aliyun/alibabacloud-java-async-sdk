@@ -285,6 +285,7 @@ public class UpdateTaskAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +298,14 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * autoApply.
+         * <p>Specifies whether to automatically execute the node. Default value: false.</p>
+         * <ul>
+         * <li>true: After the preview is complete (terraform plan), the execution (terraform apply) is automatically performed without manual confirmation.</li>
+         * <li>false: After the preview is complete (terraform plan), manual confirmation is required before the execution (terraform apply) starts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoApply(Boolean autoApply) {
             this.putBodyParameter("autoApply", autoApply);
@@ -306,7 +314,14 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * autoDestroy.
+         * <p>Specifies whether to automatically destroy resources after creation. Default value: false.</p>
+         * <ul>
+         * <li>true: After the execution is complete (terraform apply), the destroy operation (terraform destroy) is automatically performed without manual confirmation.</li>
+         * <li>false: After the execution is complete (terraform apply), no further action is taken.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoDestroy(Boolean autoDestroy) {
             this.putBodyParameter("autoDestroy", autoDestroy);
@@ -315,7 +330,11 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -324,7 +343,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -333,7 +355,7 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * groupInfo.
+         * <p>The project group information.</p>
          */
         public Builder groupInfo(GroupInfo groupInfo) {
             this.putBodyParameter("groupInfo", groupInfo);
@@ -342,7 +364,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * initModuleState.
+         * <p>Specifies whether to use a state file. Default value: false. This parameter applies to templates that originate from resource export. Only one node can use this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder initModuleState(Boolean initModuleState) {
             this.putBodyParameter("initModuleState", initModuleState);
@@ -351,7 +376,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * moduleVersion.
+         * <p>The template version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder moduleVersion(String moduleVersion) {
             this.putBodyParameter("moduleVersion", moduleVersion);
@@ -360,7 +388,15 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The node name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
+         * <li>The name must be unique among all node resources within the current account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TaskName</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -369,7 +405,7 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * protectionStrategy.
+         * <p>The list of resource protection strategies.</p>
          */
         public Builder protectionStrategy(java.util.List<String> protectionStrategy) {
             this.putBodyParameter("protectionStrategy", protectionStrategy);
@@ -378,7 +414,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * ramRole.
+         * <p>The RAM role. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role</p>
          */
         public Builder ramRole(String ramRole) {
             this.putBodyParameter("ramRole", ramRole);
@@ -387,7 +426,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * skipPropertyValidation.
+         * <p>Specifies whether to skip enumeration value validation. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder skipPropertyValidation(Boolean skipPropertyValidation) {
             this.putBodyParameter("skipPropertyValidation", skipPropertyValidation);
@@ -396,7 +438,7 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * skipRegionValidation.
+         * <p>Specifies whether to skip region validation. Valid values: true indicates skipping, false indicates not skipping.</p>
          */
         public Builder skipRegionValidation(Boolean skipRegionValidation) {
             this.putBodyParameter("skipRegionValidation", skipRegionValidation);
@@ -405,7 +447,7 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The list of tags for the node.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -414,7 +456,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * terraformProviderVersion.
+         * <p>The Terraform Provider version. Use the <strong>ListTerraformProviderVersions</strong> API to query the list of supported versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.248.0</p>
          */
         public Builder terraformProviderVersion(String terraformProviderVersion) {
             this.putBodyParameter("terraformProviderVersion", terraformProviderVersion);
@@ -423,7 +468,10 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * terraformVersion.
+         * <p>The Terraform version. Use the <strong>ListAvailableTerraformVersions</strong> API to obtain the list of supported versions. Default value: 1.5.7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.5.7</p>
          */
         public Builder terraformVersion(String terraformVersion) {
             this.putBodyParameter("terraformVersion", terraformVersion);
@@ -432,7 +480,17 @@ public class UpdateTaskAttributeRequest extends Request {
         }
 
         /**
-         * triggerStrategy.
+         * <p>The job trigger method.</p>
+         * <ul>
+         * <li>Manual: manual trigger (default).</li>
+         * <li>NewVersion: triggered when a new template version is published.</li>
+         * <li>ParameterSetUpdated: triggered when the parameter set content changes or the parameter set attach relationship changes.</li>
+         * <li>Auto: automatically triggered when the node properties change, such as creating a node, changing the execution version, or changing the job trigger policy (when changed from another method to Auto).</li>
+         * </ul>
+         * <p>The <strong>ramRole</strong> parameter is required for non-manual triggers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder triggerStrategy(String triggerStrategy) {
             this.putBodyParameter("triggerStrategy", triggerStrategy);
@@ -500,7 +558,10 @@ public class UpdateTaskAttributeRequest extends Request {
             } 
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-433aead7560571e66e31274ffd3</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -508,7 +569,10 @@ public class UpdateTaskAttributeRequest extends Request {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-433aead75605713865c386cb9d</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -575,7 +639,10 @@ public class UpdateTaskAttributeRequest extends Request {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -583,7 +650,10 @@ public class UpdateTaskAttributeRequest extends Request {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

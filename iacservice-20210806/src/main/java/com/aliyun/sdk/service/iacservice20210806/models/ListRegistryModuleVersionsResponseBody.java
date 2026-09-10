@@ -106,7 +106,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * count.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -114,7 +117,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page in a paged query. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +128,7 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * moduleVersions.
+         * <p>The list of template versions.</p>
          */
         public Builder moduleVersions(java.util.List<ModuleVersions> moduleVersions) {
             this.moduleVersions = moduleVersions;
@@ -130,7 +136,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IbuvZ8iOH447bhHWDavGTOMijI2Jep7c=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -138,7 +147,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8606B880-3485-54E2-89E1-43361C468C85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +281,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-28 11:15:57</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -277,7 +292,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * moduleName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ModuleName</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -285,7 +303,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * namespaceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NamespaceName</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -293,7 +314,13 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * provider.
+             * <p>The provider type. Valid values:</p>
+             * <ul>
+             * <li>alicloud: Alibaba Cloud.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -301,7 +328,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The template source, in the format of namespaceName/ModuleName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_namespace/RegistryModule-test0e</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -309,7 +339,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * sourceUrl.
+             * <p>The source URL of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -317,7 +350,10 @@ public class ListRegistryModuleVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

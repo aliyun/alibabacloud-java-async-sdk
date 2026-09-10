@@ -54,7 +54,10 @@ public class DeleteStackResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7070EC3-DF66-58BA-A1DD-A8574FF53143</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

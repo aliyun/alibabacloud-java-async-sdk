@@ -115,7 +115,10 @@ public class ValidateModuleRequest extends Request {
         } 
 
         /**
-         * clientToken.
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2daf4227f747cbf11a5501f18cc5e004</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -124,7 +127,10 @@ public class ValidateModuleRequest extends Request {
         }
 
         /**
-         * code.
+         * <p>The template text that is directly passed in when source is set to Upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("code", code);
@@ -133,7 +139,10 @@ public class ValidateModuleRequest extends Request {
         }
 
         /**
-         * codeMap.
+         * <p>Specifies multiple configuration files to pass in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;main.tf&quot;:&quot;xxx&quot;}</p>
          */
         public Builder codeMap(java.util.Map<String, ?> codeMap) {
             this.putBodyParameter("codeMap", codeMap);
@@ -142,7 +151,11 @@ public class ValidateModuleRequest extends Request {
         }
 
         /**
-         * source.
+         * <p>The template source. Valid values:
+         * Upload: text upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Upload</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("source", source);
@@ -151,7 +164,10 @@ public class ValidateModuleRequest extends Request {
         }
 
         /**
-         * sourcePath.
+         * <p>The source path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder sourcePath(String sourcePath) {
             this.putBodyParameter("sourcePath", sourcePath);

@@ -80,7 +80,7 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
         } 
 
         /**
-         * detectConfigRelations.
+         * <p>List of associations</p>
          */
         public Builder detectConfigRelations(java.util.List<DetectConfigRelations> detectConfigRelations) {
             this.detectConfigRelations = detectConfigRelations;
@@ -88,7 +88,7 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>0D797DC3-FF04-5C21-81EB-XXXXXXXXX</p>
@@ -99,7 +99,10 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +220,10 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
             } 
 
             /**
-             * attachDate.
+             * <p>Association time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-08T08:53:07.000+00:00</p>
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -225,7 +231,10 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * detectConfigId.
+             * <p>Drift detection configuration ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc-xxxx</p>
              */
             public Builder detectConfigId(String detectConfigId) {
                 this.detectConfigId = detectConfigId;
@@ -233,7 +242,10 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * enabled.
+             * <p>Whether enabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -241,7 +253,10 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * targetId.
+             * <p>Target ID. StackId or TaskId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stack-xxxx</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -249,7 +264,10 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * targetName.
+             * <p>Target name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stack-name-xxx</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -257,7 +275,14 @@ public class ListDetectConfigRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * targetType.
+             * <p>Target type  </p>
+             * <ul>
+             * <li>Task: orchestration job  </li>
+             * <li>Stack: resource stack</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Stack</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

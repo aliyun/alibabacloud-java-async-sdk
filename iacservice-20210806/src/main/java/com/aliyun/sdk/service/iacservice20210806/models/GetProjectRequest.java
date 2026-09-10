@@ -59,7 +59,10 @@ public class GetProjectRequest extends Request {
         } 
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-433aead7560572f8d95b25775c</p>
          */
         public Builder projectId(String projectId) {
             this.putPathParameter("projectId", projectId);

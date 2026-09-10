@@ -59,7 +59,10 @@ public class DeleteGroupRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-4267dcfbf1b6d128c87adf0e95f</p>
          */
         public Builder groupId(String groupId) {
             this.putPathParameter("groupId", groupId);

@@ -103,6 +103,7 @@ public class UpdateParameterSetAttributeRequest extends Request {
         } 
 
         /**
+         * <p>The parameter set ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class UpdateParameterSetAttributeRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the parameter set. Maximum length: 1024 characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is parameterSet</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -124,10 +128,11 @@ public class UpdateParameterSetAttributeRequest extends Request {
         }
 
         /**
+         * <p>The name of the parameter set. Maximum length: 128 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>demo</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -136,7 +141,7 @@ public class UpdateParameterSetAttributeRequest extends Request {
         }
 
         /**
-         * parameters.
+         * <p>The parameter list.</p>
          */
         public Builder parameters(java.util.List<Parameters> parameters) {
             this.putBodyParameter("parameters", parameters);
@@ -243,10 +248,10 @@ public class UpdateParameterSetAttributeRequest extends Request {
             } 
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>region</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +259,7 @@ public class UpdateParameterSetAttributeRequest extends Request {
             }
 
             /**
-             * secret.
+             * <p>Specifies whether the parameter is a secret parameter. Secret parameters are hidden in API responses and console displays, and are stored with encryption.</p>
              */
             public Builder secret(Boolean secret) {
                 this.secret = secret;
@@ -262,7 +267,12 @@ public class UpdateParameterSetAttributeRequest extends Request {
             }
 
             /**
-             * status.
+             * <p>The parameter set status. Valid values: </p>
+             * <p>HAS_VALUE (default): Defines a specific value. </p>
+             * <p>EXPLICIT_NULL: Explicitly set to null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HAS_VALUE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -270,7 +280,10 @@ public class UpdateParameterSetAttributeRequest extends Request {
             }
 
             /**
-             * type.
+             * <p>The parameter type (string/number/bool/map(string)/list(string)).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,7 +291,10 @@ public class UpdateParameterSetAttributeRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The parameter value. Use JSON for complex types.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder value(String value) {
                 this.value = value;

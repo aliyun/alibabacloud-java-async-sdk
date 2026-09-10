@@ -54,7 +54,10 @@ public class UpdateExplorerModuleAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25B274BA-E672-58C0-8602-541281B6F758</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

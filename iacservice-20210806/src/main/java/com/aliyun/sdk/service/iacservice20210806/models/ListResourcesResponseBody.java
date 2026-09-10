@@ -106,7 +106,7 @@ public class ListResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Resources.
+         * <p>The resource information.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -114,7 +114,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67585D9B-EFA5-5E51-BAB1-8FF07DA1B36F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -212,7 +227,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -487,7 +505,10 @@ public class ListResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * accountId.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>365845</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -495,7 +516,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-03T02:22:59Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -503,7 +527,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * dependsOnResourceIds.
+             * <p>The dependent resources.</p>
              */
             public Builder dependsOnResourceIds(java.util.List<String> dependsOnResourceIds) {
                 this.dependsOnResourceIds = dependsOnResourceIds;
@@ -511,7 +535,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * productCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -519,7 +546,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * properties.
+             * <p>The resource properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
@@ -527,7 +557,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * propertyVariables.
+             * <p>The property variables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder propertyVariables(java.util.Map<String, ?> propertyVariables) {
                 this.propertyVariables = propertyVariables;
@@ -535,7 +568,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -543,7 +579,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceArn.
+             * <p>The resource ARN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:vpc:cn-hangzhou:12345:test</p>
              */
             public Builder resourceArn(String resourceArn) {
                 this.resourceArn = resourceArn;
@@ -551,7 +590,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzyqyghofqbxy</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -559,7 +601,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-efegsewrttfd</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -567,7 +612,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceName.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -575,7 +623,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourcePageUrl.
+             * <p>The URL of the resources page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https:://ecs.aliyncs.com</p>
              */
             public Builder resourcePageUrl(String resourcePageUrl) {
                 this.resourcePageUrl = resourcePageUrl;
@@ -583,7 +634,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * resourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -591,7 +645,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -599,7 +656,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -629,7 +686,10 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

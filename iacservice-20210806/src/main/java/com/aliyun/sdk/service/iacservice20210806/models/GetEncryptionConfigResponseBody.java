@@ -67,7 +67,7 @@ public class GetEncryptionConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * config.
+         * <p>The object key.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -183,7 +183,10 @@ public class GetEncryptionConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * alias.
+             * <p>The key alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alias/default</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -191,7 +194,10 @@ public class GetEncryptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * creator.
+             * <p>The creator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>561786482014xxxx</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -199,7 +205,10 @@ public class GetEncryptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * keyArn.
+             * <p>The key ARN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:kms:ap-southeast-6:561786482014xxxx:key/5f2fe70a-d110-44cc-990f-706eb20fxxxx</p>
              */
             public Builder keyArn(String keyArn) {
                 this.keyArn = keyArn;
@@ -207,7 +216,10 @@ public class GetEncryptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * keyId.
+             * <p>The key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5f2fe70a-d110-44cc-990f-706eb20fxxxx</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -215,7 +227,16 @@ public class GetEncryptionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The key status. Valid values:</p>
+             * <ul>
+             * <li>Enabled</li>
+             * <li>Disabled</li>
+             * <li>PendingDeletion</li>
+             * <li>PendingImport</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

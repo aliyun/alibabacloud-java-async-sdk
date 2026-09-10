@@ -90,6 +90,7 @@ public class AssociateDetectConfigRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the drift detection configuration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class AssociateDetectConfigRequest extends Request {
         }
 
         /**
+         * <p>The ID of the association target. The value is a StackId or TaskId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,11 @@ public class AssociateDetectConfigRequest extends Request {
         }
 
         /**
+         * <p>The type of the association target. Valid values:</p>
+         * <ul>
+         * <li>Task: orchestration task.</li>
+         * <li>Stack: resource stack.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

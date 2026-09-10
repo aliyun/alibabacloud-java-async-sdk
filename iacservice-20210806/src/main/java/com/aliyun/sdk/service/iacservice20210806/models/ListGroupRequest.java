@@ -115,7 +115,10 @@ public class ListGroupRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The search keyword. Name-based search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-case2</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -124,7 +127,10 @@ public class ListGroupRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -133,7 +139,10 @@ public class ListGroupRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results to return per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -142,7 +151,10 @@ public class ListGroupRequest extends Request {
         }
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-14e80de4866bf7ffed0c4072ed9b37</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("projectId", projectId);
@@ -151,7 +163,7 @@ public class ListGroupRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -220,7 +232,10 @@ public class ListGroupRequest extends Request {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -228,7 +243,10 @@ public class ListGroupRequest extends Request {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

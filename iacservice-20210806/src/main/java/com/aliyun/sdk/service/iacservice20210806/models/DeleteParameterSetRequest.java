@@ -60,6 +60,7 @@ public class DeleteParameterSetRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the parameter set.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

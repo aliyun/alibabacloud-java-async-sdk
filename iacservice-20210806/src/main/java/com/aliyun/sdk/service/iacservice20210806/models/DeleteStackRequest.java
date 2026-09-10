@@ -74,6 +74,7 @@ public class DeleteStackRequest extends Request {
         } 
 
         /**
+         * <p>The stack ID. This is the unique identifier generated after the stack is created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DeleteStackRequest extends Request {
         }
 
         /**
-         * cleanResources.
+         * <p>Specifies whether to synchronously clean up resources managed by the stack. By default, resources are not cleaned up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder cleanResources(Boolean cleanResources) {
             this.putQueryParameter("cleanResources", cleanResources);

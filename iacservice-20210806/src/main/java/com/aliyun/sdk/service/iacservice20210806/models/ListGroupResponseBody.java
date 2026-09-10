@@ -106,7 +106,10 @@ public class ListGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * count.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -114,7 +117,7 @@ public class ListGroupResponseBody extends TeaModel {
         }
 
         /**
-         * groups.
+         * <p>The list of service group IDs.</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -122,7 +125,10 @@ public class ListGroupResponseBody extends TeaModel {
         }
 
         /**
-         * pageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -130,7 +136,10 @@ public class ListGroupResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * <p>The page size, which indicates the maximum number of results returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -138,7 +147,10 @@ public class ListGroupResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6ED9F71-7FA8-598E-B64D-4606FB3FCCC9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +216,10 @@ public class ListGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -212,7 +227,10 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iac</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -383,7 +401,10 @@ public class ListGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-09-14T07:19:13Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -391,7 +412,10 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The group description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -399,7 +423,10 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-148e7853433574fffe9fec72ed9b73</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -407,7 +434,10 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * isDefault.
+             * <p>Indicates whether the group is the default group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -415,7 +445,10 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * moduleCnt.
+             * <p>The number of templates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder moduleCnt(Long moduleCnt) {
                 this.moduleCnt = moduleCnt;
@@ -423,7 +456,10 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -431,7 +467,10 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-4267dcfbf1b6d126edcadf0e949</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -439,7 +478,10 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * sceneTestingTaskCnt.
+             * <p>The number of scenario-based testing tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sceneTestingTaskCnt(Long sceneTestingTaskCnt) {
                 this.sceneTestingTaskCnt = sceneTestingTaskCnt;
@@ -447,7 +489,7 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -455,7 +497,10 @@ public class ListGroupResponseBody extends TeaModel {
             }
 
             /**
-             * taskCnt.
+             * <p>The number of tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder taskCnt(Long taskCnt) {
                 this.taskCnt = taskCnt;

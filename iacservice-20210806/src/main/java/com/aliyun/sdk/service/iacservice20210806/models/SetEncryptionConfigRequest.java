@@ -87,7 +87,10 @@ public class SetEncryptionConfigRequest extends Request {
         } 
 
         /**
-         * clientToken.
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -96,7 +99,10 @@ public class SetEncryptionConfigRequest extends Request {
         }
 
         /**
-         * kmsKeyId.
+         * <p>The ID of the KMS key used for encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>09d0641c-e96c-495a-925e-9b50xxxxxxxx</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putBodyParameter("kmsKeyId", kmsKeyId);
@@ -105,7 +111,10 @@ public class SetEncryptionConfigRequest extends Request {
         }
 
         /**
-         * kmsRegionId.
+         * <p>The region ID of the KMS key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder kmsRegionId(String kmsRegionId) {
             this.putBodyParameter("kmsRegionId", kmsRegionId);

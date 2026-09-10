@@ -146,7 +146,13 @@ public class CreateRegistryModuleRequest extends Request {
         } 
 
         /**
-         * acl.
+         * <p>The access permission. Valid values:</p>
+         * <ul>
+         * <li>private: private.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         public Builder acl(String acl) {
             this.putBodyParameter("acl", acl);
@@ -155,6 +161,7 @@ public class CreateRegistryModuleRequest extends Request {
         }
 
         /**
+         * <p>The idempotence token. Format: [0-9a-zA-Z-]{1,64}. Use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +174,10 @@ public class CreateRegistryModuleRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the Registry template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -176,10 +186,16 @@ public class CreateRegistryModuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the Registry template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 3 to 63 characters in length.</li>
+         * <li>The name can contain uppercase and lowercase letters, digits, hyphens (-), and underscores (_), and cannot start or end with a hyphen.</li>
+         * <li>The name must be unique within the workspace.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc</p>
+         * <p>ModuleName</p>
          */
         public Builder moduleName(String moduleName) {
             this.putBodyParameter("moduleName", moduleName);
@@ -188,10 +204,11 @@ public class CreateRegistryModuleRequest extends Request {
         }
 
         /**
+         * <p>The workspace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>NamespaceName</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putBodyParameter("namespaceName", namespaceName);
@@ -200,7 +217,13 @@ public class CreateRegistryModuleRequest extends Request {
         }
 
         /**
-         * provider.
+         * <p>The provider type. Valid values:</p>
+         * <ul>
+         * <li>alicloud: Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alicloud</p>
          */
         public Builder provider(String provider) {
             this.putBodyParameter("provider", provider);
@@ -209,7 +232,13 @@ public class CreateRegistryModuleRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The template type. Valid values:</p>
+         * <ul>
+         * <li>self: custom template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>self</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

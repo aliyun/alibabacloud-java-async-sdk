@@ -186,7 +186,10 @@ public class ListTasksRequest extends Request {
         } 
 
         /**
-         * groupId.
+         * <p>The group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-59d8d22e78792ffe3d3eb6154d727</p>
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("groupId", groupId);
@@ -195,7 +198,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * keyword.
+         * <p>The keyword used to perform a fuzzy search by task ID or task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -204,7 +210,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * kmsKeyId.
+         * <p>The key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putQueryParameter("kmsKeyId", kmsKeyId);
@@ -213,7 +222,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * moduleId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mod-1525e992f1b62139d1c437d64ae</p>
          */
         public Builder moduleId(String moduleId) {
             this.putQueryParameter("moduleId", moduleId);
@@ -222,7 +234,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -231,7 +246,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -240,7 +258,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * projectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p-433aead7560572f8d95b25775c</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("projectId", projectId);
@@ -249,7 +270,18 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>Planning: The job is in the Plan execution phase.</li>
+         * <li>Planned: The job has completed the Plan execution.</li>
+         * <li>PlannedAndFinished: After the Plan execution is complete, no diff is found. The job is in a final state.</li>
+         * <li>Applying: The job is in the Apply execution phase.</li>
+         * <li>Applied: The job has completed the Apply execution.</li>
+         * <li>Errored: The job execution encountered an error and entered a final state.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Errored</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -258,7 +290,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * tag.
+         * <p>The list of task tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "tag", "json");
@@ -268,7 +300,10 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * taskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task-433aead756057fffeaba4828f5195</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("taskId", taskId);
@@ -336,7 +371,10 @@ public class ListTasksRequest extends Request {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -344,7 +382,10 @@ public class ListTasksRequest extends Request {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

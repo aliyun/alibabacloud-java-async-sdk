@@ -67,7 +67,7 @@ public class GetJobResponseBody extends TeaModel {
         } 
 
         /**
-         * job.
+         * <p>The job details.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -75,7 +75,10 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1435C78A-AED9-53D6-B7A6-E2661D29B1FA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -263,7 +266,17 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * comparison.
+             * <p>The comparison operator. Valid values:</p>
+             * <ul>
+             * <li>eq: equal to</li>
+             * <li>n_eq: not equal to</li>
+             * <li>ctn: contains</li>
+             * <li>n_ctn: does not contain</li>
+             * <li>regex: regular expression match.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder comparison(String comparison) {
                 this.comparison = comparison;
@@ -271,7 +284,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * expectedValue.
+             * <p>The expected value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>期望值</p>
              */
             public Builder expectedValue(String expectedValue) {
                 this.expectedValue = expectedValue;
@@ -279,7 +295,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * isPass.
+             * <p>Indicates whether the assertion check is passed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPass(Boolean isPass) {
                 this.isPass = isPass;
@@ -287,7 +306,15 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The assertion type. Valid values:</p>
+             * <ul>
+             * <li>state: task status</li>
+             * <li>result: execution result</li>
+             * <li>resourceChange: resource change.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>result</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -406,7 +433,10 @@ public class GetJobResponseBody extends TeaModel {
             } 
 
             /**
-             * autoApply.
+             * <p>Specifies whether to automatically execute the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoApply(Boolean autoApply) {
                 this.autoApply = autoApply;
@@ -414,7 +444,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * hasConfigProactive.
+             * <p>Specifies whether compliance pre-check is performed for this job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasConfigProactive(String hasConfigProactive) {
                 this.hasConfigProactive = hasConfigProactive;
@@ -422,7 +455,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * isDestroy.
+             * <p>Specifies whether to destroy resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fales</p>
              */
             public Builder isDestroy(Boolean isDestroy) {
                 this.isDestroy = isDestroy;
@@ -430,7 +466,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * moduleVersion.
+             * <p>The template version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder moduleVersion(String moduleVersion) {
                 this.moduleVersion = moduleVersion;
@@ -438,7 +477,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * resourcesChanged.
+             * <p>The resource change content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>+0 ~0 -0</p>
              */
             public Builder resourcesChanged(String resourcesChanged) {
                 this.resourcesChanged = resourcesChanged;
@@ -446,7 +488,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * subCommand.
+             * <p>The operation command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>destroy</p>
              */
             public Builder subCommand(String subCommand) {
                 this.subCommand = subCommand;
@@ -755,7 +800,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * assertCheckDetail.
+             * <p>The list of assertion checks. This parameter applies to scenario-based testing tasks.</p>
              */
             public Builder assertCheckDetail(java.util.List<AssertCheckDetail> assertCheckDetail) {
                 this.assertCheckDetail = assertCheckDetail;
@@ -763,7 +808,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * config.
+             * <p>The job configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -771,7 +816,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-31T03:38:40Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -779,7 +827,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The job description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -787,7 +838,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * downloadUrl.
+             * <p>The download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>url</p>
              */
             public Builder downloadUrl(java.util.Map<String, ?> downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -795,7 +849,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * elapsedTime.
+             * <p>The execution duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3s</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -803,7 +860,14 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * executeType.
+             * <p>The execution type. Valid values:</p>
+             * <ul>
+             * <li>Manual: manual execution (default)</li>
+             * <li>Auto: automatic execution.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder executeType(String executeType) {
                 this.executeType = executeType;
@@ -811,7 +875,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * isPassAssertCheck.
+             * <p>Indicates whether the assertion check is passed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPassAssertCheck(Boolean isPassAssertCheck) {
                 this.isPassAssertCheck = isPassAssertCheck;
@@ -819,7 +886,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * jobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-518855d9a058cfff0dc933e6b5767</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -827,7 +897,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * jobType.
+             * <p>The job type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -835,7 +908,19 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * logFile.
+             * <p>The run logs. The following log content (key values) is currently supported:</p>
+             * <ul>
+             * <li><p>tf-init.run.error.log</p>
+             * </li>
+             * <li><p>tf-init.plan.log</p>
+             * </li>
+             * <li><p>tf-plan.run.log</p>
+             * </li>
+             * <li><p>tf-apply.run.log</p>
+             * </li>
+             * <li><p>tf-init.apply.log.</p>
+             * </li>
+             * </ul>
              */
             public Builder logFile(java.util.Map<String, ?> logFile) {
                 this.logFile = logFile;
@@ -843,7 +928,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * output.
+             * <p>The job output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -851,7 +939,39 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * outputJsonPlan.
+             * <p>The change details of the Plan phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;formatVersion&quot;: &quot;1.2&quot;,
+             *     &quot;terraformVersion&quot;: &quot;1.5.7&quot;,
+             *     &quot;providerVersion&quot;: &quot;1.262.1&quot;,
+             *     &quot;plannedValues&quot;: {
+             *         &quot;root_module&quot;: {
+             *         }
+             *     },
+             *     &quot;resourceChanges&quot;: [
+             *         {
+             *             &quot;address&quot;: &quot;alicloud_instance.uuid_ae98dda8_xxxxxxx&quot;,
+             *             &quot;mode&quot;: &quot;managed&quot;,
+             *             &quot;type&quot;: &quot;alicloud_instance&quot;,
+             *             &quot;name&quot;: &quot;uuid_ae98dda8_xxxxxx&quot;,
+             *             &quot;providerName&quot;: &quot;registry.terraform.io/aliyun/alicloud&quot;,
+             *             &quot;change&quot;: {
+             *                 &quot;actions&quot;: [
+             *                     &quot;delete&quot;
+             *                 ],
+             *                 &quot;before&quot;: Object{...},
+             *                 &quot;after_unknown&quot;: {
+             *                 },
+             *                 &quot;before_sensitive&quot;: Object{...},
+             *                 &quot;after_sensitive&quot;: false
+             *             },
+             *             &quot;cloudSpecResourceCode&quot;: &quot;ACS::ECS::Instance&quot;
+             *         }
+             *     ],
+             *     &quot;configuration&quot;: Object{...}
+             * }</p>
              */
             public Builder outputJsonPlan(Object outputJsonPlan) {
                 this.outputJsonPlan = outputJsonPlan;
@@ -859,7 +979,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * parameters.
+             * <p>The collection of parameters.</p>
              */
             public Builder parameters(java.util.Map<String, String> parameters) {
                 this.parameters = parameters;
@@ -867,7 +987,27 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The job status. Valid values:</p>
+             * <ul>
+             * <li>Pending: the initial status after the job is created.</li>
+             * <li>PlanQueued: the job is queued because no available worker is ready after the job is created.</li>
+             * <li>Planning: the resource job is in the Plan phase.</li>
+             * <li>ConfigProactiveInProgress: compliance pre-check is in progress. The compliance pre-check feature must be enabled for the account.</li>
+             * <li>ConfigProactiveSuccess: compliance pre-check succeeded. The compliance pre-check feature must be enabled for the account.</li>
+             * <li>Planned: the resource job has completed the Plan phase.</li>
+             * <li>PlannedAndFinished: no diff is found after the Plan phase is completed. This is a final status.</li>
+             * <li>Confirmed: the resource job is waiting for confirmation after the Plan phase is completed.</li>
+             * <li>ApplyQueued: the job is queued because no available worker is ready during execution.</li>
+             * <li>Applying: the resource job is in the Apply phase.</li>
+             * <li>Applied: the resource job has completed the Apply phase. This is a final status.</li>
+             * <li>Errored: the job execution encountered an error. This is a final status.</li>
+             * <li>Canceled: the job execution was canceled. This is a final status.</li>
+             * <li>Discarded: the plan of the resource job was discarded. This is a final status.</li>
+             * <li>ConfigProactiveFailure: compliance pre-check failed. The compliance pre-check feature must be enabled for the account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Errored</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -875,7 +1015,7 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * statusDetail.
+             * <p>The job status details.</p>
              */
             public Builder statusDetail(java.util.Map<String, JobStatusDetailValue> statusDetail) {
                 this.statusDetail = statusDetail;
@@ -883,7 +1023,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-3b6cb9fa4751a1b9b5f22cbcf4e</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -891,7 +1034,14 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * taskType.
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li>Task: regular task (default)</li>
+             * <li>SceneTestingTask: scenario-based testing task.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SceneTestingTask</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -899,7 +1049,10 @@ public class GetJobResponseBody extends TeaModel {
             }
 
             /**
-             * terraformProviderVersion.
+             * <p>The Terraform provider version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.230.0</p>
              */
             public Builder terraformProviderVersion(String terraformProviderVersion) {
                 this.terraformProviderVersion = terraformProviderVersion;

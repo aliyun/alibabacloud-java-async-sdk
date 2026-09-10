@@ -102,7 +102,10 @@ public class ListParameterSetsRequest extends Request {
         } 
 
         /**
-         * keyword.
+         * <p>The keyword for exact match search. The search is case-insensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
@@ -111,7 +114,10 @@ public class ListParameterSetsRequest extends Request {
         }
 
         /**
-         * kmsKeyId.
+         * <p>The key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.putQueryParameter("kmsKeyId", kmsKeyId);
@@ -120,7 +126,10 @@ public class ListParameterSetsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -129,7 +138,10 @@ public class ListParameterSetsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * <p>The number of results returned per page. Default value: 20. Minimum value: 1. Maximum value: 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

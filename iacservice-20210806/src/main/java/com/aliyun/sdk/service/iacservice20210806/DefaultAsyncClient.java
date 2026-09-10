@@ -43,6 +43,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of AddSharedAccounts  AddSharedAccountsRequest
      * @return AddSharedAccountsResponse
      */
@@ -97,6 +100,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>After creating a parameter set, you need to associate it with a resource. Valid values for the resource type:</p>
+     * <ul>
+     * <li>Module: template</li>
+     * <li>ModuleVersion: template version</li>
+     * <li>Task: node.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AssociateParameterSet  AssociateParameterSetRequest
      * @return AssociateParameterSetResponse
      */
@@ -115,6 +126,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of CancelResourceExportTask  CancelResourceExportTaskRequest
      * @return CancelResourceExportTaskResponse
      */
@@ -133,6 +147,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li>When <code>triggerType</code> is set to <code>Cron</code>, a valid <code>cronExpression</code> must be provided.  </li>
+     * <li>Each element in the <code>alarmConfigs</code> list must specify the alerting method <code>type</code> and the corresponding alerting address <code>address</code>.  </li>
+     * <li>If the <code>enabled</code> parameter is not explicitly set, its default value is <code>true</code>, meaning newly created detection configurations are enabled by default.  </li>
+     * <li>It is recommended to use a UUID as the value of <code>clientToken</code> to ensure request idempotence.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDetectConfig  CreateDetectConfigRequest
      * @return CreateDetectConfigResponse
      */
@@ -169,6 +192,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of CreateJob  CreateJobRequest
      * @return CreateJobResponse
      */
@@ -187,6 +213,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of CreateModule  CreateModuleRequest
      * @return CreateModuleResponse
      */
@@ -205,6 +234,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>Use the <code>clientToken</code> parameter to ensure idempotence of the request and prevent duplicate submissions caused by network retries.</li>
+     * <li>Use semantic versioning (such as <code>v1.0.0</code>).</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateModuleVersion  CreateModuleVersionRequest
      * @return CreateModuleVersionResponse
      */
@@ -223,6 +259,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation creates a new parameter set.</li>
+     * <li>The <code>name</code> field is required and can be up to 128 characters in length.</li>
+     * <li>Each element in the <code>parameters</code> array must contain the <code>name</code> field. Other fields are optional.</li>
+     * <li>Use the <code>clientToken</code> field to ensure idempotence of the request.</li>
+     * <li>The request header must contain authentication information to ensure secure access.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateParameterSet  CreateParameterSetRequest
      * @return CreateParameterSetResponse
      */
@@ -259,6 +305,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of CreateRegistryModule  CreateRegistryModuleRequest
      * @return CreateRegistryModuleResponse
      */
@@ -277,6 +326,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of CreateRegistryNamespace  CreateRegistryNamespaceRequest
      * @return CreateRegistryNamespaceResponse
      */
@@ -295,6 +347,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of CreateResourceExportTask  CreateResourceExportTaskRequest
      * @return CreateResourceExportTaskResponse
      */
@@ -331,6 +386,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of CreateTask  CreateTaskRequest
      * @return CreateTaskResponse
      */
@@ -403,6 +461,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation deletes a specified template.</li>
+     * <li>Deletion is irreversible. Proceed with caution.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteModule  DeleteModuleRequest
      * @return DeleteModuleResponse
      */
@@ -421,6 +486,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes a specified parameter set.</p>
+     * 
      * @param request the request parameters of DeleteParameterSet  DeleteParameterSetRequest
      * @return DeleteParameterSetResponse
      */
@@ -457,6 +525,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of DeleteRegistryModule  DeleteRegistryModuleRequest
      * @return DeleteRegistryModuleResponse
      */
@@ -475,6 +546,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of DeleteRegistryModuleVersion  DeleteRegistryModuleVersionRequest
      * @return DeleteRegistryModuleVersionResponse
      */
@@ -493,6 +567,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of DeleteRegistryNamespace  DeleteRegistryNamespaceRequest
      * @return DeleteRegistryNamespaceResponse
      */
@@ -511,6 +588,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of DeleteResourceExportTask  DeleteResourceExportTaskRequest
      * @return DeleteResourceExportTaskResponse
      */
@@ -547,6 +627,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.
+     * Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</p>
+     * 
      * @param request the request parameters of DeleteTask  DeleteTaskRequest
      * @return DeleteTaskResponse
      */
@@ -565,6 +649,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to perform drift detection on the state files of resource orchestration tasks and stack tasks in the automated service desk.</p>
+     * 
      * @param request the request parameters of DetectTerraformState  DetectTerraformStateRequest
      * @return DetectTerraformStateResponse
      */
@@ -637,6 +724,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is used to execute Terraform Module code to create or update cloud resources. Before using this API operation, make sure that all required authentication information is correctly configured and that the Terraform code corresponding to the Module meets the expected functional requirements.</p>
+     * 
      * @param request the request parameters of ExecuteRegistryModule  ExecuteRegistryModuleRequest
      * @return ExecuteRegistryModuleResponse
      */
@@ -655,6 +745,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of ExecuteResourceExportTask  ExecuteResourceExportTaskRequest
      * @return ExecuteResourceExportTaskResponse
      */
@@ -673,6 +766,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Executes the Terraform Apply command to create or update cloud resources based on the provided Terraform code. This API can handle complex scenarios such as operations that depend on a previous state.
+     * Before calling this API, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</p>
+     * 
      * @param request the request parameters of ExecuteTerraformApply  ExecuteTerraformApplyRequest
      * @return ExecuteTerraformApplyResponse
      */
@@ -691,6 +788,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Executes the Terraform Destroy command to destroy resources created by Terraform.</p>
+     * 
      * @param request the request parameters of ExecuteTerraformDestroy  ExecuteTerraformDestroyRequest
      * @return ExecuteTerraformDestroyResponse
      */
@@ -709,6 +809,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Executes a Terraform Plan command by using the provided Terraform code to create or update cloud resources. This API operation can handle complex scenarios such as operations that depend on a previous state.
+     * Before calling this API operation, ensure that all required authentication information is properly configured and that the Terraform code meets the expected functional requirements.</p>
+     * 
      * @param request the request parameters of ExecuteTerraformPlan  ExecuteTerraformPlanRequest
      * @return ExecuteTerraformPlanResponse
      */
@@ -781,6 +885,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the result of a Terraform run.</p>
+     * 
      * @param request the request parameters of GetExecuteState  GetExecuteStateRequest
      * @return GetExecuteStateResponse
      */
@@ -817,6 +924,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of GetJob  GetJobRequest
      * @return GetJobResponse
      */
@@ -835,6 +945,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the details of a specified template, including but not limited to the template name, description, source, status, and latest version. You must specify the template ID and include authentication information in the request.</p>
+     * 
      * @param request the request parameters of GetModule  GetModuleRequest
      * @return GetModuleResponse
      */
@@ -853,6 +967,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>You can call this operation to query the details of a specific version of a specified template, including the version number, description, and release time. Make sure that the template ID and version number are correct.</p>
+     * 
      * @param request the request parameters of GetModuleVersion  GetModuleVersionRequest
      * @return GetModuleVersionResponse
      */
@@ -871,6 +989,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation retrieves detailed parameter set information by specifying a <code>parameterSetId</code>.</li>
+     * <li>Authentication is required to access this operation.</li>
+     * <li>If the request is successful, detailed data including the parameter set name, description, and parameter list is returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of GetParameterSet  GetParameterSetRequest
      * @return GetParameterSetResponse
      */
@@ -925,6 +1051,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * @param request the request parameters of GetRegistryModule  GetRegistryModuleRequest
      * @return GetRegistryModuleResponse
      */
@@ -943,6 +1072,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * @param request the request parameters of GetRegistryModuleVersion  GetRegistryModuleVersionRequest
      * @return GetRegistryModuleVersionResponse
      */
@@ -961,6 +1093,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * @param request the request parameters of GetRegistryNamespace  GetRegistryNamespaceRequest
      * @return GetRegistryNamespaceResponse
      */
@@ -979,6 +1114,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of GetResourceExportTask  GetResourceExportTaskRequest
      * @return GetResourceExportTaskResponse
      */
@@ -997,6 +1135,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * @param request the request parameters of GetResourceType  GetResourceTypeRequest
      * @return GetResourceTypeResponse
      */
@@ -1069,6 +1210,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of GetTask  GetTaskRequest
      * @return GetTaskResponse
      */
@@ -1087,6 +1231,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to retrieve the detection results of state files for resource orchestration tasks and stack tasks on the automation service desk.</p>
+     * 
      * @param request the request parameters of GetTerraformStateDetection  GetTerraformStateDetectionRequest
      * @return GetTerraformStateDetectionResponse
      */
@@ -1141,6 +1288,22 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the example information of Terraform Modules officially provided by Alibaba Cloud.
+     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <ul>
+     * <li>If <code>nextToken</code> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModuleExamples operation to the <code>nextToken</code> value returned in the previous response. If the <code>NextToken</code> parameter is not specified, the first page of data is returned by default.</li>
+     * <li>You can use keyword, namespaceName, moduleName, moduleVersion, and exampleName as conditional filter settings to narrow down the search scope. Multiple filter conditions have a logical <code>AND</code> relationship, and only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: optional. Searches by keyword and supports fuzzy match on exampleName. For example, if keyword is set to ecs, module examples whose names contain ecs are returned.</li>
+     * <li>namespaceName: optional. Filters module examples by a specific workspace. For example, if namespaceName is set to alibaba, module examples in the alibaba workspace are returned.</li>
+     * <li>moduleName: optional. Filters module examples by a specific module name. For example, if moduleName is set to ecs, module examples whose module name is ecs are returned.</li>
+     * <li>moduleVersion: optional. Filters module examples by a specific module version. For example, if moduleVersion is set to 1.0.0, module examples whose module version is 1.0.0 are returned.</li>
+     * <li>exampleName: optional. Filters module examples by a specific example name. For example, if exampleName is set to ecs, module examples whose example name is ecs are returned.
+     * The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates processing of query results.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of ListExplorerRegistryModuleExamples  ListExplorerRegistryModuleExamplesRequest
      * @return ListExplorerRegistryModuleExamplesResponse
      */
@@ -1159,6 +1322,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the version information of official Terraform modules provided by Alibaba Cloud.
+     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <ul>
+     * <li>If <code>nextToken</code> is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModules operation to the <code>nextToken</code> value returned in the previous response. If the <code>NextToken</code> parameter is not specified, the first page of data is returned by default.</li>
+     * <li>You can use keyword, namespaceName, moduleName, and moduleVersion as conditional filter Settings to narrow the search scope. Multiple filter conditions have a logical <code>AND</code> relationship. Only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: optional. Performs a fuzzy match on the module name. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</li>
+     * <li>namespaceName: optional. Filters modules by a specific workspace. For example, if namespaceName is set to alibaba, modules whose workspace is alibaba are returned. When moduleName is specified, namespaceName must also be specified. You can call the ListExplorerRegistryModule operation to obtain the namespaceName information.</li>
+     * <li>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, modules whose name is ecs are returned.</li>
+     * <li>moduleVersion: optional. Filters modules by a specific version. For example, if moduleVersion is set to 1.0.0, modules whose version is 1.0.0 are returned.
+     * The response contains the request ID, total number of entries, data on the current page, and pagination information, which facilitates the processing of query results.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of ListExplorerRegistryModuleVersions  ListExplorerRegistryModuleVersionsRequest
      * @return ListExplorerRegistryModuleVersionsResponse
      */
@@ -1177,6 +1355,19 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries information about official Terraform modules provided by Alibaba Cloud.
+     * You can use the <code>maxResults</code> parameter to adjust the maximum number of entries to return.</p>
+     * <ul>
+     * <li>If the <code>nextToken</code> parameter is not included in the response, no more data is available. Otherwise, more data is available. To query the next page, set the <code>nextToken</code> parameter of the ListExplorerRegistryModules operation to the <code>nextToken</code> value returned in the previous response. If you do not specify the <code>NextToken</code> parameter, the first page of data is returned by default.</li>
+     * <li>You can use keyword and moduleName as filter conditions to narrow the search scope. Multiple filter conditions are evaluated by using a logical <code>AND</code>. Only resources that meet all filter conditions are returned.<ul>
+     * <li>keyword: optional. Searches by keyword through fuzzy matching against ModuleName. For example, if keyword is set to ecs, modules whose names contain ecs are returned.</li>
+     * <li>moduleName: optional. Filters modules by a specific name. For example, if moduleName is set to ecs, only the module whose name is exactly ecs is returned.
+     * The response contains the request ID, total number of entries, data of the current page, and pagination information, which facilitates the processing of query results.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of ListExplorerRegistryModules  ListExplorerRegistryModulesRequest
      * @return ListExplorerRegistryModulesResponse
      */
@@ -1213,6 +1404,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of ListJobs  ListJobsRequest
      * @return ListJobsResponse
      */
@@ -1231,6 +1425,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of ListModuleVersion  ListModuleVersionRequest
      * @return ListModuleVersionResponse
      */
@@ -1249,6 +1446,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation lists all Terraform templates under the current user. You can specify query parameters to implement pagination, fuzzy match template names, filter templates by source or status, and more. You can also filter templates by tags for more granular results.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>The pagination parameters <code>pageNumber</code> and <code>pageSize</code> help control the number of returned results.</li>
+     * <li>Use the <code>name</code> parameter to perform a fuzzy match search on template names.</li>
+     * <li>Use the <code>source</code> parameter to filter templates by source (such as OSS import or file upload).</li>
+     * <li>Use the <code>status</code> parameter to filter templates by status (such as created or published).</li>
+     * <li>Tag filtering requires a JSON-formatted string, for example, <code>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</code>.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListModules  ListModulesRequest
      * @return ListModulesResponse
      */
@@ -1285,6 +1494,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This operation queries all parameter sets in the system and supports filtering by keyword and paginated results. Authentication information is required in the request.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>The <code>keyword</code> parameter can be used to fuzzy match parameter sets by name or description.</li>
+     * <li>Pagination is controlled by <code>pageNumber</code> and <code>pageSize</code>. By default, results start from the first page. The page size is customizable but should be set to a reasonable value to avoid performance issues.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListParameterSets  ListParameterSetsRequest
      * @return ListParameterSetsResponse
      */
@@ -1303,6 +1521,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li><strong>Keyword search</strong>: Use the <code>keyword</code> parameter for fuzzy matching.</li>
+     * <li><strong>Paged query</strong>: Use <code>nextToken</code> for pagination and <code>maxResults</code> to specify the maximum number of results per page (default: 100, maximum: 200).</li>
+     * <li><strong>Terraform Provider version</strong>: The optional <code>terraformProviderVersion</code> parameter filters products associated with a specific Provider version.</li>
+     * <li><strong>Response structure</strong>: The response contains the request ID, total number of entries, data of the current page, and pagination information for easy processing of query results.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListProducts  ListProductsRequest
      * @return ListProductsResponse
      */
@@ -1339,6 +1566,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * @param request the request parameters of ListRegistryModuleVersions  ListRegistryModuleVersionsRequest
      * @return ListRegistryModuleVersionsResponse
      */
@@ -1357,6 +1587,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * @param request the request parameters of ListRegistryModules  ListRegistryModulesRequest
      * @return ListRegistryModulesResponse
      */
@@ -1375,6 +1608,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 200 calls per second.</p>
+     * 
      * @param request the request parameters of ListRegistryNamespaces  ListRegistryNamespacesRequest
      * @return ListRegistryNamespacesResponse
      */
@@ -1393,6 +1629,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of ListResourceExportTaskVersions  ListResourceExportTaskVersionsRequest
      * @return ListResourceExportTaskVersionsResponse
      */
@@ -1411,6 +1650,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Rate limit per user: 100 calls per second.</p>
+     * 
      * @param request the request parameters of ListResourceExportTasks  ListResourceExportTasksRequest
      * @return ListResourceExportTasksResponse
      */
@@ -1429,6 +1671,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API allows you to perform a conditional query for a list of resource types based on conditions such as product code, Terraform Provider version, child class, status, and keyword. The results contain detailed information about resources, including product code, status, status effective version, child class, Terraform Provider version, and resource type code. Paging is supported for handling large amounts of data.</p>
+     * 
      * @param request the request parameters of ListResourceTypes  ListResourceTypesRequest
      * @return ListResourceTypesResponse
      */
@@ -1501,6 +1747,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of ListTasks  ListTasksRequest
      * @return ListTasksResponse
      */
@@ -1537,6 +1786,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API is used to manage state files for resource orchestration tasks and stack tasks on the automated service desk.
+     * Before using this API, make sure that all required authentication information is correctly configured and that the Terraform code meets the expected functional requirements.</p>
+     * 
      * @param request the request parameters of ManageTerraformState  ManageTerraformStateRequest
      * @return ManageTerraformStateResponse
      */
@@ -1555,6 +1808,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Per-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of OperateJob  OperateJobRequest
      * @return OperateJobResponse
      */
@@ -1573,6 +1829,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of PublishRegistryModuleVersion  PublishRegistryModuleVersionRequest
      * @return PublishRegistryModuleVersionResponse
      */
@@ -1591,6 +1850,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of RemoveSharedAccounts  RemoveSharedAccountsRequest
      * @return RemoveSharedAccountsResponse
      */
@@ -1645,6 +1907,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Request Description</h2>
+     * <ul>
+     * <li><code>detectConfigId</code> is a required parameter used to identify the specific detection configuration to update.  </li>
+     * <li>When <code>triggerType</code> is set to <code>Cron</code>, a valid <code>cronExpression</code> must be provided.  </li>
+     * <li>Each element in the <code>alarmConfigs</code> list must include an alert type (<code>type</code>) and an address (<code>address</code>).  </li>
+     * <li>If you do not want to change certain properties (such as <code>name</code>, <code>description</code>, etc.), you can omit these fields from the request body.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateDetectConfig  UpdateDetectConfigRequest
      * @return UpdateDetectConfigResponse
      */
@@ -1663,6 +1934,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates an Explorer template.</p>
+     * 
      * @param request the request parameters of UpdateExplorerModuleAttribute  UpdateExplorerModuleAttributeRequest
      * @return UpdateExplorerModuleAttributeResponse
      */
@@ -1699,6 +1973,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation allows you to modify the basic attributes of an existing template, including but not limited to the template name, description, and tags.</li>
+     * <li>The update operation does not affect the content or version information of the template.</li>
+     * <li>To enable or disable deletion protection, use the deletionProtection parameter.</li>
+     * <li>Use clientToken to ensure the idempotence of the request and avoid duplicate submissions caused by network issues.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateModuleAttribute  UpdateModuleAttributeRequest
      * @return UpdateModuleAttributeResponse
      */
@@ -1717,6 +2000,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation allows you to modify the basic information of an existing parameter set, including the name and description.</li>
+     * <li>If the request includes the <code>parameters</code> field, the parameter list in the parameter set is updated.</li>
+     * <li>The <code>clientToken</code> field can be used to ensure the idempotence of the request.</li>
+     * <li>The update operation requires a valid <code>parameterSetId</code> as a path parameter.</li>
+     * <li>The request must include authentication information to pass identity verification.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateParameterSetAttribute  UpdateParameterSetAttributeRequest
      * @return UpdateParameterSetAttributeResponse
      */
@@ -1753,6 +2046,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of UpdateRegistryModuleAttribute  UpdateRegistryModuleAttributeRequest
      * @return UpdateRegistryModuleAttributeResponse
      */
@@ -1771,6 +2067,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of UpdateRegistryNamespaceAttribute  UpdateRegistryNamespaceAttributeRequest
      * @return UpdateRegistryNamespaceAttributeResponse
      */
@@ -1789,6 +2088,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of UpdateResourceExportTaskAttribute  UpdateResourceExportTaskAttributeRequest
      * @return UpdateResourceExportTaskAttributeResponse
      */
@@ -1825,6 +2127,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Single-user call frequency: 100 calls per second.</p>
+     * 
      * @param request the request parameters of UpdateTaskAttribute  UpdateTaskAttributeRequest
      * @return UpdateTaskAttributeResponse
      */
@@ -1843,6 +2148,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Performs a dry run on the content of a Terraform configuration file.</p>
+     * 
      * @param request the request parameters of ValidateModule  ValidateModuleRequest
      * @return ValidateModuleResponse
      */

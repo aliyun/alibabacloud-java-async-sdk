@@ -144,6 +144,7 @@ public class UpdateStackRequest extends Request {
         } 
 
         /**
+         * <p>The stack ID. This is the unique identifier generated after the stack is created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a65451293e64979ba7a4b573950217fe</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -165,7 +169,10 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the stack.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -174,7 +181,10 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the stack. The name must be 2 to 128 characters in length and can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stack-test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -183,7 +193,10 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * ramRole.
+         * <p>The RAM role granted to the task. This role is used to automatically continue the execution of scheduled tasks during automatic triggering or offline scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestIacRole</p>
          */
         public Builder ramRole(String ramRole) {
             this.putBodyParameter("ramRole", ramRole);
@@ -192,7 +205,14 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * sourcePath.
+         * <p>The path of the configuration source. The value can be up to 1,000 characters in length.</p>
+         * <ul>
+         * <li>If the source is OSS, set this parameter to oss::<file URL>. The file must be a ZIP file. Example: oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>.</li>
+         * <li>If the source is IAC_SERVICE_MODULE, set this parameter to a template ID. Example: mod-xxxxx.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a></p>
          */
         public Builder sourcePath(String sourcePath) {
             this.putBodyParameter("sourcePath", sourcePath);
@@ -201,7 +221,10 @@ public class UpdateStackRequest extends Request {
         }
 
         /**
-         * workingDirectory.
+         * <p>The working directory where the configuration files are located. Enter / if the files are in the root directory. Example: config/ or /.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder workingDirectory(String workingDirectory) {
             this.putBodyParameter("workingDirectory", workingDirectory);

@@ -87,7 +87,7 @@ public class AddSharedAccountsRequest extends Request {
         } 
 
         /**
-         * accountIds.
+         * <p>The list of Alibaba Cloud account IDs.</p>
          */
         public Builder accountIds(java.util.List<Long> accountIds) {
             this.putBodyParameter("accountIds", accountIds);
@@ -96,7 +96,16 @@ public class AddSharedAccountsRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * <p>The ID of the shared resource.</p>
+         * <ul>
+         * <li><p>If the type is Namespace, set this parameter to the workspace name. </p>
+         * </li>
+         * <li><p>If the type is RegistryModule, set this parameter to \<namespaceName>/\<ModuleName>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>terraform-alicloud-modules/mongodb</p>
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("resourceId", resourceId);
@@ -105,7 +114,14 @@ public class AddSharedAccountsRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li>RegistryModule: Registry template.</li>
+         * <li>Namespace: workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RegistryModule</p>
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);

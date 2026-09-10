@@ -315,7 +315,14 @@ public class CreateTaskRequest extends Request {
         } 
 
         /**
-         * autoApply.
+         * <p>Specifies whether to automatically execute the task. Default value: false.</p>
+         * <ul>
+         * <li>true: After the preview is complete (terraform plan), the execution (terraform apply) is automatically performed without manual confirmation.</li>
+         * <li>false: After the preview is complete (terraform plan), manual confirmation is required before the execution (terraform apply) starts.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoApply(Boolean autoApply) {
             this.putBodyParameter("autoApply", autoApply);
@@ -324,7 +331,14 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * autoDestroy.
+         * <p>Specifies whether to automatically destroy resources after creation. Default value: false.</p>
+         * <ul>
+         * <li>true: After the execution is complete (terraform apply), the destroy operation (terraform destroy) is automatically performed without manual confirmation.</li>
+         * <li>false: After the execution is complete (terraform apply), no further action is taken.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoDestroy(Boolean autoDestroy) {
             this.putBodyParameter("autoDestroy", autoDestroy);
@@ -333,6 +347,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>The idempotency token. Format: [0-9a-zA-Z-]{1,64}. We recommend that you use a UUID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,7 +360,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The task description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -354,7 +372,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * groupInfo.
+         * <p>The project group information.</p>
          */
         public Builder groupInfo(GroupInfo groupInfo) {
             this.putBodyParameter("groupInfo", groupInfo);
@@ -363,7 +381,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * initModuleState.
+         * <p>Specifies whether to use a state file. Default value: false. This parameter applies to templates that originate from resource export. Only one task can use this parameter at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder initModuleState(Boolean initModuleState) {
             this.putBodyParameter("initModuleState", initModuleState);
@@ -372,10 +393,11 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>mod-148e7853433574fff6b316f4eb737e</p>
+         * <p>mod-144fff6b316f4eb737e</p>
          */
         public Builder moduleId(String moduleId) {
             this.putBodyParameter("moduleId", moduleId);
@@ -384,6 +406,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>The template version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -396,10 +419,16 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>The task name. The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name can contain letters, digits, Chinese characters, hyphens (-), underscores (_), and periods (.). The name cannot start or end with a hyphen, underscore, or period.</li>
+         * <li>The name must be unique among all tasks under the current account.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>TaskName</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -408,7 +437,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * parameterSetIds.
+         * <p>The collection of associated parameter set IDs.</p>
          */
         public Builder parameterSetIds(java.util.List<String> parameterSetIds) {
             this.putBodyParameter("parameterSetIds", parameterSetIds);
@@ -417,7 +446,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * protectionStrategy.
+         * <p>The list of resource protection strategies.</p>
          */
         public Builder protectionStrategy(java.util.List<String> protectionStrategy) {
             this.putBodyParameter("protectionStrategy", protectionStrategy);
@@ -426,7 +455,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * ramRole.
+         * <p>The RAM role. The system assumes this role to execute the template when a new job is triggered. This parameter is required when the job trigger method is not manual.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RoleName</p>
          */
         public Builder ramRole(String ramRole) {
             this.putBodyParameter("ramRole", ramRole);
@@ -435,7 +467,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * skipPropertyValidation.
+         * <p>Specifies whether to skip enumeration value validation. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder skipPropertyValidation(Boolean skipPropertyValidation) {
             this.putBodyParameter("skipPropertyValidation", skipPropertyValidation);
@@ -444,7 +479,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * skipRegionValidation.
+         * <p>Specifies whether to skip region validation. Valid values: true (skip) and false (do not skip).</p>
          */
         public Builder skipRegionValidation(Boolean skipRegionValidation) {
             this.putBodyParameter("skipRegionValidation", skipRegionValidation);
@@ -453,7 +488,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The list of tags for the task.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -462,7 +497,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * taskBackend.
+         * <p>The task configuration. After this parameter is configured, runtime log information is saved to the specified OSS bucket.</p>
          */
         public Builder taskBackend(TaskBackend taskBackend) {
             this.putBodyParameter("taskBackend", taskBackend);
@@ -471,7 +506,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * terraformProviderVersion.
+         * <p>The Terraform Provider version. You can call the <strong>ListTerraformProviderVersions</strong> operation to obtain the list of supported versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.248.0</p>
          */
         public Builder terraformProviderVersion(String terraformProviderVersion) {
             this.putBodyParameter("terraformProviderVersion", terraformProviderVersion);
@@ -480,7 +518,10 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * terraformVersion.
+         * <p>The Terraform version. You can call the <strong>ListAvailableTerraformVersions</strong> operation to obtain the list of supported versions. Default value: 1.5.7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.5.7</p>
          */
         public Builder terraformVersion(String terraformVersion) {
             this.putBodyParameter("terraformVersion", terraformVersion);
@@ -489,7 +530,17 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * triggerStrategy.
+         * <p>The job trigger method. Valid values:</p>
+         * <ul>
+         * <li>Manual: Manual trigger (default).</li>
+         * <li>NewVersion: Triggered when a new template version is published.</li>
+         * <li>ParameterSetUpdated: Triggered when the parameter set content changes or the parameter set binding relationship changes.</li>
+         * <li>Auto: Automatically triggered when the task\&quot;s own properties change, such as task creation, execution version change, or job trigger strategy change (when changed from another value to Auto).</li>
+         * </ul>
+         * <p>The <strong>ramRole</strong> parameter is required when the trigger method is not manual.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder triggerStrategy(String triggerStrategy) {
             this.putBodyParameter("triggerStrategy", triggerStrategy);
@@ -557,7 +608,10 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-5fd38c9b83a86432e2</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -565,7 +619,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * projectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>p-433aeade5d9167608</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -632,7 +689,10 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -640,7 +700,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -720,7 +783,10 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * bucketEndpoint.
+             * <p>The endpoint information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ss-cn-beijing.aliyuncs.com</p>
              */
             public Builder bucketEndpoint(String bucketEndpoint) {
                 this.bucketEndpoint = bucketEndpoint;
@@ -728,7 +794,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * bucketName.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>iac-runtime-test</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -736,7 +805,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * objectPath.
+             * <p>The object path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/log</p>
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;

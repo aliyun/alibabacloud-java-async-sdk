@@ -80,7 +80,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         } 
 
         /**
-         * deployments.
+         * <p>The deployment results of the stack.</p>
          */
         public Builder deployments(java.util.List<Deployments> deployments) {
             this.deployments = deployments;
@@ -88,7 +88,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BF72A6FB-B071-5F2E-A036-9D62545B962C</p>
@@ -99,7 +99,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -165,7 +168,14 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * autoApply.
+             * <p>Specifies whether to automatically execute the task. Default value: false. Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong>: No.</li>
+             * <li><strong>true</strong>: Yes.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoApply(Boolean autoApply) {
                 this.autoApply = autoApply;
@@ -173,7 +183,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * isDestroy.
+             * <p>Indicates whether this is a destroy job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDestroy(Boolean isDestroy) {
                 this.isDestroy = isDestroy;
@@ -279,7 +292,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the SLS log project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -287,7 +303,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * expression.
+             * <p>The expression that can reference component outputs, in the format: component.{component name}.{component output name}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>component.sls.project_name</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -295,7 +314,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -303,7 +325,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -311,7 +336,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The actual value after the deployment is completed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>log-project-xxxx</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -430,7 +458,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * defaultValue.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -438,7 +469,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region of the resource</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -446,7 +480,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -454,7 +491,11 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * sensitive.
+             * <p>Specifies whether the parameter is sensitive. Sensitive parameter values are not visible in the console or API. Valid values:</p>
+             * <ul>
+             * <li>true: Sensitive.</li>
+             * <li>false: Not sensitive.</li>
+             * </ul>
              */
             public Builder sensitive(Boolean sensitive) {
                 this.sensitive = sensitive;
@@ -462,7 +503,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -470,7 +514,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-6</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -550,7 +597,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * add.
+             * <p>The number of resources to be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder add(Integer add) {
                 this.add = add;
@@ -558,7 +608,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * change.
+             * <p>The number of resources to be changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder change(Integer change) {
                 this.change = change;
@@ -566,7 +619,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * destroy.
+             * <p>The number of resources to be destroyed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder destroy(Integer destroy) {
                 this.destroy = destroy;
@@ -646,7 +702,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * change.
+             * <p>The diff information of the resource change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>~ resource \&quot;alicloud_log_store\&quot; \&quot;default\&quot; {\n        id                    = \&quot;alb-log-project-v1-ph-xxxxx:alb-log-store-ph\&quot;\n      ~ max_split_shard_count = 64 -&gt; 32\n        name                  = \&quot;alb-log-store-ph\&quot;\n\n        # (13 unchanged attributes hidden)\n    }</p>
              */
             public Builder change(String change) {
                 this.change = change;
@@ -654,7 +713,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceActions.
+             * <p>The types of resource change actions included in this resource change.</p>
              */
             public Builder resourceActions(java.util.List<String> resourceActions) {
                 this.resourceActions = resourceActions;
@@ -662,7 +721,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceIdentifier.
+             * <p>The unique identifier of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alicloud_log_store.default</p>
              */
             public Builder resourceIdentifier(String resourceIdentifier) {
                 this.resourceIdentifier = resourceIdentifier;
@@ -755,7 +817,16 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * moduleAction.
+             * <p>The change type of the component. Valid values:</p>
+             * <ul>
+             * <li>create: All resource changes in the component are creations.</li>
+             * <li>delete: All resource changes in the component are deletions.</li>
+             * <li>read: All resource changes in the component are reads.</li>
+             * <li>update: Resource changes in the component include two or more types among creation, deletion, and read.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>update</p>
              */
             public Builder moduleAction(String moduleAction) {
                 this.moduleAction = moduleAction;
@@ -763,7 +834,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * moduleActionDetail.
+             * <p>The number of resources to be created, updated, and destroyed in this deployment.</p>
              */
             public Builder moduleActionDetail(ModuleActionDetail moduleActionDetail) {
                 this.moduleActionDetail = moduleActionDetail;
@@ -771,7 +842,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * resourceChanges.
+             * <p>The resource change information.</p>
              */
             public Builder resourceChanges(java.util.List<ResourceChanges> resourceChanges) {
                 this.resourceChanges = resourceChanges;
@@ -779,7 +850,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * stackModuleName.
+             * <p>The component name of the stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sls</p>
              */
             public Builder stackModuleName(String stackModuleName) {
                 this.stackModuleName = stackModuleName;
@@ -1028,7 +1102,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             } 
 
             /**
-             * config.
+             * <p>The configuration item.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -1036,7 +1110,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * configVersion.
+             * <p>The configuration version, such as v1. The initial value is v1. The version number increments each time the stack is updated or refreshed and the configuration changes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder configVersion(String configVersion) {
                 this.configVersion = configVersion;
@@ -1044,7 +1121,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>The creation time in UTC, in the format of YYYY-MM-DDTHH:mm:ssZ (ISO 8601).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-01T12:10:18Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1052,7 +1132,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * deploymentName.
+             * <p>The deployment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production</p>
              */
             public Builder deploymentName(String deploymentName) {
                 this.deploymentName = deploymentName;
@@ -1060,7 +1143,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * deploymentNo.
+             * <p>The deployment number. The deployment number for each stack starts from 1 and increments each time a deployment is successfully triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder deploymentNo(String deploymentNo) {
                 this.deploymentNo = deploymentNo;
@@ -1068,7 +1154,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * deploymentVersion.
+             * <p>Deprecated field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder deploymentVersion(String deploymentVersion) {
                 this.deploymentVersion = deploymentVersion;
@@ -1076,7 +1165,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * elapsedTime.
+             * <p>The execution duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>38000</p>
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -1084,7 +1176,12 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * executeType.
+             * <p>The execution type.</p>
+             * <p>Manual: Manual execution (default).</p>
+             * <p>Auto: Automatic execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder executeType(String executeType) {
                 this.executeType = executeType;
@@ -1092,7 +1189,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * failedReason.
+             * <p>The failure reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>\n Error: Invalid value for input variable\n \n   on main.tf line 17, in module \&quot;alb\&quot;:\n   17:   log_project           = var.log_project.project_name\n \n The given value is not suitable for module.alb.var.log_project declared at\n modules/alb/main.tf:34,1-23: string required.\n╵\n</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -1100,7 +1200,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * jobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-as154vldqt46mv0ixxxxx</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -1108,7 +1211,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * logOutputPath.
+             * <p>OSS object key prefix for deployment logs</p>
              */
             public Builder logOutputPath(String logOutputPath) {
                 this.logOutputPath = logOutputPath;
@@ -1116,7 +1219,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * outputs.
+             * <p>The outputs.</p>
              */
             public Builder outputs(java.util.List<Outputs> outputs) {
                 this.outputs = outputs;
@@ -1124,7 +1227,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * parameters.
+             * <p>The parameter set content.</p>
              */
             public Builder parameters(java.util.List<Parameters> parameters) {
                 this.parameters = parameters;
@@ -1132,7 +1235,7 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * planOutputs.
+             * <p>The state file output results.</p>
              */
             public Builder planOutputs(java.util.List<PlanOutputs> planOutputs) {
                 this.planOutputs = planOutputs;
@@ -1140,7 +1243,110 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The deployment status.</p>
+             * <table>
+             * <thead>
+             * <tr>
+             * <th>Name</th>
+             * <th>Description</th>
+             * </tr>
+             * </thead>
+             * <tbody><tr>
+             * <td>Pending</td>
+             * <td>The initial status after the deployment is created.</td>
+             * </tr>
+             * <tr>
+             * <td>PriorityQueued</td>
+             * <td>Priority queuing in progress.</td>
+             * </tr>
+             * <tr>
+             * <td>PlanQueued</td>
+             * <td>The deployment is queuing because no workflow is available after creation.</td>
+             * </tr>
+             * <tr>
+             * <td>ApplyQueued</td>
+             * <td>The deployment is queuing because no workflow is available during execution.</td>
+             * </tr>
+             * <tr>
+             * <td>Planning</td>
+             * <td>The resource deployment is in the Plan phase.</td>
+             * </tr>
+             * <tr>
+             * <td>Planned</td>
+             * <td>The resource deployment has completed the Plan phase.</td>
+             * </tr>
+             * <tr>
+             * <td>ConfigProactiveInProgress</td>
+             * <td>Compliance pre-check in progress.</td>
+             * </tr>
+             * <tr>
+             * <td>ConfigProactiveSuccess</td>
+             * <td>Compliance pre-check succeeded.</td>
+             * </tr>
+             * <tr>
+             * <td>DetectInProgress</td>
+             * <td>Drift detection in progress.</td>
+             * </tr>
+             * <tr>
+             * <td>ImportQueued</td>
+             * <td>The deployment is queuing because no workflow is available during Import execution.</td>
+             * </tr>
+             * <tr>
+             * <td>Importing</td>
+             * <td>The resource deployment is in the Import phase.</td>
+             * </tr>
+             * <tr>
+             * <td>Imported</td>
+             * <td>The resource deployment has completed the Import phase.</td>
+             * </tr>
+             * <tr>
+             * <td>StateQueued</td>
+             * <td>The deployment is queuing because no workflow is available during state command execution.</td>
+             * </tr>
+             * <tr>
+             * <td>Stating</td>
+             * <td>The resource deployment is executing the state command.</td>
+             * </tr>
+             * <tr>
+             * <td>Stated</td>
+             * <td>The resource deployment has completed the state command execution.</td>
+             * </tr>
+             * <tr>
+             * <td>Confirmed</td>
+             * <td>The resource deployment has been confirmed after the Plan phase.</td>
+             * </tr>
+             * <tr>
+             * <td>PlannedAndFinished</td>
+             * <td>No diff was found after the Plan phase. The deployment is in a final status.</td>
+             * </tr>
+             * <tr>
+             * <td>Applying</td>
+             * <td>The resource deployment is in the Apply phase.</td>
+             * </tr>
+             * <tr>
+             * <td>Applied</td>
+             * <td>The resource deployment has completed the Apply phase.</td>
+             * </tr>
+             * <tr>
+             * <td>Discarded</td>
+             * <td>The resource deployment has been discarded and is in a final status.</td>
+             * </tr>
+             * <tr>
+             * <td>Errored</td>
+             * <td>The deployment execution encountered an error and is in a final status.</td>
+             * </tr>
+             * <tr>
+             * <td>ConfigProactiveFailure</td>
+             * <td>Compliance pre-check failed.</td>
+             * </tr>
+             * <tr>
+             * <td>Canceled</td>
+             * <td>The deployment execution has been canceled and is in a final status.</td>
+             * </tr>
+             * </tbody></table>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1148,7 +1354,10 @@ public class GetStackDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * taskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task-as1d4vld8ogb2l32xxxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

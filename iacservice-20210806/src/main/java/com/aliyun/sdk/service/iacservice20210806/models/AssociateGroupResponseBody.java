@@ -54,7 +54,10 @@ public class AssociateGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6ED9F71-7FA8-598E-B64D-4606FB3FCCC9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
