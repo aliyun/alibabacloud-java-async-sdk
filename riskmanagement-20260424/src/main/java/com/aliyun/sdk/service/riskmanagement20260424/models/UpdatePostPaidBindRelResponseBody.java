@@ -106,7 +106,10 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>operation success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +147,10 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -220,7 +229,10 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
             } 
 
             /**
-             * BindCount.
+             * <p>The number of servers that are successfully bound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bindCount(Long bindCount) {
                 this.bindCount = bindCount;
@@ -239,7 +251,10 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCode.
+             * <p>The result code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder resultCode(Integer resultCode) {
                 this.resultCode = resultCode;
@@ -293,7 +308,7 @@ public class UpdatePostPaidBindRelResponseBody extends TeaModel {
             } 
 
             /**
-             * Body.
+             * <p>The message body.</p>
              */
             public Builder body(DataBody body) {
                 this.body = body;

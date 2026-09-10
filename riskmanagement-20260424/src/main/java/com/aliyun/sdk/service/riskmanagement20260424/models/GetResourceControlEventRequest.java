@@ -88,7 +88,14 @@ public class GetResourceControlEventRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -97,6 +104,7 @@ public class GetResourceControlEventRequest extends Request {
         }
 
         /**
+         * <p>The alert event ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +117,7 @@ public class GetResourceControlEventRequest extends Request {
         }
 
         /**
-         * EventIdList.
+         * <p>The list of specified event IDs.</p>
          */
         public Builder eventIdList(java.util.List<String> eventIdList) {
             String eventIdListShrink = shrink(eventIdList, "EventIdList", "json");

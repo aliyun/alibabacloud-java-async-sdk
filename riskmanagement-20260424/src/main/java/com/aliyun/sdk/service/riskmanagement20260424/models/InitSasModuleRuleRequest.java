@@ -101,7 +101,14 @@ public class InitSasModuleRuleRequest extends Request {
         } 
 
         /**
-         * AutoBind.
+         * <p>Specifies whether to enable automatic binding. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder autoBind(Integer autoBind) {
             this.putQueryParameter("AutoBind", autoBind);
@@ -110,7 +117,7 @@ public class InitSasModuleRuleRequest extends Request {
         }
 
         /**
-         * Instances.
+         * <p>The list of instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             String instancesShrink = shrink(instances, "Instances", "json");
@@ -120,7 +127,10 @@ public class InitSasModuleRuleRequest extends Request {
         }
 
         /**
-         * IsTrial.
+         * <p>Specifies whether to use the trial version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isTrial(Boolean isTrial) {
             this.putQueryParameter("IsTrial", isTrial);
@@ -129,7 +139,10 @@ public class InitSasModuleRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the access control instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -223,7 +236,10 @@ public class InitSasModuleRuleRequest extends Request {
             } 
 
             /**
-             * Cores.
+             * <p>The number of CPU cores of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cores(String cores) {
                 this.cores = cores;
@@ -231,7 +247,10 @@ public class InitSasModuleRuleRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-gw85zjrhsg2sgex7ovfx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -239,7 +258,10 @@ public class InitSasModuleRuleRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region of the cloud phone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -247,7 +269,10 @@ public class InitSasModuleRuleRequest extends Request {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>168d374e-f449-4d0b-9556-14f233fa7171</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

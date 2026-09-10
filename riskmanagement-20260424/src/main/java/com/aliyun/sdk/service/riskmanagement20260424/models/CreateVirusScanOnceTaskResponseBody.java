@@ -106,7 +106,10 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, refer to error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful‌</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>739705BB-B0EF-554B-B3A8-383F4F93E067</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.                               </li>
+         * <li><strong>false</strong>: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +272,14 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * BusinessType.
+             * <p>The asset selection business type. Valid values:</p>
+             * <ul>
+             * <li><strong>VIRUS_SCAN_CYCLE_CONFIG</strong>: virus scan configuration</li>
+             * <li><strong>VIRUS_SCAN_ONCE_TASK</strong>: virus scan one-time task</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VIRUS_SCAN_CYCLE_CONFIG</p>
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -264,7 +287,14 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The operating system of the target asset. Valid values:</p>
+             * <ul>
+             * <li><strong>windows</strong>: Windows operating system</li>
+             * <li><strong>linux</strong>: Linux operating system</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -272,7 +302,10 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1D345A09-5ABD-593C-9C26-5C2B28632CD6</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -280,7 +313,10 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SelectionKey.
+             * <p>The unique identifier of this asset selection, which can be used to query or modify the assets corresponding to this selection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87af4d19-38fc-408d-9549-2bf7b6c2a4b9</p>
              */
             public Builder selectionKey(Integer selectionKey) {
                 this.selectionKey = selectionKey;
@@ -288,7 +324,16 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The target asset type. Valid values:</p>
+             * <ul>
+             * <li><strong>all_instance</strong>: all servers</li>
+             * <li><strong>instance</strong>: select by server</li>
+             * <li><strong>group</strong>: select by group</li>
+             * <li><strong>vpc</strong>: select by VPC</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>all_instance</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -296,7 +341,10 @@ public class CreateVirusScanOnceTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The server ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9ef1a02e1de695cb7f9fea2c6c145853eklEsP2JP0Z</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

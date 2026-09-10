@@ -106,7 +106,14 @@ public class GetCompliancePackIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: Succeeded.</li>
+         * <li><strong>Others (400, 500)</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,10 @@ public class GetCompliancePackIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The compliance package ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cp-9g78b15xxxd0005d5a7</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -122,7 +132,10 @@ public class GetCompliancePackIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +143,10 @@ public class GetCompliancePackIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>855FCC89-0B13-5FC0-AAD2-120878081C1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +154,14 @@ public class GetCompliancePackIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.                               </li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -73,7 +73,10 @@ public class DescribeVersionConfigRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class DescribeVersionConfigRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -151,7 +154,13 @@ public class DescribeVersionConfigRequest extends Request {
             } 
 
             /**
-             * ResourceDirectoryAccountId.
+             * <p>The ID of the Alibaba Cloud account of the resource folder member accounts.</p>
+             * <blockquote>
+             * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5815612291408486</p>
              */
             public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
                 this.resourceDirectoryAccountId = resourceDirectoryAccountId;
@@ -159,7 +168,10 @@ public class DescribeVersionConfigRequest extends Request {
             }
 
             /**
-             * SourceIp.
+             * <p>The IP address of the access source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2409:8a55:3827:cb50:5ad9:d5ff:fe87:f48c</p>
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;

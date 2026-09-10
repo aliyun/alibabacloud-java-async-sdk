@@ -73,7 +73,10 @@ public class GetValidDeductInstancesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-fuzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class GetValidDeductInstancesRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request parameters.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -164,7 +167,10 @@ public class GetValidDeductInstancesRequest extends Request {
             } 
 
             /**
-             * InstanceId.
+             * <p>The resource plan instance ID. You can call QueryResourcePackageInstances to query the ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_cspm_dp_cn-***80001</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -172,7 +178,15 @@ public class GetValidDeductInstancesRequest extends Request {
             }
 
             /**
-             * Modules.
+             * <p>The resource plan name code. Valid values:</p>
+             * <ul>
+             * <li>Vulnerability resource plan: <strong>sas_vul_dp_cn</strong></li>
+             * <li>CSPM resource plan: <strong>sas_cspm_dp_cn</strong></li>
+             * <li>Anti-virus Edition resource plan: <strong>sas_viruspackage_dp_cn</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_vul_dp_cn</p>
              */
             public Builder modules(String modules) {
                 this.modules = modules;
@@ -180,7 +194,10 @@ public class GetValidDeductInstancesRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The resource plan status. Default value: valid. This parameter cannot be modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

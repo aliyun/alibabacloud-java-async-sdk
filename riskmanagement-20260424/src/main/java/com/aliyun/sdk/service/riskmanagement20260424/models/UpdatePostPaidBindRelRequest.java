@@ -73,7 +73,10 @@ public class UpdatePostPaidBindRelRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request parameters.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -164,7 +167,14 @@ public class UpdatePostPaidBindRelRequest extends Request {
             } 
 
             /**
-             * BindAll.
+             * <p>Specifies whether to bind all assets. Default value: <strong>false</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bindAll(Boolean bindAll) {
                 this.bindAll = bindAll;
@@ -172,7 +182,10 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * UuidList.
+             * <p>The list of specified server UUIDs.</p>
+             * <blockquote>
+             * <p>Number of items &lt;= 1000. Number of items &gt;= 0.</p>
+             * </blockquote>
              */
             public Builder uuidList(java.util.List<String> uuidList) {
                 this.uuidList = uuidList;
@@ -180,7 +193,17 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The Security Center protection edition to bind. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Free Edition.</li>
+             * <li><strong>3</strong>: Enterprise Edition.</li>
+             * <li><strong>5</strong>: Advanced Edition.</li>
+             * <li><strong>6</strong>: Anti-virus Edition.</li>
+             * <li><strong>7</strong>: Ultimate Edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -273,7 +296,14 @@ public class UpdatePostPaidBindRelRequest extends Request {
             } 
 
             /**
-             * AutoBind.
+             * <p>Specifies whether to automatically bind newly added assets. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Disabled.</li>
+             * <li><strong>1</strong>: Enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoBind(Integer autoBind) {
                 this.autoBind = autoBind;
@@ -281,7 +311,17 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * AutoBindVersion.
+             * <p>The edition to automatically bind when new assets are added. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Free Edition. </li>
+             * <li><strong>3</strong>: Enterprise Edition.</li>
+             * <li><strong>5</strong>: Advanced Edition.</li>
+             * <li><strong>6</strong>: Anti-virus Edition.    </li>
+             * <li><strong>7</strong>: Ultimate Edition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder autoBindVersion(Integer autoBindVersion) {
                 this.autoBindVersion = autoBindVersion;
@@ -289,7 +329,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * BindAction.
+             * <p>The list of binding action parameters.</p>
              */
             public Builder bindAction(java.util.List<BindAction> bindAction) {
                 this.bindAction = bindAction;
@@ -297,7 +337,10 @@ public class UpdatePostPaidBindRelRequest extends Request {
             }
 
             /**
-             * UpdateIfNecessary.
+             * <p>Specifies whether to forcibly upgrade the edition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder updateIfNecessary(Boolean updateIfNecessary) {
                 this.updateIfNecessary = updateIfNecessary;

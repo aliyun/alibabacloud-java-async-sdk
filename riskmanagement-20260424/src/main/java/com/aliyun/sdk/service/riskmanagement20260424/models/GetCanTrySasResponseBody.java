@@ -106,7 +106,10 @@ public class GetCanTrySasResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The detailed information.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetCanTrySasResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message. The value is the same as the Code parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetCanTrySasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B48613E-86DE-5411-BDBE-429C80B45F3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetCanTrySasResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the current API call is successful. This does not indicate whether subsequent business operations are successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +233,14 @@ public class GetCanTrySasResponseBody extends TeaModel {
             } 
 
             /**
-             * CanTry.
+             * <p>Indicates whether the user is eligible for a free trial. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: Eligible.</li>
+             * <li><strong>0</strong>: Not eligible.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder canTry(Integer canTry) {
                 this.canTry = canTry;
@@ -225,7 +248,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
             }
 
             /**
-             * CanTryVersions.
+             * <p>The list of editions available for trial.</p>
              */
             public Builder canTryVersions(java.util.List<Integer> canTryVersions) {
                 this.canTryVersions = canTryVersions;
@@ -233,7 +256,15 @@ public class GetCanTrySasResponseBody extends TeaModel {
             }
 
             /**
-             * TryType.
+             * <p>The trial type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Trial is not allowed.</li>
+             * <li><strong>1</strong>: First trial.</li>
+             * <li><strong>2</strong>: Second trial.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tryType(Integer tryType) {
                 this.tryType = tryType;
@@ -300,7 +331,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The data.</p>
              */
             public Builder data(BodyData data) {
                 this.data = data;
@@ -365,7 +396,7 @@ public class GetCanTrySasResponseBody extends TeaModel {
             } 
 
             /**
-             * Body.
+             * <p>The message body.</p>
              */
             public Builder body(DataBody body) {
                 this.body = body;

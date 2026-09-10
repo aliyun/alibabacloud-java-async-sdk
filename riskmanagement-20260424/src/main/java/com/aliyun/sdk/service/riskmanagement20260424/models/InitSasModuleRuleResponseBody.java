@@ -106,7 +106,10 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, refer to error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The approval result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. The value is the same as the Code parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2E130B0F-9E69-52FA-84FC-187FE1BA9489</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. true: The call is successful. false: The call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +203,10 @@ public class InitSasModuleRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * RequestId.
+             * <p>The Security Center request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14492571-0707-5130-85B4-4DDABB6BDF76</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;

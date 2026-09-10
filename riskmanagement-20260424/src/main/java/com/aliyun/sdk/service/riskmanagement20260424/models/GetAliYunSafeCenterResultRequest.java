@@ -186,7 +186,7 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         } 
 
         /**
-         * CreateSimilarSecurityEventsQueryTaskRequest.
+         * <p>Creates a node to query security alerting events triggered by the same rule or alerting type.</p>
          */
         public Builder createSimilarSecurityEventsQueryTaskRequest(CreateSimilarSecurityEventsQueryTaskRequest createSimilarSecurityEventsQueryTaskRequest) {
             String createSimilarSecurityEventsQueryTaskRequestShrink = shrink(createSimilarSecurityEventsQueryTaskRequest, "CreateSimilarSecurityEventsQueryTaskRequest", "json");
@@ -196,7 +196,7 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         }
 
         /**
-         * DescribeInstancesFullStatusRequest.
+         * <p>Queries the running status of ECS instances.</p>
          */
         public Builder describeInstancesFullStatusRequest(DescribeInstancesFullStatusRequest describeInstancesFullStatusRequest) {
             String describeInstancesFullStatusRequestShrink = shrink(describeInstancesFullStatusRequest, "DescribeInstancesFullStatusRequest", "json");
@@ -206,7 +206,7 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         }
 
         /**
-         * DescribeSecurityEventOperationStatusRequest.
+         * <p>Queries whether the list of security alerting events that match the same IP rule or same alerting type as the alerting event to be handled is empty.</p>
          */
         public Builder describeSecurityEventOperationStatusRequest(DescribeSecurityEventOperationStatusRequest describeSecurityEventOperationStatusRequest) {
             String describeSecurityEventOperationStatusRequestShrink = shrink(describeSecurityEventOperationStatusRequest, "DescribeSecurityEventOperationStatusRequest", "json");
@@ -216,7 +216,7 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         }
 
         /**
-         * DescribeSimilarSecurityEventsRequest.
+         * <p>Queries identical security alert events in Security Center.</p>
          */
         public Builder describeSimilarSecurityEventsRequest(DescribeSimilarSecurityEventsRequest describeSimilarSecurityEventsRequest) {
             String describeSimilarSecurityEventsRequestShrink = shrink(describeSimilarSecurityEventsRequest, "DescribeSimilarSecurityEventsRequest", "json");
@@ -226,7 +226,7 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         }
 
         /**
-         * GetAssetDetailByUuidRequest.
+         * <p>The request parameters for querying the Security Center Agent status.</p>
          */
         public Builder getAssetDetailByUuidRequest(GetAssetDetailByUuidRequest getAssetDetailByUuidRequest) {
             String getAssetDetailByUuidRequestShrink = shrink(getAssetDetailByUuidRequest, "GetAssetDetailByUuidRequest", "json");
@@ -236,7 +236,7 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         }
 
         /**
-         * HandleSecurityEventsRequest.
+         * <p>Handles security alert events.</p>
          */
         public Builder handleSecurityEventsRequest(HandleSecurityEventsRequest handleSecurityEventsRequest) {
             String handleSecurityEventsRequestShrink = shrink(handleSecurityEventsRequest, "HandleSecurityEventsRequest", "json");
@@ -246,7 +246,7 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         }
 
         /**
-         * HandleSimilarSecurityEventsRequest.
+         * <p>Handles security alert events in batches based on the same IP rule or type.</p>
          */
         public Builder handleSimilarSecurityEventsRequest(HandleSimilarSecurityEventsRequest handleSimilarSecurityEventsRequest) {
             String handleSimilarSecurityEventsRequestShrink = shrink(handleSimilarSecurityEventsRequest, "HandleSimilarSecurityEventsRequest", "json");
@@ -256,6 +256,29 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         }
 
         /**
+         * <p>The code of the public API operation.</p>
+         * <ul>
+         * <li><p><strong>GetAssetDetailByUuid</strong>: Retrieves the Agent status. Request parameter: GetAssetDetailByUuidRequest.</p>
+         * </li>
+         * <li><p><strong>DescribeSimilarSecurityEvents</strong>: Retrieves the list of instance IDs for identical security alerting events. Request parameter: DescribeSimilarSecurityEventsRequest.</p>
+         * </li>
+         * <li><p><strong>CreateSimilarSecurityEventsQueryTask</strong>: Creates a node to query security alerting events triggered by the same rule or alerting type. Request parameter: CreateSimilarSecurityEventsQueryTaskRequest.</p>
+         * </li>
+         * <li><p><strong>DescribeSecurityEventOperationStatus</strong>: Queries whether the list of security alerting events that match the same IP rule or same alerting type as the alerting event to be handled is empty. Request parameter: DescribeSecurityEventOperationStatusRequest.</p>
+         * </li>
+         * <li><p><strong>HandleSimilarSecurityEvents</strong>: Handles security alerting events in batches based on the same IP rule or type. Request parameter: HandleSimilarSecurityEventsRequest.
+         * HandleSecurityEvents: Handles security alerting events. Request parameter: HandleSecurityEventsRequest.</p>
+         * </li>
+         * <li><p><strong>DescribeInstancesFullStatus</strong>: Queries the running status of ECS instances. Request parameter: DescribeInstancesFullStatusRequest.</p>
+         * </li>
+         * <li><p><strong>ListInstances</strong>: Queries the running status of simple application servers. Request parameter: ListInstancesRequest.</p>
+         * </li>
+         * <li><p><strong>StartConfigRuleEvaluation</strong>: Re-evaluates security check rules.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Each API operation name corresponds to its own request parameters.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,7 +291,7 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         }
 
         /**
-         * ListInstancesRequest.
+         * <p>Queries the running status of simple application servers.</p>
          */
         public Builder listInstancesRequest(ListInstancesRequest listInstancesRequest) {
             String listInstancesRequestShrink = shrink(listInstancesRequest, "ListInstancesRequest", "json");
@@ -278,7 +301,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -359,7 +385,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -367,7 +396,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * SecurityEventId.
+             * <p>The ID of the security alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>629755508</p>
              */
             public Builder securityEventId(Long securityEventId) {
                 this.securityEventId = securityEventId;
@@ -375,7 +407,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * SimilarEventScenarioCode.
+             * <p>The code of the alerting event that has the same type or rule hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder similarEventScenarioCode(String similarEventScenarioCode) {
                 this.similarEventScenarioCode = similarEventScenarioCode;
@@ -442,7 +477,7 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             } 
 
             /**
-             * InstanceId.
+             * <p>The list of instance IDs.</p>
              */
             public Builder instanceId(java.util.List<String> instanceId) {
                 this.instanceId = instanceId;
@@ -450,7 +485,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -530,7 +568,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID. Example: ap-southeast-1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -538,7 +579,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * SecurityEventIds.
+             * <p>The list of security alert event IDs.</p>
+             * <blockquote>
+             * <p>You must specify either TaskId or SecurityEventIds.N. At least one of these parameters is required for a successful call.</p>
+             * </blockquote>
              */
             public Builder securityEventIds(java.util.List<String> securityEventIds) {
                 this.securityEventIds = securityEventIds;
@@ -546,7 +590,13 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task for handling security alert events.</p>
+             * <blockquote>
+             * <p>You must specify either TaskId or SecurityEventIds. At least one of these parameters is required for a successful call.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0BC3B4E600002A9F000048BCDCE7E710</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -613,7 +663,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -621,7 +674,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the query task. You can call the CreateSimilarSecurityEventsQueryTask operation to obtain this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1689135</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -688,7 +744,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -696,7 +755,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the asset to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9A75F21D3993C0A2B094A4AB132890B2</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -893,7 +955,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             } 
 
             /**
-             * AlertType.
+             * <p>The alert rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -901,7 +966,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * FileMd5.
+             * <p>The MD5 hash of the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fbbb90731fbb6df57c933173182d01a5</p>
              */
             public Builder fileMd5(String fileMd5) {
                 this.fileMd5 = fileMd5;
@@ -909,7 +977,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * FilePath.
+             * <p>The path of the sensitive file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flyfish-lfp-wy.release</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -917,7 +988,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>api-shared-vpc-002</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -925,7 +999,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * Ip.
+             * <p>The user IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123.56.127.180</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -933,7 +1010,14 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * MarkBatch.
+             * <p>Specifies whether to add to the whitelist in batches.</p>
+             * <ul>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder markBatch(String markBatch) {
                 this.markBatch = markBatch;
@@ -941,7 +1025,30 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * MarkMissParam.
+             * <p>The whitelist rule configuration. The value is in JSON format and contains the following fields:</p>
+             * <ul>
+             * <li><strong>field</strong>: The whitelist field.</li>
+             * <li><strong>operate</strong>: The whitelist method. Valid values:<ul>
+             * <li><strong>notContains</strong>: Does not contain.</li>
+             * <li><strong>contains</strong>: Contains.</li>
+             * <li><strong>regex</strong>: Regular expression match.</li>
+             * <li><strong>strEqual</strong>: Equals.</li>
+             * <li><strong>strNotEqual</strong>: Does not equal.</li>
+             * </ul>
+             * </li>
+             * <li><strong>fieldValue</strong>: The match value.</li>
+             * <li><strong>uuid</strong>: The scope of the whitelist rule. Valid values:<ul>
+             * <li><strong>part</strong>: Only the current asset.</li>
+             * <li><strong>ALL</strong>: All assets.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>Call the DescribeSecurityEventOperations operation to obtain the field whitelist field.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;gmtModified&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;asd&quot;},{&quot;uuid&quot;:&quot;part&quot;,&quot;field&quot;:&quot;loginUser&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;vff&quot;}]</p>
              */
             public Builder markMissParam(String markMissParam) {
                 this.markMissParam = markMissParam;
@@ -949,7 +1056,22 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * OperationCode.
+             * <p>The method for handling the security alert event. Valid values:</p>
+             * <ul>
+             * <li><strong>block_ip</strong>: Block.</li>
+             * <li><strong>advance_mark_mis_info</strong>: Add to whitelist.</li>
+             * <li><strong>ignore</strong>: Ignore.</li>
+             * <li><strong>manual_handled</strong>: Manually handled.</li>
+             * <li><strong>kill_process</strong>: Terminate process.</li>
+             * <li><strong>cleanup</strong>: Deep scan and cleanup.</li>
+             * <li><strong>kill_and_quara</strong>: Virus scan and quarantine.</li>
+             * <li><strong>disable_malicious_defense</strong>: Disable malicious behavior defense.</li>
+             * <li><strong>client_problem_check</strong>: Troubleshoot.</li>
+             * <li><strong>quara</strong>: Quarantine.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>block_ip</p>
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -957,7 +1079,27 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * OperationParams.
+             * <p>The configuration of the sub-operation for handling security alert events.</p>
+             * <p>When OperationCode is set to kill_and_quara, specify the parameter type &quot;subOperation&quot;:${code}.
+             * Valid code values:</p>
+             * <ul>
+             * <li>Quarantined file: quaraFileByMd5andPath</li>
+             * <li>Kill process and quarantined file by process ID and path: killAndQuaraFileByPidAndMd5andPath</li>
+             * <li>Kill process only: killByMd5andPath</li>
+             * <li>Kill process and quarantined file: killAndQuaraFileByMd5andPath</li>
+             * <li>Kill container process by process ID and path: killProcessByPidandPathandCmdline</li>
+             * <li>Kill container process by file MD5 and path: killContainerProcessByMd5AndPath</li>
+             * </ul>
+             * <p>When OperationCode is set to block_ip, the parameter is:</p>
+             * <ul>
+             * <li>Expiration time: expireTime:${timestamp}<blockquote>
+             * <p>This parameter is required only when OperationCode is set to <code>kill_and_quara</code> or <code>block_ip</code>. For other values of OperationCode, this parameter can be left empty. ${timestamp} indicates the timestamp of the deadline for blocking this IP address.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;expireTime\&quot;:1719588943551,\&quot;subOperation\&quot;:\&quot;killAndQuaraFileByMd5andPath\&quot;}</p>
              */
             public Builder operationParams(String operationParams) {
                 this.operationParams = operationParams;
@@ -965,7 +1107,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -973,7 +1118,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * Remark.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -981,7 +1129,8 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * SecurityEventIds.
+             * <p>The collection of IDs of the security alert events to handle.</p>
+             * <p>Example:</p>
              */
             public Builder securityEventIds(java.util.List<String> securityEventIds) {
                 this.securityEventIds = securityEventIds;
@@ -1126,7 +1275,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             } 
 
             /**
-             * AlertType.
+             * <p>The alerting type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -1134,7 +1286,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfw_elasticity_public_cn-g4t3nkh3i00b</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1142,7 +1297,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * Ip.
+             * <p>The IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>203.10*.44.71</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1150,7 +1308,13 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * OperationCode.
+             * <p>The operation type for batch handling similar security alert events.</p>
+             * <blockquote>
+             * <p>You can call the DescribeSecurityEventOperations operation to obtain this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>offline_handled</p>
              */
             public Builder operationCode(String operationCode) {
                 this.operationCode = operationCode;
@@ -1158,7 +1322,34 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * OperationParams.
+             * <p>The configuration of the sub-operation for handling alerting events. The value is in JSON format.</p>
+             * <blockquote>
+             * <p>This parameter is required only when <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, <strong>block_ip</strong>, or <strong>virus_quara</strong>. For other values of <strong>OperationCode</strong>, this parameter can be left empty.</p>
+             * </blockquote>
+             * <blockquote>
+             * <p>When <strong>OperationCode</strong> is set to <strong>block_ip</strong>, the following field is included:</p>
+             * <ul>
+             * <li><strong>expireTime</strong>: The lock expiration time. Unit: milliseconds.</li>
+             * </ul>
+             * <p>When <strong>OperationCode</strong> is set to <strong>kill_and_quara</strong>, the following field is included:</p>
+             * <ul>
+             * <li><strong>subOperation</strong>: The method for killing and quarantining. Valid values:<ul>
+             * <li><strong>killAndQuaraFileByMd5andPath</strong>: Terminates the process and quarantines the file.</li>
+             * <li><strong>killByMd5andPath</strong>: Terminates the running process.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <p>When <strong>OperationCode</strong> is set to <strong>virus_quara</strong>, the following field is included:</p>
+             * <ul>
+             * <li><strong>subOperation</strong>: The method for killing and quarantining. Valid values:<ul>
+             * <li><strong>quaraFileByMd5andPath</strong>: Quarantines the source file of the process.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;expireTime\&quot;:1767687685917}</p>
              */
             public Builder operationParams(String operationParams) {
                 this.operationParams = operationParams;
@@ -1166,7 +1357,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1174,7 +1368,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * SourceIp.
+             * <p>The IP address of the access source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>220.2*3.155.93</p>
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;
@@ -1182,7 +1379,13 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task for batch handling all security alert events of the same type.</p>
+             * <blockquote>
+             * <p>You can call the CreateSimilarSecurityEventsQueryTask operation to obtain this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>12221</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -1249,7 +1452,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             } 
 
             /**
-             * InstanceIds.
+             * <p>The instance IDs of simple application servers. The value is a JSON array that can contain up to 100 IDs. Separate multiple IDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;2ad1ae67295445f598017499dc****&quot;, &quot;2ad1ae67295445f598017123dc****&quot;]</p>
              */
             public Builder instanceIds(String instanceIds) {
                 this.instanceIds = instanceIds;
@@ -1257,7 +1463,10 @@ public class GetAliYunSafeCenterResultRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-wulanchabu</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

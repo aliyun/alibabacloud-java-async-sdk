@@ -106,7 +106,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful‌</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B57D35D-9DAC-5393-AE39-07697E37C2E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetResourceControlEventResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.</li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -386,7 +402,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertEndTime.
+             * <p>The time when the alert ended.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder alertEndTime(String alertEndTime) {
                 this.alertEndTime = alertEndTime;
@@ -394,7 +416,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * AlertStartTime.
+             * <p>The time when the first alert was triggered.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder alertStartTime(String alertStartTime) {
                 this.alertStartTime = alertStartTime;
@@ -402,7 +430,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * AntiPunishTime.
+             * <p>The time when the control action was lifted.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder antiPunishTime(String antiPunishTime) {
                 this.antiPunishTime = antiPunishTime;
@@ -410,7 +444,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyTime.
+             * <p>The application time.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-21T02:26:50Z</p>
              */
             public Builder applyTime(String applyTime) {
                 this.applyTime = applyTime;
@@ -418,7 +458,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * IgnoreAlertTime.
+             * <p>The time when the alert was ignored.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder ignoreAlertTime(String ignoreAlertTime) {
                 this.ignoreAlertTime = ignoreAlertTime;
@@ -426,7 +472,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCloseTime.
+             * <p>The time when the instance was shut down.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder instanceCloseTime(String instanceCloseTime) {
                 this.instanceCloseTime = instanceCloseTime;
@@ -434,7 +486,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceScanTime.
+             * <p>The time when the instance was scanned.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder instanceScanTime(String instanceScanTime) {
                 this.instanceScanTime = instanceScanTime;
@@ -442,7 +500,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * LastCheckTime.
+             * <p>The time of the latest detection.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder lastCheckTime(String lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -450,7 +514,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * MiningAlertProcessTime.
+             * <p>The time when the mining alert was processed.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder miningAlertProcessTime(String miningAlertProcessTime) {
                 this.miningAlertProcessTime = miningAlertProcessTime;
@@ -458,7 +528,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * PreCloseTime.
+             * <p>The estimated shutdown time.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder preCloseTime(String preCloseTime) {
                 this.preCloseTime = preCloseTime;
@@ -466,7 +542,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessTime.
+             * <p>The processing time.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-05 10:06:21</p>
              */
             public Builder processTime(String processTime) {
                 this.processTime = processTime;
@@ -474,7 +556,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * PunishEndTime.
+             * <p>The time when the control action ended.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder punishEndTime(String punishEndTime) {
                 this.punishEndTime = punishEndTime;
@@ -482,7 +570,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * PunishStartTime.
+             * <p>The time when the control action started.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder punishStartTime(String punishStartTime) {
                 this.punishStartTime = punishStartTime;
@@ -490,7 +584,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * RejectTime.
+             * <p>The rejection time.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder rejectTime(String rejectTime) {
                 this.rejectTime = rejectTime;
@@ -498,7 +598,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * RemoveTime.
+             * <p>The removal time.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder removeTime(String removeTime) {
                 this.removeTime = removeTime;
@@ -506,7 +612,13 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCheckSuccessTime.
+             * <p>The time when the risk check succeeded.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder riskCheckSuccessTime(String riskCheckSuccessTime) {
                 this.riskCheckSuccessTime = riskCheckSuccessTime;
@@ -612,7 +724,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalReason.
+             * <p>The reason for approval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>meet the requirements</p>
              */
             public Builder approvalReason(String approvalReason) {
                 this.approvalReason = approvalReason;
@@ -620,7 +735,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventTimeRecord.
+             * <p>The time records related to the application.</p>
              */
             public Builder eventTimeRecord(EventTimeRecord eventTimeRecord) {
                 this.eventTimeRecord = eventTimeRecord;
@@ -628,7 +743,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * RejectReason.
+             * <p>The reason for rejection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>does not meet the requirements</p>
              */
             public Builder rejectReason(String rejectReason) {
                 this.rejectReason = rejectReason;
@@ -636,7 +754,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Desc for Draft</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -644,7 +765,17 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>Executing</strong>: executing</li>
+             * <li><strong>Removed</strong>: removed</li>
+             * <li><strong>Alerting</strong>: alerting</li>
+             * <li><strong>Ended</strong>: ended</li>
+             * <li><strong>Processed</strong>: processed by the user and under platform review</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -880,7 +1011,7 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplyRecordList.
+             * <p>The list of application records.</p>
              */
             public Builder applyRecordList(java.util.List<ApplyRecordList> applyRecordList) {
                 this.applyRecordList = applyRecordList;
@@ -888,7 +1019,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * AssistantTip.
+             * <p>The recommended action from the assistant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>assistant tip</p>
              */
             public Builder assistantTip(String assistantTip) {
                 this.assistantTip = assistantTip;
@@ -896,7 +1030,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * BlockIp.
+             * <p>The blocked IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>196.251.81.30</p>
              */
             public Builder blockIp(String blockIp) {
                 this.blockIp = blockIp;
@@ -904,7 +1041,14 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * Direction.
+             * <p>The traffic direction. Valid values:</p>
+             * <ul>
+             * <li><strong>in</strong>: inbound to the cloud. </li>
+             * <li><strong>out</strong>: outbound from the cloud.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>out</p>
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -912,7 +1056,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * DstIp.
+             * <p>The destination IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.199.31.155</p>
              */
             public Builder dstIp(String dstIp) {
                 this.dstIp = dstIp;
@@ -920,7 +1067,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * DstPort.
+             * <p>The destination port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30629</p>
              */
             public Builder dstPort(String dstPort) {
                 this.dstPort = dstPort;
@@ -928,7 +1078,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>57ed8c6ddc9aafb1a3df38e6e84d2d45</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -936,7 +1089,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * EventImpact.
+             * <p>The overview of the event impact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance Stopped</p>
              */
             public Builder eventImpact(String eventImpact) {
                 this.eventImpact = eventImpact;
@@ -944,7 +1100,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * LeakName.
+             * <p>The vulnerability name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mining Management Event</p>
              */
             public Builder leakName(String leakName) {
                 this.leakName = leakName;
@@ -952,7 +1111,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -960,7 +1122,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * PunishReason.
+             * <p>The reason for the penalty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This instance is connecting to a Miner Pool and has likely been compromised by hackers for mining or other illicit activities.</p>
              */
             public Builder punishReason(String punishReason) {
                 this.punishReason = punishReason;
@@ -968,7 +1133,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotUrl.
+             * <p>The download URL of the penalty snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.aliyun.com/v2">https://xxx.aliyun.com/v2</a></p>
              */
             public Builder snapshotUrl(String snapshotUrl) {
                 this.snapshotUrl = snapshotUrl;
@@ -976,7 +1144,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIp.
+             * <p>The attack source IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36.134.124.185</p>
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;
@@ -984,7 +1155,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * SrcPort.
+             * <p>The source port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2168</p>
              */
             public Builder srcPort(String srcPort) {
                 this.srcPort = srcPort;
@@ -992,7 +1166,10 @@ public class GetResourceControlEventResponseBody extends TeaModel {
             }
 
             /**
-             * Tip.
+             * <p>The recommended action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Suggestion</p>
              */
             public Builder tip(String tip) {
                 this.tip = tip;

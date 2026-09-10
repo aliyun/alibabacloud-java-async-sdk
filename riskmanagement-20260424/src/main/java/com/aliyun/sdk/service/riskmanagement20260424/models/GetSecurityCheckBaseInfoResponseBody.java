@@ -106,7 +106,13 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p> 200: Success. Other codes (500, 400, etc.): Error codes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +120,7 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful‌</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B57D35D-9DAC-5393-AE39-07697E37C2E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +223,14 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Indicates whether the security check is enabled.</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -212,7 +238,14 @@ public class GetSecurityCheckBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCompleted.
+             * <p>Indicates whether the security check is completed.</p>
+             * <ul>
+             * <li><strong>true</strong>: Completed.</li>
+             * <li><strong>false</strong>: Not completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskCompleted(Boolean taskCompleted) {
                 this.taskCompleted = taskCompleted;

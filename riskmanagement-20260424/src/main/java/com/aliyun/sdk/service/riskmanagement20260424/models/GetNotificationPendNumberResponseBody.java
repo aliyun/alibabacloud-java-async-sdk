@@ -106,7 +106,10 @@ public class GetNotificationPendNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetNotificationPendNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The number of pending items for security contacts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetNotificationPendNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful‌</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetNotificationPendNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEE90F8C-EDC2-5394-953B-D07A121612B5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class GetNotificationPendNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.                                </li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

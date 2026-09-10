@@ -106,7 +106,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code returned if the call fails. For more information, see error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful‌</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99D93ED4-D462-5FC5-8518-9BC1C49C7B6C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call is successful.                               </li>
+         * <li><strong>false</strong>: The call fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -308,7 +324,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AlarmUniqueInfo.
+             * <p>The unique identifier of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>179deb12f25baac9b1e2909c419bcb1f</p>
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -316,7 +335,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * AliUid.
+             * <p>The 16-digit AliUid of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1248751055158884</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -324,7 +346,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * AnalysisCode.
+             * <p>The code of the tracing result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_code</p>
              */
             public Builder analysisCode(String analysisCode) {
                 this.analysisCode = analysisCode;
@@ -332,7 +357,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * AnalysisResult.
+             * <p>The text of the tracing result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exception_alert</p>
              */
             public Builder analysisResult(String analysisResult) {
                 this.analysisResult = analysisResult;
@@ -340,7 +368,14 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * ChooseLike.
+             * <p>Indicates whether the result is liked. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Liked.</li>
+             * <li><strong>false</strong>: Not liked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder chooseLike(Boolean chooseLike) {
                 this.chooseLike = chooseLike;
@@ -348,7 +383,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110.22.*8.111</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -356,7 +394,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * MachineInstanceId.
+             * <p>The instance ID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-adadasd-a**</p>
              */
             public Builder machineInstanceId(String machineInstanceId) {
                 this.machineInstanceId = machineInstanceId;
@@ -364,7 +405,14 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The display mode of the exception event details. Valid values:</p>
+             * <ul>
+             * <li><strong>text</strong>: plain text</li>
+             * <li><strong>html</strong>: rich text</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>auto_breaking</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -372,7 +420,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueInfo.
+             * <p>The unique ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>390317ce81d28bbbd83c05a90b39cd6c</p>
              */
             public Builder uniqueInfo(String uniqueInfo) {
                 this.uniqueInfo = uniqueInfo;
@@ -380,7 +431,10 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bb3051ca-c0dd-4da2-91be-ea5c80926132</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -447,7 +501,12 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AnalysisCode.
+             * <p>The code of the tracing result. (Deprecated)</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder analysisCode(String analysisCode) {
                 this.analysisCode = analysisCode;
@@ -455,7 +514,7 @@ public class GetAlertRecordAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueTagList.
+             * <p>The list of tracing results.</p>
              */
             public Builder uniqueTagList(java.util.List<UniqueTagList> uniqueTagList) {
                 this.uniqueTagList = uniqueTagList;

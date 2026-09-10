@@ -106,7 +106,10 @@ public class OpenTrialPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class OpenTrialPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The operation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class OpenTrialPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class OpenTrialPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>855FCC89-0B13-5FC0-AAD2-120878081C1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class OpenTrialPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +203,10 @@ public class OpenTrialPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * RequestId.
+             * <p>The Security Center request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5F4B631D-0358-5B7B-8B84-FB924138ED91</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;

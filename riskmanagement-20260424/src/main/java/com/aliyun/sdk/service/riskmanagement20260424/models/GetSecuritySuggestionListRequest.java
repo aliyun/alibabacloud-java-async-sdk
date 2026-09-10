@@ -59,7 +59,7 @@ public class GetSecuritySuggestionListRequest extends Request {
         } 
 
         /**
-         * ListConfigRulesRequest.
+         * <p>The request parameters.</p>
          */
         public Builder listConfigRulesRequest(ListConfigRulesRequest listConfigRulesRequest) {
             String listConfigRulesRequestShrink = shrink(listConfigRulesRequest, "ListConfigRulesRequest", "json");
@@ -219,7 +219,10 @@ public class GetSecuritySuggestionListRequest extends Request {
             } 
 
             /**
-             * CompliancePackId.
+             * <p>The compliance package ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-d7b061dbe91500aa179a</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -227,7 +230,17 @@ public class GetSecuritySuggestionListRequest extends Request {
             }
 
             /**
-             * ComplianceType.
+             * <p>The compliance evaluation result. Valid values:</p>
+             * <ul>
+             * <li><strong>COMPLIANT</strong>: Compliant.</li>
+             * <li><strong>NON_COMPLIANT</strong>: Non-compliant.</li>
+             * <li><strong>NOT_APPLICABLE</strong>: Not applicable.</li>
+             * <li><strong>INSUFFICIENT_DATA</strong>: Insufficient data.</li>
+             * <li><strong>IGNORED</strong>: Ignored.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -235,7 +248,10 @@ public class GetSecuritySuggestionListRequest extends Request {
             }
 
             /**
-             * ConfigRuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the rule.</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -243,7 +259,16 @@ public class GetSecuritySuggestionListRequest extends Request {
             }
 
             /**
-             * ConfigRuleState.
+             * <p>The rule running status. Valid values:</p>
+             * <ul>
+             * <li><strong>ACTIVE</strong>: Active.</li>
+             * <li><strong>DELETING</strong>: Being deleted.</li>
+             * <li><strong>EVALUATING</strong>: Being evaluated.</li>
+             * <li><strong>INACTIVE</strong>: Inactive.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder configRuleState(String configRuleState) {
                 this.configRuleState = configRuleState;
@@ -251,7 +276,11 @@ public class GetSecuritySuggestionListRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The query keyword.</p>
+             * <p>Supports fuzzy match on the rule ID, rule name, rule description, and rule template identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -259,7 +288,13 @@ public class GetSecuritySuggestionListRequest extends Request {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * <blockquote>
+             * <p>Minimum value: 1. Default value: 1.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -267,7 +302,13 @@ public class GetSecuritySuggestionListRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * <blockquote>
+             * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -275,7 +316,10 @@ public class GetSecuritySuggestionListRequest extends Request {
             }
 
             /**
-             * ResourceTypes.
+             * <p>The resource type evaluated by the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ECS::Instance</p>
              */
             public Builder resourceTypes(String resourceTypes) {
                 this.resourceTypes = resourceTypes;
@@ -283,7 +327,15 @@ public class GetSecuritySuggestionListRequest extends Request {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: High risk.</li>
+             * <li><strong>2</strong>: Medium risk.</li>
+             * <li><strong>3</strong>: Low risk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

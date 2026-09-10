@@ -106,7 +106,13 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p>200: Success. Other values (500, 400, etc.): Error codes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +120,7 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +150,10 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the current API call is successful. Valid values: True/False. This does not indicate the success of subsequent business operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -272,7 +284,14 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentStatus.
+             * <p>The status of the Security Center Agent.</p>
+             * <ul>
+             * <li><strong>true</strong>: Enabled.</li>
+             * <li><strong>false</strong>: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder agentStatus(Boolean agentStatus) {
                 this.agentStatus = agentStatus;
@@ -280,7 +299,14 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
             }
 
             /**
-             * EcsInstanceStatus.
+             * <p>The running status of the ECS instance.</p>
+             * <ul>
+             * <li><strong>true</strong>: Running.</li>
+             * <li><strong>false</strong>: Not running.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ecsInstanceStatus(Boolean ecsInstanceStatus) {
                 this.ecsInstanceStatus = ecsInstanceStatus;
@@ -288,7 +314,7 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIds.
+             * <p>The list of instance IDs of identical security alert events in Security Center.</p>
              */
             public Builder instanceIds(java.util.List<Long> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -296,10 +322,10 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Id of the request</p>
+             * <p>The request ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>3C107939-59BD-5EB9-B250-39559C830A85</p>
+             * <p>8169D779-3391-541F-936B-11F4EC09AD0D</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -307,7 +333,14 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
             }
 
             /**
-             * SwasInstanceStatus.
+             * <p>The running status of the simple application server.</p>
+             * <ul>
+             * <li><strong>true</strong>: Running.</li>
+             * <li><strong>false</strong>: Not running.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder swasInstanceStatus(Boolean swasInstanceStatus) {
                 this.swasInstanceStatus = swasInstanceStatus;
@@ -315,7 +348,10 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID for querying security alerting events triggered by the same rule or alerting type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12313123</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -323,7 +359,14 @@ public class GetAliYunSafeCenterResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>Indicates whether the list of security alerting events that match the same IP rule or same alerting type as the alerting event to be handled is empty.</p>
+             * <ul>
+             * <li><strong>true</strong>: Empty.</li>
+             * <li><strong>false</strong>: Not empty.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder taskStatus(Boolean taskStatus) {
                 this.taskStatus = taskStatus;

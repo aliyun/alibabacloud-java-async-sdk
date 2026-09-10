@@ -73,7 +73,10 @@ public class GetCanTrySasRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class GetCanTrySasRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request parameters.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -151,7 +154,14 @@ public class GetCanTrySasRequest extends Request {
             } 
 
             /**
-             * FromEcs.
+             * <p>Specifies whether the request is from the ECS console. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The request is from the ECS console.</li>
+             * <li><strong>false</strong>: The request is not from the ECS console.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fromEcs(Boolean fromEcs) {
                 this.fromEcs = fromEcs;
@@ -159,7 +169,14 @@ public class GetCanTrySasRequest extends Request {
             }
 
             /**
-             * Lang.
+             * <p>The language type for the request and response messages. Default value: zh. Valid values:</p>
+             * <ul>
+             * <li><strong>zh</strong>: Chinese</li>
+             * <li><strong>en</strong>: English</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;

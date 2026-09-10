@@ -73,7 +73,10 @@ public class DescribeServiceLinkedRoleStatusRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class DescribeServiceLinkedRoleStatusRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -138,7 +141,14 @@ public class DescribeServiceLinkedRoleStatusRequest extends Request {
             } 
 
             /**
-             * ServiceLinkedRole.
+             * <p>The service-linked role. Default value: <strong>AliyunServiceRoleForSas</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>AliyunServiceRoleForSas</strong>: the service-linked role for Security Center (sas). Security Center uses this role to access your resources in other Alibaba Cloud services.</li>
+             * <li><strong>AliyunServiceRoleForSasCspm</strong>: the service-linked role for Security Center - CSPM (sas-cspm). sas-cspm uses this role to access your resources in other Alibaba Cloud services.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunServiceRoleForSas</p>
              */
             public Builder serviceLinkedRole(String serviceLinkedRole) {
                 this.serviceLinkedRole = serviceLinkedRole;

@@ -106,7 +106,14 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><strong>200</strong>: Success.</li>
+         * <li><strong>Other (400, 500)</strong>: Failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +129,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>855FCC89-0B13-5FC0-AAD2-120878081C1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +151,14 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.         </li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +224,16 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             } 
 
             /**
-             * ComplianceType.
+             * <p>The compliance evaluation result of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>COMPLIANT</strong>: Compliant.</li>
+             * <li><strong>NON_COMPLIANT</strong>: Non-compliant.</li>
+             * <li><strong>NOT_APPLICABLE</strong>: Not applicable.</li>
+             * <li><strong>INSUFFICIENT_DATA</strong>: Insufficient data.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NON_COMPLIANT</p>
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -212,7 +241,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of evaluations corresponding to the summary result of the rule evaluation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -279,7 +311,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             } 
 
             /**
-             * CompliancePackId.
+             * <p>The ID of the compliance package to which the rule belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cp-fdc8626622af00f9****</p>
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -287,7 +322,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * CompliancePackName.
+             * <p>The compliance package name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the compliance package.</p>
              */
             public Builder compliancePackName(String compliancePackName) {
                 this.compliancePackName = compliancePackName;
@@ -354,7 +392,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -362,7 +403,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -598,7 +642,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The ID of the account to which the rule belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625772519123804</p>
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -606,7 +653,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * AutomationType.
+             * <p>The remediation type. Only OOS (CloudOps Orchestration Service) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OOS</p>
              */
             public Builder automationType(String automationType) {
                 this.automationType = automationType;
@@ -614,7 +664,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * Compliance.
+             * <p>The aggregated compliance result of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{count=1, complianceType=NON_COMPLIANT}</p>
              */
             public Builder compliance(String compliance) {
                 this.compliance = compliance;
@@ -622,7 +675,7 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * ComplianceObject.
+             * <p>The aggregated compliance result of the rule.</p>
              */
             public Builder complianceObject(ComplianceObject complianceObject) {
                 this.complianceObject = complianceObject;
@@ -630,7 +683,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigRuleArn.
+             * <p>The ARN of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:config::100931896542****:rule/cr-fdc8626622af00f9****</p>
              */
             public Builder configRuleArn(String configRuleArn) {
                 this.configRuleArn = configRuleArn;
@@ -638,7 +694,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigRuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cr-bqa2f25bc5ce00af6323</p>
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -646,7 +705,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigRuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the rule.</p>
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -654,7 +716,16 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigRuleState.
+             * <p>The rule running status. Valid values:</p>
+             * <ul>
+             * <li><strong>ACTIVE</strong>: Active.</li>
+             * <li><strong>DELETING</strong>: Being deleted.</li>
+             * <li><strong>EVALUATING</strong>: Being evaluated.</li>
+             * <li><strong>INACTIVE</strong>: Inactive.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder configRuleState(String configRuleState) {
                 this.configRuleState = configRuleState;
@@ -662,7 +733,7 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateBy.
+             * <p>The information about the rule creator.</p>
              */
             public Builder createBy(CreateBy createBy) {
                 this.createBy = createBy;
@@ -670,7 +741,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The description of the rule.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -678,7 +752,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTypesScope.
+             * <p>The resource type scope. Multiple resource types are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::EIP::EipAddress</p>
              */
             public Builder resourceTypesScope(String resourceTypesScope) {
                 this.resourceTypesScope = resourceTypesScope;
@@ -686,7 +763,15 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>The risk level of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: High risk.</li>
+             * <li><strong>2</strong>: Medium risk.</li>
+             * <li><strong>3</strong>: Low risk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -694,7 +779,16 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIdentifier.
+             * <p>The rule identifier.</p>
+             * <ul>
+             * <li><p>If the rule uses a managed rule, this parameter is the managed rule name.</p>
+             * </li>
+             * <li><p>If the rule uses a custom function, this parameter is the function ARN.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-bandwidth-limit</p>
              */
             public Builder sourceIdentifier(String sourceIdentifier) {
                 this.sourceIdentifier = sourceIdentifier;
@@ -702,7 +796,14 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwner.
+             * <p>The owner of the rule source. Valid values:</p>
+             * <ul>
+             * <li><strong>CUSTOM_FC</strong>: Custom rule.</li>
+             * <li><strong>ALIYUN</strong>: Rule template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder sourceOwner(String sourceOwner) {
                 this.sourceOwner = sourceOwner;
@@ -710,7 +811,7 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the rule.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -803,7 +904,7 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigRuleList.
+             * <p>The list of rules.</p>
              */
             public Builder configRuleList(java.util.List<ConfigRuleList> configRuleList) {
                 this.configRuleList = configRuleList;
@@ -811,7 +912,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -819,7 +923,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -827,7 +934,10 @@ public class GetSecuritySuggestionListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

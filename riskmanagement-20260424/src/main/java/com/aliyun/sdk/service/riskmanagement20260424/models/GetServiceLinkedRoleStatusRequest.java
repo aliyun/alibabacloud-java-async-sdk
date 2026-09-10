@@ -60,6 +60,13 @@ public class GetServiceLinkedRoleStatusRequest extends Request {
         } 
 
         /**
+         * <p>The authorization type. Valid values:</p>
+         * <ul>
+         * <li><strong>SecuritySense</strong>: Security check authorization.</li>
+         * <li><strong>DisposalTool</strong>: Threat removal tool authorization.</li>
+         * <li><strong>SensePosture</strong>: Security posture authorization.</li>
+         * <li><strong>CreateServiceRole</strong>: Service role creation authorization.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

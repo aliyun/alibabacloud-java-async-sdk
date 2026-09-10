@@ -106,7 +106,13 @@ public class UpdateSecurityCheckResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p> 200: The request was successful. Other codes (500, 400, etc.): An error occurred.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +120,14 @@ public class UpdateSecurityCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of updating the health check result.</p>
+         * <ul>
+         * <li><strong>true</strong>: Succeeded.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -122,7 +135,10 @@ public class UpdateSecurityCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +146,10 @@ public class UpdateSecurityCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6B57D35D-9DAC-5393-AE39-07697E37C2E7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +157,14 @@ public class UpdateSecurityCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.                                </li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

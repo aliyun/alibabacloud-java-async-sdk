@@ -106,7 +106,14 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><strong>200</strong>: Success.</li>
+         * <li><strong>Other (400, 500)</strong>: Failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +129,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +151,14 @@ public class GetNotificationContactsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Success.</li>
+         * <li><strong>false</strong>: Failure.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -243,7 +263,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelType.
+             * <p>The channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>email</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -251,7 +274,14 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * CheckedState.
+             * <p>Indicates whether the subscription is configured.</p>
+             * <ul>
+             * <li><strong>NO</strong></li>
+             * <li><strong>YES</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder checkedState(String checkedState) {
                 this.checkedState = checkedState;
@@ -259,7 +289,14 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultChecked.
+             * <p>Indicates whether the channel is selected by default.</p>
+             * <ul>
+             * <li><strong>NO</strong></li>
+             * <li><strong>YES</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder defaultChecked(String defaultChecked) {
                 this.defaultChecked = defaultChecked;
@@ -267,7 +304,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * FatigueDayLimit.
+             * <p>The fatigue limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder fatigueDayLimit(Integer fatigueDayLimit) {
                 this.fatigueDayLimit = fatigueDayLimit;
@@ -275,7 +315,14 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Optional.
+             * <p>Indicates whether the channel is modifiable.</p>
+             * <ul>
+             * <li><strong>NO</strong></li>
+             * <li><strong>YES</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder optional(String optional) {
                 this.optional = optional;
@@ -433,7 +480,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1492387044070147</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -441,7 +491,14 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * BindContact.
+             * <p>Indicates whether the contact is bound.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>fasle</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bindContact(Boolean bindContact) {
                 this.bindContact = bindContact;
@@ -449,7 +506,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactEmail.
+             * <p>The contact email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t*@qq.*</p>
              */
             public Builder contactEmail(String contactEmail) {
                 this.contactEmail = contactEmail;
@@ -457,7 +517,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * <p>The Account Center contact ID. A value of 0 indicates the account contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -465,7 +528,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactMobile.
+             * <p>The Account Center contact mobile number (masked).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13580xxx136</p>
              */
             public Builder contactMobile(String contactMobile) {
                 this.contactMobile = contactMobile;
@@ -473,7 +539,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactName.
+             * <p>The Account Center contact name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>shianyu</p>
              */
             public Builder contactName(String contactName) {
                 this.contactName = contactName;
@@ -481,7 +550,14 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * EmailConfirmed.
+             * <p>Indicates whether the email address is verified.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder emailConfirmed(Boolean emailConfirmed) {
                 this.emailConfirmed = emailConfirmed;
@@ -489,7 +565,14 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * MobileConfirmed.
+             * <p>Indicates whether the Account Center contact mobile number is verified.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mobileConfirmed(Boolean mobileConfirmed) {
                 this.mobileConfirmed = mobileConfirmed;
@@ -497,7 +580,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * <p>The Account Center contact position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CEO</p>
              */
             public Builder position(String position) {
                 this.position = position;
@@ -655,7 +741,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1355290655619147</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -663,7 +752,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryCode.
+             * <p>The message category code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod_edu_content</p>
              */
             public Builder categoryCode(String categoryCode) {
                 this.categoryCode = categoryCode;
@@ -671,7 +763,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryDesc.
+             * <p>The message category description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product usage scenarios and technical sharing content.</p>
              */
             public Builder categoryDesc(String categoryDesc) {
                 this.categoryDesc = categoryDesc;
@@ -679,7 +774,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryGroupCode.
+             * <p>The category group code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod_msg</p>
              */
             public Builder categoryGroupCode(String categoryGroupCode) {
                 this.categoryGroupCode = categoryGroupCode;
@@ -687,7 +785,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryGroupName.
+             * <p>The category group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product messages.</p>
              */
             public Builder categoryGroupName(String categoryGroupName) {
                 this.categoryGroupName = categoryGroupName;
@@ -695,7 +796,10 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * CategoryName.
+             * <p>The message category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product educational content.</p>
              */
             public Builder categoryName(String categoryName) {
                 this.categoryName = categoryName;
@@ -703,7 +807,7 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelConfigs.
+             * <p>The channel list.</p>
              */
             public Builder channelConfigs(java.util.List<ChannelConfigs> channelConfigs) {
                 this.channelConfigs = channelConfigs;
@@ -711,7 +815,14 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ChooseAllChannel.
+             * <p>Indicates whether all notification methods are selected.</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder chooseAllChannel(Boolean chooseAllChannel) {
                 this.chooseAllChannel = chooseAllChannel;
@@ -719,7 +830,7 @@ public class GetNotificationContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactInfoList.
+             * <p>The general contact list.</p>
              */
             public Builder contactInfoList(java.util.List<ContactInfoList> contactInfoList) {
                 this.contactInfoList = contactInfoList;

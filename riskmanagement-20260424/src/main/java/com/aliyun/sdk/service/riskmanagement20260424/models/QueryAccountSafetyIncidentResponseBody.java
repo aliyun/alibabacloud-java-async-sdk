@@ -106,7 +106,13 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p> 200: The request was successful. Other codes (500, 400, etc.): An error occurred.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +120,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful‌</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +236,13 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertEndTime.
+             * <p>The time when the alert ended.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder alertEndTime(String alertEndTime) {
                 this.alertEndTime = alertEndTime;
@@ -225,7 +250,13 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * AlertStartTime.
+             * <p>The time when the first alert was triggered.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder alertStartTime(String alertStartTime) {
                 this.alertStartTime = alertStartTime;
@@ -233,7 +264,13 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * LastCheckTime.
+             * <p>The time of the latest detection.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder lastCheckTime(String lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -534,7 +571,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionCode.
+             * <p>The control action code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success_service</p>
              */
             public Builder actionCode(String actionCode) {
                 this.actionCode = actionCode;
@@ -542,7 +582,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * ActionName.
+             * <p>The control action name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Penalty directly succeeded</p>
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -550,7 +593,13 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * AntiPunishTime.
+             * <p>The time when the control action was removed.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder antiPunishTime(String antiPunishTime) {
                 this.antiPunishTime = antiPunishTime;
@@ -558,7 +607,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * CallApi.
+             * <p>The called API operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AddDomainRecord</p>
              */
             public Builder callApi(String callApi) {
                 this.callApi = callApi;
@@ -566,7 +618,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * DateExtras.
+             * <p>The control time information.</p>
              */
             public Builder dateExtras(DateExtras dateExtras) {
                 this.dateExtras = dateExtras;
@@ -574,7 +626,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4ba4065e0b2206c05f86d5eaa00ae520</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -582,7 +637,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * EventImpact.
+             * <p>The event impact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak leak.</p>
              */
             public Builder eventImpact(String eventImpact) {
                 this.eventImpact = eventImpact;
@@ -590,7 +648,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The control event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak leak.</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -598,7 +659,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * EventReason.
+             * <p>The event reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ak leak.</p>
              */
             public Builder eventReason(String eventReason) {
                 this.eventReason = eventReason;
@@ -606,7 +670,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The event subtype name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Suspicious identity calling sensitive API</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -614,7 +681,13 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * ExceptionCallTime.
+             * <p>The time of the abnormal call.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder exceptionCallTime(String exceptionCallTime) {
                 this.exceptionCallTime = exceptionCallTime;
@@ -622,7 +695,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * ExceptionIp.
+             * <p>The abnormal IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.1X4.63.XX9</p>
              */
             public Builder exceptionIp(String exceptionIp) {
                 this.exceptionIp = exceptionIp;
@@ -630,7 +706,13 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * PunishTime.
+             * <p>The start time of the control action.</p>
+             * <blockquote>
+             * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder punishTime(String punishTime) {
                 this.punishTime = punishTime;
@@ -638,7 +720,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * Reinforcement.
+             * <p>The hardening suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suggestion</p>
              */
             public Builder reinforcement(String reinforcement) {
                 this.reinforcement = reinforcement;
@@ -646,7 +731,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The cloud resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2zeanc2b2vgfpbvp60cs</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -654,7 +742,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The controlled object type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -662,7 +753,16 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The event status. Valid values:</p>
+             * <ul>
+             * <li><strong>Executing</strong>: In progress.</li>
+             * <li><strong>Removed</strong>: Removed.</li>
+             * <li><strong>Alerting</strong>: Alerting.</li>
+             * <li><strong>Ended</strong>: Ended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -670,7 +770,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * Tip.
+             * <p>The handling suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suggestion</p>
              */
             public Builder tip(String tip) {
                 this.tip = tip;
@@ -678,7 +781,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * UserGuideName.
+             * <p>The help topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>help</p>
              */
             public Builder userGuideName(String userGuideName) {
                 this.userGuideName = userGuideName;
@@ -686,7 +792,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * UserGuideUrl.
+             * <p>The help topic URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxx.aliyun.com/">https://xxx.aliyun.com/</a></p>
              */
             public Builder userGuideUrl(String userGuideUrl) {
                 this.userGuideUrl = userGuideUrl;
@@ -766,7 +875,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             } 
 
             /**
-             * Current.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder current(String current) {
                 this.current = current;
@@ -774,7 +886,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of assets displayed on each page in a paged query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -782,7 +897,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder total(String total) {
                 this.total = total;
@@ -849,7 +967,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The event data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -857,7 +975,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfo.
+             * <p>The total number of records.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

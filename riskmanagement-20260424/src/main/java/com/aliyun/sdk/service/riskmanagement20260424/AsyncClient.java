@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVersionConfigResponse> describeVersionConfig(DescribeVersionConfigRequest request);
 
     /**
+     * @param request the request parameters of DownloadResourceControlEvents  DownloadResourceControlEventsRequest
+     * @return DownloadResourceControlEventsResponse
+     */
+    CompletableFuture<DownloadResourceControlEventsResponse> downloadResourceControlEvents(DownloadResourceControlEventsRequest request);
+
+    /**
      * @param request the request parameters of GetAlertRecordAnalysisResult  GetAlertRecordAnalysisResultRequest
      * @return GetAlertRecordAnalysisResultResponse
      */

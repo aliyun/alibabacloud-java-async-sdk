@@ -59,7 +59,13 @@ public class GetDisposalToolStatusRequest extends Request {
         } 
 
         /**
-         * AuthType.
+         * <p>The authorization type.</p>
+         * <ul>
+         * <li><strong>DisposalTool</strong>: one-click disposal authorization type</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DisposalTool</p>
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);

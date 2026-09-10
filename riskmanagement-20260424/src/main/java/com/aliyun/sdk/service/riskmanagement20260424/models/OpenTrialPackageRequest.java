@@ -73,7 +73,15 @@ public class OpenTrialPackageRequest extends Request {
         } 
 
         /**
-         * AutoCloseSwitch.
+         * <p>Specifies whether to automatically disable the trial plan when it expires.</p>
+         * <ul>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * </ul>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder autoCloseSwitch(Integer autoCloseSwitch) {
             this.putQueryParameter("AutoCloseSwitch", autoCloseSwitch);
@@ -82,7 +90,10 @@ public class OpenTrialPackageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

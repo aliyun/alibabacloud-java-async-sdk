@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SubmitApplyRecordResponseBody} extends {@link TeaModel}
+ * {@link DownloadResourceControlEventsResponseBody} extends {@link TeaModel}
  *
- * <p>SubmitApplyRecordResponseBody</p>
+ * <p>DownloadResourceControlEventsResponseBody</p>
  */
-public class SubmitApplyRecordResponseBody extends TeaModel {
+public class DownloadResourceControlEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Boolean data;
+    private String data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,7 +32,7 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private SubmitApplyRecordResponseBody(Builder builder) {
+    private DownloadResourceControlEventsResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SubmitApplyRecordResponseBody create() {
+    public static DownloadResourceControlEventsResponseBody create() {
         return builder().build();
     }
 
@@ -62,7 +62,7 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Boolean getData() {
+    public String getData() {
         return this.data;
     }
 
@@ -89,7 +89,7 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Boolean data; 
+        private String data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -97,7 +97,7 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(SubmitApplyRecordResponseBody model) {
+        private Builder(DownloadResourceControlEventsResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -107,10 +107,9 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
 
         /**
          * <p>The status code.</p>
-         * <ul>
-         * <li><strong>200</strong>: Succeeded.</li>
-         * <li><strong>Other (400, 500)</strong>: Failed.</li>
-         * </ul>
+         * <blockquote>
+         * <p>200 indicates success. Other values (such as 500 or 400) indicate error codes.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -121,25 +120,21 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The submission result.</p>
-         * <ul>
-         * <li><strong>true</strong>: Submitted.</li>
-         * <li><strong>false</strong>: Submission failed.</li>
-         * </ul>
+         * <p>The metadata response information.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>5</p>
          */
-        public Builder data(Boolean data) {
+        public Builder data(String data) {
             this.data = data;
             return this;
         }
 
         /**
-         * <p>The message content.</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
-         * <p>successful‌</p>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -147,10 +142,10 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>6B57D35D-9DAC-5393-AE39-07697E37C2E7</p>
+         * <p>855FCC89-0B13-5FC0-AAD2-120878081C1C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,10 +153,10 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The call status.</p>
+         * <p>Indicates whether the call was successful.</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.</li>
-         * <li><strong>false</strong>: Failed.</li>
+         * <li><strong>true</strong>: The call was successful.                                </li>
+         * <li><strong>false</strong>: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,8 +167,8 @@ public class SubmitApplyRecordResponseBody extends TeaModel {
             return this;
         }
 
-        public SubmitApplyRecordResponseBody build() {
-            return new SubmitApplyRecordResponseBody(this);
+        public DownloadResourceControlEventsResponseBody build() {
+            return new DownloadResourceControlEventsResponseBody(this);
         } 
 
     } 

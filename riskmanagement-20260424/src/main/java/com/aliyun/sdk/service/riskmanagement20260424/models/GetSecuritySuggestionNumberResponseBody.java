@@ -106,7 +106,14 @@ public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><strong>200</strong>: Successful.</li>
+         * <li><strong>Others (400, 500)</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,10 @@ public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The number of pending items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -122,7 +132,10 @@ public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +143,10 @@ public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2E130B0F-9E69-52FA-84FC-187FE1BA9489</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +154,14 @@ public class GetSecuritySuggestionNumberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

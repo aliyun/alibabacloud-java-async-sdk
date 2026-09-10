@@ -73,7 +73,10 @@ public class BindAuthToMachineRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID of the Smart Access Gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -255,7 +258,17 @@ public class BindAuthToMachineRequest extends Request {
             } 
 
             /**
-             * AuthVersion.
+             * <p>The authorization version of the asset. Valid values:</p>
+             * <ul>
+             * <li><strong>6</strong>: Anti-virus Edition</li>
+             * <li><strong>5</strong>: Advanced Edition</li>
+             * <li><strong>3</strong>: Enterprise Edition</li>
+             * <li><strong>7</strong>: Ultimate Edition</li>
+             * <li><strong>10</strong>: Value-added Service Edition</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -263,7 +276,14 @@ public class BindAuthToMachineRequest extends Request {
             }
 
             /**
-             * AutoBind.
+             * <p>Specifies whether to enable automatic binding. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoBind(Integer autoBind) {
                 this.autoBind = autoBind;
@@ -271,7 +291,11 @@ public class BindAuthToMachineRequest extends Request {
             }
 
             /**
-             * Bind.
+             * <p>The collection of UUIDs to bind.</p>
+             * <blockquote>
+             * <p>Bind and UnBind cannot both be empty.
+             * Maximum number of child entries: 1000.</p>
+             * </blockquote>
              */
             public Builder bind(java.util.List<String> bind) {
                 this.bind = bind;
@@ -279,7 +303,14 @@ public class BindAuthToMachineRequest extends Request {
             }
 
             /**
-             * BindAll.
+             * <p>Specifies whether to bind all assets. Default value: <strong>false</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: yes</li>
+             * <li><strong>false</strong>: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bindAll(Boolean bindAll) {
                 this.bindAll = bindAll;
@@ -287,7 +318,13 @@ public class BindAuthToMachineRequest extends Request {
             }
 
             /**
-             * Criteria.
+             * <p>The search conditions for assets. This parameter is in JSON format. Pay attention to the letter case when you specify this parameter.</p>
+             * <blockquote>
+             * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can call the DescribeCriteria operation to query the supported search conditions.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;name\&quot;:\&quot;clientStatus\&quot;,\&quot;value\&quot;:\&quot;online\&quot;},{\&quot;name\&quot;:\&quot;authVersion\&quot;,\&quot;value\&quot;:\&quot;1\&quot;}]</p>
              */
             public Builder criteria(String criteria) {
                 this.criteria = criteria;
@@ -295,7 +332,17 @@ public class BindAuthToMachineRequest extends Request {
             }
 
             /**
-             * IsPreBind.
+             * <p>Specifies whether this is a pre-binding operation. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no</li>
+             * <li><strong>1</strong>: yes</li>
+             * </ul>
+             * <blockquote>
+             * <p>After pre-binding is enabled, the corresponding authorization quota is automatically bound to the specified servers after the purchase is completed.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isPreBind(Integer isPreBind) {
                 this.isPreBind = isPreBind;
@@ -303,7 +350,14 @@ public class BindAuthToMachineRequest extends Request {
             }
 
             /**
-             * LogicalExp.
+             * <p>The logical relationship between multiple search conditions. Valid values:</p>
+             * <ul>
+             * <li><strong>OR</strong>: The search conditions are in an <strong>OR</strong> relationship.</li>
+             * <li><strong>AND</strong>: The search conditions are in an <strong>AND</strong> relationship.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder logicalExp(String logicalExp) {
                 this.logicalExp = logicalExp;
@@ -311,7 +365,17 @@ public class BindAuthToMachineRequest extends Request {
             }
 
             /**
-             * NtmVersion.
+             * <p>The order version associated with the pre-binding. Valid values:</p>
+             * <ul>
+             * <li><strong>level7</strong>: Anti-virus Edition</li>
+             * <li><strong>level3</strong>: Advanced Edition</li>
+             * <li><strong>level2</strong>: Enterprise Edition</li>
+             * <li><strong>level8</strong>: Ultimate Edition</li>
+             * <li><strong>level10</strong>: value-added service only</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level2</p>
              */
             public Builder ntmVersion(Long ntmVersion) {
                 this.ntmVersion = ntmVersion;
@@ -319,7 +383,13 @@ public class BindAuthToMachineRequest extends Request {
             }
 
             /**
-             * PreBindOrderId.
+             * <p>The order ID associated with the pre-binding.</p>
+             * <blockquote>
+             * <p>Note: This field is of the Long type. Precision loss may occur during the sequence/deserialization procedure. The value must not exceed 9007199254740991.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>263076506250432</p>
              */
             public Builder preBindOrderId(Long preBindOrderId) {
                 this.preBindOrderId = preBindOrderId;
@@ -327,7 +397,10 @@ public class BindAuthToMachineRequest extends Request {
             }
 
             /**
-             * UnBind.
+             * <p>The collection of UUIDs to unbind.</p>
+             * <blockquote>
+             * <p><strong>Bind</strong> and <strong>UnBind</strong> cannot both be empty.</p>
+             * </blockquote>
              */
             public Builder unBind(java.util.List<String> unBind) {
                 this.unBind = unBind;

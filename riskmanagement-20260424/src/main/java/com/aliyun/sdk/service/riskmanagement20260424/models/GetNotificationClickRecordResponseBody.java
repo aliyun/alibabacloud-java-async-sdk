@@ -106,7 +106,14 @@ public class GetNotificationClickRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <ul>
+         * <li><strong>200</strong>: Succeeded.</li>
+         * <li><strong>Others (400, 500)</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class GetNotificationClickRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The metadata.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +129,13 @@ public class GetNotificationClickRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request was successful, a success message is returned. If the request failed, the failure reason is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +143,10 @@ public class GetNotificationClickRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99D93ED4-D462-5FC5-8518-9BC1C49C7B6C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +154,14 @@ public class GetNotificationClickRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.         </li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +227,14 @@ public class GetNotificationClickRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * UserCancel.
+             * <p>Indicates whether the user clicked cancel.</p>
+             * <ul>
+             * <li><strong>true</strong>: Canceled.</li>
+             * <li><strong>false</strong>: Not canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder userCancel(String userCancel) {
                 this.userCancel = userCancel;
@@ -212,7 +242,14 @@ public class GetNotificationClickRecordResponseBody extends TeaModel {
             }
 
             /**
-             * UserConfirm.
+             * <p>Indicates whether the user clicked confirm.</p>
+             * <ul>
+             * <li><strong>true</strong>: Confirmed.</li>
+             * <li><strong>false</strong>: Not confirmed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder userConfirm(String userConfirm) {
                 this.userConfirm = userConfirm;

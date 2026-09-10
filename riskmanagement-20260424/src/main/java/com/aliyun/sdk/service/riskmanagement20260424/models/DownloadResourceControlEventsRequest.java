@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link QueryResourceControlEventsRequest} extends {@link RequestModel}
+ * {@link DownloadResourceControlEventsRequest} extends {@link RequestModel}
  *
- * <p>QueryResourceControlEventsRequest</p>
+ * <p>DownloadResourceControlEventsRequest</p>
  */
-public class QueryResourceControlEventsRequest extends Request {
+public class DownloadResourceControlEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ActionCode")
     private String actionCode;
@@ -32,10 +32,6 @@ public class QueryResourceControlEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BusinessCode")
     private String businessCode;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("BusinessCodes")
-    private java.util.List<String> businessCodes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CaseCodesPrefix")
@@ -60,10 +56,6 @@ public class QueryResourceControlEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventId")
     private String eventId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EventIdList")
-    private java.util.List<String> eventIdList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludeActionCodes")
@@ -121,20 +113,18 @@ public class QueryResourceControlEventsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
-    private QueryResourceControlEventsRequest(Builder builder) {
+    private DownloadResourceControlEventsRequest(Builder builder) {
         super(builder);
         this.actionCode = builder.actionCode;
         this.actionCodes = builder.actionCodes;
         this.aliyunLang = builder.aliyunLang;
         this.businessCode = builder.businessCode;
-        this.businessCodes = builder.businessCodes;
         this.caseCodesPrefix = builder.caseCodesPrefix;
         this.current = builder.current;
         this.domain = builder.domain;
         this.eventCode = builder.eventCode;
         this.eventCodes = builder.eventCodes;
         this.eventId = builder.eventId;
-        this.eventIdList = builder.eventIdList;
         this.excludeActionCodes = builder.excludeActionCodes;
         this.excludeEventCodes = builder.excludeEventCodes;
         this.excludeReasons = builder.excludeReasons;
@@ -155,7 +145,7 @@ public class QueryResourceControlEventsRequest extends Request {
         return new Builder();
     }
 
-    public static QueryResourceControlEventsRequest create() {
+    public static DownloadResourceControlEventsRequest create() {
         return builder().build();
     }
 
@@ -190,13 +180,6 @@ public class QueryResourceControlEventsRequest extends Request {
      */
     public String getBusinessCode() {
         return this.businessCode;
-    }
-
-    /**
-     * @return businessCodes
-     */
-    public java.util.List<String> getBusinessCodes() {
-        return this.businessCodes;
     }
 
     /**
@@ -239,13 +222,6 @@ public class QueryResourceControlEventsRequest extends Request {
      */
     public String getEventId() {
         return this.eventId;
-    }
-
-    /**
-     * @return eventIdList
-     */
-    public java.util.List<String> getEventIdList() {
-        return this.eventIdList;
     }
 
     /**
@@ -346,19 +322,17 @@ public class QueryResourceControlEventsRequest extends Request {
         return this.url;
     }
 
-    public static final class Builder extends Request.Builder<QueryResourceControlEventsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DownloadResourceControlEventsRequest, Builder> {
         private String actionCode; 
         private java.util.List<String> actionCodes; 
         private String aliyunLang; 
         private String businessCode; 
-        private java.util.List<String> businessCodes; 
         private java.util.List<String> caseCodesPrefix; 
         private Integer current; 
         private String domain; 
         private String eventCode; 
         private java.util.List<String> eventCodes; 
         private String eventId; 
-        private java.util.List<String> eventIdList; 
         private java.util.List<String> excludeActionCodes; 
         private java.util.List<String> excludeEventCodes; 
         private java.util.List<String> excludeReasons; 
@@ -378,20 +352,18 @@ public class QueryResourceControlEventsRequest extends Request {
             super();
         } 
 
-        private Builder(QueryResourceControlEventsRequest request) {
+        private Builder(DownloadResourceControlEventsRequest request) {
             super(request);
             this.actionCode = request.actionCode;
             this.actionCodes = request.actionCodes;
             this.aliyunLang = request.aliyunLang;
             this.businessCode = request.businessCode;
-            this.businessCodes = request.businessCodes;
             this.caseCodesPrefix = request.caseCodesPrefix;
             this.current = request.current;
             this.domain = request.domain;
             this.eventCode = request.eventCode;
             this.eventCodes = request.eventCodes;
             this.eventId = request.eventId;
-            this.eventIdList = request.eventIdList;
             this.excludeActionCodes = request.excludeActionCodes;
             this.excludeEventCodes = request.excludeEventCodes;
             this.excludeReasons = request.excludeReasons;
@@ -422,9 +394,9 @@ public class QueryResourceControlEventsRequest extends Request {
 
         /**
          * <p>The collection of control action name codes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>shutdown</p>
+         * <blockquote>
+         * <p>Example: [\\\&quot;shutdown\\\&quot;]</p>
+         * </blockquote>
          */
         public Builder actionCodes(java.util.List<String> actionCodes) {
             String actionCodesShrink = shrink(actionCodes, "ActionCodes", "json");
@@ -434,7 +406,11 @@ public class QueryResourceControlEventsRequest extends Request {
         }
 
         /**
-         * <p>The internationalization language.</p>
+         * <p>The language. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese (default).</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>zh</p>
@@ -458,20 +434,10 @@ public class QueryResourceControlEventsRequest extends Request {
         }
 
         /**
-         * <p>The list of product types.</p>
-         */
-        public Builder businessCodes(java.util.List<String> businessCodes) {
-            String businessCodesShrink = shrink(businessCodes, "BusinessCodes", "json");
-            this.putQueryParameter("BusinessCodes", businessCodesShrink);
-            this.businessCodes = businessCodes;
-            return this;
-        }
-
-        /**
          * <p>The collection of event name code prefixes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;BANFF\&quot;]</p>
+         * <blockquote>
+         * <p>Example: [\\\&quot;BANFF\\\&quot;]</p>
+         * </blockquote>
          */
         public Builder caseCodesPrefix(java.util.List<String> caseCodesPrefix) {
             String caseCodesPrefixShrink = shrink(caseCodesPrefix, "CaseCodesPrefix", "json");
@@ -482,6 +448,9 @@ public class QueryResourceControlEventsRequest extends Request {
 
         /**
          * <p>The current page number.</p>
+         * <blockquote>
+         * <p>Must be greater than 0.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -521,9 +490,6 @@ public class QueryResourceControlEventsRequest extends Request {
          * <blockquote>
          * <p>Example: [\\\&quot;BANFF_ECS_PE_ECS_MINING_SHUTDOWN\\\&quot;]</p>
          * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>[&quot;BANFF_ECS_PE_ECS_MINING_SHUTDOWN&quot;]</p>
          */
         public Builder eventCodes(java.util.List<String> eventCodes) {
             String eventCodesShrink = shrink(eventCodes, "EventCodes", "json");
@@ -533,10 +499,10 @@ public class QueryResourceControlEventsRequest extends Request {
         }
 
         /**
-         * <p>The event ID.</p>
+         * <p>The alert event ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>2PTOHhN3YUeaPWzq9FLmpdZ9EOW</p>
+         * <p>09C-2PpwIzkpx2zG2fuFrAH55CpJaTK</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -545,23 +511,10 @@ public class QueryResourceControlEventsRequest extends Request {
         }
 
         /**
-         * <p>The collection of event IDs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;7ac74fbfe06b2b85bb470083b7a05fb7\&quot;,\&quot;1180c5bbff0a385b00d2cf73e3371d11\&quot;]</p>
-         */
-        public Builder eventIdList(java.util.List<String> eventIdList) {
-            String eventIdListShrink = shrink(eventIdList, "EventIdList", "json");
-            this.putQueryParameter("EventIdList", eventIdListShrink);
-            this.eventIdList = eventIdList;
-            return this;
-        }
-
-        /**
          * <p>The collection of excluded control action name codes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;shutdown\&quot;]</p>
+         * <blockquote>
+         * <p>Example: [\\\&quot;shutdown\\\&quot;]</p>
+         * </blockquote>
          */
         public Builder excludeActionCodes(java.util.List<String> excludeActionCodes) {
             String excludeActionCodesShrink = shrink(excludeActionCodes, "ExcludeActionCodes", "json");
@@ -572,9 +525,9 @@ public class QueryResourceControlEventsRequest extends Request {
 
         /**
          * <p>The collection of excluded event name codes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;TEST_CASE\&quot;]</p>
+         * <blockquote>
+         * <p>Example: [\\\&quot;TEST_CASE\\\&quot;]</p>
+         * </blockquote>
          */
         public Builder excludeEventCodes(java.util.List<String> excludeEventCodes) {
             String excludeEventCodesShrink = shrink(excludeEventCodes, "ExcludeEventCodes", "json");
@@ -585,9 +538,9 @@ public class QueryResourceControlEventsRequest extends Request {
 
         /**
          * <p>The collection of excluded event reasons.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;Cryptomining alert\&quot;,\&quot;Cryptomining control event\&quot;,\&quot;Cryptomining\&quot;]</p>
+         * <blockquote>
+         * <p>Example: [\\\&quot;Mining alert\\\&quot;]</p>
+         * </blockquote>
          */
         public Builder excludeReasons(java.util.List<String> excludeReasons) {
             String excludeReasonsShrink = shrink(excludeReasons, "ExcludeReasons", "json");
@@ -598,9 +551,9 @@ public class QueryResourceControlEventsRequest extends Request {
 
         /**
          * <p>The collection of included event reasons.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;Cryptomining alert\&quot;,\&quot;Cryptomining control event\&quot;,\&quot;Cryptomining\&quot;]</p>
+         * <blockquote>
+         * <p>Example: [\\\&quot;Mining alert\\\&quot;]</p>
+         * </blockquote>
          */
         public Builder includeReasons(java.util.List<String> includeReasons) {
             String includeReasonsShrink = shrink(includeReasons, "IncludeReasons", "json");
@@ -647,6 +600,9 @@ public class QueryResourceControlEventsRequest extends Request {
 
         /**
          * <p>The penalty end time.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
@@ -659,6 +615,9 @@ public class QueryResourceControlEventsRequest extends Request {
 
         /**
          * <p>The penalty start time.</p>
+         * <blockquote>
+         * <p>Format: yyyy-MM-dd HH:mm:ss</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2026-03-16 15:15:00</p>
@@ -673,7 +632,7 @@ public class QueryResourceControlEventsRequest extends Request {
          * <p>The event reason.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cryptomining</p>
+         * <p>Mining</p>
          */
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
@@ -683,9 +642,9 @@ public class QueryResourceControlEventsRequest extends Request {
 
         /**
          * <p>The collection of event source codes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;MRM\&quot;]</p>
+         * <blockquote>
+         * <p>Example: [\\\&quot;MRM\\\&quot;]</p>
+         * </blockquote>
          */
         public Builder sourceCodes(java.util.List<String> sourceCodes) {
             String sourceCodesShrink = shrink(sourceCodes, "SourceCodes", "json");
@@ -696,6 +655,13 @@ public class QueryResourceControlEventsRequest extends Request {
 
         /**
          * <p>The task status.</p>
+         * <ul>
+         * <li><strong>Executing</strong>: In progress.</li>
+         * <li><strong>Removed</strong>: Removed.</li>
+         * <li><strong>Alerting</strong>: Alerting.</li>
+         * <li><strong>Ended</strong>: Ended.</li>
+         * <li><strong>Processed</strong>: Processed by the user and pending platform review.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Executing</p>
@@ -707,17 +673,14 @@ public class QueryResourceControlEventsRequest extends Request {
         }
 
         /**
-         * <p>The collection of task statuses. Valid values:</p>
+         * <p>The collection of task statuses.</p>
          * <ul>
-         * <li><strong>Executing</strong>: executing</li>
-         * <li><strong>Removed</strong>: removed</li>
-         * <li><strong>Alerting</strong>: alerting</li>
-         * <li><strong>Ended</strong>: ended</li>
-         * <li><strong>Processed</strong>: processed by the user and under platform review</li>
+         * <li><strong>Executing</strong>: In progress.</li>
+         * <li><strong>Removed</strong>: Removed.</li>
+         * <li><strong>Alerting</strong>: Alerting.</li>
+         * <li><strong>Ended</strong>: Ended.</li>
+         * <li><strong>Processed</strong>: Processed by the user and pending platform review.</li>
          * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>[\&quot;Executing\&quot;]</p>
          */
         public Builder statusList(java.util.List<String> statusList) {
             String statusListShrink = shrink(statusList, "StatusList", "json");
@@ -739,8 +702,8 @@ public class QueryResourceControlEventsRequest extends Request {
         }
 
         @Override
-        public QueryResourceControlEventsRequest build() {
-            return new QueryResourceControlEventsRequest(this);
+        public DownloadResourceControlEventsRequest build() {
+            return new DownloadResourceControlEventsRequest(this);
         } 
 
     } 

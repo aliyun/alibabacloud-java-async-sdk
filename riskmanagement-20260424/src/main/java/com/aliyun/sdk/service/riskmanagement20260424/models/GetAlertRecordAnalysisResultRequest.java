@@ -115,7 +115,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
         } 
 
         /**
-         * AlarmUniqueInfo.
+         * <p>The unique identifier of the alert event. (Deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9b57f0fcf98181df8d8487d1cc91cb8d</p>
          */
         public Builder alarmUniqueInfo(String alarmUniqueInfo) {
             this.putQueryParameter("AlarmUniqueInfo", alarmUniqueInfo);
@@ -124,7 +127,14 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
         }
 
         /**
-         * AliyunLang.
+         * <p>The language of the content. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong> (default): Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -133,7 +143,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
         }
 
         /**
-         * UniqueInfo.
+         * <p>The unique ID of the alert event. (Deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fc312aa0c32ba8a6147db6221fb1c1ee</p>
          */
         public Builder uniqueInfo(String uniqueInfo) {
             this.putQueryParameter("UniqueInfo", uniqueInfo);
@@ -142,7 +155,7 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
         }
 
         /**
-         * UniqueTagList.
+         * <p>The array of tracing requests.</p>
          */
         public Builder uniqueTagList(java.util.List<UniqueTagList> uniqueTagList) {
             String uniqueTagListShrink = shrink(uniqueTagList, "UniqueTagList", "json");
@@ -152,7 +165,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * <p>The unique identifier of the asset. (Deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ebde6d4e3e4aba728962eec43a69196e9J7tt7H47Pc</p>
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -298,7 +314,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
             } 
 
             /**
-             * AlarmUniqueInfo.
+             * <p>The unique ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10a19b654e73ff079ede61ce3f4465e0</p>
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -306,7 +325,14 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
             }
 
             /**
-             * ChooseLike.
+             * <p>Indicates whether the result is liked. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Liked.</li>
+             * <li><strong>false</strong>: Not liked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder chooseLike(Boolean chooseLike) {
                 this.chooseLike = chooseLike;
@@ -314,7 +340,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
             }
 
             /**
-             * Ip.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp19up785757dz800</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -322,7 +351,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
             }
 
             /**
-             * MachineInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-rj9c7d4bli38***tuym</p>
              */
             public Builder machineInstanceId(String machineInstanceId) {
                 this.machineInstanceId = machineInstanceId;
@@ -330,7 +362,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
             }
 
             /**
-             * QueryTime.
+             * <p>The query tracing time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-27 00:00:00</p>
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -338,7 +373,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The vulnerability type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BusinessLicense</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -346,7 +384,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
             }
 
             /**
-             * UniqueInfo.
+             * <p>The unique identifier of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fc312aa0c32ba8a6147db6221fb1c1ee</p>
              */
             public Builder uniqueInfo(String uniqueInfo) {
                 this.uniqueInfo = uniqueInfo;
@@ -354,7 +395,10 @@ public class GetAlertRecordAnalysisResultRequest extends Request {
             }
 
             /**
-             * Uuid.
+             * <p>The unique identifier of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3309e55fcb1ed8d4bc6af098e62e0353RNabnQSO1bx</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

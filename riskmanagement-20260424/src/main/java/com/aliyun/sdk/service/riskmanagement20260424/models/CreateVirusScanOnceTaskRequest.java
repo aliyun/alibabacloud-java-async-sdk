@@ -87,7 +87,10 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-0iw73ro05vcwn6ntq</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -96,7 +99,10 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.3*.22.11</p>
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -105,7 +111,10 @@ public class CreateVirusScanOnceTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

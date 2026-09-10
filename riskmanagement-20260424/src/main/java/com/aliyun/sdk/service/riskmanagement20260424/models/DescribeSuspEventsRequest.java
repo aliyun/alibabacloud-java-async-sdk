@@ -73,7 +73,10 @@ public class DescribeSuspEventsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request parameters.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -593,7 +596,10 @@ public class DescribeSuspEventsRequest extends Request {
             } 
 
             /**
-             * AlarmUniqueInfo.
+             * <p>The unique ID of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6838133766c37077d0515b0b557e6510</p>
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;
@@ -601,7 +607,7 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * AssetsTypeList.
+             * <p>The list of asset types.</p>
              */
             public Builder assetsTypeList(java.util.List<String> assetsTypeList) {
                 this.assetsTypeList = assetsTypeList;
@@ -609,7 +615,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxljob-02f023138826b</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -617,7 +626,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * ContainerFieldName.
+             * <p>The container search field. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instanceId</p>
              */
             public Builder containerFieldName(String containerFieldName) {
                 this.containerFieldName = containerFieldName;
@@ -625,7 +637,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * ContainerFieldValue.
+             * <p>The value of the container search field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ca9b91db58356b41af2932e8048310ab7daa415701fa62d823cf4f0406d5ce02</p>
              */
             public Builder containerFieldValue(String containerFieldValue) {
                 this.containerFieldValue = containerFieldValue;
@@ -633,7 +648,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(String currentPage) {
                 this.currentPage = currentPage;
@@ -641,7 +659,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * Dealed.
+             * <p>The status of the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder dealed(String dealed) {
                 this.dealed = dealed;
@@ -649,7 +670,12 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * DetectSource.
+             * <p>The detection source. This is an invalid field.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder detectSource(String detectSource) {
                 this.detectSource = detectSource;
@@ -657,7 +683,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * EventNames.
+             * <p>The subtypes of the alert event. Separate multiple subtypes with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEBSHELL</p>
              */
             public Builder eventNames(String eventNames) {
                 this.eventNames = eventNames;
@@ -665,7 +694,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * From.
+             * <p>The request source identifier. Set the value to <strong>sas</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas</p>
              */
             public Builder from(String from) {
                 this.from = from;
@@ -673,7 +705,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * GroupId.
+             * <p>The tag group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18768</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -681,7 +716,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The unique ID that identifies the alert event record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3165</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -689,7 +727,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * Lang.
+             * <p>The language type of the response. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -697,7 +738,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * Levels.
+             * <p>The severity levels of the alert event. Separate multiple levels with commas (in descending order of severity).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serious</p>
              */
             public Builder levels(String levels) {
                 this.levels = levels;
@@ -705,7 +749,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * MultiAccountActionType.
+             * <p>The multi-account query type. Default value: <strong>0</strong>. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder multiAccountActionType(Integer multiAccountActionType) {
                 this.multiAccountActionType = multiAccountActionType;
@@ -713,7 +760,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the asset affected by the alert event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs-xxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -721,7 +771,7 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * OperateErrorCodeList.
+             * <p>The list of alert event handling result codes.</p>
              */
             public Builder operateErrorCodeList(java.util.List<String> operateErrorCodeList) {
                 this.operateErrorCodeList = operateErrorCodeList;
@@ -729,7 +779,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * OperateTimeEnd.
+             * <p>The end timestamp of the handling time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-06 13:50:38</p>
              */
             public Builder operateTimeEnd(String operateTimeEnd) {
                 this.operateTimeEnd = operateTimeEnd;
@@ -737,7 +790,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * OperateTimeStart.
+             * <p>The start timestamp of the handling time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-06 13:50:38</p>
              */
             public Builder operateTimeStart(String operateTimeStart) {
                 this.operateTimeStart = operateTimeStart;
@@ -745,7 +801,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The maximum number of entries per page in a paged query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -753,7 +812,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * ParentEventTypes.
+             * <p>The Alarm Metric of the alerting events to query. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Malicious Scripts.</p>
              */
             public Builder parentEventTypes(String parentEventTypes) {
                 this.parentEventTypes = parentEventTypes;
@@ -761,7 +823,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * Remark.
+             * <p>The alert name or asset information to query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -769,7 +834,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * ResourceDirectoryAccountId.
+             * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5815612291408486</p>
              */
             public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
                 this.resourceDirectoryAccountId = resourceDirectoryAccountId;
@@ -777,7 +845,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * SortColumn.
+             * <p>The custom sort field. Default value: <strong>operateTime</strong>. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lastTime</p>
              */
             public Builder sortColumn(String sortColumn) {
                 this.sortColumn = sortColumn;
@@ -785,7 +856,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * SortType.
+             * <p>The sort order based on certificate expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asc</p>
              */
             public Builder sortType(String sortType) {
                 this.sortType = sortType;
@@ -793,7 +867,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * Source.
+             * <p>The alert source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -801,7 +878,7 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * SourceAliUids.
+             * <p>The list of Alibaba Cloud account IDs that generated the alerts.</p>
              */
             public Builder sourceAliUids(java.util.List<Long> sourceAliUids) {
                 this.sourceAliUids = sourceAliUids;
@@ -809,7 +886,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * SourceIp.
+             * <p>The IP address of the access source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2409:8a55:3827:cb50:5ad9:d5ff:fe87:f48c</p>
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;
@@ -817,7 +897,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * StrictMode.
+             * <p>Indicates whether the alert belongs to strict mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N</p>
              */
             public Builder strictMode(String strictMode) {
                 this.strictMode = strictMode;
@@ -825,7 +908,7 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * SupportOperateCodeList.
+             * <p>The list of operation types supported by the alert.</p>
              */
             public Builder supportOperateCodeList(java.util.List<String> supportOperateCodeList) {
                 this.supportOperateCodeList = supportOperateCodeList;
@@ -833,7 +916,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * TacticId.
+             * <p>The ATT&amp;CK tactic ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TA0003</p>
              */
             public Builder tacticId(String tacticId) {
                 this.tacticId = tacticId;
@@ -841,7 +927,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * TargetType.
+             * <p>The container search target type. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>containerId</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -849,7 +938,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * TimeEnd.
+             * <p>The end time of the latest occurrence time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-06 13:50:38</p>
              */
             public Builder timeEnd(String timeEnd) {
                 this.timeEnd = timeEnd;
@@ -857,7 +949,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * TimeStart.
+             * <p>The start time of the latest occurrence time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-06 13:50:38</p>
              */
             public Builder timeStart(String timeStart) {
                 this.timeStart = timeStart;
@@ -865,7 +960,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * UniqueInfo.
+             * <p>The unique key of the security alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f82680d9fdcb74a520fa385b7e9105b7</p>
              */
             public Builder uniqueInfo(String uniqueInfo) {
                 this.uniqueInfo = uniqueInfo;
@@ -873,7 +971,10 @@ public class DescribeSuspEventsRequest extends Request {
             }
 
             /**
-             * Uuids.
+             * <p>The UUIDs of the servers for which to query alerts. Separate multiple UUIDs with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inet-eae09bb8-32b1-413b-a8ff-23932e043209</p>
              */
             public Builder uuids(String uuids) {
                 this.uuids = uuids;

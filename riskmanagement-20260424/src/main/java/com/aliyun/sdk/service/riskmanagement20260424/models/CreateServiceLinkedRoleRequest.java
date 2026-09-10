@@ -73,7 +73,10 @@ public class CreateServiceLinkedRoleRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID of the Smart Access Gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -138,7 +141,14 @@ public class CreateServiceLinkedRoleRequest extends Request {
             } 
 
             /**
-             * ServiceLinkedRole.
+             * <p>The service-linked role. Default value: <strong>AliyunServiceRoleForSas</strong>. Valid values:</p>
+             * <ul>
+             * <li><strong>AliyunServiceRoleForSas</strong>: the service-linked role for Security Center (SAS). Security Center uses this role to access your resources in other Alibaba Cloud services.</li>
+             * <li><strong>AliyunServiceRoleForSasCspm</strong>: the service-linked role for Security Center - Cloud Security Posture Management (CSPM). SAS-CSPM uses this role to access your resources in other Alibaba Cloud services.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunServiceRoleForWebsiteBuildPublish</p>
              */
             public Builder serviceLinkedRole(String serviceLinkedRole) {
                 this.serviceLinkedRole = serviceLinkedRole;

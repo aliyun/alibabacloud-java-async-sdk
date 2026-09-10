@@ -186,6 +186,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DownloadResourceControlEvents  DownloadResourceControlEventsRequest
+     * @return DownloadResourceControlEventsResponse
+     */
+    @Override
+    public CompletableFuture<DownloadResourceControlEventsResponse> downloadResourceControlEvents(DownloadResourceControlEventsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DownloadResourceControlEvents").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DownloadResourceControlEventsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DownloadResourceControlEventsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAlertRecordAnalysisResult  GetAlertRecordAnalysisResultRequest
      * @return GetAlertRecordAnalysisResultResponse
      */

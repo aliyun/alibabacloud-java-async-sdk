@@ -106,7 +106,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The return message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the current API call itself is successful. This does not indicate the success of subsequent business operations.</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -282,7 +298,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPeriodUsed.
+             * <p>The number of authorizations consumed in the current metering cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder currentPeriodUsed(Long currentPeriodUsed) {
                 this.currentPeriodUsed = currentPeriodUsed;
@@ -290,7 +309,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737734400000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -298,7 +320,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacity.
+             * <p>The total capacity of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder initCapacity(Double initCapacity) {
                 this.initCapacity = initCapacity;
@@ -306,7 +331,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The resource plan instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apigateway-hz-96f6659a1490</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -314,7 +342,15 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Module.
+             * <p>The module code. Valid values:</p>
+             * <ul>
+             * <li><strong>POST_HOST</strong>: Host and container protection.</li>
+             * <li><strong>CSPM</strong>: Cloud product configuration check.</li>
+             * <li><strong>VUL</strong>: Vulnerability scanning.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>POST_HOST</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -322,7 +358,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodCapacity.
+             * <p>The number of authorizations consumed up to the previous billing cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodCapacity(Double periodCapacity) {
                 this.periodCapacity = periodCapacity;
@@ -330,7 +369,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1737734400000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -338,7 +380,14 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The resource plan status. Valid values:</p>
+             * <ul>
+             * <li><strong>valid</strong>: Valid.</li>
+             * <li><strong>invalid</strong>: Invalid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE_FAILED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -405,7 +454,14 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CanTry.
+             * <p>Indicates whether the account is eligible for a trial. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Eligible.</li>
+             * <li><strong>false</strong>: Not eligible.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canTry(Boolean canTry) {
                 this.canTry = canTry;
@@ -413,7 +469,7 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DeductPackageList.
+             * <p>The resource plan usage details.</p>
              */
             public Builder deductPackageList(java.util.List<DeductPackageList> deductPackageList) {
                 this.deductPackageList = deductPackageList;
@@ -480,7 +536,7 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The data body.</p>
              */
             public Builder data(BodyData data) {
                 this.data = data;
@@ -488,7 +544,10 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The Security Center request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A6FB9AC3-4431-538F-BA8A-2A13AEA208A4</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -542,7 +601,7 @@ public class GetValidDeductInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Body.
+             * <p>The message body.</p>
              */
             public Builder body(DataBody body) {
                 this.body = body;

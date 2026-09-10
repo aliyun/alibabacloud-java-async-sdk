@@ -73,7 +73,10 @@ public class CreateSasTrialRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The region ID of the access control instance. You can call the DescribeRegions operation to query the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class CreateSasTrialRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -138,7 +141,10 @@ public class CreateSasTrialRequest extends Request {
             } 
 
             /**
-             * TryReason.
+             * <p>The reason for applying for the trial.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>for poc</p>
              */
             public Builder tryReason(String tryReason) {
                 this.tryReason = tryReason;
@@ -244,7 +250,14 @@ public class CreateSasTrialRequest extends Request {
             } 
 
             /**
-             * FromEcs.
+             * <p>Specifies whether the request is from the ECS console. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The request is from the ECS console.</li>
+             * <li><strong>false</strong>: The request is not from the ECS console.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fromEcs(Boolean fromEcs) {
                 this.fromEcs = fromEcs;
@@ -252,7 +265,16 @@ public class CreateSasTrialRequest extends Request {
             }
 
             /**
-             * Lang.
+             * <p>The language of the request and response. Valid values:</p>
+             * <ul>
+             * <li><p><strong>zh</strong> (default): Chinese.</p>
+             * </li>
+             * <li><p><strong>en</strong>: English.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>en</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -260,7 +282,7 @@ public class CreateSasTrialRequest extends Request {
             }
 
             /**
-             * RequestForm.
+             * <p>The reason for applying for the trial.</p>
              */
             public Builder requestForm(RequestForm requestForm) {
                 this.requestForm = requestForm;
@@ -268,7 +290,18 @@ public class CreateSasTrialRequest extends Request {
             }
 
             /**
-             * TryType.
+             * <p>The trial type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: trial not allowed</li>
+             * <li><strong>1</strong>: first trial</li>
+             * <li><strong>2</strong>: second trial</li>
+             * </ul>
+             * <blockquote>
+             * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter. The trial can be started only when the value is not 0.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tryType(Integer tryType) {
                 this.tryType = tryType;
@@ -276,7 +309,17 @@ public class CreateSasTrialRequest extends Request {
             }
 
             /**
-             * TryVersion.
+             * <p>The trial edition. Valid values:</p>
+             * <ul>
+             * <li><strong>3</strong>: Enterprise Edition.</li>
+             * <li><strong>7</strong>: Ultimate Edition.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder tryVersion(Integer tryVersion) {
                 this.tryVersion = tryVersion;

@@ -106,7 +106,13 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p> 200: The request was successful. Other codes (such as 500 or 400): An error occurred.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +120,7 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The prompt message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful‌</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>739705BB-B0EF-554B-B3A8-383F4F93E067</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the current API call itself was successful. This does not indicate the success of subsequent business operations.</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +249,10 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigCompleted.
+             * <p>The configuration item check result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder configCompleted(String configCompleted) {
                 this.configCompleted = configCompleted;
@@ -238,7 +260,10 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PendingSecurityAlertCount.
+             * <p>The number of pending security alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pendingSecurityAlertCount(Integer pendingSecurityAlertCount) {
                 this.pendingSecurityAlertCount = pendingSecurityAlertCount;
@@ -246,7 +271,10 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PendingVulnerabilityCount.
+             * <p>The number of pending vulnerabilities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder pendingVulnerabilityCount(Integer pendingVulnerabilityCount) {
                 this.pendingVulnerabilityCount = pendingVulnerabilityCount;
@@ -254,7 +282,10 @@ public class GetSecurityCheckResultBaseInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The percentage of the health check task progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;

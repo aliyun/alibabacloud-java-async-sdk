@@ -106,7 +106,14 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. Valid values:</p>
+         * <ul>
+         * <li><strong>200</strong>: Succeeded.</li>
+         * <li><strong>Other values (400, 500)</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +129,10 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,10 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +151,14 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The call was successful.                                </li>
+         * <li><strong>false</strong>: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -191,7 +211,14 @@ public class GetServiceLinkedRoleStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The authorization status. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Authorized.</li>
+             * <li><strong>false</strong>: Not authorized.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;

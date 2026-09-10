@@ -73,7 +73,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -82,7 +85,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         }
 
         /**
-         * SdkRequest.
+         * <p>The Security Center SDK request.</p>
          */
         public Builder sdkRequest(SdkRequest sdkRequest) {
             String sdkRequestShrink = shrink(sdkRequest, "SdkRequest", "json");
@@ -281,7 +284,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             } 
 
             /**
-             * Criteria.
+             * <p>The search conditions for assets. This parameter is in JSON format. Note that the parameter names are case-sensitive.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;contactIds\&quot;:[\&quot;job-658854766790086656\&quot;,\&quot;job-658854801112113152\&quot;]}</p>
              */
             public Builder criteria(String criteria) {
                 this.criteria = criteria;
@@ -289,7 +295,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * CurrentPage.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -297,7 +306,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * Flags.
+             * <p>The asset vendor. Separate multiple asset vendors with commas (,). Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0,10,13</p>
              */
             public Builder flags(String flags) {
                 this.flags = flags;
@@ -305,7 +317,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * Importance.
+             * <p>The importance level of the asset. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder importance(Integer importance) {
                 this.importance = importance;
@@ -313,7 +328,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * Lang.
+             * <p>The language of the response. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zh</p>
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -321,7 +339,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * LogicalExp.
+             * <p>The logical relationship between multiple search conditions. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder logicalExp(String logicalExp) {
                 this.logicalExp = logicalExp;
@@ -329,7 +350,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * MachineTypes.
+             * <p>The type of asset to query. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder machineTypes(String machineTypes) {
                 this.machineTypes = machineTypes;
@@ -337,7 +361,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * NextToken.
+             * <p>The pagination token used to retrieve the next page of results. If no more results are available, this field is not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAZak7VOTMl2OSt/xmc4J6gbg4Z5eXuWnrvKgOsGARL76TVbKERXHXKNFurqjtfDdRw==</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -345,7 +372,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * NoGroupTrace.
+             * <p>Specifies whether to internationalize the default group name <strong>Ungrouped</strong>. Default value: <strong>false</strong>. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder noGroupTrace(Boolean noGroupTrace) {
                 this.noGroupTrace = noGroupTrace;
@@ -353,7 +383,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of assets to display per page in a paged query. Default value: 20, which indicates that 20 asset records are displayed per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -361,7 +394,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * ResourceDirectoryAccountId.
+             * <p>The ID of the member accounts in the resource folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1587359978118481</p>
              */
             public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
                 this.resourceDirectoryAccountId = resourceDirectoryAccountId;
@@ -369,7 +405,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             }
 
             /**
-             * UseNextToken.
+             * <p>Specifies whether to use the NextToken method to retrieve the vulnerability list data. If this parameter is used, TotalCount is no longer returned. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder useNextToken(Boolean useNextToken) {
                 this.useNextToken = useNextToken;

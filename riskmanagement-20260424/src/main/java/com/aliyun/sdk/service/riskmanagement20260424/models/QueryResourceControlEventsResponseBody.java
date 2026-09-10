@@ -106,7 +106,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The metadata returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>739705BB-B0EF-554B-B3A8-383F4F93E067</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -581,7 +593,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * ActionCode.
+             * <p>The action code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEPLOY_STAGE_REBOOT_TASK</p>
              */
             public Builder actionCode(String actionCode) {
                 this.actionCode = actionCode;
@@ -589,7 +604,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ActionName.
+             * <p>The action name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cryptomining alert</p>
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -597,7 +615,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertEndTime.
+             * <p>The alert end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder alertEndTime(String alertEndTime) {
                 this.alertEndTime = alertEndTime;
@@ -605,7 +626,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertStartTime.
+             * <p>The first alert time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder alertStartTime(String alertStartTime) {
                 this.alertStartTime = alertStartTime;
@@ -613,7 +637,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * AntiPunishTime.
+             * <p>The time when the control action was released.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder antiPunishTime(String antiPunishTime) {
                 this.antiPunishTime = antiPunishTime;
@@ -621,7 +648,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyRecordCount.
+             * <p>The number of unblock application records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder applyRecordCount(Integer applyRecordCount) {
                 this.applyRecordCount = applyRecordCount;
@@ -629,7 +659,16 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyStatus.
+             * <p>The application status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><strong>AUDIT</strong>: Under review.</li>
+             * <li><strong>SUCCESS</strong>: Approved.</li>
+             * <li><strong>FAIL</strong>: Rejected.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AUDIT</p>
              */
             public Builder applyStatus(String applyStatus) {
                 this.applyStatus = applyStatus;
@@ -637,7 +676,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyTrial.
+             * <p>Indicates whether the unblock application is processed through the review platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder applyTrial(Boolean applyTrial) {
                 this.applyTrial = applyTrial;
@@ -645,7 +687,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessName.
+             * <p>The product type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e\&quot;c\&quot;s</p>
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -653,7 +698,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * CaseCode.
+             * <p>The event name code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEST_IMS_ACCOUNT_PUNISH_WHITE_TEST</p>
              */
             public Builder caseCode(String caseCode) {
                 this.caseCode = caseCode;
@@ -661,7 +709,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The controlled domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ubs-mm-nwwss-ddos.purchern.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -669,7 +720,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e791c08281b41e8240f897a424c188ae</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -677,7 +731,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mining control event</p>
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -685,7 +742,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Extras.
+             * <p>The extended information about the penalty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;createAt\&quot;:\&quot;2025-08-03 11:18:59\&quot;,\&quot;updatedAt\&quot;:\&quot;2025-08-03 11:18:59\&quot;}</p>
              */
             public Builder extras(String extras) {
                 this.extras = extras;
@@ -693,7 +753,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * FormType.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder formType(String formType) {
                 this.formType = formType;
@@ -701,7 +764,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtLatest.
+             * <p>The latest time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder gmtLatest(String gmtLatest) {
                 this.gmtLatest = gmtLatest;
@@ -709,7 +775,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-3nsvwmt67pn72py1z</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -717,7 +786,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The controlled IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.158.58</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -725,7 +797,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LastCheckTime.
+             * <p>The latest detection time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder lastCheckTime(String lastCheckTime) {
                 this.lastCheckTime = lastCheckTime;
@@ -733,7 +808,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PreCloseTime.
+             * <p>The estimated shutdown time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder preCloseTime(String preCloseTime) {
                 this.preCloseTime = preCloseTime;
@@ -741,7 +819,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PunishFrom.
+             * <p>The source of the penalty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MRM</p>
              */
             public Builder punishFrom(String punishFrom) {
                 this.punishFrom = punishFrom;
@@ -749,7 +830,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PunishTime.
+             * <p>The time when the control action was applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-16 15:15:00</p>
              */
             public Builder punishTime(String punishTime) {
                 this.punishTime = punishTime;
@@ -757,7 +841,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The event reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cryptomining alert</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -765,7 +852,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -773,7 +863,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -781,7 +874,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Reinforcement.
+             * <p>The security hardening suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Suggestion</p>
              */
             public Builder reinforcement(String reinforcement) {
                 this.reinforcement = reinforcement;
@@ -789,7 +885,17 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * <ul>
+             * <li><strong>Executing</strong>: executing</li>
+             * <li><strong>Removed</strong>: removed</li>
+             * <li><strong>Alerting</strong>: alerting</li>
+             * <li><strong>Ended</strong>: ended</li>
+             * <li><strong>Processed</strong>: processed by the user and under platform review</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Executing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -797,7 +903,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportBatchApply.
+             * <p>Indicates whether batch unblock applications are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportBatchApply(Boolean supportBatchApply) {
                 this.supportBatchApply = supportBatchApply;
@@ -805,7 +914,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportSingleApply.
+             * <p>Indicates whether a single unblock application is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportSingleApply(Boolean supportSingleApply) {
                 this.supportSingleApply = supportSingleApply;
@@ -813,7 +925,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>The trigger type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>miner</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -821,7 +936,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The controlled URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://pm.alicdn.com/quali/bc98e42b619ad4127bf6437b87045597.jpg?auth_key=1758682451-0-0-897be72852503566bd6775cd9914f5aa">https://pm.alicdn.com/quali/bc98e42b619ad4127bf6437b87045597.jpg?auth_key=1758682451-0-0-897be72852503566bd6775cd9914f5aa</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -901,7 +1019,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * Current.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder current(Integer current) {
                 this.current = current;
@@ -909,7 +1030,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -917,7 +1041,10 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -984,7 +1111,7 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * List.
+             * <p>The event list data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -992,7 +1119,7 @@ public class QueryResourceControlEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfo.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;

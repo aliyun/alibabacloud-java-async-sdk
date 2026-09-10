@@ -106,7 +106,13 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * <blockquote>
+         * <p> 200: The request was successful. Other codes (such as 500 or 400): An error occurred.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +120,7 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +128,10 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FBDD713-00A5-5C98-B661-3FD31A349B6E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -269,7 +288,14 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
             } 
 
             /**
-             * CloudSecurityGuide.
+             * <p>The subscription status of the cloud security guide. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: not subscribed </li>
+             * <li><strong>1</strong>: subscribed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cloudSecurityGuide(Integer cloudSecurityGuide) {
                 this.cloudSecurityGuide = cloudSecurityGuide;
@@ -277,7 +303,10 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigCheckNumber.
+             * <p>The number of pending items for configuration audit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder configCheckNumber(Integer configCheckNumber) {
                 this.configCheckNumber = configCheckNumber;
@@ -285,7 +314,10 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * ContactCheckNumber.
+             * <p>The number of pending items for security contacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder contactCheckNumber(Integer contactCheckNumber) {
                 this.contactCheckNumber = contactCheckNumber;
@@ -293,7 +325,10 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * RiskEventNumber.
+             * <p>The number of risk events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder riskEventNumber(Integer riskEventNumber) {
                 this.riskEventNumber = riskEventNumber;
@@ -301,7 +336,10 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * SasCheckNumber.
+             * <p>The number of pending items for Elastic Compute Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sasCheckNumber(Integer sasCheckNumber) {
                 this.sasCheckNumber = sasCheckNumber;
@@ -309,7 +347,15 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityStatus.
+             * <p>The security check result status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: no risk</li>
+             * <li><strong>1</strong>: risks exist </li>
+             * <li><strong>2</strong>: items to be optimized exist</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder securityStatus(Integer securityStatus) {
                 this.securityStatus = securityStatus;
@@ -317,7 +363,10 @@ public class QuerySecurityCheckReportResponseBody extends TeaModel {
             }
 
             /**
-             * SuggestionText.
+             * <p>The suggestion text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exist risk event。</p>
              */
             public Builder suggestionText(String suggestionText) {
                 this.suggestionText = suggestionText;

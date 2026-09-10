@@ -106,7 +106,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status of the API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of instance details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1B4C9A14-94E6-5EEB-BF39-7DACCE9AC0D6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -958,7 +970,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AlarmStatus.
+             * <p>Indicates whether the image has security alerts. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder alarmStatus(String alarmStatus) {
                 this.alarmStatus = alarmStatus;
@@ -966,7 +981,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FC2U0JVHWS49S2OT</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -974,7 +992,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guokent</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -982,7 +1003,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * <p>The type of the asset. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -990,7 +1014,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AssetTypeName.
+             * <p>The name of the asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxx</p>
              */
             public Builder assetTypeName(String assetTypeName) {
                 this.assetTypeName = assetTypeName;
@@ -998,7 +1025,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthModifyTime.
+             * <p>The timestamp when the asset was bound for authorization. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1627974044000</p>
              */
             public Builder authModifyTime(Long authModifyTime) {
                 this.authModifyTime = authModifyTime;
@@ -1006,7 +1036,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthVersion.
+             * <p>The authorization version of the asset. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder authVersion(Integer authVersion) {
                 this.authVersion = authVersion;
@@ -1014,7 +1047,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthVersionName.
+             * <p>The authorization version name of the asset. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Free Edition.</p>
              */
             public Builder authVersionName(String authVersionName) {
                 this.authVersionName = authVersionName;
@@ -1022,7 +1058,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Bind.
+             * <p>Indicates whether the asset is bound with authorization. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bind(Boolean bind) {
                 this.bind = bind;
@@ -1030,7 +1069,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BindFileProtectType.
+             * <p>Indicates whether web tamper-proofing authorization is bound. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder bindFileProtectType(String bindFileProtectType) {
                 this.bindFileProtectType = bindFileProtectType;
@@ -1038,7 +1080,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClientStatus.
+             * <p>The online status of the client on the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder clientStatus(String clientStatus) {
                 this.clientStatus = clientStatus;
@@ -1046,7 +1091,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClientSubStatus.
+             * <p>The sub-status of the client on the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder clientSubStatus(String clientSubStatus) {
                 this.clientSubStatus = clientSubStatus;
@@ -1054,7 +1102,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The ID of the cluster where the resource group resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cb703cb0ba6bd40d4a6d8de5bff050fb9</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1062,7 +1113,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto-cn-heyuan</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -1070,7 +1124,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Cores.
+             * <p>The number of CPU cores of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -1078,7 +1135,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CpuInfo.
+             * <p>The CPU information of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intel(R) Xeon(R) Platinum 8269CY CPU @ 2.50GHz</p>
              */
             public Builder cpuInfo(String cpuInfo) {
                 this.cpuInfo = cpuInfo;
@@ -1086,7 +1146,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1607365213000</p>
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -1094,7 +1157,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExposedStatus.
+             * <p>The exposure status of the asset. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exposedStatus(Integer exposedStatus) {
                 this.exposedStatus = exposedStatus;
@@ -1102,7 +1168,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Flag.
+             * <p>The asset vendor. Separate multiple asset vendors with commas (,). Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0,1,2</p>
              */
             public Builder flag(Integer flag) {
                 this.flag = flag;
@@ -1110,7 +1179,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * FlagName.
+             * <p>The vendor of the asset. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder flagName(String flagName) {
                 this.flagName = flagName;
@@ -1118,7 +1190,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86d30f8b0e124aadb7ef3197f9dbd1f5</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -1126,7 +1201,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTrace.
+             * <p>The name of the group to which the asset belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupTrace(String groupTrace) {
                 this.groupTrace = groupTrace;
@@ -1134,7 +1212,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HasContainer.
+             * <p>Indicates whether the asset contains containers. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder hasContainer(String hasContainer) {
                 this.hasContainer = hasContainer;
@@ -1142,7 +1223,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HcStatus.
+             * <p>Indicates whether baseline risks are detected on the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder hcStatus(String hcStatus) {
                 this.hcStatus = hcStatus;
@@ -1150,7 +1234,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckCount.
+             * <p>The number of baseline risks on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder healthCheckCount(Integer healthCheckCount) {
                 this.healthCheckCount = healthCheckCount;
@@ -1158,7 +1245,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Importance.
+             * <p>The importance level of the asset. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder importance(Integer importance) {
                 this.importance = importance;
@@ -1166,7 +1256,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls-cn-tl32rf**008</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1174,7 +1267,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ra-supabase-22u1iv3hr**5v9</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1182,7 +1278,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * <p>The public IP address of the associated instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.1**.52.125</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -1190,7 +1289,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * <p>The private IP address of the current server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.1**.245</p>
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -1198,7 +1300,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * <p>The management IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>114.55.*4.*6</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1206,7 +1311,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IpListString.
+             * <p>The list of IP addresses of the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.31.XX.XX,172.171.XX.XX</p>
              */
             public Builder ipListString(String ipListString) {
                 this.ipListString = ipListString;
@@ -1214,7 +1322,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Kernel.
+             * <p>The kernel version information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.10.0-1127.19.1.el7.x86_64</p>
              */
             public Builder kernel(String kernel) {
                 this.kernel = kernel;
@@ -1222,7 +1333,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LastLoginTimestamp.
+             * <p>The timestamp when the client last went online. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637592907000</p>
              */
             public Builder lastLoginTimestamp(Long lastLoginTimestamp) {
                 this.lastLoginTimestamp = lastLoginTimestamp;
@@ -1230,7 +1344,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MacListString.
+             * <p>The MAC address of the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:13:3e:31:13:39,02:12:67:b8:<strong>:</strong></p>
              */
             public Builder macListString(String macListString) {
                 this.macListString = macListString;
@@ -1238,7 +1355,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Mem.
+             * <p>The total memory. Unit: MB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder mem(String mem) {
                 this.mem = mem;
@@ -1246,7 +1366,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slsshpcorlsmetrics</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1254,7 +1377,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * <p>The operating system of the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder os(String os) {
                 this.os = os;
@@ -1262,7 +1388,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OsName.
+             * <p>The kernel version of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliOS7U2-x86-64</p>
              */
             public Builder osName(String osName) {
                 this.osName = osName;
@@ -1270,7 +1399,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PodCount.
+             * <p>The number of pods.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder podCount(Integer podCount) {
                 this.podCount = podCount;
@@ -1278,7 +1410,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PostPaidFlag.
+             * <p>The billing method of the protection edition bound to the current asset. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder postPaidFlag(Integer postPaidFlag) {
                 this.postPaidFlag = postPaidFlag;
@@ -1286,7 +1421,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhouxxxx</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1294,7 +1432,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region where the asset resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-zhangjiakou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1302,7 +1443,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -1310,7 +1454,51 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount.
+             * <p>The statistics of risk items on the asset. The value is in JSON format and contains the following fields:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;account&quot;: 0,
+             *       &quot;appNum&quot;: 0,
+             *       &quot;asapVulCount&quot;: 0,
+             *       &quot;baselineHigh&quot;: 0,
+             *       &quot;baselineLow&quot;: 0,
+             *       &quot;baselineMedium&quot;: 0,
+             *       &quot;baselineNum&quot;: 0,
+             *       &quot;cmsNum&quot;: 0,
+             *       &quot;containerAsap&quot;: 0,
+             *       &quot;containerLater&quot;: 0,
+             *       &quot;containerNntf&quot;: 0,
+             *       &quot;containerRemind&quot;: 0,
+             *       &quot;containerSerious&quot;: 0,
+             *       &quot;containerSuspicious&quot;: 0,
+             *       &quot;cveNum&quot;: 0,
+             *       &quot;emgNum&quot;: 0,
+             *       &quot;health&quot;: 0,
+             *       &quot;imageBaselineHigh&quot;: 0,
+             *       &quot;imageBaselineLow&quot;: 0,
+             *       &quot;imageBaselineMedium&quot;: 0,
+             *       &quot;imageBaselineNum&quot;: 0,
+             *       &quot;imageMaliciousFileRemind&quot;: 0,
+             *       &quot;imageMaliciousFileSerious&quot;: 0,
+             *       &quot;imageMaliciousFileSuspicious&quot;: 0,
+             *       &quot;imageVulAsap&quot;: 0,
+             *       &quot;imageVulLater&quot;: 0,
+             *       &quot;imageVulNntf&quot;: 0,
+             *       &quot;laterVulCount&quot;: 0,
+             *       &quot;newSuspicious&quot;: 0,
+             *       &quot;nntfVulCount&quot;: 0,
+             *       &quot;remindNum&quot;: 0,
+             *       &quot;scaNum&quot;: 0,
+             *       &quot;seriousNum&quot;: 0,
+             *       &quot;suspNum&quot;: 0,
+             *       &quot;suspicious&quot;: 0,
+             *       &quot;sysNum&quot;: 0,
+             *       &quot;trojan&quot;: 0,
+             *       &quot;uuid&quot;: &quot;inet-37316411-37fe-4b72-b245-346a2721****&quot;,
+             *       &quot;vul&quot;: 0,
+             *       &quot;weakPWNum&quot;: 0
+             * }</p>
              */
             public Builder riskCount(String riskCount) {
                 this.riskCount = riskCount;
@@ -1318,7 +1506,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RiskStatus.
+             * <p>Indicates whether risks exist. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NO</p>
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;
@@ -1326,7 +1517,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SafeEventCount.
+             * <p>The number of security alerts on the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder safeEventCount(String safeEventCount) {
                 this.safeEventCount = safeEventCount;
@@ -1334,7 +1528,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The service ID. This parameter has a value only when the instance is a serverless instance that belongs to the PAI platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dsw-76jlywunsif09bp15p</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -1342,7 +1539,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The running status of the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1350,7 +1550,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The tag name of the asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pre_20250714_idpt_adjust</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1358,7 +1561,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>The tag ID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d8586ab8be4549e3815995858d277763</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -1366,7 +1572,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagResources.
+             * <p>The custom tags of the Lingjun node. This parameter is returned only when the machine is a Lingjun machine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app:test,type:lingjun</p>
              */
             public Builder tagResources(String tagResources) {
                 this.tagResources = tagResources;
@@ -1374,7 +1583,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the terminal device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1f0459ee-ed49-6484-8958-4f10f61e6362</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1382,7 +1594,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * <p>The vendor of the asset. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder vendor(Integer vendor) {
                 this.vendor = vendor;
@@ -1390,7 +1605,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorName.
+             * <p>The service provider name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IDC</p>
              */
             public Builder vendorName(String vendorName) {
                 this.vendorName = vendorName;
@@ -1398,7 +1616,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUid.
+             * <p>The account ID of the multi-cloud instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder vendorUid(String vendorUid) {
                 this.vendorUid = vendorUid;
@@ -1406,7 +1627,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VendorUserName.
+             * <p>The account name of the multi-cloud instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VendorUserName</p>
              */
             public Builder vendorUserName(String vendorUserName) {
                 this.vendorUserName = vendorUserName;
@@ -1414,7 +1638,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * <p>The ID of the VPC to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zek7v0z4r6lbp02xckei</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -1422,7 +1649,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VulCount.
+             * <p>The number of vulnerabilities on the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -1430,7 +1660,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VulStatus.
+             * <p>Indicates whether vulnerabilities exist on the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YES</p>
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;
@@ -1536,7 +1769,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1544,7 +1780,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * <p>The maximum number of rows per page in a paged query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -1552,7 +1791,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The NextToken value returned when the NextToken method is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m1NGAAAAAABzLzIwMjQwMg==</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1560,7 +1802,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1568,7 +1813,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -1661,7 +1909,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Instances.
+             * <p>The list of asset details.</p>
              */
             public Builder instances(java.util.List<Instances> instances) {
                 this.instances = instances;
@@ -1669,7 +1917,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfo.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -1677,7 +1925,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20EBDE7B-AA36-5D60-9DCA-151C48EDB9F8</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -1685,7 +1936,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the call was successful. Valid values:</p>
+             * <ul>
+             * <li>true: The call was successful.</li>
+             * <li>false: The call failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -1739,7 +1997,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Body.
+             * <p>The string of the message body content encoded by using the Base64 algorithm.</p>
              */
             public Builder body(DataBody body) {
                 this.body = body;
