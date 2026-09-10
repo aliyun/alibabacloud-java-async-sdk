@@ -184,6 +184,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +197,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +210,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
+         * <p>The resource specification information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
@@ -354,6 +357,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             } 
 
             /**
+             * <p>The number of CPUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -365,6 +369,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             }
 
             /**
+             * <p>The memory size.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

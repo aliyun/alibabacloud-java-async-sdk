@@ -73,7 +73,10 @@ public class DescribeSupportedZonesRequest extends Request {
         } 
 
         /**
-         * ArchitectureType.
+         * <p>The processor architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X86</p>
          */
         public Builder architectureType(String architectureType) {
             this.putQueryParameter("ArchitectureType", architectureType);
@@ -82,7 +85,10 @@ public class DescribeSupportedZonesRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

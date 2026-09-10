@@ -80,7 +80,10 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210406354690749</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -88,7 +91,10 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

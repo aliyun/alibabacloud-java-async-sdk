@@ -31,6 +31,14 @@ public class CreateInstanceRequest extends Request {
     private String chargeType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DefaultHaNamespaceResourceSpec")
+    private DefaultHaNamespaceResourceSpec defaultHaNamespaceResourceSpec;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DefaultNamespaceResourceSpec")
+    private DefaultNamespaceResourceSpec defaultNamespaceResourceSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
@@ -108,6 +116,8 @@ public class CreateInstanceRequest extends Request {
         this.architectureType = builder.architectureType;
         this.autoRenew = builder.autoRenew;
         this.chargeType = builder.chargeType;
+        this.defaultHaNamespaceResourceSpec = builder.defaultHaNamespaceResourceSpec;
+        this.defaultNamespaceResourceSpec = builder.defaultNamespaceResourceSpec;
         this.duration = builder.duration;
         this.extra = builder.extra;
         this.ha = builder.ha;
@@ -159,6 +169,20 @@ public class CreateInstanceRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return defaultHaNamespaceResourceSpec
+     */
+    public DefaultHaNamespaceResourceSpec getDefaultHaNamespaceResourceSpec() {
+        return this.defaultHaNamespaceResourceSpec;
+    }
+
+    /**
+     * @return defaultNamespaceResourceSpec
+     */
+    public DefaultNamespaceResourceSpec getDefaultNamespaceResourceSpec() {
+        return this.defaultNamespaceResourceSpec;
     }
 
     /**
@@ -284,6 +308,8 @@ public class CreateInstanceRequest extends Request {
         private String architectureType; 
         private Boolean autoRenew; 
         private String chargeType; 
+        private DefaultHaNamespaceResourceSpec defaultHaNamespaceResourceSpec; 
+        private DefaultNamespaceResourceSpec defaultNamespaceResourceSpec; 
         private Integer duration; 
         private String extra; 
         private Boolean ha; 
@@ -311,6 +337,8 @@ public class CreateInstanceRequest extends Request {
             this.architectureType = request.architectureType;
             this.autoRenew = request.autoRenew;
             this.chargeType = request.chargeType;
+            this.defaultHaNamespaceResourceSpec = request.defaultHaNamespaceResourceSpec;
+            this.defaultNamespaceResourceSpec = request.defaultNamespaceResourceSpec;
             this.duration = request.duration;
             this.extra = request.extra;
             this.ha = request.ha;
@@ -331,7 +359,10 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * ArchitectureType.
+         * <p>The processor architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X86</p>
          */
         public Builder architectureType(String architectureType) {
             this.putBodyParameter("ArchitectureType", architectureType);
@@ -340,7 +371,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled. This is the default value.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter does not take effect for pay-as-you-go instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -349,6 +390,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>POST: pay-as-you-go.</li>
+         * <li>PRE: subscription.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -361,7 +407,33 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The default high-availability namespace resource configuration.</p>
+         */
+        public Builder defaultHaNamespaceResourceSpec(DefaultHaNamespaceResourceSpec defaultHaNamespaceResourceSpec) {
+            String defaultHaNamespaceResourceSpecShrink = shrink(defaultHaNamespaceResourceSpec, "DefaultHaNamespaceResourceSpec", "json");
+            this.putBodyParameter("DefaultHaNamespaceResourceSpec", defaultHaNamespaceResourceSpecShrink);
+            this.defaultHaNamespaceResourceSpec = defaultHaNamespaceResourceSpec;
+            return this;
+        }
+
+        /**
+         * <p>The default namespace resource configuration.</p>
+         */
+        public Builder defaultNamespaceResourceSpec(DefaultNamespaceResourceSpec defaultNamespaceResourceSpec) {
+            String defaultNamespaceResourceSpecShrink = shrink(defaultNamespaceResourceSpec, "DefaultNamespaceResourceSpec", "json");
+            this.putBodyParameter("DefaultNamespaceResourceSpec", defaultNamespaceResourceSpecShrink);
+            this.defaultNamespaceResourceSpec = defaultNamespaceResourceSpec;
+            return this;
+        }
+
+        /**
+         * <p>The subscription duration.</p>
+         * <blockquote>
+         * <p>This parameter is required when ChargeType is set to PRE.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
@@ -370,7 +442,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Extra.
+         * <p>The extended field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder extra(String extra) {
             this.putBodyParameter("Extra", extra);
@@ -379,7 +454,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Ha.
+         * <p>Specifies whether to enable zone-disaster recovery resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ha(Boolean ha) {
             this.putBodyParameter("Ha", ha);
@@ -388,7 +466,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * HaResourceSpec.
+         * <p>The zone-disaster recovery resource specifications.</p>
          */
         public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
             String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
@@ -398,7 +476,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * HaVSwitchIds.
+         * <p>The list of vSwitch IDs in the secondary zone for zone-disaster recovery.</p>
          */
         public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
@@ -408,6 +486,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The workspace name. The name must start with a lowercase letter and can contain lowercase letters, digits, and hyphens (-). The name cannot end with a hyphen.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -420,7 +499,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * MonitorType.
+         * <p>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TAIHAO</p>
          */
         public Builder monitorType(String monitorType) {
             this.putBodyParameter("MonitorType", monitorType);
@@ -429,7 +511,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The billing cycle of the subscription instance. Valid values:</p>
+         * <ul>
+         * <li><strong>year</strong>: yearly.</li>
+         * <li><strong>month</strong>: monthly.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is required when ChargeType is set to PRE.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("PricingCycle", pricingCycle);
@@ -438,7 +530,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500043499350689</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putBodyParameter("PromotionCode", promotionCode);
@@ -447,6 +542,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -459,7 +555,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxbavps3rpiy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -468,7 +567,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ResourceSpec.
+         * <p>The resource specifications.</p>
+         * <blockquote>
+         * <p>This parameter is required when ChargeType is set to PRE.</p>
+         * </blockquote>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
             String resourceSpecShrink = shrink(resourceSpec, "ResourceSpec", "json");
@@ -478,6 +580,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The storage parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder storage(Storage storage) {
@@ -488,7 +591,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags. A maximum of 20 tags can be specified.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -498,7 +601,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * UsePromotionCode.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li>true: Use a coupon.</li>
+         * <li>false: Do not use a coupon.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder usePromotionCode(Boolean usePromotionCode) {
             this.putBodyParameter("UsePromotionCode", usePromotionCode);
@@ -507,6 +617,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The list of vSwitch IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
@@ -517,6 +628,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The virtual private cloud (VPC) ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -535,6 +647,174 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class DefaultHaNamespaceResourceSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Integer cpu;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private DefaultHaNamespaceResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DefaultHaNamespaceResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultHaNamespaceResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
+            /**
+             * <p>The number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * <p>The memory size. Unit: GB.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public DefaultHaNamespaceResourceSpec build() {
+                return new DefaultHaNamespaceResourceSpec(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class DefaultNamespaceResourceSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Integer cpu;
+
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
+        private Integer memoryGB;
+
+        private DefaultNamespaceResourceSpec(Builder builder) {
+            this.cpu = builder.cpu;
+            this.memoryGB = builder.memoryGB;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DefaultNamespaceResourceSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Integer getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return memoryGB
+         */
+        public Integer getMemoryGB() {
+            return this.memoryGB;
+        }
+
+        public static final class Builder {
+            private Integer cpu; 
+            private Integer memoryGB; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultNamespaceResourceSpec model) {
+                this.cpu = model.cpu;
+                this.memoryGB = model.memoryGB;
+            } 
+
+            /**
+             * <p>The number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
+             */
+            public Builder cpu(Integer cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * <p>The memory size. Unit: GB.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
+             */
+            public Builder memoryGB(Integer memoryGB) {
+                this.memoryGB = memoryGB;
+                return this;
+            }
+
+            public DefaultNamespaceResourceSpec build() {
+                return new DefaultNamespaceResourceSpec(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateInstanceRequest} extends {@link TeaModel}
@@ -588,7 +868,10 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs for zone-disaster recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -596,7 +879,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size for zone-disaster recovery. The value is active memory allocated for high availability (HA).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -663,7 +949,15 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is required for subscription workspaces. For pay-as-you-go workspaces, you do not need to specify this parameter.- The number of CPUs for the target project must be less than the remaining CPUs in the workspace (total purchased CPUs minus CPUs already allocated to other projects). Otherwise, an error is returned.</li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -671,7 +965,13 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size. Unit: GB.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -725,7 +1025,10 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * Bucket.
+             * <p>The name of the OSS bucket to bind.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-flink-cn-shanghai-260343971602724445</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -792,7 +1095,14 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * FullyManaged.
+             * <p>Specifies whether to use fully managed storage. You can select only one of fully managed storage or binding an OSS bucket. Valid values:</p>
+             * <ul>
+             * <li>true: Use fully managed storage.</li>
+             * <li>false: Do not use fully managed storage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder fullyManaged(Boolean fullyManaged) {
                 this.fullyManaged = fullyManaged;
@@ -800,7 +1110,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Oss.
+             * <p>The Object Storage Service (OSS) storage.</p>
              */
             public Builder oss(Oss oss) {
                 this.oss = oss;
@@ -867,7 +1177,10 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -875,7 +1188,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder value(String value) {
                 this.value = value;

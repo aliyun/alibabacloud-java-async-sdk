@@ -296,7 +296,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * ClusterStatus.
+         * <p>The cluster status.</p>
          */
         public Builder clusterStatus(String clusterStatus) {
             this.clusterStatus = clusterStatus;
@@ -304,7 +304,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * ConsoleUrl.
+         * <p>The URL of the instance management console.</p>
          */
         public Builder consoleUrl(String consoleUrl) {
             this.consoleUrl = consoleUrl;
@@ -312,7 +312,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * DiskSize.
+         * <p>The disk size, in GB.</p>
          */
         public Builder diskSize(Long diskSize) {
             this.diskSize = diskSize;
@@ -320,7 +320,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * Ha.
+         * <p>Specifies whether high availability (HA) is enabled.</p>
          */
         public Builder ha(Boolean ha) {
             this.ha = ha;
@@ -328,7 +328,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -336,7 +336,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -344,7 +344,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * OrderState.
+         * <p>The order state.</p>
          */
         public Builder orderState(String orderState) {
             this.orderState = orderState;
@@ -352,7 +352,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -360,7 +360,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * ResourceCreateTime.
+         * <p>The creation time of the resource, as a UNIX timestamp in milliseconds.</p>
          */
         public Builder resourceCreateTime(Long resourceCreateTime) {
             this.resourceCreateTime = resourceCreateTime;
@@ -368,7 +368,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * ResourceExpiredTime.
+         * <p>The expiration time of the resource, as a UNIX timestamp in milliseconds.</p>
          */
         public Builder resourceExpiredTime(Long resourceExpiredTime) {
             this.resourceExpiredTime = resourceExpiredTime;
@@ -376,7 +376,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * TabletServerModel.
+         * <p>The tablet server model.</p>
          */
         public Builder tabletServerModel(String tabletServerModel) {
             this.tabletServerModel = tabletServerModel;
@@ -384,7 +384,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * TabletServerNum.
+         * <p>The number of tablet servers.</p>
          */
         public Builder tabletServerNum(Long tabletServerNum) {
             this.tabletServerNum = tabletServerNum;
@@ -392,7 +392,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * TabletServerType.
+         * <p>The tablet server type.</p>
          */
         public Builder tabletServerType(String tabletServerType) {
             this.tabletServerType = tabletServerType;
@@ -400,7 +400,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * TieringPostCu.
+         * <p>The number of compute units (CUs) for post-tiering.</p>
          */
         public Builder tieringPostCu(Long tieringPostCu) {
             this.tieringPostCu = tieringPostCu;
@@ -408,7 +408,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * TieringPreCu.
+         * <p>The number of compute units (CUs) for pre-tiering.</p>
          */
         public Builder tieringPreCu(Long tieringPreCu) {
             this.tieringPreCu = tieringPreCu;
@@ -416,7 +416,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * Uid.
+         * <p>The Alibaba Cloud account ID (UID).</p>
          */
         public Builder uid(String uid) {
             this.uid = uid;
@@ -424,7 +424,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * VSwitches.
+         * <p>The VSwitch details.</p>
          */
         public Builder vSwitches(java.util.List<FlussVswitch> vSwitches) {
             this.vSwitches = vSwitches;
@@ -432,7 +432,7 @@ public class FlussInstance extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID.</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

@@ -154,6 +154,7 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,10 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * <p>The namespace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>di-590843445844225</p>
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -175,7 +179,10 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -184,7 +191,10 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,6 +203,7 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +216,7 @@ public class DescribeNamespacesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -274,7 +285,10 @@ public class DescribeNamespacesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Flink</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -282,7 +296,10 @@ public class DescribeNamespacesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

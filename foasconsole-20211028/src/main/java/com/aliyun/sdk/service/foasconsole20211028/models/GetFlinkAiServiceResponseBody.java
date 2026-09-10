@@ -80,7 +80,7 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * FlinkAiServiceDTO.
+         * <p>The Flink AI service data transfer object.</p>
          */
         public Builder flinkAiServiceDTO(FlinkAiServiceDTO flinkAiServiceDTO) {
             this.flinkAiServiceDTO = flinkAiServiceDTO;
@@ -88,7 +88,10 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B21DC47E-8928-199A-9F32-36D45E4693B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +207,10 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * DeletionProtection.
+             * <p>Indicates whether deletion protection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -209,7 +218,18 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * FlinkAiInstanceStatus.
+             * <p>The status of the Flink AI instance. Valid values:</p>
+             * <ul>
+             * <li>CLOSED: closed or not activated.</li>
+             * <li>WAITING: waiting to be activated after payment.</li>
+             * <li>OPENING: being activated.</li>
+             * <li>RUNNING: activated.</li>
+             * <li>CLOSING: being closed.</li>
+             * <li>DISABLE: overdue payment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOSED</p>
              */
             public Builder flinkAiInstanceStatus(String flinkAiInstanceStatus) {
                 this.flinkAiInstanceStatus = flinkAiInstanceStatus;
@@ -217,7 +237,10 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MainInstanceId.
+             * <p>The AI service order instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sc_flinkaifuncpost_public_cn-o3s4xabcdef</p>
              */
             public Builder mainInstanceId(String mainInstanceId) {
                 this.mainInstanceId = mainInstanceId;
@@ -225,7 +248,10 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -233,7 +259,10 @@ public class GetFlinkAiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceCreateTime.
+             * <p>The time when the AI service was activated, in timestamp format (milliseconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1786934292</p>
              */
             public Builder resourceCreateTime(Long resourceCreateTime) {
                 this.resourceCreateTime = resourceCreateTime;

@@ -75,6 +75,7 @@ public class DeleteInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

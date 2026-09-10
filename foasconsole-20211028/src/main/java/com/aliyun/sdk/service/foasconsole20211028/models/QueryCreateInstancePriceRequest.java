@@ -271,7 +271,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         } 
 
         /**
-         * ArchitectureType.
+         * <p>The processor architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X86</p>
          */
         public Builder architectureType(String architectureType) {
             this.putBodyParameter("ArchitectureType", architectureType);
@@ -280,7 +283,17 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables auto-renewal.</li>
+         * <li><strong>false</strong>: does not enable auto-renewal. (Default)</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is invalid for pay-as-you-go instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putBodyParameter("AutoRenew", autoRenew);
@@ -289,6 +302,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The billing type. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +315,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * <p>The number of billing cycles.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Integer duration) {
             this.putBodyParameter("Duration", duration);
@@ -310,7 +327,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * Extra.
+         * <p>The extended reserved field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder extra(String extra) {
             this.putBodyParameter("Extra", extra);
@@ -319,7 +339,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * Ha.
+         * <p>Specifies whether to select zone-disaster recovery resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ha(Boolean ha) {
             this.putBodyParameter("Ha", ha);
@@ -328,7 +351,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * HaResourceSpec.
+         * <p>The zone-disaster recovery resource specifications.</p>
          */
         public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
             String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
@@ -338,7 +361,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtc-e2e-test-post</p>
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -347,7 +373,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * <p>The billing cycle. Subscription instances support only Year and Month. Pay-as-you-go instances support Hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putBodyParameter("PricingCycle", pricingCycle);
@@ -356,7 +385,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500041860100636</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putBodyParameter("PromotionCode", promotionCode);
@@ -365,6 +397,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -377,7 +410,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * ResourceSpec.
+         * <p>The resource specifications.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
             String resourceSpecShrink = shrink(resourceSpec, "ResourceSpec", "json");
@@ -387,7 +420,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * Storage.
+         * <p>The storage information.</p>
          */
         public Builder storage(Storage storage) {
             String storageShrink = shrink(storage, "Storage", "json");
@@ -397,7 +430,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * UsePromotionCode.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder usePromotionCode(Boolean usePromotionCode) {
             this.putBodyParameter("UsePromotionCode", usePromotionCode);
@@ -406,7 +442,7 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The vSwitch IDs.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             String vSwitchIdsShrink = shrink(vSwitchIds, "VSwitchIds", "json");
@@ -416,7 +452,10 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze9xoh8qyt1rnxfmfcdi</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -484,7 +523,10 @@ public class QueryCreateInstancePriceRequest extends Request {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs for zone-disaster recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -492,7 +534,10 @@ public class QueryCreateInstancePriceRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>The active memory size for zone-disaster recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -559,7 +604,10 @@ public class QueryCreateInstancePriceRequest extends Request {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -567,7 +615,10 @@ public class QueryCreateInstancePriceRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -621,7 +672,10 @@ public class QueryCreateInstancePriceRequest extends Request {
             } 
 
             /**
-             * Bucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quicktracing</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -675,7 +729,7 @@ public class QueryCreateInstancePriceRequest extends Request {
             } 
 
             /**
-             * Oss.
+             * <p>The OSS storage information.</p>
              */
             public Builder oss(Oss oss) {
                 this.oss = oss;

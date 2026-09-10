@@ -127,6 +127,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
+         * <p>The namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +153,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +166,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * ResourceSpec.
+         * <p>The resource specifications.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
             String resourceSpecShrink = shrink(resourceSpec, "ResourceSpec", "json");
@@ -232,7 +235,10 @@ public class CreateNamespaceRequest extends Request {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -240,7 +246,13 @@ public class CreateNamespaceRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size. Unit: GB.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;

@@ -163,6 +163,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         } 
 
         /**
+         * <p>The number of pricing cycles.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +176,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +189,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable auto-renewal.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +202,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The resource specifications of the namespace.</p>
          * <p>This parameter is required.</p>
          */
         public Builder namespaceResourceSpecs(java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs) {
@@ -209,6 +213,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The pricing cycle. Only Year and Month are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +235,7 @@ public class QueryConvertInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,6 +318,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             } 
 
             /**
+             * <p>The number of CPUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -323,6 +330,10 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
+             * <p>The memory size. Unit: GB.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -395,6 +406,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             } 
 
             /**
+             * <p>The namespace name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -406,6 +418,7 @@ public class QueryConvertInstancePriceRequest extends Request {
             }
 
             /**
+             * <p>The resource specifications of the namespace.</p>
              * <p>This parameter is required.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {

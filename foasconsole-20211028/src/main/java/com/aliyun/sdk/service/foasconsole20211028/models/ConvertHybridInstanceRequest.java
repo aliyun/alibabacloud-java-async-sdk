@@ -90,10 +90,11 @@ public class ConvertHybridInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>sc_flinkserverless_public_cn-7e22ae5sess</p>
+         * <p>sc_flinkserverless_public_cn-7e22*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,6 +103,7 @@ public class ConvertHybridInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ConvertHybridInstanceRequest extends Request {
         }
 
         /**
+         * <p>The maximum resource specifications available for the pay-as-you-go portion of hybrid billing.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
@@ -185,6 +188,7 @@ public class ConvertHybridInstanceRequest extends Request {
             } 
 
             /**
+             * <p>The number of CPUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -196,6 +200,10 @@ public class ConvertHybridInstanceRequest extends Request {
             }
 
             /**
+             * <p>The memory size. Unit: GB.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

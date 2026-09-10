@@ -133,6 +133,7 @@ public class QueryRenewInstancePriceRequest extends Request {
         } 
 
         /**
+         * <p>The number of subscription periods.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class QueryRenewInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +159,7 @@ public class QueryRenewInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The subscription period unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,6 +181,7 @@ public class QueryRenewInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

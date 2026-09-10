@@ -93,7 +93,10 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * ErrCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -101,7 +104,7 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderInfo.
+         * <p>The order information.</p>
          */
         public Builder orderInfo(OrderInfo orderInfo) {
             this.orderInfo = orderInfo;
@@ -109,7 +112,10 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67F33190-946B-1105-B6A1-E2DF042*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -196,7 +205,10 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ElasticInstanceId.
+             * <p>The instance ID of the pay-as-you-go portion of hybrid billing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-cn-asd***</p>
              */
             public Builder elasticInstanceId(String elasticInstanceId) {
                 this.elasticInstanceId = elasticInstanceId;
@@ -204,7 +216,10 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the subscription portion of hybrid billing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-cn-zvp2q*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -212,7 +227,10 @@ public class ConvertHybridInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2104063546****</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

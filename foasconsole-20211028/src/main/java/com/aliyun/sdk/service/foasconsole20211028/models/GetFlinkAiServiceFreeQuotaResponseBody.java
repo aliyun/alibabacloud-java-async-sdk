@@ -80,7 +80,7 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * FlinkAiFreeQuotaDTO.
+         * <p>The Flink AI free quota data transfer object.</p>
          */
         public Builder flinkAiFreeQuotaDTO(FlinkAiFreeQuotaDTO flinkAiFreeQuotaDTO) {
             this.flinkAiFreeQuotaDTO = flinkAiFreeQuotaDTO;
@@ -88,7 +88,10 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8DF2A5B-6FBA-5651-A3D4-960F3664****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +168,10 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The used quota for this usage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35.5</p>
              */
             public Builder amount(Double amount) {
                 this.amount = amount;
@@ -170,7 +179,10 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * UsageType.
+             * <p>The usage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AI_FUNCTION</p>
              */
             public Builder usageType(String usageType) {
                 this.usageType = usageType;
@@ -237,7 +249,10 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * FreeQuota.
+             * <p>The total free quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder freeQuota(Double freeQuota) {
                 this.freeQuota = freeQuota;
@@ -245,7 +260,7 @@ public class GetFlinkAiServiceFreeQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * UsedQuotaDetails.
+             * <p>The list of used quota details for each usage type.</p>
              */
             public Builder usedQuotaDetails(java.util.List<UsedQuotaDetails> usedQuotaDetails) {
                 this.usedQuotaDetails = usedQuotaDetails;

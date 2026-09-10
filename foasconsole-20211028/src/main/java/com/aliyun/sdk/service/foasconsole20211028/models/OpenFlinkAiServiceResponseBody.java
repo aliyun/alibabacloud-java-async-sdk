@@ -80,7 +80,7 @@ public class OpenFlinkAiServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderInfo.
+         * <p>The order information.</p>
          */
         public Builder orderInfo(OrderInfo orderInfo) {
             this.orderInfo = orderInfo;
@@ -88,7 +88,10 @@ public class OpenFlinkAiServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class OpenFlinkAiServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +168,10 @@ public class OpenFlinkAiServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-cn-zvp2q*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +179,10 @@ public class OpenFlinkAiServiceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2104063546****</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

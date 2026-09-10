@@ -163,6 +163,7 @@ public class ConvertInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The number of subscription cycles.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +176,7 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +189,7 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable auto-renewal.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +202,7 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
+         * <p>The resource specifications of the namespace.</p>
          * <p>This parameter is required.</p>
          */
         public Builder namespaceResourceSpecs(java.util.List<NamespaceResourceSpecs> namespaceResourceSpecs) {
@@ -209,6 +213,7 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
+         * <p>The subscription cycle.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +235,7 @@ public class ConvertInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,6 +318,7 @@ public class ConvertInstanceRequest extends Request {
             } 
 
             /**
+             * <p>The number of CPUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -323,6 +330,7 @@ public class ConvertInstanceRequest extends Request {
             }
 
             /**
+             * <p>The memory size.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -395,6 +403,7 @@ public class ConvertInstanceRequest extends Request {
             } 
 
             /**
+             * <p>The namespace name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -406,6 +415,7 @@ public class ConvertInstanceRequest extends Request {
             }
 
             /**
+             * <p>The resource specifications.</p>
              * <p>This parameter is required.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {

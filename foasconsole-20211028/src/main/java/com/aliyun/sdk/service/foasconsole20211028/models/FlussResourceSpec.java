@@ -106,7 +106,7 @@ public class FlussResourceSpec extends TeaModel {
         } 
 
         /**
-         * DiskSizeInGB.
+         * <p>Disk size per node, in GB.</p>
          */
         public Builder diskSizeInGB(Long diskSizeInGB) {
             this.diskSizeInGB = diskSizeInGB;
@@ -114,7 +114,7 @@ public class FlussResourceSpec extends TeaModel {
         }
 
         /**
-         * SlaveModel.
+         * <p>Instance type of the slave nodes.</p>
          */
         public Builder slaveModel(String slaveModel) {
             this.slaveModel = slaveModel;
@@ -122,7 +122,7 @@ public class FlussResourceSpec extends TeaModel {
         }
 
         /**
-         * SlaveNum.
+         * <p>Number of slave nodes.</p>
          */
         public Builder slaveNum(Long slaveNum) {
             this.slaveNum = slaveNum;
@@ -130,7 +130,7 @@ public class FlussResourceSpec extends TeaModel {
         }
 
         /**
-         * TieringPostCu.
+         * <p>Number of CUs for the post-tiering stage.</p>
          */
         public Builder tieringPostCu(Long tieringPostCu) {
             this.tieringPostCu = tieringPostCu;
@@ -138,7 +138,7 @@ public class FlussResourceSpec extends TeaModel {
         }
 
         /**
-         * TieringPreCu.
+         * <p>Number of compute units (CUs) for the pre-tiering stage.</p>
          */
         public Builder tieringPreCu(Long tieringPreCu) {
             this.tieringPreCu = tieringPreCu;

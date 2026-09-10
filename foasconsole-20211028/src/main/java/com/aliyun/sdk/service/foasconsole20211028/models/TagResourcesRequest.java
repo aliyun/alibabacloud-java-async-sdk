@@ -105,6 +105,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>Region</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>List of order instance IDs</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -126,6 +128,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>Resource type. Set this parameter to vvpinstance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +141,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>List of tags. You can specify up to 20 tags</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -206,7 +210,10 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>Tag key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -214,7 +221,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>Tag value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder value(String value) {
                 this.value = value;

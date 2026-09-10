@@ -88,7 +88,7 @@ public class ModifyInstanceVswitchRequest extends Request {
         } 
 
         /**
-         * HaVSwitchIds.
+         * <p>The vSwitch IDs in the secondary zone for zone-disaster recovery. This parameter is required if zone-disaster recovery is enabled for your workspace.</p>
          */
         public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
@@ -98,6 +98,7 @@ public class ModifyInstanceVswitchRequest extends Request {
         }
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +111,7 @@ public class ModifyInstanceVswitchRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>The IDs of the vSwitches to use after the modification.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             String vSwitchIdsShrink = shrink(vSwitchIds, "VSwitchIds", "json");

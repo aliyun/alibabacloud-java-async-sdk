@@ -133,7 +133,7 @@ public class ModifyNamespaceSpecV2Request extends Request {
         } 
 
         /**
-         * ElasticResourceSpec.
+         * <p>The upper limit of pay-as-you-go resources allocated to the project namespace.</p>
          */
         public Builder elasticResourceSpec(ElasticResourceSpec elasticResourceSpec) {
             String elasticResourceSpecShrink = shrink(elasticResourceSpec, "ElasticResourceSpec", "json");
@@ -143,7 +143,7 @@ public class ModifyNamespaceSpecV2Request extends Request {
         }
 
         /**
-         * GuaranteedResourceSpec.
+         * <p>The size of subscription resources allocated to the project namespace.</p>
          */
         public Builder guaranteedResourceSpec(GuaranteedResourceSpec guaranteedResourceSpec) {
             String guaranteedResourceSpecShrink = shrink(guaranteedResourceSpec, "GuaranteedResourceSpec", "json");
@@ -153,6 +153,7 @@ public class ModifyNamespaceSpecV2Request extends Request {
         }
 
         /**
+         * <p>Specifies whether the project namespace uses zone-disaster recovery.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,10 +166,11 @@ public class ModifyNamespaceSpecV2Request extends Request {
         }
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>f-cn-wwo36qj4g06</p>
+         * <p>f-cn-wwo36qj****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -177,10 +179,11 @@ public class ModifyNamespaceSpecV2Request extends Request {
         }
 
         /**
+         * <p>The project namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>di-593439443804417</p>
+         * <p>di-5934394438****</p>
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -189,6 +192,7 @@ public class ModifyNamespaceSpecV2Request extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,6 +266,7 @@ public class ModifyNamespaceSpecV2Request extends Request {
             } 
 
             /**
+             * <p>The number of CPUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -273,6 +278,10 @@ public class ModifyNamespaceSpecV2Request extends Request {
             }
 
             /**
+             * <p>The memory size. Unit: GB.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -345,6 +354,7 @@ public class ModifyNamespaceSpecV2Request extends Request {
             } 
 
             /**
+             * <p>The number of CPUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -356,6 +366,10 @@ public class ModifyNamespaceSpecV2Request extends Request {
             }
 
             /**
+             * <p>The memory size. Unit: GB.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

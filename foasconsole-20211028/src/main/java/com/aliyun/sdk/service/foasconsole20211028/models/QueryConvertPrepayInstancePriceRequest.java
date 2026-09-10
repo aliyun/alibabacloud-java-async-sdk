@@ -75,10 +75,11 @@ public class QueryConvertPrepayInstancePriceRequest extends Request {
         } 
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>f-cn-wwo36qj4g06</p>
+         * <p>f-cn-wwo36qj4****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -87,6 +88,7 @@ public class QueryConvertPrepayInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

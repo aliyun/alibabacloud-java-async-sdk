@@ -200,7 +200,10 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * ArchitectureType.
+         * <p>The processor architecture. Valid values: X86 and ARM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X86</p>
          */
         public Builder architectureType(String architectureType) {
             this.putQueryParameter("ArchitectureType", architectureType);
@@ -209,7 +212,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The payment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRE</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -218,7 +224,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Elastic.
+         * <p>Specifies whether hybrid billing is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder elastic(Boolean elastic) {
             this.putQueryParameter("Elastic", elastic);
@@ -227,7 +236,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The order instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f-cn-wwo36qj4g06</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -236,7 +248,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2e-test</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -245,7 +260,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * NamespaceName.
+         * <p>The namespace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2e-test-default</p>
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);
@@ -254,7 +272,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -263,7 +284,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,6 +296,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +309,10 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2e55emewbqgy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -293,7 +321,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tags of the instance.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -362,7 +390,10 @@ public class DescribeInstancesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +401,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The value can be up to 64 Unicode characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ys</p>
              */
             public Builder value(String value) {
                 this.value = value;

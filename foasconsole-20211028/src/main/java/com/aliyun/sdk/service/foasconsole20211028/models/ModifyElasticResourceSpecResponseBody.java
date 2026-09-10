@@ -80,7 +80,10 @@ public class ModifyElasticResourceSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21147322832****</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -88,7 +91,10 @@ public class ModifyElasticResourceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B21DC47E-8928-199A-9F32-36D45E4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class ModifyElasticResourceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

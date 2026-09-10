@@ -105,6 +105,7 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         } 
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         }
 
         /**
+         * <p>The namespace name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         }
 
         /**
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
         }
 
         /**
+         * <p>The namespace resource details.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
@@ -212,6 +216,7 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             } 
 
             /**
+             * <p>The number of CPUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -223,6 +228,10 @@ public class ModifyPrepayNamespaceSpecRequest extends Request {
             }
 
             /**
+             * <p>The memory size. Unit: GB.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

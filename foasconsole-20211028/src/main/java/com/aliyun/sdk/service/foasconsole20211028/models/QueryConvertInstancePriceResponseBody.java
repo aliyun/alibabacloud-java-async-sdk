@@ -80,7 +80,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         } 
 
         /**
-         * PriceInfo.
+         * <p>The price information, including the price and discount rules.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -88,7 +88,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +220,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * CheapRate.
+             * <p>The price reduction ratio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34%</p>
              */
             public Builder cheapRate(String cheapRate) {
                 this.cheapRate = cheapRate;
@@ -222,7 +231,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * CheapStandAmount.
+             * <p>The standard total price after the price reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder cheapStandAmount(String cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
@@ -230,7 +242,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsShow.
+             * <p>Indicates whether to display the price reduction percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isShow(Boolean isShow) {
                 this.isShow = isShow;
@@ -238,7 +253,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * MonthPrice.
+             * <p>The equivalent monthly price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder monthPrice(String monthPrice) {
                 this.monthPrice = monthPrice;
@@ -246,7 +264,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalStandAmount.
+             * <p>The original standard total price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12000</p>
              */
             public Builder originalStandAmount(String originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
@@ -254,7 +275,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the price reduction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-21T02:06:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -347,7 +371,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * PromotionDesc.
+             * <p>The coupon description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>¥1,391.5 coupon (valid until 03/23/2022)</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -355,7 +382,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * <p>The coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>¥1,391.5 coupon</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -363,7 +393,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionOptionNo.
+             * <p>The coupon number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500011220010099</p>
              */
             public Builder promotionOptionNo(String promotionOptionNo) {
                 this.promotionOptionNo = promotionOptionNo;
@@ -371,7 +404,16 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Selected.
+             * <p>Indicates whether the coupon is selected. Valid values:</p>
+             * <ul>
+             * <li><p>true: Selected.</p>
+             * </li>
+             * <li><p>false: Not selected.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -438,7 +480,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the promotion rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Purchase for 1 year or more and enjoy a 15% discount off the official price</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -446,7 +491,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The promotion ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>587</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -656,7 +704,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORDER.INST_HAS_UNPAID_ORDER</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -664,7 +715,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -672,7 +726,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DepreciateInfo.
+             * <p>The price reduction information.</p>
              */
             public Builder depreciateInfo(DepreciateInfo depreciateInfo) {
                 this.depreciateInfo = depreciateInfo;
@@ -680,7 +734,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>655.2</p>
              */
             public Builder discountAmount(Float discountAmount) {
                 this.discountAmount = discountAmount;
@@ -688,7 +745,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsContractActivity.
+             * <p>Indicates whether the enterprise discount is applied.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isContractActivity(Boolean isContractActivity) {
                 this.isContractActivity = isContractActivity;
@@ -696,7 +756,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * LxRequestId.
+             * <p>The Lingxiao request ID of the call.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
              */
             public Builder lxRequestId(String lxRequestId) {
                 this.lxRequestId = lxRequestId;
@@ -704,7 +767,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>An unpaid order exists. Pay or cancel the existing order first</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -712,7 +778,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OptionalPromotions.
+             * <p>The coupon information.</p>
              */
             public Builder optionalPromotions(java.util.List<OptionalPromotions> optionalPromotions) {
                 this.optionalPromotions = optionalPromotions;
@@ -720,7 +786,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4368</p>
              */
             public Builder originalAmount(Float originalAmount) {
                 this.originalAmount = originalAmount;
@@ -728,7 +797,7 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The promotion rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -736,7 +805,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandDiscountPrice.
+             * <p>The discounted price based on the official website discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21321</p>
              */
             public Builder standDiscountPrice(String standDiscountPrice) {
                 this.standDiscountPrice = standDiscountPrice;
@@ -744,7 +816,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * StandPrice.
+             * <p>The official website discounted price or direct sales contract discounted price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32432</p>
              */
             public Builder standPrice(String standPrice) {
                 this.standPrice = standPrice;
@@ -752,7 +827,10 @@ public class QueryConvertInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * <p>The final price, which is the original price minus the discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3712.8</p>
              */
             public Builder tradeAmount(Float tradeAmount) {
                 this.tradeAmount = tradeAmount;

@@ -132,7 +132,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageIndex.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -140,7 +143,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of regions per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -148,7 +154,7 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Regions.
+         * <p>The list of region information.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -156,7 +162,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B21DC47E-8928-199A-9F32-36D45E4693B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +173,14 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -172,7 +188,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of regions returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -180,7 +199,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -272,7 +294,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -280,7 +305,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Extra.
+             * <p>The extended field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -288,7 +316,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -296,7 +327,10 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Beijing)</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

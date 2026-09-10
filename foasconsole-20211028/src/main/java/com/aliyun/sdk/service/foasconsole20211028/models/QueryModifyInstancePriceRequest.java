@@ -160,7 +160,10 @@ public class QueryModifyInstancePriceRequest extends Request {
         } 
 
         /**
-         * Ha.
+         * <p>Specifies whether to select zone-disaster recovery resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ha(Boolean ha) {
             this.putBodyParameter("Ha", ha);
@@ -169,7 +172,7 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * HaResourceSpec.
+         * <p>The zone-disaster recovery resource description.</p>
          */
         public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
             String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
@@ -179,7 +182,7 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
-         * HaVSwitchIds.
+         * <p>The vSwitch group for the zone-disaster recovery secondary zone.</p>
          */
         public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
@@ -189,6 +192,7 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +214,7 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,6 +227,7 @@ public class QueryModifyInstancePriceRequest extends Request {
         }
 
         /**
+         * <p>The resource specifications.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
@@ -300,7 +306,10 @@ public class QueryModifyInstancePriceRequest extends Request {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs for zone-disaster recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -308,7 +317,10 @@ public class QueryModifyInstancePriceRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size for zone-disaster recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -377,6 +389,7 @@ public class QueryModifyInstancePriceRequest extends Request {
             } 
 
             /**
+             * <p>The number of CPUs after the specification change.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -388,6 +401,10 @@ public class QueryModifyInstancePriceRequest extends Request {
             }
 
             /**
+             * <p>The memory size after the specification change.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

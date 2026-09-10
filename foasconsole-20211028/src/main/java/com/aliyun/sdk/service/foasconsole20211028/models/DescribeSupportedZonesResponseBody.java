@@ -132,7 +132,10 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageIndex.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -140,7 +143,10 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -148,7 +154,10 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23A9C718-DDAB-1696-B025-18FBC830F7C5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,7 +165,10 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -164,7 +176,10 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -172,7 +187,10 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -180,7 +198,7 @@ public class DescribeSupportedZonesResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneIds.
+         * <p>The zone information.</p>
          */
         public Builder zoneIds(java.util.List<String> zoneIds) {
             this.zoneIds = zoneIds;

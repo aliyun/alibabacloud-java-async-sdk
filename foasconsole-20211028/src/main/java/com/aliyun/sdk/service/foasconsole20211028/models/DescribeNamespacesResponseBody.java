@@ -132,7 +132,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         } 
 
         /**
-         * Namespaces.
+         * <p>The list of namespaces.</p>
          */
         public Builder namespaces(java.util.List<Namespaces> namespaces) {
             this.namespaces = namespaces;
@@ -140,7 +140,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * PageIndex.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -148,7 +151,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +162,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +173,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -172,7 +188,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -180,7 +199,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -396,7 +418,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -404,7 +429,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -484,7 +512,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of used CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -500,7 +531,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The amount of used memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memoryGB(Float memoryGB) {
                 this.memoryGB = memoryGB;
@@ -567,7 +601,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flink</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -575,7 +612,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -754,7 +794,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1629879567394</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -762,7 +805,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1629879567394</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -786,7 +832,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The name of the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns-1</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -794,7 +843,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceSpec.
+             * <p>The resource specification information.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {
                 this.resourceSpec = resourceSpec;
@@ -802,7 +851,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceUsed.
+             * <p>The used resources.</p>
              */
             public Builder resourceUsed(ResourceUsed resourceUsed) {
                 this.resourceUsed = resourceUsed;
@@ -810,7 +859,17 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the namespace. Valid values:</p>
+             * <ul>
+             * <li>CREATING: Being created.</li>
+             * <li>DELETING: Being deleted.</li>
+             * <li>MODIFYING: Resource specifications are being modified.</li>
+             * <li>SUCCESS: The last operation was successful.</li>
+             * <li>FAILED: The last operation failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -818,7 +877,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

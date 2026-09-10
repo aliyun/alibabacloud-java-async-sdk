@@ -106,7 +106,10 @@ public class TagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Return code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Request details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,16 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call succeeded. Valid values:</p>
+         * <ul>
+         * <li><p>true: The call succeeded</p>
+         * </li>
+         * <li><p>false: The call failed</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +156,10 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResponseId.
+         * <p>Tag request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>154FT</p>
          */
         public Builder tagResponseId(String tagResponseId) {
             this.tagResponseId = tagResponseId;

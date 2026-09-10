@@ -80,7 +80,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderInfo.
+         * <p>The order information.</p>
          */
         public Builder orderInfo(OrderInfo orderInfo) {
             this.orderInfo = orderInfo;
@@ -88,7 +88,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67F33190-946B-1105-B6A1-E2DF0426DD51</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +194,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The order instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-cn-zvp2q0zik06</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -196,7 +205,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>210406354694567</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -204,7 +216,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StorageInstanceId.
+             * <p>The storage instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sc_flinkstorage_public_cn-w*****</p>
              */
             public Builder storageInstanceId(String storageInstanceId) {
                 this.storageInstanceId = storageInstanceId;
@@ -212,7 +227,10 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StorageOrderId.
+             * <p>The storage order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240353501970749</p>
              */
             public Builder storageOrderId(Long storageOrderId) {
                 this.storageOrderId = storageOrderId;

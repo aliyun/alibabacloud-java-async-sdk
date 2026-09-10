@@ -90,10 +90,11 @@ public class ModifyElasticResourceSpecRequest extends Request {
         } 
 
         /**
+         * <p>The order instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>sc_flinkserverless_public_cn-7e22ae5sess</p>
+         * <p>sc_flinkserverless_public_cn-7e22ae****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -102,6 +103,7 @@ public class ModifyElasticResourceSpecRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class ModifyElasticResourceSpecRequest extends Request {
         }
 
         /**
+         * <p>The maximum pay-as-you-go resource specifications.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceSpec(ResourceSpec resourceSpec) {
@@ -185,6 +188,7 @@ public class ModifyElasticResourceSpecRequest extends Request {
             } 
 
             /**
+             * <p>The number of CPUs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -196,6 +200,10 @@ public class ModifyElasticResourceSpecRequest extends Request {
             }
 
             /**
+             * <p>The memory size.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

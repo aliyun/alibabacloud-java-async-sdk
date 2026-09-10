@@ -132,7 +132,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Instances.
+         * <p>The details of the instance group.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -140,7 +140,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageIndex.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -148,7 +151,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of instances per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +162,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C8DF2A5B-6FBA-5651-A3D4-960F3664****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +173,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -172,7 +188,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -180,7 +199,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -397,7 +419,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -405,7 +427,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the project space. Valid values:</p>
+             * <ul>
+             * <li>CREATING: Being created.</li>
+             * <li>DELETING: Being deleted.</li>
+             * <li>MODIFYING: Resource specifications are being modified.</li>
+             * <li>SUCCESS: The previous operation was successful.</li>
+             * <li>FAILED: The previous operation failed.</li>
+             * </ul>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -795,7 +824,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The cluster status. Valid values:</p>
+             * <ul>
+             * <li><p>CREATING: Being created.</p>
+             * </li>
+             * <li><p>RUNNING: Running.</p>
+             * </li>
+             * <li><p>DISABLE: Invalid.</p>
+             * </li>
+             * <li><p>DELETING: Being deleted.</p>
+             * </li>
+             * <li><p>DELETED: Deleted.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -803,7 +847,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SubStatus.
+             * <p>The cluster status. Valid values:</p>
+             * <ul>
+             * <li><p>CREATING: Being created.</p>
+             * </li>
+             * <li><p>RUNNING: Running.</p>
+             * </li>
+             * <li><p>DISABLE: Invalid.</p>
+             * </li>
+             * <li><p>DELETING: Being deleted.</p>
+             * </li>
+             * <li><p>DELETED: Deleted.</p>
+             * </li>
+             * </ul>
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;
@@ -1106,7 +1162,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ha.
+             * <p>Indicates whether zone-disaster recovery resources are selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ha(Boolean ha) {
                 this.ha = ha;
@@ -1296,7 +1355,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1304,7 +1366,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The amount of memory used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>280</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -1371,7 +1436,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs for zone-disaster recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1379,7 +1447,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size of zone-disaster recovery resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -1524,7 +1595,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableIpAddressCount.
+             * <p>The number of available IP addresses in the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder availableIpAddressCount(Long availableIpAddressCount) {
                 this.availableIpAddressCount = availableIpAddressCount;
@@ -1532,7 +1606,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1540,7 +1617,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1548,7 +1628,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchCidr.
+             * <p>The vSwitch CIDR block information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.16.0/24</p>
              */
             public Builder vSwitchCidr(String vSwitchCidr) {
                 this.vSwitchCidr = vSwitchCidr;
@@ -1556,7 +1639,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-wz9e9zt38b9f3l6*****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1564,7 +1650,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The vSwitch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test vSwitch</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -1572,7 +1661,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6d0akr6lzd75v****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1580,7 +1672,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1779,7 +1874,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Bucket.
+             * <p>The name of the bound OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flink-log-john</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -1862,7 +1960,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1870,7 +1971,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The configured memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -1924,7 +2028,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Bucket.
+             * <p>The name of the bound OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss_flink</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -2030,7 +2137,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * FullyManaged.
+             * <p>Indicates whether fully managed storage is selected. Valid values:</p>
+             * <ul>
+             * <li>true: Used.</li>
+             * <li>false: Not used.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder fullyManaged(Boolean fullyManaged) {
                 this.fullyManaged = fullyManaged;
@@ -2038,7 +2152,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderState.
+             * <p>The order status of fully managed storage. Valid values:</p>
+             * <ul>
+             * <li><p>NOT_INIT: The order is placed but components are not yet deployed.</p>
+             * </li>
+             * <li><p>NORMAL: Normal.</p>
+             * </li>
+             * <li><p>CEASE: Expired.</p>
+             * </li>
+             * <li><p>RELEASE: Overdue.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder orderState(String orderState) {
                 this.orderState = orderState;
@@ -2046,7 +2173,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Oss.
+             * <p>The OSS storage information.</p>
              */
             public Builder oss(Oss oss) {
                 this.oss = oss;
@@ -2129,7 +2256,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flink</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2137,7 +2267,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2282,7 +2415,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableIpAddressCount.
+             * <p>The number of available IP addresses in the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder availableIpAddressCount(String availableIpAddressCount) {
                 this.availableIpAddressCount = availableIpAddressCount;
@@ -2290,7 +2426,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the vSwitch group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2298,7 +2437,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2306,7 +2448,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchCidr.
+             * <p>The vSwitch CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.16.0/24</p>
              */
             public Builder vSwitchCidr(String vSwitchCidr) {
                 this.vSwitchCidr = vSwitchCidr;
@@ -2314,7 +2459,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-8vb6jk75wfcwnuq****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2322,7 +2470,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -2330,7 +2481,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16h9ru9gvz2tygo*****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2338,7 +2492,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -2457,7 +2614,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CidrBlock.
+             * <p>The VPC CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.5.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -2465,7 +2625,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The VPC description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2473,7 +2636,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2481,7 +2647,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The VPC status. Valid values:</p>
+             * <ul>
+             * <li><p>Pending: Being configured.</p>
+             * </li>
+             * <li><p>Available: Available.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2489,7 +2664,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-gw8c6nhjta3eq12y****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2497,7 +2675,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The VPC name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flink集群vpc</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -2541,6 +2722,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ClusterUsedStorage")
         private ClusterUsedStorage clusterUsedStorage;
+
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
 
         @com.aliyun.core.annotation.NameInMap("Elastic")
         private Boolean elastic;
@@ -2642,6 +2826,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.clusterStatus = builder.clusterStatus;
             this.clusterUsedResources = builder.clusterUsedResources;
             this.clusterUsedStorage = builder.clusterUsedStorage;
+            this.deletionProtection = builder.deletionProtection;
             this.elastic = builder.elastic;
             this.elasticInstanceId = builder.elasticInstanceId;
             this.elasticOrderState = builder.elasticOrderState;
@@ -2736,6 +2921,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public ClusterUsedStorage getClusterUsedStorage() {
             return this.clusterUsedStorage;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         /**
@@ -2957,6 +3149,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String clusterStatus; 
             private ClusterUsedResources clusterUsedResources; 
             private ClusterUsedStorage clusterUsedStorage; 
+            private Boolean deletionProtection; 
             private Boolean elastic; 
             private String elasticInstanceId; 
             private String elasticOrderState; 
@@ -3000,6 +3193,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.clusterStatus = model.clusterStatus;
                 this.clusterUsedResources = model.clusterUsedResources;
                 this.clusterUsedStorage = model.clusterUsedStorage;
+                this.deletionProtection = model.deletionProtection;
                 this.elastic = model.elastic;
                 this.elasticInstanceId = model.elasticInstanceId;
                 this.elasticOrderState = model.elasticOrderState;
@@ -3041,7 +3235,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ArchitectureType.
+             * <p>The processor architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X86</p>
              */
             public Builder architectureType(String architectureType) {
                 this.architectureType = architectureType;
@@ -3049,7 +3246,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AskClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c20c******404</p>
              */
             public Builder askClusterId(String askClusterId) {
                 this.askClusterId = askClusterId;
@@ -3057,7 +3257,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>POST: pay-as-you-go.</li>
+             * <li>PRE: subscription.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRE</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -3065,7 +3272,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterState.
+             * <p>The cluster state.</p>
              */
             public Builder clusterState(ClusterState clusterState) {
                 this.clusterState = clusterState;
@@ -3073,7 +3280,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterStatus.
+             * <p>The cluster status. Valid values:</p>
+             * <ul>
+             * <li>CREATING: Being created.</li>
+             * <li>RUNNING: Running.</li>
+             * <li>DISABLE: Invalid.</li>
+             * <li>DELETING: Being deleted.</li>
+             * <li>DELETED: Deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder clusterStatus(String clusterStatus) {
                 this.clusterStatus = clusterStatus;
@@ -3081,7 +3298,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterUsedResources.
+             * <p>The overall resource usage of the Flink service.</p>
              */
             public Builder clusterUsedResources(ClusterUsedResources clusterUsedResources) {
                 this.clusterUsedResources = clusterUsedResources;
@@ -3097,6 +3314,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Indicates whether deletion protection is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
+                return this;
+            }
+
+            /**
              * Elastic.
              */
             public Builder elastic(Boolean elastic) {
@@ -3105,7 +3333,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticInstanceId.
+             * <p>The elastic order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-cn-e3afbd321</p>
              */
             public Builder elasticInstanceId(String elasticInstanceId) {
                 this.elasticInstanceId = elasticInstanceId;
@@ -3129,7 +3360,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Ha.
+             * <p>Indicates whether zone-disaster recovery resources are selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ha(Boolean ha) {
                 this.ha = ha;
@@ -3137,7 +3371,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HaResourceSpec.
+             * <p>The zone-disaster recovery resource description.</p>
              */
             public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
                 this.haResourceSpec = haResourceSpec;
@@ -3145,7 +3379,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HaVSwitchIds.
+             * <p>The vSwitch group in the secondary zone for zone-disaster recovery.</p>
              */
             public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
                 this.haVSwitchIds = haVSwitchIds;
@@ -3153,7 +3387,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HaVSwitchInfo.
+             * <p>The vSwitch group information for the secondary zone of zone-disaster recovery.</p>
              */
             public Builder haVSwitchInfo(java.util.List<HaVSwitchInfo> haVSwitchInfo) {
                 this.haVSwitchInfo = haVSwitchInfo;
@@ -3161,7 +3395,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HaZoneId.
+             * <p>The secondary zone ID for zone-disaster recovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hongkong-b</p>
              */
             public Builder haZoneId(String haZoneId) {
                 this.haZoneId = haZoneId;
@@ -3169,6 +3406,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The domain name information added by the user.</p>
              * <p>This parameter is required.</p>
              */
             public Builder hostAliases(java.util.List<HostAliases> hostAliases) {
@@ -3177,7 +3415,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f-cn-zvp2q0z****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -3185,7 +3426,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vvp1</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -3193,7 +3437,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorType.
+             * <p>The type of the monitoring and alerting service. You can select ARMS or CloudMonitor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TAIHAO</p>
              */
             public Builder monitorType(String monitorType) {
                 this.monitorType = monitorType;
@@ -3201,7 +3448,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderState.
+             * <p>The order status of the Flink compute service. Valid values:</p>
+             * <ul>
+             * <li>NOT_INIT: The order is placed but components are not yet deployed.</li>
+             * <li>NORMAL: Normal.</li>
+             * <li>CEASE: Expired.</li>
+             * <li>RELEASE: Overdue.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder orderState(String orderState) {
                 this.orderState = orderState;
@@ -3217,7 +3473,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -3225,7 +3484,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceCreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1629879567394</p>
              */
             public Builder resourceCreateTime(Long resourceCreateTime) {
                 this.resourceCreateTime = resourceCreateTime;
@@ -3233,7 +3495,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceExpiredTime.
+             * <p>The overdue time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637337600000</p>
              */
             public Builder resourceExpiredTime(Long resourceExpiredTime) {
                 this.resourceExpiredTime = resourceExpiredTime;
@@ -3241,7 +3506,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-***</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -3249,7 +3517,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b3690a1655****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -3257,7 +3528,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceSpec.
+             * <p>The resource specification information.</p>
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {
                 this.resourceSpec = resourceSpec;
@@ -3265,7 +3536,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Storage.
+             * <p>The storage information.</p>
              */
             public Builder storage(Storage storage) {
                 this.storage = storage;
@@ -3281,7 +3552,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -3289,7 +3560,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>The ID of the user to whom the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183899668736****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -3297,7 +3571,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch ID group.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -3305,7 +3579,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchInfo.
+             * <p>The information about the primary vSwitch group.</p>
              */
             public Builder vSwitchInfo(java.util.List<VSwitchInfo> vSwitchInfo) {
                 this.vSwitchInfo = vSwitchInfo;
@@ -3313,7 +3587,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze9*******nxfmfcdi</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -3321,7 +3598,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInfo.
+             * <p>The VPC information.</p>
              */
             public Builder vpcInfo(VpcInfo vpcInfo) {
                 this.vpcInfo = vpcInfo;
@@ -3329,7 +3606,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-g</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
