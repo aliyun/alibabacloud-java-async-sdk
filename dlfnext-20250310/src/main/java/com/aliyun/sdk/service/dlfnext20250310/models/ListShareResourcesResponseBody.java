@@ -80,7 +80,10 @@ public class ListShareResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * catalogId.
+         * <p>The ID of the catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-xxxx</p>
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
@@ -88,7 +91,10 @@ public class ListShareResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * nextPageToken.
+         * <p>The token used to page through results. A null value indicates that this is the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -96,7 +102,7 @@ public class ListShareResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * shareResources.
+         * <p>The shared resources.</p>
          */
         public Builder shareResources(java.util.List<ShareResource> shareResources) {
             this.shareResources = shareResources;

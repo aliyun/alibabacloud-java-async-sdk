@@ -223,7 +223,10 @@ public class CacheCluster extends TeaModel {
         } 
 
         /**
-         * clusterId.
+         * <p>Cluster ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-wqewqr*****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -231,7 +234,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * clusterName.
+         * <p>Cluster name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster_name</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -239,7 +245,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>Creation time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -247,7 +256,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>Creator name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -255,7 +267,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * deployInstanceVersion.
+         * <p>Version of the deployed instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder deployInstanceVersion(String deployInstanceVersion) {
             this.deployInstanceVersion = deployInstanceVersion;
@@ -263,7 +278,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * deployOptionsVersion.
+         * <p>Deployed options version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder deployOptionsVersion(Long deployOptionsVersion) {
             this.deployOptionsVersion = deployOptionsVersion;
@@ -271,7 +289,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * instanceVersion.
+         * <p>Milvus Version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder instanceVersion(String instanceVersion) {
             this.instanceVersion = instanceVersion;
@@ -279,7 +300,7 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * options.
+         * <p>Cache cluster configuration</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.options = options;
@@ -287,7 +308,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * optionsVersion.
+         * <p>Options version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder optionsVersion(Long optionsVersion) {
             this.optionsVersion = optionsVersion;
@@ -295,7 +319,19 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>Cache cluster status. Valid values:
+         * ● NEW: Newly created and not started.
+         * ● STARTING: Starting.
+         * ● START_FAILED: Start failed.
+         * ● RUNNING: Running.
+         * ● PENDING_RESTART: Pending restart.
+         * ● PENDING_TERMINATE: Pending termination.
+         * ● TERMINATING: Terminating.
+         * ● TERMINATE_FAILED: Termination failed.
+         * ● TERMINATED: Terminated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -303,7 +339,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>Update time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1764555848748</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -311,7 +350,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>Updater name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;
@@ -319,7 +361,7 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * vSwitches.
+         * <p>vSwitch list</p>
          */
         public Builder vSwitches(java.util.List<VSwitches> vSwitches) {
             this.vSwitches = vSwitches;
@@ -327,7 +369,10 @@ public class CacheCluster extends TeaModel {
         }
 
         /**
-         * vpcId.
+         * <p>VPC ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze****</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -393,7 +438,10 @@ public class CacheCluster extends TeaModel {
             } 
 
             /**
-             * vSwitchId.
+             * <p>vSwitch ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1thxw8sgypzj2j*****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -401,7 +449,10 @@ public class CacheCluster extends TeaModel {
             }
 
             /**
-             * zone.
+             * <p>Instance zone</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder zone(String zone) {
                 this.zone = zone;

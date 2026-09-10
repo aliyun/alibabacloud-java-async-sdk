@@ -223,7 +223,10 @@ public class Partition extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The time when the partition was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1747120676378</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -231,7 +234,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The creator of the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -239,7 +245,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * done.
+         * <p>Indicates whether the process is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder done(Boolean done) {
             this.done = done;
@@ -247,7 +256,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * fileCount.
+         * <p>The number of files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fileCount(Long fileCount) {
             this.fileCount = fileCount;
@@ -255,7 +267,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * fileSizeInBytes.
+         * <p>The file size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fileSizeInBytes(Long fileSizeInBytes) {
             this.fileSizeInBytes = fileSizeInBytes;
@@ -263,7 +278,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * lastFileCreationTime.
+         * <p>The time when the latest file was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741701564261</p>
          */
         public Builder lastFileCreationTime(Long lastFileCreationTime) {
             this.lastFileCreationTime = lastFileCreationTime;
@@ -271,7 +289,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * recordCount.
+         * <p>The number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recordCount(Long recordCount) {
             this.recordCount = recordCount;
@@ -279,7 +300,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * spec.
+         * <p>The key-value pairs of the partition values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;year&quot;:&quot;2025&quot;}</p>
          */
         public Builder spec(java.util.Map<String, ?> spec) {
             this.spec = spec;
@@ -287,7 +311,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * storageAction.
+         * <p>The status of the storage class conversion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         public Builder storageAction(String storageAction) {
             this.storageAction = storageAction;
@@ -295,7 +322,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * storageActionTimestamp.
+         * <p>The storage class conversion time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1758189669915</p>
          */
         public Builder storageActionTimestamp(Long storageActionTimestamp) {
             this.storageActionTimestamp = storageActionTimestamp;
@@ -303,7 +333,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * storageClass.
+         * <p>The storage class.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;
@@ -311,7 +344,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * totalBuckets.
+         * <p>The total number of buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalBuckets(Integer totalBuckets) {
             this.totalBuckets = totalBuckets;
@@ -319,7 +355,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the partition was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -327,7 +366,10 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The user who last updated the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

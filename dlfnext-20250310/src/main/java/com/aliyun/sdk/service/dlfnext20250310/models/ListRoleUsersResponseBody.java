@@ -67,7 +67,10 @@ public class ListRoleUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The token to retrieve the next page of results. If null is returned, all results have been retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8ABEB1C3DB893D16576269017992F57</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListRoleUsersResponseBody extends TeaModel {
         }
 
         /**
-         * users.
+         * <p>The users.</p>
          */
         public Builder users(java.util.List<User> users) {
             this.users = users;

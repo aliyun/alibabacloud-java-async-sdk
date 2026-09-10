@@ -102,6 +102,7 @@ public class ListIcebergNamespaceDetailsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,12 @@ public class ListIcebergNamespaceDetailsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries to return on each page.
+         * Default value: 1000.
+         * Maximum value: 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -123,7 +129,10 @@ public class ListIcebergNamespaceDetailsRequest extends Request {
         }
 
         /**
-         * namespaceNamePattern.
+         * <p>The namespace name pattern. Supports right-hand fuzzy matching with the percent sign (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace%</p>
          */
         public Builder namespaceNamePattern(String namespaceNamePattern) {
             this.putQueryParameter("namespaceNamePattern", namespaceNamePattern);
@@ -132,7 +141,10 @@ public class ListIcebergNamespaceDetailsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token for the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);

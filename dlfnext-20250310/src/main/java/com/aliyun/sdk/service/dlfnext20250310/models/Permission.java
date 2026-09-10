@@ -184,7 +184,10 @@ public class Permission extends TeaModel {
         } 
 
         /**
-         * access.
+         * <p>The access type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DROP</p>
          */
         public Builder access(String access) {
             this.access = access;
@@ -208,7 +211,10 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.database = database;
@@ -232,7 +238,10 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * principal.
+         * <p>The user resource descriptor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:user/user_name</p>
          */
         public Builder principal(String principal) {
             this.principal = principal;
@@ -240,7 +249,10 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * resourceType.
+         * <p>The permission resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CATALOG</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -256,7 +268,10 @@ public class Permission extends TeaModel {
         }
 
         /**
-         * table.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder table(String table) {
             this.table = table;

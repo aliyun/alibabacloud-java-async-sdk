@@ -171,7 +171,10 @@ public class IcebergTable extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The table creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1747120676378</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -179,7 +182,10 @@ public class IcebergTable extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The table creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1045689747920334:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -187,7 +193,7 @@ public class IcebergTable extends TeaModel {
         }
 
         /**
-         * icebergTableMetadata.
+         * <p>The metadata of the table.</p>
          */
         public Builder icebergTableMetadata(IcebergTableMetadata icebergTableMetadata) {
             this.icebergTableMetadata = icebergTableMetadata;
@@ -195,7 +201,10 @@ public class IcebergTable extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The table UUID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tbl-424fc31c-4876-4df5-97a5-c78f3046e739</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -203,7 +212,10 @@ public class IcebergTable extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -211,7 +223,10 @@ public class IcebergTable extends TeaModel {
         }
 
         /**
-         * owner.
+         * <p>The owner of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1045689747920334:root</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -219,7 +234,10 @@ public class IcebergTable extends TeaModel {
         }
 
         /**
-         * path.
+         * <p>The table URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://clg-iceberg-bcc387be9d24490da5f194bbaf990906/ns-b314a3c3-dff5-4e30-8ba2-0493a60566c7.db/iceberg-tbl-56539259-1879-4d6d-bd6e-d1ddb3364cc9</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -227,7 +245,10 @@ public class IcebergTable extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the table was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -235,7 +256,10 @@ public class IcebergTable extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The user who last updated the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1045689747920334:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;
@@ -243,7 +267,10 @@ public class IcebergTable extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The version of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder version(Long version) {
             this.version = version;

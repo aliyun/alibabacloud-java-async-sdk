@@ -158,7 +158,10 @@ public class User extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -166,7 +169,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The name of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -174,7 +180,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_display_name</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -182,7 +191,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The type of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM_USER</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -190,7 +202,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time of the last update. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -198,7 +213,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The name of the updater.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;
@@ -206,7 +224,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * userId.
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222748924538****</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -214,7 +235,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * userName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_name</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -222,7 +246,10 @@ public class User extends TeaModel {
         }
 
         /**
-         * userPrincipal.
+         * <p>The resource descriptor of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:user/user_name</p>
          */
         public Builder userPrincipal(String userPrincipal) {
             this.userPrincipal = userPrincipal;

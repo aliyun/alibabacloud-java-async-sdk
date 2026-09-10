@@ -132,7 +132,10 @@ public class GetQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * completedAt.
+         * <p>The completion time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder completedAt(Long completedAt) {
             this.completedAt = completedAt;
@@ -140,7 +143,10 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The creation time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -148,7 +154,10 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * queryId.
+         * <p>The query ID, used for subsequent polling of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d7b21d1ec4f441e79d5ba917c3283200</p>
          */
         public Builder queryId(String queryId) {
             this.queryId = queryId;
@@ -156,7 +165,7 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>The result list.</p>
          */
         public Builder results(java.util.List<StatementResult> results) {
             this.results = results;
@@ -164,7 +173,10 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * sql.
+         * <p>The SQL text. Multiple statements separated by semicolons are supported and executed sequentially within the same session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from table_name;</p>
          */
         public Builder sql(String sql) {
             this.sql = sql;
@@ -172,7 +184,10 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The task running status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -180,7 +195,10 @@ public class GetQueryResponseBody extends TeaModel {
         }
 
         /**
-         * tier.
+         * <p>The execution specifications. Default value: standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder tier(String tier) {
             this.tier = tier;

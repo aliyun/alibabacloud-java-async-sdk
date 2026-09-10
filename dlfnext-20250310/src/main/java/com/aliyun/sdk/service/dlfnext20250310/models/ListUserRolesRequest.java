@@ -87,7 +87,10 @@ public class ListUserRolesRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -96,7 +99,10 @@ public class ListUserRolesRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The pagination token used to retrieve the next page of data. If the response does not provide this token, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -105,7 +111,10 @@ public class ListUserRolesRequest extends Request {
         }
 
         /**
-         * userPrincipal.
+         * <p>The resource descriptor for the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:user/user_name</p>
          */
         public Builder userPrincipal(String userPrincipal) {
             this.putQueryParameter("userPrincipal", userPrincipal);

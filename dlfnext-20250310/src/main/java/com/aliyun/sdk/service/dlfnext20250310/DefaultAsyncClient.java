@@ -30,20 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "DlfNext";
         this.version = "2025-03-10";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("us-west-1", "dlfnext.us-west-1.aliyuncs.com"),
-            new TeaPair("us-east-1", "dlfnext.us-east-1.aliyuncs.com"),
-            new TeaPair("eu-central-1", "dlfnext.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "dlfnext.cn-wulanchabu.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "dlfnext.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "dlfnext.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "dlfnext.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "dlfnext.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("cn-beijing", "dlfnext.cn-beijing.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "dlfnext.ap-southeast-5.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "dlfnext.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "dlfnext.ap-northeast-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -240,7 +227,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<CreateCatalogResponse> createCatalog(CreateCatalogRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateCatalog").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/catalogs").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateCatalog").setMethod(HttpMethod.POST).setPathRegex("/dlf/v1/catalogs").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCatalogResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -503,6 +490,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns the DLF data access role and KMS key policy authorization statement required to configure BYOK SSE KMS. The customer master key is configured at the catalog level through oss.sse.kms.key-id. When creating a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled=true. Tables with KMS encryption enabled and tables without encryption can coexist under the same catalog.</p>
+     * 
      * @param request the request parameters of GetCatalogKmsGrants  GetCatalogKmsGrantsRequest
      * @return GetCatalogKmsGrantsResponse
      */
@@ -1475,6 +1465,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation only validates whether the specified customer master key (CMK) can be used for BYOK SSE-KMS of the Catalog. It does not automatically enable encryption for all tables in the Catalog. The CMK is configured at the Catalog level through oss.sse.kms.key-id. When creating a table, set the table property oss.sse.kms.enabled=true to enable SSE-KMS for the specified table.</p>
+     * 
      * @param request the request parameters of VerifyCatalogKms  VerifyCatalogKmsRequest
      * @return VerifyCatalogKmsResponse
      */

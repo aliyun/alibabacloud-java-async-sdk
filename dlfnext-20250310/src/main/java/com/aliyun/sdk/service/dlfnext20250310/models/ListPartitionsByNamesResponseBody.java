@@ -54,7 +54,7 @@ public class ListPartitionsByNamesResponseBody extends TeaModel {
         } 
 
         /**
-         * partitions.
+         * <p>The partitions.</p>
          */
         public Builder partitions(java.util.List<Partition> partitions) {
             this.partitions = partitions;

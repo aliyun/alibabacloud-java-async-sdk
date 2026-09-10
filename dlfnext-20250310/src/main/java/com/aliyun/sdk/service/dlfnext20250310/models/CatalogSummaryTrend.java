@@ -119,7 +119,7 @@ public class CatalogSummaryTrend extends TeaModel {
         } 
 
         /**
-         * <p>API visit count trends</p>
+         * <p>The trend of total metadata requests.</p>
          */
         public Builder apiVisitCount(java.util.List<DateSummary> apiVisitCount) {
             this.apiVisitCount = apiVisitCount;
@@ -127,7 +127,7 @@ public class CatalogSummaryTrend extends TeaModel {
         }
 
         /**
-         * <p>file access count trends</p>
+         * <p>The trend of file access count.</p>
          */
         public Builder fileAccessCount(java.util.List<DateSummary> fileAccessCount) {
             this.fileAccessCount = fileAccessCount;
@@ -135,7 +135,7 @@ public class CatalogSummaryTrend extends TeaModel {
         }
 
         /**
-         * <p>Table count trends</p>
+         * <p>The data access traffic trend.</p>
          */
         public Builder throughput(java.util.List<DateSummary> throughput) {
             this.throughput = throughput;
@@ -143,7 +143,7 @@ public class CatalogSummaryTrend extends TeaModel {
         }
 
         /**
-         * <p>Historical total file count</p>
+         * <p>The trend of total file count.</p>
          */
         public Builder totalFileCount(java.util.List<DateSummary> totalFileCount) {
             this.totalFileCount = totalFileCount;
@@ -151,7 +151,7 @@ public class CatalogSummaryTrend extends TeaModel {
         }
 
         /**
-         * <p>Database count trends</p>
+         * <p>The trend of total storage capacity.</p>
          */
         public Builder totalFileSizeInBytes(java.util.List<DateSummary> totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
@@ -159,7 +159,7 @@ public class CatalogSummaryTrend extends TeaModel {
         }
 
         /**
-         * <p>Latest snapshot file count</p>
+         * <p>The trend of total metadata object count.</p>
          */
         public Builder totalMetaCount(java.util.List<DateSummary> totalMetaCount) {
             this.totalMetaCount = totalMetaCount;

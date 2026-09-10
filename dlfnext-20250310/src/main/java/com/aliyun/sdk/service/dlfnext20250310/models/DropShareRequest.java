@@ -59,7 +59,10 @@ public class DropShareRequest extends Request {
         } 
 
         /**
-         * share.
+         * <p>The name of the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share_name</p>
          */
         public Builder share(String share) {
             this.putPathParameter("share", share);

@@ -67,7 +67,10 @@ public class ListIcebergSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The pagination token for the next page of results. If this parameter is null, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8ABEB1C3DB893D16576269017992F57</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListIcebergSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * snapshots.
+         * <p>The list of snapshots.</p>
          */
         public Builder snapshots(java.util.List<IcebergSnapshot> snapshots) {
             this.snapshots = snapshots;

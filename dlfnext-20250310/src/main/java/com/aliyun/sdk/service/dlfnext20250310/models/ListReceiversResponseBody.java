@@ -67,7 +67,10 @@ public class ListReceiversResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The token to retrieve the next page of results. A null value indicates that this is the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListReceiversResponseBody extends TeaModel {
         }
 
         /**
-         * receivers.
+         * <p>A list of receivers.</p>
          */
         public Builder receivers(java.util.List<Receiver> receivers) {
             this.receivers = receivers;

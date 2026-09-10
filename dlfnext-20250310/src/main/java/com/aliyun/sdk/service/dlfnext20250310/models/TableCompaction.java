@@ -121,7 +121,10 @@ public class TableCompaction extends TeaModel {
         } 
 
         /**
-         * catalogId.
+         * <p>The catalog ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-xxx</p>
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
@@ -129,7 +132,10 @@ public class TableCompaction extends TeaModel {
         }
 
         /**
-         * cuUsage.
+         * <p>The total CU usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cuUsage(Double cuUsage) {
             this.cuUsage = cuUsage;
@@ -137,7 +143,10 @@ public class TableCompaction extends TeaModel {
         }
 
         /**
-         * lastCompactedFileTime.
+         * <p>The time when the last file was compacted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1759111660075</p>
          */
         public Builder lastCompactedFileTime(Long lastCompactedFileTime) {
             this.lastCompactedFileTime = lastCompactedFileTime;
@@ -145,7 +154,10 @@ public class TableCompaction extends TeaModel {
         }
 
         /**
-         * latencyFileEarliestTime.
+         * <p>The earliest creation time of uncompacted files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1760321763633</p>
          */
         public Builder latencyFileEarliestTime(Long latencyFileEarliestTime) {
             this.latencyFileEarliestTime = latencyFileEarliestTime;
@@ -153,7 +165,10 @@ public class TableCompaction extends TeaModel {
         }
 
         /**
-         * maxLevel0FileCount.
+         * <p>The number of Level 0 files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxLevel0FileCount(String maxLevel0FileCount) {
             this.maxLevel0FileCount = maxLevel0FileCount;
@@ -161,7 +176,10 @@ public class TableCompaction extends TeaModel {
         }
 
         /**
-         * tableId.
+         * <p>The table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tbl-xxx</p>
          */
         public Builder tableId(String tableId) {
             this.tableId = tableId;

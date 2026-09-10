@@ -54,7 +54,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * regions.
+         * <p>The regions.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -146,7 +146,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region description</p>
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>华东 1</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -154,7 +157,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region name</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -165,7 +168,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region show name</p>
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>华东1（杭州）</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -173,7 +179,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region type</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>region</p>

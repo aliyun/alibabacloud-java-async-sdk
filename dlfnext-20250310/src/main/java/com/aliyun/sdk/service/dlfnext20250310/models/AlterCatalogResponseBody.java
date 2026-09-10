@@ -80,7 +80,7 @@ public class AlterCatalogResponseBody extends TeaModel {
         } 
 
         /**
-         * missing.
+         * <p>The unchanged items.</p>
          */
         public Builder missing(java.util.List<String> missing) {
             this.missing = missing;
@@ -88,7 +88,7 @@ public class AlterCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * removed.
+         * <p>The deleted items.</p>
          */
         public Builder removed(java.util.List<String> removed) {
             this.removed = removed;
@@ -96,7 +96,7 @@ public class AlterCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * updated.
+         * <p>The updated items.</p>
          */
         public Builder updated(java.util.List<String> updated) {
             this.updated = updated;

@@ -87,7 +87,10 @@ public class CreateRoleRequest extends Request {
         } 
 
         /**
-         * description.
+         * <p>The role description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -96,7 +99,10 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The role display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_display_name</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -105,7 +111,10 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * roleName.
+         * <p>The role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_name</p>
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("roleName", roleName);

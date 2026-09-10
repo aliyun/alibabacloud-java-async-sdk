@@ -262,7 +262,10 @@ public class Table extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The time when the table was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741266704867</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -270,7 +273,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The creator of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -286,7 +292,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The UUID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -294,7 +303,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * isExternal.
+         * <p>Indicates whether the table is an external table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isExternal(Boolean isExternal) {
             this.isExternal = isExternal;
@@ -302,7 +314,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -310,7 +325,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * owner.
+         * <p>The owner of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -318,7 +336,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * path.
+         * <p>The path of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://clg-paimon-xxx/db-xxx/tbl-xxxx</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -326,7 +347,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * schema.
+         * <p>The table schema information.</p>
          */
         public Builder schema(Schema schema) {
             this.schema = schema;
@@ -334,7 +355,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * schemaId.
+         * <p>The ID of the table schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder schemaId(Long schemaId) {
             this.schemaId = schemaId;
@@ -382,7 +406,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the table was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741266704867</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -390,7 +417,10 @@ public class Table extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The user who last updated the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

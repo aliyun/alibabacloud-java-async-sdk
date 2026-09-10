@@ -116,6 +116,7 @@ public class ListDatabaseDetailsRequest extends Request {
         } 
 
         /**
+         * <p>The data catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListDatabaseDetailsRequest extends Request {
         }
 
         /**
-         * databaseNamePattern.
+         * <p>The SQL-style right fuzzy match pattern for database names. The percent sign (%) wildcard is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database%</p>
          */
         public Builder databaseNamePattern(String databaseNamePattern) {
             this.putQueryParameter("databaseNamePattern", databaseNamePattern);
@@ -137,7 +141,12 @@ public class ListDatabaseDetailsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The page size.</p>
+         * <p>Default value: 1000.</p>
+         * <p>Maximum value: 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -146,7 +155,10 @@ public class ListDatabaseDetailsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The pagination token used to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);

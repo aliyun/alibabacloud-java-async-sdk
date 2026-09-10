@@ -117,6 +117,7 @@ public class ListViewDetailsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class ListViewDetailsRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class ListViewDetailsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -150,7 +155,10 @@ public class ListViewDetailsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token for the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -159,7 +167,10 @@ public class ListViewDetailsRequest extends Request {
         }
 
         /**
-         * viewNamePattern.
+         * <p>A pattern to filter view names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>view%</p>
          */
         public Builder viewNamePattern(String viewNamePattern) {
             this.putQueryParameter("viewNamePattern", viewNamePattern);

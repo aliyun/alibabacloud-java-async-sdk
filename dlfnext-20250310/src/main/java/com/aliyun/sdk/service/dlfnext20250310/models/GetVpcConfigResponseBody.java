@@ -54,7 +54,7 @@ public class GetVpcConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * trustedVpcs.
+         * <p>List of trusted VPCs.</p>
          */
         public Builder trustedVpcs(java.util.List<TrustedVpcs> trustedVpcs) {
             this.trustedVpcs = trustedVpcs;
@@ -133,7 +133,10 @@ public class GetVpcConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * createdAt.
+             * <p>The time when the VPC was created, in UNIX timestamp milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1744970111419</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -141,7 +144,7 @@ public class GetVpcConfigResponseBody extends TeaModel {
             }
 
             /**
-             * extendedOptions.
+             * <p>List of configuration items.</p>
              */
             public Builder extendedOptions(java.util.Map<String, String> extendedOptions) {
                 this.extendedOptions = extendedOptions;
@@ -149,7 +152,7 @@ public class GetVpcConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf67xxxx</p>

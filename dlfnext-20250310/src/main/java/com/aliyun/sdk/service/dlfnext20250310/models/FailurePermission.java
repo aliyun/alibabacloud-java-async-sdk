@@ -80,7 +80,10 @@ public class FailurePermission extends TeaModel {
         } 
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>空</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -88,7 +91,10 @@ public class FailurePermission extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>空</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -96,7 +102,7 @@ public class FailurePermission extends TeaModel {
         }
 
         /**
-         * permission.
+         * <p>The permission information.</p>
          */
         public Builder permission(Permission permission) {
             this.permission = permission;

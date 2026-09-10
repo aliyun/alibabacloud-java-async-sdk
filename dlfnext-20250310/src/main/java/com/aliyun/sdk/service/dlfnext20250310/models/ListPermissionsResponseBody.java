@@ -67,7 +67,10 @@ public class ListPermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The pagination token used to retrieve the next page of data. If null is returned, the current page is the last page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8ABEB1C3DB893D16576269017992F57</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * permissions.
+         * <p>The permission list.</p>
          */
         public Builder permissions(java.util.List<Permission> permissions) {
             this.permissions = permissions;

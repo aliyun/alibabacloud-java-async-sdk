@@ -87,7 +87,10 @@ public class ListShareResourcesRequest extends Request {
         } 
 
         /**
-         * share.
+         * <p>The name of the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share_name</p>
          */
         public Builder share(String share) {
             this.putPathParameter("share", share);
@@ -96,7 +99,10 @@ public class ListShareResourcesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -105,7 +111,10 @@ public class ListShareResourcesRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token used to page through results. If this parameter is not returned, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);

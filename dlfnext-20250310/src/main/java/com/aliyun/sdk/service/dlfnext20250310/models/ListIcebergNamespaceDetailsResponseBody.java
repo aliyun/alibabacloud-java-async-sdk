@@ -67,7 +67,7 @@ public class ListIcebergNamespaceDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * namespaceDetails.
+         * <p>The namespaces.</p>
          */
         public Builder namespaceDetails(java.util.List<Namespace> namespaceDetails) {
             this.namespaceDetails = namespaceDetails;
@@ -75,7 +75,10 @@ public class ListIcebergNamespaceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * nextPageToken.
+         * <p>The token for the next page of results. If this parameter is not returned, all results have been retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;

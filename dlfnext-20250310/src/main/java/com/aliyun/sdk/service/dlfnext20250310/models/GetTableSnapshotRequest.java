@@ -88,6 +88,7 @@ public class GetTableSnapshotRequest extends Request {
         } 
 
         /**
+         * <p>The catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetTableSnapshotRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -109,7 +113,10 @@ public class GetTableSnapshotRequest extends Request {
         }
 
         /**
-         * table.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder table(String table) {
             this.putPathParameter("table", table);

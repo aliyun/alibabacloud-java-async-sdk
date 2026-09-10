@@ -145,7 +145,10 @@ public class View extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -153,7 +156,10 @@ public class View extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -161,7 +167,10 @@ public class View extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The UUID of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -169,7 +178,10 @@ public class View extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>view_test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -177,7 +189,10 @@ public class View extends TeaModel {
         }
 
         /**
-         * owner.
+         * <p>The owner of the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -185,7 +200,7 @@ public class View extends TeaModel {
         }
 
         /**
-         * schema.
+         * <p>The view schema.</p>
          */
         public Builder schema(ViewSchema schema) {
             this.schema = schema;
@@ -193,7 +208,10 @@ public class View extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time of the last update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -201,7 +219,10 @@ public class View extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The user who last updated the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

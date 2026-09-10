@@ -249,7 +249,10 @@ public class PartitionSummary extends TeaModel {
         } 
 
         /**
-         * <p>Partition creation timestamp in milliseconds</p>
+         * <p>The creation timestamp for the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -257,7 +260,10 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * <p>Database name</p>
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -265,7 +271,10 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * <p>Total files in partition</p>
+         * <p>The last access timestamp for the partition\&quot;s data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder lastAccessTime(Long lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -273,7 +282,7 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * lastRequester.
+         * <p>The last requester.</p>
          */
         public Builder lastRequester(String lastRequester) {
             this.lastRequester = lastRequester;
@@ -281,7 +290,10 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * <p>Partition identifier</p>
+         * <p>The name of the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hh=18</p>
          */
         public Builder partitionName(String partitionName) {
             this.partitionName = partitionName;
@@ -289,7 +301,7 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * storageActionParams.
+         * <p>The storage action parameters.</p>
          */
         public Builder storageActionParams(java.util.Map<String, String> storageActionParams) {
             this.storageActionParams = storageActionParams;
@@ -297,7 +309,7 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * storageActionTimestamp.
+         * <p>The storage action timestamp.</p>
          */
         public Builder storageActionTimestamp(Long storageActionTimestamp) {
             this.storageActionTimestamp = storageActionTimestamp;
@@ -305,7 +317,7 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * storageClass.
+         * <p>The storage class.</p>
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;
@@ -313,7 +325,10 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * <p>Table name</p>
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table1</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -321,7 +336,7 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * topRequester.
+         * <p>The top requester.</p>
          */
         public Builder topRequester(String topRequester) {
             this.topRequester = topRequester;
@@ -329,7 +344,7 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * totalFileAccessNum.
+         * <p>Total file access count.</p>
          */
         public Builder totalFileAccessNum(Long totalFileAccessNum) {
             this.totalFileAccessNum = totalFileAccessNum;
@@ -337,7 +352,7 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * totalFileAccessNum30d.
+         * <p>Total file access count over the last 30 days.</p>
          */
         public Builder totalFileAccessNum30d(Long totalFileAccessNum30d) {
             this.totalFileAccessNum30d = totalFileAccessNum30d;
@@ -345,7 +360,7 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * totalFileAccessNum7d.
+         * <p>Total file access count over the last 7 days.</p>
          */
         public Builder totalFileAccessNum7d(Long totalFileAccessNum7d) {
             this.totalFileAccessNum7d = totalFileAccessNum7d;
@@ -353,7 +368,10 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * <p>24h access count</p>
+         * <p>The total number of files in the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalFileCount(Long totalFileCount) {
             this.totalFileCount = totalFileCount;
@@ -361,7 +379,10 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * <p>Last data access timestamp in milliseconds</p>
+         * <p>The total size, in bytes, of all files in the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder totalFileSizeInBytes(Long totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
@@ -369,7 +390,10 @@ public class PartitionSummary extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The last update timestamp for the partition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;

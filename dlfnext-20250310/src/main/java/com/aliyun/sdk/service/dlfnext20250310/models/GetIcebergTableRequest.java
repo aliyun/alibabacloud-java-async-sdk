@@ -88,6 +88,7 @@ public class GetIcebergTableRequest extends Request {
         } 
 
         /**
+         * <p>The catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetIcebergTableRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace_name</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -109,7 +113,10 @@ public class GetIcebergTableRequest extends Request {
         }
 
         /**
-         * table.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder table(String table) {
             this.putPathParameter("table", table);

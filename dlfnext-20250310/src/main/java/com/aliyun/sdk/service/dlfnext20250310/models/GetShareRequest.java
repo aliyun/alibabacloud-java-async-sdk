@@ -59,7 +59,10 @@ public class GetShareRequest extends Request {
         } 
 
         /**
-         * share.
+         * <p>The share name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share_name</p>
          */
         public Builder share(String share) {
             this.putPathParameter("share", share);

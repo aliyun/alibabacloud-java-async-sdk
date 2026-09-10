@@ -106,7 +106,7 @@ public class FullDataType extends TeaModel {
         } 
 
         /**
-         * element.
+         * <p>The data type.</p>
          */
         public Builder element(FullDataType element) {
             this.element = element;
@@ -114,7 +114,7 @@ public class FullDataType extends TeaModel {
         }
 
         /**
-         * fields.
+         * <p>The list of field definitions. This parameter is required when <code>type</code> is <code>ROW</code>.</p>
          */
         public Builder fields(java.util.List<DataField> fields) {
             this.fields = fields;
@@ -122,7 +122,7 @@ public class FullDataType extends TeaModel {
         }
 
         /**
-         * key.
+         * <p>The data type of the key. This parameter is required when <code>type</code> is <code>MAP</code>.</p>
          */
         public Builder key(FullDataType key) {
             this.key = key;
@@ -130,7 +130,10 @@ public class FullDataType extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The data type. This parameter is required when <code>type</code> is <code>ARRAY</code> or <code>MULTISET</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -138,7 +141,7 @@ public class FullDataType extends TeaModel {
         }
 
         /**
-         * value.
+         * <p>The data type of the value. This parameter is required when <code>type</code> is <code>MAP</code>.</p>
          */
         public Builder value(FullDataType value) {
             this.value = value;

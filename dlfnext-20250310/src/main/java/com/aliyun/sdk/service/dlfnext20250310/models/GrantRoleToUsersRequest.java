@@ -73,7 +73,10 @@ public class GrantRoleToUsersRequest extends Request {
         } 
 
         /**
-         * rolePrincipal.
+         * <p>The resource descriptor for a role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:dlf::[accountId]:role/role_name</p>
          */
         public Builder rolePrincipal(String rolePrincipal) {
             this.putBodyParameter("rolePrincipal", rolePrincipal);
@@ -82,7 +85,7 @@ public class GrantRoleToUsersRequest extends Request {
         }
 
         /**
-         * userPrincipals.
+         * <p>The resource descriptors for users.</p>
          */
         public Builder userPrincipals(java.util.List<String> userPrincipals) {
             this.putBodyParameter("userPrincipals", userPrincipals);

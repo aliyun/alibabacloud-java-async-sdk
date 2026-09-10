@@ -106,7 +106,10 @@ public class ViewSchema extends TeaModel {
         } 
 
         /**
-         * comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -114,7 +117,7 @@ public class ViewSchema extends TeaModel {
         }
 
         /**
-         * dialects.
+         * <p>Queries for different engines.</p>
          */
         public Builder dialects(java.util.Map<String, String> dialects) {
             this.dialects = dialects;
@@ -122,7 +125,7 @@ public class ViewSchema extends TeaModel {
         }
 
         /**
-         * fields.
+         * <p>The list of field definitions for the view.</p>
          */
         public Builder fields(java.util.List<DataField> fields) {
             this.fields = fields;
@@ -130,7 +133,7 @@ public class ViewSchema extends TeaModel {
         }
 
         /**
-         * options.
+         * <p>The configuration parameters for the view.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.options = options;
@@ -138,7 +141,10 @@ public class ViewSchema extends TeaModel {
         }
 
         /**
-         * query.
+         * <p>The default query for the view.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select id from t1;</p>
          */
         public Builder query(String query) {
             this.query = query;

@@ -88,7 +88,10 @@ public class CreateShareRequest extends Request {
         } 
 
         /**
-         * comment.
+         * <p>The comment for the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("comment", comment);
@@ -97,7 +100,10 @@ public class CreateShareRequest extends Request {
         }
 
         /**
-         * enableWrite.
+         * <p>Specifies whether to enable write permissions for the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableWrite(Boolean enableWrite) {
             this.putBodyParameter("enableWrite", enableWrite);
@@ -106,6 +112,7 @@ public class CreateShareRequest extends Request {
         }
 
         /**
+         * <p>The share name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

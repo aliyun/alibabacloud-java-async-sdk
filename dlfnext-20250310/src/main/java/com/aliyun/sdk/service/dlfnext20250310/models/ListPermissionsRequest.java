@@ -172,7 +172,10 @@ public class ListPermissionsRequest extends Request {
         } 
 
         /**
-         * catalogId.
+         * <p>The data catalog ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-xxxx</p>
          */
         public Builder catalogId(String catalogId) {
             this.putPathParameter("catalogId", catalogId);
@@ -181,7 +184,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.putQueryParameter("database", database);
@@ -190,7 +196,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * function.
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function_name</p>
          */
         public Builder function(String function) {
             this.putQueryParameter("function", function);
@@ -199,7 +208,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -208,7 +220,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The pagination token used to retrieve the next page of data. If the response does not include this token, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -217,7 +232,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * principal.
+         * <p>The user resource descriptor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:user/user_name</p>
          */
         public Builder principal(String principal) {
             this.putQueryParameter("principal", principal);
@@ -226,6 +244,7 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
+         * <p>The permission resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +257,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * table.
+         * <p>The data table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder table(String table) {
             this.putQueryParameter("table", table);
@@ -247,7 +269,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * view.
+         * <p>The view name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>view_name</p>
          */
         public Builder view(String view) {
             this.putQueryParameter("view", view);

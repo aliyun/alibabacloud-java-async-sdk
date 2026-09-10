@@ -118,6 +118,7 @@ public class ListSnapshotsRequest extends Request {
         } 
 
         /**
+         * <p>The catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return on a single page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -163,7 +169,10 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token that is used to retrieve the next page of results. If the response does not provide this token, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);

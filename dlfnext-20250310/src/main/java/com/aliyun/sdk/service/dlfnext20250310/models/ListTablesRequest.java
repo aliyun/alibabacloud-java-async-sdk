@@ -117,6 +117,7 @@ public class ListTablesRequest extends Request {
         } 
 
         /**
+         * <p>The catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -150,7 +155,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token to retrieve the next page of results. If the response does not include this parameter, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -159,7 +167,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * tableNamePattern.
+         * <p>The table name pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table%</p>
          */
         public Builder tableNamePattern(String tableNamePattern) {
             this.putQueryParameter("tableNamePattern", tableNamePattern);

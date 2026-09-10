@@ -145,6 +145,7 @@ public class ListTableDetailsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class ListTableDetailsRequest extends Request {
         }
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,7 +171,10 @@ public class ListTableDetailsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to retrieve in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -178,7 +183,10 @@ public class ListTableDetailsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The pagination token used to retrieve the next page of data. If the response does not provide this value, pass an empty string (&quot;&quot;) or an empty character (\&quot;\&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -187,7 +195,14 @@ public class ListTableDetailsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The deletion status of the table. Valid values:</p>
+         * <ul>
+         * <li>retained: The table is deleted and temporarily stored in the recycle bin.</li>
+         * <li>active: The table is in a normal state. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -196,7 +211,10 @@ public class ListTableDetailsRequest extends Request {
         }
 
         /**
-         * tableNamePattern.
+         * <p>The fuzzy match pattern for the table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table%</p>
          */
         public Builder tableNamePattern(String tableNamePattern) {
             this.putQueryParameter("tableNamePattern", tableNamePattern);
@@ -205,7 +223,10 @@ public class ListTableDetailsRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

@@ -88,6 +88,7 @@ public class GetTableRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -109,7 +113,10 @@ public class GetTableRequest extends Request {
         }
 
         /**
-         * table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder table(String table) {
             this.putPathParameter("table", table);

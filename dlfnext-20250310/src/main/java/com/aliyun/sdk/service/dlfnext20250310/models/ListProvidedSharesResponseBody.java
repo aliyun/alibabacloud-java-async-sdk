@@ -67,7 +67,10 @@ public class ListProvidedSharesResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The token to retrieve the next page of results. A null value indicates that this is the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListProvidedSharesResponseBody extends TeaModel {
         }
 
         /**
-         * shares.
+         * <p>The shares.</p>
          */
         public Builder shares(java.util.List<Share> shares) {
             this.shares = shares;

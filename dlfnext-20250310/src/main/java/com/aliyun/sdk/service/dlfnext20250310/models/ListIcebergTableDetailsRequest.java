@@ -116,6 +116,7 @@ public class ListIcebergTableDetailsRequest extends Request {
         } 
 
         /**
+         * <p>The catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListIcebergTableDetailsRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace_name</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -137,7 +141,10 @@ public class ListIcebergTableDetailsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -146,7 +153,10 @@ public class ListIcebergTableDetailsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token to retrieve the next page of results. If this parameter is not returned in the response, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -155,7 +165,10 @@ public class ListIcebergTableDetailsRequest extends Request {
         }
 
         /**
-         * tableNamePattern.
+         * <p>The pattern to filter table names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table%</p>
          */
         public Builder tableNamePattern(String tableNamePattern) {
             this.putQueryParameter("tableNamePattern", tableNamePattern);

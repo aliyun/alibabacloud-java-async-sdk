@@ -106,7 +106,10 @@ public class VerifyCatalogKmsResponseBody extends TeaModel {
         } 
 
         /**
-         * errorCode.
+         * <p>The error code returned when the validation fails. An empty string is returned when the validation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyNotFound</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +117,10 @@ public class VerifyCatalogKmsResponseBody extends TeaModel {
         }
 
         /**
-         * hint.
+         * <p>The description of the failure cause and remediation suggestions returned when the validation fails. An empty string is returned when the validation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter KMS keyId is not found.</p>
          */
         public Builder hint(String hint) {
             this.hint = hint;
@@ -122,7 +128,10 @@ public class VerifyCatalogKmsResponseBody extends TeaModel {
         }
 
         /**
-         * kmsKeyId.
+         * <p>The KMS key identifier actually used by the probe object. When the validation is successful, this corresponds to the customer master key (CMK) specified in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1234567890abcdef</p>
          */
         public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
@@ -130,7 +139,10 @@ public class VerifyCatalogKmsResponseBody extends TeaModel {
         }
 
         /**
-         * serverSideEncryption.
+         * <p>The server-side encryption method actually used by the probe object. Returns KMS when the validation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KMS</p>
          */
         public Builder serverSideEncryption(String serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
@@ -138,7 +150,10 @@ public class VerifyCatalogKmsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the validation is successful. A value of true indicates that the write probe succeeded and the SSE-KMS configuration of the object meets expectations. A value of false indicates that the validation failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

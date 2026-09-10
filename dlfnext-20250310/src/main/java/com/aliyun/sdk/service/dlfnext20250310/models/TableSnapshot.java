@@ -132,7 +132,7 @@ public class TableSnapshot extends TeaModel {
         } 
 
         /**
-         * fileCount.
+         * <p>The total number of files in the snapshot.</p>
          */
         public Builder fileCount(Long fileCount) {
             this.fileCount = fileCount;
@@ -140,7 +140,7 @@ public class TableSnapshot extends TeaModel {
         }
 
         /**
-         * fileSizeInBytes.
+         * <p>The total size of all files in the snapshot, in bytes.</p>
          */
         public Builder fileSizeInBytes(Long fileSizeInBytes) {
             this.fileSizeInBytes = fileSizeInBytes;
@@ -148,7 +148,7 @@ public class TableSnapshot extends TeaModel {
         }
 
         /**
-         * lastFileCreationTime.
+         * <p>The creation time of the most recent file in the snapshot, as a Unix timestamp in milliseconds.</p>
          */
         public Builder lastFileCreationTime(Long lastFileCreationTime) {
             this.lastFileCreationTime = lastFileCreationTime;
@@ -156,7 +156,7 @@ public class TableSnapshot extends TeaModel {
         }
 
         /**
-         * partitionCount.
+         * <p>The total number of partitions in the table.</p>
          */
         public Builder partitionCount(Long partitionCount) {
             this.partitionCount = partitionCount;
@@ -164,7 +164,7 @@ public class TableSnapshot extends TeaModel {
         }
 
         /**
-         * recordCount.
+         * <p>The total number of records in the snapshot.</p>
          */
         public Builder recordCount(Long recordCount) {
             this.recordCount = recordCount;
@@ -172,7 +172,7 @@ public class TableSnapshot extends TeaModel {
         }
 
         /**
-         * snapshot.
+         * <p>Contains detailed information about the snapshot.</p>
          */
         public Builder snapshot(Snapshot snapshot) {
             this.snapshot = snapshot;
@@ -180,7 +180,7 @@ public class TableSnapshot extends TeaModel {
         }
 
         /**
-         * totalBuckets.
+         * <p>The total number of buckets in the table.</p>
          */
         public Builder totalBuckets(Integer totalBuckets) {
             this.totalBuckets = totalBuckets;

@@ -67,7 +67,10 @@ public class ListViewDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The token for the next page of results. If null is returned, all results have been retrieved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListViewDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * viewDetails.
+         * <p>A list of views.</p>
          */
         public Builder viewDetails(java.util.List<View> viewDetails) {
             this.viewDetails = viewDetails;

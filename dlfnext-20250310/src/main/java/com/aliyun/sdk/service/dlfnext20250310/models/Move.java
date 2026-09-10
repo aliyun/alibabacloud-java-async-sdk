@@ -80,7 +80,10 @@ public class Move extends TeaModel {
         } 
 
         /**
-         * fieldName.
+         * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>other_col_test</p>
          */
         public Builder fieldName(String fieldName) {
             this.fieldName = fieldName;
@@ -88,7 +91,10 @@ public class Move extends TeaModel {
         }
 
         /**
-         * referenceFieldName.
+         * <p>The name of the reference column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col_test</p>
          */
         public Builder referenceFieldName(String referenceFieldName) {
             this.referenceFieldName = referenceFieldName;
@@ -96,7 +102,10 @@ public class Move extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The move type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FIRST</p>
          */
         public Builder type(String type) {
             this.type = type;

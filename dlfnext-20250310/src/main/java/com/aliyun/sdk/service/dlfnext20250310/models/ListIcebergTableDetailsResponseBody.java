@@ -67,7 +67,10 @@ public class ListIcebergTableDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListIcebergTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * tableDetails.
+         * <p>A list of data tables.</p>
          */
         public Builder tableDetails(java.util.List<IcebergTable> tableDetails) {
             this.tableDetails = tableDetails;

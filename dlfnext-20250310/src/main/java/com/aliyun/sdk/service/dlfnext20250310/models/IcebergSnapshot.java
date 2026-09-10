@@ -171,7 +171,10 @@ public class IcebergSnapshot extends TeaModel {
         } 
 
         /**
-         * addedRows.
+         * <p>Number of added rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder addedRows(Long addedRows) {
             this.addedRows = addedRows;
@@ -179,7 +182,10 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2443368274334000657</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -195,7 +201,10 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * operation.
+         * <p>The operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>append</p>
          */
         public Builder operation(String operation) {
             this.operation = operation;
@@ -203,7 +212,10 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * parentId.
+         * <p>Parent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder parentId(Long parentId) {
             this.parentId = parentId;
@@ -219,7 +231,10 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * schemaId.
+         * <p>The schema ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder schemaId(Long schemaId) {
             this.schemaId = schemaId;
@@ -227,7 +242,10 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * sequenceNumber.
+         * <p>The sequence number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequenceNumber(Long sequenceNumber) {
             this.sequenceNumber = sequenceNumber;
@@ -235,7 +253,7 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * summary.
+         * <p>The summary.</p>
          */
         public Builder summary(java.util.Map<String, String> summary) {
             this.summary = summary;
@@ -243,7 +261,10 @@ public class IcebergSnapshot extends TeaModel {
         }
 
         /**
-         * timestampMillis.
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1750313724369</p>
          */
         public Builder timestampMillis(Long timestampMillis) {
             this.timestampMillis = timestampMillis;

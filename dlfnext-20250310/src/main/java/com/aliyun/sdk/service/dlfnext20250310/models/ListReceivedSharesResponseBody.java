@@ -67,7 +67,10 @@ public class ListReceivedSharesResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListReceivedSharesResponseBody extends TeaModel {
         }
 
         /**
-         * shares.
+         * <p>The received shares.</p>
          */
         public Builder shares(java.util.List<ReceivedShare> shares) {
             this.shares = shares;

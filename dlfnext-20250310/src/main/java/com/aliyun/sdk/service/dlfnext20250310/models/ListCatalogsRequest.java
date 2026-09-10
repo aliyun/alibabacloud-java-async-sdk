@@ -87,7 +87,10 @@ public class ListCatalogsRequest extends Request {
         } 
 
         /**
-         * catalogNamePattern.
+         * <p>The pattern of the catalog name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mi</p>
          */
         public Builder catalogNamePattern(String catalogNamePattern) {
             this.putQueryParameter("catalogNamePattern", catalogNamePattern);
@@ -96,7 +99,10 @@ public class ListCatalogsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -105,7 +111,10 @@ public class ListCatalogsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);

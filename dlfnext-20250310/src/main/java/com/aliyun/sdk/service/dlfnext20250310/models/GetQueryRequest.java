@@ -59,7 +59,10 @@ public class GetQueryRequest extends Request {
         } 
 
         /**
-         * queryId.
+         * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d7b21d1ec4f441e79d5ba917c3283200</p>
          */
         public Builder queryId(String queryId) {
             this.putPathParameter("queryId", queryId);

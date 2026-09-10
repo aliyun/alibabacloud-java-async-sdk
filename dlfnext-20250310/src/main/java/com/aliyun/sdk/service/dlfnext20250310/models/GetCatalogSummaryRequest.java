@@ -74,6 +74,7 @@ public class GetCatalogSummaryRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetCatalogSummaryRequest extends Request {
         }
 
         /**
-         * date.
+         * <p>The date of the storage overview.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-09-18</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("date", date);

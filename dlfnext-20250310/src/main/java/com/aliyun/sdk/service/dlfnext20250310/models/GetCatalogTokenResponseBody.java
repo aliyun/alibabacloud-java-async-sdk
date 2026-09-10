@@ -67,7 +67,10 @@ public class GetCatalogTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * expiresAtMillis.
+         * <p>The token expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1749160909000</p>
          */
         public Builder expiresAtMillis(Long expiresAtMillis) {
             this.expiresAtMillis = expiresAtMillis;
@@ -75,7 +78,7 @@ public class GetCatalogTokenResponseBody extends TeaModel {
         }
 
         /**
-         * token.
+         * <p>The token for the catalog.</p>
          */
         public Builder token(java.util.Map<String, String> token) {
             this.token = token;

@@ -60,6 +60,7 @@ public class GetCatalogTokenRequest extends Request {
         } 
 
         /**
+         * <p>The catalog name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

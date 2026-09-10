@@ -104,6 +104,7 @@ public class ListPartitionsByNamesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class ListPartitionsByNamesRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class ListPartitionsByNamesRequest extends Request {
         }
 
         /**
+         * <p>The name of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,7 @@ public class ListPartitionsByNamesRequest extends Request {
         }
 
         /**
-         * specs.
+         * <p>The list of partition specifications.</p>
          */
         public Builder specs(java.util.List<java.util.Map<String, String>> specs) {
             this.putBodyParameter("specs", specs);

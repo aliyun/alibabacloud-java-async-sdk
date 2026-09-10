@@ -87,7 +87,10 @@ public class CreateReceiverRequest extends Request {
         } 
 
         /**
-         * comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Customer A.</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("comment", comment);
@@ -96,7 +99,10 @@ public class CreateReceiverRequest extends Request {
         }
 
         /**
-         * receiverName.
+         * <p>The name of the receiver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>receiver_name</p>
          */
         public Builder receiverName(String receiverName) {
             this.putBodyParameter("receiverName", receiverName);
@@ -105,7 +111,10 @@ public class CreateReceiverRequest extends Request {
         }
 
         /**
-         * receiverTenantId.
+         * <p>The ID of the receiver\&quot;s account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder receiverTenantId(Long receiverTenantId) {
             this.putBodyParameter("receiverTenantId", receiverTenantId);

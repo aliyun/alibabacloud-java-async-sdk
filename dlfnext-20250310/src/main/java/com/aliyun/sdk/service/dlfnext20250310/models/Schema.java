@@ -106,7 +106,10 @@ public class Schema extends TeaModel {
         } 
 
         /**
-         * comment.
+         * <p>The comment for the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -114,7 +117,7 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * fields.
+         * <p>A list of table column definitions.</p>
          */
         public Builder fields(java.util.List<DataField> fields) {
             this.fields = fields;
@@ -122,7 +125,7 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * options.
+         * <p>A list of table configuration options.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.options = options;
@@ -130,7 +133,7 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * partitionKeys.
+         * <p>A list of partition column names.</p>
          */
         public Builder partitionKeys(java.util.List<String> partitionKeys) {
             this.partitionKeys = partitionKeys;
@@ -138,7 +141,7 @@ public class Schema extends TeaModel {
         }
 
         /**
-         * primaryKeys.
+         * <p>A list of primary key column names.</p>
          */
         public Builder primaryKeys(java.util.List<String> primaryKeys) {
             this.primaryKeys = primaryKeys;

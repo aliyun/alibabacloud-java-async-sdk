@@ -93,7 +93,10 @@ public class IcebergPartitionField extends TeaModel {
         } 
 
         /**
-         * fieldId.
+         * <p>The partition ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fieldId(Long fieldId) {
             this.fieldId = fieldId;
@@ -101,7 +104,10 @@ public class IcebergPartitionField extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The partition name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ts_day</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,7 +115,10 @@ public class IcebergPartitionField extends TeaModel {
         }
 
         /**
-         * sourceId.
+         * <p>The source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder sourceId(Long sourceId) {
             this.sourceId = sourceId;
@@ -117,7 +126,10 @@ public class IcebergPartitionField extends TeaModel {
         }
 
         /**
-         * transform.
+         * <p>The transformation rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         public Builder transform(String transform) {
             this.transform = transform;

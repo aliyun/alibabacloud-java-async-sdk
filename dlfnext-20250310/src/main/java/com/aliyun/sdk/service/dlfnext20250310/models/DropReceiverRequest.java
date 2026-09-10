@@ -59,7 +59,10 @@ public class DropReceiverRequest extends Request {
         } 
 
         /**
-         * receiver.
+         * <p>The name of the receiver to remove.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>receiver_name</p>
          */
         public Builder receiver(String receiver) {
             this.putPathParameter("receiver", receiver);

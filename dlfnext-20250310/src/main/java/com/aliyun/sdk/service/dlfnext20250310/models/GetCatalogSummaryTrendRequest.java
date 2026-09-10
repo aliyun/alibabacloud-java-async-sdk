@@ -90,6 +90,7 @@ public class GetCatalogSummaryTrendRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class GetCatalogSummaryTrendRequest extends Request {
         }
 
         /**
+         * <p>The end date, in yyyy-MM-dd format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class GetCatalogSummaryTrendRequest extends Request {
         }
 
         /**
+         * <p>The start date, in yyyy-MM-dd format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

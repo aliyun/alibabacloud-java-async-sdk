@@ -74,6 +74,7 @@ public class GetIcebergNamespaceRequest extends Request {
         } 
 
         /**
+         * <p>The data catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetIcebergNamespaceRequest extends Request {
         }
 
         /**
-         * namespace.
+         * <p>The namespace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespace_name</p>
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);

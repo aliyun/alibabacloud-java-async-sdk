@@ -170,6 +170,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCatalogByIdResponse> getCatalogById(GetCatalogByIdRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns the DLF data access role and KMS key policy authorization statement required to configure BYOK SSE KMS. The customer master key is configured at the catalog level through oss.sse.kms.key-id. When creating a table, you can enable SSE KMS for the table by setting the table property oss.sse.kms.enabled=true. Tables with KMS encryption enabled and tables without encryption can coexist under the same catalog.</p>
+     * 
      * @param request the request parameters of GetCatalogKmsGrants  GetCatalogKmsGrantsRequest
      * @return GetCatalogKmsGrantsResponse
      */
@@ -494,6 +497,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateVpcConfigResponse> updateVpcConfig(UpdateVpcConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation only validates whether the specified customer master key (CMK) can be used for BYOK SSE-KMS of the Catalog. It does not automatically enable encryption for all tables in the Catalog. The CMK is configured at the Catalog level through oss.sse.kms.key-id. When creating a table, set the table property oss.sse.kms.enabled=true to enable SSE-KMS for the specified table.</p>
+     * 
      * @param request the request parameters of VerifyCatalogKms  VerifyCatalogKmsRequest
      * @return VerifyCatalogKmsResponse
      */

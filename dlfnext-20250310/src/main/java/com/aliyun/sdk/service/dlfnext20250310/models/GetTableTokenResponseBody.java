@@ -67,7 +67,10 @@ public class GetTableTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * expiresAtMillis.
+         * <p>The expiration time of the temporary access credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1749160909000</p>
          */
         public Builder expiresAtMillis(Long expiresAtMillis) {
             this.expiresAtMillis = expiresAtMillis;
@@ -75,7 +78,7 @@ public class GetTableTokenResponseBody extends TeaModel {
         }
 
         /**
-         * token.
+         * <p>The temporary access credential for the catalog hosting the table.</p>
          */
         public Builder token(java.util.Map<String, String> token) {
             this.token = token;

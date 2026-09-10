@@ -88,10 +88,11 @@ public class AlterCatalogRequest extends Request {
         } 
 
         /**
+         * <p>The name of the catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>clg-paimon-xxxx</p>
+         * <p>catalog_name</p>
          */
         public Builder catalog(String catalog) {
             this.putPathParameter("catalog", catalog);
@@ -100,7 +101,7 @@ public class AlterCatalogRequest extends Request {
         }
 
         /**
-         * removals.
+         * <p>The items to delete.</p>
          */
         public Builder removals(java.util.List<String> removals) {
             this.putBodyParameter("removals", removals);
@@ -109,7 +110,7 @@ public class AlterCatalogRequest extends Request {
         }
 
         /**
-         * updates.
+         * <p>The items to update.</p>
          */
         public Builder updates(java.util.Map<String, String> updates) {
             this.putBodyParameter("updates", updates);

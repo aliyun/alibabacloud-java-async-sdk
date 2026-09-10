@@ -80,7 +80,15 @@ public class BatchRevokePermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * errorMessage.
+         * <ul>
+         * <li><p>If success is false, a business error message is returned.</p>
+         * </li>
+         * <li><p>If success is true, an empty value is returned.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>空</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -88,7 +96,7 @@ public class BatchRevokePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * failurePermissions.
+         * <p>The results of permissions that failed to be revoked in batches.</p>
          */
         public Builder failurePermissions(java.util.List<FailurePermission> failurePermissions) {
             this.failurePermissions = failurePermissions;
@@ -96,7 +104,14 @@ public class BatchRevokePermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The API call is successful.</li>
+         * <li>false: The API call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

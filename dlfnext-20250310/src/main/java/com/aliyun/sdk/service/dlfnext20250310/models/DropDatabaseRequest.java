@@ -74,6 +74,7 @@ public class DropDatabaseRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DropDatabaseRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);

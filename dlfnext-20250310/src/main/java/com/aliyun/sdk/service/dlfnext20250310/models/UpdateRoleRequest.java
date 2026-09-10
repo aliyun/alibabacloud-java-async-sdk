@@ -87,7 +87,10 @@ public class UpdateRoleRequest extends Request {
         } 
 
         /**
-         * description.
+         * <p>The description of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -96,7 +99,10 @@ public class UpdateRoleRequest extends Request {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_display_name</p>
          */
         public Builder displayName(String displayName) {
             this.putBodyParameter("displayName", displayName);
@@ -105,7 +111,10 @@ public class UpdateRoleRequest extends Request {
         }
 
         /**
-         * rolePrincipal.
+         * <p>The resource descriptor of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:dlf::[accountId]:role/role_name</p>
          */
         public Builder rolePrincipal(String rolePrincipal) {
             this.putBodyParameter("rolePrincipal", rolePrincipal);

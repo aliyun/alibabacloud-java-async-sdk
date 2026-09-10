@@ -197,7 +197,10 @@ public class FullSchemaChange extends TeaModel {
         } 
 
         /**
-         * action.
+         * <p>The type of change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>setOption</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -205,7 +208,10 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * <p>required in UpdateComment/AddColumn</p>
+         * <p>The description. This parameter is required when <code>action</code> is <code>UpdateComment</code> or <code>AddColumn</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col_comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -213,7 +219,7 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * dataType.
+         * <p>The column type. This parameter is required when <code>action</code> is <code>AddColumn</code>.</p>
          */
         public Builder dataType(FullDataType dataType) {
             this.dataType = dataType;
@@ -221,7 +227,7 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * <p>required in AddColumn/RenameColumn/DropColumn/UpdateColumnComment/UpdateColumnType/UpdateColumnNullability</p>
+         * <p>The table column names. This parameter is required when <code>action</code> is <code>AddColumn</code>, <code>RenameColumn</code>, <code>DropColumn</code>, <code>UpdateColumnComment</code>, <code>UpdateColumnType</code>, or <code>UpdateColumnNullability</code>.</p>
          */
         public Builder fieldNames(java.util.List<String> fieldNames) {
             this.fieldNames = fieldNames;
@@ -229,7 +235,10 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * <p>required in UpdateColumnType</p>
+         * <p>Specifies whether the column is nullable. This parameter is required when the <code>action</code> is <code>UpdateColumnType</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder keepNullability(Boolean keepNullability) {
             this.keepNullability = keepNullability;
@@ -237,7 +246,10 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * <p>required in SetOption/RemoveOption</p>
+         * <p>The key for the configuration. This parameter is required when <code>action</code> is <code>SetOption</code> or <code>RemoveOption</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\&quot;true\&quot;</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -245,7 +257,7 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * move.
+         * <p>The column to move. This parameter is required when <code>action</code> is <code>AddColumn</code> or <code>UpdateColumnPosition</code>.</p>
          */
         public Builder move(Move move) {
             this.move = move;
@@ -253,7 +265,10 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * <p>required in UpdateColumnComment</p>
+         * <p>The new description for the column. This parameter is required when <code>action</code> is <code>UpdateColumnComment</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col_comment_test</p>
          */
         public Builder newComment(String newComment) {
             this.newComment = newComment;
@@ -261,7 +276,7 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * newDataType.
+         * <p>The new column type. This parameter is required when <code>action</code> is <code>UpdateColumnType</code>.</p>
          */
         public Builder newDataType(FullDataType newDataType) {
             this.newDataType = newDataType;
@@ -269,7 +284,10 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * <p>required in RenameColumn</p>
+         * <p>The new name of the column. This parameter is required when <code>action</code> is <code>RenameColumn</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new_col_test</p>
          */
         public Builder newName(String newName) {
             this.newName = newName;
@@ -277,7 +295,10 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * <p>required in UpdateColumnNullability</p>
+         * <p>Specifies whether the new column is nullable. This parameter is required when <code>action</code> is <code>UpdateColumnType</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder newNullability(Boolean newNullability) {
             this.newNullability = newNullability;
@@ -285,7 +306,10 @@ public class FullSchemaChange extends TeaModel {
         }
 
         /**
-         * <p>required in SetOption</p>
+         * <p>The value of the configuration. This parameter is required when <code>action</code> is <code>SetOption</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\&quot;manifest.delete-file-drop-stats\&quot;</p>
          */
         public Builder value(String value) {
             this.value = value;

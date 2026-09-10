@@ -101,7 +101,10 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -110,7 +113,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The pagination token used to retrieve the next page of results. If this parameter is not returned in the response, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -119,7 +125,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM_USER</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
@@ -128,7 +137,10 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * userName.
+         * <p>The user name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_name</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("userName", userName);

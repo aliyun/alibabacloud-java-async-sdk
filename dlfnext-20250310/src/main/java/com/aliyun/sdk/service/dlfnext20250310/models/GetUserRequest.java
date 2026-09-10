@@ -59,7 +59,10 @@ public class GetUserRequest extends Request {
         } 
 
         /**
-         * userPrincipal.
+         * <p>The resource descriptor of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:user/user_name</p>
          */
         public Builder userPrincipal(String userPrincipal) {
             this.putQueryParameter("userPrincipal", userPrincipal);

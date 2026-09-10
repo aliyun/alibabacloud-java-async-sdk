@@ -80,7 +80,10 @@ public class FieldRef extends TeaModel {
         } 
 
         /**
-         * index.
+         * <p>Text sequence</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -88,7 +91,10 @@ public class FieldRef extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>Table name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -96,7 +102,7 @@ public class FieldRef extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>File type</p>
          */
         public Builder type(FullDataType type) {
             this.type = type;

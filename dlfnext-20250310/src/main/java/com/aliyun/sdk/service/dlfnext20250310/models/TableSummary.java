@@ -379,7 +379,10 @@ public class TableSummary extends TeaModel {
         } 
 
         /**
-         * <p>Latest snapshot storage size</p>
+         * <p>The timestamp, in milliseconds, indicating when the table was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -387,7 +390,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>Database name</p>
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -395,7 +401,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * generatedDate.
+         * <p>The generation date of the storage summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-01</p>
          */
         public Builder generatedDate(String generatedDate) {
             this.generatedDate = generatedDate;
@@ -403,7 +412,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * lastAccessTime.
+         * <p>The timestamp, in milliseconds, indicating when the table data was last accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder lastAccessTime(Long lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -419,7 +431,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * objTypeArchiveSize.
+         * <p>The total size of data files in the Archive storage class, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeArchiveSize(Long objTypeArchiveSize) {
             this.objTypeArchiveSize = objTypeArchiveSize;
@@ -427,7 +442,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * objTypeColdArchiveSize.
+         * <p>The total size of data files in the Cold Archive storage class, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeColdArchiveSize(Long objTypeColdArchiveSize) {
             this.objTypeColdArchiveSize = objTypeColdArchiveSize;
@@ -435,7 +453,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * objTypeIaSize.
+         * <p>The total size of data files in the Infrequent Access storage class, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeIaSize(Long objTypeIaSize) {
             this.objTypeIaSize = objTypeIaSize;
@@ -443,7 +464,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * objTypeStandardSize.
+         * <p>The total size of data files in the Standard storage class, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeStandardSize(Long objTypeStandardSize) {
             this.objTypeStandardSize = objTypeStandardSize;
@@ -451,7 +475,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>Creation timestamp in milliseconds</p>
+         * <p>The total number of partitions in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder partitionCount(Long partitionCount) {
             this.partitionCount = partitionCount;
@@ -459,7 +486,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * path.
+         * <p>The storage location of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://clg-xxxx/db-xxxx/tbl-xxxx</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -467,7 +497,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * storageActionParams.
+         * <p>The storage action parameters.</p>
          */
         public Builder storageActionParams(java.util.Map<String, String> storageActionParams) {
             this.storageActionParams = storageActionParams;
@@ -483,7 +513,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * storageClass.
+         * <p>The storage class.</p>
          */
         public Builder storageClass(String storageClass) {
             this.storageClass = storageClass;
@@ -491,7 +521,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>Table name</p>
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table1</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -507,7 +540,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * totalFileAccessNum.
+         * <p>Total file access count.</p>
          */
         public Builder totalFileAccessNum(Long totalFileAccessNum) {
             this.totalFileAccessNum = totalFileAccessNum;
@@ -515,7 +548,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * totalFileAccessNum30d.
+         * <p>Total file access count over the last 30 days.</p>
          */
         public Builder totalFileAccessNum30d(Long totalFileAccessNum30d) {
             this.totalFileAccessNum30d = totalFileAccessNum30d;
@@ -523,7 +556,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * totalFileAccessNum7d.
+         * <p>Total file access count over the last 7 days.</p>
          */
         public Builder totalFileAccessNum7d(Long totalFileAccessNum7d) {
             this.totalFileAccessNum7d = totalFileAccessNum7d;
@@ -531,7 +564,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>30-day access count</p>
+         * <p>The total number of files in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalFileCount(Long totalFileCount) {
             this.totalFileCount = totalFileCount;
@@ -539,7 +575,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * totalFileSizeInBytes.
+         * <p>The total storage capacity of the table, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder totalFileSizeInBytes(Long totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
@@ -547,7 +586,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * totalMetaFileCount.
+         * <p>The total number of metadata files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalMetaFileCount(Long totalMetaFileCount) {
             this.totalMetaFileCount = totalMetaFileCount;
@@ -555,7 +597,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * totalMetaSizeInBytes.
+         * <p>The total size of metadata files, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder totalMetaSizeInBytes(Long totalMetaSizeInBytes) {
             this.totalMetaSizeInBytes = totalMetaSizeInBytes;
@@ -563,7 +608,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>Creation timestamp in milliseconds</p>
+         * <p>The number of Standard or Infrequent Access partitions unaccessed in the last 180 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder unaccessedStdIaPartitionCount180d(Long unaccessedStdIaPartitionCount180d) {
             this.unaccessedStdIaPartitionCount180d = unaccessedStdIaPartitionCount180d;
@@ -571,7 +619,10 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * <p>Creation timestamp in milliseconds</p>
+         * <p>The number of Standard partitions unaccessed in the last 30 days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder unaccessedStdPartitionCount30d(Long unaccessedStdPartitionCount30d) {
             this.unaccessedStdPartitionCount30d = unaccessedStdPartitionCount30d;
@@ -579,7 +630,7 @@ public class TableSummary extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The update time.</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;

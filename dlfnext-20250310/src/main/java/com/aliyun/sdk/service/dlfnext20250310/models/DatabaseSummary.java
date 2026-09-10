@@ -223,7 +223,10 @@ public class DatabaseSummary extends TeaModel {
         } 
 
         /**
-         * <p>Creation timestamp in milliseconds</p>
+         * <p>The database creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -231,7 +234,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * <p>库名 - Database name</p>
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -239,7 +245,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * <p>Last profile update date in format yyyyMMdd</p>
+         * <p>The date when the storage overview data was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-01</p>
          */
         public Builder generatedDate(String generatedDate) {
             this.generatedDate = generatedDate;
@@ -247,7 +256,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * <p>Storage location URI</p>
+         * <p>The storage location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://clg-paimon-xxx/db-xxx</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -255,7 +267,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * objTypeArchiveSize.
+         * <p>The storage size of Archive data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeArchiveSize(Long objTypeArchiveSize) {
             this.objTypeArchiveSize = objTypeArchiveSize;
@@ -263,7 +278,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * objTypeColdArchiveSize.
+         * <p>The storage size of Cold Archive data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeColdArchiveSize(Long objTypeColdArchiveSize) {
             this.objTypeColdArchiveSize = objTypeColdArchiveSize;
@@ -271,7 +289,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * objTypeIaSize.
+         * <p>The storage size of Infrequent Access data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeIaSize(Long objTypeIaSize) {
             this.objTypeIaSize = objTypeIaSize;
@@ -279,7 +300,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * objTypeStandardSize.
+         * <p>The storage size of Standard data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeStandardSize(Long objTypeStandardSize) {
             this.objTypeStandardSize = objTypeStandardSize;
@@ -287,7 +311,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * partitionCount.
+         * <p>The total number of partitions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder partitionCount(Long partitionCount) {
             this.partitionCount = partitionCount;
@@ -295,7 +322,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * <p>Total storage in bytes</p>
+         * <p>The total number of tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder tableCount(Long tableCount) {
             this.tableCount = tableCount;
@@ -303,7 +333,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * totalFileCount.
+         * <p>The total number of files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         public Builder totalFileCount(Long totalFileCount) {
             this.totalFileCount = totalFileCount;
@@ -311,7 +344,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * <p>Total file count</p>
+         * <p>The storage capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1048576</p>
          */
         public Builder totalFileSizeInBytes(Long totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
@@ -319,7 +355,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * totalMetaFileCount.
+         * <p>The total number of metadata files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         public Builder totalMetaFileCount(Long totalMetaFileCount) {
             this.totalMetaFileCount = totalMetaFileCount;
@@ -327,7 +366,10 @@ public class DatabaseSummary extends TeaModel {
         }
 
         /**
-         * totalMetaSizeInBytes.
+         * <p>The storage size of metadata files, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder totalMetaSizeInBytes(Long totalMetaSizeInBytes) {
             this.totalMetaSizeInBytes = totalMetaSizeInBytes;

@@ -87,7 +87,10 @@ public class AlterShareReceiversRequest extends Request {
         } 
 
         /**
-         * share.
+         * <p>The share name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share_name</p>
          */
         public Builder share(String share) {
             this.putPathParameter("share", share);
@@ -96,7 +99,7 @@ public class AlterShareReceiversRequest extends Request {
         }
 
         /**
-         * addedReceivers.
+         * <p>The receivers to add.</p>
          */
         public Builder addedReceivers(java.util.List<String> addedReceivers) {
             this.putBodyParameter("addedReceivers", addedReceivers);
@@ -105,7 +108,7 @@ public class AlterShareReceiversRequest extends Request {
         }
 
         /**
-         * removedReceivers.
+         * <p>The receivers to remove.</p>
          */
         public Builder removedReceivers(java.util.List<String> removedReceivers) {
             this.putBodyParameter("removedReceivers", removedReceivers);

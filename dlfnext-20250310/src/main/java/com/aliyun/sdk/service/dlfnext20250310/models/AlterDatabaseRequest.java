@@ -101,7 +101,10 @@ public class AlterDatabaseRequest extends Request {
         } 
 
         /**
-         * catalogId.
+         * <p>The ID of the catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-xxxx</p>
          */
         public Builder catalogId(String catalogId) {
             this.putPathParameter("catalogId", catalogId);
@@ -110,7 +113,10 @@ public class AlterDatabaseRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -119,7 +125,7 @@ public class AlterDatabaseRequest extends Request {
         }
 
         /**
-         * removals.
+         * <p>The items to delete.</p>
          */
         public Builder removals(java.util.List<String> removals) {
             this.putBodyParameter("removals", removals);
@@ -128,7 +134,7 @@ public class AlterDatabaseRequest extends Request {
         }
 
         /**
-         * updates.
+         * <p>The items to update.</p>
          */
         public Builder updates(java.util.Map<String, String> updates) {
             this.putBodyParameter("updates", updates);

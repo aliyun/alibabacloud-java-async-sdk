@@ -87,7 +87,10 @@ public class ListRolesRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -96,7 +99,10 @@ public class ListRolesRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token used to retrieve the next page of results. If the response does not return this parameter, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -105,7 +111,10 @@ public class ListRolesRequest extends Request {
         }
 
         /**
-         * roleName.
+         * <p>The role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_name</p>
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("roleName", roleName);

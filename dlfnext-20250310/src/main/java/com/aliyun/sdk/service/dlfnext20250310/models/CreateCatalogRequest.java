@@ -115,7 +115,10 @@ public class CreateCatalogRequest extends Request {
         } 
 
         /**
-         * isShared.
+         * <p>Specifies whether the catalog is a shared data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isShared(Boolean isShared) {
             this.putBodyParameter("isShared", isShared);
@@ -124,7 +127,10 @@ public class CreateCatalogRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>catalog_demo</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -133,7 +139,7 @@ public class CreateCatalogRequest extends Request {
         }
 
         /**
-         * options.
+         * <p>The configuration parameter struct.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.putBodyParameter("options", options);
@@ -142,7 +148,10 @@ public class CreateCatalogRequest extends Request {
         }
 
         /**
-         * shareId.
+         * <p>The share ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share-xxxx</p>
          */
         public Builder shareId(String shareId) {
             this.putBodyParameter("shareId", shareId);
@@ -151,7 +160,10 @@ public class CreateCatalogRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The type of the data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAIMON</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

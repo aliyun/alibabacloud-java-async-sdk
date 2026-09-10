@@ -80,7 +80,10 @@ public class BatchGrantPermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * errorMessage.
+         * <p>The error message. This parameter is not empty when success is false, indicating a business error. This parameter is empty when success is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>空</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -88,7 +91,7 @@ public class BatchGrantPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * failurePermissions.
+         * <p>The list of permissions that failed to be granted.</p>
          */
         public Builder failurePermissions(java.util.List<FailurePermission> failurePermissions) {
             this.failurePermissions = failurePermissions;
@@ -96,7 +99,14 @@ public class BatchGrantPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the API call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The API call was successful.</li>
+         * <li>false: The API call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

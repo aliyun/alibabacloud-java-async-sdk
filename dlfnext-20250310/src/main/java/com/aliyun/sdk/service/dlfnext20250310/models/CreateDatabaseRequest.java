@@ -88,6 +88,7 @@ public class CreateDatabaseRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -109,7 +113,7 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * options.
+         * <p>The configuration options.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.putBodyParameter("options", options);

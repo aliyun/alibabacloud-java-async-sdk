@@ -80,7 +80,10 @@ public class MoMValues extends TeaModel {
         } 
 
         /**
-         * <p>total</p>
+         * <p>The current value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder currentValue(Long currentValue) {
             this.currentValue = currentValue;
@@ -88,7 +91,10 @@ public class MoMValues extends TeaModel {
         }
 
         /**
-         * <p>daily addition</p>
+         * <p>The value of the previous day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         public Builder lastDayValue(Long lastDayValue) {
             this.lastDayValue = lastDayValue;
@@ -96,7 +102,10 @@ public class MoMValues extends TeaModel {
         }
 
         /**
-         * <p>monthly addition</p>
+         * <p>The value of the previous month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder lastMonthValue(Long lastMonthValue) {
             this.lastMonthValue = lastMonthValue;

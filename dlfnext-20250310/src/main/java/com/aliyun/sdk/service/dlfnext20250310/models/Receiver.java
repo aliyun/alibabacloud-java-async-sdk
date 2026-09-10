@@ -132,7 +132,10 @@ public class Receiver extends TeaModel {
         } 
 
         /**
-         * comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -140,7 +143,10 @@ public class Receiver extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The time when the receiver was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -148,7 +154,10 @@ public class Receiver extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -156,7 +165,10 @@ public class Receiver extends TeaModel {
         }
 
         /**
-         * receiverName.
+         * <p>The name of the receiver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>receiver_name</p>
          */
         public Builder receiverName(String receiverName) {
             this.receiverName = receiverName;
@@ -164,7 +176,10 @@ public class Receiver extends TeaModel {
         }
 
         /**
-         * receiverTenantId.
+         * <p>The receiver\&quot;s account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder receiverTenantId(Long receiverTenantId) {
             this.receiverTenantId = receiverTenantId;
@@ -172,7 +187,10 @@ public class Receiver extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the receiver was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -180,7 +198,10 @@ public class Receiver extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The user who last updated the receiver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

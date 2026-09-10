@@ -129,7 +129,10 @@ public class ListPartitionsRequest extends Request {
         } 
 
         /**
-         * catalogId.
+         * <p>The ID of the catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-xxx</p>
          */
         public Builder catalogId(String catalogId) {
             this.putPathParameter("catalogId", catalogId);
@@ -138,7 +141,10 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -147,7 +153,10 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * table.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder table(String table) {
             this.putPathParameter("table", table);
@@ -156,7 +165,10 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -165,7 +177,10 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The pagination token used to retrieve the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -174,7 +189,10 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
-         * partitionNamePattern.
+         * <p>The partition name pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>partition</p>
          */
         public Builder partitionNamePattern(String partitionNamePattern) {
             this.putQueryParameter("partitionNamePattern", partitionNamePattern);

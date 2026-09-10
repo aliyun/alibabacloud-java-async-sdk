@@ -87,7 +87,10 @@ public class AlterShareResourcesRequest extends Request {
         } 
 
         /**
-         * share.
+         * <p>The share name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share_name</p>
          */
         public Builder share(String share) {
             this.putPathParameter("share", share);
@@ -96,7 +99,10 @@ public class AlterShareResourcesRequest extends Request {
         }
 
         /**
-         * catalogId.
+         * <p>The ID of the catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-xxxx</p>
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("catalogId", catalogId);
@@ -105,7 +111,7 @@ public class AlterShareResourcesRequest extends Request {
         }
 
         /**
-         * shareResourceList.
+         * <p>The shared resources.</p>
          */
         public Builder shareResourceList(java.util.List<ShareResource> shareResourceList) {
             this.putBodyParameter("shareResourceList", shareResourceList);

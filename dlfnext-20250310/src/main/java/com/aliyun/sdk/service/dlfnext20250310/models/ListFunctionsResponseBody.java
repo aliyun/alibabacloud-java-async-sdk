@@ -67,7 +67,7 @@ public class ListFunctionsResponseBody extends TeaModel {
         } 
 
         /**
-         * functions.
+         * <p>The function definitions.</p>
          */
         public Builder functions(java.util.List<String> functions) {
             this.functions = functions;
@@ -75,7 +75,10 @@ public class ListFunctionsResponseBody extends TeaModel {
         }
 
         /**
-         * nextPageToken.
+         * <p>A pagination token. Use this token to retrieve the next page of results. If this parameter is null, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8ABEB1C3DB893D16576269017992F57</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;

@@ -104,6 +104,7 @@ public class GetTableSummaryRequest extends Request {
         } 
 
         /**
+         * <p>The catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class GetTableSummaryRequest extends Request {
         }
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class GetTableSummaryRequest extends Request {
         }
 
         /**
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class GetTableSummaryRequest extends Request {
         }
 
         /**
-         * date.
+         * <p>The storage summary date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-08</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("date", date);

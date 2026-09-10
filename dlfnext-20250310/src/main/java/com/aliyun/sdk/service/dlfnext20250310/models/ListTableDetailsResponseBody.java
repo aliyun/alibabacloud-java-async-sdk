@@ -67,7 +67,10 @@ public class ListTableDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The pagination token used to retrieve the next page of data. If null is returned, the current page is the last page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8ABEB1C3DB893D16576269017992F57</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListTableDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * tableDetails.
+         * <p>The list of tables.</p>
          */
         public Builder tableDetails(java.util.List<Table> tableDetails) {
             this.tableDetails = tableDetails;

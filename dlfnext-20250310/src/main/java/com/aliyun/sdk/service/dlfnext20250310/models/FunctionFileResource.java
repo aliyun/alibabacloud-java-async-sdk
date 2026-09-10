@@ -67,7 +67,10 @@ public class FunctionFileResource extends TeaModel {
         } 
 
         /**
-         * resourceType.
+         * <p>Resource type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JAR</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -75,7 +78,10 @@ public class FunctionFileResource extends TeaModel {
         }
 
         /**
-         * uri.
+         * <p>Resource path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://tmp/SimpleUdf.jar</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;

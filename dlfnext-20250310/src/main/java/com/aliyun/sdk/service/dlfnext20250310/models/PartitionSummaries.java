@@ -67,7 +67,10 @@ public class PartitionSummaries extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The token to retrieve the next page of results. A null value indicates that the last page of results has been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hh=10</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class PartitionSummaries extends TeaModel {
         }
 
         /**
-         * <p>Current page of partition profiles</p>
+         * <p>The partitions.</p>
          */
         public Builder partitions(java.util.List<PartitionSummary> partitions) {
             this.partitions = partitions;

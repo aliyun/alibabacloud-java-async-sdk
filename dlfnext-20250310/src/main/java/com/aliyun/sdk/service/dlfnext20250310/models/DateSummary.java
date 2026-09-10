@@ -67,7 +67,10 @@ public class DateSummary extends TeaModel {
         } 
 
         /**
-         * date.
+         * <p>The date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-01</p>
          */
         public Builder date(String date) {
             this.date = date;
@@ -75,7 +78,10 @@ public class DateSummary extends TeaModel {
         }
 
         /**
-         * <p>Metric value at corresponding date</p>
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder value(Long value) {
             this.value = value;

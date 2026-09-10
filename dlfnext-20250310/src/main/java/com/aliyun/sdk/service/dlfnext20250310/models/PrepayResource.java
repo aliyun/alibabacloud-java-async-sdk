@@ -132,7 +132,10 @@ public class PrepayResource extends TeaModel {
         } 
 
         /**
-         * catalogId.
+         * <p>The catalog ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-xxxx</p>
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
@@ -140,7 +143,10 @@ public class PrepayResource extends TeaModel {
         }
 
         /**
-         * catalogName.
+         * <p>The catalog name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_catalog</p>
          */
         public Builder catalogName(String catalogName) {
             this.catalogName = catalogName;
@@ -148,7 +154,10 @@ public class PrepayResource extends TeaModel {
         }
 
         /**
-         * cu.
+         * <p>The number of CUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder cu(Integer cu) {
             this.cu = cu;
@@ -156,7 +165,10 @@ public class PrepayResource extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The time when the subscription expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1769356800000</p>
          */
         public Builder expireTime(Long expireTime) {
             this.expireTime = expireTime;
@@ -164,7 +176,10 @@ public class PrepayResource extends TeaModel {
         }
 
         /**
-         * gmtCreate.
+         * <p>The time when the resources are purchased.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1764070447351</p>
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -172,7 +187,10 @@ public class PrepayResource extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID of computing resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlf-cu-quota-xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -180,7 +198,13 @@ public class PrepayResource extends TeaModel {
         }
 
         /**
-         * instanceStatus.
+         * <p>The status of the computing resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING
+         * UPGRADING
+         * CEASED
+         * RELEASED</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;

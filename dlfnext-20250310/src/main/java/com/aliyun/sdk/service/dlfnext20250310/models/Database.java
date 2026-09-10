@@ -184,7 +184,10 @@ public class Database extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -192,7 +195,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -200,7 +206,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The UUID of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -208,7 +217,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * location.
+         * <p>The storage path of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://clg-paimon-xxx/db-xxx</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -216,7 +228,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_database</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -224,7 +239,7 @@ public class Database extends TeaModel {
         }
 
         /**
-         * options.
+         * <p>The extension options.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.options = options;
@@ -232,7 +247,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * owner.
+         * <p>The owner of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -256,7 +274,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -264,7 +285,10 @@ public class Database extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The updater.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

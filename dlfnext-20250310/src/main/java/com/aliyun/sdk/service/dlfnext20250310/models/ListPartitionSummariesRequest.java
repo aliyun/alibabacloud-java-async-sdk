@@ -132,6 +132,7 @@ public class ListPartitionSummariesRequest extends Request {
         } 
 
         /**
+         * <p>The catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +145,7 @@ public class ListPartitionSummariesRequest extends Request {
         }
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +158,7 @@ public class ListPartitionSummariesRequest extends Request {
         }
 
         /**
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +171,10 @@ public class ListPartitionSummariesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -177,7 +183,10 @@ public class ListPartitionSummariesRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token for the next page of results. If the response does not include this token, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -186,7 +195,10 @@ public class ListPartitionSummariesRequest extends Request {
         }
 
         /**
-         * partitionNamePattern.
+         * <p>The partition name pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hh=10</p>
          */
         public Builder partitionNamePattern(String partitionNamePattern) {
             this.putQueryParameter("partitionNamePattern", partitionNamePattern);

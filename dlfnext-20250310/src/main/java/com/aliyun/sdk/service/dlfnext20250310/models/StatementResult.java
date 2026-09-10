@@ -158,7 +158,10 @@ public class StatementResult extends TeaModel {
         } 
 
         /**
-         * downloadUrl.
+         * <p>The presigned URL of the Arrow IPC file. This parameter is returned when a result set exists. The URL is valid for 1 hour and contains full data. The value is null for an empty result set (rowCount == 0).</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.oss-cn-hangzhou.aliyuncs.com/xxxx">https://xxx.oss-cn-hangzhou.aliyuncs.com/xxxx</a></p>
          */
         public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = downloadUrl;
@@ -166,7 +169,10 @@ public class StatementResult extends TeaModel {
         }
 
         /**
-         * error.
+         * <p>The error message. This parameter is returned only when the status is FAILED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL_ERROR</p>
          */
         public Builder error(String error) {
             this.error = error;
@@ -174,7 +180,10 @@ public class StatementResult extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code. This parameter is returned only when the status is FAILED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This feature is not implemented: xxx</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -182,7 +191,10 @@ public class StatementResult extends TeaModel {
         }
 
         /**
-         * executionTime.
+         * <p>The execution duration of the statement, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder executionTime(Long executionTime) {
             this.executionTime = executionTime;
@@ -190,7 +202,10 @@ public class StatementResult extends TeaModel {
         }
 
         /**
-         * index.
+         * <p>The statement sequence number (0-based).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -198,7 +213,10 @@ public class StatementResult extends TeaModel {
         }
 
         /**
-         * rowCount.
+         * <p>The total number of rows in the result. The value is 0 for statements that do not return a result set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder rowCount(Integer rowCount) {
             this.rowCount = rowCount;
@@ -206,7 +224,7 @@ public class StatementResult extends TeaModel {
         }
 
         /**
-         * schema.
+         * <p>The result column information. This parameter is returned when a result set exists.</p>
          */
         public Builder schema(java.util.List<Schema> schema) {
             this.schema = schema;
@@ -214,7 +232,10 @@ public class StatementResult extends TeaModel {
         }
 
         /**
-         * sql.
+         * <p>The SQL text of the statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from table_name;</p>
          */
         public Builder sql(String sql) {
             this.sql = sql;
@@ -222,7 +243,10 @@ public class StatementResult extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the statement. Valid values: COMPLETED and FAILED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -288,7 +312,10 @@ public class StatementResult extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +323,10 @@ public class StatementResult extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;

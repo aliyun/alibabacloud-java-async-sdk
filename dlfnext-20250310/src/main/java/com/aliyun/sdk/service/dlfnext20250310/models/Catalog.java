@@ -197,7 +197,10 @@ public class Catalog extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The time when the catalog was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -205,7 +208,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The user who created the catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -213,7 +219,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The ID of the catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-xxxx</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -221,7 +230,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * isShared.
+         * <p>Whether the data catalog is shared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isShared(Boolean isShared) {
             this.isShared = isShared;
@@ -229,7 +241,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The name of the catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_catalog</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -237,7 +252,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * options.
+         * <p>The extension options.</p>
          */
         public Builder options(java.util.Map<String, String> options) {
             this.options = options;
@@ -245,7 +260,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * owner.
+         * <p>The catalog owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -253,7 +271,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * shareId.
+         * <p>Share ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share-xxxx</p>
          */
         public Builder shareId(String shareId) {
             this.shareId = shareId;
@@ -261,7 +282,18 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status of the catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW
+         * INITIALIZING
+         * INITIALIZE_FAILED
+         * RUNNING
+         * TERMINATED
+         * DELETING
+         * DELETE_FAILED 
+         * DELETED
+         * STORAGE_RESTRICTED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -269,7 +301,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>Type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAIMON</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -277,7 +312,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the catalog was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -285,7 +323,10 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The user who last modified the catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

@@ -75,6 +75,7 @@ public class VerifyCatalogKmsRequest extends Request {
         } 
 
         /**
+         * <p>The name of the Catalog whose BYOK SSE-KMS configuration you want to validate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class VerifyCatalogKmsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the KMS customer master key (CMK) to be validated. The server uses this key to perform an SSE-KMS write probe.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

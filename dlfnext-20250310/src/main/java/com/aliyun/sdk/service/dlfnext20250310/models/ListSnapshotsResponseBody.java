@@ -67,7 +67,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The token used to retrieve the next page of results. If this parameter is not returned, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8ABEB1C3DB893D16576269017992F57</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * snapshots.
+         * <p>A list of snapshots.</p>
          */
         public Builder snapshots(java.util.List<Snapshot> snapshots) {
             this.snapshots = snapshots;

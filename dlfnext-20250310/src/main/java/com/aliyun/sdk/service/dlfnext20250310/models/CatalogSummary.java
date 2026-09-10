@@ -236,7 +236,10 @@ public class CatalogSummary extends TeaModel {
         } 
 
         /**
-         * apiVisitCountMonthly.
+         * <p>The total number of metadata requests in the current month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder apiVisitCountMonthly(Long apiVisitCountMonthly) {
             this.apiVisitCountMonthly = apiVisitCountMonthly;
@@ -244,7 +247,7 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * databaseCount.
+         * <p>The month-over-month data on the total number of databases.</p>
          */
         public Builder databaseCount(MoMValues databaseCount) {
             this.databaseCount = databaseCount;
@@ -252,7 +255,10 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * fileAccessCountMonthly.
+         * <p>The total number of file requests for the current month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder fileAccessCountMonthly(Long fileAccessCountMonthly) {
             this.fileAccessCountMonthly = fileAccessCountMonthly;
@@ -260,7 +266,10 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * <p>Update date of the statistics</p>
+         * <p>The date when the storage overview data was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01</p>
          */
         public Builder generatedDate(String generatedDate) {
             this.generatedDate = generatedDate;
@@ -268,7 +277,10 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * objTypeArchiveSize.
+         * <p>The storage usage for Archive data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeArchiveSize(Long objTypeArchiveSize) {
             this.objTypeArchiveSize = objTypeArchiveSize;
@@ -276,7 +288,10 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * objTypeColdArchiveSize.
+         * <p>The storage usage for Cold Archive data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeColdArchiveSize(Long objTypeColdArchiveSize) {
             this.objTypeColdArchiveSize = objTypeColdArchiveSize;
@@ -284,7 +299,10 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * objTypeIaSize.
+         * <p>The storage usage for Infrequent Access (IA) data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeIaSize(Long objTypeIaSize) {
             this.objTypeIaSize = objTypeIaSize;
@@ -292,7 +310,10 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * objTypeStandardSize.
+         * <p>The storage usage for Standard data files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder objTypeStandardSize(Long objTypeStandardSize) {
             this.objTypeStandardSize = objTypeStandardSize;
@@ -300,7 +321,7 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * partitionCount.
+         * <p>The month-over-month data on the total number of partitions.</p>
          */
         public Builder partitionCount(MoMValues partitionCount) {
             this.partitionCount = partitionCount;
@@ -308,7 +329,7 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * tableCount.
+         * <p>The month-over-month data on the total number of tables.</p>
          */
         public Builder tableCount(MoMValues tableCount) {
             this.tableCount = tableCount;
@@ -316,7 +337,10 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * throughputMonthly.
+         * <p>The data access traffic for the current month, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder throughputMonthly(Long throughputMonthly) {
             this.throughputMonthly = throughputMonthly;
@@ -324,7 +348,7 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * totalFileCount.
+         * <p>The month-over-month data on the total number of files.</p>
          */
         public Builder totalFileCount(MoMValues totalFileCount) {
             this.totalFileCount = totalFileCount;
@@ -332,7 +356,7 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * totalFileSizeInBytes.
+         * <p>The change in storage capacity from the previous period, in bytes.</p>
          */
         public Builder totalFileSizeInBytes(MoMValues totalFileSizeInBytes) {
             this.totalFileSizeInBytes = totalFileSizeInBytes;
@@ -340,7 +364,7 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * totalMetaFileCount.
+         * <p>The month-over-month data for the total number of metadata files.</p>
          */
         public Builder totalMetaFileCount(MoMValues totalMetaFileCount) {
             this.totalMetaFileCount = totalMetaFileCount;
@@ -348,7 +372,7 @@ public class CatalogSummary extends TeaModel {
         }
 
         /**
-         * totalMetaSizeInBytes.
+         * <p>The month-over-month data for the storage usage of metadata files, in bytes.</p>
          */
         public Builder totalMetaSizeInBytes(MoMValues totalMetaSizeInBytes) {
             this.totalMetaSizeInBytes = totalMetaSizeInBytes;

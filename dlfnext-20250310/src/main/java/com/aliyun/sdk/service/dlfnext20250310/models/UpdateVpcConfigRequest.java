@@ -73,7 +73,7 @@ public class UpdateVpcConfigRequest extends Request {
         } 
 
         /**
-         * removals.
+         * <p>The list of VPC IDs to delete.</p>
          */
         public Builder removals(java.util.List<String> removals) {
             this.putBodyParameter("removals", removals);
@@ -82,7 +82,7 @@ public class UpdateVpcConfigRequest extends Request {
         }
 
         /**
-         * updates.
+         * <p>The list of VPCs to update.</p>
          */
         public Builder updates(java.util.List<Updates> updates) {
             this.putBodyParameter("updates", updates);
@@ -150,7 +150,7 @@ public class UpdateVpcConfigRequest extends Request {
             } 
 
             /**
-             * extendedOptions.
+             * <p>The list of configuration items.</p>
              */
             public Builder extendedOptions(java.util.Map<String, String> extendedOptions) {
                 this.extendedOptions = extendedOptions;

@@ -87,7 +87,10 @@ public class ListRoleUsersRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -96,7 +99,10 @@ public class ListRoleUsersRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token to retrieve the next page of results. If the response does not return a token, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);
@@ -105,7 +111,10 @@ public class ListRoleUsersRequest extends Request {
         }
 
         /**
-         * rolePrincipal.
+         * <p>The resource descriptor for the DLF role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:dlf::[accountId]:role/role_name</p>
          */
         public Builder rolePrincipal(String rolePrincipal) {
             this.putQueryParameter("rolePrincipal", rolePrincipal);

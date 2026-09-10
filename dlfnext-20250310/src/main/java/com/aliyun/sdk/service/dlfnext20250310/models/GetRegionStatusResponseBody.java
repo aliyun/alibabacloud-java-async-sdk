@@ -67,7 +67,10 @@ public class GetRegionStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * serviceRoleExists.
+         * <p>Indicates whether DLF\&quot;s service-linked role has been created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder serviceRoleExists(Boolean serviceRoleExists) {
             this.serviceRoleExists = serviceRoleExists;
@@ -75,7 +78,10 @@ public class GetRegionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
          */
         public Builder status(String status) {
             this.status = status;

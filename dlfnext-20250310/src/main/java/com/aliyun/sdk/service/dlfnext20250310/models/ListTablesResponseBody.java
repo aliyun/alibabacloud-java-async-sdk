@@ -67,7 +67,10 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * nextPageToken.
+         * <p>The token to retrieve the next page of results. If this parameter is null, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8ABEB1C3DB893D16576269017992F57</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -75,7 +78,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * tables.
+         * <p>A list of tables.</p>
          */
         public Builder tables(java.util.List<String> tables) {
             this.tables = tables;

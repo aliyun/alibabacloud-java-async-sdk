@@ -117,6 +117,7 @@ public class ListFunctionsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * functionNamePattern.
+         * <p>A pattern to filter function names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function%</p>
          */
         public Builder functionNamePattern(String functionNamePattern) {
             this.putQueryParameter("functionNamePattern", functionNamePattern);
@@ -150,7 +155,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -159,7 +167,10 @@ public class ListFunctionsRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>A pagination token. Use this token to retrieve the next page of results. Pass an empty string (&quot;&quot;) if this parameter is not returned in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);

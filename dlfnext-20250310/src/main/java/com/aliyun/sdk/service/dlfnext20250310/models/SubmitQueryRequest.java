@@ -115,7 +115,10 @@ public class SubmitQueryRequest extends Request {
         } 
 
         /**
-         * defaultCatalog.
+         * <p>The default catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_catalog</p>
          */
         public Builder defaultCatalog(String defaultCatalog) {
             this.putBodyParameter("defaultCatalog", defaultCatalog);
@@ -124,7 +127,10 @@ public class SubmitQueryRequest extends Request {
         }
 
         /**
-         * defaultDatabase.
+         * <p>The default database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder defaultDatabase(String defaultDatabase) {
             this.putBodyParameter("defaultDatabase", defaultDatabase);
@@ -133,7 +139,10 @@ public class SubmitQueryRequest extends Request {
         }
 
         /**
-         * limit.
+         * <p>The limit on the number of returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -142,7 +151,10 @@ public class SubmitQueryRequest extends Request {
         }
 
         /**
-         * sql.
+         * <p>The SQL text. Multiple statements separated by semicolons are supported and executed sequentially within the same session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from table_name;</p>
          */
         public Builder sql(String sql) {
             this.putBodyParameter("sql", sql);
@@ -151,7 +163,10 @@ public class SubmitQueryRequest extends Request {
         }
 
         /**
-         * tier.
+         * <p>The execution specifications. Default value: standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         public Builder tier(String tier) {
             this.putBodyParameter("tier", tier);

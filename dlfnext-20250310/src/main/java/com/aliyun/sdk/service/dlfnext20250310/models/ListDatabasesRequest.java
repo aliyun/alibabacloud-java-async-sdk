@@ -102,6 +102,7 @@ public class ListDatabasesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * databaseNamePattern.
+         * <p>The database name pattern for fuzzy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database%</p>
          */
         public Builder databaseNamePattern(String databaseNamePattern) {
             this.putQueryParameter("databaseNamePattern", databaseNamePattern);
@@ -123,7 +127,10 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -132,7 +139,10 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The token for the next page of results. If the response does not provide a token, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);

@@ -132,7 +132,10 @@ public class ShareResource extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -140,7 +143,10 @@ public class ShareResource extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The user who created the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -148,7 +154,10 @@ public class ShareResource extends TeaModel {
         }
 
         /**
-         * databaseName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -156,7 +165,10 @@ public class ShareResource extends TeaModel {
         }
 
         /**
-         * shareType.
+         * <p>The shared resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         public Builder shareType(String shareType) {
             this.shareType = shareType;
@@ -164,7 +176,10 @@ public class ShareResource extends TeaModel {
         }
 
         /**
-         * tableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -172,7 +187,10 @@ public class ShareResource extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the resource was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -180,7 +198,10 @@ public class ShareResource extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The user who last updated the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

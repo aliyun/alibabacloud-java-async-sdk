@@ -54,7 +54,10 @@ public class SubmitQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * queryId.
+         * <p>The query ID, which is used for subsequent polling of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d7b21d1ec4f441e79d5ba917c3283200</p>
          */
         public Builder queryId(String queryId) {
             this.queryId = queryId;

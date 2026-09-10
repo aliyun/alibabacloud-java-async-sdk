@@ -93,7 +93,10 @@ public class DataField extends TeaModel {
         } 
 
         /**
-         * description.
+         * <p>The column description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -101,7 +104,10 @@ public class DataField extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The column ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder id(Integer id) {
             this.id = id;
@@ -109,7 +115,10 @@ public class DataField extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The column name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order_id</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -117,7 +126,7 @@ public class DataField extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The column type.</p>
          */
         public Builder type(FullDataType type) {
             this.type = type;

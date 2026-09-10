@@ -101,7 +101,10 @@ public class AlterShareRequest extends Request {
         } 
 
         /**
-         * share.
+         * <p>The name of the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share_name</p>
          */
         public Builder share(String share) {
             this.putPathParameter("share", share);
@@ -110,7 +113,10 @@ public class AlterShareRequest extends Request {
         }
 
         /**
-         * comment.
+         * <p>The comment for the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("comment", comment);
@@ -119,7 +125,10 @@ public class AlterShareRequest extends Request {
         }
 
         /**
-         * enableWrite.
+         * <p>Specifies whether to enable the write permission for the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableWrite(Boolean enableWrite) {
             this.putBodyParameter("enableWrite", enableWrite);
@@ -128,7 +137,10 @@ public class AlterShareRequest extends Request {
         }
 
         /**
-         * shareName.
+         * <p>The name of the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share_name</p>
          */
         public Builder shareName(String shareName) {
             this.putBodyParameter("shareName", shareName);

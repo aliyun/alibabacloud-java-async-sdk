@@ -101,7 +101,10 @@ public class RollbackTableRequest extends Request {
         } 
 
         /**
-         * catalogId.
+         * <p>The catalog ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-xxxx</p>
          */
         public Builder catalogId(String catalogId) {
             this.putPathParameter("catalogId", catalogId);
@@ -110,7 +113,10 @@ public class RollbackTableRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -119,7 +125,10 @@ public class RollbackTableRequest extends Request {
         }
 
         /**
-         * table.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder table(String table) {
             this.putPathParameter("table", table);
@@ -128,7 +137,7 @@ public class RollbackTableRequest extends Request {
         }
 
         /**
-         * instant.
+         * <p>The details of the instance.</p>
          */
         public Builder instant(FullInstant instant) {
             this.putBodyParameter("instant", instant);

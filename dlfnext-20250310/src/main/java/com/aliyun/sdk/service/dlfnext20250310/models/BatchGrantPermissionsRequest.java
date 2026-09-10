@@ -73,7 +73,10 @@ public class BatchGrantPermissionsRequest extends Request {
         } 
 
         /**
-         * catalogId.
+         * <p>The data catalog ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clg-paimon-xxxx</p>
          */
         public Builder catalogId(String catalogId) {
             this.putPathParameter("catalogId", catalogId);
@@ -82,7 +85,7 @@ public class BatchGrantPermissionsRequest extends Request {
         }
 
         /**
-         * permissions.
+         * <p>The list of permissions.</p>
          */
         public Builder permissions(java.util.List<Permission> permissions) {
             this.putBodyParameter("permissions", permissions);

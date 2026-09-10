@@ -171,7 +171,10 @@ public class Share extends TeaModel {
         } 
 
         /**
-         * comment.
+         * <p>The comment for the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -179,7 +182,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The time when the share was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -187,7 +193,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The user who created the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -203,7 +212,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * owner.
+         * <p>The resource descriptor of the share owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -211,7 +223,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * providerTenantId.
+         * <p>The provider\&quot;s account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder providerTenantId(Long providerTenantId) {
             this.providerTenantId = providerTenantId;
@@ -219,7 +234,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * shareId.
+         * <p>The share ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder shareId(String shareId) {
             this.shareId = shareId;
@@ -227,7 +245,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * shareName.
+         * <p>The share name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>share_name</p>
          */
         public Builder shareName(String shareName) {
             this.shareName = shareName;
@@ -235,7 +256,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the share was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -243,7 +267,10 @@ public class Share extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The user who last updated the share.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;

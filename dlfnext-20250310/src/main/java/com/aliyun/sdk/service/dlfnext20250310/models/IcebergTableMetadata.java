@@ -106,7 +106,7 @@ public class IcebergTableMetadata extends TeaModel {
         } 
 
         /**
-         * currentSnapshot.
+         * <p>The latest snapshot of the Iceberg table.</p>
          */
         public Builder currentSnapshot(IcebergSnapshot currentSnapshot) {
             this.currentSnapshot = currentSnapshot;
@@ -114,7 +114,7 @@ public class IcebergTableMetadata extends TeaModel {
         }
 
         /**
-         * fields.
+         * <p>The fields.</p>
          */
         public Builder fields(java.util.List<IcebergNestedField> fields) {
             this.fields = fields;
@@ -130,7 +130,7 @@ public class IcebergTableMetadata extends TeaModel {
         }
 
         /**
-         * partitionFields.
+         * <p>The partition fields.</p>
          */
         public Builder partitionFields(java.util.List<IcebergPartitionField> partitionFields) {
             this.partitionFields = partitionFields;
@@ -138,7 +138,7 @@ public class IcebergTableMetadata extends TeaModel {
         }
 
         /**
-         * properties.
+         * <p>The properties.</p>
          */
         public Builder properties(java.util.Map<String, String> properties) {
             this.properties = properties;

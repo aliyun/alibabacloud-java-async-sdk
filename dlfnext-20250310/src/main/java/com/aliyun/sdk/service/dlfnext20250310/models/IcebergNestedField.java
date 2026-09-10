@@ -106,7 +106,10 @@ public class IcebergNestedField extends TeaModel {
         } 
 
         /**
-         * doc.
+         * <p>The comment for the field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc1</p>
          */
         public Builder doc(String doc) {
             this.doc = doc;
@@ -114,7 +117,10 @@ public class IcebergNestedField extends TeaModel {
         }
 
         /**
-         * id.
+         * <p>The field ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -122,7 +128,10 @@ public class IcebergNestedField extends TeaModel {
         }
 
         /**
-         * name.
+         * <p>The field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -130,7 +139,10 @@ public class IcebergNestedField extends TeaModel {
         }
 
         /**
-         * optional.
+         * <p>Indicates whether the field is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder optional(Boolean optional) {
             this.optional = optional;
@@ -138,7 +150,10 @@ public class IcebergNestedField extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         public Builder type(String type) {
             this.type = type;

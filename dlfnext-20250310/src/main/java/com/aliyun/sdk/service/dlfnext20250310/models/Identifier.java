@@ -67,7 +67,10 @@ public class Identifier extends TeaModel {
         } 
 
         /**
-         * database.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.database = database;
@@ -75,7 +78,10 @@ public class Identifier extends TeaModel {
         }
 
         /**
-         * object.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_name</p>
          */
         public Builder object(String object) {
             this.object = object;

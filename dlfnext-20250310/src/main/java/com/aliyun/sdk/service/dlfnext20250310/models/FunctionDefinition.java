@@ -119,7 +119,7 @@ public class FunctionDefinition extends TeaModel {
         } 
 
         /**
-         * <p>required in FileFunctionDefinition</p>
+         * <p>Required in FileFunctionDefinition.</p>
          */
         public Builder className(String className) {
             this.className = className;
@@ -127,7 +127,7 @@ public class FunctionDefinition extends TeaModel {
         }
 
         /**
-         * <p>required in SQLFunctionDefinition/LambdaFunctionDefinition</p>
+         * <p>Required in SQLFunctionDefinition and LambdaFunctionDefinition.</p>
          */
         public Builder definition(String definition) {
             this.definition = definition;
@@ -135,7 +135,7 @@ public class FunctionDefinition extends TeaModel {
         }
 
         /**
-         * <p>required in FileFunctionDefinition</p>
+         * <p>Required in FileFunctionDefinition.</p>
          */
         public Builder fileResources(java.util.List<FunctionFileResource> fileResources) {
             this.fileResources = fileResources;
@@ -143,7 +143,7 @@ public class FunctionDefinition extends TeaModel {
         }
 
         /**
-         * <p>required in FileFunctionDefinition</p>
+         * <p>Required in FileFunctionDefinition.</p>
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -151,7 +151,7 @@ public class FunctionDefinition extends TeaModel {
         }
 
         /**
-         * <p>required in LambdaFunctionDefinition/FileFunctionDefinition</p>
+         * <p>Required in LambdaFunctionDefinition and FileFunctionDefinition.</p>
          */
         public Builder language(String language) {
             this.language = language;

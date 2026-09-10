@@ -59,7 +59,10 @@ public class GetReceiverRequest extends Request {
         } 
 
         /**
-         * receiver.
+         * <p>The name of the receiver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>receiver_name</p>
          */
         public Builder receiver(String receiver) {
             this.putPathParameter("receiver", receiver);

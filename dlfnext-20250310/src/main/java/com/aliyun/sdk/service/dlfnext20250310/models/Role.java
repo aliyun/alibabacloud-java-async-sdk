@@ -171,7 +171,10 @@ public class Role extends TeaModel {
         } 
 
         /**
-         * createdAt.
+         * <p>The time when the role was created. This is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
@@ -179,7 +182,10 @@ public class Role extends TeaModel {
         }
 
         /**
-         * createdBy.
+         * <p>The name of the user who created the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -187,7 +193,10 @@ public class Role extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The role description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -195,7 +204,10 @@ public class Role extends TeaModel {
         }
 
         /**
-         * displayName.
+         * <p>The display name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_display_name</p>
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -203,7 +215,10 @@ public class Role extends TeaModel {
         }
 
         /**
-         * isPredefined.
+         * <p>Indicates whether the role is a system role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isPredefined(String isPredefined) {
             this.isPredefined = isPredefined;
@@ -211,7 +226,10 @@ public class Role extends TeaModel {
         }
 
         /**
-         * roleName.
+         * <p>The name of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role_name</p>
          */
         public Builder roleName(String roleName) {
             this.roleName = roleName;
@@ -219,7 +237,10 @@ public class Role extends TeaModel {
         }
 
         /**
-         * rolePrincipal.
+         * <p>The resource descriptor of the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:dlf::[accountId]:role/role_name</p>
          */
         public Builder rolePrincipal(String rolePrincipal) {
             this.rolePrincipal = rolePrincipal;
@@ -227,7 +248,10 @@ public class Role extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the role was last updated. This is a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1744970111419</p>
          */
         public Builder updatedAt(Long updatedAt) {
             this.updatedAt = updatedAt;
@@ -235,7 +259,10 @@ public class Role extends TeaModel {
         }
 
         /**
-         * updatedBy.
+         * <p>The name of the user who last updated the role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::[accountId]:root</p>
          */
         public Builder updatedBy(String updatedBy) {
             this.updatedBy = updatedBy;
@@ -243,7 +270,7 @@ public class Role extends TeaModel {
         }
 
         /**
-         * users.
+         * <p>The users for the role.</p>
          */
         public Builder users(java.util.List<User> users) {
             this.users = users;

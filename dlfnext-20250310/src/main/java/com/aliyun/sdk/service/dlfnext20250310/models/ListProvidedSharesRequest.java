@@ -73,7 +73,10 @@ public class ListProvidedSharesRequest extends Request {
         } 
 
         /**
-         * maxResults.
+         * <p>The maximum number of records to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -82,7 +85,10 @@ public class ListProvidedSharesRequest extends Request {
         }
 
         /**
-         * pageToken.
+         * <p>The pagination token. Use this token to retrieve the next page of results. If this parameter is not returned, pass an empty string (&quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder pageToken(String pageToken) {
             this.putQueryParameter("pageToken", pageToken);

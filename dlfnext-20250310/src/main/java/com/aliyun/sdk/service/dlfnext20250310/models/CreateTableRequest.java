@@ -102,6 +102,7 @@ public class CreateTableRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * database.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>database_name</p>
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -123,7 +127,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * identifier.
+         * <p>The table identifier.</p>
          */
         public Builder identifier(Identifier identifier) {
             this.putBodyParameter("identifier", identifier);
@@ -132,7 +136,7 @@ public class CreateTableRequest extends Request {
         }
 
         /**
-         * schema.
+         * <p>The table schema.</p>
          */
         public Builder schema(Schema schema) {
             this.putBodyParameter("schema", schema);

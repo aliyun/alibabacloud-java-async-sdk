@@ -59,7 +59,10 @@ public class DeleteRoleRequest extends Request {
         } 
 
         /**
-         * rolePrincipal.
+         * <p>The resource descriptor of the role to delete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:dlf::[accountId]:role/role_name</p>
          */
         public Builder rolePrincipal(String rolePrincipal) {
             this.putQueryParameter("rolePrincipal", rolePrincipal);

@@ -60,10 +60,11 @@ public class GetCatalogRequest extends Request {
         } 
 
         /**
+         * <p>The name of the catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>clg-paimon-xxxx</p>
+         * <p>catalog_name</p>
          */
         public Builder catalog(String catalog) {
             this.putPathParameter("catalog", catalog);

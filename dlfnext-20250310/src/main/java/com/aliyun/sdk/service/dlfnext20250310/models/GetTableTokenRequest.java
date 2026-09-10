@@ -104,6 +104,7 @@ public class GetTableTokenRequest extends Request {
         } 
 
         /**
+         * <p>The catalog ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class GetTableTokenRequest extends Request {
         }
 
         /**
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class GetTableTokenRequest extends Request {
         }
 
         /**
+         * <p>The table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class GetTableTokenRequest extends Request {
         }
 
         /**
-         * isInternal.
+         * <p>Specifies whether the access is from a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isInternal(Boolean isInternal) {
             this.putQueryParameter("isInternal", isInternal);

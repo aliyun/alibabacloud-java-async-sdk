@@ -67,7 +67,7 @@ public class ListDatabaseDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * databaseDetails.
+         * <p>The list of databases.</p>
          */
         public Builder databaseDetails(java.util.List<Database> databaseDetails) {
             this.databaseDetails = databaseDetails;
@@ -75,7 +75,10 @@ public class ListDatabaseDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * nextPageToken.
+         * <p>The pagination token used to retrieve the next page of results. A value of null indicates that the current page is the last page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E8ABEB1C3DB893D16576269017992F57</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;

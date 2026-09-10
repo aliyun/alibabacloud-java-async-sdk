@@ -89,6 +89,7 @@ public class GetDatabaseSummaryRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data catalog.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class GetDatabaseSummaryRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class GetDatabaseSummaryRequest extends Request {
         }
 
         /**
-         * date.
+         * <p>The date of the storage overview.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-26</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("date", date);

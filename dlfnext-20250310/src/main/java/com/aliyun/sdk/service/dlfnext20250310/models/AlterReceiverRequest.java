@@ -87,7 +87,10 @@ public class AlterReceiverRequest extends Request {
         } 
 
         /**
-         * receiver.
+         * <p>The name of the sink.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111</p>
          */
         public Builder receiver(String receiver) {
             this.putPathParameter("receiver", receiver);
@@ -96,7 +99,10 @@ public class AlterReceiverRequest extends Request {
         }
 
         /**
-         * comment.
+         * <p>The comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Customer A</p>
          */
         public Builder comment(String comment) {
             this.putBodyParameter("comment", comment);
@@ -105,7 +111,10 @@ public class AlterReceiverRequest extends Request {
         }
 
         /**
-         * receiverName.
+         * <p>The name of the sink.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>receiver_name</p>
          */
         public Builder receiverName(String receiverName) {
             this.putBodyParameter("receiverName", receiverName);
