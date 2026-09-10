@@ -346,6 +346,9 @@ public class GetPriceResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据盘享8.5折</p>
              */
             public Builder promotionId(Long promotionId) {
                 this.promotionId = promotionId;
@@ -354,6 +357,9 @@ public class GetPriceResponseBody extends TeaModel {
 
             /**
              * <p>The name of the promotion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据盘享8.5折</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;

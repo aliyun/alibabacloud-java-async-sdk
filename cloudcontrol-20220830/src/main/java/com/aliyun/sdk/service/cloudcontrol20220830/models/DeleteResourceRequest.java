@@ -101,15 +101,12 @@ public class DeleteResourceRequest extends Request {
         } 
 
         /**
-         * <p>The request path. Specify this parameter in the following format: /api/v1/providers/{provider}/products/{product}/resources/{resourceType}/{resourceId}</p>
-         * <p>Variables in the request path:</p>
-         * <p>provider: the Cloud service provider. Only Aliyun is supported.</p>
-         * <p>product: the code of the service.</p>
-         * <p>ResourceType: the type of resources. If parent resource is specified, the format is {parent resource type code}/parent resource ID/{resource type code}.</p>
-         * <p>resourceId: the resource ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/api/v1/providers/Aliyun/products/Redis/resources/Instance/r-8vbf5abe31cxxxxx/Account/cctest</p>
+         * <p>The URI of the request. The format is: /api/v1/providers/{provider}/products/{product}/resources/{resourceType}/{resourceId}</p>
+         * <p>The variables in the request URI are described as follows:</p>
+         * <p>provider: The cloud provider. Currently, only Aliyun is supported.</p>
+         * <p>product: The product code.</p>
+         * <p>resourceType: The resource type. If a parent resource exists, the format is <code>{parent resource type code}/{parent resource ID}/{resource type code}</code>.</p>
+         * <p>resourceId: The resource ID.</p>
          */
         public Builder requestPath(String requestPath) {
             this.putPathParameter("requestPath", requestPath);
@@ -118,7 +115,7 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. If a cloud service supports idempotence, the parameter takes effect.</p>
+         * <p>A client token to ensure idempotence. This parameter works only if the cloud product supports idempotence.</p>
          * 
          * <strong>example:</strong>
          * <p>1e810dfe1468721d0664a49b9d9f74f4</p>
@@ -140,7 +137,7 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
-         * <p>The region. This parameter is required if a cloud service is a regionalized.</p>
+         * <p>The region ID. This parameter is required if the cloud product is region-specific.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

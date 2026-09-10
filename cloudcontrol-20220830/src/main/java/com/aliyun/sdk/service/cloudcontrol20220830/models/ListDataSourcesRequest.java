@@ -88,13 +88,13 @@ public class ListDataSourcesRequest extends Request {
         } 
 
         /**
-         * <p>The request path. Specify this parameter in the following format: /api/v1/providers/{provider}/products/{product}/dataSources/{resourceType}</p>
-         * <p>Variables in the request path. Valid values:</p>
-         * <p>provider: the cloud service provider. Currently, only Aliyun is supported.</p>
-         * <p>product: the product code.</p>
-         * <p>resourceType: the type of the resource.</p>
-         * <p>Sample code:</p>
-         * <p>Redis DBInstance: /api/v1/providers/Aliyun/products/Redis/dataSources/DBInstance</p>
+         * <p>The URL of the request. The format is /api/v1/providers/{provider}/products/{product}/dataSources/{resourceType}.</p>
+         * <p>The variables in the URL are described as follows:</p>
+         * <p>provider: The cloud service provider. Only <code>Aliyun</code> is supported.</p>
+         * <p>product: The product code.</p>
+         * <p>resourceType: The resource type.</p>
+         * <p>Example for a Redis DBInstance:</p>
+         * <p><code>/api/v1/providers/Aliyun/products/Redis/dataSources/DBInstance</code></p>
          * 
          * <strong>example:</strong>
          * <p>/api/v1/providers/Aliyun/products/Redis/dataSources/DBInstance</p>
@@ -106,7 +106,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The name of the property. RegionId is supported.</p>
+         * <p>The name of the attribute. Only <code>RegionId</code> is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions. JSON format:{&quot;key1&quot;:&quot;value1&quot;}.</p>
+         * <p>The filter condition. The value must be a JSON string in the {&quot;key1&quot;:&quot;value1&quot;} format.</p>
          */
         public Builder filter(java.util.Map<String, ?> filter) {
             String filterShrink = shrink(filter, "filter", "json");

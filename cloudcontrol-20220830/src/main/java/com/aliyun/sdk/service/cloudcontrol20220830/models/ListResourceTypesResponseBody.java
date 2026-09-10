@@ -650,7 +650,8 @@ public class ListResourceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Billing method<br>paid free</p>
+             * <p>Billing method\
+             * paid free</p>
              * 
              * <strong>example:</strong>
              * <p>paid</p>

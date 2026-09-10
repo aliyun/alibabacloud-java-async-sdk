@@ -106,9 +106,6 @@ public class CreateResourceRequest extends Request {
          * <p>provider: the Cloud service provider. Only Aliyun is supported.</p>
          * <p>product: the code of the service.</p>
          * <p>resourceType: the type of resources. If parent resource is specified, the format is {parent resource type code}/parent resource ID/{resource type code}.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/api/v1/providers/Aliyun/products/Redis/resources/DBInstance/r-8vbf5abe31cxxxxx/Account</p>
          */
         public Builder requestPath(String requestPath) {
             this.putPathParameter("requestPath", requestPath);

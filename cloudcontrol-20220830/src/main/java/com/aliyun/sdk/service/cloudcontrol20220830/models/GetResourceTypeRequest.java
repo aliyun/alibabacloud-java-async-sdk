@@ -73,14 +73,16 @@ public class GetResourceTypeRequest extends Request {
         } 
 
         /**
-         * <p>The request path. Specify this parameter in the following format: /api/v1/providers/{provider}/products/{product}/resourceTypes/{resourceType}</p>
-         * <p>Variables in the request path. Valid values:</p>
-         * <p>provider: the cloud service provider. Currently, only Aliyun is supported.</p>
-         * <p>product: the product code.</p>
-         * <p>resourceType: the type of the resource. If there is a parent resource, the format is {parent resource type code}/{resource type code}</p>
+         * <p>The request path. Format:
+         * /api/v1/providers/{provider}/products/{product}/resourceTypes/{resourceType}</p>
+         * <p>Description of variables in the request path:</p>
+         * <p>provider: The cloud provider. Currently, only Aliyun is supported.</p>
+         * <p>product: The product code.</p>
+         * <p>resourceType: The resource type. If a parent resource exists, the format is {parentResourceTypeCode}/{resourceTypeCode}.</p>
          * 
          * <strong>example:</strong>
-         * <p>/api/v1/providers/Aliyun/products/Redis/resourceTypes/DBInstance</p>
+         * <p>No parent resource: /api/v1/providers/Aliyun/products/Redis/resourceTypes/DBInstance</p>
+         * <p>Has parent resource: /api/v1/providers/Aliyun/products/Redis/resourceTypes/DBInstance/Account</p>
          */
         public Builder requestPath(String requestPath) {
             this.putPathParameter("requestPath", requestPath);
@@ -89,9 +91,9 @@ public class GetResourceTypeRequest extends Request {
         }
 
         /**
-         * <p>The language selected for the returned product.</p>
+         * <p>The language in which the product information is returned. Valid values:</p>
          * <p>zh_CH: Chinese (default)</p>
-         * <p>en_US: English</p>
+         * <p>en_US: English.</p>
          * 
          * <strong>example:</strong>
          * <p>zh_CH</p>

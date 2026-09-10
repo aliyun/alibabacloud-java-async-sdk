@@ -115,17 +115,25 @@ public class GetResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The request path. You can call resources List and Get based on different request paths.</p>
-         * <p>1.List: /api/v1/providers/{provider}/products/{product}/resources/{resourceType}</p>
-         * <p>2.Get: /api/v1/providers/{provider}/products/{product}/resources/{resourceType}/{resourceId}</p>
-         * <p>Variables in the request path. Valid values:</p>
-         * <p>provider: the cloud service provider. Currently, only Aliyun is supported.</p>
-         * <p>product: the product code.</p>
-         * <p>resourceType: the type of the resource. If there is a parent resource, the format is {parent resource type code}/parent resource ID/{resource type code}.</p>
-         * <p>resourceId: the ID of the resource.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>/api/v1/providers/Aliyun/products/Redis/resources/DBInstance/r-8vbf5abe31c9****</p>
+         * <p>The URL of the request.</p>
+         * <p>The request URL determines whether the List or Get operation is called.</p>
+         * <ul>
+         * <li><p>List: <code>/api/v1/providers/{provider}/products/{product}/resources/{resourceType}</code></p>
+         * </li>
+         * <li><p>Get: <code>/api/v1/providers/{provider}/products/{product}/resources/{resourceType}/{resourceId}</code></p>
+         * </li>
+         * </ul>
+         * <p>The request URL contains the following variables:</p>
+         * <ul>
+         * <li><p>provider: The cloud service provider. Currently, only <code>Aliyun</code> is supported.</p>
+         * </li>
+         * <li><p>product: The product code.</p>
+         * </li>
+         * <li><p>resourceType: The <a href="https://help.aliyun.com/document_detail/2246871.html">resource type</a>. If a parent resource exists, the format is <code>{parent resource type code}/{parent resource ID}/{resource type code}</code>.</p>
+         * </li>
+         * <li><p>resourceId: The resource ID.</p>
+         * </li>
+         * </ul>
          */
         public Builder requestPath(String requestPath) {
             this.putPathParameter("requestPath", requestPath);
@@ -134,7 +142,18 @@ public class GetResourcesRequest extends Request {
         }
 
         /**
-         * <p>The filter condition. The JSON format. You can use some resource properties as filter conditions.</p>
+         * <p>The filter conditions for resources.</p>
+         * <p>Specify multiple key-value pairs in JSON format to filter resources. If a List or Get operation for a cloud product supports filtering by specific properties, you can use those properties as filter conditions for this parameter.</p>
+         * <blockquote>
+         * <p>The supported filter fields may vary for different resource types. For more information about the supported fields, see the OpenAPI documentation for the specific resource.</p>
+         * </blockquote>
+         * <p>For example, DBInstance resources support filtering by the <code>EditionType</code> and <code>PaymentType</code> fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;EditionType&quot;: &quot;Community&quot;,
+         *   &quot;PaymentType&quot;: &quot;PostPaid&quot;
+         * }</p>
          */
         public Builder filter(java.util.Map<String, ?> filter) {
             String filterShrink = shrink(filter, "filter", "json");
@@ -144,7 +163,7 @@ public class GetResourcesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>The maximum number of records to return on each page for a paged query. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -156,7 +175,16 @@ public class GetResourcesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
+         * <p>The pagination token.</p>
+         * <ul>
+         * <li><p>You do not need to specify this parameter for the first query. The system returns data from the first page.</p>
+         * </li>
+         * <li><p>For subsequent queries, set this parameter to the nextToken value returned from the previous call.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If this parameter contains only digits, Cloud Control API treats it as the <code>PageNumber</code> for paging.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -168,7 +196,7 @@ public class GetResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. This parameter is required if the cloud product is deployed in a region.</p>
+         * <p>The region ID. This parameter is required if the cloud product is region-specific.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

@@ -109,7 +109,7 @@ public class ListSupportedPricingApisResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>Id of the request</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListSupportedPricingApisResponseBody extends TeaModel {
         }
 
         /**
-         * supportedApis.
+         * <p>The array of OpenAPI triplets that support price inquiry. The triplets are sorted in alphabetical order by popCode, popVersion, and apiName.</p>
          */
         public Builder supportedApis(java.util.List<SupportedApis> supportedApis) {
             this.supportedApis = supportedApis;
@@ -196,7 +196,7 @@ public class ListSupportedPricingApisResponseBody extends TeaModel {
             } 
 
             /**
-             * apiName.
+             * <p>The OpenAPI name in PascalCase, such as RunInstances.</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -204,7 +204,7 @@ public class ListSupportedPricingApisResponseBody extends TeaModel {
             }
 
             /**
-             * popCode.
+             * <p>The POP product code, such as Ecs, Rds, or Alb. This value corresponds to the popCode field used in price inquiry requests.</p>
              */
             public Builder popCode(String popCode) {
                 this.popCode = popCode;
@@ -212,7 +212,7 @@ public class ListSupportedPricingApisResponseBody extends TeaModel {
             }
 
             /**
-             * popVersion.
+             * <p>The OpenAPI version number, such as 2014-05-26.</p>
              */
             public Builder popVersion(String popVersion) {
                 this.popVersion = popVersion;

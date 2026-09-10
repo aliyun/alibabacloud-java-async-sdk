@@ -31,35 +31,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.version = "2022-08-30";
         this.endpointRule = "regional";
         this.endpointMap = CommonUtil.buildMap(
+            new TeaPair("ap-northeast-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-beijing", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "cloudcontrol.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "cloudcontrol.aliyuncs.com"),
             new TeaPair("us-west-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
             new TeaPair("us-east-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("me-central-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
             new TeaPair("eu-west-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
             new TeaPair("eu-central-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-nanjing", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-fuzhou", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("cn-beijing", "cloudcontrol.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "cloudcontrol.ap-southeast-1.aliyuncs.com")
+            new TeaPair("me-east-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "cloudcontrol.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "cloudcontrol.ap-southeast-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -114,7 +113,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</p>
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view resource documentation and try Cloud Control API.</p>
      * 
      * @param request the request parameters of DeleteResource  DeleteResourceRequest
      * @return DeleteResourceResponse
@@ -189,8 +188,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
-     * You can call this operation to query resources List and Get based on different request paths.</p>
+     * <p>You can go to the <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the resource documentation and test the Cloud Control API.
+     * This API provides Get and List operations for resources that you can invoke using different request URIs.</p>
      * 
      * @param request the request parameters of GetResources  GetResourcesRequest
      * @return GetResourcesResponse
@@ -225,6 +224,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the mappings between schema properties in the Terraform alicloud provider and OpenAPI parameters.</p>
+     * 
+     * @param request the request parameters of GetTerraformPricingMappings  GetTerraformPricingMappingsRequest
+     * @return GetTerraformPricingMappingsResponse
+     */
+    @Override
+    public CompletableFuture<GetTerraformPricingMappingsResponse> getTerraformPricingMappings(GetTerraformPricingMappingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTerraformPricingMappings").setMethod(HttpMethod.POST).setPathRegex("/api/v1/price/terraform-mappings").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTerraformPricingMappingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTerraformPricingMappingsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

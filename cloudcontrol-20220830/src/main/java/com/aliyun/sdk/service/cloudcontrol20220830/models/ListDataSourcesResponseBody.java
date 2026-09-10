@@ -67,7 +67,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried data.</p>
+         * <p>The list of data.</p>
          */
         public Builder dataSources(java.util.List<DataSources> dataSources) {
             this.dataSources = dataSources;
@@ -75,7 +75,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -131,7 +131,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the data.</p>
+             * <p>The data ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>

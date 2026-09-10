@@ -67,7 +67,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
@@ -78,7 +78,13 @@ public class GetResourceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource type. Valid values:</p>
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No parent resource:
+         * Instance
+         * Has parent resource:
+         * DBInstance/Account</p>
          */
         public Builder resourceType(ResourceType resourceType) {
             this.resourceType = resourceType;
@@ -131,7 +137,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the required RAM permissions.</p>
+             * <p>The required RAM permissions.</p>
              */
             public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
@@ -185,7 +191,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the required RAM permissions.</p>
+             * <p>The required RAM permissions.</p>
              */
             public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
@@ -239,7 +245,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the required RAM permissions.</p>
+             * <p>The required RAM permissions.</p>
              */
             public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
@@ -293,7 +299,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the required RAM permissions.</p>
+             * <p>The required RAM permissions.</p>
              */
             public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
@@ -347,7 +353,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the required RAM permissions.</p>
+             * <p>The required RAM permissions.</p>
              */
             public Builder permissions(java.util.List<String> permissions) {
                 this.permissions = permissions;
@@ -453,7 +459,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the create operation.</p>
+             * <p>The information associated with the create operation.</p>
              */
             public Builder create(Create create) {
                 this.create = create;
@@ -461,7 +467,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the delete operation.</p>
+             * <p>The information associated with the delete operation.</p>
              */
             public Builder delete(Delete delete) {
                 this.delete = delete;
@@ -469,7 +475,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the query operation.</p>
+             * <p>The information associated with the get operation.</p>
              */
             public Builder get(Get get) {
                 this.get = get;
@@ -477,7 +483,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the list operation.</p>
+             * <p>The information associated with the list operation.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -485,7 +491,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the update operation.</p>
+             * <p>The information associated with the update operation.</p>
              */
             public Builder update(Update update) {
                 this.update = update;
@@ -578,8 +584,9 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The payment form. Valid values:</p>
-             * <p>paid free</p>
+             * <p>The billing method. Valid values:</p>
+             * <p>paid: paid.</p>
+             * <p>free: free.</p>
              * 
              * <strong>example:</strong>
              * <p>paid</p>
@@ -590,10 +597,10 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery level. Valid values:</p>
-             * <p>center</p>
-             * <p>region</p>
-             * <p>zone</p>
+             * <p>The delivery scope. Valid values: </p>
+             * <p>center: centralized deployment.</p>
+             * <p>region: region-level deployment.</p>
+             * <p>zone: zone-level deployment.</p>
              * 
              * <strong>example:</strong>
              * <p>region</p>
@@ -906,7 +913,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The properties that are specific to the create operation. You need to specify these properties when you create the resource. These properties are not returned when you query the resource.</p>
+             * <p>The properties exclusive to the create operation. These properties are not returned in resource query operations but are required as input parameters for the create operation.</p>
              */
             public Builder createOnlyProperties(java.util.List<String> createOnlyProperties) {
                 this.createOnlyProperties = createOnlyProperties;
@@ -914,7 +921,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties that are specific to the delete operation. You need to specify these properties when you delete the resource. These properties are not returned when you query the resource.</p>
+             * <p>The properties exclusive to the delete operation. These properties are not returned in resource query operations but are required as input parameters for the delete operation.</p>
              */
             public Builder deleteOnlyProperties(java.util.List<String> deleteOnlyProperties) {
                 this.deleteOnlyProperties = deleteOnlyProperties;
@@ -922,7 +929,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties that can be used to filter the resource when you list the resource.</p>
+             * <p>The properties that can be used as filter parameters in the list operation.</p>
              */
             public Builder filterProperties(java.util.List<String> filterProperties) {
                 this.filterProperties = filterProperties;
@@ -930,7 +937,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties that are specific to the query operation. You need to specify these properties when you query the resource. These properties are not returned in the query result.</p>
+             * <p>The properties exclusive to the get operation. These properties are not returned in resource query operations but are required as input parameters for the get operation.</p>
              */
             public Builder getOnlyProperties(java.util.List<String> getOnlyProperties) {
                 this.getOnlyProperties = getOnlyProperties;
@@ -938,7 +945,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties that are returned when you query the resource.</p>
+             * <p>The properties returned by the get operation.</p>
              */
             public Builder getResponseProperties(java.util.List<String> getResponseProperties) {
                 this.getResponseProperties = getResponseProperties;
@@ -946,7 +953,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the operation, including the required Resource Access Management (RAM) permissions.</p>
+             * <p>The supported resource operations, including RAM permissions.</p>
              */
             public Builder handlers(Handlers handlers) {
                 this.handlers = handlers;
@@ -962,7 +969,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties that are specific to the list operation. You need to specify these properties when you list the resource. These properties are not returned when you query the resource.</p>
+             * <p>The properties exclusive to the list operation. These properties are not returned in resource query operations but are required as input parameters for the list operation.</p>
              */
             public Builder listOnlyProperties(java.util.List<String> listOnlyProperties) {
                 this.listOnlyProperties = listOnlyProperties;
@@ -970,7 +977,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties that are returned when you list the resource.</p>
+             * <p>The properties returned by the list operation.</p>
              */
             public Builder listResponseProperties(java.util.List<String> listResponseProperties) {
                 this.listResponseProperties = listResponseProperties;
@@ -978,7 +985,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>/properties/InstanceId</p>
@@ -989,7 +996,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the service.</p>
+             * <p>The product code.</p>
              * 
              * <strong>example:</strong>
              * <p>ECS</p>
@@ -1000,7 +1007,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource properties. The key specifies the property name and the value specifies the details of the property.</p>
+             * <p>The resource property definitions. The key is the property name, and the value is the detailed property information.</p>
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
@@ -1008,7 +1015,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The common properties of the resource. The common properties are not operation-specific.</p>
+             * <p>The common properties that represent basic resource attributes. These are not operation-specific properties.</p>
              */
             public Builder publicProperties(java.util.List<String> publicProperties) {
                 this.publicProperties = publicProperties;
@@ -1016,7 +1023,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read-only properties. These properties are returned only when you perform the List or Get operation. You do not need to specify these properties when you create or update the resource.</p>
+             * <p>The read-only properties. These properties are returned only in list or get operations and cannot be used as input parameters for create or update operations.</p>
              */
             public Builder readOnlyProperties(java.util.List<String> readOnlyProperties) {
                 this.readOnlyProperties = readOnlyProperties;
@@ -1024,7 +1031,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties that must be specified when you create the resource.</p>
+             * <p>The required parameters for resource creation.</p>
              */
             public Builder required(java.util.List<String> required) {
                 this.required = required;
@@ -1032,10 +1039,13 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource. If the resource belongs to a parent resource, the return format is {parent resource type code /resource type code}.</p>
+             * <p>The resource type. If the resource has a parent resource, the format is {parentResourceTypeCode/resourceTypeCode}.</p>
              * 
              * <strong>example:</strong>
-             * <p>Instance</p>
+             * <p>无父资源：
+             * Instance
+             * 有父资源：
+             * DBInstance/Account</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -1043,7 +1053,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive properties, such as the password.</p>
+             * <p>The sensitive properties, such as passwords.</p>
              */
             public Builder sensitiveInfoProperties(java.util.List<String> sensitiveInfoProperties) {
                 this.sensitiveInfoProperties = sensitiveInfoProperties;
@@ -1051,7 +1061,7 @@ public class GetResourceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The properties that are specific to the update operation. You need to specify these properties when you update the resource. These properties are not returned when you query the resource.</p>
+             * <p>The properties exclusive to the update operation. These properties are not returned in resource query operations but are required as input parameters for the update operation.</p>
              */
             public Builder updateOnlyProperties(java.util.List<String> updateOnlyProperties) {
                 this.updateOnlyProperties = updateOnlyProperties;

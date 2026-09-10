@@ -119,7 +119,7 @@ public class GetResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The maximum number of entries returned. Return result of the List operation.</p>
+         * <p>The maximum number of records returned for the current request. This parameter is returned by the List operation.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -130,7 +130,7 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. Return result of the List operation.</p>
+         * <p>The position where the current call finished reading. An empty value indicates that all data has been read. This parameter is returned by the List operation.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -152,7 +152,7 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The specified resource. Return result of the Get operation.</p>
+         * <p>The specified resource. This parameter is returned by the Get operation.</p>
          */
         public Builder resource(Resource resource) {
             this.resource = resource;
@@ -160,7 +160,7 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The resource list. Return result of the List operation.</p>
+         * <p>A list of resources. This parameter is returned by the List operation.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -168,7 +168,7 @@ public class GetResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned. Return result of the List operation.</p>
+         * <p>The total number of entries that match the query conditions. This parameter is returned by the List operation.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -237,10 +237,10 @@ public class GetResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource properties in the JSON format.</p>
+             * <p>The resource properties in JSON format.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
+             * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-2ze8v41uei31lo****&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
              */
             public Builder resourceAttributes(java.util.Map<String, ?> resourceAttributes) {
                 this.resourceAttributes = resourceAttributes;
@@ -248,7 +248,7 @@ public class GetResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cctest</p>
@@ -318,10 +318,10 @@ public class GetResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource properties in the JSON format.</p>
+             * <p>The resource properties in JSON format.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-8vbf5abe31c9c4d4&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
+             * <p>{&quot;Status&quot;:&quot;Available&quot;,&quot;Description&quot;:&quot;&quot;,&quot;AccountPrivilege&quot;:&quot;RoleReadWrite&quot;,&quot;InstanceId&quot;:&quot;r-2ze8v41uei31lo****&quot;,&quot;RegionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;AccountType&quot;:&quot;Normal&quot;,&quot;TypeInfo&quot;:{},&quot;AccountName&quot;:&quot;cctest&quot;}</p>
              */
             public Builder resourceAttributes(java.util.Map<String, ?> resourceAttributes) {
                 this.resourceAttributes = resourceAttributes;
@@ -329,7 +329,7 @@ public class GetResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cctest</p>

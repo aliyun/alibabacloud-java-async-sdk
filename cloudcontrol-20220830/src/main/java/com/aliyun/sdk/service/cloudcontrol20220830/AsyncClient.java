@@ -40,7 +40,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out Cloud Control API.</p>
+     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view resource documentation and try Cloud Control API.</p>
      * 
      * @param request the request parameters of DeleteResource  DeleteResourceRequest
      * @return DeleteResourceResponse
@@ -67,8 +67,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can go to <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the documentation and try out CloudControl API.
-     * You can call this operation to query resources List and Get based on different request paths.</p>
+     * <p>You can go to the <a href="https://next.api.aliyun.com/cloudcontrol">OpenAPI Explorer</a> to view the resource documentation and test the Cloud Control API.
+     * This API provides Get and List operations for resources that you can invoke using different request URIs.</p>
      * 
      * @param request the request parameters of GetResources  GetResourcesRequest
      * @return GetResourcesResponse
@@ -83,6 +83,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTaskResponse
      */
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Retrieves the mappings between schema properties in the Terraform alicloud provider and OpenAPI parameters.</p>
+     * 
+     * @param request the request parameters of GetTerraformPricingMappings  GetTerraformPricingMappingsRequest
+     * @return GetTerraformPricingMappingsResponse
+     */
+    CompletableFuture<GetTerraformPricingMappingsResponse> getTerraformPricingMappings(GetTerraformPricingMappingsRequest request);
 
     /**
      * @param request the request parameters of ListDataSources  ListDataSourcesRequest
