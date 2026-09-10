@@ -80,7 +80,10 @@ public class CreateAIDBClusterTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The instance ID of the generated model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-2zo88***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -88,7 +91,10 @@ public class CreateAIDBClusterTaskResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2035638*******</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

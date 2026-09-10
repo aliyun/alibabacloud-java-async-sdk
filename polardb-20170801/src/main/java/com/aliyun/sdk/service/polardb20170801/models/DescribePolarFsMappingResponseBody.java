@@ -132,7 +132,10 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         } 
 
         /**
-         * DefaultAccessKeyId.
+         * <p>The default AccessKey ID at the instance level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder defaultAccessKeyId(String defaultAccessKeyId) {
             this.defaultAccessKeyId = defaultAccessKeyId;
@@ -140,7 +143,10 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -148,7 +154,10 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -156,7 +165,18 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +184,7 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         }
 
         /**
-         * PathMappingItems.
+         * <p>The list of path mappings.</p>
          */
         public Builder pathMappingItems(java.util.List<PathMappingItems> pathMappingItems) {
             this.pathMappingItems = pathMappingItems;
@@ -172,7 +192,10 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>925B84D9-CA72-432C-95CF-738C22******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +203,10 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -259,7 +285,10 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
             } 
 
             /**
-             * Bucket.
+             * <p>The storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pfs-xxx.oss-[regionId]-internal.aliyuncs.com</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -267,7 +296,10 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
             }
 
             /**
-             * BucketAccessKeyId.
+             * <p>The AccessKey ID of the storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder bucketAccessKeyId(String bucketAccessKeyId) {
                 this.bucketAccessKeyId = bucketAccessKeyId;
@@ -275,7 +307,10 @@ public class DescribePolarFsMappingResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The mapping path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;

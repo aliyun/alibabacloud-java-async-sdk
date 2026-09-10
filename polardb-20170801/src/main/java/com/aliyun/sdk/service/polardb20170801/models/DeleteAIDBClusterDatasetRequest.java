@@ -144,7 +144,10 @@ public class DeleteAIDBClusterDatasetRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -153,6 +156,7 @@ public class DeleteAIDBClusterDatasetRequest extends Request {
         }
 
         /**
+         * <p>The dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +187,10 @@ public class DeleteAIDBClusterDatasetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

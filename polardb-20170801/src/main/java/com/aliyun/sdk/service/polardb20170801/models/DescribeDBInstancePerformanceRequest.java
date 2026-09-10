@@ -160,6 +160,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         } 
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +173,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The time is in the yyyy-MM-ddTHH:mmZ format in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +186,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * <p>The performance metrics. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/141787.html">Performance parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PolarDBCPUForPCU,PolarDBPCU,PolarDBMemoryForPCU,PolarDBQPSTPS,PolarDBConnections</p>
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -229,6 +234,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The time is in the yyyy-MM-ddTHH:mmZ format in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -102,6 +102,7 @@ public class ModifyApplicationParameterRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ModifyApplicationParameterRequest extends Request {
         }
 
         /**
-         * ParameterName.
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder parameterName(String parameterName) {
             this.putQueryParameter("ParameterName", parameterName);
@@ -123,7 +127,10 @@ public class ModifyApplicationParameterRequest extends Request {
         }
 
         /**
-         * ParameterValue.
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         public Builder parameterValue(String parameterValue) {
             this.putQueryParameter("ParameterValue", parameterValue);
@@ -132,7 +139,7 @@ public class ModifyApplicationParameterRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The list of parameter names and values for modifying multiple parameters.</p>
          */
         public Builder parameters(java.util.List<Parameters> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -201,7 +208,10 @@ public class ModifyApplicationParameterRequest extends Request {
             } 
 
             /**
-             * ParameterName.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -209,7 +219,10 @@ public class ModifyApplicationParameterRequest extends Request {
             }
 
             /**
-             * ParameterValue.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

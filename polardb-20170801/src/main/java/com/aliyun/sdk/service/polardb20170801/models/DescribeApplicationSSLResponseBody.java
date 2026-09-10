@@ -145,7 +145,10 @@ public class DescribeApplicationSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * CertCommonName.
+         * <p>The Common Name of the certificate. This field is empty when SSL is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.polarclaw.rds.aliyuncs.com</p>
          */
         public Builder certCommonName(String certCommonName) {
             this.certCommonName = certCommonName;
@@ -153,7 +156,10 @@ public class DescribeApplicationSSLResponseBody extends TeaModel {
         }
 
         /**
-         * CertExpiredTime.
+         * <p>The certificate expiration time in UTC. This field is empty when SSL is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-08-09T10:23:26Z</p>
          */
         public Builder certExpiredTime(String certExpiredTime) {
             this.certExpiredTime = certExpiredTime;
@@ -161,7 +167,10 @@ public class DescribeApplicationSSLResponseBody extends TeaModel {
         }
 
         /**
-         * CertFingerprintSha256Der.
+         * <p>The SHA-256 (DER) fingerprint of the server certificate in lowercase hex. Use this value for client pinning. This is consistent with openssl -fingerprint -sha256. This field is empty when SSL is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20769803152bf6a3abed626f6b8cae3a1f0d0f2c3b4a59687776655443322110</p>
          */
         public Builder certFingerprintSha256Der(String certFingerprintSha256Der) {
             this.certFingerprintSha256Der = certFingerprintSha256Der;
@@ -169,7 +178,10 @@ public class DescribeApplicationSSLResponseBody extends TeaModel {
         }
 
         /**
-         * CertModifiedTime.
+         * <p>The most recent certificate installation time in UTC. This field is empty when SSL is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-09T10:23:49Z</p>
          */
         public Builder certModifiedTime(String certModifiedTime) {
             this.certModifiedTime = certModifiedTime;
@@ -177,7 +189,15 @@ public class DescribeApplicationSSLResponseBody extends TeaModel {
         }
 
         /**
-         * CertSource.
+         * <p>The certificate source. Valid values:</p>
+         * <ul>
+         * <li>ca: issued by the platform.</li>
+         * <li>customer: provided by the user.</li>
+         * </ul>
+         * <p>This field is empty when SSL is not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca</p>
          */
         public Builder certSource(String certSource) {
             this.certSource = certSource;
@@ -196,7 +216,10 @@ public class DescribeApplicationSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLAutoRotate.
+         * <p>Indicates whether automatic rotation of platform-issued certificates is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder SSLAutoRotate(Boolean SSLAutoRotate) {
             this.SSLAutoRotate = SSLAutoRotate;
@@ -204,7 +227,10 @@ public class DescribeApplicationSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLEnabled.
+         * <p>Indicates whether SSL is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder SSLEnabled(Boolean SSLEnabled) {
             this.SSLEnabled = SSLEnabled;

@@ -89,7 +89,7 @@ public class DeletePolarFsPathMappingRequest extends Request {
         } 
 
         /**
-         * CustomBucketPathList.
+         * <p>The bucket and corresponding path information.</p>
          */
         public Builder customBucketPathList(java.util.List<CustomBucketPathList> customBucketPathList) {
             this.putQueryParameter("CustomBucketPathList", customBucketPathList);
@@ -98,6 +98,7 @@ public class DeletePolarFsPathMappingRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeletePolarFsPathMappingRequest extends Request {
         }
 
         /**
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +183,10 @@ public class DeletePolarFsPathMappingRequest extends Request {
             } 
 
             /**
-             * Bucket.
+             * <p>The custom storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bucket</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -189,7 +194,10 @@ public class DeletePolarFsPathMappingRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>The custom storage path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data</p>
              */
             public Builder path(String path) {
                 this.path = path;

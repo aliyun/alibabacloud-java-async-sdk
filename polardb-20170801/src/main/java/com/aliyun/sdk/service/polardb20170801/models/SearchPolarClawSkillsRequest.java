@@ -88,6 +88,7 @@ public class SearchPolarClawSkillsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class SearchPolarClawSkillsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * <p>The maximum number of results to return. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -109,7 +113,10 @@ public class SearchPolarClawSkillsRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The search keyword. If this parameter is not specified, popular or recommended results are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);

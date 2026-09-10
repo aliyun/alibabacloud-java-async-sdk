@@ -272,7 +272,14 @@ public class ModifyDBNodeClassRequest extends Request {
         } 
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to automatically use coupons. Valid values:</p>
+         * <ul>
+         * <li>true (default): Uses coupons.</li>
+         * <li>false: Does not use coupons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -281,7 +288,7 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and can contain a maximum of 64 ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -293,7 +300,10 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * CloudProvider.
+         * <p>The cloud service provider of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENS</p>
          */
         public Builder cloudProvider(String cloudProvider) {
             this.putQueryParameter("CloudProvider", cloudProvider);
@@ -302,7 +312,7 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +325,7 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * <p>The specifications of all nodes. For more information, see <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of computing nodes</a>.</p>
+         * <p>The target specifications for all nodes. For more information, see <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,12 +338,7 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * <p>The type of the node. Valid values:</p>
-         * <ul>
-         * <li>RO</li>
-         * <li>STANDBY</li>
-         * <li>DLNode</li>
-         * </ul>
+         * <p>The node type. Set this parameter to DLNode only when you change the node specifications of an AI node.</p>
          * 
          * <strong>example:</strong>
          * <p>DLNode</p>
@@ -345,10 +350,10 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * <p>The type of the configuration change. Valid values:</p>
+         * <p>The type of the specification change. Valid values: </p>
          * <ul>
-         * <li><strong>Upgrade</strong></li>
-         * <li><strong>Downgrade</strong></li>
+         * <li><strong>Upgrade</strong>: upgrades the specifications.</li>
+         * <li><strong>Downgrade</strong>: downgrades the specifications.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -380,11 +385,11 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * <p>The latest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The latest start time of the scheduled specification change task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
          * <blockquote>
          * <ul>
-         * <li>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</li>
-         * <li>By default, if you specify <code>PlannedStartTime</code> but do not specify PlannedEndTime, the latest start time of the task is set to <code>Value of PlannedEndTime + 30 minutes</code>. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and you do not specify PlannedEndTime, the latest start time of the task is <code>2021-01-14T09:30:00Z</code>.</li>
+         * <li>The latest time must be at least 30 minutes later than the start time.</li>
+         * <li>If <code>PlannedStartTime</code> is set but this parameter is not specified, the latest time defaults to <code>start time + 30 minutes</code>. For example, if <code>PlannedStartTime</code> is set to <code>2021-01-14T09:00:00Z</code> and this parameter is left empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -398,7 +403,10 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * PlannedFlashingOffTime.
+         * <p>The planned transient disconnection time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-14T09:30:00Z</p>
          */
         public Builder plannedFlashingOffTime(String plannedFlashingOffTime) {
             this.putQueryParameter("PlannedFlashingOffTime", plannedFlashingOffTime);
@@ -407,12 +415,12 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * <p>The earliest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The earliest start time of the scheduled specification change task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter takes effect only when <code>ModifyType</code> is set to <code>Upgrade</code>.</li>
-         * <li>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in the time that ranges from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
-         * <li>If this parameter is left empty, the upgrade task is immediately performed.</li>
+         * <li>This parameter takes effect when <code>ModifyType</code> is set to <code>Upgrade</code> or <code>Downgrade</code>.</li>
+         * <li>The start time must be within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the valid range for the start time is from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+         * <li>If this parameter is left empty, the specification change task is immediately executed.</li>
          * </ul>
          * </blockquote>
          * 
@@ -426,7 +434,10 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727xxxxxx934</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -453,11 +464,14 @@ public class ModifyDBNodeClassRequest extends Request {
         }
 
         /**
-         * <p>The category of the cluster. Valid values:</p>
+         * <p>The cluster sub-series. Valid values:</p>
          * <ul>
-         * <li><strong>normal_exclusive</strong>: dedicated.</li>
-         * <li><strong>normal_general</strong>: genera-purpose.</li>
+         * <li><p><strong>normal_exclusive</strong>: Dedicated</p>
+         * </li>
+         * <li><p><strong>normal_general</strong>: General-purpose</p>
+         * </li>
          * </ul>
+         * <p>This parameter is required when you change specifications between Dedicated and General-purpose.</p>
          * 
          * <strong>example:</strong>
          * <p>normal_general</p>

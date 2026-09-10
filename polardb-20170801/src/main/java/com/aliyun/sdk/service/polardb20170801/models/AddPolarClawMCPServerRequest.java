@@ -89,6 +89,7 @@ public class AddPolarClawMCPServerRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,16 @@ public class AddPolarClawMCPServerRequest extends Request {
         }
 
         /**
-         * ServerConfig.
+         * <p>The configuration object for the MCP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;command&quot;: &quot;node&quot;,
+         *     &quot;args&quot;: [
+         *         &quot;-y&quot;,
+         *         &quot;@polarclaw/mcp-dev&quot;
+         *     ]
+         * }</p>
          */
         public Builder serverConfig(java.util.Map<String, ?> serverConfig) {
             String serverConfigShrink = shrink(serverConfig, "ServerConfig", "json");
@@ -111,6 +121,7 @@ public class AddPolarClawMCPServerRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier for the MCP server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

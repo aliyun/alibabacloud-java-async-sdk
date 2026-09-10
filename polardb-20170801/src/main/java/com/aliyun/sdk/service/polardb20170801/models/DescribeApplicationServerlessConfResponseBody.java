@@ -80,7 +80,10 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -88,7 +91,10 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * ServerlessConfItems.
+         * <p>The list of serverless configurations.</p>
          */
         public Builder serverlessConfItems(java.util.List<ServerlessConfItems> serverlessConfItems) {
             this.serverlessConfItems = serverlessConfItems;
@@ -175,7 +181,17 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentType.
+             * <p>The type of the application sub-component.</p>
+             * <p>For Supabase, valid values are:</p>
+             * <ul>
+             * <li><p>gateway</p>
+             * </li>
+             * <li><p>backend</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>gateway</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -183,7 +199,10 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMax.
+             * <p>The maximum scaling capacity for a single node. Valid values: 0 PCU to 16 PCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder scaleMax(String scaleMax) {
                 this.scaleMax = scaleMax;
@@ -191,7 +210,10 @@ public class DescribeApplicationServerlessConfResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMin.
+             * <p>The minimum scaling capacity for a single node, measured in PolarDB Capacity Units (PCU). Valid values: 0 PCU to 16 PCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scaleMin(String scaleMin) {
                 this.scaleMin = scaleMin;

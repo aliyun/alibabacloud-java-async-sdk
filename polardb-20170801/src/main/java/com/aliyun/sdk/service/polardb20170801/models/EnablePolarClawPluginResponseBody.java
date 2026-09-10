@@ -132,7 +132,10 @@ public class EnablePolarClawPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,10 @@ public class EnablePolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -148,7 +154,10 @@ public class EnablePolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class EnablePolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -164,7 +176,10 @@ public class EnablePolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * PluginId.
+         * <p>The ID of the plugin that was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openclaw-lark</p>
          */
         public Builder pluginId(String pluginId) {
             this.pluginId = pluginId;
@@ -172,7 +187,7 @@ public class EnablePolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7F2007D3-7E74-4ECB-89A8-BF130D******</p>
@@ -183,7 +198,10 @@ public class EnablePolarClawPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Restarted.
+         * <p>Indicates whether the gateway was restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restarted(Boolean restarted) {
             this.restarted = restarted;

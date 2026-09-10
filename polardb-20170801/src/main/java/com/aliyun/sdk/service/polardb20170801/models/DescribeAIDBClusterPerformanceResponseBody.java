@@ -158,7 +158,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key for the model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;
@@ -166,7 +169,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The ID of the database cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-a************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -174,7 +180,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * <p>The type of the database engine. Only <strong>polardb_ai</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_ai</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -182,7 +191,11 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * <p>The version number of the database AI engine.</p>
+         * <p>Example: 3.0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.0</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -190,7 +203,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range that was queried. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format and is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-16T16:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -198,7 +214,14 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity of the performance data. Valid values:</p>
+         * <ul>
+         * <li>60</li>
+         * <li>3600</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.interval = interval;
@@ -206,7 +229,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PerformanceKeys.
+         * <p>The details of the instance performance parameters.</p>
          */
         public Builder performanceKeys(java.util.List<PerformanceKeys> performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -214,7 +237,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0CEC6AC-7760-409A-A0D5-E6CD86******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +248,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range that was queried. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-15T16:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -288,7 +317,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Timestamp.
+             * <p>The UNIX timestamp that indicates when the metric was collected. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1724206183</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -296,7 +328,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>42.38</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -389,7 +424,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DBNodeId.
+             * <p>The ID of the cluster node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-*************</p>
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -397,7 +435,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Measurement.
+             * <p>The performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDBAIModelCall</p>
              */
             public Builder measurement(String measurement) {
                 this.measurement = measurement;
@@ -405,7 +446,10 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * <p>The name of the specific performance metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model_input_amount</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -413,7 +457,7 @@ public class DescribeAIDBClusterPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Points.
+             * <p>The array of performance data.</p>
              */
             public Builder points(java.util.List<Points> points) {
                 this.points = points;

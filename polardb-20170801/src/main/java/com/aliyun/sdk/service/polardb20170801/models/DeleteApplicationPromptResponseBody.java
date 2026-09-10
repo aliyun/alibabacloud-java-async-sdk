@@ -67,7 +67,10 @@ public class DeleteApplicationPromptResponseBody extends TeaModel {
         } 
 
         /**
-         * PromptId.
+         * <p>The Prompt ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>papt-f9lajgw765f4fnrzn1</p>
          */
         public Builder promptId(String promptId) {
             this.promptId = promptId;
@@ -75,7 +78,10 @@ public class DeleteApplicationPromptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

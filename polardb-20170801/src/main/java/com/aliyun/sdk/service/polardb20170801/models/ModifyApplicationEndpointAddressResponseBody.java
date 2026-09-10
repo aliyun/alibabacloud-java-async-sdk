@@ -80,7 +80,10 @@ public class ModifyApplicationEndpointAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -88,7 +91,10 @@ public class ModifyApplicationEndpointAddressResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointId.
+         * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -96,7 +102,10 @@ public class ModifyApplicationEndpointAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155462B9-205F-4FFC-BB43-4855FE******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

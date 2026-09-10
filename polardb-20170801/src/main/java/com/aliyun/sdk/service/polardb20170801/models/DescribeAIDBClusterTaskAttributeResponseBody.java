@@ -327,7 +327,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessInfo.
+         * <p>The access information of the model in the test deployment scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;networkInterfaceId\&quot;:\&quot;eni-2zea***\&quot;,\&quot;port\&quot;:\&quot;8000\&quot;,\&quot;host\&quot;:\&quot;192.<strong>.</strong>.**\&quot;}</p>
          */
         public Builder accessInfo(String accessInfo) {
             this.accessInfo = accessInfo;
@@ -335,7 +338,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterNetworkType.
+         * <p>The network type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.clusterNetworkType = clusterNetworkType;
@@ -343,7 +349,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-11-12T03:45:13Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -359,7 +368,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterDescription.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task01</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.DBClusterDescription = DBClusterDescription;
@@ -367,7 +379,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-2ze99***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -375,7 +390,15 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterStatus.
+         * <p>The training status. Valid values:</p>
+         * <ul>
+         * <li><strong>ACTIVATION</strong>: Training in progress.</li>
+         * <li><strong>COMPLETED</strong>: Training succeeded.</li>
+         * <li><strong>FAILED</strong>: Training failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.DBClusterStatus = DBClusterStatus;
@@ -383,7 +406,15 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterStatusDesc.
+         * <p>The training status. Valid values:</p>
+         * <ul>
+         * <li><strong>ACTIVATION</strong>: Training in progress.</li>
+         * <li><strong>COMPLETED</strong>: Training succeeded.</li>
+         * <li><strong>FAILED</strong>: Training failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         public Builder DBClusterStatusDesc(String DBClusterStatusDesc) {
             this.DBClusterStatusDesc = DBClusterStatusDesc;
@@ -391,7 +422,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * <p>The engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_ai</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -399,7 +433,13 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * <p>The version. Valid values:</p>
+         * <ul>
+         * <li><strong>3.1</strong>: model operator tuning.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3.1</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -407,7 +447,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DataSets.
+         * <p>The datasets.</p>
          */
         public Builder dataSets(java.util.List<DataSets> dataSets) {
             this.dataSets = dataSets;
@@ -415,7 +455,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExtraInfo.
+         * <p>The additional information, including runtime parameters.</p>
          */
         public Builder extraInfo(java.util.List<java.util.Map<String, ?>> extraInfo) {
             this.extraInfo = extraInfo;
@@ -423,7 +463,13 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * KindCode.
+         * <p>The type of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>18</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         public Builder kindCode(Long kindCode) {
             this.kindCode = kindCode;
@@ -431,7 +477,14 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LockMode.
+         * <p>The lock mode. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: locked.</li>
+         * <li><strong>1</strong>: unlocked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder lockMode(String lockMode) {
             this.lockMode = lockMode;
@@ -439,7 +492,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>The maintenance end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.maintainEndTime = maintainEndTime;
@@ -447,7 +503,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>The maintenance start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.maintainStartTime = maintainStartTime;
@@ -455,7 +514,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ModelPath.
+         * <p>The list of model paths output in the model fine-tuning scenario.</p>
          */
         public Builder modelPath(String modelPath) {
             this.modelPath = modelPath;
@@ -474,7 +533,7 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TaskInfo.
+         * <p>The task information.</p>
          */
         public Builder taskInfo(java.util.List<TaskInfo> taskInfo) {
             this.taskInfo = taskInfo;
@@ -490,7 +549,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VPCId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-**********</p>
          */
         public Builder VPCId(String VPCId) {
             this.VPCId = VPCId;
@@ -498,7 +560,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-*********************</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -644,7 +709,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * DatasetName.
+             * <p>The dataset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataset02</p>
              */
             public Builder datasetName(String datasetName) {
                 this.datasetName = datasetName;
@@ -652,7 +720,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The dataset path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb_ai/datasets/train/grpo/dataset02/test-**.jsonl#1000</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -660,7 +731,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SplitDatasetRatio.
+             * <p>The ratio split from the training set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder splitDatasetRatio(String splitDatasetRatio) {
                 this.splitDatasetRatio = splitDatasetRatio;
@@ -668,7 +742,14 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type. Valid values:</p>
+             * <ul>
+             * <li><strong>train</strong>: training set.</li>
+             * <li><strong>eval</strong>: validation set.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>train</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -813,7 +894,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * CompletedTime.
+             * <p>The task completion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-10T01:56:00Z</p>
              */
             public Builder completedTime(String completedTime) {
                 this.completedTime = completedTime;
@@ -821,7 +905,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>The foundation model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen-1.7B</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -829,7 +916,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelPath.
+             * <p>The path of the custom model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen-1.7B</p>
              */
             public Builder modelPath(String modelPath) {
                 this.modelPath = modelPath;
@@ -837,7 +927,14 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelSource.
+             * <p>The model source. Valid values:</p>
+             * <ul>
+             * <li><strong>public</strong>: pre-trained model.</li>
+             * <li><strong>custom</strong>: custom model.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder modelSource(String modelSource) {
                 this.modelSource = modelSource;
@@ -845,7 +942,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RunningTimes.
+             * <p>The runtime parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;split_dataset_ratio&quot;: 0.1,&quot;train_mode&quot;: &quot;grpo&quot;,&quot;train_type&quot;: &quot;lora&quot;,&quot;num_epochs&quot;: 1,&quot;batch_size&quot;: 2,&quot;eval_batch_size&quot;: 2, &quot;num_generations&quot;: 2, &quot;learning_rate&quot;: &quot;1e-6&quot;, &quot;data_file_list&quot;: &quot;test-00000-of-00001.jsonl#1000&quot;, &quot;lora_rank&quot;: 8, &quot;lora_alpha&quot;: 32, &quot;external_plugins&quot;: &quot;/plugin/train/plugin.py&quot;, &quot;reward_funcs&quot;: &quot;format,external_countdown&quot;, &quot;gpu_memory_utilization&quot;: 0.4}</p>
              */
             public Builder runningTimes(String runningTimes) {
                 this.runningTimes = runningTimes;
@@ -853,7 +953,10 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The task start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-10T01:56:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -861,7 +964,14 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TrainMode.
+             * <p>The task type. Valid values:</p>
+             * <ul>
+             * <li><strong>sft</strong>: SFT efficient training.</li>
+             * <li><strong>grpo</strong>: GRPO reinforcement learning.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>stf</p>
              */
             public Builder trainMode(String trainMode) {
                 this.trainMode = trainMode;
@@ -869,7 +979,14 @@ public class DescribeAIDBClusterTaskAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TrainType.
+             * <p>The training method. Valid values:</p>
+             * <ul>
+             * <li><strong>lora</strong></li>
+             * <li><strong>full</strong>: full-parameter fine-tuning.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>lora</p>
              */
             public Builder trainType(String trainType) {
                 this.trainType = trainType;

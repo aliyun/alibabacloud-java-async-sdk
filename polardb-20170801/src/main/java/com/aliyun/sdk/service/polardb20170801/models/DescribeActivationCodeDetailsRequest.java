@@ -142,7 +142,7 @@ public class DescribeActivationCodeDetailsRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud order ID (including the virtual order ID).</p>
+         * <p>The Alibaba Cloud order ID, including virtual orders.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

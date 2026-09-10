@@ -67,7 +67,10 @@ public class ModifyConsumerResponseBody extends TeaModel {
         } 
 
         /**
-         * ConsumerId.
+         * <p>The ID of the consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-mqveroemc***</p>
          */
         public Builder consumerId(String consumerId) {
             this.consumerId = consumerId;
@@ -75,7 +78,7 @@ public class ModifyConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

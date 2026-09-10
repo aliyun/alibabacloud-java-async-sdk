@@ -143,7 +143,10 @@ public class UpdatePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-xxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -151,7 +154,10 @@ public class UpdatePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -159,7 +165,10 @@ public class UpdatePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -167,7 +176,10 @@ public class UpdatePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -186,7 +198,7 @@ public class UpdatePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * Tools.
+         * <p>The updated tool configuration.</p>
          */
         public Builder tools(Tools tools) {
             this.tools = tools;
@@ -278,7 +290,7 @@ public class UpdatePolarClawAgentToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * Allow.
+             * <p>The list of explicitly allowed tools.</p>
              */
             public Builder allow(java.util.List<String> allow) {
                 this.allow = allow;
@@ -286,7 +298,7 @@ public class UpdatePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * AlsoAllow.
+             * <p>The list of additionally allowed tools.</p>
              */
             public Builder alsoAllow(java.util.List<String> alsoAllow) {
                 this.alsoAllow = alsoAllow;
@@ -294,7 +306,7 @@ public class UpdatePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Deny.
+             * <p>The list of denied tools.</p>
              */
             public Builder deny(java.util.List<String> deny) {
                 this.deny = deny;
@@ -302,7 +314,10 @@ public class UpdatePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The tool profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coding</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;

@@ -119,7 +119,7 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * Accounts.
+         * <p>The details of the accounts.</p>
          */
         public Builder accounts(java.util.List<Accounts> accounts) {
             this.accounts = accounts;
@@ -127,7 +127,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -135,7 +138,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. If the results are not fully returned, this token is returned. You can use this token in the next request to retrieve the remaining results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -143,7 +149,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -151,7 +160,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -159,7 +171,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>155462B9-205F-4FFC-BB43-4855FE******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +240,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountPrivilege.
+             * <p>The permissions of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -233,7 +251,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DBtest</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -365,7 +386,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountDescription.
+             * <p>The description of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -373,7 +397,16 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * AccountLockState.
+             * <p>The lock state of the account. Valid values:</p>
+             * <ul>
+             * <li><p>UnLock: The account is not locked.</p>
+             * </li>
+             * <li><p>Lock: The account is locked.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UnLock</p>
              */
             public Builder accountLockState(String accountLockState) {
                 this.accountLockState = accountLockState;
@@ -381,7 +414,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The name of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_acc</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -389,7 +425,10 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPasswordValidTime.
+             * <p>The time when the password expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>undefined</p>
              */
             public Builder accountPasswordValidTime(String accountPasswordValidTime) {
                 this.accountPasswordValidTime = accountPasswordValidTime;
@@ -397,7 +436,13 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * <p>The status of the account. Valid values:</p>
+             * <p>Creating: The account is being created.</p>
+             * <p>Available: The account is active.</p>
+             * <p>Deleting: The account is being deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -405,7 +450,18 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * <p>The type of the account. Valid values:</p>
+             * <ul>
+             * <li><p>Normal: A standard account.</p>
+             * </li>
+             * <li><p>Super: A privileged account.</p>
+             * </li>
+             * <li><p>ReadOnly: A global read-only account.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -413,7 +469,7 @@ public class DescribeAccountsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * DatabasePrivileges.
+             * <p>The details of the database permissions that the account has.</p>
              */
             public Builder databasePrivileges(java.util.List<DatabasePrivileges> databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;

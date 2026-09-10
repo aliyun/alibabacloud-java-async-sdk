@@ -132,7 +132,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Agent ID</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -143,7 +143,10 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-********************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -151,7 +154,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Binding.
+         * <p>Details of the newly created binding.</p>
          */
         public Builder binding(Binding binding) {
             this.binding = binding;
@@ -159,7 +162,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>200</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -170,7 +173,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>successful</p>
+         * <p>A message that indicates the request result.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -181,7 +184,10 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +195,10 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalBindings.
+         * <p>The total number of global bindings after the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalBindings(Integer totalBindings) {
             this.totalBindings = totalBindings;
@@ -268,7 +277,10 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -276,7 +288,7 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Agent ID</p>
+             * <p>The agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>work</p>
@@ -287,7 +299,10 @@ public class BindPolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Channel.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feishu</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;

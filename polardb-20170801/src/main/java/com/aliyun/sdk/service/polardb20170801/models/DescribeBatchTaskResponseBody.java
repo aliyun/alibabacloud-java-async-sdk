@@ -192,7 +192,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * BatchId.
+         * <p>The ID of the batch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcb-xxx</p>
          */
         public Builder batchId(String batchId) {
             this.batchId = batchId;
@@ -200,7 +203,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25C70FF3-D49B-594D-BECE-0DE2BA1D8BBB</p>
@@ -211,7 +214,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -219,7 +225,7 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SubTasks.
+         * <p>A list of subtasks.</p>
          */
         public Builder subTasks(java.util.List<SubTasks> subTasks) {
             this.subTasks = subTasks;
@@ -227,7 +233,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * <p>The number of successful subtasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -235,7 +244,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskBegin.
+         * <p>The time when the task started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026/05/28T16:38:20Z</p>
          */
         public Builder taskBegin(String taskBegin) {
             this.taskBegin = taskBegin;
@@ -243,7 +255,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskEnd.
+         * <p>The time when the task ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026/05/28T15:23:47Z</p>
          */
         public Builder taskEnd(String taskEnd) {
             this.taskEnd = taskEnd;
@@ -251,7 +266,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>batch_task_test</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -259,7 +277,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarclaw_install_skills</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -267,7 +288,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of subtasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -385,7 +409,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliuid:1422133474238823 assumeOssRole not exist,serviceName:aliyunesarealtimelogpushossrole</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -393,7 +420,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-pz5f6mvi1p84t35d7</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -401,7 +431,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -409,7 +442,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskBegin.
+             * <p>The time when the subtask started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026/05/28T17:38:20Z</p>
              */
             public Builder taskBegin(String taskBegin) {
                 this.taskBegin = taskBegin;
@@ -417,7 +453,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskEnd.
+             * <p>The time when the subtask ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026/05/28T20:38:20Z</p>
              */
             public Builder taskEnd(String taskEnd) {
                 this.taskEnd = taskEnd;
@@ -425,7 +464,10 @@ public class DescribeBatchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>629271331</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

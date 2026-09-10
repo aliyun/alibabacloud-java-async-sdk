@@ -67,7 +67,10 @@ public class ModifyBudgetPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * GwClusterId.
+         * <p>The ID of the gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-xxxxxxxx</p>
          */
         public Builder gwClusterId(String gwClusterId) {
             this.gwClusterId = gwClusterId;
@@ -75,7 +78,7 @@ public class ModifyBudgetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>925B84D9-CA72-432C-95CF-738C22******</p>

@@ -119,7 +119,10 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the PolarDB database cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -127,7 +130,10 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * DataServiceId.
+         * <p>The dataset management service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcs-2zeei***</p>
          */
         public Builder dataServiceId(String dataServiceId) {
             this.dataServiceId = dataServiceId;
@@ -135,7 +141,10 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pds-2ze88***</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -143,7 +152,10 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetName.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset01</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -151,7 +163,10 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * Path.
+         * <p>The path to the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_ai/datasets/train/sft/dataset01</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -159,7 +174,7 @@ public class CreateAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>

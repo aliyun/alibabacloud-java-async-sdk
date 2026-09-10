@@ -131,7 +131,10 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
         } 
 
         /**
-         * BranchId.
+         * <p>The branch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-69f762b1a44f49c487d64b9e71</p>
          */
         public Builder branchId(String branchId) {
             this.putQueryParameter("BranchId", branchId);
@@ -140,7 +143,10 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
         }
 
         /**
-         * ComputeClusterId.
+         * <p>The branch compute cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-g0lsayq8c5qe</p>
          */
         public Builder computeClusterId(String computeClusterId) {
             this.putQueryParameter("ComputeClusterId", computeClusterId);
@@ -149,6 +155,7 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
         }
 
         /**
+         * <p>The AgenticDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +168,10 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-7140b4c74b3a44978c825bac77</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -170,6 +180,7 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +193,10 @@ public class DeleteAgenticDBComputeClusterRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-51121616fa9e43e98cc90e4afa</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);

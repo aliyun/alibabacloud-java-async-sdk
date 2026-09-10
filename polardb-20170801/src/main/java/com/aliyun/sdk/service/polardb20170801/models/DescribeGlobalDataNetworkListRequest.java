@@ -73,7 +73,10 @@ public class DescribeGlobalDataNetworkListRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -82,7 +85,10 @@ public class DescribeGlobalDataNetworkListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

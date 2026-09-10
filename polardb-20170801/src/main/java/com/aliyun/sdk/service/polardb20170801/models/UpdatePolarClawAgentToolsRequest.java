@@ -144,7 +144,10 @@ public class UpdatePolarClawAgentToolsRequest extends Request {
         }
 
         /**
-         * Allow.
+         * <p>The list of explicitly allowed tools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;read&quot;,&quot;write&quot;,&quot;exec&quot;]</p>
          */
         public Builder allow(java.util.List<String> allow) {
             String allowShrink = shrink(allow, "Allow", "json");
@@ -154,7 +157,10 @@ public class UpdatePolarClawAgentToolsRequest extends Request {
         }
 
         /**
-         * AlsoAllow.
+         * <p>The list of additionally allowed tools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;send_message&quot;]</p>
          */
         public Builder alsoAllow(java.util.List<String> alsoAllow) {
             String alsoAllowShrink = shrink(alsoAllow, "AlsoAllow", "json");
@@ -164,6 +170,7 @@ public class UpdatePolarClawAgentToolsRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +183,10 @@ public class UpdatePolarClawAgentToolsRequest extends Request {
         }
 
         /**
-         * Deny.
+         * <p>The list of denied tools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;exec&quot;]</p>
          */
         public Builder deny(java.util.List<String> deny) {
             String denyShrink = shrink(deny, "Deny", "json");
@@ -186,7 +196,10 @@ public class UpdatePolarClawAgentToolsRequest extends Request {
         }
 
         /**
-         * Profile.
+         * <p>The tool profile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coding</p>
          */
         public Builder profile(String profile) {
             this.putQueryParameter("Profile", profile);

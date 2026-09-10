@@ -130,7 +130,7 @@ public class DescribeDBClusterParametersRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,10 +143,12 @@ public class DescribeDBClusterParametersRequest extends Request {
         }
 
         /**
-         * <p>The type of the parameter information to query. Valid values:</p>
+         * <p>The kernel parameters. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: the information about the cluster parameters</li>
-         * <li><strong>MigrationFromRDS</strong>: a comparison of parameters between the source RDS instance and the destination PolarDB cluster</li>
+         * <li><p><strong>Normal</strong>: The list of kernel parameters.</p>
+         * </li>
+         * <li><p><strong>MigrationFromRDS</strong>: Compares parameters with those of an ApsaraDB RDS instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

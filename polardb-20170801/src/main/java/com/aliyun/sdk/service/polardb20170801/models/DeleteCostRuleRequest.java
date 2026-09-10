@@ -89,6 +89,7 @@ public class DeleteCostRuleRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cost rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeleteCostRuleRequest extends Request {
         }
 
         /**
+         * <p>The ID of the gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeleteCostRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -106,7 +106,10 @@ public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp150t3****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -114,7 +117,10 @@ public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The ID of the Polarlakebase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-2ze0i7*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;
@@ -122,7 +128,7 @@ public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
@@ -133,7 +139,10 @@ public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * SourcePath.
+         * <p>The source path of the file resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         public Builder sourcePath(String sourcePath) {
             this.sourcePath = sourcePath;
@@ -141,7 +150,10 @@ public class ClonePolarFsBasicSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * TargetPath.
+         * <p>The destination path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/testclone</p>
          */
         public Builder targetPath(String targetPath) {
             this.targetPath = targetPath;

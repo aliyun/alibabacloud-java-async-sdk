@@ -117,7 +117,10 @@ public class ModifyResourceControlRequest extends Request {
         } 
 
         /**
-         * CpuCount.
+         * <p>The modified maximum number of CPU cores. The minimum value is 1. The maximum value is determined by the cluster kernel parameter resource_control_cpu_count_limit. You must specify one and only one of this parameter and MaxCpu.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder cpuCount(Integer cpuCount) {
             this.putQueryParameter("CpuCount", cpuCount);
@@ -126,10 +129,11 @@ public class ModifyResourceControlRequest extends Request {
         }
 
         /**
+         * <p>The PolarDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pc-****************</p>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -138,7 +142,10 @@ public class ModifyResourceControlRequest extends Request {
         }
 
         /**
-         * MaxCpu.
+         * <p>The modified maximum CPU quota percentage. Valid values: 1 to 100. You must specify one and only one of this parameter and CpuCount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxCpu(Integer maxCpu) {
             this.putQueryParameter("MaxCpu", maxCpu);
@@ -147,7 +154,13 @@ public class ModifyResourceControlRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the PolarDB cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -156,10 +169,11 @@ public class ModifyResourceControlRequest extends Request {
         }
 
         /**
+         * <p>The name of the resource control rule. The name must be 1 to 63 ASCII bytes in length, start with a letter, and can contain only letters, digits, and underscores.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-rc</p>
+         * <p>test_rc</p>
          */
         public Builder resourceControlName(String resourceControlName) {
             this.putQueryParameter("ResourceControlName", resourceControlName);

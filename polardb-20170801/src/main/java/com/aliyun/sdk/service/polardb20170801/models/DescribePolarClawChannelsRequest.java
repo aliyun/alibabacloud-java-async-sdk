@@ -74,6 +74,7 @@ public class DescribePolarClawChannelsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribePolarClawChannelsRequest extends Request {
         }
 
         /**
-         * ChannelList.
+         * <p>The channel IDs to query. Leave this parameter empty to return all channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feishu,telegram</p>
          */
         public Builder channelList(java.util.List<String> channelList) {
             String channelListShrink = shrink(channelList, "ChannelList", "json");

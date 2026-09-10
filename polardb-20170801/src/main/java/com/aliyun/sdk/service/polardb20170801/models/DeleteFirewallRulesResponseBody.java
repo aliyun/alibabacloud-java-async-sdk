@@ -80,7 +80,13 @@ public class DeleteFirewallRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * <blockquote>
+         * <p>If the request is successful, Successful is returned. If the request fails, an error message is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +94,7 @@ public class DeleteFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>049A1520-6BD7-5572-8923-79215D2B4A94</p>
@@ -99,7 +105,16 @@ public class DeleteFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

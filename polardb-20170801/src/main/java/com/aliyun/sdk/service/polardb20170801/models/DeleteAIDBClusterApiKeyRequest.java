@@ -89,6 +89,7 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
         } 
 
         /**
+         * <p>The API key of the model service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
         }
 
         /**
-         * ModelSpaceName.
+         * <p>The model space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pms-xxx</p>
          */
         public Builder modelSpaceName(String modelSpaceName) {
             this.putQueryParameter("ModelSpaceName", modelSpaceName);
@@ -110,6 +114,10 @@ public class DeleteAIDBClusterApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

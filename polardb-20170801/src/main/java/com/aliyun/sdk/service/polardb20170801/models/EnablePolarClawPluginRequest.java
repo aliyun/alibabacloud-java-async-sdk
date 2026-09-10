@@ -89,6 +89,7 @@ public class EnablePolarClawPluginRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class EnablePolarClawPluginRequest extends Request {
         }
 
         /**
+         * <p>The ID of the plugin to enable.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class EnablePolarClawPluginRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Indicates whether to restart the gateway after the plugin is enabled. Default value: <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

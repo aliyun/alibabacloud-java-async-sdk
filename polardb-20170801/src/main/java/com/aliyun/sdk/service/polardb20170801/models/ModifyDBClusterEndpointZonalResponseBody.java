@@ -54,7 +54,10 @@ public class ModifyDBClusterEndpointZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2A9EFA7-915F-4572-8299-85A307******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -131,6 +131,13 @@ public class CheckConnectionStringRequest extends Request {
         } 
 
         /**
+         * <p>The prefix of the new connection string. The prefix must meet the following requirements:</p>
+         * <ul>
+         * <li><p>It must consist of lowercase letters, digits, and periods (.).</p>
+         * </li>
+         * <li><p>It must start with a letter and end with a letter or a digit.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +150,10 @@ public class CheckConnectionStringRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the details of all clusters in your account, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

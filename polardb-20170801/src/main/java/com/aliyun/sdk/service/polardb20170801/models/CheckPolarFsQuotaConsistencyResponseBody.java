@@ -80,7 +80,10 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
         } 
 
         /**
-         * PolarFsInstanceId.
+         * <p>The ID of the PolarFS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-2ze0i74ka607*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;
@@ -88,7 +91,7 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaItem.
+         * <p>An object that contains details about the quota.</p>
          */
         public Builder quotaItem(QuotaItem quotaItem) {
             this.quotaItem = quotaItem;
@@ -96,7 +99,10 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E56531A4-E552-40BA-9C58-137B80******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +207,10 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
             } 
 
             /**
-             * Capacity.
+             * <p>The storage capacity quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104857600</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -209,7 +218,7 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Inodes</p>
+             * <p>The inode quota.</p>
              * 
              * <strong>example:</strong>
              * <p>50000</p>
@@ -220,7 +229,10 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The directory path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/zookeepertest718</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -228,7 +240,10 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacity.
+             * <p>The used capacity, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104857600</p>
              */
             public Builder usedCapacity(Long usedCapacity) {
                 this.usedCapacity = usedCapacity;
@@ -236,7 +251,10 @@ public class CheckPolarFsQuotaConsistencyResponseBody extends TeaModel {
             }
 
             /**
-             * UsedInodes.
+             * <p>The number of used inodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usedInodes(Long usedInodes) {
                 this.usedInodes = usedInodes;

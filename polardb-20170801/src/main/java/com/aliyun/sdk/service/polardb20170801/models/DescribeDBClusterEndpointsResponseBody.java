@@ -67,7 +67,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the endpoints.</p>
+         * <p>A list of cluster endpoints.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -75,7 +75,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2DC120BF-6EBA-4C63-BE99-B09F9E******</p>
@@ -235,7 +235,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoint.</p>
+             * <p>The connection string.</p>
              * 
              * <strong>example:</strong>
              * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
@@ -246,10 +246,12 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is the dashboard endpoint of the PolarDB search node.</p>
+             * <p>Indicates whether the endpoint is a dashboard endpoint for a PolarDB Search node.</p>
              * <ul>
-             * <li>Ture</li>
-             * <li>False</li>
+             * <li><p><strong>True</strong>: Yes</p>
+             * </li>
+             * <li><p><strong>False</strong>: No</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -272,11 +274,19 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the endpoint. Valid values:</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
-             * <li><strong>Public</strong></li>
-             * <li><strong>Private</strong></li>
+             * <li><p><strong>Public</strong>: public network</p>
+             * </li>
+             * <li><p><strong>Private</strong>: private network</p>
+             * </li>
              * </ul>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <ul>
+             * <li><strong>Inner</strong>: classic network</li>
+             * </ul>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <p>Only PolarDB for MySQL clusters support the classic network type.</p>
              * 
              * <strong>example:</strong>
              * <p>Private</p>
@@ -298,7 +308,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private domain name that is bound to the endpoint.</p>
+             * <p>The connection string for the private domain name.</p>
              * 
              * <strong>example:</strong>
              * <p><em><strong>.</strong></em>.**.com</p>
@@ -309,7 +319,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-***************</p>
@@ -320,7 +330,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-************</p>
@@ -331,9 +341,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC) instance.</p>
+             * <p>The VPC instance ID.</p>
              * <blockquote>
-             * <p>This parameter is returned for only PolarDB for MySQL clusters.</p>
+             * <p>This parameter is returned only for PolarDB for MySQL clusters.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -625,7 +635,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the endpoint.</p>
+             * <p>The connection addresses for the endpoint.</p>
              */
             public Builder addressItems(java.util.List<AddressItems> addressItems) {
                 this.addressItems = addressItems;
@@ -633,10 +643,12 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether new nodes are automatically associated with the default cluster endpoint. Valid values:</p>
+             * <p>Indicates whether new nodes are automatically added to the default cluster endpoint. Valid values:</p>
              * <ul>
-             * <li><strong>Enable</strong></li>
-             * <li><strong>Disable</strong></li>
+             * <li><p><strong>Enable</strong></p>
+             * </li>
+             * <li><p><strong>Disable</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -648,7 +660,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint.</p>
+             * <p>The connection string.</p>
              * 
              * <strong>example:</strong>
              * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
@@ -659,7 +671,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-bp1s826a1up******</p>
@@ -670,7 +682,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the endpoint.</p>
+             * <p>The endpoint name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -681,7 +693,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the endpoint.</p>
+             * <p>The endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pe-*************</p>
@@ -692,33 +704,40 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advanced configurations of the endpoint.</p>
+             * <p>The advanced settings for the cluster endpoint.</p>
              * <ul>
-             * <li><p><strong>DistributedTransaction</strong>: indicates whether transaction splitting is enabled. Valid values:</p>
+             * <li><p><strong>DistributedTransaction</strong>: The transaction splitting status. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong></li>
-             * <li><strong>off</strong></li>
+             * <li><p><strong>on</strong>: enabled</p>
+             * </li>
+             * <li><p><strong>off</strong>: disabled</p>
+             * </li>
              * </ul>
              * </li>
-             * <li><p><strong>ConsistLevel</strong>: the consistency level of sessions. Valid values:</p>
+             * <li><p><strong>ConsistLevel</strong>: The consistency level. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: eventual consistency.</li>
-             * <li><strong>1</strong>: session consistency.</li>
-             * <li><strong>2</strong>: global consistency.</li>
+             * <li><p><strong>0</strong>: eventual consistency</p>
+             * </li>
+             * <li><p><strong>1</strong>: session consistency</p>
+             * </li>
+             * <li><p><strong>2</strong>: global consistency</p>
+             * </li>
              * </ul>
              * </li>
-             * <li><p><strong>LoadBalanceStrategy</strong>: the load balancing policy that automatically schedules loads. Only <strong>load</strong> may be returned.</p>
+             * <li><p><strong>LoadBalanceStrategy</strong>: The load balancing policy. The value is fixed to <strong>load</strong>, which indicates load-based scheduling.</p>
              * </li>
-             * <li><p><strong>MasterAcceptReads</strong>: indicates whether the primary node processes read requests. Valid values:</p>
+             * <li><p><strong>MasterAcceptReads</strong>: Indicates whether the primary node accepts read requests. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong></li>
-             * <li><strong>off</strong></li>
+             * <li><p><strong>on</strong>: The primary node accepts read requests.</p>
+             * </li>
+             * <li><p><strong>off</strong>: The primary node does not accept read requests.</p>
+             * </li>
              * </ul>
              * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;DistributedTransaction&quot;:&quot;off&quot;,&quot;ConsistLevel&quot;:&quot;0&quot;,&quot;LoadBalanceStrategy&quot;:&quot;load&quot;,&quot;MasterAcceptReads&quot;:&quot;on&quot;}</p>
+             * <p>{\&quot;DistributedTransaction\&quot;:\&quot;off\&quot;,\&quot;ConsistLevel\&quot;:\&quot;0\&quot;,\&quot;LoadBalanceStrategy\&quot;:\&quot;load\&quot;,\&quot;MasterAcceptReads\&quot;:\&quot;on\&quot;}</p>
              */
             public Builder endpointConfig(String endpointConfig) {
                 this.endpointConfig = endpointConfig;
@@ -726,11 +745,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the endpoint. Valid values:</p>
+             * <p>The type of the cluster endpoint. Valid values:</p>
              * <ul>
-             * <li><strong>Cluster</strong>: the default endpoint.</li>
-             * <li><strong>Primary</strong>: the primary endpoint.</li>
-             * <li><strong>Custom</strong>: a custom cluster endpoint.</li>
+             * <li><p><strong>Cluster</strong>: the default cluster endpoint.</p>
+             * </li>
+             * <li><p><strong>Primary</strong>: the primary endpoint.</p>
+             * </li>
+             * <li><p><strong>Custom</strong>: a custom cluster endpoint.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -742,10 +764,12 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the endpoint. Valid values:</p>
+             * <p>The network type. Valid values:</p>
              * <ul>
-             * <li><strong>Public</strong></li>
-             * <li><strong>Private</strong></li>
+             * <li><p><strong>Public</strong>: public network</p>
+             * </li>
+             * <li><p><strong>Private</strong>: private network</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -757,9 +781,9 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role name of each node in the endpoint. The role name of the primary node is <strong>Writer</strong>. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number. For example, you can use <strong>Reader1</strong> and <strong>Reader2</strong> as the role names.</p>
+             * <p>The role of each node in the endpoint. The primary node has the <strong>Writer</strong> role. Read-only nodes have numbered roles, such as <strong>Reader1</strong>, <strong>Reader2</strong>, and so on.</p>
              * <blockquote>
-             * <p> This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.</p>
+             * <p>This parameter is supported only by PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (compatible with Oracle) clusters.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -771,7 +795,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nodes in the endpoint.</p>
+             * <p>The list of nodes configured for the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>pi-<em><strong><strong><strong><strong><strong><strong><strong>,pi-</strong></strong></strong></strong></strong></strong></strong></em></p>
@@ -782,10 +806,12 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The global consistency timeout policy. Valid values:</p>
+             * <p>The policy for handling global consistency read timeouts. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: sends the request to the primary node.</li>
-             * <li><strong>2</strong>: downgrades the consistency level of a query to inconsistent read when a global consistent read in the query times out. No error message is returned to the client.</li>
+             * <li><p><strong>0</strong>: Redirects the request to the primary node.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Downgrades the request. If a global consistency read times out, the system automatically downgrades the query to a non-consistent read, and the client does not receive an error.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -797,7 +823,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Global consistency timeout.</p>
+             * <p>The timeout period for global consistency reads.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -819,7 +845,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -829,8 +858,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             /**
              * <p>The read/write mode. Valid values:</p>
              * <ul>
-             * <li><strong>ReadWrite</strong>: handles read and write requests. Automatic read/write splitting is enabled.</li>
-             * <li><strong>ReadOnly</strong>: handles read-only requests.</li>
+             * <li><p><strong>ReadWrite</strong>: read and write (automatic read/write splitting).</p>
+             * </li>
+             * <li><p><strong>ReadOnly</strong>: read-only.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -842,10 +873,12 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</p>
+             * <p>Indicates whether global consistency (high-performance mode) is enabled for the node. Valid values:</p>
              * <ul>
-             * <li><strong>on</strong>: enabled.</li>
-             * <li><strong>off</strong>: disabled</li>
+             * <li><p><strong>on</strong>: enabled</p>
+             * </li>
+             * <li><p><strong>off</strong>: disabled</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -857,7 +890,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-name</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -865,7 +901,7 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-***************</p>

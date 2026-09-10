@@ -102,6 +102,7 @@ public class UpgradePolarClawSkillsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,13 @@ public class UpgradePolarClawSkillsRequest extends Request {
         }
 
         /**
-         * ApplicationType.
+         * <p>The application type.</p>
+         * <blockquote>
+         * <p>You can omit this parameter when you first call this operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>polarclaw</p>
          */
         public Builder applicationType(String applicationType) {
             this.putQueryParameter("ApplicationType", applicationType);
@@ -123,7 +130,13 @@ public class UpgradePolarClawSkillsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters in your account.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -132,7 +145,10 @@ public class UpgradePolarClawSkillsRequest extends Request {
         }
 
         /**
-         * UpgradeMethod.
+         * <p>The upgrade method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         public Builder upgradeMethod(String upgradeMethod) {
             this.putQueryParameter("UpgradeMethod", upgradeMethod);

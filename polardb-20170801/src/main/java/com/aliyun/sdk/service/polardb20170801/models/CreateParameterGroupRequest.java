@@ -219,9 +219,12 @@ public class CreateParameterGroupRequest extends Request {
         /**
          * <p>The version of the database engine. Valid values:</p>
          * <ul>
-         * <li><strong>5.6</strong></li>
-         * <li><strong>5.7</strong></li>
-         * <li><strong>8.0</strong></li>
+         * <li><p><strong>5.6</strong></p>
+         * </li>
+         * <li><p><strong>5.7</strong></p>
+         * </li>
+         * <li><p><strong>8.0</strong></p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -267,8 +270,10 @@ public class CreateParameterGroupRequest extends Request {
         /**
          * <p>The name of the parameter template. The name must meet the following requirements:</p>
          * <ul>
-         * <li>It can contain letters, digits, and underscores (_). It must start with a letter and cannot end with an underscore.**</li>
-         * <li>It must be 8 to 64 characters in length.</li>
+         * <li><p>It must start with a letter and can contain letters, digits, and underscores (<em>). It cannot contain Chinese characters or end with an underscore (</em>).</p>
+         * </li>
+         * <li><p>It must be 8 to 64 characters in length.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -282,9 +287,9 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * <p>The JSON string that consists of parameters and values. The parameter values are strings. Example: <code>{&quot;wait_timeout&quot;:&quot;86400&quot;,&quot;innodb_old_blocks_time&quot;:&quot;1000&quot;}</code>.</p>
+         * <p>A JSON string that consists of parameters and their values. The values of the parameters must be strings. For example: <code>{&quot;wait_timeout&quot;:&quot;86400&quot;,&quot;innodb_old_blocks_time&quot;:&quot;1000&quot;}</code>.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207428.html">DescribeParameterTemplates</a> operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207428.html">DescribeParameterTemplates</a> operation to view the details of all parameters for a specific database engine version. The details include parameter names and value ranges.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -298,9 +303,9 @@ public class CreateParameterGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The ID of the region where the parameter template is located.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

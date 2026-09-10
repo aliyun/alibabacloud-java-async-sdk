@@ -119,7 +119,10 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -127,7 +130,10 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * DeviceId.
+         * <p>The unique device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>device-784x37k0vko734fk</p>
          */
         public Builder deviceId(String deviceId) {
             this.deviceId = deviceId;
@@ -143,7 +152,10 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * PairRequestId.
+         * <p>The pairing request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req-abc-123</p>
          */
         public Builder pairRequestId(String pairRequestId) {
             this.pairRequestId = pairRequestId;
@@ -159,7 +174,7 @@ public class RejectPolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>

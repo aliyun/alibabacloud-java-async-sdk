@@ -119,7 +119,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -127,7 +130,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * Paired.
+         * <p>A list of paired devices.</p>
          */
         public Builder paired(java.util.List<Paired> paired) {
             this.paired = paired;
@@ -151,7 +160,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * Pending.
+         * <p>A list of pending pairing requests.</p>
          */
         public Builder pending(java.util.List<Pending> pending) {
             this.pending = pending;
@@ -159,7 +168,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
@@ -332,7 +341,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientId.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cli</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -340,7 +352,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientMode.
+             * <p>The client mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cli</p>
              */
             public Builder clientMode(String clientMode) {
                 this.clientMode = clientMode;
@@ -348,7 +363,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAtMs.
+             * <p>The time when the device pairing was created, in Unix milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778659807727</p>
              */
             public Builder createdAtMs(Long createdAtMs) {
                 this.createdAtMs = createdAtMs;
@@ -356,7 +374,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceFamily.
+             * <p>The device family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>empty</p>
              */
             public Builder deviceFamily(String deviceFamily) {
                 this.deviceFamily = deviceFamily;
@@ -364,7 +385,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The unique device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f92620d6bea04f65d48cf603c57b367c97e837c1ab9f6d78f741f477e99d857c</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -372,7 +396,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>empty</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -380,7 +407,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * LastSeenAtMs.
+             * <p>The time when the device was last active, in Unix milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778659807727</p>
              */
             public Builder lastSeenAtMs(Long lastSeenAtMs) {
                 this.lastSeenAtMs = lastSeenAtMs;
@@ -388,7 +418,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -396,7 +429,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The device role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>operator</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -404,7 +440,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * Scopes.
+             * <p>The list of permission scopes.</p>
              */
             public Builder scopes(java.util.List<String> scopes) {
                 this.scopes = scopes;
@@ -640,7 +676,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientId.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cli</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -648,7 +687,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientMode.
+             * <p>The client mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cli</p>
              */
             public Builder clientMode(String clientMode) {
                 this.clientMode = clientMode;
@@ -656,7 +698,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceFamily.
+             * <p>The device family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>server</p>
              */
             public Builder deviceFamily(String deviceFamily) {
                 this.deviceFamily = deviceFamily;
@@ -664,7 +709,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The unique device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device-784x37k0vko734fk</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -672,7 +720,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -680,7 +731,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * IsRepair.
+             * <p>Whether the request is to repair an existing pairing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isRepair(Boolean isRepair) {
                 this.isRepair = isRepair;
@@ -688,7 +742,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * PairRequestId.
+             * <p>The pairing request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-1778647932986</p>
              */
             public Builder pairRequestId(String pairRequestId) {
                 this.pairRequestId = pairRequestId;
@@ -696,7 +753,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The operating system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -704,7 +764,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * PublicKey.
+             * <p>The Ed25519 public key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-pubkey-base64url</p>
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;
@@ -712,7 +775,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteIp.
+             * <p>The requester\&quot;s remote IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder remoteIp(String remoteIp) {
                 this.remoteIp = remoteIp;
@@ -720,7 +786,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The device role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>operator</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -728,7 +797,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * Roles.
+             * <p>The list of roles.</p>
              */
             public Builder roles(java.util.List<String> roles) {
                 this.roles = roles;
@@ -736,7 +805,7 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * Scopes.
+             * <p>The list of permission scopes.</p>
              */
             public Builder scopes(java.util.List<String> scopes) {
                 this.scopes = scopes;
@@ -744,7 +813,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * Silent.
+             * <p>Whether this is a silent pairing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder silent(Boolean silent) {
                 this.silent = silent;
@@ -752,7 +824,10 @@ public class ListPolarClawDevicePairsResponseBody extends TeaModel {
             }
 
             /**
-             * Ts.
+             * <p>The timestamp of the pairing request, in Unix milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778660347550</p>
              */
             public Builder ts(Long ts) {
                 this.ts = ts;

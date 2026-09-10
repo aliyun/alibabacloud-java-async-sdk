@@ -173,7 +173,7 @@ public class DeleteDBNodesRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. The client generates this value, which must be unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
          * 
          * <strong>example:</strong>
          * <p>6000170000591aed949d0f54a343f1a42***********</p>
@@ -185,7 +185,10 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * CloudProvider.
+         * <p>The service provider of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENS</p>
          */
         public Builder cloudProvider(String cloudProvider) {
             this.putQueryParameter("CloudProvider", cloudProvider);
@@ -194,7 +197,7 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,9 +210,9 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the nodes.</p>
+         * <p>The IDs of the nodes to be deleted.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including node IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -225,15 +228,12 @@ public class DeleteDBNodesRequest extends Request {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li>RO</li>
-         * <li>STANDBY</li>
-         * <li>DLNode</li>
-         * </ul>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>DLNode: AI node</li>
-         * <li>STANDBY: standby node</li>
-         * <li>RO: read-only node</li>
+         * <li><p>RO</p>
+         * </li>
+         * <li><p>STANDBY</p>
+         * </li>
+         * <li><p>DLNode</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

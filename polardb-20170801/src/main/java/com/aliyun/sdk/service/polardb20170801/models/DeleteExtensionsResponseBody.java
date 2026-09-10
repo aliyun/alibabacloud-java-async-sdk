@@ -54,7 +54,7 @@ public class DeleteExtensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>11EB8492-C17F-5FC2-9E27-1440A5C2F583</p>

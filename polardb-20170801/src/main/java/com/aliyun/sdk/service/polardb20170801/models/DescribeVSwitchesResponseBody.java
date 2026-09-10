@@ -106,10 +106,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -117,10 +114,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -128,10 +122,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9A572171-4E27-40D1-BD36-D26C9E71E29E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -139,10 +130,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of returned entries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -150,7 +138,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vSwitches.</p>
+         * VSwitchs.
          */
         public Builder vSwitchs(java.util.List<VSwitchs> vSwitchs) {
             this.vSwitchs = vSwitchs;
@@ -294,10 +282,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of available IP addresses in the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AvailableIpAddressCount.
              */
             public Builder availableIpAddressCount(Long availableIpAddressCount) {
                 this.availableIpAddressCount = availableIpAddressCount;
@@ -305,10 +290,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv4 CIDR block of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.0.0/24</p>
+             * CidrBlock.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -316,10 +298,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vSwitchDescription</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -327,14 +306,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsDefault.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -342,10 +314,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone to which the NAT gateway belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-b</p>
+             * IzNo.
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -353,14 +322,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the vSwitch. Valid values:</p>
-             * <ul>
-             * <li><strong>Pending</strong>: The vSwitch is being configured.</li>
-             * <li><strong>Available</strong>: The vSwitch is available.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -368,10 +330,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-25bcdxs7pv1****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -379,10 +338,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vSwitch</p>
+             * VSwitchName.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;

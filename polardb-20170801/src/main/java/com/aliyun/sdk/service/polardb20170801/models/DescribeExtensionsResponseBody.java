@@ -93,7 +93,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * InstalledExtensions.
+         * <p>The extensions that are installed in the specified database.</p>
          */
         public Builder installedExtensions(java.util.List<InstalledExtensions> installedExtensions) {
             this.installedExtensions = installedExtensions;
@@ -101,7 +101,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * Overview.
+         * <p>The overview of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试建单，请忽略</p>
          */
         public Builder overview(String overview) {
             this.overview = overview;
@@ -109,7 +112,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>309073D4-9C99-511C-AF84-0C67A6F52E67</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,7 @@ public class DescribeExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * UninstalledExtensions.
+         * <p>The extensions that are not installed in the specified database.</p>
          */
         public Builder uninstalledExtensions(java.util.List<UninstalledExtensions> uninstalledExtensions) {
             this.uninstalledExtensions = uninstalledExtensions;
@@ -274,7 +280,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The extension type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>geography_space, self_develop</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -282,7 +291,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The description of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -290,7 +302,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * <p>The default version of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.7</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -298,7 +313,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledVersion.
+             * <p>The currently installed version of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.7</p>
              */
             public Builder installedVersion(String installedVersion) {
                 this.installedVersion = installedVersion;
@@ -306,7 +324,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The extension name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jueming</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -314,7 +335,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alton</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -322,7 +346,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -330,7 +357,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Requires.
+             * <p>The extensions on which this extension depends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ganos_networking</p>
              */
             public Builder requires(String requires) {
                 this.requires = requires;
@@ -338,7 +368,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Restart.
+             * <p>Specifies whether to restart the application. \<code>true\\</code>: The application is restarted. \<code>false\\</code>: The application is not restarted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder restart(String restart) {
                 this.restart = restart;
@@ -496,7 +529,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The extension type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>geography_space, self_develop</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -504,7 +540,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The purpose of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -512,7 +551,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * <p>The default version of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.7</p>
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -520,7 +562,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledVersion.
+             * <p>The currently installed version of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7.7</p>
              */
             public Builder installedVersion(String installedVersion) {
                 this.installedVersion = installedVersion;
@@ -528,7 +573,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The extension name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jueming</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -536,7 +584,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alton</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -544,7 +595,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the extension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -552,7 +606,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Requires.
+             * <p>The extensions on which this extension depends.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ganos_networking</p>
              */
             public Builder requires(String requires) {
                 this.requires = requires;
@@ -560,7 +617,10 @@ public class DescribeExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Restart.
+             * <p>Specifies whether to restart the application. \<code>true\\</code>: The application is restarted. \<code>false\\</code>: The application is not restarted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder restart(String restart) {
                 this.restart = restart;

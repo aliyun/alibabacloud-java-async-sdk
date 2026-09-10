@@ -88,7 +88,10 @@ public class CreateAIDBClusterApiKeyRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -97,7 +100,10 @@ public class CreateAIDBClusterApiKeyRequest extends Request {
         }
 
         /**
-         * ModelSpaceName.
+         * <p>The model space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pms-xxx</p>
          */
         public Builder modelSpaceName(String modelSpaceName) {
             this.putQueryParameter("ModelSpaceName", modelSpaceName);
@@ -106,6 +112,13 @@ public class CreateAIDBClusterApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the specified account.</li>
+         * <li>If this parameter is left empty, scheduled tasks in all regions under the current account are queried by default.</li>
+         * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -60,6 +60,7 @@ public class DescribeApplicationSSLRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

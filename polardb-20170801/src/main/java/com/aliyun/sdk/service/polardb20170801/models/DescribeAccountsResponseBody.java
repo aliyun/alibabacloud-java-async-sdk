@@ -101,7 +101,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the page returned.</p>
+         * <p>The page number. Pages start from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -192,7 +192,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The permissions that the account is granted on the database. Valid values:</p>
+             * <p>The permissions of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>ReadOnly</p>
@@ -203,7 +203,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>DBtest</p>
@@ -338,7 +338,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the account.</p>
+             * <p>The description of the database account.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -349,10 +349,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The locking state of the account. Valid values:</p>
+             * <p>The lock status of the account. Valid values:</p>
              * <ul>
-             * <li><strong>UnLock</strong></li>
-             * <li><strong>Lock</strong></li>
+             * <li><p><strong>UnLock</strong>: The account is not locked.</p>
+             * </li>
+             * <li><p><strong>Lock</strong>: The account is locked.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -364,7 +366,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the account.</p>
+             * <p>The name of the database account.</p>
              * 
              * <strong>example:</strong>
              * <p>test_acc</p>
@@ -386,11 +388,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the account. Valid values:</p>
+             * <p>The status of the database account. Valid values:</p>
              * <ul>
-             * <li><strong>Creating</strong>: The account is being created.</li>
-             * <li><strong>Available</strong>: The account is available.</li>
-             * <li><strong>Deleting</strong>: The account is being deleted</li>
+             * <li><p><strong>Creating</strong>: The account is being created.</p>
+             * </li>
+             * <li><p><strong>Available</strong>: The account is available.</p>
+             * </li>
+             * <li><p><strong>Deleting</strong>: The account is being deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -404,9 +409,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             /**
              * <p>The type of the account. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: standard account.</li>
-             * <li><strong>Super</strong>: privileged account.</li>
-             * <li><strong>ReadOnly</strong>: global read-only account.</li>
+             * <li><p><strong>Normal</strong>: standard account.</p>
+             * </li>
+             * <li><p><strong>Super</strong>: privileged account.</p>
+             * </li>
+             * <li><p><strong>ReadOnly</strong>: global read-only account.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -27,6 +27,14 @@ public class DescribeKBSyncLinksRequest extends Request {
     private String knowledgeBaseId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -35,6 +43,8 @@ public class DescribeKBSyncLinksRequest extends Request {
         super(builder);
         this.imPlatform = builder.imPlatform;
         this.knowledgeBaseId = builder.knowledgeBaseId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
     }
 
@@ -66,6 +76,20 @@ public class DescribeKBSyncLinksRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -75,6 +99,8 @@ public class DescribeKBSyncLinksRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeKBSyncLinksRequest, Builder> {
         private String imPlatform; 
         private String knowledgeBaseId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String regionId; 
 
         private Builder() {
@@ -85,11 +111,16 @@ public class DescribeKBSyncLinksRequest extends Request {
             super(request);
             this.imPlatform = request.imPlatform;
             this.knowledgeBaseId = request.knowledgeBaseId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ImPlatform.
+         * <p>The source channel of the synchronization link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FEISHU</p>
          */
         public Builder imPlatform(String imPlatform) {
             this.putQueryParameter("ImPlatform", imPlatform);
@@ -98,6 +129,7 @@ public class DescribeKBSyncLinksRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +142,31 @@ public class DescribeKBSyncLinksRequest extends Request {
         }
 
         /**
+         * <p>The page number of the query results. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * <p>The number of synchronization links returned per page. Valid values: 10, 20, 30, 50, 100, 200, and 500. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

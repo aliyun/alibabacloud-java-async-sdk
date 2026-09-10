@@ -89,7 +89,10 @@ public class DeletePolarFsObjectsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -98,6 +101,7 @@ public class DeletePolarFsObjectsRequest extends Request {
         }
 
         /**
+         * <p>The list of objects to delete.</p>
          * <p>This parameter is required.</p>
          */
         public Builder objectsToDelete(java.util.List<String> objectsToDelete) {
@@ -108,6 +112,7 @@ public class DeletePolarFsObjectsRequest extends Request {
         }
 
         /**
+         * <p>The PolarLakebase instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

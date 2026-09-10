@@ -171,7 +171,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The Hermes application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-123456</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -179,7 +182,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -187,7 +193,7 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         }
 
         /**
-         * DailyUsage.
+         * <p>The usage statistics grouped by UTC date.</p>
          */
         public Builder dailyUsage(java.util.List<DailyUsage> dailyUsage) {
             this.dailyUsage = dailyUsage;
@@ -195,7 +201,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Days.
+         * <p>The number of days covered by this statistical period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder days(Integer days) {
             this.days = days;
@@ -203,7 +212,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -211,7 +223,7 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         }
 
         /**
-         * ModelUsage.
+         * <p>The usage statistics grouped by model.</p>
          */
         public Builder modelUsage(java.util.List<ModelUsage> modelUsage) {
             this.modelUsage = modelUsage;
@@ -219,7 +231,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F45FFACC-1234-5678-90AB-1234567890AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +242,7 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         }
 
         /**
-         * SessionSummary.
+         * <p>The current session runtime and storage statistics.</p>
          */
         public Builder sessionSummary(SessionSummary sessionSummary) {
             this.sessionSummary = sessionSummary;
@@ -235,7 +250,7 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         }
 
         /**
-         * SkillUsage.
+         * <p>The aggregated statistics of skill activities.</p>
          */
         public Builder skillUsage(SkillUsage skillUsage) {
             this.skillUsage = skillUsage;
@@ -243,7 +258,7 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>The aggregated usage within the query period.</p>
          */
         public Builder summary(Summary summary) {
             this.summary = summary;
@@ -374,7 +389,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * APICalls.
+             * <p>The number of model API calls for the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder APICalls(Long APICalls) {
                 this.APICalls = APICalls;
@@ -382,7 +400,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * CacheReadTokens.
+             * <p>The number of tokens served from cache hits for the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder cacheReadTokens(Long cacheReadTokens) {
                 this.cacheReadTokens = cacheReadTokens;
@@ -390,7 +411,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Date.
+             * <p>The UTC date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-24</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -398,7 +422,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
+             * <p>The number of input tokens for the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12000</p>
              */
             public Builder inputTokens(Long inputTokens) {
                 this.inputTokens = inputTokens;
@@ -406,7 +433,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The number of output tokens for the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder outputTokens(Long outputTokens) {
                 this.outputTokens = outputTokens;
@@ -414,7 +444,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ReasoningTokens.
+             * <p>The number of reasoning tokens for the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder reasoningTokens(Long reasoningTokens) {
                 this.reasoningTokens = reasoningTokens;
@@ -422,7 +455,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Sessions.
+             * <p>The number of sessions for the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder sessions(Long sessions) {
                 this.sessions = sessions;
@@ -567,7 +603,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * APICalls.
+             * <p>The number of API calls for this model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>320</p>
              */
             public Builder APICalls(Long APICalls) {
                 this.APICalls = APICalls;
@@ -575,7 +614,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * CacheReadTokens.
+             * <p>The number of tokens served from cache hits for this model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12000</p>
              */
             public Builder cacheReadTokens(Long cacheReadTokens) {
                 this.cacheReadTokens = cacheReadTokens;
@@ -583,7 +625,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
+             * <p>The number of input tokens consumed by this model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80000</p>
              */
             public Builder inputTokens(Long inputTokens) {
                 this.inputTokens = inputTokens;
@@ -591,7 +636,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-max</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -599,7 +647,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The number of output tokens generated by this model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>24000</p>
              */
             public Builder outputTokens(Long outputTokens) {
                 this.outputTokens = outputTokens;
@@ -607,7 +658,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Provider.
+             * <p>The model provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -615,7 +669,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ReasoningTokens.
+             * <p>The number of reasoning tokens generated by this model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4000</p>
              */
             public Builder reasoningTokens(Long reasoningTokens) {
                 this.reasoningTokens = reasoningTokens;
@@ -623,7 +680,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Sessions.
+             * <p>The number of sessions that used this model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder sessions(Long sessions) {
                 this.sessions = sessions;
@@ -690,7 +750,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * ActiveSessions.
+             * <p>The number of currently active sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder activeSessions(Long activeSessions) {
                 this.activeSessions = activeSessions;
@@ -698,7 +761,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * StoredSessions.
+             * <p>The total number of sessions in session storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder storedSessions(Long storedSessions) {
                 this.storedSessions = storedSessions;
@@ -791,7 +857,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * DistinctSkills.
+             * <p>The number of distinct skills that have activity records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder distinctSkills(Long distinctSkills) {
                 this.distinctSkills = distinctSkills;
@@ -799,7 +868,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalActions.
+             * <p>The total number of skill-related operations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder totalActions(Long totalActions) {
                 this.totalActions = totalActions;
@@ -807,7 +879,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalEdits.
+             * <p>The number of times skills were edited or managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalEdits(Long totalEdits) {
                 this.totalEdits = totalEdits;
@@ -815,7 +890,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalLoads.
+             * <p>The number of times skills were loaded or viewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder totalLoads(Long totalLoads) {
                 this.totalLoads = totalLoads;
@@ -934,7 +1012,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * APICalls.
+             * <p>The number of model API calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480</p>
              */
             public Builder APICalls(Long APICalls) {
                 this.APICalls = APICalls;
@@ -942,7 +1023,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * CacheReadTokens.
+             * <p>The number of tokens served from cache hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18000</p>
              */
             public Builder cacheReadTokens(Long cacheReadTokens) {
                 this.cacheReadTokens = cacheReadTokens;
@@ -950,7 +1034,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
+             * <p>The number of input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120000</p>
              */
             public Builder inputTokens(Long inputTokens) {
                 this.inputTokens = inputTokens;
@@ -958,7 +1045,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The number of output tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36000</p>
              */
             public Builder outputTokens(Long outputTokens) {
                 this.outputTokens = outputTokens;
@@ -966,7 +1056,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * ReasoningTokens.
+             * <p>The number of reasoning tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder reasoningTokens(Long reasoningTokens) {
                 this.reasoningTokens = reasoningTokens;
@@ -974,7 +1067,10 @@ public class DescribeApplicationUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Sessions.
+             * <p>The number of sessions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder sessions(Long sessions) {
                 this.sessions = sessions;

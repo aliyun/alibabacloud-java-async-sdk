@@ -151,10 +151,12 @@ public class RefreshDBClusterStorageUsageRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable real-time synchronization. Valid values:</p>
+         * <p>Specifies the synchronization mode. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong>: T + 1</li>
+         * <li><p><strong>true</strong>: Real-time synchronization.</p>
+         * </li>
+         * <li><p><strong>false</strong>: T+1 synchronization.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

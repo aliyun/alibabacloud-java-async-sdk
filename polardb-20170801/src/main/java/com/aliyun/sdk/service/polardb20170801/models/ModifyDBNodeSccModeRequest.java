@@ -146,6 +146,7 @@ public class ModifyDBNodeSccModeRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +159,7 @@ public class ModifyDBNodeSccModeRequest extends Request {
         }
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +208,7 @@ public class ModifyDBNodeSccModeRequest extends Request {
         }
 
         /**
-         * <p>SCC</p>
+         * <p>The SCC mode to set for the node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

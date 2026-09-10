@@ -145,7 +145,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         } 
 
         /**
-         * Agents.
+         * <p>The agent list.</p>
          */
         public Builder agents(java.util.List<Agents> agents) {
             this.agents = agents;
@@ -153,7 +153,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -161,7 +164,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -169,7 +175,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultId.
+         * <p>The default agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder defaultId(String defaultId) {
             this.defaultId = defaultId;
@@ -177,7 +186,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * MainKey.
+         * <p>The primary agent key name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder mainKey(String mainKey) {
             this.mainKey = mainKey;
@@ -185,7 +197,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -204,7 +219,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
         }
 
         /**
-         * Scope.
+         * <p>The routing scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>per-sender</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -309,7 +327,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Missing.
+             * <p>Indicates whether the file is missing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder missing(Boolean missing) {
                 this.missing = missing;
@@ -317,7 +338,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SOUL.md</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -325,7 +349,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/node/.openclaw/workspace-work/SOUL.md</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -333,7 +360,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -341,7 +371,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAtMs.
+             * <p>The last updated timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1716000000000</p>
              */
             public Builder updatedAtMs(Long updatedAtMs) {
                 this.updatedAtMs = updatedAtMs;
@@ -447,7 +480,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Avatar.
+             * <p>The avatar path or content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -455,7 +491,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarUrl.
+             * <p>The avatar URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -463,7 +502,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Emoji.
+             * <p>The emoji identifier in Unicode format such as U+1F99E, or a direct emoji character.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U+1F99E</p>
              */
             public Builder emoji(String emoji) {
                 this.emoji = emoji;
@@ -471,7 +513,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The identity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarClaw</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -479,7 +524,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Theme.
+             * <p>The theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>space lobster</p>
              */
             public Builder theme(String theme) {
                 this.theme = theme;
@@ -546,7 +594,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Fallbacks.
+             * <p>The fallback model list.</p>
              */
             public Builder fallbacks(java.util.List<String> fallbacks) {
                 this.fallbacks = fallbacks;
@@ -554,7 +602,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Primary.
+             * <p>The primary model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>claude-sonnet-4-5</p>
              */
             public Builder primary(String primary) {
                 this.primary = primary;
@@ -699,7 +750,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             } 
 
             /**
-             * Default.
+             * <p>Indicates whether this is the default agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder _default(Boolean _default) {
                 this._default = _default;
@@ -707,7 +761,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Files.
+             * <p>The agent file list.</p>
              */
             public Builder files(java.util.List<Files> files) {
                 this.files = files;
@@ -726,7 +780,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Identity.
+             * <p>The identity information.</p>
              */
             public Builder identity(Identity identity) {
                 this.identity = identity;
@@ -734,7 +788,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model configuration.</p>
              */
             public Builder model(Model model) {
                 this.model = model;
@@ -742,7 +796,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The agent display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -750,7 +807,7 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Skills.
+             * <p>The list of skills available to the agent.</p>
              */
             public Builder skills(java.util.List<String> skills) {
                 this.skills = skills;
@@ -758,7 +815,10 @@ public class DescribePolarClawAgentsResponseBody extends TeaModel {
             }
 
             /**
-             * Workspace.
+             * <p>The working directory path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/node/.openclaw/workspace-work</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

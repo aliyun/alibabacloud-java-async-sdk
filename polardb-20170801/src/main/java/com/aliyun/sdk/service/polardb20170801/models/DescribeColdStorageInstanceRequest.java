@@ -255,7 +255,10 @@ public class DescribeColdStorageInstanceRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the PolarDB cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-wz9062015ly7526jc</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -264,7 +267,10 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -273,7 +279,23 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * EngineType.
+         * <p>The type of the supported engine. The return value is the sum of the values of the supported engine types.</p>
+         * <ul>
+         * <li><p>1: Search engine</p>
+         * </li>
+         * <li><p>2: LindormTSDB</p>
+         * </li>
+         * <li><p>4: LindormTable</p>
+         * </li>
+         * <li><p>8: File engine</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>For example, if \<code>EngineType\\</code> is 15 (8 + 4 + 2 + 1), the instance supports the search engine, LindormTSDB, LindormTable, and file engine. If \<code>EngineType\\</code> is 6 (4 + 2), the instance supports LindormTSDB and LindormTable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -282,7 +304,10 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time of the cluster. Note: This parameter is returned only for subscription clusters. An empty value is returned for pay-as-you-go clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-14T16:00:00Z</p>
          */
         public Builder expireTime(Integer expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -291,7 +316,15 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <ul>
+         * <li><p>If you do not specify the <strong>MaxResults</strong> parameter, the query is not paged. The value of the <strong>MaxResults</strong> parameter in the response indicates the total number of entries.</p>
+         * </li>
+         * <li><p>If you specify the <strong>MaxResults</strong> parameter, the query is paged. <strong>MaxResults</strong> specifies the number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. The value of the <strong>MaxResults</strong> parameter in the response indicates the number of entries on the current page. The recommended value is <strong>20</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -300,7 +333,10 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A token to retrieve the next page of results. Set this parameter to the \<code>NextToken\\</code> value from a previous call. You do not need to specify this parameter for the first call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2FpXzIwMjIwNjI5X2Jhay9zYWlfc3VtbWVyX3RyZWFzdXJlX3Bvb2xfbG9nLkNTVg==</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -309,7 +345,10 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * <p>The object type. Valid values: \<code>TABLE\\</code>, \<code>PARTITION_TABLE\\</code>, and \<code>LOB\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -336,7 +375,10 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -345,7 +387,10 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -354,7 +399,18 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <ul>
+         * <li>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>If you do not specify this parameter, the operation queries scheduled tasks in all regions within your account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -381,7 +437,10 @@ public class DescribeColdStorageInstanceRequest extends Request {
         }
 
         /**
-         * TableName.
+         * <p>The name of the data table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_log</p>
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

@@ -158,7 +158,10 @@ public class DescribeCostRulesRequest extends Request {
         } 
 
         /**
-         * EffectiveTargetType.
+         * <p>Filters by effective target type. Valid values: global, consumerGroup, and consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder effectiveTargetType(String effectiveTargetType) {
             this.putQueryParameter("EffectiveTargetType", effectiveTargetType);
@@ -167,7 +170,10 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * EffectiveTargetValue.
+         * <p>Filters by effective target value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder effectiveTargetValue(String effectiveTargetValue) {
             this.putQueryParameter("EffectiveTargetValue", effectiveTargetValue);
@@ -176,6 +182,7 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +195,10 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * <p>The model name, such as gpt-4 or qwen-turbo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3-max</p>
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -197,7 +207,10 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * ModelServiceId.
+         * <p>The model service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ms-xxxxxx</p>
          */
         public Builder modelServiceId(String modelServiceId) {
             this.putQueryParameter("ModelServiceId", modelServiceId);
@@ -206,7 +219,10 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +231,16 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +249,10 @@ public class DescribeCostRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

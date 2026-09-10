@@ -171,7 +171,10 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * ClientId.
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cli_xxxxxxbe8</p>
          */
         public Builder clientId(String clientId) {
             this.clientId = clientId;
@@ -179,7 +182,10 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-14T05:58:42Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -187,7 +193,10 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the synchronization link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDesc</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -195,7 +204,14 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * ImPlatform.
+         * <p>The source channel of the synchronization link. Valid values:</p>
+         * <ul>
+         * <li>FEISHU </li>
+         * <li>SHAREPOINT</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FEISHU</p>
          */
         public Builder imPlatform(String imPlatform) {
             this.imPlatform = imPlatform;
@@ -203,7 +219,10 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * LinkId.
+         * <p>The synchronization link ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pkbl-xxxxxx</p>
          */
         public Builder linkId(String linkId) {
             this.linkId = linkId;
@@ -211,7 +230,10 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * LinkName.
+         * <p>The name of the synchronization link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder linkName(String linkName) {
             this.linkName = linkName;
@@ -230,7 +252,10 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * SourceDir.
+         * <p>The source directory address for synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.feishu.cn/wiki/space/xxxxxx">https://example.feishu.cn/wiki/space/xxxxxx</a></p>
          */
         public Builder sourceDir(String sourceDir) {
             this.sourceDir = sourceDir;
@@ -238,7 +263,10 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * SyncIntervalMinutes.
+         * <p>The synchronization interval. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder syncIntervalMinutes(Integer syncIntervalMinutes) {
             this.syncIntervalMinutes = syncIntervalMinutes;
@@ -246,7 +274,16 @@ public class CreateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * SyncStatus.
+         * <p>The synchronization status. Valid values:</p>
+         * <ul>
+         * <li>CREATING</li>
+         * <li>RUNNING</li>
+         * <li>PAUSED</li>
+         * <li>DELETING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATING</p>
          */
         public Builder syncStatus(String syncStatus) {
             this.syncStatus = syncStatus;

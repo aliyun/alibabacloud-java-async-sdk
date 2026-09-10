@@ -130,7 +130,18 @@ public class DescribeDBClusterNetInfoRequest extends Request {
         } 
 
         /**
-         * ConnectionStringType.
+         * <p>The type of the endpoint. Valid values:</p>
+         * <ul>
+         * <li><p>Normal: the primary endpoint</p>
+         * </li>
+         * <li><p>ReadWriteSplitting: the cluster endpoint</p>
+         * </li>
+         * <li><p>MPP: the Massively Parallel Processing (MPP) endpoint</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder connectionStringType(String connectionStringType) {
             this.putQueryParameter("ConnectionStringType", connectionStringType);
@@ -139,6 +150,7 @@ public class DescribeDBClusterNetInfoRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -185,7 +185,32 @@ public class ListOrdersRequest extends Request {
         } 
 
         /**
-         * Category.
+         * <p>The <a href="https://help.aliyun.com/document_detail/183258.html">edition</a> of the cluster. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Normal</strong>: Cluster Edition</p>
+         * </li>
+         * <li><p><strong>Basic</strong>: single node</p>
+         * </li>
+         * <li><p><strong>Archive</strong>: X-Engine</p>
+         * </li>
+         * <li><p><strong>NormalMultimaster</strong>: Multi-master Cluster Edition</p>
+         * </li>
+         * <li><p><strong>SENormal</strong>: Standard Edition</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li><p>The single node edition is not supported on PolarDB for PostgreSQL clusters that run PostgreSQL 11.</p>
+         * </li>
+         * <li><p>The Standard Edition is supported on PolarDB for MySQL clusters that run MySQL 8.0 or 5.7, and on PolarDB for PostgreSQL clusters that run PostgreSQL 14.</p>
+         * </li>
+         * <li><p>PolarDB for MySQL clusters that run MySQL 8.0 support X-Engine and the Multi-master Cluster Edition.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -194,7 +219,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the current instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2zed3m89cw***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -203,7 +231,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for the current request. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -212,7 +243,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. If the query results are not returned in a single call, this token is returned. Use this token in a subsequent call to retrieve the remaining results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -221,7 +255,22 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * OrderStatus.
+         * <p>The status of the order.</p>
+         * <ul>
+         * <li><p><strong>pending</strong>: The task is waiting to start.</p>
+         * </li>
+         * <li><p><strong>create</strong>: The order is placed and is being processed.</p>
+         * </li>
+         * <li><p><strong>fail</strong>: The instance failed to be created.</p>
+         * </li>
+         * <li><p><strong>cancel</strong>: The order is canceled.</p>
+         * </li>
+         * <li><p><strong>success</strong>: The instance is created.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder orderStatus(String orderStatus) {
             this.putQueryParameter("OrderStatus", orderStatus);
@@ -230,7 +279,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -239,7 +291,19 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +312,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The product code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -257,7 +324,13 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the details of regions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -266,7 +339,10 @@ public class ListOrdersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

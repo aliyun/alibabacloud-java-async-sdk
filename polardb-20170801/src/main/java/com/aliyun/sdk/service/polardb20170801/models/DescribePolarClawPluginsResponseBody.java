@@ -119,7 +119,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -127,7 +130,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Diagnostics.
+         * <p>An array of diagnostic objects.</p>
          */
         public Builder diagnostics(java.util.List<Diagnostics> diagnostics) {
             this.diagnostics = diagnostics;
@@ -143,7 +149,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * Plugins.
+         * <p>An array of plugin objects.</p>
          */
         public Builder plugins(java.util.List<Plugins> plugins) {
             this.plugins = plugins;
@@ -159,7 +168,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -251,7 +263,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * Level.
+             * <p>The severity level. Valid values: <code>error</code> and <code>warn</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>warn</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -259,7 +274,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The detailed diagnostic message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>loaded without install/load-path provenance; treat as untracked local code</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -267,7 +285,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * PluginId.
+             * <p>The ID of the associated plugin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openclaw-lark</p>
              */
             public Builder pluginId(String pluginId) {
                 this.pluginId = pluginId;
@@ -275,7 +296,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source file path associated with the diagnostic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/node/.openclaw/extensions/openclaw-lark/index.js</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -459,7 +483,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelIds.
+             * <p>A list of channel IDs, which can be empty.</p>
              */
             public Builder channelIds(java.util.List<String> channelIds) {
                 this.channelIds = channelIds;
@@ -467,7 +491,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the plugin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lark/Feishu channel plugin with im/doc/wiki/drive/task/calendar tools</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -475,7 +502,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message, or <code>null</code> if no error occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -483,7 +513,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The format of the plugin, which can be an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openclaw</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -491,7 +524,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The plugin ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openclaw-lark</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -499,7 +535,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The display name of the plugin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Feishu</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -507,7 +546,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Origin.
+             * <p>The origin of the plugin. Valid values: <code>bundled</code>, <code>global</code>, and <code>user-install</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -515,7 +557,7 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderIds.
+             * <p>A list of provider IDs, which can be empty.</p>
              */
             public Builder providerIds(java.util.List<String> providerIds) {
                 this.providerIds = providerIds;
@@ -523,7 +565,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The file path to the plugin\&quot;s entry point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/node/.openclaw/extensions/openclaw-lark/index.js</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -531,7 +576,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the plugin. Valid values: <code>loaded</code>, <code>disabled</code>, and <code>error</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>loaded</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -539,7 +587,10 @@ public class DescribePolarClawPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number of the plugin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026.4.7</p>
              */
             public Builder version(String version) {
                 this.version = version;

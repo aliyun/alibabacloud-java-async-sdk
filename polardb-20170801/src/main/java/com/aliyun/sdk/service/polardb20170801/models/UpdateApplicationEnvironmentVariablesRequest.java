@@ -88,6 +88,7 @@ public class UpdateApplicationEnvironmentVariablesRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class UpdateApplicationEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after the update. The default value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);
@@ -109,7 +113,12 @@ public class UpdateApplicationEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * Variables.
+         * <p>A mapping from environment variable names to values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ENV_TEST&quot;: &quot;test-value&quot;
+         * }</p>
          */
         public Builder variables(java.util.Map<String, ?> variables) {
             String variablesShrink = shrink(variables, "Variables", "json");

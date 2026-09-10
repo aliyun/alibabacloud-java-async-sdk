@@ -101,7 +101,10 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * Engine.
+         * <p>The database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -110,7 +113,10 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * Extra.
+         * <p>The engine extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
          */
         public Builder extra(String extra) {
             this.putQueryParameter("Extra", extra);
@@ -119,7 +125,13 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view information about all available regions for your account, including region IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

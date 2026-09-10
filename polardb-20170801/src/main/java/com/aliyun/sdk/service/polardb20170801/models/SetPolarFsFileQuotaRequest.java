@@ -89,7 +89,10 @@ public class SetPolarFsFileQuotaRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -98,6 +101,7 @@ public class SetPolarFsFileQuotaRequest extends Request {
         }
 
         /**
+         * <p>The details of the quota rules to apply to directories.</p>
          * <p>This parameter is required.</p>
          */
         public Builder filePathQuotas(java.util.List<FilePathQuotas> filePathQuotas) {
@@ -107,6 +111,7 @@ public class SetPolarFsFileQuotaRequest extends Request {
         }
 
         /**
+         * <p>The Polarlakebase instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +235,10 @@ public class SetPolarFsFileQuotaRequest extends Request {
             } 
 
             /**
-             * Capacity.
+             * <p>The quota capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -238,7 +246,10 @@ public class SetPolarFsFileQuotaRequest extends Request {
             }
 
             /**
-             * FilePathId.
+             * <p>The directory path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/a/project</p>
              */
             public Builder filePathId(String filePathId) {
                 this.filePathId = filePathId;
@@ -246,7 +257,10 @@ public class SetPolarFsFileQuotaRequest extends Request {
             }
 
             /**
-             * Inodes.
+             * <p>The quota inodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder inodes(Long inodes) {
                 this.inodes = inodes;
@@ -254,7 +268,10 @@ public class SetPolarFsFileQuotaRequest extends Request {
             }
 
             /**
-             * MaxDepth.
+             * <p>The number of subdirectory levels to traverse under <code>FilePathId</code>. A value of 1 indicates that only the first-level subdirectories are traversed. A value of 0 indicates that all levels are traversed to the deepest level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxDepth(Integer maxDepth) {
                 this.maxDepth = maxDepth;
@@ -262,7 +279,10 @@ public class SetPolarFsFileQuotaRequest extends Request {
             }
 
             /**
-             * QuotaIds.
+             * <p>The IDs of the rules to apply, separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2</p>
              */
             public Builder quotaIds(String quotaIds) {
                 this.quotaIds = quotaIds;
@@ -270,7 +290,14 @@ public class SetPolarFsFileQuotaRequest extends Request {
             }
 
             /**
-             * Strategy.
+             * <p>The mode in which rules take effect on existing files. Valid values:</p>
+             * <ul>
+             * <li><strong>missing</strong>: Rules take effect only when they are missing. This is the default value.</li>
+             * <li><strong>all</strong>: Rules take effect on all files.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>missing</p>
              */
             public Builder strategy(String strategy) {
                 this.strategy = strategy;

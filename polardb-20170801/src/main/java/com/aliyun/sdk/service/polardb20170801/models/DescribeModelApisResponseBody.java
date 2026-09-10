@@ -119,7 +119,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of model APIs.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -143,7 +149,11 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, or <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +172,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -345,7 +358,15 @@ public class DescribeModelApisResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The model category. Valid values:</p>
+             * <ul>
+             * <li><strong>text</strong></li>
+             * <li><strong>embedding</strong></li>
+             * <li><strong>rerank</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -361,7 +382,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-16 16:46:20</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -369,7 +393,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * ModelApiId.
+             * <p>The model API IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mi-xxxx</p>
              */
             public Builder modelApiId(String modelApiId) {
                 this.modelApiId = modelApiId;
@@ -377,7 +404,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The model API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -385,7 +415,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * PathPrefix.
+             * <p>The API path prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tests/models/</p>
              */
             public Builder pathPrefix(String pathPrefix) {
                 this.pathPrefix = pathPrefix;
@@ -393,7 +426,16 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol. Valid values:</p>
+             * <ul>
+             * <li><strong>openai</strong></li>
+             * <li><strong>anthropic</strong></li>
+             * <li><strong>bailian</strong></li>
+             * <li><strong>vllm</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>openai</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -401,7 +443,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * RecordInput.
+             * <p>The number of input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder recordInput(String recordInput) {
                 this.recordInput = recordInput;
@@ -409,7 +454,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * RecordOutput.
+             * <p>The number of output tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder recordOutput(String recordOutput) {
                 this.recordOutput = recordOutput;
@@ -417,7 +465,33 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * RouteRules.
+             * <p>The routing rules list (JSON array string).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *   {
+             *     &quot;RuleName&quot;: &quot;string&quot;,
+             *     &quot;FallbackMode&quot;: &quot;failover&quot;,
+             *     &quot;MatchModelListJson&quot;: &quot;[]&quot;,
+             *     &quot;providerBalancerAlgorithm&quot;: &quot;round-robin&quot;,
+             *     &quot;Providers&quot;: [
+             *       {
+             *         &quot;ModelServiceName&quot;: &quot;string&quot;,
+             *         &quot;Weight&quot;: &quot;0&quot;,
+             *         &quot;model_protocol&quot;: &quot;vllm&quot;
+             *         &quot;ModelList&quot;: &quot;[]&quot;
+             *       }
+             *     ],
+             *     &quot;FallbackProviders&quot;: [
+             *       {
+             *         &quot;ModelServiceName&quot;: &quot;string&quot;,
+             *         &quot;model_protocol&quot;: &quot;anthropic&quot;,
+             *         &quot;Weight&quot;: &quot;10&quot;,
+             *         &quot;ModelList&quot;: &quot;[]&quot;
+             *       }
+             *     ]
+             *   }
+             * ]</p>
              */
             public Builder routeRules(String routeRules) {
                 this.routeRules = routeRules;
@@ -425,7 +499,10 @@ public class DescribeModelApisResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The model API status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;

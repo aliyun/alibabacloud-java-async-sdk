@@ -147,7 +147,10 @@ public class CreateBudgetPolicyRequest extends Request {
         } 
 
         /**
-         * AlertThresholdPct.
+         * <p>The alert threshold, as a percentage. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder alertThresholdPct(String alertThresholdPct) {
             this.putQueryParameter("AlertThresholdPct", alertThresholdPct);
@@ -156,7 +159,10 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
-         * BudgetDimensionRefId.
+         * <p>The ID of the dimension object. This parameter is required if <code>BudgetType</code> is set to <code>ConsumerTotal</code> or <code>ConsumerGroupTotal</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mi-xxxxx</p>
          */
         public Builder budgetDimensionRefId(String budgetDimensionRefId) {
             this.putQueryParameter("BudgetDimensionRefId", budgetDimensionRefId);
@@ -165,6 +171,7 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
+         * <p>The number of budget points.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,6 +184,15 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
+         * <p>The budget type. Valid values:</p>
+         * <ul>
+         * <li><p><code>GlobalTotal</code>: global total budget</p>
+         * </li>
+         * <li><p><code>ConsumerTotal</code>: consumer total budget</p>
+         * </li>
+         * <li><p><code>ConsumerGroupTotal</code>: consumer group total budget</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +205,7 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
+         * <p>The gateway cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +218,10 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,6 +230,7 @@ public class CreateBudgetPolicyRequest extends Request {
         }
 
         /**
+         * <p>The day of the month on which the budget resets. Valid values: 1 to 28.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * AgenticDbClusterDescription.
+         * <p>The Agentic cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc-***************</p>
          */
         public Builder agenticDbClusterDescription(String agenticDbClusterDescription) {
             this.agenticDbClusterDescription = agenticDbClusterDescription;
@@ -127,7 +130,10 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * AgenticDbClusterId.
+         * <p>The Agentic cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc-***************</p>
          */
         public Builder agenticDbClusterId(String agenticDbClusterId) {
             this.agenticDbClusterId = agenticDbClusterId;
@@ -135,7 +141,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp1s826a1up******</p>
@@ -146,7 +152,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Order ID.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>211454967******</p>
@@ -157,7 +163,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E56531A4-E552-40BA-9C58-137B80******</p>
@@ -168,7 +174,7 @@ public class CreateDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-***************</p>

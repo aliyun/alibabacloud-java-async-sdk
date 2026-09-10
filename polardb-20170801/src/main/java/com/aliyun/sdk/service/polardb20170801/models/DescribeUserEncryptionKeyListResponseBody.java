@@ -132,7 +132,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-************</p>
@@ -143,7 +143,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster key list.</p>
+         * <p>The list of cluster keys.</p>
          */
         public Builder keyList(java.util.List<String> keyList) {
             this.keyList = keyList;
@@ -151,7 +151,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -159,7 +162,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -167,7 +173,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -175,7 +184,7 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
@@ -186,7 +195,10 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;

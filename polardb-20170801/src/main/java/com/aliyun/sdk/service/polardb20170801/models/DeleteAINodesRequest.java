@@ -73,7 +73,13 @@ public class DeleteAINodesRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://api.aliyun.com/api/polardb/2017-08-01/DescribeAIDBClusters">DescribeAIDBClusters</a> operation to view the cluster ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-xxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -82,7 +88,7 @@ public class DeleteAINodesRequest extends Request {
         }
 
         /**
-         * DBNodeId.
+         * <p>The IDs of the nodes to delete.</p>
          */
         public Builder DBNodeId(java.util.List<String> DBNodeId) {
             this.putQueryParameter("DBNodeId", DBNodeId);

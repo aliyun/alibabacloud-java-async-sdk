@@ -67,7 +67,7 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key.</p>
          */
         public Builder apiKey(ApiKey apiKey) {
             this.apiKey = apiKey;
@@ -183,7 +183,10 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key for model serving.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -191,7 +194,10 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-12T03:41:53Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -199,7 +205,10 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +227,10 @@ public class CreateAIDBClusterApiKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The API key status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;

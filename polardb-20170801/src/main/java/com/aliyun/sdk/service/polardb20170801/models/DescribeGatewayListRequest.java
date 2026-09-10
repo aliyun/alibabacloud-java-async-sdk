@@ -116,7 +116,10 @@ public class DescribeGatewayListRequest extends Request {
         } 
 
         /**
-         * GwClusterId.
+         * <p>The ID of the gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-xxxxxxxxxx</p>
          */
         public Builder gwClusterId(String gwClusterId) {
             this.putQueryParameter("GwClusterId", gwClusterId);
@@ -125,7 +128,10 @@ public class DescribeGatewayListRequest extends Request {
         }
 
         /**
-         * GwDescription.
+         * <p>The description of the gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder gwDescription(String gwDescription) {
             this.putQueryParameter("GwDescription", gwDescription);
@@ -134,7 +140,10 @@ public class DescribeGatewayListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,7 +152,19 @@ public class DescribeGatewayListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,7 +173,11 @@ public class DescribeGatewayListRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

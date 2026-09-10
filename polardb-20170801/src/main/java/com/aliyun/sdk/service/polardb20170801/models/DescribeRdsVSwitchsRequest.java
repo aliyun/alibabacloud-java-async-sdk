@@ -176,6 +176,7 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
+         * <p>The region ID. Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +216,10 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) where the endpoint is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*************</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -224,7 +228,10 @@ public class DescribeRdsVSwitchsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

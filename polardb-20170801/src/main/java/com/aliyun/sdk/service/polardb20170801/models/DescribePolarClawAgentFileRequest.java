@@ -103,6 +103,7 @@ public class DescribePolarClawAgentFileRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class DescribePolarClawAgentFileRequest extends Request {
         }
 
         /**
+         * <p>The file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -117,7 +117,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test desc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -126,6 +129,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +142,10 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -147,6 +154,7 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +167,17 @@ public class UpdateKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * SearchMode.
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li>balanced (default): balanced mode.</li>
+         * <li>precise: precise mode.</li>
+         * <li>semantic: semantic mode.</li>
+         * <li>knn: KNN mode.</li>
+         * <li>rrf: reciprocal rank fusion (RRF) mode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>balanced</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);

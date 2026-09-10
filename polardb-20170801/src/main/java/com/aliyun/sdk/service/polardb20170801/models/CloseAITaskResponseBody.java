@@ -78,7 +78,7 @@ public class CloseAITaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task for disabling the PolarDB for AI feature.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>53879cdb-9a00-428e-acaf-ff4cff******</p>

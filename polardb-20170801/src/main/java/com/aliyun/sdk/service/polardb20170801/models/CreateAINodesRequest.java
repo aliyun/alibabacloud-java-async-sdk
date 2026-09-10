@@ -73,7 +73,13 @@ public class CreateAINodesRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://api.aliyun.com/api/polardb/2017-08-01/DescribeAIDBClusters">DescribeAIDBClusters</a> operation to query information about all clusters in your account, including cluster IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-xxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -82,7 +88,7 @@ public class CreateAINodesRequest extends Request {
         }
 
         /**
-         * DBNodes.
+         * <p>The information about the nodes to add.</p>
          */
         public Builder DBNodes(java.util.List<DBNodes> DBNodes) {
             this.putQueryParameter("DBNodes", DBNodes);
@@ -137,7 +143,10 @@ public class CreateAINodesRequest extends Request {
             } 
 
             /**
-             * DBNodeClass.
+             * <p>The node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.mysql.g4.xlarge.gu10</p>
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;

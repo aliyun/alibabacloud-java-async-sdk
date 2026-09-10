@@ -67,7 +67,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2FDB684-751D-424D-98B9-704BEA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * <p>A list of zones.</p>
          */
         public Builder zones(java.util.List<Zones> zones) {
             this.zones = zones;
@@ -167,7 +170,18 @@ public class DescribeZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * ModeCode.
+             * <p>The enumeration of statuses. Valid values:</p>
+             * <ul>
+             * <li><p><strong>UnSet</strong>: The zone is not open for use.</p>
+             * </li>
+             * <li><p><strong>SoldOut</strong>: The resources in the zone are sold out.</p>
+             * </li>
+             * <li><p><strong>WithStock</strong>: The zone has available resources.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UnSet</p>
              */
             public Builder modeCode(String modeCode) {
                 this.modeCode = modeCode;
@@ -175,7 +189,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -183,7 +200,16 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the zone. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ON</strong>: The zone is available.</p>
+             * </li>
+             * <li><p><strong>OFF</strong>: The zone is unavailable.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -191,7 +217,10 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

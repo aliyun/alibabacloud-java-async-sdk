@@ -74,6 +74,7 @@ public class UpgradeApplicationVersionRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class UpgradeApplicationVersionRequest extends Request {
         }
 
         /**
-         * UpgradePolicy.
+         * <p>The upgrade policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOT</p>
          */
         public Builder upgradePolicy(String upgradePolicy) {
             this.putQueryParameter("UpgradePolicy", upgradePolicy);

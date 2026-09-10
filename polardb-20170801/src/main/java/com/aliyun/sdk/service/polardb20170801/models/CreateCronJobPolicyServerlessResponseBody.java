@@ -158,7 +158,10 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
         } 
 
         /**
-         * Action.
+         * <p>The action of the scheduled task. The value is fixed as <code>ModifyDBClusterServerlessConf</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ModifyDBClusterServerlessConf</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -166,7 +169,10 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * CronExpression.
+         * <p>The Cron expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 8 * * ?</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.cronExpression = cronExpression;
@@ -174,7 +180,10 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -182,7 +191,10 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the task. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-07T04:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -190,7 +202,10 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1fa3c0e7-b568-4f41-b703-463c96a91bd8</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -198,7 +213,10 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -206,7 +224,7 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>45D24263-7E3A-4140-9472-************</p>
@@ -217,7 +235,10 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the task. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-01T00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -225,7 +246,16 @@ public class CreateCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><p><code>working</code>: The scheduled task is running.</p>
+         * </li>
+         * <li><p><code>finish</code>: The scheduled task is complete.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>working</p>
          */
         public Builder status(String status) {
             this.status = status;

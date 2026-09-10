@@ -172,7 +172,11 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         } 
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to automatically use coupons. Valid values:</p>
+         * <ul>
+         * <li>true (default): uses coupons.</li>
+         * <li>false: does not use coupons.</li>
+         * </ul>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -181,13 +185,13 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the I/O Burst feature for the ESSD AutoPL disk. Valid value:</p>
+         * <p>Specifies whether to enable I/O performance burst for the ESSD AutoPL cloud disk. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled (default).</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only when the StorageType parameter is set to ESSDAUTOPL.</p>
+         * <p>This parameter is supported only when StorageType is set to ESSDAUTOPL.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -200,7 +204,10 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can contain only ASCII characters. The token can be up to 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f******************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,6 +216,7 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +229,14 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         }
 
         /**
-         * ModifyType.
+         * <p>The type of the specification change. Valid values: </p>
+         * <ul>
+         * <li><strong>Upgrade</strong>: upgrades the specifications.</li>
+         * <li><strong>Downgrade</strong>: downgrades the specifications.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Upgrade</p>
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -230,7 +245,10 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727xxxxxx934</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -239,7 +257,12 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         }
 
         /**
-         * ProvisionedIops.
+         * <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</p>
+         * <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × Capacity, 50000}.</p>
+         * <note id="note_7kj_j0o_rgs" props="china" icmsditafragmentmagic=1>This parameter is supported only when StorageType is set to ESSDAUTOPL.</note>
+         * 
+         * <strong>example:</strong>
+         * <p>2500</p>
          */
         public Builder provisionedIops(Integer provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -257,7 +280,22 @@ public class ModifyDBClusterStoragePerformanceRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The target storage type. Valid values for PolarDB Enterprise Edition:</p>
+         * <ul>
+         * <li><strong>PSL5</strong></li>
+         * <li><strong>PSL4</strong></li>
+         * </ul>
+         * <p>Valid values for PolarDB for MySQL Standard Edition:</p>
+         * <ul>
+         * <li><strong>ESSDPL0</strong></li>
+         * <li><strong>ESSDPL1</strong></li>
+         * <li><strong>ESSDPL2</strong></li>
+         * <li><strong>ESSDPL3</strong></li>
+         * <li><strong>ESSDAUTOPL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ESSDAUTOPL</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

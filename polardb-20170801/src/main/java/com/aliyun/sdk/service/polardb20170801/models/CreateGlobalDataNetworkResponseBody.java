@@ -80,7 +80,10 @@ public class CreateGlobalDataNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * ChannelId.
+         * <p>The unique ID of the newly created synchronization channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdc-xxx</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -88,7 +91,7 @@ public class CreateGlobalDataNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>GDN ID</p>
+         * <p>The unique ID of the newly created GDN.</p>
          * 
          * <strong>example:</strong>
          * <p>gdn-xxx</p>
@@ -99,7 +102,10 @@ public class CreateGlobalDataNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

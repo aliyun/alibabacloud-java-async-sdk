@@ -975,7 +975,10 @@ public class CreateDBClusterRequest extends Request {
         } 
 
         /**
-         * AgenticDbClusterDescription.
+         * <p>The Agentic cluster description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc-******</p>
          */
         public Builder agenticDbClusterDescription(String agenticDbClusterDescription) {
             this.putQueryParameter("AgenticDbClusterDescription", agenticDbClusterDescription);
@@ -984,7 +987,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * AgenticDbClusterId.
+         * <p>The Agentic cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc-******</p>
          */
         public Builder agenticDbClusterId(String agenticDbClusterId) {
             this.putQueryParameter("AgenticDbClusterId", agenticDbClusterId);
@@ -993,7 +999,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * AgenticDbType.
+         * <p>The Agentic database engine type. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dedicated</p>
          */
         public Builder agenticDbType(String agenticDbType) {
             this.putQueryParameter("AgenticDbType", agenticDbType);
@@ -1002,16 +1011,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable idle pause. Values:</p>
-         * <ul>
-         * <li><p><strong>true</strong>: Enabled</p>
-         * </li>
-         * <li><p><strong>false</strong>: Disabled (default)</p>
-         * </li>
-         * </ul>
-         * <blockquote>
-         * <p>Only supported by Serverless clusters.</p>
-         * </blockquote>
+         * <p>Specifies whether to enable No-activity Suspension. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1023,11 +1023,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>CPU architecture. Available values include:</p>
-         * <ul>
-         * <li>X86</li>
-         * <li>ARM</li>
-         * </ul>
+         * <p>The CPU architecture. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>X86</p>
@@ -1039,15 +1035,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable auto-renewal, with available values as follows:</p>
-         * <ul>
-         * <li><strong>true</strong>: Auto-renew.</li>
-         * <li><strong>false</strong>: Do not auto-renew.</li>
-         * </ul>
-         * <p>The default is <strong>false</strong>.</p>
-         * <blockquote>
-         * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
-         * </blockquote>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1059,7 +1047,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to automatically use coupons. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -1068,17 +1059,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Backup retention policy upon cluster deletion, with valid values as follows:</p>
-         * <ul>
-         * <li><strong>ALL</strong>: Permanently retain all backups.</li>
-         * <li><strong>LATEST</strong>: Permanently retain the latest backup (automatically backed up before deletion).</li>
-         * <li><strong>NONE</strong>: Do not retain backup sets upon cluster deletion.</li>
-         * </ul>
-         * <p>By default, the value is set to <strong>NONE</strong>, indicating no backup sets are retained upon cluster deletion.</p>
-         * <blockquote>
-         * <p>This parameter applies only when <strong>DBType</strong> is <strong>MySQL</strong>.
-         * Serverless clusters do not support this parameter.</p>
-         * </blockquote>
+         * <p>The data retention policy for backups when the cluster is deleted. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>NONE</p>
@@ -1090,7 +1071,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * BurstingEnabled.
+         * <p>Specifies whether to enable I/O performance burst for the ESSD AutoPL cloud disk. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder burstingEnabled(String burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -1099,7 +1083,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Used to ensure idempotency of the request. Generated by the client, ensuring uniqueness across different requests, case-sensitive, and not exceeding 64 ASCII characters.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. The value of this parameter is generated by the client and is unique among different requests. The value is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>6000170000591aed949d0f5********************</p>
@@ -1111,16 +1095,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The point in time to clone data, with the following options:</p>
-         * <ul>
-         * <li><strong>LATEST</strong>: Data from the latest time point.</li>
-         * <li><strong>BackupID</strong>: Historical backup set ID, please enter the specific backup set ID.</li>
-         * <li><strong>Timestamp</strong>: Historical time point, please enter the specific time in the format <code>YYYY-MM-DDThh:mm:ssZ</code> (UTC time).</li>
-         * </ul>
-         * <p>The default value is <strong>LATEST</strong>.</p>
-         * <blockquote>
-         * <p>If <strong>CreationOption</strong> is <strong>CloneFromRDS</strong>, this parameter can only be set to <strong>LATEST</strong>.</p>
-         * </blockquote>
+         * <p>The point in time at which data is cloned. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>LATEST</p>
@@ -1132,7 +1107,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * CloudProvider.
+         * <p>The cloud service provider to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENS</p>
          */
         public Builder cloudProvider(String cloudProvider) {
             this.putQueryParameter("CloudProvider", cloudProvider);
@@ -1141,7 +1119,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Cluster network type, currently only VPC is supported, with a fixed value of <strong>VPC</strong>.</p>
+         * <p>The network type of the cluster. Currently, only Virtual Private Cloud (VPC) is supported. Set the value to <strong>VPC</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -1153,22 +1131,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Product series, with valid values as follows:</p>
-         * <ul>
-         * <li><strong>Normal</strong>: Cluster Edition (default)</li>
-         * <li><strong>Basic</strong>: Single-node</li>
-         * <li><strong>ArchiveNormal</strong>: High Compression Engine (X-Engine)</li>
-         * <li><strong>NormalMultimaster</strong>: Multi-master Cluster Edition</li>
-         * <li><strong>SENormal</strong>: Standard Edition</li>
-         * </ul>
-         * <blockquote>
-         * <ul>
-         * <li><strong>MySQL</strong> <strong>5.6</strong>, <strong>5.7</strong>, <strong>8.0</strong>, <strong>PostgreSQL</strong> <strong>14</strong>, and <strong>Oracle Syntax Compatible 2.0</strong> support <strong>Basic</strong>.</li>
-         * <li><strong>MySQL</strong> <strong>8.0</strong> supports <strong>ArchiveNormal</strong> and <strong>NormalMultimaster</strong>.</li>
-         * <li><strong>MySQL</strong> <strong>5.6</strong>, <strong>5.7</strong>, <strong>8.0</strong>, and <strong>PostgreSQL</strong> <strong>14</strong> support <strong>SENormal</strong>.</li>
-         * </ul>
-         * </blockquote>
-         * <p>For more information about product series, see <a href="https://help.aliyun.com/document_detail/183258.html">Product Series</a>.</p>
+         * <p>The edition of the cluster. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1180,42 +1143,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Creation method, with the following values supported:</p>
-         * <ul>
-         * <li><p><strong>Normal</strong>: Creates a brand new PolarDB cluster. For console operations, refer to the following documents:</p>
-         * <ul>
-         * <li><a href="https://help.aliyun.com/document_detail/58769.html">Create a PolarDB MySQL Edition Database Cluster</a></li>
-         * <li><a href="https://help.aliyun.com/document_detail/118063.html">Create a PolarDB PostgreSQL Edition Database Cluster</a></li>
-         * <li><a href="https://help.aliyun.com/document_detail/118182.html">Create a PolarDB PostgreSQL Edition (Oracle Compatible) Database Cluster</a></li>
-         * </ul>
-         * </li>
-         * <li><p><strong>CloneFromPolarDB</strong>: Clones data from an existing PolarDB cluster to a new PolarDB cluster. For console operations, refer to the following documents:</p>
-         * <ul>
-         * <li><a href="https://help.aliyun.com/document_detail/87966.html">Clone a PolarDB MySQL Edition Cluster</a></li>
-         * <li><a href="https://help.aliyun.com/document_detail/118108.html">Clone a PolarDB PostgreSQL Edition Cluster</a></li>
-         * <li><a href="https://help.aliyun.com/document_detail/118221.html">Clone a PolarDB PostgreSQL Edition (Oracle Compatible) Cluster</a></li>
-         * </ul>
-         * </li>
-         * <li><p><strong>RecoverFromRecyclebin</strong>: Recovers data from a released PolarDB cluster to a new PolarDB cluster. For console operations, refer to the following documents:</p>
-         * <ul>
-         * <li><a href="https://help.aliyun.com/document_detail/164880.html">Restore a Released PolarDB MySQL Edition Cluster</a></li>
-         * <li><a href="https://help.aliyun.com/document_detail/432844.html">Restore a Released PolarDB PostgreSQL Edition Cluster</a></li>
-         * <li><a href="https://help.aliyun.com/document_detail/424632.html">Restore a Released PolarDB PostgreSQL Edition (Oracle Compatible) Cluster</a></li>
-         * </ul>
-         * </li>
-         * <li><p><strong>CloneFromRDS</strong>: Clones data from an existing RDS instance to a new PolarDB cluster. Console operation guide is available at <a href="https://help.aliyun.com/document_detail/121812.html">One-click Clone from RDS MySQL to PolarDB MySQL Edition</a>.</p>
-         * </li>
-         * <li><p><strong>MigrationFromRDS</strong>: Migrates data from an existing RDS instance to a new PolarDB cluster. The created PolarDB cluster operates in read-only mode with Binlog enabled by default. Console operation guide is at <a href="https://help.aliyun.com/document_detail/121582.html">One-click Upgrade from RDS MySQL to PolarDB MySQL Edition</a>.</p>
-         * </li>
-         * <li><p><strong>CreateGdnStandby</strong>: Creates a standby cluster. Console operation guide can be found at <a href="https://help.aliyun.com/document_detail/160381.html">Add Standby Cluster</a>.</p>
-         * </li>
-         * <li><p><strong>UpgradeFromPolarDB</strong>: Upgrades and migrates from PolarDB. Console operation guide is detailed in <a href="https://help.aliyun.com/document_detail/459712.html">Major Version Upgrade</a>.</p>
-         * </li>
-         * </ul>
-         * <p>The default value is <strong>Normal</strong>.</p>
-         * <blockquote>
-         * <p>When <strong>DBType</strong> is <strong>MySQL</strong> and <strong>DBVersion</strong> is <strong>8.0</strong>, this parameter can also take the value <strong>CreateGdnStandby</strong>.</p>
-         * </blockquote>
+         * <p>The method used to create the cluster. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -1227,11 +1155,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Cluster name, which must meet the following requirements:</p>
-         * <ul>
-         * <li>Cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>Length should be between 2 and 256 characters.</li>
-         * </ul>
+         * <p>The cluster name. The cluster name must meet the following requirements:</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1243,14 +1167,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Database engine minor version number. Valid values include:</p>
-         * <ul>
-         * <li><strong>8.0.2</strong></li>
-         * <li><strong>8.0.1</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p>This parameter takes effect only when <strong>DBType</strong> is <strong>MySQL</strong> and <strong>DBVersion</strong> is <strong>8.0</strong>.</p>
-         * </blockquote>
+         * <p>The minor version of the database engine. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>8.0.1</p>
@@ -1262,18 +1179,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Node specifications. For details, refer to the following documents:</p>
-         * <ul>
-         * <li>PolarDB MySQL Edition: <a href="https://help.aliyun.com/document_detail/102542.html">Compute Node Specifications</a>.</li>
-         * <li>PolarDB PostgreSQL Edition (Oracle Compatible): <a href="https://help.aliyun.com/document_detail/207921.html">Compute Node Specifications</a>.</li>
-         * <li>PolarDB PostgreSQL Edition: <a href="https://help.aliyun.com/document_detail/209380.html">Compute Node Specifications</a>.</li>
-         * </ul>
-         * <blockquote>
-         * <ul>
-         * <li>For a Serverless cluster in PolarDB MySQL, enter <strong>polar.mysql.sl.small</strong>.
-         * &lt;props=&quot;china&quot;&gt;&gt; - For a Serverless cluster in both PolarDB PostgreSQL (Oracle Compatible) and PolarDB PostgreSQL, enter <strong>polar.pg.sl.small.c</strong>.</li>
-         * </ul>
-         * </blockquote>
+         * <p>The node specifications. For details, see the following topics:</p>
          * 
          * <strong>example:</strong>
          * <p>polar.mysql.x4.medium</p>
@@ -1285,19 +1191,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The number of nodes. This parameter is supported for Standard Edition clusters. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong> (default): only one primary node.</li>
-         * <li><strong>2</strong>: one read-only node and one primary node.</li>
-         * </ul>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p>By default, an Enterprise Edition cluster has two nodes and a Standard Edition cluster has one node.</p>
-         * </li>
-         * <li><p>This parameter is supported only for PolarDB for MySQL clusters.</p>
-         * </li>
-         * </ul>
+         * <p>The number of nodes for Standard Edition and Enterprise Edition. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1309,12 +1203,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Database engine type, with available values as follows:</p>
-         * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>Oracle</strong></li>
-         * </ul>
+         * <p>The database engine type. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1327,36 +1216,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Database engine version number.</p>
-         * <ul>
-         * <li><p>For MySQL, the version numbers are as follows:</p>
-         * <ul>
-         * <li><strong>5.6</strong></li>
-         * <li><strong>5.7</strong></li>
-         * <li><strong>8.0</strong></li>
-         * </ul>
-         * </li>
-         * <li><p>For PostgreSQL, the version numbers are as follows:</p>
-         * <ul>
-         * <li><p><strong>11</strong></p>
-         * </li>
-         * <li><p><strong>14</strong></p>
-         * </li>
-         * <li><p><strong>15</strong>
-         *   &lt;props=&quot;china&quot;&gt;</p>
-         * <blockquote>
-         * <p>When creating a Serverless cluster in PolarDB PostgreSQL, only version <strong>14</strong> is supported.</p>
-         * </blockquote>
-         * </li>
-         * </ul>
-         * </li>
-         * <li><p>For Oracle, the version numbers are as follows:</p>
-         * <ul>
-         * <li><strong>11</strong></li>
-         * <li><strong>14</strong></li>
-         * </ul>
-         * </li>
-         * </ul>
+         * <p>The database engine version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1369,10 +1229,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Cluster timezone (UTC), with selectable values ranging from <strong>-12:00</strong> to <strong>+13:00</strong> at whole-hour intervals, e.g., <strong>00:00</strong>. The default value is <strong>SYSTEM</strong>, which matches the Region&quot;s timezone.</p>
-         * <blockquote>
-         * <p>This parameter applies only when <strong>DBType</strong> is <strong>MySQL</strong>.</p>
-         * </blockquote>
+         * <p>The time zone of the cluster (UTC). The value can be set to any time frame within the range of <strong>-12:00 to +13:00</strong>, such as <strong>00:00</strong>. Default value: <strong>SYSTEM</strong>. The default time zone is the same as the time zone of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -1384,7 +1241,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * EnsRegionId.
+         * <p>The ENS node ID required when creating an ENS database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vn-hanoi-3</p>
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);
@@ -1393,10 +1253,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Global Database Network (GDN) ID.</p>
-         * <blockquote>
-         * <p>This parameter is required when <strong>CreationOption</strong> is <strong>CreateGdnStandby</strong>.</p>
-         * </blockquote>
+         * <p>The global database network (GDN) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gdn-***********</p>
@@ -1408,15 +1265,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the hot standby storage cluster feature. Valid values:</p>
-         * <ul>
-         * <li><strong>ON</strong> (default): enables the hot standby storage cluster feature.</li>
-         * <li><strong>OFF</strong>: disables the hot standby storage cluster feature.</li>
-         * <li><strong>STANDBY</strong>: enables the hot standby storage cluster feature for Standard Edition clusters.</li>
-         * </ul>
-         * <blockquote>
-         * <p> The default value for Standard Edition clusters is <strong>STANDBY</strong>.</p>
-         * </blockquote>
+         * <p>Specifies whether the hot standby cluster is enabled. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1428,10 +1277,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Enable Binlog feature, valid values are as follows:</p>
-         * <ul>
-         * <li><strong>ON</strong>: Cluster enables the Binlog feature. - <strong>OFF</strong>: Cluster disables the Binlog feature. &gt; This parameter takes effect only when the <strong>DBType</strong> parameter is set to <strong>MySQL</strong>.</li>
-         * </ul>
+         * <p>Specifies whether to enable the Binlog feature. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1443,14 +1289,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Enable the X-Engine storage engine feature, with valid values as follows:</p>
-         * <ul>
-         * <li><strong>ON</strong>: The cluster enables the X-Engine engine.</li>
-         * <li><strong>OFF</strong>: The cluster disables the X-Engine engine.<blockquote>
-         * <p>This parameter is effective only when <strong>CreationOption</strong> is not <strong>CreateGdnStandby</strong>, <strong>DBType</strong> is <strong>MySQL</strong>, and <strong>DBVersion</strong> is <strong>8.0</strong>. The memory specification of nodes that enable the X-Engine engine must be at least 8 GB.</p>
-         * </blockquote>
-         * </li>
-         * </ul>
+         * <p>Specifies whether to enable the X-Engine storage engine. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1462,10 +1301,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Set the ratio for enabling the X-Engine storage engine, with a range of integers from 10 to 90.</p>
-         * <blockquote>
-         * <p>This parameter takes effect only when <strong>LooseXEngine</strong> is <strong>ON</strong>.</p>
-         * </blockquote>
+         * <p>The percentage of memory allocated to the X-Engine storage engine. Valid values: integers from 10 to 90.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -1477,15 +1313,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Whether table names are case-sensitive, with valid values as follows:</p>
-         * <ul>
-         * <li><strong>1</strong>: Case-insensitive</li>
-         * <li><strong>0</strong>: Case-sensitive</li>
-         * </ul>
-         * <p>The default value is <strong>1</strong>.</p>
-         * <blockquote>
-         * <p>This parameter applies only when <strong>DBType</strong> is <strong>MySQL</strong>.</p>
-         * </blockquote>
+         * <p>Specifies whether table names are case-sensitive. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1515,10 +1343,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Parameter template ID.</p>
-         * <blockquote>
-         * <p>You can view the list of parameter templates in the target region, including the parameter template ID, by calling the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> interface.</p>
-         * </blockquote>
+         * <p>The parameter template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pcpg-**************</p>
@@ -1530,11 +1355,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Payment type, with available values as follows:</p>
-         * <ul>
-         * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: Subscription (monthly or yearly).</li>
-         * </ul>
+         * <p>The billing method. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1547,11 +1368,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>If the payment type is <strong>Prepaid</strong>, this parameter is required. It specifies whether the prepaid cluster is on a monthly or yearly basis.</p>
-         * <ul>
-         * <li><strong>Year</strong>: Yearly subscription.</li>
-         * <li><strong>Month</strong>: Monthly subscription.</li>
-         * </ul>
+         * <p>This parameter is required when PayType is set to <strong>Prepaid</strong>. Specifies whether the subscription cluster uses a yearly or monthly billing cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -1563,7 +1380,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code. If not specified, the default coupon is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727xxxxxx934</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -1572,9 +1392,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p id="p_wyg_t4a_glm">The provisioned read and write IOPS for ESSD AutoPL cloud disks. Possible values: 0 to min{50,000, 1000*capacity-Baseline Performance}.</p>
-         * <p id="p_6de_jxy_k2g">Baseline Performance = min{1,800+50*capacity, 50000}.</p>
-         * <note id="note_7kj_j0o_rgs">This parameter is supported only when StorageType is ESSDAUTOPL.</note>
+         * <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1586,16 +1404,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Standard edition database proxy specifications. Values are as follows:</p>
-         * <ul>
-         * <li><strong>polar.maxscale.g2.medium.c</strong>: 2 cores.</li>
-         * <li><strong>polar.maxscale.g2.large.c</strong>: 4 cores.</li>
-         * <li><strong>polar.maxscale.g2.xlarge.c</strong>: 8 cores.</li>
-         * <li><strong>polar.maxscale.g2.2xlarge.c</strong>: 16 cores.</li>
-         * <li><strong>polar.maxscale.g2.3xlarge.c</strong>: 24 cores.</li>
-         * <li><strong>polar.maxscale.g2.4xlarge.c</strong>: 32 cores.</li>
-         * <li><strong>polar.maxscale.g2.8xlarge.c</strong>: 64 cores.</li>
-         * </ul>
+         * <p>The specification of the database proxy for Standard Edition. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>polar.maxscale.g2.medium.c</p>
@@ -1607,18 +1416,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Database proxy type, with values including:</p>
-         * <ul>
-         * <li><strong>EXCLUSIVE</strong>: Enterprise Exclusive Edition</li>
-         * <li><strong>GENERAL</strong>: Enterprise General Purpose Edition<blockquote>
-         * <p>The proxy type must match the type of the cluster&quot;s node specifications, i.e.,</p>
-         * <ul>
-         * <li>If the node specification is general, the proxy type should be Enterprise General Purpose Edition;</li>
-         * <li>If the node specification is dedicated, the proxy type should be Enterprise Exclusive Edition.</li>
-         * </ul>
-         * </blockquote>
-         * </li>
-         * </ul>
+         * <p>The database proxy type. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Exclusive</p>
@@ -1630,10 +1428,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
-         * <blockquote>
-         * <p>You can view available regions through the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> interface.</p>
-         * </blockquote>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1646,7 +1441,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-************</p>
@@ -1676,10 +1471,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Maximum scaling limit for a single node. The value range is: 1 PCU~32 PCU.</p>
-         * <blockquote>
-         * <p>Only supported by Serverless clusters.</p>
-         * </blockquote>
+         * <p>The maximum scaling limit per node. Valid values: 1 PCU to 32 PCUs.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -1691,10 +1483,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Minimum scaling limit for a single node. The value range is: 1 PCU~31 PCU.</p>
-         * <blockquote>
-         * <p>Only supported by Serverless clusters.</p>
-         * </blockquote>
+         * <p>The minimum scaling limit per node. Valid values: 1 PCU to 31 PCUs.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1706,10 +1495,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Maximum scaling limit for the number of read-only nodes. The value range is: 0~15.</p>
-         * <blockquote>
-         * <p>Only supported by Serverless clusters.</p>
-         * </blockquote>
+         * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -1721,10 +1507,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Minimum scaling limit for the number of read-only nodes. The value range is: 0~15.</p>
-         * <blockquote>
-         * <p>Only supported by Serverless clusters.</p>
-         * </blockquote>
+         * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1736,10 +1519,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>PolarDB cluster whitelist IP address.</p>
-         * <blockquote>
-         * <p>Supports configuring multiple whitelist IP addresses, with English commas separating multiple IP addresses.</p>
-         * </blockquote>
+         * <p>The IP whitelist of the PolarDB cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>10.<em><strong>.</strong></em>.***</p>
@@ -1751,10 +1531,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Serverless type. The current value is fixed to <strong>AgileServerless</strong> (sensitive mode).</p>
-         * <blockquote>
-         * <p>This parameter is only supported by Serverless clusters.</p>
-         * </blockquote>
+         * <p>The serverless type. The value is fixed as <strong>AgileServerless</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>AgileServerless</p>
@@ -1766,15 +1543,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Source RDS instance ID or source PolarDB cluster ID. This parameter is mandatory only when <strong>CreationOption</strong> is set to <strong>MigrationFromRDS</strong>, <strong>CloneFromRDS</strong>, <strong>CloneFromPolarDB</strong>, or <strong>RecoverFromRecyclebin</strong>.</p>
-         * <ul>
-         * <li><p>If <strong>CreationOption</strong> is <strong>MigrationFromRDS</strong> or <strong>CloneFromRDS</strong>, you need to input the source RDS instance ID. The source RDS instance version must be RDS MySQL 5.6, 5.7, or 8.0 High Availability edition.</p>
-         * </li>
-         * <li><p>If <strong>CreationOption</strong> is <strong>CloneFromPolarDB</strong>, you need to input the source PolarDB cluster ID. The DBType of the cloned cluster will default to match the source cluster. For example, if the source cluster is MySQL 8.0, the cloned cluster must also have <strong>DBType</strong> set to <strong>MySQL</strong> and <strong>DBVersion</strong> to <strong>8.0</strong>.</p>
-         * </li>
-         * <li><p>If <strong>CreationOption</strong> is <strong>RecoverFromRecyclebin</strong>, you need to input the released source PolarDB cluster ID. The DBType of the cluster being recovered from the recycle bin must match the source cluster. For example, if the source cluster was MySQL 8.0, the recovered cluster must also have <strong>DBType</strong> set to <strong>MySQL</strong> and <strong>DBVersion</strong> to <strong>8.0</strong>.</p>
-         * </li>
-         * </ul>
+         * <p>The instance ID of the source ApsaraDB RDS instance or the source PolarDB cluster. This parameter is required only when <strong>CreationOption</strong> is set to <strong>MigrationFromRDS</strong>, <strong>CloneFromRDS</strong>, <strong>CloneFromPolarDB</strong>, or <strong>RecoverFromRecyclebin</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-*************</p>
@@ -1786,7 +1555,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * SourceUid.
+         * <p>The UID of the account that owns the source backup set in cross-account backup restoration scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1022xxxxxxxx</p>
          */
         public Builder sourceUid(Long sourceUid) {
             this.putQueryParameter("SourceUid", sourceUid);
@@ -1795,10 +1567,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The availability zone where the hot standby cluster is stored. Applicable to the standard edition 3AZ scenario.</p>
-         * <blockquote>
-         * <p>This parameter takes effect only when multi-zone data strong consistency is enabled.</p>
-         * </blockquote>
+         * <p>The zone of the hot standby cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-g</p>
@@ -1810,11 +1579,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable automatic storage expansion for standard edition clusters, with valid values as follows:</p>
-         * <ul>
-         * <li>Enable: Enables automatic storage expansion.</li>
-         * <li>Disable: Disables automatic storage expansion.</li>
-         * </ul>
+         * <p>Specifies whether to enable automatic storage scaling for the Standard Edition cluster. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -1826,17 +1591,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable disk encryption. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> This parameter takes effect only when <strong>StorageType</strong> is set to one of the Standard Edition storage types.</p>
-         * </blockquote>
+         * <p>Specifies whether to enable cloud disk encryption. Valid values:</p>
          */
         public Builder storageEncryption(Boolean storageEncryption) {
             this.putQueryParameter("StorageEncryption", storageEncryption);
@@ -1845,14 +1600,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom key that is used for disk encryption in the region in which the instance resides. If this parameter is specified, disk encryption is automatically enabled and cannot be disabled afterwards. If you want to use the default service key for disk encryption, leave this parameter empty.</p>
-         * <p>You can obtain the ID of the key in the KMS console or create a key.</p>
-         * <blockquote>
-         * <p> This parameter takes effect only when <strong>DBType</strong> is set to <strong>MySQL</strong>.</p>
-         * </blockquote>
-         * <blockquote>
-         * <p> This parameter takes effect only when <strong>StorageType</strong> is set to one of the Standard Edition storage types.</p>
-         * </blockquote>
+         * <p>The key ID of the custom Key Management Service (KMS) key for cloud disk encryption in the same region as the instance. Specifying this parameter automatically enables cloud disk encryption, which cannot be disabled after being enabled. Leave this parameter empty to use the default service key for cloud disk encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1022xxxxxxxx</p>
          */
         public Builder storageEncryptionKey(String storageEncryptionKey) {
             this.putQueryParameter("StorageEncryptionKey", storageEncryptionKey);
@@ -1861,11 +1612,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The storage billing type, with valid values as follows:</p>
-         * <ul>
-         * <li>Postpaid: Pay-as-you-go (hourly).</li>
-         * <li>Prepaid: Pay-per-use based on space (subscription).</li>
-         * </ul>
+         * <p>The billing type for storage. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Prepaid</p>
@@ -1877,15 +1624,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The storage that is billed based on the subscription billing method. Unit: GB.</p>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li><p>Valid values for the subscription storage capacity of a PolarDB for MySQL Standard Edition cluster: 20 to 32000.</p>
-         * </li>
-         * <li><p>Valid values for the subscription storage capacity of a Standard Edition cluster that uses the ESSD AUTOPL storage type: 40 to 64000, in increments of 10.</p>
-         * </li>
-         * </ul>
+         * <p>The storage space for the space-based billing (subscription) plan. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -1897,19 +1636,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Enterprise edition storage types include:</p>
-         * <ul>
-         * <li><strong>PSL5</strong></li>
-         * <li><strong>PSL4</strong></li>
-         * </ul>
-         * <p>Standard edition storage types include:</p>
-         * <ul>
-         * <li><strong>ESSDPL0</strong></li>
-         * <li><strong>ESSDPL1</strong></li>
-         * <li><strong>ESSDPL2</strong></li>
-         * <li><strong>ESSDPL3</strong></li>
-         * <li><strong>ESSDAUTOPL</strong></li>
-         * </ul>
+         * <p>The storage type for Enterprise Edition. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>PSL4</p>
@@ -1921,10 +1648,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Set the upper limit for automatic storage expansion of standard edition clusters, in GB.</p>
-         * <blockquote>
-         * <p>The maximum value is 32000.</p>
-         * </blockquote>
+         * <p>The upper limit of automatic storage scaling for the Standard Edition cluster. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -1936,13 +1660,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Whether the cluster has enabled strong data consistency across multiple zones. Values are as follows:</p>
-         * <ul>
-         * <li><p><strong>ON</strong>: Indicates strong data consistency across multiple zones is enabled, applicable to the standard edition 3AZ scenario.</p>
-         * </li>
-         * <li><p><strong>OFF</strong>: Indicates strong data consistency across multiple zones is not enabled.</p>
-         * </li>
-         * </ul>
+         * <p>Specifies whether to enable multi-zone strong data consistency for the cluster. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1954,18 +1672,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Enables TDE encryption. Valid values are as follows:</p>
-         * <ul>
-         * <li><strong>true</strong>: Enabled.</li>
-         * <li><strong>false</strong>: Disabled (default).</li>
-         * </ul>
-         * <blockquote>
-         * <ul>
-         * <li>This parameter takes effect only when <strong>DBType</strong> is <strong>PostgreSQL</strong> or <strong>Oracle</strong>.</li>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/167982.html">ModifyDBClusterTDE</a> interface to enable TDE encryption for a PolarDB MySQL cluster.</li>
-         * <li>Once the TDE feature is enabled, it cannot be disabled.</li>
-         * </ul>
-         * </blockquote>
+         * <p>Specifies whether to enable Transparent Data Encryption (TDE). Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1977,7 +1684,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>List of tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1986,7 +1693,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * TargetMinorVersion.
+         * <p>The target minor engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0.1.1.54</p>
          */
         public Builder targetMinorVersion(String targetMinorVersion) {
             this.putQueryParameter("TargetMinorVersion", targetMinorVersion);
@@ -1995,11 +1705,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>If the payment type is <strong>Prepaid</strong>, this parameter is required.</p>
-         * <ul>
-         * <li>When <strong>Period</strong> is <strong>Month</strong>, <strong>UsedTime</strong> should be an integer within <code>[1-9]</code>.</li>
-         * <li>When <strong>Period</strong> is <strong>Year</strong>, <strong>UsedTime</strong> should be an integer within <code>[1-3]</code>.</li>
-         * </ul>
+         * <p>This parameter is required when PayType is set to <strong>Prepaid</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2011,7 +1717,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>VPC ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-**********</p>
@@ -2023,10 +1729,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Virtual switch ID.</p>
-         * <blockquote>
-         * <p>If VPCId has been selected, VSwitchId is mandatory.</p>
-         * </blockquote>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-**********</p>
@@ -2038,10 +1741,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Availability Zone ID.</p>
-         * <blockquote>
-         * <p>You can view the available zones through the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> interface.</p>
-         * </blockquote>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>
@@ -2112,10 +1812,7 @@ public class CreateDBClusterRequest extends Request {
             } 
 
             /**
-             * <p>Tag key. If you need to add multiple tags to the target cluster at once, click <strong>Add</strong> to add a tag key.</p>
-             * <blockquote>
-             * <p>Up to 20 pairs of tags can be added each time, where <code>Tag.N.Key</code> corresponds to <code>Tag.N.Value</code>.</p>
-             * </blockquote>
+             * <p>The tag key. To add multiple tags to the cluster at a time, click <strong>Add</strong> to add tag keys.</p>
              * 
              * <strong>example:</strong>
              * <p>type</p>
@@ -2126,10 +1823,7 @@ public class CreateDBClusterRequest extends Request {
             }
 
             /**
-             * <p>Tag value. If you need to add multiple tags to the target cluster at once, click <strong>Add</strong> to add tag values.</p>
-             * <blockquote>
-             * <p>Up to 20 pairs of tags can be added each time, where <code>Tag.N.Value</code> corresponds to <code>Tag.N.Key</code>.</p>
-             * </blockquote>
+             * <p>The tag value. To add multiple tags to the cluster at a time, click <strong>Add</strong> to add tag values.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

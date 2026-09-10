@@ -146,6 +146,7 @@ public class ResetAccountPasswordRequest extends Request {
         } 
 
         /**
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +159,15 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The new password for the database account. The password must meet the following requirements:</p>
+         * <ul>
+         * <li><p>Contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+         * </li>
+         * <li><p>Be 8 to 32 characters in length.</p>
+         * </li>
+         * <li><p>The special characters are <code>!@#$%^&amp;*()_+-=</code>.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +180,10 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view information about all clusters in the destination region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

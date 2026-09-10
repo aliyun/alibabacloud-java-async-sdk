@@ -216,7 +216,10 @@ public class DescribeSharedBackupsRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * <p>The backup set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -225,7 +228,10 @@ public class DescribeSharedBackupsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -234,7 +240,19 @@ public class DescribeSharedBackupsRequest extends Request {
         }
 
         /**
-         * DBType.
+         * <p>The database type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * </ul>
+         * <p>To specify multiple types, separate them with a comma.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL,PostgreSQL,Oracle</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -243,7 +261,10 @@ public class DescribeSharedBackupsRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * <p>The database version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -270,7 +291,10 @@ public class DescribeSharedBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -279,7 +303,10 @@ public class DescribeSharedBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 30 to 100. Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -288,7 +315,13 @@ public class DescribeSharedBackupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -315,6 +348,13 @@ public class DescribeSharedBackupsRequest extends Request {
         }
 
         /**
+         * <p>The share type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ShareIncoming</strong>: backups shared with you.</p>
+         * </li>
+         * <li><p><strong>ShareOutgoing</strong>: backups you shared.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

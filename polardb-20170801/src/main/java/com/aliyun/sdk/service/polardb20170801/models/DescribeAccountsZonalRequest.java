@@ -200,7 +200,10 @@ public class DescribeAccountsZonalRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>The account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_acc</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -209,6 +212,7 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +225,10 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -230,7 +237,10 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. You do not need to specify this parameter for the first request. In a subsequent request, set this parameter to the NextToken value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -239,7 +249,13 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The node type. This parameter is required when you query the accounts of a PolarDB Search node.</p>
+         * <ul>
+         * <li>Search</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Search</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -266,7 +282,10 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be an integer that is greater than 0. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -275,7 +294,19 @@ public class DescribeAccountsZonalRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><p>30</p>
+         * </li>
+         * <li><p>50</p>
+         * </li>
+         * <li><p>100</p>
+         * </li>
+         * </ul>
+         * <p>The default value is 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

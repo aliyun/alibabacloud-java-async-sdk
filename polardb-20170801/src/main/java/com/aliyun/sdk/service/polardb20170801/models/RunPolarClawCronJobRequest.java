@@ -103,6 +103,7 @@ public class RunPolarClawCronJobRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class RunPolarClawCronJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cron job to run.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class RunPolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The execution mode. Valid values: force and due. Default value: force.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>force</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -136,7 +141,10 @@ public class RunPolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after the job completes. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

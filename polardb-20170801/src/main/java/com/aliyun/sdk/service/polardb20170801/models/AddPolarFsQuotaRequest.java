@@ -89,7 +89,10 @@ public class AddPolarFsQuotaRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the PolarDB instance on which the application depends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -98,6 +101,7 @@ public class AddPolarFsQuotaRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Polarlakebase instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class AddPolarFsQuotaRequest extends Request {
         }
 
         /**
+         * <p>The details of the quota rules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder quotas(java.util.List<Quotas> quotas) {
@@ -284,7 +289,10 @@ public class AddPolarFsQuotaRequest extends Request {
             } 
 
             /**
-             * AccessTTL.
+             * <p>The time to live (TTL) for the access time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7200</p>
              */
             public Builder accessTTL(Long accessTTL) {
                 this.accessTTL = accessTTL;
@@ -292,7 +300,10 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * ChangeTTL.
+             * <p>The TTL for the change time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7200</p>
              */
             public Builder changeTTL(Long changeTTL) {
                 this.changeTTL = changeTTL;
@@ -300,7 +311,10 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the resource quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>quota_policy</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -308,7 +322,16 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the rule. Valid values:</p>
+             * <ul>
+             * <li><p><strong>True</strong>: The rule immediately applies to new items. This is the default value.</p>
+             * </li>
+             * <li><p><strong>False</strong>: The rule does not apply to new items.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -316,7 +339,13 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * Exclude.
+             * <p>The rule to exclude specific paths from matching.</p>
+             * <ul>
+             * <li>A path pattern that starts with a forward slash (/). Supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>/a/<em>project</em></p>
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -324,7 +353,10 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * FileCountLimit.
+             * <p>The limit on the number of files for a user in the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder fileCountLimit(Long fileCountLimit) {
                 this.fileCountLimit = fileCountLimit;
@@ -332,6 +364,10 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
+             * <p>The wildcard pattern to match paths.</p>
+             * <ul>
+             * <li>A path pattern that starts with a forward slash (/). Supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -343,6 +379,7 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
+             * <p>The name of the rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -354,7 +391,10 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the quota rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -362,7 +402,13 @@ public class AddPolarFsQuotaRequest extends Request {
             }
 
             /**
-             * SizeLimit.
+             * <p>The total size limit for files in the directory. Unit: GB.</p>
+             * <ul>
+             * <li>Note: The value must be at least 1 GB.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sizeLimit(Long sizeLimit) {
                 this.sizeLimit = sizeLimit;

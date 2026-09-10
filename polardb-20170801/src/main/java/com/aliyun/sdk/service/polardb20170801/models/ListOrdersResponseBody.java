@@ -133,7 +133,10 @@ public class ListOrdersResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned for the current request. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -141,7 +144,10 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. If the query results are not returned in a single call, this token is returned. Use this token in a subsequent call to retrieve the remaining results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -149,6 +155,7 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The list of orders.</p>
          * <p>This parameter is required.</p>
          */
         public Builder orderList(java.util.List<OrderList> orderList) {
@@ -157,7 +164,10 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -165,7 +175,19 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -173,7 +195,10 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3AA69096-757C-4647-B36C-29EBC2******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +206,10 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -351,7 +379,10 @@ public class ListOrdersResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1910740440664****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -359,7 +390,16 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+             * </li>
+             * <li><p><strong>Prepaid</strong>: subscription</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Prepaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -367,7 +407,40 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code. Valid values:</p>
+             * <ul>
+             * <li><p>polardb_sub: subscription in the Chinese mainland.</p>
+             * </li>
+             * <li><p>polardb_sub_intl: subscription in Hong Kong (China) and regions outside China.</p>
+             * </li>
+             * <li><p>polardb_payg: pay-as-you-go in the Chinese mainland.</p>
+             * </li>
+             * <li><p>polardb_payg_intl: pay-as-you-go in Hong Kong (China) and regions outside China.</p>
+             * </li>
+             * <li><p>polardb_sub_jushita: Jushita subscription.</p>
+             * </li>
+             * <li><p>polardb_payg_jushita: Jushita pay-as-you-go.</p>
+             * </li>
+             * <li><p>polardb_sub_cainiao: Cainiao subscription.</p>
+             * </li>
+             * <li><p>polardb_payg_cainiao: Cainiao pay-as-you-go.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <ul>
+             * <li><p>If you use an Alibaba Cloud account for the China site, you can view only the commodity codes for the Chinese mainland.</p>
+             * </li>
+             * <li><p>If you use an Alibaba Cloud international site account, you can view only the commodity codes for regions outside the Chinese mainland.</p>
+             * </li>
+             * <li><p>If you use a Jushita account, you can view only the commodity codes for Jushita.</p>
+             * </li>
+             * <li><p>If you use a Cainiao account, you can view only the commodity codes for Cainiao.</p>
+             * </li>
+             * </ul>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb_payg_intl</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -375,7 +448,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * <p>The time when the order was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-31T16:09:13</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -383,7 +459,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-uf6k532gav*******</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -391,7 +470,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25808743077*****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -399,7 +481,22 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * OrderStatus.
+             * <p>The status of the order.</p>
+             * <ul>
+             * <li><p><strong>pending</strong>: The task is waiting to start.</p>
+             * </li>
+             * <li><p><strong>create</strong>: The order is placed and is being processed.</p>
+             * </li>
+             * <li><p><strong>fail</strong>: The instance failed to be created.</p>
+             * </li>
+             * <li><p><strong>cancel</strong>: The order is canceled.</p>
+             * </li>
+             * <li><p><strong>success</strong>: The instance is created.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder orderStatus(String orderStatus) {
                 this.orderStatus = orderStatus;
@@ -407,7 +504,20 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The type of the order. Valid values:</p>
+             * <ul>
+             * <li><p>BUY: The instance is purchased.</p>
+             * </li>
+             * <li><p>UPGRADE: The instance configuration is changed.</p>
+             * </li>
+             * <li><p>RENEW: The subscription is renewed.</p>
+             * </li>
+             * <li><p>CONVERT: The billing method is changed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BUY</p>
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -415,7 +525,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * ProduceCode.
+             * <p>The product code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb</p>
              */
             public Builder produceCode(String produceCode) {
                 this.produceCode = produceCode;
@@ -423,7 +536,10 @@ public class ListOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;

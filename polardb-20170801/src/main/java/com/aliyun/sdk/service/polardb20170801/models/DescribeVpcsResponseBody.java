@@ -106,7 +106,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,19 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * <p><strong>30</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +137,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11FDB5A0-84F5-5361-B729-5770B0AEB9D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +148,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +159,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * Vpcs.
+         * <p>A list of VPCs.</p>
          */
         public Builder vpcs(java.util.List<Vpcs> vpcs) {
             this.vpcs = vpcs;
@@ -282,7 +303,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             } 
 
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.118.126.0/25</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -290,7 +314,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the vSwitch was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-18T15:02:37Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -298,7 +325,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the vSwitch was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-18T15:02:37Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -306,7 +336,16 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The vSwitch is the default vSwitch.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The vSwitch is not the default vSwitch.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -314,7 +353,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * <p>The zone to which the vSwitch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen-f</p>
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -322,7 +364,16 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the vSwitch. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Pending</strong>: The vSwitch is being configured.</p>
+             * </li>
+             * <li><p><strong>Available</strong>: The vSwitch is active.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +381,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The ID of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6fus5py6hbvxqwzwnk8</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -338,7 +392,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-sw</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -522,7 +579,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1868512340232755</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -530,7 +590,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Bid.
+             * <p>Indicates whether the account is an Alibaba Finance Cloud account, an Alibaba Gov Cloud account, or a public cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -538,7 +601,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The IPv4 CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>57.100.6.59/32</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -546,7 +612,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the VPC was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-18T15:02:37Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -554,7 +623,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the VPC was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-18T15:02:37Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -562,7 +634,16 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The VPC is the default VPC.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The VPC is not the default VPC.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -570,7 +651,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The ID of the region to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-chengdu-wt97-a01</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -578,7 +662,16 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the VPC. Valid values:</p>
+             * <ul>
+             * <li><p><code>Pending</code>: The VPC is being configured.</p>
+             * </li>
+             * <li><p><code>Available</code>: The VPC is active.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -586,7 +679,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchs.
+             * <p>A list of vSwitches.</p>
              */
             public Builder vSwitchs(java.util.List<VSwitchs> vSwitchs) {
                 this.vSwitchs = vSwitchs;
@@ -594,7 +687,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC.</p>
+             * <blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> operation to query the details of VPCs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16efwqjzyumc23c647v</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -602,7 +701,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-e2e-10341f3</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

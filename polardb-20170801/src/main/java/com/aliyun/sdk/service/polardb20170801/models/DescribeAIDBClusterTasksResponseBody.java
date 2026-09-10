@@ -171,7 +171,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Engine.
+         * <p>The cluster engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_ai</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -179,7 +182,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * <p>The database engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.1</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -187,7 +193,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The cluster endpoint details.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -195,7 +201,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -203,7 +209,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The total number of records on the current page.</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -211,7 +217,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -219,7 +225,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RelativeDBClusterId.
+         * <p>The ID of the PolarDB cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze***</p>
          */
         public Builder relativeDBClusterId(String relativeDBClusterId) {
             this.relativeDBClusterId = relativeDBClusterId;
@@ -238,7 +247,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>train</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -246,7 +258,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -507,7 +519,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CompletedTime.
+             * <p>The task completion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-09T18:00:00Z</p>
              */
             public Builder completedTime(String completedTime) {
                 this.completedTime = completedTime;
@@ -515,7 +530,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-25T09:37:10Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -523,7 +541,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeDescription.
+             * <p>The node description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBNodeDescription(String DBNodeDescription) {
                 this.DBNodeDescription = DBNodeDescription;
@@ -531,7 +552,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeId.
+             * <p>The template operator instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pm-2ze***</p>
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -539,7 +563,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeStatus.
+             * <p>The instance status. This parameter may not be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder DBNodeStatus(String DBNodeStatus) {
                 this.DBNodeStatus = DBNodeStatus;
@@ -547,7 +574,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeStatusDesc.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder DBNodeStatusDesc(String DBNodeStatusDesc) {
                 this.DBNodeStatusDesc = DBNodeStatusDesc;
@@ -555,7 +585,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DataZoneId.
+             * <p>The zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing-i</p>
              */
             public Builder dataZoneId(String dataZoneId) {
                 this.dataZoneId = dataZoneId;
@@ -563,7 +596,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The cluster engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb_ai</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -571,7 +607,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3.1</p>
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -579,7 +618,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -587,7 +629,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModelPath.
+             * <p>The path.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder modelPath(String modelPath) {
                 this.modelPath = modelPath;
@@ -595,7 +640,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModelSource.
+             * <p>The model source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder modelSource(String modelSource) {
                 this.modelSource = modelSource;
@@ -603,7 +651,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RunningTimes.
+             * <p>The running parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder runningTimes(String runningTimes) {
                 this.runningTimes = runningTimes;
@@ -611,7 +662,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The task start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-09T18:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -619,7 +673,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TrainMode.
+             * <p>The mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sft</p>
              */
             public Builder trainMode(String trainMode) {
                 this.trainMode = trainMode;
@@ -627,7 +684,10 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TrainType.
+             * <p>The type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lora</p>
              */
             public Builder trainType(String trainType) {
                 this.trainType = trainType;
@@ -635,7 +695,7 @@ public class DescribeAIDBClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TuneArch.
+             * <p>The tuning framework.</p>
              */
             public Builder tuneArch(String tuneArch) {
                 this.tuneArch = tuneArch;

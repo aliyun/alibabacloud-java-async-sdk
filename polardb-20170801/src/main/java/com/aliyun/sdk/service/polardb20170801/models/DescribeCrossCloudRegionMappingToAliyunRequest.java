@@ -87,7 +87,10 @@ public class DescribeCrossCloudRegionMappingToAliyunRequest extends Request {
         } 
 
         /**
-         * AliyunRegionId.
+         * <p>The region ID of Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder aliyunRegionId(String aliyunRegionId) {
             this.putQueryParameter("AliyunRegionId", aliyunRegionId);
@@ -96,7 +99,16 @@ public class DescribeCrossCloudRegionMappingToAliyunRequest extends Request {
         }
 
         /**
-         * CloudProvider.
+         * <p>The cloud provider. Valid values:</p>
+         * <ul>
+         * <li><p>HuaweiCloud</p>
+         * </li>
+         * <li><p>Azure</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HuaweiCloud</p>
          */
         public Builder cloudProvider(String cloudProvider) {
             this.putQueryParameter("CloudProvider", cloudProvider);
@@ -105,7 +117,10 @@ public class DescribeCrossCloudRegionMappingToAliyunRequest extends Request {
         }
 
         /**
-         * CrossCloudRegionId.
+         * <p>The region ID of the third-party cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-east-3</p>
          */
         public Builder crossCloudRegionId(String crossCloudRegionId) {
             this.putQueryParameter("CrossCloudRegionId", crossCloudRegionId);

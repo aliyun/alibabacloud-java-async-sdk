@@ -236,7 +236,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         } 
 
         /**
-         * ContinuationToken.
+         * <p>The continuation token from the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFSDF-DF-***</p>
          */
         public Builder continuationToken(String continuationToken) {
             this.continuationToken = continuationToken;
@@ -244,7 +247,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * DataServiceId.
+         * <p>The data service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcs-2zeei***</p>
          */
         public Builder dataServiceId(String dataServiceId) {
             this.dataServiceId = dataServiceId;
@@ -252,7 +258,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pds-2ze88***</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -260,7 +269,18 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetMode.
+         * <p>The training mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>sft</strong>: Supervised Fine-Tuning (SFT).</p>
+         * </li>
+         * <li><p><strong>grpo</strong>: Reinforcement Learning (RL).</p>
+         * </li>
+         * <li><p><strong>text</strong>: Text generation.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>stf</p>
          */
         public Builder datasetMode(String datasetMode) {
             this.datasetMode = datasetMode;
@@ -268,7 +288,16 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetType.
+         * <p>The dataset type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>train</strong>: The training set.</p>
+         * </li>
+         * <li><p><strong>eval</strong>: The evaluation set.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>train</p>
          */
         public Builder datasetType(String datasetType) {
             this.datasetType = datasetType;
@@ -276,7 +305,7 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * Datasets.
+         * <p>An array of dataset objects.</p>
          */
         public Builder datasets(java.util.List<Datasets> datasets) {
             this.datasets = datasets;
@@ -284,7 +313,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * FileCount.
+         * <p>The total number of files in the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder fileCount(String fileCount) {
             this.fileCount = fileCount;
@@ -292,7 +324,16 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * <p>Indicates if more datasets are available. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: More datasets are available.</p>
+         * </li>
+         * <li><p><strong>false</strong>: All datasets have been listed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -300,7 +341,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * NextContinuationToken.
+         * <p>The token for retrieving the next page of results. This parameter is returned only if <code>IsTruncated</code> is <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFSDF-DF-***</p>
          */
         public Builder nextContinuationToken(String nextContinuationToken) {
             this.nextContinuationToken = nextContinuationToken;
@@ -308,7 +352,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -316,7 +363,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -324,7 +374,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * RelativeDBClusterId.
+         * <p>The relative DB cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze88***</p>
          */
         public Builder relativeDBClusterId(String relativeDBClusterId) {
             this.relativeDBClusterId = relativeDBClusterId;
@@ -332,7 +385,7 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2921D843-433A-5FB3-A03B-4EC093B219F8</p>
@@ -343,7 +396,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count of datasets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -351,7 +407,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecords.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalRecords(String totalRecords) {
             this.totalRecords = totalRecords;
@@ -521,7 +580,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             } 
 
             /**
-             * BucketName.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pcs-2ze22***-q7***</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -529,7 +591,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * <p>The file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2845904</p>
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -537,7 +602,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time the file was created, in UTC and formatted as ISO 8601.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-06T06:50:43Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -545,7 +613,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pds-2ze88***</p>
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -553,7 +624,16 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * DatasetType.
+             * <p>The dataset type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>train</strong>: The training set.</p>
+             * </li>
+             * <li><p><strong>eval</strong>: The evaluation set.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>train</p>
              */
             public Builder datasetType(String datasetType) {
                 this.datasetType = datasetType;
@@ -561,7 +641,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>train-***.json</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -569,7 +652,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * LastModified.
+             * <p>The time the file was last modified, in UTC and formatted as ISO 8601.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-06T06:50:43Z</p>
              */
             public Builder lastModified(String lastModified) {
                 this.lastModified = lastModified;
@@ -577,7 +663,10 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb_ai/datasets/train/sft/dataset01/train-***.json</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -585,7 +674,13 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type. The only valid value is:</p>
+             * <ul>
+             * <li><strong>Standard</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Standard</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -593,7 +688,18 @@ public class DescribeAIDBClusterDatasetsResponseBody extends TeaModel {
             }
 
             /**
-             * TrainMode.
+             * <p>The training mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>sft</strong>: Supervised Fine-Tuning (SFT).</p>
+             * </li>
+             * <li><p><strong>grpo</strong>: Reinforcement Learning (RL).</p>
+             * </li>
+             * <li><p><strong>text</strong>: Text generation.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>stf</p>
              */
             public Builder trainMode(String trainMode) {
                 this.trainMode = trainMode;

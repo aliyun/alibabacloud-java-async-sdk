@@ -106,7 +106,10 @@ public class CreateGwConsumerOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * CreditToken.
+         * <p>The redemption code used for subsequent activation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;9&quot;</p>
          */
         public Builder creditToken(String creditToken) {
             this.creditToken = creditToken;
@@ -114,7 +117,10 @@ public class CreateGwConsumerOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-14T16:00:00Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -122,7 +128,10 @@ public class CreateGwConsumerOrderResponseBody extends TeaModel {
         }
 
         /**
-         * GatewayId.
+         * <p>The ID of the AI gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-2ze24rr575j5b18cg</p>
          */
         public Builder gatewayId(String gatewayId) {
             this.gatewayId = gatewayId;
@@ -130,7 +139,10 @@ public class CreateGwConsumerOrderResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID returned after the order is placed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2035638*******</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -138,7 +150,7 @@ public class CreateGwConsumerOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>

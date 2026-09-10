@@ -535,7 +535,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -543,7 +546,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationType.
+         * <p>The application type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
          */
         public Builder applicationType(String applicationType) {
             this.applicationType = applicationType;
@@ -551,7 +557,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Architecture.
+         * <p>The CPU architecture. Valid values:</p>
+         * <ul>
+         * <li><code>x86</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x86</p>
          */
         public Builder architecture(String architecture) {
             this.architecture = architecture;
@@ -559,7 +571,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CanDisableSnat.
+         * <p>Indicates whether SNAT can be disabled.</p>
          */
         public Builder canDisableSnat(Boolean canDisableSnat) {
             this.canDisableSnat = canDisableSnat;
@@ -567,7 +579,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Components.
+         * <p>The list of subcomponents.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.components = components;
@@ -575,7 +587,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-25T09:37:10Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -583,7 +598,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The instance ID of the PolarDB instance on which the application depends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -591,7 +609,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myapp</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -599,7 +620,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DnatMappings.
+         * <p>The list of DNAT mapping entries for NAT mapping.</p>
          */
         public Builder dnatMappings(java.util.List<DnatMappings> dnatMappings) {
             this.dnatMappings = dnatMappings;
@@ -607,7 +628,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Endpoints.
+         * <p>The list of endpoints of the application.</p>
          */
         public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
@@ -615,7 +636,11 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time.</p>
+         * <p>This value is empty if the billing method is Postpaid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-06-25T09:37:10Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -623,7 +648,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Expired.
+         * <p>Indicates whether the application has expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder expired(Boolean expired) {
             this.expired = expired;
@@ -631,7 +659,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IsLatestVersion.
+         * <p>Indicates whether this is the latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isLatestVersion(Boolean isLatestVersion) {
             this.isLatestVersion = isLatestVersion;
@@ -639,7 +670,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LatestVersion.
+         * <p>The latest version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2026.3.13-1#20260320</p>
          */
         public Builder latestVersion(String latestVersion) {
             this.latestVersion = latestVersion;
@@ -647,7 +681,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LockMode.
+         * <p>The lock mode. Valid values:</p>
+         * <ul>
+         * <li>Unlock: Not locked.</li>
+         * <li>Lock: Locked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         public Builder lockMode(String lockMode) {
             this.lockMode = lockMode;
@@ -655,7 +696,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MaintainEndTime.
+         * <p>The end time of the maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19:00Z</p>
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.maintainEndTime = maintainEndTime;
@@ -663,7 +707,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MaintainStartTime.
+         * <p>The start time of the maintenance window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18:00Z</p>
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.maintainStartTime = maintainStartTime;
@@ -671,7 +718,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MemApplicationAttribute.
+         * <p>The Mem0 application attributes.</p>
          */
         public Builder memApplicationAttribute(MemApplicationAttribute memApplicationAttribute) {
             this.memApplicationAttribute = memApplicationAttribute;
@@ -679,7 +726,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MinorVersion.
+         * <p>The minor version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v2026.3.13-1#20260320</p>
          */
         public Builder minorVersion(String minorVersion) {
             this.minorVersion = minorVersion;
@@ -687,7 +737,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NatGatewayId.
+         * <p>The NAT gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxx</p>
          */
         public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
@@ -695,7 +748,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NatMappingSnatIpAddress.
+         * <p>The SNAT IP address bound to the vSwitch where the application resides for NAT mapping. This is a customer-managed SNAT entry that is discovered and returned by the control plane in real time. It is not related to the Internet NAT gateway SNAT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.64.0.20</p>
          */
         public Builder natMappingSnatIpAddress(String natMappingSnatIpAddress) {
             this.natMappingSnatIpAddress = natMappingSnatIpAddress;
@@ -703,7 +759,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -711,7 +770,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PolarClawSaaSApplicationAttribute.
+         * <p>The PolarClaw SaaS application attributes.</p>
          */
         public Builder polarClawSaaSApplicationAttribute(PolarClawSaaSApplicationAttribute polarClawSaaSApplicationAttribute) {
             this.polarClawSaaSApplicationAttribute = polarClawSaaSApplicationAttribute;
@@ -719,7 +778,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFSInstanceId.
+         * <p>The instance ID of PolarFS Cold Storage Edition or High Performance Edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-**************</p>
          */
         public Builder polarFSInstanceId(String polarFSInstanceId) {
             this.polarFSInstanceId = polarFSInstanceId;
@@ -727,7 +789,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -735,7 +800,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -743,7 +811,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroups.
+         * <p>The list of security groups at the application level.</p>
          */
         public Builder securityGroups(java.util.List<SecurityGroups> securityGroups) {
             this.securityGroups = securityGroups;
@@ -751,7 +819,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIPArrays.
+         * <p>The list of whitelists at the application level.</p>
          */
         public Builder securityIPArrays(java.util.List<SecurityIPArrays> securityIPArrays) {
             this.securityIPArrays = securityIPArrays;
@@ -759,7 +827,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ServerlessType.
+         * <p>The serverless type. Valid values:</p>
+         * <ul>
+         * <li>2: agile.</li>
+         * <li>3: steady.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder serverlessType(String serverlessType) {
             this.serverlessType = serverlessType;
@@ -767,7 +842,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SnatStatus.
+         * <p>The SNAT status. Valid values: on and off.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder snatStatus(String snatStatus) {
             this.snatStatus = snatStatus;
@@ -775,7 +853,26 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The application status. Valid values:</p>
+         * <ul>
+         * <li>Creating: Being created.</li>
+         * <li>Activated: Running.</li>
+         * <li>Maintaining: Under maintenance.</li>
+         * <li>ClassChanging: Configuration is being changed.</li>
+         * <li>Transing: Being migrated.</li>
+         * <li>MinorVersionUpgrading: Minor version is being upgraded.</li>
+         * <li>NetCreating: Endpoint is being created.</li>
+         * <li>NetDeleting: Endpoint is being deleted.</li>
+         * <li>NetModifying: Endpoint is being modified.</li>
+         * <li>Restarting: Being restarted.</li>
+         * <li>Locking: Being locked.</li>
+         * <li>Locked: Locked.</li>
+         * <li>Unlocking: Being unlocked.</li>
+         * <li>Deleting: Being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Activated</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -783,7 +880,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Storages.
+         * <p>The storage resource information.</p>
          */
         public Builder storages(java.util.List<Storages> storages) {
             this.storages = storages;
@@ -791,7 +888,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradeAvailable.
+         * <p>Indicates whether an upgrade is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder upgradeAvailable(String upgradeAvailable) {
             this.upgradeAvailable = upgradeAvailable;
@@ -821,7 +921,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -829,7 +932,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcNatGatewayId.
+         * <p>The customer-created VPC NAT gateway ID for NAT mapping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-xxx</p>
          */
         public Builder vpcNatGatewayId(String vpcNatGatewayId) {
             this.vpcNatGatewayId = vpcNatGatewayId;
@@ -837,7 +943,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-l</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -929,7 +1038,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * NetType.
+             * <p>The network type. Valid values: </p>
+             * <ul>
+             * <li>vpc</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -937,7 +1052,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -945,7 +1063,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-*******************</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -953,7 +1074,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupName.
+             * <p>The name of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyGroupName</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -1059,7 +1183,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * SecurityIPArrayName.
+             * <p>The name of the IP address group. Default value: <code>default</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder securityIPArrayName(String securityIPArrayName) {
                 this.securityIPArrayName = securityIPArrayName;
@@ -1067,7 +1194,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPArrayTag.
+             * <p>The tag of the IP address group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytag</p>
              */
             public Builder securityIPArrayTag(String securityIPArrayTag) {
                 this.securityIPArrayTag = securityIPArrayTag;
@@ -1075,7 +1205,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The whitelisted IP addresses, separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -1083,7 +1216,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPNetType.
+             * <p>The network type of the whitelisted IP addresses. Default value: <code>mix</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mix</p>
              */
             public Builder securityIPNetType(String securityIPNetType) {
                 this.securityIPNetType = securityIPNetType;
@@ -1091,7 +1227,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPType.
+             * <p>The type of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder securityIPType(String securityIPType) {
                 this.securityIPType = securityIPType;
@@ -1171,7 +1310,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * Children.
+             * <p>The list of topology child node IDs or child node subcomponent types of the current application subcomponent.</p>
              */
             public Builder children(java.util.List<String> children) {
                 this.children = children;
@@ -1179,7 +1318,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Layer.
+             * <p>The topology layer of the current application subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder layer(String layer) {
                 this.layer = layer;
@@ -1187,7 +1329,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Parents.
+             * <p>The list of topology parent node IDs or parent node subcomponent types of the current application subcomponent.</p>
              */
             public Builder parents(java.util.List<String> parents) {
                 this.parents = parents;
@@ -1371,7 +1513,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentClass.
+             * <p>The specification of the application subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.app.g2.medium</p>
              */
             public Builder componentClass(String componentClass) {
                 this.componentClass = componentClass;
@@ -1379,7 +1524,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentClassDescription.
+             * <p>The specification description of the application subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2C4GB</p>
              */
             public Builder componentClassDescription(String componentClassDescription) {
                 this.componentClassDescription = componentClassDescription;
@@ -1387,7 +1535,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentId.
+             * <p>The subcomponent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pac-*******************</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -1395,7 +1546,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentMaxReplica.
+             * <p>The maximum number of replicas of the application subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder componentMaxReplica(Long componentMaxReplica) {
                 this.componentMaxReplica = componentMaxReplica;
@@ -1403,7 +1557,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentReplica.
+             * <p>The number of replicas of the application subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder componentReplica(Long componentReplica) {
                 this.componentReplica = componentReplica;
@@ -1411,7 +1568,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentReplicaGroupName.
+             * <p>The group name of the replicas of the application subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder componentReplicaGroupName(String componentReplicaGroupName) {
                 this.componentReplicaGroupName = componentReplicaGroupName;
@@ -1419,7 +1579,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentType.
+             * <p>The type of the application subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gateway</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -1427,7 +1590,8 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroups.
+             * <p>The list of security groups at the subcomponent level.</p>
+             * <p>If the security groups at the subcomponent level are the same as those at the application level, this response element is omitted.</p>
              */
             public Builder securityGroups(java.util.List<ComponentsSecurityGroups> securityGroups) {
                 this.securityGroups = securityGroups;
@@ -1435,7 +1599,8 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPArrays.
+             * <p>The list of whitelist addresses at the subcomponent level.</p>
+             * <p>If the whitelists at the subcomponent level are the same as those at the application level, this response element is omitted.</p>
              */
             public Builder securityIPArrays(java.util.List<ComponentsSecurityIPArrays> securityIPArrays) {
                 this.securityIPArrays = securityIPArrays;
@@ -1443,7 +1608,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The component status. Valid values are the same as those of the application status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Activated</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1451,7 +1619,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Topology.
+             * <p>The topology information of the application subcomponent.</p>
              */
             public Builder topology(Topology topology) {
                 this.topology = topology;
@@ -1570,7 +1738,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessAddress.
+             * <p>The access address in the format of NatIp:FrontPort. This address can be used directly from the office network.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.64.0.10:10001</p>
              */
             public Builder accessAddress(String accessAddress) {
                 this.accessAddress = accessAddress;
@@ -1578,7 +1749,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * BackendPort.
+             * <p>The backend service port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8787</p>
              */
             public Builder backendPort(Integer backendPort) {
                 this.backendPort = backendPort;
@@ -1586,7 +1760,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EntryId.
+             * <p>The DNAT entry ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fwd-xxx</p>
              */
             public Builder entryId(String entryId) {
                 this.entryId = entryId;
@@ -1594,7 +1771,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * FrontPort.
+             * <p>The frontend port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder frontPort(Integer frontPort) {
                 this.frontPort = frontPort;
@@ -1602,7 +1782,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PortName.
+             * <p>The port name. Valid values: webui, hermesagent, dashboard, and ssh.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>webui</p>
              */
             public Builder portName(String portName) {
                 this.portName = portName;
@@ -1610,7 +1793,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The entry status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1742,7 +1928,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myendpoint</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1758,7 +1947,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointId.
+             * <p>The endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-**************</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -1766,7 +1958,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.31.95.252</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1774,7 +1969,14 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The endpoint type. Valid values:</p>
+             * <ul>
+             * <li>Private: VPC endpoint.</li>
+             * <li>Public: Public endpoint.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -1782,7 +1984,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1790,7 +1995,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PortDescription.
+             * <p>The port description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kong_http</p>
              */
             public Builder portDescription(String portDescription) {
                 this.portDescription = portDescription;
@@ -1883,7 +2091,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountMode.
+             * <p>The account source. Valid values: reuse_vector and existing. This parameter is returned only when the status is ENABLED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>existing</p>
              */
             public Builder accountMode(String accountMode) {
                 this.accountMode = accountMode;
@@ -1891,7 +2102,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The PolarDB cluster ID used for session storage. This parameter is returned only when the status is ENABLED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-xxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -1899,7 +2113,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The session database name. This parameter is returned only when the status is ENABLED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>contextdb_example</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -1907,7 +2124,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The session storage status. Valid values: DISABLED, ENABLING, ENABLED, and DISABLING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2052,7 +2272,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * DbName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-database-name</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -2060,7 +2283,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EmbedderModelName.
+             * <p>The embedder model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text-embedding-v4</p>
              */
             public Builder embedderModelName(String embedderModelName) {
                 this.embedderModelName = embedderModelName;
@@ -2068,7 +2294,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * GraphLlmModelName.
+             * <p>The graph LLM model support.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-max</p>
              */
             public Builder graphLlmModelName(String graphLlmModelName) {
                 this.graphLlmModelName = graphLlmModelName;
@@ -2076,7 +2305,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LlmModelName.
+             * <p>The LLM model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-max</p>
              */
             public Builder llmModelName(String llmModelName) {
                 this.llmModelName = llmModelName;
@@ -2084,7 +2316,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The project name, which corresponds to the schema that stores project data in the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-project-name</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -2092,7 +2327,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RerankerModelName.
+             * <p>The reranker model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-rerank</p>
              */
             public Builder rerankerModelName(String rerankerModelName) {
                 this.rerankerModelName = rerankerModelName;
@@ -2100,7 +2338,7 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStore.
+             * <p>The Mem0 full session information storage configuration.</p>
              */
             public Builder sessionStore(SessionStore sessionStore) {
                 this.sessionStore = sessionStore;
@@ -2108,7 +2346,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-user</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -2188,7 +2429,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthCallbackURL.
+             * <p>The authentication callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://8.xxx.xxx.xxx.xxx/xxx">http://8.xxx.xxx.xxx.xxx/xxx</a></p>
              */
             public Builder authCallbackURL(String authCallbackURL) {
                 this.authCallbackURL = authCallbackURL;
@@ -2204,7 +2448,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SupabaseClusterId.
+             * <p>The Supabase cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-**************</p>
              */
             public Builder supabaseClusterId(String supabaseClusterId) {
                 this.supabaseClusterId = supabaseClusterId;
@@ -2297,7 +2544,13 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * NetType.
+             * <p>The network type. Valid values: </p>
+             * <ul>
+             * <li>vpc</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -2305,7 +2558,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2313,7 +2569,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-**************</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -2321,7 +2580,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupName.
+             * <p>The name of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyGroupName</p>
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -2427,7 +2689,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * SecurityIPArrayName.
+             * <p>The name of the IP address group. Default value: <code>default</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder securityIPArrayName(String securityIPArrayName) {
                 this.securityIPArrayName = securityIPArrayName;
@@ -2435,7 +2700,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPArrayTag.
+             * <p>The tag of the IP address group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytag</p>
              */
             public Builder securityIPArrayTag(String securityIPArrayTag) {
                 this.securityIPArrayTag = securityIPArrayTag;
@@ -2443,7 +2711,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The whitelisted IP addresses, separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -2451,7 +2722,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPNetType.
+             * <p>The network type of the whitelisted IP addresses. Default value: <code>mix</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mix</p>
              */
             public Builder securityIPNetType(String securityIPNetType) {
                 this.securityIPNetType = securityIPNetType;
@@ -2459,7 +2733,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPType.
+             * <p>The type of the IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder securityIPType(String securityIPType) {
                 this.securityIPType = securityIPType;
@@ -2552,7 +2829,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * StorageCapacity.
+             * <p>The storage capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20Gi</p>
              */
             public Builder storageCapacity(String storageCapacity) {
                 this.storageCapacity = storageCapacity;
@@ -2560,7 +2840,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StorageInstanceId.
+             * <p>The storage instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-**************</p>
              */
             public Builder storageInstanceId(String storageInstanceId) {
                 this.storageInstanceId = storageInstanceId;
@@ -2568,7 +2851,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StoragePerformanceLevel.
+             * <p>The storage performance level (PL).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -2576,7 +2862,10 @@ public class DescribeApplicationAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>essd</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

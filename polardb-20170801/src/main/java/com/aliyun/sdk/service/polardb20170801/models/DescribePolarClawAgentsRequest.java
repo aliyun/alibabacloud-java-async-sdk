@@ -74,7 +74,10 @@ public class DescribePolarClawAgentsRequest extends Request {
         } 
 
         /**
-         * AgentList.
+         * <p>The list of agent IDs to describe.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>work,research</p>
          */
         public Builder agentList(java.util.List<String> agentList) {
             String agentListShrink = shrink(agentList, "AgentList", "json");
@@ -84,6 +87,7 @@ public class DescribePolarClawAgentsRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

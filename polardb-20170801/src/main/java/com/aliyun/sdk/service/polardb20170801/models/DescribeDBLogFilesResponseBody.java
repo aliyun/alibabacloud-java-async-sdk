@@ -184,7 +184,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -192,7 +195,18 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceType.
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>polardb_mysql_rw</strong>: read-write instance.</p>
+         * </li>
+         * <li><p><strong>polardb_mysql_ro</strong>: read-only instance.</p>
+         * </li>
+         * <li><p><strong>polardb_mysql_standby</strong>: standby instance.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_mysql_rw</p>
          */
         public Builder DBInstanceType(String DBInstanceType) {
             this.DBInstanceType = DBInstanceType;
@@ -200,7 +214,7 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * HaLogItems.
+         * <p>A list of failover logs.</p>
          */
         public Builder haLogItems(java.util.List<HaLogItems> haLogItems) {
             this.haLogItems = haLogItems;
@@ -208,7 +222,16 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * HaStatus.
+         * <p>Indicates whether a failover record exists. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: No</p>
+         * </li>
+         * <li><p><strong>0</strong>: Yes</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder haStatus(Integer haStatus) {
             this.haStatus = haStatus;
@@ -216,7 +239,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * ItemsNumbers.
+         * <p>The number of log items on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder itemsNumbers(Integer itemsNumbers) {
             this.itemsNumbers = itemsNumbers;
@@ -224,7 +250,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. It must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -232,7 +261,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 5 to 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -240,7 +272,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +283,7 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * SwitchListItems.
+         * <p>A list of fault simulation records.</p>
          */
         public Builder switchListItems(java.util.List<SwitchListItems> switchListItems) {
             this.switchListItems = switchListItems;
@@ -256,7 +291,7 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * SwitchLogItems.
+         * <p>A list of fault simulation logs.</p>
          */
         public Builder switchLogItems(java.util.List<SwitchLogItems> switchLogItems) {
             this.switchLogItems = switchLogItems;
@@ -264,7 +299,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecords.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecords(Integer totalRecords) {
             this.totalRecords = totalRecords;
@@ -421,7 +459,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * AffectedSessions.
+             * <p>The number of affected sessions during the failover.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder affectedSessions(Long affectedSessions) {
                 this.affectedSessions = affectedSessions;
@@ -429,7 +470,18 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FromDBType.
+             * <p>The instance type before the failover. Valid values:</p>
+             * <ul>
+             * <li><p><strong>polardb_mysql_rw</strong>: read-write instance.</p>
+             * </li>
+             * <li><p><strong>polardb_mysql_ro</strong>: read-only instance.</p>
+             * </li>
+             * <li><p><strong>polardb_mysql_standby</strong>: standby instance.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb_mysql_rw</p>
              */
             public Builder fromDBType(String fromDBType) {
                 this.fromDBType = fromDBType;
@@ -437,7 +489,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchCauseCode.
+             * <p>The error code for the failover cause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Platform.Ha.AuroraService.ManualOperations</p>
              */
             public Builder switchCauseCode(String switchCauseCode) {
                 this.switchCauseCode = switchCauseCode;
@@ -445,7 +500,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchCauseDetail.
+             * <p>Details about the failover cause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Platform.Ha.ManuallyTriggered</p>
              */
             public Builder switchCauseDetail(String switchCauseDetail) {
                 this.switchCauseDetail = switchCauseDetail;
@@ -453,7 +511,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchFinishTime.
+             * <p>The time when the failover was complete. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-20T03:09:56Z</p>
              */
             public Builder switchFinishTime(String switchFinishTime) {
                 this.switchFinishTime = switchFinishTime;
@@ -461,7 +522,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * <p>The failover log ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e571f897-9b3c-4012-9470-88333832dec4</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -469,7 +533,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchStartTime.
+             * <p>The time when the failover started. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-20T03:09:45Z</p>
              */
             public Builder switchStartTime(String switchStartTime) {
                 this.switchStartTime = switchStartTime;
@@ -477,7 +544,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchType.
+             * <p>The failover type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder switchType(Long switchType) {
                 this.switchType = switchType;
@@ -485,7 +555,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSessions.
+             * <p>The total number of sessions during the failover.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder totalSessions(Long totalSessions) {
                 this.totalSessions = totalSessions;
@@ -604,7 +677,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The time when the step was complete. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-08-14T02:07:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -612,7 +688,16 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSuccess.
+             * <p>Indicates whether the step was successful. Valid values:</p>
+             * <ul>
+             * <li><p><code>true</code>: The step was successful.</p>
+             * </li>
+             * <li><p><code>false</code>: The step failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSuccess(String isSuccess) {
                 this.isSuccess = isSuccess;
@@ -620,7 +705,18 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulatePhase.
+             * <p>The fault simulation phase. Valid values:</p>
+             * <ul>
+             * <li><p><strong>PolarDB.MySQL.FaultSimulate.Phase.FAULT_INJECTION</strong>: The fault injection phase.</p>
+             * </li>
+             * <li><p><strong>PolarDB.MySQL.FaultSimulate.Phase.RECOVERY</strong>: The recovery phase.</p>
+             * </li>
+             * <li><p><strong>PolarDB.MySQL.FaultSimulate.Phase.POST_PROCESS</strong>: The post-processing phase.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDB.MySQL.FaultSimulate.Phase.FAULT_INJECTION</p>
              */
             public Builder simulatePhase(String simulatePhase) {
                 this.simulatePhase = simulatePhase;
@@ -628,7 +724,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the step started. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-19T02:12:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -636,7 +735,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StepName.
+             * <p>The name of the current step. You can call the <a href="https://help.aliyun.com/document_detail/2400077.html">DescribeHistoryTasks</a> operation to query the current step of a specified task. A common value is <strong>do_pause</strong>, which indicates that the system waits for a specified period of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init_task_info</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -644,7 +746,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeCost.
+             * <p>The duration of the step in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder timeCost(String timeCost) {
                 this.timeCost = timeCost;
@@ -802,7 +907,13 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * <blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of your clusters, including the cluster IDs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*************</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -810,7 +921,16 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * DstDbType.
+             * <p>The destination database type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>PolarDBMySQL</strong>: A major version upgrade of PolarDB for MySQL.</p>
+             * </li>
+             * <li><p><strong>RDS</strong>: A migration from RDS to PolarDB for MySQL.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDBMySQL</p>
              */
             public Builder dstDbType(String dstDbType) {
                 this.dstDbType = dstDbType;
@@ -818,7 +938,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EventFinishTime.
+             * <p>The time when the system event was complete. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-19T02:12:00Z</p>
              */
             public Builder eventFinishTime(String eventFinishTime) {
                 this.eventFinishTime = eventFinishTime;
@@ -826,7 +949,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EventStartTime.
+             * <p>The time when the system event started. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-19T01:12:00Z</p>
              */
             public Builder eventStartTime(String eventStartTime) {
                 this.eventStartTime = eventStartTime;
@@ -834,7 +960,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateListId.
+             * <p>The simulation list ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>96</p>
              */
             public Builder simulateListId(String simulateListId) {
                 this.simulateListId = simulateListId;
@@ -842,7 +971,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateLogId.
+             * <p>The simulation log ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder simulateLogId(String simulateLogId) {
                 this.simulateLogId = simulateLogId;
@@ -850,7 +982,24 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateStatus.
+             * <p>The fault simulation status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Pending</p>
+             * </li>
+             * <li><p><strong>1</strong>: Success</p>
+             * </li>
+             * <li><p><strong>2</strong>: Running</p>
+             * </li>
+             * <li><p><strong>3</strong>: Failed</p>
+             * </li>
+             * <li><p><strong>4</strong>: Aborted</p>
+             * </li>
+             * <li><p><strong>5</strong>: Awaiting rollback</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder simulateStatus(String simulateStatus) {
                 this.simulateStatus = simulateStatus;
@@ -858,7 +1007,16 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SrcDbType.
+             * <p>The source database type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>PolarDBMySQL</strong>: A major version upgrade of PolarDB for MySQL.</p>
+             * </li>
+             * <li><p><strong>RDS</strong>: A migration from RDS to PolarDB for MySQL.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDBMySQL</p>
              */
             public Builder srcDbType(String srcDbType) {
                 this.srcDbType = srcDbType;
@@ -866,7 +1024,7 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchStepItems.
+             * <p>A list of fault simulation steps.</p>
              */
             public Builder switchStepItems(java.util.List<SwitchStepItems> switchStepItems) {
                 this.switchStepItems = switchStepItems;
@@ -998,7 +1156,13 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * DBNodeId.
+             * <p>The cluster node ID.</p>
+             * <blockquote>
+             * <p>This parameter is returned only when the <code>Key</code> parameter in the request is not set to <code>PolarDBDiskUsage</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-*************</p>
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -1006,7 +1170,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the step was complete. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-23T02:30:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1014,7 +1181,16 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSuccess.
+             * <p>Indicates whether the step was successful. Valid values:</p>
+             * <ul>
+             * <li><p><code>true</code>: The step was successful.</p>
+             * </li>
+             * <li><p><code>false</code>: The step failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSuccess(String isSuccess) {
                 this.isSuccess = isSuccess;
@@ -1022,7 +1198,18 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulatePhase.
+             * <p>The fault simulation phase. Valid values:</p>
+             * <ul>
+             * <li><p><strong>PolarDB.MySQL.FaultSimulate.Phase.FAULT_INJECTION</strong>: The fault injection phase.</p>
+             * </li>
+             * <li><p><strong>PolarDB.MySQL.FaultSimulate.Phase.RECOVERY</strong>: The recovery phase.</p>
+             * </li>
+             * <li><p><strong>PolarDB.MySQL.FaultSimulate.Phase.POST_PROCESS</strong>: The post-processing phase.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDB.MySQL.FaultSimulate.Phase.FAULT_INJECTION</p>
              */
             public Builder simulatePhase(String simulatePhase) {
                 this.simulatePhase = simulatePhase;
@@ -1030,7 +1217,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the step started. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-16T02:12:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1038,7 +1228,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StepName.
+             * <p>The name of the current step. You can call the <a href="https://help.aliyun.com/document_detail/2400077.html">DescribeHistoryTasks</a> operation to query the current step of a specified task. A common value is <strong>do_pause</strong>, which indicates that the system waits for a specified period of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init_task_info</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -1046,7 +1239,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeCost.
+             * <p>The duration of the step in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder timeCost(String timeCost) {
                 this.timeCost = timeCost;
@@ -1243,7 +1439,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * DBNodeCrashList.
+             * <p>The IDs of nodes on which to simulate a fault.</p>
+             * <blockquote>
+             * <p>For a node-level fault simulation, specify the ID of a single node. For an availability zone-level fault simulation, you can either omit this parameter or specify the IDs of all nodes in the zone.</p>
+             * </blockquote>
              */
             public Builder DBNodeCrashList(java.util.List<String> DBNodeCrashList) {
                 this.DBNodeCrashList = DBNodeCrashList;
@@ -1251,7 +1450,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the fault simulation was complete. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-10T02:25:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1259,7 +1461,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EventFinishTime.
+             * <p>The time when the system event was complete. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-19T02:12:00Z</p>
              */
             public Builder eventFinishTime(String eventFinishTime) {
                 this.eventFinishTime = eventFinishTime;
@@ -1267,7 +1472,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EventStartTime.
+             * <p>The time when the system event started. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-19T01:12:00Z</p>
              */
             public Builder eventStartTime(String eventStartTime) {
                 this.eventStartTime = eventStartTime;
@@ -1275,7 +1483,13 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FaultInjectionType.
+             * <p>The fault injection method. Valid values:</p>
+             * <ul>
+             * <li>CrashSQLInjection: Injects a fault into the instance by using <code>Crash SQL</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CrashSQLInjection</p>
              */
             public Builder faultInjectionType(String faultInjectionType) {
                 this.faultInjectionType = faultInjectionType;
@@ -1283,7 +1497,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateListId.
+             * <p>The fault simulation record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder simulateListId(String simulateListId) {
                 this.simulateListId = simulateListId;
@@ -1291,7 +1508,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateMode.
+             * <p>The fault simulation mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder simulateMode(String simulateMode) {
                 this.simulateMode = simulateMode;
@@ -1299,7 +1519,24 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateStatus.
+             * <p>The fault simulation status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Pending</p>
+             * </li>
+             * <li><p><strong>1</strong>: Success</p>
+             * </li>
+             * <li><p><strong>2</strong>: Running</p>
+             * </li>
+             * <li><p><strong>3</strong>: Failed</p>
+             * </li>
+             * <li><p><strong>4</strong>: Aborted</p>
+             * </li>
+             * <li><p><strong>5</strong>: Awaiting rollback</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder simulateStatus(String simulateStatus) {
                 this.simulateStatus = simulateStatus;
@@ -1307,7 +1544,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateTaskId.
+             * <p>The fault simulation task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23</p>
              */
             public Builder simulateTaskId(String simulateTaskId) {
                 this.simulateTaskId = simulateTaskId;
@@ -1315,7 +1555,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the fault simulation started. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-25T01:05:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1323,7 +1566,7 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchLogItems.
+             * <p>A list of fault simulation logs.</p>
              */
             public Builder switchLogItems(java.util.List<SwitchListItemsSwitchLogItems> switchLogItems) {
                 this.switchLogItems = switchLogItems;
@@ -1331,7 +1574,7 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchStepItems.
+             * <p>A list of failover steps.</p>
              */
             public Builder switchStepItems(java.util.List<SwitchListItemsSwitchStepItems> switchStepItems) {
                 this.switchStepItems = switchStepItems;
@@ -1476,7 +1719,13 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * DBNodeId.
+             * <p>The node ID.</p>
+             * <blockquote>
+             * <p>You must specify either the <code>DBNodeId</code> or <code>DBClusterId</code> parameter. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of your clusters, including the node IDs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-*************</p>
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -1484,7 +1733,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the step was complete. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-27T02:27:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1492,7 +1744,16 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSuccess.
+             * <p>Indicates whether the step was successful. Valid values:</p>
+             * <ul>
+             * <li><p><code>true</code>: The step was successful.</p>
+             * </li>
+             * <li><p><code>false</code>: The step failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSuccess(String isSuccess) {
                 this.isSuccess = isSuccess;
@@ -1500,7 +1761,18 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulatePhase.
+             * <p>The fault simulation phase. Valid values:</p>
+             * <ul>
+             * <li><p><strong>PolarDB.MySQL.FaultSimulate.Phase.FAULT_INJECTION</strong>: The fault injection phase.</p>
+             * </li>
+             * <li><p><strong>PolarDB.MySQL.FaultSimulate.Phase.RECOVERY</strong>: The recovery phase.</p>
+             * </li>
+             * <li><p><strong>PolarDB.MySQL.FaultSimulate.Phase.POST_PROCESS</strong>: The post-processing phase.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDB.MySQL.FaultSimulate.Phase.FAULT_INJECTION</p>
              */
             public Builder simulatePhase(String simulatePhase) {
                 this.simulatePhase = simulatePhase;
@@ -1508,7 +1780,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the step started. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-21T02:12:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1516,7 +1791,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StepMsg.
+             * <p>A message about the execution status of the step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This step exec success</p>
              */
             public Builder stepMsg(String stepMsg) {
                 this.stepMsg = stepMsg;
@@ -1524,7 +1802,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * StepName.
+             * <p>The name of the step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init_task_info</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -1532,7 +1813,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeCost.
+             * <p>The duration of the step in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder timeCost(String timeCost) {
                 this.timeCost = timeCost;
@@ -1690,7 +1974,13 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceId.
+             * <p>The cluster ID.</p>
+             * <blockquote>
+             * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of your clusters, including the cluster IDs.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*************</p>
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -1698,7 +1988,16 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * DstDbType.
+             * <p>The destination database type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>PolarDBMySQL</strong>: A major version upgrade of PolarDB for MySQL.</p>
+             * </li>
+             * <li><p><strong>RDS</strong>: A migration from RDS to PolarDB for MySQL.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDBMySQL</p>
              */
             public Builder dstDbType(String dstDbType) {
                 this.dstDbType = dstDbType;
@@ -1706,7 +2005,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EventFinishTime.
+             * <p>The time when the system event was complete. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-19T02:12:00Z</p>
              */
             public Builder eventFinishTime(String eventFinishTime) {
                 this.eventFinishTime = eventFinishTime;
@@ -1714,7 +2016,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * EventStartTime.
+             * <p>The time when the system event started. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-19T01:12:00Z</p>
              */
             public Builder eventStartTime(String eventStartTime) {
                 this.eventStartTime = eventStartTime;
@@ -1722,7 +2027,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateListId.
+             * <p>The simulation list ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231</p>
              */
             public Builder simulateListId(String simulateListId) {
                 this.simulateListId = simulateListId;
@@ -1730,7 +2038,24 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SimulateStatus.
+             * <p>The fault simulation status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Pending</p>
+             * </li>
+             * <li><p><strong>1</strong>: Success</p>
+             * </li>
+             * <li><p><strong>2</strong>: Running</p>
+             * </li>
+             * <li><p><strong>3</strong>: Failed</p>
+             * </li>
+             * <li><p><strong>4</strong>: Aborted</p>
+             * </li>
+             * <li><p><strong>5</strong>: Awaiting rollback</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder simulateStatus(String simulateStatus) {
                 this.simulateStatus = simulateStatus;
@@ -1738,7 +2063,10 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Simulatecode.
+             * <p>The status code of the fault simulation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder simulatecode(String simulatecode) {
                 this.simulatecode = simulatecode;
@@ -1746,7 +2074,16 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SrcDbType.
+             * <p>The source database type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>PolarDBMySQL</strong>: A major version upgrade of PolarDB for MySQL.</p>
+             * </li>
+             * <li><p><strong>RDS</strong>: A migration from RDS to PolarDB for MySQL.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDBMySQL</p>
              */
             public Builder srcDbType(String srcDbType) {
                 this.srcDbType = srcDbType;
@@ -1754,7 +2091,7 @@ public class DescribeDBLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchStepItems.
+             * <p>A list of failover steps.</p>
              */
             public Builder switchStepItems(java.util.List<SwitchLogItemsSwitchStepItems> switchStepItems) {
                 this.switchStepItems = switchStepItems;

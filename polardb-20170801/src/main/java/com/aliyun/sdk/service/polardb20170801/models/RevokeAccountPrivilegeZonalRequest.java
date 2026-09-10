@@ -160,6 +160,7 @@ public class RevokeAccountPrivilegeZonalRequest extends Request {
         } 
 
         /**
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +173,10 @@ public class RevokeAccountPrivilegeZonalRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client-generated token that ensures the idempotence of the request. The token must be unique for each request. It is case-sensitive and cannot exceed 64 ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f5********************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -181,6 +185,7 @@ public class RevokeAccountPrivilegeZonalRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +198,7 @@ public class RevokeAccountPrivilegeZonalRequest extends Request {
         }
 
         /**
+         * <p>The name of the database. To specify multiple databases, separate the names with a comma (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

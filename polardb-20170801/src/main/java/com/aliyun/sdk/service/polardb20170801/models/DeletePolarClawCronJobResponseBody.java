@@ -132,7 +132,10 @@ public class DeletePolarClawCronJobResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,10 @@ public class DeletePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -148,7 +154,10 @@ public class DeletePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the deleted cron job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8006e51c-dab3-4602-bc69-4f728002c6ce</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -156,7 +165,10 @@ public class DeletePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,10 @@ public class DeletePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -172,7 +187,10 @@ public class DeletePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Removed.
+         * <p>Indicates whether a matching cron job was found and deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder removed(Boolean removed) {
             this.removed = removed;
@@ -180,7 +198,10 @@ public class DeletePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

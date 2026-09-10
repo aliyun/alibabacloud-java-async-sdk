@@ -93,7 +93,10 @@ public class CreateKnowledgeSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the PolarDB instance created by automatic creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -101,7 +104,10 @@ public class CreateKnowledgeSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeSpaceId.
+         * <p>The unique identifier of the knowledge space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pks-xxxxxx</p>
          */
         public Builder knowledgeSpaceId(String knowledgeSpaceId) {
             this.knowledgeSpaceId = knowledgeSpaceId;
@@ -109,7 +115,10 @@ public class CreateKnowledgeSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20951253014****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

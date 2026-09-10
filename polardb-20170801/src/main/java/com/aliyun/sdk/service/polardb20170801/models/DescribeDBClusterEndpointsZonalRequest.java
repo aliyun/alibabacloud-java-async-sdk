@@ -144,6 +144,7 @@ public class DescribeDBClusterEndpointsZonalRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class DescribeDBClusterEndpointsZonalRequest extends Request {
         }
 
         /**
-         * DBEndpointId.
+         * <p>The cluster endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pe-*************</p>
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
@@ -165,7 +169,10 @@ public class DescribeDBClusterEndpointsZonalRequest extends Request {
         }
 
         /**
-         * DescribeType.
+         * <p>Specifies whether to return information about AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);

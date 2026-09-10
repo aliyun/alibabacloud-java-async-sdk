@@ -67,7 +67,7 @@ public class DisableDBClusterServerlessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the serverless cluster.</p>
+         * <p>The serverless cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>

@@ -67,7 +67,10 @@ public class ModifyCostRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * CostRuleId.
+         * <p>The cost rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>924d450014e64e88ac6e8486f8e990**</p>
          */
         public Builder costRuleId(String costRuleId) {
             this.costRuleId = costRuleId;
@@ -75,7 +78,7 @@ public class ModifyCostRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

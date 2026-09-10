@@ -132,7 +132,10 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,10 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationType.
+         * <p>The application type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>supabase</p>
          */
         public Builder applicationType(String applicationType) {
             this.applicationType = applicationType;
@@ -148,7 +154,10 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-05-23T02:21:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -156,7 +165,10 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The data granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.interval = interval;
@@ -172,7 +184,10 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class DescribeApplicationPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-15T16:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

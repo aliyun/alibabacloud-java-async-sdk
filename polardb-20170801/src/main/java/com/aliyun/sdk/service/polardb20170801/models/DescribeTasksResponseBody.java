@@ -145,7 +145,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster for which the task was created.</p>
+         * <p>The ID of the cluster to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-***************</p>
@@ -156,7 +156,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the query.</p>
+         * <p>The end of the time range to query.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-02T03:00Z</p>
@@ -167,7 +167,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the page returned.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +178,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -200,7 +200,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query.</p>
+         * <p>The beginning of the time range to query.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-30T00:00Z</p>
@@ -211,7 +211,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the task.</p>
+         * Tasks.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -444,10 +444,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was started. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-12-02T02:39:15Z</p>
+             * BeginTime.
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -455,10 +452,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the current step.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>create_instance</p>
+             * CurrentStepName.
              */
             public Builder currentStepName(String currentStepName) {
                 this.currentStepName = currentStepName;
@@ -466,13 +460,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * <blockquote>
-             * <p> This parameter is returned for only the tasks that involve database operations.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DBName.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -480,10 +468,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated end time of the task. In most cases, this parameter is empty.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * ExpectedFinishTime.
              */
             public Builder expectedFinishTime(String expectedFinishTime) {
                 this.expectedFinishTime = expectedFinishTime;
@@ -491,10 +476,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was completed. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-12-02T02:40:15Z</p>
+             * FinishTime.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -502,10 +484,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the task in percentage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Progress.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -513,10 +492,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the task progress. If no progress description is provided for the task, this parameter is empty.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * ProgressInfo.
              */
             public Builder progressInfo(String progressInfo) {
                 this.progressInfo = progressInfo;
@@ -524,10 +500,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated remaining duration of the task. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1767</p>
+             * Remain.
              */
             public Builder remain(Integer remain) {
                 this.remain = remain;
@@ -535,10 +508,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the subtasks. For example, the value <code>1/4</code> indicates that the task consists of four subtasks and the first subtask is in progress.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1/4</p>
+             * StepProgressInfo.
              */
             public Builder stepProgressInfo(String stepProgressInfo) {
                 this.stepProgressInfo = stepProgressInfo;
@@ -546,10 +516,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the subtasks.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[{&quot;remain&quot;:0,&quot;name&quot;:&quot;init_task&quot;,&quot;progress&quot;:100},{&quot;remain&quot;:1764,&quot;name&quot;:&quot;create_instance&quot;,&quot;progress&quot;:0},{&quot;remain&quot;:1,&quot;name&quot;:&quot;init_cluster&quot;,&quot;progress&quot;:0},{&quot;remain&quot;:2,&quot;name&quot;:&quot;create_backup&quot;,&quot;progress&quot;:0}]</p>
+             * StepsInfo.
              */
             public Builder stepsInfo(String stepsInfo) {
                 this.stepsInfo = stepsInfo;
@@ -557,10 +524,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API operation that is used by the task. Example: <code>CreateDBInstance</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CreateDBInstance</p>
+             * TaskAction.
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;
@@ -568,13 +532,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code that is returned when an error occurs.</p>
-             * <blockquote>
-             * <p> This parameter is returned only when the task is in the <strong>Stop</strong> state.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * TaskErrorCode.
              */
             public Builder taskErrorCode(String taskErrorCode) {
                 this.taskErrorCode = taskErrorCode;
@@ -582,13 +540,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message that is returned when an error occurs.</p>
-             * <blockquote>
-             * <p> This parameter is returned only when the task is in the <strong>Stop</strong> state.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>null</p>
+             * TaskErrorMessage.
              */
             public Builder taskErrorMessage(String taskErrorMessage) {
                 this.taskErrorMessage = taskErrorMessage;
@@ -596,10 +548,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>111111111</p>
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

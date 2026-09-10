@@ -67,7 +67,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of parameter templates.</p>
+         * <p>The list of parameter templates.</p>
          */
         public Builder parameterGroups(java.util.List<ParameterGroups> parameterGroups) {
             this.parameterGroups = parameterGroups;
@@ -75,7 +75,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>944CED46-A6F7-40C6-B6DC-C6E5CC******</p>
@@ -246,7 +246,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the engine.</p>
+             * <p>The type of the database engine.</p>
              * 
              * <strong>example:</strong>
              * <p>MySQL</p>
@@ -257,7 +257,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the database engine</p>
+             * <p>The version of the database engine.</p>
              * 
              * <strong>example:</strong>
              * <p>8.0</p>
@@ -268,10 +268,12 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to restart the cluster when this parameter template is applied. Valid values:</p>
+             * <p>Indicates whether a cluster restart is required for the parameter template to take effect. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: A restart is not required.</li>
-             * <li><strong>1</strong>: A restart is required.</li>
+             * <li><p><strong>0</strong>: A restart is not required.</p>
+             * </li>
+             * <li><p><strong>1</strong>: A restart is required.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -329,9 +331,12 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             /**
              * <p>The type of the parameter template. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: the default parameter template.</li>
-             * <li><strong>1</strong>: a custom parameter template.</li>
-             * <li><strong>2</strong>: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</li>
+             * <li><p><strong>0</strong>: system default template</p>
+             * </li>
+             * <li><p><strong>1</strong>: user-defined template</p>
+             * </li>
+             * <li><p><strong>2</strong>: automatic backup template (The system automatically backs up the previous parameter settings as a template after you apply a new template.)</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

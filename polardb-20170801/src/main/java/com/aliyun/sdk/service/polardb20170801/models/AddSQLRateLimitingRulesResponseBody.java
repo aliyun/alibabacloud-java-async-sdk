@@ -80,7 +80,13 @@ public class AddSQLRateLimitingRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * <blockquote>
+         * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message is returned, such as an error code.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Message</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +94,7 @@ public class AddSQLRateLimitingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
@@ -99,7 +105,16 @@ public class AddSQLRateLimitingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

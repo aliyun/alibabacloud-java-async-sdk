@@ -131,6 +131,7 @@ public class DeleteDatabaseZonalRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class DeleteDatabaseZonalRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

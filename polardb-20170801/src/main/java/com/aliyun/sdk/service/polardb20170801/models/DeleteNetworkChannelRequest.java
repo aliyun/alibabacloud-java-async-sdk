@@ -187,6 +187,7 @@ public class DeleteNetworkChannelRequest extends Request {
         } 
 
         /**
+         * <p>The name of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +200,10 @@ public class DeleteNetworkChannelRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client token that ensures request idempotence. The client generates this token. It must be unique across requests. The token is case-sensitive and can contain up to 64 ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -208,6 +212,7 @@ public class DeleteNetworkChannelRequest extends Request {
         }
 
         /**
+         * <p>The name of the target instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +243,10 @@ public class DeleteNetworkChannelRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -247,7 +255,10 @@ public class DeleteNetworkChannelRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -274,7 +285,10 @@ public class DeleteNetworkChannelRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) where the endpoint is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1qpo0kug3a20qqe****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

@@ -89,7 +89,13 @@ public class DeletePolarFsQuotaRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the details of all clusters under your account, including the cluster ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -98,6 +104,7 @@ public class DeletePolarFsQuotaRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Polarlakebase instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +117,7 @@ public class DeletePolarFsQuotaRequest extends Request {
         }
 
         /**
+         * <p>The details of the quota rules.</p>
          * <p>This parameter is required.</p>
          */
         public Builder quotas(java.util.List<Quotas> quotas) {
@@ -180,6 +188,7 @@ public class DeletePolarFsQuotaRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the quota.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -191,6 +200,7 @@ public class DeletePolarFsQuotaRequest extends Request {
             }
 
             /**
+             * <p>The name of the quota.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

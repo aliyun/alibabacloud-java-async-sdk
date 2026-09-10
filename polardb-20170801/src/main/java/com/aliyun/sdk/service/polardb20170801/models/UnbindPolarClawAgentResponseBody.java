@@ -132,7 +132,7 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Agent ID</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -143,7 +143,10 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-********************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -151,7 +154,10 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code of the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -159,7 +165,10 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -167,7 +176,10 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RemovedCount.
+         * <p>The number of removed bindings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder removedCount(Integer removedCount) {
             this.removedCount = removedCount;
@@ -175,7 +187,7 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -186,7 +198,10 @@ public class UnbindPolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * TotalBindings.
+         * <p>The total number of bindings after the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalBindings(Integer totalBindings) {
             this.totalBindings = totalBindings;

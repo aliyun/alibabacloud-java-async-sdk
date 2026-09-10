@@ -145,7 +145,10 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * BranchComputeClusterId.
+         * <p>The ID of the compute instance associated with the default branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-g0lsayq8c5qe</p>
          */
         public Builder branchComputeClusterId(String branchComputeClusterId) {
             this.branchComputeClusterId = branchComputeClusterId;
@@ -153,7 +156,10 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the project was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-10T11:00:00Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -161,7 +167,10 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultBranchId.
+         * <p>The default branch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-1a2b3c4d5e6f</p>
          */
         public Builder defaultBranchId(String defaultBranchId) {
             this.defaultBranchId = defaultBranchId;
@@ -169,7 +178,10 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultBranchName.
+         * <p>The default branch name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder defaultBranchName(String defaultBranchName) {
             this.defaultBranchName = defaultBranchName;
@@ -177,7 +189,10 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the new project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-a1b2c3d4e5f6</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -185,7 +200,10 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analytics-prod</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -193,7 +211,10 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5F6A7B8-C9D0-1234-EFAB-345678901234</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +222,10 @@ public class CreateAgenticDBProjectResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;

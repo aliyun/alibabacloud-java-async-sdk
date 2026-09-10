@@ -67,7 +67,7 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of endpoints.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -75,7 +75,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E5F6A7B8-C9D0-1234-EFAB-567890123EFA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pe-cedar-cygfzprh775g.polaragentic.pre.rds.aliyuncs.com</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -175,7 +181,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionString.
+             * <p>The full PostgreSQL connection string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>postgresql://cloud_admin:******@pe-cedar-cygfzprh775g.polaragentic.pre.rds.aliyuncs.com:5460/neondb</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -183,7 +192,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type. Valid values: Private and Public.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -191,7 +203,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5460</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -349,7 +364,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * Account.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_admin</p>
              */
             public Builder account(String account) {
                 this.account = account;
@@ -357,7 +375,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Address.
+             * <p>The compatible connection address. The public endpoint is returned first. If no public endpoint is available, the private endpoint is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.1.100</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -365,7 +386,7 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * AddressItems.
+             * <p>The list of public and private network endpoints.</p>
              */
             public Builder addressItems(java.util.List<AddressItems> addressItems) {
                 this.addressItems = addressItems;
@@ -373,7 +394,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionString.
+             * <p>The compatible connection string. The public connection string is returned first. If no public connection string is available, the private connection string is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>postgresql://cloud_admin:******@10.0.1.100:5432/neondb</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -381,7 +405,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>neondb</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -389,7 +416,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointId.
+             * <p>The endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-3m4n5o6p7q8r</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -397,7 +427,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointType.
+             * <p>The endpoint type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadWrite</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -405,7 +438,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -413,7 +449,10 @@ public class DescribeAgenticDBBranchEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The compatible connection port that corresponds to the Address parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5432</p>
              */
             public Builder port(Integer port) {
                 this.port = port;

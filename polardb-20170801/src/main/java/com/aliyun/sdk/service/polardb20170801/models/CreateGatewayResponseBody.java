@@ -80,7 +80,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         } 
 
         /**
-         * GwClusterId.
+         * <p>The gateway instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-2ze2079ueg20****</p>
          */
         public Builder gwClusterId(String gwClusterId) {
             this.gwClusterId = gwClusterId;
@@ -88,7 +91,10 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2035629******</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +102,7 @@ public class CreateGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F9F1CB1A-B1D5-4EF5-A53A-************</p>

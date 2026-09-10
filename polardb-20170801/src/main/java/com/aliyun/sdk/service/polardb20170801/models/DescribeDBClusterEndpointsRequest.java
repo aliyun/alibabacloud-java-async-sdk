@@ -160,7 +160,7 @@ public class DescribeDBClusterEndpointsRequest extends Request {
         /**
          * <p>The ID of the cluster.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to find the IDs of all clusters in your account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -174,7 +174,7 @@ public class DescribeDBClusterEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the endpoint.</p>
+         * <p>The ID of the cluster endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>pe-*************</p>
@@ -186,7 +186,10 @@ public class DescribeDBClusterEndpointsRequest extends Request {
         }
 
         /**
-         * DescribeType.
+         * <p>Specifies whether to return information about AI nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);
@@ -213,7 +216,10 @@ public class DescribeDBClusterEndpointsRequest extends Request {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The ID of the PolarFS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-test*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.putQueryParameter("PolarFsInstanceId", polarFsInstanceId);

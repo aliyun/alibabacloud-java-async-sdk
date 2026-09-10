@@ -119,7 +119,7 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>A list of consumer groups.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -143,7 +149,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records returned per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,7 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -162,7 +171,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -293,7 +305,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowedModels.
+             * <p>The list of supported models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;[]&quot;</p>
              */
             public Builder allowedModels(String allowedModels) {
                 this.allowedModels = allowedModels;
@@ -301,7 +316,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroupId.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cg-xxxxxxxx</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -309,7 +327,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroupName.
+             * <p>The name of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder consumerGroupName(String consumerGroupName) {
                 this.consumerGroupName = consumerGroupName;
@@ -317,7 +338,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-28T09:56:03+08:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -325,7 +349,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-04T16:09:29+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -333,7 +360,16 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the consumer group is the default group. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: No</p>
+             * </li>
+             * <li><p><strong>1</strong>: Yes</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -341,7 +377,10 @@ public class DescribeConsumerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>The nickname of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;

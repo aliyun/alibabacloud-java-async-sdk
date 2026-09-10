@@ -74,6 +74,7 @@ public class DescribePolarClawMCPServersRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class DescribePolarClawMCPServersRequest extends Request {
         }
 
         /**
-         * ServerList.
+         * <p>A list of MCP server names. If this parameter is empty, the configurations of all MCP servers are returned.</p>
          */
         public Builder serverList(java.util.List<String> serverList) {
             this.putQueryParameter("ServerList", serverList);

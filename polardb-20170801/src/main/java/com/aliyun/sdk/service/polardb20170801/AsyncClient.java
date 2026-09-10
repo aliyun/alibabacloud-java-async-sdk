@@ -20,6 +20,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Aborts an upgrade or migration task.<blockquote>
+     * <p>Before you call this operation, create an upgrade task for the cluster by calling the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation and setting the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade an ApsaraDB RDS for MySQL instance to a PolarDB for MySQL cluster</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of AbortDBClusterMigration  AbortDBClusterMigrationRequest
      * @return AbortDBClusterMigrationResponse
      */
@@ -38,6 +46,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddFirewallRulesResponse> addFirewallRules(AddFirewallRulesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>The <code>ApplicationId</code> and <code>ServerName</code> parameters are required.</li>
+     * <li>The <code>ApplicationId</code> parameter specifies the application ID.</li>
+     * <li>The <code>ServerName</code> parameter specifies the MCP server name to add.</li>
+     * <li>A successful response returns the request ID, a message, a status code, the application ID, and the server name.</li>
+     * <li>If the request fails, the API may return a 500 error code with a detailed error message.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddPolarClawMCPServer  AddPolarClawMCPServerRequest
      * @return AddPolarClawMCPServerResponse
      */
@@ -50,6 +68,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddPolarFsPathMappingResponse> addPolarFsPathMapping(AddPolarFsPathMappingRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation adds a new path policy—a directory quota rule—to a specified Polarlakebase instance.</li>
+     * <li>The <code>Quotas</code> parameter is a list. Each element represents a new quota rule. You can add up to 11 rules in a single request.</li>
+     * <li>Each rule must include the <code>Name</code> and <code>Include</code> fields. Other fields, such as <code>Description</code> and <code>Exclude</code>, are optional.</li>
+     * <li>To define the quota limit, specify at least one of the following parameters: <code>SizeLimit</code>, <code>FileCountLimit</code>, <code>AccessTTL</code>, or <code>ChangeTTL</code>.</li>
+     * <li>The <code>Priority</code> field specifies the rule priority. A larger value indicates higher priority. The default value is 0.</li>
+     * <li>The <code>Enabled</code> field determines whether the rule takes effect immediately. The default value is true.</li>
+     * </ul>
+     * 
      * @param request the request parameters of AddPolarFsQuota  AddPolarFsQuotaRequest
      * @return AddPolarFsQuotaResponse
      */
@@ -74,6 +103,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AnswerKnowledgeBaseResponse> answerKnowledgeBase(AnswerKnowledgeBaseRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>Applies prompts to a specified application instance.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ApplyApplicationPrompts  ApplyApplicationPromptsRequest
      * @return ApplyApplicationPromptsResponse
      */
@@ -92,12 +127,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AttachApplicationPolarFSResponse> attachApplicationPolarFS(AttachApplicationPolarFSRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This API associates an agent from a PolarClaw application with a communication channel. You specify the application with <code>ApplicationId</code>, the agent with <code>AgentId</code>, and the channel with <code>Channel</code>. You can optionally specify an account ID for the channel with <code>ChannelAccountId</code>.</p>
+     * 
      * @param request the request parameters of BindPolarClawAgent  BindPolarClawAgentRequest
      * @return BindPolarClawAgentResponse
      */
     CompletableFuture<BindPolarClawAgentResponse> bindPolarClawAgent(BindPolarClawAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Resource Control limits the CPU resources that can be used by specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of BindResourceControl  BindResourceControlRequest
      * @return BindResourceControlResponse
      */
@@ -116,6 +166,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelCronJobPolicyServerlessResponse> cancelCronJobPolicyServerless(CancelCronJobPolicyServerlessRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>The <code>PolarFsInstanceId</code> parameter is required. It specifies the Polarlakebase instance for the operation.</li>
+     * <li>The <code>FilePathIds</code> parameter is required. It accepts a string containing the IDs of the file paths for which you want to delete quota rules. Ensure that each ID is valid and belongs to the specified Polarlakebase instance.</li>
+     * <li>A single API call can delete quotas for multiple file paths. However, limit the number of paths in a single request to avoid performance issues.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CancelPolarFsFileQuota  CancelPolarFsFileQuotaRequest
      * @return CancelPolarFsFileQuotaResponse
      */
@@ -165,14 +223,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
-     * <p>该API允许用户验证指定PolarFS实例内的配额配置是否一致，包括但不限于目录路径上的存储容量和inode限制。如果存在不一致的情况，将返回具体的不一致路径列表及可能的错误信息。</p>
-     * <h3>注意事项</h3>
+     * <h2>Description</h2>
+     * <p>This operation verifies the consistency of quota configurations within a specified PolarFS instance. These configurations include storage capacity and inode limits on directory paths. If inconsistencies are found, the operation returns a list of the inconsistent paths and any related error information.</p>
+     * <h3>Usage notes</h3>
      * <ul>
-     * <li>确保<code>PolarFsInstanceId</code>参数正确无误地指向了目标PolarFS实例。</li>
-     * <li>当系统检测到配额不一致时，除了返回<code>IsConsistent=false</code>外，还会提供<code>InconsistentPaths</code>数组来指示具体哪些路径存在问题。</li>
-     * <li>如果请求成功但没有发现任何不一致，则<code>InconsistentPaths</code>为空数组，并且<code>IsConsistent=true</code>。</li>
-     * <li>错误处理：若请求过程中遇到权限不足、资源不存在等问题，请参考提供的错误码定义部分以获取更详细的错误信息。</li>
+     * <li>Ensure that the <code>PolarFsInstanceId</code> parameter correctly identifies the target PolarFS instance.</li>
+     * <li>When the system detects quota inconsistencies, it returns <code>IsConsistent=false</code> and populates the <code>InconsistentPaths</code> array.</li>
+     * <li>If the request is successful and no inconsistencies are found, the <code>InconsistentPaths</code> array is empty and <code>IsConsistent</code> is set to <code>true</code>.</li>
+     * <li>For errors such as insufficient permissions or a non-existent resource, see the error codes for details.</li>
      * </ul>
      * 
      * @param request the request parameters of CheckPolarFsQuotaConsistency  CheckPolarFsQuotaConsistencyRequest
@@ -187,6 +245,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li><code>PolarFsInstanceId</code> is required. It specifies the PolarDB instance for the operation.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ClonePolarFsBasicSnapshot  ClonePolarFsBasicSnapshotRequest
      * @return ClonePolarFsBasicSnapshotResponse
      */
@@ -200,10 +264,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to cancel the migration task before data migration.</p>
      * <ul>
-     * <li>You can call this operation to perform the migration task after data migration.<blockquote>
-     * <p>Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Create a PolarDB for MySQL cluster by using the Migration from RDS method</a>.</p>
+     * <li>Cancel the migration task before data migration.</li>
+     * <li>Perform the migration task after data migration.<blockquote>
+     * <p>Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>Operation to create an upgrade task. Set the <strong>CreationOption</strong>Parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Create a PolarDB for MySQL cluster by using the Migration from RDS method</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -312,12 +376,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>You can manually create up to three backups for each cluster.</li>
-     * <li>The <code>Exceeding the daily backup times of this DB cluster</code> error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a>.</li>
-     * <li>After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.</li>
+     * <li>Each cluster can have up to three manually created backups at the same time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before you call this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of CreateBackup  CreateBackupRequest
      * @return CreateBackupResponse
@@ -325,6 +389,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Each cluster can have a maximum of three manually created backups at the same time.</li>
+     * <li>If the error message <code>Exceeding the daily backup times of this DB cluster</code> is returned, three manually created backups already exist in your cluster. <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a> before calling this operation.</li>
+     * <li>After you call this operation, a backup task is created in the background. If the data volume is large, the backup may take a long time. Wait until the backup is complete.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateBatchConsumer  CreateBatchConsumerRequest
      * @return CreateBatchConsumerResponse
      */
@@ -373,6 +446,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCronJobPolicyServerlessResponse> createCronJobPolicyServerless(CreateCronJobPolicyServerlessRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>DBLink can connect two PolarDB for PostgreSQL (Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL (Compatible with Oracle) cluster to a self-managed PostgreSQL database on an ECS instance. You can use DBLink to query data across clusters.</p>
+     * 
      * @param request the request parameters of CreateDBCluster  CreateDBClusterRequest
      * @return CreateDBClusterResponse
      */
@@ -393,7 +469,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
+     * <p>You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint of a PolarDB cluster.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateDBEndpointAddress  CreateDBEndpointAddressRequest
@@ -403,12 +479,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.</p>
+     * <p>A DBLink provides connectivity between two PolarDB for PostgreSQL (Oracle-compatible) clusters, or between a PolarDB for PostgreSQL (Oracle-compatible) cluster and a self-managed PostgreSQL database on an Elastic Compute Service (ECS) instance. This lets you query data across clusters.</p>
      * <blockquote>
      * <ul>
-     * <li>You can create up to 10 database links for a cluster.</li>
-     * <li>Each database link connects a source cluster and a destination cluster.</li>
-     * <li>The source cluster and the destination cluster or the destination ECS instance must be located in the same region.</li>
+     * <li><p>Each cluster supports a maximum of 10 DBLinks.</p>
+     * </li>
+     * <li><p>A DBLink consumes one DBLink quota from both the source cluster and the destination cluster.</p>
+     * </li>
+     * <li><p>The source cluster and the destination cluster or destination ECS instance must be in the same region.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -455,6 +534,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateGatewayResponse> createGateway(CreateGatewayRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This API creates a PolarFileSystem (PolarFS) Global Data Network (GDN). Do not confuse it with the CreateGlobalDatabaseNetwork API, which operates on a PolarDB cluster. Ensure you are using the correct API to avoid unintended actions.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateGlobalDataNetwork  CreateGlobalDataNetworkRequest
      * @return CreateGlobalDataNetworkResponse
      */
@@ -463,7 +547,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> A cluster belongs to only one GDN.</p>
+     * <p>A cluster can belong to only one GDN.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateGlobalDatabaseNetwork  CreateGlobalDatabaseNetworkRequest
@@ -533,9 +617,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <p>Parameter templates allow you to manage cluster parameters in batches. You can use this feature to quickly apply parameter templates to PolarDB clusters. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use parameter templates</a>.</p>
      * <blockquote>
-     * <p>You can call this operation only on a PolarDB for MySQL cluster.</p>
+     * <p>This feature is available only for PolarDB for MySQL clusters.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateParameterGroup  CreateParameterGroupRequest
@@ -544,18 +628,29 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateParameterGroupResponse> createParameterGroup(CreateParameterGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Use this operation to create a PolarClaw Agent. You can optionally specify an <code>emoji</code> and an <code>avatar</code>.</p>
+     * 
      * @param request the request parameters of CreatePolarClawAgent  CreatePolarClawAgentRequest
      * @return CreatePolarClawAgentResponse
      */
     CompletableFuture<CreatePolarClawAgentResponse> createPolarClawAgent(CreatePolarClawAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * 
      * @param request the request parameters of CreatePolarClawChannel  CreatePolarClawChannelRequest
      * @return CreatePolarClawChannelResponse
      */
     CompletableFuture<CreatePolarClawChannelResponse> createPolarClawChannel(CreatePolarClawChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>Use this API to create a cron job. You can configure the job\&quot;s payload, execution frequency, timezone, target channel, recipients, and a failure alert mechanism.</p>
+     * 
      * @param request the request parameters of CreatePolarClawCronJob  CreatePolarClawCronJobRequest
      * @return CreatePolarClawCronJobResponse
      */
@@ -569,13 +664,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Description</h2>
      * <ul>
-     * <li><strong>Path</strong>：需要创建的目录绝对路径。</li>
-     * <li><strong>Recursive</strong>：是否递归创建父目录，默认为 <code>false</code>。</li>
-     * <li>该接口支持在指定的PolarFS实例中创建单个或多个层级的目录结构。</li>
-     * <li>如果设置 <code>Recursive</code> 为 <code>true</code>，则会自动创建所有不存在的父目录。</li>
-     * <li>创建目录时，请确保具有足够的权限。</li>
+     * <li><strong>Path</strong>: The absolute path of the directory to create.</li>
+     * <li><strong>Recursive</strong>: Specifies whether to recursively create parent directories. The default value is <code>false</code>.</li>
+     * <li>This operation creates a directory structure with one or more levels in the specified PolarFS instance.</li>
+     * <li>Setting <code>Recursive</code> to <code>true</code> automatically creates all non-existent parent directories.</li>
+     * <li>Ensure that you have sufficient permissions to create the directory.</li>
      * </ul>
      * 
      * @param request the request parameters of CreatePolarFsObject  CreatePolarFsObjectRequest
@@ -590,6 +685,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRateLimitPolicyResponse> createRateLimitPolicy(CreateRateLimitPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
+     * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
+     * <li>The maximum value of CpuCount is determined by the kernel parameter resource_control_cpu_count_limit of the target cluster.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateResourceControl  CreateResourceControlRequest
      * @return CreateResourceControlResponse
      */
@@ -640,7 +748,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</p>
+     * <p>The cluster must be in the running state for this operation to succeed.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteAccount  DeleteAccountRequest
@@ -679,6 +787,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAgenticDBTenantApiKeyResponse> deleteAgenticDBTenantApiKey(DeleteAgenticDBTenantApiKeyRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Important</h2>
+     * <ul>
+     * <li>This operation deletes a PolarDB application but does not affect the associated PolarDB instance.</li>
+     * <li>The delete operation is irreversible and permanently deletes the application. Proceed with caution.</li>
+     * <li>Ensure that you have backed up all critical data before proceeding.Before you delete an application, make sure that you have backed up all important data.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteApplication  DeleteApplicationRequest
      * @return DeleteApplicationResponse
      */
@@ -761,8 +877,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</li>
-     * <li>Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).</li>
+     * <li><p>You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
+     * </li>
+     * <li><p>Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -828,6 +946,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGatewayResponse> deleteGateway(DeleteGatewayRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This API deletes the Global Data Network (GDN) for PolarFS. Do not confuse it with the DeleteGlobalDatabaseNetwork API, which applies to PolarDB clusters.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteGlobalDataNetwork  DeleteGlobalDataNetworkRequest
      * @return DeleteGlobalDataNetworkResponse
      */
@@ -836,7 +959,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can delete a GDN only when the GDN includes only a primary cluster.</p>
+     * <p>A GDN can be deleted only if it contains a single primary cluster.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteGlobalDatabaseNetwork  DeleteGlobalDatabaseNetworkRequest
@@ -900,9 +1023,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <p>Parameter templates help you manage cluster parameters in batches. You can quickly apply a template to PolarDB clusters. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use parameter templates</a>.</p>
      * <blockquote>
-     * <p> When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.</p>
+     * <p>Deleting a parameter template does not affect PolarDB clusters to which the template has been applied.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteParameterGroup  DeleteParameterGroupRequest
@@ -911,18 +1034,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteParameterGroupResponse> deleteParameterGroup(DeleteParameterGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <ul>
+     * <li>A successful operation returns the ID of the deleted agent and the number of removed bindings.</li>
+     * <li>Ensure you provide the correct target <code>AgentId</code>. An incorrect ID can cause the operation to fail or affect an unintended agent.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeletePolarClawAgent  DeletePolarClawAgentRequest
      * @return DeletePolarClawAgentResponse
      */
     CompletableFuture<DeletePolarClawAgentResponse> deletePolarClawAgent(DeletePolarClawAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Use the <code>DeletePolarClawChannel</code> operation to delete a specified PolarClaw Channel. You can also uninstall the associated channel plugin. Before you delete the channel, back up all important data and ensure that no critical tasks are running on it.</p>
+     * 
      * @param request the request parameters of DeletePolarClawChannel  DeletePolarClawChannelRequest
      * @return DeletePolarClawChannelResponse
      */
     CompletableFuture<DeletePolarClawChannelResponse> deletePolarClawChannel(DeletePolarClawChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>To delete a PolarClaw cron job, provide its <code>ApplicationId</code> and <code>JobId</code>. Ensure that the IDs are correct to prevent accidental deletion of other jobs.
+     * <strong>Note</strong>: This operation is irreversible. Proceed with caution.</p>
+     * 
      * @param request the request parameters of DeletePolarClawCronJob  DeletePolarClawCronJobRequest
      * @return DeletePolarClawCronJobResponse
      */
@@ -955,6 +1094,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePolarFsPathMappingResponse> deletePolarFsPathMapping(DeletePolarFsPathMappingRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>You must specify the <code>PolarFsInstanceId</code> parameter to identify the Polarlakebase instance.</li>
+     * <li>The <code>Quotas</code> parameter is a list of quota rules to delete. Each rule is uniquely identified by its <code>Name</code> and <code>Id</code>. You can delete up to 21 rules in a single request.</li>
+     * <li>For each quota rule, provide both the <code>Name</code> and <code>Id</code>. This information must match an existing rule.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeletePolarFsQuota  DeletePolarFsQuotaRequest
      * @return DeletePolarFsQuotaResponse
      */
@@ -973,6 +1120,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRateLimitPolicyResponse> deleteRateLimitPolicy(DeleteRateLimitPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Resource Control is used to limit the CPU resources available to specified users, databases, queries, or connections in a PolarDB for MySQL cluster. This release supports the create, update, delete, attach, and detach operations for resource control rules. Querying Resource Control CPU usage is not supported.</p>
+     * <h3>Limits</h3>
+     * <ul>
+     * <li>This feature applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>In the cluster kernel parameter Settings, loose_enable_resource_control must be set to ON.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteResourceControl  DeleteResourceControlRequest
      * @return DeleteResourceControlResponse
      */
@@ -1021,12 +1179,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAIDBClusterTaskLogFilesResponse> describeAIDBClusterTaskLogFiles(DescribeAIDBClusterTaskLogFilesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>For more information about kernel versions for PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/471239.html">Kernel versions</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeAIDBClusterTaskMetrics  DescribeAIDBClusterTaskMetricsRequest
      * @return DescribeAIDBClusterTaskMetricsResponse
      */
     CompletableFuture<DescribeAIDBClusterTaskMetricsResponse> describeAIDBClusterTaskMetrics(DescribeAIDBClusterTaskMetricsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>This operation supports filtering and returning the list of template operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeAIDBClusterTasks  DescribeAIDBClusterTasksRequest
      * @return DescribeAIDBClusterTasksResponse
      */
@@ -1105,6 +1275,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAgenticDBBranchesResponse> describeAgenticDBBranches(DescribeAgenticDBBranchesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This operation supports filtering and returning the list of related model operators based on the <code>RelativeDBClusterId</code> and <code>KubeType</code> parameters.</li>
+     * <li>Note: Ensure that the <code>RelativeDBClusterId</code> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeAgenticDBClusters  DescribeAgenticDBClustersRequest
      * @return DescribeAgenticDBClustersResponse
      */
@@ -1141,6 +1318,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApikeyAttributeResponse> describeApikeyAttribute(DescribeApikeyAttributeRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</p>
+     * 
      * @param request the request parameters of DescribeApplicationAttribute  DescribeApplicationAttributeRequest
      * @return DescribeApplicationAttributeResponse
      */
@@ -1357,6 +1537,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterConnectivityResponse> describeDBClusterConnectivity(DescribeDBClusterConnectivityRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <ul>
+     * <li>Query the key usage details for a PolarDB cluster, such as the key ID, status, and type.</li>
+     * <li>The <code>DBClusterId</code>Parameter is required. It specifies the ID of the PolarDB cluster to query.</li>
+     * <li>Before you call this operation, make sure that the required Resource Access Management (RAM) roles and policies are configured.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeDBClusterEncryptionKey  DescribeDBClusterEncryptionKeyRequest
      * @return DescribeDBClusterEncryptionKeyResponse
      */
@@ -1376,7 +1564,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the request.</p>
+     * <ul>
+     * <li>You can use this operation to query the status of a one-click migration from an ApsaraDB RDS for MySQL instance to a PolarDB for MySQL cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade an ApsaraDB RDS for MySQL instance to PolarDB for MySQL</a>.</li>
+     * <li>Before you call this operation, you must create a one-click upgrade task for the cluster by calling the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation and setting the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeDBClusterMigration  DescribeDBClusterMigrationRequest
      * @return DescribeDBClusterMigrationResponse
@@ -1403,19 +1594,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the monitoring data is collected every 5 seconds:
-     *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
-     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
      * <ul>
-     * <li>When the monitoring data is collected every 60 seconds:<ul>
-     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
-     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
-     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
-     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.<blockquote>
-     * <p> By default, the monitoring data is collected once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the data collection interval to every 5 seconds.</p>
+     * <li>If the monitoring frequency is once every 5 seconds:<ul>
+     * <li>If the query time range is 1 hour or less, the data granularity is 5 seconds.</li>
+     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
+     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
+     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
+     * <li>If the query time range is more than 30 days, the data granularity is 1 day.</li>
+     * </ul>
+     * </li>
+     * <li>If the monitoring frequency is once every 60 seconds:<ul>
+     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
+     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
+     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
+     * <li>If the query time range is more than 30 days, the data granularity is 1 day.<blockquote>
+     * <p>The default monitoring frequency is once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the frequency to once every 5 seconds.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1458,6 +1651,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterTDEResponse> describeDBClusterTDE(DescribeDBClusterTDERequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>For more information about the minor Milvus versions and details of PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/471239.html">Minor Milvus version description</a> and <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeDBClusterVersion  DescribeDBClusterVersionRequest
      * @return DescribeDBClusterVersionResponse
      */
@@ -1524,19 +1722,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  When the monitoring data is collected every 5 seconds:
-     *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
-     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
      * <ul>
-     * <li>When the monitoring data is collected every 60 seconds:<ul>
-     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
-     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
-     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
-     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.<blockquote>
-     * <p> By default, the monitoring data is collected once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the data collection interval to every 5 seconds.</p>
+     * <li>If the monitoring frequency is 5 seconds:<ul>
+     * <li>If the query time range is 1 hour or less, the data granularity is 5 seconds.</li>
+     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
+     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
+     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
+     * <li>If the query time range is more than 30 days, the data granularity is 1 day.</li>
+     * </ul>
+     * </li>
+     * <li>If the monitoring frequency is 60 seconds:<ul>
+     * <li>If the query time range is 1 day or less, the data granularity is 1 minute.</li>
+     * <li>If the query time range is 7 days or less, the data granularity is 10 minutes.</li>
+     * <li>If the query time range is 30 days or less, the data granularity is 1 hour.</li>
+     * <li>If the query time range is more than 30 days, the data granularity is 1 day.<blockquote>
+     * <p>The default monitoring frequency is 60 seconds. Call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set it to 5 seconds.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1591,9 +1791,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that the PolarDB cluster is in the <strong>Released</strong> state. You must also confirm that the <strong>Retain All Backups Permanently</strong> or <strong>Retain Last Automatic Backup Permanently</strong> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</p>
+     * <p>When you invoke this operation, the PolarDB cluster must be in the <strong>Released</strong> state, and one of the following backup retention options must have been selected when the cluster was released: <strong>Long-term Retention (LTR) of All Backups</strong> or <strong>Long-term Retention (LTR) of the Last Backup (Automatic Backup Before Deletion)</strong>. If all retained backup sets of a released cluster have been manually deleted, this operation can no longer query the cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeDetachedBackups  DescribeDetachedBackupsRequest
@@ -1674,6 +1874,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGlobalSecurityIPGroupRelationResponse> describeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Only PolarDB for MySQL supports this operation.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeHALogs  DescribeHALogsRequest
      * @return DescribeHALogsResponse
      */
@@ -1807,9 +2014,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <p>Parameter templates let you centrally manage parameters for multiple clusters. You can quickly apply a parameter template to PolarDB clusters. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use parameter templates</a>.</p>
      * <blockquote>
-     * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * <p>This feature currently supports only PolarDB for MySQL clusters.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeParameterGroup  DescribeParameterGroupRequest
@@ -1819,9 +2026,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <p>Parameter templates allow you to manage cluster parameters in batches and quickly apply them to PolarDB clusters. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use parameter templates</a>.</p>
      * <blockquote>
-     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * <p>This feature is available only for PolarDB for MySQL clusters.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeParameterGroups  DescribeParameterGroupsRequest
@@ -1890,6 +2097,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarClawChannelsResponse> describePolarClawChannels(DescribePolarClawChannelsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <ul>
+     * <li>You can use this API to retrieve all scheduled tasks in a PolarClaw application or filter specific tasks using the <code>JobIdList</code> parameter.</li>
+     * <li>If you do not specify the <code>JobIdList</code> parameter, the API returns all scheduled tasks in the application.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribePolarClawCronJobs  DescribePolarClawCronJobsRequest
      * @return DescribePolarClawCronJobsResponse
      */
@@ -1902,6 +2116,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarClawMCPServersResponse> describePolarClawMCPServers(DescribePolarClawMCPServersRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This API gets information about all plugins for a given application, including built-in and user-installed plugins.</li>
+     * <li>Use the <code>PluginList</code> parameter to request information for specific plugins. If you omit this parameter, the API returns details for all plugins.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribePolarClawPlugins  DescribePolarClawPluginsRequest
      * @return DescribePolarClawPluginsResponse
      */
@@ -1953,6 +2174,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarFsObjectsResponse> describePolarFsObjects(DescribePolarFsObjectsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li>This operation queries all quota rules for a specific PolarFS instance. It supports wildcard matching with the <code>QuotaNameMatch</code> and <code>PatternMatch</code> parameters.</li>
+     * <li>Paging is not yet available and will be released in a future kernel update.</li>
+     * <li>The <code>PolarFsInstanceId</code> parameter is required to specify the PolarFS instance to query.</li>
+     * <li>You can use optional parameters, such as <code>QuotaNameMatch</code> and <code>PatternMatch</code>, to filter quota rules.</li>
+     * <li>The returned data includes the total number of quota rules, the number of rules on the current page, and details for each rule, such as the rule ID, name, description, and capacity limit.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribePolarFsQuota  DescribePolarFsQuotaRequest
      * @return DescribePolarFsQuotaResponse
      */
@@ -1965,6 +2196,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolarFsQuotaListResponse> describePolarFsQuotaList(DescribePolarFsQuotaListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Note:</em>*
+     * This API operation is deprecated. Use <a href="https://help.aliyun.com/document_detail/2778837.html">Query the configurations of DAS Enterprise Edition</a> instead.</p>
+     * 
      * @param request the request parameters of DescribePolarSQLCollectorPolicy  DescribePolarSQLCollectorPolicyRequest
      * @return DescribePolarSQLCollectorPolicyResponse
      */
@@ -2022,8 +2257,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Only PolarDB MySQL Edition clusters support calling this interface.</li>
-     * <li>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, when calling this interface, the value of the SQLHash field will change. For more details, please refer to [Notice] Optimization of Slow SQL Template Algorithm (<del>2845725</del>).</li>
+     * <li><p>This operation is supported only for PolarDB for MySQL clusters.</p>
+     * </li>
+     * <li><p>For PolarDB for PostgreSQL and PolarDB for PostgreSQL (Oracle Compatible) clusters, use the <a href="https://help.aliyun.com/document_detail/2922426.html">DAS API to query slow log records</a>.</p>
+     * </li>
+     * <li><p>Starting September 1, 2024, the value of the <code>SQLHash</code> field will change due to an optimization of the SQL templating algorithm. For more information, see <a href="~~2845725~~">[Notice] Optimization of the templating algorithm for slow SQL queries</a>.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -2035,7 +2274,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * <ul>
+     * <li><p>This API is available only for PolarDB for MySQL.</p>
+     * </li>
+     * <li><p>Effective September 1, 2024, the SQLHash field value will change when you call this API due to an optimization to the SQL templating algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Optimization of the templating algorithm for slow SQL queries</a>.</p>
+     * </li>
+     * </ul>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeSlowLogs  DescribeSlowLogsRequest
@@ -2045,9 +2289,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to view the details of a task that is generated by a specific API operation or in the PolarDB console. The system calls the specific API operation when you perform an operation in the PolarDB console. For example, you can view the details of the task when you call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation or <a href="https://help.aliyun.com/document_detail/58769.html">create a cluster</a> in the PolarDB console.</p>
      * <ul>
-     * <li>You can view the details of tasks that are generated only when you call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create a cluster and <code>CreationOption</code> is not set to <code>CreateGdnStandby</code>.</li>
+     * <li>You can view the progress details of tasks generated by either direct API calls, such as <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a>, or operations in the PolarDB console, such as <a href="https://help.aliyun.com/document_detail/58769.html">creating a cluster</a>.</li>
+     * <li>Currently, this operation supports viewing the progress details only for tasks generated when you create a cluster by calling the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation, provided that the <code>CreationOption</code> parameter is not set to <code>CreateGdnStandby</code>.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeTasks  DescribeTasksRequest
@@ -2110,6 +2354,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableDBClusterServerlessResponse> disableDBClusterServerless(DisableDBClusterServerlessRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Description</h2>
+     * <p>Call the<code>DisablePolarClawChannel</code> API to disable a PolarClaw channel for a specific application. Before you perform this operation, make sure you have the target channel ID and the application ID.</p>
+     * 
      * @param request the request parameters of DisablePolarClawChannel  DisablePolarClawChannelRequest
      * @return DisablePolarClawChannelResponse
      */
@@ -2158,6 +2406,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnablePolarClawChannelResponse> enablePolarClawChannel(EnablePolarClawChannelRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <p>This operation enables a cron job in a PolarClaw application to run tasks on a schedule. Specify the correct <code>ApplicationId</code> to associate the job with the target application.</p>
+     * 
      * @param request the request parameters of EnablePolarClawCronJob  EnablePolarClawCronJobRequest
      * @return EnablePolarClawCronJobResponse
      */
@@ -2229,11 +2481,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>An account can be authorized to access one or more databases.</li>
-     * <li>If the specified account already has the access permissions on the specified databases, the operation returns a successful response.</li>
-     * <li>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</li>
-     * <li>You can call this operation only on a PolarDB for MySQL cluster.</li>
-     * <li>By default, a privileged account for a cluster has all the permissions on the databases in the cluster.</li>
+     * <li><p>An account can be authorized to access one or more databases.</p>
+     * </li>
+     * <li><p>If the specified account already has the access permissions on the specified databases, the operation returns a successful response.</p>
+     * </li>
+     * <li><p>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</p>
+     * </li>
+     * <li><p>This operation is supported only for PolarDB for MySQL clusters.</p>
+     * </li>
+     * <li><p>By default, a privileged account for a cluster has all the permissions on the databases in the cluster.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -2464,6 +2721,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterArchResponse> modifyDBClusterArch(ModifyDBClusterArchRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Note:</em>* This API has been deprecated and is no longer maintained. We recommend that you use <a href="https://help.aliyun.com/document_detail/2778835.html">Enable or configure DAS Enterprise Edition</a>.</p>
+     * <blockquote>
+     * <p>If DAS Enterprise Edition is available in the region of the cluster, calling this API to enable SQL Audit automatically enables the latest DAS Enterprise Edition available in that region. For information about database engines and regions supported by each DAS Enterprise Edition version, see <a href="https://help.aliyun.com/document_detail/156204.html">Supported database engines and regions for DAS Enterprise Edition</a>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ModifyDBClusterAuditLogCollector  ModifyDBClusterAuditLogCollectorRequest
      * @return ModifyDBClusterAuditLogCollectorResponse
      */
@@ -2502,7 +2765,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.</p>
+     * <p>Set the routine maintenance window for the cluster to a time during off-peak hours. Alibaba Cloud performs cluster maintenance during this window to minimize the impact on your business.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDBClusterMaintainTime  ModifyDBClusterMaintainTimeRequest
@@ -2512,10 +2775,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.</p>
      * <ul>
-     * <li>You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.<blockquote>
-     * <p>Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Create a PolarDB for MySQL cluster by using the Migration from RDS method</a>.</p>
+     * <li>If this operation is called before the switchover, it performs a switchover.</li>
+     * <li>If this operation is called after the switchover is complete, it performs a rollback.<blockquote>
+     * <p>A one-click upgrade task must be created for the cluster before you call this operation. To create the task, call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation and set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">One-click upgrade from RDS MySQL to PolarDB for MySQL</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -2556,9 +2819,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.
-     * **
-     * **Only PolarDB for MySQL clusters support parameter templates.</p>
+     * <p>PolarDB provides the parameter template feature. You can use parameter templates to centrally manage parameters and quickly apply them to clusters. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use parameter templates</a>.</p>
+     * <blockquote>
+     * <p>Currently, only PolarDB for MySQL supports the parameter template feature.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of ModifyDBClusterParameters  ModifyDBClusterParametersRequest
      * @return ModifyDBClusterParametersResponse
@@ -2596,6 +2860,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBClusterStoragePerformanceResponse> modifyDBClusterStoragePerformance(ModifyDBClusterStoragePerformanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You cannot scale down the storage space of PolarDB for PostgreSQL clusters.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ModifyDBClusterStorageSpace  ModifyDBClusterStorageSpaceRequest
      * @return ModifyDBClusterStorageSpaceResponse
      */
@@ -2605,8 +2874,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>To perform this operation, you must activate KMS first. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</li>
-     * <li>After TDE is enabled, you cannot disable TDE.</li>
+     * <li><p>You must activate Key Management Service (KMS) before you perform this operation. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</p>
+     * </li>
+     * <li><p>You cannot disable transparent data encryption (TDE) after you enable it.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -2766,6 +3037,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyRateLimitPolicyResponse> modifyRateLimitPolicy(ModifyRateLimitPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Resource Control limits the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release supports creating, modifying, deleting, binding, and unbinding resource control rules. It does not support querying Resource Control CPU usage.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.</li>
+     * <li>MaxCpu and CpuCount are two mutually exclusive CPU quota modes.</li>
+     * <li>The maximum value of CpuCount is determined by the cluster kernel parameter resource_control_cpu_count_limit.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of ModifyResourceControl  ModifyResourceControlRequest
      * @return ModifyResourceControlResponse
      */
@@ -2826,6 +3110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefreshDBClusterStorageUsageResponse> refreshDBClusterStorageUsage(RefreshDBClusterStorageUsageRequest request);
 
     /**
+     * @param request the request parameters of RegisterKnowledgeBaseFile  RegisterKnowledgeBaseFileRequest
+     * @return RegisterKnowledgeBaseFileResponse
+     */
+    CompletableFuture<RegisterKnowledgeBaseFileResponse> registerKnowledgeBaseFile(RegisterKnowledgeBaseFileRequest request);
+
+    /**
      * @param request the request parameters of RejectPolarClawDevicePair  RejectPolarClawDevicePairRequest
      * @return RejectPolarClawDevicePairResponse
      */
@@ -2840,7 +3130,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You cannot remove the primary cluster from a GDN.</p>
+     * <p>The primary cluster in a GDN cannot be removed.</p>
      * </blockquote>
      * 
      * @param request the request parameters of RemoveDBClusterFromGDN  RemoveDBClusterFromGDNRequest
@@ -2864,8 +3154,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>Only PolarDB for MySQL clusters support this operation.</li>
-     * <li>If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.</li>
+     * <li><p>Only PolarDB for MySQL clusters support this operation.</p>
+     * </li>
+     * <li><p>If the privileged account of your cluster encounters exceptions, you can reset the permissions by using this operation. For example, the permissions are accidentally revoked.</p>
+     * </li>
      * </ul>
      * </blockquote>
      * 
@@ -2983,6 +3275,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchPolarClawSkillsResponse> searchPolarClawSkills(SearchPolarClawSkillsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation sets file quota rules for a specific directory in a Polarlakebase instance. By configuring the <code>FilePathQuotas</code> parameter, you can specify the directories to which quota rules are applied and their related attributes. When you use <code>FilePathId</code> to specify a directory, ensure that the path is an absolute path from the root directory rather than a mount point path. You can also use the <code>Strategy</code> parameter to control how rules take effect on existing files. By default, rules take effect only when they are missing.</p>
+     * <h3>Notes</h3>
+     * <ul>
+     * <li>The maximum length of the <code>FilePathQuotas</code> list is 21.</li>
+     * <li>To apply rules to multiple levels of subdirectories under <code>FilePathId</code>, set the <code>MaxDepth</code> parameter. To traverse to the deepest level, set this value to 0.</li>
+     * </ul>
+     * 
      * @param request the request parameters of SetPolarFsFileQuota  SetPolarFsFileQuotaRequest
      * @return SetPolarFsFileQuotaResponse
      */
@@ -3009,12 +3310,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change the billing method from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change the billing method from pay-as-you-go to subscription</a>.</li>
-     * <li>You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.</li>
-     * <li>If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.</li>
+     * <li>PolarDB clusters support subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change from pay-as-you-go to subscription</a>.</li>
+     * <li>If your Alibaba Cloud account balance is insufficient, you cannot change the pay-as-you-go billing method to subscription.</li>
+     * <li>When you change the billing method from subscription to pay-as-you-go, the system automatically refunds the remaining balance of the fees that you have paid.</li>
      * </ul>
+     * </blockquote>
      * 
      * @param request the request parameters of TransformDBClusterPayType  TransformDBClusterPayTypeRequest
      * @return TransformDBClusterPayTypeResponse
@@ -3034,6 +3335,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnbindPolarClawAgentResponse> unbindPolarClawAgent(UnbindPolarClawAgentRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Resource Control is used to limit the CPU resources that can be used by a specified user, database, query, or connection in a PolarDB for MySQL cluster. This release provides the capabilities to create, modify, delete, attach, and unbind resource control rules. It does not provide the capability to query Resource Control CPU usage.</p>
+     * <h3>Before you begin</h3>
+     * <ul>
+     * <li>This operation applies only to PolarDB for MySQL Cluster Edition clusters that support Resource Control. PolarDB for MySQL Standard Edition is not supported.</li>
+     * <li>The cluster kernel parameter loose_enable_resource_control must be set to ON.<blockquote>
+     * <p>Notice: This is a notice.</notice></p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of UnbindResourceControl  UnbindResourceControlRequest
      * @return UnbindResourceControlResponse
      */

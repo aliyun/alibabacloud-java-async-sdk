@@ -160,6 +160,7 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +173,7 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +186,21 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li><p><code>all</code></p>
+         * </li>
+         * <li><p><code>train</code></p>
+         * </li>
+         * <li><p><code>eval</code></p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>The default value is <em>all</em>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -193,7 +209,10 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the query result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -202,7 +221,19 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records to return on each page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * <p>The default value is 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +242,10 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * RelativeDBClusterId.
+         * <p>The ID of the associated PolarDB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2zejpr***</p>
          */
         public Builder relativeDBClusterId(String relativeDBClusterId) {
             this.putQueryParameter("RelativeDBClusterId", relativeDBClusterId);
@@ -220,7 +254,10 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * <p>Specifies whether to sort the results in reverse order. The default value is <em>false</em>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -229,6 +266,7 @@ public class DescribeAIDBClusterTaskMetricsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

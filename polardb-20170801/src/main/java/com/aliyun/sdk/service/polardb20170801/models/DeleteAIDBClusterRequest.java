@@ -74,6 +74,7 @@ public class DeleteAIDBClusterRequest extends Request {
         } 
 
         /**
+         * <p>The AI cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DeleteAIDBClusterRequest extends Request {
         }
 
         /**
-         * ModelSpace.
+         * <p>The model operator space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pms-xxx</p>
          */
         public Builder modelSpace(String modelSpace) {
             this.putQueryParameter("ModelSpace", modelSpace);

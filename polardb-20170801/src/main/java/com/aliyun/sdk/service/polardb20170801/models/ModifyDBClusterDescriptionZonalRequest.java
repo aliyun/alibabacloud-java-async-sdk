@@ -145,7 +145,10 @@ public class ModifyDBClusterDescriptionZonalRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>A client token to ensure the idempotence of the request. The client generates this value. It must be unique among different requests. The token is case-sensitive and can contain up to 64 ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -154,6 +157,13 @@ public class ModifyDBClusterDescriptionZonalRequest extends Request {
         }
 
         /**
+         * <p>The cluster name. The cluster name must meet the following requirements:</p>
+         * <ul>
+         * <li><p>It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </li>
+         * <li><p>It must be 2 to 256 characters in length.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +176,7 @@ public class ModifyDBClusterDescriptionZonalRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

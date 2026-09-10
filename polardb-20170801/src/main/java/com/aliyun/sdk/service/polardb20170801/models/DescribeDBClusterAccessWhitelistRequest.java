@@ -130,7 +130,7 @@ public class DescribeDBClusterAccessWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the PolarDB cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,10 @@ public class DescribeDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * PfsInstanceId.
+         * <p>The PFS instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-xxx</p>
          */
         public Builder pfsInstanceId(String pfsInstanceId) {
             this.putQueryParameter("PfsInstanceId", pfsInstanceId);

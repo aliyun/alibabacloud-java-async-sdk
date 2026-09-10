@@ -173,6 +173,7 @@ public class SearchMemoriesRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +186,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * CreateTimeBegin.
+         * <p>The start time for memory creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yyyy-MM-ddTHH:mm:ssZ</p>
          */
         public Builder createTimeBegin(String createTimeBegin) {
             this.putQueryParameter("CreateTimeBegin", createTimeBegin);
@@ -194,7 +198,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * CreateTimeEnd.
+         * <p>The end time for memory creation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yyyy-MM-ddTHH:mm:ssZ</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -203,7 +210,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * MemoryAgentId.
+         * <p>The memory agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent1</p>
          */
         public Builder memoryAgentId(String memoryAgentId) {
             this.putQueryParameter("MemoryAgentId", memoryAgentId);
@@ -212,6 +222,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
+         * <p>The memory user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +235,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * Page.
+         * <p>The page number.</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -233,7 +244,7 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,7 +253,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * Query.
+         * <p>The search query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>who are you</p>
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -251,7 +265,10 @@ public class SearchMemoriesRequest extends Request {
         }
 
         /**
-         * TopK.
+         * <p>Specifies the number of top results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder topK(String topK) {
             this.putQueryParameter("TopK", topK);

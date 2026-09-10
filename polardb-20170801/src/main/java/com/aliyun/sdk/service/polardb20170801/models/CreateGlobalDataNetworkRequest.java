@@ -185,7 +185,10 @@ public class CreateGlobalDataNetworkRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description or remarks for the GDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mygdn</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -194,7 +197,10 @@ public class CreateGlobalDataNetworkRequest extends Request {
         }
 
         /**
-         * DestinationFileSystemPath.
+         * <p>Destination path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder destinationFileSystemPath(String destinationFileSystemPath) {
             this.putQueryParameter("DestinationFileSystemPath", destinationFileSystemPath);
@@ -203,7 +209,10 @@ public class CreateGlobalDataNetworkRequest extends Request {
         }
 
         /**
-         * DestinationId.
+         * <p>Target PolarFileSystem (PolarFS) instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-xxx</p>
          */
         public Builder destinationId(String destinationId) {
             this.putQueryParameter("DestinationId", destinationId);
@@ -212,7 +221,10 @@ public class CreateGlobalDataNetworkRequest extends Request {
         }
 
         /**
-         * DestinationRegion.
+         * <p>The region of the destination PolarFS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder destinationRegion(String destinationRegion) {
             this.putQueryParameter("DestinationRegion", destinationRegion);
@@ -221,7 +233,16 @@ public class CreateGlobalDataNetworkRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * <p>The type of the destination instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>pfs</strong>: PolarFS High-Performance Edition.</p>
+         * </li>
+         * <li><p><strong>pcs</strong>: PolarFS Cold Storage Edition.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs</p>
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -230,7 +251,19 @@ public class CreateGlobalDataNetworkRequest extends Request {
         }
 
         /**
-         * FreezeSourceDuringSync.
+         * <p>Whether to freeze the source path during transmission. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Freeze.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Do not freeze.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Currently only supports oss source.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder freezeSourceDuringSync(String freezeSourceDuringSync) {
             this.putQueryParameter("FreezeSourceDuringSync", freezeSourceDuringSync);
@@ -239,7 +272,10 @@ public class CreateGlobalDataNetworkRequest extends Request {
         }
 
         /**
-         * SourceFileSystemPath.
+         * <p>The source path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder sourceFileSystemPath(String sourceFileSystemPath) {
             this.putQueryParameter("SourceFileSystemPath", sourceFileSystemPath);
@@ -248,7 +284,10 @@ public class CreateGlobalDataNetworkRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * <p>Source PolarFileSystem (PolarFS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcs-xxx</p>
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);
@@ -257,7 +296,10 @@ public class CreateGlobalDataNetworkRequest extends Request {
         }
 
         /**
-         * SourceRegion.
+         * <p>The region of the source PolarFS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wulanchabu</p>
          */
         public Builder sourceRegion(String sourceRegion) {
             this.putQueryParameter("SourceRegion", sourceRegion);
@@ -266,7 +308,16 @@ public class CreateGlobalDataNetworkRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The type of the source instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>pfs</strong>: PolarFS High-Performance Edition.</p>
+         * </li>
+         * <li><p><strong>pcs</strong>: PolarFS Cold Storage Edition.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pcs</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

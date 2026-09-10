@@ -171,7 +171,10 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -179,7 +182,10 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * ChannelId.
+         * <p>The ID of the upgraded channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feishu</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -187,7 +193,10 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -195,7 +204,10 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -203,7 +215,10 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * NpmPackage.
+         * <p>The name of the upgraded npm package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@larksuite/<a href="mailto:openclaw-lark@2026.4.7">openclaw-lark@2026.4.7</a></p>
          */
         public Builder npmPackage(String npmPackage) {
             this.npmPackage = npmPackage;
@@ -211,7 +226,10 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -219,7 +237,10 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * PluginId.
+         * <p>The ID of the upgraded plugin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openclaw-lark</p>
          */
         public Builder pluginId(String pluginId) {
             this.pluginId = pluginId;
@@ -227,7 +248,10 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * PluginUpgraded.
+         * <p>Indicates whether the plugin was upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pluginUpgraded(Boolean pluginUpgraded) {
             this.pluginUpgraded = pluginUpgraded;
@@ -235,7 +259,7 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -246,7 +270,10 @@ public class UpgradePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Restarted.
+         * <p>Indicates whether the gateway was restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restarted(Boolean restarted) {
             this.restarted = restarted;

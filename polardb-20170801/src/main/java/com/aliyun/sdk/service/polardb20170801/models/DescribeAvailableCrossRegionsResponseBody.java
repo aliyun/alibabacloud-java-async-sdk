@@ -67,7 +67,10 @@ public class DescribeAvailableCrossRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Regions.
+         * <p>The list of regions available for cross-region backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[\&quot;cn-beijing\&quot;, \&quot;cn-shanghai\&quot;, \&quot;cn-qingdao\&quot;, \&quot;cn-shenzhen\&quot;, \&quot;cn-hongkong\&quot;]</p>
          */
         public Builder regions(java.util.List<String> regions) {
             this.regions = regions;
@@ -75,7 +78,10 @@ public class DescribeAvailableCrossRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D685D479-B36E-52B9-98FF-8402EA01F***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

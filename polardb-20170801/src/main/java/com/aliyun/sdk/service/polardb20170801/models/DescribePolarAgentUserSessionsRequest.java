@@ -59,7 +59,10 @@ public class DescribePolarAgentUserSessionsRequest extends Request {
         } 
 
         /**
-         * Source.
+         * <p>The source of the product. The value is \<code>polardb-console\\</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb-console</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

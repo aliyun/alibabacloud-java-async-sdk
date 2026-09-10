@@ -93,7 +93,10 @@ public class DeleteEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -101,7 +104,13 @@ public class DeleteEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * <blockquote>
+         * <p>If the request is successful, <code>Successful</code> is returned. If the request fails, an error message is returned, such as an error code.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +118,7 @@ public class DeleteEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -120,7 +129,16 @@ public class DeleteEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

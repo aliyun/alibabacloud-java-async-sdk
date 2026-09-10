@@ -130,6 +130,7 @@ public class DescribeFirewallRulesRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +179,13 @@ public class DescribeFirewallRulesRequest extends Request {
         }
 
         /**
-         * RuleNameList.
+         * <p>The names of the firewall rules to query. To query multiple rules, separate the rule names with commas (,).</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeFirewallRules</a> operation to view the details of all firewall rules for the target cluster, including the rule names.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
          */
         public Builder ruleNameList(String ruleNameList) {
             this.putQueryParameter("RuleNameList", ruleNameList);

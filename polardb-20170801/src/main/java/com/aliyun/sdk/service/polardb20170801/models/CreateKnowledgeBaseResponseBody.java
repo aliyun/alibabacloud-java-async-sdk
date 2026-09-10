@@ -67,7 +67,10 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * KnowledgeBaseId.
+         * <p>The unique identifier of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pkb-xxxxx</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;

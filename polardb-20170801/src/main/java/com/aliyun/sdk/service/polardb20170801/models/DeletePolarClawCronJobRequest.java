@@ -89,6 +89,7 @@ public class DeletePolarClawCronJobRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeletePolarClawCronJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cron job to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeletePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after the cron job is deleted. The default value is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

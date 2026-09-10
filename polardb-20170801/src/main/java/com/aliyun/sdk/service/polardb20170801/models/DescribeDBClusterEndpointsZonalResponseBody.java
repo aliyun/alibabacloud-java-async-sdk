@@ -67,7 +67,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The details of the cluster endpoints.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -75,7 +75,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DC120BF-6EBA-4C63-BE99-B09F9E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionString.
+             * <p>The connection string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -240,7 +246,16 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * DashboardUsed.
+             * <p>Specifies whether the endpoint is the dashboard endpoint of a PolarDB search node. Valid values:</p>
+             * <ul>
+             * <li><p>True: Yes.</p>
+             * </li>
+             * <li><p>False: No.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder dashboardUsed(Boolean dashboardUsed) {
                 this.dashboardUsed = dashboardUsed;
@@ -248,7 +263,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.<em><strong>.</strong></em>.***</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -256,7 +274,16 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li><p>Public: Internet.</p>
+             * </li>
+             * <li><p>Private: internal network.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -264,7 +291,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1521</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -272,7 +302,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateZoneConnectionString.
+             * <p>The private domain name that is bound to the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><em><strong>.</strong></em>.**.com</p>
              */
             public Builder privateZoneConnectionString(String privateZoneConnectionString) {
                 this.privateZoneConnectionString = privateZoneConnectionString;
@@ -280,7 +313,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-***************</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -288,7 +324,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The virtual switch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-************</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -296,7 +335,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * <p>The VPC instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pe-*************</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -506,7 +548,7 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             } 
 
             /**
-             * AddressItems.
+             * <p>The connection string information.</p>
              */
             public Builder addressItems(java.util.List<AddressItems> addressItems) {
                 this.addressItems = addressItems;
@@ -514,7 +556,16 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * AutoAddNewNodes.
+             * <p>Specifies whether new nodes are automatically added to the default cluster endpoint. Valid values:</p>
+             * <ul>
+             * <li><p>Enable.</p>
+             * </li>
+             * <li><p>Disable.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder autoAddNewNodes(String autoAddNewNodes) {
                 this.autoAddNewNodes = autoAddNewNodes;
@@ -522,7 +573,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp1s826a1up******</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -530,7 +584,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * DBEndpointDescription.
+             * <p>The name of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBEndpointDescription(String DBEndpointDescription) {
                 this.DBEndpointDescription = DBEndpointDescription;
@@ -538,7 +595,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * DBEndpointId.
+             * <p>The endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pe-*************</p>
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
@@ -546,7 +606,40 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointConfig.
+             * <p>The advanced configurations of the cluster endpoint.</p>
+             * <ul>
+             * <li><p><strong>DistributedTransaction</strong>: The status of transaction splitting. Valid values:</p>
+             * <ul>
+             * <li><p><strong>on</strong>: Transaction splitting is enabled.</p>
+             * </li>
+             * <li><p><strong>off</strong>: Transaction splitting is disabled.</p>
+             * </li>
+             * </ul>
+             * </li>
+             * <li><p><strong>ConsistLevel</strong>: The consistency level. Valid values:</p>
+             * <ul>
+             * <li><p><strong>0</strong>: Eventual consistency.</p>
+             * </li>
+             * <li><p><strong>1</strong>: Session consistency.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Global consistency.</p>
+             * </li>
+             * </ul>
+             * </li>
+             * <li><p><strong>LoadBalanceStrategy</strong>: The load balancing policy for automatic scheduling based on loads. The value is fixed as <strong>load</strong>.</p>
+             * </li>
+             * <li><p><strong>MasterAcceptReads</strong>: Specifies whether the primary node accepts read requests. Valid values:</p>
+             * <ul>
+             * <li><p><strong>on</strong>: The primary node accepts read requests.</p>
+             * </li>
+             * <li><p><strong>off</strong>: The primary node does not accept read requests.</p>
+             * </li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;DistributedTransaction\&quot;:\&quot;off\&quot;,\&quot;ConsistLevel\&quot;:\&quot;0\&quot;,\&quot;LoadBalanceStrategy\&quot;:\&quot;load\&quot;,\&quot;MasterAcceptReads\&quot;:\&quot;on\&quot;}</p>
              */
             public Builder endpointConfig(String endpointConfig) {
                 this.endpointConfig = endpointConfig;
@@ -554,7 +647,18 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointType.
+             * <p>The type of the cluster endpoint. Valid values:</p>
+             * <ul>
+             * <li><p>Cluster: the default cluster endpoint.</p>
+             * </li>
+             * <li><p>Primary: the primary endpoint.</p>
+             * </li>
+             * <li><p>Custom: a custom cluster endpoint.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -562,7 +666,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * NodeWithRoles.
+             * <p>The role of each node in the endpoint. The primary node has the Writer role. Because multiple read-only nodes can be added to an endpoint, each read-only node is assigned a role name suffixed with a number, such as Reader1 and Reader2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Reader1</p>
              */
             public Builder nodeWithRoles(String nodeWithRoles) {
                 this.nodeWithRoles = nodeWithRoles;
@@ -570,7 +677,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * <p>The list of nodes that are configured for the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-<em><strong><strong><strong><strong><strong><strong><strong>,pi-</strong></strong></strong></strong></strong></strong></strong></em></p>
              */
             public Builder nodes(String nodes) {
                 this.nodes = nodes;
@@ -578,7 +688,16 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * PolarSccTimeoutAction.
+             * <p>The policy for global consistency timeout. Valid values:</p>
+             * <ul>
+             * <li><p>0: Sends the request to the primary node.</p>
+             * </li>
+             * <li><p>2: Degrades the request. If a global consistency read times out, the query is automatically degraded to a regular request. The client does not receive an error message.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder polarSccTimeoutAction(String polarSccTimeoutAction) {
                 this.polarSccTimeoutAction = polarSccTimeoutAction;
@@ -586,7 +705,10 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * PolarSccWaitTimeout.
+             * <p>The timeout period for global consistency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder polarSccWaitTimeout(String polarSccWaitTimeout) {
                 this.polarSccWaitTimeout = polarSccWaitTimeout;
@@ -594,7 +716,16 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * ReadWriteMode.
+             * <p>The read/write mode. Valid values:</p>
+             * <ul>
+             * <li><p>ReadWrite: read and write (automatic read/write splitting).</p>
+             * </li>
+             * <li><p>ReadOnly: read-only.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder readWriteMode(String readWriteMode) {
                 this.readWriteMode = readWriteMode;
@@ -602,7 +733,16 @@ public class DescribeDBClusterEndpointsZonalResponseBody extends TeaModel {
             }
 
             /**
-             * SccMode.
+             * <p>Specifies whether global consistency (high-performance mode) is enabled for the node. Valid values:</p>
+             * <ul>
+             * <li><p>on: enabled.</p>
+             * </li>
+             * <li><p>off: disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder sccMode(String sccMode) {
                 this.sccMode = sccMode;

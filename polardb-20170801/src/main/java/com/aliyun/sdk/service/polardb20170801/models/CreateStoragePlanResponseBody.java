@@ -91,7 +91,7 @@ public class CreateStoragePlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2035638*******</p>

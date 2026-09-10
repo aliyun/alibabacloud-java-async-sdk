@@ -104,6 +104,7 @@ public class UnbindPolarClawAgentRequest extends Request {
         } 
 
         /**
+         * <p>The agent ID to unbind.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class UnbindPolarClawAgentRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class UnbindPolarClawAgentRequest extends Request {
         }
 
         /**
+         * <p>The channel plugin ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class UnbindPolarClawAgentRequest extends Request {
         }
 
         /**
-         * ChannelAccountId.
+         * <p>The channel account ID. Omit this parameter to remove all bindings for the specified agent ID and channel plugin ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder channelAccountId(String channelAccountId) {
             this.putQueryParameter("ChannelAccountId", channelAccountId);

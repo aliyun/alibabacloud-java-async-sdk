@@ -135,7 +135,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +146,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The list of results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -303,7 +306,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-09-26T08:25:44Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -311,7 +317,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The memory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -319,7 +328,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -327,7 +339,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryAgentId.
+             * <p>The agent to which the memory belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent1</p>
              */
             public Builder memoryAgentId(String memoryAgentId) {
                 this.memoryAgentId = memoryAgentId;
@@ -335,7 +350,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryUserId.
+             * <p>The user to whom the memory belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder memoryUserId(String memoryUserId) {
                 this.memoryUserId = memoryUserId;
@@ -343,7 +361,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * <p>The metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;tags\&quot;:\&quot;Issue_date_2023-11-30,VD_现行有效\&quot;}</p>
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -351,7 +372,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder score(String score) {
                 this.score = score;
@@ -359,7 +383,10 @@ public class SearchMemoriesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-16T02:27:33Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

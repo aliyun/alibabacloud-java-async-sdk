@@ -132,7 +132,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-xxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -148,7 +154,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         }
 
         /**
-         * LatestVersion.
+         * <p>The latest version information.</p>
          */
         public Builder latestVersion(LatestVersion latestVersion) {
             this.latestVersion = latestVersion;
@@ -156,7 +162,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +173,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>The Skill author information.</p>
          */
         public Builder owner(Owner owner) {
             this.owner = owner;
@@ -183,7 +192,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Skill.
+         * <p>The core information of the Skill.</p>
          */
         public Builder skill(Skill skill) {
             this.skill = skill;
@@ -262,7 +271,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Changelog.
+             * <p>The version changelog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>empty</p>
              */
             public Builder changelog(String changelog) {
                 this.changelog = changelog;
@@ -270,7 +282,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAt.
+             * <p>The version publish timestamp in Unix milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767545394459</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -278,7 +293,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -371,7 +389,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the author.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Peter Steinberger</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -379,7 +400,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Handle.
+             * <p>The account identifier of the author.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>steipete</p>
              */
             public Builder handle(String handle) {
                 this.handle = handle;
@@ -387,7 +411,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * <p>The profile picture URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://avatars.githubusercontent.com/u/58493?v=4">https://avatars.githubusercontent.com/u/58493?v=4</a></p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -395,7 +422,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID of the author.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s179zksw999xz8ms4cy7pb2fr183m5jq</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -514,7 +544,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Comments.
+             * <p>The number of comments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder comments(Long comments) {
                 this.comments = comments;
@@ -522,7 +555,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Downloads.
+             * <p>The number of downloads.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>155765</p>
              */
             public Builder downloads(Long downloads) {
                 this.downloads = downloads;
@@ -530,7 +566,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstallsAllTime.
+             * <p>The total number of installations of all time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3787</p>
              */
             public Builder installsAllTime(Long installsAllTime) {
                 this.installsAllTime = installsAllTime;
@@ -538,7 +577,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstallsCurrent.
+             * <p>The current number of installations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3664</p>
              */
             public Builder installsCurrent(Long installsCurrent) {
                 this.installsCurrent = installsCurrent;
@@ -546,7 +588,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Stars.
+             * <p>The number of stars.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder stars(Long stars) {
                 this.stars = stars;
@@ -554,7 +599,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Versions.
+             * <p>The number of versions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder versions(Long versions) {
                 this.versions = versions;
@@ -686,7 +734,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The first publish timestamp in Unix milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767545394459</p>
              */
             public Builder createdAt(Long createdAt) {
                 this.createdAt = createdAt;
@@ -694,7 +745,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weather</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -702,7 +756,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Slug.
+             * <p>The Skill identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weather</p>
              */
             public Builder slug(String slug) {
                 this.slug = slug;
@@ -710,7 +767,7 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Stats.
+             * <p>The statistics information.</p>
              */
             public Builder stats(Stats stats) {
                 this.stats = stats;
@@ -718,7 +775,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The brief description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Get current weather and forecasts (no API key required).</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -726,7 +786,12 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag key-value pairs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;latest&quot;: &quot;1.0.0&quot;
+             * }</p>
              */
             public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;
@@ -734,7 +799,10 @@ public class DescribePolarClawSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The last update timestamp in Unix milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778485729679</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;

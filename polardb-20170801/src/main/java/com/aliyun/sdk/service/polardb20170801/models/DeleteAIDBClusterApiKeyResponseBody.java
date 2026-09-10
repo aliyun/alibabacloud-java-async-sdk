@@ -67,7 +67,10 @@ public class DeleteAIDBClusterApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key of the model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder apiKey(String apiKey) {
             this.apiKey = apiKey;

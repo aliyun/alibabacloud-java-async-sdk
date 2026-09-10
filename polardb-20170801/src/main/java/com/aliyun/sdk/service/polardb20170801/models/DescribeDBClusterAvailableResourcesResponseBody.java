@@ -67,7 +67,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The available zones of the cluster.</p>
+         * <p>The list of available resources.</p>
          */
         public Builder availableZones(java.util.List<AvailableZones> availableZones) {
             this.availableZones = availableZones;
@@ -75,7 +75,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2B19F698-8FFC-4918-B9E2-58D878******</p>
@@ -146,16 +146,23 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             /**
              * <p>The edition of the cluster. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: Cluster Edition.</li>
-             * <li><strong>Basic</strong>: Single Node Edition.</li>
-             * <li><strong>ArchiveNormal</strong>: X-Engine.</li>
-             * <li><strong>NormalMultimaster</strong>: Multi-master Cluster (Database/Table) Edition.</li>
-             * <li><strong>SENormal</strong>: Standard Edition.</li>
+             * <li><p><strong>Normal</strong>: Cluster Edition.</p>
+             * </li>
+             * <li><p><strong>Basic</strong>: Single Node Edition.</p>
+             * </li>
+             * <li><p><strong>ArchiveNormal</strong>: X-Engine.</p>
+             * </li>
+             * <li><p><strong>NormalMultimaster</strong>: Multi-master Cluster (Database/Table) Edition.</p>
+             * </li>
+             * <li><p><strong>SENormal</strong>: Standard Edition.</p>
+             * </li>
              * </ul>
              * <blockquote>
              * <ul>
-             * <li>Only PolarDB for MySQL supports Single Node Edition.</li>
-             * <li>Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.</li>
+             * <li><p>Only PolarDB for MySQL supports Single Node Edition.</p>
+             * </li>
+             * <li><p>Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.</p>
+             * </li>
              * </ul>
              * </blockquote>
              * 
@@ -329,7 +336,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The region ID of the cluster.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -340,7 +347,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engines that the available resources support.</p>
+             * <p>The list of available engines.</p>
              */
             public Builder supportedEngines(java.util.List<SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -348,7 +355,7 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the cluster.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-i</p>

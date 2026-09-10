@@ -174,9 +174,9 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         } 
 
         /**
-         * <p>The IP address in the whitelist template.</p>
+         * <p>The IP addresses in the whitelist template.</p>
          * <blockquote>
-         * <p> Multiple IP addresses are separated by commas (,). You can create up to 1,000 IP addresses or CIDR blocks for all IP whitelists.</p>
+         * <p>Separate multiple IP addresses with commas (,). You can add a total of up to 1,000 IP addresses or CIDR blocks to all IP whitelists.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -192,9 +192,12 @@ public class CreateGlobalSecurityIPGroupRequest extends Request {
         /**
          * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-         * <li>The name must start with a letter and end with a letter or digit.</li>
-         * <li>The name must be 2 to 120 characters in length.</li>
+         * <li><p>It can contain lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>It must start with a letter and end with a letter or digit.</p>
+         * </li>
+         * <li><p>It must be 2 to 120 characters in length.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -102,7 +102,10 @@ public class GetPolarAgentRequest extends Request {
         } 
 
         /**
-         * ExtraInfo.
+         * <p>Additional information, as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extraInfo(String extraInfo) {
             this.putQueryParameter("ExtraInfo", extraInfo);
@@ -111,6 +114,7 @@ public class GetPolarAgentRequest extends Request {
         }
 
         /**
+         * <p>The session query. Get this value from the return value of the &quot;Start a digital human&quot; API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,10 @@ public class GetPolarAgentRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID. Get this value from the return value of the &quot;Start a digital human&quot; API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c4d242f3-c909-4846-91d9-f84c238a9820</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -132,7 +139,10 @@ public class GetPolarAgentRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The product type source. Valid value: polardb-console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb-console</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

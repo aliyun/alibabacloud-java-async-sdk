@@ -145,6 +145,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         } 
 
         /**
+         * <p>The AgenticDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +170,10 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +182,10 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID for exact match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-a1b2c3d4e5f6</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -184,7 +194,10 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analytics</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -193,6 +206,7 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +219,10 @@ public class DescribeAgenticDBProjectsRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID to which the project belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);

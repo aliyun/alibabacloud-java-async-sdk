@@ -172,7 +172,10 @@ public class DescribePolarFsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The instance ID of the PolarDB instance on which the application depends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze8u21s03******</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -181,7 +184,10 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be an integer greater than 0 and not exceeding the maximum value of Integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -190,7 +196,18 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +216,10 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
-         * PolarFsInstanceDescription.
+         * <p>The description of the PolarFS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-ins1********</p>
          */
         public Builder polarFsInstanceDescription(String polarFsInstanceDescription) {
             this.putQueryParameter("PolarFsInstanceDescription", polarFsInstanceDescription);
@@ -208,7 +228,10 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
-         * PolarFsInstanceIds.
+         * <p>The list of PolarFS instance IDs, separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-ins1*******</p>
          */
         public Builder polarFsInstanceIds(String polarFsInstanceIds) {
             this.putQueryParameter("PolarFsInstanceIds", polarFsInstanceIds);
@@ -217,7 +240,10 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
-         * PolarFsType.
+         * <p>The PolarFS type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder polarFsType(String polarFsType) {
             this.putQueryParameter("PolarFsType", polarFsType);
@@ -226,6 +252,7 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +265,10 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
-         * RelativeDbClusterId.
+         * <p>The ID of the associated PolarDB cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2zejpr41d9xk*****</p>
          */
         public Builder relativeDbClusterId(String relativeDbClusterId) {
             this.putQueryParameter("RelativeDbClusterId", relativeDbClusterId);
@@ -247,7 +277,7 @@ public class DescribePolarFsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -315,7 +345,10 @@ public class DescribePolarFsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -323,7 +356,10 @@ public class DescribePolarFsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

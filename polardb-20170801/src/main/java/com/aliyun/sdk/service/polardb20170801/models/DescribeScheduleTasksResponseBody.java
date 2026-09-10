@@ -93,7 +93,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The result data.</p>
+         * <p>The result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,9 +101,9 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned for the request.</p>
+         * <p>The response message.</p>
          * <blockquote>
-         * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -351,7 +351,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the scheduled tasks.</p>
+             * <p>The task type.</p>
              * 
              * <strong>example:</strong>
              * <p>CreateDBNodes</p>
@@ -362,7 +362,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the scheduled task.</p>
+             * <p>The ID of the scheduled O\&amp;M task.</p>
              * 
              * <strong>example:</strong>
              * <p>86293c29-a03d-4872-b625-***********</p>
@@ -384,7 +384,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the cluster.</p>
+             * <p>The cluster description.</p>
              * 
              * <strong>example:</strong>
              * <p>test_cluster</p>
@@ -395,7 +395,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the cluster.</p>
+             * <p>The cluster status.</p>
              * 
              * <strong>example:</strong>
              * <p>Running</p>
@@ -406,9 +406,9 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the order.</p>
+             * <p>The order ID.</p>
              * <blockquote>
-             * <p> This parameter is returned only when you set the <code>Action</code> parameter to <strong>CreateDBNodes</strong> or <strong>ModifyDBNodeClass</strong>.</p>
+             * <p>This parameter is returned only if <code>Action</code> is <strong>CreateDBNodes</strong> or <strong>ModifyDBNodeClass</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -420,7 +420,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+             * <p>The latest start time of the task. The time is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-28T12:30Z</p>
@@ -431,7 +431,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PlannedFlashingOffTime.
+             * <p>The scheduled time for the transient switchover.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-28T12:30Z</p>
              */
             public Builder plannedFlashingOffTime(String plannedFlashingOffTime) {
                 this.plannedFlashingOffTime = plannedFlashingOffTime;
@@ -439,7 +442,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+             * <p>The scheduled start time of the task. The time is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-28T12:00Z</p>
@@ -450,7 +453,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected start time of the task. The time is displayed in UTC.</p>
+             * <p>The estimated start time of the task. The time is in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-28T12:16Z</p>
@@ -461,7 +464,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region in which the scheduled task runs.</p>
+             * <p>The region ID of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -472,7 +475,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the scheduled task.</p>
+             * <p>The status of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>finish</p>
@@ -485,8 +488,10 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the scheduled task can be canceled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -498,7 +503,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>53879cdb-9a00-428e-acaf-ff4cff******</p>
@@ -594,7 +599,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the page returned.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -605,7 +610,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -616,7 +621,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the scheduled tasks.</p>
+             * <p>Details of scheduled tasks.</p>
              */
             public Builder timerInfos(java.util.List<TimerInfos> timerInfos) {
                 this.timerInfos = timerInfos;
@@ -624,7 +629,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -132,7 +132,10 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-xxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,10 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -148,7 +154,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The updated Skill configuration. Sensitive values are masked.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -156,7 +162,10 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +173,10 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -183,7 +195,10 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillKey.
+         * <p>The Skill identifier key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibacloud-rds-copilot</p>
          */
         public Builder skillKey(String skillKey) {
             this.skillKey = skillKey;
@@ -249,7 +264,10 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Specifies whether to enable the Skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -257,7 +275,7 @@ public class UpdatePolarClawSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment variable configuration.</p>
              */
             public Builder env(java.util.Map<String, String> env) {
                 this.env = env;

@@ -130,9 +130,9 @@ public class DescribeDBClusterAttributeRequest extends Request {
         } 
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can view detailed information about all clusters under your account, including the cluster ID, through the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> interface.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -146,7 +146,7 @@ public class DescribeDBClusterAttributeRequest extends Request {
         }
 
         /**
-         * <p>Whether to obtain information about AI-related nodes.</p>
+         * <p>Specifies whether to retrieve AI-related node information.</p>
          * 
          * <strong>example:</strong>
          * <p>AI</p>

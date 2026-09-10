@@ -106,10 +106,12 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The billing method of the cluster. Valid values:</p>
+         * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: subscription</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +123,7 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The PolarDB cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp10gr51qasnl****</p>
@@ -132,9 +134,9 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the cluster expires.</p>
+         * <p>The expiration time of the instance.</p>
          * <blockquote>
-         * <p> This parameter is returned if you set the <strong>PayType</strong> parameter to <strong>Prepaid</strong>.</p>
+         * <p>This response parameter is returned only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +148,7 @@ public class TransformDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20515760028****</p>

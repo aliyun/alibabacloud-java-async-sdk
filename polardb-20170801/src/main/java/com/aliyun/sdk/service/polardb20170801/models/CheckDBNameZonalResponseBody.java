@@ -67,7 +67,10 @@ public class CheckDBNameZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * DBName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder DBName(String DBName) {
             this.DBName = DBName;
@@ -75,7 +78,10 @@ public class CheckDBNameZonalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

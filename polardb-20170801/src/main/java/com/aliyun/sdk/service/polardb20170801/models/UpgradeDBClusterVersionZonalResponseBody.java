@@ -54,7 +54,10 @@ public class UpgradeDBClusterVersionZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAE6755F-B79A-4861-B227-801FE8******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -54,7 +54,10 @@ public class CheckConnectionStringResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

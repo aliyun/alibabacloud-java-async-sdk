@@ -67,7 +67,10 @@ public class ModifyApplicationServerlessConfResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -75,7 +78,10 @@ public class ModifyApplicationServerlessConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0CEC6AC-7760-409A-A0D5-E6CD86******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -103,7 +103,10 @@ public class GetLakebaseTenantTokenRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The associated PolarDB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -112,6 +115,7 @@ public class GetLakebaseTenantTokenRequest extends Request {
         }
 
         /**
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +128,7 @@ public class GetLakebaseTenantTokenRequest extends Request {
         }
 
         /**
+         * <p>The mount subdirectory. Specify an absolute path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class GetLakebaseTenantTokenRequest extends Request {
         }
 
         /**
-         * Tenant.
+         * <p>The tenant identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tenant-xxx</p>
          */
         public Builder tenant(String tenant) {
             this.putQueryParameter("Tenant", tenant);

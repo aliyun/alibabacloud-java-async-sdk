@@ -241,7 +241,17 @@ public class DescribeUpgradeReportRequest extends Request {
         } 
 
         /**
-         * CreationCategory.
+         * <p>The product series. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Normal</strong>: Cluster Edition (default)</p>
+         * </li>
+         * <li><p><strong>SENormal</strong>: Standard Edition</p>
+         * </li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/183258.html">Product series</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder creationCategory(String creationCategory) {
             this.putQueryParameter("CreationCategory", creationCategory);
@@ -250,7 +260,16 @@ public class DescribeUpgradeReportRequest extends Request {
         }
 
         /**
-         * DBType.
+         * <p>The database type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -259,7 +278,10 @@ public class DescribeUpgradeReportRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * <p>The compatible database version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -286,7 +308,10 @@ public class DescribeUpgradeReportRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -295,7 +320,10 @@ public class DescribeUpgradeReportRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -304,7 +332,13 @@ public class DescribeUpgradeReportRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -331,7 +365,10 @@ public class DescribeUpgradeReportRequest extends Request {
         }
 
         /**
-         * SourceDBClusterId.
+         * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2zen5pe5vi56447d0</p>
          */
         public Builder sourceDBClusterId(String sourceDBClusterId) {
             this.putQueryParameter("SourceDBClusterId", sourceDBClusterId);
@@ -340,7 +377,10 @@ public class DescribeUpgradeReportRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -349,7 +389,10 @@ public class DescribeUpgradeReportRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2321321</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -358,7 +401,10 @@ public class DescribeUpgradeReportRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>A special metric. This parameter is supported only for instances that use the Tair architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>orca</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

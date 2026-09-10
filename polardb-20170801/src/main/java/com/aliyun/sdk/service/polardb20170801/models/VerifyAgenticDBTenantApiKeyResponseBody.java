@@ -158,7 +158,10 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiKeyId.
+         * <p>The key ID. This parameter is empty if the API key is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ak-71304e39c7e841a1</p>
          */
         public Builder apiKeyId(String apiKeyId) {
             this.apiKeyId = apiKeyId;
@@ -166,7 +169,10 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * <p>The ID of the associated AgenticDB cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc-bp1abcdef1234567</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -174,7 +180,10 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time of the API key. This parameter is empty if the API key is permanently valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-01-01T00:00:00Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -182,7 +191,7 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The reason why the validation failed. Valid values: NotFound, Expired, and Revoked. This parameter is empty if the API key is valid.</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -198,7 +207,10 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D4E5F6A7-B8C9-0123-DEFA-234567890123</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +218,10 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The ID of the tenant to which the API key belongs. This parameter is empty if the API key is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -214,7 +229,10 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * TenantName.
+         * <p>The name of the tenant to which the API key belongs. This parameter is empty if the API key is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-saas-app</p>
          */
         public Builder tenantName(String tenantName) {
             this.tenantName = tenantName;
@@ -222,7 +240,10 @@ public class VerifyAgenticDBTenantApiKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Valid.
+         * <p>Indicates whether the API key is valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder valid(Boolean valid) {
             this.valid = valid;

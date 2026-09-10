@@ -74,6 +74,7 @@ public class GetPolarClawConfigRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetPolarClawConfigRequest extends Request {
         }
 
         /**
-         * ConfigPath.
+         * <p>The path to the configuration section to retrieve, specified in JSONPath dot notation. If this parameter is empty, the entire configuration is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>models</p>
          */
         public Builder configPath(String configPath) {
             this.putQueryParameter("ConfigPath", configPath);

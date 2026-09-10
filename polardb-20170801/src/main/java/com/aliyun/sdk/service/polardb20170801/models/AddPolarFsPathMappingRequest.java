@@ -89,7 +89,7 @@ public class AddPolarFsPathMappingRequest extends Request {
         } 
 
         /**
-         * CustomBucketPathList.
+         * <p>The bucket and corresponding path information.</p>
          */
         public Builder customBucketPathList(java.util.List<CustomBucketPathList> customBucketPathList) {
             this.putQueryParameter("CustomBucketPathList", customBucketPathList);
@@ -98,6 +98,7 @@ public class AddPolarFsPathMappingRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class AddPolarFsPathMappingRequest extends Request {
         }
 
         /**
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +209,10 @@ public class AddPolarFsPathMappingRequest extends Request {
             } 
 
             /**
-             * Bucket.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bucket1</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -231,7 +236,10 @@ public class AddPolarFsPathMappingRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>The custom storage path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data1</p>
              */
             public Builder path(String path) {
                 this.path = path;

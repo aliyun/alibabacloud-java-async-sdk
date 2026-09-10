@@ -89,7 +89,10 @@ public class CancelPolarFsFileQuotaRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the PolarDB cluster that the application depends on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -98,6 +101,7 @@ public class CancelPolarFsFileQuotaRequest extends Request {
         }
 
         /**
+         * <p>The file paths. Separate multiple paths with a comma (<code>,</code>).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +114,7 @@ public class CancelPolarFsFileQuotaRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Polarlakebase instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

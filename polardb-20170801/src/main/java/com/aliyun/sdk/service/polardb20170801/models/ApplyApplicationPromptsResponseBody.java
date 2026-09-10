@@ -67,7 +67,10 @@ public class ApplyApplicationPromptsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -75,7 +78,7 @@ public class ApplyApplicationPromptsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>

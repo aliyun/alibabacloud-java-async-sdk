@@ -104,7 +104,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the nodes.</p>
+         * <p>The list of nodes.</p>
          */
         public Builder DBNodeIds(java.util.List<String> DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
@@ -112,7 +112,7 @@ public class TempModifyDBNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2035638*******</p>

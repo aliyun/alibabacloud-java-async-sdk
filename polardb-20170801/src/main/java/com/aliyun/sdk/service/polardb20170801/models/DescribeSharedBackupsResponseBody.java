@@ -106,7 +106,7 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>A list of shared backup sets.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +136,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total record count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -412,7 +424,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * BackupEndTime.
+             * <p>The end time of the backup, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-05-12T03:25:55Z</p>
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -420,7 +435,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * <p>The backup set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111111111</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -428,7 +446,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMethod.
+             * <p>The backup method. Only snapshot backup is supported. The value is fixed to <strong>Snapshot</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Snapshot</p>
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -436,7 +457,16 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * <p>The backup mode. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Automated</strong>: automated backup</p>
+             * </li>
+             * <li><p><strong>Manual</strong>: manual backup</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Manual</p>
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -444,7 +474,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetSize.
+             * <p>The size of the backup set, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4639948800</p>
              */
             public Builder backupSetSize(String backupSetSize) {
                 this.backupSetSize = backupSetSize;
@@ -452,7 +485,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * <p>The start time of the backup, in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-11-15T07:30:05Z</p>
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -460,7 +496,16 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * <p>The backup status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Success</strong>: The backup is complete.</p>
+             * </li>
+             * <li><p><strong>Failed</strong>: The backup failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -468,7 +513,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * <p>The backup type. Only full backups are supported. The value is fixed to <strong>FullBackup</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FullBackup</p>
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -476,7 +524,16 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupsLevel.
+             * <p>The backup level. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Level-1</strong>: Level-1 backup.</p>
+             * </li>
+             * <li><p><strong>Level-2</strong>: Level-2 backup.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Level-2</p>
              */
             public Builder backupsLevel(String backupsLevel) {
                 this.backupsLevel = backupsLevel;
@@ -484,7 +541,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsistentTime.
+             * <p>The UNIX timestamp of the consistent snapshot, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1589253947</p>
              */
             public Builder consistentTime(String consistentTime) {
                 this.consistentTime = consistentTime;
@@ -492,7 +552,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-****************</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -500,7 +563,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -508,7 +574,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBVersion.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.6</p>
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -516,7 +585,16 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+             * </li>
+             * <li><p><strong>Prepaid</strong>: prepaid (subscription)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -524,7 +602,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hongzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -532,7 +613,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerlessType.
+             * <p>The Serverless type. A value of <strong>AgileServerless</strong> indicates a Serverless cluster, while an empty value indicates a standard cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AgileServerless</p>
              */
             public Builder serverlessType(String serverlessType) {
                 this.serverlessType = serverlessType;
@@ -540,7 +624,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * <p>The share type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ShareIncoming</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -548,7 +635,10 @@ public class DescribeSharedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * SharerUID.
+             * <p>The UID of the account that shared the backup set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>170*************</p>
              */
             public Builder sharerUID(String sharerUID) {
                 this.sharerUID = sharerUID;

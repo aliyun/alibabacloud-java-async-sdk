@@ -285,7 +285,7 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable storage compression. Set the value to <strong>ON</strong>.</p>
+         * <p>Enables storage compression. Set the value to <strong>ON</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -308,7 +308,7 @@ public class ModifyDBClusterRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You can call the DescribeDBClusters operation to query information about all PolarDB clusters that are deployed in a specified region, such as cluster IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including cluster IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -322,9 +322,9 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The list of nodes for the drill.</p>
+         * <p>The list of node instance names for the disaster recovery drill.</p>
          * <blockquote>
-         * <p> You can specify only one node for a node-level disaster recovery drill. For a primary zone-level disaster recovery drill, you can either choose not to specify this parameter or specify all nodes.</p>
+         * <p>Node-level drills support only a single node. For zone-level drills, you can leave this parameter empty or specify all nodes.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -337,10 +337,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The method used to replicate data across zones. Valid values:</p>
+         * <p>The cross-zone data replication mode of the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>AsyncSync</strong>: the asynchronous mode.</li>
-         * <li><strong>SemiSync</strong>: the semi-synchronous mode.</li>
+         * <li><strong>AsyncSync</strong>: asynchronous</li>
+         * <li><strong>SemiSync</strong>: semi-synchronous</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -355,11 +355,7 @@ public class ModifyDBClusterRequest extends Request {
         /**
          * <p>The fault injection method. Valid values:</p>
          * <ul>
-         * <li>0: <code>Crash SQL</code>-based fault injection.</li>
-         * </ul>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>CrashSQLInjection: CrashSQLInjection.</li>
+         * <li>0: instance fault injection based on <code>Crash SQL</code></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,26 +368,16 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The level of the disaster recovery drill. Valid values:</p>
+         * <p>The dimension of the disaster recovery drill for the cluster. Valid values:</p>
          * <ul>
-         * <li><code>0</code> or <code>FaultInjection</code>: The primary zone level.</li>
-         * <li><code>1</code>: The node level.</li>
+         * <li><code>0</code> or <code>FaultInjection</code>: primary zone-level disaster recovery drill.</li>
+         * <li><code>1</code>: node-level disaster recovery drill.<blockquote>
+         * <ul>
+         * <li>In the <strong>primary zone-level disaster recovery drill</strong> scenario, all compute nodes in the primary zone become unavailable. The failover in this scenario causes service interruptions.</li>
+         * <li>In the <strong>node-level disaster recovery drill</strong> scenario, only a single compute node is supported for the drill. Specify the desired compute node name by using <code>DBNodeCrashList</code>.</li>
          * </ul>
-         * <blockquote>
          * </blockquote>
-         * <ul>
-         * <li><p>In <strong>primary zone-level disaster recovery drill</strong> scenarios, all compute nodes in the primary zone are unavailable. Data loss occurs during failovers in the scenarios.</p>
          * </li>
-         * <li><p>In <strong>node-level disaster recovery drill</strong> scenarios, you can specify only one compute node for the disaster recovery drill. You can use the <code>DBNodeCrashList</code> parameter to specify the name of the compute node that you want to use for the drill.</p>
-         * </li>
-         * </ul>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>FaultInjectToPrimaryAz</li>
-         * <li>FaultInjectToDbNode</li>
-         * <li>FaultInjection</li>
-         * <li>0</li>
-         * <li>1</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -404,19 +390,17 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic IMCI-based query acceleration. IMCI is short for In-Memory Column Index. Valid values:</p>
+         * <p>The automatic IMCI-based query acceleration feature. Valid values:</p>
          * <ul>
-         * <li><code>ON</code>: enables automatic IMCI-based query acceleration.</li>
-         * <li><code>OFF</code>: disables automatic IMCI-based query acceleration.</li>
+         * <li><code>ON</code>: enabled.</li>
+         * <li><code>OFF</code>: disabled.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter is supported only for PolarDB for MySQL clusters.</p>
-         * </li>
-         * <li><p>For information about the cluster version limits, see <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic IMCI-based query acceleration</a>.</p>
-         * </li>
+         * <li>Only PolarDB for MySQL clusters are supported.</li>
+         * <li>For cluster version requirements, see <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic acceleration (AutoIndex)</a>.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>OFF</p>
@@ -428,7 +412,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ModifyRowCompression.
+         * <p>Modifies the row compression settings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OFF</p>
          */
         public Builder modifyRowCompression(String modifyRowCompression) {
             this.putQueryParameter("ModifyRowCompression", modifyRowCompression);
@@ -473,7 +460,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cross-zone automatic switchover. Valid values:</p>
+         * <p>The cross-zone automatic switchover mode of the cluster. Valid values:</p>
          * <ul>
          * <li><strong>ON</strong>: enables cross-zone automatic switchover.</li>
          * <li><strong>OFF</strong>: disables cross-zone automatic switchover.</li>
@@ -491,8 +478,8 @@ public class ModifyDBClusterRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic storage scaling for the Standard Edition cluster. Valid values:</p>
          * <ul>
-         * <li>Enable</li>
-         * <li>Disable</li>
+         * <li>Enable: enables automatic storage scaling.</li>
+         * <li>Disable: disables automatic storage scaling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -505,9 +492,9 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The maximum storage capacity of the cluster of Standard Edition in automatic scaling. Unit: GB.</p>
+         * <p>The upper limit for automatic storage scaling of the Standard Edition cluster. Unit: GB.</p>
          * <blockquote>
-         * <p> The maximum value of this parameter is 32000.</p>
+         * <p>The maximum value is 32000.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -520,7 +507,14 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * TableMeta.
+         * <p>The JSON string that contains the information about the databases and tables to be restored. The values of the database and table information are strings.
+         * Example: <code>[    {        &quot;tables&quot;:[            {                &quot;name&quot;:&quot;testtb&quot;,                &quot;type&quot;:&quot;table&quot;,                &quot;newname&quot;:&quot;testtb_restore&quot;            }        ],        &quot;name&quot;:&quot;testdb&quot;,        &quot;type&quot;:&quot;db&quot;,        &quot;newname&quot;:&quot;testdb_restore&quot;    } ]</code>.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query the names of databases and tables that can be restored, and then specify the information in the corresponding fields in the preceding example.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[ { &quot;tables&quot;:[ { &quot;name&quot;:&quot;testtb&quot;, &quot;type&quot;:&quot;table&quot;, &quot;newname&quot;:&quot;testtb_restore&quot; } ], &quot;name&quot;:&quot;testdb&quot;, &quot;type&quot;:&quot;db&quot;, &quot;newname&quot;:&quot;testdb_restore&quot; } ]</p>
          */
         public Builder tableMeta(String tableMeta) {
             this.putQueryParameter("TableMeta", tableMeta);

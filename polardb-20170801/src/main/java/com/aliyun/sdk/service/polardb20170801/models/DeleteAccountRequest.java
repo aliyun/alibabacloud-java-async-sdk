@@ -131,7 +131,7 @@ public class DeleteAccountRequest extends Request {
         } 
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

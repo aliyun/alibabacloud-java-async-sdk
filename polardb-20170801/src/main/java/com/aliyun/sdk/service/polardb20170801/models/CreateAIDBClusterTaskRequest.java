@@ -367,6 +367,7 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -379,7 +380,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.pg.g6.4xlarge.guh</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -397,7 +401,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * DatasetPath.
+         * <p>The training dataset ID. This parameter is required for fine-tuning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pds-2zetrain***</p>
          */
         public Builder datasetPath(String datasetPath) {
             this.putQueryParameter("DatasetPath", datasetPath);
@@ -406,7 +413,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * EvalDatasetPath.
+         * <p>The validation dataset ID. This parameter is required for evaluation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pds-2zetrain***</p>
          */
         public Builder evalDatasetPath(String evalDatasetPath) {
             this.putQueryParameter("EvalDatasetPath", evalDatasetPath);
@@ -415,6 +425,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
+         * <p>The model service type. Valid values:</p>
+         * <ul>
+         * <li><strong>aitrain</strong>: model operator tuning</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -427,6 +441,11 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
+         * <p>The model name.</p>
+         * <ul>
+         * <li><strong>For a preset model, specify the name of the selected model.</strong></li>
+         * <li><strong>For a custom model, specify the path where the model is stored (the model trained in a cold storage instance).</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -439,6 +458,11 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
+         * <p>The model source. Valid values:</p>
+         * <ul>
+         * <li><strong>public</strong>: preset model</li>
+         * <li><strong>custom</strong>: custom model</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -451,7 +475,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * ModelType.
+         * <p>The custom model type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3</p>
          */
         public Builder modelType(String modelType) {
             this.putQueryParameter("ModelType", modelType);
@@ -478,7 +505,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -505,6 +535,7 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
+         * <p>The running parameters in a JSON string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -517,7 +548,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp**************</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -526,7 +560,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The model service description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -544,7 +581,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*******************</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -553,7 +593,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-*********************</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -562,7 +605,10 @@ public class CreateAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

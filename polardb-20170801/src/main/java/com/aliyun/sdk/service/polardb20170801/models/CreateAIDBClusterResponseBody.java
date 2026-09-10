@@ -93,7 +93,10 @@ public class CreateAIDBClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-******************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -101,7 +104,10 @@ public class CreateAIDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2035638*******</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -120,7 +126,10 @@ public class CreateAIDBClusterResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

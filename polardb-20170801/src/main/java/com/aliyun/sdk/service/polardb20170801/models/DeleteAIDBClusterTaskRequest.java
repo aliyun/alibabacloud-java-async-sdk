@@ -143,7 +143,10 @@ public class DeleteAIDBClusterTaskRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-2ze9***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -170,7 +173,10 @@ public class DeleteAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -179,7 +185,10 @@ public class DeleteAIDBClusterTaskRequest extends Request {
         }
 
         /**
-         * RelativeDBClusterId.
+         * <p>The ID of the PolarDB database instance for the AI model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2zejpr***</p>
          */
         public Builder relativeDBClusterId(String relativeDBClusterId) {
             this.putQueryParameter("RelativeDBClusterId", relativeDBClusterId);

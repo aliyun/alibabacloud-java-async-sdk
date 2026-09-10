@@ -80,7 +80,7 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * ParameterTemplates.
+         * <p>The details of the parameter template.</p>
          */
         public Builder parameterTemplates(ParameterTemplates parameterTemplates) {
             this.parameterTemplates = parameterTemplates;
@@ -88,7 +88,7 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * <p>The parameter details.</p>
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -96,7 +96,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +230,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * Default.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder _default(String _default) {
                 this._default = _default;
@@ -235,7 +241,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the parameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +252,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -251,7 +263,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * NeedRestart.
+             * <p>Indicates whether the application needs to be restarted after you modify the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needRestart(Boolean needRestart) {
                 this.needRestart = needRestart;
@@ -259,7 +274,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Pattern.
+             * <p>The regular expression for the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^[a-zA-Z0-9]{1,20}$</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -267,7 +285,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * <p>Indicates whether the parameter is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -275,7 +296,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -355,7 +379,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentId.
+             * <p>The subcomponent ID or application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pac-**************</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -363,7 +390,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentType.
+             * <p>The type of the subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -371,7 +401,7 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>A list of parameter template details.</p>
              */
             public Builder parameters(java.util.List<ComponentParameterTemplatesParameters> parameters) {
                 this.parameters = parameters;
@@ -425,7 +455,7 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentParameterTemplates.
+             * <p>A list of subcomponents that contain lists of parameter template details.</p>
              */
             public Builder componentParameterTemplates(java.util.List<ComponentParameterTemplates> componentParameterTemplates) {
                 this.componentParameterTemplates = componentParameterTemplates;
@@ -583,7 +613,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * Default.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default value</p>
              */
             public Builder _default(String _default) {
                 this._default = _default;
@@ -591,7 +624,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the parameter</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -599,7 +635,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -607,7 +646,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * NeedRestart.
+             * <p>Indicates whether the application needs to be restarted after you modify the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needRestart(Boolean needRestart) {
                 this.needRestart = needRestart;
@@ -615,7 +657,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Pattern.
+             * <p>The regular expression for the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^[a-zA-Z0-9]{1,20}$</p>
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -623,7 +668,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * <p>Indicates whether the parameter is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -631,7 +679,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Applied</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -639,7 +690,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -647,7 +701,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The current value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -727,7 +784,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentId.
+             * <p>The subcomponent ID or application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pac-**************</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -735,7 +795,10 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentType.
+             * <p>The type of the subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>supabase</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -743,7 +806,7 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>A list of parameter details.</p>
              */
             public Builder parameters(java.util.List<ComponentParametersParameters> parameters) {
                 this.parameters = parameters;
@@ -797,7 +860,7 @@ public class DescribeApplicationParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentParameters.
+             * <p>A list of subcomponents that contain lists of parameter details.</p>
              */
             public Builder componentParameters(java.util.List<ComponentParameters> componentParameters) {
                 this.componentParameters = componentParameters;

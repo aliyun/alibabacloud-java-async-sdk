@@ -257,7 +257,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>The ID of the Agent that runs the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>work</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -266,6 +269,7 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -278,7 +282,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * DeleteAfterRun.
+         * <p>Specifies whether to delete the task after its first execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteAfterRun(Boolean deleteAfterRun) {
             this.putQueryParameter("DeleteAfterRun", deleteAfterRun);
@@ -287,7 +294,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Delivery.
+         * <p>The result delivery configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Mode&quot;:&quot;announce&quot;,&quot;Channel&quot;:&quot;telegram&quot;}</p>
          */
         public Builder delivery(Delivery delivery) {
             String deliveryShrink = shrink(delivery, "Delivery", "json");
@@ -297,7 +307,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The new description for the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily report generation</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -306,7 +319,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether the task is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -315,7 +331,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * FailureAlert.
+         * <p>The configuration for failure alerts. Set this to <code>false</code> to disable alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;After&quot;:3,&quot;Channel&quot;:&quot;telegram&quot;}</p>
          */
         public Builder failureAlert(FailureAlert failureAlert) {
             String failureAlertShrink = shrink(failureAlert, "FailureAlert", "json");
@@ -325,6 +344,7 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scheduled task to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -337,7 +357,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new name for the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>afternoon-report</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -346,7 +369,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Payload.
+         * <p>The new payload configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Kind&quot;:&quot;agentTurn&quot;,&quot;Message&quot;:&quot;Updated: Generate afternoon report.&quot;}</p>
          */
         public Builder payload(Payload payload) {
             String payloadShrink = shrink(payload, "Payload", "json");
@@ -356,7 +382,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after the update. Default value: <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);
@@ -365,7 +394,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * Schedule.
+         * <p>The scheduling configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Kind&quot;:&quot;cron&quot;,&quot;Expr&quot;:&quot;0 12 * * *&quot;,&quot;Tz&quot;:&quot;America/New_York&quot;}</p>
          */
         public Builder schedule(Schedule schedule) {
             String scheduleShrink = shrink(schedule, "Schedule", "json");
@@ -375,7 +407,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * SessionKey.
+         * <p>The session routing key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent:main:feishu:direct:***</p>
          */
         public Builder sessionKey(String sessionKey) {
             this.putQueryParameter("SessionKey", sessionKey);
@@ -384,7 +419,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * SessionTarget.
+         * <p>The new session target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>isolated</p>
          */
         public Builder sessionTarget(String sessionTarget) {
             this.putQueryParameter("SessionTarget", sessionTarget);
@@ -393,7 +431,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
         }
 
         /**
-         * WakeMode.
+         * <p>The new wake mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>now</p>
          */
         public Builder wakeMode(String wakeMode) {
             this.putQueryParameter("WakeMode", wakeMode);
@@ -500,7 +541,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID for the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accountId123</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -508,7 +552,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * BestEffort.
+             * <p>Specifies whether to ignore delivery failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bestEffort(Boolean bestEffort) {
                 this.bestEffort = bestEffort;
@@ -516,7 +563,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Channel.
+             * <p>The delivery channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telegram</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -524,7 +574,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The delivery mode. Valid values: <code>none</code>, <code>announce</code>, and <code>webhook</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>announce</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -532,7 +585,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * To.
+             * <p>The delivery target. This parameter is required and must be a URL if <code>Delivery.Mode</code> is <code>webhook</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/webhook">https://example.com/webhook</a></p>
              */
             public Builder to(String to) {
                 this.to = to;
@@ -651,7 +707,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID for the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accountId123</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -659,7 +718,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * After.
+             * <p>The number of consecutive failures after which to send an alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder after(Integer after) {
                 this.after = after;
@@ -667,7 +729,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Channel.
+             * <p>The alert channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>email</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -675,7 +740,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * CooldownMs.
+             * <p>The minimum interval between two alerts, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder cooldownMs(Integer cooldownMs) {
                 this.cooldownMs = cooldownMs;
@@ -683,7 +751,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The alert mode. Valid values: <code>announce</code> and <code>webhook</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>announce</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -691,7 +762,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * To.
+             * <p>The alert target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:user@example.com">user@example.com</a></p>
              */
             public Builder to(String to) {
                 this.to = to;
@@ -888,7 +962,7 @@ public class UpdatePolarClawCronJobRequest extends Request {
             } 
 
             /**
-             * BestEffortDeliver.
+             * <p>Specifies whether to ignore delivery failures.</p>
              */
             public Builder bestEffortDeliver(Boolean bestEffortDeliver) {
                 this.bestEffortDeliver = bestEffortDeliver;
@@ -896,7 +970,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Channel.
+             * <p>The ID of the delivery channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>telegram</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -904,7 +981,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Deliver.
+             * <p>Specifies whether to deliver the output to a channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deliver(Boolean deliver) {
                 this.deliver = deliver;
@@ -912,7 +992,7 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Fallbacks.
+             * <p>A list of fallback models.</p>
              */
             public Builder fallbacks(java.util.List<String> fallbacks) {
                 this.fallbacks = fallbacks;
@@ -920,7 +1000,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Kind.
+             * <p>The payload type. Valid values are <code>agentTurn</code> (for an Agent conversation) or <code>systemEvent</code> (for a system event).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agentTurn</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -928,7 +1011,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * LightContext.
+             * <p>Specifies whether to use a lightweight context.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder lightContext(Boolean lightContext) {
                 this.lightContext = lightContext;
@@ -936,7 +1022,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Message.
+             * <p>The prompt for the Agent conversation. This parameter is required if <code>Payload.Kind</code> is <code>agentTurn</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Generate the daily report and send it to the team.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -944,7 +1033,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Model.
+             * <p>The model override.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>anthropic/sonnet-4.6</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -952,7 +1044,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Text.
+             * <p>The text for the system event. This parameter is required if <code>Payload.Kind</code> is <code>systemEvent</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Send a reminder to the user.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -960,7 +1055,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Thinking.
+             * <p>The thinking level. Valid values: <code>off</code>, <code>minimal</code>, <code>low</code>, <code>medium</code>, <code>high</code>, and <code>xhigh</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder thinking(String thinking) {
                 this.thinking = thinking;
@@ -968,7 +1066,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * TimeoutSeconds.
+             * <p>The execution timeout in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -976,7 +1077,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * To.
+             * <p>The delivery target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>team</p>
              */
             public Builder to(String to) {
                 this.to = to;
@@ -1108,7 +1212,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             } 
 
             /**
-             * AnchorMs.
+             * <p>The anchor timestamp for interval alignment, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1777370572518</p>
              */
             public Builder anchorMs(Long anchorMs) {
                 this.anchorMs = anchorMs;
@@ -1116,7 +1223,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * At.
+             * <p>An ISO 8601 timestamp. This parameter is required if <code>Schedule.Kind</code> is <code>at</code>. For example: <code>2026-04-10T09:00:00+08:00</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-10T09:00:00+08:00</p>
              */
             public Builder at(String at) {
                 this.at = at;
@@ -1124,7 +1234,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * EveryMs.
+             * <p>The interval in milliseconds. This parameter is required if <code>Schedule.Kind</code> is <code>every</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder everyMs(Long everyMs) {
                 this.everyMs = everyMs;
@@ -1132,7 +1245,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Expr.
+             * <p>The cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 9 * * *</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -1140,7 +1256,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Kind.
+             * <p>The schedule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -1148,7 +1267,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * StaggerMs.
+             * <p>The deterministic jitter window, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder staggerMs(Integer staggerMs) {
                 this.staggerMs = staggerMs;
@@ -1156,7 +1278,10 @@ public class UpdatePolarClawCronJobRequest extends Request {
             }
 
             /**
-             * Tz.
+             * <p>The time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder tz(String tz) {
                 this.tz = tz;

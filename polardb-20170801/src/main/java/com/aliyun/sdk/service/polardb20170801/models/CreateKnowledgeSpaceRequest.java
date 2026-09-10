@@ -310,7 +310,10 @@ public class CreateKnowledgeSpaceRequest extends Request {
         } 
 
         /**
-         * DBType.
+         * <p>The database engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -319,7 +322,10 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the knowledge space. The description can be up to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDesc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -328,6 +334,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The vector dimensions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,6 +347,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The name of the embedding model.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +360,10 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * EnforceAcl.
+         * <p>Specifies whether to enable ACL-based authentication for the knowledge space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enforceAcl(Boolean enforceAcl) {
             this.putQueryParameter("EnforceAcl", enforceAcl);
@@ -361,7 +372,10 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * LLMModel.
+         * <p>The name of the large language model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3.6-plus</p>
          */
         public Builder LLMModel(String LLMModel) {
             this.putQueryParameter("LLMModel", LLMModel);
@@ -370,6 +384,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The name of the knowledge space. The name must be 1 to 128 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -395,6 +410,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The name of an existing OSS bucket in the same region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -420,6 +436,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -432,7 +449,10 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * RerankModel.
+         * <p>The name of the reranking model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3-rerank</p>
          */
         public Builder rerankModel(String rerankModel) {
             this.putQueryParameter("RerankModel", rerankModel);
@@ -441,6 +461,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The security group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -453,6 +474,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The shard size, in tokens.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -465,6 +487,11 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The sharding strategy. Valid values:</p>
+         * <ul>
+         * <li>hierarchical (default)</li>
+         * <li>hybrid</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -477,6 +504,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch for automatic creation of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -489,6 +517,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The VPC for automatic creation of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -501,6 +530,7 @@ public class CreateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The active zone for automatic creation of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

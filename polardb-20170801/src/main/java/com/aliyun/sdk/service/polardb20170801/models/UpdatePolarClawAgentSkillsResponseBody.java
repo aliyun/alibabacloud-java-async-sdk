@@ -143,7 +143,10 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-xxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -151,7 +154,10 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The return code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -159,7 +165,10 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -167,7 +176,10 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -186,7 +198,7 @@ public class UpdatePolarClawAgentSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Skills.
+         * <p>The updated skill list.</p>
          */
         public Builder skills(java.util.List<String> skills) {
             this.skills = skills;

@@ -147,7 +147,10 @@ public class DescribeAgenticDBBranchLineageRequest extends Request {
         } 
 
         /**
-         * BranchId.
+         * <p>The anchor branch ID. If this parameter is not specified, the primary branch of the project is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-7g8h9i0j1k2l</p>
          */
         public Builder branchId(String branchId) {
             this.putQueryParameter("BranchId", branchId);
@@ -156,6 +159,7 @@ public class DescribeAgenticDBBranchLineageRequest extends Request {
         }
 
         /**
+         * <p>The AgenticDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +172,10 @@ public class DescribeAgenticDBBranchLineageRequest extends Request {
         }
 
         /**
-         * IncludeDestroying.
+         * <p>Specifies whether to include branches in the Destroying state. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeDestroying(Boolean includeDestroying) {
             this.putQueryParameter("IncludeDestroying", includeDestroying);
@@ -186,6 +193,7 @@ public class DescribeAgenticDBBranchLineageRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +206,7 @@ public class DescribeAgenticDBBranchLineageRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,6 +219,7 @@ public class DescribeAgenticDBBranchLineageRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

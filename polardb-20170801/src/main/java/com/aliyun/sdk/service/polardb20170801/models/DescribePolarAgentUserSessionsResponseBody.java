@@ -67,7 +67,7 @@ public class DescribePolarAgentUserSessionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The result set.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribePolarAgentUserSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2FDB684-751D-424D-98B9-704BEA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribePolarAgentUserSessionsResponseBody extends TeaModel {
             } 
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01IC17MLISBB98SL345H7B5AES1E8VB1</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -162,7 +168,16 @@ public class DescribePolarAgentUserSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionStatus.
+             * <p>The status of the session. Valid values:</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Active</p>
+             * </li>
+             * <li><p><strong>0</strong>: Closed</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sessionStatus(Long sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -170,7 +185,10 @@ public class DescribePolarAgentUserSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content</p>
              */
             public Builder title(String title) {
                 this.title = title;

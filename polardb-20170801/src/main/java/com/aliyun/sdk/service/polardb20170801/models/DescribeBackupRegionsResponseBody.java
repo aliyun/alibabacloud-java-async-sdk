@@ -67,7 +67,7 @@ public class DescribeBackupRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Regions.
+         * <p>The list of regions where the backup sets are stored.</p>
          */
         public Builder regions(java.util.List<String> regions) {
             this.regions = regions;
@@ -75,7 +75,10 @@ public class DescribeBackupRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB07CFF0-D8A4-5C76-AED7-D00E26FC2***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -75,6 +75,7 @@ public class ModifyApplicationServerlessConfRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ModifyApplicationServerlessConfRequest extends Request {
         }
 
         /**
+         * <p>The list of Serverless configurations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder serverlessConfList(java.util.List<ServerlessConfList> serverlessConfList) {
@@ -168,7 +170,17 @@ public class ModifyApplicationServerlessConfRequest extends Request {
             } 
 
             /**
-             * ComponentType.
+             * <p>The type of the application sub-component.</p>
+             * <p>For Supabase, valid values are:</p>
+             * <ul>
+             * <li><p>gateway</p>
+             * </li>
+             * <li><p>backend</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>gateway</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -176,7 +188,10 @@ public class ModifyApplicationServerlessConfRequest extends Request {
             }
 
             /**
-             * ScaleMax.
+             * <p>The maximum number of PCUs for a single node. Valid values: 0 to 16.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder scaleMax(String scaleMax) {
                 this.scaleMax = scaleMax;
@@ -184,7 +199,10 @@ public class ModifyApplicationServerlessConfRequest extends Request {
             }
 
             /**
-             * ScaleMin.
+             * <p>The minimum number of PolarDB Capacity Units (PCUs) for a single node. Valid values: 0 to 16.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scaleMin(String scaleMin) {
                 this.scaleMin = scaleMin;

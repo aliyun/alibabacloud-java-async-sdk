@@ -106,7 +106,16 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderType.
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li>BUY: new purchase.</li>
+         * <li>UPGRADE: specification change.</li>
+         * <li>RENEW: renewal.</li>
+         * <li>CONVERT: billing method conversion.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BUY</p>
          */
         public Builder orderType(String orderType) {
             this.orderType = orderType;
@@ -114,7 +123,7 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
         }
 
         /**
-         * PriceInfo.
+         * <p>The price details.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -122,7 +131,10 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E2FE3BB-C677-5FF9-9FC5-XXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,10 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
         }
 
         /**
-         * ShowDiscount.
+         * <p>Indicates whether discounts are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder showDiscount(Boolean showDiscount) {
             this.showDiscount = showDiscount;
@@ -468,7 +483,10 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -476,7 +494,10 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1978.2</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -484,7 +505,10 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * <p>The original price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1099.0</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -500,7 +524,10 @@ public class DescribeDBClusterPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * <p>The final price, which is the original price minus the discount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>165.0</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;

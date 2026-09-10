@@ -104,6 +104,7 @@ public class BindPolarClawAgentRequest extends Request {
         } 
 
         /**
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class BindPolarClawAgentRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class BindPolarClawAgentRequest extends Request {
         }
 
         /**
+         * <p>The channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class BindPolarClawAgentRequest extends Request {
         }
 
         /**
-         * ChannelAccountId.
+         * <p>The account ID for the channel. If omitted, the default value is \&quot;default\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder channelAccountId(String channelAccountId) {
             this.putQueryParameter("ChannelAccountId", channelAccountId);

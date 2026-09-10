@@ -285,7 +285,10 @@ public class DescribeHistoryTasksRequest extends Request {
         } 
 
         /**
-         * FromExecTime.
+         * <p>The minimum task execution time in seconds. Filters for tasks that took longer than this value. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder fromExecTime(Integer fromExecTime) {
             this.putQueryParameter("FromExecTime", fromExecTime);
@@ -294,6 +297,8 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
+         * <p>The start of the time range to query, based on task start time. The time follows the ISO8601 standard and must be in <code>UTC+0</code> time. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+         * <p>The earliest supported time is 30 days ago. If the specified time is more than 30 days ago, it will be automatically converted to 30 days ago.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +311,13 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The resource ID to filter by. You can provide a comma-separated list of up to 30 IDs. Default value: empty, indicating no restriction.</p>
+         * <blockquote>
+         * <p>Currently, only PolarDB cluster IDs are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2zed3m89cw***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -315,7 +326,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>Currently, only Instance is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -333,7 +347,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Valid values: positive integers. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -342,7 +359,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Valid values: 10 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -351,7 +371,13 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -360,7 +386,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -396,7 +425,25 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Scheduled</strong>: waiting for execution</p>
+         * </li>
+         * <li><p><strong>Running</strong>: executing</p>
+         * </li>
+         * <li><p><strong>Succeed</strong>: executed successfully</p>
+         * </li>
+         * <li><p><strong>Cancelling</strong>: stopping</p>
+         * </li>
+         * <li><p><strong>Canceled</strong>: stopped</p>
+         * </li>
+         * <li><p><strong>Waiting</strong>: waiting for preset time</p>
+         * </li>
+         * </ul>
+         * <p>You can provide a comma-separated list. Default value: empty, which indicates all statuses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -405,7 +452,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID. You can provide a comma-separated list of up to 30 IDs. Default value: empty, indicating no restriction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-0mqi38ho0cgjv***</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -414,7 +464,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The task type. You can provide a comma-separated list of up to 30 task types. Default value: empty, indicating no restriction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ChangeVariable</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -423,7 +476,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * ToExecTime.
+         * <p>The maximum task execution time in seconds. Filters for tasks that took less than this value. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder toExecTime(Integer toExecTime) {
             this.putQueryParameter("ToExecTime", toExecTime);
@@ -432,6 +488,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query, based on task start time. The time follows the ISO8601 standard and must be in <code>UTC+0</code> time. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

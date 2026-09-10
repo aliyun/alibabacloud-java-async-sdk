@@ -106,7 +106,10 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -114,7 +117,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * Bindings.
+         * <p>The list of bindings.</p>
          */
         public Builder bindings(java.util.List<Bindings> bindings) {
             this.bindings = bindings;
@@ -122,7 +125,10 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +136,10 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7F2007D3-7E74-4ECB-89A8-BF130D******</p>
@@ -220,7 +229,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent ID</p>
+             * <p>The agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>work</p>
@@ -231,7 +240,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Channel ID</p>
+             * <p>The channel ID.</p>
              * 
              * <strong>example:</strong>
              * <p>feishu</p>
@@ -242,7 +251,7 @@ public class ListPolarClawBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Account ID</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>

@@ -89,6 +89,7 @@ public class RemoveApplicationEnvironmentVariablesRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class RemoveApplicationEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after removing the variables. The default is <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);
@@ -110,6 +114,7 @@ public class RemoveApplicationEnvironmentVariablesRequest extends Request {
         }
 
         /**
+         * <p>A list of the environment variable names to remove.</p>
          * <p>This parameter is required.</p>
          */
         public Builder variableNames(java.util.List<String> variableNames) {

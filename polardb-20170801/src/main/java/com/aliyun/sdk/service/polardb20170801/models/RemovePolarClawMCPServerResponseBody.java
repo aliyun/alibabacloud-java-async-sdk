@@ -119,7 +119,10 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -127,7 +130,10 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the request was successful. A value of <code>true</code> indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -151,7 +163,7 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E56531A4-E552-40BA-9C58-137B80******</p>
@@ -162,7 +174,10 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * ServerName.
+         * <p>The ID of the deleted MCP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-v1</p>
          */
         public Builder serverName(String serverName) {
             this.serverName = serverName;

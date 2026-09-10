@@ -171,7 +171,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-2zejpr***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -179,7 +182,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-15T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -187,7 +193,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -195,7 +201,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * MetricType.
+         * <p>The metric type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder metricType(String metricType) {
             this.metricType = metricType;
@@ -203,7 +212,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -211,7 +223,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The total number of entries that match the query conditions. This parameter is optional and is not returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -219,7 +234,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries returned for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -227,7 +245,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RelativeDbClusterId.
+         * <p>The ID of the associated PolarDB cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2zejpr***</p>
          */
         public Builder relativeDbClusterId(String relativeDbClusterId) {
             this.relativeDbClusterId = relativeDbClusterId;
@@ -246,7 +267,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-15T14:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -377,7 +401,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentStep.
+             * <p>The current step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder currentStep(Integer currentStep) {
                 this.currentStep = currentStep;
@@ -385,7 +412,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Epoch.
+             * <p>The epoch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.23</p>
              */
             public Builder epoch(Double epoch) {
                 this.epoch = epoch;
@@ -393,7 +423,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalStep.
+             * <p>The total number of steps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder globalStep(Integer globalStep) {
                 this.globalStep = globalStep;
@@ -401,7 +434,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * LogTime.
+             * <p>The log time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-15T14:16:49.52140317Z</p>
              */
             public Builder logTime(String logTime) {
                 this.logTime = logTime;
@@ -409,7 +445,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Metric.
+             * <p>The metric details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;memory(GiB)&quot;:&quot;xxx&quot;}</p>
              */
             public Builder metric(java.util.Map<String, ?> metric) {
                 this.metric = metric;
@@ -417,7 +456,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * MetricType.
+             * <p>The metric type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>train</p>
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
@@ -425,7 +467,10 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The specific point in time when the monitoring metric was collected. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1742090703</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -479,7 +524,7 @@ public class DescribeAIDBClusterTaskMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * SlsMetricsItems.
+             * <p>The list of metrics.</p>
              */
             public Builder slsMetricsItems(java.util.List<SlsMetricsItems> slsMetricsItems) {
                 this.slsMetricsItems = slsMetricsItems;

@@ -132,7 +132,7 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of consumer objects.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -140,7 +140,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -148,7 +151,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -156,7 +162,16 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -175,7 +190,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -183,7 +201,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -470,7 +491,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             } 
 
             /**
-             * Active.
+             * <p>Indicates whether the key is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -478,7 +502,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * ApiKey.
+             * <p>The full API key. Returned only in this response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -486,7 +513,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * ApiKeyMd5.
+             * <p>The MD5 hash of the API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0769a11c2d474f96fbb527f8e273d3de</p>
              */
             public Builder apiKeyMd5(String apiKeyMd5) {
                 this.apiKeyMd5 = apiKeyMd5;
@@ -494,7 +524,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * ApiKeyStatus.
+             * <p>The status of the API key. Default value: Active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder apiKeyStatus(String apiKeyStatus) {
                 this.apiKeyStatus = apiKeyStatus;
@@ -502,7 +535,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * ApiStatus.
+             * <p>The API key status. Default value: Active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder apiStatus(String apiStatus) {
                 this.apiStatus = apiStatus;
@@ -510,7 +546,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetLimit.
+             * <p>The budget limit, which equals the number of credits per package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder budgetLimit(Long budgetLimit) {
                 this.budgetLimit = budgetLimit;
@@ -518,7 +557,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetPolicyId.
+             * <p>The budget policy ID. Each key has an independent budget policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>023aacc1effc4b56bb154bfbec6ba9**</p>
              */
             public Builder budgetPolicyId(String budgetPolicyId) {
                 this.budgetPolicyId = budgetPolicyId;
@@ -526,7 +568,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetUsed.
+             * <p>The used quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder budgetUsed(Long budgetUsed) {
                 this.budgetUsed = budgetUsed;
@@ -534,7 +579,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cg-xxxxxx</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -542,7 +590,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-mqveroemc***</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -550,7 +601,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerTag.
+             * <p>The consumer tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder consumerTag(String consumerTag) {
                 this.consumerTag = consumerTag;
@@ -558,7 +612,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The application description or remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myapp</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -566,7 +623,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-25T09:37:10Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -574,7 +634,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * <p>Indicates whether the key is expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -582,7 +645,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-16 16:46:20</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -590,7 +656,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-04T16:09:29+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -598,7 +667,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * GwClusterId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-xxxxxxxxxx</p>
              */
             public Builder gwClusterId(String gwClusterId) {
                 this.gwClusterId = gwClusterId;
@@ -606,7 +678,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -614,7 +689,10 @@ public class CreateBatchConsumerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The consumer status. Default value: Enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

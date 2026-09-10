@@ -106,7 +106,7 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The details of the Global Data Networks (GDNs).</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +136,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -230,7 +242,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelId.
+             * <p>The ID of the synchronization channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gdc-xxx</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -238,7 +253,40 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelStatus.
+             * <p>The status of the synchronization channel. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Creating</strong>: The channel is being created.</p>
+             * </li>
+             * <li><p><strong>Running</strong>: The channel is running.</p>
+             * </li>
+             * <li><p><strong>Syncing</strong>: The channel is synchronizing data.</p>
+             * </li>
+             * <li><p><strong>SyncFinished</strong>: Data synchronization is complete.</p>
+             * </li>
+             * <li><p><strong>SyncFailed</strong>: Data synchronization failed.</p>
+             * </li>
+             * <li><p><strong>SyncPartialFailed</strong>: Data synchronization partially failed.</p>
+             * </li>
+             * <li><p><strong>Stopped</strong>: The channel is stopped.</p>
+             * </li>
+             * <li><p><strong>Maintaining</strong>: The channel is under maintenance.</p>
+             * </li>
+             * <li><p><strong>Restarting</strong>: The channel is restarting.</p>
+             * </li>
+             * <li><p><strong>Locking</strong>: The channel is being locked.</p>
+             * </li>
+             * <li><p><strong>Locked</strong>: The channel is locked.</p>
+             * </li>
+             * <li><p><strong>Unlocking</strong>: The channel is being unlocked.</p>
+             * </li>
+             * <li><p><strong>Deleting</strong>: The channel is being deleted.</p>
+             * </li>
+             * <li><p><strong>Deleted</strong>: The channel is deleted.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Syncing</p>
              */
             public Builder channelStatus(String channelStatus) {
                 this.channelStatus = channelStatus;
@@ -246,7 +294,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * FreezeSourceDuringSync.
+             * <p>Indicates whether the source path is frozen during data transmission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder freezeSourceDuringSync(Boolean freezeSourceDuringSync) {
                 this.freezeSourceDuringSync = freezeSourceDuringSync;
@@ -254,7 +305,13 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The synchronization progress.</p>
+             * <blockquote>
+             * <p>The value is a percentage that is accurate to two decimal places.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>11.45%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -347,7 +404,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             } 
 
             /**
-             * DestinationFileSystemPath.
+             * <p>The destination path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder destinationFileSystemPath(String destinationFileSystemPath) {
                 this.destinationFileSystemPath = destinationFileSystemPath;
@@ -355,7 +415,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationId.
+             * <p>Destination PolarDB instance</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pfs-xxx</p>
              */
             public Builder destinationId(String destinationId) {
                 this.destinationId = destinationId;
@@ -363,7 +426,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationRegion.
+             * <p>The region of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder destinationRegion(String destinationRegion) {
                 this.destinationRegion = destinationRegion;
@@ -371,7 +437,16 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationType.
+             * <p>The type of the destination. Valid values:</p>
+             * <ul>
+             * <li><p><strong>pfs</strong>: Polarlakebase High-performance Edition.</p>
+             * </li>
+             * <li><p><strong>pcs</strong>: Polarlakebase Cold Storage Edition.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pfs</p>
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
@@ -464,7 +539,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             } 
 
             /**
-             * SourceFileSystemPath.
+             * <p>The source path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder sourceFileSystemPath(String sourceFileSystemPath) {
                 this.sourceFileSystemPath = sourceFileSystemPath;
@@ -472,7 +550,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * <p>The ID of the source Polarlakebase instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pcs-xxx</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -480,7 +561,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRegion.
+             * <p>The region of the source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-wulanchabu</p>
              */
             public Builder sourceRegion(String sourceRegion) {
                 this.sourceRegion = sourceRegion;
@@ -488,7 +572,16 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The type of the source. Valid values:</p>
+             * <ul>
+             * <li><p><strong>pfs</strong>: Polarlakebase High-performance Edition.</p>
+             * </li>
+             * <li><p><strong>pcs</strong>: Polarlakebase Cold Storage Edition.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pcs</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -555,7 +648,7 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             } 
 
             /**
-             * Destinations.
+             * <p>The synchronization destinations.</p>
              */
             public Builder destinations(java.util.List<Destinations> destinations) {
                 this.destinations = destinations;
@@ -563,7 +656,7 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * Sources.
+             * <p>The synchronization sources.</p>
              */
             public Builder sources(java.util.List<Sources> sources) {
                 this.sources = sources;
@@ -682,7 +775,7 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             } 
 
             /**
-             * Channels.
+             * <p>The synchronization channels.</p>
              */
             public Builder channels(java.util.List<Channels> channels) {
                 this.channels = channels;
@@ -690,7 +783,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the GDN was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-25T09:37:10Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -698,7 +794,10 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkDescription.
+             * <p>The description of the GDN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mygdn</p>
              */
             public Builder networkDescription(String networkDescription) {
                 this.networkDescription = networkDescription;
@@ -706,7 +805,7 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GDN ID</p>
+             * <p>The ID of the GDN.</p>
              * 
              * <strong>example:</strong>
              * <p>gdn-xxx</p>
@@ -717,7 +816,40 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkStatus.
+             * <p>The status of the GDN. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Creating</strong>: The GDN is being created.</p>
+             * </li>
+             * <li><p><strong>Running</strong>: The GDN is running.</p>
+             * </li>
+             * <li><p><strong>Syncing</strong>: The GDN is synchronizing data.</p>
+             * </li>
+             * <li><p><strong>SyncFinished</strong>: Data synchronization is complete.</p>
+             * </li>
+             * <li><p><strong>SyncFailed</strong>: Data synchronization failed.</p>
+             * </li>
+             * <li><p><strong>SyncPartialFailed</strong>: Data synchronization partially failed.</p>
+             * </li>
+             * <li><p><strong>Stopped</strong>: The GDN is stopped.</p>
+             * </li>
+             * <li><p><strong>Maintaining</strong>: The GDN is under maintenance.</p>
+             * </li>
+             * <li><p><strong>Restarting</strong>: The GDN is restarting.</p>
+             * </li>
+             * <li><p><strong>Locking</strong>: The GDN is being locked.</p>
+             * </li>
+             * <li><p><strong>Locked</strong>: The GDN is locked.</p>
+             * </li>
+             * <li><p><strong>Unlocking</strong>: The GDN is being unlocked.</p>
+             * </li>
+             * <li><p><strong>Deleting</strong>: The GDN is being deleted.</p>
+             * </li>
+             * <li><p><strong>Deleted</strong>: The GDN is deleted.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder networkStatus(String networkStatus) {
                 this.networkStatus = networkStatus;
@@ -725,7 +857,7 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkTopology.
+             * <p>The network topology of the GDN.</p>
              */
             public Builder networkTopology(NetworkTopology networkTopology) {
                 this.networkTopology = networkTopology;
@@ -779,7 +911,7 @@ public class DescribeGlobalDataNetworkListResponseBody extends TeaModel {
             } 
 
             /**
-             * Networks.
+             * <p>The list of GDN networks.</p>
              */
             public Builder networks(java.util.List<Networks> networks) {
                 this.networks = networks;

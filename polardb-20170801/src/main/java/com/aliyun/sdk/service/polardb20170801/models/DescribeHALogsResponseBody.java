@@ -158,7 +158,10 @@ public class DescribeHALogsResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-a*************</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -166,7 +169,15 @@ public class DescribeHALogsResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceType.
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li><strong>polardb_mysql_rw</strong>: read-write instance.</li>
+         * <li><strong>polardb_mysql_ro</strong>: read-only instance.</li>
+         * <li><strong>polardb_mysql_standby</strong>: standby instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_mysql_rw</p>
          */
         public Builder DBInstanceType(String DBInstanceType) {
             this.DBInstanceType = DBInstanceType;
@@ -174,7 +185,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The failover logs.</p>
+         * <p>The list of primary/secondary 这里 AI 机翻使用了 failover，但代码里用了 switch，建议保持一致，都改为 swichover logs.</p>
          */
         public Builder haLogItems(java.util.List<HaLogItems> haLogItems) {
             this.haLogItems = haLogItems;
@@ -182,7 +193,14 @@ public class DescribeHALogsResponseBody extends TeaModel {
         }
 
         /**
-         * HaStatus.
+         * <p>Indicates whether primary/secondary switchover records exist. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: No</li>
+         * <li><strong>0</strong>: Yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder haStatus(Integer haStatus) {
             this.haStatus = haStatus;
@@ -190,7 +208,10 @@ public class DescribeHALogsResponseBody extends TeaModel {
         }
 
         /**
-         * ItemsNumbers.
+         * <p>The number of items in the log list on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder itemsNumbers(Integer itemsNumbers) {
             this.itemsNumbers = itemsNumbers;
@@ -198,7 +219,10 @@ public class DescribeHALogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -206,7 +230,10 @@ public class DescribeHALogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page. Valid values: 30 to 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -214,7 +241,10 @@ public class DescribeHALogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +252,10 @@ public class DescribeHALogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecords.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160</p>
          */
         public Builder totalRecords(Integer totalRecords) {
             this.totalRecords = totalRecords;
@@ -327,7 +360,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason code of the failover.</p>
+             * <p>The cause code of the switchover.</p>
              * 
              * <strong>example:</strong>
              * <p>Platform.Ha.AuroraService.ManualOperations</p>
@@ -338,7 +371,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason of the failover.</p>
+             * <p>The cause of the switchover.</p>
              * 
              * <strong>example:</strong>
              * <p>Platform.Ha.ManuallyTriggered</p>
@@ -349,7 +382,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the failover ended.</p>
+             * <p>The end time of the switchover.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-20T03:09:56Z</p>
@@ -360,7 +393,10 @@ public class DescribeHALogsResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchId.
+             * <p>The ID of the primary/secondary switchover log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e571f897-9b3c-4012-9470-88333832dec4</p>
              */
             public Builder switchId(String switchId) {
                 this.switchId = switchId;
@@ -368,7 +404,7 @@ public class DescribeHALogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the failover started.</p>
+             * <p>The start time of the switchover.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-20T03:09:45Z</p>

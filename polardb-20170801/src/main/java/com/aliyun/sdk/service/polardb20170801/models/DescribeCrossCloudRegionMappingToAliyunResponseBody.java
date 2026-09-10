@@ -67,7 +67,7 @@ public class DescribeCrossCloudRegionMappingToAliyunResponseBody extends TeaMode
         } 
 
         /**
-         * CrossCloudRegionMappingList.
+         * <p>The list of cross-cloud region mappings.</p>
          */
         public Builder crossCloudRegionMappingList(java.util.List<CrossCloudRegionMappingList> crossCloudRegionMappingList) {
             this.crossCloudRegionMappingList = crossCloudRegionMappingList;
@@ -75,7 +75,10 @@ public class DescribeCrossCloudRegionMappingToAliyunResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E56531A4-E552-40BA-9C58-137B80******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeCrossCloudRegionMappingToAliyunResponseBody extends TeaMode
             } 
 
             /**
-             * AliyunRegionId.
+             * <p>The region ID of Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder aliyunRegionId(String aliyunRegionId) {
                 this.aliyunRegionId = aliyunRegionId;
@@ -162,7 +168,10 @@ public class DescribeCrossCloudRegionMappingToAliyunResponseBody extends TeaMode
             }
 
             /**
-             * CloudProvider.
+             * <p>The cloud provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HuaweiCloud</p>
              */
             public Builder cloudProvider(String cloudProvider) {
                 this.cloudProvider = cloudProvider;
@@ -170,7 +179,10 @@ public class DescribeCrossCloudRegionMappingToAliyunResponseBody extends TeaMode
             }
 
             /**
-             * CrossCloudRegionId.
+             * <p>The region ID of the third-party cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-east-3</p>
              */
             public Builder crossCloudRegionId(String crossCloudRegionId) {
                 this.crossCloudRegionId = crossCloudRegionId;

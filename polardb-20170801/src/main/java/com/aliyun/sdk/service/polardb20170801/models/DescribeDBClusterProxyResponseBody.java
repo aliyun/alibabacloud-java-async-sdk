@@ -106,7 +106,7 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         } 
 
         /**
-         * ChildInstances.
+         * <p>A list of network instances loaded by the Cloud Enterprise Network (CEN) instance.</p>
          */
         public Builder childInstances(java.util.List<ChildInstances> childInstances) {
             this.childInstances = childInstances;
@@ -114,7 +114,10 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         }
 
         /**
-         * DBProxyClusterId.
+         * <p>The proxy cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pe-xxxxxxxxx</p>
          */
         public Builder DBProxyClusterId(String DBProxyClusterId) {
             this.DBProxyClusterId = DBProxyClusterId;
@@ -122,7 +125,10 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         }
 
         /**
-         * DBProxyClusterNum.
+         * <p>The number of proxy nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder DBProxyClusterNum(Long DBProxyClusterNum) {
             this.DBProxyClusterNum = DBProxyClusterNum;
@@ -130,7 +136,10 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         }
 
         /**
-         * DBProxyClusterStatus.
+         * <p>The status of the proxy cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClassChanging</p>
          */
         public Builder DBProxyClusterStatus(String DBProxyClusterStatus) {
             this.DBProxyClusterStatus = DBProxyClusterStatus;
@@ -138,7 +147,10 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30E11ED2-C922-5B96-BCC6-11EE8C484AC6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +268,18 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
             } 
 
             /**
-             * DBNodeClass.
+             * <p>The node specifications. For more information, see the following documents:</p>
+             * <ul>
+             * <li><p>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</p>
+             * </li>
+             * <li><p>PolarDB for Oracle: <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a>.</p>
+             * </li>
+             * <li><p>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a>.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.mysql.g4.medium</p>
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -264,7 +287,10 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeIP.
+             * <p>The private IP address of the database cluster node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.*.*10</p>
              */
             public Builder DBNodeIP(String DBNodeIP) {
                 this.DBNodeIP = DBNodeIP;
@@ -272,7 +298,10 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeId.
+             * <p>The ID of the database cluster node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-wz97h479y364g9du7</p>
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -280,7 +309,10 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodePort.
+             * <p>The port of the database cluster node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2450</p>
              */
             public Builder DBNodePort(String DBNodePort) {
                 this.DBNodePort = DBNodePort;
@@ -288,7 +320,38 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeStatus.
+             * <p>The status of the node. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Creating</strong>: The node is being created.</p>
+             * </li>
+             * <li><p><strong>Running</strong>: The node is running.</p>
+             * </li>
+             * <li><p><strong>Deleting</strong>: The node is being deleted.</p>
+             * </li>
+             * <li><p><strong>Rebooting</strong>: The node is being restarted.</p>
+             * </li>
+             * <li><p><strong>DBNodeCreating</strong>: A node is being added.</p>
+             * </li>
+             * <li><p><strong>DBNodeDeleting</strong>: A node is being deleted.</p>
+             * </li>
+             * <li><p><strong>ClassChanging</strong>: The node specifications are being changed.</p>
+             * </li>
+             * <li><p><strong>NetAddressCreating</strong>: A network connection is being created.</p>
+             * </li>
+             * <li><p><strong>NetAddressDeleting</strong>: A network connection is being deleted.</p>
+             * </li>
+             * <li><p><strong>NetAddressModifying</strong>: A network connection is being modified.</p>
+             * </li>
+             * <li><p><strong>MinorVersionUpgrading</strong>: The minor version is being upgraded.</p>
+             * </li>
+             * <li><p><strong>Maintaining</strong>: The instance is being maintained.</p>
+             * </li>
+             * <li><p><strong>Switching</strong>: A switchover is in progress.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBNodeStatus(String DBNodeStatus) {
                 this.DBNodeStatus = DBNodeStatus;
@@ -296,7 +359,10 @@ public class DescribeDBClusterProxyResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * <p>The hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sh-lsf01-144-37</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;

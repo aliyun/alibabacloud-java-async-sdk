@@ -161,7 +161,10 @@ public class ModifyCostRuleRequest extends Request {
         } 
 
         /**
-         * CacheCostPointsPerMillion.
+         * <p>The cost in points per million cache tokens. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cacheCostPointsPerMillion(String cacheCostPointsPerMillion) {
             this.putQueryParameter("CacheCostPointsPerMillion", cacheCostPointsPerMillion);
@@ -170,6 +173,7 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
+         * <p>The cost rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +186,7 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +199,10 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
-         * InputCostPointsPerMillion.
+         * <p>The cost in points per million input tokens. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder inputCostPointsPerMillion(String inputCostPointsPerMillion) {
             this.putQueryParameter("InputCostPointsPerMillion", inputCostPointsPerMillion);
@@ -203,6 +211,7 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
+         * <p>The model name, such as gpt-4 or qwen-turbo.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,6 +224,7 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
+         * <p>The model service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +237,10 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
-         * OutputCostPointsPerMillion.
+         * <p>The cost in points per million output tokens. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder outputCostPointsPerMillion(String outputCostPointsPerMillion) {
             this.putQueryParameter("OutputCostPointsPerMillion", outputCostPointsPerMillion);
@@ -236,7 +249,10 @@ public class ModifyCostRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

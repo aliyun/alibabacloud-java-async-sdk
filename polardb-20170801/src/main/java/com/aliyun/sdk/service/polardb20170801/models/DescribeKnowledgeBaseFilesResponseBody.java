@@ -119,7 +119,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of files.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -143,7 +149,11 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +172,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -228,7 +241,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * MaxTokens.
+             * <p>The maximum number of tokens per shard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder maxTokens(Integer maxTokens) {
                 this.maxTokens = maxTokens;
@@ -236,7 +252,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * MergePeers.
+             * <p>Specifies whether to merge adjacent small shards under the same heading.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mergePeers(Boolean mergePeers) {
                 this.mergePeers = mergePeers;
@@ -303,7 +322,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Parameters.
+             * <p>The parameter list.</p>
              */
             public Builder parameters(Parameters parameters) {
                 this.parameters = parameters;
@@ -311,7 +330,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The default chunking strategy type. Valid values: hybrid and hierarchical.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hybrid</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -365,7 +387,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * ContentType.
+             * <p>The content type. Currently, table is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -432,7 +457,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * MarkdownTables.
+             * <p>The Markdown table processing mode. Valid values: auto, on, and off.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder markdownTables(String markdownTables) {
                 this.markdownTables = markdownTables;
@@ -440,7 +468,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTokens.
+             * <p>The maximum number of tokens per shard for matched content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder maxTokens(Integer maxTokens) {
                 this.maxTokens = maxTokens;
@@ -507,7 +538,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Parameters.
+             * <p>The parameter list.</p>
              */
             public Builder parameters(StrategyParameters parameters) {
                 this.parameters = parameters;
@@ -515,7 +546,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The chunking strategy type applied after a rule is matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hierarchical</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -582,7 +616,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Match.
+             * <p>The content type. Currently, table is supported.</p>
              */
             public Builder match(Match match) {
                 this.match = match;
@@ -590,7 +624,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * <p>The chunking strategy.</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;
@@ -657,7 +691,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultStrategy.
+             * <p>The default chunking strategy type. Valid values: hybrid and hierarchical.</p>
              */
             public Builder defaultStrategy(DefaultStrategy defaultStrategy) {
                 this.defaultStrategy = defaultStrategy;
@@ -665,7 +699,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The list of override rules matched in order.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -914,7 +948,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Not Support.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -922,7 +959,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5b2dbb13-xxxx-xxxx-xxxx-a55fe8daec8f</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -930,7 +970,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Financial_report.pdf</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -938,7 +981,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * <p>The file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>318881</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -946,7 +992,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pdf</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -954,7 +1003,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * InheritSpaceStrategy.
+             * <p>Indicates whether the chunking strategy is inherited from the knowledge space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder inheritSpaceStrategy(Boolean inheritSpaceStrategy) {
                 this.inheritSpaceStrategy = inheritSpaceStrategy;
@@ -962,7 +1014,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeBaseId.
+             * <p>The knowledge base ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pkb-xxxxxx</p>
              */
             public Builder knowledgeBaseId(String knowledgeBaseId) {
                 this.knowledgeBaseId = knowledgeBaseId;
@@ -970,7 +1025,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeSpaceId.
+             * <p>The knowledge space ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pks-xxxxxx</p>
              */
             public Builder knowledgeSpaceId(String knowledgeSpaceId) {
                 this.knowledgeSpaceId = knowledgeSpaceId;
@@ -978,7 +1036,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * <p>The document metadata.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder metadata(java.util.Map<String, ?> metadata) {
                 this.metadata = metadata;
@@ -986,7 +1047,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * OSSPath.
+             * <p>The OSS file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket-example/pks-xxxx/pkb-xxxx/Financial_report.pdf</p>
              */
             public Builder OSSPath(String OSSPath) {
                 this.OSSPath = OSSPath;
@@ -994,7 +1058,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ShardCount.
+             * <p>The number of shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder shardCount(Integer shardCount) {
                 this.shardCount = shardCount;
@@ -1002,7 +1069,7 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ShardingStrategyConfig.
+             * <p>The chunking strategy configuration currently in effect for the document. This value may be empty if the complete configuration was not saved for existing objects.</p>
              */
             public Builder shardingStrategyConfig(ShardingStrategyConfig shardingStrategyConfig) {
                 this.shardingStrategyConfig = shardingStrategyConfig;
@@ -1010,7 +1077,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1018,7 +1088,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1026,7 +1099,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-15T22:28:53Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -1034,7 +1110,10 @@ public class DescribeKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UploadTime.
+             * <p>The upload time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-15T22:28:53Z</p>
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;

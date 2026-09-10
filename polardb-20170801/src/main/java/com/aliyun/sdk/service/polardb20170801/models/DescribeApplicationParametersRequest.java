@@ -74,6 +74,7 @@ public class DescribeApplicationParametersRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class DescribeApplicationParametersRequest extends Request {
         }
 
         /**
-         * ComponentIdList.
+         * <p>A list of subcomponent IDs. If you specify this parameter, the operation returns the parameters and parameter templates for only these components.</p>
          */
         public Builder componentIdList(java.util.List<String> componentIdList) {
             String componentIdListShrink = shrink(componentIdList, "ComponentIdList", "json");

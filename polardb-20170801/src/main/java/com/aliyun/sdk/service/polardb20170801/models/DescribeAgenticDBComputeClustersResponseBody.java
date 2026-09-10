@@ -106,7 +106,7 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of compute instances.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F6A7B8C9-D0E1-2345-FABC-678901234FAB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -425,7 +437,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * BranchId.
+             * <p>The ID of the associated branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>br-7g8h9i0j1k2l</p>
              */
             public Builder branchId(String branchId) {
                 this.branchId = branchId;
@@ -433,7 +448,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * BranchName.
+             * <p>The name of the associated branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feature-analytics</p>
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
@@ -441,7 +459,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeClusterId.
+             * <p>The compute instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-g0lsayq8c5qe</p>
              */
             public Builder computeClusterId(String computeClusterId) {
                 this.computeClusterId = computeClusterId;
@@ -449,7 +470,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeNodeCount.
+             * <p>The number of compute nodes. The value is fixed to 1 in the first phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder computeNodeCount(Integer computeNodeCount) {
                 this.computeNodeCount = computeNodeCount;
@@ -457,7 +481,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the compute instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-10T11:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -465,7 +492,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the compute instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Compute cluster for analytics</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -481,7 +511,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LastActivatedAt.
+             * <p>The time when the compute instance was last activated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-10T12:30:00Z</p>
              */
             public Builder lastActivatedAt(String lastActivatedAt) {
                 this.lastActivatedAt = lastActivatedAt;
@@ -489,7 +522,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCU.
+             * <p>The maximum compute unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder maxCU(String maxCU) {
                 this.maxCU = maxCU;
@@ -497,7 +533,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * MinCU.
+             * <p>The minimum compute unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder minCU(String minCU) {
                 this.minCU = minCU;
@@ -505,7 +544,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorType.
+             * <p>The operator type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Neon</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;
@@ -529,7 +571,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the associated project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proj-a1b2c3d4e5f6</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -537,7 +582,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the associated project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>analytics-prod</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -545,7 +593,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the compute instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -553,7 +604,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * <p>The amount of used data, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1073741824</p>
              */
             public Builder storageSize(Long storageSize) {
                 this.storageSize = storageSize;
@@ -561,7 +615,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The ID of the associated tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-4b83e0da66674951</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -569,7 +626,10 @@ public class DescribeAgenticDBComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * TenantName.
+             * <p>The name of the associated tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-saas-app</p>
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;

@@ -88,7 +88,13 @@ public class DescribePolarFsAttributeRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including cluster IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp1q76364ird*****</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -97,6 +103,7 @@ public class DescribePolarFsAttributeRequest extends Request {
         }
 
         /**
+         * <p>The Polarlakebase instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +116,14 @@ public class DescribePolarFsAttributeRequest extends Request {
         }
 
         /**
-         * QueryFuseMountInfo.
+         * <p>Specifies whether to query Fuse mount information. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder queryFuseMountInfo(Boolean queryFuseMountInfo) {
             this.putQueryParameter("QueryFuseMountInfo", queryFuseMountInfo);

@@ -106,7 +106,7 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of tasks.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,19 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records on each page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +145,7 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
@@ -141,7 +156,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -441,7 +459,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>A system parameter. Set the value to <strong>ModifyDBClusterServerlessConf</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ModifyDBClusterServerlessConf</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -449,7 +470,16 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * AllowShutDown.
+             * <p>Specifies whether to enable No-activity Suspension. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: enabled</p>
+             * </li>
+             * <li><p><strong>false</strong>: disabled (default)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder allowShutDown(String allowShutDown) {
                 this.allowShutDown = allowShutDown;
@@ -457,7 +487,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * <p>The Cron expression for the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 8 * * ?</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -465,7 +498,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*****************</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -473,7 +509,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the task. The time is in the yyyy-MM-ddTHH:mm:ssZ format and in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-04T02:25:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -481,7 +520,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12eee3eb-60bd-40ac-a403-218e02eb99c7</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -489,7 +531,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>254752088000354</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -497,7 +542,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -505,7 +553,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleApRoNumMax.
+             * <p>The maximum number of read-only IMCI nodes. Valid values: 1 to 15.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder scaleApRoNumMax(String scaleApRoNumMax) {
                 this.scaleApRoNumMax = scaleApRoNumMax;
@@ -513,7 +564,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleApRoNumMin.
+             * <p>The minimum number of read-only IMCI nodes. Valid values: 0 to 15.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scaleApRoNumMin(String scaleApRoNumMin) {
                 this.scaleApRoNumMin = scaleApRoNumMin;
@@ -521,7 +575,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMax.
+             * <p>The maximum capacity. The value must be from 1 to 32. Unit: PCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder scaleMax(String scaleMax) {
                 this.scaleMax = scaleMax;
@@ -529,7 +586,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMin.
+             * <p>The minimum capacity. The value must be from 0.25 to 32 and less than or equal to the maximum capacity. Unit: PolarDB Capacity Unit (PCU).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scaleMin(String scaleMin) {
                 this.scaleMin = scaleMin;
@@ -537,7 +597,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleRoNumMax.
+             * <p>The maximum number of read-only nodes. The value must be greater than or equal to the minimum value. Valid values: 0 to 15.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder scaleRoNumMax(String scaleRoNumMax) {
                 this.scaleRoNumMax = scaleRoNumMax;
@@ -545,7 +608,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleRoNumMin.
+             * <p>The minimum number of read-only nodes. Valid values: 0 to 15.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder scaleRoNumMin(String scaleRoNumMin) {
                 this.scaleRoNumMin = scaleRoNumMin;
@@ -553,7 +619,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * SecondsUntilAutoPause.
+             * <p>The detection period for No-activity Suspension. The value must be a multiple of 5. Valid values: 5 to 1440. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder secondsUntilAutoPause(String secondsUntilAutoPause) {
                 this.secondsUntilAutoPause = secondsUntilAutoPause;
@@ -561,7 +630,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * ServerlessRuleCpuEnlargeThreshold.
+             * <p>The CPU utilization threshold for scaling up. Valid values: 40 to 100. Unit: %.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder serverlessRuleCpuEnlargeThreshold(String serverlessRuleCpuEnlargeThreshold) {
                 this.serverlessRuleCpuEnlargeThreshold = serverlessRuleCpuEnlargeThreshold;
@@ -569,7 +641,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * ServerlessRuleCpuShrinkThreshold.
+             * <p>The CPU utilization threshold for scaling down. Valid values: 10 to 100. Unit: %. The difference between the scale-up threshold and the scale-down threshold must be 30 or greater.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder serverlessRuleCpuShrinkThreshold(String serverlessRuleCpuShrinkThreshold) {
                 this.serverlessRuleCpuShrinkThreshold = serverlessRuleCpuShrinkThreshold;
@@ -577,7 +652,16 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * ServerlessRuleMode.
+             * <p>The elasticity sensitivity. Valid values:</p>
+             * <ul>
+             * <li><p>normal: standard</p>
+             * </li>
+             * <li><p>flexible: sensitive</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder serverlessRuleMode(String serverlessRuleMode) {
                 this.serverlessRuleMode = serverlessRuleMode;
@@ -585,7 +669,10 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the task. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format and in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-09T18:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -593,7 +680,16 @@ public class DescribeCronJobPolicyServerlessResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><p><strong>working</strong>: The scheduled task is running.</p>
+             * </li>
+             * <li><p><strong>finish</strong>: The scheduled task is complete.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -80,7 +80,10 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>Application ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -88,7 +91,7 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
         }
 
         /**
-         * <p>PolarFS ID</p>
+         * <p>PolarLakeBase instance ID</p>
          * 
          * <strong>example:</strong>
          * <p>pcs-**************</p>
@@ -99,7 +102,10 @@ public class AttachApplicationPolarFSResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

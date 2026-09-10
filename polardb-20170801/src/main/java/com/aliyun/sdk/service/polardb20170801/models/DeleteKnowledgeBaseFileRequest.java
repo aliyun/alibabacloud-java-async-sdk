@@ -90,6 +90,7 @@ public class DeleteKnowledgeBaseFileRequest extends Request {
         } 
 
         /**
+         * <p>The file ID. To delete multiple files at a time, separate the file IDs with commas (,). A maximum of 500 file IDs are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteKnowledgeBaseFileRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteKnowledgeBaseFileRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

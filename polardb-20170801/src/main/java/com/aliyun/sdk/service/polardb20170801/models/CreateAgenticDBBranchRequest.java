@@ -148,6 +148,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         } 
 
         /**
+         * <p>The name of the branch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +161,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
+         * <p>The AgenticDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +174,10 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the branch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Feature branch for analytics</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -181,7 +186,10 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
-         * ParentBranchId.
+         * <p>The ID of the parent branch. If this parameter is not specified, the branch is derived from the main branch by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-1a2b3c4d5e6f</p>
          */
         public Builder parentBranchId(String parentBranchId) {
             this.putQueryParameter("ParentBranchId", parentBranchId);
@@ -190,6 +198,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
+         * <p>The ID of the project to which the branch belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +211,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +224,7 @@ public class CreateAgenticDBBranchRequest extends Request {
         }
 
         /**
+         * <p>The ID of the tenant to which the branch belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

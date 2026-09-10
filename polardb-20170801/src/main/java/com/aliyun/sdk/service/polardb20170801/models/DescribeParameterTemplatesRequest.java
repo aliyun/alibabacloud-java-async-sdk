@@ -160,7 +160,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The type of the database engine. Only <strong>MySQL</strong> is supported.</p>
+         * <p>The database engine type. Only <strong>MySQL</strong> is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,11 +173,14 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The version of the database. Valid values:</p>
+         * <p>The database version. Valid values:</p>
          * <ul>
-         * <li><strong>5.6</strong></li>
-         * <li><strong>5.7</strong></li>
-         * <li><strong>8.0</strong></li>
+         * <li><p><strong>5.6</strong></p>
+         * </li>
+         * <li><p><strong>5.7</strong></p>
+         * </li>
+         * <li><p><strong>8.0</strong></p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -211,7 +214,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available within your account, such as the region IDs.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the IDs of available regions.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -225,7 +228,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-************</p>

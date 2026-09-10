@@ -89,10 +89,11 @@ public class DeleteResourceControlRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID of the PolarDB cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pc-****************</p>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -101,7 +102,13 @@ public class DeleteResourceControlRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the PolarDB cluster.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -110,10 +117,11 @@ public class DeleteResourceControlRequest extends Request {
         }
 
         /**
+         * <p>The name of the resource control rule. The name must be 1 to 63 ASCII bytes in length, start with a letter, and can contain letters, digits, and underscores.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test-rc</p>
+         * <p>test_rc</p>
          */
         public Builder resourceControlName(String resourceControlName) {
             this.putQueryParameter("ResourceControlName", resourceControlName);

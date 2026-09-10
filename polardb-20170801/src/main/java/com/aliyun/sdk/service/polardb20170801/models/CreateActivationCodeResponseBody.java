@@ -195,7 +195,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The activation code in the base64 format. The activation code is decoded and stored into a file named license.lic. PolarDB can access and read the license.lic file upon startup to validate the license or perform related operations.</p>
+         * <p>The content of the activation code. Decode this Base64-encoded content and save it to the \<code>license.lic\\</code> file. PolarDB reads this file on startup.</p>
          * 
          * <strong>example:</strong>
          * <p>AAEAA******AAA=</p>
@@ -217,7 +217,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the activation code expires.</p>
+         * <p>The expiration time.</p>
          * 
          * <strong>example:</strong>
          * <p>2054-10-09 16:46:20</p>
@@ -228,7 +228,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the activation code was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -239,7 +239,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the activation code was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-16 16:46:20</p>
@@ -250,7 +250,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The activation code ID.</p>
+         * <p>The ID of the activation code.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -283,7 +283,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4CE6DF97-AEA4-484F-906F-C407EE******</p>
@@ -294,7 +294,7 @@ public class CreateActivationCodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The system identifier of the database.</p>
+         * <p>The unique system identifier of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123456</p>

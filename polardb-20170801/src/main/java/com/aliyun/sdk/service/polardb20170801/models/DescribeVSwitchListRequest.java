@@ -218,7 +218,10 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be an integer that is greater than 0. It cannot exceed the maximum value of the Integer data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -227,7 +230,19 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -236,6 +251,10 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the vSwitch resides.</p>
+         * <blockquote>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query the IDs of all regions that support vSwitches.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +294,7 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>A list of vSwitches in the VPC.</p>
          */
         public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             this.putQueryParameter("VSwitchIds", vSwitchIds);
@@ -284,7 +303,13 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <blockquote>
+         * <p>Call <a href="https://help.aliyun.com/document_detail/35739.html">DescribeVpcs</a> to view the details of the VPC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-25cdvfeq58pl****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -293,7 +318,10 @@ public class DescribeVSwitchListRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The ID of the zone where the vSwitch resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

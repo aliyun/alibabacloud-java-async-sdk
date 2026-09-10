@@ -213,7 +213,10 @@ public class DescribeAIDBClusterDatasetsRequest extends Request {
         } 
 
         /**
-         * ContinuationToken.
+         * <p>The token used to retrieve the next page of results. This value is obtained from the response of a previous request. For the first request, leave this parameter empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFSDF-DF-***</p>
          */
         public Builder continuationToken(String continuationToken) {
             this.putQueryParameter("ContinuationToken", continuationToken);
@@ -222,7 +225,10 @@ public class DescribeAIDBClusterDatasetsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The ID of the PolarDB cluster for AI model services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze88***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -231,7 +237,10 @@ public class DescribeAIDBClusterDatasetsRequest extends Request {
         }
 
         /**
-         * DatasetId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pds-2ze88***</p>
          */
         public Builder datasetId(String datasetId) {
             this.putQueryParameter("DatasetId", datasetId);
@@ -240,7 +249,16 @@ public class DescribeAIDBClusterDatasetsRequest extends Request {
         }
 
         /**
-         * DatasetType.
+         * <p>The type of the dataset. Valid values:</p>
+         * <ul>
+         * <li><p><strong>train</strong>: The training set.</p>
+         * </li>
+         * <li><p><strong>eval</strong>: The evaluation set.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>train</p>
          */
         public Builder datasetType(String datasetType) {
             this.putQueryParameter("DatasetType", datasetType);
@@ -267,7 +285,10 @@ public class DescribeAIDBClusterDatasetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -276,7 +297,11 @@ public class DescribeAIDBClusterDatasetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -285,7 +310,10 @@ public class DescribeAIDBClusterDatasetsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -312,7 +340,18 @@ public class DescribeAIDBClusterDatasetsRequest extends Request {
         }
 
         /**
-         * TrainMode.
+         * <p>The training mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>sft</strong>: supervised fine-tuning.</p>
+         * </li>
+         * <li><p><strong>grpo</strong>: reinforcement learning.</p>
+         * </li>
+         * <li><p><strong>text</strong>: text generation.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>grpo</p>
          */
         public Builder trainMode(String trainMode) {
             this.putQueryParameter("TrainMode", trainMode);

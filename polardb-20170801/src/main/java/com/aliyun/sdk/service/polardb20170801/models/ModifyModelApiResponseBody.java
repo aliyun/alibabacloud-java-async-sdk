@@ -67,7 +67,10 @@ public class ModifyModelApiResponseBody extends TeaModel {
         } 
 
         /**
-         * ModelApiId.
+         * <p>The model API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mi-xxxxx</p>
          */
         public Builder modelApiId(String modelApiId) {
             this.modelApiId = modelApiId;

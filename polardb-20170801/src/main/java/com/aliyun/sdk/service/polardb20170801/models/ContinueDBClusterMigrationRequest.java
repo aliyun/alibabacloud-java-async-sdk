@@ -172,6 +172,10 @@ public class ContinueDBClusterMigrationRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the destination region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +188,12 @@ public class ContinueDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * ForceSwitch.
+         * <p>Specifies whether to skip the current error. Valid values:</p>
+         * <p><strong>true</strong>: Skips the error.</p>
+         * <p><strong>false</strong>: Does not skip the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceSwitch(String forceSwitch) {
             this.putQueryParameter("ForceSwitch", forceSwitch);
@@ -211,7 +220,13 @@ public class ContinueDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <blockquote>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +235,10 @@ public class ContinueDBClusterMigrationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

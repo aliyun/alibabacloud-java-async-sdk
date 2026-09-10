@@ -539,7 +539,10 @@ public class CreateAIDBClusterRequest extends Request {
         } 
 
         /**
-         * AckAdmin.
+         * <p>Specifies whether the cluster is managed by an ACK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         public Builder ackAdmin(String ackAdmin) {
             this.putQueryParameter("AckAdmin", ackAdmin);
@@ -548,7 +551,18 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong>: Auto-renewal is not enabled.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -557,7 +571,14 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to automatically use coupons. Valid values:</p>
+         * <ul>
+         * <li>true (default): Use coupons.</li>
+         * <li>false: Do not use coupons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -575,7 +596,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * CreatePublicEndpoint.
+         * <p>Specifies whether to create a public endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder createPublicEndpoint(String createPublicEndpoint) {
             this.putQueryParameter("CreatePublicEndpoint", createPublicEndpoint);
@@ -584,7 +608,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterDescription.
+         * <p>The cluster description. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -593,7 +620,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The instance ID of the PolarDB instance on which the application depends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-******************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -602,7 +632,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeClass.
+         * <p>The node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.pg.g4.6xlarge.gu4</p>
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -611,7 +644,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * Extension.
+         * <p>The extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maas</p>
          */
         public Builder extension(String extension) {
             this.putQueryParameter("Extension", extension);
@@ -620,7 +656,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * InferenceEngine.
+         * <p>The inference engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sglang</p>
          */
         public Builder inferenceEngine(String inferenceEngine) {
             this.putQueryParameter("InferenceEngine", inferenceEngine);
@@ -629,7 +668,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * KubeClusterId.
+         * <p>The ACK cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxxxxxxxxxxxxxxx</p>
          */
         public Builder kubeClusterId(String kubeClusterId) {
             this.putQueryParameter("KubeClusterId", kubeClusterId);
@@ -638,7 +680,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * KubeConfig.
+         * <p>The Kubernetes configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder kubeConfig(String kubeConfig) {
             this.putQueryParameter("KubeConfig", kubeConfig);
@@ -647,7 +692,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * KubeManagement.
+         * <p>The Kubernetes cluster management mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>self_k8s</p>
          */
         public Builder kubeManagement(String kubeManagement) {
             this.putQueryParameter("KubeManagement", kubeManagement);
@@ -668,7 +716,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * KubernetesConfig.
+         * <p>The Kubernetes configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder kubernetesConfig(String kubernetesConfig) {
             this.putQueryParameter("KubernetesConfig", kubernetesConfig);
@@ -677,7 +728,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * ManagementMode.
+         * <p>The management mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack</p>
          */
         public Builder managementMode(String managementMode) {
             this.putQueryParameter("ManagementMode", managementMode);
@@ -686,7 +740,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen3-30B-A3B</p>
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -695,7 +752,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * ModelSpace.
+         * <p>The model operator space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pms-xxx</p>
          */
         public Builder modelSpace(String modelSpace) {
             this.putQueryParameter("ModelSpace", modelSpace);
@@ -722,7 +782,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -731,6 +794,11 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The billing method. Valid values: </p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -743,7 +811,14 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>This parameter is required to pass parameter when <strong>PayType</strong> is set to <strong>Prepaid</strong>. Specifies the unit of the upfront payment duration for the subscription cluster. </p>
+         * <ul>
+         * <li><strong>Year</strong>: The subscription duration is measured in years.</li>
+         * <li><strong>Month</strong>: The subscription duration is measured in months.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -752,7 +827,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727xxxxxx934</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -761,6 +839,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -791,7 +870,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp**************</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -800,7 +882,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * StorageSpace.
+         * <p>The storage space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         public Builder storageSpace(Integer storageSpace) {
             this.putQueryParameter("StorageSpace", storageSpace);
@@ -809,7 +894,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>essdpl0</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -818,7 +906,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * TimeSlices.
+         * <p>The pay-as-you-go time intervals.</p>
          */
         public Builder timeSlices(java.util.List<TimeSlices> timeSlices) {
             this.putQueryParameter("TimeSlices", timeSlices);
@@ -827,7 +915,14 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * <ul>
+         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-9]</code>.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-3]</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -836,6 +931,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The VPC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -848,6 +944,7 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -860,7 +957,10 @@ public class CreateAIDBClusterRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -928,7 +1028,10 @@ public class CreateAIDBClusterRequest extends Request {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time of the task. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1758729600</p>
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -936,7 +1039,10 @@ public class CreateAIDBClusterRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the query. The end time must be later than the start time. The time is in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1758733200</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;

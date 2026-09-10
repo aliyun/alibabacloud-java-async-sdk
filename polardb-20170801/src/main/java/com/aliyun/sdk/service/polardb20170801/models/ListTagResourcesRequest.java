@@ -173,10 +173,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The token required to obtain more results. This parameter is not required in the first query. If the first query does not return all results, you can use the token that is returned from the first query in the next query to obtain more results.</p>
+         * <p>A token to retrieve the next page of results. You do not need to specify this parameter for the first request. If the first request does not return all results, the response returns a token. You can use this token in the next request to continue the query.</p>
          * 
          * <strong>example:</strong>
-         * <p>212db86sca4384811e0b5e8707e******</p>
+         * <p>212db86sca4384811e0b5e8707*******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -203,7 +203,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view the available region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,15 +216,15 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the clusters. To query the tags of multiple clusters, click <strong>Add</strong> to add cluster IDs.</p>
+         * <p>The ID of a cluster. You can specify multiple cluster IDs to query the tags of multiple clusters.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You must specify at least one of the <code>ResourceId.N</code> and <code>Tag.N.Key</code> parameters.</p>
+         * <li><p>You must specify either the <code>ResourceId.N</code> parameter or the <code>Tag.N.Key</code> parameter.</p>
          * </li>
-         * <li><p>If you specify the <code>ResourceId.N</code> parameter, you can add a maximum of 50 cluster IDs at a time.</p>
+         * <li><p>If you specify the <code>ResourceId.N</code> parameter, you can add up to 50 cluster IDs.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -254,7 +254,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
+         * <p>The resource type. Set the value to <strong>cluster</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -335,15 +335,15 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. To query the details of clusters to which multiple tags are added, click <strong>Add</strong> to add tags.</p>
+             * <p>The key of a tag. You can specify multiple tags to query for resources that have all of the specified tags.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>You must specify at least one of the <code>ResourceId.N</code> and <code>Tag.N.Key</code> parameters.</p>
+             * <li><p>You must specify either the <code>ResourceId.N</code> parameter or the <code>Tag.N.Key</code> parameter.</p>
              * </li>
-             * <li><p>If you specify the <code>Tag.N.Key</code> parameter, you can create up to 20 tags at a time.</p>
+             * <li><p>If you specify the <code>Tag.N.Key</code> parameter, you can add up to 20 tag pairs.</p>
              * </li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>type</p>
@@ -354,7 +354,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The tag value that is paired with the tag key. This parameter can be set to an empty string.</p>
+             * <p>The tag value that corresponds to the tag key. An empty string is allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

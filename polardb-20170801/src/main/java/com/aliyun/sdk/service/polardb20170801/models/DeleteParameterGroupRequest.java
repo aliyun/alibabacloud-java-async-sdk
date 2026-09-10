@@ -165,7 +165,7 @@ public class DeleteParameterGroupRequest extends Request {
         /**
          * <p>The parameter template ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the parameter template ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to view parameter template IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -181,7 +181,7 @@ public class DeleteParameterGroupRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view available regions.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -195,7 +195,7 @@ public class DeleteParameterGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-************</p>

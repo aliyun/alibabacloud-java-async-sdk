@@ -156,7 +156,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-xxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -164,7 +167,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -172,7 +178,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentConfig.
+         * <p>The current tool configuration.</p>
          */
         public Builder currentConfig(CurrentConfig currentConfig) {
             this.currentConfig = currentConfig;
@@ -180,7 +186,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * Groups.
+         * <p>The list of tool groups.</p>
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
@@ -188,7 +194,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -196,7 +205,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
         }
 
         /**
-         * Profiles.
+         * <p>The list of available profiles.</p>
          */
         public Builder profiles(java.util.List<Profiles> profiles) {
             this.profiles = profiles;
@@ -299,7 +308,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * Allow.
+             * <p>The list of explicitly allowed tools.</p>
              */
             public Builder allow(java.util.List<String> allow) {
                 this.allow = allow;
@@ -307,7 +316,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * AlsoAllow.
+             * <p>The list of additionally allowed tools.</p>
              */
             public Builder alsoAllow(java.util.List<String> alsoAllow) {
                 this.alsoAllow = alsoAllow;
@@ -315,7 +324,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Deny.
+             * <p>The list of denied tools.</p>
              */
             public Builder deny(java.util.List<String> deny) {
                 this.deny = deny;
@@ -323,7 +332,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * <p>The tool profile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>full</p>
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -429,7 +441,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultProfiles.
+             * <p>The list of profiles that include this tool by default.</p>
              */
             public Builder defaultProfiles(java.util.List<String> defaultProfiles) {
                 this.defaultProfiles = defaultProfiles;
@@ -437,7 +449,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The tool description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>读取指定文件内容</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -445,7 +460,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The tool identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>read</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -453,7 +471,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The tool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>读取文件</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -461,7 +482,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>core</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -554,7 +578,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The group identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>file</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -562,7 +589,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>文件操作</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -570,7 +600,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source, which is core or a plugin ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>core</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -578,7 +611,7 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Tools.
+             * <p>The list of tools.</p>
              */
             public Builder tools(java.util.List<Tools> tools) {
                 this.tools = tools;
@@ -645,7 +678,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The profile identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>full</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -653,7 +689,10 @@ public class DescribePolarClawAgentToolsResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>全部工具</p>
              */
             public Builder label(String label) {
                 this.label = label;

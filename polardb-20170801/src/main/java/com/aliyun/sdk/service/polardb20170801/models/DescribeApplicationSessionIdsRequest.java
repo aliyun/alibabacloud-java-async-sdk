@@ -177,6 +177,7 @@ public class DescribeApplicationSessionIdsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +190,7 @@ public class DescribeApplicationSessionIdsRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +221,10 @@ public class DescribeApplicationSessionIdsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -228,7 +233,10 @@ public class DescribeApplicationSessionIdsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -237,6 +245,7 @@ public class DescribeApplicationSessionIdsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,6 +267,7 @@ public class DescribeApplicationSessionIdsRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -172,6 +172,7 @@ public class DescribeModelServicesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +185,10 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * ModelCategory.
+         * <p>The model category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder modelCategory(String modelCategory) {
             this.putQueryParameter("ModelCategory", modelCategory);
@@ -193,7 +197,10 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * ModelServiceIds.
+         * <p>The IDs of the model services. Separate multiple IDs with a comma (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ms-xxx,ms-xxxx</p>
          */
         public Builder modelServiceIds(String modelServiceIds) {
             this.putQueryParameter("ModelServiceIds", modelServiceIds);
@@ -202,7 +209,10 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -211,7 +221,10 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -220,7 +233,10 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +245,20 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>openai</strong></p>
+         * </li>
+         * <li><p><strong>anthropic</strong></p>
+         * </li>
+         * <li><p><strong>bailian</strong>: Models from Model Studio.</p>
+         * </li>
+         * <li><p><strong>vllm</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>openai</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -238,7 +267,10 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -247,7 +279,10 @@ public class DescribeModelServicesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

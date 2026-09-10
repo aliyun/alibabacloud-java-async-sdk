@@ -54,7 +54,10 @@ public class ModifyAccountLockStateResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B762E8C5-0129-51DB-80C8-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

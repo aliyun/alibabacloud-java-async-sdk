@@ -145,7 +145,10 @@ public class RestartDBNodeZonalRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>A client token to ensure request idempotence. Generate a unique token for each request. The token must be case-sensitive and up to 64 ASCII characters long.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -154,6 +157,7 @@ public class RestartDBNodeZonalRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +170,7 @@ public class RestartDBNodeZonalRequest extends Request {
         }
 
         /**
+         * <p>The cluster node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

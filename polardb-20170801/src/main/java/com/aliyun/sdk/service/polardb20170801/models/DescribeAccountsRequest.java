@@ -172,7 +172,7 @@ public class DescribeAccountsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The account name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_acc</p>
@@ -197,7 +197,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>The node type. This parameter is required when you query the PolarDB search node account.</p>
+         * <p>The node type. Required when you query the PolarDB search node account</p>
          * <ul>
          * <li>Search</li>
          * </ul>
@@ -230,7 +230,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. Set this parameter to an integer that is larger than 0. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the returned page. The value must be an integer that is larger than 0. The default value is <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,13 +242,16 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries returned per page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong></li>
-         * <li><strong>50</strong></li>
-         * <li><strong>100</strong></li>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
          * </ul>
-         * <p>Default value: <strong>30</strong>.</p>
+         * <p>The default value is <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

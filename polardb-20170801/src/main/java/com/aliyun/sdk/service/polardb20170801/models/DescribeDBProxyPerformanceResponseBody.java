@@ -176,7 +176,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the performance metrics.</p>
+         * PerformanceKeys.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -264,10 +264,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the metric value was collected. This value is a timestamp in milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1600822800000</p>
+             * Timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -275,10 +272,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -425,10 +419,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pi-*************</p>
+             * DBNodeId.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -436,10 +427,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PolarProxy_CpuUsage</p>
+             * Measurement.
              */
             public Builder measurement(String measurement) {
                 this.measurement = measurement;
@@ -447,10 +435,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>service_connections_ps</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -458,7 +443,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of the performance metrics.</p>
+             * Points.
              */
             public Builder points(Points points) {
                 this.points = points;

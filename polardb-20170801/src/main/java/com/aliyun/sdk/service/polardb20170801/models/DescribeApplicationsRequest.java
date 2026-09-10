@@ -144,7 +144,10 @@ public class DescribeApplicationsRequest extends Request {
         } 
 
         /**
-         * ApplicationIds.
+         * <p>A list of application IDs. If specified, this operation returns information only about the specified applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationIds(String applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
@@ -162,7 +165,10 @@ public class DescribeApplicationsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The ID of the PolarDB instance. If specified, this operation returns information only about applications associated with this instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -171,7 +177,10 @@ public class DescribeApplicationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -180,7 +189,19 @@ public class DescribeApplicationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -189,6 +210,7 @@ public class DescribeApplicationsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +223,7 @@ public class DescribeApplicationsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>A list of tags. A tag is a key-value pair.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -269,7 +291,10 @@ public class DescribeApplicationsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -277,7 +302,10 @@ public class DescribeApplicationsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

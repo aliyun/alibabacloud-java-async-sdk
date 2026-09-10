@@ -74,7 +74,10 @@ public class ModifyResourcePackageRequest extends Request {
         } 
 
         /**
-         * AutoQuota.
+         * <p>Indicates whether to enable automatic quotas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoQuota(Boolean autoQuota) {
             this.putQueryParameter("AutoQuota", autoQuota);
@@ -83,6 +86,7 @@ public class ModifyResourcePackageRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cross-cloud resource plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

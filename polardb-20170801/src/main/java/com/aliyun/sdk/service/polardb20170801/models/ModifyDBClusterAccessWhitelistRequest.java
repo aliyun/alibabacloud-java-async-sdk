@@ -214,11 +214,11 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         } 
 
         /**
-         * <p>The attributes of the IP whitelist group. Set this parameter to <strong>hidden</strong> to hide the IP whitelist group in the console.</p>
+         * <p>The attribute of the IP whitelist group. If you set this parameter to <strong>hidden</strong>, the group is not displayed in the console.</p>
          * <blockquote>
          * <ul>
-         * <li>The IP whitelist group that has appeared in the console cannot be hidden.</li>
-         * <li>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</li>
+         * <li>IP whitelist groups that are already displayed in the console cannot be hidden.</li>
+         * <li>This parameter takes effect only when <strong>WhiteListType</strong> is set to <strong>IP</strong>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -232,20 +232,18 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.</p>
+         * <p>The name of the IP whitelist group. The name must be 2 to 120 characters in length and can contain lowercase letters and digits. The name must start with a letter and end with a letter or digit.</p>
          * <ul>
-         * <li>If the specified whitelist group name does not exist, the whitelist group is created.</li>
-         * <li>If the specified whitelist group name exists, the whitelist group is modified.</li>
-         * <li>If you do not specify this parameter, the default group is modified.</li>
+         * <li>If the specified whitelist group name does not exist, a new whitelist group is created.</li>
+         * <li>If the specified whitelist group name already exists, the whitelist group is modified.</li>
+         * <li>If this parameter is not specified, the default group is modified.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can create a maximum of 50 IP whitelist groups for a cluster.</p>
-         * </li>
-         * <li><p>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
-         * </li>
+         * <li>A cluster supports up to 50 IP whitelist groups.</li>
+         * <li>This parameter takes effect only when <strong>WhiteListType</strong> is set to <strong>IP</strong>.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -272,12 +270,12 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         /**
          * <p>The method used to modify the IP whitelist. Valid values:</p>
          * <ul>
-         * <li><strong>Cover</strong> (default): overwrites the original IP whitelist.</li>
-         * <li><strong>Append</strong>: appends IP addresses to the original whitelist.</li>
-         * <li><strong>Delete</strong>: deletes IP addresses.</li>
+         * <li><strong>Cover</strong>: overwrites the original IP whitelist. This is the default value.</li>
+         * <li><strong>Append</strong>: appends IP addresses to the IP whitelist.</li>
+         * <li><strong>Delete</strong>: removes IP addresses from the IP whitelist.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
+         * <p>This parameter takes effect only when <strong>WhiteListType</strong> is set to <strong>IP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -308,7 +306,10 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * PfsInstanceId.
+         * <p>The file system instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-xxx</p>
          */
         public Builder pfsInstanceId(String pfsInstanceId) {
             this.putQueryParameter("PfsInstanceId", pfsInstanceId);
@@ -335,11 +336,11 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group. Separate multiple security groups with commas (,).</p>
+         * <p>The security group IDs. Separate multiple security group IDs with commas (,).</p>
          * <blockquote>
          * <ul>
-         * <li>You can add a maximum of three security groups to a cluster.</li>
-         * <li>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>SecurityGroup</strong>.</li>
+         * <li>A cluster supports up to 3 security groups.</li>
+         * <li>This parameter takes effect only when <strong>WhiteListType</strong> is set to <strong>SecurityGroup</strong>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -353,13 +354,13 @@ public class ModifyDBClusterAccessWhitelistRequest extends Request {
         }
 
         /**
-         * <p>The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:</p>
+         * <p>The IP addresses or CIDR blocks in the IP whitelist group. You can add up to 1,000 IP addresses or CIDR blocks across all IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported: </p>
          * <ul>
-         * <li>IP addresses. Example: 10.23.12.24.</li>
-         * <li>CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.</li>
+         * <li>IP address format, such as 10.23.12.24.</li>
+         * <li>CIDR format, such as 10.23.12.24/24, where 24 indicates the length of the prefix in the IP address. The prefix length ranges from 1 to 32.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
+         * <p>This parameter takes effect only when <strong>WhiteListType</strong> is set to <strong>IP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

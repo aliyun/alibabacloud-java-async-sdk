@@ -117,6 +117,7 @@ public class CreateConsumerGroupRequest extends Request {
         } 
 
         /**
+         * <p>The name of the consumer group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,16 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * <p>Indicates whether the consumer group is the default group. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: No</p>
+         * </li>
+         * <li><p><strong>1</strong>: Yes</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isDefault(String isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -150,7 +161,10 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * NickName.
+         * <p>The nickname of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -159,7 +173,10 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the consumer group will be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

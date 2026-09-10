@@ -210,7 +210,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * BindingAppCount.
+         * <p>The number of AI applications bound to the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bindingAppCount(Integer bindingAppCount) {
             this.bindingAppCount = bindingAppCount;
@@ -218,7 +221,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-14T05:58:42Z</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -226,7 +232,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDesc</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -234,7 +243,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseId.
+         * <p>The unique identifier of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pkb-xxxxx</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
@@ -242,7 +254,14 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeBaseType.
+         * <p>The type of the knowledge base. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC</li>
+         * <li>PERSONAL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
          */
         public Builder knowledgeBaseType(String knowledgeBaseType) {
             this.knowledgeBaseType = knowledgeBaseType;
@@ -250,7 +269,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * KnowledgeSpaceId.
+         * <p>The ID of the knowledge space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pks-xxxxxx</p>
          */
         public Builder knowledgeSpaceId(String knowledgeSpaceId) {
             this.knowledgeSpaceId = knowledgeSpaceId;
@@ -258,7 +280,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -277,7 +302,17 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SearchMode.
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li>balanced (default)</li>
+         * <li>precise</li>
+         * <li>semantic</li>
+         * <li>knn</li>
+         * <li>rrf</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>balanced</p>
          */
         public Builder searchMode(String searchMode) {
             this.searchMode = searchMode;
@@ -285,7 +320,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ShardCount.
+         * <p>The number of shards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder shardCount(Integer shardCount) {
             this.shardCount = shardCount;
@@ -293,7 +331,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Activation</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -301,7 +342,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalDocs.
+         * <p>The total number of documents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalDocs(Integer totalDocs) {
             this.totalDocs = totalDocs;
@@ -309,7 +353,10 @@ public class DescribeKnowledgeBaseAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSizeBytes.
+         * <p>The total size in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>318881</p>
          */
         public Builder totalSizeBytes(Long totalSizeBytes) {
             this.totalSizeBytes = totalSizeBytes;

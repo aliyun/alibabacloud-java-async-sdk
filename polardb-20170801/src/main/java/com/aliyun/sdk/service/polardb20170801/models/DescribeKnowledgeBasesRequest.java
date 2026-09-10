@@ -130,7 +130,10 @@ public class DescribeKnowledgeBasesRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>The keyword for searching knowledge bases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkb</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -139,7 +142,10 @@ public class DescribeKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * KnowledgeSpaceId.
+         * <p>The unique identifier of the knowledge space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pks-xxxxxx</p>
          */
         public Builder knowledgeSpaceId(String knowledgeSpaceId) {
             this.putQueryParameter("KnowledgeSpaceId", knowledgeSpaceId);
@@ -148,7 +154,10 @@ public class DescribeKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -157,7 +166,10 @@ public class DescribeKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -166,6 +178,7 @@ public class DescribeKnowledgeBasesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +191,10 @@ public class DescribeKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the knowledge base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Activation</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

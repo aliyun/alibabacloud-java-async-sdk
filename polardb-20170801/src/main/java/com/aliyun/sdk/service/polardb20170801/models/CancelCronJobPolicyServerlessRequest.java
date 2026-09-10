@@ -143,7 +143,10 @@ public class CancelCronJobPolicyServerlessRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -152,7 +155,10 @@ public class CancelCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The scheduled task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b3e7b3d3-027d-4fcc-9f92-5c5f2363e141</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -179,7 +185,10 @@ public class CancelCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

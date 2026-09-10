@@ -67,7 +67,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * ChannelInfos.
+         * <p>A list of network channels.</p>
          */
         public Builder channelInfos(java.util.List<ChannelInfos> channelInfos) {
             this.channelInfos = channelInfos;
@@ -75,7 +75,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>925B84D9-CA72-432C-95CF-738C22******</p>
@@ -235,7 +235,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * ChannelName.
+             * <p>The channel name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch4</p>
              */
             public Builder channelName(String channelName) {
                 this.channelName = channelName;
@@ -243,7 +246,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The ID of the source cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*************</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -251,7 +257,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Notes.
+             * <p>The notes about the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test update</p>
              */
             public Builder notes(String notes) {
                 this.notes = notes;
@@ -259,7 +268,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -267,7 +279,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * TargetDBClusterId.
+             * <p>The ID of the target cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*************</p>
              */
             public Builder targetDBClusterId(String targetDBClusterId) {
                 this.targetDBClusterId = targetDBClusterId;
@@ -275,7 +290,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * TargetIp.
+             * <p>The IP address of the target cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33.<em>.</em>.240</p>
              */
             public Builder targetIp(String targetIp) {
                 this.targetIp = targetIp;
@@ -283,7 +301,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPort.
+             * <p>The port of the target cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3389</p>
              */
             public Builder targetPort(String targetPort) {
                 this.targetPort = targetPort;
@@ -291,7 +312,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The type of the target cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb_for_postgresql</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -299,7 +323,10 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC that contains the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2ze13g2c6j7j2jl*******</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

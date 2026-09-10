@@ -382,7 +382,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         } 
 
         /**
-         * CloudProvider.
+         * <p>The cloud service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AlibabaCloud</p>
          */
         public Builder cloudProvider(String cloudProvider) {
             this.putQueryParameter("CloudProvider", cloudProvider);
@@ -391,7 +394,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * ConnectionString.
+         * <p>The database endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -400,7 +406,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * DBClusterDescription.
+         * <p>The description of the cluster. Fuzzy search is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -409,7 +418,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * DBClusterIds.
+         * <p>The cluster ID. To specify multiple cluster IDs, separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -418,7 +430,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * DBClusterStatus.
+         * <p>The status of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
@@ -427,7 +442,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * DBNodeIds.
+         * <p>The node ID. You can specify multiple node IDs. Separate them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-***************</p>
          */
         public Builder DBNodeIds(String DBNodeIds) {
             this.putQueryParameter("DBNodeIds", DBNodeIds);
@@ -436,7 +454,18 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * DBType.
+         * <p>The database type. Valid values:</p>
+         * <ul>
+         * <li><p>MySQL</p>
+         * </li>
+         * <li><p>PostgreSQL</p>
+         * </li>
+         * <li><p>Oracle</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -445,7 +474,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * <p>The database version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -454,7 +486,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * DescribeType.
+         * <p>The query mode. Set the value to \<code>Simple\\</code>. In this mode, only the basic metadata of the clusters is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Simple</p>
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);
@@ -463,7 +498,16 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * Expired.
+         * <p>Specifies whether the cluster has expired. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);
@@ -472,7 +516,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for the current request. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -481,7 +528,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A token used to retrieve the next page of results. Set this parameter to the \<code>NextToken\\</code> value returned from the previous API call. You do not need to specify this parameter for the first call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -508,7 +558,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -517,7 +570,11 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values: 30, 50, and 100.</p>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -526,7 +583,16 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><p>Postpaid: pay-as-you-go</p>
+         * </li>
+         * <li><p>Prepaid: subscription</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -535,7 +601,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * RecentCreationInterval.
+         * <p>Filters for clusters created in the last N days. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder recentCreationInterval(Integer recentCreationInterval) {
             this.putQueryParameter("RecentCreationInterval", recentCreationInterval);
@@ -544,7 +613,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * RecentExpirationInterval.
+         * <p>Filters for clusters that expire in N days. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder recentExpirationInterval(Integer recentExpirationInterval) {
             this.putQueryParameter("RecentExpirationInterval", recentExpirationInterval);
@@ -553,6 +625,7 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -565,7 +638,10 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-**********</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -592,7 +668,7 @@ public class DescribeDBClustersZonalRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -660,7 +736,10 @@ public class DescribeDBClustersZonalRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of tag \<code>n\\</code>. You can filter clusters by specifying up to 20 tags. The \<code>n\\</code> must be a unique and consecutive integer that starts from 1. \<code>Tag.n.Key\\</code> corresponds to \<code>Tag.n.Value\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -668,7 +747,10 @@ public class DescribeDBClustersZonalRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.6</p>
              */
             public Builder value(String value) {
                 this.value = value;

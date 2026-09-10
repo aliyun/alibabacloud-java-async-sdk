@@ -80,7 +80,10 @@ public class DeleteApplicationEndpointAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -88,7 +91,10 @@ public class DeleteApplicationEndpointAddressResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointId.
+         * <p>The server-side endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -96,7 +102,10 @@ public class DeleteApplicationEndpointAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

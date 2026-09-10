@@ -130,6 +130,7 @@ public class InstallPolarClawSkillRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class InstallPolarClawSkillRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to force a reinstallation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -151,7 +155,10 @@ public class InstallPolarClawSkillRequest extends Request {
         }
 
         /**
-         * SkillVersion.
+         * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.0</p>
          */
         public Builder skillVersion(String skillVersion) {
             this.putQueryParameter("SkillVersion", skillVersion);
@@ -160,7 +167,10 @@ public class InstallPolarClawSkillRequest extends Request {
         }
 
         /**
-         * Slug.
+         * <p>The Skill identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibacloud-rds-copilot</p>
          */
         public Builder slug(String slug) {
             this.putQueryParameter("Slug", slug);
@@ -169,7 +179,10 @@ public class InstallPolarClawSkillRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clawhub</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -132,6 +132,7 @@ public class RetrievalKnowledgeBaseRequest extends Request {
         } 
 
         /**
+         * <p>The unique ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,11 @@ public class RetrievalKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The query text.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Financial report</p>
          */
         public Builder queryText(String queryText) {
             this.putQueryParameter("QueryText", queryText);
@@ -153,6 +158,7 @@ public class RetrievalKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +171,10 @@ public class RetrievalKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * RerankEnabled.
+         * <p>Specifies whether to enable reranking. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder rerankEnabled(Boolean rerankEnabled) {
             this.putQueryParameter("RerankEnabled", rerankEnabled);
@@ -174,7 +183,10 @@ public class RetrievalKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * ScoreThreshold.
+         * <p>The similarity score threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.7</p>
          */
         public Builder scoreThreshold(Double scoreThreshold) {
             this.putQueryParameter("ScoreThreshold", scoreThreshold);
@@ -183,7 +195,10 @@ public class RetrievalKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * TopK.
+         * <p>The number of results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder topK(Integer topK) {
             this.putQueryParameter("TopK", topK);

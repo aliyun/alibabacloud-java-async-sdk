@@ -119,7 +119,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-********************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -127,7 +130,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * Device.
+         * <p>The paired device information.</p>
          */
         public Builder device(Device device) {
             this.device = device;
@@ -143,7 +149,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * PairRequestId.
+         * <p>The pairing request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req-abc-123</p>
          */
         public Builder pairRequestId(String pairRequestId) {
             this.pairRequestId = pairRequestId;
@@ -159,7 +171,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>25C70FF3-D49B-594D-BECE-0DE2BA1D8BBB</p>
@@ -293,7 +305,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAtMs.
+             * <p>The creation time of the device pairing, in Unix milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778662316663</p>
              */
             public Builder createdAtMs(Long createdAtMs) {
                 this.createdAtMs = createdAtMs;
@@ -301,7 +316,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceFamily.
+             * <p>The device family.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>server</p>
              */
             public Builder deviceFamily(String deviceFamily) {
                 this.deviceFamily = deviceFamily;
@@ -309,7 +327,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The unique ID of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device-l7rdl36iz6op66zf</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -317,7 +338,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -325,7 +349,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * <p>The operating system of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linux</p>
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -333,7 +360,10 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>operator</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -341,7 +371,7 @@ public class ApprovePolarClawDevicePairResponseBody extends TeaModel {
             }
 
             /**
-             * Scopes.
+             * <p>A list of permission scopes.</p>
              */
             public Builder scopes(java.util.List<String> scopes) {
                 this.scopes = scopes;

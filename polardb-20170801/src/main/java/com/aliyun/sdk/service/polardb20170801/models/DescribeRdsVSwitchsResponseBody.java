@@ -67,7 +67,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A0450B18-BBD4-5DF9-8E71-610F1A921CDE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitches.
+         * <p>The vSwitch information.</p>
          */
         public Builder vSwitches(VSwitches vSwitches) {
             this.vSwitches = vSwitches;
@@ -258,7 +261,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>175358919****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -266,7 +272,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * Bid.
+             * <p>Identifies the cloud service type, such as Alibaba Finance Cloud, Alibaba Gov Cloud, or public cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26842</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -274,7 +283,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The CIDR block of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.8.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -282,7 +294,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the vSwitch was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-23 10:15:38</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -290,7 +305,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the vSwitch was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-30T09:41:14+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -298,7 +316,16 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The vSwitch is the default vSwitch.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The vSwitch is not the default vSwitch.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -306,7 +333,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * <p>The ID of the zone to which the vSwitch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ch-hangzhou-g</p>
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -314,7 +344,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The ID of the region to which the vSwitch belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -322,7 +355,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the vSwitch. Valid values: <em><strong>Pending</strong></em>\<em>: The vSwitch is being configured.\</em> <strong>Available</strong>: The vSwitch is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +366,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-**************</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -338,7 +377,10 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The name of the vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sw01</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -392,7 +434,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             } 
 
             /**
-             * VSwitch.
+             * <p>The vSwitch information.</p>
              */
             public Builder vSwitch(java.util.List<VSwitch> vSwitch) {
                 this.vSwitch = vSwitch;

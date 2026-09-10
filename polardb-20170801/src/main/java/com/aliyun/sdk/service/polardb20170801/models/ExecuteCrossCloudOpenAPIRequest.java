@@ -59,7 +59,10 @@ public class ExecuteCrossCloudOpenAPIRequest extends Request {
         } 
 
         /**
-         * ProxyInfo.
+         * <p>The information required to call the cross-cloud OpenAPI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Action&quot;:&quot;DescribeDBClusters&quot;}</p>
          */
         public Builder proxyInfo(String proxyInfo) {
             this.putQueryParameter("ProxyInfo", proxyInfo);

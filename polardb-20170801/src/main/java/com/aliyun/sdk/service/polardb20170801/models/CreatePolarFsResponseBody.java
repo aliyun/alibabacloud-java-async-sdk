@@ -106,7 +106,10 @@ public class CreatePolarFsResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2035638*******</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -114,7 +117,10 @@ public class CreatePolarFsResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The PolarFS instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-2ze0i74ka607wck3</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;
@@ -122,7 +128,10 @@ public class CreatePolarFsResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsPath.
+         * <p>The PolarFS file system path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-xxx*******</p>
          */
         public Builder polarFsPath(String polarFsPath) {
             this.polarFsPath = polarFsPath;
@@ -130,7 +139,10 @@ public class CreatePolarFsResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsStatus.
+         * <p>The PolarFS instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         public Builder polarFsStatus(String polarFsStatus) {
             this.polarFsStatus = polarFsStatus;
@@ -138,10 +150,10 @@ public class CreatePolarFsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>580EF224-9647-59E7-9950-D9EBFD6A2921</p>
+         * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

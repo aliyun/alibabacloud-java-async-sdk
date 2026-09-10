@@ -133,6 +133,7 @@ public class CreatePolarClawChannelRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,16 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
-         * ChannelConfig.
+         * <p>The channel configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;enabled&quot;: true,
+         *     &quot;dmPolicy&quot;: &quot;open&quot;,
+         *     &quot;allowFrom&quot;: [
+         *         &quot;*&quot;
+         *     ]
+         * }</p>
          */
         public Builder channelConfig(java.util.Map<String, ?> channelConfig) {
             String channelConfigShrink = shrink(channelConfig, "ChannelConfig", "json");
@@ -155,6 +165,7 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
+         * <p>The channel\&quot;s unique identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +178,7 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
+         * <p>The name and version of the npm package for the channel plugin.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +191,7 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
+         * <p>The channel plugin\&quot;s name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +204,10 @@ public class CreatePolarClawChannelRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Indicates whether to restart the gateway after the channel is created. Default: <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

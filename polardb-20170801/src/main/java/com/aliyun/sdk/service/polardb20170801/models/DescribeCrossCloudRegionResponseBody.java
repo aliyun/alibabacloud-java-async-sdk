@@ -67,7 +67,7 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * CrossCloudRegionList.
+         * <p>The information about the cross-cloud regions.</p>
          */
         public Builder crossCloudRegionList(java.util.List<CrossCloudRegionList> crossCloudRegionList) {
             this.crossCloudRegionList = crossCloudRegionList;
@@ -75,7 +75,10 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E56531A4-E552-40BA-9C58-137B80******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * CrossCloudZoneId.
+             * <p>The ID of the third-party cloud zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-east-3-1</p>
              */
             public Builder crossCloudZoneId(String crossCloudZoneId) {
                 this.crossCloudZoneId = crossCloudZoneId;
@@ -149,7 +155,10 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
             }
 
             /**
-             * CrossCloudZoneName.
+             * <p>The name of the third-party cloud zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-east-3-1</p>
              */
             public Builder crossCloudZoneName(String crossCloudZoneName) {
                 this.crossCloudZoneName = crossCloudZoneName;
@@ -242,7 +251,10 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * CrossCloudRegionId.
+             * <p>The ID of the third-party cloud region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-east-3</p>
              */
             public Builder crossCloudRegionId(String crossCloudRegionId) {
                 this.crossCloudRegionId = crossCloudRegionId;
@@ -250,7 +262,10 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
             }
 
             /**
-             * CrossCloudRegionName.
+             * <p>The name of the third-party cloud region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-east-3</p>
              */
             public Builder crossCloudRegionName(String crossCloudRegionName) {
                 this.crossCloudRegionName = crossCloudRegionName;
@@ -258,7 +273,7 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
             }
 
             /**
-             * CrossCloudZoneList.
+             * <p>A list of third-party cloud zones.</p>
              */
             public Builder crossCloudZoneList(java.util.List<CrossCloudZoneList> crossCloudZoneList) {
                 this.crossCloudZoneList = crossCloudZoneList;
@@ -266,7 +281,10 @@ public class DescribeCrossCloudRegionResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The resource pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pj-87681rbcef6******</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;

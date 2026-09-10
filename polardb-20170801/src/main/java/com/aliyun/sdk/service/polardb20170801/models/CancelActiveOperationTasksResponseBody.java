@@ -78,7 +78,7 @@ public class CancelActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of O&amp;M events that are canceled at a time. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of O\&amp;M events that are canceled at a time. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>2355,2352</p>

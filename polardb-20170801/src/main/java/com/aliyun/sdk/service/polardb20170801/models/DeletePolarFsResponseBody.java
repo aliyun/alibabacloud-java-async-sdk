@@ -54,7 +54,7 @@ public class DeletePolarFsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>

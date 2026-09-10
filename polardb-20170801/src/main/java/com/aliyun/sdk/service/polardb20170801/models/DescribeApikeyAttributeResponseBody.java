@@ -67,7 +67,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of consumer objects.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -235,7 +235,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -243,7 +246,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cg-bq6rcdjp02vt</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -251,7 +257,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerId.
+             * <p>The consumer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-71qh3pscbd3i</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -259,7 +268,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerTag.
+             * <p>The consumer tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder consumerTag(String consumerTag) {
                 this.consumerTag = consumerTag;
@@ -267,7 +279,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-18T07:32:30Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -275,7 +290,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * GwClusterId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-2ze5n62ef4s165***</p>
              */
             public Builder gwClusterId(String gwClusterId) {
                 this.gwClusterId = gwClusterId;
@@ -283,7 +301,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-10T01:48:25Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -291,7 +312,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The consumer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -299,7 +323,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The consumer status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -509,7 +536,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * DimensionRefId.
+             * <p>The dimension reference ID, which is the ConsumerId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-xxxxxx</p>
              */
             public Builder dimensionRefId(String dimensionRefId) {
                 this.dimensionRefId = dimensionRefId;
@@ -517,7 +547,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionType.
+             * <p>The statistics dimension. The value is typically Consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Consumer</p>
              */
             public Builder dimensionType(String dimensionType) {
                 this.dimensionType = dimensionType;
@@ -525,7 +558,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * GwClusterId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-bp1ln7w98yrhzz7i2</p>
              */
             public Builder gwClusterId(String gwClusterId) {
                 this.gwClusterId = gwClusterId;
@@ -533,7 +569,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyCacheToken.
+             * <p>The number of cache tokens for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder monthlyCacheToken(String monthlyCacheToken) {
                 this.monthlyCacheToken = monthlyCacheToken;
@@ -541,7 +580,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyCostPoints.
+             * <p>The cost points consumed for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder monthlyCostPoints(String monthlyCostPoints) {
                 this.monthlyCostPoints = monthlyCostPoints;
@@ -549,7 +591,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyInputToken.
+             * <p>The number of input tokens for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder monthlyInputToken(String monthlyInputToken) {
                 this.monthlyInputToken = monthlyInputToken;
@@ -557,7 +602,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyOutputToken.
+             * <p>The number of output tokens for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder monthlyOutputToken(String monthlyOutputToken) {
                 this.monthlyOutputToken = monthlyOutputToken;
@@ -565,7 +613,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * MonthlyToken.
+             * <p>The number of tokens for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder monthlyToken(String monthlyToken) {
                 this.monthlyToken = monthlyToken;
@@ -573,7 +624,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCacheToken.
+             * <p>The cumulative number of cache tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCacheToken(String totalCacheToken) {
                 this.totalCacheToken = totalCacheToken;
@@ -581,7 +635,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCostPoints.
+             * <p>The cumulative cost points consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCostPoints(String totalCostPoints) {
                 this.totalCostPoints = totalCostPoints;
@@ -589,7 +646,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalInputToken.
+             * <p>The cumulative number of input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalInputToken(String totalInputToken) {
                 this.totalInputToken = totalInputToken;
@@ -597,7 +657,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalOutputToken.
+             * <p>The cumulative number of output tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalOutputToken(String totalOutputToken) {
                 this.totalOutputToken = totalOutputToken;
@@ -605,7 +668,10 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TotalToken.
+             * <p>The cumulative number of tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalToken(String totalToken) {
                 this.totalToken = totalToken;
@@ -672,7 +738,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * Consumer.
+             * <p>The consumer information.</p>
              */
             public Builder consumer(Consumer consumer) {
                 this.consumer = consumer;
@@ -680,7 +746,7 @@ public class DescribeApikeyAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * UsageStatistics.
+             * <p>The usage statistics for the consumer.</p>
              */
             public Builder usageStatistics(java.util.List<UsageStatistics> usageStatistics) {
                 this.usageStatistics = usageStatistics;

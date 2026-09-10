@@ -54,7 +54,7 @@ public class DeleteNetworkChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3AA69096-757C-4647-B36C-29EBC2******</p>

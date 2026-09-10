@@ -117,6 +117,7 @@ public class ModifyConsumerGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the consumer group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class ModifyConsumerGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class ModifyConsumerGroupRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * <p>Indicates whether the consumer group is the default group. Valid values: <code>0</code> (false) and <code>1</code> (true).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isDefault(String isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -150,7 +155,10 @@ public class ModifyConsumerGroupRequest extends Request {
         }
 
         /**
-         * NickName.
+         * <p>The nickname of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yonghu</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -159,7 +167,10 @@ public class ModifyConsumerGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

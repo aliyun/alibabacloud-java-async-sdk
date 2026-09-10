@@ -223,7 +223,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -231,7 +234,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * DBLatestVersion.
+         * <p>The latest version of the database kernel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0.1.1.16</p>
          */
         public Builder DBLatestVersion(String DBLatestVersion) {
             this.DBLatestVersion = DBLatestVersion;
@@ -239,7 +245,24 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * DBMinorVersion.
+         * <p>The minor version of the database engine.</p>
+         * <ul>
+         * <li><p>If <code>DBVersion</code> is <strong>8.0</strong>, the valid values are:</p>
+         * <ul>
+         * <li><p><strong>8.0.2</strong></p>
+         * </li>
+         * <li><p><strong>8.0.1</strong></p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>If <code>DBVersion</code> is <strong>5.7</strong>, the value is <strong>5.7.28</strong>.</p>
+         * </li>
+         * <li><p>If <code>DBVersion</code> is <strong>5.6</strong>, the value is <strong>5.6.16</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0.1</p>
          */
         public Builder DBMinorVersion(String DBMinorVersion) {
             this.DBMinorVersion = DBMinorVersion;
@@ -247,7 +270,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * DBRevisionVersion.
+         * <p>The patch version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0.1.1.7</p>
          */
         public Builder DBRevisionVersion(String DBRevisionVersion) {
             this.DBRevisionVersion = DBRevisionVersion;
@@ -255,7 +281,7 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * DBRevisionVersionList.
+         * <p>The list of upgradable versions.</p>
          */
         public Builder DBRevisionVersionList(java.util.List<DBRevisionVersionList> DBRevisionVersionList) {
             this.DBRevisionVersionList = DBRevisionVersionList;
@@ -263,7 +289,18 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * <p>The major version of the database engine. Valid values:</p>
+         * <ul>
+         * <li><p>8.0</p>
+         * </li>
+         * <li><p>5.7</p>
+         * </li>
+         * <li><p>5.6</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -271,7 +308,20 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersionStatus.
+         * <p>The status of the current minor version of the database. Valid values:</p>
+         * <ul>
+         * <li><p>Stable: The current version is stable.</p>
+         * </li>
+         * <li><p>Old: The current version is outdated. Upgrade to the latest version.</p>
+         * </li>
+         * <li><p>HighRisk: The current version has critical bugs. Upgrade to the latest version immediately.</p>
+         * </li>
+         * <li><p>Beta: The current version is a beta version.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stable</p>
          */
         public Builder DBVersionStatus(String DBVersionStatus) {
             this.DBVersionStatus = DBVersionStatus;
@@ -279,7 +329,16 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * IsLatestVersion.
+         * <p>Indicates whether the current database kernel version is the latest version. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isLatestVersion(String isLatestVersion) {
             this.isLatestVersion = isLatestVersion;
@@ -287,7 +346,16 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * IsProxyLatestVersion.
+         * <p>Indicates whether the current database proxy version is the latest version. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isProxyLatestVersion(String isProxyLatestVersion) {
             this.isProxyLatestVersion = isProxyLatestVersion;
@@ -295,7 +363,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyLatestVersion.
+         * <p>The latest version of the database proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4.17</p>
          */
         public Builder proxyLatestVersion(String proxyLatestVersion) {
             this.proxyLatestVersion = proxyLatestVersion;
@@ -303,7 +374,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyRevisionVersion.
+         * <p>The version of the database proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4.15</p>
          */
         public Builder proxyRevisionVersion(String proxyRevisionVersion) {
             this.proxyRevisionVersion = proxyRevisionVersion;
@@ -311,7 +385,17 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyRevisionVersionList.
+         * <p>The list of upgradable database proxy versions.</p>
+         * <ul>
+         * <li><p><strong>Stable</strong>: The current version is stable.</p>
+         * </li>
+         * <li><p><strong>Old</strong>: The current version is outdated. Do not upgrade to this version.</p>
+         * </li>
+         * <li><p><strong>HighRisk</strong>: The current version has critical bugs. Do not upgrade to this version.</p>
+         * </li>
+         * <li><p><strong>Beta</strong>: The current version is a beta version.</p>
+         * </li>
+         * </ul>
          */
         public Builder proxyRevisionVersionList(java.util.List<ProxyRevisionVersionList> proxyRevisionVersionList) {
             this.proxyRevisionVersionList = proxyRevisionVersionList;
@@ -319,7 +403,20 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyVersionStatus.
+         * <p>The status of the database proxy version. Valid values:</p>
+         * <ul>
+         * <li><p>Stable: The current version is stable.</p>
+         * </li>
+         * <li><p>Old: The current version is outdated. Upgrade to the latest version.</p>
+         * </li>
+         * <li><p>HighRisk: The current version has critical bugs. Upgrade to the latest version immediately.</p>
+         * </li>
+         * <li><p>Beta: The current version is a beta version.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stable</p>
          */
         public Builder proxyVersionStatus(String proxyVersionStatus) {
             this.proxyVersionStatus = proxyVersionStatus;
@@ -327,7 +424,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47921222-0D37-4133-8C0D-017DC3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -419,7 +519,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             } 
 
             /**
-             * ReleaseNote.
+             * <p>The release notes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReleaseNote</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -427,7 +530,20 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseType.
+             * <p>The release status of the database version. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Stable</strong>: The current version is stable.</p>
+             * </li>
+             * <li><p><strong>Old</strong>: The current version is outdated. Do not upgrade to this version.</p>
+             * </li>
+             * <li><p><strong>HighRisk</strong>: The current version has critical bugs. Do not upgrade to this version.</p>
+             * </li>
+             * <li><p><strong>Beta</strong>: The current version is a beta version.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Stable</p>
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
@@ -435,7 +551,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * RevisionVersionCode.
+             * <p>The code of the patch version for the database engine. Use this code to specify the target version for an upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230707</p>
              */
             public Builder revisionVersionCode(String revisionVersionCode) {
                 this.revisionVersionCode = revisionVersionCode;
@@ -443,7 +562,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * RevisionVersionName.
+             * <p>The patch version of the database engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0.1.1.35.1</p>
              */
             public Builder revisionVersionName(String revisionVersionName) {
                 this.revisionVersionName = revisionVersionName;
@@ -536,7 +658,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             } 
 
             /**
-             * ReleaseNote.
+             * <p>The release notes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ReleaseNote</p>
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -544,7 +669,16 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseType.
+             * <p>The release type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>LTS</strong>: Long-Term Support (LTS) version.</p>
+             * </li>
+             * <li><p><strong>BETA</strong>: Preview version.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LTS</p>
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
@@ -552,7 +686,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * RevisionVersionCode.
+             * <p>The code of the patch version for the database proxy. Use this code to specify the target version for an upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230707</p>
              */
             public Builder revisionVersionCode(String revisionVersionCode) {
                 this.revisionVersionCode = revisionVersionCode;
@@ -560,7 +697,10 @@ public class DescribeDBClusterVersionZonalResponseBody extends TeaModel {
             }
 
             /**
-             * RevisionVersionName.
+             * <p>The patch version of the database proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.8.24</p>
              */
             public Builder revisionVersionName(String revisionVersionName) {
                 this.revisionVersionName = revisionVersionName;

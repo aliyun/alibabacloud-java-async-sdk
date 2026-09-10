@@ -80,7 +80,10 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * LinkId.
+         * <p>The synchronization link ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pkbl-xxxxx</p>
          */
         public Builder linkId(String linkId) {
             this.linkId = linkId;
@@ -99,7 +102,7 @@ public class UpdateKBSyncLinkResponseBody extends TeaModel {
         }
 
         /**
-         * SyncSchedule.
+         * <p>The scheduling time of the synchronization task.</p>
          */
         public Builder syncSchedule(String syncSchedule) {
             this.syncSchedule = syncSchedule;

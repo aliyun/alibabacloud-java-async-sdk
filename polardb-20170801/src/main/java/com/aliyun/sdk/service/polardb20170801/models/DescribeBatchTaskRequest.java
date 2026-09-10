@@ -59,7 +59,10 @@ public class DescribeBatchTaskRequest extends Request {
         } 
 
         /**
-         * BatchId.
+         * <p>The ID of the batch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcb-xxx</p>
          */
         public Builder batchId(String batchId) {
             this.putQueryParameter("BatchId", batchId);

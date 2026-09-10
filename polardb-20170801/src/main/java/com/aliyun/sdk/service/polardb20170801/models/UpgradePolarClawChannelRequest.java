@@ -131,6 +131,7 @@ public class UpgradePolarClawChannelRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,17 @@ public class UpgradePolarClawChannelRequest extends Request {
         }
 
         /**
-         * ChannelConfig.
+         * <p>The channel configuration object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;enabled&quot;: true,
+         *     &quot;dmPolicy&quot;: &quot;open&quot;,
+         *     &quot;allowFrom&quot;: [
+         *         &quot;*&quot;,
+         *         &quot;ou_abc&quot;
+         *     ]
+         * }</p>
          */
         public Builder channelConfig(java.util.Map<String, ?> channelConfig) {
             String channelConfigShrink = shrink(channelConfig, "ChannelConfig", "json");
@@ -153,6 +164,7 @@ public class UpgradePolarClawChannelRequest extends Request {
         }
 
         /**
+         * <p>The channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +177,10 @@ public class UpgradePolarClawChannelRequest extends Request {
         }
 
         /**
-         * NpmPackage.
+         * <p>The npm package name of the channel plugin, including the version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@larksuite/<a href="mailto:openclaw-feishu@2026.4.7">openclaw-feishu@2026.4.7</a></p>
          */
         public Builder npmPackage(String npmPackage) {
             this.putQueryParameter("NpmPackage", npmPackage);
@@ -174,7 +189,10 @@ public class UpgradePolarClawChannelRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The ID of the channel plugin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openclaw-feishu</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -183,7 +201,10 @@ public class UpgradePolarClawChannelRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after the upgrade. The default value is <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

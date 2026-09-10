@@ -93,10 +93,12 @@ public class CheckKMSAuthorizedResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the cluster is authorized to use KMS. Valid values:</p>
+         * <p>The authorization status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: no.</li>
-         * <li><strong>1</strong>: yes.</li>
+         * <li><p><strong>0</strong>: Unauthorized.</p>
+         * </li>
+         * <li><p><strong>1</strong>: Authorized.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +132,7 @@ public class CheckKMSAuthorizedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
+         * <p>The Global Resource Descriptor of the role. It specifies the role. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</p>

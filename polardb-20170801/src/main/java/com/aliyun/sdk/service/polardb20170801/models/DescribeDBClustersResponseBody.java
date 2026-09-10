@@ -106,7 +106,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the clusters.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -125,7 +125,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of clusters returned per page.</p>
+         * <p>The number of clusters on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -136,7 +136,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
@@ -147,7 +147,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -294,10 +294,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The specifications of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>polar.mysql.x4.large</p>
+             * DBNodeClass.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -305,10 +302,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pi-****************</p>
+             * DBNodeId.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -316,16 +310,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The role of the node. Valid values:</p>
-             * <ul>
-             * <li><strong>Writer</strong>: primary node</li>
-             * <li><strong>Reader</strong>: read-only node</li>
-             * <li><strong>ColumnReader</strong>: column store read-only node</li>
-             * <li><strong>AI</strong>: AI node</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Reader</p>
+             * DBNodeRole.
              */
             public Builder DBNodeRole(String DBNodeRole) {
                 this.DBNodeRole = DBNodeRole;
@@ -333,14 +318,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the hot standby feature is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>ON</strong></li>
-             * <li><strong>OFF</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>OFF</p>
+             * HotReplicaMode.
              */
             public Builder hotReplicaMode(String hotReplicaMode) {
                 this.hotReplicaMode = hotReplicaMode;
@@ -348,14 +326,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the In-Memory Column Index (IMCI) feature is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>ON</strong></li>
-             * <li><strong>OFF</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>OFF</p>
+             * ImciSwitch.
              */
             public Builder imciSwitch(String imciSwitch) {
                 this.imciSwitch = imciSwitch;
@@ -363,10 +334,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -374,14 +342,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the serverless feature is enabled for the node.</p>
-             * <ul>
-             * <li><strong>ON</strong> indicates that the serverless feature is enabled.</li>
-             * <li>No value is returned if the serverless feature is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ON</p>
+             * Serverless.
              */
             public Builder serverless(String serverless) {
                 this.serverless = serverless;
@@ -389,10 +350,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-i</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -513,10 +471,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MySQL</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -524,10 +479,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5.6</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1116,20 +1068,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the AI node. Valid values:</p>
-             * <ul>
-             * <li>SearchNode: search node</li>
-             * <li>DLNode: AI node</li>
-             * </ul>
-             * <p>Enumeration values:</p>
-             * <ul>
-             * <li>SearchNode | DLNode: both</li>
-             * <li>DLNode: AI node</li>
-             * <li>SearchNode: search node</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SearchNode</p>
+             * AiType.
              */
             public Builder aiType(String aiType) {
                 this.aiType = aiType;
@@ -1137,16 +1076,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>Normal</strong>: Cluster Edition</li>
-             * <li><strong>Basic</strong>: Single Node Edition</li>
-             * <li><strong>Archive</strong>: X-Engine Edition</li>
-             * <li><strong>NormalMultimaster</strong>: Multi-master Cluster (Database/Table) Edition</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1170,10 +1100,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * CpuCores.
              */
             public Builder cpuCores(String cpuCores) {
                 this.cpuCores = cpuCores;
@@ -1181,10 +1108,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-08-14T05:58:42Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1192,10 +1116,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GDN-1</p>
+             * DBClusterDescription.
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -1203,10 +1124,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pc-****************</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -1214,10 +1132,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * DBClusterNetworkType.
              */
             public Builder DBClusterNetworkType(String DBClusterNetworkType) {
                 this.DBClusterNetworkType = DBClusterNetworkType;
@@ -1225,10 +1140,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * DBClusterStatus.
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -1236,10 +1148,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>polar.mysql.x4.large</p>
+             * DBNodeClass.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -1247,10 +1156,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * DBNodeNumber.
              */
             public Builder DBNodeNumber(Integer DBNodeNumber) {
                 this.DBNodeNumber = DBNodeNumber;
@@ -1258,7 +1164,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the nodes.</p>
+             * DBNodes.
              */
             public Builder DBNodes(DBNodes DBNodes) {
                 this.DBNodes = DBNodes;
@@ -1266,10 +1172,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database engine.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MySQL</p>
+             * DBType.
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -1277,10 +1180,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the database engine.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5.6</p>
+             * DBVersion.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -1288,17 +1188,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cluster is protected from deletion. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: The cluster is not protected from deletion.</li>
-             * <li><strong>1</strong>: The cluster is protected from deletion.</li>
-             * </ul>
-             * <blockquote>
-             * <p> You cannot delete clusters that are protected from deletion.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * DeletionLock.
              */
             public Builder deletionLock(Integer deletionLock) {
                 this.deletionLock = deletionLock;
@@ -1306,10 +1196,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>POLARDB</p>
+             * Engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1317,13 +1204,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the cluster.</p>
-             * <blockquote>
-             * <p> A specific value is returned only for subscription (<strong>Prepaid</strong>) clusters. For pay-as-you-go (<strong>Postpaid</strong>) clusters, no value is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-11-14T16:00:00Z</p>
+             * ExpireTime.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1331,17 +1212,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cluster has expired. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * <blockquote>
-             * <p> A specific value is returned only for subscription (<strong>Prepaid</strong>) clusters.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Expired.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -1349,14 +1220,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the hot standby storage cluster feature is enabled. Valid values:</p>
-             * <ul>
-             * <li>ON</li>
-             * <li>OFF</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>OFF</p>
+             * HotStandbyCluster.
              */
             public Builder hotStandbyCluster(String hotStandbyCluster) {
                 this.hotStandbyCluster = hotStandbyCluster;
@@ -1364,15 +1228,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lock state of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>Unlock</strong>: The cluster is unlocked.</li>
-             * <li><strong>ManualLock</strong>: The cluster is manually locked.</li>
-             * <li><strong>LockByExpiration</strong>: The cluster is locked due to cluster expiration.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Unlock</p>
+             * LockMode.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -1380,10 +1236,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size for local operations. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2048</p>
+             * MemorySize.
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
@@ -1391,14 +1244,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-             * <li><strong>Prepaid</strong>: subscription</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Prepaid</p>
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1406,10 +1252,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1417,10 +1260,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size for distributed operations. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3612</p>
+             * RemoteMemorySize.
              */
             public Builder remoteMemorySize(String remoteMemorySize) {
                 this.remoteMemorySize = remoteMemorySize;
@@ -1428,10 +1268,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-************</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1447,10 +1284,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cluster is a serverless cluster. <strong>AgileServerless</strong> indicates the cluster is a serverless cluster. No value is returned for a common cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>AgileServerless</p>
+             * ServerlessType.
              */
             public Builder serverlessType(String serverlessType) {
                 this.serverlessType = serverlessType;
@@ -1458,14 +1292,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage billing method of the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-             * <li><strong>Prepaid</strong>: subscription</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Prepaid</p>
+             * StoragePayType.
              */
             public Builder storagePayType(String storagePayType) {
                 this.storagePayType = storagePayType;
@@ -1473,10 +1300,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage that is billed based on the subscription billing method. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50</p>
+             * StorageSpace.
              */
             public Builder storageSpace(Long storageSpace) {
                 this.storageSpace = storageSpace;
@@ -1484,10 +1308,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>essdautopl</p>
+             * StorageType.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1495,10 +1316,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The used storage. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3009413120</p>
+             * StorageUsed.
              */
             public Builder storageUsed(Long storageUsed) {
                 this.storageUsed = storageUsed;
@@ -1506,14 +1324,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether multi-zone data consistency is enabled for the cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>ON</strong>: Multi-zone data consistency is enabled. For Standard Edition clusters of Multi-zone Edition, this value is returned.</li>
-             * <li><strong>OFF</strong>: Multi-zone data consistency is disabled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ON</p>
+             * StrictConsistency.
              */
             public Builder strictConsistency(String strictConsistency) {
                 this.strictConsistency = strictConsistency;
@@ -1521,14 +1332,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification type of the compute node. Valid values:</p>
-             * <ul>
-             * <li><strong>Exclusive</strong>: dedicated.</li>
-             * <li><strong>General</strong>: general-purpose.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Exclusive</p>
+             * SubCategory.
              */
             public Builder subCategory(String subCategory) {
                 this.subCategory = subCategory;
@@ -1536,7 +1340,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1544,10 +1348,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-****************</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1555,10 +1356,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-***************</p>
+             * VswitchId.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -1566,10 +1364,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-i</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

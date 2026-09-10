@@ -93,7 +93,10 @@ public class CreateAINodesResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-xxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -101,7 +104,7 @@ public class CreateAINodesResponseBody extends TeaModel {
         }
 
         /**
-         * DBNodeIds.
+         * <p>The IDs of the created DB nodes.</p>
          */
         public Builder DBNodeIds(java.util.List<String> DBNodeIds) {
             this.DBNodeIds = DBNodeIds;
@@ -109,7 +112,10 @@ public class CreateAINodesResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2148126708*****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -117,7 +123,10 @@ public class CreateAINodesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0CEC6AC-7760-409A-A0D5-E6CD86******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

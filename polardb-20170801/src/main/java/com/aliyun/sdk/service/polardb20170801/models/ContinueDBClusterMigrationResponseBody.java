@@ -54,7 +54,10 @@ public class ContinueDBClusterMigrationResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D2056BBE-FF76-5825-AB63-5CB1ABB46218</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

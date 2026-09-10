@@ -340,7 +340,7 @@ public class DescribeDBClustersRequest extends Request {
         } 
 
         /**
-         * <p>The endpoint of the cluster.</p>
+         * <p>The database endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
@@ -352,7 +352,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The description of the cluster. Fuzzy match is supported.</p>
+         * <p>The cluster description. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -364,7 +364,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster. Separate multiple cluster IDs with commas (,).</p>
+         * <p>The cluster ID. Separate multiple cluster IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -376,7 +376,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The state of the cluster that you want to query. For information about valid values, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster states</a>.</p>
+         * <p>The cluster status. For valid values, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster status table</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -388,7 +388,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+         * <p>The node ID. You can specify multiple node IDs, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>pi-***************</p>
@@ -400,7 +400,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The database engine that the cluster runs. Valid values:</p>
+         * <p>The database type. Valid values:</p>
          * <ul>
          * <li><strong>MySQL</strong></li>
          * <li><strong>PostgreSQL</strong></li>
@@ -417,7 +417,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of the cluster.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.6</p>
@@ -429,9 +429,9 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The query mode of the list. The value Simple indicates that the simple mode is used. In this mode, only the basic metadata information of the cluster is returned.</p>
+         * <p>The query mode for the list. Set the value to Simple to use the simple mode, which returns only basic metadata of clusters.</p>
          * <blockquote>
-         * <p>If you do not specify this parameter, the detailed mode is used by default. Detailed information about the cluster is returned.</p>
+         * <p>If you do not specify this parameter, the detailed mode is used by default, which returns detailed information about clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -446,8 +446,10 @@ public class DescribeDBClustersRequest extends Request {
         /**
          * <p>Specifies whether the cluster has expired. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -478,7 +480,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -503,10 +505,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method. Valid values: </p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-         * <li><strong>Prepaid</strong>: subscription</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -519,7 +521,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>Filters clusters created in the last N days. Valid values: 0 to 15.</p>
+         * <p>Filters clusters created within the last N days. Valid values: 0 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -531,7 +533,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>Filters clusters that expire after N days. Valid values: 0 to 15.</p>
+         * <p>Filters clusters that expire within the next N days. Valid values: 0 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -543,9 +545,9 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -559,7 +561,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-**********</p>
@@ -589,7 +591,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The tags of the cluster.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -657,7 +659,7 @@ public class DescribeDBClustersRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag. You can use tags to filter clusters. You can specify up to 20 tags. N specifies the serial number of each tag. The values that you specify for N must be unique and consecutive integers that start from 1. The value of Tag.N.Key is Tag.N.Value.</p>
+             * <p>The tag key. You can use tags to filter the cluster list. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer that starts from 1. The Tag.n.Key parameter is paired with the Tag.n.Value parameter.</p>
              * <blockquote>
              * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
              * </blockquote>
@@ -671,7 +673,7 @@ public class DescribeDBClustersRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value that corresponds to the tag key.</p>
              * <blockquote>
              * <p>The tag value can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
              * </blockquote>

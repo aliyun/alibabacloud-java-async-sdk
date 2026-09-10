@@ -145,7 +145,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         } 
 
         /**
-         * AnchorBranchId.
+         * <p>The anchor branch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-7g8h9i0j1k2l</p>
          */
         public Builder anchorBranchId(String anchorBranchId) {
             this.anchorBranchId = anchorBranchId;
@@ -153,7 +156,7 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of lineage nodes.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -161,7 +164,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * NodeCount.
+         * <p>The total number of returned nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = nodeCount;
@@ -169,7 +175,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>proj-a1b2c3d4e5f6</p>
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -177,7 +186,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analytics-prod</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -185,7 +197,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B2C3D4E5-F6A7-8901-BCDE-2345678901BC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * RootBranchId.
+         * <p>The primary branch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>br-root</p>
          */
         public Builder rootBranchId(String rootBranchId) {
             this.rootBranchId = rootBranchId;
@@ -201,7 +219,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-4b83e0da66674951</p>
          */
         public Builder tenantId(String tenantId) {
             this.tenantId = tenantId;
@@ -436,7 +457,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             } 
 
             /**
-             * BranchComputeClusterId.
+             * <p>The compute cluster ID of the branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-g0lsayq8c5qe</p>
              */
             public Builder branchComputeClusterId(String branchComputeClusterId) {
                 this.branchComputeClusterId = branchComputeClusterId;
@@ -444,7 +468,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * BranchDescription.
+             * <p>The branch description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Feature branch for analytics</p>
              */
             public Builder branchDescription(String branchDescription) {
                 this.branchDescription = branchDescription;
@@ -452,7 +479,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * BranchId.
+             * <p>The branch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>br-7g8h9i0j1k2l</p>
              */
             public Builder branchId(String branchId) {
                 this.branchId = branchId;
@@ -460,7 +490,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * BranchName.
+             * <p>The branch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feature-analytics</p>
              */
             public Builder branchName(String branchName) {
                 this.branchName = branchName;
@@ -468,7 +501,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the branch was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-10T11:00:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -476,7 +512,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Depth.
+             * <p>The depth relative to the anchor branch. The anchor branch has a depth of 0. Ancestor branches have negative values. Descendant branches have positive values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -484,7 +523,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * DirectChildCount.
+             * <p>The total number of direct child branches.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder directChildCount(Integer directChildCount) {
                 this.directChildCount = directChildCount;
@@ -492,7 +534,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * HasMoreAncestors.
+             * <p>Indicates whether more ancestor nodes exist but are not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasMoreAncestors(Boolean hasMoreAncestors) {
                 this.hasMoreAncestors = hasMoreAncestors;
@@ -500,7 +545,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * HasMoreChildren.
+             * <p>Indicates whether more child nodes exist but are not returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasMoreChildren(Boolean hasMoreChildren) {
                 this.hasMoreChildren = hasMoreChildren;
@@ -508,7 +556,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * IsAnchor.
+             * <p>Indicates whether the branch is the anchor branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isAnchor(Boolean isAnchor) {
                 this.isAnchor = isAnchor;
@@ -524,7 +575,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * IsRoot.
+             * <p>Indicates whether the branch is the primary branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isRoot(Boolean isRoot) {
                 this.isRoot = isRoot;
@@ -532,7 +586,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * ParentBranchId.
+             * <p>The parent branch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>br-1a2b3c4d5e6f</p>
              */
             public Builder parentBranchId(String parentBranchId) {
                 this.parentBranchId = parentBranchId;
@@ -540,7 +597,10 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * ParentBranchName.
+             * <p>The parent branch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder parentBranchName(String parentBranchName) {
                 this.parentBranchName = parentBranchName;
@@ -548,7 +608,14 @@ public class DescribeAgenticDBBranchLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The branch status. Valid values:</p>
+             * <ul>
+             * <li>Active</li>
+             * <li>Destroying</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;

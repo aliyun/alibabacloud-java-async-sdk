@@ -146,6 +146,10 @@ public class ModifyDBNodeDescriptionRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view information about all clusters in the destination region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +162,13 @@ public class ModifyDBNodeDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The name of the node. The name must meet the following requirements:</p>
+         * <ul>
+         * <li><p>It cannot start with http\:// or https\://.</p>
+         * </li>
+         * <li><p>It must be 2 to 256 characters in length.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +181,10 @@ public class ModifyDBNodeDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster node.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to view the details of all clusters that belong to your account, including node IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

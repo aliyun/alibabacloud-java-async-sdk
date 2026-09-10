@@ -73,7 +73,10 @@ public class OperateApplicationRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -82,7 +85,15 @@ public class OperateApplicationRequest extends Request {
         }
 
         /**
-         * Operation.
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li><strong>restart</strong>: restart</li>
+         * <li><strong>stop</strong>: stop</li>
+         * <li><strong>start</strong>: start.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>restart</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("Operation", operation);

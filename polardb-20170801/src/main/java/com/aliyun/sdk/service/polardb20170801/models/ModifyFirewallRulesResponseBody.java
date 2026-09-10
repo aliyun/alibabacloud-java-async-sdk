@@ -80,7 +80,13 @@ public class ModifyFirewallRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request is successful, Successful is returned. If the request fails, an error message is returned, such as an error code.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -88,7 +94,7 @@ public class ModifyFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A8DBA3A7-82FB-5CBE-A002-8959E47D1D61</p>
@@ -99,7 +105,16 @@ public class ModifyFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The result of the request. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request is successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request fails.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

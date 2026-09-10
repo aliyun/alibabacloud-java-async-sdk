@@ -80,7 +80,10 @@ public class AnswerKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * QueryId.
+         * <p>The unique ID of the Q&amp;A task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R3BGbnBqcXN******.2a5a23c9-******-179970533d30</p>
          */
         public Builder queryId(String queryId) {
             this.queryId = queryId;
@@ -99,7 +102,10 @@ public class AnswerKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the Q&amp;A task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;

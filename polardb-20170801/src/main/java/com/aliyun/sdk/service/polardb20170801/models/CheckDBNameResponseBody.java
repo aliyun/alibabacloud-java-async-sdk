@@ -67,7 +67,7 @@ public class CheckDBNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_db</p>
@@ -78,7 +78,7 @@ public class CheckDBNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>

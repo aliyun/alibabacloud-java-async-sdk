@@ -119,6 +119,10 @@ public class DescribeAIDBClusterPerformanceRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +135,7 @@ public class DescribeAIDBClusterPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +148,14 @@ public class DescribeAIDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity of the data to retrieve. Valid values: <strong>60</strong> (minutes) and <strong>3600</strong> (hours).</p>
+         * <ul>
+         * <li>If you set <strong>Interval</strong> to <strong>60</strong>, you can query data from the last month. The maximum time range for a single query is 7 days.</li>
+         * <li>If you set <strong>Interval</strong> to <strong>3600</strong>, you can query data from the last month. The maximum time range for a single query is 7 days.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -152,6 +164,7 @@ public class DescribeAIDBClusterPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The name of the metric.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +177,7 @@ public class DescribeAIDBClusterPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

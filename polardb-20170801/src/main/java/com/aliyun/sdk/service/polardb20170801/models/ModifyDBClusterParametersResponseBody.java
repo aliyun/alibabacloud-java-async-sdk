@@ -54,7 +54,7 @@ public class ModifyDBClusterParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C5D526E5-91B5-48B8-B980-FE07FF******</p>

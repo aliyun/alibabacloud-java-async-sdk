@@ -132,7 +132,7 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of directory entries.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -140,7 +140,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The maximum number of records that can be displayed on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -148,7 +151,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +162,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Path.
+         * <p>The absolute path of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -164,7 +173,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The PolarFs instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-2ze0i7*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;
@@ -172,7 +184,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -337,7 +355,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * Capacity.
+             * <p>The capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -345,7 +366,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-25T09:37:10Z</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -353,7 +377,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * LastModified.
+             * <p>The last modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-25T09:37:10Z</p>
              */
             public Builder lastModified(Long lastModified) {
                 this.lastModified = lastModified;
@@ -361,7 +388,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * LinkTarget.
+             * <p>The real path of the symbolic link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder linkTarget(String linkTarget) {
                 this.linkTarget = linkTarget;
@@ -369,7 +399,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The file system permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>755</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -377,7 +410,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Nlink.
+             * <p>The number of links.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nlink(Integer nlink) {
                 this.nlink = nlink;
@@ -396,7 +432,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The absolute path of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -404,7 +443,10 @@ public class DescribePolarFsObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The file type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>directory</p>
              */
             public Builder type(String type) {
                 this.type = type;

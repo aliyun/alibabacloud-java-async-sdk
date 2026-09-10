@@ -186,6 +186,7 @@ public class DescribeDatabasesZonalRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,10 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -207,7 +211,10 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -216,7 +223,10 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The query token. This is the NextToken value from the previous API call. If there are no more results, do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -243,7 +253,10 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -252,7 +265,19 @@ public class DescribeDatabasesZonalRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page. Valid values:</p>
+         * <ul>
+         * <li><p>30</p>
+         * </li>
+         * <li><p>50</p>
+         * </li>
+         * <li><p>100</p>
+         * </li>
+         * </ul>
+         * <p>The default value is 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

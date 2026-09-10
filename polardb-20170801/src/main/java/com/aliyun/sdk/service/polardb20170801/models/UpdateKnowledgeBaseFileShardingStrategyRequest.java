@@ -118,6 +118,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
         } 
 
         /**
+         * <p>The unique ID of the knowledge base file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
         }
 
         /**
-         * InheritSpaceStrategy.
+         * <p>Specifies whether to restore inheritance of the chunking strategy from the knowledge space. When this parameter is set to true, ShardingStrategyConfig cannot be specified at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder inheritSpaceStrategy(Boolean inheritSpaceStrategy) {
             this.putQueryParameter("InheritSpaceStrategy", inheritSpaceStrategy);
@@ -139,6 +143,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +156,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the knowledge base resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +169,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
         }
 
         /**
-         * ShardingStrategyConfig.
+         * <p>The file-level chunking strategy configuration. This parameter is required when InheritSpaceStrategy is not set to true.</p>
          */
         public Builder shardingStrategyConfig(ShardingStrategyConfig shardingStrategyConfig) {
             String shardingStrategyConfigShrink = shrink(shardingStrategyConfig, "ShardingStrategyConfig", "json");
@@ -232,7 +238,10 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             } 
 
             /**
-             * MaxTokens.
+             * <p>The maximum number of tokens per chunk. The value must be a positive integer. This parameter takes effect only when Type is set to hybrid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder maxTokens(Integer maxTokens) {
                 this.maxTokens = maxTokens;
@@ -240,7 +249,10 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             }
 
             /**
-             * MergePeers.
+             * <p>Specifies whether to merge adjacent small chunks under the same heading. This parameter takes effect only when Type is set to hybrid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mergePeers(Boolean mergePeers) {
                 this.mergePeers = mergePeers;
@@ -308,7 +320,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             } 
 
             /**
-             * Parameters.
+             * <p>The parameters of the default chunking strategy. MaxTokens and MergePeers are supported only when Type is set to hybrid.</p>
              */
             public Builder parameters(Parameters parameters) {
                 this.parameters = parameters;
@@ -316,6 +328,11 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             }
 
             /**
+             * <p>The type of the default chunking strategy. Valid values:</p>
+             * <ul>
+             * <li>hybrid: Splits by document structure and limits the token count.</li>
+             * <li>hierarchical: Splits only by document structure.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -373,7 +390,10 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             } 
 
             /**
-             * ContentType.
+             * <p>The content type. Currently, only table is supported, which matches content that is parsed as tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -440,7 +460,15 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             } 
 
             /**
-             * MarkdownTables.
+             * <p>The Markdown table processing mode. Valid values:</p>
+             * <ul>
+             * <li>auto: Automatically determines the processing mode.</li>
+             * <li>on: Forcefully enables Markdown table processing.</li>
+             * <li>off: Disables Markdown table processing.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder markdownTables(String markdownTables) {
                 this.markdownTables = markdownTables;
@@ -448,7 +476,10 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             }
 
             /**
-             * MaxTokens.
+             * <p>The maximum number of tokens per chunk for matched content. The value must be a positive integer. This parameter takes effect only when Type is set to hybrid.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder maxTokens(Integer maxTokens) {
                 this.maxTokens = maxTokens;
@@ -516,7 +547,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             } 
 
             /**
-             * Parameters.
+             * <p>The chunking strategy parameters of the override rule. MaxTokens takes effect only when Type is set to hybrid. MarkdownTables supports auto, on, or off.</p>
              */
             public Builder parameters(StrategyParameters parameters) {
                 this.parameters = parameters;
@@ -524,6 +555,11 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             }
 
             /**
+             * <p>The chunking strategy type of the override rule. Valid values:</p>
+             * <ul>
+             * <li>hybrid</li>
+             * <li>hierarchical</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -596,6 +632,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             } 
 
             /**
+             * <p>The rule match condition. Currently, only exact matching by content type for table content is supported.</p>
              * <p>This parameter is required.</p>
              */
             public Builder match(Match match) {
@@ -604,6 +641,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             }
 
             /**
+             * <p>The chunking strategy to use when the rule is matched.</p>
              * <p>This parameter is required.</p>
              */
             public Builder strategy(Strategy strategy) {
@@ -672,6 +710,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             } 
 
             /**
+             * <p>The default chunking strategy. This strategy is used when no rule is matched.</p>
              * <p>This parameter is required.</p>
              */
             public Builder defaultStrategy(DefaultStrategy defaultStrategy) {
@@ -680,7 +719,7 @@ public class UpdateKnowledgeBaseFileShardingStrategyRequest extends Request {
             }
 
             /**
-             * Rules.
+             * <p>The list of override rules that are matched in order. Currently, a maximum of one exact-match rule with ContentType set to table is supported.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

@@ -145,7 +145,10 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -153,7 +156,10 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -161,7 +167,10 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +178,10 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -177,7 +189,7 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6A2EE5B4-CC9F-46E1-A747-E43BC9******</p>
@@ -188,7 +200,10 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * Restarted.
+         * <p>Indicates whether the gateway was restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restarted(Boolean restarted) {
             this.restarted = restarted;
@@ -196,7 +211,10 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * TotalVariables.
+         * <p>The total number of environment variables for the application after the update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalVariables(Integer totalVariables) {
             this.totalVariables = totalVariables;
@@ -204,7 +222,7 @@ public class UpdateApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * UpdatedKeys.
+         * <p>A list of the environment variable names that were added or updated.</p>
          */
         public Builder updatedKeys(java.util.List<String> updatedKeys) {
             this.updatedKeys = updatedKeys;

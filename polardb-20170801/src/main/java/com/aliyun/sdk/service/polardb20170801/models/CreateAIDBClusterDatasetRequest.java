@@ -185,7 +185,10 @@ public class CreateAIDBClusterDatasetRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the PolarDB database cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze88***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -194,7 +197,10 @@ public class CreateAIDBClusterDatasetRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset01</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -203,7 +209,16 @@ public class CreateAIDBClusterDatasetRequest extends Request {
         }
 
         /**
-         * DatasetType.
+         * <p>The type of the dataset. Valid values:</p>
+         * <ul>
+         * <li><p><strong>train</strong>: training set</p>
+         * </li>
+         * <li><p><strong>eval</strong>: evaluation set</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>train</p>
          */
         public Builder datasetType(String datasetType) {
             this.putQueryParameter("DatasetType", datasetType);
@@ -212,7 +227,13 @@ public class CreateAIDBClusterDatasetRequest extends Request {
         }
 
         /**
-         * ImportMode.
+         * <p>The import method. Valid values:</p>
+         * <ul>
+         * <li><strong>LocalImport</strong>: local import</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LocalImport</p>
          */
         public Builder importMode(String importMode) {
             this.putQueryParameter("ImportMode", importMode);
@@ -239,7 +260,10 @@ public class CreateAIDBClusterDatasetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -266,7 +290,18 @@ public class CreateAIDBClusterDatasetRequest extends Request {
         }
 
         /**
-         * TrainMode.
+         * <p>The training mode for the dataset. The dataset format depends on the mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>sft</strong>: supervised fine-tuning. For training sets only.</p>
+         * </li>
+         * <li><p><strong>grpo</strong>: reinforcement learning optimization. For training sets only.</p>
+         * </li>
+         * <li><p><strong>text</strong>: text generation. For validation sets only.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sft</p>
          */
         public Builder trainMode(String trainMode) {
             this.putQueryParameter("TrainMode", trainMode);

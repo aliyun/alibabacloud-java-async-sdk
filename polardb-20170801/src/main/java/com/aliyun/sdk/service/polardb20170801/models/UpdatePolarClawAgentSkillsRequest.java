@@ -102,6 +102,7 @@ public class UpdatePolarClawAgentSkillsRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class UpdatePolarClawAgentSkillsRequest extends Request {
         }
 
         /**
-         * Skills.
+         * <p>The skill allowlist. A value of null indicates that all skills are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;alibacloud-rds-copilot&quot;]</p>
          */
         public Builder skills(java.util.List<String> skills) {
             String skillsShrink = shrink(skills, "Skills", "json");

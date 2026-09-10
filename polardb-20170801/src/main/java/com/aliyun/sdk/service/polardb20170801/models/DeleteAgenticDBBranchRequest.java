@@ -120,6 +120,7 @@ public class DeleteAgenticDBBranchRequest extends Request {
         } 
 
         /**
+         * <p>The branch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +133,7 @@ public class DeleteAgenticDBBranchRequest extends Request {
         }
 
         /**
+         * <p>The AgenticDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +146,7 @@ public class DeleteAgenticDBBranchRequest extends Request {
         }
 
         /**
+         * <p>The ID of the project to which the branch belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +159,7 @@ public class DeleteAgenticDBBranchRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +172,7 @@ public class DeleteAgenticDBBranchRequest extends Request {
         }
 
         /**
+         * <p>The ID of the tenant to which the branch belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

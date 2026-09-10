@@ -146,7 +146,7 @@ public class ModifyDBDescriptionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,8 +161,10 @@ public class ModifyDBDescriptionRequest extends Request {
         /**
          * <p>The description of the database. The description must meet the following requirements:</p>
          * <ul>
-         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>It must be 2 to 256 characters in length.</li>
+         * <li><p>Cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </li>
+         * <li><p>Must be 2 to 256 characters in length.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -176,7 +178,7 @@ public class ModifyDBDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

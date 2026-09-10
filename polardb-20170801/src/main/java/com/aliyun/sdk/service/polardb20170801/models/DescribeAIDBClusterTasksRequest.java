@@ -171,7 +171,10 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         } 
 
         /**
-         * KubeType.
+         * <p>The template operator type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aitrain</p>
          */
         public Builder kubeType(String kubeType) {
             this.putQueryParameter("KubeType", kubeType);
@@ -198,7 +201,7 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -207,7 +210,7 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of items per page.</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +219,10 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -225,7 +231,10 @@ public class DescribeAIDBClusterTasksRequest extends Request {
         }
 
         /**
-         * RelativeDBClusterId.
+         * <p>The instance ID of the PolarDB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2ze88***</p>
          */
         public Builder relativeDBClusterId(String relativeDBClusterId) {
             this.putQueryParameter("RelativeDBClusterId", relativeDBClusterId);

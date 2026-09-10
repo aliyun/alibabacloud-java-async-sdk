@@ -133,7 +133,10 @@ public class CreateGwConsumerOrderRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a42***********</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -142,7 +145,10 @@ public class CreateGwConsumerOrderRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time of the API key in ISO-8601 format. The value must be later than the current time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-07-23T03:09:08Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -151,6 +157,7 @@ public class CreateGwConsumerOrderRequest extends Request {
         }
 
         /**
+         * <p>The ID of the AI gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,6 +170,7 @@ public class CreateGwConsumerOrderRequest extends Request {
         }
 
         /**
+         * <p>The number of API keys to generate (the number of capacity plans to order). Valid values: 1 to 30.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,10 +183,11 @@ public class CreateGwConsumerOrderRequest extends Request {
         }
 
         /**
+         * <p>The number of credits per API key. The value is a positive integer string.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>basic</p>
+         * <p>3000</p>
          */
         public Builder packageSpec(String packageSpec) {
             this.putQueryParameter("PackageSpec", packageSpec);
@@ -187,6 +196,10 @@ public class CreateGwConsumerOrderRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region information.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

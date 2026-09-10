@@ -146,6 +146,7 @@ public class EnableSQLRateLimitingRulesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +159,16 @@ public class EnableSQLRateLimitingRulesRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable or disable the specified SQL throttling rules. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enable.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disable.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter applies only when you specify the <strong>RuleNameList</strong> parameter.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +217,10 @@ public class EnableSQLRateLimitingRulesRequest extends Request {
         }
 
         /**
+         * <p>The names of the SQL throttling rules to enable. To specify multiple rules, separate the names with a comma (,).</p>
+         * <blockquote>
+         * <p>You can view all SQL throttling rules and their names on the SQL Firewall tab of the Security Management page for the cluster.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

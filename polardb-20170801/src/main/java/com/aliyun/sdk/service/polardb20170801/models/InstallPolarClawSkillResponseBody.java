@@ -145,7 +145,10 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-xxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -153,7 +156,10 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -161,7 +167,10 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +178,10 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -188,7 +200,10 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Slug.
+         * <p>The identifier of the installed Skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibacloud-rds-copilot</p>
          */
         public Builder slug(String slug) {
             this.slug = slug;
@@ -196,7 +211,10 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * TargetDir.
+         * <p>The installation directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/node/.openclaw/skills/alibacloud-rds-copilot</p>
          */
         public Builder targetDir(String targetDir) {
             this.targetDir = targetDir;
@@ -204,7 +222,10 @@ public class InstallPolarClawSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version number of the installed Skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.0</p>
          */
         public Builder version(String version) {
             this.version = version;

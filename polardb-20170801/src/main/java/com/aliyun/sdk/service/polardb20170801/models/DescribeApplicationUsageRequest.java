@@ -75,6 +75,7 @@ public class DescribeApplicationUsageRequest extends Request {
         } 
 
         /**
+         * <p>The Hermes application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +88,10 @@ public class DescribeApplicationUsageRequest extends Request {
         }
 
         /**
-         * Days.
+         * <p>The number of recent days to query. Valid values: 1 to 365. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder days(Integer days) {
             this.putQueryParameter("Days", days);

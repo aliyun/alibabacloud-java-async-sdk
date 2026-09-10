@@ -54,7 +54,7 @@ public class ModifyDBClusterSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A94B1755-6D8B-4E27-BF3C-8562BC******</p>

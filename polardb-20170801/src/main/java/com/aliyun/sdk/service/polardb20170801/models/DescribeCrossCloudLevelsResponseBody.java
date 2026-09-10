@@ -67,7 +67,7 @@ public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
         } 
 
         /**
-         * CrossCloudLevelList.
+         * <p>The list of supported cross-cloud specifications.</p>
          */
         public Builder crossCloudLevelList(java.util.List<CrossCloudLevelList> crossCloudLevelList) {
             this.crossCloudLevelList = crossCloudLevelList;
@@ -75,7 +75,10 @@ public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E56531A4-E552-40BA-9C58-137B80******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
             } 
 
             /**
-             * DBType.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -162,7 +168,10 @@ public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * LevelCode.
+             * <p>The specification code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.mysql.g4.medium.c</p>
              */
             public Builder levelCode(String levelCode) {
                 this.levelCode = levelCode;
@@ -170,7 +179,10 @@ public class DescribeCrossCloudLevelsResponseBody extends TeaModel {
             }
 
             /**
-             * LevelName.
+             * <p>The CPU and memory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2 core 8 GB</p>
              */
             public Builder levelName(String levelName) {
                 this.levelName = levelName;

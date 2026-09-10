@@ -74,7 +74,13 @@ public class DeletePolarFsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all Data Warehouse Edition clusters in a specific region.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -83,6 +89,7 @@ public class DeletePolarFsRequest extends Request {
         }
 
         /**
+         * <p>The PolarFs instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

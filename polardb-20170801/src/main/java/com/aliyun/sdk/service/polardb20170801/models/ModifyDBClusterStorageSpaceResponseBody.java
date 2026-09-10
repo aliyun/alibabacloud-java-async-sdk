@@ -80,7 +80,7 @@ public class ModifyDBClusterStorageSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The ID of the database cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-*************</p>
@@ -91,7 +91,7 @@ public class ModifyDBClusterStorageSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order ID.</p>
+         * <p>The ID of the order.</p>
          * 
          * <strong>example:</strong>
          * <p>2035629******</p>
@@ -102,7 +102,7 @@ public class ModifyDBClusterStorageSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>685F028C-4FCD-407D-A559-072D63******</p>

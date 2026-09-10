@@ -54,7 +54,7 @@ public class ModifyActiveOperationMaintainConfResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CC9CB4B-BBAF-5963-9545-A8DE9FFC7DFB</p>

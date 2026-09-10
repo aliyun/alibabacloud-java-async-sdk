@@ -118,6 +118,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         } 
 
         /**
+         * <p>The AgenticDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +131,10 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the API key usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dedicated key for MCP Server</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -139,7 +143,10 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time in ISO 8601 format. If this parameter is not specified, the API key never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-01-01T00:00:00Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
@@ -148,6 +155,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +168,7 @@ public class CreateAgenticDBTenantApiKeyRequest extends Request {
         }
 
         /**
+         * <p>The tenant name. The name must be unique within the cluster and contain 2 to 64 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

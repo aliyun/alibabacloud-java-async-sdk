@@ -89,6 +89,7 @@ public class UninstallPolarClawPluginRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class UninstallPolarClawPluginRequest extends Request {
         }
 
         /**
+         * <p>The plugin ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class UninstallPolarClawPluginRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Indicates whether to restart the gateway after the plugin is uninstalled. The default is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

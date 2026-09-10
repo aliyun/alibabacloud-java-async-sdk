@@ -119,7 +119,10 @@ public class DisablePolarClawCronJobResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -127,7 +130,10 @@ public class DisablePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class DisablePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the disabled job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ee00f56-f467-4d41-858c-ca4ede2c770e</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -143,7 +152,10 @@ public class DisablePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class DisablePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful. A value of <code>true</code> indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -159,7 +174,10 @@ public class DisablePolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

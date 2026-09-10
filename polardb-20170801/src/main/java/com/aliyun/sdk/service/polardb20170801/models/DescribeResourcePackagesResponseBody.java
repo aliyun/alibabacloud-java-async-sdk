@@ -67,7 +67,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E56531A4-E552-40BA-9C58-137B80******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
         }
 
         /**
-         * ResourcePackageList.
+         * <p>A list of cross-cloud resource plans.</p>
          */
         public Builder resourcePackageList(java.util.List<ResourcePackageList> resourcePackageList) {
             this.resourcePackageList = resourcePackageList;
@@ -154,7 +157,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * AllocatedCapacity.
+             * <p>The capacity allocated to the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder allocatedCapacity(Long allocatedCapacity) {
                 this.allocatedCapacity = allocatedCapacity;
@@ -162,7 +168,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pj-87681rbcef6******</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -170,7 +179,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacity.
+             * <p>The used capacity of the resource pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder usedCapacity(Long usedCapacity) {
                 this.usedCapacity = usedCapacity;
@@ -237,7 +249,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -245,7 +260,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -416,7 +434,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoQuota.
+             * <p>Indicates whether automatic quota allocation is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoQuota(Boolean autoQuota) {
                 this.autoQuota = autoQuota;
@@ -424,7 +445,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the resource plan was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1744621511000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -432,7 +456,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The time when the resource plan expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747238400000</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -440,7 +467,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourcePackageId.
+             * <p>The ID of the cross-cloud resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pm-bp11b0i9389******</p>
              */
             public Builder resourcePackageId(String resourcePackageId) {
                 this.resourcePackageId = resourcePackageId;
@@ -448,7 +478,7 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourcePackageQuotaList.
+             * <p>The quota allocation details.</p>
              */
             public Builder resourcePackageQuotaList(java.util.List<ResourcePackageQuotaList> resourcePackageQuotaList) {
                 this.resourcePackageQuotaList = resourcePackageQuotaList;
@@ -456,7 +486,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourcePackageType.
+             * <p>The type of the cross-cloud resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder resourcePackageType(String resourcePackageType) {
                 this.resourcePackageType = resourcePackageType;
@@ -464,7 +497,16 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the cross-cloud resource plan. Valid values:</p>
+             * <ul>
+             * <li><p>Normal: Normal.</p>
+             * </li>
+             * <li><p>Maintaining: Under maintenance.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -472,7 +514,7 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -480,7 +522,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCapacity.
+             * <p>The total capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalCapacity(Long totalCapacity) {
                 this.totalCapacity = totalCapacity;
@@ -488,7 +533,10 @@ public class DescribeResourcePackagesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacity.
+             * <p>The used capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder usedCapacity(Long usedCapacity) {
                 this.usedCapacity = usedCapacity;

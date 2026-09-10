@@ -172,23 +172,35 @@ public class DescribeClassListRequest extends Request {
         } 
 
         /**
-         * <p>The code of the commodity. Valid values:</p>
+         * <p>The commodity code. Valid values:</p>
          * <ul>
-         * <li>polardb_sub: the subscription cluster in regions in the Chinese mainland</li>
-         * <li>polardb_sub _intl: the subscription cluster in regions outside the Chinese mainland</li>
-         * <li>polardb_payg: the pay-as-you-go cluster in regions in the Chinese mainland</li>
-         * <li>polardb_payg_intl: the pay-as-you-go cluster in regions outside the Chinese mainland</li>
-         * <li>polardb_sub_jushita: the subscription cluster for CloudTmall</li>
-         * <li>polardb_payg_jushita: the pay-as-you-go cluster for CloudTmall</li>
-         * <li>polardb_sub_cainiao: the subscription cluster for Cainiao</li>
-         * <li>polardb_payg_cainiao: the pay-as-you-go cluster for Cainiao</li>
+         * <li><p>polardb_sub: subscription for the Chinese mainland.</p>
+         * </li>
+         * <li><p>polardb_sub_intl: subscription for regions in Hong Kong (China) and outside the Chinese mainland.</p>
+         * </li>
+         * <li><p>polardb_payg: pay-as-you-go for the Chinese mainland.</p>
+         * </li>
+         * <li><p>polardb_payg_intl: pay-as-you-go for regions in Hong Kong (China) and outside the Chinese mainland.</p>
+         * </li>
+         * <li><p>polardb_sub_jushita: Jushita subscription.</p>
+         * </li>
+         * <li><p>polardb_payg_jushita: Jushita pay-as-you-go.</p>
+         * </li>
+         * <li><p>polardb_sub_cainiao: Cainiao subscription.</p>
+         * </li>
+         * <li><p>polardb_payg_cainiao: Cainiao pay-as-you-go.</p>
+         * </li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If you use an Alibaba Cloud account on the China site, you can view only the codes of the commodities that are available in the Chinese mainland.</li>
-         * <li>If you are using an Alibaba Cloud international account, you can view only the codes of the commodities that are available outside the Chinese mainland.</li>
-         * <li>If you use a CloudTmall account, you can view only the codes of the commodities that are available in CloudTmall.</li>
-         * <li>If you use a Cainiao account, you can view only the codes of the commodities that are available in Cainiao.</li>
+         * <li><p>If you use an Alibaba Cloud China site account, you can view only the commodity codes for the Chinese mainland.</p>
+         * </li>
+         * <li><p>If you use an Alibaba Cloud international site account, you can view only the commodity codes for regions outside the Chinese mainland.</p>
+         * </li>
+         * <li><p>If you use a Jushita account, you can view only the commodity codes for Jushita.</p>
+         * </li>
+         * <li><p>If you use a Cainiao account, you can view only the commodity codes for Cainiao.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -205,9 +217,12 @@ public class DescribeClassListRequest extends Request {
         /**
          * <p>The number of nodes. Valid values:</p>
          * <ul>
-         * <li>single: Standalone Edition.</li>
-         * <li>cluster: Cluster Edition.</li>
-         * <li>all: both Standalone Edition and Cluster Edition.</li>
+         * <li><p>single: single node.</p>
+         * </li>
+         * <li><p>cluster: cluster.</p>
+         * </li>
+         * <li><p>all: single node and cluster.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,12 +235,16 @@ public class DescribeClassListRequest extends Request {
         }
 
         /**
-         * <p>The type of the order. Valid values:</p>
+         * <p>The order type. Valid values:</p>
          * <ul>
-         * <li>BUY: The order is used to purchase a cluster.</li>
-         * <li>UPGRADE: The order is used to change the specifications of a cluster.</li>
-         * <li>RENEW: The order is used to renew a cluster.</li>
-         * <li>CONVERT: The order is used to change the billing method of a cluster.</li>
+         * <li><p>BUY: new purchase.</p>
+         * </li>
+         * <li><p>UPGRADE: changes the configuration.</p>
+         * </li>
+         * <li><p>RENEW: renews the instance.</p>
+         * </li>
+         * <li><p>CONVERT: changes the billing method.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -256,7 +275,10 @@ public class DescribeClassListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>This parameter is required if you use an Alibaba Cloud international site account.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

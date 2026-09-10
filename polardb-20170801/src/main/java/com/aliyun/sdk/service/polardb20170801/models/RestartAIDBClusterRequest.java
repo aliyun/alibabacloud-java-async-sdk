@@ -59,7 +59,10 @@ public class RestartAIDBClusterRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

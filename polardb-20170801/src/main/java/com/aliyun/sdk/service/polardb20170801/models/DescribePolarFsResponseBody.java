@@ -114,7 +114,10 @@ public class DescribePolarFsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribePolarFsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -141,7 +147,10 @@ public class DescribePolarFsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -236,10 +245,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>token</p>
-             * 
-             * <strong>example:</strong>
-             * <hr>
+             * Token.
              */
             public Builder token(String token) {
                 this.token = token;
@@ -1081,10 +1087,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-uf653ibw32whvnplrnzz4</p>
+             * VPCId.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;

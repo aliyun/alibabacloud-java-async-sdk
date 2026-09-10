@@ -158,7 +158,7 @@ public class DeleteDBClusterEndpointRequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom cluster endpoint.</p>
+         * <p>The custom cluster endpoint ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,10 @@ public class DeleteDBClusterEndpointRequest extends Request {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The PolarFs instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-test*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.putQueryParameter("PolarFsInstanceId", polarFsInstanceId);

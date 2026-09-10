@@ -131,7 +131,10 @@ public class ModifyBudgetPolicyRequest extends Request {
         } 
 
         /**
-         * AlertThresholdPct.
+         * <p>The budget usage percentage that triggers an alert. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder alertThresholdPct(String alertThresholdPct) {
             this.putQueryParameter("AlertThresholdPct", alertThresholdPct);
@@ -140,7 +143,10 @@ public class ModifyBudgetPolicyRequest extends Request {
         }
 
         /**
-         * BudgetPoints.
+         * <p>The budget amount in points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder budgetPoints(String budgetPoints) {
             this.putQueryParameter("BudgetPoints", budgetPoints);
@@ -149,6 +155,7 @@ public class ModifyBudgetPolicyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the budget policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +168,7 @@ public class ModifyBudgetPolicyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +181,10 @@ public class ModifyBudgetPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +193,10 @@ public class ModifyBudgetPolicyRequest extends Request {
         }
 
         /**
-         * ResetDayOfMonth.
+         * <p>The day of the month when the budget is reset. Valid values: 1 to 28.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder resetDayOfMonth(String resetDayOfMonth) {
             this.putQueryParameter("ResetDayOfMonth", resetDayOfMonth);

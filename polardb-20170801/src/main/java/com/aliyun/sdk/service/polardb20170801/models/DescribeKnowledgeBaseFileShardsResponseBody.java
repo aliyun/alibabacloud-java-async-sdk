@@ -119,7 +119,10 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -127,7 +130,10 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -135,7 +141,10 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +163,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         }
 
         /**
-         * Shards.
+         * <p>The shard information.</p>
          */
         public Builder shards(java.util.List<Shards> shards) {
             this.shards = shards;
@@ -162,7 +171,10 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -254,7 +266,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             } 
 
             /**
-             * Headings.
+             * <p>The chain of section headings to which the shard belongs.</p>
              */
             public Builder headings(java.util.List<String> headings) {
                 this.headings = headings;
@@ -262,7 +274,7 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumbers.
+             * <p>The list of page numbers to which the shard belongs.</p>
              */
             public Builder pageNumbers(java.util.List<String> pageNumbers) {
                 this.pageNumbers = pageNumbers;
@@ -270,7 +282,10 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             }
 
             /**
-             * ShardContent.
+             * <p>The text content of the shard.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder shardContent(String shardContent) {
                 this.shardContent = shardContent;
@@ -278,7 +293,10 @@ public class DescribeKnowledgeBaseFileShardsResponseBody extends TeaModel {
             }
 
             /**
-             * ShardIndex.
+             * <p>The shard index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder shardIndex(Integer shardIndex) {
                 this.shardIndex = shardIndex;

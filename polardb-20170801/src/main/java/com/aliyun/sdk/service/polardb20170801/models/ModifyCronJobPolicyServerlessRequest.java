@@ -343,7 +343,16 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         } 
 
         /**
-         * AllowShutDown.
+         * <p>Specifies whether to enable No-activity Suspension. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enables the feature.</p>
+         * </li>
+         * <li><p><strong>false</strong> (default): Disables the feature.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowShutDown(String allowShutDown) {
             this.putQueryParameter("AllowShutDown", allowShutDown);
@@ -352,6 +361,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
+         * <p>The Cron expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -364,6 +374,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -376,6 +387,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -388,7 +400,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * JobId.
+         * <p>The ID of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8006e51c-dab3-4602-bc69-4f728002c6ce</p>
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -415,6 +430,7 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -445,7 +461,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * ScaleApRoNumMax.
+         * <p>The maximum number of read-only column store nodes. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleApRoNumMax(String scaleApRoNumMax) {
             this.putQueryParameter("ScaleApRoNumMax", scaleApRoNumMax);
@@ -454,7 +473,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * ScaleApRoNumMin.
+         * <p>The minimum number of read-only column store nodes. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleApRoNumMin(String scaleApRoNumMin) {
             this.putQueryParameter("ScaleApRoNumMin", scaleApRoNumMin);
@@ -463,7 +485,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * ScaleMax.
+         * <p>The maximum number of PCUs. Valid values: 1 to 32.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder scaleMax(String scaleMax) {
             this.putQueryParameter("ScaleMax", scaleMax);
@@ -472,7 +497,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * ScaleMin.
+         * <p>The minimum number of PolarDB Capacity Units (PCUs). Valid values: 0.25 to 32. This value must be less than or equal to the value of ScaleMax.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder scaleMin(String scaleMin) {
             this.putQueryParameter("ScaleMin", scaleMin);
@@ -481,7 +509,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * ScaleRoNumMax.
+         * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder scaleRoNumMax(String scaleRoNumMax) {
             this.putQueryParameter("ScaleRoNumMax", scaleRoNumMax);
@@ -490,7 +521,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * ScaleRoNumMin.
+         * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder scaleRoNumMin(String scaleRoNumMin) {
             this.putQueryParameter("ScaleRoNumMin", scaleRoNumMin);
@@ -499,7 +533,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * SecondsUntilAutoPause.
+         * <p>The detection period for No-activity Suspension. Unit: minutes. Valid values: 5 to 1440. The value must be a multiple of 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder secondsUntilAutoPause(String secondsUntilAutoPause) {
             this.putQueryParameter("SecondsUntilAutoPause", secondsUntilAutoPause);
@@ -508,7 +545,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * ServerlessRuleCpuEnlargeThreshold.
+         * <p>The CPU utilization threshold for a scale-up. Unit: percent. Valid values: 40 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder serverlessRuleCpuEnlargeThreshold(String serverlessRuleCpuEnlargeThreshold) {
             this.putQueryParameter("ServerlessRuleCpuEnlargeThreshold", serverlessRuleCpuEnlargeThreshold);
@@ -517,7 +557,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * ServerlessRuleCpuShrinkThreshold.
+         * <p>The CPU utilization threshold for a scale-down. Unit: percent. Valid values: 10 to 100. The value of ServerlessRuleCpuEnlargeThreshold minus the value of this parameter must be greater than or equal to 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder serverlessRuleCpuShrinkThreshold(String serverlessRuleCpuShrinkThreshold) {
             this.putQueryParameter("ServerlessRuleCpuShrinkThreshold", serverlessRuleCpuShrinkThreshold);
@@ -526,7 +569,16 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * ServerlessRuleMode.
+         * <p>The scaling sensitivity. Valid values:</p>
+         * <ul>
+         * <li><p>normal</p>
+         * </li>
+         * <li><p>flexible</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder serverlessRuleMode(String serverlessRuleMode) {
             this.putQueryParameter("ServerlessRuleMode", serverlessRuleMode);
@@ -535,7 +587,10 @@ public class ModifyCronJobPolicyServerlessRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

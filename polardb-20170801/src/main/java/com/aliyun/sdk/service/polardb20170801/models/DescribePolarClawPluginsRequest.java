@@ -74,6 +74,7 @@ public class DescribePolarClawPluginsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,7 @@ public class DescribePolarClawPluginsRequest extends Request {
         }
 
         /**
-         * PluginList.
+         * <p>A list of plugin IDs. If omitted, all plugins are returned.</p>
          */
         public Builder pluginList(java.util.List<String> pluginList) {
             this.putQueryParameter("PluginList", pluginList);

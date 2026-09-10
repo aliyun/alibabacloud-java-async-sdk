@@ -132,7 +132,7 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of consumer objects.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -140,7 +140,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -148,7 +151,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -156,7 +162,16 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -175,7 +190,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -183,7 +201,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -327,7 +348,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -335,7 +359,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cg-xxxxxx</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -343,7 +370,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-mqveroemc***</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -351,7 +381,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerTag.
+             * <p>The consumer tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder consumerTag(String consumerTag) {
                 this.consumerTag = consumerTag;
@@ -359,7 +392,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-08-14T05:58:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -367,7 +403,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             }
 
             /**
-             * GwClusterId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-xxxxxxxx</p>
              */
             public Builder gwClusterId(String gwClusterId) {
                 this.gwClusterId = gwClusterId;
@@ -375,7 +414,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-29T09:31:37Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -383,7 +425,10 @@ public class DescribeGatewayApikeyListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -186,6 +186,7 @@ public class DescribeModelApisRequest extends Request {
         } 
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,10 @@ public class DescribeModelApisRequest extends Request {
         }
 
         /**
-         * ModelApiIds.
+         * <p>The model API IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mi-xxx,mi-xxxx</p>
          */
         public Builder modelApiIds(String modelApiIds) {
             this.putQueryParameter("ModelApiIds", modelApiIds);
@@ -207,7 +211,15 @@ public class DescribeModelApisRequest extends Request {
         }
 
         /**
-         * ModelCategory.
+         * <p>The model category. Valid values:</p>
+         * <ul>
+         * <li><strong>text</strong></li>
+         * <li><strong>embedding</strong></li>
+         * <li><strong>rerank</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder modelCategory(String modelCategory) {
             this.putQueryParameter("ModelCategory", modelCategory);
@@ -216,7 +228,10 @@ public class DescribeModelApisRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The model API name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -225,7 +240,10 @@ public class DescribeModelApisRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -234,7 +252,16 @@ public class DescribeModelApisRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +270,10 @@ public class DescribeModelApisRequest extends Request {
         }
 
         /**
-         * PathPrefix.
+         * <p>The API path prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         public Builder pathPrefix(String pathPrefix) {
             this.putQueryParameter("PathPrefix", pathPrefix);
@@ -252,7 +282,16 @@ public class DescribeModelApisRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>openai</strong></li>
+         * <li><strong>anthropic</strong></li>
+         * <li><strong>bailian</strong></li>
+         * <li><strong>vllm</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>openai</p>
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -261,7 +300,10 @@ public class DescribeModelApisRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,7 +312,10 @@ public class DescribeModelApisRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The model API status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

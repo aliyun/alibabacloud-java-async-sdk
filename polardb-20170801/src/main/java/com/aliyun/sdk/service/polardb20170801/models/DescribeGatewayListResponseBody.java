@@ -119,7 +119,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>A list of gateway instances.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -143,7 +149,19 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +169,7 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
@@ -162,7 +180,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -358,7 +379,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the gateway instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-08-14T05:58:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -366,7 +390,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * <p>The database type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polardb_mysql</p>
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -374,7 +401,16 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the gateway instance.</p>
+             * <ul>
+             * <li><p>For subscription instances, this parameter indicates the expiration time.</p>
+             * </li>
+             * <li><p>This parameter is empty for pay-as-you-go instances.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2028-09-01T16:00:00Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -382,7 +418,16 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * <p>Indicates whether the gateway instance has expired. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -390,7 +435,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * GwClusterId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-xxxxxxx</p>
              */
             public Builder gwClusterId(String gwClusterId) {
                 this.gwClusterId = gwClusterId;
@@ -398,7 +446,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * GwDescription.
+             * <p>The description of the gateway instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-xxxxxx</p>
              */
             public Builder gwDescription(String gwDescription) {
                 this.gwDescription = gwDescription;
@@ -406,7 +457,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the gateway instance was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-29T09:31:37Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -414,7 +468,16 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+             * </li>
+             * <li><p><strong>Prepaid</strong>: subscription</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -422,7 +485,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -430,7 +496,16 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the gateway instance. Valid values:</p>
+             * <ul>
+             * <li><p><strong>CREATE</strong>: creating</p>
+             * </li>
+             * <li><p><strong>ACTIVATION</strong>: running</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVATION</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -438,7 +513,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-wz9u0v2yuskt1gth3uuju</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -446,7 +524,10 @@ public class DescribeGatewayListResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-****************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -116,9 +116,9 @@ public class DescribeLogBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query all the information about the available clusters in the target region, including the cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information about all clusters in a specific region, including the cluster IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

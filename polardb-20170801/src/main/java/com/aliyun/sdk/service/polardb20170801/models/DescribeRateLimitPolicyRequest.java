@@ -144,6 +144,7 @@ public class DescribeRateLimitPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to return. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -165,7 +169,18 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong>. The default value is <strong>30</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -174,7 +189,10 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * <p>The ID of the rate limit policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02eccf7c61cf4d05a543075ee907f3**</p>
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -183,7 +201,10 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,7 +213,10 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * ScopeRefId.
+         * <p>The ID of the target resource, which can be a consumer group or a consumer, depending on the <code>ScopeType</code> value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-xxxxxxxx</p>
          */
         public Builder scopeRefId(String scopeRefId) {
             this.putQueryParameter("ScopeRefId", scopeRefId);
@@ -201,7 +225,16 @@ public class DescribeRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * ScopeType.
+         * <p>The scope of the rate limit policy. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ConsumerGroup</strong>: The policy applies to a consumer group.</p>
+         * </li>
+         * <li><p><strong>Consumer</strong>: The policy applies to a specific consumer.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConsumerGroup</p>
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);

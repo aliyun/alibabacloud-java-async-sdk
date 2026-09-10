@@ -75,6 +75,7 @@ public class DescribePolarFsObjectsRequest extends Request {
         } 
 
         /**
+         * <p>The absolute path of the directory.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DescribePolarFsObjectsRequest extends Request {
         }
 
         /**
+         * <p>The PolarFs instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

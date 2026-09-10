@@ -132,7 +132,10 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -140,7 +143,10 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -148,7 +154,11 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -156,7 +166,10 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The PolarFs instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-test****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;
@@ -164,7 +177,7 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaItems.
+         * <p>The directory quotas.</p>
          */
         public Builder quotaItems(java.util.List<QuotaItems> quotaItems) {
             this.quotaItems = quotaItems;
@@ -183,7 +196,10 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -288,7 +304,10 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
             } 
 
             /**
-             * Capacity.
+             * <p>The capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1073741824</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -307,7 +326,10 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The directory path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -315,7 +337,10 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacity.
+             * <p>The used capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104857600</p>
              */
             public Builder usedCapacity(Long usedCapacity) {
                 this.usedCapacity = usedCapacity;
@@ -323,7 +348,10 @@ public class DescribePolarFsQuotaListResponseBody extends TeaModel {
             }
 
             /**
-             * UsedInodes.
+             * <p>The number of used inodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usedInodes(Long usedInodes) {
                 this.usedInodes = usedInodes;

@@ -129,6 +129,7 @@ public class DescribeBatchTasksRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the query range. Specify the time in UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +142,10 @@ public class DescribeBatchTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value must be a positive integer. The default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -150,7 +154,10 @@ public class DescribeBatchTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -159,6 +166,7 @@ public class DescribeBatchTasksRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query range. Specify the time in UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +179,10 @@ public class DescribeBatchTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task statuses.</p>
+         * <blockquote>
+         * <p>If you omit this parameter, the operation returns tasks of all statuses.</p>
+         * </blockquote>
          */
         public Builder status(java.util.List<String> status) {
             String statusShrink = shrink(status, "Status", "json");
@@ -181,7 +192,10 @@ public class DescribeBatchTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the batch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polarclaw_install_skills</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

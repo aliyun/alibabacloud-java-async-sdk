@@ -197,7 +197,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -205,7 +208,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. If this parameter is not returned, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2FpXzIwMjIwNjI5X2Jhay9zYWlfc3VtbWVyX3RyZWFzdXJlX3Bvb2xfbG9nLkNTVg==</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -213,7 +219,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ObjectType.
+         * <p>The object type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;
@@ -221,7 +230,16 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OssClusterEnabled.
+         * <p>Indicates whether the OSS bucket is enabled.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enabled</p>
+         * </li>
+         * <li><p><strong>false</strong>: disabled</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ossClusterEnabled(String ossClusterEnabled) {
             this.ossClusterEnabled = ossClusterEnabled;
@@ -229,7 +247,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OssClusterInfoList.
+         * <p>The list of OSS addresses for the cold storage instances.</p>
          */
         public Builder ossClusterInfoList(java.util.List<OssClusterInfoList> ossClusterInfoList) {
             this.ossClusterInfoList = ossClusterInfoList;
@@ -237,7 +255,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -245,7 +266,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -253,7 +277,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -261,7 +288,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7A8EA8E-A140-5226-90D7-5BCB304D3DB6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +299,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * SupportOssCluster.
+         * <p>Indicates whether the cluster supports cold storage. If the cluster does not support cold storage, the switch is not displayed on the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder supportOssCluster(String supportOssCluster) {
             this.supportOssCluster = supportOssCluster;
@@ -277,7 +310,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Tables.
+         * <p>The list of cold storage instances.</p>
          */
         public Builder tables(java.util.List<Tables> tables) {
             this.tables = tables;
@@ -285,7 +318,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecord.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecord(Integer totalRecord) {
             this.totalRecord = totalRecord;
@@ -377,7 +413,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-10T17:01:16Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -385,7 +424,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OssClusterId.
+             * <p>The ID of the cold storage instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*****************</p>
              */
             public Builder ossClusterId(String ossClusterId) {
                 this.ossClusterId = ossClusterId;
@@ -393,7 +435,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The ID of the region where the task is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -401,7 +446,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the cold storage table. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -494,7 +542,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ObjectName.
+             * <p>The object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>img/1728554006462.png</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -502,7 +553,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * <p>The object type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>File</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -510,7 +564,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The disk size. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -518,7 +575,25 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Scheduled</strong>: The task is waiting to be executed.</p>
+             * </li>
+             * <li><p><strong>Running</strong>: The task is in progress.</p>
+             * </li>
+             * <li><p><strong>Succeed</strong>: The task is successful.</p>
+             * </li>
+             * <li><p><strong>Cancelling</strong>: The task is being stopped.</p>
+             * </li>
+             * <li><p><strong>Canceled</strong>: The task is stopped.</p>
+             * </li>
+             * <li><p><strong>Waiting</strong>: The task is waiting for a preset time.</p>
+             * </li>
+             * </ul>
+             * <p>To query multiple statuses, separate them with commas (,). If you do not specify this parameter, all statuses are queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -689,7 +764,7 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildObjects.
+             * <p>The list of child objects.</p>
              */
             public Builder childObjects(java.util.List<ChildObjects> childObjects) {
                 this.childObjects = childObjects;
@@ -697,7 +772,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DB.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder db(String db) {
                 this.db = db;
@@ -705,7 +783,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -713,7 +794,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * <p>The name of the large object (LOB) field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -721,7 +805,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OssClusterId.
+             * <p>The ID of the OSS-based cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-*****************</p>
              */
             public Builder ossClusterId(String ossClusterId) {
                 this.ossClusterId = ossClusterId;
@@ -729,7 +816,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Partion.
+             * <p>The partition of the cold storage instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202509</p>
              */
             public Builder partion(String partion) {
                 this.partion = partion;
@@ -737,7 +827,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The disk size of the cold storage instance. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -745,7 +838,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -753,7 +849,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Table.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder table(String table) {
                 this.table = table;
@@ -761,7 +860,10 @@ public class DescribeColdStorageInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

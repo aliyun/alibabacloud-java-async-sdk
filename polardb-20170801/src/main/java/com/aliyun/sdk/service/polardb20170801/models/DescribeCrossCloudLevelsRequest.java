@@ -104,6 +104,15 @@ public class DescribeCrossCloudLevelsRequest extends Request {
         } 
 
         /**
+         * <p>The database engine type. Valid values:</p>
+         * <ul>
+         * <li><p>MySQL</p>
+         * </li>
+         * <li><p>PostgreSQL</p>
+         * </li>
+         * <li><p>Oracle</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +125,28 @@ public class DescribeCrossCloudLevelsRequest extends Request {
         }
 
         /**
-         * DBVersion.
+         * <p>The version number of the database engine.</p>
+         * <p>Valid values for MySQL:</p>
+         * <ul>
+         * <li><p>5.6</p>
+         * </li>
+         * <li><p>5.7</p>
+         * </li>
+         * <li><p>8.0</p>
+         * </li>
+         * </ul>
+         * <p>Valid values for PostgreSQL:</p>
+         * <ul>
+         * <li><p>11</p>
+         * </li>
+         * <li><p>14</p>
+         * </li>
+         * <li><p>15</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.putQueryParameter("DBVersion", DBVersion);
@@ -125,6 +155,7 @@ public class DescribeCrossCloudLevelsRequest extends Request {
         }
 
         /**
+         * <p>The resource pool ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +168,7 @@ public class DescribeCrossCloudLevelsRequest extends Request {
         }
 
         /**
+         * <p>The storage class.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

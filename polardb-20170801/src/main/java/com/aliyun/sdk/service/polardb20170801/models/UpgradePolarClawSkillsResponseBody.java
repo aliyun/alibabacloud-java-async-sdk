@@ -67,7 +67,10 @@ public class UpgradePolarClawSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45D24263-7E3A-4140-9472-************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class UpgradePolarClawSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32077061</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

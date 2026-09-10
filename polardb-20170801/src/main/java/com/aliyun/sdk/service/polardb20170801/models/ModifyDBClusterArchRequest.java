@@ -129,7 +129,11 @@ public class ModifyDBClusterArchRequest extends Request {
         } 
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to automatically use coupons. Valid values:</p>
+         * <ul>
+         * <li>true (default): Uses coupons.</li>
+         * <li>false: Does not use coupons.</li>
+         * </ul>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -138,7 +142,7 @@ public class ModifyDBClusterArchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -150,10 +154,10 @@ public class ModifyDBClusterArchRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the hot standby storage cluster feature. Valid values:</p>
+         * <p>Specifies whether to enable the hot standby cluster. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong>: enables hot standby storage cluster.</li>
-         * <li><strong>equal</strong>: Enable a peer-to-peer cluster.</li>
+         * <li><strong>on</strong>: Enables the hot standby cluster.</li>
+         * <li><strong>equal</strong>: Enables the peer cluster.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,7 +170,10 @@ public class ModifyDBClusterArchRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727xxxxxx934</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -177,7 +184,7 @@ public class ModifyDBClusterArchRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about regions.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region information.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -192,11 +199,11 @@ public class ModifyDBClusterArchRequest extends Request {
         /**
          * <p>The zone of the hot standby storage cluster. Valid values:</p>
          * <ul>
-         * <li><strong>auto</strong> (default): The zone is automatically selected.</li>
-         * </ul>
-         * <blockquote>
-         * <p> You can use the default value when HotStandbyCluster is set to on. If HotStandbyCluster is set to equal, specify the zone of the hot standby storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a> operation to query information about zones.</p>
+         * <li><strong>auto</strong> (default): Automatically selected.<blockquote>
+         * <p>When the HotStandbyCluster parameter is set to on, you can use the default value. When the HotStandbyCluster parameter is set to equal, you must specify a specific zone. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a> operation to query zone details.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-i</p>

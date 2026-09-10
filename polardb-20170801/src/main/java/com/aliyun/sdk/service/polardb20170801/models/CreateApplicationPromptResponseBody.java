@@ -67,7 +67,10 @@ public class CreateApplicationPromptResponseBody extends TeaModel {
         } 
 
         /**
-         * PromptId.
+         * <p>The ID of the Prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>papt-f9lajgw765f4fnrzn1</p>
          */
         public Builder promptId(String promptId) {
             this.promptId = promptId;
@@ -75,7 +78,10 @@ public class CreateApplicationPromptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

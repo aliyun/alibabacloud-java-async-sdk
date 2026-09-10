@@ -106,7 +106,10 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>925B84D9-CA72-432C-95CF-738C22******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
         }
 
         /**
-         * S3Accounts.
+         * <p>The list of S3 accounts.</p>
          */
         public Builder s3Accounts(java.util.List<S3Accounts> s3Accounts) {
             this.s3Accounts = s3Accounts;
@@ -138,7 +147,10 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,14 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountType.
+             * <p>The account type. Valid values:</p>
+             * <ul>
+             * <li>default: the built-in default account.</li>
+             * <li>user: a user-created account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -225,7 +244,10 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
             }
 
             /**
-             * UserAccAk.
+             * <p>The access key of the S3 account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>accname</p>
              */
             public Builder userAccAk(String userAccAk) {
                 this.userAccAk = userAccAk;
@@ -233,7 +255,10 @@ public class ListLakebaseS3AccountsResponseBody extends TeaModel {
             }
 
             /**
-             * UserAccSk.
+             * <p>The secret key of the S3 account (displayed in masked format).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password***</p>
              */
             public Builder userAccSk(String userAccSk) {
                 this.userAccSk = userAccSk;

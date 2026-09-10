@@ -119,7 +119,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>An array of rate limit policy objects.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The returned page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -143,7 +149,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,7 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
@@ -162,7 +171,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of matching entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -332,7 +344,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-01T17:52:05+08:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -340,7 +355,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-19T16:47:25+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -348,7 +366,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * GwClusterId.
+             * <p>The ID of the gateway instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-xxxxxxxx</p>
              */
             public Builder gwClusterId(String gwClusterId) {
                 this.gwClusterId = gwClusterId;
@@ -356,7 +377,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the rate limit policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>02eccf7c61cf4d05a543075ee907f3**</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -364,7 +388,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RateLimit</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -372,7 +399,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RateLimitRpm.
+             * <p>The maximum requests per minute (RPM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rateLimitRpm(String rateLimitRpm) {
                 this.rateLimitRpm = rateLimitRpm;
@@ -380,7 +410,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * RateLimitTpm.
+             * <p>The maximum tokens per minute (TPM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rateLimitTpm(String rateLimitTpm) {
                 this.rateLimitTpm = rateLimitTpm;
@@ -388,7 +421,10 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeRefId.
+             * <p>The ID of the object within the policy\&quot;s scope, such as a consumer group or a consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cg-xxxxxxx</p>
              */
             public Builder scopeRefId(String scopeRefId) {
                 this.scopeRefId = scopeRefId;
@@ -396,7 +432,16 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeType.
+             * <p>The scope of the policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ConsumerGroup</strong>: The policy applies to a consumer group.</p>
+             * </li>
+             * <li><p><strong>Consumer</strong>: The policy applies to a specific consumer.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ConsumerGroup</p>
              */
             public Builder scopeType(String scopeType) {
                 this.scopeType = scopeType;
@@ -404,7 +449,16 @@ public class DescribeRateLimitPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: The policy is enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: The policy is disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;

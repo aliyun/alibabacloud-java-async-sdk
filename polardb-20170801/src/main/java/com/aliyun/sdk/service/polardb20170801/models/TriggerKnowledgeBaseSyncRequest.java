@@ -89,6 +89,7 @@ public class TriggerKnowledgeBaseSyncRequest extends Request {
         } 
 
         /**
+         * <p>The unique identifier of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class TriggerKnowledgeBaseSyncRequest extends Request {
         }
 
         /**
-         * LinkId.
+         * <p>The synchronization link ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pkbl-xxxxx</p>
          */
         public Builder linkId(String linkId) {
             this.putQueryParameter("LinkId", linkId);
@@ -110,6 +114,7 @@ public class TriggerKnowledgeBaseSyncRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

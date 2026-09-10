@@ -80,7 +80,10 @@ public class CreatePolarFsObjectResponseBody extends TeaModel {
         } 
 
         /**
-         * Path.
+         * <p>The absolute path of the created directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -88,7 +91,10 @@ public class CreatePolarFsObjectResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The PolarFS instance id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-test****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;
@@ -96,7 +102,7 @@ public class CreatePolarFsObjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request id.</p>
          * 
          * <strong>example:</strong>
          * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>

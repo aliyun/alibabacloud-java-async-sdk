@@ -144,7 +144,10 @@ public class ListTagResourcesForRegionRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * <p>The token that is used to retrieve the next page of results. Optional for the first request. If the query does not return all results, the response contains a token. You can use this token in the next request to continue the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -171,6 +174,7 @@ public class ListTagResourcesForRegionRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +205,16 @@ public class ListTagResourcesForRegionRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><p>cluster: cluster instance</p>
+         * </li>
+         * <li><p>aicluster: AI cluster instance</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

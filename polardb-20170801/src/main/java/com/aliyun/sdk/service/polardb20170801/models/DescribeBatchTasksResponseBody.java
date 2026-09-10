@@ -106,7 +106,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>925B84D9-CA72-432C-95CF-738C22******</p>
@@ -133,7 +139,7 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TaskList.
+         * <p>The task list.</p>
          */
         public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
@@ -141,7 +147,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of tasks that match the query, ignoring pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -285,7 +294,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * BatchId.
+             * <p>The batch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pcb-xxx</p>
              */
             public Builder batchId(String batchId) {
                 this.batchId = batchId;
@@ -293,7 +305,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -301,7 +316,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successfully completed subtasks in the batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -309,7 +327,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskBegin.
+             * <p>The task start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-06 20:51:44</p>
              */
             public Builder taskBegin(String taskBegin) {
                 this.taskBegin = taskBegin;
@@ -317,7 +338,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskEnd.
+             * <p>The task end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-06 22:43:26</p>
              */
             public Builder taskEnd(String taskEnd) {
                 this.taskEnd = taskEnd;
@@ -325,7 +349,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>batch_task_test</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -333,7 +360,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarclaw_install_skills</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -341,7 +371,10 @@ public class DescribeBatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of subtasks in the batch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

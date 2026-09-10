@@ -90,6 +90,7 @@ public class DeleteLakebaseS3AccountRequest extends Request {
         } 
 
         /**
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,10 @@ public class DeleteLakebaseS3AccountRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +119,10 @@ public class DeleteLakebaseS3AccountRequest extends Request {
         }
 
         /**
+         * <p>The access key of the S3 account to delete.</p>
+         * <blockquote>
+         * <p>The default account cannot be deleted.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

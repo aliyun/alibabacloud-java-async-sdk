@@ -101,7 +101,10 @@ public class ClonePolarFsBasicSnapshotRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The ID of the database cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -110,7 +113,10 @@ public class ClonePolarFsBasicSnapshotRequest extends Request {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The ID of the Polarlakebase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-test*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.putQueryParameter("PolarFsInstanceId", polarFsInstanceId);
@@ -119,7 +125,10 @@ public class ClonePolarFsBasicSnapshotRequest extends Request {
         }
 
         /**
-         * SourcePath.
+         * <p>The source path of the file resource. This parameter is empty if the type is local.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         public Builder sourcePath(String sourcePath) {
             this.putQueryParameter("SourcePath", sourcePath);
@@ -128,7 +137,10 @@ public class ClonePolarFsBasicSnapshotRequest extends Request {
         }
 
         /**
-         * TargetPath.
+         * <p>The destination path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/testclone</p>
          */
         public Builder targetPath(String targetPath) {
             this.putQueryParameter("TargetPath", targetPath);

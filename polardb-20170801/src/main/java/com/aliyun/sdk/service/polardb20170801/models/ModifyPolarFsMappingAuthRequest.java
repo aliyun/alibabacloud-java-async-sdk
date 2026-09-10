@@ -134,6 +134,7 @@ public class ModifyPolarFsMappingAuthRequest extends Request {
         } 
 
         /**
+         * <p>The bucket name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class ModifyPolarFsMappingAuthRequest extends Request {
         }
 
         /**
+         * <p>The AccessKey ID of the storage bucket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ModifyPolarFsMappingAuthRequest extends Request {
         }
 
         /**
+         * <p>The AccessKey secret of the storage bucket.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +173,13 @@ public class ModifyPolarFsMappingAuthRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in a specified region, including the cluster ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-******************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -179,6 +188,7 @@ public class ModifyPolarFsMappingAuthRequest extends Request {
         }
 
         /**
+         * <p>The destination path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +201,7 @@ public class ModifyPolarFsMappingAuthRequest extends Request {
         }
 
         /**
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -383,7 +383,10 @@ public class CreatePolarFsRequest extends Request {
         } 
 
         /**
-         * AccelerateStorageSize.
+         * <p>The acceleration storage space for Basic Edition with acceleration enabled. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder accelerateStorageSize(Long accelerateStorageSize) {
             this.putQueryParameter("AccelerateStorageSize", accelerateStorageSize);
@@ -392,7 +395,14 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * AccelerateSwitch.
+         * <p>The acceleration mode. Valid values:</p>
+         * <ul>
+         * <li><strong>ONLY</strong>: enables acceleration only.</li>
+         * <li><strong>ON</strong>: enables cold data storage and acceleration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLY</p>
          */
         public Builder accelerateSwitch(String accelerateSwitch) {
             this.putQueryParameter("AccelerateSwitch", accelerateSwitch);
@@ -401,7 +411,14 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * AccelerateType.
+         * <p>The acceleration type. Valid values: </p>
+         * <ul>
+         * <li><strong>juice</strong>: file system acceleration.</li>
+         * <li><strong>alluxio</strong>: transparent acceleration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alluxio</p>
          */
         public Builder accelerateType(String accelerateType) {
             this.putQueryParameter("AccelerateType", accelerateType);
@@ -410,7 +427,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * AuthorizedUserIds.
+         * <p>The list of authorized account IDs for Cold Storage Edition instances, separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128***********，198***********</p>
          */
         public Builder authorizedUserIds(String authorizedUserIds) {
             this.putQueryParameter("AuthorizedUserIds", authorizedUserIds);
@@ -419,7 +439,18 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong>: Auto-renewal is disabled.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -428,7 +459,14 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to automatically use coupons. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Coupons are used (default).</li>
+         * <li><strong>false</strong>: Coupons are not used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -437,7 +475,15 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * CreationCategory.
+         * <p>The edition. Valid values:</p>
+         * <ul>
+         * <li><strong>basic</strong>: Basic Edition (default).</li>
+         * <li><strong>cold</strong>: Cold Storage Edition.</li>
+         * <li><strong>high_performance</strong>: High-performance Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder creationCategory(String creationCategory) {
             this.putQueryParameter("CreationCategory", creationCategory);
@@ -446,7 +492,13 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * CustomBucketCount.
+         * <p>The number of buckets.</p>
+         * <blockquote>
+         * <p>This parameter is required only when acceleration (file system acceleration) is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder customBucketCount(Integer customBucketCount) {
             this.putQueryParameter("CustomBucketCount", customBucketCount);
@@ -455,7 +507,13 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * CustomBucketPath.
+         * <p>The bucket path.</p>
+         * <blockquote>
+         * <p>This parameter is required only when acceleration (file system acceleration) is enabled.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         public Builder customBucketPath(String customBucketPath) {
             this.putQueryParameter("CustomBucketPath", customBucketPath);
@@ -464,7 +522,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * CustomBucketPathList.
+         * <p>The bucket and path information.</p>
+         * <blockquote>
+         * <p>This parameter is required for transparent acceleration scenarios.</p>
+         * </blockquote>
          */
         public Builder customBucketPathList(java.util.List<CustomBucketPathList> customBucketPathList) {
             this.putQueryParameter("CustomBucketPathList", customBucketPathList);
@@ -473,7 +534,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * CustomOssAk.
+         * <p>The custom AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder customOssAk(String customOssAk) {
             this.putQueryParameter("CustomOssAk", customOssAk);
@@ -482,7 +546,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * CustomOssSk.
+         * <p>The custom AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder customOssSk(String customOssSk) {
             this.putQueryParameter("CustomOssSk", customOssSk);
@@ -491,7 +558,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -500,7 +570,14 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * DBType.
+         * <p>The database engine. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -509,7 +586,14 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The billing method. Valid values: </p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -518,7 +602,14 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>. Specifies whether the subscription cluster uses a yearly or monthly billing cycle. You must pass this parameter when the billing method is subscription. </p>
+         * <ul>
+         * <li><strong>Year</strong>: The subscription period is measured in years.</li>
+         * <li><strong>Month</strong>: The subscription period is measured in months.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -527,7 +618,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727xxxxxx934</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -536,6 +630,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -548,7 +646,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * StorageSpace.
+         * <p>The storage space. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder storageSpace(Long storageSpace) {
             this.putQueryParameter("StorageSpace", storageSpace);
@@ -557,7 +658,23 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>Valid values for high-performance storage type:</p>
+         * <ul>
+         * <li><strong>ESSDPL0</strong></li>
+         * <li><strong>ESSDPL1</strong></li>
+         * </ul>
+         * <p>Valid values for Basic Edition storage type:</p>
+         * <ul>
+         * <li><strong>city_redundancy (zone-redundant)</strong></li>
+         * </ul>
+         * <p>Valid values for Cold Storage Edition storage type:</p>
+         * <ul>
+         * <li><strong>city_redundancy (zone-redundant)</strong></li>
+         * <li><strong>local_redundancy (locally redundant)</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>local_redundancy</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -566,7 +683,14 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * <ul>
+         * <li>When <strong>Period</strong> is set to <strong>Month</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-9]</code>.</li>
+         * <li>When <strong>Period</strong> is set to <strong>Year</strong>, the valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-3]</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -575,7 +699,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*******************</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -584,7 +711,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-*********************</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -593,7 +723,10 @@ public class CreatePolarFsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-i</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -661,7 +794,10 @@ public class CreatePolarFsRequest extends Request {
             } 
 
             /**
-             * Bucket.
+             * <p>The custom storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pfs-xxx.oss-[regionId]-internal.aliyuncs.com</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -669,7 +805,10 @@ public class CreatePolarFsRequest extends Request {
             }
 
             /**
-             * Path.
+             * <p>The custom storage path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data</p>
              */
             public Builder path(String path) {
                 this.path = path;

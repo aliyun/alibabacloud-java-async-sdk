@@ -158,7 +158,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -166,7 +169,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -174,7 +180,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 5 to 50. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +191,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Path.
+         * <p>The path of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data</p>
          */
         public Builder path(String path) {
             this.path = path;
@@ -190,7 +202,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The PolarFS instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-2ze0i74ka607*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;
@@ -198,7 +213,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyItems.
+         * <p>The details of the rules.</p>
          */
         public Builder policyItems(java.util.List<PolicyItems> policyItems) {
             this.policyItems = policyItems;
@@ -206,7 +221,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaItems.
+         * <p>The quota information.</p>
          */
         public Builder quotaItems(java.util.List<QuotaItems> quotaItems) {
             this.quotaItems = quotaItems;
@@ -214,7 +229,7 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2FED790E-FB61-4721-8C1C-07C627******</p>
@@ -225,7 +240,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -408,7 +426,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessTTL.
+             * <p>The TTL of the access time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7200</p>
              */
             public Builder accessTTL(Long accessTTL) {
                 this.accessTTL = accessTTL;
@@ -416,7 +437,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeTTL.
+             * <p>The TTL of the change time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7200</p>
              */
             public Builder changeTTL(Long changeTTL) {
                 this.changeTTL = changeTTL;
@@ -424,7 +448,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NULL</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -432,7 +459,16 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the rule is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong>: The rule takes effect immediately for new events. This is the default value.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The rule does not take effect for new events.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -440,7 +476,13 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Exclude.
+             * <p>The glob pattern of paths to exclude.</p>
+             * <ul>
+             * <li>The pattern must start with <code>/</code> and supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NULL</p>
              */
             public Builder exclude(String exclude) {
                 this.exclude = exclude;
@@ -448,7 +490,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountLimit.
+             * <p>The maximum number of files in the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>77</p>
              */
             public Builder fileCountLimit(Long fileCountLimit) {
                 this.fileCountLimit = fileCountLimit;
@@ -456,7 +501,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>73</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -464,7 +512,13 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Include.
+             * <p>The glob pattern for paths to include.</p>
+             * <ul>
+             * <li>The pattern must start with <code>/</code> and supports glob syntax, including <code>*</code>, <code>?</code>, and <code>**</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>/a*</p>
              */
             public Builder include(String include) {
                 this.include = include;
@@ -472,7 +526,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -480,7 +537,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the quota rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -488,7 +548,13 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * SizeLimit.
+             * <p>The maximum total size of files in the directory. Unit: GB.</p>
+             * <ul>
+             * <li>The value must be greater than or equal to 1.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sizeLimit(Long sizeLimit) {
                 this.sizeLimit = sizeLimit;
@@ -594,7 +660,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * Capacity.
+             * <p>The capacity. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1073741824</p>
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -602,7 +671,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Inodes.
+             * <p>The total number of inodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder inodes(Long inodes) {
                 this.inodes = inodes;
@@ -610,7 +682,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The directory path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -618,7 +693,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCapacity.
+             * <p>The used capacity. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104857600</p>
              */
             public Builder usedCapacity(Long usedCapacity) {
                 this.usedCapacity = usedCapacity;
@@ -626,7 +704,10 @@ public class DescribePolarFsQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * UsedInodes.
+             * <p>The number of used inodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder usedInodes(Long usedInodes) {
                 this.usedInodes = usedInodes;

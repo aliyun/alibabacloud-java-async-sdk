@@ -106,7 +106,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the cluster.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of clusters returned per page.</p>
+         * <p>The number of clusters on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -136,7 +136,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F8529AA2-522F-4B30-B80B-8F7D39******</p>
@@ -147,7 +147,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -437,10 +437,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the cluster was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-05-09T09:33:51Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -448,10 +445,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DBClusterDescription.
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -459,10 +453,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pc-****************</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -470,10 +461,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * DBClusterNetworkType.
              */
             public Builder DBClusterNetworkType(String DBClusterNetworkType) {
                 this.DBClusterNetworkType = DBClusterNetworkType;
@@ -481,23 +469,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster. Valid values:</p>
-             * <ul>
-             * <li>Creating: The cluster is being created.</li>
-             * <li>Running: The cluster is running.</li>
-             * <li>Deleting: The cluster is being released.</li>
-             * <li>Rebooting: The cluster is restarting.</li>
-             * <li>DBNodeCreating: The node is being added.</li>
-             * <li>DBNodeDeleting: The node is being deleted.</li>
-             * <li>ClassChanging: The specifications of the node are being changed.</li>
-             * <li>NetAddressCreating: The network connection is being created.</li>
-             * <li>NetAddressDeleting: The network connection is being deleted.</li>
-             * <li>NetAddressModifying: The network connection is being modified.</li>
-             * <li>Deleted: The cluster has been released.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * DBClusterStatus.
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -505,10 +477,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>polar.mysql.x4.medium</p>
+             * DBNodeClass.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -516,10 +485,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database engine.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MySQL</p>
+             * DBType.
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -527,10 +493,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the database engine.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8.0</p>
+             * DBVersion.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -538,10 +501,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster was deleted.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-05-12T03:25:37Z</p>
+             * DeletedTime.
              */
             public Builder deletedTime(String deletedTime) {
                 this.deletedTime = deletedTime;
@@ -549,14 +509,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cluster is locked and can be deleted. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: The cluster is not locked and can be deleted.</li>
-             * <li><strong>1</strong>: The cluster is locked and cannot be deleted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * DeletionLock.
              */
             public Builder deletionLock(Integer deletionLock) {
                 this.deletionLock = deletionLock;
@@ -564,10 +517,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database engine.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>POLARDB</p>
+             * Engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -575,13 +525,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster expires.</p>
-             * <blockquote>
-             * <p>A specific value will be returned only for subscription clusters. For pay-as-you-go clusters, an empty string will be returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-09-14T16:00:00Z</p>
+             * ExpireTime.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -589,13 +533,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cluster has expired.</p>
-             * <blockquote>
-             * <p>A specific value will be returned only for subscription clusters.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Expired.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -603,14 +541,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cluster was released. Valid values:</p>
-             * <ul>
-             * <li>1: released</li>
-             * <li>0: not released</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * IsDeleted.
              */
             public Builder isDeleted(Integer isDeleted) {
                 this.isDeleted = isDeleted;
@@ -618,15 +549,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the cluster lock. Valid values:</p>
-             * <ul>
-             * <li><strong>Unlock</strong>: The cluster is not locked.</li>
-             * <li><strong>ManualLock</strong>: The cluster is manually locked.</li>
-             * <li><strong>LockByExpiration</strong>: The cluster is automatically locked after the cluster expires.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Unlock</p>
+             * LockMode.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -634,14 +557,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method. Valid values:</p>
-             * <ul>
-             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-             * <li><strong>Prepaid</strong>: subscription</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Postpaid</p>
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -649,10 +565,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -660,10 +573,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-******************</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -671,10 +581,7 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone in which the instance is located.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-h</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

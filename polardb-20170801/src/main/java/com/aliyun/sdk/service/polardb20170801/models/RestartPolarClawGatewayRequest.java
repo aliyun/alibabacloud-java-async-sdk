@@ -74,6 +74,7 @@ public class RestartPolarClawGatewayRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,14 @@ public class RestartPolarClawGatewayRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The restart mode. Valid values:</p>
+         * <ul>
+         * <li>in-process: lightweight restart without applying environment variable changes. This is the default value.</li>
+         * <li>pkill: cold start that applies environment variable changes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>in-process</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

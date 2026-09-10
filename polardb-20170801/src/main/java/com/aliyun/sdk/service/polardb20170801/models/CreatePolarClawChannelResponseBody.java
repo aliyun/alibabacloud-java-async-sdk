@@ -171,7 +171,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p><strong>The application ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -179,7 +182,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * ChannelId.
+         * <p>The ID of the channel that was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feishu</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -187,7 +193,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -195,7 +204,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -203,7 +215,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * NpmPackage.
+         * <p>The name of the installed npm package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@larksuite/<a href="mailto:openclaw-lark@2026.4.7">openclaw-lark@2026.4.7</a></p>
          */
         public Builder npmPackage(String npmPackage) {
             this.npmPackage = npmPackage;
@@ -211,7 +226,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -219,7 +237,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * PluginId.
+         * <p><strong>The plugin ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>openclaw-lark</p>
          */
         public Builder pluginId(String pluginId) {
             this.pluginId = pluginId;
@@ -227,7 +248,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * PluginInstalled.
+         * <p>Indicates whether a new plugin was installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder pluginInstalled(Boolean pluginInstalled) {
             this.pluginInstalled = pluginInstalled;
@@ -235,7 +259,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>The request ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,7 +270,10 @@ public class CreatePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Restarted.
+         * <p>Indicates whether the gateway was restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restarted(Boolean restarted) {
             this.restarted = restarted;

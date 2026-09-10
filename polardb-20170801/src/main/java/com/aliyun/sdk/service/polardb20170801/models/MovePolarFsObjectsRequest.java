@@ -73,7 +73,7 @@ public class MovePolarFsObjectsRequest extends Request {
         } 
 
         /**
-         * ObjectsToMove.
+         * <p>A list of files to move or rename.</p>
          */
         public Builder objectsToMove(java.util.List<ObjectsToMove> objectsToMove) {
             this.putQueryParameter("ObjectsToMove", objectsToMove);
@@ -82,7 +82,10 @@ public class MovePolarFsObjectsRequest extends Request {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The PolarFs instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-test*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.putQueryParameter("PolarFsInstanceId", polarFsInstanceId);
@@ -150,7 +153,10 @@ public class MovePolarFsObjectsRequest extends Request {
             } 
 
             /**
-             * DestinationPath.
+             * <p>The destination path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test1</p>
              */
             public Builder destinationPath(String destinationPath) {
                 this.destinationPath = destinationPath;
@@ -158,7 +164,10 @@ public class MovePolarFsObjectsRequest extends Request {
             }
 
             /**
-             * SourcePath.
+             * <p>The source path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test</p>
              */
             public Builder sourcePath(String sourcePath) {
                 this.sourcePath = sourcePath;

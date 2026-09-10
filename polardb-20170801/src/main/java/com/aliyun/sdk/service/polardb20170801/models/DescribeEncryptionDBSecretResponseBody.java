@@ -119,7 +119,10 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -127,7 +130,10 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionDBRegion.
+         * <p>The region where the encryption key is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder encryptionDBRegion(String encryptionDBRegion) {
             this.encryptionDBRegion = encryptionDBRegion;
@@ -135,7 +141,11 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionDBStatus.
+         * <p>Indicates whether encryption is enabled. Valid values:</p>
+         * <p>Enabled: Encryption is enabled. Disabled: Encryption is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder encryptionDBStatus(String encryptionDBStatus) {
             this.encryptionDBStatus = encryptionDBStatus;
@@ -143,7 +153,10 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionKey.
+         * <p>The custom key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2a4f4ac2-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong>********</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -151,7 +164,16 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionKeyStatus.
+         * <p>The status of the key. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enabled</strong></p>
+         * </li>
+         * <li><p><strong>Disabled</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         public Builder encryptionKeyStatus(String encryptionKeyStatus) {
             this.encryptionKeyStatus = encryptionKeyStatus;
@@ -159,7 +181,7 @@ public class DescribeEncryptionDBSecretResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>944CED46-A6F7-40C6-B6DC-C6E5CC******</p>

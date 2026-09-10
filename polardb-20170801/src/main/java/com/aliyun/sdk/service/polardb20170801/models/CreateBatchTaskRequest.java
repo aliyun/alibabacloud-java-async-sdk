@@ -142,6 +142,7 @@ public class CreateBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -152,7 +153,10 @@ public class CreateBatchTaskRequest extends Request {
         }
 
         /**
-         * Param.
+         * <p>The task parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;skillName&quot;:&quot;github&quot;,&quot;version&quot;:&quot;1.0.0&quot;},{&quot;skillName&quot;:&quot;skill-vetter&quot;,&quot;version&quot;:&quot;1.0.1&quot;}]</p>
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -161,6 +165,10 @@ public class CreateBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters in your account.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +181,7 @@ public class CreateBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the batch task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +194,7 @@ public class CreateBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The task type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

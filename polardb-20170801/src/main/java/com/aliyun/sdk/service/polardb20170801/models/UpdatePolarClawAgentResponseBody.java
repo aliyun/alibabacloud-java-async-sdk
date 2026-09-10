@@ -119,7 +119,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Agent.
+         * <p>The details of the updated agent.</p>
          */
         public Builder agent(Agent agent) {
             this.agent = agent;
@@ -138,7 +138,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -146,7 +149,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -154,7 +160,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -270,7 +279,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Avatar.
+             * <p>The avatar path or content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -278,7 +290,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarUrl.
+             * <p>The avatar URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -286,7 +301,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Emoji.
+             * <p>The emoji identifier. The value is in Unicode encoding format such as U+1F99E, or a direct emoji character.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U+1F99E</p>
              */
             public Builder emoji(String emoji) {
                 this.emoji = emoji;
@@ -294,7 +312,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The identity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarClaw</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -302,7 +323,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Theme.
+             * <p>The theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>soul lobster</p>
              */
             public Builder theme(String theme) {
                 this.theme = theme;
@@ -406,7 +430,7 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Identity.
+             * <p>The identity information.</p>
              */
             public Builder identity(Identity identity) {
                 this.identity = identity;
@@ -414,7 +438,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The display name of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarClaw</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -422,7 +449,10 @@ public class UpdatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Workspace.
+             * <p>The working directory path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/node/.openclaw/workspace-work-v2</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

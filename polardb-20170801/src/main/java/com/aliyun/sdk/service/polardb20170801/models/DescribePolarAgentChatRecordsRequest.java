@@ -74,6 +74,7 @@ public class DescribePolarAgentChatRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribePolarAgentChatRecordsRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The product source. Valid value: polardb-console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb-console</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

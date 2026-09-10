@@ -131,6 +131,7 @@ public class ModifyAIDBClusterDescriptionRequest extends Request {
         } 
 
         /**
+         * <p>The cluster description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class ModifyAIDBClusterDescriptionRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

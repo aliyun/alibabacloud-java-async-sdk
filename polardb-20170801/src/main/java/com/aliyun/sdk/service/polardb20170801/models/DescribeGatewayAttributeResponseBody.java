@@ -288,7 +288,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * ClassCode.
+         * <p>The specification code for the gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.app.g2.medium</p>
          */
         public Builder classCode(String classCode) {
             this.classCode = classCode;
@@ -296,7 +299,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the gateway instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-02-24T11:57:54Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -312,7 +318,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DbType.
+         * <p>The database type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder dbType(String dbType) {
             this.dbType = dbType;
@@ -320,7 +329,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Endpoints.
+         * <p>A list of endpoints for the gateway instance.</p>
          */
         public Builder endpoints(java.util.List<Endpoints> endpoints) {
             this.endpoints = endpoints;
@@ -328,7 +337,11 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The time when the subscription for the gateway instance expires.</p>
+         * <p>This parameter is empty for pay-as-you-go instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-04-22T16:00:00Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -336,7 +349,16 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Expired.
+         * <p>Indicates whether the subscription for the gateway instance has expired. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder expired(Boolean expired) {
             this.expired = expired;
@@ -344,7 +366,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * GwClusterId.
+         * <p>The ID of the gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-xxxxxxx</p>
          */
         public Builder gwClusterId(String gwClusterId) {
             this.gwClusterId = gwClusterId;
@@ -352,7 +377,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * GwDescription.
+         * <p>The description of the gateway instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder gwDescription(String gwDescription) {
             this.gwDescription = gwDescription;
@@ -368,7 +396,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * <p>The time when the gateway instance was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-07T02:19:55Z</p>
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -376,7 +407,16 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing method of the gateway instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go.</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: subscription.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -384,7 +424,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -392,7 +435,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -411,7 +454,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIPArrays.
+         * <p>A list of IP whitelists for the gateway instance.</p>
          */
         public Builder securityIPArrays(java.util.List<SecurityIPArrays> securityIPArrays) {
             this.securityIPArrays = securityIPArrays;
@@ -419,7 +462,16 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the gateway instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>CREATE</strong>: The gateway instance is being created.</p>
+         * </li>
+         * <li><p><strong>ACTIVATION</strong>: The gateway instance is running.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATION</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -427,7 +479,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * <p>The ID of the VSwitch where the gateway instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-*********************</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -435,7 +490,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC where the gateway instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*************</p>
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -566,7 +624,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The endpoint address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-xxxxx.polardbaigateway.pre.rds.aliyuncs.com</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -574,7 +635,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointId.
+             * <p>The ID of the endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -582,7 +646,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * GwClusterId.
+             * <p>The ID of the gateway instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-xxxxxxx</p>
              */
             public Builder gwClusterId(String gwClusterId) {
                 this.gwClusterId = gwClusterId;
@@ -590,7 +657,16 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Private</strong>: VPC endpoint.</p>
+             * </li>
+             * <li><p><strong>Public</strong>: public endpoint.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -598,7 +674,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -606,7 +685,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TunnelId.
+             * <p>The tunnel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1874631</p>
              */
             public Builder tunnelId(String tunnelId) {
                 this.tunnelId = tunnelId;
@@ -614,7 +696,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC to which the endpoint belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-*************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -694,7 +779,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * SecurityIPArrayName.
+             * <p>The name of the IP whitelist. The default value is <code>default</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder securityIPArrayName(String securityIPArrayName) {
                 this.securityIPArrayName = securityIPArrayName;
@@ -702,7 +790,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPArrayTag.
+             * <p>The tag of the IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mytag</p>
              */
             public Builder securityIPArrayTag(String securityIPArrayTag) {
                 this.securityIPArrayTag = securityIPArrayTag;
@@ -710,7 +801,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * <p>A comma-separated list of IP addresses in the IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;

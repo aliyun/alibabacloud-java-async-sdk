@@ -74,6 +74,7 @@ public class DescribePolarAgentSessionStatusRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the session. This ID is used to identify a visitor\&quot;s session and maintain context information.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribePolarAgentSessionStatusRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the product. Set the value to polardb-console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb-console</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

@@ -174,7 +174,10 @@ public class CreateCostRuleRequest extends Request {
         } 
 
         /**
-         * CacheCostPointsPerMillion.
+         * <p>The cost points per million cached tokens. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder cacheCostPointsPerMillion(String cacheCostPointsPerMillion) {
             this.putQueryParameter("CacheCostPointsPerMillion", cacheCostPointsPerMillion);
@@ -183,7 +186,16 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
-         * EffectiveTargetType.
+         * <p>The effective target type. Valid values:</p>
+         * <ul>
+         * <li>global</li>
+         * <li>consumerGroup</li>
+         * <li>consumer</li>
+         * </ul>
+         * <p>Default value: global.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder effectiveTargetType(String effectiveTargetType) {
             this.putQueryParameter("EffectiveTargetType", effectiveTargetType);
@@ -192,7 +204,10 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
-         * EffectiveTargetValue.
+         * <p>The effective target value. This parameter is required when EffectiveTargetType is not set to global.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder effectiveTargetValue(String effectiveTargetValue) {
             this.putQueryParameter("EffectiveTargetValue", effectiveTargetValue);
@@ -201,6 +216,7 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +229,10 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
-         * InputCostPointsPerMillion.
+         * <p>The cost points per million input tokens. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder inputCostPointsPerMillion(String inputCostPointsPerMillion) {
             this.putQueryParameter("InputCostPointsPerMillion", inputCostPointsPerMillion);
@@ -222,6 +241,7 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
+         * <p>The model name, such as gpt-4 or qwen-turbo.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,6 +254,7 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
+         * <p>The model service ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +267,10 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
-         * OutputCostPointsPerMillion.
+         * <p>The cost points per million output tokens. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder outputCostPointsPerMillion(String outputCostPointsPerMillion) {
             this.putQueryParameter("OutputCostPointsPerMillion", outputCostPointsPerMillion);
@@ -255,7 +279,10 @@ public class CreateCostRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

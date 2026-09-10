@@ -117,7 +117,10 @@ public class UpdatePolarClawSkillRequest extends Request {
         } 
 
         /**
-         * ApiKey.
+         * <p>The Skill API key. An empty string indicates that the key is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-api</p>
          */
         public Builder apiKey(String apiKey) {
             this.putQueryParameter("ApiKey", apiKey);
@@ -126,6 +129,7 @@ public class UpdatePolarClawSkillRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +142,10 @@ public class UpdatePolarClawSkillRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether to enable the Skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -147,7 +154,10 @@ public class UpdatePolarClawSkillRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment variables as a key-value map. A null value indicates that the variable is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NETA_TOKEN&quot;:&quot;my-token&quot;}</p>
          */
         public Builder env(java.util.Map<String, String> env) {
             String envShrink = shrink(env, "Env", "json");
@@ -157,6 +167,7 @@ public class UpdatePolarClawSkillRequest extends Request {
         }
 
         /**
+         * <p>The Skill identifier key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

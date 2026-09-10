@@ -143,7 +143,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-xxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -151,7 +154,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -159,7 +165,7 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
         }
 
         /**
-         * File.
+         * <p>The file details.</p>
          */
         public Builder file(File file) {
             this.file = file;
@@ -167,7 +173,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -186,7 +195,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
         }
 
         /**
-         * Workspace.
+         * <p>The working directory path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/node/.openclaw/workspace-main</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -304,7 +316,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a helpful assistant.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -312,7 +327,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
             }
 
             /**
-             * Missing.
+             * <p>Indicates whether the file is missing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder missing(Boolean missing) {
                 this.missing = missing;
@@ -320,7 +338,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SOUL.md</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -328,7 +349,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/node/.openclaw/workspace-main/SOUL.md</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -336,7 +360,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The file size, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -344,7 +371,10 @@ public class DescribePolarClawAgentFileResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAtMs.
+             * <p>The last updated UNIX timestamp, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1716000000000</p>
              */
             public Builder updatedAtMs(Long updatedAtMs) {
                 this.updatedAtMs = updatedAtMs;

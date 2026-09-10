@@ -80,7 +80,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of SSL connections.</p>
+         * <p>The list of SSL connection information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -88,7 +88,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>
@@ -99,13 +99,15 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</p>
+         * <p>Indicates whether automatic SSL certificate rotation is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>Enable</strong>: The feature is enabled.</li>
-         * <li><strong>Disable</strong>: The feature is disabled.</li>
+         * <li><p><strong>Enable</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>Disable</strong>: Disabled.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+         * <p>This parameter is supported only for PolarDB for MySQL.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -214,7 +216,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the endpoint.</p>
+             * <p>The cluster endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pe-************</p>
@@ -225,13 +227,15 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</p>
+             * <p>Indicates whether automatic SSL certificate rotation is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>Enable</strong>: The feature is enabled.</li>
-             * <li><strong>Disable</strong>: The feature is disabled.</li>
+             * <li><p><strong>Enable</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>Disable</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+             * <p>This parameter is supported only when the database engine is PostgreSQL-compatible or Oracle syntax-compatible.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -243,7 +247,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SSL connection string.</p>
+             * <p>The SSL connection address.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-************.mysql.polardb.rds.aliyuncs.com</p>
@@ -254,10 +258,10 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+             * <p>Indicates whether Secure Sockets Layer (SSL) encryption is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong>: SSL is enabled.</li>
-             * <li><strong>Disable</strong>: SSL is disabled.</li>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Shutdown.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -269,7 +273,7 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the server certificate expires. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * <p>The expiration time of the SSL certificate. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-13T07:14:22Z</p>

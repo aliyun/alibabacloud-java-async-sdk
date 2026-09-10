@@ -231,6 +231,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         } 
 
         /**
+         * <p>The application cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +244,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * Consumer.
+         * <p>The user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-xxxxxxx</p>
          */
         public Builder consumer(String consumer) {
             this.putQueryParameter("Consumer", consumer);
@@ -252,7 +256,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * ConsumerGroup.
+         * <p>The user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-xxxxxx</p>
          */
         public Builder consumerGroup(String consumerGroup) {
             this.putQueryParameter("ConsumerGroup", consumerGroup);
@@ -261,7 +268,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * Downsample.
+         * <p>The downsampling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>raw_sample</p>
          */
         public Builder downsample(String downsample) {
             this.putQueryParameter("Downsample", downsample);
@@ -270,7 +280,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * EndStep.
+         * <p>The end step number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder endStep(Long endStep) {
             this.putQueryParameter("EndStep", endStep);
@@ -279,6 +292,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +315,19 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The data granularity of performance data. Valid values:</p>
+         * <ul>
+         * <li>5</li>
+         * <li>30</li>
+         * <li>60</li>
+         * <li>600</li>
+         * <li>1800</li>
+         * <li>3600</li>
+         * <li>86400</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -310,6 +336,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The performance metrics to query. Separate multiple values with commas (,).</p>
+         * <blockquote>
+         * <p> You can specify up to 5 performance metrics.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -322,7 +352,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * MaxPoints.
+         * <p>The maximum number of data points to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxPoints(Integer maxPoints) {
             this.putQueryParameter("MaxPoints", maxPoints);
@@ -331,7 +364,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * ModelService.
+         * <p>The model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ms-xxxxxx</p>
          */
         public Builder modelService(String modelService) {
             this.putQueryParameter("ModelService", modelService);
@@ -340,7 +376,10 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
-         * StartStep.
+         * <p>The start step number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder startStep(Long startStep) {
             this.putQueryParameter("StartStep", startStep);
@@ -349,6 +388,7 @@ public class DescribeApplicationPerformanceRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

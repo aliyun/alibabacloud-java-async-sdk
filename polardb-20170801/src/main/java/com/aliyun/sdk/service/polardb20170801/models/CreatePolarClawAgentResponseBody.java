@@ -145,7 +145,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Agent.
+         * <p>Details of the new agent.</p>
          */
         public Builder agent(Agent agent) {
             this.agent = agent;
@@ -153,7 +153,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Agent ID</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>work</p>
@@ -164,7 +164,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -172,7 +175,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -180,7 +186,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -188,7 +197,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The display name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>work</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -196,7 +208,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +219,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Workspace.
+         * <p>The workspace path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/node/.openclaw/workspace-work</p>
          */
         public Builder workspace(String workspace) {
             this.workspace = workspace;
@@ -309,7 +327,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Avatar.
+             * <p>The avatar\&quot;s path or content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -317,7 +338,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * AvatarUrl.
+             * <p>The avatar URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -325,7 +349,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Emoji.
+             * <p>The emoji identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>U+1F99E</p>
              */
             public Builder emoji(String emoji) {
                 this.emoji = emoji;
@@ -333,7 +360,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The identity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>work</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -341,7 +371,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Theme.
+             * <p>The theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>work</p>
              */
             public Builder theme(String theme) {
                 this.theme = theme;
@@ -434,7 +467,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Agent ID</p>
+             * <p>The agent ID.</p>
              * 
              * <strong>example:</strong>
              * <p>work</p>
@@ -445,7 +478,7 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Identity.
+             * <p>The agent\&quot;s identity.</p>
              */
             public Builder identity(Identity identity) {
                 this.identity = identity;
@@ -453,7 +486,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The display name of the agent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>work</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -461,7 +497,10 @@ public class CreatePolarClawAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Workspace.
+             * <p>The workspace path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home/node/.openclaw/workspace-work</p>
              */
             public Builder workspace(String workspace) {
                 this.workspace = workspace;

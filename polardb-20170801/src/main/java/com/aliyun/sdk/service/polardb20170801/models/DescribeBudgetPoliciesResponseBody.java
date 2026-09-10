@@ -119,7 +119,7 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of budget policies.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -143,7 +149,11 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +172,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -384,7 +397,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertThresholdPct.
+             * <p>The alert threshold percentage. Valid values: 0 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder alertThresholdPct(String alertThresholdPct) {
                 this.alertThresholdPct = alertThresholdPct;
@@ -392,7 +408,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTriggered.
+             * <p>Indicates whether the alert threshold has been triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder alertTriggered(Boolean alertTriggered) {
                 this.alertTriggered = alertTriggered;
@@ -400,7 +419,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetDimensionRefId.
+             * <p>The dimension object ID. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cg-p3gk2oh55c**</p>
              */
             public Builder budgetDimensionRefId(String budgetDimensionRefId) {
                 this.budgetDimensionRefId = budgetDimensionRefId;
@@ -408,7 +430,14 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetDimensionType.
+             * <p>The policy type. Valid values:</p>
+             * <ul>
+             * <li><strong>ConsumerGroup</strong>: total budget for a user group</li>
+             * <li><strong>Consumer</strong>: total budget for a user</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ConsumerGroup</p>
              */
             public Builder budgetDimensionType(String budgetDimensionType) {
                 this.budgetDimensionType = budgetDimensionType;
@@ -416,7 +445,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetPoints.
+             * <p>The budget points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder budgetPoints(String budgetPoints) {
                 this.budgetPoints = budgetPoints;
@@ -424,7 +456,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetPolicyId.
+             * <p>The budget policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>023aacc1effc4b56bb154bfbec6ba9**</p>
              */
             public Builder budgetPolicyId(String budgetPolicyId) {
                 this.budgetPolicyId = budgetPolicyId;
@@ -432,7 +467,15 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetType.
+             * <p>The budget type. Valid values:</p>
+             * <ul>
+             * <li><strong>GlobalTotal</strong>: global total budget</li>
+             * <li><strong>ConsumerTotal</strong>: total budget for a user</li>
+             * <li><strong>ConsumerGroupTotal</strong>: total budget for a user group</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GlobalTotal</p>
              */
             public Builder budgetType(String budgetType) {
                 this.budgetType = budgetType;
@@ -440,7 +483,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Exceeded.
+             * <p>Indicates whether the quota has been exceeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder exceeded(String exceeded) {
                 this.exceeded = exceeded;
@@ -448,7 +494,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the policy was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-19T14:13:53+08:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -456,7 +505,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the policy was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-08T10:43:28+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -464,7 +516,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * GwClusterId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-xxxxxxxx</p>
              */
             public Builder gwClusterId(String gwClusterId) {
                 this.gwClusterId = gwClusterId;
@@ -472,7 +527,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * ResetDayOfMonth.
+             * <p>The day of the month on which the budget resets. Valid values: 1 to 28.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder resetDayOfMonth(String resetDayOfMonth) {
                 this.resetDayOfMonth = resetDayOfMonth;
@@ -480,7 +538,14 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The policy status. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: enabled</li>
+             * <li><strong>Disenabled</strong>: disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -488,7 +553,10 @@ public class DescribeBudgetPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedPoints.
+             * <p>The number of used points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedPoints(Integer usedPoints) {
                 this.usedPoints = usedPoints;

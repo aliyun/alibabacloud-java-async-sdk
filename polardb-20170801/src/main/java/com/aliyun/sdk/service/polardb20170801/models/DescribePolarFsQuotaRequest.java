@@ -116,7 +116,13 @@ public class DescribePolarFsQuotaRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>To find the cluster ID for enterprise, basic, or data lakehouse edition clusters, call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -125,7 +131,10 @@ public class DescribePolarFsQuotaRequest extends Request {
         }
 
         /**
-         * Path.
+         * <p>The destination path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -134,6 +143,7 @@ public class DescribePolarFsQuotaRequest extends Request {
         }
 
         /**
+         * <p>The PolarFS instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +156,10 @@ public class DescribePolarFsQuotaRequest extends Request {
         }
 
         /**
-         * QuotaType.
+         * <p>The quota type to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>quotaPolicy</p>
          */
         public Builder quotaType(String quotaType) {
             this.putQueryParameter("QuotaType", quotaType);
@@ -155,7 +168,13 @@ public class DescribePolarFsQuotaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to find the IDs of all available regions in your account.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

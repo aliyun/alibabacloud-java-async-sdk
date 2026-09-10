@@ -132,7 +132,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp1s826a1up******</p>
@@ -143,7 +143,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of databases and tables that can be restored.</p>
+         * <p>The details of recoverable databases and tables.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -162,7 +162,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of records on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -173,7 +173,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AA815DE7-B576-4B22-B33C-3FB31A******</p>
@@ -184,7 +184,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -277,7 +277,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database that can be restored.</p>
+             * <p>The name of the database that can be recovered.</p>
              * 
              * <strong>example:</strong>
              * <p>test_db</p>
@@ -288,7 +288,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the database or table, in bytes.</p>
              */
             public Builder size(java.util.List<Long> size) {
                 this.size = size;
@@ -296,7 +296,7 @@ public class DescribeMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the table that can be restored.</p>
+             * <p>The names of the tables that can be recovered.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;

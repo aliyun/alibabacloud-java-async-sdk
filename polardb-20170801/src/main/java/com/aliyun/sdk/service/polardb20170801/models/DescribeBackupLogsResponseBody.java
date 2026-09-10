@@ -106,7 +106,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the backup logs.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -147,7 +147,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -294,10 +294,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the backup task ended. The time follows the ISO 8601 standard in the <code>YYYY-MM-DD\&quot;T\&quot;HH:mm:ssZ</code> format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-02-12T03:55:31Z</p>
+             * BackupLogEndTime.
              */
             public Builder backupLogEndTime(String backupLogEndTime) {
                 this.backupLogEndTime = backupLogEndTime;
@@ -305,10 +302,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1111111111</p>
+             * BackupLogId.
              */
             public Builder backupLogId(String backupLogId) {
                 this.backupLogId = backupLogId;
@@ -316,10 +310,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the backup log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ib_logfile1</p>
+             * BackupLogName.
              */
             public Builder backupLogName(String backupLogName) {
                 this.backupLogName = backupLogName;
@@ -327,10 +318,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the backup log. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1073741824</p>
+             * BackupLogSize.
              */
             public Builder backupLogSize(String backupLogSize) {
                 this.backupLogSize = backupLogSize;
@@ -338,10 +326,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup task started. The time follows the ISO 8601 standard in the <code>YYYY-MM-DD\&quot;T\&quot;HH:mm:ssZ</code> format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-02-12T03:54:43Z</p>
+             * BackupLogStartTime.
              */
             public Builder backupLogStartTime(String backupLogStartTime) {
                 this.backupLogStartTime = backupLogStartTime;
@@ -349,10 +334,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public URL used to download the backup log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>http://***********.oss-cn-hangzhou.aliyuncs.com</p>
+             * DownloadLink.
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -360,10 +342,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal URL used to download the backup log.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>http://***********.oss-cn-hangzhou-internal.aliyuncs.com</p>
+             * IntranetDownloadLink.
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -371,10 +350,7 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the download URL expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-02-14T08:40:50Z</p>
+             * LinkExpiredTime.
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;

@@ -159,7 +159,10 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         } 
 
         /**
-         * FileIds.
+         * <p>The list of file IDs, separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc_a,doc_b</p>
          */
         public Builder fileIds(String fileIds) {
             this.putQueryParameter("FileIds", fileIds);
@@ -168,7 +171,10 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword used to filter file names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Financial report</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -177,6 +183,7 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +196,10 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
-         * LinkId.
+         * <p>The unique ID of the synchronization link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pkbl-2ze123456789abc</p>
          */
         public Builder linkId(String linkId) {
             this.putQueryParameter("LinkId", linkId);
@@ -198,7 +208,10 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -207,7 +220,10 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,6 +232,7 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +245,10 @@ public class DescribeKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

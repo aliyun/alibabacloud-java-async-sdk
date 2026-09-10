@@ -200,7 +200,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
         } 
 
         /**
-         * AgenticDbClusterIds.
+         * <p>The Agentic cluster ID. Separate multiple cluster IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pagc-**************</p>
          */
         public Builder agenticDbClusterIds(String agenticDbClusterIds) {
             this.putQueryParameter("AgenticDbClusterIds", agenticDbClusterIds);
@@ -209,7 +212,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterDescription.
+         * <p>The cluster description. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -218,7 +224,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterIds.
+         * <p>The cluster ID. Separate multiple cluster IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -227,7 +236,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterStatus.
+         * <p>The cluster status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
@@ -236,7 +248,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -245,7 +260,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. If there is no next query, do not pass this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -254,7 +272,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -263,7 +284,11 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 30, 50, and 100.</p>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,6 +297,7 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +310,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -293,7 +322,7 @@ public class DescribeAgenticDBClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -361,7 +390,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. You can filter the cluster list by tag. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>type</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -369,7 +401,10 @@ public class DescribeAgenticDBClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value that corresponds to the tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValueData</p>
              */
             public Builder value(String value) {
                 this.value = value;

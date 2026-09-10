@@ -132,7 +132,10 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-15T15:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -140,7 +143,7 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of logs.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -148,7 +151,10 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -156,7 +162,10 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The total number of entries that meet the query conditions. This parameter is optional and may not be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -164,7 +173,10 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of records returned for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -172,7 +184,7 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>7E2FE3BB-C677-5FF9-9FC5-9CF364BD6BE5</p>
@@ -183,7 +195,10 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-15T14:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -262,7 +277,10 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * LogTime.
+             * <p>The time when the log was recorded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-15T14:13:50.830295892Z</p>
              */
             public Builder logTime(String logTime) {
                 this.logTime = logTime;
@@ -270,7 +288,10 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The log message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -278,7 +299,10 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The specific point in time when the metric was recorded. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1765677660</p>
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -332,7 +356,7 @@ public class DescribeAIDBClusterTaskLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * SlsLogItems.
+             * <p>The SLS log information.</p>
              */
             public Builder slsLogItems(java.util.List<SlsLogItems> slsLogItems) {
                 this.slsLogItems = slsLogItems;

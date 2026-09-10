@@ -663,7 +663,10 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * AIDBClusterId.
+         * <p>The ID of an existing model operator instance to associate. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-xxxxxx</p>
          */
         public Builder AIDBClusterId(String AIDBClusterId) {
             this.putQueryParameter("AIDBClusterId", AIDBClusterId);
@@ -672,7 +675,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AgenticDBBranchSpec.
+         * <p>The AgenticDB branch specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;DBClusterId&quot;:&quot;pagc-2zea920mcvd5o87&quot;,&quot;TenantId&quot;:&quot;t-cfc2d7df0e59439681f0087f51&quot;,&quot;ProjectId&quot;:&quot;proj-d7849d0050664c758af795d468&quot;,&quot;BranchId&quot;:&quot;br-9054b3b7649e4c0d977bd0df37&quot;,&quot;ForkFromBranch&quot;:true,&quot;ForkFromApplicationId&quot;:&quot;pa-source&quot;}</p>
          */
         public Builder agenticDBBranchSpec(AgenticDBBranchSpec agenticDBBranchSpec) {
             String agenticDBBranchSpecShrink = shrink(agenticDBBranchSpec, "AgenticDBBranchSpec", "json");
@@ -682,6 +688,12 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * <p>The application type. Valid values:</p>
+         * <ul>
+         * <li>supabase: Set this value to create a managed Supabase application.</li>
+         * <li>raycluster: Set this value to create a managed Ray Cluster application.</li>
+         * <li>polarclaw: Set this value to create a managed PolarClaw application.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -694,6 +706,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
+         * <p>The CPU architecture. Valid values:</p>
+         * <ul>
+         * <li>x86</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -706,7 +722,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AuthProvider.
+         * <p>The authentication service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feishu</p>
          */
         public Builder authProvider(String authProvider) {
             this.putQueryParameter("AuthProvider", authProvider);
@@ -715,7 +734,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AuthProviderConfig.
+         * <p>The authentication provider configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder authProviderConfig(String authProviderConfig) {
             this.putQueryParameter("AuthProviderConfig", authProviderConfig);
@@ -724,7 +746,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AutoAllocatePublicEip.
+         * <p>Specifies whether to enable automatic creation of an elastic IP address (EIP) and attach it to the instance. This is equivalent to associate with an EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3-max</p>
          */
         public Builder autoAllocatePublicEip(Boolean autoAllocatePublicEip) {
             this.putQueryParameter("AutoAllocatePublicEip", autoAllocatePublicEip);
@@ -733,7 +758,14 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AutoCreatePolarFs.
+         * <p>Specifies whether to enable automatic creation of a cold storage Polarlakebase instance. Valid values:</p>
+         * <ul>
+         * <li>false (default): Automatic creation is disabled.</li>
+         * <li>true: Automatic creation is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoCreatePolarFs(Boolean autoCreatePolarFs) {
             this.putQueryParameter("AutoCreatePolarFs", autoCreatePolarFs);
@@ -742,7 +774,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -751,7 +786,14 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to automatically use coupons. Valid values:</p>
+         * <ul>
+         * <li>true (default): Use coupons.</li>
+         * <li>false: Do not use coupons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -760,7 +802,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Components.
+         * <p>The list of user-defined application subcomponents.</p>
          */
         public Builder components(java.util.List<Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -770,7 +812,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The instance ID of the PolarDB instance on which the application depends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -779,7 +824,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myapp</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -788,7 +836,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * DnatEntries.
+         * <p>The list of expected DNAT entries for NAT mapping. Specify this parameter together with VpcNatGatewayId. This parameter can be left empty, which indicates that no DNAT entries are created.</p>
          */
         public Builder dnatEntries(java.util.List<DnatEntries> dnatEntries) {
             String dnatEntriesShrink = shrink(dnatEntries, "DnatEntries", "json");
@@ -798,7 +846,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * DnatIpAddress.
+         * <p>The DNAT-dedicated NAT IP address that has been allocated (separate from the SNAT IP address) for NAT mapping. The IP address must belong to the specified gateway and be in an available state. The vSwitch of the gateway must belong to a primary CIDR block that is reachable from the office network. Specify this parameter together with VpcNatGatewayId. Prerequisite: An SNAT entry has been bound to the vSwitch where the application resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.64.0.10</p>
          */
         public Builder dnatIpAddress(String dnatIpAddress) {
             this.putQueryParameter("DnatIpAddress", dnatIpAddress);
@@ -807,7 +858,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Default value: <code>false</code>. If you set this parameter to <code>true</code>, only parameter and resource validation is performed without actually creating the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -816,7 +870,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Endpoints.
+         * <p>The list of user-defined service endpoints. By default, a VPC endpoint is created.</p>
          */
         public Builder endpoints(java.util.List<Endpoints> endpoints) {
             String endpointsShrink = shrink(endpoints, "Endpoints", "json");
@@ -826,7 +880,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * KnowledgeApplicationSpec.
+         * <p>Required for knowledge applications.</p>
          */
         public Builder knowledgeApplicationSpec(KnowledgeApplicationSpec knowledgeApplicationSpec) {
             String knowledgeApplicationSpecShrink = shrink(knowledgeApplicationSpec, "KnowledgeApplicationSpec", "json");
@@ -836,7 +890,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * MemApplicationSpec.
+         * <p>Required for mem0 applications.</p>
          */
         public Builder memApplicationSpec(MemApplicationSpec memApplicationSpec) {
             String memApplicationSpecShrink = shrink(memApplicationSpec, "MemApplicationSpec", "json");
@@ -846,7 +900,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ModelApi.
+         * <p>The model API. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openai-completions</p>
          */
         public Builder modelApi(String modelApi) {
             this.putQueryParameter("ModelApi", modelApi);
@@ -855,7 +912,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ModelApiKey.
+         * <p>The model API key. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-xxxxxx</p>
          */
         public Builder modelApiKey(String modelApiKey) {
             this.putQueryParameter("ModelApiKey", modelApiKey);
@@ -864,7 +924,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ModelBaseUrl.
+         * <p>The model base URL. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
          */
         public Builder modelBaseUrl(String modelBaseUrl) {
             this.putQueryParameter("ModelBaseUrl", modelBaseUrl);
@@ -873,7 +936,15 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ModelFrom.
+         * <p>The model source. Valid values:</p>
+         * <ul>
+         * <li>bailian: Alibaba Cloud Model Studio model.</li>
+         * <li>custom: Custom model.</li>
+         * <li>maas: PolarDB model operator.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
          */
         public Builder modelFrom(String modelFrom) {
             this.putQueryParameter("ModelFrom", modelFrom);
@@ -882,7 +953,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ModelName.
+         * <p>The model name. This parameter takes effect only when ApplicationType is set to polarclaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3-max</p>
          */
         public Builder modelName(String modelName) {
             this.putQueryParameter("ModelName", modelName);
@@ -891,7 +965,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The list of parameters.</p>
          */
         public Builder parameters(java.util.List<Parameters> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -901,7 +975,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The billing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -910,7 +987,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The subscription type (yearly or monthly).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Year</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -919,7 +999,15 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PolarFSInstanceId.
+         * <p>The instance ID of the Polarlakebase cold storage or high-performance edition. Default value: empty. If specified, the corresponding storage is mounted to the application.</p>
+         * <p>Currently, only the following applications support this parameter:</p>
+         * <ul>
+         * <li>supabase</li>
+         * <li>raycluster</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pcs-********************</p>
          */
         public Builder polarFSInstanceId(String polarFSInstanceId) {
             this.putQueryParameter("PolarFSInstanceId", polarFSInstanceId);
@@ -928,7 +1016,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code. If you do not specify this parameter, the default coupon is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>727xxxxxx934</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -937,7 +1028,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region. Default value: the region of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -946,7 +1040,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-********************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -955,7 +1052,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-********************</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -964,7 +1064,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SecurityIPArrayName.
+         * <p>The name of the IP whitelist group. Default value: <code>default</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder securityIPArrayName(String securityIPArrayName) {
             this.putQueryParameter("SecurityIPArrayName", securityIPArrayName);
@@ -973,7 +1076,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * <p>The IP whitelist. If you do not specify this parameter, the default value is <code>127.0.0.1</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1,172.17.0.0/24</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -982,7 +1088,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SecurityIPType.
+         * <p>The type of the IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         public Builder securityIPType(String securityIPType) {
             this.putQueryParameter("SecurityIPType", securityIPType);
@@ -991,7 +1100,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SkillTemplateId.
+         * <p>The skill template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder skillTemplateId(String skillTemplateId) {
             this.putQueryParameter("SkillTemplateId", skillTemplateId);
@@ -1000,7 +1112,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Storages.
+         * <p>The list of application storages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;StorageType&quot;:&quot;oss&quot;,&quot;StorageInstanceId&quot;:&quot;pfs-xxxx&quot;,&quot;EndpointId&quot;:&quot;pe-xxxx&quot;}]</p>
          */
         public Builder storages(java.util.List<Storages> storages) {
             String storagesShrink = shrink(storages, "Storages", "json");
@@ -1010,7 +1125,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1019,7 +1134,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * TargetVersion.
+         * <p>The target version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
          */
         public Builder targetVersion(String targetVersion) {
             this.putQueryParameter("TargetVersion", targetVersion);
@@ -1028,7 +1146,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -1037,7 +1158,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch. Default value: the vSwitch in the primary zone of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-*********************</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1046,7 +1170,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-********************</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -1055,7 +1182,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * VpcNatGatewayId.
+         * <p>The VPC NAT gateway ID for NAT mapping. If specified, NAT mapping is enabled when the instance is created. The NAT gateway must be in the same VPC as the application, use the private network type (intranet), and be in an active state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-xxx</p>
          */
         public Builder vpcNatGatewayId(String vpcNatGatewayId) {
             this.putQueryParameter("VpcNatGatewayId", vpcNatGatewayId);
@@ -1064,7 +1194,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone. Default value: the primary zone of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-k</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1184,7 +1317,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * BranchId.
+             * <p>The AgenticDB branch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>br-9054b3b7649e4c0d977bd0df37</p>
              */
             public Builder branchId(String branchId) {
                 this.branchId = branchId;
@@ -1192,7 +1328,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * DBClusterId.
+             * <p>The AgenticDB cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pagc-2zea920mcvd5o87</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -1200,7 +1339,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ForkFromApplicationId.
+             * <p>The ID of the source application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-source</p>
              */
             public Builder forkFromApplicationId(String forkFromApplicationId) {
                 this.forkFromApplicationId = forkFromApplicationId;
@@ -1208,7 +1350,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ForkFromBranch.
+             * <p>Specifies whether to create the application based on a specified AgenticDB branch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder forkFromBranch(Boolean forkFromBranch) {
                 this.forkFromBranch = forkFromBranch;
@@ -1216,7 +1361,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ProjectId.
+             * <p>The AgenticDB project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proj-d7849d0050664c758af795d468</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -1224,7 +1372,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * TenantId.
+             * <p>The AgenticDB tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-cfc2d7df0e59439681f0087f51</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1395,7 +1546,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * ComponentClass.
+             * <p>The specification of the application subcomponent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polar.app.g2.medium</p>
              */
             public Builder componentClass(String componentClass) {
                 this.componentClass = componentClass;
@@ -1403,7 +1557,13 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ComponentMaxReplica.
+             * <p>The maximum number of replicas for the application subcomponent with the same specification. Default value: the value of ComponentReplica.</p>
+             * <ul>
+             * <li>Only raycluster supports this parameter.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder componentMaxReplica(Long componentMaxReplica) {
                 this.componentMaxReplica = componentMaxReplica;
@@ -1411,7 +1571,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ComponentReplica.
+             * <p>The number of replicas for the application subcomponent. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder componentReplica(Long componentReplica) {
                 this.componentReplica = componentReplica;
@@ -1419,7 +1582,21 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ComponentType.
+             * <p>The type of the application subcomponent.</p>
+             * <p>For supabase, valid values:</p>
+             * <ul>
+             * <li>gateway</li>
+             * <li>backend</li>
+             * </ul>
+             * <p>For raycluster, valid values:</p>
+             * <ul>
+             * <li>head</li>
+             * <li>worker</li>
+             * <li>gpuworker</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>gateway</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -1427,7 +1604,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ScaleMax.
+             * <p>The maximum number of replicas for component scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder scaleMax(String scaleMax) {
                 this.scaleMax = scaleMax;
@@ -1435,7 +1615,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ScaleMin.
+             * <p>The minimum number of replicas for component scaling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scaleMin(String scaleMin) {
                 this.scaleMin = scaleMin;
@@ -1443,7 +1626,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * SecurityGroups.
+             * <p>The list of security groups for the application subcomponent, separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-********************</p>
              */
             public Builder securityGroups(String securityGroups) {
                 this.securityGroups = securityGroups;
@@ -1451,7 +1637,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * SecurityIPArrayName.
+             * <p>The name of the whitelist IP address group for the application subcomponent. Default value: default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder securityIPArrayName(String securityIPArrayName) {
                 this.securityIPArrayName = securityIPArrayName;
@@ -1459,7 +1648,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * SecurityIPList.
+             * <p>The whitelist IP addresses of the application subcomponent, separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -1467,7 +1659,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * SecurityIPType.
+             * <p>The type of the whitelist IP addresses for the application subcomponent. Default value: ipv4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder securityIPType(String securityIPType) {
                 this.securityIPType = securityIPType;
@@ -1534,7 +1729,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * FrontPort.
+             * <p>The frontend port. This parameter is optional. If not specified, the system automatically assigns a port that does not conflict with ports already in use on the gateway. You can query the assignment result by calling the DescribeApplicationAttribute operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder frontPort(Integer frontPort) {
                 this.frontPort = frontPort;
@@ -1542,7 +1740,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * PortName.
+             * <p>The port name. Valid values: webui, hermesagent, dashboard, and ssh.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>webui</p>
              */
             public Builder portName(String portName) {
                 this.portName = portName;
@@ -1609,7 +1810,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description of the service endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_endpoint</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1617,7 +1821,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * EndpointType.
+             * <p>The type of the service endpoint. The value is fixed as Primary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Primary</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -1697,7 +1904,7 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * DashboardPassword.
+             * <p>The dashboard password.</p>
              */
             public Builder dashboardPassword(String dashboardPassword) {
                 this.dashboardPassword = dashboardPassword;
@@ -1705,7 +1912,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * DbPassword.
+             * <p>The password.</p>
              */
             public Builder dbPassword(String dbPassword) {
                 this.dbPassword = dbPassword;
@@ -1713,7 +1920,7 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * LlmModel.
+             * <p>Required for knowledge applications. The LLM model name, such as qwen3-max.</p>
              */
             public Builder llmModel(String llmModel) {
                 this.llmModel = llmModel;
@@ -1884,7 +2091,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * DbName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-database-name</p>
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -1892,7 +2102,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * DbPassword.
+             * <p>The password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-user-password</p>
              */
             public Builder dbPassword(String dbPassword) {
                 this.dbPassword = dbPassword;
@@ -1900,7 +2113,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * DbUser.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-user</p>
              */
             public Builder dbUser(String dbUser) {
                 this.dbUser = dbUser;
@@ -1908,7 +2124,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * EmbedderModel.
+             * <p>Required for mem0 applications. The embedder model name, such as text-embedding-v4.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text-embedding-v4</p>
              */
             public Builder embedderModel(String embedderModel) {
                 this.embedderModel = embedderModel;
@@ -1916,7 +2135,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * EmbedderModelDimension.
+             * <p>The vector dimensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder embedderModelDimension(Integer embedderModelDimension) {
                 this.embedderModelDimension = embedderModelDimension;
@@ -1924,7 +2146,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * GraphLlmModel.
+             * <p>The graph LLM model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-plus</p>
              */
             public Builder graphLlmModel(String graphLlmModel) {
                 this.graphLlmModel = graphLlmModel;
@@ -1932,7 +2157,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * LlmModel.
+             * <p>Required for mem0 applications. The LLM model name, such as qwen3-max.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-max</p>
              */
             public Builder llmModel(String llmModel) {
                 this.llmModel = llmModel;
@@ -1940,7 +2168,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ProjectName.
+             * <p>The project name, which corresponds to the database schema that stores project data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-project-name</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -1948,7 +2179,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * RerankerModel.
+             * <p>Required for mem0 applications. The reranker model name, such as qwen3-rerank.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3-rerank</p>
              */
             public Builder rerankerModel(String rerankerModel) {
                 this.rerankerModel = rerankerModel;
@@ -1956,7 +2190,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * Shard.
+             * <p>The number of table shards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder shard(Integer shard) {
                 this.shard = shard;
@@ -2023,7 +2260,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * ParameterName.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>secret.gateway.auth.token</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -2031,7 +2271,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * ParameterValue.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TK***</p>
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -2176,7 +2419,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * ContainerMountPath.
+             * <p>The mount path inside the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data/container</p>
              */
             public Builder containerMountPath(String containerMountPath) {
                 this.containerMountPath = containerMountPath;
@@ -2184,7 +2430,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * EndpointId.
+             * <p>The storage endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pe-xxxx</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -2192,7 +2441,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * MountPath.
+             * <p>The storage mount path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data/source</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -2200,7 +2452,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * StorageCapacity.
+             * <p>The storage capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder storageCapacity(String storageCapacity) {
                 this.storageCapacity = storageCapacity;
@@ -2208,7 +2463,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * StorageEndpoint.
+             * <p>The storage access endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarfs.example.com</p>
              */
             public Builder storageEndpoint(String storageEndpoint) {
                 this.storageEndpoint = storageEndpoint;
@@ -2216,7 +2474,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * StorageInstanceId.
+             * <p>The storage instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pfs-xxxx</p>
              */
             public Builder storageInstanceId(String storageInstanceId) {
                 this.storageInstanceId = storageInstanceId;
@@ -2224,7 +2485,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * StoragePerformanceLevel.
+             * <p>The storage performance level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder storagePerformanceLevel(String storagePerformanceLevel) {
                 this.storagePerformanceLevel = storagePerformanceLevel;
@@ -2232,7 +2496,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -2299,7 +2566,10 @@ public class CreateApplicationRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2307,7 +2577,10 @@ public class CreateApplicationRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

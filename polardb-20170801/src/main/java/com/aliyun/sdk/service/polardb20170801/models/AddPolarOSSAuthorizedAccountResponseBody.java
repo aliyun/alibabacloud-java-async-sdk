@@ -93,7 +93,10 @@ public class AddPolarOSSAuthorizedAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorizedUserArnIds.
+         * <p>The updated list of RAM role ARNs, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arn:sts::123456:assumed-role/myrole/*</p>
          */
         public Builder authorizedUserArnIds(String authorizedUserArnIds) {
             this.authorizedUserArnIds = authorizedUserArnIds;
@@ -101,7 +104,10 @@ public class AddPolarOSSAuthorizedAccountResponseBody extends TeaModel {
         }
 
         /**
-         * AuthorizedUserIds.
+         * <p>The updated list of UIDs, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890,9876543210</p>
          */
         public Builder authorizedUserIds(String authorizedUserIds) {
             this.authorizedUserIds = authorizedUserIds;
@@ -109,7 +115,10 @@ public class AddPolarOSSAuthorizedAccountResponseBody extends TeaModel {
         }
 
         /**
-         * PfsInstanceId.
+         * <p>The cold storage instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-xxxxxxxxxxxxxxxxx</p>
          */
         public Builder pfsInstanceId(String pfsInstanceId) {
             this.pfsInstanceId = pfsInstanceId;
@@ -117,7 +126,10 @@ public class AddPolarOSSAuthorizedAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F45FFACC-xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -132,7 +132,10 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,10 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * ChannelId.
+         * <p>The ID of the enabled channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feishu</p>
          */
         public Builder channelId(String channelId) {
             this.channelId = channelId;
@@ -148,7 +154,10 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -156,7 +165,10 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,10 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -172,7 +187,7 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
@@ -183,7 +198,10 @@ public class EnablePolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Restarted.
+         * <p>Indicates whether the gateway was restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restarted(Boolean restarted) {
             this.restarted = restarted;

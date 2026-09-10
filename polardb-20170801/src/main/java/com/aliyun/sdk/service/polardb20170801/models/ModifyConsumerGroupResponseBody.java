@@ -67,7 +67,10 @@ public class ModifyConsumerGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * ConsumerGroupId.
+         * <p>The ID of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-xxxxxx</p>
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.consumerGroupId = consumerGroupId;
@@ -75,7 +78,7 @@ public class ModifyConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>

@@ -104,6 +104,7 @@ public class UpgradePolarClawPluginRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class UpgradePolarClawPluginRequest extends Request {
         }
 
         /**
+         * <p>The name and version of the new npm package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class UpgradePolarClawPluginRequest extends Request {
         }
 
         /**
+         * <p>The ID of the plugin to upgrade.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +143,10 @@ public class UpgradePolarClawPluginRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after the upgrade. The default is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

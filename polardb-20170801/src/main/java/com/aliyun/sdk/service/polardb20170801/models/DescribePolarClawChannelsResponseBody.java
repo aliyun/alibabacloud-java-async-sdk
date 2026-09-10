@@ -106,7 +106,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -114,7 +117,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * Channels.
+         * <p>A list of PolarClaw channel objects.</p>
          */
         public Builder channels(java.util.List<Channels> channels) {
             this.channels = channels;
@@ -122,7 +125,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The returned status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +136,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message. A value of <code>successful</code> indicates that the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +147,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +281,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -277,7 +292,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Configured.
+             * <p>Indicates whether the account is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder configured(Boolean configured) {
                 this.configured = configured;
@@ -285,7 +303,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Connected.
+             * <p>Indicates whether the account is connected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder connected(Boolean connected) {
                 this.connected = connected;
@@ -293,7 +314,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the account is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -301,7 +325,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Issues.
+             * <p>A list of issues related to the account.</p>
              */
             public Builder issues(java.util.List<String> issues) {
                 this.issues = issues;
@@ -309,7 +333,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * LastInboundAt.
+             * <p>The timestamp (in milliseconds) of the last inbound message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lastInboundAt(Long lastInboundAt) {
                 this.lastInboundAt = lastInboundAt;
@@ -317,7 +344,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * LastOutboundAt.
+             * <p>The timestamp (in milliseconds) of the last outbound message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lastOutboundAt(Long lastOutboundAt) {
                 this.lastOutboundAt = lastOutboundAt;
@@ -423,7 +453,7 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * Accounts.
+             * <p>A list of account objects for the channel.</p>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
@@ -431,7 +461,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feishu</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -439,7 +472,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Configured.
+             * <p>Indicates whether the channel is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder configured(Boolean configured) {
                 this.configured = configured;
@@ -447,7 +483,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultAccountId.
+             * <p>The default account ID for the channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder defaultAccountId(String defaultAccountId) {
                 this.defaultAccountId = defaultAccountId;
@@ -455,7 +494,10 @@ public class DescribePolarClawChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the channel is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;

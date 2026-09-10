@@ -131,9 +131,9 @@ public class DeleteDBLinkRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the source cluster where a database link is to be deleted.</p>
+         * <p>The ID of the source cluster that contains the DBLink you want to delete.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query PolarDB clusters.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to view the list of PolarDB clusters.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -147,7 +147,7 @@ public class DeleteDBLinkRequest extends Request {
         }
 
         /**
-         * <p>The name of the database link to be deleted.</p>
+         * <p>The name of the DBLink to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -243,6 +243,7 @@ public class CreateNetworkChannelRequest extends Request {
         } 
 
         /**
+         * <p>The name of the network channel. The name must consist of lowercase letters, digits, and underscores (_). It must start and end with a letter or a digit. The name can be up to 64 characters long.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +256,10 @@ public class CreateNetworkChannelRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client token that ensures the request is idempotent. The client generates this token. The token must be unique for each request. It is case-sensitive and can be up to 64 ASCII characters long.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f5********************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -264,6 +268,7 @@ public class CreateNetworkChannelRequest extends Request {
         }
 
         /**
+         * <p>The name of the source instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,7 +281,10 @@ public class CreateNetworkChannelRequest extends Request {
         }
 
         /**
-         * Notes.
+         * <p>The notes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder notes(String notes) {
             this.putQueryParameter("Notes", notes);
@@ -303,7 +311,10 @@ public class CreateNetworkChannelRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -312,7 +323,10 @@ public class CreateNetworkChannelRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-re*********</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -339,7 +353,10 @@ public class CreateNetworkChannelRequest extends Request {
         }
 
         /**
-         * TargetDBClusterId.
+         * <p>The name of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*****************</p>
          */
         public Builder targetDBClusterId(String targetDBClusterId) {
             this.putQueryParameter("TargetDBClusterId", targetDBClusterId);
@@ -348,7 +365,10 @@ public class CreateNetworkChannelRequest extends Request {
         }
 
         /**
-         * TargetIp.
+         * <p>The IP address of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.<strong>.</strong>.46</p>
          */
         public Builder targetIp(String targetIp) {
             this.putQueryParameter("TargetIp", targetIp);
@@ -357,7 +377,10 @@ public class CreateNetworkChannelRequest extends Request {
         }
 
         /**
-         * TargetPort.
+         * <p>The port of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9032</p>
          */
         public Builder targetPort(String targetPort) {
             this.putQueryParameter("TargetPort", targetPort);
@@ -366,7 +389,10 @@ public class CreateNetworkChannelRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) where the endpoint is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-25cdvfeq58pl****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

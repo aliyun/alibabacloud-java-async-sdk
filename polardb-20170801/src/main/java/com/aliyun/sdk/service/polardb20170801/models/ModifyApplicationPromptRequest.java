@@ -103,6 +103,7 @@ public class ModifyApplicationPromptRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class ModifyApplicationPromptRequest extends Request {
         }
 
         /**
-         * <p>papt-xx</p>
+         * <p>The ID of the prompt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ModifyApplicationPromptRequest extends Request {
         }
 
         /**
-         * PromptName.
+         * <p>The name of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prompt name</p>
          */
         public Builder promptName(String promptName) {
             this.putQueryParameter("PromptName", promptName);
@@ -137,7 +141,10 @@ public class ModifyApplicationPromptRequest extends Request {
         }
 
         /**
-         * PromptValue.
+         * <p>The content of the prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prompt value</p>
          */
         public Builder promptValue(String promptValue) {
             this.putQueryParameter("PromptValue", promptValue);

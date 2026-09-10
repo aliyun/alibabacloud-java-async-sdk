@@ -93,7 +93,10 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         } 
 
         /**
-         * Engine.
+         * <p>The database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_ai</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -101,7 +104,10 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * <p>The database engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -109,7 +115,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of models.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -186,7 +192,10 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * GpuMinCount.
+             * <p>The minimum number of GPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder gpuMinCount(String gpuMinCount) {
                 this.gpuMinCount = gpuMinCount;
@@ -194,7 +203,10 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuModel.
+             * <p>The GPU model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder gpuModel(String gpuModel) {
                 this.gpuModel = gpuModel;
@@ -326,7 +338,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             } 
 
             /**
-             * GpuRequired.
+             * <p>The supported GPU types.</p>
              */
             public Builder gpuRequired(java.util.List<GpuRequired> gpuRequired) {
                 this.gpuRequired = gpuRequired;
@@ -334,7 +346,10 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumCpu.
+             * <p>The minimum number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder minimumCpu(Long minimumCpu) {
                 this.minimumCpu = minimumCpu;
@@ -342,7 +357,10 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumMemory.
+             * <p>The minimum memory size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16384</p>
              */
             public Builder minimumMemory(Long minimumMemory) {
                 this.minimumMemory = minimumMemory;
@@ -350,7 +368,10 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen3-32B-GPTQ-Int4</p>
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -358,7 +379,10 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * ModelSeries.
+             * <p>The model series.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BERT</p>
              */
             public Builder modelSeries(String modelSeries) {
                 this.modelSeries = modelSeries;
@@ -366,7 +390,7 @@ public class DescribeAvailableModelsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedGpuModels.
+             * <p>The supported GPU models.</p>
              */
             public Builder supportedGpuModels(java.util.List<String> supportedGpuModels) {
                 this.supportedGpuModels = supportedGpuModels;

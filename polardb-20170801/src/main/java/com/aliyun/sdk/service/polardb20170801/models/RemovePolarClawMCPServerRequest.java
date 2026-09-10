@@ -75,6 +75,7 @@ public class RemovePolarClawMCPServerRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class RemovePolarClawMCPServerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the MCP server to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

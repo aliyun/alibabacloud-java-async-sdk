@@ -90,6 +90,7 @@ public class DeleteApplicationEndpointAddressRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DeleteApplicationEndpointAddressRequest extends Request {
         }
 
         /**
+         * <p>The ID of the server-side endpoint to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DeleteApplicationEndpointAddressRequest extends Request {
         }
 
         /**
+         * <p>The network type of the connection address to delete. The value is fixed to <code>Public</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

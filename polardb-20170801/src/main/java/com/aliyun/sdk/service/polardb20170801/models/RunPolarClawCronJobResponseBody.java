@@ -132,7 +132,10 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,10 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -148,7 +154,10 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * <p>The unique ID for this job execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8006e51c-dab3-4602-bc69-4f728002c6ce</p>
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -156,7 +165,10 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +176,10 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -172,7 +187,10 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * Ran.
+         * <p>Indicates whether the job actually ran.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ran(Boolean ran) {
             this.ran = ran;
@@ -180,7 +198,7 @@ public class RunPolarClawCronJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C61892A4-0850-4516-9E26-44D96C1782DE</p>

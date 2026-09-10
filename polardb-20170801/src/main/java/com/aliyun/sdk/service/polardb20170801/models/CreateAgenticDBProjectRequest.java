@@ -133,6 +133,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         } 
 
         /**
+         * <p>The AgenticDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,10 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
-         * DefaultBranchName.
+         * <p>The default branch name. Default value: main.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder defaultBranchName(String defaultBranchName) {
             this.putQueryParameter("DefaultBranchName", defaultBranchName);
@@ -154,7 +158,10 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Production analytics database</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -163,6 +170,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
+         * <p>The project name. The name must be unique within the same tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +183,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +196,7 @@ public class CreateAgenticDBProjectRequest extends Request {
         }
 
         /**
+         * <p>The ID of the tenant to which the project belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -175,6 +175,7 @@ public class GrantAccountPrivilegeZonalRequest extends Request {
         } 
 
         /**
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +188,19 @@ public class GrantAccountPrivilegeZonalRequest extends Request {
         }
 
         /**
+         * <p>The account permissions. Valid values:</p>
+         * <ul>
+         * <li><p>ReadWrite: Read and write permissions.</p>
+         * </li>
+         * <li><p>ReadOnly: Read-only permissions.</p>
+         * </li>
+         * <li><p>DMLOnly: DML-only permissions.</p>
+         * </li>
+         * <li><p>DDLOnly: DDL-only permissions.</p>
+         * </li>
+         * <li><p>ReadIndex: Read-only and index permissions.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +213,10 @@ public class GrantAccountPrivilegeZonalRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A client-generated token that ensures the idempotence of the request. Make sure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f5********************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -208,6 +225,7 @@ public class GrantAccountPrivilegeZonalRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +238,7 @@ public class GrantAccountPrivilegeZonalRequest extends Request {
         }
 
         /**
+         * <p>The name of the database for which to grant permissions. To grant permissions for multiple databases, separate the database names with a comma (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

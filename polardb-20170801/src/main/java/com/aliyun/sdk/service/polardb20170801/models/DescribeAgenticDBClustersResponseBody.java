@@ -132,7 +132,7 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The cluster list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -140,7 +140,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +151,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. If there is no next query, do not pass this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -156,7 +162,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -164,7 +173,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of clusters on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -172,7 +184,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -246,7 +264,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +275,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValueData</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -594,7 +618,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * AgenticDbClusterDescription.
+             * <p>The Agentic cluster description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pagc-**************</p>
              */
             public Builder agenticDbClusterDescription(String agenticDbClusterDescription) {
                 this.agenticDbClusterDescription = agenticDbClusterDescription;
@@ -602,7 +629,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * AgenticDbClusterId.
+             * <p>The Agentic cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pagc-**************</p>
              */
             public Builder agenticDbClusterId(String agenticDbClusterId) {
                 this.agenticDbClusterId = agenticDbClusterId;
@@ -610,7 +640,20 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Category.
+             * <p>The cluster edition. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Normal</strong>: Cluster Edition</p>
+             * </li>
+             * <li><p><strong>Basic</strong>: Single Node Edition</p>
+             * </li>
+             * <li><p><strong>Archive</strong>: X-Engine Edition</p>
+             * </li>
+             * <li><p><strong>NormalMultimaster</strong>: Multi-master Cluster (Database/Table)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -618,7 +661,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-08-14T05:58:42Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -626,7 +672,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterDescription.
+             * <p>The cluster description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ocpx</p>
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -634,7 +683,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-xxxxxx</p>
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -642,7 +694,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterStatus.
+             * <p>The cluster status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -650,7 +705,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * <p>The database engine type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -658,7 +716,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBVersion.
+             * <p>The database engine version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.0</p>
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -666,7 +727,13 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the cluster.</p>
+             * <blockquote>
+             * <p>A specific value is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-25T09:37:10Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -674,7 +741,19 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * <p>Indicates whether the cluster has expired. Valid values:</p>
+             * <ul>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -682,7 +761,15 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * <p>The lock status of the cluster. Valid values: </p>
+             * <ul>
+             * <li><strong>Unlock</strong>: Normal. </li>
+             * <li><strong>ManualLock</strong>: Manually locked. </li>
+             * <li><strong>LockByExpiration</strong>: Automatically locked due to cluster expiration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Unlock</p>
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -690,7 +777,14 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * <p>The billing method. Valid values: </p>
+             * <ul>
+             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+             * <li><strong>Prepaid</strong>: subscription.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Postpaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -698,7 +792,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -706,7 +803,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMax.
+             * <p>The maximum value: 1 to 32 PCUs. Unit: PCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9</p>
              */
             public Builder scaleMax(String scaleMax) {
                 this.scaleMax = scaleMax;
@@ -714,7 +814,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleMin.
+             * <p>The minimum value: 0 to 32 PCUs. The minimum value must be less than or equal to the maximum value. Unit: PCU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scaleMin(String scaleMin) {
                 this.scaleMin = scaleMin;
@@ -722,7 +825,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ServerlessType.
+             * <p>The serverless type. A value of <strong>AgileServerless</strong> indicates that the cluster is a serverless cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AgileServerless</p>
              */
             public Builder serverlessType(String serverlessType) {
                 this.serverlessType = serverlessType;
@@ -730,7 +836,16 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li><strong>essdpl0</strong></li>
+             * <li><strong>essdpl1</strong></li>
+             * <li><strong>essdpl2</strong></li>
+             * <li><strong>essdpl3</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>city_redundancy</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -738,7 +853,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StorageUsed.
+             * <p>The storage usage of the cluster. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3009413120</p>
              */
             public Builder storageUsed(Long storageUsed) {
                 this.storageUsed = storageUsed;
@@ -746,7 +864,7 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag key. You can filter the cluster list by tag. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -754,7 +872,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the virtual private cloud (VPC) in which the endpoint resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-****************</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -762,7 +883,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-**************</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -770,7 +894,10 @@ public class DescribeAgenticDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

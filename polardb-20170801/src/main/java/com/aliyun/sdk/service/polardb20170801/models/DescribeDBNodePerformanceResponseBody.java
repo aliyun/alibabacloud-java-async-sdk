@@ -132,7 +132,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster node.</p>
+         * <p>The ID of the node in the PolarDB cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>pi-*****************</p>
@@ -143,7 +143,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -154,7 +154,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0</p>
@@ -165,7 +165,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the query. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <p>The end of the time range. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-23T01:01:00Z</p>
@@ -176,7 +176,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster performance metrics.</p>
+         * PerformanceKeys.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -195,7 +195,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <p>The beginning of the time range. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-09-23T01:00:00Z</p>
@@ -264,10 +264,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1600822800000</p>
+             * Timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -275,10 +272,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>9.33</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -412,10 +406,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The performance metrics that you want to query.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PolarDBDiskUsage</p>
+             * Measurement.
              */
             public Builder measurement(String measurement) {
                 this.measurement = measurement;
@@ -423,10 +414,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mean_sys_dir_size</p>
+             * MetricName.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -434,7 +422,7 @@ public class DescribeDBNodePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance metrics.</p>
+             * Points.
              */
             public Builder points(Points points) {
                 this.points = points;

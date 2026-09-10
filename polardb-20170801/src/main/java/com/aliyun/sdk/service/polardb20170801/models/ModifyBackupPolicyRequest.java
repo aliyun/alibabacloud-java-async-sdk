@@ -312,7 +312,19 @@ public class ModifyBackupPolicyRequest extends Request {
         } 
 
         /**
-         * AdvancedDataPolicies.
+         * <p>The advanced backup policy.</p>
+         * <blockquote>
+         * <ul>
+         * <li><ul>
+         * <li>PolarDB for PostgreSQL (Compatible with Oracle) and PolarDB for PostgreSQL do not support this parameter.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>Only clusters with BackupPolicyLevel set to Advanced support this parameter.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
          */
         public Builder advancedDataPolicies(java.util.List<AdvancedDataPolicies> advancedDataPolicies) {
             String advancedDataPoliciesShrink = shrink(advancedDataPolicies, "AdvancedDataPolicies", "json");
@@ -322,18 +334,31 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The backup frequency. Default value: Normal. Valid values:</p>
+         * <p>The backup frequency. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: standard backup. The system backs up data once a day.</li>
-         * <li><strong>2/24H</strong>: enhanced backup. The system backs up data every 2 hours.</li>
-         * <li><strong>3/24H</strong>: enhanced backup. The system backs up data every 3 hours.</li>
-         * <li><strong>4/24H</strong>: enhanced backup. The system backs up data every 4 hours.</li>
+         * <li><strong>Normal</strong> (default): regular backup. Automatic backup is performed once a day at a scheduled time.</li>
+         * <li><strong>2/24H</strong>: high-frequency backup. Backup is performed every 2 hours.</li>
+         * <li><strong>3/24H</strong>: high-frequency backup. Backup is performed every 3 hours.</li>
+         * <li><strong>4/24H</strong>: high-frequency backup. Backup is performed every 4 hours.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If you enable enhanced backup, all backups are retained for 24 hours. For backup files that are created earlier than the previous 24 hours, the system permanently retains only the first backup that is created after 00:00 every day and deletes the rest.</li>
-         * <li>If you enable enhanced backup, <strong>PreferredBackupPeriod</strong> is automatically set to all days in a week (from Monday to Sunday).</li>
-         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * <li><ul>
+         * <li>After high-frequency backup is enabled, all backups completed within 24 hours are retained. For backups older than 24 hours, only the first backup completed after 00:00 each day is retained, and all others are deleted.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After high-frequency backup is enabled, the backup cycle parameter PreferredBackupPeriod defaults to all days of the week (Monday through Sunday).</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>If the region of your PolarDB for MySQL cluster supports the cross-region backup feature, this parameter is not supported. For regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedDataPolicies parameter instead.</li>
+         * </ul>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -347,7 +372,30 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupPolicyLevel.
+         * <p>The backup policy level. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: regular backup.</li>
+         * <li><strong>Advanced</strong>: advanced backup.<blockquote>
+         * <ul>
+         * <li><ul>
+         * <li>PolarDB for PostgreSQL (Compatible with Oracle) and PolarDB for PostgreSQL do not support this parameter.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>You can check the AdvancedPolicyOption response parameter of the <a href="https://help.aliyun.com/document_detail/2319231.html">DescribeBackupPolicy</a> operation to determine whether the cluster supports advanced backup. If the cluster supports advanced backup, you can apply to use this feature through <a href="~611727~~">Advanced backup settings</a>.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After advanced backup is enabled, rollback to regular backup is <strong>not supported</strong>.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder backupPolicyLevel(String backupPolicyLevel) {
             this.putQueryParameter("BackupPolicyLevel", backupPolicyLevel);
@@ -356,14 +404,17 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to retain backups when a cluster is deleted. Valid values:</p>
+         * <p>Specifies whether to retain backups when the cluster is deleted. Valid values:</p>
          * <ul>
-         * <li><strong>ALL</strong>: permanently retains all backups.</li>
-         * <li><strong>LATEST</strong>: permanently retains the most recent backup.</li>
-         * <li><strong>NONE</strong>: does not retain backups.</li>
+         * <li><p><strong>ALL</strong>: Long-term retention (LTR) of all backups.</p>
+         * </li>
+         * <li><p><strong>LATEST</strong>: Long-term retention (LTR) of only the last backup.</p>
+         * </li>
+         * <li><p><strong>NONE</strong>: Does not retain any backups.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The default value of the parameter is NONE.</p>
+         * <p>Default value: NONE.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -376,9 +427,9 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in a specific region, including cluster IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -392,17 +443,27 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The frequency of level-1 backups. Default value: Normal. Valid values:</p>
+         * <p>The backup frequency. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: standard backup. The system backs up data once a day.</li>
-         * <li><strong>2/24H</strong>: enhanced backup. The system backs up data every 2 hours.</li>
-         * <li><strong>3/24H</strong>: enhanced backup. The system backs up data every 3 hours.</li>
-         * <li><strong>4/24H</strong>: enhanced backup. The system backs up data every 4 hours.</li>
+         * <li><strong>Normal</strong> (default): regular backup. Automatic backup is performed once a day at a scheduled time.</li>
+         * <li><strong>2/24H</strong>: high-frequency backup. Backup is performed every 2 hours.</li>
+         * <li><strong>3/24H</strong>: high-frequency backup. Backup is performed every 3 hours.</li>
+         * <li><strong>4/24H</strong>: high-frequency backup. Backup is performed every 4 hours.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</li>
-         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * <li><ul>
+         * <li>PolarDB for PostgreSQL (Compatible with Oracle) and PolarDB for PostgreSQL do not support this parameter.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>If the region of your PolarDB for MySQL cluster does not support the cross-region backup feature, this parameter is not supported. For regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedDataPolicies parameter instead.</li>
+         * </ul>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -416,7 +477,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The backup cycle of level-1 backups. Valid values:</p>
+         * <p>The level-1 backup cycle. Valid values: </p>
          * <ul>
          * <li><strong>Monday</strong></li>
          * <li><strong>Tuesday</strong></li>
@@ -428,9 +489,22 @@ public class ModifyBackupPolicyRequest extends Request {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>You need to specify at least two values. Separate multiple values with commas (,).</li>
-         * <li>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</li>
-         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * <li><ul>
+         * <li>Select at least 2 days. Separate multiple values with commas (,).</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>PolarDB for PostgreSQL (Compatible with Oracle) and PolarDB for PostgreSQL do not support this parameter.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>If the region of your PolarDB for MySQL cluster does not support the cross-region backup feature, this parameter is not supported. For regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedDataPolicies parameter instead.</li>
+         * </ul>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -445,6 +519,11 @@ public class ModifyBackupPolicyRequest extends Request {
 
         /**
          * <p>The retention period of level-1 backups. Valid values: 3 to 14. Unit: days.</p>
+         * <blockquote>
+         * <ul>
+         * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedDataPolicies parameter instead.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -456,11 +535,11 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time period during which automatic backup for level-1 backup is performed. The time period is in the <code>hh:mmZ-hh:mmZ</code> format and is displayed in UTC. The start time and end time are on the hour and have an interval of 1 hour. Example: <code>14:00Z-15:00Z</code>.</p>
+         * <p>The time period during which automatic backup is performed. Specify the time period in the <code>hh:mmZ-hh:mmZ</code> format in UTC. The values must be on the hour with an interval of 1 hour, such as <code>14:00Z-15:00Z</code>.</p>
          * <blockquote>
          * <ul>
-         * <li>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</li>
-         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * <li>PolarDB for PostgreSQL (Compatible with Oracle) and PolarDB for PostgreSQL do not support this parameter.</li>
+         * <li>If the region of your PolarDB for MySQL cluster does not support the cross-region backup feature, this parameter is not supported. For regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -474,7 +553,12 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region where the cross-region level-2 backup is stored. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+         * <p>The destination region for cross-region level-2 backups. For regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+         * <blockquote>
+         * <ul>
+         * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedDataPolicies parameter instead.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -486,14 +570,26 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of cross-region level-2 backups. Valid values:</p>
+         * <p>The retention period of cross-region backups for level-2 backups. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The cross-region level-2 backup feature is disabled.</li>
-         * <li><strong>30 to 7300</strong>: Cross-region level-2 backups are retained for 30 to 7,300 days.</li>
-         * <li><strong>1</strong>: Cross-region level-2 backups are permanently retained.</li>
+         * <li><p><strong>0</strong>: Disables the level-2 cross-region backup feature.</p>
+         * </li>
+         * <li><p><strong>30 to 7300</strong>: The retention period of level-2 backups. Unit: days.</p>
+         * </li>
+         * <li><p><strong>-1</strong>: Long-term retention (LTR) of level-2 backups.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The default value of the parameter is <strong>0</strong>.</p>
+         * <ul>
+         * <li><ul>
+         * <li>When a cluster is created, the default value is <strong>0</strong>, which means the level-2 cross-region backup feature is disabled.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedDataPolicies parameter instead.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -506,7 +602,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The backup cycle of level-2 backups. Valid values:</p>
+         * <p>The level-2 backup cycle. Valid values: </p>
          * <ul>
          * <li><strong>Monday</strong></li>
          * <li><strong>Tuesday</strong></li>
@@ -518,9 +614,22 @@ public class ModifyBackupPolicyRequest extends Request {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>You need to specify at least two values. Separate multiple values with commas (,).</li>
-         * <li>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</li>
-         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * <li><ul>
+         * <li>Select at least 2 days. Separate multiple values with commas (,).</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>PolarDB for PostgreSQL (Compatible with Oracle) and PolarDB for PostgreSQL do not support this parameter.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>If the region of your PolarDB for MySQL cluster does not support the cross-region backup feature, this parameter is not supported. For regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedDataPolicies parameter instead.</li>
+         * </ul>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -536,12 +645,24 @@ public class ModifyBackupPolicyRequest extends Request {
         /**
          * <p>The retention period of level-2 backups. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The level-2 backup feature is disabled.</li>
-         * <li><strong>30 to 7300</strong>: Level-2 backups are retained for 30 to 7,300 days.</li>
-         * <li><strong>1</strong>: Level-2 backups are permanently retained.</li>
+         * <li><p><strong>0</strong>: Disables the level-2 backup feature.</p>
+         * </li>
+         * <li><p><strong>30 to 7300</strong>: The retention period of level-2 backups. Unit: days.</p>
+         * </li>
+         * <li><p><strong>-1</strong>: Long-term retention (LTR) of level-2 backups.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> The default value of this parameter is <strong>0</strong>.</p>
+         * <ul>
+         * <li><ul>
+         * <li>When a cluster is created, the default value is <strong>0</strong>, which means the level-2 backup feature is disabled.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedDataPolicies parameter instead.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -572,7 +693,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The backup cycle. Valid values:</p>
+         * <p>The backup cycle. Valid values: </p>
          * <ul>
          * <li><strong>Monday</strong></li>
          * <li><strong>Tuesday</strong></li>
@@ -584,8 +705,18 @@ public class ModifyBackupPolicyRequest extends Request {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>You need to specify at least two values. Separate multiple values with commas (,).</li>
-         * <li>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * <li><ul>
+         * <li>Select at least 2 days. Separate multiple values with commas (,).</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>If the region of your PolarDB for MySQL cluster supports the cross-region backup feature, this parameter is not supported. For regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After advanced backup is enabled, this parameter no longer takes effect. Use the AdvancedDataPolicies parameter instead.</li>
+         * </ul>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -599,7 +730,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The time period during which automatic backup for level-1 backup is performed. The format is <code>hh:mmZ-hh:mmZ</code> format. The time is displayed in UTC. The start time and end time are on the hour and with an interval of one hour. Example: <code>14:00Z-15:00Z</code>.</p>
+         * <p>The time period during which automatic backup is performed. Specify the time period in the <code>hh:mmZ-hh:mmZ</code> format in UTC. The values must be on the hour with an interval of 1 hour, such as <code>14:00Z-15:00Z</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>15:00Z-16:00Z</p>
@@ -883,7 +1014,15 @@ public class ModifyBackupPolicyRequest extends Request {
             } 
 
             /**
-             * ActionType.
+             * <p>The action type. Valid values:</p>
+             * <ul>
+             * <li><strong>CREATE</strong>: create</li>
+             * <li><strong>UPDATE</strong>: update</li>
+             * <li><strong>DELETE</strong>: delete</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -891,7 +1030,13 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * AutoCreated.
+             * <p>Indicates whether the backup policy is automatically generated by the system.</p>
+             * <blockquote>
+             * <p>This parameter value is automatically generated. You do not need to specify it.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoCreated(Boolean autoCreated) {
                 this.autoCreated = autoCreated;
@@ -899,7 +1044,16 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * BakType.
+             * <p>The backup type. Valid values:</p>
+             * <ul>
+             * <li><strong>F</strong>: full backup.<blockquote>
+             * <p>This parameter cannot be modified and is fixed to F.</p>
+             * </blockquote>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>F</p>
              */
             public Builder bakType(String bakType) {
                 this.bakType = bakType;
@@ -907,7 +1061,10 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * DestRegion.
+             * <p>The destination region of the backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder destRegion(String destRegion) {
                 this.destRegion = destRegion;
@@ -915,7 +1072,15 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * DestType.
+             * <p>The destination type of the backup policy. Valid values:</p>
+             * <ul>
+             * <li><strong>level1</strong>: level-1 backup</li>
+             * <li><strong>level2</strong>: level-2 backup</li>
+             * <li><strong>level2Cross</strong>: level-2 cross-region backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level2</p>
              */
             public Builder destType(String destType) {
                 this.destType = destType;
@@ -923,7 +1088,13 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * DumpAction.
+             * <p>The method for converting level-1 backups to level-2 backups. Valid values:</p>
+             * <ul>
+             * <li><strong>copy</strong>: copy</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>copy</p>
              */
             public Builder dumpAction(String dumpAction) {
                 this.dumpAction = dumpAction;
@@ -931,7 +1102,19 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * FilterKey.
+             * <p>The scheduling type. Valid values:</p>
+             * <ul>
+             * <li><strong>dayOfWeek</strong>: scheduled by week</li>
+             * <li><strong>dayOfMonth</strong>: scheduled by month</li>
+             * <li><strong>dayOfYear</strong>: scheduled by year</li>
+             * <li><strong>backupInterval</strong>: scheduled at fixed intervals</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter is required only when FilterType is set to <strong>crontab</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>dayOfWeek</p>
              */
             public Builder filterKey(String filterKey) {
                 this.filterKey = filterKey;
@@ -939,7 +1122,14 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * FilterType.
+             * <p>The filter type of the advanced policy. Valid values:</p>
+             * <ul>
+             * <li><strong>crontab</strong>: periodic scheduling</li>
+             * <li><strong>event</strong>: event-based scheduling</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>crontab</p>
              */
             public Builder filterType(String filterType) {
                 this.filterType = filterType;
@@ -947,7 +1137,10 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * FilterValue.
+             * <p>The backup cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2,3,4,5,6,7</p>
              */
             public Builder filterValue(String filterValue) {
                 this.filterValue = filterValue;
@@ -955,7 +1148,14 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * OnlyPreserveOneEachDay.
+             * <p>The 24-hour backup data retention policy. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Only the first backup set of the day is retained for backups older than 24 hours.</li>
+             * <li><strong>false</strong>: All backup sets are retained.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder onlyPreserveOneEachDay(Boolean onlyPreserveOneEachDay) {
                 this.onlyPreserveOneEachDay = onlyPreserveOneEachDay;
@@ -963,7 +1163,17 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * OnlyPreserveOneEachHour.
+             * <p>The hourly backup data retention policy. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Only the earliest backup set within each hour is retained for backups older than 1 hour.</li>
+             * <li><strong>false</strong>: All backup sets are retained.</li>
+             * </ul>
+             * <blockquote>
+             * <p>This parameter cannot be modified and is fixed to true.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder onlyPreserveOneEachHour(Boolean onlyPreserveOneEachHour) {
                 this.onlyPreserveOneEachHour = onlyPreserveOneEachHour;
@@ -971,7 +1181,10 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * PolicyId.
+             * <p>The backup policy ID. You can call the <a href="https://help.aliyun.com/document_detail/2319231.html">DescribeBackupPolicy</a> operation to query the backup policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71930ac2e9f15e41615e10627c******</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -979,7 +1192,14 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * RetentionType.
+             * <p>The retention type of backup sets. Valid values:</p>
+             * <ul>
+             * <li><strong>never</strong>: never expires</li>
+             * <li><strong>delay</strong>: expires after a fixed number of days</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>delay</p>
              */
             public Builder retentionType(String retentionType) {
                 this.retentionType = retentionType;
@@ -987,7 +1207,10 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * RetentionValue.
+             * <p>The number of days to retain backups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder retentionValue(String retentionValue) {
                 this.retentionValue = retentionValue;
@@ -995,7 +1218,10 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * SrcRegion.
+             * <p>The source region of the backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder srcRegion(String srcRegion) {
                 this.srcRegion = srcRegion;
@@ -1003,7 +1229,16 @@ public class ModifyBackupPolicyRequest extends Request {
             }
 
             /**
-             * SrcType.
+             * <p>The source type of the backup policy. Valid values:</p>
+             * <ul>
+             * <li><strong>db</strong>: database cluster</li>
+             * <li><strong>level1</strong>: level-1 backup</li>
+             * <li><strong>level2</strong>: level-2 backup</li>
+             * <li><strong>level2Cross</strong>: level-2 cross-region backup</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level1</p>
              */
             public Builder srcType(String srcType) {
                 this.srcType = srcType;

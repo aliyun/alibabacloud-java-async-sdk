@@ -246,8 +246,8 @@ public class CreateAccountRequest extends Request {
         /**
          * <p>The description of the account. The description must meet the following requirements:</p>
          * <ul>
-         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>It must be 2 to 256 characters in length.</li>
+         * <li>Cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>Is 2 to 256 characters in length.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,12 +260,12 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The name of the account. The name must meet the following requirements:</p>
+         * <p>The account name. The name must meet the following requirements:</p>
          * <ul>
-         * <li>It must start with a lowercase letter and end with a letter or a digit.</li>
-         * <li>It can contain lowercase letters, digits, and underscores (_).</li>
-         * <li>It must be 2 to 16 characters in length.</li>
-         * <li>It cannot be root, admin, or another username that is reserved by the system.</li>
+         * <li>Starts with a lowercase letter and ends with a letter or digit.</li>
+         * <li>Contains only lowercase letters, digits, or underscores (_).</li>
+         * <li>Is 2 to 16 characters in length.</li>
+         * <li>Cannot use certain reserved usernames such as root or admin.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -279,11 +279,11 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The password of the account. The password must meet the following requirements:</p>
+         * <p>The account password. The password must meet the following requirements:</p>
          * <ul>
-         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-         * <li>The password must be 8 to 32 characters in length.</li>
-         * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+         * <li>Contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Is 8 to 32 characters in length.</li>
+         * <li>Special characters include <code>!@#$%^&amp;*()_+-=</code>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -297,24 +297,21 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The permissions that are granted to the account. Valid values:</p>
+         * <p>The permissions of the account. Valid values: </p>
          * <ul>
-         * <li><strong>ReadWrite</strong>: read and write permissions.</li>
-         * <li><strong>ReadOnly</strong>: read-only permissions.</li>
-         * <li><strong>DMLOnly</strong>: the permissions to execute only DML statements.</li>
-         * <li><strong>DDLOnly</strong>: the permissions to execute only DDL statements.</li>
-         * <li><strong>ReadIndex</strong>: the read-only and index permissions.</li>
+         * <li><strong>ReadWrite</strong>: read and write</li>
+         * <li><strong>ReadOnly</strong>: read-only</li>
+         * <li><strong>DMLOnly</strong>: DML only</li>
+         * <li><strong>DDLOnly</strong>: DDL only</li>
+         * <li><strong>ReadIndex</strong>: read-only and index</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p><code>AccountPrivilege</code> is valid only after you specify <code>DBName</code>.</p>
-         * </li>
-         * <li><p>If multiple database names are specified by the <code>DBName</code> parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,), and make sure that the length of the value of <code>AccountPrivilege</code> does not exceed 900. For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set <code>DBName</code> to <code>DB1,DB2</code> and set <code>AccountPrivilege</code> to <code>ReadWrite,ReadOnly</code>.</p>
-         * </li>
-         * <li><p>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
-         * </li>
+         * <li>The DBName parameter must be specified for AccountPrivilege to take effect.</li>
+         * <li>If you specify multiple database names for the DBName parameter, you must grant the corresponding permissions to each database. Separate multiple permissions with commas (,) and make sure that the total length of the AccountPrivilege string does not exceed 900 characters. For example, to grant read and write permissions on database DB1 and read-only permissions on database DB2, set DBName to <code>DB1,DB2</code> and set AccountPrivilege to <code>ReadWrite,ReadOnly</code>.</li>
+         * <li>This parameter is supported only for standard accounts of PolarDB for MySQL clusters.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ReadWrite</p>
@@ -326,21 +323,20 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The type of the account. Valid values:</p>
+         * <p>The account type. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: standard account</li>
-         * <li><strong>Super</strong>: privileged account.</li>
+         * <li><strong>Normal</strong>: standard account. </li>
+         * <li><strong>Super</strong>: privileged account. </li>
+         * <li><strong>DynamoDB</strong>: DynamoDB account.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If you leave this parameter empty, the default value <strong>Super</strong> is used.</p>
-         * </li>
-         * <li><p>You can create multiple privileged accounts for a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster. A privileged account has more permissions than a standard account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
-         * </li>
-         * <li><p>You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account has more permissions than a standard account. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
-         * </li>
+         * <li>If this parameter is left empty, a <strong>Super</strong> account is created by default.</li>
+         * <li>If the cluster is a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster, you can create multiple privileged accounts for each cluster. Privileged accounts have more permissions than standard accounts. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</li>
+         * <li>If the cluster is a PolarDB for MySQL cluster, you can create at most one privileged account for each cluster. Privileged accounts have more permissions than standard accounts. For more information, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</li>
+         * <li>DynamoDB accounts are dedicated accounts created for the DynamoDB compatibility feature of PolarDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/2979941.html">DynamoDB usage instructions</a>.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -352,7 +348,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token is case-sensitive and cannot exceed 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
@@ -364,7 +360,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The ID of cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -377,9 +373,9 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * <p>The name of the database that can be accessed by the account. To enter multiple database names, separate the names with commas (,).</p>
+         * <p>The name of the database that the account is authorized to access. You can specify multiple database names separated by commas (,).</p>
          * <blockquote>
-         * <p> This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
+         * <p>This parameter is supported only for standard accounts of PolarDB for MySQL clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -392,7 +388,13 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>Search: required when creating an account for a PolarDB Search node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Search</p>
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -419,7 +421,22 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * PrivForAllDB.
+         * <p>Specifies whether to grant permissions on all existing databases and all new databases in the current cluster. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0 or empty</strong>: does not grant permissions.</p>
+         * </li>
+         * <li><p><strong>1</strong>: grants permissions.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The AccountPrivilege parameter must be specified for this parameter to take effect.</li>
+         * <li>If this parameter is set to <code>1</code>, the permissions specified by AccountPrivilege are granted on all databases.</li>
+         * </ul>
+         * </blockquote>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder privForAllDB(String privForAllDB) {
             this.putQueryParameter("PrivForAllDB", privForAllDB);

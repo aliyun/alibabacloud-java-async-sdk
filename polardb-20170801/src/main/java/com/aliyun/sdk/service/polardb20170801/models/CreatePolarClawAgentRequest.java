@@ -132,6 +132,7 @@ public class CreatePolarClawAgentRequest extends Request {
         } 
 
         /**
+         * <p>The agent ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +145,7 @@ public class CreatePolarClawAgentRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +158,10 @@ public class CreatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * Avatar.
+         * <p>The avatar\&quot;s URL or path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder avatar(String avatar) {
             this.putQueryParameter("Avatar", avatar);
@@ -165,7 +170,10 @@ public class CreatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * Emoji.
+         * <p>The emoji character.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U+1F99E</p>
          */
         public Builder emoji(String emoji) {
             this.putQueryParameter("Emoji", emoji);
@@ -174,7 +182,10 @@ public class CreatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after the agent is created. The default value is <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);
@@ -183,6 +194,7 @@ public class CreatePolarClawAgentRequest extends Request {
         }
 
         /**
+         * <p>The absolute path of the agent workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

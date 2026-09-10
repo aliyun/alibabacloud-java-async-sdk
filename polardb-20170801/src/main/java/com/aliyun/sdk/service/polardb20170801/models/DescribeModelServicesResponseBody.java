@@ -119,7 +119,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The details of the model services.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -143,7 +149,19 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records to return on each page. Valid values:</p>
+         * <ul>
+         * <li><p><strong>30</strong></p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +169,7 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
@@ -162,7 +180,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -358,7 +379,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key for the model service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -366,7 +390,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * BaseUrl.
+             * <p>The base URL of the upstream service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://xxxxxx">https://xxxxxx</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -374,7 +401,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the model service was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-31T14:40:48Z</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -382,7 +412,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * InputCostPointsPerMillion.
+             * <p>The cost in points per million input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder inputCostPointsPerMillion(String inputCostPointsPerMillion) {
                 this.inputCostPointsPerMillion = inputCostPointsPerMillion;
@@ -390,7 +423,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelCategory.
+             * <p>The model category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder modelCategory(String modelCategory) {
                 this.modelCategory = modelCategory;
@@ -398,7 +434,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelServiceId.
+             * <p>The model service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ms-xxxxxx</p>
              */
             public Builder modelServiceId(String modelServiceId) {
                 this.modelServiceId = modelServiceId;
@@ -406,7 +445,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The model service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -414,7 +456,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputCostPointsPerMillion.
+             * <p>The cost in points per million output tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder outputCostPointsPerMillion(String outputCostPointsPerMillion) {
                 this.outputCostPointsPerMillion = outputCostPointsPerMillion;
@@ -422,7 +467,20 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol. Valid values:</p>
+             * <ul>
+             * <li><p><strong>OpenAI</strong></p>
+             * </li>
+             * <li><p><strong>Anthropic</strong></p>
+             * </li>
+             * <li><p><strong>bailian</strong>: Alibaba Cloud Model Studio.</p>
+             * </li>
+             * <li><p><strong>vLLM</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>openai</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -430,7 +488,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * RequestCostPoints.
+             * <p>The cost in points per request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder requestCostPoints(String requestCostPoints) {
                 this.requestCostPoints = requestCostPoints;
@@ -438,7 +499,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the model service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -446,7 +510,10 @@ public class DescribeModelServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Vendor.
+             * <p>The vendor of the model service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;

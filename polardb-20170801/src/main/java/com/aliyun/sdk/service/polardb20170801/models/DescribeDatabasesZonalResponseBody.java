@@ -119,7 +119,7 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * Databases.
+         * <p>The details of the databases.</p>
          */
         public Builder databases(java.util.List<Databases> databases) {
             this.databases = databases;
@@ -127,7 +127,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned for the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -135,7 +138,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The query token. This is the NextToken value from the previous API call. If there are no more results, do not specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212db86sca4384811e0b5e8707e******</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -143,7 +149,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -151,7 +160,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -159,7 +171,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FED790E-FB61-4721-8C1C-07C627******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -251,7 +266,13 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * <blockquote>
+             * <p>If the cluster is a PolarDB for MySQL cluster, privileged accounts are not included.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>test_acc</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -259,7 +280,22 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             }
 
             /**
-             * AccountPrivilege.
+             * <p>The permissions of the account. Valid values:</p>
+             * <ul>
+             * <li><p><strong>ReadWrite</strong></p>
+             * </li>
+             * <li><p><strong>ReadOnly</strong></p>
+             * </li>
+             * <li><p><strong>DMLOnly</strong></p>
+             * </li>
+             * <li><p><strong>DDLOnly</strong></p>
+             * </li>
+             * <li><p><strong>ReadIndex</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ReadOnly</p>
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -267,7 +303,18 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * <p>The status of the account. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Creating</strong></p>
+             * </li>
+             * <li><p><strong>Available</strong></p>
+             * </li>
+             * <li><p><strong>Deleting</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -275,7 +322,18 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeStatus.
+             * <p>The authorization status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Empowering</strong>: Permissions are being granted.</p>
+             * </li>
+             * <li><p><strong>Empowered</strong>: Permissions are granted.</p>
+             * </li>
+             * <li><p><strong>Removing</strong>: Permissions are being revoked.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Empowered</p>
              */
             public Builder privilegeStatus(String privilegeStatus) {
                 this.privilegeStatus = privilegeStatus;
@@ -407,7 +465,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             } 
 
             /**
-             * Accounts.
+             * <p>The details of the database accounts.</p>
+             * <blockquote>
+             * <p>If the cluster is a PolarDB for MySQL cluster, privileged accounts are not included.</p>
+             * </blockquote>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
@@ -415,7 +476,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             }
 
             /**
-             * CharacterSetName.
+             * <p>The character set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>utf8mb4</p>
              */
             public Builder characterSetName(String characterSetName) {
                 this.characterSetName = characterSetName;
@@ -423,7 +487,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             }
 
             /**
-             * DBDescription.
+             * <p>The description of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_des</p>
              */
             public Builder DBDescription(String DBDescription) {
                 this.DBDescription = DBDescription;
@@ -431,7 +498,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The name of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_db</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -439,7 +509,18 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             }
 
             /**
-             * DBStatus.
+             * <p>The status of the database. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Creating</strong></p>
+             * </li>
+             * <li><p><strong>Running</strong></p>
+             * </li>
+             * <li><p><strong>Deleting</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder DBStatus(String DBStatus) {
                 this.DBStatus = DBStatus;
@@ -447,7 +528,18 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The database engine type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>MySQL</strong></p>
+             * </li>
+             * <li><p><strong>Oracle</strong></p>
+             * </li>
+             * <li><p><strong>PostgreSQL</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MySQL</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -455,7 +547,10 @@ public class DescribeDatabasesZonalResponseBody extends TeaModel {
             }
 
             /**
-             * MasterID.
+             * <p>The ID of the primary node that corresponds to the database in a Multi-master Cluster (Database/Table) edition cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder masterID(String masterID) {
                 this.masterID = masterID;

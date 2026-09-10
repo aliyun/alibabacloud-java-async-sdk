@@ -80,7 +80,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The character sets that are supported.</p>
+         * CharacterSetNameItems.
          */
         public Builder characterSetNameItems(CharacterSetNameItems characterSetNameItems) {
             this.characterSetNameItems = characterSetNameItems;
@@ -88,7 +88,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The cluster engine.</p>
          * 
          * <strong>example:</strong>
          * <p>POLARDB</p>
@@ -99,7 +99,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>34458CD3-33E0-4624-BFEF-840C15******</p>

@@ -73,7 +73,10 @@ public class DescribeDBClusterEncryptionKeyRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>A client token to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f******************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -82,7 +85,13 @@ public class DescribeDBClusterEncryptionKeyRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a>Operation to query the details of all clusters in your account, including cluster IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

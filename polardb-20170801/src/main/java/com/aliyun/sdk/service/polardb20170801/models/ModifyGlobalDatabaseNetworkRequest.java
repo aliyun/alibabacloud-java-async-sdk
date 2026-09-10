@@ -195,7 +195,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * <p>Create a global domain</p>
+         * <p>Specifies whether to create a global domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -207,12 +207,16 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * <p>The description of the GDN. The description must meet the following requirements:</p>
+         * <p>The description of the GDN. It must meet the following requirements:</p>
          * <ul>
-         * <li>The description cannot start with http:// or https://.</li>
-         * <li>The description must start with a letter.</li>
-         * <li>The description can contain letters, digits, underscores (_), and hyphens (-).</li>
-         * <li>The description must be 2 to 126 characters in length.</li>
+         * <li><p>Cannot start with http\:// or https\://.</p>
+         * </li>
+         * <li><p>Must start with a letter or a Chinese character.</p>
+         * </li>
+         * <li><p>Can contain letters, Chinese characters, digits, underscores (_), and hyphens (-).</p>
+         * </li>
+         * <li><p>Must be 2 to 126 characters in length.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +229,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * <p>The GDN ID.</p>
+         * <p>The ID of the GDN.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +260,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-************</p>

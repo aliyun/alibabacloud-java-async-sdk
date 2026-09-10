@@ -191,7 +191,10 @@ public class UpdateKBSyncLinkRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cli_xxxxxxbe8</p>
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -200,7 +203,10 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * ClientSecret.
+         * <p>The client secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder clientSecret(String clientSecret) {
             this.putQueryParameter("ClientSecret", clientSecret);
@@ -209,6 +215,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,6 +228,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>The synchronization link ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +241,10 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * McpEndpoint.
+         * <p>The MCP Server address for DingTalk documents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
          */
         public Builder mcpEndpoint(String mcpEndpoint) {
             this.putQueryParameter("McpEndpoint", mcpEndpoint);
@@ -242,6 +253,7 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +266,10 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * SheetMcpEndpoint.
+         * <p>The MCP Server address for DingTalk spreadsheets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
          */
         public Builder sheetMcpEndpoint(String sheetMcpEndpoint) {
             this.putQueryParameter("SheetMcpEndpoint", sheetMcpEndpoint);
@@ -263,7 +278,10 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * SyncEnabled.
+         * <p>Specifies whether to enable automatic synchronization. This parameter can only be modified independently and cannot be changed together with other configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder syncEnabled(Boolean syncEnabled) {
             this.putQueryParameter("SyncEnabled", syncEnabled);
@@ -284,7 +302,10 @@ public class UpdateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The DingTalk user ID for the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***56</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

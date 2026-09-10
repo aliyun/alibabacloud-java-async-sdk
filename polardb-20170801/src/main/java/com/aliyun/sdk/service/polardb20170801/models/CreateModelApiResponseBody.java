@@ -93,7 +93,10 @@ public class CreateModelApiResponseBody extends TeaModel {
         } 
 
         /**
-         * InvokeEndpoint.
+         * <p>The request endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder invokeEndpoint(String invokeEndpoint) {
             this.invokeEndpoint = invokeEndpoint;
@@ -101,7 +104,10 @@ public class CreateModelApiResponseBody extends TeaModel {
         }
 
         /**
-         * ModelApiId.
+         * <p>The model API ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mi-xxxxxx</p>
          */
         public Builder modelApiId(String modelApiId) {
             this.modelApiId = modelApiId;
@@ -120,7 +126,10 @@ public class CreateModelApiResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The model API status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.status = status;

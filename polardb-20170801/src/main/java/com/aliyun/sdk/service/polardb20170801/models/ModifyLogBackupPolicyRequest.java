@@ -172,7 +172,19 @@ public class ModifyLogBackupPolicyRequest extends Request {
         } 
 
         /**
-         * AdvancedLogPolicies.
+         * <p>The advanced backup policies.</p>
+         * <blockquote>
+         * <ul>
+         * <li><ul>
+         * <li>This parameter is not supported for PolarDB for PostgreSQL (Oracle Compatible) or PolarDB for PostgreSQL.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>This parameter is supported only for clusters for which the BackupPolicyLevel parameter is set to Advanced.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
          */
         public Builder advancedLogPolicies(java.util.List<AdvancedLogPolicies> advancedLogPolicies) {
             String advancedLogPoliciesShrink = shrink(advancedLogPolicies, "AdvancedLogPolicies", "json");
@@ -184,7 +196,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
         /**
          * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all clusters that are deployed in a specific region, such as the cluster IDs.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view information about all clusters in a specific region, including cluster IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -198,7 +210,15 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region in which you want to store cross-region log backups. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+         * <p>The destination region for cross-region log backups. For information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</p>
+         * <blockquote>
+         * <ul>
+         * <li><ul>
+         * <li>After you enable the advanced backup feature, this parameter is no longer valid. Use the AdvancedLogPolicies parameter instead.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -212,12 +232,24 @@ public class ModifyLogBackupPolicyRequest extends Request {
         /**
          * <p>The retention period of cross-region log backups. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The cross-region backup feature is disabled.</li>
-         * <li><strong>30 to 7300</strong>: Cross-region log backups are retained for 30 to 7,300 days.</li>
-         * <li><strong>-1</strong>: The log backups are permanently retained.</li>
+         * <li><p><strong>0</strong>: Disables the cross-region log backup feature.</p>
+         * </li>
+         * <li><p><strong>30 to 7300</strong>: The retention period in days.</p>
+         * </li>
+         * <li><p><strong>-1</strong>: long-term retention.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> When you create a cluster, the default value of this parameter is <strong>0</strong>.</p>
+         * <ul>
+         * <li><ul>
+         * <li>When you create a cluster, the default value of this parameter is <strong>0</strong>. This value disables the cross-region log backup feature.</li>
+         * </ul>
+         * </li>
+         * <li><ul>
+         * <li>After you enable the advanced backup feature, this parameter is no longer valid. Use the AdvancedLogPolicies parameter instead.</li>
+         * </ul>
+         * </li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -230,11 +262,21 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * <p>The retention period of the log backups. Valid values:</p>
+         * <p>The retention period of log backups. Valid values:</p>
          * <ul>
-         * <li>3 to 7300: The log backups are retained for 3 to 7,300 days.</li>
-         * <li>-1: The log backups are permanently retained.</li>
+         * <li><p>3 to 7300: The retention period in days.</p>
+         * </li>
+         * <li><p>-1: long-term retention.</p>
+         * </li>
          * </ul>
+         * <blockquote>
+         * <ul>
+         * <li><ul>
+         * <li>After you enable the advanced backup feature, this parameter is no longer valid. Use the AdvancedLogPolicies parameter instead.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -432,7 +474,18 @@ public class ModifyLogBackupPolicyRequest extends Request {
             } 
 
             /**
-             * ActionType.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li><p><strong>CREATE</strong>: Create</p>
+             * </li>
+             * <li><p><strong>UPDATE</strong>: Update</p>
+             * </li>
+             * <li><p><strong>DELETE</strong>: Delete</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -440,7 +493,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
             }
 
             /**
-             * DestRegion.
+             * <p>The destination region of the log backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder destRegion(String destRegion) {
                 this.destRegion = destRegion;
@@ -448,7 +504,18 @@ public class ModifyLogBackupPolicyRequest extends Request {
             }
 
             /**
-             * DestType.
+             * <p>The destination type of the backup policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>level1</strong>: level-1 backup</p>
+             * </li>
+             * <li><p><strong>level2</strong>: level-2 backup</p>
+             * </li>
+             * <li><p><strong>level2Cross</strong>: level-2 cross-region backup</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level2</p>
              */
             public Builder destType(String destType) {
                 this.destType = destType;
@@ -456,7 +523,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
             }
 
             /**
-             * EnableLogBackup.
+             * <p>Specifies whether to enable log backup. Set the value to 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enableLogBackup(Integer enableLogBackup) {
                 this.enableLogBackup = enableLogBackup;
@@ -464,7 +534,16 @@ public class ModifyLogBackupPolicyRequest extends Request {
             }
 
             /**
-             * LogRetentionType.
+             * <p>The retention period type for log backups. Valid values:</p>
+             * <ul>
+             * <li><p><strong>never</strong>: The backups never expire.</p>
+             * </li>
+             * <li><p><strong>delay</strong>: The backups expire after a fixed number of days.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>delay</p>
              */
             public Builder logRetentionType(String logRetentionType) {
                 this.logRetentionType = logRetentionType;
@@ -472,7 +551,16 @@ public class ModifyLogBackupPolicyRequest extends Request {
             }
 
             /**
-             * LogRetentionValue.
+             * <p>The number of days to retain the log backups. Valid values:</p>
+             * <ul>
+             * <li><p>3 to 7300: The retention period in days.</p>
+             * </li>
+             * <li><p>-1: long-term retention.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder logRetentionValue(String logRetentionValue) {
                 this.logRetentionValue = logRetentionValue;
@@ -480,7 +568,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
             }
 
             /**
-             * PolicyId.
+             * <p>The ID of the log backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>71930ac2e9f15e41615e10627c******</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -488,7 +579,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
             }
 
             /**
-             * SrcRegion.
+             * <p>The source region of the log backup policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder srcRegion(String srcRegion) {
                 this.srcRegion = srcRegion;
@@ -496,7 +590,20 @@ public class ModifyLogBackupPolicyRequest extends Request {
             }
 
             /**
-             * SrcType.
+             * <p>The source type of the log backup policy. Valid values:</p>
+             * <ul>
+             * <li><p><strong>db</strong>: database cluster</p>
+             * </li>
+             * <li><p><strong>level1</strong>: level-1 backup</p>
+             * </li>
+             * <li><p><strong>level2</strong>: level-2 backup</p>
+             * </li>
+             * <li><p><strong>level2Cross</strong>: level-2 cross-region backup</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>level1</p>
              */
             public Builder srcType(String srcType) {
                 this.srcType = srcType;

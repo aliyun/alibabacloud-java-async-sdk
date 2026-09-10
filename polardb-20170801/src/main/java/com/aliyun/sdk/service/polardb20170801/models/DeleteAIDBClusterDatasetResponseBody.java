@@ -80,7 +80,10 @@ public class DeleteAIDBClusterDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * DataServiceId.
+         * <p>The ID of the Data Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcs-2zeei***</p>
          */
         public Builder dataServiceId(String dataServiceId) {
             this.dataServiceId = dataServiceId;
@@ -88,7 +91,10 @@ public class DeleteAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * DatasetId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pds-xxxxxxxxxxxxxxxx</p>
          */
         public Builder datasetId(String datasetId) {
             this.datasetId = datasetId;
@@ -96,7 +102,7 @@ public class DeleteAIDBClusterDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>

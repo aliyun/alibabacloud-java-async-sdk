@@ -106,7 +106,7 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>A list of Application Prompts.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of entries on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -130,7 +136,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of matching entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalRecordCount(String totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -243,7 +255,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             } 
 
             /**
-             * PromptEnabled.
+             * <p>Specifies whether the Prompt is enabled. A value of 1 indicates enabled, and 0 indicates disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prompt if enabled</p>
              */
             public Builder promptEnabled(Integer promptEnabled) {
                 this.promptEnabled = promptEnabled;
@@ -251,7 +266,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * PromptId.
+             * <p>The Prompt ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>papt-58z96zl691otf356o4</p>
              */
             public Builder promptId(String promptId) {
                 this.promptId = promptId;
@@ -259,7 +277,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * PromptName.
+             * <p>The Prompt Name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prompt name</p>
              */
             public Builder promptName(String promptName) {
                 this.promptName = promptName;
@@ -267,7 +288,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * PromptType.
+             * <p>The Prompt Type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DELETE_RELATIONS_SYSTEM_PROMPT</p>
              */
             public Builder promptType(String promptType) {
                 this.promptType = promptType;
@@ -275,7 +299,10 @@ public class DescribeApplicationPromptsResponseBody extends TeaModel {
             }
 
             /**
-             * PromptValue.
+             * <p>The Prompt Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prompt value</p>
              */
             public Builder promptValue(String promptValue) {
                 this.promptValue = promptValue;

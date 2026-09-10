@@ -203,7 +203,20 @@ public class CreateGatewayRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enables auto-renewal.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables auto-renewal.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * <blockquote>
+         * <p>This parameter applies only when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -212,7 +225,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * DBClusterClass.
+         * <p>The cluster specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.app.g2.medium</p>
          */
         public Builder DBClusterClass(String DBClusterClass) {
             this.putQueryParameter("DBClusterClass", DBClusterClass);
@@ -221,7 +237,16 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * DBType.
+         * <p>The database engine type. Valid values:</p>
+         * <ul>
+         * <li><p>MySQL</p>
+         * </li>
+         * <li><p>PostgreSQL</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -230,6 +255,13 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Postpaid</strong>: pay-as-you-go</p>
+         * </li>
+         * <li><p><strong>Prepaid</strong>: subscription</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +274,16 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The unit of the subscription duration. This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * <ul>
+         * <li><p><strong>Year</strong>: The subscription duration is measured in years.</p>
+         * </li>
+         * <li><p><strong>Month</strong>: The subscription duration is measured in months.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -251,6 +292,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,7 +305,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp**************</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -272,7 +317,16 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * <p>The subscription duration. This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * <ul>
+         * <li><p>If <strong>Period</strong> is set to <strong>Month</strong>, the value must be an integer from <code>1</code> to <code>9</code>.</p>
+         * </li>
+         * <li><p>If <strong>Period</strong> is set to <strong>Year</strong>, the value must be an integer from <code>1</code> to <code>3</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -281,6 +335,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,6 +348,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +361,10 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The availability zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-l</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

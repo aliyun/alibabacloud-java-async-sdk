@@ -106,10 +106,12 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code for connection diagnosis. Valid values:</p>
+         * <p>The connection check error code. Valid values:</p>
          * <ul>
-         * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist.</li>
-         * <li><strong>CONNECTION_ABNORMAL</strong>: The connection to the cluster is normal.</li>
+         * <li><p><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not in the whitelist.</p>
+         * </li>
+         * <li><p><strong>CONNECTION_ABNORMAL</strong>: The connection is abnormal.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +123,7 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message for connection diagnosis.</p>
+         * <p>The connection check error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Src ip:192.<em><strong>.</strong></em>.1 not in user whitelist</p>
@@ -132,10 +134,12 @@ public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The connection diagnosis result. Valid values:</p>
+         * <p>The connection check result. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong></li>
-         * <li><strong>Failed</strong></li>
+         * <li><p><strong>Success</strong></p>
+         * </li>
+         * <li><p><strong>Failed</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

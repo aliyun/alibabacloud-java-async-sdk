@@ -88,6 +88,7 @@ public class PatchPolarClawConfigRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,18 @@ public class PatchPolarClawConfigRequest extends Request {
         }
 
         /**
-         * ConfigPatch.
+         * <p>A JSON merge-patch object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;tools&quot;: {
+         *         &quot;web&quot;: {
+         *             &quot;search&quot;: {
+         *                 &quot;enabled&quot;: false
+         *             }
+         *         }
+         *     }
+         * }</p>
          */
         public Builder configPatch(java.util.Map<String, ?> configPatch) {
             String configPatchShrink = shrink(configPatch, "ConfigPatch", "json");
@@ -110,7 +122,10 @@ public class PatchPolarClawConfigRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after applying the patch. The default is <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

@@ -202,7 +202,10 @@ public class DeleteExtensionsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>A client-generated token to ensure that the request is idempotent. The token must be unique for each request. It is case-sensitive and can contain a maximum of 64 ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -211,6 +214,7 @@ public class DeleteExtensionsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +227,7 @@ public class DeleteExtensionsRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,6 +240,7 @@ public class DeleteExtensionsRequest extends Request {
         }
 
         /**
+         * <p>The extensions to uninstall. Separate multiple extension names with a comma (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,7 +271,10 @@ public class DeleteExtensionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -274,7 +283,10 @@ public class DeleteExtensionsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -301,7 +313,10 @@ public class DeleteExtensionsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) where the endpoint is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-25cdvfeq58pl****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

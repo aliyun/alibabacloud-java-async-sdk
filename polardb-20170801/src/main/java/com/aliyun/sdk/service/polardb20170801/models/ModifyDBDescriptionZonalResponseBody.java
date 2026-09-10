@@ -54,7 +54,10 @@ public class ModifyDBDescriptionZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EB07CFF0-D8A4-5C76-AED7-D00E26FC2***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -54,7 +54,10 @@ public class CreateAccountZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

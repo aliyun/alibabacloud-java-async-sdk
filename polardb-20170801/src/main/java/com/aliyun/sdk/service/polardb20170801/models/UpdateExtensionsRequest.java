@@ -216,7 +216,10 @@ public class UpdateExtensionsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>A client token used to ensure the idempotence of the request. The client generates this value. Make sure that the value is unique for each request. The token is case-sensitive and cannot exceed 64 ASCII characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000170000591aed949d0f5********************</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -225,6 +228,7 @@ public class UpdateExtensionsRequest extends Request {
         }
 
         /**
+         * <p>The name of the source instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,6 +241,7 @@ public class UpdateExtensionsRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,6 +254,7 @@ public class UpdateExtensionsRequest extends Request {
         }
 
         /**
+         * <p>The extensions to update. Separate multiple extensions with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +285,10 @@ public class UpdateExtensionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -288,7 +297,10 @@ public class UpdateExtensionsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-**********</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -324,7 +336,10 @@ public class UpdateExtensionsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC) where the endpoint is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1qpo0kug3a20qqe****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

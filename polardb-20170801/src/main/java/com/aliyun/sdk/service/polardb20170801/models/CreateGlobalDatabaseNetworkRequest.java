@@ -236,10 +236,14 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         /**
          * <p>The description of the GDN. The description must meet the following requirements:</p>
          * <ul>
-         * <li>It cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></li>
-         * <li>It must start with a letter.</li>
-         * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
-         * <li>It must be 2 to 126 characters in length.</li>
+         * <li><p>It cannot start with http\:// or https\://.</p>
+         * </li>
+         * <li><p>It must start with a letter or a Chinese character.</p>
+         * </li>
+         * <li><p>It can contain letters, Chinese characters, digits, underscores (_), and hyphens (-).</p>
+         * </li>
+         * <li><p>It must be 2 to 126 characters in length.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -252,7 +256,10 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         }
 
         /**
-         * GDNVersion.
+         * <p>The GDN version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder GDNVersion(String GDNVersion) {
             this.putQueryParameter("GDNVersion", GDNVersion);

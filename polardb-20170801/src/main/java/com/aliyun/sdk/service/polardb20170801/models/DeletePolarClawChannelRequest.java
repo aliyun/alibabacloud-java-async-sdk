@@ -117,6 +117,7 @@ public class DeletePolarClawChannelRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class DeletePolarClawChannelRequest extends Request {
         }
 
         /**
+         * <p>The channel ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class DeletePolarClawChannelRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * <p>The plugin ID. This parameter is required if <code>UninstallPlugin</code> is set to <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openclaw-lark</p>
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -150,7 +155,10 @@ public class DeletePolarClawChannelRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after the channel is deleted. Default value: <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);
@@ -159,7 +167,10 @@ public class DeletePolarClawChannelRequest extends Request {
         }
 
         /**
-         * UninstallPlugin.
+         * <p>Specifies whether to uninstall the channel plugin. Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder uninstallPlugin(Boolean uninstallPlugin) {
             this.putQueryParameter("UninstallPlugin", uninstallPlugin);

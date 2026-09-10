@@ -93,7 +93,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterNetworkType.
+         * <p>The network type of the cluster. The value is fixed as <strong>VPC</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.clusterNetworkType = clusterNetworkType;
@@ -117,7 +120,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72D99256-ACF1-5F86-831F-8CB53E9C23ED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

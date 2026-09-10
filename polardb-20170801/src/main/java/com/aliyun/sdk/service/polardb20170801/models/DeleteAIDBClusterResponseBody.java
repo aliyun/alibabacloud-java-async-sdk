@@ -67,7 +67,10 @@ public class DeleteAIDBClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The AI cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-*****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;

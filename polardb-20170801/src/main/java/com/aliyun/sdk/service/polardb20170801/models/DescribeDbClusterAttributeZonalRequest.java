@@ -130,6 +130,7 @@ public class DescribeDbClusterAttributeZonalRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class DescribeDbClusterAttributeZonalRequest extends Request {
         }
 
         /**
-         * DescribeType.
+         * <p>Specifies whether to obtain information about AI-related nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AI</p>
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);

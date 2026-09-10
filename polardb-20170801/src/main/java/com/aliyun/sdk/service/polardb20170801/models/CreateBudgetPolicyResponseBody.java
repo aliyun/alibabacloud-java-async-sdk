@@ -80,7 +80,10 @@ public class CreateBudgetPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * BudgetPolicyId.
+         * <p>The budget policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05a5a8603df444a8a605af712ffexxx</p>
          */
         public Builder budgetPolicyId(String budgetPolicyId) {
             this.budgetPolicyId = budgetPolicyId;
@@ -88,7 +91,10 @@ public class CreateBudgetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * GwClusterId.
+         * <p>The gateway cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-xxxxxxx</p>
          */
         public Builder gwClusterId(String gwClusterId) {
             this.gwClusterId = gwClusterId;
@@ -96,7 +102,7 @@ public class CreateBudgetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>

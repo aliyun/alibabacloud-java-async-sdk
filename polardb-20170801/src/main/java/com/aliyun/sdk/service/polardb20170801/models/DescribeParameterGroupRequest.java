@@ -159,7 +159,18 @@ public class DescribeParameterGroupRequest extends Request {
         } 
 
         /**
-         * DBType.
+         * <p>The database engine type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -186,9 +197,9 @@ public class DescribeParameterGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parameter template.</p>
+         * <p>The ID of the parameter group.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter groups in the specified region.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -204,7 +215,7 @@ public class DescribeParameterGroupRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available within your account, such as the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions and their IDs in your account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

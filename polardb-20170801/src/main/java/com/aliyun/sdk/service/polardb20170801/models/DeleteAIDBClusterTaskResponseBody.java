@@ -80,7 +80,10 @@ public class DeleteAIDBClusterTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-2ze9***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -88,7 +91,10 @@ public class DeleteAIDBClusterTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RelativeDBClusterId.
+         * <p>The ID of the PolarDB database instance for the AI model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2zejpr***</p>
          */
         public Builder relativeDBClusterId(String relativeDBClusterId) {
             this.relativeDBClusterId = relativeDBClusterId;
@@ -96,7 +102,7 @@ public class DeleteAIDBClusterTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E56531A4-E552-40BA-9C58-137B80******</p>

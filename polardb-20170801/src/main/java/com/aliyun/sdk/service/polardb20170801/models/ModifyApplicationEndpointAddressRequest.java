@@ -118,6 +118,7 @@ public class ModifyApplicationEndpointAddressRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class ModifyApplicationEndpointAddressRequest extends Request {
         }
 
         /**
+         * <p>The endpoint ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,11 @@ public class ModifyApplicationEndpointAddressRequest extends Request {
         }
 
         /**
+         * <p>The network type of the endpoint address. Valid values: </p>
+         * <ul>
+         * <li><strong>Public</strong>: public network.</li>
+         * <li><strong>Private</strong>: private network.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +161,10 @@ public class ModifyApplicationEndpointAddressRequest extends Request {
         }
 
         /**
-         * NewConnectionStringPrefix.
+         * <p>The new endpoint prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xg06iror0l</p>
          */
         public Builder newConnectionStringPrefix(String newConnectionStringPrefix) {
             this.putQueryParameter("NewConnectionStringPrefix", newConnectionStringPrefix);
@@ -163,7 +173,7 @@ public class ModifyApplicationEndpointAddressRequest extends Request {
         }
 
         /**
-         * NewPorts.
+         * <p>The list of new ports.</p>
          */
         public Builder newPorts(java.util.List<NewPorts> newPorts) {
             String newPortsShrink = shrink(newPorts, "NewPorts", "json");
@@ -245,7 +255,10 @@ public class ModifyApplicationEndpointAddressRequest extends Request {
             } 
 
             /**
-             * NewPort.
+             * <p>The new port value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder newPort(Integer newPort) {
                 this.newPort = newPort;
@@ -253,7 +266,10 @@ public class ModifyApplicationEndpointAddressRequest extends Request {
             }
 
             /**
-             * OldPort.
+             * <p>The old port value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18789</p>
              */
             public Builder oldPort(Integer oldPort) {
                 this.oldPort = oldPort;
@@ -261,7 +277,10 @@ public class ModifyApplicationEndpointAddressRequest extends Request {
             }
 
             /**
-             * PortName.
+             * <p>The port name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>polarclaw</p>
              */
             public Builder portName(String portName) {
                 this.portName = portName;

@@ -67,7 +67,7 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * EncryptionKeyList.
+         * <p>The list of keys.</p>
          */
         public Builder encryptionKeyList(java.util.List<EncryptionKeyList> encryptionKeyList) {
             this.encryptionKeyList = encryptionKeyList;
@@ -75,7 +75,10 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>137ECCC0-920E-5B3B-9F8E-B81632108BBE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -258,7 +261,10 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * AliasName.
+             * <p>The alias of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alias/your_default_key</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -266,7 +272,10 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The UID of the Alibaba Cloud account that created the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1****1</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -274,7 +283,13 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteDate.
+             * <p>The scheduled time to delete the key. The format is yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+             * <ul>
+             * <li>This field is empty if the key is not scheduled for deletion.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-08T08:14:16Z</p>
              */
             public Builder deleteDate(String deleteDate) {
                 this.deleteDate = deleteDate;
@@ -282,7 +297,10 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description of the key</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -290,7 +308,10 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionKey.
+             * <p>The key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>51858179-afb3-4369-8329-*********</p>
              */
             public Builder encryptionKey(String encryptionKey) {
                 this.encryptionKey = encryptionKey;
@@ -298,7 +319,16 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionKeyStatus.
+             * <p>The status of the key. Valid values:</p>
+             * <ul>
+             * <li><p>Enabled: The key is enabled.</p>
+             * </li>
+             * <li><p>Disabled: The key is not enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder encryptionKeyStatus(String encryptionKeyStatus) {
                 this.encryptionKeyStatus = encryptionKeyStatus;
@@ -306,7 +336,16 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * KeyType.
+             * <p>The type of the key. Valid values:</p>
+             * <ul>
+             * <li><p>CMK: customer master key</p>
+             * </li>
+             * <li><p>ServiceKey: service key</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ServiceKey</p>
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -314,7 +353,10 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * KeyUsage.
+             * <p>The purpose of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENCRYPT/DECRYPT</p>
              */
             public Builder keyUsage(String keyUsage) {
                 this.keyUsage = keyUsage;
@@ -322,7 +364,10 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * MaterialExpireTime.
+             * <p>The expiration time of the key. The format is yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-18T08:14:16Z</p>
              */
             public Builder materialExpireTime(String materialExpireTime) {
                 this.materialExpireTime = materialExpireTime;
@@ -330,7 +375,10 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Origin.
+             * <p>The source of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun_KMS</p>
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -338,7 +386,16 @@ public class DescribeDBClusterEncryptionKeyResponseBody extends TeaModel {
             }
 
             /**
-             * UsedBy.
+             * <p>The service that uses the key. Valid values:</p>
+             * <ul>
+             * <li><p>TDE: transparent data encryption (TDE).</p>
+             * </li>
+             * <li><p>DiskEncryption: disk encryption.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DiskEncryption</p>
              */
             public Builder usedBy(String usedBy) {
                 this.usedBy = usedBy;

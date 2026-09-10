@@ -189,7 +189,7 @@ public class ModifyDBClusterResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the original resource group.</p>
+         * <p>The original resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-**********</p>

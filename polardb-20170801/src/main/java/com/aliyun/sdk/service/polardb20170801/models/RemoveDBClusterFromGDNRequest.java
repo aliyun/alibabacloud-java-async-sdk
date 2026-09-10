@@ -196,9 +196,9 @@ public class RemoveDBClusterFromGDNRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster in the GDN.</p>
+         * <p>The ID of the secondary cluster that you want to remove from the GDN.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to view the ID of the cluster in the GDN.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to query the IDs of clusters in the GDN.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -212,7 +212,10 @@ public class RemoveDBClusterFromGDNRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to forcibly remove the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -279,7 +282,10 @@ public class RemoveDBClusterFromGDNRequest extends Request {
         }
 
         /**
-         * TargetDBClusterId.
+         * <p>The ID of the target cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-wz9fb5nn44u1d****</p>
          */
         public Builder targetDBClusterId(String targetDBClusterId) {
             this.putQueryParameter("TargetDBClusterId", targetDBClusterId);

@@ -255,7 +255,14 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * FromTimeService.
+         * <p>Specifies whether to immediately execute or schedule the parameter modification and restart. Valid values:</p>
+         * <ul>
+         * <li>false (default): Schedule the execution.</li>
+         * <li>true: Immediately execute.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder fromTimeService(Boolean fromTimeService) {
             this.putQueryParameter("FromTimeService", fromTimeService);
@@ -282,7 +289,10 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * PlannedEndTime.
+         * <p>The latest time to start executing the target scheduled task. Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-28T14:30:00Z</p>
          */
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
@@ -291,7 +301,10 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * PlannedStartTime.
+         * <p>The earliest time to start executing the scheduled task (that is, the task is executed within the target time period). Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-28T14:00:00Z</p>
          */
         public Builder plannedStartTime(String plannedStartTime) {
             this.putQueryParameter("PlannedStartTime", plannedStartTime);
@@ -318,7 +331,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+         * <p>The maximum number of steady-state AP read-only nodes. Valid values: 0 to 7.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -330,7 +343,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+         * <p>The minimum number of steady-state AP read-only nodes. Valid values: 0 to 7.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -342,7 +355,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of PCUs per node for scaling. Valid values: 1 to 8 PCUs.</p>
+         * <p>The maximum scaling limit per node. Valid values: 0 PCU to 16 PCU.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -354,7 +367,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of PolarDB capacity units (PCUs) per node for scaling. Valid values: 1 to 8 PCUs.</p>
+         * <p>The minimum scaling limit per node. Valid values: 0 PCU to 16 PCU.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -366,7 +379,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 7.</p>
+         * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -378,7 +391,7 @@ public class EnableDBClusterServerlessRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 7.</p>
+         * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

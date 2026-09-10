@@ -90,6 +90,7 @@ public class CreateApplicationAgentRelationRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the Agent to attach.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class CreateApplicationAgentRelationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Squad application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class CreateApplicationAgentRelationRequest extends Request {
         }
 
         /**
+         * <p>The authentication token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

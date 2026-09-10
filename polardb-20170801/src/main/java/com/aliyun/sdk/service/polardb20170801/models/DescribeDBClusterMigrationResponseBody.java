@@ -223,11 +223,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The mode of the source ApsaraDB RDS instance. Valid values:</p>
-         * <ul>
-         * <li><strong>rw</strong>: read and write mode</li>
-         * <li><strong>ro</strong>: read-only mode</li>
-         * </ul>
+         * <p>The comments on the migration exception. If no exception occurs during the migration, an empty value is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -238,7 +234,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The port number.</p>
+         * <p>The details of the PolarDB endpoints.</p>
          */
         public Builder DBClusterEndpointList(java.util.List<DBClusterEndpointList> DBClusterEndpointList) {
             this.DBClusterEndpointList = DBClusterEndpointList;
@@ -246,7 +242,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The replication latency between the ApsaraDB RDS instance and the PolarDB cluster. Unit: seconds.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-****************</p>
@@ -257,7 +253,13 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about the endpoints.</p>
+         * <p>The read/write mode of the cluster. Valid values:</p>
+         * <ul>
+         * <li><p><strong>rw</strong>: Read and write.</p>
+         * </li>
+         * <li><p><strong>ro</strong>: Read-only.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ro</p>
@@ -268,7 +270,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The replication delay between the ApsaraDB RDS instance and the PolarDB cluster, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -279,12 +281,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network type of the endpoint. Valid values:</p>
-         * <ul>
-         * <li><strong>Public</strong>: the public endpoint</li>
-         * <li><strong>Private</strong>: the internal endpoint (VPC)</li>
-         * <li><strong>Inner</strong>: the internal endpoint (classic network)</li>
-         * </ul>
+         * <p>The ID of the sync task.</p>
          * 
          * <strong>example:</strong>
          * <p>dts**********618bs</p>
@@ -295,11 +292,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The mode of the PolarDB cluster. Valid values:</p>
-         * <ul>
-         * <li><strong>rw</strong>: read and write mode</li>
-         * <li><strong>ro</strong>: read-only mode</li>
-         * </ul>
+         * <p>The time when the replication relationship between the ApsaraDB RDS instance and the PolarDB cluster expires. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-06-17T01:56:36Z</p>
@@ -310,7 +303,23 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The endpoint.</p>
+         * <p>The migration status of the PolarDB cluster. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NO_MIGRATION</strong>: No migration task is created.</p>
+         * </li>
+         * <li><p><strong>RDS2POLARDB_CLONING</strong>: Data is being cloned.</p>
+         * </li>
+         * <li><p><strong>RDS2POLARDB_SYNCING</strong>: Data is being synchronized. In this state, the PolarDB cluster is read-only, and the ApsaraDB RDS instance is read-write.</p>
+         * </li>
+         * <li><p><strong>SWITCHING</strong>: The database is being switched.</p>
+         * </li>
+         * <li><p><strong>POLARDB2RDS_SYNCING</strong>: The database switch is complete. In this state, the PolarDB cluster is read-write, and the ApsaraDB RDS instance is read-only. Change the endpoints in your application.</p>
+         * </li>
+         * <li><p><strong>ROLLBACK</strong>: The migration is being rolled back. After the rollback is complete, the migration status changes to <strong>RDS2POLARDB_SYNCING</strong>.</p>
+         * </li>
+         * <li><p><strong>CLOSING_MIGRATION</strong>: The migration task is being shut down.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RDS2POLARDB_SYNCING</p>
@@ -321,7 +330,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The endpoints of the ApsaraDB RDS instance.</p>
+         * <p>The details of the ApsaraDB RDS endpoints.</p>
          */
         public Builder rdsEndpointList(java.util.List<RdsEndpointList> rdsEndpointList) {
             this.rdsEndpointList = rdsEndpointList;
@@ -329,7 +338,13 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the synchronous task.</p>
+         * <p>The read/write mode of the source ApsaraDB RDS instance. Valid values:</p>
+         * <ul>
+         * <li><p><strong>rw</strong>: Read and write.</p>
+         * </li>
+         * <li><p><strong>ro</strong>: Read-only.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>rw</p>
@@ -340,7 +355,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the source ApsaraDB RDS instance.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F2A9EFA7-915F-4572-8299-85A307******</p>
@@ -351,7 +366,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The endpoints of the ApsaraDB RDS instance.</p>
+         * <p>The ID of the source ApsaraDB RDS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-************</p>
@@ -364,8 +379,10 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         /**
          * <p>The type of the source database. Valid values:</p>
          * <ul>
-         * <li><strong>PolarDBMySQL</strong>: The source database is a PolarDB for MySQL database when the major version of your PolarDB cluster is upgraded.</li>
-         * <li><strong>RDS</strong>: The source database is an ApsaraDB RDS database when data is migrated from ApsaraDB RDS to PolarDB for MySQL.</li>
+         * <li><p><strong>PolarDBMySQL</strong>: The source database for a major version upgrade of a PolarDB cluster.</p>
+         * </li>
+         * <li><p><strong>RDS</strong>: The source database for migrating data from an ApsaraDB RDS instance to a PolarDB for MySQL cluster.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -377,15 +394,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The migration state of the PolarDB cluster. Valid values:</p>
+         * <p>The data synchronization relationship. Valid values:</p>
          * <ul>
-         * <li><strong>NO_MIGRATION</strong>: No migration task is running.</li>
-         * <li><strong>RDS2POLARDB_CLONING</strong>: Data is being replicated.</li>
-         * <li><strong>RDS2POLARDB_SYNCING</strong>: Data is being replicated. During the replication, the PolarDB cluster is running in read-only mode and the source ApsaraDB RDS instance is running in read and write mode.</li>
-         * <li><strong>SWITCHING</strong>: Databases are being switched.</li>
-         * <li><strong>POLARDB2RDS_SYNCING</strong>: Databases are switched. The PolarDB cluster is running in read and write mode and the source ApsaraDB RDS instance is running in read-only mode. In this state, you can modify the endpoints for your applications.</li>
-         * <li><strong>ROLLBACK</strong>: The migration is being rolled back. After the rollback is complete, the value <strong>RDS2POLARDB_SYNCING</strong> is returned.</li>
-         * <li><strong>CLOSING_MIGRATION</strong>: The migration task is being terminated.</li>
+         * <li><p><strong>RDS2POLARDB</strong>: Data is synchronized from the ApsaraDB RDS instance to the PolarDB cluster.</p>
+         * </li>
+         * <li><p><strong>POLARDB2RDS</strong>: Data is synchronized from the PolarDB cluster to the ApsaraDB RDS instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -520,11 +534,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>Enabled</strong></li>
-             * <li><strong>Disabled</strong></li>
-             * </ul>
+             * <p>The connection string.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-**************.rwlb.rds.aliyuncs.com</p>
@@ -535,7 +545,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of a migration exception. If no exception occurs during the migration, an empty string is returned.</p>
+             * <p>The IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>192.<em><strong>.</strong></em>.10</p>
@@ -546,7 +556,15 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the endpoint.</p>
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Public</strong>: An endpoint for the Internet.</p>
+             * </li>
+             * <li><p><strong>Private</strong>: A private endpoint.</p>
+             * </li>
+             * <li><p><strong>Inner</strong>: A private endpoint in a classic network.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Private</p>
@@ -557,12 +575,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the endpoint. Valid values:</p>
-             * <ul>
-             * <li><strong>Cluster</strong>: the default cluster endpoint</li>
-             * <li><strong>Primary</strong>: the primary endpoint</li>
-             * <li><strong>Custom</strong>: the custom endpoint</li>
-             * </ul>
+             * <p>The port.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -573,7 +586,13 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the request.</p>
+             * <p>Indicates whether Secure Sockets Layer (SSL) encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Enabled</strong>: SSL encryption is enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: SSL encryption is disabled.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Enabled</p>
@@ -584,11 +603,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read/write mode. Valid values:</p>
-             * <ul>
-             * <li>ReadWrite: receives and forwards read and write requests (automatic read-write splitting).</li>
-             * <li>ReadOnly (default): receives and forwards read requests only.</li>
-             * </ul>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-**********</p>
@@ -599,7 +614,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the endpoint.</p>
+             * <p>The ID of the virtual switch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-**********</p>
@@ -695,7 +710,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The details of the connection strings.</p>
              */
             public Builder addressItems(java.util.List<AddressItems> addressItems) {
                 this.addressItems = addressItems;
@@ -703,7 +718,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the replication between ApsaraDB RDS and PolarDB. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * <p>The endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pe-***********</p>
@@ -714,7 +729,15 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Cluster</strong>: The default cluster endpoint.</p>
+             * </li>
+             * <li><p><strong>Primary</strong>: The primary endpoint.</p>
+             * </li>
+             * <li><p><strong>Custom</strong>: A custom cluster endpoint.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Cluster</p>
@@ -725,10 +748,12 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synchronization direction. Valid values:</p>
+             * <p>The read/write mode. Valid values:</p>
              * <ul>
-             * <li><strong>RDS2POLARDB</strong>: Data is replicated from an ApsaraDB RDS instance to a PolarDB cluster.</li>
-             * <li><strong>POLARDB2RDS</strong>: Data is replicated from a PolarDB cluster to an ApsaraDB RDS instance.</li>
+             * <li><p>ReadWrite: Read and write (automatic read/write splitting).</p>
+             * </li>
+             * <li><p>ReadOnly (Default): Read-only.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -864,11 +889,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-             * <ul>
-             * <li><strong>Enabled</strong></li>
-             * <li><strong>Disabled</strong></li>
-             * </ul>
+             * <p>The connection string.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-***********.mysql.rds.aliyuncs.com</p>
@@ -879,11 +900,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source database. Valid values:</p>
-             * <ul>
-             * <li><strong>PolarDBMySQL</strong>: The source database is a PolarDB for MySQL database when the major version of your PolarDB cluster is upgraded.</li>
-             * <li><strong>RDS</strong>: The source database is an ApsaraDB RDS database when data is migrated from ApsaraDB RDS to PolarDB for MySQL.</li>
-             * </ul>
+             * <p>The IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>172.<em><strong>.</strong></em>.173</p>
@@ -894,7 +911,15 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the endpoint.</p>
+             * <p>The network type of the endpoint. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Public</strong>: An endpoint for the Internet.</p>
+             * </li>
+             * <li><p><strong>Private</strong>: A private endpoint.</p>
+             * </li>
+             * <li><p><strong>Inner</strong>: A private endpoint in a classic network.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Private</p>
@@ -905,11 +930,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the endpoint. Valid values:</p>
-             * <ul>
-             * <li><strong>Normal</strong>: the standard endpoint</li>
-             * <li><strong>ReadWriteSplitting</strong>: the read/write splitting endpoint</li>
-             * </ul>
+             * <p>The port.</p>
              * 
              * <strong>example:</strong>
              * <p>3306</p>
@@ -922,8 +943,10 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             /**
              * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>Enabled</strong></li>
-             * <li><strong>Disabled</strong></li>
+             * <li><p><strong>Enabled</strong>: SSL encryption is enabled.</p>
+             * </li>
+             * <li><p><strong>Disabled</strong>: SSL encryption is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -935,7 +958,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type.</p>
+             * <p>The ID of the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-************</p>
@@ -946,7 +969,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the endpoint.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-**************</p>
@@ -1042,7 +1065,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The details of the connection strings.</p>
              */
             public Builder addressItems(java.util.List<RdsEndpointListAddressItems> addressItems) {
                 this.addressItems = addressItems;
@@ -1063,7 +1086,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the endpoint.</p>
+             * <p>The endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-************-normal</p>
@@ -1076,8 +1099,10 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             /**
              * <p>The type of the endpoint. Valid values:</p>
              * <ul>
-             * <li><strong>Normal</strong>: the standard endpoint</li>
-             * <li><strong>ReadWriteSplitting</strong>: the read/write splitting endpoint</li>
+             * <li><p><strong>Normal</strong>: A regular endpoint.</p>
+             * </li>
+             * <li><p><strong>ReadWriteSplitting</strong>: A read/write splitting endpoint.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

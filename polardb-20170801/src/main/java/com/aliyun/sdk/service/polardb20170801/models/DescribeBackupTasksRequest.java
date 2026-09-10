@@ -144,7 +144,7 @@ public class DescribeBackupTasksRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the backup task.</p>
+         * <p>The backup job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11111111</p>
@@ -158,8 +158,10 @@ public class DescribeBackupTasksRequest extends Request {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li><strong>Automated</strong></li>
-         * <li><strong>Manual</strong></li>
+         * <li><p><strong>Automated</strong>: An automatic backup.</p>
+         * </li>
+         * <li><p><strong>Manual</strong>: A manual backup.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

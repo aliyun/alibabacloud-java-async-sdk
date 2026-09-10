@@ -131,7 +131,10 @@ public class CreateConsumerRequest extends Request {
         } 
 
         /**
-         * ConsumerGroupName.
+         * <p>The consumer group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-p3gk2oh55c**</p>
          */
         public Builder consumerGroupName(String consumerGroupName) {
             this.putQueryParameter("ConsumerGroupName", consumerGroupName);
@@ -140,6 +143,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +156,10 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * KeyType.
+         * <p>The key type. The only supported value is ApiKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiKey</p>
          */
         public Builder keyType(String keyType) {
             this.putQueryParameter("KeyType", keyType);
@@ -161,6 +168,7 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
+         * <p>The user name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +181,10 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * NickName.
+         * <p>The user nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -182,7 +193,10 @@ public class CreateConsumerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

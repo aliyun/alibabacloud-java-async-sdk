@@ -132,7 +132,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-********************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Components.
+         * <p>The list of child components.</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.components = components;
@@ -148,7 +151,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The application description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myapp</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -156,7 +162,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The generated order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2148126708*****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -164,7 +173,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +184,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceAvailable.
+         * <p>Indicates whether resources are sufficient. This parameter is returned only when DryRun is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resourceAvailable(Boolean resourceAvailable) {
             this.resourceAvailable = resourceAvailable;
@@ -180,7 +195,10 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-********************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -233,7 +251,10 @@ public class CreateApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentId.
+             * <p>The child component ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pac-********************</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;

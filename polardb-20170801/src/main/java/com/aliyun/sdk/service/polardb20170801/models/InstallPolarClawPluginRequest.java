@@ -103,6 +103,7 @@ public class InstallPolarClawPluginRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class InstallPolarClawPluginRequest extends Request {
         }
 
         /**
-         * NpmPackage.
+         * <p>The npm package name, including the version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@larksuite/<a href="mailto:openclaw-lark@2026.4.7">openclaw-lark@2026.4.7</a></p>
          */
         public Builder npmPackage(String npmPackage) {
             this.putQueryParameter("NpmPackage", npmPackage);
@@ -124,6 +128,7 @@ public class InstallPolarClawPluginRequest extends Request {
         }
 
         /**
+         * <p>The plug-in ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class InstallPolarClawPluginRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after installation. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

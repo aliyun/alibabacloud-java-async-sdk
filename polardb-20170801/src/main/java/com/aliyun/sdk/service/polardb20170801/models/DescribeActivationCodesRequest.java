@@ -173,7 +173,7 @@ public class DescribeActivationCodesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud order. The value can be the ID of a virtual order.</p>
+         * <p>The ID of the Alibaba Cloud order (including virtual orders) used to purchase the activation codes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,10 @@ public class DescribeActivationCodesRequest extends Request {
         }
 
         /**
-         * MacAddress.
+         * <p>Filters the list to return only the activation code matching the specified MAC address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa:bb:cc:dd:ee:ff</p>
          */
         public Builder macAddress(String macAddress) {
             this.putQueryParameter("MacAddress", macAddress);
@@ -213,7 +216,7 @@ public class DescribeActivationCodesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>Page number</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,7 +228,7 @@ public class DescribeActivationCodesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>Number of records to return per page</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -255,7 +258,10 @@ public class DescribeActivationCodesRequest extends Request {
         }
 
         /**
-         * SystemIdentifier.
+         * <p>Filters the list to return only the activation code matching the specified system identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3312548696141831911</p>
          */
         public Builder systemIdentifier(String systemIdentifier) {
             this.putQueryParameter("SystemIdentifier", systemIdentifier);

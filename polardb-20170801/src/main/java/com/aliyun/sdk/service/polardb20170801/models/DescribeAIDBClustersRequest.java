@@ -228,7 +228,15 @@ public class DescribeAIDBClustersRequest extends Request {
         } 
 
         /**
-         * AiNodeType.
+         * <p>The node type. Multiple types are supported. Separate two values with a comma (,).</p>
+         * <ul>
+         * <li>vnode: managed by Kubernetes.</li>
+         * <li>container: logon-enabled container.</li>
+         * <li>maas: model service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vnode,container</p>
          */
         public Builder aiNodeType(String aiNodeType) {
             this.putQueryParameter("AiNodeType", aiNodeType);
@@ -237,7 +245,10 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterDescription.
+         * <p>The cluster description. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -246,7 +257,10 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterIds.
+         * <p>The cluster ID. Separate multiple cluster IDs with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-***************</p>
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -255,7 +269,26 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterStatus.
+         * <p>The cluster status. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong>: being created.</li>
+         * <li><strong>Running</strong>: running.</li>
+         * <li><strong>Deleting</strong>: being released.</li>
+         * <li><strong>Rebooting</strong>: being restarted.</li>
+         * <li><strong>DBNodeCreating</strong>: a node is being added (increase).</li>
+         * <li><strong>DBNodeDeleting</strong>: a node is being deleted.</li>
+         * <li><strong>ClassChanging</strong>: node specifications are being changed.</li>
+         * <li><strong>NetAddressCreating</strong>: a network connectivity is being created.</li>
+         * <li><strong>NetAddressDeleting</strong>: a network connectivity is being deleted.</li>
+         * <li><strong>NetAddressModifying</strong>: a network connectivity is being modified. </li>
+         * <li><strong>Deleted</strong>: released.</li>
+         * </ul>
+         * <ul>
+         * <li><strong>ClassChanged</strong>: resources are being revoked after a decrease the quota operation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
@@ -282,7 +315,10 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -291,7 +327,11 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -300,7 +340,14 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * PayType.
+         * <p>The billing method. Valid values: </p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -309,6 +356,7 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -339,7 +387,7 @@ public class DescribeAIDBClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -407,7 +455,10 @@ public class DescribeAIDBClustersRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. You can filter the cluster list by tag. You can specify up to 20 tag pairs. The number n for each tag pair must be unique and must be a consecutive integer starting from 1. The value of Tag.n.Key corresponds to Tag.n.Value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,7 +466,10 @@ public class DescribeAIDBClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value that corresponds to the tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValueData</p>
              */
             public Builder value(String value) {
                 this.value = value;

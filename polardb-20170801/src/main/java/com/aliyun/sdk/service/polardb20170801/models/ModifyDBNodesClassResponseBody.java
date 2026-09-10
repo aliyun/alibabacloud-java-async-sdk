@@ -80,7 +80,7 @@ public class ModifyDBNodesClassResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The database cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-*************</p>
@@ -91,7 +91,7 @@ public class ModifyDBNodesClassResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2035629******</p>

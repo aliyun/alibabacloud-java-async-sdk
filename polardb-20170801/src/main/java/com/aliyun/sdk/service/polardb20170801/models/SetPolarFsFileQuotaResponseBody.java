@@ -67,7 +67,10 @@ public class SetPolarFsFileQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * PolarFsInstanceId.
+         * <p>The Polarlakebase instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-2ze0i74ka607*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;

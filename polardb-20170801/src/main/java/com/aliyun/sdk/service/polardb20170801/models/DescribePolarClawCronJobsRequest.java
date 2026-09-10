@@ -116,6 +116,7 @@ public class DescribePolarClawCronJobsRequest extends Request {
         } 
 
         /**
+         * <p>Application ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class DescribePolarClawCronJobsRequest extends Request {
         }
 
         /**
-         * IncludeDisabled.
+         * <p>Include disabled tasks. Default is true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeDisabled(Boolean includeDisabled) {
             this.putQueryParameter("IncludeDisabled", includeDisabled);
@@ -137,7 +141,10 @@ public class DescribePolarClawCronJobsRequest extends Request {
         }
 
         /**
-         * IncludeRuns.
+         * <p>Include run history. Default is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeRuns(Boolean includeRuns) {
             this.putQueryParameter("IncludeRuns", includeRuns);
@@ -146,7 +153,10 @@ public class DescribePolarClawCronJobsRequest extends Request {
         }
 
         /**
-         * JobIdList.
+         * <p>Filter by Job ID list</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0ee00f56-f467-4d41-858c-ca4ede2c770e,1ee00f56-f467-4d41-858c-ca4ede2c770f</p>
          */
         public Builder jobIdList(java.util.List<String> jobIdList) {
             String jobIdListShrink = shrink(jobIdList, "JobIdList", "json");
@@ -156,7 +166,10 @@ public class DescribePolarClawCronJobsRequest extends Request {
         }
 
         /**
-         * RunLimit.
+         * <p>Maximum number of run history entries per task. Default is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder runLimit(Integer runLimit) {
             this.putQueryParameter("RunLimit", runLimit);

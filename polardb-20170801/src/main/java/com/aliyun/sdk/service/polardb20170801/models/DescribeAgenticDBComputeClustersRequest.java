@@ -140,6 +140,7 @@ public class DescribeAgenticDBComputeClustersRequest extends Request {
         }
 
         /**
+         * <p>The AgenticDB cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class DescribeAgenticDBComputeClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +165,10 @@ public class DescribeAgenticDBComputeClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 30. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,6 +177,7 @@ public class DescribeAgenticDBComputeClustersRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +190,10 @@ public class DescribeAgenticDBComputeClustersRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status filter. Valid values: Running, Stopped, and Waiting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

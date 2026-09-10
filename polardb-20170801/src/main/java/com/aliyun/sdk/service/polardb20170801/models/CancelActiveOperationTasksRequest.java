@@ -211,7 +211,7 @@ public class CancelActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The IDs of O&amp;M events that are canceled at a time. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of O\&amp;M events that are canceled at a time. Separate multiple IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

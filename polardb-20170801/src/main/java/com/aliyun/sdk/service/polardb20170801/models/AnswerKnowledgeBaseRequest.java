@@ -202,6 +202,7 @@ public class AnswerKnowledgeBaseRequest extends Request {
         } 
 
         /**
+         * <p>The unique ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +215,10 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * MaxContextChars.
+         * <p>The maximum number of context characters. Valid values: 1000 to 32000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16000</p>
          */
         public Builder maxContextChars(Integer maxContextChars) {
             this.putQueryParameter("MaxContextChars", maxContextChars);
@@ -223,7 +227,11 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The user query text.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Summarize this year\&quot;s financial report</p>
          */
         public Builder queryText(String queryText) {
             this.putQueryParameter("QueryText", queryText);
@@ -232,6 +240,7 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +253,10 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * RerankEnabled.
+         * <p>Specifies whether to enable reranking. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder rerankEnabled(Boolean rerankEnabled) {
             this.putQueryParameter("RerankEnabled", rerankEnabled);
@@ -253,7 +265,10 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * ReturnSources.
+         * <p>Specifies whether to return citation sources. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder returnSources(Boolean returnSources) {
             this.putQueryParameter("ReturnSources", returnSources);
@@ -262,7 +277,10 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * ScoreThreshold.
+         * <p>The similarity score threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.7</p>
          */
         public Builder scoreThreshold(Double scoreThreshold) {
             this.putQueryParameter("ScoreThreshold", scoreThreshold);
@@ -271,7 +289,10 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * SearchMode.
+         * <p>The search mode. Valid values: knn, rrf, precise, semantic, and balanced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>semantic</p>
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -280,7 +301,10 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * SystemPrompt.
+         * <p>The system prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a minimal test prompt for security verification.</p>
          */
         public Builder systemPrompt(String systemPrompt) {
             this.putQueryParameter("SystemPrompt", systemPrompt);
@@ -289,7 +313,10 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * TopK.
+         * <p>The number of results to recall during retrieval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topK(Integer topK) {
             this.putQueryParameter("TopK", topK);
@@ -298,7 +325,10 @@ public class AnswerKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * UserInstructions.
+         * <p>The supplementary user instructions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Return a short summary and test result.</p>
          */
         public Builder userInstructions(String userInstructions) {
             this.putQueryParameter("UserInstructions", userInstructions);

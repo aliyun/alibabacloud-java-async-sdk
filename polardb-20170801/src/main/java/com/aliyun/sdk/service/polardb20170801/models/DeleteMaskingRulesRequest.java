@@ -89,9 +89,9 @@ public class DeleteMaskingRulesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -105,8 +105,9 @@ public class DeleteMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>Deletes data masking or encryption rules. Valid values:</p>
-         * <p>v1: deletes data masking rules. v2: deletes data encryption rules.</p>
+         * <p>The type of rule to delete. Valid values:</p>
+         * <p>v1: deletes data masking rules.
+         * v2: deletes data encryption rules.</p>
          * 
          * <strong>example:</strong>
          * <p>v1</p>
@@ -118,9 +119,9 @@ public class DeleteMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the masking rule. You can specify multiple masking rules at a time. Separate the masking rules with commas (,).</p>
+         * <p>The names of the data masking rules to delete. To delete multiple rules in a batch, separate the names with commas (,).</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeMaskingRules</a> operation to query details of all the masking rules for a specified cluster, such as the names of the masking rules.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/212573.html">DescribeMaskingRules</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

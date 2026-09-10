@@ -132,7 +132,10 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,10 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -148,7 +154,10 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Operation.
+         * <p>The name of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LoginPolarClawChannel</p>
          */
         public Builder operation(String operation) {
             this.operation = operation;
@@ -164,7 +176,7 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>
@@ -175,7 +187,10 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The state of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -183,7 +198,10 @@ public class LoginPolarClawChannelResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc6762fb-20ad-4796-84fe-5c5d0dc413ce</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

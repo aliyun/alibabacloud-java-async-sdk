@@ -119,7 +119,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>Application ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -127,7 +130,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Jobs.
+         * <p>List of scheduled tasks</p>
          */
         public Builder jobs(java.util.List<Jobs> jobs) {
             this.jobs = jobs;
@@ -143,7 +149,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Response message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>Total number of tasks</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -264,7 +279,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>Channel account ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -272,7 +290,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * BestEffort.
+             * <p>Ignore delivery failures</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bestEffort(Boolean bestEffort) {
                 this.bestEffort = bestEffort;
@@ -280,7 +301,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Channel.
+             * <p>Delivery channel</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feishu</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -288,7 +312,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>Delivery mode: none/announce/webhook</p>
+             * 
+             * <strong>example:</strong>
+             * <p>announce</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -296,7 +323,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>Delivery destination</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_***</p>
              */
             public Builder to(String to) {
                 this.to = to;
@@ -467,7 +497,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * BestEffortDeliver.
+             * <p>Ignore delivery failures</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder bestEffortDeliver(Boolean bestEffortDeliver) {
                 this.bestEffortDeliver = bestEffortDeliver;
@@ -475,7 +508,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Channel.
+             * <p>Delivery channel ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feishu</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -483,7 +519,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Deliver.
+             * <p>Deliver output to channel</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deliver(Boolean deliver) {
                 this.deliver = deliver;
@@ -491,7 +530,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * <p>Payload type: agentTurn/systemEvent</p>
+             * 
+             * <strong>example:</strong>
+             * <p>systemEvent</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -499,7 +541,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LightContext.
+             * <p>Indicates whether lightweight context is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder lightContext(Boolean lightContext) {
                 this.lightContext = lightContext;
@@ -507,7 +552,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Agent conversation prompt</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Generate the daily report.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -515,7 +563,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>Model override</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian/qwen3.5-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -523,7 +574,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>System event text</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Generate the daily report.</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -531,7 +585,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutSeconds.
+             * <p>Execution timeout in seconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -539,7 +596,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * To.
+             * <p>Delivery destination</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ou_***</p>
              */
             public Builder to(String to) {
                 this.to = to;
@@ -619,7 +679,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * InputTokens.
+             * <p>Number of input tokens</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30250</p>
              */
             public Builder inputTokens(Integer inputTokens) {
                 this.inputTokens = inputTokens;
@@ -627,7 +690,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>Number of output tokens</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30250</p>
              */
             public Builder outputTokens(Integer outputTokens) {
                 this.outputTokens = outputTokens;
@@ -635,7 +701,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>Total number of tokens</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60500</p>
              */
             public Builder totalTokens(Integer totalTokens) {
                 this.totalTokens = totalTokens;
@@ -871,7 +940,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>Action: finished/error/skipped</p>
+             * 
+             * <strong>example:</strong>
+             * <p>finished</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -879,7 +951,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Delivered.
+             * <p>Indicates whether the job has been delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder delivered(Boolean delivered) {
                 this.delivered = delivered;
@@ -887,7 +962,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryStatus.
+             * <p>Delivery status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>not-requested</p>
              */
             public Builder deliveryStatus(String deliveryStatus) {
                 this.deliveryStatus = deliveryStatus;
@@ -895,7 +973,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DurationMs.
+             * <p>Execution duration (milliseconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27586</p>
              */
             public Builder durationMs(Long durationMs) {
                 this.durationMs = durationMs;
@@ -903,7 +984,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>Associated task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f83f5278-1abe-40a6-b10e-ad3ecdc05de2</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -911,7 +995,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * <p>Task name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -919,7 +1006,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>Model used</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian/qwen3.5-plus</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -927,7 +1017,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * NextRunAtMs.
+             * <p>Next execution timestamp (milliseconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1777424400000</p>
              */
             public Builder nextRunAtMs(Long nextRunAtMs) {
                 this.nextRunAtMs = nextRunAtMs;
@@ -935,7 +1028,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Provider.
+             * <p>Model provider</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder provider(String provider) {
                 this.provider = provider;
@@ -943,7 +1039,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RunAtMs.
+             * <p>Actual execution timestamp (milliseconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1777370544931</p>
              */
             public Builder runAtMs(Long runAtMs) {
                 this.runAtMs = runAtMs;
@@ -951,7 +1050,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>Associated session ID</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -959,7 +1061,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status: ok/error/skipped</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -967,7 +1072,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>Run summary text</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Generate the daily report.</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -975,7 +1083,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Ts.
+             * <p>Run timestamp (milliseconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1777370572518</p>
              */
             public Builder ts(Long ts) {
                 this.ts = ts;
@@ -983,7 +1094,7 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * <p>Token usage details</p>
              */
             public Builder usage(Usage usage) {
                 this.usage = usage;
@@ -1102,7 +1213,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * AnchorMs.
+             * <p>Alignment anchor timestamp for interval</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1777370572518</p>
              */
             public Builder anchorMs(Long anchorMs) {
                 this.anchorMs = anchorMs;
@@ -1110,7 +1224,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * At.
+             * <p>ISO 8601 timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-10T09:00:00+08:00</p>
              */
             public Builder at(String at) {
                 this.at = at;
@@ -1118,7 +1235,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * EveryMs.
+             * <p>Interval in milliseconds</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder everyMs(Long everyMs) {
                 this.everyMs = everyMs;
@@ -1126,7 +1246,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Expr.
+             * <p>Cron expression</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 9 * * *</p>
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -1134,7 +1257,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Kind.
+             * <p>Schedule type: cron/every/at</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -1142,7 +1268,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Tz.
+             * <p>IANA time zone</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder tz(String tz) {
                 this.tz = tz;
@@ -1235,7 +1364,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConsecutiveErrors.
+             * <p>Number of consecutive failures</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder consecutiveErrors(Integer consecutiveErrors) {
                 this.consecutiveErrors = consecutiveErrors;
@@ -1243,7 +1375,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LastRunAtMs.
+             * <p>Last execution timestamp (milliseconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1777370544931</p>
              */
             public Builder lastRunAtMs(Long lastRunAtMs) {
                 this.lastRunAtMs = lastRunAtMs;
@@ -1251,7 +1386,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * LastRunStatus.
+             * <p>Last execution status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ok</p>
              */
             public Builder lastRunStatus(String lastRunStatus) {
                 this.lastRunStatus = lastRunStatus;
@@ -1259,7 +1397,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * NextRunAtMs.
+             * <p>Next execution timestamp (milliseconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1777424400000</p>
              */
             public Builder nextRunAtMs(Long nextRunAtMs) {
                 this.nextRunAtMs = nextRunAtMs;
@@ -1508,7 +1649,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentId.
+             * <p>Execution Agent ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
@@ -1516,7 +1660,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedAtMs.
+             * <p>Creation timestamp (milliseconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1777370572517</p>
              */
             public Builder createdAtMs(Long createdAtMs) {
                 this.createdAtMs = createdAtMs;
@@ -1524,7 +1671,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteAfterRun.
+             * <p>Delete after first execution</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deleteAfterRun(Boolean deleteAfterRun) {
                 this.deleteAfterRun = deleteAfterRun;
@@ -1532,7 +1682,7 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Delivery.
+             * <p>Result delivery configuration</p>
              */
             public Builder delivery(Delivery delivery) {
                 this.delivery = delivery;
@@ -1540,7 +1690,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Task description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily report generation</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1548,7 +1701,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Whether enabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1556,7 +1712,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Task ID (UUID)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0ee00f56-f467-4d41-858c-ca4ede2c770e</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1564,7 +1723,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Task name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1572,7 +1734,7 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Payload.
+             * <p>Execution payload</p>
              */
             public Builder payload(Payload payload) {
                 this.payload = payload;
@@ -1580,7 +1742,7 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Runs.
+             * <p>Run history</p>
              */
             public Builder runs(java.util.List<Runs> runs) {
                 this.runs = runs;
@@ -1588,7 +1750,7 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Schedule.
+             * <p>Scheduling Configuration</p>
              */
             public Builder schedule(Schedule schedule) {
                 this.schedule = schedule;
@@ -1596,7 +1758,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionKey.
+             * <p>Session routing key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>agent:main:feishu:direct:***</p>
              */
             public Builder sessionKey(String sessionKey) {
                 this.sessionKey = sessionKey;
@@ -1604,7 +1769,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionTarget.
+             * <p>Session target: main/isolated/current</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder sessionTarget(String sessionTarget) {
                 this.sessionTarget = sessionTarget;
@@ -1612,7 +1780,7 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Run status</p>
              */
             public Builder state(State state) {
                 this.state = state;
@@ -1620,7 +1788,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAtMs.
+             * <p>Update timestamp (milliseconds)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1777368967284</p>
              */
             public Builder updatedAtMs(Long updatedAtMs) {
                 this.updatedAtMs = updatedAtMs;
@@ -1628,7 +1799,10 @@ public class DescribePolarClawCronJobsResponseBody extends TeaModel {
             }
 
             /**
-             * WakeMode.
+             * <p>Wake mode: now/next-heartbeat</p>
+             * 
+             * <strong>example:</strong>
+             * <p>now</p>
              */
             public Builder wakeMode(String wakeMode) {
                 this.wakeMode = wakeMode;

@@ -145,7 +145,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the knowledge space. The description can be up to 512 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDesc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -154,6 +157,7 @@ public class UpdateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the knowledge space.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +170,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * LLMModel.
+         * <p>The name of the large language model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3.6-plus</p>
          */
         public Builder LLMModel(String LLMModel) {
             this.putQueryParameter("LLMModel", LLMModel);
@@ -175,7 +182,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the knowledge space. The name must be 1 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -184,6 +194,7 @@ public class UpdateKnowledgeSpaceRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +207,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * RerankModel.
+         * <p>The name of the reranking model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3-rerank</p>
          */
         public Builder rerankModel(String rerankModel) {
             this.putQueryParameter("RerankModel", rerankModel);
@@ -205,7 +219,7 @@ public class UpdateKnowledgeSpaceRequest extends Request {
         }
 
         /**
-         * ShardingStrategyConfig.
+         * <p>The default chunking strategy configuration for the knowledge space. Both simple strategies and composite strategies that match by content type are supported.</p>
          */
         public Builder shardingStrategyConfig(ShardingStrategyConfig shardingStrategyConfig) {
             String shardingStrategyConfigShrink = shrink(shardingStrategyConfig, "ShardingStrategyConfig", "json");
@@ -274,7 +288,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             } 
 
             /**
-             * MaxTokens.
+             * <p>The maximum number of tokens per chunk. The value must be a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder maxTokens(Integer maxTokens) {
                 this.maxTokens = maxTokens;
@@ -282,7 +299,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             }
 
             /**
-             * MergePeers.
+             * <p>Specifies whether to merge adjacent small chunks under the same heading.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder mergePeers(Boolean mergePeers) {
                 this.mergePeers = mergePeers;
@@ -349,7 +369,7 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             } 
 
             /**
-             * Parameters.
+             * <p>The parameters of the default chunking strategy. MaxTokens and MergePeers take effect only when Type is set to hybrid.</p>
              */
             public Builder parameters(Parameters parameters) {
                 this.parameters = parameters;
@@ -357,7 +377,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the default chunking strategy. Valid values: hybrid or hierarchical.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hybrid</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -411,7 +434,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             } 
 
             /**
-             * ContentType.
+             * <p>The content type. Currently, only table is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -478,7 +504,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             } 
 
             /**
-             * MarkdownTables.
+             * <p>The processing mode for Markdown tables. Valid values: auto, on, or off.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder markdownTables(String markdownTables) {
                 this.markdownTables = markdownTables;
@@ -486,7 +515,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             }
 
             /**
-             * MaxTokens.
+             * <p>The maximum number of tokens per chunk for matched content. The value must be a positive integer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>512</p>
              */
             public Builder maxTokens(Integer maxTokens) {
                 this.maxTokens = maxTokens;
@@ -553,7 +585,7 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             } 
 
             /**
-             * Parameters.
+             * <p>The chunking strategy parameters for the override rule. MaxTokens takes effect only when Type is set to hybrid. MarkdownTables supports auto, on, or off.</p>
              */
             public Builder parameters(StrategyParameters parameters) {
                 this.parameters = parameters;
@@ -561,7 +593,10 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the chunking strategy to use when the rule is matched. Valid values: hybrid or hierarchical.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hierarchical</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -628,7 +663,7 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             } 
 
             /**
-             * Match.
+             * <p>The match condition of the rule. Currently, only exact matching of table content by content type is supported.</p>
              */
             public Builder match(Match match) {
                 this.match = match;
@@ -636,7 +671,7 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             }
 
             /**
-             * Strategy.
+             * <p>The chunking strategy to use when the rule is matched.</p>
              */
             public Builder strategy(Strategy strategy) {
                 this.strategy = strategy;
@@ -703,7 +738,7 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             } 
 
             /**
-             * DefaultStrategy.
+             * <p>The default chunking strategy. This strategy is used when no rule is matched.</p>
              */
             public Builder defaultStrategy(DefaultStrategy defaultStrategy) {
                 this.defaultStrategy = defaultStrategy;
@@ -711,7 +746,7 @@ public class UpdateKnowledgeSpaceRequest extends Request {
             }
 
             /**
-             * Rules.
+             * <p>The list of override rules that are matched in order. Currently, a maximum of one exact-match rule with ContentType set to table is supported.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

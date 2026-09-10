@@ -93,7 +93,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Engine.
+         * <p>The cluster engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb_mysql</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -101,7 +104,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * <p>The engine version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -109,7 +115,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of parameter modification history.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -117,7 +123,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CD35F3-F3-44CA-AFFF-BAF869******</p>
@@ -225,7 +231,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             } 
 
             /**
-             * ModifyTime.
+             * <p>The time when the parameter was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-29T09:31:37Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -233,7 +242,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * NewParameterValue.
+             * <p>The parameter value after the modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder newParameterValue(String newParameterValue) {
                 this.newParameterValue = newParameterValue;
@@ -241,7 +253,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * OldParameterValue.
+             * <p>The parameter value before the modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder oldParameterValue(String oldParameterValue) {
                 this.oldParameterValue = oldParameterValue;
@@ -249,7 +264,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hz</p>
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -257,7 +275,10 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the modification was applied successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder status(String status) {
                 this.status = status;

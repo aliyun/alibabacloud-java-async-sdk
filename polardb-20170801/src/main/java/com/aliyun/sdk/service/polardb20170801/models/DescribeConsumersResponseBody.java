@@ -119,7 +119,7 @@ public class DescribeConsumersResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of users.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -143,7 +149,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +171,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -371,7 +383,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             } 
 
             /**
-             * AllowedModels.
+             * <p>The list of supported models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;[]&quot;</p>
              */
             public Builder allowedModels(String allowedModels) {
                 this.allowedModels = allowedModels;
@@ -379,7 +394,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * ApiKey.
+             * <p>The full API key, returned only in this response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxxxxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -387,7 +405,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cg-xxxxxx</p>
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -395,7 +416,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroupName.
+             * <p>The user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder consumerGroupName(String consumerGroupName) {
                 this.consumerGroupName = consumerGroupName;
@@ -403,7 +427,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c-mqveroemc***</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -411,7 +438,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-28T09:56:03+08:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -419,7 +449,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-04T16:09:29+08:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -427,7 +460,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * LifetimeCostCount.
+             * <p>The total cumulative usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder lifetimeCostCount(Long lifetimeCostCount) {
                 this.lifetimeCostCount = lifetimeCostCount;
@@ -435,7 +471,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * LifetimeTokenCount.
+             * <p>The total cost for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder lifetimeTokenCount(Long lifetimeTokenCount) {
                 this.lifetimeTokenCount = lifetimeTokenCount;
@@ -443,7 +482,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * MtdCostCount.
+             * <p>The usage for the current month.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder mtdCostCount(Long mtdCostCount) {
                 this.mtdCostCount = mtdCostCount;
@@ -451,7 +493,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * MtdTokenCount.
+             * <p>The total cumulative cost.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder mtdTokenCount(Long mtdTokenCount) {
                 this.mtdTokenCount = mtdTokenCount;
@@ -459,7 +504,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -467,7 +515,10 @@ public class DescribeConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>The nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yonghu</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;

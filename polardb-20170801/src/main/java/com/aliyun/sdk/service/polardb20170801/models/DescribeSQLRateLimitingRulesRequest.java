@@ -158,6 +158,7 @@ public class DescribeSQLRateLimitingRulesRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,12 @@ public class DescribeSQLRateLimitingRulesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * <p>Maximum value: 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -179,7 +185,10 @@ public class DescribeSQLRateLimitingRulesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3QbdIPYBaCDXsvvjLHCQfi</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -224,7 +233,13 @@ public class DescribeSQLRateLimitingRulesRequest extends Request {
         }
 
         /**
-         * RuleNameList.
+         * <p>The name of the SQL throttling rule that you want to query. You can specify multiple rule names for a batch query. Separate the rule names with commas (,).</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeSQLRateLimitingRules</a> operation to query the details of all SQL throttling rules for the cluster, including the rule names.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testrule</p>
          */
         public Builder ruleNameList(String ruleNameList) {
             this.putQueryParameter("RuleNameList", ruleNameList);

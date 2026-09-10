@@ -54,7 +54,10 @@ public class ModifyResourceControlResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47921222-0D37-4133-8C0D-017DC3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -93,7 +93,10 @@ public class DescribeLakebaseS3AccountResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,10 @@ public class DescribeLakebaseS3AccountResponseBody extends TeaModel {
         }
 
         /**
-         * UserAccAk.
+         * <p>The Access Key of the S3 account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accname</p>
          */
         public Builder userAccAk(String userAccAk) {
             this.userAccAk = userAccAk;
@@ -109,7 +115,10 @@ public class DescribeLakebaseS3AccountResponseBody extends TeaModel {
         }
 
         /**
-         * UserAccPolicy.
+         * <p>The policy document of the S3 account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Version&quot;:&quot;2012-10-17&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Allow&quot;,&quot;Action&quot;:[&quot;s3:<em>&quot;],&quot;Resource&quot;:[&quot;</em>&quot;]}]}</p>
          */
         public Builder userAccPolicy(String userAccPolicy) {
             this.userAccPolicy = userAccPolicy;
@@ -117,7 +126,10 @@ public class DescribeLakebaseS3AccountResponseBody extends TeaModel {
         }
 
         /**
-         * UserAccSk.
+         * <p>The Secret Key of the S3 account (masked).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>password***</p>
          */
         public Builder userAccSk(String userAccSk) {
             this.userAccSk = userAccSk;

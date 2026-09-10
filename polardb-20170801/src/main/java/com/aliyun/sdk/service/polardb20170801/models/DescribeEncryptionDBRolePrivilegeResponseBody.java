@@ -106,7 +106,10 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -114,7 +117,7 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,13 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * <blockquote>
+         * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message, such as an error code, is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D0CEC6AC-7760-409A-A0D5-E6CD86******</p>
@@ -141,7 +150,16 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +251,10 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
             } 
 
             /**
-             * Encryption.
+             * <p>The regular users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[alton01]</p>
              */
             public Builder encryption(String encryption) {
                 this.encryption = encryption;
@@ -241,7 +262,10 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
             }
 
             /**
-             * Negation.
+             * <p>Other users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder negation(String negation) {
                 this.negation = negation;
@@ -249,7 +273,10 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
             }
 
             /**
-             * NotEncryption.
+             * <p>The privileged users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[alton]</p>
              */
             public Builder notEncryption(String notEncryption) {
                 this.notEncryption = notEncryption;
@@ -257,7 +284,10 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
             }
 
             /**
-             * RolePrivilegeName.
+             * <p>The name of the role permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder rolePrivilegeName(String rolePrivilegeName) {
                 this.rolePrivilegeName = rolePrivilegeName;
@@ -311,7 +341,7 @@ public class DescribeEncryptionDBRolePrivilegeResponseBody extends TeaModel {
             } 
 
             /**
-             * RolePrivilegeList.
+             * <p>A list of role access policies.</p>
              */
             public Builder rolePrivilegeList(java.util.List<RolePrivilegeList> rolePrivilegeList) {
                 this.rolePrivilegeList = rolePrivilegeList;

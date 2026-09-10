@@ -106,7 +106,7 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of knowledge bases.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,11 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +148,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -311,7 +321,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             } 
 
             /**
-             * BindingAppCount.
+             * <p>The number of AI applications bound to the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder bindingAppCount(Integer bindingAppCount) {
                 this.bindingAppCount = bindingAppCount;
@@ -319,7 +332,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-25T09:37:10Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -327,7 +343,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDesc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -335,7 +354,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeBaseId.
+             * <p>The unique identifier of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pkb-xxxxxx</p>
              */
             public Builder knowledgeBaseId(String knowledgeBaseId) {
                 this.knowledgeBaseId = knowledgeBaseId;
@@ -343,7 +365,14 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeBaseType.
+             * <p>The type of the knowledge base. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: public.</li>
+             * <li>PERSONAL: personal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder knowledgeBaseType(String knowledgeBaseType) {
                 this.knowledgeBaseType = knowledgeBaseType;
@@ -351,7 +380,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeSpaceId.
+             * <p>The ID of the knowledge space.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pks-xxxxxx</p>
              */
             public Builder knowledgeSpaceId(String knowledgeSpaceId) {
                 this.knowledgeSpaceId = knowledgeSpaceId;
@@ -359,7 +391,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -367,7 +402,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the knowledge base.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Activation</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -375,7 +413,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalDocs.
+             * <p>The total number of documents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalDocs(Integer totalDocs) {
                 this.totalDocs = totalDocs;
@@ -383,7 +424,10 @@ public class DescribeKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSizeBytes.
+             * <p>The total size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231984</p>
              */
             public Builder totalSizeBytes(Long totalSizeBytes) {
                 this.totalSizeBytes = totalSizeBytes;

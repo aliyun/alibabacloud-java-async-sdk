@@ -67,7 +67,10 @@ public class CreateApplicationAgentRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The ID of the Squad application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-xxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;

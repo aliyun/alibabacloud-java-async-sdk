@@ -161,6 +161,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the model operator instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,6 +174,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +187,10 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
+         * <p>The log type. Set the value to:</p>
+         * <ul>
+         * <li><strong>sls</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +203,10 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -206,7 +215,11 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of records to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>.</p>
+         * <p>The default value is <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +228,10 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * RelativeDBClusterId.
+         * <p>The ID of the PolarDB cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-bp10ze***</p>
          */
         public Builder relativeDBClusterId(String relativeDBClusterId) {
             this.putQueryParameter("RelativeDBClusterId", relativeDBClusterId);
@@ -224,7 +240,10 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
-         * Reverse.
+         * <p>Specifies whether to return the results in reverse order. The default value is <em>false</em>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -233,6 +252,7 @@ public class DescribeAIDBClusterTaskLogFilesRequest extends Request {
         }
 
         /**
+         * <p>The start of the time range to query. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format and is displayed in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

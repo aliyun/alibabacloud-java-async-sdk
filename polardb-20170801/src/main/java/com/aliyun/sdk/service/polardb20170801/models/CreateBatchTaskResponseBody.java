@@ -67,7 +67,10 @@ public class CreateBatchTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * BatchId.
+         * <p>The release batch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcb-xxx</p>
          */
         public Builder batchId(String batchId) {
             this.batchId = batchId;
@@ -75,7 +78,10 @@ public class CreateBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C61892A4-0850-4516-9E26-44D96C1782DE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

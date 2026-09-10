@@ -67,7 +67,7 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The result set.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +183,10 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * Answer.
+             * <p>The answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -188,7 +194,10 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * FeedbackType.
+             * <p>The feedback type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder feedbackType(String feedbackType) {
                 this.feedbackType = feedbackType;
@@ -196,7 +205,10 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Query.
+             * <p>The session query. Obtain this value from the response of the API call to start a digital human.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder query(String query) {
                 this.query = query;
@@ -204,7 +216,7 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Query ID。</p>
+             * <p>The query ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sq202506261002hz8b24fe80067683</p>
@@ -215,7 +227,10 @@ public class DescribePolarAgentChatRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44dcdf31-04cd-4a44-9bae-834dd6657e29</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

@@ -90,6 +90,7 @@ public class RetryKnowledgeBaseFilesRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the files to retry. Separate multiple IDs with commas (,). A maximum of 30 IDs can be specified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class RetryKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
+         * <p>The unique ID of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class RetryKnowledgeBaseFilesRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

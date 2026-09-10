@@ -119,7 +119,7 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of cost rules.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -127,7 +127,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * <p>The number of records on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -143,7 +149,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 30, 50, and 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +171,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -345,7 +357,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * CacheCostPointsPerMillion.
+             * <p>The cost points per million cache tokens. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cacheCostPointsPerMillion(String cacheCostPointsPerMillion) {
                 this.cacheCostPointsPerMillion = cacheCostPointsPerMillion;
@@ -353,7 +368,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CostRuleId.
+             * <p>The cost rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>924d450014e64e88ac6e8486f8e990**</p>
              */
             public Builder costRuleId(String costRuleId) {
                 this.costRuleId = costRuleId;
@@ -361,7 +379,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTargetType.
+             * <p>The effective target type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder effectiveTargetType(String effectiveTargetType) {
                 this.effectiveTargetType = effectiveTargetType;
@@ -369,7 +390,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTargetValue.
+             * <p>The effective target value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder effectiveTargetValue(String effectiveTargetValue) {
                 this.effectiveTargetValue = effectiveTargetValue;
@@ -377,7 +401,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-04T16:09:29+08:00</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -385,7 +412,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-16 16:46:20</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -393,7 +423,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * GwClusterId.
+             * <p>The gateway instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pg-xxxxxxxxxx</p>
              */
             public Builder gwClusterId(String gwClusterId) {
                 this.gwClusterId = gwClusterId;
@@ -401,7 +434,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * InputCostPointsPerMillion.
+             * <p>The cost points per million input tokens. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder inputCostPointsPerMillion(String inputCostPointsPerMillion) {
                 this.inputCostPointsPerMillion = inputCostPointsPerMillion;
@@ -409,7 +445,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gpt-4</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -417,7 +456,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelServiceId.
+             * <p>The model service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ms-xxxxxxxxx</p>
              */
             public Builder modelServiceId(String modelServiceId) {
                 this.modelServiceId = modelServiceId;
@@ -425,7 +467,10 @@ public class DescribeCostRulesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputCostPointsPerMillion.
+             * <p>The cost points per million output tokens. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outputCostPointsPerMillion(String outputCostPointsPerMillion) {
                 this.outputCostPointsPerMillion = outputCostPointsPerMillion;

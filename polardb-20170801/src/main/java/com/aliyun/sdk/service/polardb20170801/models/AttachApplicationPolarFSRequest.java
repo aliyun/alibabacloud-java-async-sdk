@@ -103,6 +103,7 @@ public class AttachApplicationPolarFSRequest extends Request {
         } 
 
         /**
+         * <p>Application ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class AttachApplicationPolarFSRequest extends Request {
         }
 
         /**
-         * PolarFSAccessKeyId.
+         * <p>AccessKey ID of the Alibaba Cloud account or RAM user. Ensure that you granted permissions to this account or user when you created the PolarLakeBase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LT**********************</p>
          */
         public Builder polarFSAccessKeyId(String polarFSAccessKeyId) {
             this.putQueryParameter("PolarFSAccessKeyId", polarFSAccessKeyId);
@@ -124,7 +128,10 @@ public class AttachApplicationPolarFSRequest extends Request {
         }
 
         /**
-         * PolarFSAccessKeySecret.
+         * <p>AccessKey secret of the Alibaba Cloud account or RAM user</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H3****************************</p>
          */
         public Builder polarFSAccessKeySecret(String polarFSAccessKeySecret) {
             this.putQueryParameter("PolarFSAccessKeySecret", polarFSAccessKeySecret);
@@ -133,6 +140,11 @@ public class AttachApplicationPolarFSRequest extends Request {
         }
 
         /**
+         * <p>PolarLakeBase cold-storage instance ID</p>
+         * <p>Only the following applications support cold-storage instances:</p>
+         * <ul>
+         * <li>Supabase</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

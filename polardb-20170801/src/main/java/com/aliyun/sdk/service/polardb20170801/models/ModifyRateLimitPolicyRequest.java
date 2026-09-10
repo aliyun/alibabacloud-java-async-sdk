@@ -117,6 +117,7 @@ public class ModifyRateLimitPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class ModifyRateLimitPolicyRequest extends Request {
         }
 
         /**
+         * <p>The rate limit policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class ModifyRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * RateLimitRpm.
+         * <p>The maximum number of requests per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder rateLimitRpm(String rateLimitRpm) {
             this.putQueryParameter("RateLimitRpm", rateLimitRpm);
@@ -150,7 +155,10 @@ public class ModifyRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * RateLimitTpm.
+         * <p>The maximum number of tokens per minute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder rateLimitTpm(String rateLimitTpm) {
             this.putQueryParameter("RateLimitTpm", rateLimitTpm);
@@ -159,7 +167,10 @@ public class ModifyRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

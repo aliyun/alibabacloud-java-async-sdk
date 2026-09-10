@@ -160,6 +160,13 @@ public class ModifyAccountLockStateRequest extends Request {
         } 
 
         /**
+         * <p>The lock status of the account. Valid values:</p>
+         * <ul>
+         * <li><p><strong>UnLock</strong>: The account is not locked.</p>
+         * </li>
+         * <li><p><strong>Lock</strong>: The account is locked.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +179,7 @@ public class ModifyAccountLockStateRequest extends Request {
         }
 
         /**
+         * <p>The name of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +192,10 @@ public class ModifyAccountLockStateRequest extends Request {
         }
 
         /**
-         * AccountPasswordValidTime.
+         * <p>The expiration time of the account. The time must be in the \<code>YYYY-MM-DDThh:mm:ssZ\\</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-09-17T10:00:00Z</p>
          */
         public Builder accountPasswordValidTime(String accountPasswordValidTime) {
             this.putQueryParameter("AccountPasswordValidTime", accountPasswordValidTime);
@@ -193,6 +204,10 @@ public class ModifyAccountLockStateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the cluster.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the details of all clusters in a region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

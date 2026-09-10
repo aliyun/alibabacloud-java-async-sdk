@@ -106,7 +106,10 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -114,7 +117,10 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +128,10 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,12 @@ public class DescribePolarClawMCPServersResponseBody extends TeaModel {
         }
 
         /**
-         * Servers.
+         * <p>The configurations of the MCP servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;dev-mcp-server&quot;: &quot;{\&quot;args\&quot;:[\&quot;-y\&quot;,\&quot;@polarclaw/mcp-dev\&quot;],\&quot;command\&quot;:\&quot;node\&quot;}&quot;
+         * }</p>
          */
         public Builder servers(java.util.Map<String, ?> servers) {
             this.servers = servers;

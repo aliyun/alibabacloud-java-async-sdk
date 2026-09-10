@@ -74,7 +74,10 @@ public class DescribeAIDBClusterApiKeysRequest extends Request {
         } 
 
         /**
-         * ModelSpaceName.
+         * <p>The model space ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pms-xxx</p>
          */
         public Builder modelSpaceName(String modelSpaceName) {
             this.putQueryParameter("ModelSpaceName", modelSpaceName);
@@ -83,6 +86,7 @@ public class DescribeAIDBClusterApiKeysRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

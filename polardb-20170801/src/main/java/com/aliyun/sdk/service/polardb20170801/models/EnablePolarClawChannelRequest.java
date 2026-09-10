@@ -89,6 +89,7 @@ public class EnablePolarClawChannelRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class EnablePolarClawChannelRequest extends Request {
         }
 
         /**
+         * <p>The ID of the channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class EnablePolarClawChannelRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after the channel is enabled. The default value is <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);

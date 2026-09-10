@@ -145,7 +145,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-bp1s826a1up******</p>
@@ -156,11 +156,14 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine that the clusters runs. Valid values:</p>
+         * <p>The database type. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong></li>
-         * <li><strong>PostgreSQL</strong></li>
-         * <li><strong>Oracle</strong></li>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,20 +175,29 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the database engine. </p>
+         * <p>The database engine version.
+         * Valid values for MySQL:</p>
          * <ul>
-         * <li>Valid values for the MySQL database engine:   <ul>
-         * <li><strong>5.6</strong></li>
-         * <li><strong>5.7</strong></li>
-         * <li><strong>8.0</strong></li>
-         * </ul>
+         * <li><p><strong>5.6</strong></p>
          * </li>
-         * <li>Valid value for the PostgreSQL database engine:    <ul>
-         * <li><strong>11</strong></li>
-         * <li><strong>14</strong></li>
-         * </ul>
+         * <li><p><strong>5.7</strong></p>
          * </li>
-         * <li>Valid value for the Oracle database engine:  <strong>11</strong></li>
+         * <li><p><strong>8.0</strong></p>
+         * </li>
+         * </ul>
+         * <p>Valid values for PostgreSQL:</p>
+         * <ul>
+         * <li><p><strong>11</strong></p>
+         * </li>
+         * <li><p><strong>14</strong></p>
+         * </li>
+         * </ul>
+         * <p>Valid values for Oracle:</p>
+         * <ul>
+         * <li><p><strong>11</strong></p>
+         * </li>
+         * <li><p><strong>14</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +209,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cluster engine.</p>
+         * <p>The engine.</p>
          * 
          * <strong>example:</strong>
          * <p>POLARDB</p>
@@ -219,7 +231,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A comparison of parameters between the source RDS instance and the destination PolarDB cluster.</p>
+         * Parameters.
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -227,7 +239,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EBEAA83D-1734-42E3-85E3-E25F6E******</p>
@@ -238,7 +250,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameters of the PolarDB cluster.</p>
+         * RunningParameters.
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -447,10 +459,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the source and current parameters have the same value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsEqual.
              */
             public Builder isEqual(String isEqual) {
                 this.isEqual = isEqual;
@@ -458,14 +467,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: The parameter is a primary parameter of the destination cluster.</li>
-             * <li><strong>0</strong>: The parameter is not a primary parameter of the destination cluster.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * IsInstancePolarDBKey.
              */
             public Builder isInstancePolarDBKey(String isInstancePolarDBKey) {
                 this.isInstancePolarDBKey = isInstancePolarDBKey;
@@ -473,14 +475,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicate whether the parameter is a primary parameter of the source instance. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: The parameter is a primary parameter of the source instance.</li>
-             * <li><strong>0</strong>: The parameter is not a primary parameter of the source instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * IsInstanceRdsKey.
              */
             public Builder isInstanceRdsKey(String isInstanceRdsKey) {
                 this.isInstanceRdsKey = isInstanceRdsKey;
@@ -488,14 +483,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: The parameter is a primary parameter of the destination cluster.</li>
-             * <li><strong>0</strong>: The parameter is not a primary parameter of the destination cluster.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * IsPolarDBKey.
              */
             public Builder isPolarDBKey(String isPolarDBKey) {
                 this.isPolarDBKey = isPolarDBKey;
@@ -503,14 +491,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicate whether the parameter is a primary parameter of the source instance. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: The parameter is a primary parameter of the source instance.</li>
-             * <li><strong>0</strong>: The parameter is not a primary parameter of the source instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * IsRdsKey.
              */
             public Builder isRdsKey(String isRdsKey) {
                 this.isRdsKey = isRdsKey;
@@ -518,10 +499,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter of the destination cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The server&quot;s default character set.</p>
+             * distParameterDescription.
              */
             public Builder distParameterDescription(String distParameterDescription) {
                 this.distParameterDescription = distParameterDescription;
@@ -529,10 +507,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter of the destination cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>character_set_server</p>
+             * distParameterName.
              */
             public Builder distParameterName(String distParameterName) {
                 this.distParameterName = distParameterName;
@@ -540,13 +515,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The valid values of the parameter of the destination cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <ul>
-             * <li>utf8</li>
-             * <li>gbk</li>
-             * </ul>
+             * distParameterOptional.
              */
             public Builder distParameterOptional(String distParameterOptional) {
                 this.distParameterOptional = distParameterOptional;
@@ -554,10 +523,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter of the destination cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>utf8</p>
+             * distParameterValue.
              */
             public Builder distParameterValue(String distParameterValue) {
                 this.distParameterValue = distParameterValue;
@@ -565,10 +531,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter of the source instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The server&quot;s default character set.</p>
+             * rdsParameterDescription.
              */
             public Builder rdsParameterDescription(String rdsParameterDescription) {
                 this.rdsParameterDescription = rdsParameterDescription;
@@ -576,10 +539,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter of the source instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>character_set_server</p>
+             * rdsParameterName.
              */
             public Builder rdsParameterName(String rdsParameterName) {
                 this.rdsParameterName = rdsParameterName;
@@ -587,13 +547,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The valid values of the parameter of the source instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <ul>
-             * <li>utf8</li>
-             * <li>gbk</li>
-             * </ul>
+             * rdsParameterOptional.
              */
             public Builder rdsParameterOptional(String rdsParameterOptional) {
                 this.rdsParameterOptional = rdsParameterOptional;
@@ -601,10 +555,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter of the source instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>utf8</p>
+             * rdsParameterValue.
              */
             public Builder rdsParameterValue(String rdsParameterValue) {
                 this.rdsParameterValue = rdsParameterValue;
@@ -658,7 +609,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A comparison of parameters between the source RDS instance and the destination PolarDB cluster.</p>
+             * Parameters.
              */
             public Builder parameters(java.util.List<ParametersParameters> parameters) {
                 this.parameters = parameters;
@@ -855,10 +806,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The valid values of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[utf8|latin1|gbk|utf8mb4]</p>
+             * CheckingCode.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -866,15 +814,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the parameter value. Valid values:</p>
-             * <ul>
-             * <li><strong>INT</strong></li>
-             * <li><strong>STRING</strong></li>
-             * <li><strong>B</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>INT</p>
+             * DataType.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -882,10 +822,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>utf8</p>
+             * DefaultParameterValue.
              */
             public Builder defaultParameterValue(String defaultParameterValue) {
                 this.defaultParameterValue = defaultParameterValue;
@@ -893,10 +830,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * Factor.
              */
             public Builder factor(String factor) {
                 this.factor = factor;
@@ -904,14 +838,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a cluster restart is required for the parameter modification to take effect. Valid values:</p>
-             * <ul>
-             * <li><strong>false</strong></li>
-             * <li><strong>true</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ForceRestart.
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -919,14 +846,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter can be modified. Valid values:</p>
-             * <ul>
-             * <li><strong>false</strong></li>
-             * <li><strong>true</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsModifiable.
              */
             public Builder isModifiable(Boolean isModifiable) {
                 this.isModifiable = isModifiable;
@@ -934,14 +854,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: The parameter is a global parameter. The modified parameter value is synchronized to other nodes.</li>
-             * <li><strong>1</strong>: The parameter is not a global parameter. You can specify the nodes to which the modified parameter value can be synchronized.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * IsNodeAvailable.
              */
             public Builder isNodeAvailable(String isNodeAvailable) {
                 this.isNodeAvailable = isNodeAvailable;
@@ -949,10 +862,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dependencies of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>utf8</p>
+             * ParamRelyRule.
              */
             public Builder paramRelyRule(String paramRelyRule) {
                 this.paramRelyRule = paramRelyRule;
@@ -960,10 +870,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The server&quot;s default character set.</p>
+             * ParameterDescription.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -971,10 +878,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>character_set_server</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -982,14 +886,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the parameter. Valid values:</p>
-             * <ul>
-             * <li><strong>Normal</strong></li>
-             * <li><strong>Modifying</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * ParameterStatus.
              */
             public Builder parameterStatus(String parameterStatus) {
                 this.parameterStatus = parameterStatus;
@@ -997,10 +894,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>utf8</p>
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

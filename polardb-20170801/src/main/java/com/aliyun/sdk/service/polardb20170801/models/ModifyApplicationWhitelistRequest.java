@@ -130,6 +130,7 @@ public class ModifyApplicationWhitelistRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class ModifyApplicationWhitelistRequest extends Request {
         }
 
         /**
-         * ComponentId.
+         * <p>The ID of the application subcomponent. If you specify this parameter, the whitelist modification takes effect only for this subcomponent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pac-*******************</p>
          */
         public Builder componentId(String componentId) {
             this.putQueryParameter("ComponentId", componentId);
@@ -151,7 +155,18 @@ public class ModifyApplicationWhitelistRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * <p>The method to modify the whitelist. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Cover</strong>: Overwrites the original IP address whitelist. This is the default value.</p>
+         * </li>
+         * <li><p><strong>Append</strong>: Appends IP addresses.</p>
+         * </li>
+         * <li><p><strong>Delete</strong>: Deletes IP addresses.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Append</p>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -160,7 +175,10 @@ public class ModifyApplicationWhitelistRequest extends Request {
         }
 
         /**
-         * SecurityGroups.
+         * <p>The list of security group IDs. Separate multiple IDs with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-**************</p>
          */
         public Builder securityGroups(String securityGroups) {
             this.putQueryParameter("SecurityGroups", securityGroups);
@@ -169,7 +187,10 @@ public class ModifyApplicationWhitelistRequest extends Request {
         }
 
         /**
-         * SecurityIPArrayName.
+         * <p>The name of the IP address group. The default value is <code>default</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder securityIPArrayName(String securityIPArrayName) {
             this.putQueryParameter("SecurityIPArrayName", securityIPArrayName);
@@ -178,7 +199,10 @@ public class ModifyApplicationWhitelistRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * <p>The IP addresses for the whitelist. Separate multiple IP addresses with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1,172.17.0.0/24</p>
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);

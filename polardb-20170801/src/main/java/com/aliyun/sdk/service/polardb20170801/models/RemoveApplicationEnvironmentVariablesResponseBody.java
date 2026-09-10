@@ -145,7 +145,10 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -153,7 +156,10 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -161,7 +167,10 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +178,10 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -177,7 +189,10 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * RemovedCount.
+         * <p>The number of variables removed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder removedCount(Integer removedCount) {
             this.removedCount = removedCount;
@@ -185,7 +200,7 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
@@ -196,7 +211,10 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * Restarted.
+         * <p>Indicates whether the gateway was restarted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restarted(Boolean restarted) {
             this.restarted = restarted;
@@ -204,7 +222,10 @@ public class RemoveApplicationEnvironmentVariablesResponseBody extends TeaModel 
         }
 
         /**
-         * TotalVariables.
+         * <p>The total number of application environment variables remaining.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalVariables(Integer totalVariables) {
             this.totalVariables = totalVariables;

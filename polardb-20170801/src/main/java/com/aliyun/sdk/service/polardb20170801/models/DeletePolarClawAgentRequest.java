@@ -89,6 +89,7 @@ public class DeletePolarClawAgentRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the agent to delete. This parameter cannot be set to <code>main</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DeletePolarClawAgentRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,10 @@ public class DeletePolarClawAgentRequest extends Request {
         }
 
         /**
-         * DeleteFiles.
+         * <p>Specifies whether to delete the working directory and session files. Default value: <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder deleteFiles(Boolean deleteFiles) {
             this.putQueryParameter("DeleteFiles", deleteFiles);

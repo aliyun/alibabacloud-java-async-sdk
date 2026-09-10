@@ -54,7 +54,10 @@ public class ModifyAccountPasswordZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>925B84D9-CA72-432C-95CF-738C22******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -187,7 +187,7 @@ public class ModifyDBClusterTDERequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,13 +200,15 @@ public class ModifyDBClusterTDERequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow the TDE key of the cluster to be automatically rotated within the next maintenance window after a lapse of the rotation period when a change in the KMS key version is detected. This parameter is supported only for custom keys. Valid values:</p>
+         * <p>Specifies whether to automatically rotate the TDE key of the instance during the next O\&amp;M window after a new version of the KMS key is available. This parameter is valid only for custom keys.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is supported only for a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
+         * <p>This parameter is supported only when the database engine is compatible with PostgreSQL or Oracle.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -219,13 +221,15 @@ public class ModifyDBClusterTDERequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable automatic encryption for new tables. Valid values:</p>
+         * <p>Specifies whether to automatically encrypt all new tables. Valid values:</p>
          * <ul>
-         * <li><strong>ON</strong></li>
-         * <li><strong>OFF</strong></li>
+         * <li><p><strong>ON</strong></p>
+         * </li>
+         * <li><p><strong>OFF</strong></p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter takes effect only for a PolarDB for MySQL cluster.</p>
+         * <p>This parameter is valid only when the database engine is compatible with MySQL.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -286,7 +290,7 @@ public class ModifyDBClusterTDERequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
+         * <p>The Global Resource Descriptor of the role. You can use this parameter to specify a role. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</p>
@@ -298,7 +302,7 @@ public class ModifyDBClusterTDERequest extends Request {
         }
 
         /**
-         * <p>Modifies the TDE status. Set the value to <strong>Enable</strong>.</p>
+         * <p>The TDE status. Set the value to <strong>Enable</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

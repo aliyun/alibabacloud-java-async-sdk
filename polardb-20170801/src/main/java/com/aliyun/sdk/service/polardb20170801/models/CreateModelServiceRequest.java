@@ -206,6 +206,7 @@ public class CreateModelServiceRequest extends Request {
         } 
 
         /**
+         * <p>The API key for the model service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +219,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The URL of the upstream service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +232,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +245,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * InputCostPointsPerMillion.
+         * <p>The billing cost for input, measured in points per one million tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder inputCostPointsPerMillion(String inputCostPointsPerMillion) {
             this.putQueryParameter("InputCostPointsPerMillion", inputCostPointsPerMillion);
@@ -251,6 +257,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The model category.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,6 +270,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The model service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +283,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * OutputCostPointsPerMillion.
+         * <p>The billing cost for output, measured in points per one million tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder outputCostPointsPerMillion(String outputCostPointsPerMillion) {
             this.putQueryParameter("OutputCostPointsPerMillion", outputCostPointsPerMillion);
@@ -284,6 +295,7 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The protocol type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -296,7 +308,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -305,7 +320,10 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
-         * RequestCostPoints.
+         * <p>The billing cost per request, measured in points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder requestCostPoints(String requestCostPoints) {
             this.putQueryParameter("RequestCostPoints", requestCostPoints);
@@ -314,7 +332,11 @@ public class CreateModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The model service provider. The example value <code>bailian</code> is a pinyin-based identifier that corresponds to the product name Model Studio.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

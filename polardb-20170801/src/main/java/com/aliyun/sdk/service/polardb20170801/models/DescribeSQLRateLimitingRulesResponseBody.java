@@ -106,7 +106,7 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The result set.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries returned for the current request. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,13 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * <blockquote>
+         * <p>If the request is successful, \<code>Successful\\</code> is returned. If the request fails, an error message is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>nextToken</p>
+         * <p>The token for the next page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh0vHYf39hc0J5qELgsazkBk</p>
@@ -141,7 +150,7 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>22C0ACF0-DD29-4B67-9190-B7A48C******</p>
@@ -197,7 +206,7 @@ public class DescribeSQLRateLimitingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * RuleList.
+             * <p>The list of rules.</p>
              */
             public Builder ruleList(java.util.List<String> ruleList) {
                 this.ruleList = ruleList;

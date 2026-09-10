@@ -144,6 +144,7 @@ public class ModifyEncryptionDBRolePrivilegeRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +193,10 @@ public class ModifyEncryptionDBRolePrivilegeRequest extends Request {
         }
 
         /**
-         * RolePrivilegeConfig.
+         * <p>The role access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;notEncryption&quot;:[&quot;alton&quot;],&quot;encryption&quot;:[&quot;alton01&quot;]}</p>
          */
         public Builder rolePrivilegeConfig(String rolePrivilegeConfig) {
             this.putQueryParameter("RolePrivilegeConfig", rolePrivilegeConfig);
@@ -201,7 +205,10 @@ public class ModifyEncryptionDBRolePrivilegeRequest extends Request {
         }
 
         /**
-         * RolePrivilegeName.
+         * <p>The role permission name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder rolePrivilegeName(String rolePrivilegeName) {
             this.putQueryParameter("RolePrivilegeName", rolePrivilegeName);

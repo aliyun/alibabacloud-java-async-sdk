@@ -247,6 +247,7 @@ public class DescribeApplicationLogsRequest extends Request {
         } 
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,7 +260,10 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
-         * ComponentName.
+         * <p>The subcomponent instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pac-xxx</p>
          */
         public Builder componentName(String componentName) {
             this.putQueryParameter("ComponentName", componentName);
@@ -268,7 +272,10 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
-         * ContainerName.
+         * <p>The container name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analytics</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -277,10 +284,11 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-03-25T02:11:00Z</p>
+         * <p>2026-03-25T02:11Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -289,7 +297,10 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The search keyword. This parameter is used for polarclaw instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Config</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -298,7 +309,10 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
-         * Level.
+         * <p>The log level. This parameter is used for polarclaw instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WARN</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("Level", level);
@@ -325,7 +339,10 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -334,7 +351,10 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>30</strong>. Valid values: 30 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -343,6 +363,7 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -364,10 +385,11 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. Specify the time in the <code>YYYY-MM-DDThh:mmZ</code> format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-03-25T01:57:00Z</p>
+         * <p>2026-03-25T01:57Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -376,7 +398,10 @@ public class DescribeApplicationLogsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The log type. This parameter is used for polarclaw instances. Currently, only gateway is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gateway</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -229,9 +229,9 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query the details of all clusters in a destination region, including their cluster IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -245,10 +245,12 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to change the primary zone immediately. Valid values:</p>
+         * <p>Specifies whether to perform the zone change immediately or at a scheduled time. Valid values:</p>
          * <ul>
-         * <li>false (default): changes the primary zone as scheduled.</li>
-         * <li>true: changes the primary zone immediately.</li>
+         * <li><p>false (default): The zone change is performed at the scheduled time.</p>
+         * </li>
+         * <li><p>true: The zone change is performed immediately.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,10 +263,12 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to switch back to the original primary zone.</p>
+         * <p>Specifies whether to fail back to the original zone. Valid values:</p>
          * <ul>
-         * <li>true: switches back to the original primary zone.</li>
-         * <li>false: does not switch back to the original primary zone.</li>
+         * <li><p>true: Fails back to the original zone.</p>
+         * </li>
+         * <li><p>false: Does not fail back to the original zone.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,11 +299,13 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * <p>The latest start time to switch the primary zone within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The latest time to start the scheduled task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
          * <blockquote>
          * <ul>
-         * <li>The latest start time must be at least 30 minutes later than the earliest start time.</li>
-         * <li>If you specify the <code>PlannedStartTime</code> parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by <code>the value of the PlannedEndTime parameter + 30 minutes</code> by default. For example, if you set the <code>PlannedStartTime</code> parameter to <code>2021-01-14T09:00:00Z</code> and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</li>
+         * <li><p>The latest start time must be at least 30 minutes later than the earliest start time.</p>
+         * </li>
+         * <li><p>If you specify <code>PlannedStartTime</code> but not this parameter, the latest start time of the task is the value of <code>PlannedStartTime</code> plus 30 minutes by default. For example, if you set <code>PlannedStartTime</code> to <code>2021-01-14T09:00:00Z</code> and leave this parameter empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -313,11 +319,13 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * <p>The start time to change the primary zone within the scheduled time period. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The earliest time to start the scheduled task to change the zone. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
          * <blockquote>
          * <ul>
-         * <li>The start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in time from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
-         * <li>If you leave this parameter empty, the primary zone is immediately changed.</li>
+         * <li><p>The start time must be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can set the start time to a value from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the zone change task is performed immediately.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -349,7 +357,7 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID of the destination primary zone.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-**********</p>
@@ -361,11 +369,13 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch in the destination primary zone.</p>
+         * <p>The ID of the vSwitch in the destination zone.</p>
          * <blockquote>
          * <ul>
-         * <li>For a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster, this parameter is required.</li>
-         * <li>For a PolarDB for MySQL cluster, the default vSwitch is used if no vSwitches are created in the destination zone. If a vSwitch is in the destination zone, this parameter is required.</li>
+         * <li><p>This parameter is required for PolarDB for Oracle and PolarDB for PostgreSQL clusters.</p>
+         * </li>
+         * <li><p>For PolarDB for MySQL clusters, this parameter is required if a vSwitch is created in the destination zone. If no vSwitch is created, the default vSwitch is used and this parameter is optional.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -379,9 +389,9 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the destination primary zone.</p>
+         * <p>The ID of the new zone.</p>
          * <blockquote>
-         * <p> You can call the DescribeRegions operation to query available zones.<a href="~~98041~~"></a></p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available zones.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -395,10 +405,12 @@ public class ModifyDBClusterPrimaryZoneRequest extends Request {
         }
 
         /**
-         * <p>The zone type. Valid values:</p>
+         * <p>The type of the zone. Valid values:</p>
          * <ul>
-         * <li><strong>Primary</strong>: primary zone</li>
-         * <li><strong>Standby</strong>: secondary zone</li>
+         * <li><p><strong>Primary</strong>: The primary zone.</p>
+         * </li>
+         * <li><p><strong>Standby</strong>: The secondary zone.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

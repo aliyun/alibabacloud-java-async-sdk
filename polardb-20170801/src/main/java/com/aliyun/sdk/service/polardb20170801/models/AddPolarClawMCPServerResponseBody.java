@@ -119,7 +119,10 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -127,7 +130,10 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The returned status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -135,7 +141,10 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * Ok.
+         * <p>Indicates whether the operation was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder ok(Boolean ok) {
             this.ok = ok;
@@ -151,7 +163,10 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class AddPolarClawMCPServerResponseBody extends TeaModel {
         }
 
         /**
-         * ServerName.
+         * <p>The name of the added or updated MCP server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-v1</p>
          */
         public Builder serverName(String serverName) {
             this.serverName = serverName;

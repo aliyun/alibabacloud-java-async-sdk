@@ -80,7 +80,10 @@ public class CreateModelServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * ModelServiceId.
+         * <p>The model service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ms-xxxxxx</p>
          */
         public Builder modelServiceId(String modelServiceId) {
             this.modelServiceId = modelServiceId;
@@ -88,7 +91,7 @@ public class CreateModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
@@ -99,7 +102,10 @@ public class CreateModelServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder status(String status) {
             this.status = status;

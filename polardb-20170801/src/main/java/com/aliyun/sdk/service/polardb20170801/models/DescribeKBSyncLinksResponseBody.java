@@ -20,12 +20,24 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List<Items> items;
 
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
+    private Integer totalRecordCount;
+
     private DescribeKBSyncLinksResponseBody(Builder builder) {
         this.items = builder.items;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
+        this.totalRecordCount = builder.totalRecordCount;
     }
 
     public static Builder builder() {
@@ -48,29 +60,78 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
     }
 
+    /**
+     * @return totalRecordCount
+     */
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
     public static final class Builder {
         private java.util.List<Items> items; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String requestId; 
+        private Integer totalRecordCount; 
 
         private Builder() {
         } 
 
         private Builder(DescribeKBSyncLinksResponseBody model) {
             this.items = model.items;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
             this.requestId = model.requestId;
+            this.totalRecordCount = model.totalRecordCount;
         } 
 
         /**
-         * Items.
+         * <p>The list of synchronization links.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
+            return this;
+        }
+
+        /**
+         * <p>The page number of the current results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * <p>The number of records per page in the current results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -82,6 +143,17 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The total number of synchronization links that match the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder totalRecordCount(Integer totalRecordCount) {
+            this.totalRecordCount = totalRecordCount;
             return this;
         }
 
@@ -235,7 +307,10 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientId.
+             * <p>The client ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cli_xxxxxxbe8</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -243,7 +318,10 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-11T09:55:19Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -251,7 +329,10 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the synchronization link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testDesc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -259,7 +340,10 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * ImPlatform.
+             * <p>The source channel of the synchronization link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FEISHU</p>
              */
             public Builder imPlatform(String imPlatform) {
                 this.imPlatform = imPlatform;
@@ -267,7 +351,10 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * LinkId.
+             * <p>The synchronization link ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pkbl-xxxxx</p>
              */
             public Builder linkId(String linkId) {
                 this.linkId = linkId;
@@ -275,7 +362,10 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * LinkName.
+             * <p>The link name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testName</p>
              */
             public Builder linkName(String linkName) {
                 this.linkName = linkName;
@@ -283,7 +373,10 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDir.
+             * <p>The source directory address for synchronization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.feishu.cn/wiki/space/xxxxxx">https://example.feishu.cn/wiki/space/xxxxxx</a></p>
              */
             public Builder sourceDir(String sourceDir) {
                 this.sourceDir = sourceDir;
@@ -291,7 +384,10 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * SyncIntervalMinutes.
+             * <p>The synchronization interval. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder syncIntervalMinutes(Integer syncIntervalMinutes) {
                 this.syncIntervalMinutes = syncIntervalMinutes;
@@ -299,7 +395,16 @@ public class DescribeKBSyncLinksResponseBody extends TeaModel {
             }
 
             /**
-             * SyncStatus.
+             * <p>The synchronization status. Valid values:</p>
+             * <ul>
+             * <li>CREATING</li>
+             * <li>RUNNING</li>
+             * <li>PAUSED</li>
+             * <li>DELETING</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder syncStatus(String syncStatus) {
                 this.syncStatus = syncStatus;

@@ -80,7 +80,7 @@ public class ModifyGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-*****************</p>
@@ -91,7 +91,7 @@ public class ModifyGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the global IP whitelist template.</p>
+         * <p>Details of the global IP address whitelist template.</p>
          */
         public Builder globalSecurityIPGroupRel(java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel) {
             this.globalSecurityIPGroupRel = globalSecurityIPGroupRel;
@@ -99,7 +99,7 @@ public class ModifyGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
@@ -194,9 +194,9 @@ public class ModifyGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address in the whitelist template.</p>
+             * <p>The IP addresses in the whitelist template.</p>
              * <blockquote>
-             * <p> Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP whitelists.</p>
+             * <p>Separate multiple IP addresses with a comma. A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP address whitelists.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -208,11 +208,14 @@ public class ModifyGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+             * <p>The name of the IP address whitelist template. The name must meet the following requirements:</p>
              * <ul>
-             * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
-             * <li>The name must start with a letter and end with a letter or a digit.</li>
-             * <li>The name must be 2 to 120 characters in length.</li>
+             * <li><p>Consists of lowercase letters, digits, and underscores (_).</p>
+             * </li>
+             * <li><p>Starts with a letter and ends with a letter or a digit.</p>
+             * </li>
+             * <li><p>Is 2 to 120 characters in length.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -224,7 +227,7 @@ public class ModifyGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the IP whitelist template.</p>
+             * <p>The ID of the IP address whitelist template.</p>
              * 
              * <strong>example:</strong>
              * <p>g-zsldxfiwjmti0kcm****</p>
@@ -235,7 +238,7 @@ public class ModifyGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

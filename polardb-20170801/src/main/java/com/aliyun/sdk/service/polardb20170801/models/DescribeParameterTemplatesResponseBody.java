@@ -119,7 +119,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -130,7 +130,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.7</p>
@@ -141,7 +141,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine of the cluster.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>POLARDB</p>
@@ -163,7 +163,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the parameters.</p>
+         * Parameters.
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -318,10 +318,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The valid values of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[ROW|STATEMENT|MIXED]</p>
+             * CheckingCode.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -329,14 +326,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter setting can be modified. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ForceModify.
              */
             public Builder forceModify(String forceModify) {
                 this.forceModify = forceModify;
@@ -344,14 +334,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a cluster restart is required to make the parameter modification take effect. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * ForceRestart.
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -359,14 +342,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: yes. The modified parameter value is synchronized to other nodes by default.</li>
-             * <li><strong>1</strong>: no. You can customize the nodes to which the modified parameter value can be synchronized.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * IsNodeAvailable.
              */
             public Builder isNodeAvailable(String isNodeAvailable) {
                 this.isNodeAvailable = isNodeAvailable;
@@ -374,10 +350,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameter dependencies.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>utf8</p>
+             * ParamRelyRule.
              */
             public Builder paramRelyRule(String paramRelyRule) {
                 this.paramRelyRule = paramRelyRule;
@@ -385,10 +358,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>What form of binary logging the master will use.</p>
+             * ParameterDescription.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -396,10 +366,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>binlog_format</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -407,10 +374,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ROW</p>
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

@@ -106,7 +106,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -114,7 +117,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +128,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>
@@ -141,7 +150,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Task.
+         * <p>The task object.</p>
          */
         public Builder task(Task task) {
             this.task = task;
@@ -207,7 +216,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INVALID_REQUEST</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -215,7 +227,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>channelId format invalid</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -347,7 +362,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAtMs.
+             * <p>The timestamp when the task was created, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778564698304</p>
              */
             public Builder createdAtMs(Long createdAtMs) {
                 this.createdAtMs = createdAtMs;
@@ -355,7 +373,7 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error object. This parameter is returned only if the task fails.</p>
              */
             public Builder error(Error error) {
                 this.error = error;
@@ -363,7 +381,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Operation.
+             * <p>The operation name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LoginPolarClawChannel</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -371,7 +392,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The task result object. This parameter is returned only if the task succeeds. The content of this object varies by operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder result(java.util.Map<String, ?> result) {
                 this.result = result;
@@ -379,7 +403,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The task state. Valid values: pending, running, succeeded, and failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -387,7 +414,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID, which is a universally unique identifier (UUID).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5956e600-ce6e-4d11-9648-939ef3286e94</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -395,7 +425,10 @@ public class DescribePolarClawTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAtMs.
+             * <p>The timestamp when the task was last updated, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1778564750541</p>
              */
             public Builder updatedAtMs(Long updatedAtMs) {
                 this.updatedAtMs = updatedAtMs;

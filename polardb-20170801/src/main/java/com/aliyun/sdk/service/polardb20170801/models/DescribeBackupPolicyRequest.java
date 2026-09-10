@@ -116,9 +116,9 @@ public class DescribeBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query the information about all clusters in a specified region, including cluster IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

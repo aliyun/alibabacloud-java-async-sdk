@@ -67,7 +67,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The list of tasks.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -75,7 +75,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>45D24263-7E3A-4140-9472-************</p>
@@ -144,7 +144,26 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * <ul>
+             * <li><p>Scheduled: The task is waiting to be executed.</p>
+             * </li>
+             * <li><p>Running: The task is running.</p>
+             * </li>
+             * <li><p>Succeed: The task is successful.</p>
+             * </li>
+             * <li><p>Failed: The task failed.</p>
+             * </li>
+             * <li><p>Cancelling: The task is being canceled.</p>
+             * </li>
+             * <li><p>Canceled: The task is canceled.</p>
+             * </li>
+             * <li><p>Waiting: The task is waiting for a scheduled time.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -152,7 +171,10 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

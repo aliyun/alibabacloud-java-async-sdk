@@ -106,7 +106,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the backup sets.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -136,7 +136,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>717B2382-BB14-4DCB-BBC2-32DBE0******</p>
@@ -147,7 +147,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -359,10 +359,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the backup task. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-05-12T03:25:55Z</p>
+             * BackupEndTime.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -370,10 +367,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>111111111</p>
+             * BackupId.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -381,10 +375,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup method. Only snapshot backups are supported. The value is set to <strong>Snapshot</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Snapshot</p>
+             * BackupMethod.
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -392,14 +383,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup mode. Valid values:</p>
-             * <ul>
-             * <li><strong>Automated</strong></li>
-             * <li><strong>Manual</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Manual</p>
+             * BackupMode.
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -407,13 +391,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the backup set. Unit: bytes.</p>
-             * <blockquote>
-             * <p>After you delete the target snapshot backups, the storage space consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share certain data blocks.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>7251056</p>
+             * BackupSetSize.
              */
             public Builder backupSetSize(String backupSetSize) {
                 this.backupSetSize = backupSetSize;
@@ -421,10 +399,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the backup task. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-05-12T03:25:44Z</p>
+             * BackupStartTime.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -432,14 +407,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the backup set. Valid values:</p>
-             * <ul>
-             * <li><strong>Success</strong></li>
-             * <li><strong>Failed</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * BackupStatus.
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -447,10 +415,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the backup. Only full backups are supported. The value is set to <strong>FullBackup</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FullBackup</p>
+             * BackupType.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -458,14 +423,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the backup set. Valid values:</p>
-             * <ul>
-             * <li><strong>Level-1</strong>: level-1 backup set</li>
-             * <li><strong>Level-2</strong>: level-2 backup set</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Level-2</p>
+             * BackupsLevel.
              */
             public Builder backupsLevel(String backupsLevel) {
                 this.backupsLevel = backupsLevel;
@@ -473,10 +431,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The snapshot checkpoint time. The value is a Unix timestamp.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1589253947</p>
+             * ConsistentTime.
              */
             public Builder consistentTime(String consistentTime) {
                 this.consistentTime = consistentTime;
@@ -484,10 +439,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pc-**************</p>
+             * DBClusterId.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -495,14 +447,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the backup set is available. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: The data backup set is unavailable.</li>
-             * <li><strong>1</strong>: The data backup set is available.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * IsAvail.
              */
             public Builder isAvail(String isAvail) {
                 this.isAvail = isAvail;
@@ -510,14 +455,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the backup set can be deleted. Valid values:</p>
-             * <ul>
-             * <li><strong>Enabled</strong>: The backup set can be deleted.</li>
-             * <li><strong>Disabled</strong>: The backup set cannot be deleted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Disabled</p>
+             * StoreStatus.
              */
             public Builder storeStatus(String storeStatus) {
                 this.storeStatus = storeStatus;

@@ -204,7 +204,10 @@ public class ModifyModelServiceRequest extends Request {
         } 
 
         /**
-         * ApiKey.
+         * <p>The API key for the model service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder apiKey(String apiKey) {
             this.putQueryParameter("ApiKey", apiKey);
@@ -213,7 +216,10 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
-         * BaseUrl.
+         * <p>The address of the upstream service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
          */
         public Builder baseUrl(String baseUrl) {
             this.putQueryParameter("BaseUrl", baseUrl);
@@ -222,6 +228,7 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +241,10 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
-         * InputCostPointsPerMillion.
+         * <p>The cost in points per million input tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder inputCostPointsPerMillion(String inputCostPointsPerMillion) {
             this.putQueryParameter("InputCostPointsPerMillion", inputCostPointsPerMillion);
@@ -243,6 +253,7 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The model category.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,6 +266,7 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the model service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,6 +279,7 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The name of the model service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +292,10 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
-         * OutputCostPointsPerMillion.
+         * <p>The cost in points per million output tokens.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder outputCostPointsPerMillion(String outputCostPointsPerMillion) {
             this.putQueryParameter("OutputCostPointsPerMillion", outputCostPointsPerMillion);
@@ -288,6 +304,17 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
+         * <p>The protocol type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>openai</strong></p>
+         * </li>
+         * <li><p><strong>anthropic</strong></p>
+         * </li>
+         * <li><p><strong>bailian</strong></p>
+         * </li>
+         * <li><p><strong>vllm</strong></p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +327,10 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -309,7 +339,10 @@ public class ModifyModelServiceRequest extends Request {
         }
 
         /**
-         * RequestCostPoints.
+         * <p>The cost in points per request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder requestCostPoints(String requestCostPoints) {
             this.putQueryParameter("RequestCostPoints", requestCostPoints);

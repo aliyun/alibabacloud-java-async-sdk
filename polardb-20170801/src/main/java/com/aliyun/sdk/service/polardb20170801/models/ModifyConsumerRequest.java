@@ -132,7 +132,10 @@ public class ModifyConsumerRequest extends Request {
         } 
 
         /**
-         * ConsumerGroupName.
+         * <p>The name of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-xxxxxx</p>
          */
         public Builder consumerGroupName(String consumerGroupName) {
             this.putQueryParameter("ConsumerGroupName", consumerGroupName);
@@ -141,6 +144,7 @@ public class ModifyConsumerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +157,7 @@ public class ModifyConsumerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the gateway instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +170,10 @@ public class ModifyConsumerRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * <p>Indicates if the consumer is in the default group. Valid values: 0 (No) and 1 (Yes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder isDefault(String isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -174,6 +182,7 @@ public class ModifyConsumerRequest extends Request {
         }
 
         /**
+         * <p>The new name for the consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +195,10 @@ public class ModifyConsumerRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

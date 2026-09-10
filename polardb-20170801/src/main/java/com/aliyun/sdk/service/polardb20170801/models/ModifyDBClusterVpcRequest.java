@@ -160,6 +160,7 @@ public class ModifyDBClusterVpcRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,6 +173,13 @@ public class ModifyDBClusterVpcRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to switch existing endpoints. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NONE</strong>: Does not switch existing endpoints.</p>
+         * </li>
+         * <li><p><strong>ALL</strong>: Switches all existing endpoints.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +228,10 @@ public class ModifyDBClusterVpcRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-*******************</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -229,6 +240,7 @@ public class ModifyDBClusterVpcRequest extends Request {
         }
 
         /**
+         * <p>The ID of the virtual switch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -258,7 +258,18 @@ public class DescribeActiveOperationTasksRequest extends Request {
         } 
 
         /**
-         * AllowCancel.
+         * <p>Specifies whether to allow cancellation. Valid values:</p>
+         * <ul>
+         * <li><p><strong>-1</strong> (default): all.</p>
+         * </li>
+         * <li><p><strong>0</strong>: returns only tasks that do not allow cancellation.</p>
+         * </li>
+         * <li><p><strong>1</strong>: returns only tasks that allow cancellation.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowCancel(Long allowCancel) {
             this.putQueryParameter("AllowCancel", allowCancel);
@@ -267,7 +278,18 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * AllowChange.
+         * <p>Specifies whether to allow time modification. Valid values:</p>
+         * <ul>
+         * <li><p><strong>-1</strong> (default): all.</p>
+         * </li>
+         * <li><p><strong>0</strong>: returns only tasks that do not allow time modification.</p>
+         * </li>
+         * <li><p><strong>1</strong>: returns only tasks that allow time modification.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder allowChange(Long allowChange) {
             this.putQueryParameter("AllowChange", allowChange);
@@ -276,7 +298,18 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * ChangeLevel.
+         * <p>The task level. Valid values:</p>
+         * <ul>
+         * <li><p><strong>all</strong> (default): all.</p>
+         * </li>
+         * <li><p><strong>S0</strong>: returns tasks at the abnormal repair level.</p>
+         * </li>
+         * <li><p><strong>S1</strong>: returns tasks at the system maintenance level.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder changeLevel(String changeLevel) {
             this.putQueryParameter("ChangeLevel", changeLevel);
@@ -285,7 +318,13 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query detailed information about all clusters under your account, including cluster IDs.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-3ns***********d5d</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -294,7 +333,18 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * DBType.
+         * <p>The database engine type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.putQueryParameter("DBType", DBType);
@@ -321,7 +371,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -333,11 +383,14 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values:</p>
+         * <p>The number of entries to return on each page. Valid values:</p>
          * <ul>
-         * <li><strong>30</strong> (default)</li>
-         * <li><strong>50</strong></li>
-         * <li><strong>100</strong></li>
+         * <li><p><strong>30</strong> (default)</p>
+         * </li>
+         * <li><p><strong>50</strong></p>
+         * </li>
+         * <li><p><strong>100</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -350,6 +403,10 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the pending event.</p>
+         * <blockquote>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -389,7 +446,24 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><p>-1: all tasks.</p>
+         * </li>
+         * <li><p>3: pending tasks.</p>
+         * </li>
+         * <li><p>4: tasks in progress.</p>
+         * </li>
+         * <li><p>5: successfully completed tasks.</p>
+         * </li>
+         * <li><p>6: failed tasks.</p>
+         * </li>
+         * <li><p>7: canceled tasks.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder status(Long status) {
             this.putQueryParameter("Status", status);
@@ -398,7 +472,25 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the pending event task. Valid values:</p>
+         * <ul>
+         * <li><p><strong>DatabaseSoftwareUpgrading</strong>: database software upgrade</p>
+         * </li>
+         * <li><p><strong>DatabaseHardwareMaintenance</strong>: hardware maintenance and upgrade</p>
+         * </li>
+         * <li><p><strong>DatabaseStorageUpgrading</strong>: database storage upgrade</p>
+         * </li>
+         * <li><p><strong>DatabaseProxyUpgrading</strong>: proxy minor version upgrade</p>
+         * </li>
+         * <li><p><strong>all</strong>: returns all types of pending events</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>When <code>Region</code> is set to <strong>all</strong>, <code>TaskType</code> must also be set to <strong>all</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DatabaseProxyUpgrading</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -238,11 +238,13 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data backup file.</p>
+         * <p>The ID of the backup set.</p>
          * <blockquote>
          * <ul>
-         * <li>When you run a query, you must specify the <code>BackId</code> or <code>RestoreTime</code> parameter.</li>
-         * <li>You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the ID of the backup set.</li>
+         * <li><p>You must specify either the <code>BackupId</code> or <code>RestoreTime</code> parameter.</p>
+         * </li>
+         * <li><p>Call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the backup set ID.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -256,9 +258,9 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -272,11 +274,13 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * <p>Specify the specific database name (such as <code>test_db</code>) to query the names of all data tables that can be restored in the desired database.</p>
+         * <p>The name of the database, such as <code>test_db</code>. If you specify this parameter, the names of all tables that can be recovered from the specified database are returned.</p>
          * <blockquote>
          * <ul>
-         * <li>You can specify only one database name each time.</li>
-         * <li>If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.</li>
+         * <li><p>You can specify only one database name at a time.</p>
+         * </li>
+         * <li><p>If you do not specify this parameter, the names of all databases that can be recovered from the current backup set are returned. The names of tables in each database are not returned.</p>
+         * </li>
          * </ul>
          * </blockquote>
          * 
@@ -308,7 +312,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -326,8 +330,7 @@ public class DescribeMetaListRequest extends Request {
          * </li>
          * <li><p><strong>50</strong></p>
          * </li>
-         * <li><p><strong>100</strong></p>
-         * <p>Default value: <strong>30</strong>.</p>
+         * <li><p><strong>100</strong> Default value: <strong>30</strong>.</p>
          * </li>
          * </ul>
          * 
@@ -341,7 +344,7 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/2319132.html">DescribeDBClusterAttribute</a> operation to query the region ID of the instance.</p>
+         * <p>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/2319132.html">DescribeDBClusterAttribute</a> to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -371,9 +374,9 @@ public class DescribeMetaListRequest extends Request {
         }
 
         /**
-         * <p>The point in time for the restoration. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
+         * <p>The point in time to which you want to restore data. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
          * <blockquote>
-         * <p> When you run a query, you must specify the <code>BackId</code> or <code>RestoreTime</code> parameter. You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the point in time for the restoration.</p>
+         * <p>You must specify either the <code>BackupId</code> or <code>RestoreTime</code> parameter. Call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the point in time for restoration.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

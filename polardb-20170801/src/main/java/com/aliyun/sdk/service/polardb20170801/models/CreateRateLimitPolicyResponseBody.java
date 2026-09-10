@@ -80,7 +80,10 @@ public class CreateRateLimitPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * GwClusterId.
+         * <p>The gateway instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-xxxxxxxx</p>
          */
         public Builder gwClusterId(String gwClusterId) {
             this.gwClusterId = gwClusterId;
@@ -88,7 +91,10 @@ public class CreateRateLimitPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02eccf7c61cf4d05a543075ee907f3**</p>
          */
         public Builder policyId(String policyId) {
             this.policyId = policyId;
@@ -96,7 +102,7 @@ public class CreateRateLimitPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>

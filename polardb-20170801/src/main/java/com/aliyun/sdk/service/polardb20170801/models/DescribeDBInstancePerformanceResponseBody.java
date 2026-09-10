@@ -145,7 +145,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-*************</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -153,7 +156,18 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * <p>The database engine type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>MySQL</strong></p>
+         * </li>
+         * <li><p><strong>PostgreSQL</strong></p>
+         * </li>
+         * <li><p><strong>Oracle</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -161,7 +175,18 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBVersion.
+         * <p>The MySQL version number. Valid values:</p>
+         * <ul>
+         * <li><p><strong>5.6</strong></p>
+         * </li>
+         * <li><p><strong>5.7</strong></p>
+         * </li>
+         * <li><p><strong>8.0</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -169,7 +194,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the query. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:01Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -177,7 +205,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * <p>The database engine type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -193,7 +224,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2A9EFA7-915F-4572-8299-85A307******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +235,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the query. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-23T01:01Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

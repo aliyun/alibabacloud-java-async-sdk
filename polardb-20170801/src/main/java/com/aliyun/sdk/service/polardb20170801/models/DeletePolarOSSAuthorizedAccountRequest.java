@@ -103,6 +103,7 @@ public class DeletePolarOSSAuthorizedAccountRequest extends Request {
         } 
 
         /**
+         * <p>The list of authorized accounts to delete, separated by commas. UIDs and RAM role ARNs can be passed in together.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class DeletePolarOSSAuthorizedAccountRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * <p>The ID of the PolarDB cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxxxxxxxxxxxxxxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -124,6 +128,7 @@ public class DeletePolarOSSAuthorizedAccountRequest extends Request {
         }
 
         /**
+         * <p>The cold storage instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class DeletePolarOSSAuthorizedAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

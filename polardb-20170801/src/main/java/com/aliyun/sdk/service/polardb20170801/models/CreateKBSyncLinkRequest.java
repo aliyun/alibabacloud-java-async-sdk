@@ -238,6 +238,7 @@ public class CreateKBSyncLinkRequest extends Request {
         } 
 
         /**
+         * <p>The client ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,6 +251,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>The client secret.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +264,10 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the synchronization link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDesc</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -271,6 +276,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>The unique identifier of the knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,6 +289,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>The name of the synchronization link.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +302,10 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * McpEndpoint.
+         * <p>The DingTalk document MCP Server endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
          */
         public Builder mcpEndpoint(String mcpEndpoint) {
             this.putQueryParameter("McpEndpoint", mcpEndpoint);
@@ -304,6 +314,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +327,10 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * SheetMcpEndpoint.
+         * <p>The DingTalk spreadsheet MCP Server endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
          */
         public Builder sheetMcpEndpoint(String sheetMcpEndpoint) {
             this.putQueryParameter("SheetMcpEndpoint", sheetMcpEndpoint);
@@ -325,6 +339,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>The source directory address for synchronization.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -337,6 +352,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
+         * <p>The data source type. Valid values: FEISHU and SHAREPOINT.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -349,7 +365,10 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * SyncIntervalMinutes.
+         * <p>The synchronization interval. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder syncIntervalMinutes(Integer syncIntervalMinutes) {
             this.putQueryParameter("SyncIntervalMinutes", syncIntervalMinutes);
@@ -358,7 +377,10 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID. This parameter is required when SourceType is set to SHAREPOINT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63eexxxx-xxxx-xxxx-xxxx-xxxxxx090f82</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("TenantId", tenantId);
@@ -367,7 +389,10 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>The DingTalk operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123***56</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

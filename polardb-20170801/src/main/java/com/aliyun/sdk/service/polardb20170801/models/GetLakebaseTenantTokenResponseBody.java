@@ -119,7 +119,10 @@ public class GetLakebaseTenantTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The associated PolarDB instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxx</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -138,7 +141,10 @@ public class GetLakebaseTenantTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVATION</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -146,7 +152,10 @@ public class GetLakebaseTenantTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Subdir.
+         * <p>The mount subdirectory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/project</p>
          */
         public Builder subdir(String subdir) {
             this.subdir = subdir;
@@ -154,7 +163,10 @@ public class GetLakebaseTenantTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Tenant.
+         * <p>The tenant identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder tenant(String tenant) {
             this.tenant = tenant;
@@ -162,7 +174,10 @@ public class GetLakebaseTenantTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * <p>The tenant token.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder token(String token) {
             this.token = token;

@@ -143,7 +143,10 @@ public class DescribeAIDBClusterTaskAttributeRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pm-2ze99***</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -152,7 +155,13 @@ public class DescribeAIDBClusterTaskAttributeRequest extends Request {
         }
 
         /**
-         * DescribeType.
+         * <p>The query mode. Valid values:</p>
+         * <ul>
+         * <li><strong>RelatedAITask</strong>: queries task details.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RelatedAITask</p>
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);
@@ -179,7 +188,10 @@ public class DescribeAIDBClusterTaskAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -639,7 +639,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * AccelerateType.
+         * <p>The acceleration type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alluxio</p>
          */
         public Builder accelerateType(String accelerateType) {
             this.accelerateType = accelerateType;
@@ -647,7 +650,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AcceleratedStorageSpace.
+         * <p>The acceleration storage space, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder acceleratedStorageSpace(Double acceleratedStorageSpace) {
             this.acceleratedStorageSpace = acceleratedStorageSpace;
@@ -655,7 +661,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AcceleratingEnable.
+         * <p>Indicates whether the acceleration cache is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>ON</strong>: Enabled.</li>
+         * <li><strong>OFF</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         public Builder acceleratingEnable(String acceleratingEnable) {
             this.acceleratingEnable = acceleratingEnable;
@@ -663,7 +676,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AuthorizedUserArnIds.
+         * <p>The list of authorized RAM role ARNs, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arn:sts::123456:assumed-role/myrole/*</p>
          */
         public Builder authorizedUserArnIds(String authorizedUserArnIds) {
             this.authorizedUserArnIds = authorizedUserArnIds;
@@ -671,7 +687,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AuthorizedUserIds.
+         * <p>The list of authorized UIDs, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890,9876543210</p>
          */
         public Builder authorizedUserIds(String authorizedUserIds) {
             this.authorizedUserIds = authorizedUserIds;
@@ -679,7 +698,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Bandwidth.
+         * <p>The bandwidth, in MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder bandwidth(Double bandwidth) {
             this.bandwidth = bandwidth;
@@ -687,7 +709,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BandwidthBaseLine.
+         * <p>The bandwidth baseline, in MB/s/TiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder bandwidthBaseLine(Double bandwidthBaseLine) {
             this.bandwidthBaseLine = bandwidthBaseLine;
@@ -695,7 +720,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BucketId.
+         * <p>The bucket ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder bucketId(String bucketId) {
             this.bucketId = bucketId;
@@ -703,7 +731,18 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Category.
+         * <p>The Polarlakebase edition. Valid values:</p>
+         * <ul>
+         * <li><p><strong>high_performance</strong>: High-performance Edition.</p>
+         * </li>
+         * <li><p><strong>basic</strong>: Basic Edition.</p>
+         * </li>
+         * <li><p><strong>cold</strong>: Cold Storage Edition.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high_performance</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -711,7 +750,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ClientDownloadPath.
+         * <p>The client download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://*</p>
          */
         public Builder clientDownloadPath(String clientDownloadPath) {
             this.clientDownloadPath = clientDownloadPath;
@@ -719,7 +761,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-02T05:57:10Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -727,7 +772,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CustomBucketPath.
+         * <p>The custom bucket path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxx-%d.oss-cn-beijing-internal.aliyuncs.com</p>
          */
         public Builder customBucketPath(String customBucketPath) {
             this.customBucketPath = customBucketPath;
@@ -735,7 +783,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CustomBucketPathList.
+         * <p>The list of custom storage paths.</p>
          */
         public Builder customBucketPathList(java.util.List<CustomBucketPathList> customBucketPathList) {
             this.customBucketPathList = customBucketPathList;
@@ -743,7 +791,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBEndpointId.
+         * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pe-zo1z5qw5nb39s699n</p>
          */
         public Builder DBEndpointId(String DBEndpointId) {
             this.DBEndpointId = DBEndpointId;
@@ -751,7 +802,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DBType.
+         * <p>The database ecosystem type. Valid values: </p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder DBType(String DBType) {
             this.DBType = DBType;
@@ -759,7 +817,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointItems.
+         * <p>The list of endpoints, including endpoint information for NAS, S3Gateway, and other types.</p>
          */
         public Builder endpointItems(java.util.List<EndpointItems> endpointItems) {
             this.endpointItems = endpointItems;
@@ -767,7 +825,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * <p>The expiration time of the cluster.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription). An empty value is returned for <strong>Postpaid</strong> (pay-as-you-go) clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-10T16:00:00Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -775,7 +839,13 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Expired.
+         * <p>Indicates whether the cluster has expired.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for clusters whose billing method is <strong>Prepaid</strong> (subscription).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder expired(String expired) {
             this.expired = expired;
@@ -783,7 +853,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * FileSystemId.
+         * <p>The file system ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -791,7 +864,15 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * LockMode.
+         * <p>The lock mode. Valid values: </p>
+         * <ul>
+         * <li><strong>Unlock</strong>: Not locked.</li>
+         * <li><strong>ManualLock</strong>: Manually locked. </li>
+         * <li><strong>LockByExpiration</strong>: Automatically locked due to cluster expiration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         public Builder lockMode(String lockMode) {
             this.lockMode = lockMode;
@@ -799,7 +880,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MaxscaleEndpointId.
+         * <p>The proxy endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pe-cz9inwqec7ifd98c3</p>
          */
         public Builder maxscaleEndpointId(String maxscaleEndpointId) {
             this.maxscaleEndpointId = maxscaleEndpointId;
@@ -807,7 +891,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MetaConnString.
+         * <p>The metadata service cluster endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-x67w12d2d5t13mt88.pg.polardb.rds.aliyuncs.com</p>
          */
         public Builder metaConnString(String metaConnString) {
             this.metaConnString = metaConnString;
@@ -815,7 +902,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MetaInstanceName.
+         * <p>The metadata instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-xxxxxxxxxxxxxxxxx</p>
          */
         public Builder metaInstanceName(String metaInstanceName) {
             this.metaInstanceName = metaInstanceName;
@@ -823,7 +913,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MetaMxsConnString.
+         * <p>The metadata proxy service cluster endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-y3610mp168p3bb740.rwlb.rds.aliyuncs.com</p>
          */
         public Builder metaMxsConnString(String metaMxsConnString) {
             this.metaMxsConnString = metaMxsConnString;
@@ -831,7 +924,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MetaUrl.
+         * <p>The metadata address for Fuse mount (encrypted).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e6cc1d2e2a6fa292038d999fda6501*****</p>
          */
         public Builder metaUrl(String metaUrl) {
             this.metaUrl = metaUrl;
@@ -839,7 +935,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MinorVersion.
+         * <p>The minor version of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.3.0-v1.1.1</p>
          */
         public Builder minorVersion(String minorVersion) {
             this.minorVersion = minorVersion;
@@ -847,7 +946,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * MountInfo.
+         * <p>The mount configuration.</p>
          */
         public Builder mountInfo(MountInfo mountInfo) {
             this.mountInfo = mountInfo;
@@ -855,7 +954,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -863,7 +969,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsInstanceDescription.
+         * <p>The description of the Polarlakebase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-xxx</p>
          */
         public Builder polarFsInstanceDescription(String polarFsInstanceDescription) {
             this.polarFsInstanceDescription = polarFsInstanceDescription;
@@ -871,7 +980,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsInstanceId.
+         * <p>The Polarlakebase instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-2ze0i74ka607*****</p>
          */
         public Builder polarFsInstanceId(String polarFsInstanceId) {
             this.polarFsInstanceId = polarFsInstanceId;
@@ -879,7 +991,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsStatus.
+         * <p>The Polarlakebase instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder polarFsStatus(String polarFsStatus) {
             this.polarFsStatus = polarFsStatus;
@@ -887,7 +1002,14 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsType.
+         * <p>The instance version. Valid values:</p>
+         * <ul>
+         * <li><strong>PolarFS 2.0</strong>: 2.0</li>
+         * <li><strong>PolarFS 1.0</strong>: 1.0</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PolarFS 2.0</p>
          */
         public Builder polarFsType(String polarFsType) {
             this.polarFsType = polarFsType;
@@ -895,7 +1017,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PolarFsVersion.
+         * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.1-1.0.3</p>
          */
         public Builder polarFsVersion(String polarFsVersion) {
             this.polarFsVersion = polarFsVersion;
@@ -903,7 +1028,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -911,7 +1039,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RelativeDbClusterId.
+         * <p>The ID of the associated PolarDB cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-2zejpr41d9xk3uk34</p>
          */
         public Builder relativeDbClusterId(String relativeDbClusterId) {
             this.relativeDbClusterId = relativeDbClusterId;
@@ -919,7 +1050,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RelativePfsClusterId.
+         * <p>The instance ID of the associated Polarlakebase instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pfs-**********</p>
          */
         public Builder relativePfsClusterId(String relativePfsClusterId) {
             this.relativePfsClusterId = relativePfsClusterId;
@@ -938,7 +1072,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The managed security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp**************</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -946,7 +1083,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StorageSpace.
+         * <p>The storage space, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder storageSpace(Double storageSpace) {
             this.storageSpace = storageSpace;
@@ -954,7 +1094,18 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type for the High-performance Edition. Valid values:</p>
+         * <ul>
+         * <li><strong>ESSDPL1</strong></li>
+         * <li><strong>ESSDPL0</strong></li>
+         * </ul>
+         * <p>The storage type for the Basic Edition. Valid values:</p>
+         * <ul>
+         * <li><strong>city_redundancy</strong>: cross-zone redundancy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>essdpl1</p>
          */
         public Builder storageType(String storageType) {
             this.storageType = storageType;
@@ -962,7 +1113,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * StorageUsed.
+         * <p>The storage usage, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3012558848</p>
          */
         public Builder storageUsed(Double storageUsed) {
             this.storageUsed = storageUsed;
@@ -970,7 +1124,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * UserDefaultAccName.
+         * <p>The default user account name for S3 Gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lakebase_acc</p>
          */
         public Builder userDefaultAccName(String userDefaultAccName) {
             this.userDefaultAccName = userDefaultAccName;
@@ -978,7 +1135,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * UserDefaultAccSk.
+         * <p>The default user account key for S3 Gateway (encrypted ciphertext).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EncryptedSecretKey==</p>
          */
         public Builder userDefaultAccSk(String userDefaultAccSk) {
             this.userDefaultAccSk = userDefaultAccSk;
@@ -986,7 +1146,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VPCId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-**********</p>
          */
         public Builder VPCId(String VPCId) {
             this.VPCId = VPCId;
@@ -994,7 +1157,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-**************</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -1002,7 +1168,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-k</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -1068,7 +1237,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * Bucket.
+             * <p>The custom storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pfs-xxx.oss-[regionId]-internal.aliyuncs.com</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -1076,7 +1248,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The custom storage path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1195,7 +1370,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * ConnectionString.
+             * <p>The endpoint of the protocol connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aclsh-prd-pdb12-rw.rwlb.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -1203,7 +1381,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.116.9.224</p>
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -1211,7 +1392,15 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * <p>The network type of the connection string. Valid values:</p>
+             * <ul>
+             * <li><strong>Public</strong>: public endpoint.</li>
+             * <li><strong>Private</strong>: private endpoint.</li>
+             * <li><strong>Inner</strong>: private endpoint (classic network).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -1219,7 +1408,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1227,7 +1419,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-**********</p>
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -1235,7 +1430,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-**************</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1315,7 +1513,7 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * AddressItems.
+             * <p>The list of addresses.</p>
              */
             public Builder addressItems(java.util.List<AddressItems> addressItems) {
                 this.addressItems = addressItems;
@@ -1323,7 +1521,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DBEndpointId.
+             * <p>The endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-xxxxxxxxx</p>
              */
             public Builder DBEndpointId(String DBEndpointId) {
                 this.DBEndpointId = DBEndpointId;
@@ -1331,7 +1532,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointType.
+             * <p>The endpoint type. Valid values: Nas, S3Gateway, and others.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>S3Gateway</p>
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -1411,7 +1615,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * PolarDbProxy.
+             * <p>The cluster management endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP://<strong>.</strong>.<strong>.</strong>:3000,TCP://<strong>.</strong>.<strong>.</strong>:3000,TCP://<strong>.</strong>.<strong>.</strong>:3000</p>
              */
             public Builder polarDbProxy(String polarDbProxy) {
                 this.polarDbProxy = polarDbProxy;
@@ -1419,7 +1626,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PolarFsCluster.
+             * <p>The file system name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pfs-**********</p>
              */
             public Builder polarFsCluster(String polarFsCluster) {
                 this.polarFsCluster = polarFsCluster;
@@ -1427,7 +1637,10 @@ public class DescribePolarFsAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>The token value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a734298c391cb9ebd05e2ee85feb624</p>
              */
             public Builder token(String token) {
                 this.token = token;

@@ -67,7 +67,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the SLR is created.</p>
+         * <p>Indicates whether a service-linked role has been created.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -78,7 +78,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3F9E6A3B-C13E-4064-A010-18582A******</p>

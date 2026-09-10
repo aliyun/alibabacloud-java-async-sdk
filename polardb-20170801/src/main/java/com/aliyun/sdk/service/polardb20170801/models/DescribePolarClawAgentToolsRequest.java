@@ -102,6 +102,7 @@ public class DescribePolarClawAgentToolsRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class DescribePolarClawAgentToolsRequest extends Request {
         }
 
         /**
-         * IncludePlugins.
+         * <p>Specifies whether to include plugin tools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includePlugins(Boolean includePlugins) {
             this.putQueryParameter("IncludePlugins", includePlugins);

@@ -172,7 +172,10 @@ public class DescribeBudgetPoliciesRequest extends Request {
         } 
 
         /**
-         * BudgetDimensionRefId.
+         * <p>The dimension object ID. This parameter is required when BudgetDimensionType is set to ConsumerGroup or Consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cg-p3gk2oh55c**</p>
          */
         public Builder budgetDimensionRefId(String budgetDimensionRefId) {
             this.putQueryParameter("BudgetDimensionRefId", budgetDimensionRefId);
@@ -181,7 +184,14 @@ public class DescribeBudgetPoliciesRequest extends Request {
         }
 
         /**
-         * BudgetDimensionType.
+         * <p>The policy type. Valid values:</p>
+         * <ul>
+         * <li><strong>ConsumerGroup</strong>: total budget for a user group</li>
+         * <li><strong>Consumer</strong>: total budget for a user</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ConsumerGroup</p>
          */
         public Builder budgetDimensionType(String budgetDimensionType) {
             this.putQueryParameter("BudgetDimensionType", budgetDimensionType);
@@ -190,7 +200,10 @@ public class DescribeBudgetPoliciesRequest extends Request {
         }
 
         /**
-         * BudgetPolicyId.
+         * <p>The budget policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>023aacc1effc4b56bb154bfbec6baxxx</p>
          */
         public Builder budgetPolicyId(String budgetPolicyId) {
             this.putQueryParameter("BudgetPolicyId", budgetPolicyId);
@@ -199,6 +212,7 @@ public class DescribeBudgetPoliciesRequest extends Request {
         }
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +225,10 @@ public class DescribeBudgetPoliciesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -220,7 +237,16 @@ public class DescribeBudgetPoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: </p>
+         * <ul>
+         * <li><strong>30</strong></li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
+         * </ul>
+         * <p>Default value: <strong>30</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +255,10 @@ public class DescribeBudgetPoliciesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -247,7 +276,14 @@ public class DescribeBudgetPoliciesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The policy status. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: enabled</li>
+         * <li><strong>Disenabled</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

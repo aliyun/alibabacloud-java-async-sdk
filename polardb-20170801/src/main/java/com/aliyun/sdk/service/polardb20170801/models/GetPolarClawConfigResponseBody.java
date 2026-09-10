@@ -132,7 +132,10 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -140,7 +143,10 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -148,7 +154,12 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The configuration object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;models&quot;: &quot;{\&quot;mode\&quot;:\&quot;merge\&quot;,\&quot;providers\&quot;:{\&quot;bailian\&quot;:{\&quot;models\&quot;:[{\&quot;input\&quot;:[\&quot;text\&quot;,\&quot;image\&quot;],\&quot;name\&quot;:\&quot;qwen3.6-plus\&quot;,\&quot;api\&quot;:\&quot;openai-completions\&quot;,\&quot;id\&quot;:\&quot;qwen3.6-plus\&quot;,\&quot;compat\&quot;:{\&quot;supportsUsageInStreaming\&quot;:true}}],\&quot;baseUrl\&quot;:\&quot;<a href="https://dashscope.aliyuncs.com/compatible-mode/v1%5C%5C%22,%5C%5C%22apiKey%5C%5C%22:%5C%5C%22__OPENCLAW_REDACTED__%5C%5C%22,%5C%5C%22api%5C%5C%22:%5C%5C%22openai-completions%5C%5C%22%7D,%5C%5C%22polardbCustom%5C%5C%22:%7B%5C%5C%22models%5C%5C%22:%5B%7B%5C%5C%22name%5C%5C%22:%5C%5C%22qwen3-max%5C%5C%22,%5C%5C%22api%5C%5C%22:%5C%5C%22openai-completions%5C%5C%22,%5C%5C%22id%5C%5C%22:%5C%5C%22qwen3-max%5C%5C%22%7D%5D,%5C%5C%22baseUrl%5C%5C%22:%5C%5C%22https://dashscope.aliyuncs.com/compatible-mode/v1%5C%5C%22,%5C%5C%22apiKey%5C%5C%22:%5C%5C%22__OPENCLAW_REDACTED__%5C%5C%22,%5C%5C%22api%5C%5C%22:%5C%5C%22openai-completions%5C%5C%22%7D,%5C%5C%22polardb%5C%5C%22:%7B%5C%5C%22models%5C%5C%22:%5B%5D,%5C%5C%22baseUrl%5C%5C%22:%5C%5C%22https://dashscope.aliyuncs.com/compatible-mode/v1%5C%5C%22,%5C%5C%22api%5C%5C%22:%5C%5C%22openai-completions%5C%5C%22%7D%7D%7D">https://dashscope.aliyuncs.com/compatible-mode/v1\\&quot;,\\&quot;apiKey\\&quot;:\\&quot;__OPENCLAW_REDACTED__\\&quot;,\\&quot;api\\&quot;:\\&quot;openai-completions\\&quot;},\\&quot;polardbCustom\\&quot;:{\\&quot;models\\&quot;:[{\\&quot;name\\&quot;:\\&quot;qwen3-max\\&quot;,\\&quot;api\\&quot;:\\&quot;openai-completions\\&quot;,\\&quot;id\\&quot;:\\&quot;qwen3-max\\&quot;}],\\&quot;baseUrl\\&quot;:\\&quot;https://dashscope.aliyuncs.com/compatible-mode/v1\\&quot;,\\&quot;apiKey\\&quot;:\\&quot;__OPENCLAW_REDACTED__\\&quot;,\\&quot;api\\&quot;:\\&quot;openai-completions\\&quot;},\\&quot;polardb\\&quot;:{\\&quot;models\\&quot;:[],\\&quot;baseUrl\\&quot;:\\&quot;https://dashscope.aliyuncs.com/compatible-mode/v1\\&quot;,\\&quot;api\\&quot;:\\&quot;openai-completions\\&quot;}}}</a>&quot;
+         * }</p>
          */
         public Builder config(java.util.Map<String, ?> config) {
             this.config = config;
@@ -156,7 +167,10 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Hash.
+         * <p>The configuration hash.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>005b55a8e870aaf866598e48a6af0bdbfa3fef704770c5e1cbad99648beaa661</p>
          */
         public Builder hash(String hash) {
             this.hash = hash;
@@ -164,7 +178,10 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -172,7 +189,10 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         }
 
         /**
-         * OpenclawVersion.
+         * <p>The version of OpenClaw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026.3.28</p>
          */
         public Builder openclawVersion(String openclawVersion) {
             this.openclawVersion = openclawVersion;
@@ -180,7 +200,7 @@ public class GetPolarClawConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</p>

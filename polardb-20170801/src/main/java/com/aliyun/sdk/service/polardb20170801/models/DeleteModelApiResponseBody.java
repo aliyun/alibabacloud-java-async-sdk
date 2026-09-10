@@ -54,7 +54,7 @@ public class DeleteModelApiResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</p>

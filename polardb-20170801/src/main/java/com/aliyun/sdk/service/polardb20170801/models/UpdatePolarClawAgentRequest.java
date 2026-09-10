@@ -187,6 +187,7 @@ public class UpdatePolarClawAgentRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the agent to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +200,7 @@ public class UpdatePolarClawAgentRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +213,10 @@ public class UpdatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * Avatar.
+         * <p>The new avatar.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder avatar(String avatar) {
             this.putQueryParameter("Avatar", avatar);
@@ -220,7 +225,10 @@ public class UpdatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * Files.
+         * <p>The list of files to update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;FileName&quot;:&quot;SOUL.md&quot;,&quot;FileContent&quot;:&quot;You are a helpful assistant.&quot;}]</p>
          */
         public Builder files(java.util.List<Files> files) {
             String filesShrink = shrink(files, "Files", "json");
@@ -230,7 +238,10 @@ public class UpdatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * <p>Specifies whether to set the agent as the default agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -239,7 +250,10 @@ public class UpdatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * KeepWorkspaceFiles.
+         * <p>Specifies whether to keep files when switching the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder keepWorkspaceFiles(Boolean keepWorkspaceFiles) {
             this.putQueryParameter("KeepWorkspaceFiles", keepWorkspaceFiles);
@@ -248,7 +262,10 @@ public class UpdatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * Model.
+         * <p>The model override.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>claude-sonnet-4-5</p>
          */
         public Builder model(String model) {
             this.putQueryParameter("Model", model);
@@ -257,7 +274,10 @@ public class UpdatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The new display name of the agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Work Bot</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -266,7 +286,10 @@ public class UpdatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * Restart.
+         * <p>Specifies whether to restart the gateway after creation. Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);
@@ -275,7 +298,10 @@ public class UpdatePolarClawAgentRequest extends Request {
         }
 
         /**
-         * Workspace.
+         * <p>The new working directory path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/node/.openclaw/workspace-work-v2</p>
          */
         public Builder workspace(String workspace) {
             this.putQueryParameter("Workspace", workspace);
@@ -343,7 +369,10 @@ public class UpdatePolarClawAgentRequest extends Request {
             } 
 
             /**
-             * FileContent.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You are a helpful assistant.</p>
              */
             public Builder fileContent(String fileContent) {
                 this.fileContent = fileContent;
@@ -351,7 +380,10 @@ public class UpdatePolarClawAgentRequest extends Request {
             }
 
             /**
-             * FileName.
+             * <p>The file name. The value must be one of the following allowed file names: AGENTS.md, SOUL.md, TOOLS.md, IDENTITY.md, USER.md, HEARTBEAT.md, BOOTSTRAP.md, MEMORY.md, or MEMORY.alt.md.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SOUL.md</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;

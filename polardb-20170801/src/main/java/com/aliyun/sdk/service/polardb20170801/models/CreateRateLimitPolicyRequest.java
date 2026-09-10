@@ -134,6 +134,7 @@ public class CreateRateLimitPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class CreateRateLimitPolicyRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of requests per minute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class CreateRateLimitPolicyRequest extends Request {
         }
 
         /**
+         * <p>The maximum number of tokens per minute.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +173,10 @@ public class CreateRateLimitPolicyRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -179,6 +185,7 @@ public class CreateRateLimitPolicyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the consumer group or consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +198,13 @@ public class CreateRateLimitPolicyRequest extends Request {
         }
 
         /**
+         * <p>The rate limiting dimension. Valid values:</p>
+         * <ul>
+         * <li><p><strong>ConsumerGroup</strong>: Consumer group</p>
+         * </li>
+         * <li><p><strong>Consumer</strong>: Consumer</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -205,7 +205,18 @@ public class CreateModelApiRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The gateway retry configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;failover&quot;: {
+         *         &quot;enabled&quot;: true,
+         *         &quot;max_provider_retries&quot;: 2,
+         *         &quot;max_failover_providers&quot;: 1,
+         *         &quot;retryable_status_codes&quot;: [429, 500, 502, 503, 504],
+         *         &quot;retry_delay&quot;: 0.5
+         *     }
+         * }</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -214,7 +225,10 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
-         * ForceModel.
+         * <p>The forced model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder forceModel(String forceModel) {
             this.putQueryParameter("ForceModel", forceModel);
@@ -223,6 +237,7 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
+         * <p>The gateway instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,6 +250,12 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
+         * <p>The category. Valid values:</p>
+         * <ul>
+         * <li><strong>text</strong></li>
+         * <li><strong>embedding</strong></li>
+         * <li><strong>rerank</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,6 +268,7 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
+         * <p>The model API name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,6 +281,7 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
+         * <p>The API path prefix.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +294,13 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
+         * <p>The protocol. Valid values:</p>
+         * <ul>
+         * <li><strong>openai</strong></li>
+         * <li><strong>anthropic</strong></li>
+         * <li><strong>bailian</strong></li>
+         * <li><strong>vllm</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +313,10 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
-         * RecordInput.
+         * <p>The number of input points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder recordInput(String recordInput) {
             this.putQueryParameter("RecordInput", recordInput);
@@ -292,7 +325,10 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
-         * RecordOutput.
+         * <p>The number of output points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder recordOutput(String recordOutput) {
             this.putQueryParameter("RecordOutput", recordOutput);
@@ -301,7 +337,10 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,6 +349,7 @@ public class CreateModelApiRequest extends Request {
         }
 
         /**
+         * <p>The list of routing rules (JSON array string).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

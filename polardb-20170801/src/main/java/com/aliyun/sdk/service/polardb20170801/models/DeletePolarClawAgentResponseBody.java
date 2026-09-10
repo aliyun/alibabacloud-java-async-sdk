@@ -119,7 +119,10 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * AgentId.
+         * <p>The ID of the deleted agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>work</p>
          */
         public Builder agentId(String agentId) {
             this.agentId = agentId;
@@ -127,7 +130,10 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-**************</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -135,7 +141,10 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -143,7 +152,10 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +163,10 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RemovedBindings.
+         * <p>The number of automatically removed bindings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder removedBindings(Integer removedBindings) {
             this.removedBindings = removedBindings;
@@ -159,7 +174,10 @@ public class DeletePolarClawAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>The request ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

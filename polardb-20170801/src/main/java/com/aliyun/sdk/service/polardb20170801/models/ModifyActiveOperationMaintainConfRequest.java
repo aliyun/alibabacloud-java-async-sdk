@@ -233,7 +233,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * <p>The remarks for the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -242,6 +245,13 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>The time of the cycle.</p>
+         * <ul>
+         * <li><p>If CycleType is set to Month, specify the day of the month. Valid values: 1 to 28. Use commas (,) to separate multiple days.</p>
+         * </li>
+         * <li><p>If CycleType is set to Week, specify the day of the week. Valid values: 1 to 7. Use commas (,) to separate multiple days.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,6 +264,13 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>The cycle type. Valid values:</p>
+         * <ul>
+         * <li><p>Month</p>
+         * </li>
+         * <li><p>Week</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,6 +283,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>The end time of the maintenance window. Use the HH:mmZ format. The time is in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -278,6 +296,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>The start time of the task. The time must be in UTC and in the yyyy-mm-ddThh:mm:ssZ format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,6 +327,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +340,10 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -356,6 +379,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the configuration. Valid values: 1 (Enable) and 2 (Disable).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

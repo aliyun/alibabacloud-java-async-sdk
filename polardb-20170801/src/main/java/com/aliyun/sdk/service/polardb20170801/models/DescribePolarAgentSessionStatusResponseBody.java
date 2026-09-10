@@ -67,7 +67,10 @@ public class DescribePolarAgentSessionStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDB3258F-B5DE-43C4-8935-CBA0CA******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,16 @@ public class DescribePolarAgentSessionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the session. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: Enabled</p>
+         * </li>
+         * <li><p><strong>0</strong>: Disabled</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Long status) {
             this.status = status;

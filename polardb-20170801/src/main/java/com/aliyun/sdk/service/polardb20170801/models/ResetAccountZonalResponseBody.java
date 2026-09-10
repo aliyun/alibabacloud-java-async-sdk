@@ -54,7 +54,10 @@ public class ResetAccountZonalResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24A1990B-4F6E-482B-B8CB-75C612******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

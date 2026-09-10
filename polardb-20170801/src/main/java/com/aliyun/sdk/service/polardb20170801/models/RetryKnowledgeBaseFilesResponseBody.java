@@ -106,7 +106,10 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * FailedCount.
+         * <p>The number of failed retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder failedCount(Integer failedCount) {
             this.failedCount = failedCount;
@@ -114,7 +117,7 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The list of retry results.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -133,7 +136,10 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * SucceededCount.
+         * <p>The number of successful retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder succeededCount(Integer succeededCount) {
             this.succeededCount = succeededCount;
@@ -141,7 +147,10 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -233,7 +242,10 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AclProjectionNotFound</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -241,7 +253,10 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The failure reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No active ACL projection exists for the IM document</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -249,7 +264,10 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91b97b71-xxxx-xxxx-xxxx-33c6a6341cdc</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -257,7 +275,14 @@ public class RetryKnowledgeBaseFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>The request result. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The request was successful.</li>
+             * <li><strong>false</strong>: The request failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

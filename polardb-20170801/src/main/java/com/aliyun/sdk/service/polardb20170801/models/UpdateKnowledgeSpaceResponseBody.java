@@ -80,7 +80,10 @@ public class UpdateKnowledgeSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * KnowledgeSpaceId.
+         * <p>The unique identifier of the knowledge space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pks-xxxxxx</p>
          */
         public Builder knowledgeSpaceId(String knowledgeSpaceId) {
             this.knowledgeSpaceId = knowledgeSpaceId;
@@ -99,7 +102,10 @@ public class UpdateKnowledgeSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the asynchronous workflow task. This value is empty if no actual model change occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52*****03</p>
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

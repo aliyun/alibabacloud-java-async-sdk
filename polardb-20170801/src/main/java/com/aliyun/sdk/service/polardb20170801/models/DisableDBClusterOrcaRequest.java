@@ -130,7 +130,16 @@ public class DisableDBClusterOrcaRequest extends Request {
         } 
 
         /**
-         * CleanData.
+         * <p>Specifies whether to clean up data. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Enable</strong></p>
+         * </li>
+         * <li><p><strong>Disable</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         public Builder cleanData(String cleanData) {
             this.putQueryParameter("CleanData", cleanData);
@@ -139,6 +148,10 @@ public class DisableDBClusterOrcaRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in a specific region, including cluster IDs.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

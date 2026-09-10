@@ -67,7 +67,10 @@ public class ModifyEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         } 
 
         /**
-         * DBClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-******************</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -75,7 +78,7 @@ public class ModifyEncryptionDBRolePrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>925B84D9-CA72-432C-95CF-738C22******</p>

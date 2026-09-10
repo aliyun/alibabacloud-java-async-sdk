@@ -200,7 +200,7 @@ public class ModifyDBClusterParametersRequest extends Request {
         } 
 
         /**
-         * ClearBinlog.
+         * <p>Specifies whether to clear binlogs. This parameter takes effect only when binlog is disabled.</p>
          */
         public Builder clearBinlog(Boolean clearBinlog) {
             this.putQueryParameter("ClearBinlog", clearBinlog);
@@ -209,9 +209,9 @@ public class ModifyDBClusterParametersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including cluster IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -225,10 +225,12 @@ public class ModifyDBClusterParametersRequest extends Request {
         }
 
         /**
-         * <p>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:</p>
+         * <p>Specifies whether to immediately or schedule the parameter modification and cluster restart. Valid values:  </p>
          * <ul>
-         * <li>false: scheduled task</li>
-         * <li>true: immediate task</li>
+         * <li><p>false (default): Scheduled execution.</p>
+         * </li>
+         * <li><p>true: Immediate execution.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,17 +261,14 @@ public class ModifyDBClusterParametersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parameter template.</p>
+         * <p>The parameter template ID.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the parameter template ID.</p>
-         * </li>
-         * <li><p>You must specify this parameter or the <code>Parameters</code> parameter.</p>
-         * </li>
-         * <li><p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
-         * </li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the parameter template ID.</li>
+         * <li>You must specify either this parameter or the <code>Parameters</code> parameter.</li>
+         * <li>Only PolarDB for MySQL supports this parameter.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>pcpg-**************</p>
@@ -281,17 +280,14 @@ public class ModifyDBClusterParametersRequest extends Request {
         }
 
         /**
-         * <p>The JSON string that consists of parameters and values. The parameter values are strings, for example, <code>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</code>.</p>
+         * <p>A JSON string that consists of parameters and their values. Parameter values are of the STRING type. Example: <code>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</code>.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98122.html">DescribeDBClusterParameters</a> operation to query the parameters of the PolarDB cluster.</p>
-         * </li>
-         * <li><p>This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster.</p>
-         * </li>
-         * <li><p>For PolarDB for MySQL clusters, you must specify this parameter or the <code>ParameterGroupId</code> parameter.</p>
-         * </li>
+         * <li>You can call the <a href="https://help.aliyun.com/document_detail/98122.html">DescribeDBClusterParameters</a> operation to query the parameters of a PolarDB cluster.</li>
+         * <li>If the cluster runs PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle), this parameter is required.</li>
+         * <li>If the cluster runs PolarDB for MySQL, you must specify either this parameter or the <code>ParameterGroupId</code> parameter.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</p>
@@ -303,15 +299,13 @@ public class ModifyDBClusterParametersRequest extends Request {
         }
 
         /**
-         * <p>The latest start time to run the task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The latest time to start running the scheduled task. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.</p>
-         * </li>
-         * <li><p>By default, if you specify the <code>PlannedStartTime</code> parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: <code>Value of the PlannedEndTime parameter + 30 minutes</code>. For example, if you set the <code>PlannedStartTime</code> parameter to <code>2021-01-14T09:00:00Z</code> and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</p>
-         * </li>
+         * <li>The latest time must be at least 30 minutes later than the start time.</li>
+         * <li>If you specify <code>PlannedStartTime</code> but do not specify this parameter, the latest time defaults to <code>start time + 30 minutes</code>. For example, if <code>PlannedStartTime</code> is set to <code>2021-01-14T09:00:00Z</code> and this parameter is left empty, the task starts no later than <code>2021-01-14T09:30:00Z</code>.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2022-04-28T14:30:00Z</p>
@@ -323,15 +317,13 @@ public class ModifyDBClusterParametersRequest extends Request {
         }
 
         /**
-         * <p>The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+         * <p>The earliest time to start running the scheduled task within the specified time range. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format (UTC).</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in the time range from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</p>
-         * </li>
-         * <li><p>If this parameter is empty, the upgrade task is immediately performed.</p>
-         * </li>
+         * <li>The start time must be within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, the start time can range from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</li>
+         * <li>If this parameter is left empty, the task is immediately executed.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>2022-04-28T14:00:00Z</p>

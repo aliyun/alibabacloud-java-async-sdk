@@ -106,7 +106,10 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApplicationId.
+         * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pa-xxx</p>
          */
         public Builder applicationId(String applicationId) {
             this.applicationId = applicationId;
@@ -114,7 +117,10 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +128,10 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +150,7 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * <p>The list of search results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -259,7 +268,10 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS Copilot</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -267,7 +279,10 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The relevance score.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.95</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -275,7 +290,10 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Slug.
+             * <p>The skill identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibacloud-rds-copilot</p>
              */
             public Builder slug(String slug) {
                 this.slug = slug;
@@ -283,7 +301,10 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The brief description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A copilot for RDS</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -291,7 +312,10 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The UNIX timestamp of the last update, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1716000000</p>
              */
             public Builder updatedAt(Long updatedAt) {
                 this.updatedAt = updatedAt;
@@ -299,7 +323,10 @@ public class SearchPolarClawSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.2.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

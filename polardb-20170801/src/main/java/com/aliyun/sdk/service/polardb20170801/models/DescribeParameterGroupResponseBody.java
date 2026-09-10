@@ -67,7 +67,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the parameter templates.</p>
+         * <p>A list of parameter templates.</p>
          */
         public Builder parameterGroup(java.util.List<ParameterGroup> parameterGroup) {
             this.parameterGroup = parameterGroup;
@@ -75,7 +75,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F1F16757-D31B-49CA-9BF4-305BAF******</p>
@@ -144,7 +144,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the parameter.</p>
+             * <p>The parameter name.</p>
              * 
              * <strong>example:</strong>
              * <p>back_log</p>
@@ -155,7 +155,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
+             * <p>The parameter value.</p>
              * 
              * <strong>example:</strong>
              * <p>3000</p>
@@ -329,7 +329,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the parameter template was created. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+             * <p>The creation time of the parameter template, in <code>yyyy-MM-ddTHH:mm:ssZ</code> format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10T08:40:39Z</p>
@@ -340,7 +340,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database engine.</p>
+             * <p>The database engine type.</p>
              * 
              * <strong>example:</strong>
              * <p>MySQL</p>
@@ -351,7 +351,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the database engine.</p>
+             * <p>The database engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>8.0</p>
@@ -362,10 +362,12 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to restart the cluster when this parameter template is applied. Valid values:</p>
+             * <p>Specifies whether a cluster restart is required for the parameter template to take effect. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: A restart is not required.</li>
-             * <li><strong>1</strong>: A restart is required.</li>
+             * <li><p><strong>0</strong>: No restart is required.</p>
+             * </li>
+             * <li><p><strong>1</strong>: A restart is required.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -388,7 +390,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the parameters.</p>
+             * <p>A list of parameters.</p>
              */
             public Builder parameterDetail(java.util.List<ParameterDetail> parameterDetail) {
                 this.parameterDetail = parameterDetail;
@@ -431,9 +433,12 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             /**
              * <p>The type of the parameter template. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: the default parameter template.</li>
-             * <li><strong>1</strong>: a custom parameter template.</li>
-             * <li><strong>2</strong>: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</li>
+             * <li><p><strong>0</strong>: default template</p>
+             * </li>
+             * <li><p><strong>1</strong>: custom template</p>
+             * </li>
+             * <li><p><strong>2</strong>: automatic backup template. This type of template is an automatic backup of the previous settings, created when you apply a new template.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
