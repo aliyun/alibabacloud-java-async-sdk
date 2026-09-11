@@ -106,7 +106,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried mount targets.</p>
+         * MountTargets.
          */
         public Builder mountTargets(MountTargets mountTargets) {
             this.mountTargets = mountTargets;
@@ -114,7 +114,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the file system list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of mount targets on each page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -229,10 +229,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The default logon password of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12****</p>
+             * DefaultPasswd.
              */
             public Builder defaultPasswd(String defaultPasswd) {
                 this.defaultPasswd = defaultPasswd;
@@ -240,10 +237,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance on the client management node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-hp3i3odi5ory1buo****</p>
+             * EcsId.
              */
             public Builder ecsId(String ecsId) {
                 this.ecsId = ecsId;
@@ -251,10 +245,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the ECS instance on the client management node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.1.0</p>
+             * EcsIp.
              */
             public Builder ecsIp(String ecsIp) {
                 this.ecsIp = ecsIp;
@@ -375,16 +366,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key. Limits:</p>
-             * <ul>
-             * <li>The tag key cannot be null or an empty string.</li>
-             * <li>The tag key can be up to 128 characters in length.</li>
-             * <li>The key value cannot start with aliyun or acs:.</li>
-             * <li>The key value cannot contain http:// or https://.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>nastest</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,15 +374,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * <p>Limits:</p>
-             * <ul>
-             * <li>The tag value can be up to 128 characters in length.</li>
-             * <li>The tag value cannot contain http:// or https://.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>mounttargettest</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -638,10 +612,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the permission group that is attached to the mount target.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DEFAULT_VPC_GROUP_NAME</p>
+             * AccessGroup.
              */
             public Builder accessGroup(String accessGroup) {
                 this.accessGroup = accessGroup;
@@ -657,7 +628,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about client management nodes.</p>
+             * ClientMasterNodes.
              */
             public Builder clientMasterNodes(ClientMasterNodes clientMasterNodes) {
                 this.clientMasterNodes = clientMasterNodes;
@@ -665,10 +636,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1ca404****-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
+             * DualStackMountTargetDomain.
              */
             public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
                 this.dualStackMountTargetDomain = dualStackMountTargetDomain;
@@ -676,14 +644,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the mount target.</p>
-             * <ul>
-             * <li>IPv4: an IPv4 mount target</li>
-             * <li>DualStack: a dual-stack mount target</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>IPv4</p>
+             * IPVersion.
              */
             public Builder IPVersion(String IPVersion) {
                 this.IPVersion = IPVersion;
@@ -691,10 +652,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv4 domain name of the mount target.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1ca404****-w****.cn-hangzhou.nas.aliyuncs.com</p>
+             * MountTargetDomain.
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -702,10 +660,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type. Valid value: <strong>Vpc</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Vpc</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -713,22 +668,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the mount target.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Active: The mount target is available.</li>
-             * <li>Inactive: The mount target is unavailable.</li>
-             * <li>Pending: The mount target is being created or modified.</li>
-             * <li>Deleting: The mount target is being deleted.</li>
-             * <li>Hibernating: The mount target is being hibernated.</li>
-             * <li>Hibernated: The mount target is hibernated.</li>
-             * </ul>
-             * <blockquote>
-             * <p>You can mount a file system only when the mount target of the file system is in the Active state.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -736,7 +676,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array of tags. The array may contain up to 20 tags. If the array contains multiple tags, each tag key is unique.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -744,10 +684,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2zesj9afh3y518k9o****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -755,10 +692,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-2zevmwkwyztjuoffg****</p>
+             * VswId.
              */
             public Builder vswId(String vswId) {
                 this.vswId = vswId;

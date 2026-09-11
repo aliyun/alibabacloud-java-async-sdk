@@ -106,7 +106,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried clients.</p>
+         * Clients.
          */
         public Builder clients(Clients clients) {
             this.clients = clients;
@@ -203,10 +203,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the client.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.10.10.1</p>
+             * ClientIP.
              */
             public Builder clientIP(String clientIP) {
                 this.clientIP = clientIP;

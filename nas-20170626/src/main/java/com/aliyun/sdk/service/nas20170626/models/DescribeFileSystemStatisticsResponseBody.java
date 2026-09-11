@@ -119,7 +119,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The statistics of file systems.</p>
+         * FileSystemStatistics.
          */
         public Builder fileSystemStatistics(FileSystemStatistics fileSystemStatistics) {
             this.fileSystemStatistics = fileSystemStatistics;
@@ -127,7 +127,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried file systems.</p>
+         * FileSystems.
          */
         public Builder fileSystems(FileSystems fileSystems) {
             this.fileSystems = fileSystems;
@@ -276,10 +276,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of expired file systems.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ExpiredCount.
              */
             public Builder expiredCount(Integer expiredCount) {
                 this.expiredCount = expiredCount;
@@ -287,11 +284,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of expiring file systems.</p>
-             * <p>File systems whose expiration time is less than or equal to seven days away from the current time are counted.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ExpiringCount.
              */
             public Builder expiringCount(Integer expiringCount) {
                 this.expiringCount = expiringCount;
@@ -299,10 +292,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the file system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * FileSystemType.
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -310,12 +300,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of the file system.</p>
-             * <p>The value of this parameter is the maximum storage usage of the file system over the last hour.</p>
-             * <p>Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1611</p>
+             * MeteredSize.
              */
             public Builder meteredSize(Long meteredSize) {
                 this.meteredSize = meteredSize;
@@ -323,10 +308,10 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of file systems of the current type.</p>
+             * <p>The total number of file system entries.</p>
              * 
              * <strong>example:</strong>
-             * <p>10</p>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -473,10 +458,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the validity period for the storage plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-01-05T16:00:00Z</p>
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -484,10 +466,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the storage plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>naspackage-0be9c4b624-37****</p>
+             * PackageId.
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -495,10 +474,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity of the storage plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>107374182400</p>
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -506,10 +482,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the validity period for the storage plan.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-12-05T01:40:56Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -799,11 +772,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The capacity of the file system.</p>
-             * <p>Unit: GiB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Capacity.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -811,16 +780,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Subscription: The subscription billing method is used.</li>
-             * <li>PayAsYouGo: The pay-as-you-go billing method is used.</li>
-             * <li>Package: A storage plan is attached to the file system.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PayAsYouGo</p>
+             * ChargeType.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -828,10 +788,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the NAS file system was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-05-27T15:43:06CST</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -839,10 +796,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the file system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>31a8e48eda</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -850,10 +804,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file system expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-08-27T15:43:06CST</p>
+             * ExpiredTime.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -861,10 +812,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the file system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>109c04****</p>
+             * FileSystemId.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -872,16 +820,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the file system.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>standard: General-purpose NAS file system</li>
-             * <li>extreme: Extreme NAS file system</li>
-             * <li>cpfs: CPFS file system</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * FileSystemType.
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -889,11 +828,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of the Infrequent Access (IA) storage medium.</p>
-             * <p>Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>362832</p>
+             * MeteredIASize.
              */
             public Builder meteredIASize(Long meteredIASize) {
                 this.meteredIASize = meteredIASize;
@@ -901,11 +836,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage usage of the file system.</p>
-             * <p>The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1611661312</p>
+             * MeteredSize.
              */
             public Builder meteredSize(Long meteredSize) {
                 this.meteredSize = meteredSize;
@@ -913,7 +844,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about storage plans.</p>
+             * Packages.
              */
             public Builder packages(Packages packages) {
                 this.packages = packages;
@@ -921,16 +852,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol type of the file system.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>NFS: Network File System (NFS)</li>
-             * <li>SMB: Server Message Block (SMB)</li>
-             * <li>cpfs: the protocol type supported by the CPFS file system</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>NFS</p>
+             * ProtocolType.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -938,10 +860,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -949,19 +868,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the file system.</p>
-             * <p>This parameter is returned for Extreme NAS file systems and Cloud Parallel File Storage (CPFS) file systems. Valid values:</p>
-             * <ul>
-             * <li>Pending: The file system is being created or modified.</li>
-             * <li>Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.</li>
-             * <li>Stopped: The file system is unavailable.</li>
-             * <li>Extending: The file system is being scaled out.</li>
-             * <li>Stopping: The file system is being disabled.</li>
-             * <li>Deleting: The file system is being deleted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Pending</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -969,16 +876,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Valid values for General-purpose NAS file systems: Capacity and Performance.</li>
-             * <li>Valid values for Extreme NAS file systems: standard and advance.</li>
-             * <li>Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Performance</p>
+             * StorageType.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -986,10 +884,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-b</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

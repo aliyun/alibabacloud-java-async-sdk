@@ -104,6 +104,7 @@ public class ModifyCpfsAccessPointRequest extends Request {
         } 
 
         /**
+         * <p>The access point ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,10 @@ public class ModifyCpfsAccessPointRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -125,6 +129,13 @@ public class ModifyCpfsAccessPointRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
+         * <ul>
+         * <li><p>CPFS: The ID must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</p>
+         * </li>
+         * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, for example, bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +148,7 @@ public class ModifyCpfsAccessPointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

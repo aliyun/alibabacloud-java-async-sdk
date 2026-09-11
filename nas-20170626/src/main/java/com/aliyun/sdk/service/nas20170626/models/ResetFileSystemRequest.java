@@ -75,7 +75,7 @@ public class ResetFileSystemRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the advanced Extreme NAS file system.</p>
+         * <p>The ID of the Advanced Extreme NAS file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class ResetFileSystemRequest extends Request {
         }
 
         /**
-         * <p>The snapshot ID.</p>
+         * <p>The ID of the historical snapshot to which you want to roll back the specified file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

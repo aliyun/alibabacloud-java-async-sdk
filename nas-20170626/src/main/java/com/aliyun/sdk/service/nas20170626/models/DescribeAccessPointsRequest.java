@@ -115,9 +115,9 @@ public class DescribeAccessPointsRequest extends Request {
         } 
 
         /**
-         * <p>The name of the permission group.</p>
-         * <p>This parameter is required for a General-purpose NAS file system.</p>
-         * <p>The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.</p>
+         * <p>The permission group name.</p>
+         * <p>This parameter is required if the file system is a General-purpose NAS file system.</p>
+         * <p>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_VPC_GROUP_NAME</p>
@@ -129,7 +129,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>174494****</p>
@@ -154,7 +154,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The token used to retrieve the next page of results. Do not specify this parameter for the first request. For subsequent requests, set this value to the NextToken returned in the previous response.</p>
+         * <p>The query token. Set the value to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
@@ -166,7 +166,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * <p>The tags of the access point.</p>
+         * <p>The list of access point tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -234,13 +234,13 @@ public class DescribeAccessPointsRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * <p>Limits:</p>
              * <ul>
              * <li>Valid values of N: 1 to 20.</li>
-             * <li>Maximum length is 128 characters.</li>
-             * <li>Cannot start with aliyun or acs:.</li>
-             * <li>Cannot contain http:// or https://.</li>
+             * <li>The tag key can be up to 128 characters in length.</li>
+             * <li>The tag key cannot start with aliyun or acs:.</li>
+             * <li>The tag key cannot contain http:// or https://.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -252,13 +252,13 @@ public class DescribeAccessPointsRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * <p>Limits:</p>
              * <ul>
              * <li>Valid values of N: 1 to 20.</li>
-             * <li>Maximum length is 128 characters.</li>
-             * <li>Cannot start with aliyun or acs:.</li>
-             * <li>Cannot contain http:// or https://.</li>
+             * <li>The tag value can be up to 128 characters in length.</li>
+             * <li>The tag value cannot start with aliyun or acs:.</li>
+             * <li>The tag value cannot contain http:// or https://.</li>
              * </ul>
              * 
              * <strong>example:</strong>

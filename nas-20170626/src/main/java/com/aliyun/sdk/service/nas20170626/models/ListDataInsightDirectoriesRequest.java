@@ -102,6 +102,13 @@ public class ListDataInsightDirectoriesRequest extends Request {
         } 
 
         /**
+         * <p>The file system ID.</p>
+         * <ul>
+         * <li>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.<blockquote>
+         * <p>Only CPFS for Lingjun file systems are supported.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +121,12 @@ public class ListDataInsightDirectoriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of directories to return.</p>
+         * <p>Valid values: 10 to 100.</p>
+         * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -123,7 +135,10 @@ public class ListDataInsightDirectoriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Leave this parameter empty for the first request. Default value: &quot;&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -132,7 +147,10 @@ public class ListDataInsightDirectoriesRequest extends Request {
         }
 
         /**
-         * ParentDir.
+         * <p>The parent directory path. Specifies the parent directory to query. Default value: root directory &quot;/&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/</p>
          */
         public Builder parentDir(String parentDir) {
             this.putQueryParameter("ParentDir", parentDir);

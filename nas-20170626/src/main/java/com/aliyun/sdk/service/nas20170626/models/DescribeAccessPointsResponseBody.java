@@ -94,7 +94,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the access point.</p>
+         * <p>The access point information.</p>
          */
         public Builder accessPoints(java.util.List<AccessPoints> accessPoints) {
             this.accessPoints = accessPoints;
@@ -102,7 +102,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The query token. Set the value to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
@@ -113,7 +113,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the POSIX user group.</p>
+             * <p>The POSIX user group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -218,7 +218,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the secondary user groups.</p>
+             * <p>The secondary user group ID.</p>
              */
             public Builder posixSecondaryGroupIds(java.util.List<Integer> posixSecondaryGroupIds) {
                 this.posixSecondaryGroupIds = posixSecondaryGroupIds;
@@ -226,7 +226,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the POSIX user.</p>
+             * <p>The POSIX user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -309,7 +309,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the owner group.</p>
+             * <p>The file group ID of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -320,7 +320,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID.</p>
+             * <p>The user ID of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -401,7 +401,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag that is added to the resource.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -412,7 +412,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tag value</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -677,7 +677,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the access point.</p>
+             * <p>The access point ARN.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</p>
@@ -688,7 +688,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission group.</p>
+             * <p>The permission group name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -699,7 +699,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the access point.</p>
+             * <p>The access point ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-ie15y*****</p>
@@ -710,7 +710,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the access point.</p>
+             * <p>The access point name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -721,7 +721,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was created.</p>
+             * <p>The time when the access point was created. Format: Unix/POSIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1709619668276167</p>
@@ -732,7 +732,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the access point.</p>
+             * <p>The access point domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -743,7 +743,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Resource Access Management (RAM) policy is enabled.</p>
+             * <p>Indicates whether the RAM policy is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -754,7 +754,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the file system.</p>
+             * <p>The file system ID.</p>
              * 
              * <strong>example:</strong>
              * <p>31a8e4****</p>
@@ -765,7 +765,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access point was modified.</p>
+             * <p>The time when the access point was last modified. Format: Unix/POSIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1709619668276167</p>
@@ -776,7 +776,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Portable Operating System Interface for UNIX (POSIX) user.</p>
+             * <p>The POSIX user.</p>
              */
             public Builder posixUser(PosixUser posixUser) {
                 this.posixUser = posixUser;
@@ -795,7 +795,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permissions on the root directory.</p>
+             * <p>The root directory permission.</p>
              */
             public Builder rootPathPermission(RootPathPermission rootPathPermission) {
                 this.rootPathPermission = rootPathPermission;
@@ -803,12 +803,12 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the root directory.</p>
+             * <p>The current root directory status.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>0: The rootpath status is unknown.</li>
-             * <li>1: The rootpath does not exist and may be deleted.</li>
-             * <li>2: The rootpath is normal.</li>
+             * <li>0: The root path status is unknown.</li>
+             * <li>1: The root path does not exist. It may have been deleted by the user.</li>
+             * <li>2: The root path status is normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -820,16 +820,16 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the access point.</p>
+             * <p>The current access point status.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>Active: The access point is available.</li>
-             * <li>Inactive: The access point is unavailable.</li>
-             * <li>Pending: The access point is being created.</li>
-             * <li>Deleting: The access point is being deleted.</li>
+             * <li>Active: available.</li>
+             * <li>Inactive: unavailable.</li>
+             * <li>Pending: being created.</li>
+             * <li>Deleting: being deleted.</li>
              * </ul>
              * <blockquote>
-             * <p> You can mount a file system only if the access point is in the Active state.</p>
+             * <p>You can mount the file system only when the status is Active.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -841,7 +841,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the access point.</p>
+             * <p>The list of access point tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -849,7 +849,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Switch ID.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-2zevmwkwyztjuoffg****</p>

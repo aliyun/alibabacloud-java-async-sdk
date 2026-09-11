@@ -155,7 +155,7 @@ public class DeleteProtocolMountTargetRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>exp-123****</p>
+         * <p>exp-19abf5beab8d****</p>
          */
         public Builder exportId(String exportId) {
             this.putQueryParameter("ExportId", exportId);
@@ -168,7 +168,7 @@ public class DeleteProtocolMountTargetRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpfs-123****</p>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -181,7 +181,7 @@ public class DeleteProtocolMountTargetRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ptc-123****</p>
+         * <p>ptc-197ed6a00f2b****</p>
          */
         public Builder protocolServiceId(String protocolServiceId) {
             this.putQueryParameter("ProtocolServiceId", protocolServiceId);

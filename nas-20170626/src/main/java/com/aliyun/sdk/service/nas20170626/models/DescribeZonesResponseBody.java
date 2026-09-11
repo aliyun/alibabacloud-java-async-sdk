@@ -78,7 +78,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried zones.</p>
+         * Zones.
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -198,15 +198,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The protocol type.</p>
-             * <ul>
-             * <li>If the FileSystemType parameter is set to standard, the protocol type is nfs or smb.</li>
-             * <li>If the FileSystemType parameter is set to extreme, the protocol type is nfs.</li>
-             * <li>If the FileSystemType parameter is set to cpfs, the protocol type is cpfs.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>nfs</p>
+             * ProtocolType.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -214,15 +206,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type.</p>
-             * <ul>
-             * <li>If the FileSystemType parameter is set to standard, the storage type is Performance or Capacity.</li>
-             * <li>If the FileSystemType parameter is set to extreme, the storage type is standard or advance.</li>
-             * <li>If the FileSystemType parameter is set to cpfs, the storage type is advance_100 (100 MB/s/TiB baseline) or advance_200 (200 MB/s/TiB baseline).</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Capacity</p>
+             * StorageType.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -423,7 +407,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>This parameter is reserved. You can ignore this parameter.</p>
+             * Capacity.
              */
             public Builder capacity(Capacity capacity) {
                 this.capacity = capacity;
@@ -431,7 +415,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about file system types.</p>
+             * InstanceTypes.
              */
             public Builder instanceTypes(InstanceTypes instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -439,7 +423,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is reserved. You can ignore this parameter.</p>
+             * Performance.
              */
             public Builder performance(Performance performance) {
                 this.performance = performance;
@@ -447,10 +431,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-b</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

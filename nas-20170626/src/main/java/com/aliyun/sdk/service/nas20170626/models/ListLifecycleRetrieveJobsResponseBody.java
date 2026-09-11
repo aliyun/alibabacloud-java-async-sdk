@@ -106,7 +106,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the data retrieval tasks.</p>
+         * <p>The collection of data retrieval task information.</p>
          */
         public Builder lifecycleRetrieveJobs(java.util.List<LifecycleRetrieveJobs> lifecycleRetrieveJobs) {
             this.lifecycleRetrieveJobs = lifecycleRetrieveJobs;
@@ -114,7 +114,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of data retrieval tasks on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
@@ -319,7 +319,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of files that are read in the data retrieval task.</p>
+             * <p>The total number of files read by the data retrieval task.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -330,7 +330,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the file system.</p>
+             * <p>The file system ID.</p>
              * 
              * <strong>example:</strong>
              * <p>31a8e4****</p>
@@ -341,7 +341,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data retrieval task.</p>
+             * <p>The data retrieval task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>lrj-nfstest-ia-160****853-hshvw</p>
@@ -352,7 +352,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution path of the data retrieval task.</p>
+             * <p>The execution paths of the data retrieval task.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -360,7 +360,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of files that are retrieved.</p>
+             * <p>The number of files that are successfully retrieved by the data retrieval task.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -373,10 +373,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             /**
              * <p>The status of the data retrieval task. Valid values:</p>
              * <ul>
-             * <li>active: The task is running.</li>
-             * <li>canceled: The task is canceled.</li>
-             * <li>completed: The task is completed.</li>
-             * <li>failed: The task has failed.</li>
+             * <li>active: Running.</li>
+             * <li>canceled: Canceled.</li>
+             * <li>completed: Completed.</li>
+             * <li>failed: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -388,10 +388,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage class.</p>
+             * <p>The storage class. Valid values:</p>
              * <ul>
-             * <li>InfrequentAccess: the IA storage class.</li>
-             * <li>Archive: the Archive storage class.</li>
+             * <li>InfrequentAccess: IA storage class.</li>
+             * <li>Archive: Archive storage.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -403,7 +403,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was updated.</p>
+             * <p>The time when the task was last updated.</p>
              * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
              * 
              * <strong>example:</strong>

@@ -75,6 +75,7 @@ public class StartLifecyclePolicyExecutionRequest extends Request {
         } 
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class StartLifecyclePolicyExecutionRequest extends Request {
         }
 
         /**
+         * <p>The lifecycle policy ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

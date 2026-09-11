@@ -106,7 +106,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * Directory.
+         * <p>The directory information.</p>
          */
         public Builder directory(Directory directory) {
             this.directory = directory;
@@ -114,7 +114,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * FileSystemId.
+         * <p>The file system ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bmcpfs-370lx1ev9ss27o0****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = fileSystemId;
@@ -122,7 +125,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of directories returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -130,7 +136,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token returned in this call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/subDir</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -138,7 +147,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -334,7 +346,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedAt.
+             * <p>The time when the directory was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-23T12:47:14Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -342,7 +357,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirCapacity.
+             * <p>The capacity of the subdirectory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>345518080</p>
              */
             public Builder dirCapacity(Long dirCapacity) {
                 this.dirCapacity = dirCapacity;
@@ -350,7 +368,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirCapacityOffline.
+             * <p>The capacity of IA files in the subdirectory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dirCapacityOffline(Long dirCapacityOffline) {
                 this.dirCapacityOffline = dirCapacityOffline;
@@ -358,7 +379,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirCapacityOnline.
+             * <p>The capacity of standard files in the subdirectory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>345518080</p>
              */
             public Builder dirCapacityOnline(Long dirCapacityOnline) {
                 this.dirCapacityOnline = dirCapacityOnline;
@@ -366,7 +390,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirLevel.
+             * <p>The subdirectory level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dirLevel(Integer dirLevel) {
                 this.dirLevel = dirLevel;
@@ -374,7 +401,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirName.
+             * <p>The subdirectory name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dir_l1_n000</p>
              */
             public Builder dirName(String dirName) {
                 this.dirName = dirName;
@@ -382,7 +412,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FileCount.
+             * <p>The number of files in the subdirectory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>84846</p>
              */
             public Builder fileCount(Long fileCount) {
                 this.fileCount = fileCount;
@@ -390,7 +423,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountOffline.
+             * <p>The number of IA files in the subdirectory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2343</p>
              */
             public Builder fileCountOffline(Long fileCountOffline) {
                 this.fileCountOffline = fileCountOffline;
@@ -398,7 +434,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountOnline.
+             * <p>The number of standard files in the subdirectory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>84355</p>
              */
             public Builder fileCountOnline(Long fileCountOnline) {
                 this.fileCountOnline = fileCountOnline;
@@ -406,7 +445,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Inode.
+             * <p>The inode number of the subdirectory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>140288</p>
              */
             public Builder inode(Long inode) {
                 this.inode = inode;
@@ -414,7 +456,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * LastAccessTime.
+             * <p>The time when the database directory data record was last updated. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-29T03:41:12Z</p>
              */
             public Builder lastAccessTime(String lastAccessTime) {
                 this.lastAccessTime = lastAccessTime;
@@ -422,7 +467,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedAt.
+             * <p>The time when the directory was last accessed. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-29T03:41:12Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -567,7 +615,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * DirCapacity.
+             * <p>The directory capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder dirCapacity(Long dirCapacity) {
                 this.dirCapacity = dirCapacity;
@@ -575,7 +626,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirCapacityOffline.
+             * <p>The capacity of IA files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder dirCapacityOffline(Long dirCapacityOffline) {
                 this.dirCapacityOffline = dirCapacityOffline;
@@ -583,7 +637,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirCapacityOnline.
+             * <p>The capacity of standard files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder dirCapacityOnline(Long dirCapacityOnline) {
                 this.dirCapacityOnline = dirCapacityOnline;
@@ -591,7 +648,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FileCount.
+             * <p>The number of files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2343232</p>
              */
             public Builder fileCount(Long fileCount) {
                 this.fileCount = fileCount;
@@ -599,7 +659,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountOffline.
+             * <p>The number of Infrequent Access (IA) files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204800</p>
              */
             public Builder fileCountOffline(Long fileCountOffline) {
                 this.fileCountOffline = fileCountOffline;
@@ -607,7 +670,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountOnline.
+             * <p>The number of standard files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>204800</p>
              */
             public Builder fileCountOnline(Long fileCountOnline) {
                 this.fileCountOnline = fileCountOnline;
@@ -615,7 +681,10 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Inode.
+             * <p>The inode number of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2343</p>
              */
             public Builder inode(Long inode) {
                 this.inode = inode;
@@ -623,7 +692,7 @@ public class ListDataInsightDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * SubDirectories.
+             * <p>The subdirectory information.</p>
              */
             public Builder subDirectories(java.util.List<SubDirectories> subDirectories) {
                 this.subDirectories = subDirectories;

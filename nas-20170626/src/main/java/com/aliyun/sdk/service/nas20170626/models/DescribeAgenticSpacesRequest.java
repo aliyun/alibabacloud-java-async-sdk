@@ -103,6 +103,7 @@ public class DescribeAgenticSpacesRequest extends Request {
         } 
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,7 @@ public class DescribeAgenticSpacesRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>The collection of filter conditions.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -124,7 +125,11 @@ public class DescribeAgenticSpacesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of results per query.</p>
+         * <p>Valid values: 10 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +138,10 @@ public class DescribeAgenticSpacesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the value of NextToken that is returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTc3OTkzNTA0Mjg0NTc1MDI4OCM0MDQ0MzA****=</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -201,7 +209,13 @@ public class DescribeAgenticSpacesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The name of the filter key. Valid values:</p>
+             * <ul>
+             * <li>AgenticSpaceIds</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AgenticSpaceIds</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -209,7 +223,13 @@ public class DescribeAgenticSpacesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the filter key. Wildcards are not supported.</p>
+             * <ul>
+             * <li>AgenticSpaceIds: Only a single ID can be specified.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>06229oypxjgox0u****</p>
              */
             public Builder value(String value) {
                 this.value = value;

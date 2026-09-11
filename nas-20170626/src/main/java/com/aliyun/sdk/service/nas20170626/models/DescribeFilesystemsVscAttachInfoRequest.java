@@ -103,8 +103,9 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
         } 
 
         /**
-         * <p>The number of results for each query.</p>
-         * <p>Valid values: 10 to 100. Default value: 10.</p>
+         * <p>The number of results returned per query.</p>
+         * <p>Valid values: 10 to 100.
+         * Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -116,7 +117,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>Query token, which is the NextToken value returned from the previous API call.</p>
+         * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -128,7 +129,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID information of the file system and virtual storage channel. Each batch can contain up to 10 IDs.</p>
+         * <p>The ID information of file systems and virtual storage channels. A maximum of 10 entries can be specified per batch.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceIds(java.util.List<ResourceIds> resourceIds) {
@@ -138,7 +139,10 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
         }
 
         /**
-         * RoleChain.
+         * <p>The role chain.</p>
+         * <blockquote>
+         * <p>Required only for cross-account scenarios.</p>
+         * </blockquote>
          */
         public Builder roleChain(java.util.List<RoleChain> roleChain) {
             this.putQueryParameter("RoleChain", roleChain);
@@ -206,7 +210,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the file system.</p>
+             * <p>The file system ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bmcpfs-290t15yn4uo8lid****</p>
@@ -217,7 +221,7 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
             }
 
             /**
-             * <p>The ID of the virtual storage channel.</p>
+             * <p>The virtual storage channel ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsc-8vb864o3ppwfvh****</p>
@@ -300,7 +304,10 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
             } 
 
             /**
-             * AssumeRoleFor.
+             * <p>The UID of the Alibaba Cloud account (primary account), which specifies the account on whose behalf the service assumes the role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101522855006****</p>
              */
             public Builder assumeRoleFor(String assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -308,7 +315,10 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
             }
 
             /**
-             * RoleArn.
+             * <p>The resource descriptor of the specified role. Format: acs:ram::$accountID:role/$roleName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::123472233814****:role/aliyunnasclientvsc****</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -316,7 +326,10 @@ public class DescribeFilesystemsVscAttachInfoRequest extends Request {
             }
 
             /**
-             * RoleType.
+             * <p>The role type. Valid values: service and user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;

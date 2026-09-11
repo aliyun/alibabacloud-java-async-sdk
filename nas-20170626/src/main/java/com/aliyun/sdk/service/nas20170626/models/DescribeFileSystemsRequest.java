@@ -158,12 +158,12 @@ public class DescribeFileSystemsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <ul>
-         * <li>Sample ID of a General-purpose NAS file system: 31a8e4****.</li>
-         * <li>The IDs of Extreme NAS file systems must start with extreme-, for example, extreme-0015****.</li>
-         * <li>The IDs of CPFS file systems must start with cpfs-. Example: cpfs-125487****.</li>
-         * <li>The IDs of CPFS SE file systems must start with cpfsse-. Example: cpfsse-022c71b134****.</li>
+         * <li>General-purpose NAS: 31a8e4****.</li>
+         * <li>Extreme NAS: must start with extreme-, such as extreme-0015****.</li>
+         * <li>CPFS (locally redundant): must start with cpfs-, such as cpfs-125487****.</li>
+         * <li>CPFS SE (zone-redundant): must start with cpfsse-, such as cpfsse-022c71b134****.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,14 +179,14 @@ public class DescribeFileSystemsRequest extends Request {
          * <p>The type of the file system.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>all (default): All types.</li>
-         * <li>standard: General-purpose NAS</li>
-         * <li>extreme: Extreme NAS</li>
-         * <li>cpfs: CPFS (locally redundant storage)</li>
-         * <li>cpfsse: CPFS SE (zone-redundant storage)</li>
+         * <li>all (default): queries all types.</li>
+         * <li>standard: General-purpose NAS.</li>
+         * <li>extreme: Extreme NAS.</li>
+         * <li>cpfs: Cloud Parallel File Storage (CPFS) with locally redundant storage.</li>
+         * <li>cpfsse: CPFS SE with zone-redundant storage.</li>
          * </ul>
          * <blockquote>
-         * <p> Separate multiple data types with commas (,).</p>
+         * <p>To query multiple types, separate them with commas (,).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -199,8 +199,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the file system list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -212,12 +211,10 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
-         * <p>Valid values: 1 to 100.</p>
-         * <p>Default value: 10.</p>
+         * <p>The number of file systems on each page in a paging query.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -227,10 +224,10 @@ public class DescribeFileSystemsRequest extends Request {
 
         /**
          * <p>The resource group ID.</p>
-         * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a> to view resource group IDs.</p>
+         * <p>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups?">Resource Management console</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmwavnfdf****</p>
+         * <p>rg-acfmwavnfef****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -239,7 +236,10 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The storage type. Currently, only CPFS for Lingjun specifications are supported for a filtered query. Other FileSystemType values are not supported. The following specifications are supported:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bm_advance_400</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -248,7 +248,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The details about the tags.</p>
+         * <p>The tag information.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -257,8 +257,7 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
-         * <p>If you want to mount the file system on an Elastic Compute Service (ECS) instance, the file system and the ECS instance must reside in the same VPC.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1sevsgtqvk5gxbl****</p>
@@ -339,7 +338,7 @@ public class DescribeFileSystemsRequest extends Request {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -350,14 +349,14 @@ public class DescribeFileSystemsRequest extends Request {
              * <p>The tag value.</p>
              * <p>Limits:</p>
              * <ul>
-             * <li>Valid values of N: 1 to 20.</li>
+             * <li>N can be an integer from 1 to 20.</li>
              * <li>The tag value can be up to 128 characters in length.</li>
              * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
              * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>test-value</p>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

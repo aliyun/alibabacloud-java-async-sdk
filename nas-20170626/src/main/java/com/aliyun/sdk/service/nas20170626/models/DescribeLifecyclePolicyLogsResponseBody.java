@@ -119,7 +119,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * LifecyclePolicyLogs.
+         * <p>The execution logs of the lifecycle management policy.</p>
          */
         public Builder lifecyclePolicyLogs(java.util.List<LifecyclePolicyLogs> lifecyclePolicyLogs) {
             this.lifecyclePolicyLogs = lifecyclePolicyLogs;
@@ -127,7 +127,10 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of log entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,14 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The request status. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +175,10 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of log entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -225,7 +244,14 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Attribute.
+             * <p>The attribute of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Atime: the last access time of the file.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Atime</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -233,7 +259,14 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>If Attribute is set to Atime, this parameter specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -300,7 +333,13 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Attribute.
+             * <p>The attribute of the rule. Valid values:</p>
+             * <ul>
+             * <li>RetrieveType: the retrieval method.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RetrieveType</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -308,7 +347,17 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold of the rule. Valid values:</p>
+             * <ul>
+             * <li>RetrieveType<ul>
+             * <li>AfterVisit: Supported when LifecyclePolicyType=Auto. Indicates best-effort recall on visit.</li>
+             * <li>All: Supported when LifecyclePolicyType=OnDemand. Indicates retrieving all data.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -375,7 +424,14 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * Attribute.
+             * <p>The attribute of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Atime: the last access time of the file.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Atime</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -383,7 +439,14 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>If Attribute is set to Atime, this parameter specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -528,7 +591,10 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the task was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-10-20T02:25:07Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -536,7 +602,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DeleteRules.
+             * <p>The file data expiration and deletion rules. A maximum of one rule can be configured.</p>
              */
             public Builder deleteRules(java.util.List<DeleteRules> deleteRules) {
                 this.deleteRules = deleteRules;
@@ -544,7 +610,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Paths.
+             * <p>The execution paths of the specified retrieval task.</p>
              */
             public Builder paths(java.util.List<String> paths) {
                 this.paths = paths;
@@ -552,7 +618,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RetrieveRules.
+             * <p>The file data retrieval rules.</p>
              */
             public Builder retrieveRules(java.util.List<RetrieveRules> retrieveRules) {
                 this.retrieveRules = retrieveRules;
@@ -560,7 +626,17 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the data retrieval task. Valid values:</p>
+             * <ul>
+             * <li>PENDING: Being created.</li>
+             * <li>RUNNING: Running.</li>
+             * <li>STOPPED: Stopped.</li>
+             * <li>FINISHED: Finished.</li>
+             * <li>FAILED: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -568,7 +644,14 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The tiered storage type. Valid values:</p>
+             * <ul>
+             * <li>InfrequentAccess: IA storage class (default).</li>
+             * <li>Archive: Archive storage.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>InfrequentAccess</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -576,7 +659,10 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The task overview.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Total tasks: 100000, success tasks: 100000</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -584,7 +670,7 @@ public class DescribeLifecyclePolicyLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRules.
+             * <p>The file data transit rules.</p>
              */
             public Builder transitRules(java.util.List<TransitRules> transitRules) {
                 this.transitRules = transitRules;

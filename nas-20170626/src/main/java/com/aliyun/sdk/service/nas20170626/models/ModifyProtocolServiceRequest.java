@@ -118,10 +118,10 @@ public class ModifyProtocolServiceRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -138,12 +138,13 @@ public class ModifyProtocolServiceRequest extends Request {
          * <p>Limits:</p>
          * <ul>
          * <li>The description must be 2 to 128 characters in length.</li>
-         * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * <li>The description must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
+         * <li><strong>Spaces and other special characters are not allowed</strong>. Valid example: <code>My-Protocol-Service_01</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>My-Protocol-Service_01</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -152,11 +153,12 @@ public class ModifyProtocolServiceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a dry run, without performing the actual request. The dry run checks parameter validity and prerequisites. The dry run does not modify a file system or incur fees.</p>
+         * <p>Specifies whether to perform a dry run for this modification request.
+         * A dry run checks parameter validity and dependencies without actually modifying the instance or incurring charges.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run and does not modify the protocol service. The system checks the request format, service limits, prerequisites, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, a 200 HTTP status code is returned.</li>
-         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, the service protocol is modified.</li>
+         * <li>true: Sends a dry run request without modifying the protocol service. The dry run checks whether required parameters are specified, whether the request format is valid, and whether business constraints and dependencies are met. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned.</li>
+         * <li>false (default): Sends a normal request. After the check succeeds, the protocol service is directly modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,7 @@ public class ModifyProtocolServiceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpfs-123****</p>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -182,11 +184,11 @@ public class ModifyProtocolServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the protocol service.</p>
+         * <p>The ID of the protocol service. You can obtain the protocol service ID from the response of the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-createprotocolservice-cpfs">CreateProtocolService</a> operation, or query it by calling the <a href="https://www.alibabacloud.com/help/en/cpfs/cpfsonecs/developer-reference/api-nas-2017-06-26-describeprotocolservice-cpfs">DescribeProtocolService</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ptc-123****</p>
+         * <p>ptc-197ed6a00f2b****</p>
          */
         public Builder protocolServiceId(String protocolServiceId) {
             this.putQueryParameter("ProtocolServiceId", protocolServiceId);

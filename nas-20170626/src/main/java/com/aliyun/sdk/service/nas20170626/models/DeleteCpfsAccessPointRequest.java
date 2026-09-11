@@ -90,6 +90,7 @@ public class DeleteCpfsAccessPointRequest extends Request {
         } 
 
         /**
+         * <p>The access point ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,13 @@ public class DeleteCpfsAccessPointRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
+         * <ul>
+         * <li><p>CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
+         * </li>
+         * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +122,7 @@ public class DeleteCpfsAccessPointRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

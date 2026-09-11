@@ -60,6 +60,13 @@ public class EnableDataInsightRequest extends Request {
         } 
 
         /**
+         * <p>The file system ID.</p>
+         * <ul>
+         * <li>CPFS for Lingjun: The value must start with <code>bmcpfs-</code>, such as bmcpfs-125487\<em>\</em>\<em>\</em>.<blockquote>
+         * <p>Only CPFS for Lingjun file systems are supported.</p>
+         * </blockquote>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -102,6 +102,7 @@ public class ListAccessPointsRequest extends Request {
         } 
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,7 @@ public class ListAccessPointsRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>The filter information.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -123,7 +124,15 @@ public class ListAccessPointsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per query.</p>
+         * <ul>
+         * <li>Maximum value: 100.</li>
+         * <li>Minimum value: 10.</li>
+         * <li>Default value: 20.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -132,7 +141,10 @@ public class ListAccessPointsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The query token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTY4NzcxOTcwMjAzMDk2Nzc0MyM4MDM4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -200,7 +212,15 @@ public class ListAccessPointsRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the filter key. Valid values:</p>
+             * <ul>
+             * <li>AccessGroup (not supported for agentic)</li>
+             * <li>AccessPointId</li>
+             * <li>AgenticSpaceId</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AccessPointId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -208,7 +228,10 @@ public class ListAccessPointsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the filter key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

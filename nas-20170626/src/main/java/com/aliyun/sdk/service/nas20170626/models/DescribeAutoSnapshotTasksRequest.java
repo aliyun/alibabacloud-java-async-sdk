@@ -117,8 +117,8 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of automatic snapshot policies.</p>
-         * <p>You can specify a maximum of 100 policy IDs. If you want to query the tasks of multiple automatic snapshot policies, you must separate the policy IDs with commas (,).</p>
+         * <p>The IDs of the automatic snapshot policies.</p>
+         * <p>You can specify up to 100 automatic snapshot policy IDs. To query tasks of multiple automatic snapshot policies, separate the policy IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>sp-extreme-233e6****,sp-extreme-233e6****, sp-extreme-233e6****</p>
@@ -130,8 +130,8 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
-         * <p>You can specify a maximum of 100 file system IDs. If you want to query the snapshots of multiple file systems, you must separate the file system IDs with commas (,).</p>
+         * <p>The IDs of the file systems.</p>
+         * <p>You can specify up to 100 file system IDs in a single request. To query snapshots of multiple file systems, separate the file system IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>extreme-233e6****,extreme -23vbp****,extreme -23vas****</p>
@@ -144,7 +144,7 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
 
         /**
          * <p>The type of the file system.</p>
-         * <p>Valid value: extreme, which indicates Extreme NAS file systems.</p>
+         * <p>Valid values: extreme (Extreme NAS file system)</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of snapshot tasks on each page.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -171,8 +171,8 @@ public class DescribeAutoSnapshotTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the automatic snapshot task list.</p>
+         * <p>Start value (default value): 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

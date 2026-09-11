@@ -106,7 +106,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried permission groups.</p>
+         * AccessGroups.
          */
         public Builder accessGroups(AccessGroups accessGroups) {
             this.accessGroups = accessGroups;
@@ -114,7 +114,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of permission groups returned per page.</p>
+         * <p>The number of permission groups on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -294,10 +294,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the permission group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DEFAULT_VPC_GROUP_NAME</p>
+             * AccessGroupName.
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -305,10 +302,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the permission group. Valid value: <strong>Vpc</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Vpc</p>
+             * AccessGroupType.
              */
             public Builder accessGroupType(String accessGroupType) {
                 this.accessGroupType = accessGroupType;
@@ -316,10 +310,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the permission group was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-01-05T16:00:00Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -327,10 +318,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the permission group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is a test access group.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,16 +326,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the file system.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>standard: General-purpose NAS</li>
-             * <li>extreme: Extreme NAS</li>
-             * <li>cpfs: CPFS</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * FileSystemType.
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -355,10 +334,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of mount targets to which the permission group is attached.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * MountTargetCount.
              */
             public Builder mountTargetCount(Integer mountTargetCount) {
                 this.mountTargetCount = mountTargetCount;
@@ -366,10 +342,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -377,10 +350,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of rules in the permission group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * RuleCount.
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;

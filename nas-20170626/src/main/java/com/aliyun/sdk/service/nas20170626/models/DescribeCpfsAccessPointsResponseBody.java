@@ -106,7 +106,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessPoints.
+         * <p>The access point information.</p>
          */
         public Builder accessPoints(java.util.List<AccessPoints> accessPoints) {
             this.accessPoints = accessPoints;
@@ -114,7 +114,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,11 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of results per page.
+         * Valid values: 1 to 100.<br>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +137,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A323836B-5BC6-45A6-8048-60675C23****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +148,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of access points.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +217,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             } 
 
             /**
-             * RootPath.
+             * <p>The root directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/path</p>
              */
             public Builder rootPath(String rootPath) {
                 this.rootPath = rootPath;
@@ -212,7 +228,16 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * RootPathStatus.
+             * <p>The current status of the root directory.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Unknown: the root path status is unknown.</li>
+             * <li>NotExist: the root path does not exist. It may have been deleted by the user.</li>
+             * <li>Ready: the root path status is normal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder rootPathStatus(String rootPathStatus) {
                 this.rootPathStatus = rootPathStatus;
@@ -221,6 +246,87 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
 
             public RootDirectory build() {
                 return new RootDirectory(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCpfsAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCpfsAccessPointsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The key of the CPFS access point tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the CPFS access point tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
@@ -260,6 +366,9 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         private AccessPoints(Builder builder) {
             this.ARN = builder.ARN;
             this.accessPointId = builder.accessPointId;
@@ -270,6 +379,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.rootDirectory = builder.rootDirectory;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -343,6 +453,13 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String ARN; 
             private String accessPointId; 
@@ -353,6 +470,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             private String regionId; 
             private RootDirectory rootDirectory; 
             private String status; 
+            private java.util.List<Tags> tags; 
 
             private Builder() {
             } 
@@ -367,10 +485,14 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
                 this.regionId = model.regionId;
                 this.rootDirectory = model.rootDirectory;
                 this.status = model.status;
+                this.tags = model.tags;
             } 
 
             /**
-             * ARN.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:nas:cn-hangzhou:178321033379****:accesspoint/ap-ie15yd****</p>
              */
             public Builder ARN(String ARN) {
                 this.ARN = ARN;
@@ -378,7 +500,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessPointId.
+             * <p>The access point ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-ie15y*****</p>
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;
@@ -386,7 +511,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the access point was created. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-28T06:32:14Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -394,7 +522,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -402,7 +533,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * <p>The file system ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bmcpfs-290r9c75fnb0il8d8v1</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -410,7 +544,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the access point was last modified. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-28T06:32:14Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -418,7 +555,10 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -426,7 +566,7 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * RootDirectory.
+             * <p>The root directory information.</p>
              */
             public Builder rootDirectory(RootDirectory rootDirectory) {
                 this.rootDirectory = rootDirectory;
@@ -434,10 +574,31 @@ public class DescribeCpfsAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The current status of the access point.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Active: available.</li>
+             * <li>Inactive: unavailable.</li>
+             * <li>Pending: being created.</li>
+             * <li>Deleting: being deleted.</li>
+             * </ul>
+             * <blockquote>
+             * <p>You can mount the file system only when the status is Active.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>The list of CPFS access point tags.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -67,7 +67,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * AgenticSpace.
+         * <p>The AgenticSpace information.</p>
          */
         public Builder agenticSpace(AgenticSpace agenticSpace) {
             this.agenticSpace = agenticSpace;
@@ -75,7 +75,10 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D****3E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,16 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             } 
 
             /**
-             * FileCountLimit.
+             * <p>The file count limit of the quota. Valid values:</p>
+             * <ul>
+             * <li><p>Minimum value: 10,000.</p>
+             * </li>
+             * <li><p>Maximum value: 100,000,000.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10000000</p>
              */
             public Builder fileCountLimit(Long fileCountLimit) {
                 this.fileCountLimit = fileCountLimit;
@@ -149,7 +161,16 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * SizeLimit.
+             * <p>The total capacity limit of the quota. Unit: bytes.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
+             * <li>Maximum value: 1,099,511,627,776,000 (1024000 GiB).</li>
+             * <li>Increment: 1,073,741,824 (1 GiB).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10737418240</p>
              */
             public Builder sizeLimit(Long sizeLimit) {
                 this.sizeLimit = sizeLimit;
@@ -344,7 +365,10 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * Azone.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder azone(String azone) {
                 this.azone = azone;
@@ -352,7 +376,10 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimeUtc.
+             * <p>The time when the AgenticSpace was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-10T10:08:08Z</p>
              */
             public Builder createTimeUtc(String createTimeUtc) {
                 this.createTimeUtc = createTimeUtc;
@@ -371,7 +398,10 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * FileCountUsage.
+             * <p>The file count usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder fileCountUsage(Long fileCountUsage) {
                 this.fileCountUsage = fileCountUsage;
@@ -379,7 +409,10 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemId.
+             * <p>The file system ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>06229oypxjgox0u****</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -387,7 +420,10 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemPath.
+             * <p>The absolute file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/test/</p>
              */
             public Builder fileSystemPath(String fileSystemPath) {
                 this.fileSystemPath = fileSystemPath;
@@ -395,7 +431,7 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * Quota.
+             * <p>The quota information.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -403,7 +439,10 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * SpaceUsage.
+             * <p>The capacity usage. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder spaceUsage(Long spaceUsage) {
                 this.spaceUsage = spaceUsage;
@@ -411,7 +450,13 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the AgenticSpace. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -419,7 +464,10 @@ public class GetAgenticSpaceResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimeUtc.
+             * <p>The time when the AgenticSpace was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-10T10:08:08Z</p>
              */
             public Builder updateTimeUtc(String updateTimeUtc) {
                 this.updateTimeUtc = updateTimeUtc;

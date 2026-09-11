@@ -106,7 +106,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried automatic snapshot tasks.</p>
+         * AutoSnapshotTasks.
          */
         public Builder autoSnapshotTasks(AutoSnapshotTasks autoSnapshotTasks) {
             this.autoSnapshotTasks = autoSnapshotTasks;
@@ -114,7 +114,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the automatic snapshot task list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for the paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -216,10 +216,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the automatic snapshot policy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sp-extreme-233e6****</p>
+             * AutoSnapshotPolicyId.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -227,10 +224,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the file system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>extreme-233e6****</p>
+             * SourceFileSystemId.
              */
             public Builder sourceFileSystemId(String sourceFileSystemId) {
                 this.sourceFileSystemId = sourceFileSystemId;

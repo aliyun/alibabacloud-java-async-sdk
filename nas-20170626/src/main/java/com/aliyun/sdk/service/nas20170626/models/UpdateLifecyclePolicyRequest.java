@@ -159,7 +159,7 @@ public class UpdateLifecyclePolicyRequest extends Request {
         } 
 
         /**
-         * DeleteRules.
+         * <p>The expiration and deletion rules for file data.</p>
          */
         public Builder deleteRules(java.util.List<DeleteRules> deleteRules) {
             this.putQueryParameter("DeleteRules", deleteRules);
@@ -168,7 +168,15 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the lifecycle policy.</p>
+         * <p>Format:
+         * The description must be 3 to 64 characters in length, start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
+         * <blockquote>
+         * <p>Only CPFS for Lingjun is supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Lifecycle policy description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -177,6 +185,10 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
+         * <p>The file system ID. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****.</p>
+         * <blockquote>
+         * <p>This parameter is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +201,10 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
+         * <p>The ID of the lifecycle policy.</p>
+         * <blockquote>
+         * <p>This parameter is required for CPFS for Lingjun file systems.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +217,7 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * Paths.
+         * <p>The absolute paths of the directories associated with the lifecycle management policy.</p>
          */
         public Builder paths(java.util.List<String> paths) {
             this.putQueryParameter("Paths", paths);
@@ -210,7 +226,10 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * RetrieveRules.
+         * <p>The data retrieval rules. You can configure up to one rule.</p>
+         * <blockquote>
+         * <p>Only CPFS for Lingjun file systems are supported.</p>
+         * </blockquote>
          */
         public Builder retrieveRules(java.util.List<RetrieveRules> retrieveRules) {
             this.putQueryParameter("RetrieveRules", retrieveRules);
@@ -219,7 +238,14 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * <p>The tiered storage type.</p>
+         * <ul>
+         * <li>InfrequentAccess: IA storage class (default).</li>
+         * <li>Archive: Archive storage class.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InfrequentAccess</p>
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -228,7 +254,10 @@ public class UpdateLifecyclePolicyRequest extends Request {
         }
 
         /**
-         * TransitRules.
+         * <p>The data transit rules. You can configure up to one rule.</p>
+         * <blockquote>
+         * <p>This parameter is supported only when LifecyclePolicyType is set to Auto for CPFS for Lingjun file systems.</p>
+         * </blockquote>
          */
         public Builder transitRules(java.util.List<TransitRules> transitRules) {
             this.putQueryParameter("TransitRules", transitRules);
@@ -296,7 +325,14 @@ public class UpdateLifecyclePolicyRequest extends Request {
             } 
 
             /**
-             * Attribute.
+             * <p>The attribute of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Atime: the last access time of the file.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Atime</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -304,7 +340,14 @@ public class UpdateLifecyclePolicyRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>If Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -371,7 +414,13 @@ public class UpdateLifecyclePolicyRequest extends Request {
             } 
 
             /**
-             * Attribute.
+             * <p>The attribute of the rule. Valid values:</p>
+             * <ul>
+             * <li>RetrieveType: the retrieval method.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RetrieveType</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -379,7 +428,17 @@ public class UpdateLifecyclePolicyRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold of the rule. Valid values:</p>
+             * <ul>
+             * <li>RetrieveType<ul>
+             * <li>AfterVisit: supported when LifecyclePolicyType is set to Auto. Indicates best-effort recall on visit.</li>
+             * <li>All: supported when LifecyclePolicyType is set to OnDemand. Indicates retrieving all data.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;
@@ -446,7 +505,14 @@ public class UpdateLifecyclePolicyRequest extends Request {
             } 
 
             /**
-             * Attribute.
+             * <p>The attribute of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>Atime: the last access time of the file.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Atime</p>
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -454,7 +520,14 @@ public class UpdateLifecyclePolicyRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold of the rule.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>If Attribute is set to Atime, the value specifies the number of days since the file was last accessed. Valid values: 1 to 365.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder threshold(String threshold) {
                 this.threshold = threshold;

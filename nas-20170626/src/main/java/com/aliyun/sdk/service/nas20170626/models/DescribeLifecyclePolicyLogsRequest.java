@@ -104,6 +104,7 @@ public class DescribeLifecyclePolicyLogsRequest extends Request {
         } 
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class DescribeLifecyclePolicyLogsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the lifecycle management policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,11 @@ public class DescribeLifecyclePolicyLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +143,11 @@ public class DescribeLifecyclePolicyLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of log entries per page.</p>
+         * <p>Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

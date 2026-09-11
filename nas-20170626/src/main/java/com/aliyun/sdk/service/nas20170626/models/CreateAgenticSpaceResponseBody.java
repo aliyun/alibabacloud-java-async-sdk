@@ -67,7 +67,10 @@ public class CreateAgenticSpaceResponseBody extends TeaModel {
         } 
 
         /**
-         * AgenticSpaceId.
+         * <p>The Agentic space ID. This is a globally unique identifier assigned by the system after the Agentic space (an independent workspace allocated to a single agent end user in AgenticFS) is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentic-229oypxjgpau2****</p>
          */
         public Builder agenticSpaceId(String agenticSpaceId) {
             this.agenticSpaceId = agenticSpaceId;
@@ -75,7 +78,10 @@ public class CreateAgenticSpaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -78,7 +78,7 @@ public class CreateDataFlowTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the dataflow task.</p>
+         * <p>The data flow task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>task-38aa8e890f45****</p>

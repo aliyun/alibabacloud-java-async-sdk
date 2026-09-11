@@ -114,8 +114,8 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The type of the file system.</p>
-         * <p>Valid value: extreme, which indicates Extreme File Storage NAS (NAS) file systems.</p>
+         * <p>The file system type.</p>
+         * <p>Valid value: extreme (Extreme NAS file system).</p>
          * 
          * <strong>example:</strong>
          * <p>extreme</p>
@@ -127,8 +127,8 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the automatic snapshot policy list.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -140,7 +140,7 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of automatic snapshot policies on each page.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 

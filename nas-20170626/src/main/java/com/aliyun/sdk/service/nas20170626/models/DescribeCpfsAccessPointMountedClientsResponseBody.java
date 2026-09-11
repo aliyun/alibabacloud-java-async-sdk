@@ -106,7 +106,7 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
         } 
 
         /**
-         * MountedClient.
+         * <p>The clients mounted to the access point.</p>
          */
         public Builder mountedClient(java.util.List<MountedClient> mountedClient) {
             this.mountedClient = mountedClient;
@@ -114,7 +114,10 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
         }
 
         /**
-         * PageSize.
+         * <p>The number of results on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of clients mounted to the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,14 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
             } 
 
             /**
-             * ChannelType.
+             * <p>The type of the client mounted to the access point. Valid values:</p>
+             * <ul>
+             * <li>vsc</li>
+             * <li>tcp</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -225,7 +244,10 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
             }
 
             /**
-             * ClientId.
+             * <p>The ID of the client mounted to the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsc-8vb864o3ppwfvh****</p>
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -233,7 +255,10 @@ public class DescribeCpfsAccessPointMountedClientsResponseBody extends TeaModel 
             }
 
             /**
-             * ClientIp.
+             * <p>The IP address of the client mounted to the access point.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>219.145.34.210</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;

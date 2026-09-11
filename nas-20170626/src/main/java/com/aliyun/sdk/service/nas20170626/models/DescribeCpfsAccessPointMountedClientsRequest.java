@@ -119,6 +119,7 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends Request {
         } 
 
         /**
+         * <p>The access point ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +132,7 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends Request {
         }
 
         /**
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,10 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +157,11 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of results on each page. Valid values: 1 to 100.
+         * Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,6 +170,7 @@ public class DescribeCpfsAccessPointMountedClientsRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

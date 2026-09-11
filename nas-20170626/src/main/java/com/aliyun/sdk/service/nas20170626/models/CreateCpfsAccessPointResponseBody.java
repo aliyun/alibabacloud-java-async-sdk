@@ -67,7 +67,10 @@ public class CreateCpfsAccessPointResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessPointId.
+         * <p>The access point ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-ie15yd****</p>
          */
         public Builder accessPointId(String accessPointId) {
             this.accessPointId = accessPointId;
@@ -75,7 +78,10 @@ public class CreateCpfsAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98696EF0-1607-4E9D-B01D-F20930B6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -146,7 +146,7 @@ public class DescribeFilesystemsAssociatedHpnZonesRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the CPFS for Lingjun file system. Must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</p>
+             * <p>The ID of the CPFS for Lingjun file system. Must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</p>
              * 
              * <strong>example:</strong>
              * <p>bmcpfs-290t15yn4uo8lid****</p>

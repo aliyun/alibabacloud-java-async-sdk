@@ -106,7 +106,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The rules in the permission group.</p>
+         * AccessRules.
          */
         public Builder accessRules(AccessRules accessRules) {
             this.accessRules = accessRules;
@@ -114,7 +114,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the file system list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of permission rules on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of rules.</p>
+         * <p>The total number of permission rules.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -307,10 +307,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the permission group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * AccessGroupName.
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -318,10 +315,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AccessRuleId.
              */
             public Builder accessRuleId(String accessRuleId) {
                 this.accessRuleId = accessRuleId;
@@ -329,15 +323,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the file system.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>standard: General-purpose File Storage NAS (NAS) file system</li>
-             * <li>extreme: Extreme NAS file system</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>standard</p>
+             * FileSystemType.
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -345,10 +331,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv6 address or CIDR block of the authorized object.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2001:250:6000::***</p>
+             * Ipv6SourceCidrIp.
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -356,12 +339,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the rule.</p>
-             * <p>If multiple rules are attached to the authorized object, the rule with the highest priority takes effect.</p>
-             * <p>Valid values: 1 to 100. The value 1 indicates the highest priority.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -369,15 +347,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access permissions of the authorized object on the file system.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>RDWR (default): the read and write permissions</li>
-             * <li>RDONLY: the read-only permissions</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>RDWR</p>
+             * RWAccess.
              */
             public Builder RWAccess(String RWAccess) {
                 this.RWAccess = RWAccess;
@@ -385,10 +355,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -396,7 +363,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address or CIDR block of the authorized object.</p>
+             * SourceCidrIp.
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -404,17 +371,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access permissions for different types of users in the authorized object.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>no_squash: allows access from root users to the file system.</li>
-             * <li>root_squash: grants root users the least permissions as the nobody user.</li>
-             * <li>all_squash: grants all users the least permissions as the nobody user.</li>
-             * </ul>
-             * <p>The nobody user has the least permissions in Linux and can access only the public content of the file system. This ensures the security of the file system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>no_squash</p>
+             * UserAccess.
              */
             public Builder userAccess(String userAccess) {
                 this.userAccess = userAccess;

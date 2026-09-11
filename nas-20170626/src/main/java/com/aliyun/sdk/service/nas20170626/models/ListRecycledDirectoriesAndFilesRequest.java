@@ -104,8 +104,8 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the directory that you want to query.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories </a>operation to query the file ID.</p>
+         * <p>The FileId of the directory to query.</p>
+         * <p>This field is the NFS inode number. When the recycle bin is empty, you can call this operation with FileId=2 (root directory inode) to verify the reachability of the operation or query the recycle bin content under the root directory. Other valid FileId values can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2412173.html">ListRecentlyRecycledDirectories</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of files or directories to return for each query.</p>
+         * <p>The number of files or directories returned per query.</p>
          * <p>Valid values: 10 to 1000.</p>
          * <p>Default value: 100.</p>
          * 
@@ -145,11 +145,11 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
-         * <p>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</p>
+         * <p>The pagination token for the next page. You do not need to specify this parameter for the first query.</p>
+         * <p>If a single query does not return all files and directories, a non-empty NextToken is returned. You can pass the correct NextToken in subsequent queries to continue retrieving results.</p>
          * 
          * <strong>example:</strong>
-         * <p>CJyNARIsMTY5OTI2NjQ3NTEzMjY2OTMwOF8xODA5NF8ufnl0YkROTl9uZXcuaXB5bmI=</p>
+         * <p>1256****25</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

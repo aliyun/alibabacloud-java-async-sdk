@@ -67,10 +67,10 @@ public class CreateProtocolServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the protocol service.</p>
+         * <p>The protocol service cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>ptc-123****</p>
+         * <p>ptc-197ed6a00f2b****</p>
          */
         public Builder protocolServiceId(String protocolServiceId) {
             this.protocolServiceId = protocolServiceId;

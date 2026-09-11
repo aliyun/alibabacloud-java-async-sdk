@@ -153,7 +153,7 @@ public class CreateFilesetRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>123e4567-e89b-12d3-a456-42665544****</p>
+         * <p>123e4567-e89b-12d3-a456-4266554*****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -189,7 +189,7 @@ public class CreateFilesetRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>内部事务目录</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -218,13 +218,13 @@ public class CreateFilesetRequest extends Request {
         /**
          * <p>The ID of the file system.</p>
          * <ul>
-         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c****.</li>
-         * <li>The IDs of CPFS for Lingjun file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</li>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c\<em>\</em>\<em>\</em>.</li>
+         * <li>The IDs of CPFS for Lingjun file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>bmcpfs-290w65p03ok64ya****</p>
+         * <p>bmcpfs-290w65p03ok64y*****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

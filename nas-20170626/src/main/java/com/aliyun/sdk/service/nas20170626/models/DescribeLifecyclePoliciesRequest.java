@@ -174,7 +174,7 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         /**
          * <p>The description of the policy.</p>
          * <blockquote>
-         * <p> Only CPFS for Lingjun supports this parameter.</p>
+         * <p>Only CPFS for Lingjun supports this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,7 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>31a8e4****</p>
@@ -211,10 +211,10 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * <p>The name of the lifecycle policy. The naming rules are as follows:</p>
-         * <p>The name must be 3 to 64 characters in length and must start with a letter. It can contain letters, digits, underscores (_), and hyphens (-).</p>
+         * <p>The lifecycle policy name. Naming rules:</p>
+         * <p>The name must be 3 to 64 characters in length, must start with a letter, and can contain letters, digits, underscores (_), or hyphens (-).</p>
          * <blockquote>
-         * <p> Optional for General-purpose NAS file systems. If this parameter is provided, it takes precedence over LifecyclePolicyId. If left empty, LifecyclePolicyId is used.</p>
+         * <p>Optional for General-purpose NAS file systems. If specified, this parameter takes precedence. If not specified, LifecyclePolicyId is used instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -227,15 +227,15 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * <p>The type of the lifecycle policy.</p>
+         * <p>The policy type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Auto: The job is automatically triggered.</li>
-         * <li>OnDemand: On-demand execution.</li>
-         * </ul>
-         * <blockquote>
-         * <p> Only CPFS for Lingjun supports this parameter.</p>
+         * <li>Auto: Automatic execution.</li>
+         * <li>OnDemand: On-demand execution.<blockquote>
+         * <p>Only CPFS for Lingjun supports this parameter.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Auto</p>
@@ -247,8 +247,8 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the list.</p>
+         * <p>Start value (default value): 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -260,7 +260,7 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of lifecycle management policies on each page.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 
@@ -274,9 +274,9 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * <p>Filter by path.</p>
+         * <p>Filters results by path.</p>
          * <blockquote>
-         * <p> Only CPFS for Lingjun supports this parameter.</p>
+         * <p>Only CPFS for Lingjun supports this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -289,14 +289,14 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * <p>The storage class.</p>
+         * <p>The storage type. Valid values:</p>
          * <ul>
-         * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
-         * <li>Archive: the Archive storage class.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If StorageType is not specified, all lifecycle policies are returned.</p>
+         * <li>InfrequentAccess: IA storage class.</li>
+         * <li>Archive: Archive storage class.<blockquote>
+         * <p>If StorageType is not specified, all lifecycle policies are returned.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>InfrequentAccess</p>

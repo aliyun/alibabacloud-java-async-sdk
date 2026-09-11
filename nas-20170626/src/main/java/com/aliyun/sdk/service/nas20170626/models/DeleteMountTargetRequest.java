@@ -77,9 +77,9 @@ public class DeleteMountTargetRequest extends Request {
         /**
          * <p>The ID of the file system.</p>
          * <ul>
-         * <li>Sample ID of a General-purpose NAS file system: 31a8e4****.</li>
-         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015****.</li>
-         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
+         * <li>Sample ID of a General-purpose NAS file system: 31a8e4\<em>\</em>\<em>\</em>.</li>
+         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</li>
+         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

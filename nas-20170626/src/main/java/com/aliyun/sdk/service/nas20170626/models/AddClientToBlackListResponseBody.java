@@ -54,7 +54,7 @@ public class AddClientToBlackListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A70BEE5D-76D3-49FB-B58F-1F398211A5C3</p>

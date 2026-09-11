@@ -138,7 +138,7 @@ public class CreateSnapshotRequest extends Request {
          * <p>Unit: days.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</li>
+         * <li>\-1 (default). Auto snapshots are permanently retained. After the number of auto snapshots exceeds the upper limit, the earliest auto snapshot is automatically deleted.</li>
          * <li>1 to 65536: Auto snapshots are retained for the specified days. After the retention period of auto snapshots expires, the auto snapshots are automatically deleted.</li>
          * </ul>
          * 

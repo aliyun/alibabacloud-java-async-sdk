@@ -94,7 +94,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The fileset information.</p>
+         * Entries.
          */
         public Builder entries(Entries entries) {
             this.entries = entries;
@@ -102,10 +102,12 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <ul>
-         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c****.</li>
-         * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</li>
+         * <li><p>CPFS: The ID starts with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
+         * </li>
+         * <li><p>CPFS for Lingjun: The ID starts with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +119,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, use NextToken to initiate a new request to retrieve the content after the truncation point.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -197,14 +199,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file quantity quota. Valid values:</p>
-             * <ul>
-             * <li>Minimum value: 10000.</li>
-             * <li>Maximum value: 10000000000.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>10000</p>
+             * FileCountLimit.
              */
             public Builder fileCountLimit(Long fileCountLimit) {
                 this.fileCountLimit = fileCountLimit;
@@ -212,14 +207,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity quota. Unit: bytes.</p>
-             * <ul>
-             * <li>Minimum value: 10737418240 (10 GiB).</li>
-             * <li>Step size: 1073741824 (1 GiB).</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>10737418240</p>
+             * SizeLimit.
              */
             public Builder sizeLimit(Long sizeLimit) {
                 this.sizeLimit = sizeLimit;
@@ -403,11 +391,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the fileset was created.</p>
-             * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-09-30T10:08:08Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -415,17 +399,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the <a href="https://help.aliyun.com/document_detail/2402263.html">DeleteFileset</a> operation. Valid values:</p>
-             * <ul>
-             * <li>true: enables release protection.</li>
-             * <li>false: disables release protection.</li>
-             * </ul>
-             * <blockquote>
-             * <p>This parameter can protect filesets only against manual releases, but not against automatic releases.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DeletionProtection.
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -433,10 +407,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fileset description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -444,13 +415,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The usage of the file quantity.</p>
-             * <blockquote>
-             * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1024</p>
+             * FileCountUsage.
              */
             public Builder fileCountUsage(Long fileCountUsage) {
                 this.fileCountUsage = fileCountUsage;
@@ -458,10 +423,12 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the file system.</p>
+             * <p>The file system ID.</p>
              * <ul>
-             * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-099394bd928c****.</li>
-             * <li>The IDs of CPFS for LINGJUN file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-290w65p03ok64ya****.</li>
+             * <li><p>CPFS: The ID starts with <code>cpfs-</code>, such as cpfs-099394bd928c****.</p>
+             * </li>
+             * <li><p>CPFS for Lingjun: The ID starts with <code>bmcpfs-</code>, such as bmcpfs-290w65p03ok64ya****.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -473,10 +440,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fileset path.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pathtoroot/fset</p>
+             * FileSystemPath.
              */
             public Builder fileSystemPath(String fileSystemPath) {
                 this.fileSystemPath = fileSystemPath;
@@ -484,10 +448,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fileset ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fset-1902718ea0ae****</p>
+             * FsetId.
              */
             public Builder fsetId(String fsetId) {
                 this.fsetId = fsetId;
@@ -495,10 +456,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota information.</p>
-             * <blockquote>
-             * <p> Only CPFS for Lingjun V2.7.0 and later support this parameter.</p>
-             * </blockquote>
+             * Quota.
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -506,13 +464,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The capacity usage. Unit: bytes.</p>
-             * <blockquote>
-             * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1024</p>
+             * SpaceUsage.
              */
             public Builder spaceUsage(Long spaceUsage) {
                 this.spaceUsage = spaceUsage;
@@ -520,16 +472,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fileset status. Valid values:</p>
-             * <ul>
-             * <li>CREATING: The fileset is being created.</li>
-             * <li>CREATED: The fileset has been created and is running properly.</li>
-             * <li>RELEASING: The fileset is being released.</li>
-             * <li>RELEASED: The fileset has been deleted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>CREATED</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -537,11 +480,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the fileset was last updated.</p>
-             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-09-30T10:08:08Z</p>
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -218,7 +218,7 @@ public class CreateDirRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>/test</p>
          */
         public Builder rootDirectory(String rootDirectory) {
             this.putQueryParameter("RootDirectory", rootDirectory);

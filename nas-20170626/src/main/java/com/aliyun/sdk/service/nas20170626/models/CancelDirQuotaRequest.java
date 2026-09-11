@@ -104,7 +104,7 @@ public class CancelDirQuotaRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class CancelDirQuotaRequest extends Request {
         }
 
         /**
-         * <p>The absolute path of a directory.</p>
+         * <p>The absolute path of the directory in the file system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,12 +130,12 @@ public class CancelDirQuotaRequest extends Request {
         }
 
         /**
-         * <p>The UID or GID of a user for whom you want to cancel the directory quota.</p>
-         * <p>This parameter is required and valid only if the UserType parameter is set to Uid or Gid.</p>
+         * <p>The UID or GID to cancel.</p>
+         * <p>This parameter is required and valid only when UserType is set to Uid or Gid.</p>
          * <p>Examples:</p>
          * <ul>
-         * <li>If you want to cancel a quota for a user whose UID is 500, set the UserType parameter to Uid and set the UserId parameter to 500.</li>
-         * <li>If you want to cancel a quota for a group whose GID is 100, set the UserType parameter to Gid and set the UserId parameter to 100.</li>
+         * <li>To cancel the quota for the user whose UID is 500, set UserType to Uid and UserId to 500.</li>
+         * <li>To cancel the quota for the user group whose GID is 100, set UserType to Gid and UserId to 100.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,12 +148,12 @@ public class CancelDirQuotaRequest extends Request {
         }
 
         /**
-         * <p>The type of the user.</p>
+         * <p>The user type.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>Uid: user ID</li>
          * <li>Gid: user group ID</li>
-         * <li>AllUsers: all users</li>
+         * <li>AllUsers: all users.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

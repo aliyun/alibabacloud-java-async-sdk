@@ -67,10 +67,10 @@ public class CreateProtocolMountTargetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the export directory for the protocol service.</p>
+         * <p>The ID of the protocol service export directory.</p>
          * 
          * <strong>example:</strong>
-         * <p>exp-123****</p>
+         * <p>exp-19abf5beab8d****</p>
          */
         public Builder exportId(String exportId) {
             this.exportId = exportId;

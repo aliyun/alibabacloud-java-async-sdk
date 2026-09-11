@@ -130,7 +130,7 @@ public class ModifyMountTargetRequest extends Request {
         } 
 
         /**
-         * <p>The name of the permission group that is attached to the mount target.</p>
+         * <p>The permission group attached to the mount target.</p>
          * 
          * <strong>example:</strong>
          * <p>classic-test</p>
@@ -142,7 +142,10 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * AccessPointAccessOnly.
+         * <p>Specifies whether the VPC mount target supports access only through access points. This parameter applies only to CPFS for Lingjun file systems.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder accessPointAccessOnly(Boolean accessPointAccessOnly) {
             this.putQueryParameter("AccessPointAccessOnly", accessPointAccessOnly);
@@ -151,9 +154,9 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+         * <p>The IPv4/IPv6 dual-stack mount target.</p>
          * <blockquote>
-         * <p> Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+         * <p>Currently, only Extreme NAS in regions in the Chinese mainland supports IPv6.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -166,10 +169,10 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <ul>
-         * <li>Sample ID of a General-purpose NAS file system: <code>31a8e4****</code>.</li>
-         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</li>
+         * <li>General-purpose NAS: <code>31a8e4****</code>.</li>
+         * <li>Extreme NAS: Must start with <code>extreme-</code>, such as <code>extreme-0015****</code>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -183,7 +186,7 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * <p>The IPv4 domain name of the mount target.</p>
+         * <p>The IPv4 mount target.</p>
          * 
          * <strong>example:</strong>
          * <p>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -195,14 +198,14 @@ public class ModifyMountTargetRequest extends Request {
         }
 
         /**
-         * <p>The status of the mount target.</p>
+         * <p>The mount target status.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Active: The mount target is available.</li>
-         * <li>Inactive: The mount target is unavailable.</li>
+         * <li>Active: active</li>
+         * <li>Inactive: inactive</li>
          * </ul>
          * <blockquote>
-         * <p> Only General-purpose File Storage NAS (NAS) file systems support changing the mount target status.</p>
+         * <p>Only General-purpose NAS supports changing the mount target status.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

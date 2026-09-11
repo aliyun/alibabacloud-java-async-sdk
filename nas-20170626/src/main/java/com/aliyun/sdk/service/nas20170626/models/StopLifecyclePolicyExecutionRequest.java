@@ -75,6 +75,10 @@ public class StopLifecyclePolicyExecutionRequest extends Request {
         } 
 
         /**
+         * <p>The file system ID. The ID starts with bmcpfs-, such as bmcpfs-290w65p03ok64ya****.</p>
+         * <blockquote>
+         * <p>This operation is supported only when LifecyclePolicyType is set to OnDemand in the lifecycle management policy of a CPFS for Lingjun file system.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +91,7 @@ public class StopLifecyclePolicyExecutionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the lifecycle policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

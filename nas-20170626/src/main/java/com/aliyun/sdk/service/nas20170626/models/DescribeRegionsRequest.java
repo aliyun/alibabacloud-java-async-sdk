@@ -88,17 +88,14 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * <p>The type of the file system.</p>
+         * <p>The file system type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>all: all types of file systems</li>
-         * <li>standard (default): General-purpose NAS file system</li>
-         * <li>extreme: Extreme NAS file system</li>
-         * <li>cpfs: Cloud Parallel File Storage (CPFS) file system</li>
+         * <li>all: all types.</li>
+         * <li>standard (default): General-purpose NAS.</li>
+         * <li>extreme: Extreme NAS.</li>
+         * <li>cpfs: CPFS.</li>
          * </ul>
-         * <blockquote>
-         * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -110,8 +107,8 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the list.</p>
+         * <p>Start value (default value): 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -123,7 +120,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of regions on each page during a paged query.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 

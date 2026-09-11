@@ -136,12 +136,12 @@ public class ListDirectoriesAndFilesRequest extends Request {
          * <p>Specifies whether to query only directories.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>false (default): queries both directories and files.</li>
-         * <li>true: queries only directories.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+         * <li>false (default): No. Both directories and files can be queried.</li>
+         * <li>true: Yes. Only directories are queried.<blockquote>
+         * <p>When StorageType is set to All, DirectoryOnly must be set to true and cannot be set to false.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -153,7 +153,7 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of directories or files to include in the results of each query.</p>
+         * <p>The number of directories or files included in each query result.</p>
          * <p>Valid values: 10 to 128.</p>
          * <p>Default value: 100.</p>
          * 
@@ -180,7 +180,7 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the return results are truncated, you can use NextToken to initiate a new request to retrieve the content after the current truncation position.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -192,8 +192,8 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * <p>The absolute path of the directory.</p>
-         * <p>The path must start with a forward slash (/) and must be a path that exists in the mount target.</p>
+         * <p>The absolute path of the specified directory.</p>
+         * <p>The path must start with a forward slash (/) and must be an existing path in the mount target.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,15 +206,15 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * <p>The storage class.</p>
+         * <p>The storage class type.</p>
          * <ul>
-         * <li>InfrequentAccess: the Infrequent Access (IA) storage class.</li>
-         * <li>Archive: the Archive storage class.</li>
-         * <li>All: all stored data.</li>
-         * </ul>
-         * <blockquote>
-         * <p> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</p>
+         * <li>InfrequentAccess: IA storage class.</li>
+         * <li>Archive: Archive storage class.</li>
+         * <li>All: queries data of all storage classes.<blockquote>
+         * <p>When StorageType is set to All, you must set DirectoryOnly to true.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

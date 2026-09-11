@@ -175,10 +175,10 @@ public class CreateProtocolServiceRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -191,16 +191,16 @@ public class CreateProtocolServiceRequest extends Request {
         }
 
         /**
-         * <p>The description of the protocol service. The name of the protocol service appears in the console.</p>
+         * <p>The description of the protocol service. This value is displayed as &quot;Protocol service name&quot; in the console.</p>
          * <p>Limits:</p>
          * <ul>
          * <li>The description must be 2 to 128 characters in length.</li>
-         * <li>The description must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * <li>The description must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain digits, colons (:), underscores (_), and hyphens (-).</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>此协议服务的描述。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -209,12 +209,12 @@ public class CreateProtocolServiceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run.</p>
-         * <p>The dry run checks parameter validity and prerequisites. The dry run does not create a protocol service or incur fees.</p>
+         * <p>Specifies whether to perform a dry run for this request.</p>
+         * <p>A dry run checks parameter validity and dependencies without actually creating the instance or incurring charges.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: performs only a dry run and does not create the protocol service. The system checks the request format, service limits, prerequisites, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the ProtocolServiceId parameter.</li>
-         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a protocol service is created.</li>
+         * <li>true: Sends a check request without creating the protocol service. The check items include whether required parameters are specified, the request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but ProtocolServiceId is empty.</li>
+         * <li>false (default): Sends a normal request. After the check passes, the instance is directly created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,11 +227,11 @@ public class CreateProtocolServiceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpfs-123****</p>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -241,13 +241,7 @@ public class CreateProtocolServiceRequest extends Request {
 
         /**
          * <p>The specification of the protocol service.</p>
-         * <p>Set the value to General (default).</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CL2</li>
-         * <li>General</li>
-         * <li>CL1</li>
-         * </ul>
+         * <p>Valid values: General (default).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +255,7 @@ public class CreateProtocolServiceRequest extends Request {
 
         /**
          * <p>The protocol type of the protocol service.</p>
-         * <p>Valid value: NFS (default). Only NFSv3 is supported.</p>
+         * <p>Valid values: NFS (default). Only NFSv3 access is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +268,7 @@ public class CreateProtocolServiceRequest extends Request {
         }
 
         /**
-         * <p>The throughput of the protocol service.</p>
+         * <p>The bandwidth of the protocol service.</p>
          * <p>Unit: MB/s.</p>
          * 
          * <strong>example:</strong>
@@ -288,9 +282,10 @@ public class CreateProtocolServiceRequest extends Request {
 
         /**
          * <p>The vSwitch ID of the protocol service.</p>
+         * <p>If the storage redundancy type of the file system is zone-redundant storage (ZRS), do not set this parameter. Otherwise, this parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-123****</p>
+         * <p>vsw-2vc3c2lybvdllxyq4****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -299,10 +294,11 @@ public class CreateProtocolServiceRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID of the protocol service. The VPC ID of the protocol service must be the same as the VPC ID of the file system.</p>
+         * <p>The VPC ID of the protocol service. The VPC must be the same as the VPC of the file system.</p>
+         * <p>If the storage redundancy type of the file system is zone-redundant storage (ZRS), do not set this parameter. Otherwise, this parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-123****</p>
+         * <p>vpc-2vct297b8157bth9z****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

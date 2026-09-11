@@ -67,7 +67,7 @@ public class CreateDataFlowResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the dataflow.</p>
+         * <p>The data flow ID.</p>
          * 
          * <strong>example:</strong>
          * <p>df-194433a5be31****</p>

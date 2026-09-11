@@ -88,12 +88,12 @@ public class ModifyFileSystemRequest extends Request {
         } 
 
         /**
-         * <p>The description of the file system.</p>
+         * <p>The file system description.</p>
          * <p>Limits:</p>
          * <ul>
          * <li>The description must be 2 to 128 characters in length.</li>
-         * <li>It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+         * <li>The description must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain digits, colons (:), underscores (_), or hyphens (-).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,11 +106,14 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <ul>
-         * <li>Sample ID of a General-purpose NAS file system: <code>31a8e4****</code>.</li>
-         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>. Example: <code>extreme-0015****</code>.</li>
-         * <li>The IDs of Cloud Paralleled File System (CPFS) file systems must start with <code>cpfs-</code>. Example: <code>cpfs-125487****</code>.</li>
+         * <li><p>General-purpose NAS: <code>31a8e4****</code>.</p>
+         * </li>
+         * <li><p>Extreme NAS: must start with <code>extreme-</code>, for example, <code>extreme-0015****</code>.</p>
+         * </li>
+         * <li><p>CPFS: must start with <code>cpfs-</code>, for example, <code>cpfs-125487****</code>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -206,7 +209,10 @@ public class ModifyFileSystemRequest extends Request {
             } 
 
             /**
-             * EnableABE.
+             * <p>Specifies whether to enable the SMB Access-based Enumeration (ABE) access control feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableABE(Boolean enableABE) {
                 this.enableABE = enableABE;
@@ -214,14 +220,15 @@ public class ModifyFileSystemRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the oplock feature. Valid values:</p>
+             * <p>Specifies whether to enable the OpLock feature.
+             * Valid values:</p>
              * <ul>
              * <li>true: enables the feature.</li>
-             * <li>false: disables the feature.</li>
-             * </ul>
-             * <blockquote>
-             * <p> Only Server Message Block (SMB) file systems support this feature.</p>
+             * <li>false: does not enable the feature.<blockquote>
+             * <p>Only file systems whose Protocol Type is SMB protocol are supported.</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -232,7 +239,10 @@ public class ModifyFileSystemRequest extends Request {
             }
 
             /**
-             * VscAccessPointAccessOnly.
+             * <p>Specifies whether the Lingjun VSC mount target supports access only through access points.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder vscAccessPointAccessOnly(Boolean vscAccessPointAccessOnly) {
                 this.vscAccessPointAccessOnly = vscAccessPointAccessOnly;

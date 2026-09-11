@@ -121,7 +121,7 @@ public class DescribeAccessRulesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-test</p>
+         * <p>classic-test</p>
          */
         public Builder accessGroupName(String accessGroupName) {
             this.putQueryParameter("AccessGroupName", accessGroupName);
@@ -130,7 +130,7 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * <p>The rule ID.</p>
+         * <p>The ID of the permission rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -145,8 +145,8 @@ public class DescribeAccessRulesRequest extends Request {
          * <p>The type of the file system.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>standard (default): General-purpose NAS file system.</li>
-         * <li>extreme: Extreme NAS file system.</li>
+         * <li>standard (default): General-purpose NAS.</li>
+         * <li>extreme: Extreme NAS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,8 +159,8 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the file system list.</p>
+         * <p>Start value (default value): 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -172,7 +172,7 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of file systems on each page during a paged query.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 

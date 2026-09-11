@@ -117,9 +117,9 @@ public class DescribeMountTargetsRequest extends Request {
         } 
 
         /**
-         * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
+         * <p>The IPv4 and IPv6 dual-stack mount target.</p>
          * <blockquote>
-         * <p>Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</p>
+         * <p>Currently, only Extreme NAS in regions in the Chinese mainland supports IPv6.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -132,11 +132,14 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <ul>
-         * <li>Sample ID of a General-purpose NAS file system: 31a8e4****.</li>
-         * <li>The IDs of Extreme NAS file systems must start with <code>extreme-</code>, for example, extreme-0015****.</li>
-         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
+         * <li><p>General-purpose NAS: 31a8e4\<em>\</em>\<em>\</em>.</p>
+         * </li>
+         * <li><p>Extreme NAS: must start with <code>extreme-</code>, for example, extreme-0015\<em>\</em>\<em>\</em>.</p>
+         * </li>
+         * <li><p>CPFS: must start with <code>cpfs-</code>, for example, cpfs-125487\<em>\</em>\<em>\</em>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -150,7 +153,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * <p>The address of the mount target.</p>
+         * <p>The mount target address.</p>
          * 
          * <strong>example:</strong>
          * <p>1ca404****-x****.cn-hangzhou.nas.aliyuncs.com</p>
@@ -162,8 +165,8 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the list.</p>
+         * <p>Start value (default value): 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,7 +178,7 @@ public class DescribeMountTargetsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of mount targets on each page.</p>
          * <p>Valid values: 1 to 100.</p>
          * <p>Default value: 10.</p>
          * 

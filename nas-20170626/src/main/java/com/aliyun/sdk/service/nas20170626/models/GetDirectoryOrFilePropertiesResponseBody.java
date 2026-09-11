@@ -67,7 +67,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the file or directory.</p>
+         * <p>The directory or file information.</p>
          */
         public Builder entry(Entry entry) {
             this.entry = entry;
@@ -289,7 +289,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             /**
              * <p>The time when the file was queried.</p>
              * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
-             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * <p>This parameter is returned only when Type is File.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-02-01T10:08:08Z</p>
@@ -302,7 +302,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             /**
              * <p>The time when the metadata was modified.</p>
              * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
-             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * <p>This parameter is returned only when Type is File.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-02-11T10:08:10Z</p>
@@ -313,12 +313,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the directory contains files stored in the Archive storage class.</p>
-             * <p>This parameter is returned only if the Type parameter is set to Directory.</p>
+             * <p>Indicates whether the directory contains Archive storage class files.</p>
+             * <p>This parameter is returned only when Type is Directory.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>true: The directory contains files stored in the Archive storage class.</li>
-             * <li>false: The directory does not contain files stored in the Archive storage class.</li>
+             * <li>true: The directory contains Archive storage class files.</li>
+             * <li>false: The directory does not contain Archive storage class files.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -330,12 +330,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the directory contains files stored in the IA storage medium.</p>
-             * <p>This parameter is returned only if the value of the Type parameter is Directory.</p>
+             * <p>Indicates whether the directory contains IA storage class files.</p>
+             * <p>This parameter is returned only when Type is Directory.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>true: The directory contains files stored in the IA storage medium.</li>
-             * <li>false: The directory does not contain files stored in the IA storage medium.</li>
+             * <li>true: The directory contains IA storage class files.</li>
+             * <li>false: The directory does not contain IA storage class files.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -347,7 +347,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file or directory inode.</p>
+             * <p>The inode of the file or directory.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -360,7 +360,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             /**
              * <p>The time when the file was modified.</p>
              * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
-             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * <p>This parameter is returned only when Type is File.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-02-11T10:08:08Z</p>
@@ -371,7 +371,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file or directory.</p>
+             * <p>The file name or directory name.</p>
              * 
              * <strong>example:</strong>
              * <p>file.txt</p>
@@ -382,7 +382,10 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineDuration.
+             * <p>The total duration for which the file has been stored as an Archive file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder offlineDuration(Long offlineDuration) {
                 this.offlineDuration = offlineDuration;
@@ -390,7 +393,10 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineUnchangedDuration.
+             * <p>The total duration for which the file has remained unchanged since it was stored as an Archive file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder offlineUnchangedDuration(Long offlineUnchangedDuration) {
                 this.offlineUnchangedDuration = offlineUnchangedDuration;
@@ -398,9 +404,9 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last data retrieval task was run.</p>
+             * <p>The time when the most recent data retrieval task was executed.</p>
              * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
-             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * <p>This parameter is returned only when Type is File.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-02-11T10:08:08Z</p>
@@ -413,7 +419,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             /**
              * <p>The size of the file.</p>
              * <p>Unit: bytes.</p>
-             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * <p>This parameter is returned only when Type is File.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -424,12 +430,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage class of the file.</p>
-             * <p>This parameter is returned only if the value of the Type parameter is File.</p>
+             * <p>The storage type of the returned file.</p>
+             * <p>This parameter is returned only when Type is File.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>standard: General-purpose NAS file system</li>
-             * <li>InfrequentAccess: the IA storage class.</li>
+             * <li>Standard: General-purpose NAS storage.</li>
+             * <li>InfrequentAccess: IA storage class.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -441,11 +447,11 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the query result.</p>
+             * <p>The type of the returned result.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li>File</li>
-             * <li>Directory</li>
+             * <li>File: file</li>
+             * <li>Directory: directory</li>
              * </ul>
              * 
              * <strong>example:</strong>

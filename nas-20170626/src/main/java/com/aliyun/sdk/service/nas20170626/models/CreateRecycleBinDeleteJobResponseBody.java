@@ -67,7 +67,7 @@ public class CreateRecycleBinDeleteJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8C****C54</p>

@@ -247,7 +247,7 @@ public class CreateDataFlowTaskRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
          * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -260,15 +260,16 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>The conflict policy for files with the same name. Valid value:</p>
+         * <p>The conflict policy for files with the same name.
+         * Valid values:</p>
          * <ul>
-         * <li>SKIP_THE_FILE: skips files with the same name.</li>
-         * <li>KEEP_LATEST: compares the update time and keeps the latest version.</li>
-         * <li>OVERWRITE_EXISTING: forcibly overwrites the existing file.</li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is required for CPFS for Lingjun file systems.</p>
+         * <li>SKIP_THE_FILE: Skips files with the same name.</li>
+         * <li>KEEP_LATEST: Compares the update time and keeps the latest version.</li>
+         * <li>OVERWRITE_EXISTING: Forcibly overwrites files with the same name.<blockquote>
+         * <p>This parameter is required when the file system type is CPFS for Lingjun.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SKIP_THE_FILE</p>
@@ -280,19 +281,18 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically create a directory if no directory exists. Valid value:</p>
+         * <p>Specifies whether to enable automatic creation of the folder if it does not exist.
+         * Valid values:</p>
          * <ul>
-         * <li>true: automatically creates a directory.</li>
-         * <li>false (default): does not automatically create a directory.</li>
+         * <li>true: Automatic creation of the folder is enabled.</li>
+         * <li>false (default): Automatic creation of the folder is not enabled.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter is required if the TaskAction parameter is set to Import.</p>
-         * </li>
-         * <li><p>Only CPFS for Lingjun V2.6.0 and later support this parameter.</p>
-         * </li>
+         * <li>This parameter takes effect when TaskAction is set to Import.</li>
+         * <li>Only CPFS for Lingjun 2.6.0 and later support this feature.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -304,7 +304,7 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the dataflow.</p>
+         * <p>The data flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -317,12 +317,15 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of data on which operations are performed by the dataflow task.</p>
-         * <p>Valid value:</p>
+         * <p>The type of data on which the data flow task operates.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>Metadata: the metadata of a file, including the timestamp, ownership, and permission information of the file. If you select Metadata, only the metadata of the file is imported. You can only query the file. When you access the file data, the file is loaded from the source storage as required.</li>
-         * <li>Data: the data blocks of a file.</li>
-         * <li>MetaAndData: the metadata and data blocks of the file.</li>
+         * <li>Metadata: the metadata of files, including attributes such as timestamp, ownership, and permission. If you select Metadata, only the metadata of files is imported. You can see the file, but when you access the file data, the data is loaded from the source storage on demand.</li>
+         * <li>Data: the data blocks of files.</li>
+         * <li>MetaAndData: the metadata and data blocks of files.<blockquote>
+         * <p>When TaskAction is set to Evict, the DataType parameter is required.</p>
+         * </blockquote>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -338,18 +341,19 @@ public class CreateDataFlowTaskRequest extends Request {
          * <p>The source directory of the data.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>The directory must be 1 to 1,023 characters in length.</li>
-         * <li>Must be encoded in UTF-8.</li>
-         * <li>The directory must start and end with a forward slash (/).</li>
-         * <li>Only one directory can be listed at a time.</li>
-         * <li>If the TaskAction parameter is set to Export, the directory must be a relative path within the FileSystemPath.</li>
-         * <li>If the TaskAction parameter is set to Import, the directory must be a relative path within the SourceStoragePath.</li>
-         * <li>If the TaskAction parameter is set to StreamExport, the directory must be a relative path within the FileSystemPath.</li>
-         * <li>If the TaskAction parameter is set to StreamImport, the directory must be a relative path within the SourceStoragePath.</li>
-         * </ul>
-         * <blockquote>
-         * <p> Only CPFS for Lingjun V2.6.0 and later support StreamImport and StreamExport.</p>
+         * <li>The value must be 1 to 1,023 characters in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The value must start and end with a forward slash (/).</li>
+         * <li>Only one directory can be specified at a time.</li>
+         * <li>When TaskAction is set to Export, this directory must be a relative path within FileSystemPath.</li>
+         * <li>When TaskAction is set to Import, this directory must be a relative path within SourceStoragePath.</li>
+         * <li>When TaskAction is set to StreamExport, this directory must be a relative path within FileSystemPath.</li>
+         * <li>When TaskAction is set to StreamImport, this directory must be a relative path within SourceStoragePath.<blockquote>
+         * <p>StreamImport and StreamExport are supported only by CPFS for Lingjun 2.6.0 and later.
+         * Directory, EntryList, and TransferFileListPath are mutually exclusive parameters. You can specify only one of them.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>/path_in_cpfs/</p>
@@ -361,12 +365,12 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run.</p>
-         * <p>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no dataflow task is created and no fee is incurred.</p>
-         * <p>Valid value:</p>
+         * <p>Specifies whether to perform a dry run for this request.</p>
+         * <p>A dry run checks parameter validity, verifies inventory, and performs other checks without actually creating the instance or incurring fees.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>true: performs a dry run. The system checks the required parameters, request syntax, service limits, and available Apsara File Storage NAS (NAS) resources. Otherwise, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the TaskId parameter.</li>
-         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a dataflow task is created.</li>
+         * <li>true: sends a dry run request without creating the instance. The check items include whether required parameters are specified, the request format, business limits, and File Storage NAS inventory. If the check fails, the corresponding error is returned. If the check succeeds, HTTP status code 200 is returned, but TaskId is empty.</li>
+         * <li>false (default): sends a normal request. After the check succeeds, the instance is directly created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -379,20 +383,21 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>The directory mapped to the dataflow task. Limits:</p>
+         * <p>The target directory to which the data flow task is mapped.
+         * Limits:</p>
          * <ul>
-         * <li>The directory must start and end with a forward slash (/). The directory cannot be /../.</li>
-         * <li>The directory must be 1 to 1,023 characters in length.</li>
-         * <li>Must be encoded in UTF-8.</li>
-         * <li>Only one directory can be listed at a time.</li>
-         * <li>If the TaskAction parameter is set to Export, the directory must be a relative path within the SourceStoragePath.</li>
-         * <li>If the TaskAction parameter is set to Import, the directory must be a relative path within the FileSystemPath.</li>
-         * <li>If the TaskAction parameter is set to StreamExport, the directory must be a relative path within the SourceStoragePath.</li>
-         * <li>If the TaskAction parameter is set to StreamImport, the directory must be a relative path within the FileSystemPath.</li>
-         * </ul>
-         * <blockquote>
-         * <p> Only CPFS for Lingjun V2.6.0 and later support StreamImport and StreamExport.</p>
+         * <li>The value must start and end with a forward slash (/). /../ is not supported.</li>
+         * <li>The value must be 1 to 1,023 characters in length.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * <li>Only one directory can be specified at a time.</li>
+         * <li>When TaskAction is set to Export, this directory must be a relative path within SourceStoragePath.</li>
+         * <li>When TaskAction is set to Import, this directory must be a relative path within FileSystemPath.</li>
+         * <li>When TaskAction is set to StreamExport, this directory must be a relative path within SourceStoragePath.</li>
+         * <li>When TaskAction is set to StreamImport, this directory must be a relative path within FileSystemPath.<blockquote>
+         * <p>StreamImport and StreamExport are supported only by CPFS for Lingjun 2.6.0 and later.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>/path_in_cpfs/</p>
@@ -404,15 +409,18 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>The list of files that are executed by the dataflow task.</p>
+         * <p>The list of files on which the data flow task is executed.</p>
          * <p>Limits:</p>
          * <ul>
-         * <li>The list must be encoded in UTF-8.</li>
-         * <li>The total length of the file list cannot exceed 64 KB.</li>
-         * <li>The file list is in JSON format.</li>
-         * <li>The path of a single file must be 1 to 1,023 characters in length and must start with a forward slash (/).</li>
-         * <li>If the TaskAction parameter is set to Import, each element in the list represents an OSS object name.</li>
-         * <li>If the TaskAction parameter is set to Export, each element in the list represents a CPFS file path.</li>
+         * <li>The value must be encoded in UTF-8.</li>
+         * <li>The total length of the file list must be less than 64 KB.</li>
+         * <li>The file list must be in JSON format.</li>
+         * <li>The path of each file must be 1 to 1,023 characters in length and must start with a forward slash (/).</li>
+         * <li>When TaskAction is set to Import, each element in the list represents an OSS object name.</li>
+         * <li>When TaskAction is set to Export, each element in the list represents a CPFS file path.<blockquote>
+         * <p>Directory, EntryList, and TransferFileListPath are mutually exclusive parameters. You can specify only one of them.</p>
+         * </blockquote>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,15 +433,17 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <ul>
-         * <li>The IDs of CPFS file systems must start with <code>cpfs-</code>. Example: cpfs-125487****.</li>
-         * <li>The IDs of CPFS for Lingjun file systems must start with <code>bmcpfs-</code>. Example: bmcpfs-0015****.</li>
+         * <li><p>General-purpose CPFS: The ID must start with <code>cpfs-</code>, such as cpfs-125487\<em>\</em>\<em>\</em>.</p>
+         * </li>
+         * <li><p>CPFS for Lingjun: The ID must start with <code>bmcpfs-</code>, such as bmcpfs-0015\<em>\</em>\<em>\</em>.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>bmcpfs-290w65p03ok64ya****</p>
+         * <p>cpfs-099394bd928c****</p>
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -442,17 +452,14 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>Filters subdirectories and transfers their contents.</p>
+         * <p>Filters directories under the specified directory and transfers the content of the included folders.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>This parameter takes effect only when the Directory parameter is specified.</p>
-         * </li>
-         * <li><p>The path length of a single folder must be 1 to 1023 characters, start and end with a forward slash (/), and the total length must not exceed 3000 characters.</p>
-         * </li>
-         * <li><p>Only CPFS for Lingjun supports this parameter.</p>
-         * </li>
+         * <li>This parameter takes effect only when the Directory parameter is specified.</li>
+         * <li>The path of each folder must be 1 to 1,023 characters in length and must start and end with a forward slash (/). The total length cannot exceed 3,000 characters.</li>
+         * <li>Only CPFS for Lingjun supports this feature.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>[&quot;/test/&quot;,&quot;/test1/&quot;]</p>
@@ -464,13 +471,13 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>If you specify SrcTaskId, you must enter the ID of the dataflow task. The system copies the TaskAction, DataType, and EntryList parameters from the destination dataflow task. You do not need to specify them.</p>
+         * <p>If you specify SrcTaskId, enter the data flow task ID. The system copies the TaskAction, DataType, and EntryList parameter information from the specified data flow task. You do not need to specify these parameters separately.</p>
          * <blockquote>
-         * <p> Streaming dataflow tasks are not supported.</p>
+         * <p>Data flow streaming tasks are not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>task-27aa8e890f45****</p>
+         * <p>task-29ee8e890f45****</p>
          */
         public Builder srcTaskId(String srcTaskId) {
             this.putQueryParameter("SrcTaskId", srcTaskId);
@@ -479,19 +486,19 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>Select the type of the dataflow task.</p>
-         * <p>Valid value:</p>
+         * <p>The data flow node type.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>Import: imports data stored in the source storage to a CPFS file system.</li>
-         * <li>Export: exports specified data from a CPFS file system to the source storage.</li>
-         * <li>StreamImport: batch imports the specified data from the source storage to a CPFS file system.</li>
-         * <li>StreamExport: batch exports specified data from a CPFS file system to the source storage.</li>
-         * <li>Evict: releases the data blocks of a file in a CPFS file system. After the eviction, only the metadata of the file is retained in the CPFS file system. You can still query the file. However, the data blocks of the file are cleared and do not occupy the storage space in the CPFS file system. When you access the file data, the file is loaded from the source storage as required.</li>
-         * <li>Inventory: obtains the inventory list managed by a dataflow from the CPFS file system, providing the cache status of inventories in the dataflow.</li>
-         * </ul>
-         * <blockquote>
-         * <p> CPFS for Lingjun supports only Import, Export, StreamImport, and StreamExport. Only CPFS for Lingjun V2.6.0 and later support StreamImport and StreamExport.</p>
+         * <li>Import: data import from the source storage to CPFS.</li>
+         * <li>Export: exports specified data from CPFS to the source storage.</li>
+         * <li>StreamImport: batch data import from the source storage to CPFS.</li>
+         * <li>StreamExport: batch exports specified data from CPFS to the source storage.</li>
+         * <li>Evict: releases data blocks of files on CPFS. After the release, only metadata is retained on CPFS. You can still query the file, but the data blocks are purged and do not occupy storage capacity on CPFS. When you access the file data, the data is loaded from the source storage on demand.</li>
+         * <li>Inventory: obtains the file checklist managed by the data stream on CPFS. This provides the cache status of files in the data stream.<blockquote>
+         * <p>CPFS for Lingjun supports only Import, Export, StreamImport, and StreamExport. StreamImport and StreamExport are supported only by CPFS for Lingjun 2.6.0 and later.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Import</p>
@@ -503,31 +510,28 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * <p>Specify the OSS directory and synchronize data based on the content of the CSV file in the OSS directory. Requirements:</p>
+         * <p>The OSS directory. Data is synchronized based on the content of CSV files in the OSS directory. Limits:</p>
          * <ul>
-         * <li>Must start and end with a forward slash (/).</li>
-         * <li>Case-sensitive.</li>
-         * <li>Must be 1 to 1023 characters in length.</li>
-         * <li>Must be encoded in UTF-8.</li>
+         * <li><p>The value must start and end with a forward slash (/).</p>
+         * </li>
+         * <li><p>The value is case-sensitive.</p>
+         * </li>
+         * <li><p>The value must be 1 to 1,023 characters in length.</p>
+         * </li>
+         * <li><p>The value must be encoded in UTF-8.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>TransferFileListPath,Directory, and EntryList are mutually exclusive, and only one of the three can be selected.</p>
-         * </li>
-         * <li><p>This parameter is the actual path that exists in OSS. The *.csv file in the path is stored in OSS.</p>
-         * </li>
-         * <li><p>TransferFileListPath only supports Import and Export functions.</p>
-         * </li>
-         * <li><p>In the import scenario, the file or directory specified in the CSV file is imported from OSS to CPFS.</p>
-         * </li>
-         * <li><p>In the export scenario, the file or directory specified in the CSV file is exported from CPFS to OSS.</p>
-         * </li>
-         * <li><p>The CSV file format should include the columns Name and Type. Name refers to the relative path, while Type supports two values: dir and file. If Type is dir, the Name must end with a &quot;/&quot;.</p>
-         * </li>
-         * <li><p>Only CPFS for Lingjun supports this operation.</p>
-         * </li>
+         * <li>TransferFileListPath, Directory, and EntryList are mutually exclusive parameters. You can specify only one of them.</li>
+         * <li>This parameter specifies an existing path in OSS. The \*.csv files in the path are stored in OSS.</li>
+         * <li>TransferFileListPath supports only Import and Export.</li>
+         * <li>For Import, the files or directories specified in the CSV files are imported from OSS to CPFS.</li>
+         * <li>For Export, the files or directories specified in the CSV files are exported from CPFS to OSS.</li>
+         * <li>The CSV file must contain the Name and Type columns. Name is a relative path. Type supports two values: dir and file. If Type is dir, the Name value must end with a forward slash (/).</li>
+         * <li>Only CPFS for Lingjun supports this feature.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>/test_oss_path/</p>

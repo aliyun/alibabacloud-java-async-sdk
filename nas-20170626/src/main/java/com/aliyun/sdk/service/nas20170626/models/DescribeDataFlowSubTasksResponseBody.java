@@ -80,7 +80,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about data streaming tasks.</p>
+         * DataFlowSubTask.
          */
         public Builder dataFlowSubTask(DataFlowSubTask dataFlowSubTask) {
             this.dataFlowSubTask = dataFlowSubTask;
@@ -88,7 +88,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * <p>If the response is truncated, you can use NextToken to send a subsequent request to retrieve the remaining content from the point of truncation.</p>
          * 
          * <strong>example:</strong>
          * <p>pUJaUwAAAABhdGUyNTk1MQ==</p>
@@ -181,10 +181,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The checksum. Format example: crc64:123456.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>crc64:850309505450944****</p>
+             * Checksum.
              */
             public Builder checksum(String checksum) {
                 this.checksum = checksum;
@@ -192,10 +189,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the file was modified. The value is a UNIX timestamp. Unit: ns.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1721167603</p>
+             * ModifyTime.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -203,10 +197,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file size. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>68</p>
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -299,10 +290,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The actual amount of data for which the data flow task is complete. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>68</p>
+             * ActualBytes.
              */
             public Builder actualBytes(Long actualBytes) {
                 this.actualBytes = actualBytes;
@@ -310,10 +298,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average flow velocity. Unit: bytes/s.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>34</p>
+             * AverageSpeed.
              */
             public Builder averageSpeed(Long averageSpeed) {
                 this.averageSpeed = averageSpeed;
@@ -321,10 +306,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of data (including skipped data) for which the data flow task is complete. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>68</p>
+             * BytesDone.
              */
             public Builder bytesDone(Long bytesDone) {
                 this.bytesDone = bytesDone;
@@ -332,10 +314,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of data scanned on the source. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>68</p>
+             * BytesTotal.
              */
             public Builder bytesTotal(Long bytesTotal) {
                 this.bytesTotal = bytesTotal;
@@ -558,10 +537,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the data streaming task was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-07-01 19:59:29</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -569,10 +545,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data flow.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>df-194433a5be31****</p>
+             * DataFlowId.
              */
             public Builder dataFlowId(String dataFlowId) {
                 this.dataFlowId = dataFlowId;
@@ -580,10 +553,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data streaming task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>subTaskId-370kyfmyknxcyzw****</p>
+             * DataFlowSubTaskId.
              */
             public Builder dataFlowSubTaskId(String dataFlowSubTaskId) {
                 this.dataFlowSubTaskId = dataFlowSubTaskId;
@@ -591,10 +561,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data flow task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>task-38aa8e890f45****</p>
+             * DataFlowTaskId.
              */
             public Builder dataFlowTaskId(String dataFlowTaskId) {
                 this.dataFlowTaskId = dataFlowTaskId;
@@ -602,16 +569,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the destination file. Limits:</p>
-             * <ul>
-             * <li>The path must be 1 to 1,023 characters in length.</li>
-             * <li>The path must be encoded in UTF-8.</li>
-             * <li>The path must start with a forward slash (/).</li>
-             * <li>The path must end with the file name.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>/mnt/file.png</p>
+             * DstFilePath.
              */
             public Builder dstFilePath(String dstFilePath) {
                 this.dstFilePath = dstFilePath;
@@ -619,10 +577,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the data streaming task ended.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-07-04 11:14:22</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -630,7 +585,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the task failed.</p>
+             * ErrorMsg.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -638,7 +593,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file information.</p>
+             * FileDetail.
              */
             public Builder fileDetail(FileDetail fileDetail) {
                 this.fileDetail = fileDetail;
@@ -646,10 +601,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the file system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bmcpfs-370lx1ev9ss27o0****</p>
+             * FileSystemId.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -657,10 +609,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the data streaming task. Valid values: 0 to 10000.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10000</p>
+             * Progress.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -668,7 +617,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress information about data streaming tasks.</p>
+             * ProgressStats.
              */
             public Builder progressStats(ProgressStats progressStats) {
                 this.progressStats = progressStats;
@@ -676,16 +625,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path of the source file. Limits:</p>
-             * <ul>
-             * <li>The path must be 1 to 1,023 characters in length.</li>
-             * <li>The path must be encoded in UTF-8.</li>
-             * <li>The path must start with a forward slash (/).</li>
-             * <li>The path must end with the file name.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>/test/file.png</p>
+             * SrcFilePath.
              */
             public Builder srcFilePath(String srcFilePath) {
                 this.srcFilePath = srcFilePath;
@@ -693,10 +633,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the data streaming task started.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-07-03 10:43:16</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -704,19 +641,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the data streaming task. Valid values:</p>
-             * <ul>
-             * <li>EXPIRED: The task is terminated.</li>
-             * <li>CREATED: The task is created.</li>
-             * <li>RUNNING: The task is running.</li>
-             * <li>COMPLETE: The task is complete.</li>
-             * <li>CANCELING: The task is being canceled.</li>
-             * <li>FAILED: The task failed to be executed.</li>
-             * <li>CANCELED: The task is canceled.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>COMPLETE</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -770,7 +695,7 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details about data streaming tasks.</p>
+             * DataFlowSubTask.
              */
             public Builder dataFlowSubTask(java.util.List<DataFlowSubTaskDataFlowSubTask> dataFlowSubTask) {
                 this.dataFlowSubTask = dataFlowSubTask;

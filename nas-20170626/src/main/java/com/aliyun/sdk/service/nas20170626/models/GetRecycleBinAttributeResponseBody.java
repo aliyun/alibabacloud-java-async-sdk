@@ -67,7 +67,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The description of the recycle bin.</p>
+         * <p>The recycle bin description.</p>
          */
         public Builder recycleBinAttribute(RecycleBinAttribute recycleBinAttribute) {
             this.recycleBinAttribute = recycleBinAttribute;
@@ -196,7 +196,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the archived data that is dumped to the recycle bin. Unit: bytes.</p>
+             * <p>The storage usage of archived data in the recycle bin. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1611661312</p>
@@ -207,7 +207,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the recycle bin was enabled.</p>
+             * <p>The time when the recycle bin was enabled. The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-30T10:08:08Z</p>
@@ -218,8 +218,8 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The retention period of the files in the recycle bin. Unit: days.</p>
-             * <p>If the recycle bin is disabled, 0 is returned for this parameter.</p>
+             * <p>The retention period of files in the recycle bin. Unit: days.</p>
+             * <p>If the recycle bin is disabled, this parameter returns 0.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -230,7 +230,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the Infrequent Access (IA) data that is dumped to the recycle bin. Unit: bytes.</p>
+             * <p>The storage usage of Infrequent Access (IA) data in the recycle bin. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -241,7 +241,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the files that are dumped to the recycle bin. Unit: bytes.</p>
+             * <p>The storage usage of files in the recycle bin. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -252,7 +252,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the recycle bin.</p>
+             * <p>The recycle bin status.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>Enable: The recycle bin is enabled.</li>

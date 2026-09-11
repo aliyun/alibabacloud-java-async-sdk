@@ -88,7 +88,10 @@ public class DescribeAgenticSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Set this parameter to the value of NextToken that is returned in the previous API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTc2NTg1MTUyMzA1OTczNTc1OCM0NjQxMzQ****=</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -96,7 +99,10 @@ public class DescribeAgenticSpacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC7C825C-5F65-4B56-BEF6-98C56C7C****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -354,10 +360,7 @@ public class DescribeAgenticSpacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AgenticSpace Id。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>agentic-229oypxjgpau2****</p>
+             * AgenticSpaceId.
              */
             public Builder agenticSpaceId(String agenticSpaceId) {
                 this.agenticSpaceId = agenticSpaceId;

@@ -67,7 +67,7 @@ public class DescribeSmbAclResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the ACL feature.</p>
+         * <p>The ACL information.</p>
          */
         public Builder acl(Acl acl) {
             this.acl = acl;
@@ -196,10 +196,12 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the file system allows anonymous access. Valid values:</p>
+             * <p>Indicates whether anonymous access is allowed. Valid values:</p>
              * <ul>
-             * <li>true: The file system allows anonymous access.</li>
-             * <li>false: The file system does not allow anonymous access.</li>
+             * <li><p>true: Anonymous access is allowed.</p>
+             * </li>
+             * <li><p>false: Anonymous access is not allowed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -211,10 +213,12 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ACL feature is enabled. Valid values:</p>
+             * <p>Indicates whether the SMB AD ACL feature is enabled.</p>
              * <ul>
-             * <li>true: The ACL feature is enabled.</li>
-             * <li>false: The ACL feature is disabled.</li>
+             * <li><p>true: The SMB AD ACL feature is enabled.</p>
+             * </li>
+             * <li><p>false: The SMB AD ACL feature is not enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -226,10 +230,12 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether encryption in transit is enabled. Valid values:</p>
+             * <p>Indicates whether encryption in transit is enabled.</p>
              * <ul>
-             * <li>true: Encryption in transit is enabled.</li>
-             * <li>false: Encryption in transit is disabled.</li>
+             * <li><p>true: Encryption in transit is enabled.</p>
+             * </li>
+             * <li><p>false: Encryption in transit is not enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -241,7 +247,7 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The home directory of each user.</p>
+             * <p>The home directory path for each user.</p>
              * 
              * <strong>example:</strong>
              * <p>/home</p>
@@ -252,10 +258,12 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the file system denies access from non-encrypted clients. Valid values:</p>
+             * <p>Indicates whether unencrypted clients are rejected.</p>
              * <ul>
-             * <li>true: The file system denies access from non-encrypted clients.</li>
-             * <li>false: The file system allows access from non-encrypted clients.</li>
+             * <li><p>true: Unencrypted clients are rejected.</p>
+             * </li>
+             * <li><p>false: Unencrypted clients are not rejected.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -267,7 +275,7 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of a super admin.</p>
+             * <p>The ID of the superuser.</p>
              * 
              * <strong>example:</strong>
              * <p>S-1-0-0</p>

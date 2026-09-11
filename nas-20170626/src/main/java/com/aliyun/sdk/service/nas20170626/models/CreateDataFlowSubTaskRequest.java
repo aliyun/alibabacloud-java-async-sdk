@@ -162,10 +162,10 @@ public class CreateDataFlowSubTaskRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</p>
+         * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * <p>The check conditions. The check must be passed after the following conditions are specified.</p>
+         * <p>The verification condition. The specified conditions must pass verification.</p>
          */
         public Builder condition(Condition condition) {
             this.putQueryParameter("Condition", condition);
@@ -187,7 +187,7 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data flow.</p>
+         * <p>The data flow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,9 +200,9 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data flow task.</p>
+         * <p>The data flow task ID.</p>
          * <blockquote>
-         * <p> Only the IDs of data streaming tasks are supported.</p>
+         * <p>Only data flow streaming task IDs are supported.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -216,12 +216,12 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run.</p>
-         * <p>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no data streaming subtask is created and no fee is incurred.</p>
+         * <p>Specifies whether to perform a dry run for this request.</p>
+         * <p>A dry run checks parameter validity and resource availability without actually creating an instance or incurring fees.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>true: performs a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the DataFlowSubTaskId parameter.</li>
-         * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, a data streaming subtask is created.</li>
+         * <li>true: Sends a check request without creating the data flow. The check items include whether required parameters are specified, the request format, and business limit dependencies. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but DataFlowSubTaskId is empty.</li>
+         * <li>false (default): Sends a normal request. After the check passes, the instance is directly created.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,12 +234,13 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * <p>The path of the destination file. Limits:</p>
+         * <p>The destination file path.
+         * Limits:</p>
          * <ul>
          * <li>The path must be 1 to 1,023 characters in length.</li>
          * <li>The path must be encoded in UTF-8.</li>
          * <li>The path must start with a forward slash (/).</li>
-         * <li>The path must end with the file name.</li>
+         * <li>The path must end with a file name.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -253,7 +254,7 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,12 +267,13 @@ public class CreateDataFlowSubTaskRequest extends Request {
         }
 
         /**
-         * <p>The path of the source file. Limits:</p>
+         * <p>The source file path.
+         * Limits:</p>
          * <ul>
          * <li>The path must be 1 to 1,023 characters in length.</li>
          * <li>The path must be encoded in UTF-8.</li>
          * <li>The path must start with a forward slash (/).</li>
-         * <li>The path must end with the file name.</li>
+         * <li>The path must end with a file name.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -344,7 +346,7 @@ public class CreateDataFlowSubTaskRequest extends Request {
             } 
 
             /**
-             * <p>The modification time. The value must be a UNIX timestamp. Unit: ns.</p>
+             * <p>The modification time as a UNIX timestamp. Unit: ns.</p>
              * 
              * <strong>example:</strong>
              * <p>1725897600000000000</p>

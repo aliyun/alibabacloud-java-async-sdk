@@ -106,7 +106,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The number of directories to return for each query.</p>
+         * <p>The number of entries returned per query.</p>
          * <p>Valid values: 10 to 1000.</p>
          * <p>Default value: 10.</p>
          * 
@@ -119,7 +119,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Query token, which is the NextToken value returned from the previous API call.</p>
+         * <p>The query token. Set this parameter to the NextToken value returned in the previous API call.</p>
          * 
          * <strong>example:</strong>
          * <p>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</p>
@@ -141,7 +141,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of associated information.</p>
+         * <p>The total number of association entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -152,7 +152,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A collection of file system and virtual channel association data.</p>
+         * VscAttachInfo.
          */
         public Builder vscAttachInfo(VscAttachInfo vscAttachInfo) {
             this.vscAttachInfo = vscAttachInfo;
@@ -231,10 +231,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the file system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bmcpfs-290t15yn4uo8lid****</p>
+             * FileSystemId.
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -242,17 +239,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The association status of the file system and virtual channel. Valid values:</p>
-             * <ul>
-             * <li>Attaching: The association is being made.</li>
-             * <li>Attached: The association is complete.</li>
-             * <li>Detaching: The association is being canceled.</li>
-             * <li>Detached: The association is canceled.</li>
-             * <li>Failed: The association failed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Attached</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -260,10 +247,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual storage channel.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsc-8vb864o3ppwfvh****</p>
+             * VscId.
              */
             public Builder vscId(String vscId) {
                 this.vscId = vscId;
@@ -317,7 +301,7 @@ public class DescribeFilesystemsVscAttachInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A collection of file system and virtual channel association data.</p>
+             * VscAttachInfo.
              */
             public Builder vscAttachInfo(java.util.List<VscAttachInfoVscAttachInfo> vscAttachInfo) {
                 this.vscAttachInfo = vscAttachInfo;
