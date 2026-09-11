@@ -177,6 +177,7 @@ public class GlobalHotelQueryAvailabilityRequest extends Request {
         } 
 
         /**
+         * <p>The account ID of the distributor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +190,7 @@ public class GlobalHotelQueryAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The number of adults.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,6 +203,7 @@ public class GlobalHotelQueryAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The check-in date in the format of yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,6 +216,7 @@ public class GlobalHotelQueryAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The check-out date in the format of yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +229,10 @@ public class GlobalHotelQueryAvailabilityRequest extends Request {
         }
 
         /**
-         * ChildCount.
+         * <p>The number of children.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder childCount(Integer childCount) {
             this.putBodyParameter("ChildCount", childCount);
@@ -234,7 +241,10 @@ public class GlobalHotelQueryAvailabilityRequest extends Request {
         }
 
         /**
-         * ChildrenAges.
+         * <p>The list of children\&quot;s ages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[8]</p>
          */
         public Builder childrenAges(java.util.List<Integer> childrenAges) {
             String childrenAgesShrink = shrink(childrenAges, "ChildrenAges", "json");
@@ -244,6 +254,7 @@ public class GlobalHotelQueryAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The number of rooms.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,6 +267,7 @@ public class GlobalHotelQueryAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The list of standard hotel IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

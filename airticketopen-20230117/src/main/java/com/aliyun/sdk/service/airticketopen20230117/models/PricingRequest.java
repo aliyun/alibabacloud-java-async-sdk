@@ -89,7 +89,7 @@ public class PricingRequest extends Request {
         } 
 
         /**
-         * <p>solution_id returned by Enrich</p>
+         * <p>solution_id.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class PricingRequest extends Request {
         }
 
         /**
-         * <p>access token</p>
+         * <p>access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class PricingRequest extends Request {
         }
 
         /**
-         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * <p>The language. Defaults to the buyer account configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

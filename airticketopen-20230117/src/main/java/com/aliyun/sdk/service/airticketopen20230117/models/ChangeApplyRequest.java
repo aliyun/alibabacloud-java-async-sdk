@@ -163,7 +163,7 @@ public class ChangeApplyRequest extends Request {
         } 
 
         /**
-         * <p>List of passengers for change</p>
+         * <p>The list of passengers for the change.</p>
          * <p>This parameter is required.</p>
          */
         public Builder changePassengerList(java.util.List<ChangePassengerList> changePassengerList) {
@@ -174,7 +174,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * <p>Proposed itinerary</p>
+         * <p>The target journey for the change.</p>
          * <p>This parameter is required.</p>
          */
         public Builder changedJourneys(java.util.List<ChangedJourneys> changedJourneys) {
@@ -185,7 +185,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * <p>Contact information</p>
+         * <p>The contact information for the change.</p>
          * <p>This parameter is required.</p>
          */
         public Builder contact(Contact contact) {
@@ -196,7 +196,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * <p>Order number</p>
+         * <p>The order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * <p>Buyer&quot;s remarks</p>
+         * <p>The buyer remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>remark desc</p>
@@ -221,7 +221,11 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * <p>Change type 0: voluntary change; 1: involuntary change</p>
+         * <p>The change type. Valid values:</p>
+         * <ul>
+         * <li>0: voluntary change</li>
+         * <li>1: flight schedule change or flight cancellation.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +238,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * <p>access token</p>
+         * <p>The access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +251,7 @@ public class ChangeApplyRequest extends Request {
         }
 
         /**
-         * <p>Multi-language, default to the buyer&quot;s account configuration</p>
+         * <p>The language setting. Defaults to the buyer account configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>
@@ -333,7 +337,7 @@ public class ChangeApplyRequest extends Request {
             } 
 
             /**
-             * <p>Document number</p>
+             * <p>The document number.</p>
              * 
              * <strong>example:</strong>
              * <p>411***********4411</p>
@@ -344,7 +348,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Passenger&quot;s first name</p>
+             * <p>The first name of the passenger.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -356,7 +360,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Passenger&quot;s last name</p>
+             * <p>The last name of the passenger.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -587,7 +591,7 @@ public class ChangeApplyRequest extends Request {
             } 
 
             /**
-             * <p>Three-letter code of the arrival airport</p>
+             * <p>The three-letter IATA code of the arrival airport.</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -598,7 +602,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Three-letter code of the arrival city</p>
+             * <p>The three-letter IATA code of the arrival city.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -610,7 +614,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Arrival terminal</p>
+             * <p>The arrival terminal of the flight.</p>
              * 
              * <strong>example:</strong>
              * <p>T1</p>
@@ -621,7 +625,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>(Deprecated) Arrival date and time, UTC timestamp</p>
+             * <p>(该属性废弃)航班到达日期时间，utc时间戳</p>
              * 
              * <strong>example:</strong>
              * <p>1677232999000</p>
@@ -632,7 +636,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>(Required) Arrival date and time, in the format: yyyy-MM-dd HH:mm:ss</p>
+             * <p>(必填参数)航班到达日期时间，航班的旅行时间，格式：yyyy-MM-dd HH:mm:ss</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-20 12:30:00</p>
@@ -643,7 +647,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Whether it is a codeshare flight</p>
+             * <p>Indicates whether the flight is a codeshare flight.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -654,7 +658,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Three-letter code of the departure airport</p>
+             * <p>The three-letter IATA code of the departure airport.</p>
              * 
              * <strong>example:</strong>
              * <p>PVG</p>
@@ -665,7 +669,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Three-letter code of the departure city</p>
+             * <p>The three-letter IATA code of the departure city.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -677,7 +681,11 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Departure date (e.g., yyyyMMdd)</p>
+             * <p>The departure date (for example, yyyyMMdd).
+             * <a href="Deprecated">_single.params.changed_journeys.items.segment_list.items.departure_time.desc</a> The departure date and time of the flight, in UTC timestamp.
+             * <a href="Required">_single.params.changed_journeys.items.segment_list.items.departure_time_str.desc</a> The departure date and time of the flight, in local travel time. Format: yyyy-MM-dd HH:mm:ss.
+             * <a href="Deprecated">_single.params.changed_journeys.items.segment_list.items.arrive_time.desc</a> The arrival date and time of the flight, in UTC timestamp.
+             * <a href="Required">_single.params.changed_journeys.items.segment_list.items.arrive_time_str.desc</a> The arrival date and time of the flight, in local travel time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -689,7 +697,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Departure terminal</p>
+             * <p>The departure terminal of the flight.</p>
              * 
              * <strong>example:</strong>
              * <p>T2</p>
@@ -700,7 +708,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>(Deprecated) Departure date, UTC timestamp</p>
+             * <p>(该属性废弃)航班起飞日期，utc时间戳</p>
              * 
              * <strong>example:</strong>
              * <p>1677232998000</p>
@@ -711,7 +719,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>(Required) Departure date and time, in the format: yyyy-MM-dd HH:mm:ss</p>
+             * <p>(必填参数)航班起飞日期时间，航班的旅行时间，格式：yyyy-MM-dd HH:mm:ss</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-20 09:30:00</p>
@@ -722,7 +730,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Marketing flight number (e.g., KA5809)</p>
+             * <p>The marketing flight number (such as KA5809).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -734,7 +742,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Operating flight number (e.g., CX601)</p>
+             * <p>The operating flight number (such as CX601).</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295</p>
@@ -791,7 +799,7 @@ public class ChangeApplyRequest extends Request {
             } 
 
             /**
-             * <p>List of proposed segments for change</p>
+             * <p>The list of target segments for the change.</p>
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -871,7 +879,7 @@ public class ChangeApplyRequest extends Request {
             } 
 
             /**
-             * <p>Email address</p>
+             * <p>The email address.</p>
              * 
              * <strong>example:</strong>
              * <p>gao******@gmail.com</p>
@@ -882,7 +890,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Country code</p>
+             * <p>The country calling code.</p>
              * 
              * <strong>example:</strong>
              * <p>86</p>
@@ -893,7 +901,7 @@ public class ChangeApplyRequest extends Request {
             }
 
             /**
-             * <p>Contact&quot;s mobile phone number</p>
+             * <p>The mobile phone number of the contact.</p>
              * 
              * <strong>example:</strong>
              * <p>183*****92</p>

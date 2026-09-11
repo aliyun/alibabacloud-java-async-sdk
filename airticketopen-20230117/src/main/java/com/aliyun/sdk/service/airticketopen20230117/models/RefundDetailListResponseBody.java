@@ -132,7 +132,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request RequestId</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -143,7 +143,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Properly processed return data</p>
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error code</p>
+         * <p>The business error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -162,7 +162,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data carried in error handling</p>
+         * <p>The data returned with the error.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -173,7 +173,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -184,7 +184,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP request successful, status value is 200</p>
+         * <p>The HTTP status code. The value is always 200 for successful requests.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class RefundDetailListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -329,7 +329,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether it is a supplementary refund</p>
+             * <p>Indicates whether this is a supplementary refund order.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -340,7 +340,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Order number （ Ticketing Order Number）</p>
+             * <p>The order number.</p>
              * 
              * <strong>example:</strong>
              * <p>49884*****2345</p>
@@ -351,7 +351,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Refund order number</p>
+             * <p>The refund order number.</p>
              * 
              * <strong>example:</strong>
              * <p>49884*****950</p>
@@ -362,7 +362,13 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Refund order status: 0: Refund application; 1: Refund in progress; 2: Refund failed; 3: Refund succeeded</p>
+             * <p>The refund order status. Valid values:</p>
+             * <ul>
+             * <li>0: refund requested.</li>
+             * <li>1: refund being processed.</li>
+             * <li>2: refund failed.</li>
+             * <li>3: refund succeeded.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -373,7 +379,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original refund order number associated with this supplementary refund. Only present for supplementary refunds, indicating the ID of the original refund order.</p>
+             * <p>The refund order number of the original order associated with this supplementary refund order. This field is returned only for supplementary refund orders and indicates the refund order ID of the associated original order.</p>
              * 
              * <strong>example:</strong>
              * <p>49884*****2387</p>
@@ -384,7 +390,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Transaction serial number</p>
+             * <p>The transaction number.</p>
              * 
              * <strong>example:</strong>
              * <p>49884**tde-95za</p>
@@ -395,7 +401,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time, UTC timestamp</p>
+             * <p>The creation time. The value is a UTC timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1677229002000</p>
@@ -491,7 +497,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Current page number</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -502,7 +508,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of items per page</p>
+             * <p>The number of records per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -513,7 +519,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total count</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -524,7 +530,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total pages</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -594,7 +600,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Data list</p>
+             * <p>The data list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -602,7 +608,7 @@ public class RefundDetailListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pagination information</p>
+             * <p>The pagination information.</p>
              */
             public Builder pagination(Pagination pagination) {
                 this.pagination = pagination;

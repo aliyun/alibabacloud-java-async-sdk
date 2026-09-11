@@ -140,7 +140,7 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +148,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>The business error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +159,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>The data returned with the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -164,7 +170,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -172,7 +181,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The HTTP status code. The value is always 200 for successful HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -180,7 +192,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -298,7 +313,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             } 
 
             /**
-             * change_order_num.
+             * <p>The change order number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4988430***950</p>
              */
             public Builder changeOrderNum(Long changeOrderNum) {
                 this.changeOrderNum = changeOrderNum;
@@ -306,7 +324,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             }
 
             /**
-             * order_num.
+             * <p>The order number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4988430***971</p>
              */
             public Builder orderNum(Long orderNum) {
                 this.orderNum = orderNum;
@@ -314,7 +335,17 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             }
 
             /**
-             * order_status.
+             * <p>The application order status. Valid values:</p>
+             * <ul>
+             * <li>0: initial state</li>
+             * <li>1: pending payment</li>
+             * <li>2: payment successful</li>
+             * <li>3: change successful</li>
+             * <li>4: change closed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
@@ -322,7 +353,18 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             }
 
             /**
-             * pay_status.
+             * <p>The payment status. Valid values:</p>
+             * <ul>
+             * <li>0: initial state</li>
+             * <li>1: pending payment</li>
+             * <li>2: payment successful</li>
+             * <li>3: transaction successful</li>
+             * <li>4: paid order closed successfully</li>
+             * <li>5: unpaid order closed successfully.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder payStatus(Integer payStatus) {
                 this.payStatus = payStatus;
@@ -330,7 +372,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             }
 
             /**
-             * transaction_no.
+             * <p>The transaction number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkduendkd-2023-dj0</p>
              */
             public Builder transactionNo(String transactionNo) {
                 this.transactionNo = transactionNo;
@@ -338,7 +383,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             }
 
             /**
-             * utc_create_time.
+             * <p>The order creation time. The value is a UTC timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1677415274000</p>
              */
             public Builder utcCreateTime(Long utcCreateTime) {
                 this.utcCreateTime = utcCreateTime;
@@ -431,7 +479,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             } 
 
             /**
-             * current_page.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -439,7 +490,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -447,7 +501,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -455,7 +512,10 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             }
 
             /**
-             * total_page.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPage(Integer totalPage) {
                 this.totalPage = totalPage;
@@ -522,7 +582,7 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The data list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -530,7 +590,7 @@ public class ChangeDetailListOfBuyerResponseBody extends TeaModel {
             }
 
             /**
-             * pagination.
+             * <p>The pagination information.</p>
              */
             public Builder pagination(Pagination pagination) {
                 this.pagination = pagination;

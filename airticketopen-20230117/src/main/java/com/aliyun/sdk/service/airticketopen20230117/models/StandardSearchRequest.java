@@ -159,7 +159,7 @@ public class StandardSearchRequest extends Request {
         } 
 
         /**
-         * <p>adult passenger amount 1-9</p>
+         * <p>Number of adult passengers, range 1-9</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -171,7 +171,7 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * <p>itinerary list</p>
+         * <p>Journey array. At least one of departure_city and departure_airport_list must be non-empty; when departure_airport_list has values, they must belong to the same city. At least one of arrival_city and arrival_airport_list must be non-empty; when arrival_airport_list has values, they must belong to the same city.</p>
          * <p>This parameter is required.</p>
          */
         public Builder airLegs(java.util.List<AirLegs> airLegs) {
@@ -182,15 +182,7 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * <p>cabin class</p>
-         * <ol>
-         * <li><strong>ALL_CABIN</strong> : all cabin class</li>
-         * <li><strong>Y</strong> : economy class</li>
-         * <li><strong>FC</strong> : first class and business class</li>
-         * <li><strong>S</strong> : premium economy class</li>
-         * <li><strong>YS</strong> : economy class and premium economy class</li>
-         * <li><strong>YSC</strong> : economy class, premium economy class and business class</li>
-         * </ol>
+         * <p>Defaults to ALL_CABIN if not specified. Cabin class ALL_CABIN: All cabin classes; Y: Economy class; FC: First class and Business class; S: Premium Economy class; YS: Economy class and Premium Economy class; YSC: Economy class, Premium Economy class, and Business class;</p>
          * 
          * <strong>example:</strong>
          * <p>ALL_CABIN</p>
@@ -202,7 +194,7 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * <p>child passenger amount 0-9</p>
+         * <p>Number of child passengers, range 0-9</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -214,7 +206,7 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * <p>infant passenger amount 0-9</p>
+         * <p>Number of infant passengers, range 0-9</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +218,7 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * <p>search controls</p>
+         * <p>Search control options, optional</p>
          */
         public Builder searchControlOptions(SearchControlOptions searchControlOptions) {
             String searchControlOptionsShrink = shrink(searchControlOptions, "search_control_options", "json");
@@ -249,7 +241,10 @@ public class StandardSearchRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>Language setting, defaults to buyer account configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);
@@ -357,7 +352,7 @@ public class StandardSearchRequest extends Request {
             } 
 
             /**
-             * <p>arrival airport [IATA airport code]</p>
+             * <p>Arrival airport three-letter code</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -368,7 +363,7 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * <p>arrival city code</p>
+             * <p>Arrival city three-letter code</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -379,7 +374,7 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * <p>departure airport [IATA airport code]</p>
+             * <p>Departure airport three-letter code</p>
              * 
              * <strong>example:</strong>
              * <p>PVG</p>
@@ -390,7 +385,7 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * <p>departure city code</p>
+             * <p>Departure city three-letter code</p>
              * 
              * <strong>example:</strong>
              * <p>SHA</p>
@@ -401,7 +396,7 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * <p>departure date (eg: yyyyMMdd)</p>
+             * <p>Departure date (e.g.: yyyyMMdd)</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -485,7 +480,7 @@ public class StandardSearchRequest extends Request {
             } 
 
             /**
-             * <p>excluded airlines list</p>
+             * <p>Excluded airlines list</p>
              * 
              * <strong>example:</strong>
              * <p>7C</p>
@@ -496,7 +491,7 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * <p>preferred airlines list</p>
+             * <p>Preferred airlines list</p>
              * 
              * <strong>example:</strong>
              * <p>FD</p>
@@ -507,7 +502,7 @@ public class StandardSearchRequest extends Request {
             }
 
             /**
-             * <p>service quality</p>
+             * <p>Ticketing service quality</p>
              * 
              * <strong>example:</strong>
              * <p>A1</p>

@@ -89,6 +89,7 @@ public class GlobalHotelCancelOrderRequest extends Request {
         } 
 
         /**
+         * <p>The distributor account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class GlobalHotelCancelOrderRequest extends Request {
         }
 
         /**
+         * <p>The sales order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

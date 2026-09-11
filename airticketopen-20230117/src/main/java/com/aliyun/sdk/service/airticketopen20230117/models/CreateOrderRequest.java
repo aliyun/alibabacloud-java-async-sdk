@@ -213,10 +213,7 @@ public class CreateOrderRequest extends Request {
         }
 
         /**
-         * <p>TraceId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TraceId</p>
+         * TracerId.
          */
         public Builder tracerId(String tracerId) {
             this.putBodyParameter("TracerId", tracerId);
@@ -355,10 +352,7 @@ public class CreateOrderRequest extends Request {
             }
 
             /**
-             * <p>TraceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TraceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -454,10 +448,7 @@ public class CreateOrderRequest extends Request {
             }
 
             /**
-             * <p>TraceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TraceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;

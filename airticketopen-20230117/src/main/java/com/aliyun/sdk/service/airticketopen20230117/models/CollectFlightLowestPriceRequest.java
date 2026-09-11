@@ -89,6 +89,7 @@ public class CollectFlightLowestPriceRequest extends Request {
         } 
 
         /**
+         * <p>The lowest-price flight information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder lowestPriceFlightInfoList(java.util.List<LowestPriceFlightInfoList> lowestPriceFlightInfoList) {
@@ -99,7 +100,7 @@ public class CollectFlightLowestPriceRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>The access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,7 +113,10 @@ public class CollectFlightLowestPriceRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>The language. Defaults to the buyer account configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);
@@ -305,6 +309,7 @@ public class CollectFlightLowestPriceRequest extends Request {
             } 
 
             /**
+             * <p>The arrival city.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -316,6 +321,7 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
+             * <p>The departure city.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -327,6 +333,7 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
+             * <p>The departure date. Format: yyyy-MM-dd.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -338,6 +345,7 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
+             * <p>The list of outbound flight numbers. Multiple segments are split by commas (,).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -349,6 +357,7 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
+             * <p>The lowest competitor price in the market, including fare and taxes. The currency is USD.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -360,7 +369,10 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
-             * request_id.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789dacd</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -368,7 +380,10 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
-             * return_date.
+             * <p>The return date for round-trip scenarios. Format: yyyy-MM-dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-11</p>
              */
             public Builder returnDate(String returnDate) {
                 this.returnDate = returnDate;
@@ -376,7 +391,10 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
-             * return_flight_number.
+             * <p>The list of return flight numbers. Multiple segments are split by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CA123,CA456</p>
              */
             public Builder returnFlightNumber(String returnFlightNumber) {
                 this.returnFlightNumber = returnFlightNumber;
@@ -384,6 +402,7 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
+             * <p>The solution_id returned by Search/Enrich.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -395,6 +414,7 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
+             * <p>The Suez quoted price, including fare and taxes. The currency is USD.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -406,6 +426,11 @@ public class CollectFlightLowestPriceRequest extends Request {
             }
 
             /**
+             * <p>The trip type. Valid values:</p>
+             * <ul>
+             * <li>1: one-way</li>
+             * <li>2: round-trip.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

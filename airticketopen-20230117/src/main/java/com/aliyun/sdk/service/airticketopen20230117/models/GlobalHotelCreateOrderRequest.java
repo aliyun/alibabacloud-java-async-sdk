@@ -149,6 +149,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
         } 
 
         /**
+         * <p>The distributor account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,6 +162,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
         }
 
         /**
+         * <p>The contact information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder contact(Contact contact) {
@@ -171,6 +173,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
         }
 
         /**
+         * <p>The external order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +186,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
         }
 
         /**
+         * <p>The guests grouped by room.</p>
          * <p>This parameter is required.</p>
          */
         public Builder guests(java.util.List<java.util.List<Guests>> guests) {
@@ -193,6 +197,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
         }
 
         /**
+         * <p>The offer ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,6 +210,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
         }
 
         /**
+         * <p>The number of rooms.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,6 +336,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
             } 
 
             /**
+             * <p>The email address of the contact.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -341,6 +348,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
             }
 
             /**
+             * <p>The first name of the contact.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -352,6 +360,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
             }
 
             /**
+             * <p>The last name of the contact.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -363,7 +372,10 @@ public class GlobalHotelCreateOrderRequest extends Request {
             }
 
             /**
-             * Phone.
+             * <p>The phone number of the contact.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>+86-13800138000</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -456,6 +468,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
             } 
 
             /**
+             * <p>The first name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -467,6 +480,7 @@ public class GlobalHotelCreateOrderRequest extends Request {
             }
 
             /**
+             * <p>The last name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

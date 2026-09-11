@@ -132,7 +132,7 @@ public class RefundDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request RequestId</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -143,7 +143,7 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Correctly processed return data</p>
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error code</p>
+         * <p>The business error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -162,7 +162,7 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error handling carries data</p>
+         * <p>The data returned with the error.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -173,7 +173,7 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -184,7 +184,7 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP request successful, status value is 200</p>
+         * <p>The HTTP status code. The value is always 200 for successful requests.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class RefundDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -277,7 +277,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Document number</p>
+             * <p>The document number.</p>
              * 
              * <strong>example:</strong>
              * <p>411***********4411</p>
@@ -288,7 +288,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Passenger&quot;s first name</p>
+             * <p>The first name of the passenger.</p>
              * 
              * <strong>example:</strong>
              * <p>SAN</p>
@@ -299,7 +299,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Passenger&quot;s last name</p>
+             * <p>The last name of the passenger.</p>
              * 
              * <strong>example:</strong>
              * <p>ZHANG</p>
@@ -382,7 +382,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Amount refunded from the Change order</p>
+             * <p>The supplementary refund amount from the rebooking order.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -393,7 +393,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Amount refunded from the Ticketing order</p>
+             * <p>The supplementary refund amount from the original order.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -404,7 +404,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Passenger for the refund</p>
+             * <p>The passenger for the refund.</p>
              */
             public Builder passenger(Passenger passenger) {
                 this.passenger = passenger;
@@ -484,7 +484,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Additional refund order number</p>
+             * <p>The refund order number of the supplementary refund.</p>
              * 
              * <strong>example:</strong>
              * <p>498843***6950</p>
@@ -495,7 +495,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Transaction number of the Additional Refund order</p>
+             * <p>The transaction serial number of the supplementary refund.</p>
              * 
              * <strong>example:</strong>
              * <p>498843***6950</p>
@@ -506,7 +506,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Additional refund details from the passenger&quot;s</p>
+             * <p>The passenger-level supplementary refund details.</p>
              */
             public Builder passengerMultiRefundDetails(java.util.List<PassengerMultiRefundDetails> passengerMultiRefundDetails) {
                 this.passengerMultiRefundDetails = passengerMultiRefundDetails;
@@ -586,7 +586,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Document number</p>
+             * <p>The document number.</p>
              * 
              * <strong>example:</strong>
              * <p>411***********4411</p>
@@ -597,7 +597,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Passenger&quot;s first name</p>
+             * <p>The first name of the passenger.</p>
              * 
              * <strong>example:</strong>
              * <p>SAN</p>
@@ -608,7 +608,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Passenger&quot;s last name</p>
+             * <p>The last name of the passenger.</p>
              * 
              * <strong>example:</strong>
              * <p>ZHANG</p>
@@ -769,7 +769,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Total price of the used segments</p>
+             * <p>The total price of already used tickets.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -788,7 +788,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Amount refunded to the user after a change</p>
+             * <p>The refundable amount to the buyer from rebooking.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -799,7 +799,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Non-refundable change penalty</p>
+             * <p>The non-refundable rebooking service fee.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -810,7 +810,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Non-refundable fare difference</p>
+             * <p>The non-refundable cabin upgrade service fee.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -821,7 +821,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>tax penalty</p>
+             * <p>The non-refundable tax amount, which is the tax refund service fee.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -832,7 +832,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>fare penalty</p>
+             * <p>The non-refundable ticket amount, which is the ticket refund service fee.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -843,7 +843,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Amount refundable to the user (ticket price + taxes - fare penalty - tax penalty - total price of used segments)</p>
+             * <p>The refundable amount to the buyer from the original ticket (ticket price + taxes - ticket refund service fee - tax refund service fee - total price of already used tickets).</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -921,7 +921,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Information of the passenger applying for a refund</p>
+             * <p>The passenger information for the refund.</p>
              */
             public Builder passenger(PassengerRefundDetailsPassenger passenger) {
                 this.passenger = passenger;
@@ -929,7 +929,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Refund fee details</p>
+             * <p>The refund fee breakdown.</p>
              */
             public Builder refundFee(RefundFee refundFee) {
                 this.refundFee = refundFee;
@@ -1256,7 +1256,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Three-letter code of the arrival airport (in uppercase)</p>
+             * <p>The three-letter IATA code of the arrival airport (uppercase).</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -1267,7 +1267,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Three-letter code of the arrival city (in uppercase)</p>
+             * <p>The three-letter IATA code of the arrival city (uppercase).</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -1278,7 +1278,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Arrival terminal of the flight</p>
+             * <p>The arrival terminal.</p>
              * 
              * <strong>example:</strong>
              * <p>T1</p>
@@ -1289,7 +1289,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Arrival date and time in string format (yyyy-mm-dd hh:mm:ss)</p>
+             * <p>The arrival date and time in string format (yyyy-MM-dd HH:mm:ss).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10 10:40:00</p>
@@ -1300,7 +1300,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of available seats</p>
+             * <p>The number of remaining seats.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -1311,7 +1311,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>RBD</p>
+             * <p>The cabin code.</p>
              * 
              * <strong>example:</strong>
              * <p>V</p>
@@ -1322,7 +1322,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>service class ( compartment )</p>
+             * <p>The cabin class.</p>
              * 
              * <strong>example:</strong>
              * <p>Y</p>
@@ -1333,7 +1333,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether it is a codeshare flight</p>
+             * <p>Indicates whether the flight is a codeshare flight.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1344,7 +1344,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Three-letter code of the departure airport (in uppercase)</p>
+             * <p>The three-letter IATA code of the departure airport (uppercase).</p>
              * 
              * <strong>example:</strong>
              * <p>PVG</p>
@@ -1355,7 +1355,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Three-letter code of the departure city (in uppercase)</p>
+             * <p>The three-letter IATA code of the departure city (uppercase).</p>
              * 
              * <strong>example:</strong>
              * <p>SHA</p>
@@ -1366,7 +1366,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Departure terminal of the flight</p>
+             * <p>The departure terminal.</p>
              * 
              * <strong>example:</strong>
              * <p>T2</p>
@@ -1377,7 +1377,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Departure date and time in string format (yyyy-mm-dd hh:mm:ss)</p>
+             * <p>The departure date and time in string format (yyyy-MM-dd HH:mm:ss).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10 07:55:00</p>
@@ -1388,7 +1388,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Aircraft type</p>
+             * <p>The aircraft type.</p>
              * 
              * <strong>example:</strong>
              * <p>32Q</p>
@@ -1399,7 +1399,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Flight duration in minutes</p>
+             * <p>The flight duration, in minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>165</p>
@@ -1410,7 +1410,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Marketing airline (e.g., HO)</p>
+             * <p>The marketing airline code (such as HO).</p>
              * 
              * <strong>example:</strong>
              * <p>HO</p>
@@ -1421,7 +1421,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Marketing flight number (e.g., HO1295)</p>
+             * <p>The marketing flight number (such as HO1295).</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295</p>
@@ -1432,7 +1432,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Marketing flight number (numeric part, e.g., 1295)</p>
+             * <p>The numeric marketing flight number (such as 1295).</p>
              * 
              * <strong>example:</strong>
              * <p>1295</p>
@@ -1443,7 +1443,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operating airline (e.g., CX)</p>
+             * <p>The operating airline code (such as CX).</p>
              * 
              * <strong>example:</strong>
              * <p>HO</p>
@@ -1454,7 +1454,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operating flight number (e.g., CX601)</p>
+             * <p>The operating flight number (such as CX601).</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295</p>
@@ -1465,7 +1465,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Segment ID format: flight number + departure airport + arrival airport + departure date (MMdd)</p>
+             * <p>The segment ID. Format: flight number + departure airport + arrival airport + departure date (MMdd).</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295-PVG-MFM-20230310</p>
@@ -1476,7 +1476,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of stop cities, present when stopQuantity &gt; 0, multiple values separated by commas</p>
+             * <p>The list of stopover cities. This field has a value when stopQuantity is greater than 0. Multiple cities are separated by commas.</p>
              * 
              * <strong>example:</strong>
              * <p>SEL,HKG</p>
@@ -1487,7 +1487,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of stop cities</p>
+             * <p>The number of stopover cities.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1557,7 +1557,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Segment information</p>
+             * <p>The segment information.</p>
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -1565,7 +1565,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of transfers</p>
+             * <p>The number of transfers.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1791,7 +1791,7 @@ public class RefundDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether it contains additional refunds</p>
+             * <p>Indicates whether the refund contains a supplementary refund.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1802,7 +1802,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of additional refund details associated with the initial refund</p>
+             * <p>The list of supplementary refund details associated with the initial refund.</p>
              */
             public Builder multiRefundDetails(java.util.List<MultiRefundDetails> multiRefundDetails) {
                 this.multiRefundDetails = multiRefundDetails;
@@ -1810,7 +1810,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Order number</p>
+             * <p>The order number.</p>
              * 
              * <strong>example:</strong>
              * <p>4966***617111</p>
@@ -1821,7 +1821,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of passenger refund details, refund information by passenger</p>
+             * <p>The list of passenger-level refund details.</p>
              */
             public Builder passengerRefundDetails(java.util.List<PassengerRefundDetails> passengerRefundDetails) {
                 this.passengerRefundDetails = passengerRefundDetails;
@@ -1829,7 +1829,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Actual refund time, UTC timestamp</p>
+             * <p>The actual refund time, in UTC timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1677229005000</p>
@@ -1840,7 +1840,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of URLs for medical refund attachments</p>
+             * <p>The list of attachment URLs for medical refund requests.</p>
              * 
              * <strong>example:</strong>
              * <p>[zzz,yyy]</p>
@@ -1851,7 +1851,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Refund journey</p>
+             * <p>The journeys included in the refund.</p>
              */
             public Builder refundJourneys(java.util.List<RefundJourneys> refundJourneys) {
                 this.refundJourneys = refundJourneys;
@@ -1859,7 +1859,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Refund order number</p>
+             * <p>The refund order number.</p>
              * 
              * <strong>example:</strong>
              * <p>4966***617654</p>
@@ -1870,7 +1870,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reason for refund</p>
+             * <p>The reason for the refund request.</p>
              * 
              * <strong>example:</strong>
              * <p>desc reason</p>
@@ -1881,7 +1881,14 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>2: Voluntary application; 5: Flight delay or cancellation, flight schedule change, etc., due to airline reasons; 6: Health reasons with a report from a hospital of at least secondary level A; 7: Involuntary emergency guidance; 100: Involuntary non-emergency</p>
+             * <p>The refund request type. Valid values:</p>
+             * <ul>
+             * <li>2: voluntary request.</li>
+             * <li>5: airline-initiated reasons such as flight delay, cancellation, or schedule change.</li>
+             * <li>6: medical reasons with a certificate from a Grade II Class A hospital or above.</li>
+             * <li>7: involuntary definitive emergency guidance.</li>
+             * <li>100: involuntary non-definitive emergency.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1892,7 +1899,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reason for refund rejection</p>
+             * <p>The reason for rejecting the refund request.</p>
              * 
              * <strong>example:</strong>
              * <p>refuse reason</p>
@@ -1903,7 +1910,13 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Refund order status 0: Refund application; 1: Refund in progress; 2: Refund failed; 3: Refund successful</p>
+             * <p>The refund order status. Valid values:</p>
+             * <ul>
+             * <li>0: refund requested.</li>
+             * <li>1: refund being processed.</li>
+             * <li>2: refund failed.</li>
+             * <li>3: refund succeeded.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1914,7 +1927,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Transaction serial number</p>
+             * <p>The transaction serial number.</p>
              * 
              * <strong>example:</strong>
              * <p>1677229005000</p>
@@ -1925,7 +1938,7 @@ public class RefundDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Refund order creation time, UTC timestamp</p>
+             * <p>The creation time of the refund order, in UTC timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1677229002000</p>

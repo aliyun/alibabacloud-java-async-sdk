@@ -93,7 +93,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         } 
 
         /**
-         * <p>Full unused ticket refund rules</p>
+         * <p>Fully unused refund rules</p>
          */
         public Builder refundRuleAllUnusedList(java.util.List<RefundRuleAllUnusedList> refundRuleAllUnusedList) {
             this.refundRuleAllUnusedList = refundRuleAllUnusedList;
@@ -101,7 +101,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         }
 
         /**
-         * <p>Partial unused ticket refund rules</p>
+         * <p>Partially unused refund rules</p>
          */
         public Builder refundRulePartUnusedList(java.util.List<RefundRulePartUnusedList> refundRulePartUnusedList) {
             this.refundRulePartUnusedList = refundRulePartUnusedList;
@@ -109,7 +109,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         }
 
         /**
-         * <p>Unused return flight change rules</p>
+         * <p>Return/inbound unused change rules</p>
          */
         public Builder changeRuleInUnusedList(java.util.List<ChangeRuleInUnusedList> changeRuleInUnusedList) {
             this.changeRuleInUnusedList = changeRuleInUnusedList;
@@ -117,7 +117,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
         }
 
         /**
-         * <p>Unused outbound change rules</p>
+         * <p>Outbound unused change rules</p>
          */
         public Builder changeRuleOutUnusedList(java.util.List<ChangeRuleOutUnusedList> changeRuleOutUnusedList) {
             this.changeRuleOutUnusedList = changeRuleOutUnusedList;
@@ -261,7 +261,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             } 
 
             /**
-             * <p>The type of itinerary this refund rule applies to 0: fully unused; 1: partially unused</p>
+             * <p>Refund rule applicable journey usage type 0: fully unused; 1: partially unused</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -283,7 +283,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>The start time of the refund time interval for this refund rule, in units of (days/hours)</p>
+             * <p>Start time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -294,7 +294,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>The end time of the refund time interval for this refund rule, in units of (days/hours)</p>
+             * <p>End time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -305,7 +305,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Whether a refund is allowed X-Y hours (days) before departure</p>
+             * <p>Whether refund is allowed X-Y hours (days) before departure</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -327,7 +327,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Whether full tax refund is allowed X-Y hours (days) before departure</p>
+             * <p>Whether full tax refund is available X-Y hours (days) before departure</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -486,7 +486,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             } 
 
             /**
-             * <p>The type of itinerary usage for this refund rule. 0: Entirely unused; 1: Partially unused</p>
+             * <p>Refund rule applicable journey usage type 0: fully unused; 1: partially unused</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -508,7 +508,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>The start time of the refund time interval for this refund rule, in units of days/hours</p>
+             * <p>Start time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -519,7 +519,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>The end time of the refund time interval for this refund rule, in units of days/hours</p>
+             * <p>End time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -530,7 +530,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Whether a refund is allowed X-Y hours (days) before departure</p>
+             * <p>Whether refund is allowed X-Y hours (days) before departure</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -552,7 +552,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Whether full tax refund is allowed X-Y hours (days) before departure</p>
+             * <p>Whether full tax refund is available X-Y hours (days) before departure</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -685,7 +685,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             } 
 
             /**
-             * <p>Type of itinerary usage for the change rule 2: outbound unused; 3: return unused</p>
+             * <p>Change rule applicable journey usage type 2: outbound unused; 3: return/inbound unused</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -707,7 +707,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Start time of the refund time interval, in units of days/hours, to which this refund rule applies</p>
+             * <p>Start time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -718,7 +718,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>End time of the refund time interval, in units of days/hours, to which this refund rule applies</p>
+             * <p>End time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -729,7 +729,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Whether it is possible to change the ticket X-Y hours (days) before departure</p>
+             * <p>Whether rebooking is allowed X-Y hours (days) before departure</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -740,7 +740,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Change fee X-Y hours (days) before departure</p>
+             * <p>Rebooking fee X-Y hours (days) before departure</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -862,7 +862,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             } 
 
             /**
-             * <p>The type of itinerary usage for this change rule 2: unused outbound; 3: unused return</p>
+             * <p>Change rule applicable journey usage type 2: outbound unused; 3: return/inbound unused</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -884,7 +884,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Start time of the refund time interval for this refund rule, in days/hours</p>
+             * <p>Start time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -895,7 +895,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>End time of the refund time interval for this refund rule, in days/hours</p>
+             * <p>End time of the refund time interval applicable to this refund rule, unit (day/hour)</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -906,7 +906,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Whether it is possible to change the ticket X-Y hours (days) before departure</p>
+             * <p>Whether rebooking is allowed X-Y hours (days) before departure</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -917,7 +917,7 @@ public class DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleM
             }
 
             /**
-             * <p>Change fee X-Y hours (days) before departure</p>
+             * <p>Rebooking fee X-Y hours (days) before departure</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

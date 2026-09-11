@@ -147,6 +147,7 @@ public class GlobalHotelValidatePriceRequest extends Request {
         } 
 
         /**
+         * <p>The distributor account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,6 +160,7 @@ public class GlobalHotelValidatePriceRequest extends Request {
         }
 
         /**
+         * <p>The total number of adults.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +173,10 @@ public class GlobalHotelValidatePriceRequest extends Request {
         }
 
         /**
-         * Children.
+         * <p>The total number of children.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder children(Integer children) {
             this.putBodyParameter("Children", children);
@@ -180,7 +185,10 @@ public class GlobalHotelValidatePriceRequest extends Request {
         }
 
         /**
-         * ChildrenAges.
+         * <p>The list of children\&quot;s ages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[8]</p>
          */
         public Builder childrenAges(java.util.List<Integer> childrenAges) {
             String childrenAgesShrink = shrink(childrenAges, "ChildrenAges", "json");
@@ -190,6 +198,7 @@ public class GlobalHotelValidatePriceRequest extends Request {
         }
 
         /**
+         * <p>The offer key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +211,7 @@ public class GlobalHotelValidatePriceRequest extends Request {
         }
 
         /**
+         * <p>The number of rooms.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

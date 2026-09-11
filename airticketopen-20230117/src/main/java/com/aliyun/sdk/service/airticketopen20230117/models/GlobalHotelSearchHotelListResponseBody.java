@@ -119,7 +119,7 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CityCodeRequired</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>City code cannot be empty</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -143,7 +149,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +279,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
             } 
 
             /**
-             * CityName.
+             * <p>The city name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -275,7 +290,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
             }
 
             /**
-             * CountryName.
+             * <p>The country name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -283,7 +301,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
             }
 
             /**
-             * HotelName.
+             * <p>The hotel name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing Hotel</p>
              */
             public Builder hotelName(String hotelName) {
                 this.hotelName = hotelName;
@@ -291,7 +312,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
             }
 
             /**
-             * StandardHotelId.
+             * <p>The platform standard hotel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H001</p>
              */
             public Builder standardHotelId(String standardHotelId) {
                 this.standardHotelId = standardHotelId;
@@ -299,7 +323,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The hotel status. Valid values: ONLINE and OFFLINE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -366,7 +393,7 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
             } 
 
             /**
-             * Hotels.
+             * <p>The list of hotels.</p>
              */
             public Builder hotels(java.util.List<Hotels> hotels) {
                 this.hotels = hotels;
@@ -374,7 +401,10 @@ public class GlobalHotelSearchHotelListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of hotels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -140,7 +140,10 @@ public class ChangeCancelResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned for a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class ChangeCancelResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>Business error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class ChangeCancelResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>The data returned for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -164,7 +173,10 @@ public class ChangeCancelResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -172,7 +184,10 @@ public class ChangeCancelResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>If the HTTP request is successful, the status value is 200.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -180,7 +195,10 @@ public class ChangeCancelResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

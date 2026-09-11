@@ -159,10 +159,7 @@ public class QueryOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>TracerId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TracerId</p>
+         * TracerId.
          */
         public Builder tracerId(String tracerId) {
             this.tracerId = tracerId;
@@ -320,10 +317,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TracerId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -419,10 +413,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TracerId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -510,10 +501,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DefaultFractionDigits</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * DefaultFractionDigits.
              */
             public Builder defaultFractionDigits(Integer defaultFractionDigits) {
                 this.defaultFractionDigits = defaultFractionDigits;
@@ -521,10 +509,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>NumericCode</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * NumericCode.
              */
             public Builder numericCode(Integer numericCode) {
                 this.numericCode = numericCode;
@@ -591,10 +576,7 @@ public class QueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>cent</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Cent.
              */
             public Builder cent(Long cent) {
                 this.cent = cent;
@@ -773,10 +755,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TracerId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -872,10 +851,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TraceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -1172,10 +1148,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TracerId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -1388,10 +1361,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TraceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -1487,10 +1457,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TraceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -1766,10 +1733,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TraceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TracerId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -2150,10 +2114,7 @@ public class QueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TracerId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;

@@ -117,7 +117,7 @@ public class ChangeDetailListOfOrderNumRequest extends Request {
         } 
 
         /**
-         * <p>Order Number</p>
+         * <p>The order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ChangeDetailListOfOrderNumRequest extends Request {
         }
 
         /**
-         * <p>Page Index</p>
+         * <p>The page index.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -142,7 +142,7 @@ public class ChangeDetailListOfOrderNumRequest extends Request {
         }
 
         /**
-         * <p>Page Size</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -154,7 +154,7 @@ public class ChangeDetailListOfOrderNumRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>The access token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class ChangeDetailListOfOrderNumRequest extends Request {
         }
 
         /**
-         * <p>Multi-language, default to buyer account configuration</p>
+         * <p>The language. Defaults to the buyer account configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

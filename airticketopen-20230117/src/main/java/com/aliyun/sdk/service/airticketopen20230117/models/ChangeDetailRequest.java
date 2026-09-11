@@ -89,7 +89,7 @@ public class ChangeDetailRequest extends Request {
         } 
 
         /**
-         * <p>Change order number</p>
+         * <p>The change order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class ChangeDetailRequest extends Request {
         }
 
         /**
-         * <p>access token</p>
+         * <p>The access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ChangeDetailRequest extends Request {
         }
 
         /**
-         * <p>Multi-language, default to buyer&quot;s account configuration</p>
+         * <p>The language. The buyer account configuration is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

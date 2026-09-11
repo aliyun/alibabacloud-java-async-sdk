@@ -132,7 +132,10 @@ public class LuggageDirectResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +143,7 @@ public class LuggageDirectResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class LuggageDirectResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>The business error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class LuggageDirectResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>The data returned with the error response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -164,7 +173,10 @@ public class LuggageDirectResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -172,7 +184,10 @@ public class LuggageDirectResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The HTTP status code. The value is always 200 for successful requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -180,7 +195,10 @@ public class LuggageDirectResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -246,7 +264,10 @@ public class LuggageDirectResponseBody extends TeaModel {
             } 
 
             /**
-             * city_code.
+             * <p>The three-letter IATA code of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BJS</p>
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -254,7 +275,14 @@ public class LuggageDirectResponseBody extends TeaModel {
             }
 
             /**
-             * direct_type.
+             * <p>The luggage through-check rule type. Valid values:</p>
+             * <ul>
+             * <li>0: luggage through-check is not supported.</li>
+             * <li>1: luggage through-check is supported.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder directType(Integer directType) {
                 this.directType = directType;

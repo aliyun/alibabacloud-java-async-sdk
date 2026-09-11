@@ -102,6 +102,7 @@ public class GlobalHotelQueryOrderRequest extends Request {
         } 
 
         /**
+         * <p>The distributor account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class GlobalHotelQueryOrderRequest extends Request {
         }
 
         /**
-         * ExternalOrderNo.
+         * <p>The external order number. At least one of ExternalOrderNo and OrderNo is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXT_ORDER_001</p>
          */
         public Builder externalOrderNo(String externalOrderNo) {
             this.putBodyParameter("ExternalOrderNo", externalOrderNo);
@@ -123,7 +127,10 @@ public class GlobalHotelQueryOrderRequest extends Request {
         }
 
         /**
-         * OrderNo.
+         * <p>The sales order number. At least one of OrderNo and ExternalOrderNo is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SO202606290001</p>
          */
         public Builder orderNo(String orderNo) {
             this.putBodyParameter("OrderNo", orderNo);

@@ -134,7 +134,7 @@ public class RefundApplyRequest extends Request {
         } 
 
         /**
-         * <p>Order number</p>
+         * <p>The order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * <p>Itinerary for which a refund is being requested</p>
+         * <p>The journeys for the refund application.</p>
          * <p>This parameter is required.</p>
          */
         public Builder refundJourneys(java.util.List<RefundJourneys> refundJourneys) {
@@ -158,7 +158,7 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * <p>List of passengers applying for a refund</p>
+         * <p>The list of passengers for the refund application.</p>
          * <p>This parameter is required.</p>
          */
         public Builder refundPassengerList(java.util.List<RefundPassengerList> refundPassengerList) {
@@ -169,8 +169,7 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * <p>Refund type - involuntary or voluntary. 
-         * attachments are required for involuntary refund application.</p>
+         * <p>The refund type. Attachments are required for involuntary refund applications.</p>
          * <p>This parameter is required.</p>
          */
         public Builder refundType(RefundType refundType) {
@@ -181,7 +180,7 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * <p>Access token</p>
+         * <p>The access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +193,7 @@ public class RefundApplyRequest extends Request {
         }
 
         /**
-         * <p>Multi-language, default to buyer account configuration</p>
+         * <p>The language setting. Defaults to the buyer account configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>
@@ -295,7 +294,7 @@ public class RefundApplyRequest extends Request {
             } 
 
             /**
-             * <p>Three-letter code of the arrival airport (uppercase)</p>
+             * <p>The three-letter IATA code of the arrival airport (uppercase).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -307,7 +306,7 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * <p>Three-letter code of the arrival city (uppercase)</p>
+             * <p>The three-letter IATA code of the arrival city (uppercase).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -319,7 +318,7 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * <p>Three-letter code of the departure airport (uppercase)</p>
+             * <p>The three-letter IATA code of the departure airport (uppercase).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -331,7 +330,7 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * <p>Three-letter code of the departure city (uppercase)</p>
+             * <p>The three-letter IATA code of the departure city (uppercase).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -390,7 +389,7 @@ public class RefundApplyRequest extends Request {
             } 
 
             /**
-             * <p>Flight segment information</p>
+             * <p>The segment information.</p>
              * <p>This parameter is required.</p>
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
@@ -473,7 +472,7 @@ public class RefundApplyRequest extends Request {
             } 
 
             /**
-             * <p>Document number</p>
+             * <p>The document number of the passenger.</p>
              * 
              * <strong>example:</strong>
              * <p>411***********4411</p>
@@ -484,7 +483,7 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * <p>Passenger&quot;s first name</p>
+             * <p>The first name of the passenger.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -496,7 +495,7 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * <p>Passenger&quot;s last name</p>
+             * <p>The last name of the passenger.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -581,7 +580,7 @@ public class RefundApplyRequest extends Request {
             } 
 
             /**
-             * <p>Array of attachment file URLs. First, upload the files using a separate file upload interface to get the file URLs.</p>
+             * <p>The array of attachment file URLs. Upload files first by using the dedicated file upload operation to obtain the file URLs.</p>
              * 
              * <strong>example:</strong>
              * <p>[xxx,yyy]</p>
@@ -592,9 +591,13 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * <p>2: Voluntary (I want to change my travel plan/I don&quot;t want to fly). 
-             * 5: Involuntary, due to flight delay or cancellation, schedule changes, or other airline reasons. 
-             * 6: Involuntary, due to health reasons with a medical report from a hospital of at least secondary level A or above.</p>
+             * <p>The refund type. Valid values:</p>
+             * <ul>
+             * <li>2: Voluntary refund (change of travel plans or decision not to fly).</li>
+             * <li>5: Involuntary refund due to airline reasons such as flight delay, cancellation, or schedule change.</li>
+             * <li>6: Involuntary refund due to medical reasons with a certificate from a Grade II Class A hospital or above.</li>
+             * </ul>
+             * <p>Note: Attachments are not mandatory, but providing attachments for involuntary refunds can improve the success rate of the refund application.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -606,7 +609,7 @@ public class RefundApplyRequest extends Request {
             }
 
             /**
-             * <p>Remark: detailed description about the refund application</p>
+             * <p>The remarks.</p>
              * 
              * <strong>example:</strong>
              * <p>remark desc</p>

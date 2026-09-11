@@ -26,32 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AccountFlowListResponse> accountFlowList(AccountFlowListRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>search ancillary for selected solution, you should enter the solution_id returned by enrich.</p>
-     * 
      * @param request the request parameters of AncillarySuggest  AncillarySuggestRequest
      * @return AncillarySuggestResponse
      */
     CompletableFuture<AncillarySuggestResponse> ancillarySuggest(AncillarySuggestRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Enter solution_id returned by enrich, ancillary_id returned by ancillarySuggest(optional), passengers information and contact information, the book interface will create an order wait for pay.
-     * There are two issues should be noticed:</p>
-     * <ol>
-     * <li>the solution_id must be processed by pricing.</li>
-     * <li>the order created by book interface should be pay within 30 minutes, otherwise the order will be closed.</li>
-     * </ol>
-     * 
      * @param request the request parameters of Book  BookRequest
      * @return BookResponse
      */
     CompletableFuture<BookResponse> book(BookRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>close an unpaid order</p>
-     * 
      * @param request the request parameters of Cancel  CancelRequest
      * @return CancelResponse
      */
@@ -94,6 +80,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeDetailListOfOrderNumResponse> changeDetailListOfOrderNum(ChangeDetailListOfOrderNumRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Collects lowest-price flight information.</p>
+     * 
      * @param request the request parameters of CollectFlightLowestPrice  CollectFlightLowestPriceRequest
      * @return CollectFlightLowestPriceResponse
      */
@@ -101,7 +90,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Choose either <code>solution_id</code> or <code>journey_param_list</code> in the parameters, and <code>solution_id</code> needs to be obtained from the Search interface.</p>
+     * <p>In the input parameters, choose either solution_id or journey_param_list. solution_id must be obtained from the Search API.</p>
      * 
      * @param request the request parameters of Enrich  EnrichRequest
      * @return EnrichResponse
@@ -127,33 +116,27 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries luggage through-check information for an itinerary. Provide itinerary information as input, and the API returns whether luggage through-check is supported for the itinerary. Luggage through-check applies to transfer and stopover scenarios.</p>
+     * 
      * @param request the request parameters of LuggageDirect  LuggageDirectRequest
      * @return LuggageDirectResponse
      */
     CompletableFuture<LuggageDirectResponse> luggageDirect(LuggageDirectRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>query order detail</p>
-     * 
      * @param request the request parameters of OrderDetail  OrderDetailRequest
      * @return OrderDetailResponse
      */
     CompletableFuture<OrderDetailResponse> orderDetail(OrderDetailRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>query order list</p>
-     * 
      * @param request the request parameters of OrderList  OrderListRequest
      * @return OrderListResponse
      */
     CompletableFuture<OrderListResponse> orderList(OrderListRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Check is price and remaining seats of solution you selected has changed. You should enter the solution_id returned by enrich.</p>
-     * 
      * @param request the request parameters of Pricing  PricingRequest
      * @return PricingResponse
      */
@@ -178,9 +161,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RefundDetailListResponse> refundDetailList(RefundDetailListRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>Enter the information of departure, arrival, departure date, passenger number and cabin, return the lowest price for each flight.</p>
-     * 
      * @param request the request parameters of Search  SearchRequest
      * @return SearchResponse
      */
@@ -278,7 +258,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Pre-check for Ticketing, this interface is optional to use.</p>
+     * <p>Performs a pre-ticketing check. This operation is optional.</p>
      * 
      * @param request the request parameters of TicketingCheck  TicketingCheckRequest
      * @return TicketingCheckResponse
@@ -286,6 +266,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TicketingCheckResponse> ticketingCheck(TicketingCheckRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries transit visa requirements for a flight itinerary. You provide flight information, and the API returns whether a transit visa is required for the itinerary. Only transfer or stopover segments are valid input parameters (transfers or stopovers passing through a third country). The supported passenger type defaults to Chinese mainland travelers.</p>
+     * 
      * @param request the request parameters of TransitVisa  TransitVisaRequest
      * @return TransitVisaResponse
      */

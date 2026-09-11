@@ -117,6 +117,7 @@ public class GlobalHotelSearchHotelListRequest extends Request {
         } 
 
         /**
+         * <p>The distributor account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class GlobalHotelSearchHotelListRequest extends Request {
         }
 
         /**
+         * <p>The city code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class GlobalHotelSearchHotelListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Pages start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -150,7 +155,10 @@ public class GlobalHotelSearchHotelListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

@@ -89,6 +89,7 @@ public class ChangeConfirmRequest extends Request {
         } 
 
         /**
+         * <p>The change order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,7 @@ public class ChangeConfirmRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ChangeConfirmRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>The language. The buyer account configuration is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);

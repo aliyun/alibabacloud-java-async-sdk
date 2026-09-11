@@ -146,11 +146,11 @@ public class OrderListRequest extends Request {
         } 
 
         /**
-         * <p>latest booking time (timestamp)</p>
+         * <p>The query end time. The value is a 13-digit UNIX timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1677229005000</p>
+         * <p>1677229006000</p>
          */
         public Builder bookTimeEnd(Long bookTimeEnd) {
             this.putQueryParameter("book_time_end", bookTimeEnd);
@@ -159,11 +159,11 @@ public class OrderListRequest extends Request {
         }
 
         /**
-         * <p>earliest book time(timestamp)</p>
+         * <p>The query start time. The value is a 13-digit UNIX timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1677227005000</p>
+         * <p>1677229005000</p>
          */
         public Builder bookTimeStart(Long bookTimeStart) {
             this.putQueryParameter("book_time_start", bookTimeStart);
@@ -172,10 +172,10 @@ public class OrderListRequest extends Request {
         }
 
         /**
-         * <p>pagination query parameters, from which page to start querying,querying starts with 0</p>
+         * <p>The page index. The value starts from 1.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("page_index", pageIndex);
@@ -184,7 +184,7 @@ public class OrderListRequest extends Request {
         }
 
         /**
-         * <p>pagination query parameters, how many orders to return</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -196,12 +196,13 @@ public class OrderListRequest extends Request {
         }
 
         /**
-         * <p>which order status will be query</p>
-         * <p>1: order reservation in process</p>
-         * <p>2: order reservation successful</p>
-         * <p>3: order paid</p>
-         * <p>4: order successful</p>
-         * <p>5: order closed</p>
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>2: order creation succeeded.</li>
+         * <li>3: order paid.</li>
+         * <li>4: order succeeded.</li>
+         * <li>5: order closed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -213,7 +214,7 @@ public class OrderListRequest extends Request {
         }
 
         /**
-         * <p>access token</p>
+         * <p>The access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,7 +227,7 @@ public class OrderListRequest extends Request {
         }
 
         /**
-         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * <p>The language. Default value: the language configured for the buyer account.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

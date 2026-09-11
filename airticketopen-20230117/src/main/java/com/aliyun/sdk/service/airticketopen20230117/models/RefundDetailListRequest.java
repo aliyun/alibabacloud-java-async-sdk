@@ -146,7 +146,7 @@ public class RefundDetailListRequest extends Request {
         } 
 
         /**
-         * <p>Order number</p>
+         * <p>The order number.</p>
          * 
          * <strong>example:</strong>
          * <p>49884*****950</p>
@@ -158,7 +158,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>Page index</p>
+         * <p>The page index.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -170,7 +170,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>Page size</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -182,7 +182,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>Refund order creation start time, UTC timestamp</p>
+         * <p>The start time for refund order creation. The value is a UTC timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>Refund order creation end time, UTC timestamp</p>
+         * <p>The end time for refund order creation. The value is a UTC timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>Access token</p>
+         * <p>The access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +221,7 @@ public class RefundDetailListRequest extends Request {
         }
 
         /**
-         * <p>Multi-language, default to buyer account configuration</p>
+         * <p>The language. Defaults to the buyer account configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

@@ -119,7 +119,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateOrderFailed</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to create order</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -143,7 +149,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique identifier of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -280,7 +292,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency code (present only for AMOUNT type).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -288,7 +303,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>The effective end time (UTC millisecond timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672617600000</p>
              */
             public Builder end(String end) {
                 this.end = end;
@@ -296,7 +314,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PenaltyType.
+             * <p>The penalty type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PERCENTAGE</p>
              */
             public Builder penaltyType(String penaltyType) {
                 this.penaltyType = penaltyType;
@@ -304,7 +325,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PenaltyValue.
+             * <p>The penalty value (percentage/amount/number of nights).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder penaltyValue(String penaltyValue) {
                 this.penaltyValue = penaltyValue;
@@ -312,7 +336,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * <p>The effective start time (UTC millisecond timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672531200000</p>
              */
             public Builder start(String start) {
                 this.start = start;
@@ -403,7 +430,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Penalties.
+             * <p>The list of cancellation penalty details.</p>
              */
             public Builder penalties(java.util.List<Penalties> penalties) {
                 this.penalties = penalties;
@@ -411,7 +438,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The cancellation policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FREE_CANCELLATION</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -502,7 +532,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The amount in the smallest currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -510,7 +543,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -518,10 +554,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
+             * <p>null</p>
              * 
              * <strong>example:</strong>
-             * <p>TracerId</p>
+             * <p>null</p>
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -612,7 +648,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The price.</p>
              */
             public Builder price(Price price) {
                 this.price = price;
@@ -620,10 +656,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
+             * <p>null</p>
              * 
              * <strong>example:</strong>
-             * <p>TracerId</p>
+             * <p>null</p>
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -703,7 +739,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Breakfast included</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -711,7 +750,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * MealType.
+             * <p>The meal type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BREAKFAST</p>
              */
             public Builder mealType(String mealType) {
                 this.mealType = mealType;
@@ -802,7 +844,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The amount in the smallest currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>574</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -810,7 +855,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency code (ISO 4217).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -818,10 +866,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TracerId</p>
+             * <p>null</p>
              * 
              * <strong>example:</strong>
-             * <p>TracerId</p>
+             * <p>null</p>
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -966,7 +1014,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * CancelPolicy.
+             * <p>The cancellation policy.</p>
              */
             public Builder cancelPolicy(CancelPolicy cancelPolicy) {
                 this.cancelPolicy = cancelPolicy;
@@ -974,7 +1022,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * CheckIn.
+             * <p>The check-in date (yyyy-MM-dd).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-01</p>
              */
             public Builder checkIn(String checkIn) {
                 this.checkIn = checkIn;
@@ -982,7 +1033,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * CheckInNumber.
+             * <p>The number of guests checking in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder checkInNumber(Integer checkInNumber) {
                 this.checkInNumber = checkInNumber;
@@ -990,7 +1044,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * CheckOut.
+             * <p>The check-out date (yyyy-MM-dd).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-07-03</p>
              */
             public Builder checkOut(String checkOut) {
                 this.checkOut = checkOut;
@@ -998,7 +1055,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * DailyPrices.
+             * <p>The list of nightly rates.</p>
              */
             public Builder dailyPrices(java.util.List<DailyPrices> dailyPrices) {
                 this.dailyPrices = dailyPrices;
@@ -1006,7 +1063,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Meal.
+             * <p>The meal information.</p>
              */
             public Builder meal(Meal meal) {
                 this.meal = meal;
@@ -1014,7 +1071,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RoomCount.
+             * <p>The number of rooms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder roomCount(Integer roomCount) {
                 this.roomCount = roomCount;
@@ -1022,7 +1082,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPrice.
+             * <p>The total selling price.</p>
              */
             public Builder totalPrice(TotalPrice totalPrice) {
                 this.totalPrice = totalPrice;
@@ -1102,7 +1162,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The amount in the smallest currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -1110,7 +1173,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency code (ISO 4217).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -1214,7 +1280,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The payment amount.</p>
              */
             public Builder amount(Amount amount) {
                 this.amount = amount;
@@ -1222,7 +1288,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * GmtPaid.
+             * <p>The payment completion time (UTC millisecond timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672531200000</p>
              */
             public Builder gmtPaid(String gmtPaid) {
                 this.gmtPaid = gmtPaid;
@@ -1230,7 +1299,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentMethod.
+             * <p>The payment method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BALANCE</p>
              */
             public Builder paymentMethod(String paymentMethod) {
                 this.paymentMethod = paymentMethod;
@@ -1238,7 +1310,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentTransactionId.
+             * <p>The payment transaction ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAY202606290001</p>
              */
             public Builder paymentTransactionId(String paymentTransactionId) {
                 this.paymentTransactionId = paymentTransactionId;
@@ -1318,7 +1393,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The amount in the smallest currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -1326,7 +1404,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency code (ISO 4217).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -1417,7 +1498,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The amount in the smallest currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -1425,7 +1509,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency code (ISO 4217).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -1568,7 +1655,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>The refund order creation time (UTC millisecond timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672531200000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1576,7 +1666,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RefundOrderNo.
+             * <p>The external refund order number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RF202606290001</p>
              */
             public Builder refundOrderNo(String refundOrderNo) {
                 this.refundOrderNo = refundOrderNo;
@@ -1584,7 +1677,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RefundTransactionId.
+             * <p>The refund transaction ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TXN001</p>
              */
             public Builder refundTransactionId(String refundTransactionId) {
                 this.refundTransactionId = refundTransactionId;
@@ -1592,7 +1688,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RejectReason.
+             * <p>The rejection reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Supplier rejected</p>
              */
             public Builder rejectReason(String rejectReason) {
                 this.rejectReason = rejectReason;
@@ -1600,7 +1699,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The unified refund status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>REFUNDED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1608,7 +1710,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPenaltyAmount.
+             * <p>The penalty amount on the sales side.</p>
              */
             public Builder totalPenaltyAmount(TotalPenaltyAmount totalPenaltyAmount) {
                 this.totalPenaltyAmount = totalPenaltyAmount;
@@ -1616,7 +1718,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRefundAmount.
+             * <p>The actual refund amount.</p>
              */
             public Builder totalRefundAmount(TotalRefundAmount totalRefundAmount) {
                 this.totalRefundAmount = totalRefundAmount;
@@ -1696,7 +1798,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * FirstName.
+             * <p>The first name of the guest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -1704,7 +1809,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * LastName.
+             * <p>The last name of the guest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Doe</p>
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -1808,7 +1916,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfirmationId.
+             * <p>The room confirmation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONF001</p>
              */
             public Builder confirmationId(String confirmationId) {
                 this.confirmationId = confirmationId;
@@ -1816,7 +1927,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Guests.
+             * <p>The list of guests.</p>
              */
             public Builder guests(java.util.List<Guests> guests) {
                 this.guests = guests;
@@ -1824,7 +1935,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RoomIndex.
+             * <p>The room index, starting from 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder roomIndex(Integer roomIndex) {
                 this.roomIndex = roomIndex;
@@ -1832,7 +1946,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The fulfillment status (PENDING_CHECKIN/CHECKED_IN/CHECKED_OUT/CANCELLED). The value is null before the fulfillment is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECKED_IN</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2016,7 +2133,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * BuyerId.
+             * <p>The buyer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder buyerId(String buyerId) {
                 this.buyerId = buyerId;
@@ -2024,7 +2144,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalOrderNo.
+             * <p>The external order number of the buyer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXT_ORDER_001</p>
              */
             public Builder externalOrderNo(String externalOrderNo) {
                 this.externalOrderNo = externalOrderNo;
@@ -2032,7 +2155,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time (UTC millisecond timestamp).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672531200000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -2040,7 +2166,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * ItemInfo.
+             * <p>The item information.</p>
              */
             public Builder itemInfo(ItemInfo itemInfo) {
                 this.itemInfo = itemInfo;
@@ -2048,7 +2174,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * OrderNo.
+             * <p>The order number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SO202606290001</p>
              */
             public Builder orderNo(String orderNo) {
                 this.orderNo = orderNo;
@@ -2056,7 +2185,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Payment.
+             * <p>The payment information.</p>
              */
             public Builder payment(Payment payment) {
                 this.payment = payment;
@@ -2064,7 +2193,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RefundOrders.
+             * <p>The list of refund orders.</p>
              */
             public Builder refundOrders(java.util.List<RefundOrders> refundOrders) {
                 this.refundOrders = refundOrders;
@@ -2072,7 +2201,7 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * RoomStays.
+             * <p>The list of room stays.</p>
              */
             public Builder roomStays(java.util.List<RoomStays> roomStays) {
                 this.roomStays = roomStays;
@@ -2080,7 +2209,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * SalesChannel.
+             * <p>The sales channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POP</p>
              */
             public Builder salesChannel(String salesChannel) {
                 this.salesChannel = salesChannel;
@@ -2088,7 +2220,10 @@ public class GlobalHotelQueryOrderResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The unified order status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONFIRMED</p>
              */
             public Builder status(String status) {
                 this.status = status;

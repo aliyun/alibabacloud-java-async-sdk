@@ -177,6 +177,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends Request {
         } 
 
         /**
+         * <p>The distributor account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +190,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The number of adults.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,6 +203,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The end date of the check-in date range to query, in the yyyy-MM-dd format. The date cannot be earlier than the start date. The date range is inclusive and supports a maximum of 30 days.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,6 +216,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The start date of the check-in date range to query, in the yyyy-MM-dd format. The date cannot be earlier than the current day.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +229,10 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends Request {
         }
 
         /**
-         * ChildCount.
+         * <p>The number of children.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder childCount(Integer childCount) {
             this.putBodyParameter("ChildCount", childCount);
@@ -234,7 +241,10 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends Request {
         }
 
         /**
-         * ChildrenAges.
+         * <p>The list of children ages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder childrenAges(java.util.List<Integer> childrenAges) {
             String childrenAgesShrink = shrink(childrenAges, "ChildrenAges", "json");
@@ -244,6 +254,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The number of rooms.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,6 +267,7 @@ public class GlobalHotelQueryCalendarAvailabilityRequest extends Request {
         }
 
         /**
+         * <p>The list of standard hotel IDs on the platform. A maximum of 10 IDs are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

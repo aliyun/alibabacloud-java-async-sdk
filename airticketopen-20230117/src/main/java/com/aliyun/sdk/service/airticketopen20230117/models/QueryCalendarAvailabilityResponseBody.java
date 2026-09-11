@@ -159,10 +159,7 @@ public class QueryCalendarAvailabilityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>TraceId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TraceId</p>
+         * TracerId.
          */
         public Builder tracerId(String tracerId) {
             this.tracerId = tracerId;
@@ -353,10 +350,7 @@ public class QueryCalendarAvailabilityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>TraceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TraceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;

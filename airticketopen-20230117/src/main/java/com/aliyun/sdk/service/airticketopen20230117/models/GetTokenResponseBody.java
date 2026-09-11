@@ -132,7 +132,7 @@ public class GetTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request RequestId</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -143,7 +143,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Correctly processed return data</p>
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Business error code</p>
+         * <p>The business error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -162,7 +162,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data carried during error handling</p>
+         * <p>The data returned with an error response.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -173,7 +173,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -184,7 +184,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>When the HTTP request is successful, the status value is 200.</p>
+         * <p>The HTTP status code. The value is always 200 for successful HTTP requests.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether it is correct</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -277,7 +277,7 @@ public class GetTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Remaining valid time of the token in seconds</p>
+             * <p>The remaining validity period of the token. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>7200</p>
@@ -288,7 +288,7 @@ public class GetTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Timestamp of token generation in seconds</p>
+             * <p>The UNIX timestamp when the token was generated. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1677055176</p>

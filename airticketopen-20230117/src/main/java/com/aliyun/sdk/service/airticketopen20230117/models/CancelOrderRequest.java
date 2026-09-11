@@ -113,10 +113,7 @@ public class CancelOrderRequest extends Request {
         }
 
         /**
-         * <p>TraceId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TraceId</p>
+         * TracerId.
          */
         public Builder tracerId(String tracerId) {
             this.putBodyParameter("TracerId", tracerId);

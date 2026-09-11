@@ -89,7 +89,7 @@ public class CancelRequest extends Request {
         } 
 
         /**
-         * <p>order number</p>
+         * <p>The order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CancelRequest extends Request {
         }
 
         /**
-         * <p>access token</p>
+         * <p>access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class CancelRequest extends Request {
         }
 
         /**
-         * <p>language code(refer to ISO_639), defaults to buyer account configuration</p>
+         * <p>The language. The buyer account configuration is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

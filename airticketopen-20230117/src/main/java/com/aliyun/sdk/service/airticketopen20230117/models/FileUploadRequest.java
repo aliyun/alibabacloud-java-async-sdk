@@ -104,6 +104,7 @@ public class FileUploadRequest extends Request {
         } 
 
         /**
+         * <p>The Base64-encoded string of the attachment image file. Supported image types: .jpg, .png, and .jpeg.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +119,7 @@ public class FileUploadRequest extends Request {
         }
 
         /**
+         * <p>The forward order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +132,7 @@ public class FileUploadRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>The access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +145,10 @@ public class FileUploadRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>The language setting. Uses the buyer account configuration by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);

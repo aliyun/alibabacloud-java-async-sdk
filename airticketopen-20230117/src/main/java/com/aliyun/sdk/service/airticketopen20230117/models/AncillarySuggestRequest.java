@@ -89,7 +89,7 @@ public class AncillarySuggestRequest extends Request {
         } 
 
         /**
-         * <p>solution_id returned by enrich</p>
+         * <p>The solution_id of the flight.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class AncillarySuggestRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>The access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class AncillarySuggestRequest extends Request {
         }
 
         /**
-         * <p>Language Code(refer to ISO_639)</p>
+         * <p>The language setting. Defaults to the buyer account configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

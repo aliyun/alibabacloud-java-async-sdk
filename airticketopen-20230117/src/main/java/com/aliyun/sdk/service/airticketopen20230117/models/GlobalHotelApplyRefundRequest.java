@@ -103,6 +103,7 @@ public class GlobalHotelApplyRefundRequest extends Request {
         } 
 
         /**
+         * <p>The distributor account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class GlobalHotelApplyRefundRequest extends Request {
         }
 
         /**
+         * <p>The sales order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class GlobalHotelApplyRefundRequest extends Request {
         }
 
         /**
-         * RefundReason.
+         * <p>The refund reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GUEST_REQUEST</p>
          */
         public Builder refundReason(String refundReason) {
             this.putBodyParameter("RefundReason", refundReason);

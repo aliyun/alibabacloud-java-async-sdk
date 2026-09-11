@@ -75,7 +75,7 @@ public class GetTokenRequest extends Request {
         } 
 
         /**
-         * <p>appKey</p>
+         * <p>The appKey.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetTokenRequest extends Request {
         }
 
         /**
-         * <p>appSecret</p>
+         * <p>The appSecret.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

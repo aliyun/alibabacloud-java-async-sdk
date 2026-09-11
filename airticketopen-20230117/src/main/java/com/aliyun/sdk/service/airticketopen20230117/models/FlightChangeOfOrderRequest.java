@@ -89,7 +89,7 @@ public class FlightChangeOfOrderRequest extends Request {
         } 
 
         /**
-         * <p>Order Number</p>
+         * <p>The order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class FlightChangeOfOrderRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class FlightChangeOfOrderRequest extends Request {
         }
 
         /**
-         * <p>Multi-language, default to buyer account configuration</p>
+         * <p>The language setting. Defaults to the buyer account configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>

@@ -260,7 +260,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Weight of checked baggage</p>
+         * <p>Checked baggage weight</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -271,7 +271,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Unit of checked baggage weight (KG)</p>
+         * <p>Checked baggage weight unit KG</p>
          * 
          * <strong>example:</strong>
          * <p>KG</p>
@@ -282,7 +282,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Whether the weight applies to all checked baggage</p>
+         * <p>Whether it is total checked baggage weight</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -304,7 +304,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Weight of carry-on baggage</p>
+         * <p>Carry-on baggage weight</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -315,7 +315,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Carry-on luggage weight unit KG</p>
+         * <p>Carry-on baggage weight unit KG</p>
          * 
          * <strong>example:</strong>
          * <p>KG</p>
@@ -326,7 +326,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Whether it is the total carry-on luggage weight</p>
+         * <p>Whether it is total carry-on baggage weight</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -337,10 +337,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Carry-on luggage length (unit: centimeters)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>55</p>
+         * carry_length.
          */
         public Builder carryLength(Integer carryLength) {
             this.carryLength = carryLength;
@@ -348,10 +345,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Carry-on luggage width (unit: centimeters)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
+         * carry_width.
          */
         public Builder carryWidth(Integer carryWidth) {
             this.carryWidth = carryWidth;
@@ -359,10 +353,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Carry-on luggage height (unit: centimeters)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
+         * carry_height.
          */
         public Builder carryHeight(Integer carryHeight) {
             this.carryHeight = carryHeight;
@@ -370,10 +361,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Sum of three sides of the Carry-on luggage (unit: centimeters)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>115</p>
+         * carry_sum_of_length_width_height.
          */
         public Builder carrySumOfLengthWidthHeight(Integer carrySumOfLengthWidthHeight) {
             this.carrySumOfLengthWidthHeight = carrySumOfLengthWidthHeight;
@@ -381,10 +369,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Check-in luggage length (unit: centimeters)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
+         * length.
          */
         public Builder length(Integer length) {
             this.length = length;
@@ -392,10 +377,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Check-in luggage width (unit: centimeters)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40</p>
+         * width.
          */
         public Builder width(Integer width) {
             this.width = width;
@@ -403,10 +385,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Check-in luggage height (unit: centimeters)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60</p>
+         * height.
          */
         public Builder height(Integer height) {
             this.height = height;
@@ -414,10 +393,7 @@ public class DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceM
         }
 
         /**
-         * <p>Sum of three sides of the Check-in luggage (unit: centimeters)</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * sum_of_length_width_height.
          */
         public Builder sumOfLengthWidthHeight(Integer sumOfLengthWidthHeight) {
             this.sumOfLengthWidthHeight = sumOfLengthWidthHeight;

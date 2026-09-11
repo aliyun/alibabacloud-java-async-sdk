@@ -132,6 +132,7 @@ public class AccountFlowListRequest extends Request {
         } 
 
         /**
+         * <p>The number of days to search. Maximum value: 30. Valid values: 0 to 30.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +145,10 @@ public class AccountFlowListRequest extends Request {
         }
 
         /**
-         * page_index.
+         * <p>The page index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("page_index", pageIndex);
@@ -153,7 +157,10 @@ public class AccountFlowListRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -162,6 +169,7 @@ public class AccountFlowListRequest extends Request {
         }
 
         /**
+         * <p>The start search timestamp, effective to the day. Specify a 13-digit UTC timestamp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +182,7 @@ public class AccountFlowListRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +195,10 @@ public class AccountFlowListRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>The language. Default value: the language configured for the buyer account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);

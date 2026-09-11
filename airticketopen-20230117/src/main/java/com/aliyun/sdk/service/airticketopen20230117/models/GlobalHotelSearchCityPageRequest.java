@@ -117,6 +117,7 @@ public class GlobalHotelSearchCityPageRequest extends Request {
         } 
 
         /**
+         * <p>The distributor account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +130,7 @@ public class GlobalHotelSearchCityPageRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +143,10 @@ public class GlobalHotelSearchCityPageRequest extends Request {
         }
 
         /**
-         * CountryCode.
+         * <p>The country code in ISO 3166-1 alpha-2 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder countryCode(String countryCode) {
             this.putBodyParameter("CountryCode", countryCode);
@@ -150,7 +155,10 @@ public class GlobalHotelSearchCityPageRequest extends Request {
         }
 
         /**
-         * Start.
+         * <p>The pagination offset. Starts from 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder start(Integer start) {
             this.putBodyParameter("Start", start);

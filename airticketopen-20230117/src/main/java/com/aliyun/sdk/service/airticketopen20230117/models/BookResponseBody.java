@@ -132,7 +132,7 @@ public class BookResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -143,7 +143,7 @@ public class BookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>data</p>
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class BookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error code</p>
+         * <p>The business error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -162,7 +162,7 @@ public class BookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error data</p>
+         * <p>The data returned with the error.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -173,7 +173,7 @@ public class BookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -184,7 +184,7 @@ public class BookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>http reqeust has been processed successfully，status code is 200</p>
+         * <p>The HTTP status code. The value is always 200 for successful HTTP requests.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class BookResponseBody extends TeaModel {
         }
 
         /**
-         * <p>true represents success, false represents failure</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -443,7 +443,7 @@ public class BookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>order number</p>
+             * <p>The order number.</p>
              * 
              * <strong>example:</strong>
              * <p>4966***617111</p>
@@ -500,7 +500,7 @@ public class BookResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>order information list</p>
+             * <p>The list of order information.</p>
              */
             public Builder orderList(java.util.List<OrderList> orderList) {
                 this.orderList = orderList;
@@ -746,7 +746,7 @@ public class BookResponseBody extends TeaModel {
             }
 
             /**
-             * <p>order number</p>
+             * <p>The order number.</p>
              * 
              * <strong>example:</strong>
              * <p>4966***617111</p>
@@ -803,7 +803,7 @@ public class BookResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>order information list. When the same input parameters are used to repeat a Book, if the booking has already been successful, the order number will be returned.</p>
+             * <p>The list of order information. If you call the Book operation again with the same parameters after a successful booking, the order number is returned.</p>
              */
             public Builder orderList(java.util.List<ErrorDataOrderList> orderList) {
                 this.orderList = orderList;

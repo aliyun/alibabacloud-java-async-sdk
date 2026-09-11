@@ -119,7 +119,7 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateOrderFailed</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Failed to create order</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -143,7 +149,10 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +253,10 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The amount in the smallest currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -249,7 +264,10 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency code in ISO 4217 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -340,7 +358,10 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
             } 
 
             /**
-             * Amount.
+             * <p>The amount in the smallest currency unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -348,7 +369,10 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * <p>The currency code in ISO 4217 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -452,7 +476,10 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
             } 
 
             /**
-             * RefundOrderNo.
+             * <p>The after-sales refund order number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RF202606290001</p>
              */
             public Builder refundOrderNo(String refundOrderNo) {
                 this.refundOrderNo = refundOrderNo;
@@ -460,7 +487,7 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPenaltyAmount.
+             * <p>The total penalty amount.</p>
              */
             public Builder totalPenaltyAmount(TotalPenaltyAmount totalPenaltyAmount) {
                 this.totalPenaltyAmount = totalPenaltyAmount;
@@ -468,7 +495,7 @@ public class GlobalHotelApplyRefundResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRefundAmount.
+             * <p>The total refund amount.</p>
              */
             public Builder totalRefundAmount(TotalRefundAmount totalRefundAmount) {
                 this.totalRefundAmount = totalRefundAmount;

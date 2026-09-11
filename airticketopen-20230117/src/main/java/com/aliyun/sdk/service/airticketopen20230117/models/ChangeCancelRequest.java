@@ -89,6 +89,7 @@ public class ChangeCancelRequest extends Request {
         } 
 
         /**
+         * <p>Change order number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ChangeCancelRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>Language. Uses the buyer account configuration by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);

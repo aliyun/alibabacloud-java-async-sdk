@@ -88,7 +88,7 @@ public class TransitVisaRequest extends Request {
         } 
 
         /**
-         * flight_segment_param_list.
+         * <p>The list of flight segments that constitute an itinerary. Maximum size: 2.</p>
          */
         public Builder flightSegmentParamList(java.util.List<FlightSegmentParamList> flightSegmentParamList) {
             String flightSegmentParamListShrink = shrink(flightSegmentParamList, "flight_segment_param_list", "json");
@@ -98,7 +98,7 @@ public class TransitVisaRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>The access token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,10 @@ public class TransitVisaRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>The language. Defaults to the buyer account configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);
@@ -316,6 +319,7 @@ public class TransitVisaRequest extends Request {
             } 
 
             /**
+             * <p>The three-letter IATA code of the arrival airport.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -327,7 +331,10 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
-             * arrival_terminal.
+             * <p>The arrival terminal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder arrivalTerminal(String arrivalTerminal) {
                 this.arrivalTerminal = arrivalTerminal;
@@ -335,6 +342,7 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
+             * <p>The arrival time. A 13-digit UNIX timestamp.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -346,6 +354,7 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
+             * <p>Indicates whether the flight is a codeshare flight.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -357,6 +366,7 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
+             * <p>The three-letter IATA code of the departure airport.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -368,7 +378,10 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
-             * departure_terminal.
+             * <p>The departure terminal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1</p>
              */
             public Builder departureTerminal(String departureTerminal) {
                 this.departureTerminal = departureTerminal;
@@ -376,6 +389,7 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
+             * <p>The departure time. A 13-digit UNIX timestamp.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -387,6 +401,7 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
+             * <p>The marketing airline.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -398,6 +413,7 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
+             * <p>The flight number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -409,7 +425,10 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
-             * operating_airline.
+             * <p>The operating airline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CZ</p>
              */
             public Builder operatingAirline(String operatingAirline) {
                 this.operatingAirline = operatingAirline;
@@ -417,7 +436,10 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
-             * stop_city_list.
+             * <p>The three-letter IATA codes of stopover cities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SEL,HKG</p>
              */
             public Builder stopCityList(String stopCityList) {
                 this.stopCityList = stopCityList;
@@ -425,7 +447,10 @@ public class TransitVisaRequest extends Request {
             }
 
             /**
-             * ticketing_airline.
+             * <p>The ticketing airline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CZ</p>
              */
             public Builder ticketingAirline(String ticketingAirline) {
                 this.ticketingAirline = ticketingAirline;

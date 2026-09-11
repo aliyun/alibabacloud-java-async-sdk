@@ -93,7 +93,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
         } 
 
         /**
-         * <p>refund rule for fully-unused tickets</p>
+         * <p>全程未使用退票规则</p>
          */
         public Builder refundRuleAllUnusedList(java.util.List<RefundRuleAllUnusedList> refundRuleAllUnusedList) {
             this.refundRuleAllUnusedList = refundRuleAllUnusedList;
@@ -101,7 +101,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
         }
 
         /**
-         * <p>refund rule for partially-used tickets</p>
+         * <p>部分未使用退票规则</p>
          */
         public Builder refundRulePartUnusedList(java.util.List<RefundRulePartUnusedList> refundRulePartUnusedList) {
             this.refundRulePartUnusedList = refundRulePartUnusedList;
@@ -109,7 +109,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
         }
 
         /**
-         * <p>change rule for inbound segment unused tickets</p>
+         * <p>回程未使用改签规则</p>
          */
         public Builder changeRuleInUnusedList(java.util.List<ChangeRuleInUnusedList> changeRuleInUnusedList) {
             this.changeRuleInUnusedList = changeRuleInUnusedList;
@@ -117,7 +117,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
         }
 
         /**
-         * <p>change rule for outbound-flight-unused tickets</p>
+         * <p>去程未使用改签规则</p>
          */
         public Builder changeRuleOutUnusedList(java.util.List<ChangeRuleOutUnusedList> changeRuleOutUnusedList) {
             this.changeRuleOutUnusedList = changeRuleOutUnusedList;
@@ -261,7 +261,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             } 
 
             /**
-             * <p>type: 0 - fully-unused ticket; 1 - partially used ticket</p>
+             * <p>该退票规则适用航程使用类型 0:全程未使用; 1:部分未使用</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -272,7 +272,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>time unit: day/hour</p>
+             * <p>时间单位：day/hour</p>
              * 
              * <strong>example:</strong>
              * <p>hour</p>
@@ -283,7 +283,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>applicable refund rule start time, time unit (day/hour)</p>
+             * <p>该退票规则适用于的退票时间区间开始时间，单位（天/小时）</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -294,7 +294,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>applicable refund rule end time, time unit (day/hour)</p>
+             * <p>该退票规则适用于的退票时间区间结束时间，单位（天/小时）</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -305,7 +305,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>whether refundable X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 可否退票</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -316,7 +316,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>refund fee X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 退票手续费</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -327,7 +327,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>whether tax is fully refundable X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 是否全额退税</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -338,7 +338,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>tax amount refundable X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 可部分退税金额</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -486,7 +486,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             } 
 
             /**
-             * <p>type: 0 - fully-unused ticket; 1 - partially used ticket</p>
+             * <p>该退票规则适用航程使用类型 0:全程未使用; 1:部分未使用</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -497,7 +497,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>time unit: day/hour</p>
+             * <p>时间单位：day/hour</p>
              * 
              * <strong>example:</strong>
              * <p>hour</p>
@@ -508,7 +508,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>applicable refund rule start time, time unit (day/hour)</p>
+             * <p>该退票规则适用于的退票时间区间开始时间，单位（天/小时）</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -519,7 +519,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>applicable refund rule end time, time unit (day/hour)</p>
+             * <p>该退票规则适用于的退票时间区间结束时间，单位（天/小时）</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -530,7 +530,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>whether refundable X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 可否退票</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -541,7 +541,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>refund fee X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 退票手续费</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -552,7 +552,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>whether tax is fully refundable X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 是否全额退税</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -563,7 +563,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>tax amount refundable X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 可部分退税金额</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -685,7 +685,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             } 
 
             /**
-             * <p>type: 2 - outbound segment unused; 3 - inbound segment unused</p>
+             * <p>该改签规则适用航程使用类型 2:去程未使用; 3:回程未使用</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -696,7 +696,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>time unit: day/hour</p>
+             * <p>时间单位：day/hour</p>
              * 
              * <strong>example:</strong>
              * <p>hour</p>
@@ -707,7 +707,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>applicable change rule start time, time unit (day/hour)</p>
+             * <p>该退票规则适用于的退票时间区间开始时间，单位（天/小时）</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -718,7 +718,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>applicable change rule end time, time unit (day/hour)</p>
+             * <p>该退票规则适用于的退票时间区间结束时间，单位（天/小时）</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -729,7 +729,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>whether changeable X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 可否可以改签</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -740,7 +740,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>change fee X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 改签费</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -862,7 +862,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             } 
 
             /**
-             * <p>type: 2 - outbound segment unused; 3 - inbound segment unused</p>
+             * <p>该改签规则适用航程使用类型 2:去程未使用; 3:回程未使用</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -873,7 +873,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>time unit: day/hour</p>
+             * <p>时间单位：day/hour</p>
              * 
              * <strong>example:</strong>
              * <p>hour</p>
@@ -884,7 +884,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>applicable change rule start time, time unit (day/hour)</p>
+             * <p>该退票规则适用于的退票时间区间开始时间，单位（天/小时）</p>
              * 
              * <strong>example:</strong>
              * <p>36</p>
@@ -895,7 +895,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>applicable change rule end time, time unit (day/hour)</p>
+             * <p>该退票规则适用于的退票时间区间结束时间，单位（天/小时）</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -906,7 +906,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>whether changeable X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 可否可以改签</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -917,7 +917,7 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             }
 
             /**
-             * <p>change fee X-Y hour(day) before departure</p>
+             * <p>起飞前X-Y小时(天) 改签费</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

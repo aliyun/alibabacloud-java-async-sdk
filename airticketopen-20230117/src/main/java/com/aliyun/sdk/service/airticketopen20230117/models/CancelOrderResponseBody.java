@@ -138,10 +138,7 @@ public class CancelOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>TraceId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TraceId</p>
+         * TracerId.
          */
         public Builder tracerId(String tracerId) {
             this.tracerId = tracerId;

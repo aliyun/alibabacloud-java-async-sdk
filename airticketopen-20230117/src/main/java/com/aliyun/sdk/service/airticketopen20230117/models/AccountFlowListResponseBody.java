@@ -132,7 +132,10 @@ public class AccountFlowListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,7 +143,7 @@ public class AccountFlowListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +151,10 @@ public class AccountFlowListResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>The business error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +162,10 @@ public class AccountFlowListResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>The data returned with the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -164,7 +173,10 @@ public class AccountFlowListResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -172,7 +184,10 @@ public class AccountFlowListResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The HTTP status code. The value is always 200 for successful HTTP requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -180,7 +195,10 @@ public class AccountFlowListResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -376,7 +394,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             } 
 
             /**
-             * after_available_amount.
+             * <p>The available balance after the operation, in CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder afterAvailableAmount(Double afterAvailableAmount) {
                 this.afterAvailableAmount = afterAvailableAmount;
@@ -384,7 +405,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * before_available_amount.
+             * <p>The available balance before the operation, in CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1950.5</p>
              */
             public Builder beforeAvailableAmount(Double beforeAvailableAmount) {
                 this.beforeAvailableAmount = beforeAvailableAmount;
@@ -392,7 +416,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * change_order_num.
+             * <p>The change order number. This value is not empty if the flow is related to a ticket change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49880***971</p>
              */
             public Builder changeOrderNum(Long changeOrderNum) {
                 this.changeOrderNum = changeOrderNum;
@@ -400,7 +427,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * flow_id.
+             * <p>The flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1627239841225842666</p>
              */
             public Builder flowId(Long flowId) {
                 this.flowId = flowId;
@@ -408,7 +438,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * gmt_create.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1676799185000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -416,7 +449,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * gmt_modified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1676966530000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -424,7 +460,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * op_amount.
+             * <p>The operation amount, in CNY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>950.5</p>
              */
             public Builder opAmount(Double opAmount) {
                 this.opAmount = opAmount;
@@ -432,7 +471,15 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * op_type.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li>1: payment</li>
+             * <li>2: refund</li>
+             * <li>3: top-up.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder opType(Integer opType) {
                 this.opType = opType;
@@ -440,7 +487,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * order_num.
+             * <p>The original order number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4988430***971</p>
              */
             public Builder orderNum(Long orderNum) {
                 this.orderNum = orderNum;
@@ -448,7 +498,15 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * order_type.
+             * <p>The order type. Valid values:</p>
+             * <ul>
+             * <li>0: original transaction</li>
+             * <li>1: change order payment</li>
+             * <li>2: refund.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderType(Integer orderType) {
                 this.orderType = orderType;
@@ -456,7 +514,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * out_order_num.
+             * <p>The external order number of the original order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4988430***971</p>
              */
             public Builder outOrderNum(String outOrderNum) {
                 this.outOrderNum = outOrderNum;
@@ -464,7 +525,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * refund_order_num.
+             * <p>The refund order number. This value is not empty if the flow is related to a refund.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48430***971</p>
              */
             public Builder refundOrderNum(Long refundOrderNum) {
                 this.refundOrderNum = refundOrderNum;
@@ -557,7 +621,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             } 
 
             /**
-             * current_page.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -565,7 +632,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -573,7 +643,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -581,7 +654,10 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * total_page.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPage(Integer totalPage) {
                 this.totalPage = totalPage;
@@ -648,7 +724,7 @@ public class AccountFlowListResponseBody extends TeaModel {
             } 
 
             /**
-             * list.
+             * <p>The data list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -656,7 +732,7 @@ public class AccountFlowListResponseBody extends TeaModel {
             }
 
             /**
-             * pagination.
+             * <p>The pagination information.</p>
              */
             public Builder pagination(Pagination pagination) {
                 this.pagination = pagination;

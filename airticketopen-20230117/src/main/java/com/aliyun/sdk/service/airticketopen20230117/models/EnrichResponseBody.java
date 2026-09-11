@@ -132,7 +132,7 @@ public class EnrichResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>request RequestId</p>
+         * <p>Request RequestId</p>
          * 
          * <strong>example:</strong>
          * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -143,7 +143,7 @@ public class EnrichResponseBody extends TeaModel {
         }
 
         /**
-         * <p>correctly processed return data</p>
+         * <p>Data returned on successful processing</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class EnrichResponseBody extends TeaModel {
         }
 
         /**
-         * <p>business error code</p>
+         * <p>Business error code</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -162,7 +162,7 @@ public class EnrichResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data carried in error handling</p>
+         * <p>Data carried on error processing</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -173,7 +173,7 @@ public class EnrichResponseBody extends TeaModel {
         }
 
         /**
-         * <p>error message</p>
+         * <p>Error message</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -184,7 +184,7 @@ public class EnrichResponseBody extends TeaModel {
         }
 
         /**
-         * <p>http request successful, status value is 200</p>
+         * <p>When HTTP request succeeds, status value is always 200</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class EnrichResponseBody extends TeaModel {
         }
 
         /**
-         * <p>whether the request was successful</p>
+         * <p>Whether successful</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -257,6 +257,9 @@ public class EnrichResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("equip_type")
         private String equipType;
 
+        @com.aliyun.core.annotation.NameInMap("fare_basis")
+        private String fareBasis;
+
         @com.aliyun.core.annotation.NameInMap("flight_duration")
         private Integer flightDuration;
 
@@ -298,6 +301,7 @@ public class EnrichResponseBody extends TeaModel {
             this.departureTerminal = builder.departureTerminal;
             this.departureTime = builder.departureTime;
             this.equipType = builder.equipType;
+            this.fareBasis = builder.fareBasis;
             this.flightDuration = builder.flightDuration;
             this.marketingAirline = builder.marketingAirline;
             this.marketingFlightNo = builder.marketingFlightNo;
@@ -409,6 +413,13 @@ public class EnrichResponseBody extends TeaModel {
         }
 
         /**
+         * @return fareBasis
+         */
+        public String getFareBasis() {
+            return this.fareBasis;
+        }
+
+        /**
          * @return flightDuration
          */
         public Integer getFlightDuration() {
@@ -485,6 +496,7 @@ public class EnrichResponseBody extends TeaModel {
             private String departureTerminal; 
             private String departureTime; 
             private String equipType; 
+            private String fareBasis; 
             private Integer flightDuration; 
             private String marketingAirline; 
             private String marketingFlightNo; 
@@ -512,6 +524,7 @@ public class EnrichResponseBody extends TeaModel {
                 this.departureTerminal = model.departureTerminal;
                 this.departureTime = model.departureTime;
                 this.equipType = model.equipType;
+                this.fareBasis = model.fareBasis;
                 this.flightDuration = model.flightDuration;
                 this.marketingAirline = model.marketingAirline;
                 this.marketingFlightNo = model.marketingFlightNo;
@@ -524,7 +537,7 @@ public class EnrichResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Three-letter code of the arrival airport (uppercase)</p>
+             * <p>Flight arrival airport code (3-letter uppercase)</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -535,7 +548,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Three-letter code of the arrival city (uppercase)</p>
+             * <p>Flight arrival city code (3-letter uppercase)</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -546,7 +559,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Arrival terminal of the flight</p>
+             * <p>Flight arrival terminal</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -557,7 +570,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Arrival date and time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>Flight arrival date and time, string format (yyyy-MM-dd HH:mm:ss)</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10 10:40:00</p>
@@ -568,7 +581,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of remaining seats. The value range is 1,2,3,4,5,6,7,8,9,A; A indicates more than 9 seats available.</p>
+             * <p>Remaining seats. Value range: 1,2,3,4,5,6,7,8,9,A; A indicates more than 9 remaining seats.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -579,7 +592,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cabin class</p>
+             * <p>Booking class</p>
              * 
              * <strong>example:</strong>
              * <p>V</p>
@@ -590,7 +603,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cabin grade</p>
+             * <p>Cabin class</p>
              * 
              * <strong>example:</strong>
              * <p>Y</p>
@@ -601,7 +614,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is a code-share flight</p>
+             * <p>Whether it is a codeshare flight</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -612,7 +625,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Three-letter code of the departure airport (uppercase)</p>
+             * <p>Flight departure airport code (3-letter uppercase)</p>
              * 
              * <strong>example:</strong>
              * <p>PVG</p>
@@ -623,7 +636,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Three-letter code of the departure city (uppercase)</p>
+             * <p>Flight departure city code (3-letter uppercase)</p>
              * 
              * <strong>example:</strong>
              * <p>SHA</p>
@@ -634,7 +647,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Departure terminal of the flight</p>
+             * <p>Flight departure terminal</p>
              * 
              * <strong>example:</strong>
              * <p>T2</p>
@@ -645,7 +658,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Departure date and time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>Flight departure date and time, string format (yyyy-MM-dd HH:mm:ss)</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10 07:55:00</p>
@@ -667,7 +680,15 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Flight duration in minutes</p>
+             * fare_basis.
+             */
+            public Builder fareBasis(String fareBasis) {
+                this.fareBasis = fareBasis;
+                return this;
+            }
+
+            /**
+             * <p>Flight duration, unit: minutes</p>
              * 
              * <strong>example:</strong>
              * <p>165</p>
@@ -678,7 +699,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Marketing airline (e.g., KA)</p>
+             * <p>Marketing carrier airline (e.g., KA)</p>
              * 
              * <strong>example:</strong>
              * <p>HO</p>
@@ -689,7 +710,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Marketing flight number (e.g., KA5809)</p>
+             * <p>Marketing carrier flight number (e.g., KA5809)</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295</p>
@@ -700,7 +721,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Marketing flight number in digits (e.g., 5809)</p>
+             * <p>Marketing carrier numeric flight number (e.g., 5809)</p>
              * 
              * <strong>example:</strong>
              * <p>1295</p>
@@ -711,7 +732,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operating airline (e.g., CX)</p>
+             * <p>Operating carrier airline (e.g., CX)</p>
              * 
              * <strong>example:</strong>
              * <p>HO</p>
@@ -722,7 +743,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Operating flight number (e.g., CX601)</p>
+             * <p>Operating carrier flight number (e.g., CX601)</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295</p>
@@ -733,7 +754,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>segment ID format: flight number + departure airport + arrival airport + departure date (MMdd)</p>
+             * <p>Segment ID format: flight number + departure airport + arrival airport + departure date (MMdd)</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295-PVG-MFM-20230310</p>
@@ -744,7 +765,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of stopover cities, with values when stopQuantity &gt; 0, separated by commas</p>
+             * <p>Stopover city list, has value when stopQuantity &gt; 0, multiple values separated by commas</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;&quot;</p>
@@ -825,7 +846,7 @@ public class EnrichResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>segment information</p>
+             * <p>Segment information</p>
              */
             public Builder segmentList(java.util.List<SegmentList> segmentList) {
                 this.segmentList = segmentList;
@@ -833,7 +854,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>number of transfers</p>
+             * <p>Number of transfers</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -903,7 +924,7 @@ public class EnrichResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Baggage check-in rule type 1: Direct baggage between segments; 2: Re-check baggage between segments; 3: Direct baggage at stopover cities; 4: Re-check baggage at stopover cities</p>
+             * <p>Baggage through-check rule type 1: baggage through-checked between segments; 2: baggage re-checked between segments; 3: baggage through-checked at stopover city; 4: baggage re-checked at stopover city</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -914,7 +935,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of segment IDs that use the same baggage check-in rule</p>
+             * <p>Segment ID list. These segment IDs share the same baggage through-check rules</p>
              */
             public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -981,7 +1002,7 @@ public class EnrichResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Mapping of passenger type to free baggage allowance</p>
+             * <p>Passenger type to free baggage allowance mapping</p>
              */
             public Builder passengerBaggageAllowanceMapping(java.util.Map<String, DataSolutionListSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping) {
                 this.passengerBaggageAllowanceMapping = passengerBaggageAllowanceMapping;
@@ -989,7 +1010,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of segment IDs that use the same free baggage allowance rule</p>
+             * <p>Segment ID list. These segment IDs share the same free baggage allowance rules</p>
              */
             public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -1056,7 +1077,7 @@ public class EnrichResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Passenger type - refund and change rule mapping</p>
+             * <p>Passenger type to refund and change rules mapping</p>
              */
             public Builder refundChangeRuleMap(java.util.Map<String, DataSolutionListSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap) {
                 this.refundChangeRuleMap = refundChangeRuleMap;
@@ -1064,7 +1085,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Segment ID list. These segment IDs use the same refund and change rules.</p>
+             * <p>Segment ID list. These segment IDs share the same refund and change rules</p>
              */
             public Builder segmentIdList(java.util.List<String> segmentIdList) {
                 this.segmentIdList = segmentIdList;
@@ -1131,7 +1152,7 @@ public class EnrichResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Issue ticket type:  1: after payment; 2: before departure; -1: unknown</p>
+             * issue_ticket_type.
              */
             public Builder issueTicketType(Integer issueTicketType) {
                 this.issueTicketType = issueTicketType;
@@ -1139,7 +1160,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Estimated issue ticket time, unit: minutes</p>
+             * issue_time_limit.
              */
             public Builder issueTimeLimit(Integer issueTimeLimit) {
                 this.issueTimeLimit = issueTimeLimit;
@@ -1206,7 +1227,7 @@ public class EnrichResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Issue ticket time related</p>
+             * issue_time_info.
              */
             public Builder issueTimeInfo(IssueTimeInfo issueTimeInfo) {
                 this.issueTimeInfo = issueTimeInfo;
@@ -1214,7 +1235,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Supply source type 1: Self-operated; 2: Agent; 3: Flagship store</p>
+             * <p>Supply source type 1: self-operated; 2: agent; 3: flagship store</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1414,7 +1435,7 @@ public class EnrichResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>adult unit price</p>
+             * <p>Adult unit price</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -1425,7 +1446,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>adult tax</p>
+             * <p>Adult tax</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1436,7 +1457,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>child unit price</p>
+             * <p>Child unit price</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1447,7 +1468,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>child tax</p>
+             * <p>Child tax</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1458,7 +1479,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>infant unit price</p>
+             * <p>Infant unit price</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -1469,7 +1490,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>infant tax</p>
+             * <p>Infant tax</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1480,7 +1501,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>journey</p>
+             * <p>Journey</p>
              */
             public Builder journeyList(java.util.List<JourneyList> journeyList) {
                 this.journeyList = journeyList;
@@ -1488,7 +1509,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Baggage check-in rules</p>
+             * <p>Baggage through-check rules</p>
              */
             public Builder segmentBaggageCheckInInfoList(java.util.List<SegmentBaggageCheckInInfoList> segmentBaggageCheckInInfoList) {
                 this.segmentBaggageCheckInInfoList = segmentBaggageCheckInInfoList;
@@ -1496,7 +1517,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Free baggage rules</p>
+             * <p>Free baggage allowance rules</p>
              */
             public Builder segmentBaggageMappingList(java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList) {
                 this.segmentBaggageMappingList = segmentBaggageMappingList;
@@ -1512,7 +1533,7 @@ public class EnrichResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quotation attributes</p>
+             * <p>Quote attributes</p>
              */
             public Builder solutionAttribute(SolutionAttribute solutionAttribute) {
                 this.solutionAttribute = solutionAttribute;
@@ -1577,7 +1598,7 @@ public class EnrichResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>search quotation results</p>
+             * <p>Search and inquiry results</p>
              */
             public Builder solutionList(java.util.List<SolutionList> solutionList) {
                 this.solutionList = solutionList;

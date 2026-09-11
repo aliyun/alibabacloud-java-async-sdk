@@ -132,7 +132,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request RequestId</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>51593418-8C73-5E47-8BA8-3F1D4A00CC0B</p>
@@ -143,7 +143,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Correctly processed return data</p>
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -151,7 +151,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Business error code</p>
+         * <p>The business error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -162,7 +162,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error handling carries data</p>
+         * <p>The data returned with the error.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -173,7 +173,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -184,7 +184,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP request successful, status value is always 200</p>
+         * <p>The HTTP status code. The value is always 200 for successful requests.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class ChangeApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -277,7 +277,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Document number</p>
+             * <p>The document number.</p>
              * 
              * <strong>example:</strong>
              * <p>411***********4411</p>
@@ -288,7 +288,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Passenger&quot;s first name</p>
+             * <p>The first name of the passenger.</p>
              * 
              * <strong>example:</strong>
              * <p>SAN</p>
@@ -299,7 +299,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Passenger&quot;s last name</p>
+             * <p>The last name of the passenger.</p>
              * 
              * <strong>example:</strong>
              * <p>ZHANG</p>
@@ -395,7 +395,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>change order number</p>
+             * <p>The change order number.</p>
              * 
              * <strong>example:</strong>
              * <p>49884*****950</p>
@@ -406,7 +406,11 @@ public class ChangeApplyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>change order status. 0: change order created successfully; 5: change order creation failed</p>
+             * <p>The change order status. Valid values:</p>
+             * <ul>
+             * <li>0: Change order created.</li>
+             * <li>5: Change order creation failed.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -417,7 +421,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reason for the failure of the change order creation</p>
+             * <p>The reason for the change order creation failure.</p>
              * 
              * <strong>example:</strong>
              * <p>desc reason</p>
@@ -428,7 +432,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Passenger&quot;s information for the change order</p>
+             * <p>The passenger information of the change order.</p>
              */
             public Builder passengers(java.util.List<Passengers> passengers) {
                 this.passengers = passengers;
@@ -495,7 +499,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of change application results</p>
+             * <p>The list of change order application results.</p>
              */
             public Builder changeOrders(java.util.List<ChangeOrders> changeOrders) {
                 this.changeOrders = changeOrders;
@@ -503,7 +507,7 @@ public class ChangeApplyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Order number</p>
+             * <p>The order number.</p>
              * 
              * <strong>example:</strong>
              * <p>4988430***950</p>

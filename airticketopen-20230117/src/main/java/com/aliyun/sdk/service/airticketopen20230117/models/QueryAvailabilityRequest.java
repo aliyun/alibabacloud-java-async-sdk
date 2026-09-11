@@ -261,10 +261,7 @@ public class QueryAvailabilityRequest extends Request {
         }
 
         /**
-         * <p>TraceId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>string</p>
+         * TracerId.
          */
         public Builder tracerId(String tracerId) {
             this.putBodyParameter("TracerId", tracerId);

@@ -103,6 +103,7 @@ public class GlobalHotelBatchGetHotelDetailRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the distributor account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class GlobalHotelBatchGetHotelDetailRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language for the response, such as en or zh.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -124,6 +128,7 @@ public class GlobalHotelBatchGetHotelDetailRequest extends Request {
         }
 
         /**
+         * <p>The list of standard hotel IDs. A maximum of 100 IDs are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

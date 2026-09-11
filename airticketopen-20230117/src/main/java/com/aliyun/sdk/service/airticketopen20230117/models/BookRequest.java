@@ -148,7 +148,7 @@ public class BookRequest extends Request {
         } 
 
         /**
-         * <p>contact information</p>
+         * <p>The contact information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder contact(Contact contact) {
@@ -159,7 +159,7 @@ public class BookRequest extends Request {
         }
 
         /**
-         * <p>external order number(buyer customization)</p>
+         * <p>The external order number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class BookRequest extends Request {
         }
 
         /**
-         * <p>passenger-ancillary purchase relationship</p>
+         * <p>The mapping between passengers and ancillary purchases.</p>
          */
         public Builder passengerAncillaryPurchaseMapList(java.util.List<PassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList) {
             String passengerAncillaryPurchaseMapListShrink = shrink(passengerAncillaryPurchaseMapList, "passenger_ancillary_purchase_map_list", "json");
@@ -182,7 +182,7 @@ public class BookRequest extends Request {
         }
 
         /**
-         * <p>passenger list</p>
+         * <p>The list of passengers.</p>
          * <p>This parameter is required.</p>
          */
         public Builder passengerList(java.util.List<PassengerList> passengerList) {
@@ -193,7 +193,7 @@ public class BookRequest extends Request {
         }
 
         /**
-         * <p>solution_id returned by Enrich</p>
+         * <p>solution_id.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class BookRequest extends Request {
         }
 
         /**
-         * <p>access token</p>
+         * <p>access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +219,7 @@ public class BookRequest extends Request {
         }
 
         /**
-         * <p>language code(refer to ISO_639), defaults to the buyer&quot;s account configuration</p>
+         * <p>The language setting. Uses the buyer account configuration by default.</p>
          * 
          * <strong>example:</strong>
          * <p>en_US</p>
@@ -329,7 +329,7 @@ public class BookRequest extends Request {
             } 
 
             /**
-             * <p>email address</p>
+             * <p>The email address.</p>
              * 
              * <strong>example:</strong>
              * <p>gao******@gmail.com</p>
@@ -340,7 +340,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>first name</p>
+             * <p>The first name.</p>
              * 
              * <strong>example:</strong>
              * <p>SAN</p>
@@ -351,7 +351,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>last name</p>
+             * <p>The last name.</p>
              * 
              * <strong>example:</strong>
              * <p>ZHANG</p>
@@ -362,7 +362,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>country code</p>
+             * <p>The country calling code.</p>
              * 
              * <strong>example:</strong>
              * <p>86</p>
@@ -373,7 +373,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>mobile phone number</p>
+             * <p>The mobile phone number.</p>
              * 
              * <strong>example:</strong>
              * <p>183******96</p>
@@ -443,7 +443,7 @@ public class BookRequest extends Request {
             } 
 
             /**
-             * <p>ancillary product ID, returned by AncillarySuggest.</p>
+             * <p>The ancillary product ID.</p>
              * 
              * <strong>example:</strong>
              * <p>MDY2NTAxLCJleHAiOjE2NxNzM3MDEsIm5ix</p>
@@ -454,7 +454,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>type of ancillary product, only support &quot;4&quot;(4 means paid baggage) currently.</p>
+             * <p>The ancillary product type. Currently supported value: 4 (paid baggage). More types will be supported in the future.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -550,7 +550,7 @@ public class BookRequest extends Request {
             } 
 
             /**
-             * <p>place of issue, two-letter code</p>
+             * <p>The place of issue. Use a two-letter country code.</p>
              * 
              * <strong>example:</strong>
              * <p>CN</p>
@@ -561,7 +561,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>travel document number</p>
+             * <p>The credential number.</p>
              * 
              * <strong>example:</strong>
              * <p>E1***5673</p>
@@ -572,7 +572,27 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>travel document type , only support &quot;1&quot;(1 means passport) currently</p>
+             * <p>The credential type. Valid values:</p>
+             * <ul>
+             * <li>0: ID card</li>
+             * <li>1: passport</li>
+             * <li>2: student ID</li>
+             * <li>3: military ID</li>
+             * <li>4: Home Return Permit</li>
+             * <li>5: Taiwan Compatriot Permit</li>
+             * <li>6: Hong Kong and Macau Travel Permit</li>
+             * <li>7: international seafarer certificate</li>
+             * <li>8: foreigner permanent residence permit</li>
+             * <li>10: police officer certificate</li>
+             * <li>11: soldier certificate</li>
+             * <li>12: Taiwan Travel Permit</li>
+             * <li>13: Taiwan Entry Permit</li>
+             * <li>14: household register</li>
+             * <li>15: birth certificate</li>
+             * <li>16: driver license</li>
+             * <li>17: Hong Kong and Macau resident residence permit</li>
+             * <li>18: Taiwan resident residence permit.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -583,7 +603,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>expiration date</p>
+             * <p>The expiration date of the credential.</p>
              * 
              * <strong>example:</strong>
              * <p>20290102</p>
@@ -749,7 +769,7 @@ public class BookRequest extends Request {
             } 
 
             /**
-             * <p>date of birth (yyyyMMdd)</p>
+             * <p>The date of birth in yyyyMMdd format.</p>
              * 
              * <strong>example:</strong>
              * <p>20020320</p>
@@ -760,7 +780,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>travel document</p>
+             * <p>The credential information.</p>
              */
             public Builder credential(Credential credential) {
                 this.credential = credential;
@@ -768,7 +788,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>first name</p>
+             * <p>The first name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -780,7 +800,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>gender 0: male; 1: female</p>
+             * <p>The gender. Valid values:</p>
+             * <ul>
+             * <li>0: MALE</li>
+             * <li>1: FEMALE.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -791,7 +815,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>last name</p>
+             * <p>The last name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -803,7 +827,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>country code for mobile phone number</p>
+             * <p>The country calling code for the mobile phone number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -815,7 +839,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>mobile phone number</p>
+             * <p>The mobile phone number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -827,7 +851,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>nationality</p>
+             * <p>The nationality.</p>
              * 
              * <strong>example:</strong>
              * <p>CN</p>
@@ -838,7 +862,12 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>passenger type 0: adult; 1: child; 8: Infant</p>
+             * <p>The passenger type. Valid values:</p>
+             * <ul>
+             * <li>0: adult</li>
+             * <li>1: child</li>
+             * <li>8: infant.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -909,7 +938,7 @@ public class BookRequest extends Request {
             } 
 
             /**
-             * <p>ancillary information</p>
+             * <p>The ancillary product object for the booking request.</p>
              */
             public Builder bookAncillaryReqItem(BookAncillaryReqItem bookAncillaryReqItem) {
                 this.bookAncillaryReqItem = bookAncillaryReqItem;
@@ -917,7 +946,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>passenger list for unified ancillary purchases</p>
+             * <p>The list of passengers who purchase the same ancillary product.</p>
              */
             public Builder passengerList(java.util.List<PassengerAncillaryPurchaseMapListPassengerList> passengerList) {
                 this.passengerList = passengerList;
@@ -1010,7 +1039,7 @@ public class BookRequest extends Request {
             } 
 
             /**
-             * <p>place of issue, two-letter code</p>
+             * <p>The place of issue. Use a two-letter country code.</p>
              * 
              * <strong>example:</strong>
              * <p>CN</p>
@@ -1021,7 +1050,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>travel document number</p>
+             * <p>The credential number.</p>
              * 
              * <strong>example:</strong>
              * <p>E1***5674</p>
@@ -1032,7 +1061,16 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>travel document type , only support &quot;1&quot;(1 means passport) currently.</p>
+             * <p>The credential type. Valid values:</p>
+             * <ul>
+             * <li>0: ID card</li>
+             * <li>1: passport</li>
+             * <li>4: Home Return Permit</li>
+             * <li>5: Taiwan Compatriot Permit</li>
+             * <li>6: Hong Kong and Macau Travel Permit</li>
+             * <li>12: Taiwan Travel Permit</li>
+             * <li>19: no credential.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1043,7 +1081,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>expiration date</p>
+             * <p>The expiration date of the credential.</p>
              * 
              * <strong>example:</strong>
              * <p>20290101</p>
@@ -1209,7 +1247,7 @@ public class BookRequest extends Request {
             } 
 
             /**
-             * <p>date of birth (yyyyMMdd)</p>
+             * <p>The date of birth in yyyyMMdd format.</p>
              * 
              * <strong>example:</strong>
              * <p>20200320</p>
@@ -1220,7 +1258,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>travel document</p>
+             * <p>The credential information.</p>
              */
             public Builder credential(PassengerListCredential credential) {
                 this.credential = credential;
@@ -1228,7 +1266,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>first name</p>
+             * <p>The first name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1240,7 +1278,11 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>gender 0: MALE; 1: FEMALE</p>
+             * <p>The gender. Valid values:</p>
+             * <ul>
+             * <li>0: MALE</li>
+             * <li>1: FEMALE.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1251,7 +1293,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>last name</p>
+             * <p>The last name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1263,7 +1305,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>mobile country code</p>
+             * <p>The country calling code for the mobile phone number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1275,7 +1317,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>mobile phone number</p>
+             * <p>The mobile phone number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1287,7 +1329,7 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>nationality (two-letter code)</p>
+             * <p>The nationality. Use a two-letter country code.</p>
              * 
              * <strong>example:</strong>
              * <p>CN</p>
@@ -1298,7 +1340,12 @@ public class BookRequest extends Request {
             }
 
             /**
-             * <p>passenger type 0: adult; 1: child; 8: infant</p>
+             * <p>The passenger type. Valid values:</p>
+             * <ul>
+             * <li>0: adult</li>
+             * <li>1: child</li>
+             * <li>8: infant.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

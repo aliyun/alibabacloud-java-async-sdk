@@ -119,7 +119,7 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CityCodeRequired</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>City code cannot be empty</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -143,7 +149,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -306,7 +318,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             } 
 
             /**
-             * CnName.
+             * <p>The Chinese name of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京市</p>
              */
             public Builder cnName(String cnName) {
                 this.cnName = cnName;
@@ -314,7 +329,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110100</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -322,7 +340,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             }
 
             /**
-             * Country.
+             * <p>The country code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>156</p>
              */
             public Builder country(Integer country) {
                 this.country = country;
@@ -330,7 +351,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             }
 
             /**
-             * CountryCode.
+             * <p>The country code in ISO 3166-1 alpha-2 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -338,7 +362,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             }
 
             /**
-             * EnName.
+             * <p>The English name of the city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder enName(String enName) {
                 this.enName = enName;
@@ -346,7 +373,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The administrative level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -354,7 +384,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCode.
+             * <p>The parent city code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110000</p>
              */
             public Builder parentCode(Integer parentCode) {
                 this.parentCode = parentCode;
@@ -362,7 +395,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder region(Integer region) {
                 this.region = region;
@@ -442,7 +478,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             } 
 
             /**
-             * Cities.
+             * <p>The list of cities.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder cities(java.util.List<Cities> cities) {
                 this.cities = cities;
@@ -450,7 +489,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             }
 
             /**
-             * HasNext.
+             * <p>Indicates whether there is a next page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -458,7 +500,10 @@ public class GlobalHotelSearchCityPageResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

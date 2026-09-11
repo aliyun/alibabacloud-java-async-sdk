@@ -119,7 +119,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The business data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CityCodeRequired</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>City code cannot be empty</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -143,7 +149,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260E4F99-983D-1919-834C-5C42E98E5B2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +266,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The facility description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Outdoor heated swimming pool</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -262,7 +277,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the facility.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Swimming Pool</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +288,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubItems.
+             * <p>The list of sub-facilities.</p>
              */
             public Builder subItems(java.util.List<?> subItems) {
                 this.subItems = subItems;
@@ -278,7 +296,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the facility.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>parkade</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -423,7 +444,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the picture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hotel lobby</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -431,7 +455,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FirstCategoryCode.
+             * <p>The first-level category code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOTEL</p>
              */
             public Builder firstCategoryCode(String firstCategoryCode) {
                 this.firstCategoryCode = firstCategoryCode;
@@ -439,7 +466,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FirstCategoryName.
+             * <p>The first-level category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hotel</p>
              */
             public Builder firstCategoryName(String firstCategoryName) {
                 this.firstCategoryName = firstCategoryName;
@@ -447,7 +477,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsHeadPic.
+             * <p>Indicates whether the picture is the cover image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isHeadPic(Boolean isHeadPic) {
                 this.isHeadPic = isHeadPic;
@@ -455,7 +488,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PictureId.
+             * <p>The picture ID. The URL takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PIC001</p>
              */
             public Builder pictureId(String pictureId) {
                 this.pictureId = pictureId;
@@ -463,7 +499,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SecondCategoryCode.
+             * <p>The second-level category code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOBBY</p>
              */
             public Builder secondCategoryCode(String secondCategoryCode) {
                 this.secondCategoryCode = secondCategoryCode;
@@ -471,7 +510,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SecondCategoryName.
+             * <p>The second-level category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lobby</p>
              */
             public Builder secondCategoryName(String secondCategoryName) {
                 this.secondCategoryName = secondCategoryName;
@@ -479,7 +521,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the picture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.example.com/1.jpg">https://img.example.com/1.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -572,7 +617,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Children.
+             * <p>The list of subkeys.</p>
              */
             public Builder children(java.util.List<?> children) {
                 this.children = children;
@@ -580,7 +625,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ItemName.
+             * <p>The item name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check-in time</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -588,7 +636,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ItemTypeId.
+             * <p>The item type ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_IN_TIME</p>
              */
             public Builder itemTypeId(String itemTypeId) {
                 this.itemTypeId = itemTypeId;
@@ -596,7 +647,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The text value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14:00</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -676,7 +730,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * GroupName.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check-in Policy</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -684,7 +741,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupTypeId.
+             * <p>The group type ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_IN</p>
              */
             public Builder groupTypeId(String groupTypeId) {
                 this.groupTypeId = groupTypeId;
@@ -692,7 +752,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * <p>The list of policy items.</p>
              */
             public Builder items(java.util.List<Items> items) {
                 this.items = items;
@@ -798,7 +858,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * BedCount.
+             * <p>The number of beds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bedCount(Integer bedCount) {
                 this.bedCount = bedCount;
@@ -806,7 +869,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BedNameCn.
+             * <p>The Chinese name of the bed type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>大床</p>
              */
             public Builder bedNameCn(String bedNameCn) {
                 this.bedNameCn = bedNameCn;
@@ -814,7 +880,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BedNameEn.
+             * <p>The English name of the bed type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>King Bed</p>
              */
             public Builder bedNameEn(String bedNameEn) {
                 this.bedNameEn = bedNameEn;
@@ -822,7 +891,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BedSize.
+             * <p>The bed width in meters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.83</p>
              */
             public Builder bedSize(String bedSize) {
                 this.bedSize = bedSize;
@@ -830,7 +902,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BedType.
+             * <p>The bed type code. This is the original channel code passed through directly. For the meaning of code values, refer to the API documentation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bedType(String bedType) {
                 this.bedType = bedType;
@@ -884,7 +959,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * BedInfos.
+             * <p>The list of bed types within a group. Items are in an AND relationship.</p>
              */
             public Builder bedInfos(java.util.List<BedInfos> bedInfos) {
                 this.bedInfos = bedInfos;
@@ -977,7 +1052,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The facility description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Popular Facilities</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -985,7 +1063,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the facility.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Parking Lot</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -993,7 +1074,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubItems.
+             * <p>The list of sub-facilities.</p>
              */
             public Builder subItems(java.util.List<?> subItems) {
                 this.subItems = subItems;
@@ -1001,7 +1082,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the facility.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>parkade</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1146,7 +1230,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the picture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hotel lobby</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1154,7 +1241,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FirstCategoryCode.
+             * <p>The first-level category code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOTEL</p>
              */
             public Builder firstCategoryCode(String firstCategoryCode) {
                 this.firstCategoryCode = firstCategoryCode;
@@ -1162,7 +1252,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FirstCategoryName.
+             * <p>The first-level category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hotel</p>
              */
             public Builder firstCategoryName(String firstCategoryName) {
                 this.firstCategoryName = firstCategoryName;
@@ -1170,7 +1263,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsHeadPic.
+             * <p>Indicates whether the picture is the cover image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isHeadPic(Boolean isHeadPic) {
                 this.isHeadPic = isHeadPic;
@@ -1178,7 +1274,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PictureId.
+             * <p>The picture ID. The URL takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PIC001</p>
              */
             public Builder pictureId(String pictureId) {
                 this.pictureId = pictureId;
@@ -1186,7 +1285,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SecondCategoryCode.
+             * <p>The second-level category code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOBBY</p>
              */
             public Builder secondCategoryCode(String secondCategoryCode) {
                 this.secondCategoryCode = secondCategoryCode;
@@ -1194,7 +1296,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SecondCategoryName.
+             * <p>The second-level category name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Lobby</p>
              */
             public Builder secondCategoryName(String secondCategoryName) {
                 this.secondCategoryName = secondCategoryName;
@@ -1202,7 +1307,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the picture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://img.example.com/1.jpg">https://img.example.com/1.jpg</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1373,7 +1481,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * BedGroups.
+             * <p>The list of bed type groups. This has the same structure as bedInfoJson. Groups are in an OR relationship, and items within a group are in an AND relationship.</p>
              */
             public Builder bedGroups(java.util.List<BedGroups> bedGroups) {
                 this.bedGroups = bedGroups;
@@ -1381,7 +1489,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Facilities.
+             * <p>The list of room type facilities.</p>
              */
             public Builder facilities(java.util.List<RoomTypesFacilities> facilities) {
                 this.facilities = facilities;
@@ -1389,7 +1497,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Pictures.
+             * <p>The list of room type pictures.</p>
              */
             public Builder pictures(java.util.List<RoomTypesPictures> pictures) {
                 this.pictures = pictures;
@@ -1397,7 +1505,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoomName.
+             * <p>The room type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Deluxe King Room</p>
              */
             public Builder roomName(String roomName) {
                 this.roomName = roomName;
@@ -1405,7 +1516,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoomNameCn.
+             * <p>The Chinese room type name. This value is always in Chinese regardless of the language parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>豪华大床房</p>
              */
             public Builder roomNameCn(String roomNameCn) {
                 this.roomNameCn = roomNameCn;
@@ -1413,7 +1527,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoomSize.
+             * <p>The room size. The value is passed through as-is and may be a range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35.0</p>
              */
             public Builder roomSize(String roomSize) {
                 this.roomSize = roomSize;
@@ -1421,7 +1538,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoomSizeUnit.
+             * <p>The unit of the room size. Valid values: SQM (square meters) and SQFT (square feet). Default value: SQM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQM</p>
              */
             public Builder roomSizeUnit(String roomSizeUnit) {
                 this.roomSizeUnit = roomSizeUnit;
@@ -1429,7 +1549,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StandardRoomId.
+             * <p>The platform standard room type ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>R001</p>
              */
             public Builder standardRoomId(String standardRoomId) {
                 this.standardRoomId = standardRoomId;
@@ -1437,7 +1560,18 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WindowType.
+             * <p>The window type. Valid values:</p>
+             * <ul>
+             * <li>0: no window.</li>
+             * <li>1: with window.</li>
+             * <li>2: partially with window.</li>
+             * <li>3: frosted or opaque window.</li>
+             * <li>4: partially frosted or opaque window.</li>
+             * <li>5: floor-to-ceiling window.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>WINDOW</p>
              */
             public Builder windowType(String windowType) {
                 this.windowType = windowType;
@@ -1445,7 +1579,17 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WindowTypeDefect.
+             * <p>The window defect code. Valid values:</p>
+             * <ul>
+             * <li>0: The window cannot be opened for ventilation.</li>
+             * <li>1: The view from the window is obstructed.</li>
+             * <li>2: The window faces an interior hotel view.</li>
+             * <li>3: The window is located along a corridor or hallway.</li>
+             * <li>4: The window can be opened for ventilation and faces an outdoor open environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SMALL_WINDOW</p>
              */
             public Builder windowTypeDefect(String windowTypeDefect) {
                 this.windowTypeDefect = windowTypeDefect;
@@ -1811,7 +1955,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Address.
+             * <p>The address of the hotel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>No.33 East Chang An Avenue</p>
              */
             public Builder address(String address) {
                 this.address = address;
@@ -1819,7 +1966,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CheckInTime.
+             * <p>The default check-in time in HH:mm format, based on the hotel\&quot;s local time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14:00</p>
              */
             public Builder checkInTime(String checkInTime) {
                 this.checkInTime = checkInTime;
@@ -1827,7 +1977,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CheckOutTime.
+             * <p>The default check-out time in HH:mm format, based on the hotel\&quot;s local time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12:00</p>
              */
             public Builder checkOutTime(String checkOutTime) {
                 this.checkOutTime = checkOutTime;
@@ -1835,7 +1988,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CityName.
+             * <p>The city name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing</p>
              */
             public Builder cityName(String cityName) {
                 this.cityName = cityName;
@@ -1843,7 +1999,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CountryName.
+             * <p>The country name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China</p>
              */
             public Builder countryName(String countryName) {
                 this.countryName = countryName;
@@ -1851,7 +2010,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the hotel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Five-star luxury hotel</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1859,7 +2021,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code for the individual hotel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOTEL_NOT_FOUND</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -1867,7 +2032,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error description for the individual hotel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hotel does not exist</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1875,7 +2043,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Facilities.
+             * <p>The list of facilities.</p>
              */
             public Builder facilities(java.util.List<Facilities> facilities) {
                 this.facilities = facilities;
@@ -1883,7 +2051,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HotelName.
+             * <p>The hotel name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Beijing Hotel</p>
              */
             public Builder hotelName(String hotelName) {
                 this.hotelName = hotelName;
@@ -1891,7 +2062,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HotelNameCn.
+             * <p>The Chinese hotel name. This value is always in Chinese regardless of the language setting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京饭店</p>
              */
             public Builder hotelNameCn(String hotelNameCn) {
                 this.hotelNameCn = hotelNameCn;
@@ -1899,7 +2073,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HotelType.
+             * <p>The hotel type (LUXURY/DELUXE/COMFORT).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LUXURY</p>
              */
             public Builder hotelType(String hotelType) {
                 this.hotelType = hotelType;
@@ -1907,7 +2084,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Latitude.
+             * <p>The latitude of the hotel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39.9042</p>
              */
             public Builder latitude(String latitude) {
                 this.latitude = latitude;
@@ -1915,7 +2095,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Longitude.
+             * <p>The longitude of the hotel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116.4074</p>
              */
             public Builder longitude(String longitude) {
                 this.longitude = longitude;
@@ -1923,7 +2106,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OpeningTime.
+             * <p>The year the hotel opened.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018</p>
              */
             public Builder openingTime(Integer openingTime) {
                 this.openingTime = openingTime;
@@ -1931,7 +2117,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Pictures.
+             * <p>The list of pictures.</p>
              */
             public Builder pictures(java.util.List<Pictures> pictures) {
                 this.pictures = pictures;
@@ -1939,7 +2125,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Policies.
+             * <p>The hotel policy information.</p>
              */
             public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
@@ -1947,7 +2133,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PositionType.
+             * <p>The source of the latitude and longitude coordinates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GOOGLE</p>
              */
             public Builder positionType(String positionType) {
                 this.positionType = positionType;
@@ -1955,7 +2144,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RenovationTime.
+             * <p>The year the hotel was last renovated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021</p>
              */
             public Builder renovationTime(Integer renovationTime) {
                 this.renovationTime = renovationTime;
@@ -1963,7 +2155,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoomTypes.
+             * <p>The list of room types.</p>
              */
             public Builder roomTypes(java.util.List<RoomTypes> roomTypes) {
                 this.roomTypes = roomTypes;
@@ -1971,7 +2163,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StandardHotelId.
+             * <p>The platform standard hotel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>H001</p>
              */
             public Builder standardHotelId(String standardHotelId) {
                 this.standardHotelId = standardHotelId;
@@ -1979,7 +2174,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Star.
+             * <p>The star rating of the hotel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder star(String star) {
                 this.star = star;
@@ -1987,7 +2185,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The hotel status (ONLINE/OFFLINE).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLINE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1995,7 +2196,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tel.
+             * <p>The phone number of the hotel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>+86-10-65137766</p>
              */
             public Builder tel(String tel) {
                 this.tel = tel;
@@ -2003,7 +2207,10 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Timezone.
+             * <p>The time zone of the hotel in IANA ID format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asia/Shanghai</p>
              */
             public Builder timezone(String timezone) {
                 this.timezone = timezone;
@@ -2057,7 +2264,7 @@ public class GlobalHotelBatchGetHotelDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Hotels.
+             * <p>The list of hotel details.</p>
              */
             public Builder hotels(java.util.List<Hotels> hotels) {
                 this.hotels = hotels;

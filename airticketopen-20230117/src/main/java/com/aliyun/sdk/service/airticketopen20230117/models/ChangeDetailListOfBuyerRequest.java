@@ -130,7 +130,10 @@ public class ChangeDetailListOfBuyerRequest extends Request {
         } 
 
         /**
-         * page_index.
+         * <p>The page index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("page_index", pageIndex);
@@ -139,7 +142,10 @@ public class ChangeDetailListOfBuyerRequest extends Request {
         }
 
         /**
-         * page_size.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -148,7 +154,10 @@ public class ChangeDetailListOfBuyerRequest extends Request {
         }
 
         /**
-         * utc_create_begin.
+         * <p>The start time for change order creation. The value is a 13-digit UTC timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677415276000</p>
          */
         public Builder utcCreateBegin(Long utcCreateBegin) {
             this.putQueryParameter("utc_create_begin", utcCreateBegin);
@@ -157,7 +166,10 @@ public class ChangeDetailListOfBuyerRequest extends Request {
         }
 
         /**
-         * utc_create_end.
+         * <p>The end time for change order creation. The value is a 13-digit UTC timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1677415279000</p>
          */
         public Builder utcCreateEnd(Long utcCreateEnd) {
             this.putQueryParameter("utc_create_end", utcCreateEnd);
@@ -166,7 +178,7 @@ public class ChangeDetailListOfBuyerRequest extends Request {
         }
 
         /**
-         * <p>access_token</p>
+         * <p>The access_token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +191,10 @@ public class ChangeDetailListOfBuyerRequest extends Request {
         }
 
         /**
-         * x-acs-airticket-language.
+         * <p>The language. Default value: the language configured for the buyer account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en_US</p>
          */
         public Builder xAcsAirticketLanguage(String xAcsAirticketLanguage) {
             this.putHeaderParameter("x-acs-airticket-language", xAcsAirticketLanguage);

@@ -132,10 +132,7 @@ public class QueryOrderRequest extends Request {
         }
 
         /**
-         * <p>TracerId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TracerId</p>
+         * TracerId.
          */
         public Builder tracerId(String tracerId) {
             this.putBodyParameter("TracerId", tracerId);

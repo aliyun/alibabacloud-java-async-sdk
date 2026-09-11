@@ -140,7 +140,7 @@ public class ChangeConfirmResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -148,7 +148,10 @@ public class ChangeConfirmResponseBody extends TeaModel {
         }
 
         /**
-         * error_code.
+         * <p>The business error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -156,7 +159,10 @@ public class ChangeConfirmResponseBody extends TeaModel {
         }
 
         /**
-         * error_data.
+         * <p>The data returned for a failed request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorData(Object errorData) {
             this.errorData = errorData;
@@ -164,7 +170,10 @@ public class ChangeConfirmResponseBody extends TeaModel {
         }
 
         /**
-         * error_msg.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -172,7 +181,10 @@ public class ChangeConfirmResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The HTTP status code. The value is always 200 for successful requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -180,7 +192,10 @@ public class ChangeConfirmResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -259,7 +274,10 @@ public class ChangeConfirmResponseBody extends TeaModel {
             } 
 
             /**
-             * pay_amount.
+             * <p>The payment amount for the flight change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder payAmount(Double payAmount) {
                 this.payAmount = payAmount;
@@ -275,7 +293,10 @@ public class ChangeConfirmResponseBody extends TeaModel {
             }
 
             /**
-             * transaction_no.
+             * <p>The payment transaction number for the flight change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hkduendkd-2023-dj0</p>
              */
             public Builder transactionNo(String transactionNo) {
                 this.transactionNo = transactionNo;

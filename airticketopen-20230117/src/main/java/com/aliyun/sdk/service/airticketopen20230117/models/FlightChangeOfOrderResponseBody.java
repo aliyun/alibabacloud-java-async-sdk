@@ -140,7 +140,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Correctly processed return data</p>
+         * <p>The data returned for a successful request.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -148,7 +148,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Business error code</p>
+         * <p>The business error code.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -159,7 +159,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data carried with error handling</p>
+         * <p>The data returned with the error.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -170,7 +170,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -181,7 +181,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>HTTP request successful, status value is 200</p>
+         * <p>The HTTP status code. The value is always 200 for successful requests.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -192,7 +192,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the operation was successful</p>
+         * <p>Indicates whether the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -404,10 +404,10 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Reason for the irregular flight</p>
+             * <p>The reason for the flight change.</p>
              * 
              * <strong>example:</strong>
-             * <p>weather</p>
+             * <p>天气</p>
              */
             public Builder changeReason(String changeReason) {
                 this.changeReason = changeReason;
@@ -415,7 +415,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Flight change time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>The time of the flight change in string format (yyyy-MM-dd HH:mm:ss).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-01 10:01:00</p>
@@ -426,7 +426,11 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type of irregular flight 1: Cancellation; 2:  delay, schedule change, or other airline reasons</p>
+             * <p>The type of the flight change. Valid values:</p>
+             * <ul>
+             * <li>1: cancellation</li>
+             * <li>2: schedule change.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -437,7 +441,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>New arrival airport three-letter code (uppercase)</p>
+             * <p>The three-letter IATA code of the new arrival airport (uppercase).</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -448,7 +452,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>New flight arrival date and time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>The arrival date and time of the new flight in string format (yyyy-MM-dd HH:mm:ss).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-01 15:01:00</p>
@@ -459,7 +463,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>New departure airport three-letter code (uppercase)</p>
+             * <p>The three-letter IATA code of the new departure airport (uppercase).</p>
              * 
              * <strong>example:</strong>
              * <p>PVG</p>
@@ -470,7 +474,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>New departure date and time, string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>The departure date and time of the new flight in string format (yyyy-MM-dd HH:mm:ss).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-01 13:01:00</p>
@@ -481,7 +485,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>New flight number</p>
+             * <p>The new flight number.</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295</p>
@@ -492,7 +496,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Original arrival airport three-letter code (uppercase)</p>
+             * <p>The three-letter IATA code of the original arrival airport (uppercase).</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -503,7 +507,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Original arrival date and time, string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>The arrival date and time of the original flight in string format (yyyy-MM-dd HH:mm:ss).</p>
              * 
              * <strong>example:</strong>
              * <p>023-02-01 14:01:00</p>
@@ -514,7 +518,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Original departure airport three-letter code (uppercase)</p>
+             * <p>The three-letter IATA code of the original departure airport (uppercase).</p>
              * 
              * <strong>example:</strong>
              * <p>PVG</p>
@@ -525,7 +529,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Original departure date and time, string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>The departure date and time of the original flight in string format (yyyy-MM-dd HH:mm:ss).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-01 12:01:00</p>
@@ -536,7 +540,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Original flight number</p>
+             * <p>The original flight number.</p>
              * 
              * <strong>example:</strong>
              * <p>HO1295</p>
@@ -606,7 +610,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>irregular flight information</p>
+             * <p>The flight change information.</p>
              */
             public Builder flightChangeDetail(FlightChangeDetail flightChangeDetail) {
                 this.flightChangeDetail = flightChangeDetail;
@@ -614,7 +618,7 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Order number</p>
+             * <p>The order number.</p>
              * 
              * <strong>example:</strong>
              * <p>4966***617111</p>

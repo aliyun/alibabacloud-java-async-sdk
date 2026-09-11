@@ -159,10 +159,7 @@ public class ValidatePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>traceId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>traceId</p>
+         * TracerId.
          */
         public Builder tracerId(String tracerId) {
             this.tracerId = tracerId;
@@ -320,10 +317,7 @@ public class ValidatePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>traceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>traceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -419,10 +413,7 @@ public class ValidatePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>traceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>traceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -518,10 +509,7 @@ public class ValidatePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>traceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>traceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -638,10 +626,7 @@ public class ValidatePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>traceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>traceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
@@ -758,10 +743,7 @@ public class ValidatePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>traceId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>traceId</p>
+             * TracerId.
              */
             public Builder tracerId(String tracerId) {
                 this.tracerId = tracerId;
