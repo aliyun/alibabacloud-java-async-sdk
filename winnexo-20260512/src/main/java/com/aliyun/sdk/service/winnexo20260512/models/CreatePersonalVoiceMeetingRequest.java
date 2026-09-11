@@ -44,6 +44,10 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTags")
+    private String sourceTags;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
@@ -56,6 +60,7 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         this.name = builder.name;
         this.operatingObjectName = builder.operatingObjectName;
         this.requestId = builder.requestId;
+        this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
     }
 
@@ -115,6 +120,13 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
     }
 
     /**
+     * @return sourceTags
+     */
+    public String getSourceTags() {
+        return this.sourceTags;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -128,6 +140,7 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         private String name; 
         private String operatingObjectName; 
         private String requestId; 
+        private String sourceTags; 
         private String tenantId; 
 
         private Builder() {
@@ -142,11 +155,12 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
             this.name = request.name;
             this.operatingObjectName = request.operatingObjectName;
             this.requestId = request.requestId;
+            this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>资源描述（可选）</p>
+         * <p>The pipeline description.</p>
          * 
          * <strong>example:</strong>
          * <p>update-JNQ9csEc6ArPPSXANH7O</p>
@@ -158,7 +172,7 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         }
 
         /**
-         * <p>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -170,7 +184,7 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         }
 
         /**
-         * <p>离线会议音频文件 URL（必填）</p>
+         * <p>The Yida attachment URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +197,7 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         }
 
         /**
-         * <p>资源显示名称</p>
+         * <p>The image name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +210,7 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -221,7 +235,19 @@ public class CreatePersonalVoiceMeetingRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The list of resource tag JSON strings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Key&quot;,&quot;Meeting&quot;]</p>
+         */
+        public Builder sourceTags(String sourceTags) {
+            this.putBodyParameter("sourceTags", sourceTags);
+            this.sourceTags = sourceTags;
+            return this;
+        }
+
+        /**
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>474379246158592</p>

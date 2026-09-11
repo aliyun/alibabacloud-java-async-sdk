@@ -172,7 +172,7 @@ public class CreatePersonalFeishuChatRequest extends Request {
         } 
 
         /**
-         * <p>飞书群聊 ID，以 oc_ 开头</p>
+         * <p>The group chat session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,10 +185,10 @@ public class CreatePersonalFeishuChatRequest extends Request {
         }
 
         /**
-         * <p>资源描述</p>
+         * <p>The description of the source.</p>
          * 
          * <strong>example:</strong>
-         * <p>产品研发群聊天记录</p>
+         * <p>Product R&amp;D group chat records</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -197,7 +197,7 @@ public class CreatePersonalFeishuChatRequest extends Request {
         }
 
         /**
-         * <p>目标个人目录 ID；不传时使用当前用户默认个人根目录</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_personal_1</p>
@@ -209,7 +209,7 @@ public class CreatePersonalFeishuChatRequest extends Request {
         }
 
         /**
-         * <p>历史消息起始时间；支持 YYYY-MM-DD 或 YYYY-MM-DD HH:MM:SS，不传则拉取全部可见历史</p>
+         * <p>The start time for historical messages. Supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS. If not specified, all visible history is pulled.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-01 00:00:00</p>
@@ -221,10 +221,10 @@ public class CreatePersonalFeishuChatRequest extends Request {
         }
 
         /**
-         * <p>分析指令</p>
+         * <p>The meeting notes content (optional). Used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
-         * <p>重点提取决策和待办</p>
+         * <p>Focus on extracting decisions and action items</p>
          */
         public Builder notes(String notes) {
             this.putBodyParameter("notes", notes);
@@ -233,10 +233,10 @@ public class CreatePersonalFeishuChatRequest extends Request {
         }
 
         /**
-         * <p>运营对象名称，仅保留用于来源追溯</p>
+         * <p>The digital employee name (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
-         * <p>研发助手</p>
+         * <p>R&amp;D Assistant</p>
          */
         public Builder operatingObjectName(String operatingObjectName) {
             this.putBodyParameter("operatingObjectName", operatingObjectName);
@@ -245,10 +245,10 @@ public class CreatePersonalFeishuChatRequest extends Request {
         }
 
         /**
-         * <p>资源标签，JSON 字符串列表</p>
+         * <p>The source tags.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;研发&quot;]</p>
+         * <p>[&quot;R&amp;D&quot;]</p>
          */
         public Builder sourceTags(String sourceTags) {
             this.putBodyParameter("sourceTags", sourceTags);
@@ -257,7 +257,7 @@ public class CreatePersonalFeishuChatRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID to take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -269,7 +269,7 @@ public class CreatePersonalFeishuChatRequest extends Request {
         }
 
         /**
-         * <p>Source 级定时同步配置</p>
+         * <p>The update frequency.</p>
          */
         public Builder updateFrequency(UpdateFrequency updateFrequency) {
             String updateFrequencyShrink = shrink(updateFrequency, "updateFrequency", "json");
@@ -351,7 +351,7 @@ public class CreatePersonalFeishuChatRequest extends Request {
             } 
 
             /**
-             * <p>五段 cron；传入时优先于 preset</p>
+             * <p>The cron expression for the timed scheduling node.</p>
              * 
              * <strong>example:</strong>
              * <p>0 * * * *</p>
@@ -362,7 +362,7 @@ public class CreatePersonalFeishuChatRequest extends Request {
             }
 
             /**
-             * <p>是否启用定时同步，默认 true</p>
+             * <p>Specifies whether to enable the scheduled synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -373,7 +373,7 @@ public class CreatePersonalFeishuChatRequest extends Request {
             }
 
             /**
-             * <p>同步预设：hourly 或 daily_2am</p>
+             * <p>The synchronization preset: hourly or daily_2am.</p>
              * 
              * <strong>example:</strong>
              * <p>hourly</p>

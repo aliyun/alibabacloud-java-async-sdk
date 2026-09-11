@@ -116,10 +116,10 @@ public class CreateTenantDirectoryRequest extends Request {
         } 
 
         /**
-         * <p>目录描述</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>Sample description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -128,11 +128,11 @@ public class CreateTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -141,7 +141,7 @@ public class CreateTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>父目录内部主键；不传表示创建企业知识库根目录</p>
+         * <p>The ID of the parent node.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class CreateTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>文件 OSS URL</p>
+         * <p>The path of the node.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
@@ -165,7 +165,7 @@ public class CreateTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The ID of the tenant for which the operation takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

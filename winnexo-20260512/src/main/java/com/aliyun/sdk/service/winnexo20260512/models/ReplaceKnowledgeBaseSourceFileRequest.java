@@ -147,7 +147,7 @@ public class ReplaceKnowledgeBaseSourceFileRequest extends Request {
         } 
 
         /**
-         * <p>新文件名（可选；不传或空字符串时保持原文件名）</p>
+         * <p>The new file name. This parameter is optional. If this parameter is not provided or set to an empty string, the original file name is retained.</p>
          * 
          * <strong>example:</strong>
          * <p>example.pdf</p>
@@ -159,7 +159,7 @@ public class ReplaceKnowledgeBaseSourceFileRequest extends Request {
         }
 
         /**
-         * <p>新文件的 OSS 持久化地址（由上传签名接口返回）</p>
+         * <p>The OSS persistent storage address of the replacement file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class ReplaceKnowledgeBaseSourceFileRequest extends Request {
         }
 
         /**
-         * <p>新文件的公开访问 URL（可能携带临时签名）</p>
+         * <p>The public access URL of the new file. The URL may contain a temporary signature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class ReplaceKnowledgeBaseSourceFileRequest extends Request {
         }
 
         /**
-         * <p>新文件的文件记录 ID</p>
+         * <p>The file record ID of the replacement file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +198,7 @@ public class ReplaceKnowledgeBaseSourceFileRequest extends Request {
         }
 
         /**
-         * <p>是否同步等待重新解析完成；默认 false，异步入队</p>
+         * <p>Specifies whether to synchronously wait for re-parsing to complete. Default value: false, which indicates asynchronous queuing.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -210,7 +210,7 @@ public class ReplaceKnowledgeBaseSourceFileRequest extends Request {
         }
 
         /**
-         * <p>待替换的企业知识库 FILE 数据源 ID</p>
+         * <p>The ID of the FILE data source in the enterprise knowledge base to be replaced.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +223,7 @@ public class ReplaceKnowledgeBaseSourceFileRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

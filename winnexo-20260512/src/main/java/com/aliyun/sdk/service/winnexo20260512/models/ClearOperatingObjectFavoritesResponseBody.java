@@ -158,7 +158,7 @@ public class ClearOperatingObjectFavoritesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200</p>
+         * <p>The status code. SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class ClearOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>canonical 图谱技术名</p>
+         * <p>The graph name. You can call listGraphs to obtain the value.</p>
          * 
          * <strong>example:</strong>
          * <p>crm</p>
@@ -180,7 +180,7 @@ public class ClearOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -191,7 +191,7 @@ public class ClearOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>对象类型技术名</p>
+         * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>contract</p>
@@ -202,7 +202,7 @@ public class ClearOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>canonical 数字员工技术名</p>
+         * <p>The digital employee name (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>customer_assistant</p>
@@ -213,7 +213,7 @@ public class ClearOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>同一事务内复核的未过滤剩余物理记录数量</p>
+         * <p>The number of remaining followed objects within the specified scope.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -224,7 +224,7 @@ public class ClearOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>实际删除的物理关注记录数量</p>
+         * <p>The number of physical follow records that were actually deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -235,7 +235,7 @@ public class ClearOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -246,7 +246,7 @@ public class ClearOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否已确认剩余物理记录为零</p>
+         * <p>Indicates whether the remaining record count has been verified as zero within the same transaction.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

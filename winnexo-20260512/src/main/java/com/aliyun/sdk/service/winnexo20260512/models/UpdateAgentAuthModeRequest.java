@@ -89,7 +89,7 @@ public class UpdateAgentAuthModeRequest extends Request {
         } 
 
         /**
-         * <p>使用权限授权模式：SPECIFIED_USERS=指定用户（需显式授权），ALL_USERS=所有用户（无需授权即可使用）</p>
+         * <p>The authentication mode.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class UpdateAgentAuthModeRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class UpdateAgentAuthModeRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The ID of the effective tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

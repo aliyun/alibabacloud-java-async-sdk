@@ -132,7 +132,7 @@ public class MoveResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class MoveResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -154,7 +154,7 @@ public class MoveResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E68654BD-F7BA-5837-8686-5645D739A47C</p>
@@ -165,7 +165,7 @@ public class MoveResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>源目录 ID（echo 回入参）</p>
+         * <p>The source directory ID, which echoes the input parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceDirectoryId</p>
@@ -176,7 +176,7 @@ public class MoveResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 ID（echo 回入参）</p>
+         * <p>The resource ID, which echoes the input parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>2000627</p>
@@ -187,7 +187,7 @@ public class MoveResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作是否成功</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -198,7 +198,7 @@ public class MoveResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目标目录 ID（echo 回入参）</p>
+         * <p>The target directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleTargetDirectoryId</p>

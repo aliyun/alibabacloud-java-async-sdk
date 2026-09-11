@@ -158,7 +158,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建知识库根目录 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -180,7 +180,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-14T02:18:27Z</p>
@@ -191,7 +191,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>知识库 URL（echo 回入参，便于调用方对齐）</p>
+         * <p>The knowledge base URL. This echoes the input parameter for the caller to verify alignment.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -202,7 +202,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -213,7 +213,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The name of the AI assistant.</p>
          * 
          * <strong>example:</strong>
          * <p>p-toolset-3dcef7ca-31b9-4d1c-8692-1ef03099cad3</p>
@@ -224,7 +224,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>所属数字员工名称（echo 回入参，可为 null）</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -235,7 +235,7 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E68654BD-F7BA-5837-8686-5645D739A47C</p>
@@ -246,7 +246,11 @@ public class CreatePersonalAlidingKnowledgeBaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>知识库根目录状态（创建后为 RUNNING；后台同步完成后转 READY 或 FAILED）</p>
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>200: Succeeded.</li>
+         * <li>500: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>200</p>

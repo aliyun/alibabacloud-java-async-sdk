@@ -184,7 +184,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分类描述</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
          * <p>This is default function description by fc-deploy component</p>
@@ -206,7 +206,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建分类 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -217,7 +217,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目录 KB 归属类型：normal / aliding_kb_root / aliding_kb_internal</p>
+         * <p>The directory type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -228,7 +228,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间戳（毫秒）</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-14T02:18:27Z</p>
@@ -239,7 +239,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>修改时间戳（毫秒）</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-19T01:48:56Z</p>
@@ -250,7 +250,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -261,7 +261,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>p-toolset-89550434-4e20-4e4e-bcac-9ab81b82c5b3</p>
@@ -272,7 +272,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>父分类 ID；新分类挂在租户根目录下时返回 null</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>wd-lxykjnnw4lyl9eq</p>
@@ -283,7 +283,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件 OSS URL</p>
+         * <p>The path of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>UVCIpI0siUski9iw</p>
@@ -294,7 +294,7 @@ public class CreateKnowledgeBaseDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C474BFC7-7B11-5D92-971E-74AA82EC495B</p>

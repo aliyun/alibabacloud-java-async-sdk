@@ -158,7 +158,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定的目录 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -180,7 +180,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>兼容字段，固定返回空值</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-14T02:18:27Z</p>
@@ -191,7 +191,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -202,7 +202,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
          * <p>oklabs_tongyici</p>
@@ -213,7 +213,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B49109FE-5BB1-593C-915D-F5A99D9F5435</p>
@@ -224,7 +224,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 scope，固定为 PERSONAL</p>
+         * <p>The permission scope.</p>
          * 
          * <strong>example:</strong>
          * <p>user_info projects pull_requests hook gists emails</p>
@@ -235,7 +235,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>兼容字段，固定返回空字符串</p>
+         * <p>The unique identifier on the business system side, which is the business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2000398</p>
@@ -246,7 +246,7 @@ public class CreatePersonalDingtalkMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>固定返回 DEPRECATED</p>
+         * <p>The task running status.</p>
          * 
          * <strong>example:</strong>
          * <p>updated</p>

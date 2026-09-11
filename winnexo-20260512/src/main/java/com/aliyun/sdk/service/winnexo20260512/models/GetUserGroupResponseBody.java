@@ -132,7 +132,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>直接子用户组列表</p>
+         * <p><strong>The list of direct child user groups.</strong></p>
          */
         public Builder childGroups(java.util.List<?> childGroups) {
             this.childGroups = childGroups;
@@ -140,7 +140,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -151,7 +151,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前用户组直接成员列表</p>
+         * <p><strong>The list of direct members in the current user group.</strong></p>
          */
         public Builder members(java.util.List<?> members) {
             this.members = members;
@@ -159,7 +159,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -170,7 +170,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>父用户组信息；根节点为空</p>
+         * <p><strong>The parent user group information. This is empty for the root node.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;userGroupId&quot;:&quot;b07fb0a4-0b7d-44a7-a3d5-a43a5964c8f0&quot;,&quot;userGroupName&quot;:&quot;Sales Center&quot;,&quot;parentId&quot;:null,&quot;level&quot;:1,&quot;description&quot;:&quot;Sales organization&quot;,&quot;childGroupCount&quot;:1,&quot;directMemberCount&quot;:0,&quot;sourceType&quot;:&quot;internal&quot;,&quot;externalSyncStatus&quot;:null,&quot;gmtCreate&quot;:&quot;2026-08-27T08:00:00Z&quot;,&quot;gmtModified&quot;:&quot;2026-08-27T08:00:00Z&quot;}</p>
          */
         public Builder parentGroup(Object parentGroup) {
             this.parentGroup = parentGroup;
@@ -178,7 +181,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -189,7 +192,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目标用户组信息</p>
+         * <p><strong>The target user group information.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;userGroupId&quot;:&quot;7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11&quot;,&quot;userGroupName&quot;:&quot;South China Sales&quot;,&quot;parentId&quot;:&quot;b07fb0a4-0b7d-44a7-a3d5-a43a5964c8f0&quot;,&quot;level&quot;:2,&quot;description&quot;:&quot;South China Sales organization&quot;,&quot;childGroupCount&quot;:0,&quot;directMemberCount&quot;:2,&quot;sourceType&quot;:&quot;internal&quot;,&quot;externalSyncStatus&quot;:null,&quot;gmtCreate&quot;:&quot;2026-08-27T09:00:00Z&quot;,&quot;gmtModified&quot;:&quot;2026-08-27T10:00:00Z&quot;}</p>
          */
         public Builder userGroup(Object userGroup) {
             this.userGroup = userGroup;

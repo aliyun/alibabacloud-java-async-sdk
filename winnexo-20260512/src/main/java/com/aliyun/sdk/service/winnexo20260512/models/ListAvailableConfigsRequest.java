@@ -59,7 +59,7 @@ public class ListAvailableConfigsRequest extends Request {
         } 
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. The winnexo-cli passes this parameter explicitly by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

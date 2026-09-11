@@ -132,7 +132,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of MCP cards.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -162,7 +162,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页数量</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -195,7 +195,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>符合条件的总数（应用 keyword/sourceTypes 后，分页前）</p>
+         * <p>The maximum number of entries returned in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -303,7 +303,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>对象归属的语义图谱名（object_id 在该 graph 下唯一）</p>
+             * <p>The name of the semantic graph to which the object belongs. The object_id is unique within this graph.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -314,7 +314,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象唯一 ID</p>
+             * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -325,7 +325,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象显示名（如客户名称），由图谱 schema 解析；缓存缺失时为 null</p>
+             * <p>The object name.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -336,7 +336,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象类型（如 customer / opportunity），对应图谱 schema 中的 object_type</p>
+             * <p>The object type, such as customer. This field has a value when type is set to mention.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -347,7 +347,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象类型显示名（如&quot;客户&quot;），由图谱 schema 解析；缓存缺失时为 null</p>
+             * <p>The display name of the object type (such as &quot;Customer&quot;), parsed from the graph schema. The value is null when the cache is missed.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -586,7 +586,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>目录创建者姓名（仅 KB 顶层目录列表时返回）</p>
+             * <p>The name of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -597,10 +597,10 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>描述（仅 KB 顶层目录列表时返回）</p>
+             * <p>The description of the to-do card type.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例描述</p>
+             * <p>Sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -608,7 +608,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录归属类型（itemType=directory 时有值）：normal / aliding_kb_root / aliding_kb_internal</p>
+             * <p>The directory type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -619,7 +619,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间戳（毫秒）</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -630,7 +630,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间戳（毫秒）</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -641,7 +641,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>唯一标识（itemType=directory 时为 directory_id；itemType=resource 时为 source_id）</p>
+             * <p>The ID of the data item. When tabId and orgId are the same, itemId uniquely identifies a data item. The maximum length is 128 characters.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleItemId</p>
@@ -652,7 +652,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>类型：directory / resource</p>
+             * <p>The data type (group, user, or role).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -663,10 +663,10 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -674,7 +674,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * objectBindings.
+             * <p>The object bindings.</p>
              */
             public Builder objectBindings(java.util.List<ObjectBindings> objectBindings) {
                 this.objectBindings = objectBindings;
@@ -682,7 +682,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>状态为 FAILED 的资源数（仅 KB 顶层目录列表时返回）</p>
+             * <p>The number of resources with the FAILED status. This field is returned only in the top-level knowledge base directory list.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -693,7 +693,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源归属类型（itemType=resource 时有值）：aliding_kb_doc / normal</p>
+             * <p>The knowledge base source type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -704,7 +704,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>状态为 READY 的资源数（仅 KB 顶层目录列表时返回）</p>
+             * <p>The number of resources with the READY status. This field is returned only in the top-level knowledge base directory list.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -715,7 +715,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源状态（itemType=resource 时有值）</p>
+             * <p>The resource status. This field has a value when itemType is set to resource.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -726,7 +726,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录及子目录下资源总数（仅 KB 顶层目录列表时返回）</p>
+             * <p>The total number of resources in the directory and its subdirectories. This field is returned only in the top-level knowledge base directory list.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -737,7 +737,7 @@ public class ListAdminKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源类型（itemType=resource 时有值）</p>
+             * <p>The source type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

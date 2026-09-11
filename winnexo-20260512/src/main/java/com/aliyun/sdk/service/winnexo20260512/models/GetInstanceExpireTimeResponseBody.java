@@ -145,7 +145,7 @@ public class GetInstanceExpireTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class GetInstanceExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否找到标准包实例</p>
+         * <p>Indicates whether a standard package instance is found.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,7 +167,7 @@ public class GetInstanceExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>实例过期时间（ISO格式）</p>
+         * <p>The expiration time of the instance in ISO format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -178,7 +178,7 @@ public class GetInstanceExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>实例ID</p>
+         * <p>The instance ID. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleInstanceId</p>
@@ -189,7 +189,13 @@ public class GetInstanceExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>实例状态</p>
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li>RUNNING: Running.</li>
+         * <li>TERMINATED: Terminated.</li>
+         * <li>COMPLETED: Completed.</li>
+         * <li>ERROR: Error.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -200,7 +206,7 @@ public class GetInstanceExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -211,7 +217,7 @@ public class GetInstanceExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -222,7 +228,7 @@ public class GetInstanceExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>系统租户ID</p>
+         * <p>The effective tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

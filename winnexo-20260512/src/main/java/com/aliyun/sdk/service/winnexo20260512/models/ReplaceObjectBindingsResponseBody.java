@@ -106,7 +106,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -128,7 +128,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * objectBindings.
+         * <p>The object binding.</p>
          */
         public Builder objectBindings(java.util.List<ObjectBindings> objectBindings) {
             this.objectBindings = objectBindings;
@@ -136,7 +136,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -147,7 +147,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源 ID</p>
+         * <p>The ID of the personal FILE data source to be replaced (unique within the tenant).</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -229,7 +229,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>绑定对象归属的语义图谱名（object_id 在该 graph 下唯一，必填）</p>
+             * <p>The semantic graph name to which the binding object belongs (object_id is unique within this graph. Required).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -240,7 +240,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>绑定对象 ID</p>
+             * <p>The binding object ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -251,7 +251,7 @@ public class ReplaceObjectBindingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>绑定对象类型（如 customer / project）</p>
+             * <p>The binding object type (such as customer or project).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

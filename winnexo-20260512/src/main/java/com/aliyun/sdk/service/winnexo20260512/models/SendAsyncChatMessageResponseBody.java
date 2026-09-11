@@ -132,7 +132,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* or InvalidParameter.*).</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The error description. This is empty when the request succeeds.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -154,7 +154,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>助手消息ID；用于随后调用 streamChatMessage 订阅生成结果</p>
+         * <p>The assistant message ID. Use this ID to call streamChatMessage to subscribe to the generation results.</p>
          * 
          * <strong>example:</strong>
          * <p>3cf84d92-f273-4bb7-ab3c-52646d25ec30</p>
@@ -165,7 +165,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -176,7 +176,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用是否新建了会话</p>
+         * <p>Indicates whether a new session was created by this call.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -187,7 +187,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>会话ID；续写会话时与入参一致，新建会话时为服务端生成值</p>
+         * <p>The session ID. For continued sessions, this matches the input value. For new sessions, this is a server-generated value.</p>
          * 
          * <strong>example:</strong>
          * <p>bd772dcc-afab-44ad-9fb8-bca716726201</p>
@@ -198,7 +198,7 @@ public class SendAsyncChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户消息ID；用于与本轮助手消息建立配对关系</p>
+         * <p>The user message ID.</p>
          * 
          * <strong>example:</strong>
          * <p>60756cc6-8c53-4d1f-8db8-b8c09b81a5cb</p>

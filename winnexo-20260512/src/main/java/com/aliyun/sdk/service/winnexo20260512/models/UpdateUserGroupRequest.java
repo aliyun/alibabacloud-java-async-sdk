@@ -130,10 +130,10 @@ public class UpdateUserGroupRequest extends Request {
         } 
 
         /**
-         * <p>新用户组描述；不传表示不修改</p>
+         * <p>The new description of the user group. If not specified, the description is not modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>South China Sales Organization</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -142,7 +142,7 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>是否移动到根节点；不能与 parentId 同时设置</p>
+         * <p>Specifies whether to move the user group to the root node. This parameter cannot be set together with parentId.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -154,10 +154,10 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>新父用户组ID；不传表示不移动</p>
+         * <p>The ID of the new parent user group. If not specified, the user group is not moved.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11</p>
          */
         public Builder parentId(String parentId) {
             this.putBodyParameter("parentId", parentId);
@@ -166,10 +166,10 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>10000</p>
          */
         public Builder tenantId(String tenantId) {
             this.putQueryParameter("tenantId", tenantId);
@@ -178,11 +178,11 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>目标用户组ID</p>
+         * <p>The ID of the target user group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11</p>
          */
         public Builder userGroupId(String userGroupId) {
             this.putBodyParameter("userGroupId", userGroupId);
@@ -191,10 +191,10 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>新用户组名称；不传表示不修改</p>
+         * <p>The new name of the user group. If not specified, the name is not modified.</p>
          * 
          * <strong>example:</strong>
-         * <p>string_value</p>
+         * <p>South China Sales</p>
          */
         public Builder userGroupName(String userGroupName) {
             this.putBodyParameter("userGroupName", userGroupName);

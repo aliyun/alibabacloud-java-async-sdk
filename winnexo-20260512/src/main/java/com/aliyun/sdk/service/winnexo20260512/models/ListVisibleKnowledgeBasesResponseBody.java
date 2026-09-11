@@ -106,7 +106,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The file information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -136,7 +136,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>190F5425-A145-5BBA-980F-082ADB0CA6AF</p>
@@ -147,7 +147,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回条数（不分页，等于 len(items)）</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -320,7 +320,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>目录创建者姓名（来自 rbj_user_tenant_mapping.user_display_name）</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>
@@ -331,7 +331,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录描述</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>{{7*7}}</p>
@@ -342,7 +342,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录唯一标识（租户内唯一）</p>
+             * <p>The directory ID. You can obtain this value by calling the API operation for retrieving the knowledge base directory.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleDirectoryId</p>
@@ -353,10 +353,10 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间戳（毫秒）</p>
+             * <p>The creation time. The value is a timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
-             * <p>2025-11-14T02:18:27Z</p>
+             * <p>1763086707000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -364,10 +364,10 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间戳（毫秒）</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
-             * <p>2026-03-26T13:57:42Z</p>
+             * <p>1774533462</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -375,7 +375,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The skill name.</p>
              * 
              * <strong>example:</strong>
              * <p>cs-default-umodel-1785637207863_k8s.metric.k8s_csi_node_pv_node_cn-heyuan-acdr-1/c80cf3a4f9d6c496781591bd17d006c6f</p>
@@ -386,7 +386,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件 OSS URL</p>
+             * <p>The file directory information.</p>
              * 
              * <strong>example:</strong>
              * <p>/test-folder-path1_1773194924773</p>
@@ -397,7 +397,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录及子目录下状态为 FAILED 的资源数</p>
+             * <p>The number of resources in the FAILED state. This parameter is returned only when the top-level knowledge base directory list is queried.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -408,7 +408,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录及子目录下状态为 READY 的资源数</p>
+             * <p>The number of resources in the READY state. This parameter is returned only when the top-level knowledge base directory list is queried.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -419,7 +419,7 @@ public class ListVisibleKnowledgeBasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录及子目录下的资源总数</p>
+             * <p>The total number of resources in the directory and its subdirectories. This parameter is returned only when the top-level knowledge base directory list is queried.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -214,7 +214,7 @@ public class UpdateScheduledTaskRequest extends Request {
         } 
 
         /**
-         * description.
+         * <p>The description information.</p>
          */
         public Builder description(java.util.List<Description> description) {
             String descriptionShrink = shrink(description, "description", "json");
@@ -224,7 +224,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称列表</p>
+         * <p>The list of digital human names.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -237,7 +237,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>是否公开访问</p>
+         * <p>Specifies whether the task is publicly accessible.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -249,7 +249,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>执行模型档位；不传则不更新</p>
+         * <p>The execution model tier. If not specified, the model tier is not updated.</p>
          * 
          * <strong>example:</strong>
          * <p>quick</p>
@@ -261,10 +261,10 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -273,7 +273,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * segments.
+         * <p>The segments.</p>
          */
         public Builder segments(java.util.List<Segments> segments) {
             String segmentsShrink = shrink(segments, "segments", "json");
@@ -283,7 +283,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * taskDetail.
+         * <p>The task details.</p>
          */
         public Builder taskDetail(TaskDetail taskDetail) {
             String taskDetailShrink = shrink(taskDetail, "taskDetail", "json");
@@ -293,7 +293,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>任务 ID</p>
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -318,7 +318,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * triggerConfig.
+         * <p>The trigger configuration. The configuration varies depending on the trigger type.</p>
          */
         public Builder triggerConfig(TriggerConfig triggerConfig) {
             String triggerConfigShrink = shrink(triggerConfig, "triggerConfig", "json");
@@ -328,7 +328,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>群任务可见范围调整：PRIVATE(仅创建人与群主可见)/COLLABORATIVE(指定协作成员可见)/PUBLIC(群内全员可见)；不传表示不更新档位，个人任务忽略该字段</p>
+         * <p>The visibility scope for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If not specified, the visibility is not updated. This parameter is ignored for personal tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>COLLABORATIVE</p>
@@ -340,7 +340,7 @@ public class UpdateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>协作成员全量替换列表（仅 visibility=COLLABORATIVE 生效，从协作档改走时名单清空，最多 1000 个）；不传表示不更新成员；任务创建人与群创建人无需传入（由鉴权层覆盖）；个人任务忽略该字段</p>
+         * <p>The full replacement list of collaborator member user IDs. This parameter takes effect only when visibility is set to COLLABORATIVE. The list is cleared when switching away from the COLLABORATIVE tier. A maximum of 1000 members are supported. If not specified, the member list is not updated. The task creator and group creator do not need to be included because they are covered by the authentication layer. This parameter is ignored for personal tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -478,10 +478,10 @@ public class UpdateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>文本内容，type=text 时必填</p>
+             * <p>The text content. Required when type is set to text.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例内容</p>
+             * <p>Sample content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -489,7 +489,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>功能开关，type=web_search 时可选</p>
+             * <p>The feature switch. Optional when type is set to web_search.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -500,10 +500,10 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -511,7 +511,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象 ID，type=mention 时有值</p>
+             * <p>The object ID. This parameter has a value when type is set to mention.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -522,7 +522,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象类型如 customer，type=mention 时有值</p>
+             * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -533,7 +533,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>技能编码，type=skill 时有值</p>
+             * <p>The skill code. This parameter has a value when type is set to skill.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -544,7 +544,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>元素类型：text|web_search|mention|skill</p>
+             * <p>The element type. Valid values: text, web_search, mention, and skill.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -681,10 +681,10 @@ public class UpdateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>文本内容，type=text 时必填</p>
+             * <p>The text content. Required when type is set to text.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例内容</p>
+             * <p>Sample content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -692,7 +692,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>功能开关，type=web_search 时可选</p>
+             * <p>The feature switch. Optional when type is set to web_search.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -703,10 +703,10 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -714,7 +714,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象 ID，type=mention 时有值</p>
+             * <p>The object ID. This parameter has a value when type is set to mention.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -725,7 +725,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象类型如 customer，type=mention 时有值</p>
+             * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -736,7 +736,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>技能编码，type=skill 时有值</p>
+             * <p>The skill code. This parameter has a value when type is set to skill.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -747,7 +747,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>元素类型：text|web_search|mention|skill</p>
+             * <p>The element type. Valid values: text, web_search, mention, and skill.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -844,7 +844,7 @@ public class UpdateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>提及类型，如 objects</p>
+             * <p>The mention type, such as objects.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -855,10 +855,10 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -866,7 +866,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象 ID（@指定时有值）</p>
+             * <p>The object ID. This parameter has a value when an object is mentioned using @.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -877,7 +877,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象类型，如 customer、company</p>
+             * <p>The object type, such as customer or company.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -947,7 +947,7 @@ public class UpdateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>语义属性（JSON 字符串），用于语义检索时过滤</p>
+             * <p>The semantic attributes (JSON string) used for filtering during semantic retrieval.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;level&quot;: &quot;VIP&quot;}</p>
@@ -958,7 +958,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>语义实体名，如客户/机会</p>
+             * <p>The semantic entity name, such as customer or opportunity.</p>
              * 
              * <strong>example:</strong>
              * <p>customer</p>
@@ -1054,7 +1054,7 @@ public class UpdateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>技能展示名称</p>
+             * <p>The display name of the skill.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1065,10 +1065,10 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1076,7 +1076,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>技能代码</p>
+             * <p>The skill code.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1183,7 +1183,7 @@ public class UpdateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * relatedObjects.
+             * <p>The related objects.</p>
              */
             public Builder relatedObjects(java.util.List<RelatedObjects> relatedObjects) {
                 this.relatedObjects = relatedObjects;
@@ -1191,7 +1191,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * relatedSemantics.
+             * <p>The related semantics.</p>
              */
             public Builder relatedSemantics(java.util.List<RelatedSemantics> relatedSemantics) {
                 this.relatedSemantics = relatedSemantics;
@@ -1199,7 +1199,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * relatedSkills.
+             * <p>The related skills.</p>
              */
             public Builder relatedSkills(java.util.List<RelatedSkills> relatedSkills) {
                 this.relatedSkills = relatedSkills;
@@ -1207,7 +1207,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>【已废弃】任务理解描述；任务理解功能已下线，服务端接收后忽略该字段（更新时会清空存量 task_detail），仅为存量调用方入参兼容保留；已取消必填约束，新接入无需传入</p>
+             * <p>The task understanding description polished by the LLM.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1342,7 +1342,7 @@ public class UpdateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>推送渠道</p>
+             * <p>The push channel type.</p>
              * 
              * <strong>example:</strong>
              * <p>DINGTALK</p>
@@ -1353,7 +1353,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>推送内容范围，默认 all_replies</p>
+             * <p>The scope of push content. Default value: all_replies.</p>
              * 
              * <strong>example:</strong>
              * <p>all_replies</p>
@@ -1364,7 +1364,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>推送方式，默认 channel_bot</p>
+             * <p>The push method. Default value: channel_bot.</p>
              * 
              * <strong>example:</strong>
              * <p>channel_bot</p>
@@ -1375,7 +1375,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>是否推送该频道，默认关闭</p>
+             * <p>Specifies whether to push to this channel. Default value: false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1386,7 +1386,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>产出文件推送格式，默认 file</p>
+             * <p>The format for pushing output files. Default value: file.</p>
              * 
              * <strong>example:</strong>
              * <p>file</p>
@@ -1397,7 +1397,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>发送机器人所属数字员工，必传且不可为空</p>
+             * <p>The digital human to which the sending bot belongs. This parameter is required and cannot be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1408,7 +1408,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>接收人，当前仅支持 self</p>
+             * <p>The receiver type. Currently only self is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1518,7 +1518,7 @@ public class UpdateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>Cron 表达式，trigger_mode=scheduled 时必填，如 &quot;00 09 * * *&quot;</p>
+             * <p>The cron expression. Required when trigger_mode is set to scheduled. Example: \&quot;00 09 * * *\&quot;.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1529,7 +1529,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>语言如 zh-CN|en-US，由服务端自动注入</p>
+             * <p>The language, such as zh-CN or en-US. Automatically injected by the server.</p>
              * 
              * <strong>example:</strong>
              * <p>zh-CN</p>
@@ -1540,7 +1540,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>任务推送频道列表；为空或无启用频道时不推送</p>
+             * <p>The list of push channels for the task. No push notifications are sent if the list is empty or no channel is enabled.</p>
              */
             public Builder pushConfig(java.util.List<PushConfig> pushConfig) {
                 this.pushConfig = pushConfig;
@@ -1548,7 +1548,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>时区如 Asia/Shanghai，由服务端自动注入</p>
+             * <p>The time zone, such as Asia/Shanghai. Automatically injected by the server.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -1559,7 +1559,7 @@ public class UpdateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>触发模式：manual|scheduled</p>
+             * <p>The trigger mode. Valid values: manual and scheduled.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

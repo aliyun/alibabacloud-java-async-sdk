@@ -106,7 +106,7 @@ public class UpdateDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class UpdateDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目录唯一标识（echo 回入参）</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -128,7 +128,7 @@ public class UpdateDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -139,7 +139,7 @@ public class UpdateDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -150,7 +150,11 @@ public class UpdateDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>操作是否成功</p>
+         * <p>Indicates whether the API call is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call is successful.</li>
+         * <li>false: The call fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -119,7 +119,11 @@ public class TogglePrimaryObjectFavoriteRequest extends Request {
         } 
 
         /**
-         * <p>操作：add-关注，remove-取消关注</p>
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Add to whitelist.</li>
+         * <li><strong>2</strong>: Remove from whitelist.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +136,7 @@ public class TogglePrimaryObjectFavoriteRequest extends Request {
         }
 
         /**
-         * <p>主对象业务ID列表</p>
+         * <p>The list of primary object business IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +150,7 @@ public class TogglePrimaryObjectFavoriteRequest extends Request {
         }
 
         /**
-         * <p>对象类型（如 customer、project）</p>
+         * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +163,7 @@ public class TogglePrimaryObjectFavoriteRequest extends Request {
         }
 
         /**
-         * <p>运营对象名称（如 customer_1）</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +176,7 @@ public class TogglePrimaryObjectFavoriteRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The ID of the effective tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

@@ -59,7 +59,7 @@ public class GetUserCreditUsageRequest extends Request {
         } 
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The ID of the tenant to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

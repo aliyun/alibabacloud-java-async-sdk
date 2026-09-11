@@ -143,7 +143,7 @@ public class ListTenantDirectoryRequest extends Request {
         } 
 
         /**
-         * <p>目录唯一标识；不传或传 root 时查询知识库根目录列表</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -155,7 +155,7 @@ public class ListTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>页码</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class ListTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>每页数量</p>
+         * <p>The number of entries per page. Default value: 100. Maximum value: 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -179,7 +179,12 @@ public class ListTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>排序字段</p>
+         * <p>The field by which the results are sorted. Valid values:</p>
+         * <ul>
+         * <li>event_time: the event creation time.</li>
+         * <li>event_execute_start_time: the event execution time.</li>
+         * <li>event_execute_finish_time: the event completion time.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -191,7 +196,7 @@ public class ListTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>排序方向</p>
+         * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>
@@ -203,7 +208,7 @@ public class ListTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>资源类型过滤，多个类型使用逗号分隔；传入后只返回资源</p>
+         * <p>The list of source types.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -215,7 +220,7 @@ public class ListTenantDirectoryRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

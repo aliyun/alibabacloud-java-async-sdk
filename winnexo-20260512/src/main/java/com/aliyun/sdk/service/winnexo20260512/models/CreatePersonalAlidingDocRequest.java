@@ -39,6 +39,10 @@ public class CreatePersonalAlidingDocRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTags")
+    private String sourceTags;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
@@ -50,6 +54,7 @@ public class CreatePersonalAlidingDocRequest extends Request {
         this.filePublicUrl = builder.filePublicUrl;
         this.name = builder.name;
         this.operatingObjectName = builder.operatingObjectName;
+        this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
     }
 
@@ -102,6 +107,13 @@ public class CreatePersonalAlidingDocRequest extends Request {
     }
 
     /**
+     * @return sourceTags
+     */
+    public String getSourceTags() {
+        return this.sourceTags;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -114,6 +126,7 @@ public class CreatePersonalAlidingDocRequest extends Request {
         private String filePublicUrl; 
         private String name; 
         private String operatingObjectName; 
+        private String sourceTags; 
         private String tenantId; 
 
         private Builder() {
@@ -127,11 +140,12 @@ public class CreatePersonalAlidingDocRequest extends Request {
             this.filePublicUrl = request.filePublicUrl;
             this.name = request.name;
             this.operatingObjectName = request.operatingObjectName;
+            this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>资源描述（可选）</p>
+         * <p>The pipeline description.</p>
          * 
          * <strong>example:</strong>
          * <p>controll service user</p>
@@ -143,7 +157,7 @@ public class CreatePersonalAlidingDocRequest extends Request {
         }
 
         /**
-         * <p>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时绑定到该目录（必须是当前用户在当前数字员工下的已有个人目录）</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -155,7 +169,7 @@ public class CreatePersonalAlidingDocRequest extends Request {
         }
 
         /**
-         * <p>阿里钉在线文档的可公开访问 URL</p>
+         * <p>The publicly accessible URL of the AliDing online document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +182,7 @@ public class CreatePersonalAlidingDocRequest extends Request {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The customer group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +195,7 @@ public class CreatePersonalAlidingDocRequest extends Request {
         }
 
         /**
-         * <p>Agent 命名空间标识，可选</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -193,7 +207,19 @@ public class CreatePersonalAlidingDocRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The list of resource tag JSON strings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Key&quot;,&quot;Document&quot;]</p>
+         */
+        public Builder sourceTags(String sourceTags) {
+            this.putBodyParameter("sourceTags", sourceTags);
+            this.sourceTags = sourceTags;
+            return this;
+        }
+
+        /**
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1729094555111072</p>

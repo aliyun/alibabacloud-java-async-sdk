@@ -116,10 +116,10 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
         } 
 
         /**
-         * <p>新分类描述；不传表示不更新</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>Sample description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -128,7 +128,7 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>待修改的分类 ID（必传）</p>
+         * <p>The directory ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,10 +141,10 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>新分类名称；不传表示不更新</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -153,7 +153,7 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>新父分类 ID；不传表示不移动，传入时必须是当前租户下已存在的企业知识库目录 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleParentDirectoryId</p>
@@ -165,7 +165,7 @@ public class UpdateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID to take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

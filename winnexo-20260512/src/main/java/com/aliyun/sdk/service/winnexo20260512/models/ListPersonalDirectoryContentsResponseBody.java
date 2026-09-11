@@ -132,7 +132,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The file information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -162,7 +162,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页数量</p>
+         * <p>The number of entries returned per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -195,7 +195,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>总数（不分页前的命中行数）</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,7 +290,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>对象唯一 ID</p>
+             * <p>The bound object ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -301,7 +301,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象显示名（如客户名称），由图谱 schema 解析；缓存缺失时为 null</p>
+             * <p>The object name.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -312,7 +312,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象类型（如 customer / opportunity），对应图谱 schema 中的 object_type</p>
+             * <p>The bound object type, such as customer or project.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -323,7 +323,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象类型显示名（如&quot;客户&quot;），由图谱 schema 解析；缓存缺失时为 null</p>
+             * <p>The display name of the object type, such as &quot;Customer&quot;, resolved from the graph schema. The value is null when there is a cache miss.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -562,7 +562,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>目录创建者姓名（仅 directoryId=&quot;root&quot; 列表时返回）</p>
+             * <p>The name of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -573,10 +573,10 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>知识库描述（仅 directoryId=&quot;root&quot; 列表时返回）</p>
+             * <p>The description of the to-do card type.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例描述</p>
+             * <p>Sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -584,7 +584,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录 KB 归属类型（itemType=directory 时有值）：aliding_kb_root / aliding_kb_internal / normal</p>
+             * <p>The directory type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -595,7 +595,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间戳（毫秒）</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -606,7 +606,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间戳（毫秒）</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -617,7 +617,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>唯一标识（目录为 directoryId，资源为 sourceId）</p>
+             * <p>The signing record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleItemId</p>
@@ -628,7 +628,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>类型: directory 或 resource</p>
+             * <p>The item type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -639,10 +639,10 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -650,7 +650,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * objectBindings.
+             * <p>The object bindings.</p>
              */
             public Builder objectBindings(java.util.List<ObjectBindings> objectBindings) {
                 this.objectBindings = objectBindings;
@@ -658,7 +658,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录下失败资源数（含子目录，仅 directoryId=&quot;root&quot; 列表时返回）</p>
+             * <p>The number of resources with the FAILED status. This parameter is returned only when the top-level KB directory is listed.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -669,7 +669,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Source KB 归属类型（itemType=resource 时有值）：aliding_kb_doc / normal</p>
+             * <p>The knowledge base (KB) ownership type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -680,7 +680,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录下成功资源数（含子目录，仅 directoryId=&quot;root&quot; 列表时返回）</p>
+             * <p>The number of resources with the READY status. This parameter is returned only when the top-level KB directory is listed.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -691,7 +691,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源状态（itemType=resource 时有值）</p>
+             * <p>The resource status. This parameter has a value only when itemType is resource.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -702,7 +702,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录下资源总数（含子目录，仅 directoryId=&quot;root&quot; 列表时返回）</p>
+             * <p>The total number of resources under the directory and its subdirectories. This parameter is returned only when the top-level KB directory is listed.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -713,7 +713,7 @@ public class ListPersonalDirectoryContentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源类型（itemType=resource 时有值；产出保存类资源会被反刷为 OUTPUT）</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

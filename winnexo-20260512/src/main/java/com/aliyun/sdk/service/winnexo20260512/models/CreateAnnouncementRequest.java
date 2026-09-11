@@ -230,11 +230,11 @@ public class CreateAnnouncementRequest extends Request {
         } 
 
         /**
-         * <p>公告正文</p>
+         * <p>The content of the notice.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统将于今晚进行维护。</p>
+         * <p>The system will undergo maintenance tonight</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -243,7 +243,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>展示页面：ALL、FRONTEND、BACKEND</p>
+         * <p>The display page. Valid values: ALL, FRONTEND, and BACKEND.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -255,7 +255,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>展示类型：POPUP、LIST、BANNER</p>
+         * <p>The display type and group label.</p>
          * 
          * <strong>example:</strong>
          * <p>LIST</p>
@@ -267,7 +267,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>带时区的 ISO8601 生效结束时间；不传表示永久有效</p>
+         * <p>The effective end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-21T14:00:00+08:00</p>
@@ -279,7 +279,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>带时区的 ISO8601 生效开始时间；不传表示立即生效</p>
+         * <p>The effective start time in ISO 8601 format with time zone. If this parameter is not specified, the notice takes effect immediately.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-20T14:00:00+08:00</p>
@@ -291,7 +291,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>公告重要性：URGENT、IMPORTANT、GENERAL</p>
+         * <p>The priority. Valid values:</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>是否创建后立即发布</p>
+         * <p>Specifies whether to publish the notice immediately after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -316,7 +316,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>指定系统角色 code 列表；targetRoleMode=SPECIFIED 时使用</p>
+         * <p>The list of system role codes. This parameter is used when targetRoleMode is set to SPECIFIED.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;SYSTEM_ADMIN&quot;]</p>
@@ -329,7 +329,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>目标角色范围：ALL、SPECIFIED</p>
+         * <p>The target role scope. Valid values: ALL and SPECIFIED.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -341,7 +341,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>指定目标租户 ID 列表；targetTenantMode=SPECIFIED 时使用</p>
+         * <p>The list of target tenant IDs. This parameter is used when targetTenantMode is set to SPECIFIED.</p>
          * 
          * <strong>example:</strong>
          * <p>[10000]</p>
@@ -354,7 +354,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>目标租户范围：ALL、SPECIFIED</p>
+         * <p>The target tenant scope. Valid values: ALL and SPECIFIED.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -366,7 +366,7 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The ID of the tenant for which the notice takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -378,11 +378,11 @@ public class CreateAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>公告标题</p>
+         * <p>The title of the notice.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>系统维护通知</p>
+         * <p>System Maintenance Notification</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("title", title);

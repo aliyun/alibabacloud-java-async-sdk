@@ -392,7 +392,7 @@ public class GetSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -403,7 +403,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>DocumentAgent 解析完成时间，ISO8601 格式</p>
+         * <p>The completion time, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -414,10 +414,10 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源描述</p>
+         * <p>The description of the to-do card type.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>Sample description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -425,7 +425,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间，ISO8601 格式</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -436,7 +436,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>修改时间，ISO8601 格式</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -447,7 +447,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否存在备注</p>
+         * <p>Indicates whether notes exist.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -458,7 +458,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否存在 settings 配置</p>
+         * <p>Indicates whether settings configuration exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -469,7 +469,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否存在结构化表</p>
+         * <p>Indicates whether structured tables exist.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -480,7 +480,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否存在非结构化文档</p>
+         * <p>Indicates whether unstructured documents exist.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -491,7 +491,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -502,10 +502,10 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -513,7 +513,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>备注（仅 includeDetails=True）</p>
+         * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -524,7 +524,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * objectBindings.
+         * <p>The object bindings.</p>
          */
         public Builder objectBindings(java.util.List<ObjectBindings> objectBindings) {
             this.objectBindings = objectBindings;
@@ -532,7 +532,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>主对象 ID（兼容字段）</p>
+         * <p>The associated variable ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleObjectId</p>
@@ -543,7 +543,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>主对象类型（兼容字段）</p>
+         * <p>The object type, such as customer. This field has a value when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -554,7 +554,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>运营对象名称</p>
+         * <p>The digital employee name (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -565,7 +565,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -576,7 +576,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>可见范围：PERSONAL / TENANT</p>
+         * <p>The task scope.</p>
          * 
          * <strong>example:</strong>
          * <p>PERSONAL</p>
@@ -587,7 +587,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * settings.
+         * <p>The user profile settings.</p>
          */
         public Builder settings(java.util.Map<String, ?> settings) {
             this.settings = settings;
@@ -595,7 +595,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>技能产出 ID（由产出保存为资源时携带）</p>
+         * <p>The skill output ID (carried when the output is saved as a resource).</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSkillOutputId</p>
@@ -606,7 +606,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源 ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -617,7 +617,11 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源归属类型：normal / aliding_kb_doc</p>
+         * <p>The knowledge base (KB) ownership type. Valid values:</p>
+         * <ul>
+         * <li>aliding_kb_doc: DingTalk knowledge base document.</li>
+         * <li>normal: common knowledge.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -628,7 +632,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源标签 JSON 字符串</p>
+         * <p>The resource tags (optional, a JSON string list such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -639,7 +643,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源类型</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -650,7 +654,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源状态</p>
+         * <p>The final status of the message.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -661,7 +665,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>structuredTables</p>
+         * <p>The list of structured tables.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -672,7 +676,7 @@ public class GetSourceResponseBody extends TeaModel {
         }
 
         /**
-         * unstructuredDocs.
+         * <p>The unstructured documents.</p>
          */
         public Builder unstructuredDocs(java.util.List<UnstructuredDocs> unstructuredDocs) {
             this.unstructuredDocs = unstructuredDocs;
@@ -751,7 +755,7 @@ public class GetSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>对象归属的语义图谱名</p>
+             * <p>The semantic graph name to which the object belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -762,7 +766,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象 ID</p>
+             * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -773,7 +777,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象类型</p>
+             * <p>The object type, such as customer. This field has a value when type is set to mention.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -895,7 +899,7 @@ public class GetSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>DocumentAgent 解析完成时间，ISO8601 格式</p>
+             * <p>The completion time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -906,7 +910,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The file name, including the file name extension.</p>
              * 
              * <strong>example:</strong>
              * <p>example.pdf</p>
@@ -917,7 +921,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件记录 ID</p>
+             * <p>The file record ID (optional, corresponding to settings.file_record_id).</p>
              * 
              * <strong>example:</strong>
              * <p>exampleFileRecordId</p>
@@ -928,7 +932,11 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件类型</p>
+             * <p>The file type. Valid values:</p>
+             * <ul>
+             * <li><strong>file</strong>: file.</li>
+             * <li><strong>folder</strong>: folder.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>pdf</p>
@@ -939,7 +947,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OSS 远程 URL</p>
+             * <p>The session analysis result in OSS URL format. The URL expires in one hour.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -950,7 +958,7 @@ public class GetSourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DocumentAgent 语义 ID</p>
+             * <p>The DocumentAgent semantic ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleSemanticsId</p>

@@ -132,7 +132,7 @@ public class RenameKnowledgeBaseSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class RenameKnowledgeBaseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>最近修改时间，ISO8601 格式</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -154,7 +154,7 @@ public class RenameKnowledgeBaseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -165,10 +165,10 @@ public class RenameKnowledgeBaseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -176,7 +176,7 @@ public class RenameKnowledgeBaseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -187,7 +187,7 @@ public class RenameKnowledgeBaseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源 ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -198,7 +198,7 @@ public class RenameKnowledgeBaseSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源状态</p>
+         * <p>The data source status after re-parsing.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

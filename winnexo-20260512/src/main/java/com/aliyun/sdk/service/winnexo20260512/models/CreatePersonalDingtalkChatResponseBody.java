@@ -171,7 +171,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>普通钉钉群聊 ID</p>
+         * <p>The DingTalk group chat session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cidxxxxxxxx</p>
@@ -182,7 +182,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -193,7 +193,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求指定的目标目录 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -204,7 +204,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-18T10:00:00Z</p>
@@ -215,7 +215,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -226,10 +226,10 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Source 名称</p>
+         * <p>The name of the AI assistant.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户项目群</p>
+         * <p>CustomerProjectGroup</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -237,7 +237,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -248,7 +248,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源范围，固定为 PERSONAL</p>
+         * <p>The permission scope.</p>
          * 
          * <strong>example:</strong>
          * <p>PERSONAL</p>
@@ -259,7 +259,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建 Source ID</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -270,7 +270,7 @@ public class CreatePersonalDingtalkChatResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Source 状态</p>
+         * <p>The task running status.</p>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>

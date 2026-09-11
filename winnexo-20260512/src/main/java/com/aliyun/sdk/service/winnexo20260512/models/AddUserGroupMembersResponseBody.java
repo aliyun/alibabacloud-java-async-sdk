@@ -119,7 +119,7 @@ public class AddUserGroupMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>实际新增成员关系数量</p>
+         * <p>The number of user group member relationships that were actually added.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -130,7 +130,7 @@ public class AddUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -141,7 +141,7 @@ public class AddUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -152,7 +152,7 @@ public class AddUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -163,7 +163,7 @@ public class AddUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>去重前请求成员数量</p>
+         * <p>The number of requested members before deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -174,7 +174,7 @@ public class AddUserGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目标用户组ID</p>
+         * <p>The ID of the target user group.</p>
          * 
          * <strong>example:</strong>
          * <p>7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11</p>

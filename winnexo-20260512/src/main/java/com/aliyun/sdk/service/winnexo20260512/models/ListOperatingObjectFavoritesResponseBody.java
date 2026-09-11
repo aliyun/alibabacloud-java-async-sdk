@@ -184,7 +184,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>canonical 图谱技术名</p>
+         * <p>The graph name. Call listGraphs to retrieve available graphs.</p>
          * 
          * <strong>example:</strong>
          * <p>crm</p>
@@ -206,7 +206,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否还有下一页</p>
+         * <p>Indicates whether more pages are available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -217,7 +217,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The MCP card list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -225,7 +225,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -236,7 +236,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>下一页签名不透明游标；没有下一页时为空</p>
+         * <p>The pagination cursor.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJ2IjoxLCJpZCI6OTAyfQ.c2lnbmF0dXJlX2V4YW1wbGU</p>
@@ -247,7 +247,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>对象类型技术名</p>
+         * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
          * 
          * <strong>example:</strong>
          * <p>contract</p>
@@ -258,7 +258,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>canonical 数字员工技术名</p>
+         * <p>The digital employee name (operating object name).</p>
          * 
          * <strong>example:</strong>
          * <p>customer_assistant</p>
@@ -269,7 +269,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次请求页大小</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -280,7 +280,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -291,7 +291,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>精确范围内去重后的关注总数</p>
+         * <p>The total number of results.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -412,7 +412,10 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The to-do card type description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -420,7 +423,7 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>关注时间，Unix 秒级时间戳</p>
+             * <p>The follow time. The value is a Unix timestamp in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1787822400</p>
@@ -431,10 +434,10 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>canonical 图谱技术名</p>
+             * <p>The graph name.</p>
              * 
              * <strong>example:</strong>
-             * <p>crm</p>
+             * <p>string_value</p>
              */
             public Builder graphName(String graphName) {
                 this.graphName = graphName;
@@ -442,7 +445,10 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
             }
 
             /**
-             * objectId.
+             * <p>The ID of the recommended item. The value can be a <strong>feedId</strong> or a micro-application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2676</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -450,7 +456,10 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
             }
 
             /**
-             * objectName.
+             * <p>The object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>469ac312-403c-41fb-aae3-de5260e30906</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -458,10 +467,10 @@ public class ListOperatingObjectFavoritesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象类型技术名</p>
+             * <p>The bound object type, such as customer or project.</p>
              * 
              * <strong>example:</strong>
-             * <p>contract</p>
+             * <p>table</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;

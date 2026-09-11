@@ -132,7 +132,7 @@ public class ListBillingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class ListBillingResponseBody extends TeaModel {
         }
 
         /**
-         * list.
+         * <p>The details of the bills.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -151,7 +151,7 @@ public class ListBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -162,7 +162,7 @@ public class ListBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>页码</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页条数</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -195,7 +195,7 @@ public class ListBillingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>总数</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -459,7 +459,7 @@ public class ListBillingResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>账单业务ID</p>
+             * <p>The billing ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleBillingId</p>
@@ -470,7 +470,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>业务来源ID</p>
+             * <p>The file ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleBizId</p>
@@ -481,7 +481,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>业务来源类型</p>
+             * <p>The business type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -492,7 +492,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>costSource</p>
+             * <p>The cost source type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -503,7 +503,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>costSourceDisplayName</p>
+             * <p>The display name of the cost source.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -514,7 +514,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>结束时间</p>
+             * <p>The end timestamp, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -525,7 +525,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>入口对象ID</p>
+             * <p>The entry object ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleEntryObjectId</p>
@@ -536,7 +536,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>入口对象类型</p>
+             * <p>The entry object type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -547,7 +547,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否影子账单</p>
+             * <p>Indicates whether the bill is a shadow bill.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -558,7 +558,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>操作类型</p>
+             * <p>The operation type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -569,7 +569,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>操作类型展示名称</p>
+             * <p>The display name of the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -580,7 +580,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>开始时间</p>
+             * <p>The start timestamp, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -591,7 +591,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>状态</p>
+             * <p>The node status. Running is returned upon submission.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -602,7 +602,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>状态展示名称</p>
+             * <p>The display name of the status.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -613,7 +613,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户ID</p>
+             * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -624,7 +624,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>汇总 credit 消耗</p>
+             * <p>The total credit consumption.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -635,7 +635,7 @@ public class ListBillingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>WINNEXO 平台用户ID</p>
+             * <p>The WINNEXO platform user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

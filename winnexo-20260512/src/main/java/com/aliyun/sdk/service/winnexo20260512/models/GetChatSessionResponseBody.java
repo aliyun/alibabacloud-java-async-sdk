@@ -106,7 +106,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -128,7 +128,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * messages.
+         * <p>The message data details structure.</p>
          */
         public Builder messages(java.util.List<Messages> messages) {
             this.messages = messages;
@@ -136,7 +136,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -147,7 +147,7 @@ public class GetChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * session.
+         * <p>The session ID.</p>
          */
         public Builder session(Session session) {
             this.session = session;
@@ -343,10 +343,10 @@ public class GetChatSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>消息内容</p>
+             * <p>The message content.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例内容</p>
+             * <p>Sample content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -354,7 +354,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>该消息之后 LLM 上下文是否已清空</p>
+             * <p>Indicates whether the LLM context was cleared after this message.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -365,7 +365,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否来自分享续聊复制的消息</p>
+             * <p>Indicates whether the message was copied from a shared conversation.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -376,7 +376,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>消息ID</p>
+             * <p>The message ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleId</p>
@@ -387,7 +387,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新时间</p>
+             * <p>The message metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -398,7 +398,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>类型</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -409,7 +409,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色</p>
+             * <p>The role.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -420,7 +420,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>分享来源用户名称</p>
+             * <p>The username of the sharing source. This field has a value only when from_share is set to True.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -431,7 +431,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>消息状态</p>
+             * <p>The message status.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -442,7 +442,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>追踪ID</p>
+             * <p>The trace ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleTraceId</p>
@@ -453,7 +453,10 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * updateAt.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20240101</p>
              */
             public Builder updateAt(Long updateAt) {
                 this.updateAt = updateAt;
@@ -461,7 +464,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户反馈类型</p>
+             * <p>The user feedback type. Valid values: LIKE, DISLIKE, and CANCEL.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -635,7 +638,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>创建时间</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -646,7 +649,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>消息ID</p>
+             * <p>The message ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleId</p>
@@ -657,7 +660,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间是否超过30天</p>
+             * <p>Indicates whether the creation time exceeds 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -668,7 +671,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>关联对象ID</p>
+             * <p>The session metadata.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -679,7 +682,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>会话使用的抽象模型名（quick/standard/flagship）</p>
+             * <p>The abstract model name used by the session. Valid values: quick, standard, and flagship.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -690,7 +693,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>类型</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -701,7 +704,10 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * objectId.
+             * <p>The associated object ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2676</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -709,7 +715,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>operatingObjectName</p>
+             * <p>The list of digital employee names.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -720,10 +726,10 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标题</p>
+             * <p>The title.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例标题</p>
+             * <p>Sample title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -731,7 +737,7 @@ public class GetChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新时间</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

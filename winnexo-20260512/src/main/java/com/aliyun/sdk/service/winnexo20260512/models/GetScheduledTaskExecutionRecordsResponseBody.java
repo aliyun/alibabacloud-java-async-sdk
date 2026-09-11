@@ -145,7 +145,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否有更多数据</p>
+         * <p>Indicates whether more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,7 +167,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -178,7 +178,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -189,7 +189,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页任务数</p>
+         * <p>The number of tasks per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -200,7 +200,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -211,7 +211,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * tasks.
+         * <p>The task list.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -219,7 +219,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>任务总数</p>
+         * <p>The total number of tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -366,7 +366,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>实际执行时间（仅历史记录）</p>
+             * <p>The actual hours spent, in hours.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -377,7 +377,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行记录展示名称</p>
+             * <p>The name of the schedule location.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -388,7 +388,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>错误信息（仅失败记录）</p>
+             * <p>The error message.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -399,7 +399,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行记录 ID（历史记录才有）</p>
+             * <p>The execution record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleExecutionId</p>
@@ -410,7 +410,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>该条执行记录是否已过期归档</p>
+             * <p>Indicates whether the execution record has been archived due to expiration.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -421,7 +421,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行输出内容（仅历史记录）</p>
+             * <p>The execution output content (historical records only).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -432,7 +432,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>计划执行时间 ISO8601</p>
+             * <p>The timed scheduling time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -443,7 +443,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>历史记录状态（小写）：pending/running/success/failed/timeout/cancelled；未来计划项为 SCHEDULED（大写）</p>
+             * <p>The final status of the message.</p>
              * 
              * <strong>example:</strong>
              * <p>READY</p>
@@ -617,7 +617,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>所属协作群组 ID；为空表示个人任务</p>
+             * <p>The ID of the collaboration group to which the task belongs. An empty value indicates a personal task.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleCollaborationGroupId</p>
@@ -628,7 +628,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cron 表达式</p>
+             * <p>The cron expression.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -639,10 +639,10 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务简述</p>
+             * <p>The description of the to-do card type.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例描述</p>
+             * <p>Sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -650,7 +650,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否公开</p>
+             * <p>Indicates whether public access is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -661,7 +661,12 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行模型档位：flagship(旗舰)/standard(标准)/quick(轻量)</p>
+             * <p>The execution model tier. Valid values:</p>
+             * <ul>
+             * <li>flagship: Flagship.</li>
+             * <li>standard: Standard.</li>
+             * <li>quick: Lightweight.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -672,10 +677,10 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -683,7 +688,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务 ID</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleTaskId</p>
@@ -694,7 +699,7 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * timeline.
+             * <p>The timeline.</p>
              */
             public Builder timeline(java.util.List<Timeline> timeline) {
                 this.timeline = timeline;
@@ -702,7 +707,10 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>时区</p>
+             * <p>The time zone.</p>
+             * <blockquote>
+             * <p>Default value: UTC+8.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -713,7 +721,11 @@ public class GetScheduledTaskExecutionRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>触发类型 cron/manual/event</p>
+             * <p>The trigger type. Valid values:</p>
+             * <ul>
+             * <li>Manual: Manual execution.</li>
+             * <li>Cron: Timed scheduling.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

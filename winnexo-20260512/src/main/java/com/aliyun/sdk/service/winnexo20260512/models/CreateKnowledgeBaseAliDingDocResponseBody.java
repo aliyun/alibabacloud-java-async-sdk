@@ -171,7 +171,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The result code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -182,7 +182,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定的目录 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -193,7 +193,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文档公开 URL（echo 回入参）</p>
+         * <p>The public URL of the document (echoes the input parameter).</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -204,7 +204,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-22 16:03:27</p>
@@ -215,7 +215,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The error details.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -226,7 +226,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源显示名称</p>
+         * <p>The name.</p>
          * 
          * <strong>example:</strong>
          * <p>p-toolset-b8a1de80-e9f5-49f3-8a12-873d378889c6</p>
@@ -237,7 +237,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F42FC60B-C54D-5DFB-A8EC-04625BFFF1F7</p>
@@ -248,7 +248,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 scope，固定为 TENANT</p>
+         * <p>The permission scope.</p>
          * 
          * <strong>example:</strong>
          * <p>repo</p>
@@ -259,7 +259,7 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建资源 ID</p>
+         * <p>The unique identifier on the business system side, which is the business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -270,10 +270,18 @@ public class CreateKnowledgeBaseAliDingDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源状态</p>
+         * <p>The refund status. Query this field to confirm the refund status during processing. Valid values:</p>
+         * <ul>
+         * <li>SUCCESS: All refunds are successful.</li>
+         * <li>FAIL: The refund failed.</li>
+         * <li>WAIT_PAY: Waiting for refund.</li>
+         * <li>EXPIRE: The refund has expired.</li>
+         * <li>PAYING: The refund is being processed.</li>
+         * <li>TERMINATE: The refund is terminated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;observedGeneration&quot;: 7, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2025-12-17T11:57:07Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1765972627273-k7GZvr&quot;}</p>
+         * <p>{\&quot;observedGeneration\&quot;: 7, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-12-17T11:57:07Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1765972627273-k7GZvr\&quot;}</p>
          */
         public Builder status(String status) {
             this.status = status;

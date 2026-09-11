@@ -93,7 +93,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The business status code. A value of 200 indicates success. A non-200 value indicates a backend error code (ERR.* / InvalidParameter.*).</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The error description. This is empty when the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -115,7 +115,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -126,7 +126,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * session.
+         * <p>The session ID.</p>
          */
         public Builder session(Session session) {
             this.session = session;
@@ -296,7 +296,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>创建时间</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -307,7 +307,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>消息ID</p>
+             * <p>The message ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleId</p>
@@ -318,7 +318,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间是否超过30天</p>
+             * <p>Indicates whether the creation time exceeds 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -329,7 +329,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>关联对象ID</p>
+             * <p>The associated object ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -340,7 +340,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>会话使用的抽象模型名（quick/standard/flagship）</p>
+             * <p>The abstract model name used by the session (quick/standard/flagship).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -351,7 +351,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>类型</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -362,7 +362,10 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * objectId.
+             * <p>The associated object ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2676</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -370,7 +373,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>operatingObjectName</p>
+             * <p>The operating object name.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -381,10 +384,10 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标题</p>
+             * <p>The title.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例标题</p>
+             * <p>Sample title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -392,7 +395,7 @@ public class UpdateChatSessionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新时间</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

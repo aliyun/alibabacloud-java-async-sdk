@@ -158,7 +158,7 @@ public class CreateKnowledgeBaseTextResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class CreateKnowledgeBaseTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定的目录 ID</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -180,7 +180,7 @@ public class CreateKnowledgeBaseTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-22T07:10:40.000+00:00</p>
@@ -191,7 +191,7 @@ public class CreateKnowledgeBaseTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The error message returned when the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -202,7 +202,7 @@ public class CreateKnowledgeBaseTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>p-default-af484147-e026-487b-a9eb-bd25464f0667</p>
@@ -213,7 +213,7 @@ public class CreateKnowledgeBaseTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9005F6D0-748F-559D-ABDA-F4F31B983316</p>
@@ -224,7 +224,7 @@ public class CreateKnowledgeBaseTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 scope，固定为 TENANT</p>
+         * <p>The permission scope.</p>
          * 
          * <strong>example:</strong>
          * <p>read:user,read:repo,write:repo,read:org,read:group</p>
@@ -235,7 +235,7 @@ public class CreateKnowledgeBaseTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建资源 ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -246,7 +246,7 @@ public class CreateKnowledgeBaseTextResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源状态</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

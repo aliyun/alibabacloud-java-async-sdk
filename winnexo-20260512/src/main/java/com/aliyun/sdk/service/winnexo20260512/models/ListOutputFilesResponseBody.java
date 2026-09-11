@@ -132,7 +132,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The output list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -162,7 +162,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页数量</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -195,7 +195,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>符合条件的产出总数</p>
+         * <p>The total number of outputs that match the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -290,7 +290,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>邮件内容</p>
+             * <p>The email body.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -301,7 +301,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内容类型，如 MARKDOWN/JSONML/HTML</p>
+             * <p>The content type, such as MARKDOWN/JSONML/HTML.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -312,7 +312,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>recipients</p>
+             * <p>The recipient list.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -323,7 +323,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>邮件主题</p>
+             * <p>The email subject.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -419,10 +419,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>文件描述</p>
+             * <p>The file description.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例描述</p>
+             * <p>Sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -430,10 +430,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -441,7 +441,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件 OSS URL</p>
+             * <p>The file path (OSS object key).</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
@@ -452,7 +452,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件类型，如 .pdf, .md</p>
+             * <p>The file type, such as .pdf or .md.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -548,7 +548,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>已完成幻灯片数</p>
+             * <p>The number of completed slides.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -559,7 +559,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PPT ID</p>
+             * <p>The PPT file ID.</p>
              * 
              * <strong>example:</strong>
              * <p>examplePptId</p>
@@ -570,7 +570,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>PPT 名称</p>
+             * <p>The PPT name.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -581,7 +581,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总幻灯片数</p>
+             * <p>The total number of slides.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -820,7 +820,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>创建时间(ISO8601)</p>
+             * <p>The creation time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -831,7 +831,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * emailInfo.
+             * <p>The email information. This field is present when the output type is email.</p>
              */
             public Builder emailInfo(EmailInfo emailInfo) {
                 this.emailInfo = emailInfo;
@@ -839,7 +839,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * fileInfo.
+             * <p>The file information. This field is present when the output type is file.</p>
              */
             public Builder fileInfo(FileInfo fileInfo) {
                 this.fileInfo = fileInfo;
@@ -847,7 +847,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据库创建时间(ISO8601)</p>
+             * <p>The database creation time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -858,7 +858,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据库更新时间(ISO8601)</p>
+             * <p>The database update time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -869,7 +869,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>产出名称</p>
+             * <p>The output name.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleItemName</p>
@@ -880,7 +880,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>产出明细类型: ppt/html/document/picture/slides/video/audio/email/others</p>
+             * <p>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
              * 
              * <strong>example:</strong>
              * <p>ppt</p>
@@ -891,7 +891,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>产出明细类型国际化展示名称</p>
+             * <p>The internationalized display name of the output detail type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -902,7 +902,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>助手消息ID，由 sendAsyncChatMessage 返回；不属于当前租户时返回 404</p>
+             * <p>The message ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleMessageId</p>
@@ -913,7 +913,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>产出明细 ID</p>
+             * <p>The output detail ID.</p>
              * 
              * <strong>example:</strong>
              * <p>string_example_value</p>
@@ -924,7 +924,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否开启分享</p>
+             * <p>Indicates whether sharing is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -935,7 +935,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>分享令牌</p>
+             * <p>The share token that is present when sharing is enabled. You can use this token to access the public share preview API.</p>
              * 
              * <strong>example:</strong>
              * <p>example_share_token</p>
@@ -946,7 +946,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>技能产出 ID</p>
+             * <p>The skill output ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleSkillOutputId</p>
@@ -957,7 +957,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * slidesInfo.
+             * <p>The slides information. This field is present when the output type is slides.</p>
              */
             public Builder slidesInfo(SlidesInfo slidesInfo) {
                 this.slidesInfo = slidesInfo;
@@ -965,7 +965,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务执行 ID</p>
+             * <p>The task execution ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleTaskExecutionId</p>
@@ -1152,7 +1152,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>会话 ID</p>
+             * <p>The conversation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleConversationId</p>
@@ -1163,7 +1163,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间(ISO8601)</p>
+             * <p>The creation time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1174,7 +1174,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新时间(ISO8601)</p>
+             * <p>The update time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1185,10 +1185,10 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The output name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1196,7 +1196,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数字员工（运营对象）名称</p>
+             * <p>The name of the digital employee (operating object).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1207,7 +1207,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>产出 ID</p>
+             * <p>The output ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleOutputId</p>
@@ -1218,7 +1218,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * outputItems.
+             * <p>The output detail list.</p>
              */
             public Builder outputItems(java.util.List<OutputItems> outputItems) {
                 this.outputItems = outputItems;
@@ -1226,7 +1226,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>产出类型: conversation/skill/task</p>
+             * <p>The output type: <code>conversation/skill/task</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>conversation</p>
@@ -1237,7 +1237,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>产出类型国际化展示名称</p>
+             * <p>The internationalized display name of the output type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1248,7 +1248,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>技能产出 ID</p>
+             * <p>The skill output ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleSkillOutputId</p>
@@ -1259,7 +1259,7 @@ public class ListOutputFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务 ID</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>string_example_value</p>

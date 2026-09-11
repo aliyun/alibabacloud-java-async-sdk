@@ -87,7 +87,7 @@ public class GetScheduledTaskPushOptionsRequest extends Request {
         } 
 
         /**
-         * <p>协作群组 ID；传入时返回该群可选的 IM 群绑定</p>
+         * <p>The ID of the collaboration group (such as cg_101). If specified, a group workspace task is created (the caller must be a valid group member). If left empty, a personal task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>cg_401</p>
@@ -99,7 +99,7 @@ public class GetScheduledTaskPushOptionsRequest extends Request {
         }
 
         /**
-         * <p>个人任务查询时使用的数字员工名称；查询群任务推送选项时无需传入</p>
+         * <p>The name of the currently active digital employee. This value is empty if not configured.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDigitalEmployeeName</p>
@@ -111,7 +111,7 @@ public class GetScheduledTaskPushOptionsRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

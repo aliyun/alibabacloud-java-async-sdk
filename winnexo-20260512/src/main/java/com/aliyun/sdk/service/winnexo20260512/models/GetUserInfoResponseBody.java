@@ -301,7 +301,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>用户头像URL</p>
+         * <p>The profile picture URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></p>
@@ -312,7 +312,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -323,7 +323,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>CRM 类型</p>
+         * <p>The CRM type.</p>
          * 
          * <strong>example:</strong>
          * <p>standard</p>
@@ -334,7 +334,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否为超级管理员</p>
+         * <p>Indicates whether the user is an enterprise administrator.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -345,7 +345,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前登录租户是否为系统租户（tenantId=10000）</p>
+         * <p>Indicates whether the current logon tenant is a system tenant (tenantId=10000).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -356,7 +356,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户语言偏好</p>
+         * <p>The language preference.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -367,7 +367,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -378,10 +378,10 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -389,7 +389,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户服务描述</p>
+         * <p>The user service description. The value can be up to 1000 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -400,7 +400,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户服务解析结果（JSON格式）</p>
+         * <p>The parsed result of the user service description in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -411,7 +411,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户角色</p>
+         * <p>The user role.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -422,7 +422,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户角色描述（当profileRole为Others时使用）</p>
+         * <p>The personal profile.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -433,7 +433,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -444,7 +444,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户自我介绍</p>
+         * <p>The user self-introduction. The value can be up to 1000 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -455,7 +455,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前租户ID</p>
+         * <p>The effective tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -466,7 +466,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * tenantList.
+         * <p>The tenant list.</p>
          */
         public Builder tenantList(java.util.List<TenantList> tenantList) {
             this.tenantList = tenantList;
@@ -474,7 +474,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前租户名称</p>
+         * <p>The current tenant name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -485,7 +485,12 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>租户类型</p>
+         * <p>The tenant type. Valid values:</p>
+         * <ul>
+         * <li>user: individual.</li>
+         * <li>org: enterprise.</li>
+         * <li>group: group.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -496,7 +501,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户代码</p>
+         * <p>The user code.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -507,7 +512,7 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -602,7 +607,7 @@ public class GetUserInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>CRM 类型</p>
+             * <p>The CRM type.</p>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -613,7 +618,7 @@ public class GetUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户ID</p>
+             * <p>The ID of the tenant to which the task belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -624,7 +629,7 @@ public class GetUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户名称</p>
+             * <p>The tenant name.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -635,7 +640,12 @@ public class GetUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户类型</p>
+             * <p>The tenant type. Valid values:</p>
+             * <ul>
+             * <li>user: individual.</li>
+             * <li>org: enterprise.</li>
+             * <li>group: group.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>normal</p>

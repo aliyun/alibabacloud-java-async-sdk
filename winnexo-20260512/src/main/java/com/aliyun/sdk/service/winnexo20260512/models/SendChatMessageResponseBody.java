@@ -122,7 +122,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +133,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * content.
+         * <p>The streaming response content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yes，i\&quot;m ready</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -138,7 +144,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>The SSE event stream payload. On success, the response is a text/event-stream raw frame that must be consumed frame by frame in streaming mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -146,7 +155,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * <p>The status code description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +166,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +177,10 @@ public class SendChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * type.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>think</p>
          */
         public Builder type(String type) {
             this.type = type;

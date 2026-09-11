@@ -145,7 +145,7 @@ public class RunSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -156,7 +156,7 @@ public class RunSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>任务创建时间，ISO8601 UTC 格式</p>
+         * <p>The task creation time in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -167,7 +167,7 @@ public class RunSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -178,7 +178,7 @@ public class RunSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -189,7 +189,7 @@ public class RunSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>异步任务 ID，用于 getSkillRun 查询</p>
+         * <p>The asynchronous task ID, used for querying with getSkillRun.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleRunId</p>
@@ -200,7 +200,7 @@ public class RunSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>实际执行的技能编码</p>
+         * <p>The skill code that was actually executed.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -211,7 +211,7 @@ public class RunSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>技能名称</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -222,7 +222,7 @@ public class RunSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>任务状态：提交即返回 Running</p>
+         * <p>The task status. Returns Running immediately upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

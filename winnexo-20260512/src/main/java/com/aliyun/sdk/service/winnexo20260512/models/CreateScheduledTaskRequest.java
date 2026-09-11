@@ -214,7 +214,7 @@ public class CreateScheduledTaskRequest extends Request {
         } 
 
         /**
-         * <p>所属协作群组 ID（如 cg_101）；传入时创建群空间任务（调用者需为有效群成员），为空创建个人任务</p>
+         * <p>The ID of the collaboration group (such as cg_101). If specified, a group space task is created (the caller must be a valid group member). If empty, a personal task is created.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleCollaborationGroupId</p>
@@ -226,7 +226,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the to-do card type.</p>
          */
         public Builder description(java.util.List<Description> description) {
             String descriptionShrink = shrink(description, "description", "json");
@@ -236,7 +236,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称列表</p>
+         * <p>The name of the current effective digital employee. This parameter is empty if not configured.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -249,7 +249,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>是否公开访问</p>
+         * <p>Specifies whether public access is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -261,7 +261,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>执行模型档位，不传默认 standard</p>
+         * <p>The large model used by the assistant. An empty value indicates that DingTalk automatically selects the model.</p>
          * 
          * <strong>example:</strong>
          * <p>quick</p>
@@ -273,11 +273,11 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -286,7 +286,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * segments.
+         * <p>The site ID.</p>
          */
         public Builder segments(java.util.List<Segments> segments) {
             String segmentsShrink = shrink(segments, "segments", "json");
@@ -296,7 +296,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * taskDetail.
+         * <p>The task details.</p>
          */
         public Builder taskDetail(TaskDetail taskDetail) {
             String taskDetailShrink = shrink(taskDetail, "taskDetail", "json");
@@ -306,7 +306,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The ID of the effective tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -318,7 +318,17 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * triggerConfig.
+         * <p>The trigger configuration. The configuration varies depending on the trigger type. For the specific format, refer to the following data structures:</p>
+         * <ul>
+         * <li>OSS trigger: See <a href="https://help.aliyun.com/document_detail/415697.html">OSSTriggerConfig</a>.</li>
+         * <li>Simple Log Service trigger: See <a href="https://help.aliyun.com/document_detail/415694.html">LogTriggerConfig</a>.</li>
+         * <li>Time trigger: See <a href="https://help.aliyun.com/document_detail/415712.html">TimeTriggerConfig</a>.</li>
+         * <li>HTTP trigger: See <a href="https://help.aliyun.com/document_detail/415685.html">HTTPTriggerConfig</a>.</li>
+         * <li>Tablestore trigger: You only need to specify the complete <strong>SourceArn</strong> parameter. No additional configuration is required. Set the value to an empty object {}.</li>
+         * <li>CDN event trigger: See <a href="https://help.aliyun.com/document_detail/415674.html">CDNEventsTriggerConfig</a>.</li>
+         * <li>MNS topic trigger: See <a href="https://help.aliyun.com/document_detail/415695.html">MnsTopicTriggerConfig</a>.</li>
+         * <li>EventBridge trigger: See <a href="https://help.aliyun.com/document_detail/2508622.html">EventBridgeTriggerConfig</a>.</li>
+         * </ul>
          */
         public Builder triggerConfig(TriggerConfig triggerConfig) {
             String triggerConfigShrink = shrink(triggerConfig, "triggerConfig", "json");
@@ -328,7 +338,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>群任务可见范围：PRIVATE(仅创建人与群主可见)/COLLABORATIVE(指定协作成员可见)/PUBLIC(群内全员可见)；群任务不传时默认 PRIVATE，个人任务忽略该字段</p>
+         * <p>The visibility scope of the group task. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). Default value for group tasks: PRIVATE. This parameter is ignored for personal tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -340,7 +350,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * <p>协作成员用户 ID 列表（仅 visibility=COLLABORATIVE 生效，其余档位忽略，最多 1000 个）；任务创建人与群创建人无需传入（由鉴权层覆盖）；个人任务忽略该字段</p>
+         * <p>The list of collaborator user IDs. This parameter takes effect only when visibility is set to COLLABORATIVE. It is ignored for other visibility levels. A maximum of 1000 IDs are supported. The task creator and group creator do not need to be included (covered by the authentication layer). This parameter is ignored for personal tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -477,10 +487,10 @@ public class CreateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>文本内容，type=text 时必填</p>
+             * <p>The streaming output message.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例内容</p>
+             * <p>Sample content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -488,7 +498,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>功能开关，type=web_search 时可选</p>
+             * <p>Specifies whether the throttling rule is enabled. A value of true indicates enabled, and a value of false indicates disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -499,10 +509,10 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -510,7 +520,13 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象 ID，type=mention 时有值</p>
+             * <p>The object ID. Pass the project task ID.</p>
+             * <ul>
+             * <li><p>For internal enterprise applications, use the taskId obtained by calling the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> operation.</p>
+             * </li>
+             * <li><p>For third-party enterprise applications, use the taskId obtained by calling the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> operation.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -521,7 +537,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象类型如 customer，type=mention 时有值</p>
+             * <p>The object type. Fixed value: task, indicating a project task.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -532,7 +548,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>技能编码，type=skill 时有值</p>
+             * <p>The skill code. This parameter has a value when type is set to skill.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -543,7 +559,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>元素类型：text|web_search|mention|skill</p>
+             * <p>The HTTP API type. Valid values: Http (standard HTTP API), Rest (RESTful API), WebSocket (WebSocket API), HttpIngress (HTTP API accessed through Ingress), LLM (large language model API), and Agent (Agent proxy API).</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -678,10 +694,10 @@ public class CreateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>文本内容，type=text 时必填</p>
+             * <p>The card callback content.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例内容</p>
+             * <p>Sample content</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -689,7 +705,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>功能开关，type=web_search 时可选</p>
+             * <p>Specifies whether to enable this feature.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -700,10 +716,10 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -711,7 +727,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象 ID，type=mention 时有值</p>
+             * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -722,7 +738,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象类型如 customer，type=mention 时有值</p>
+             * <p>The customer type to save.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -733,7 +749,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>技能编码，type=skill 时有值</p>
+             * <p>The skill code. This parameter has a value when type is set to skill.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -744,7 +760,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>元素类型：text|web_search|mention|skill</p>
+             * <p>The billing type. Only fixed is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>
@@ -840,7 +856,7 @@ public class CreateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>提及类型，如 objects</p>
+             * <p>The mention type, such as objects.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -851,10 +867,10 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -862,7 +878,13 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象 ID（@指定时有值）</p>
+             * <p>The object ID. Pass the project task ID.</p>
+             * <ul>
+             * <li><p>For internal enterprise applications, use the taskId obtained by calling the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> operation.</p>
+             * </li>
+             * <li><p>For third-party enterprise applications, use the taskId obtained by calling the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> operation.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -873,7 +895,11 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>对象类型，如 customer、company</p>
+             * <p>The relationship type. Valid values:</p>
+             * <ul>
+             * <li>crm_customer: enterprise customer.</li>
+             * <li>crm_customer_personal: individual customer.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -943,7 +969,7 @@ public class CreateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>语义属性（JSON 字符串），用于语义检索时过滤</p>
+             * <p>The file extension information.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;level&quot;: &quot;VIP&quot;}</p>
@@ -954,7 +980,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>语义实体名，如客户/机会</p>
+             * <p>The semantic entity name, such as customer or opportunity.</p>
              * 
              * <strong>example:</strong>
              * <p>customer</p>
@@ -1050,7 +1076,7 @@ public class CreateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>技能展示名称</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1061,10 +1087,10 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1072,7 +1098,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>技能代码</p>
+             * <p>The skill code.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1179,7 +1205,7 @@ public class CreateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * relatedObjects.
+             * <p>The related objects.</p>
              */
             public Builder relatedObjects(java.util.List<RelatedObjects> relatedObjects) {
                 this.relatedObjects = relatedObjects;
@@ -1187,7 +1213,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * relatedSemantics.
+             * <p>The related semantics.</p>
              */
             public Builder relatedSemantics(java.util.List<RelatedSemantics> relatedSemantics) {
                 this.relatedSemantics = relatedSemantics;
@@ -1195,7 +1221,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * relatedSkills.
+             * <p>The related skills.</p>
              */
             public Builder relatedSkills(java.util.List<RelatedSkills> relatedSkills) {
                 this.relatedSkills = relatedSkills;
@@ -1203,7 +1229,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>【已废弃】任务理解描述；任务理解功能已下线，服务端接收后忽略该字段，仅为存量调用方入参兼容保留</p>
+             * <p>The task understanding description polished by the LLM.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1338,7 +1364,13 @@ public class CreateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>推送渠道</p>
+             * <p>The notification method. Valid values:</p>
+             * <ul>
+             * <li><strong>hdm_alarm_sms</strong>: SMS.</li>
+             * <li><strong>dingtalk</strong>: DingTalk chatbot.</li>
+             * <li><strong>hdm_alarm_sms_and_email</strong>: SMS and email.</li>
+             * <li><strong>hdm_alarm_sms,dingtalk</strong>: SMS and DingTalk chatbot.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>DINGTALK</p>
@@ -1349,7 +1381,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>推送内容范围，默认 all_replies</p>
+             * <p>The push content scope. Default value: all_replies.</p>
              * 
              * <strong>example:</strong>
              * <p>all_replies</p>
@@ -1360,7 +1392,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>推送方式，默认 channel_bot</p>
+             * <p>The push method. Default value: channel_bot.</p>
              * 
              * <strong>example:</strong>
              * <p>channel_bot</p>
@@ -1371,7 +1403,11 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>是否推送该频道，默认关闭</p>
+             * <p>Specifies whether the credential is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1382,7 +1418,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>产出文件推送格式，默认 file</p>
+             * <p>The file format. Valid values: Excel and CSV.</p>
              * 
              * <strong>example:</strong>
              * <p>file</p>
@@ -1393,7 +1429,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>发送机器人所属数字员工，必传且不可为空</p>
+             * <p>The digital employee name (operating object name, optional).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1404,7 +1440,17 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>接收人，当前仅支持 self</p>
+             * <p>The file receiver type. Valid values:</p>
+             * <ul>
+             * <li><p>0: One-on-one chat.</p>
+             * </li>
+             * <li><p>1: Group chat.</p>
+             * </li>
+             * <li><p>2: DingTalk Drive.</p>
+             * </li>
+             * <li><p>3: Document.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1513,7 +1559,7 @@ public class CreateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * <p>Cron 表达式，trigger_mode=scheduled 时必填，如 &quot;00 09 * * *&quot;</p>
+             * <p>The periodic training information in cron syntax (Minutes Hours DayofMonth Month DayofWeek). An empty value indicates that periodic training is not performed (default). In DayofWeek, 0 indicates Sunday.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -1524,7 +1570,11 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>语言如 zh-CN|en-US，由服务端自动注入</p>
+             * <p>The language. Valid values:</p>
+             * <ul>
+             * <li>zh_CN: Chinese (default)</li>
+             * <li>en_US: English</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>zh-CN</p>
@@ -1535,7 +1585,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>任务推送频道列表；为空或无启用频道时不推送</p>
+             * <p>The list of task push channels. No push is performed if the list is empty or no channel is enabled.</p>
              */
             public Builder pushConfig(java.util.List<PushConfig> pushConfig) {
                 this.pushConfig = pushConfig;
@@ -1543,7 +1593,7 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>时区如 Asia/Shanghai，由服务端自动注入</p>
+             * <p>The time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>Asia/Shanghai</p>
@@ -1554,7 +1604,12 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * <p>触发模式：manual|scheduled</p>
+             * <p>The trigger mode.</p>
+             * <p>  1: Manual trigger</p>
+             * <p>  2: Scheduled trigger </p>
+             * <p>  3: Code commit trigger</p>
+             * <p>  5: Pipeline trigger</p>
+             * <p>  6: WEBHOOK trigger</p>
              * 
              * <strong>example:</strong>
              * <p>manual</p>

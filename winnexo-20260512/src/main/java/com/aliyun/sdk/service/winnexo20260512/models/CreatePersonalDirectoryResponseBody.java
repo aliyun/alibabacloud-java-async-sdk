@@ -197,7 +197,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -208,7 +208,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目录描述</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>PublicApplication</p>
@@ -219,7 +219,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建目录 ID</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -230,7 +230,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目录 KB 归属类型：normal / aliding_kb_root / aliding_kb_internal</p>
+         * <p>The folder type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -241,10 +241,10 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间戳（毫秒）</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2026-03-04 13:54:52</p>
+         * <p>1772603692</p>
          */
         public Builder gmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -252,10 +252,10 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>修改时间戳（毫秒）</p>
+         * <p>The last modification time.</p>
          * 
          * <strong>example:</strong>
-         * <p>2025-11-14T02:18:27Z</p>
+         * <p>1763086707</p>
          */
         public Builder gmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
@@ -263,7 +263,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -274,7 +274,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The name of the worksheet.</p>
          * 
          * <strong>example:</strong>
          * <p>conn_ip_101</p>
@@ -285,7 +285,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>所属数字员工名称</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -296,7 +296,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>父目录 ID（service 若回填默认根目录，这里返回回填后的父目录 ID）</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>wd-lxykjnnw4lyl9eq</p>
@@ -307,7 +307,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件 OSS URL</p>
+         * <p>The path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://clg-paimon-4a00f1ac43464714b86fb54ca41a84c9/db-abc73646-6a08-4b96-820f-3d1d547a1e3b.db/tbl-c8a33522-5398-4f8e-9a2a-fba1efad94d1</p>
@@ -318,7 +318,7 @@ public class CreatePersonalDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>375701FC-2FB9-5782-BE8F-A3F5E2F2158C</p>

@@ -59,7 +59,7 @@ public class ListUserGroupsRequest extends Request {
         } 
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using <code>--tenant-id</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

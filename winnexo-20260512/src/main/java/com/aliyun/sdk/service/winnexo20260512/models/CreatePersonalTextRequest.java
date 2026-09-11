@@ -34,6 +34,10 @@ public class CreatePersonalTextRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("operatingObjectName")
     private String operatingObjectName;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTags")
+    private String sourceTags;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
@@ -49,6 +53,7 @@ public class CreatePersonalTextRequest extends Request {
         this.directoryId = builder.directoryId;
         this.name = builder.name;
         this.operatingObjectName = builder.operatingObjectName;
+        this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
         this.textContent = builder.textContent;
     }
@@ -95,6 +100,13 @@ public class CreatePersonalTextRequest extends Request {
     }
 
     /**
+     * @return sourceTags
+     */
+    public String getSourceTags() {
+        return this.sourceTags;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -113,6 +125,7 @@ public class CreatePersonalTextRequest extends Request {
         private String directoryId; 
         private String name; 
         private String operatingObjectName; 
+        private String sourceTags; 
         private String tenantId; 
         private String textContent; 
 
@@ -126,12 +139,13 @@ public class CreatePersonalTextRequest extends Request {
             this.directoryId = request.directoryId;
             this.name = request.name;
             this.operatingObjectName = request.operatingObjectName;
+            this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
             this.textContent = request.textContent;
         } 
 
         /**
-         * <p>资源描述（可选）</p>
+         * <p>The pipeline description.</p>
          * 
          * <strong>example:</strong>
          * <p>PublicApplication</p>
@@ -143,7 +157,7 @@ public class CreatePersonalTextRequest extends Request {
         }
 
         /**
-         * <p>目标个人目录 ID；不传时自动绑定到用户默认根目录，传入时必须是当前用户的已有个人目录</p>
+         * <p>The folder ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -155,7 +169,7 @@ public class CreatePersonalTextRequest extends Request {
         }
 
         /**
-         * <p>资源显示名称</p>
+         * <p>The image name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +182,7 @@ public class CreatePersonalTextRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -180,7 +194,19 @@ public class CreatePersonalTextRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>资源标签 JSON 字符串列表</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;重点&quot;,&quot;文本&quot;]</p>
+         */
+        public Builder sourceTags(String sourceTags) {
+            this.putBodyParameter("sourceTags", sourceTags);
+            this.sourceTags = sourceTags;
+            return this;
+        }
+
+        /**
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3668</p>
@@ -192,7 +218,7 @@ public class CreatePersonalTextRequest extends Request {
         }
 
         /**
-         * <p>纯文本正文（必填）</p>
+         * <p>The message content for text messages.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

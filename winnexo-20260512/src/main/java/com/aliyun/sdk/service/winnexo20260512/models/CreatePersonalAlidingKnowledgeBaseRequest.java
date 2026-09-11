@@ -39,6 +39,10 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
     private String operatingObjectName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTags")
+    private String sourceTags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("syncConfig")
     private SyncConfig syncConfig;
 
@@ -53,6 +57,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
         this.kbUrl = builder.kbUrl;
         this.objectBindings = builder.objectBindings;
         this.operatingObjectName = builder.operatingObjectName;
+        this.sourceTags = builder.sourceTags;
         this.syncConfig = builder.syncConfig;
         this.tenantId = builder.tenantId;
     }
@@ -106,6 +111,13 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
     }
 
     /**
+     * @return sourceTags
+     */
+    public String getSourceTags() {
+        return this.sourceTags;
+    }
+
+    /**
      * @return syncConfig
      */
     public SyncConfig getSyncConfig() {
@@ -125,6 +137,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
         private String kbUrl; 
         private java.util.List<ObjectBindings> objectBindings; 
         private String operatingObjectName; 
+        private String sourceTags; 
         private SyncConfig syncConfig; 
         private String tenantId; 
 
@@ -139,12 +152,13 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
             this.kbUrl = request.kbUrl;
             this.objectBindings = request.objectBindings;
             this.operatingObjectName = request.operatingObjectName;
+            this.sourceTags = request.sourceTags;
             this.syncConfig = request.syncConfig;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>目标个人目录 ID；不传时自动绑定到用户默认根目录，传入时必须是当前用户的已有个人目录（PERSONAL）</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -156,7 +170,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>知识库显示名称；不传时由后台从远程拉取的根节点名称回填</p>
+         * <p>The display name of the knowledge base. If not provided, the name is populated from the root node name pulled from the remote source.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -168,7 +182,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>阿里钉知识库的可公开访问 URL</p>
+         * <p>The publicly accessible URL of the AliDing knowledge base.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +195,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * objectBindings.
+         * <p>The object bindings.</p>
          */
         public Builder objectBindings(java.util.List<ObjectBindings> objectBindings) {
             String objectBindingsShrink = shrink(objectBindings, "objectBindings", "json");
@@ -191,7 +205,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>Agent 命名空间标识，可选</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -203,7 +217,19 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * syncConfig.
+         * <p>The list of resource tag JSON strings applied to all child sources created during knowledge base synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Key&quot;,&quot;KnowledgeBase&quot;]</p>
+         */
+        public Builder sourceTags(String sourceTags) {
+            this.putBodyParameter("sourceTags", sourceTags);
+            this.sourceTags = sourceTags;
+            return this;
+        }
+
+        /**
+         * <p>The synchronization settings.</p>
          */
         public Builder syncConfig(SyncConfig syncConfig) {
             String syncConfigShrink = shrink(syncConfig, "syncConfig", "json");
@@ -213,7 +239,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>PiPklI1iSRTm6VFFqlY9VzbgiEiE</p>
@@ -284,7 +310,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>绑定对象 ID</p>
+             * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a micro-application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2676</p>
@@ -295,7 +321,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>绑定对象类型，例如 CUSTOMER / OPPORTUNITY</p>
+             * <p>The advanced field type.</p>
              * 
              * <strong>example:</strong>
              * <p>table</p>
@@ -365,7 +391,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
             } 
 
             /**
-             * <p>cron 表达式；enabled=true 时必填，enabled=false 时忽略</p>
+             * <p>The cron expression for the timed scheduling node.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -376,7 +402,7 @@ public class CreatePersonalAlidingKnowledgeBaseRequest extends Request {
             }
 
             /**
-             * <p>是否启用定时同步</p>
+             * <p>Specifies whether to enable synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>

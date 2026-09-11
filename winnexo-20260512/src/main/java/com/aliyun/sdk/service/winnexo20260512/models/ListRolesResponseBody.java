@@ -93,7 +93,7 @@ public class ListRolesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>系统内置角色列表（固定 7 个）</p>
+         * <p>The MCP card list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -112,7 +112,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -123,7 +123,7 @@ public class ListRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -218,10 +218,10 @@ public class ListRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>角色说明（按请求 Accept-Language 国际化）</p>
+             * <p>The description of the to-do card type.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例描述</p>
+             * <p>Sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -229,7 +229,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色标识码，用于 createUser/updateUser 的 roleCodes 参数</p>
+             * <p>The role code.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -240,7 +240,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>角色显示名称（按请求 Accept-Language 国际化）</p>
+             * <p>The role name.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -251,7 +251,7 @@ public class ListRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否允许启用/停用操作（超级管理员和应用用户不可切换）</p>
+             * <p>Indicates whether the enable/disable operation is allowed. Super administrators and application users cannot be switched.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

@@ -132,7 +132,7 @@ public class CreateUserRequest extends Request {
         } 
 
         /**
-         * <p>用户显示名称（租户内唯一，不可为空，最多100字）</p>
+         * <p>The cluster name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>RSA-OAEP-SHA256 加密后的 base64 密码密文（必填，不可为空）</p>
+         * <p>The base64-encoded password ciphertext encrypted by using RSA-OAEP-SHA256 (required).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>系统角色 code 列表，可选值: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER。不传默认 APPLICATION_USER</p>
+         * <p>The list of new system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -171,7 +171,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>SSO provider 类型。租户仅有一个外部登录方式时可不传；多外部登录方式时必填。当前 createUser 支持 BUILD_IN 与 AGENT_ONE</p>
+         * <p>The SSO provider type. This parameter is optional if the tenant has only one external logon method. This parameter is required if the tenant has multiple external logon methods. Currently, createUser supports BUILD_IN and AGENT_ONE.</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT_ONE</p>
@@ -183,7 +183,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The ID of the tenant on which the operation takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -195,7 +195,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>登录账号唯一标识；阿里云场景为 RAM 子账号 ID</p>
+         * <p>The WINNEXO logon account (unique identifier, required).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -132,7 +132,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The file information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -162,7 +162,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页数量</p>
+         * <p>The number of entries per page. Default value: 100. Maximum value: 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -195,7 +195,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>内容总数</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -407,7 +407,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>创建人名称</p>
+             * <p>The nickname of the creator.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -418,10 +418,10 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录描述</p>
+             * <p>The description of the to-do card type.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例描述</p>
+             * <p>Sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -429,7 +429,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间戳</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -440,7 +440,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间戳</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -451,7 +451,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目录 ID 或资源 ID</p>
+             * <p>The signing record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleItemId</p>
@@ -462,7 +462,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>内容类型：directory 或 resource</p>
+             * <p>The data type (group, user, or role).</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -473,10 +473,10 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -484,7 +484,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * objectBindings.
+             * <p>The object bindings.</p>
              */
             public Builder objectBindings(java.util.List<java.util.Map<String, ?>> objectBindings) {
                 this.objectBindings = objectBindings;
@@ -492,7 +492,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>根知识库下失败资源数</p>
+             * <p>The number of resources with the FAILED status. This field is returned only when the top-level directory list of the knowledge base is queried.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -503,7 +503,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>根知识库下成功资源数</p>
+             * <p>The number of resources with the READY status. This field is returned only when the top-level directory list of the knowledge base is queried.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -514,7 +514,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源解析状态</p>
+             * <p>The resource status. This field has a value only when itemType is set to resource.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -525,7 +525,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>根知识库下资源总数</p>
+             * <p>The total number of resources in the directory and its subdirectories. This field is returned only when the top-level directory list of the knowledge base is queried.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -536,7 +536,7 @@ public class ListTenantDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源类型</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

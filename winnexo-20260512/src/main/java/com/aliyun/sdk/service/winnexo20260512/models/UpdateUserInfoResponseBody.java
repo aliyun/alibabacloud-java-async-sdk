@@ -93,7 +93,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -115,7 +115,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -126,7 +126,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * user.
+         * <p>The user information.</p>
          */
         public Builder user(User user) {
             this.user = user;
@@ -192,7 +192,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>租户ID</p>
+             * <p>The tenant ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -203,7 +203,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>租户名称</p>
+             * <p>The tenant name.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -442,7 +442,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>用户头像URL</p>
+             * <p>The profile picture URL of the user.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></p>
@@ -453,7 +453,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否为超级管理员</p>
+             * <p>Indicates whether the user is a super administrator.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -464,7 +464,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前登录租户是否为系统租户</p>
+             * <p>Indicates whether the current logged-in tenant is a system tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -475,7 +475,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户语言偏好</p>
+             * <p>The language preference of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -486,10 +486,10 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -497,7 +497,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户服务描述</p>
+             * <p>The service description of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -508,7 +508,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户服务解析结果（JSON格式）</p>
+             * <p>The parsed result of the user service in JSON format.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -519,7 +519,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户角色</p>
+             * <p>The role of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -530,7 +530,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户角色描述</p>
+             * <p>The role description of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -541,7 +541,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户自我介绍</p>
+             * <p>The self-introduction of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -552,7 +552,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前租户ID</p>
+             * <p>The ID of the current tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -563,7 +563,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * tenantList.
+             * <p>The list of tenants to which the user belongs.</p>
              */
             public Builder tenantList(java.util.List<TenantList> tenantList) {
                 this.tenantList = tenantList;
@@ -571,7 +571,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前租户名称</p>
+             * <p>The name of the current tenant.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -582,7 +582,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户代码</p>
+             * <p>The user code.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -593,7 +593,7 @@ public class UpdateUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户ID</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

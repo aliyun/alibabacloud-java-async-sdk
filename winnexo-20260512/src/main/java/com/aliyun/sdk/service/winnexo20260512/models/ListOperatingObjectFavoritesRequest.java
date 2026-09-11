@@ -133,7 +133,7 @@ public class ListOperatingObjectFavoritesRequest extends Request {
         } 
 
         /**
-         * <p>数字员工所属图谱技术名</p>
+         * <p>The graph name. Call listGraphs to retrieve available graphs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class ListOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>上一页返回的签名不透明游标，首屏不传；不得自行解析或拼接</p>
+         * <p>The pagination cursor.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJ2IjoxLCJpZCI6MTAwMX0.c2lnbmF0dXJlX2V4YW1wbGU</p>
@@ -158,7 +158,7 @@ public class ListOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>数字员工配置的主对象或显式一级关联对象类型</p>
+         * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class ListOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>数字员工技术名；不得用 objectType 替代</p>
+         * <p>The digital employee name (operating object name). Optional.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class ListOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>每页数量，范围 1 至 200，默认 100</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -196,7 +196,7 @@ public class ListOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID to take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

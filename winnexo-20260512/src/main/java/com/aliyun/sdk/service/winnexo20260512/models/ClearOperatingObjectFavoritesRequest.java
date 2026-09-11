@@ -104,7 +104,7 @@ public class ClearOperatingObjectFavoritesRequest extends Request {
         } 
 
         /**
-         * <p>数字员工所属图谱技术名</p>
+         * <p>The graph name. You can call listGraphs to obtain the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ClearOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>数字员工配置的主对象或显式一级关联对象类型</p>
+         * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ClearOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>数字员工技术名；不得用 objectType 替代</p>
+         * <p>The operating object name, such as customer_1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ClearOperatingObjectFavoritesRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID to take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

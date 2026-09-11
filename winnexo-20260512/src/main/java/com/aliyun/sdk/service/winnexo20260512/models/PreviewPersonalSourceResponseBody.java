@@ -158,7 +158,7 @@ public class PreviewPersonalSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,10 +169,10 @@ public class PreviewPersonalSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文本内容（CONTENT类型使用）</p>
+         * <p>The text content. This parameter is used for the CONTENT type.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例内容</p>
+         * <p>Sample content</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -180,7 +180,7 @@ public class PreviewPersonalSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件扩展名（OSS_IMM类型使用）</p>
+         * <p>The file name extension. This parameter is used for the OSS_IMM type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -191,7 +191,7 @@ public class PreviewPersonalSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名（OSS_IMM类型使用）</p>
+         * <p>The file name. This parameter is used for the OSS_IMM type.</p>
          * 
          * <strong>example:</strong>
          * <p>example.pdf</p>
@@ -202,7 +202,7 @@ public class PreviewPersonalSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -213,7 +213,7 @@ public class PreviewPersonalSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>预览类型：OSS_IMM / IMAGE / AUDIO / VIDEO / HTML / DING_TALK / VOICE_MEETING / CONTENT</p>
+         * <p>The preview type. Valid values: OSS_IMM, IMAGE, AUDIO, VIDEO, HTML, DING_TALK, VOICE_MEETING, and CONTENT.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS_IMM</p>
@@ -224,7 +224,7 @@ public class PreviewPersonalSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>预览URL（OSS_IMM、DING_TALK、VOICE_MEETING使用）</p>
+         * <p>The preview URL. This parameter is used for the OSS_IMM, DING_TALK, and VOICE_MEETING types.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -235,7 +235,7 @@ public class PreviewPersonalSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>公开下载URL（可供下载的文件URL）</p>
+         * <p>The public download URL of the file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -246,7 +246,7 @@ public class PreviewPersonalSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

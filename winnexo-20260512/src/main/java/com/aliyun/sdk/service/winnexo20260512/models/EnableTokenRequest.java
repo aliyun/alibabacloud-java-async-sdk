@@ -73,7 +73,7 @@ public class EnableTokenRequest extends Request {
         } 
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The ID of the effective tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -85,7 +85,7 @@ public class EnableTokenRequest extends Request {
         }
 
         /**
-         * <p>目标用户 ID（WINNEXO 平台用户ID，空则操作自身，管理员可传入他人 ID 代操作）</p>
+         * <p>The ID of the target user (WINNEXO platform user ID). If this parameter is left empty, the operation is performed on the caller. Administrators can specify another user\&quot;s ID to perform the operation on behalf of that user.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

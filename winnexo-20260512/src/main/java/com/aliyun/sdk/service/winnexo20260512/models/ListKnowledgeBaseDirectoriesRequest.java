@@ -101,7 +101,7 @@ public class ListKnowledgeBaseDirectoriesRequest extends Request {
         } 
 
         /**
-         * <p>父分类 ID；不传时返回企业知识库根目录下的所有分类树</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -113,7 +113,12 @@ public class ListKnowledgeBaseDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>排序字段：name / gmt_create / gmt_modified</p>
+         * <p>The field by which the results are sorted. Valid values:</p>
+         * <ul>
+         * <li>event_time: event creation time</li>
+         * <li>event_execute_start_time: event execution time</li>
+         * <li>event_execute_finish_time: event completion time</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -125,7 +130,7 @@ public class ListKnowledgeBaseDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>排序方向：asc / desc</p>
+         * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>
@@ -137,7 +142,7 @@ public class ListKnowledgeBaseDirectoriesRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID. This is a common parameter. You can pass it explicitly by using --tenant-id in winnexo-cli.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

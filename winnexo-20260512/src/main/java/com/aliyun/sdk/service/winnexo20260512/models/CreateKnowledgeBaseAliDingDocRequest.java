@@ -159,7 +159,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         } 
 
         /**
-         * <p>资源描述（可选）</p>
+         * <p>The description of the alias.</p>
          * 
          * <strong>example:</strong>
          * <p>created by eventbridge</p>
@@ -171,7 +171,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>目标企业知识库目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前租户下已有的企业知识库目录</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -183,7 +183,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>阿里钉在线文档的可公开访问 URL</p>
+         * <p>The publicly accessible URL of the AliDing online document.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>知识库 ID（可选，透传给 document_agent）</p>
+         * <p>Not supported. This parameter is ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleKnowledgeId</p>
@@ -208,7 +208,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>资源显示名称（建议传入钉钉文档标题）</p>
+         * <p>The name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +221,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称（运营对象 name，可选）</p>
+         * <p>The digital employee name (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -233,7 +233,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>资源标签（可选，JSON 字符串列表，如 [&quot;tagA&quot;,&quot;tagB&quot;]）</p>
+         * <p>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -245,7 +245,7 @@ public class CreateKnowledgeBaseAliDingDocRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>520539530998273</p>

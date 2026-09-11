@@ -93,7 +93,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码</p>
+         * <p>SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -115,7 +115,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -126,7 +126,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
         }
 
         /**
-         * <p>逐项保存结果，与 itemIds 同序</p>
+         * <p>The result list.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -231,7 +231,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>失败时返回业务错误码</p>
+             * <p>The business error code (i18n key), returned on failure.</p>
              * 
              * <strong>example:</strong>
              * <p>ERR.Robject.UserOutput.ItemNotFound</p>
@@ -242,10 +242,10 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
             }
 
             /**
-             * <p>失败时返回本地化错误信息</p>
+             * <p>The error description (internationalized based on the request locale), returned on failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>群产出不存在</p>
+             * <p>Group output does not exist</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -253,7 +253,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
             }
 
             /**
-             * <p>群产出明细 ID</p>
+             * <p>The output item ID.</p>
              * 
              * <strong>example:</strong>
              * <p>item-1</p>
@@ -264,7 +264,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
             }
 
             /**
-             * <p>成功时返回新建的个人 Source ID</p>
+             * <p>The sourceId of the newly created resource, returned on success.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleSourceId</p>
@@ -275,7 +275,7 @@ public class SaveGroupOutputFileToPersonalResourceResponseBody extends TeaModel 
             }
 
             /**
-             * <p>是否保存成功</p>
+             * <p>Indicates whether the operation is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

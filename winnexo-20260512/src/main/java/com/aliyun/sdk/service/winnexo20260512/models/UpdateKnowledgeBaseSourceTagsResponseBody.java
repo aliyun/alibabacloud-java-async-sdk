@@ -119,7 +119,7 @@ public class UpdateKnowledgeBaseSourceTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class UpdateKnowledgeBaseSourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>最近修改时间，ISO8601 格式</p>
+         * <p>The last modified time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -141,7 +141,7 @@ public class UpdateKnowledgeBaseSourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -152,7 +152,7 @@ public class UpdateKnowledgeBaseSourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -163,7 +163,7 @@ public class UpdateKnowledgeBaseSourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源 ID</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -174,7 +174,7 @@ public class UpdateKnowledgeBaseSourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>更新后的资源标签</p>
+         * <p>The updated resource tags.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

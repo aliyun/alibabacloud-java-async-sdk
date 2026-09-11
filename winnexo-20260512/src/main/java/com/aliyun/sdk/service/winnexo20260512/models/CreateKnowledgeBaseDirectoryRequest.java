@@ -102,7 +102,7 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
         } 
 
         /**
-         * <p>分类描述（可选）</p>
+         * <p>The description of the AI assistant.</p>
          * 
          * <strong>example:</strong>
          * <p>recorder function</p>
@@ -114,7 +114,7 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>分类名称（企业知识库目录名称）</p>
+         * <p>The image name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>父分类 ID；不传时新分类挂在企业知识库根目录下，传入时必须是当前租户下已存在的企业知识库目录 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>wd-lxykjnnw4lyl9eq</p>
@@ -139,7 +139,7 @@ public class CreateKnowledgeBaseDirectoryRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>692318833855074</p>

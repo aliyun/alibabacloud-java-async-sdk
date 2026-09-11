@@ -158,7 +158,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定的目录 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -180,7 +180,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-04 11:12:03</p>
@@ -191,7 +191,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The operation message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -202,7 +202,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>issue_research</p>
@@ -213,7 +213,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FEE93-17FB-5369-BB65-1188C3A14B0A</p>
@@ -224,7 +224,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 scope，固定为 PERSONAL</p>
+         * <p>The permission scope.</p>
          * 
          * <strong>example:</strong>
          * <p>read:user,read:repo,write:repo,read:org,read:group</p>
@@ -235,7 +235,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建资源 ID</p>
+         * <p>The original project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2001086</p>
@@ -246,7 +246,7 @@ public class CreatePersonalFeishuMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源状态</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

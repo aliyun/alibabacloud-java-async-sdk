@@ -157,7 +157,7 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         } 
 
         /**
-         * <p>目录 ID；为空或 &quot;root&quot; 时返回 KB 顶层列表，传具体值时下钻返回该目录的子目录 + 资源（混合分页，由 itemType 区分）</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -169,10 +169,10 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>搜索关键词，仅在 directoryId 为空/root 时生效，模糊匹配 KB 名称或描述（忽略大小写）</p>
+         * <p>The keyword for fuzzy search on form component data.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例关键词</p>
+         * <p>SampleKeyword</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -181,7 +181,7 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>页码，从 1 开始</p>
+         * <p>The page number. Default value: 1. Pages start from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -193,7 +193,7 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>每页数量，范围 1-100</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -205,7 +205,12 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>排序字段：name / gmtCreate / gmtModified；非法值回退为 name</p>
+         * <p>The field by which the results are sorted. Valid values:</p>
+         * <ul>
+         * <li>event_time: the event creation time.</li>
+         * <li>event_execute_start_time: the event execution time.</li>
+         * <li>event_execute_finish_time: the event completion time.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -217,7 +222,7 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>排序方向：asc / desc；非法值回退为 asc</p>
+         * <p>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</p>
          * 
          * <strong>example:</strong>
          * <p>asc</p>
@@ -229,7 +234,7 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>资源类型过滤，仅在下钻（directoryId 非空）时生效；命中时仅返回匹配类型的资源，不含子目录</p>
+         * <p>The list of source types.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -242,7 +247,7 @@ public class ListAdminKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

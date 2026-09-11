@@ -74,7 +74,7 @@ public class DeleteSourceRequest extends Request {
         } 
 
         /**
-         * <p>待删除的数据源 ID（租户内唯一）</p>
+         * <p>The unique identifier on the business system side, that is, the business ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DeleteSourceRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>21577</p>

@@ -132,7 +132,7 @@ public class CreateUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>登录账号唯一标识</p>
+         * <p>The ID of your Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleAccountId</p>
@@ -143,7 +143,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -154,7 +154,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户显示名称</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -165,7 +165,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否为新创建的用户（false 表示已有用户加入租户）</p>
+         * <p>Indicates whether the user is newly created. A value of false indicates that an existing user is added to the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -176,7 +176,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -187,7 +187,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -198,7 +198,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>WINNEXO 平台用户ID</p>
+         * <p>The WINNEXO platform user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

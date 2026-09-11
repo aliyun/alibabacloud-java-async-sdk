@@ -75,7 +75,7 @@ public class GetGraphSchemaRequest extends Request {
         } 
 
         /**
-         * <p>图谱名称，可先调用 listGraphs 获取</p>
+         * <p>The graph name. Call listGraphs first to obtain this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetGraphSchemaRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The effective tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

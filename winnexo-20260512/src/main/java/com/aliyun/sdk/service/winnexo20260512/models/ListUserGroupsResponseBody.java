@@ -93,7 +93,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>用户组树根节点列表；children 递归包含直接子用户组</p>
+         * <p>The list of top-level user groups.</p>
          */
         public Builder items(java.util.List<?> items) {
             this.items = items;
@@ -112,7 +112,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -123,7 +123,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>

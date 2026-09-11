@@ -201,10 +201,10 @@ public class CreateGroupFeishuDocRequest extends Request {
         } 
 
         /**
-         * <p>资源描述</p>
+         * <p>The description of the AI assistant.</p>
          * 
          * <strong>example:</strong>
-         * <p>群协作文档</p>
+         * <p>Group collaboration document</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -213,7 +213,7 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>目标群目录 ID；不传时使用群知识库根目录</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_group_child</p>
@@ -225,7 +225,7 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>飞书 Docx 或底层为 Docx 的 Wiki HTTPS 链接</p>
+         * <p>The document URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>目标群组 ID</p>
+         * <p>The project group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,10 +251,10 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>资源名称；不传时同步飞书标题</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
-         * <p>项目方案</p>
+         * <p>ProjectPlan</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -263,10 +263,10 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>分析指令</p>
+         * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
-         * <p>提取决策和待办</p>
+         * <p>Extract decisions and to-do items</p>
          */
         public Builder notes(String notes) {
             this.putBodyParameter("notes", notes);
@@ -275,7 +275,7 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * objectBindings.
+         * <p>The object bindings.</p>
          */
         public Builder objectBindings(java.util.List<ObjectBindings> objectBindings) {
             String objectBindingsShrink = shrink(objectBindings, "objectBindings", "json");
@@ -285,10 +285,10 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>运营对象名称</p>
+         * <p>The name of the operating object.</p>
          * 
          * <strong>example:</strong>
-         * <p>研发助手</p>
+         * <p>R&amp;D Assistant</p>
          */
         public Builder operatingObjectName(String operatingObjectName) {
             this.putBodyParameter("operatingObjectName", operatingObjectName);
@@ -297,10 +297,10 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>资源标签 JSON 字符串列表</p>
+         * <p>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;研发&quot;]</p>
+         * <p>[&quot;R&amp;D&quot;]</p>
          */
         public Builder sourceTags(String sourceTags) {
             this.putBodyParameter("sourceTags", sourceTags);
@@ -309,7 +309,7 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * syncConfig.
+         * <p>The synchronization settings.</p>
          */
         public Builder syncConfig(SyncConfig syncConfig) {
             String syncConfigShrink = shrink(syncConfig, "syncConfig", "json");
@@ -319,7 +319,7 @@ public class CreateGroupFeishuDocRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -405,7 +405,7 @@ public class CreateGroupFeishuDocRequest extends Request {
             } 
 
             /**
-             * <p>对象归属语义图谱名</p>
+             * <p>The name of the semantic graph to which the object belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>crm</p>
@@ -416,7 +416,7 @@ public class CreateGroupFeishuDocRequest extends Request {
             }
 
             /**
-             * <p>绑定对象 ID</p>
+             * <p>The ID of the recommended item, which can be a <strong>feedId</strong> or a mini-app ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -428,7 +428,7 @@ public class CreateGroupFeishuDocRequest extends Request {
             }
 
             /**
-             * <p>绑定对象类型</p>
+             * <p>The advanced field type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -513,7 +513,7 @@ public class CreateGroupFeishuDocRequest extends Request {
             } 
 
             /**
-             * <p>五段 cron 表达式</p>
+             * <p>The cron expression for the timed scheduling task.</p>
              * 
              * <strong>example:</strong>
              * <p>0 * * * *</p>
@@ -524,7 +524,7 @@ public class CreateGroupFeishuDocRequest extends Request {
             }
 
             /**
-             * <p>是否启用定时同步</p>
+             * <p>Specifies whether to enable or disable synchronization.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -536,7 +536,7 @@ public class CreateGroupFeishuDocRequest extends Request {
             }
 
             /**
-             * <p>同步预设，默认 custom</p>
+             * <p>The preset mode (can be ignored).</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>

@@ -43,6 +43,10 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String shanjiUrl;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTags")
+    private String sourceTags;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
@@ -55,6 +59,7 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
         this.notes = builder.notes;
         this.operatingObjectName = builder.operatingObjectName;
         this.shanjiUrl = builder.shanjiUrl;
+        this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
     }
 
@@ -114,6 +119,13 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
     }
 
     /**
+     * @return sourceTags
+     */
+    public String getSourceTags() {
+        return this.sourceTags;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -127,6 +139,7 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
         private String notes; 
         private String operatingObjectName; 
         private String shanjiUrl; 
+        private String sourceTags; 
         private String tenantId; 
 
         private Builder() {
@@ -141,11 +154,12 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
             this.notes = request.notes;
             this.operatingObjectName = request.operatingObjectName;
             this.shanjiUrl = request.shanjiUrl;
+            this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>资源描述（可选）</p>
+         * <p>The description of the AI assistant.</p>
          * 
          * <strong>example:</strong>
          * <p>controll service user</p>
@@ -157,7 +171,7 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
         }
 
         /**
-         * <p>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -169,7 +183,7 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
         }
 
         /**
-         * <p>资源显示名称</p>
+         * <p>The name of the image-trained digital human.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +196,7 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
         }
 
         /**
-         * <p>会议笔记内容（可选），会参与辅助分析</p>
+         * <p>The meeting notes (optional). The notes are used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -194,7 +208,7 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -206,7 +220,7 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
         }
 
         /**
-         * <p>原始的闪记链接（必填）</p>
+         * <p>The original Shanji link (required).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +233,19 @@ public class CreatePersonalAliDingMeetingRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>A list of resource tag JSON strings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Important&quot;,&quot;Meeting&quot;]</p>
+         */
+        public Builder sourceTags(String sourceTags) {
+            this.putBodyParameter("sourceTags", sourceTags);
+            this.sourceTags = sourceTags;
+            return this;
+        }
+
+        /**
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>549003315603714</p>

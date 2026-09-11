@@ -158,7 +158,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定的目录 ID（请求体传入时 echo 回；缺省走默认根目录时为 null）</p>
+         * <p>The bound directory ID. This value is echoed back if provided in the request body. The value is null if the default root directory is used.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -180,7 +180,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-22T08:15:28.000+00:00</p>
@@ -191,7 +191,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -202,7 +202,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The knowledge base name.</p>
          * 
          * <strong>example:</strong>
          * <p>p-toolset-e95d1287-3d40-487a-bcce-6e6252c7a793</p>
@@ -213,7 +213,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A5241B90-8FF4-565C-977A-0CE1842AED72</p>
@@ -224,7 +224,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 scope，固定为 PERSONAL</p>
+         * <p>The resource scope. The value is fixed to PERSONAL.</p>
          * 
          * <strong>example:</strong>
          * <p>user_info projects pull_requests hook gists emails</p>
@@ -235,7 +235,7 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建资源 ID</p>
+         * <p>The unique ID on the business system side, which is the business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -246,10 +246,10 @@ public class CreatePersonalVoiceMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源状态（创建链路初始多为 PENDING；on_create 失败则为 FAILED）</p>
+         * <p>The resource status. The initial status during the creation process is typically PENDING. If the on_create process fails, the status is FAILED.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;observedGeneration&quot;: 4, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2025-10-31T03:48:27Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1761882507097-Eu1vIP&quot;}</p>
+         * <p>{\&quot;observedGeneration\&quot;: 4, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-10-31T03:48:27Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1761882507097-Eu1vIP\&quot;}</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -101,7 +101,7 @@ public class CreateConversationRequest extends Request {
         } 
 
         /**
-         * <p>会话元数据，可含 model 等透传字段（model 需为合法抽象模型名，否则回退默认）</p>
+         * <p>A reserved field.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -113,7 +113,7 @@ public class CreateConversationRequest extends Request {
         }
 
         /**
-         * <p>关联业务对象ID</p>
+         * <p>The primary key ID of the associated variable.</p>
          * 
          * <strong>example:</strong>
          * <p>2676</p>
@@ -125,7 +125,7 @@ public class CreateConversationRequest extends Request {
         }
 
         /**
-         * <p>operatingObjectName</p>
+         * <p>The operating object name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -138,7 +138,7 @@ public class CreateConversationRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>

@@ -187,7 +187,7 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         } 
 
         /**
-         * <p>普通钉钉群聊 ID</p>
+         * <p>The DingTalk group chat session ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,10 +200,10 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>群聊名称</p>
+         * <p>The group chat name.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户项目群</p>
+         * <p>CustomerProjectGroup</p>
          */
         public Builder chatName(String chatName) {
             this.putBodyParameter("chatName", chatName);
@@ -212,10 +212,10 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>资源描述</p>
+         * <p>The pipeline description.</p>
          * 
          * <strong>example:</strong>
-         * <p>客户群聊历史</p>
+         * <p>Customer group chat history</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -224,7 +224,7 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>目标个人知识目录 ID；不传时使用当前用户默认根目录</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -236,7 +236,7 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>历史消息起始时间，支持 YYYY-MM-DD 或 YYYY-MM-DD HH:MM:SS</p>
+         * <p>The start time for collecting chat history.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,10 +249,10 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>分析指令</p>
+         * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
-         * <p>重点识别客户诉求与待办</p>
+         * <p>Focus on identifying customer demands and to-do items</p>
          */
         public Builder notes(String notes) {
             this.putBodyParameter("notes", notes);
@@ -261,7 +261,7 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>运营对象名称</p>
+         * <p>The digital employee name (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent</p>
@@ -273,10 +273,10 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>资源标签 JSON 字符串列表</p>
+         * <p>The resource tags (optional, a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;]).</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;客户&quot;,&quot;群聊&quot;]</p>
+         * <p>[&quot;Customer&quot;,&quot;GroupChat&quot;]</p>
          */
         public Builder sourceTags(String sourceTags) {
             this.putBodyParameter("sourceTags", sourceTags);
@@ -285,7 +285,7 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -297,7 +297,7 @@ public class CreatePersonalDingtalkChatRequest extends Request {
         }
 
         /**
-         * <p>Source 级定时同步配置</p>
+         * <p>The feature update frequency.</p>
          */
         public Builder updateFrequency(UpdateFrequency updateFrequency) {
             String updateFrequencyShrink = shrink(updateFrequency, "updateFrequency", "json");
@@ -379,7 +379,7 @@ public class CreatePersonalDingtalkChatRequest extends Request {
             } 
 
             /**
-             * <p>五段 cron；传入时优先于 preset</p>
+             * <p>The cron expression for timed scheduling.</p>
              * 
              * <strong>example:</strong>
              * <p>0 2 * * *</p>
@@ -390,7 +390,7 @@ public class CreatePersonalDingtalkChatRequest extends Request {
             }
 
             /**
-             * <p>是否启用定时同步，默认 true</p>
+             * <p>Specifies whether to enable or disable the feature.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -401,7 +401,7 @@ public class CreatePersonalDingtalkChatRequest extends Request {
             }
 
             /**
-             * <p>同步预设：hourly 或 daily_2am</p>
+             * <p>The preset mode (can be ignored).</p>
              * 
              * <strong>example:</strong>
              * <p>hourly</p>

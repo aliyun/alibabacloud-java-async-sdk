@@ -132,7 +132,7 @@ public class CreateConversationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class CreateConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3a59769c-e631-4b48-84f3-c9bf3a8ae940</p>
@@ -154,7 +154,7 @@ public class CreateConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>会话创建时间戳（秒）</p>
+         * <p>The time when the share was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1784513941206</p>
@@ -165,7 +165,7 @@ public class CreateConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -176,7 +176,7 @@ public class CreateConversationResponseBody extends TeaModel {
         }
 
         /**
-         * metadata.
+         * <p>A reserved field for extension purposes.</p>
          */
         public Builder metadata(java.util.Map<String, ?> metadata) {
             this.metadata = metadata;
@@ -184,7 +184,7 @@ public class CreateConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A5241B90-8FF4-565C-977A-0CE1842AED72</p>
@@ -195,7 +195,7 @@ public class CreateConversationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>会话标题（已按调用方语言国际化）</p>
+         * <p>The appointment title.</p>
          * 
          * <strong>example:</strong>
          * <p>Incident RCA: alert-0885feb7-3d4b-4da5-90f0-0119dfbbf555:up0shc25tp0kueo0afeobvhk81</p>

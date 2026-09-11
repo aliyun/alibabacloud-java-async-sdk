@@ -135,7 +135,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -146,7 +146,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>图谱名称</p>
+         * <p>The graph name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -169,7 +169,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -180,7 +180,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>graph 对应的 active QueryAgent 注册 schema ID；尚未注册时为 null</p>
+         * <p>The active QueryAgent registered schema ID corresponding to the graph. The value is null if not yet registered.</p>
          * 
          * <strong>example:</strong>
          * <p>schema_123456</p>
@@ -191,7 +191,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前 active Graph Schema 版本</p>
+         * <p>The version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class GetGraphSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>按 READ 权限裁剪的 Graph Schema 原始 YAML 文本，保留授权子图内的 $ref</p>
+         * <p>The raw YAML text of the Graph Schema trimmed by READ permissions, retaining $ref references within the authorized subgraph.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

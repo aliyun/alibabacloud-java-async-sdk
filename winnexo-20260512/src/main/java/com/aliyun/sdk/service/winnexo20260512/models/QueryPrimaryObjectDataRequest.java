@@ -130,10 +130,10 @@ public class QueryPrimaryObjectDataRequest extends Request {
         } 
 
         /**
-         * <p>关键字搜索（固定匹配 name；若 schema 定义 description，则同时匹配 description）</p>
+         * <p>The keyword for search. The keyword is matched against the name field. If the schema defines a description field, the keyword is also matched against the description field.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例关键词</p>
+         * <p>SampleKeyword</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -142,7 +142,7 @@ public class QueryPrimaryObjectDataRequest extends Request {
         }
 
         /**
-         * <p>仅返回关注的主对象；false 或不传则返回全部对象（包含 isFavorited 标识）</p>
+         * <p>Specifies whether to return only favorited primary objects. If this parameter is set to false or not specified, all objects are returned, including the isFavorited flag.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -154,7 +154,7 @@ public class QueryPrimaryObjectDataRequest extends Request {
         }
 
         /**
-         * <p>数字员工技术名（如 customer_1），不是对象类型</p>
+         * <p>The operating object name, such as customer_1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class QueryPrimaryObjectDataRequest extends Request {
         }
 
         /**
-         * <p>页码（从 1 开始）</p>
+         * <p>The page number. Pages start from page 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -179,7 +179,7 @@ public class QueryPrimaryObjectDataRequest extends Request {
         }
 
         /**
-         * <p>每页数量，范围 1-100</p>
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -191,7 +191,7 @@ public class QueryPrimaryObjectDataRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID. This is a common parameter. You can explicitly pass this parameter by using --tenant-id in winnexo-cli.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

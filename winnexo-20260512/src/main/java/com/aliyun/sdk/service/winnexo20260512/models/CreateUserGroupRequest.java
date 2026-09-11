@@ -102,10 +102,10 @@ public class CreateUserGroupRequest extends Request {
         } 
 
         /**
-         * <p>用户组描述</p>
+         * <p>The description of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>销售组织</p>
+         * <p>Sales organization</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -114,7 +114,7 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>父用户组ID；不传表示创建根节点</p>
+         * <p>The ID of the parent user group. If this parameter is not specified, a root node is created.</p>
          * 
          * <strong>example:</strong>
          * <p>7ea8973f-7a5c-4e8a-956b-4fe0e7e2eb11</p>
@@ -126,7 +126,7 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -138,11 +138,11 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * <p>用户组名称；同一父节点下唯一</p>
+         * <p>The name of the user group. The name must be unique under the same parent node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>华东销售</p>
+         * <p>East China Sales</p>
          */
         public Builder userGroupName(String userGroupName) {
             this.putBodyParameter("userGroupName", userGroupName);

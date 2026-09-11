@@ -132,7 +132,7 @@ public class MoveKnowledgeBaseResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class MoveKnowledgeBaseResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目标知识库 ID（echo 回入参）</p>
+         * <p>The target knowledge base ID. This value is echoed from the request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleKnowledgeId</p>
@@ -154,7 +154,7 @@ public class MoveKnowledgeBaseResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -165,7 +165,7 @@ public class MoveKnowledgeBaseResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>375701FC-2FB9-5782-BE8F-A3F5E2F2158C</p>
@@ -176,7 +176,7 @@ public class MoveKnowledgeBaseResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>源目录 ID（echo 回入参）</p>
+         * <p>The source directory ID. This value is echoed from the request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceDirectoryId</p>
@@ -187,7 +187,7 @@ public class MoveKnowledgeBaseResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 ID（echo 回入参）</p>
+         * <p>The unique identifier on the business system side, that is, the business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2000358</p>
@@ -198,7 +198,7 @@ public class MoveKnowledgeBaseResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目标目录 ID（echo 回入参）</p>
+         * <p>The target directory ID. This value is echoed from the request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleTargetDirectoryId</p>

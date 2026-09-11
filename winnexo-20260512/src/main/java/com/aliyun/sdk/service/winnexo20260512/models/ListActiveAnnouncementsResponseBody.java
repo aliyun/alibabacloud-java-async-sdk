@@ -132,7 +132,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码</p>
+         * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前生效公告列表</p>
+         * <p>The list of MCP cards.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -162,7 +162,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页数量</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -195,7 +195,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前生效公告总数</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -381,7 +381,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>公告业务 ID</p>
+             * <p>The business ID of the announcement.</p>
              * 
              * <strong>example:</strong>
              * <p>1001</p>
@@ -392,10 +392,10 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>公告正文</p>
+             * <p>The returned content.</p>
              * 
              * <strong>example:</strong>
-             * <p>系统将于今晚进行维护。</p>
+             * <p>The system will undergo maintenance tonight</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -403,7 +403,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建人平台用户 ID</p>
+             * <p>The user ID of the project creator.</p>
              * 
              * <strong>example:</strong>
              * <p>10001</p>
@@ -414,7 +414,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>展示页面：ALL、FRONTEND、BACKEND</p>
+             * <p>The display page. Valid values: ALL, FRONTEND, BACKEND.</p>
              * 
              * <strong>example:</strong>
              * <p>ALL</p>
@@ -425,7 +425,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>展示类型：POPUP、LIST、BANNER</p>
+             * <p>The display type and group label.</p>
              * 
              * <strong>example:</strong>
              * <p>LIST</p>
@@ -436,7 +436,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>生效结束时间；为空表示永久有效，ISO8601 格式</p>
+             * <p>The custom effective end time.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-21T14:00:00+08:00</p>
@@ -447,7 +447,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>生效开始时间；为空表示立即生效，ISO8601 格式</p>
+             * <p>The effective start time in ISO 8601 format with time zone. If not specified, the announcement takes effect immediately.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-20T14:00:00+08:00</p>
@@ -458,7 +458,27 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>公告重要性</p>
+             * <p>The priority of the free task.</p>
+             * <ul>
+             * <li><p>Uses the default priority of the project, as shown in the following figure. The default priorities are as follows:</p>
+             * <ul>
+             * <li><p><strong>-10</strong>: Low. This is the default value.</p>
+             * </li>
+             * <li><p><strong>0</strong>: Normal.</p>
+             * </li>
+             * <li><p><strong>1</strong>: Urgent.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Very urgent.</p>
+             * </li>
+             * </ul>
+             * </li>
+             * </ul>
+             * <p><img src="https://img.alicdn.com/imgextra/i1/O1CN01hNuSPz25juCzgxhmW_!!6000000007563-2-tps-2682-1304.png" alt=""></p>
+             * <ul>
+             * <li>Custom priority, as shown in the following figure, with an additional &quot;Moderately urgent&quot; level.</li>
+             * </ul>
+             * <p>The value of this parameter is subject to the actual response of the API. A higher priority corresponds to a larger value.</p>
+             * <p><img src="https://img.alicdn.com/imgextra/i1/O1CN01V67b3i1mkNvJiW8D1_!!6000000004992-2-tps-2128-1126.png" alt=""></p>
              * 
              * <strong>example:</strong>
              * <p>GENERAL</p>
@@ -469,7 +489,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>发布时间，ISO8601 格式</p>
+             * <p>The publish time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-08-20T14:00:00+08:00</p>
@@ -480,7 +500,7 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>公告状态，固定为 PUBLISHED</p>
+             * <p>The task status. Running is returned upon submission.</p>
              * 
              * <strong>example:</strong>
              * <p>PUBLISHED</p>
@@ -491,10 +511,10 @@ public class ListActiveAnnouncementsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>公告标题</p>
+             * <p>The title of the scheduled meeting.</p>
              * 
              * <strong>example:</strong>
-             * <p>系统维护通知</p>
+             * <p>System Maintenance Notice</p>
              */
             public Builder title(String title) {
                 this.title = title;

@@ -145,7 +145,7 @@ public class CreateAnnouncementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>公告业务 ID</p>
+         * <p>The business ID of the notice.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -156,7 +156,7 @@ public class CreateAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -167,7 +167,7 @@ public class CreateAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建人平台用户 ID</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>
@@ -178,7 +178,7 @@ public class CreateAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -189,7 +189,7 @@ public class CreateAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>发布时间；草稿为空，ISO8601 格式</p>
+         * <p>The publish time in ISO 8601 format. This field is empty for drafts.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-20T14:00:00+08:00</p>
@@ -200,7 +200,7 @@ public class CreateAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -211,7 +211,7 @@ public class CreateAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>公告来源，固定为 PLATFORM</p>
+         * <p>The source type of the dictionary file. Valid values: OSS: Object Storage Service (OSS). ORIGIN: retains the previously uploaded dictionary.</p>
          * 
          * <strong>example:</strong>
          * <p>PLATFORM</p>
@@ -222,7 +222,15 @@ public class CreateAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>公告状态：DRAFT 或 PUBLISHED</p>
+         * <p>The refund status. You need to query and confirm the refund status during the refund process. Valid values:</p>
+         * <ul>
+         * <li>SUCCESS: All succeeded.</li>
+         * <li>FAIL: Failed.</li>
+         * <li>WAIT_PAY: Waiting for refund.</li>
+         * <li>EXPIRE: Expired.</li>
+         * <li>PAYING: Refund in progress.</li>
+         * <li>TERMINATE: Refund terminated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>

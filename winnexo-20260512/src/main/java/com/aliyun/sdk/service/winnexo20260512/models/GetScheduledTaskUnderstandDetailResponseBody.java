@@ -132,7 +132,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -154,7 +154,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         }
 
         /**
-         * relatedObjects.
+         * <p>The related objects.</p>
          */
         public Builder relatedObjects(java.util.List<RelatedObjects> relatedObjects) {
             this.relatedObjects = relatedObjects;
@@ -162,7 +162,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         }
 
         /**
-         * relatedSemantics.
+         * <p>The related semantics.</p>
          */
         public Builder relatedSemantics(java.util.List<RelatedSemantics> relatedSemantics) {
             this.relatedSemantics = relatedSemantics;
@@ -170,7 +170,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         }
 
         /**
-         * relatedSkills.
+         * <p>The related skills.</p>
          */
         public Builder relatedSkills(java.util.List<RelatedSkills> relatedSkills) {
             this.relatedSkills = relatedSkills;
@@ -178,7 +178,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -189,7 +189,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>润色后的任务理解</p>
+         * <p>The task understanding description refined by the LLM.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -284,7 +284,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>提及类型</p>
+             * <p>The mention type, such as objects.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -295,10 +295,10 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -306,7 +306,13 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象 ID</p>
+             * <p>The object ID. Set this parameter to the project task ID.</p>
+             * <ul>
+             * <li><p>For internal enterprise applications, this is the taskId obtained by calling the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> operation.</p>
+             * </li>
+             * <li><p>For third-party enterprise applications, this is the taskId obtained by calling the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> operation.</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -317,7 +323,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>对象类型</p>
+             * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -387,7 +393,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>语义属性（JSON 字符串），用于语义检索时过滤</p>
+             * <p>The information type.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;level&quot;: &quot;VIP&quot;}</p>
@@ -398,7 +404,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>语义实体名，如客户/机会</p>
+             * <p>The semantic entity name, such as customer or opportunity.</p>
              * 
              * <strong>example:</strong>
              * <p>customer</p>
@@ -494,7 +500,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>技能展示名称</p>
+             * <p>The display name of the MCP service.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -505,10 +511,10 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -516,7 +522,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>技能代码</p>
+             * <p>The skill code.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -527,7 +533,7 @@ public class GetScheduledTaskUnderstandDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>sourceIds</p>
+             * <p>The list of related skill source IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

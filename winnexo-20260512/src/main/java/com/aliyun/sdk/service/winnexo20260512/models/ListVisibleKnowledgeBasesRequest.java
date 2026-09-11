@@ -88,7 +88,7 @@ public class ListVisibleKnowledgeBasesRequest extends Request {
         } 
 
         /**
-         * <p>数字员工名称（运营对象 name）</p>
+         * <p>The name of the digital employee (operating object name).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class ListVisibleKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F892C03F-7E12-5F37-A506-1FC3B065EAC6</p>
@@ -113,7 +113,7 @@ public class ListVisibleKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1729094555111072</p>

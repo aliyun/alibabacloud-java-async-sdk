@@ -132,7 +132,7 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,10 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of incremental information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
          */
         public Builder items(java.util.List<java.util.Map<String, String>> items) {
             this.items = items;
@@ -151,7 +154,7 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The error description. This parameter is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -162,7 +165,7 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +176,7 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页数量</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -184,7 +187,7 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -195,7 +198,7 @@ public class QueryPrimaryObjectDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>总数</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

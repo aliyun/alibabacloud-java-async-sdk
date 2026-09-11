@@ -119,7 +119,7 @@ public class StreamChatMessageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,10 +130,10 @@ public class StreamChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前 SSE 帧的增量内容</p>
+         * <p>The incremental content of the current SSE frame.</p>
          * 
          * <strong>example:</strong>
-         * <p>你好</p>
+         * <p>Hello</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -141,7 +141,7 @@ public class StreamChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>SSE 事件流负载；成功时响应为 text/event-stream 原始帧，需按流式方式逐帧消费</p>
+         * <p>The SSE event stream payload. On success, the response is returned as raw text/event-stream frames that must be consumed frame by frame in streaming mode.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -152,7 +152,7 @@ public class StreamChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -163,7 +163,7 @@ public class StreamChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -174,7 +174,7 @@ public class StreamChatMessageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>SSE 事件类型，如 text、think、heartbeat、done 或 error</p>
+         * <p>The SSE event type, such as text, think, heartbeat, done, or error.</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>

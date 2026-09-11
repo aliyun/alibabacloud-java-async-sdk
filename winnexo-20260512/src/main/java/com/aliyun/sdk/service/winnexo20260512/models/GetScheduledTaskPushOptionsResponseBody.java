@@ -106,7 +106,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>可用推送渠道及其个人推送方式或群绑定列表</p>
+         * <p>The list of notification channels.</p>
          */
         public Builder channels(java.util.List<Channels> channels) {
             this.channels = channels;
@@ -114,7 +114,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,10 +125,10 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>无已绑定三方账号时的提示</p>
+         * <p>The prompt displayed when no third-party accounts are bound.</p>
          * 
          * <strong>example:</strong>
-         * <p>暂无可用推送渠道</p>
+         * <p>No push channels available</p>
          */
         public Builder emptyHint(String emptyHint) {
             this.emptyHint = emptyHint;
@@ -136,7 +136,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -147,7 +147,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -231,7 +231,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>外部 IM 群 ID</p>
+             * <p>The external IM group ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -243,10 +243,10 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>外部 IM 群名称</p>
+             * <p>The external IM group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>项目协作群</p>
+             * <p>Project collaboration group</p>
              */
             public Builder imGroupName(String imGroupName) {
                 this.imGroupName = imGroupName;
@@ -254,7 +254,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IM 群绑定记录 ID</p>
+             * <p>The binding record ID of the IM group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -354,10 +354,10 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>置灰原因</p>
+             * <p>The reason why the option is grayed out.</p>
              * 
              * <strong>example:</strong>
-             * <p>未绑定推送渠道</p>
+             * <p>No push channel is bound</p>
              */
             public Builder disabledReason(String disabledReason) {
                 this.disabledReason = disabledReason;
@@ -365,7 +365,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否可选</p>
+             * <p>The feature switch. This parameter is optional when type is set to web_search.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -377,7 +377,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>推送方式：channel_bot/direct</p>
+             * <p>The method.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -389,11 +389,11 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>推送方式展示名</p>
+             * <p>The name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>群机器人</p>
+             * <p>Group chatbot</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -488,11 +488,11 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>渠道展示名</p>
+             * <p>The channel name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>钉钉</p>
+             * <p>DingTalk</p>
              */
             public Builder channelName(String channelName) {
                 this.channelName = channelName;
@@ -500,7 +500,13 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>渠道枚举值</p>
+             * <p>The notification method. Valid values:</p>
+             * <ul>
+             * <li><strong>hdm_alarm_sms</strong>: SMS.</li>
+             * <li><strong>dingtalk</strong>: DingTalk chatbot.</li>
+             * <li><strong>hdm_alarm_sms_and_email</strong>: SMS and email.</li>
+             * <li><strong>hdm_alarm_sms,dingtalk</strong>: SMS and DingTalk chatbot.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -512,7 +518,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>该协作群组在此渠道绑定的可选 IM 群；个人任务查询时为空</p>
+             * <p>The optional IM groups bound to this channel for the collaboration group. This value is empty when querying personal tasks.</p>
              */
             public Builder imGroups(java.util.List<ImGroups> imGroups) {
                 this.imGroups = imGroups;
@@ -520,7 +526,7 @@ public class GetScheduledTaskPushOptionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>推送方式</p>
+             * <p>The supported methods: HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS.</p>
              */
             public Builder methods(java.util.List<Methods> methods) {
                 this.methods = methods;

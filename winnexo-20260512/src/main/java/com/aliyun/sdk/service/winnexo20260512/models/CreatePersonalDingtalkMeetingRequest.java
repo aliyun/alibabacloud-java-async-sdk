@@ -159,7 +159,7 @@ public class CreatePersonalDingtalkMeetingRequest extends Request {
         } 
 
         /**
-         * <p>凭证 ID（历史兼容参数；接口已废弃且不再处理）</p>
+         * <p>The credential ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleCredentialId</p>
@@ -171,7 +171,7 @@ public class CreatePersonalDingtalkMeetingRequest extends Request {
         }
 
         /**
-         * <p>资源描述（可选）</p>
+         * <p>The pipeline description.</p>
          * 
          * <strong>example:</strong>
          * <p>Watchlist Monitor Layer</p>
@@ -183,7 +183,7 @@ public class CreatePersonalDingtalkMeetingRequest extends Request {
         }
 
         /**
-         * <p>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -195,7 +195,7 @@ public class CreatePersonalDingtalkMeetingRequest extends Request {
         }
 
         /**
-         * <p>资源显示名称</p>
+         * <p>The image name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class CreatePersonalDingtalkMeetingRequest extends Request {
         }
 
         /**
-         * <p>会议笔记内容（可选），会参与辅助分析</p>
+         * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -220,7 +220,7 @@ public class CreatePersonalDingtalkMeetingRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -232,7 +232,7 @@ public class CreatePersonalDingtalkMeetingRequest extends Request {
         }
 
         /**
-         * <p>钉钉会议号（历史兼容参数；接口已废弃且不再处理）</p>
+         * <p>The meeting code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class CreatePersonalDingtalkMeetingRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>520539530998273</p>

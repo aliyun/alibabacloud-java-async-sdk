@@ -117,10 +117,10 @@ public class RecommendNextActionsRequest extends Request {
         } 
 
         /**
-         * <p>自定义推荐 prompt（不超过 10000 字符）。作为自定义指令注入默认推荐模板（位于输出格式约束之前），输出仍受模板的 JSON 格式与类型约束</p>
+         * <p>The extraction instruction.</p>
          * 
          * <strong>example:</strong>
-         * <p>只推荐与数据分析相关的下一步操作</p>
+         * <p>Only recommend next steps related to data analysis</p>
          */
         public Builder customPrompt(String customPrompt) {
             this.putBodyParameter("customPrompt", customPrompt);
@@ -129,7 +129,7 @@ public class RecommendNextActionsRequest extends Request {
         }
 
         /**
-         * <p>输出类型：followUpOnly=仅追问类推荐（默认），skillOnly=仅推荐执行的 skill，both=追问+skill</p>
+         * <p>The output type: <code>conversation/skill/task</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>followUpOnly</p>
@@ -141,7 +141,7 @@ public class RecommendNextActionsRequest extends Request {
         }
 
         /**
-         * <p>组装上下文的最近消息条数，范围 1-30，默认 10（约 5 轮 user+assistant 对话回合）</p>
+         * <p>The number of recent messages used to assemble the contextual information.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -153,7 +153,7 @@ public class RecommendNextActionsRequest extends Request {
         }
 
         /**
-         * <p>会话ID</p>
+         * <p>The session ID to filter by. If specified, returns all Active/Expired status information associated with this session.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class RecommendNextActionsRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

@@ -119,7 +119,7 @@ public class DeleteChatSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class DeleteChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否删除成功</p>
+         * <p>Indicates whether the session is deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -141,7 +141,7 @@ public class DeleteChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否硬删除</p>
+         * <p>Indicates whether the session is hard-deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -152,7 +152,7 @@ public class DeleteChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -163,7 +163,7 @@ public class DeleteChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -174,7 +174,7 @@ public class DeleteChatSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>会话 ID</p>
+         * <p>The unique identifier of the function session.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSessionId</p>

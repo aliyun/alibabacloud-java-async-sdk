@@ -158,7 +158,7 @@ public class CreateKnowledgeBaseFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class CreateKnowledgeBaseFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定的目录 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -180,7 +180,7 @@ public class CreateKnowledgeBaseFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-12T03:08:56Z</p>
@@ -191,7 +191,7 @@ public class CreateKnowledgeBaseFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -202,7 +202,7 @@ public class CreateKnowledgeBaseFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>oklabs_tongyici</p>
@@ -213,7 +213,7 @@ public class CreateKnowledgeBaseFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>911656E1-9A09-5C77-BAAD-915EB4958D68</p>
@@ -224,7 +224,11 @@ public class CreateKnowledgeBaseFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 scope，固定为 TENANT</p>
+         * <p>The export scope. Valid values:</p>
+         * <ul>
+         * <li>ALL: all.</li>
+         * <li>SELECT: selected rows.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>user_info projects pull_requests hook gists emails</p>
@@ -235,7 +239,7 @@ public class CreateKnowledgeBaseFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建资源 ID</p>
+         * <p>The unique identifier on the business system side, which is the business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2001549</p>
@@ -246,7 +250,7 @@ public class CreateKnowledgeBaseFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源状态</p>
+         * <p>The store status.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>

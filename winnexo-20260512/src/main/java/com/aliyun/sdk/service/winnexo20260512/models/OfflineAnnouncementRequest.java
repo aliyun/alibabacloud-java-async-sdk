@@ -74,7 +74,7 @@ public class OfflineAnnouncementRequest extends Request {
         } 
 
         /**
-         * <p>公告业务 ID，必须为正整数</p>
+         * <p>The business ID of the announcement.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class OfflineAnnouncementRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. Pass it explicitly in winnexo-cli by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

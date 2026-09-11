@@ -143,7 +143,7 @@ public class ListOutputFilesRequest extends Request {
         } 
 
         /**
-         * <p>产出明细类型: ppt/html/document/picture/slides/video/audio/email/others</p>
+         * <p>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</p>
          * 
          * <strong>example:</strong>
          * <p>ppt</p>
@@ -155,7 +155,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>关键词搜索，匹配产出标题或明细名称</p>
+         * <p>The keyword for searching. Matches the output title or item name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -167,7 +167,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>数字员工（运营对象）名称，按名称过滤</p>
+         * <p>The name of the digital employee (operating object). Used to filter results by name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -179,7 +179,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>页码，从 1 开始</p>
+         * <p>The page number, starting from 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +191,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>每页数量，范围 1-100</p>
+         * <p>The number of items per page. Valid values: 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -203,7 +203,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>是否仅展示开启分享的产出和产出明细</p>
+         * <p>Specifies whether to display only outputs and output items with sharing enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -215,7 +215,7 @@ public class ListOutputFilesRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

@@ -88,7 +88,7 @@ public class ListActiveAnnouncementsRequest extends Request {
         } 
 
         /**
-         * <p>页码，从 1 开始</p>
+         * <p>The page number for paginated queries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -100,7 +100,7 @@ public class ListActiveAnnouncementsRequest extends Request {
         }
 
         /**
-         * <p>每页数量，范围 1 到 100</p>
+         * <p>The number of entries per page. Default value: 100. Maximum value: 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -112,7 +112,7 @@ public class ListActiveAnnouncementsRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

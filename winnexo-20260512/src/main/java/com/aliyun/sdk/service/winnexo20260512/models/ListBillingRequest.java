@@ -199,7 +199,7 @@ public class ListBillingRequest extends Request {
         } 
 
         /**
-         * <p>业务来源ID（可选筛选）</p>
+         * <p>The unique business identifier. When bizType is set to LibraryChat, bizId specifies the document library ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleBizId</p>
@@ -211,7 +211,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>业务来源类型（可选筛选）</p>
+         * <p>The business type. Currently supported values: model Q&amp;A (LlmChat) and document library Q&amp;A (LibraryChat).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -223,7 +223,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>结束时间范围，ISO-8601 字符串，如 2026-08-05T16:30:00.000Z</p>
+         * <p>The actual end timestamp of the live stream, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -235,7 +235,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>是否过滤 credit 消耗为 0 的账单，默认 true（过滤）</p>
+         * <p>Specifies whether to filter out bills with zero credit consumption. Default value: true (filter out).</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -247,7 +247,14 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>操作类型（可选筛选）</p>
+         * <p>The operation type. Valid values:</p>
+         * <ul>
+         * <li>start: indicates node creation. This is the default value. In most cases, you do not need to explicitly set this value.</li>
+         * <li>stop: stops a real-time meeting node. This value corresponds to the creation of a real-time meeting. After the meeting ends, set this value to stop and trigger the call. This value is used in real-time meeting scenarios.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Note: When ending a real-time recording, make sure to set this parameter to stop.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -259,7 +266,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>页码</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -271,7 +278,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>每页条数</p>
+         * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -283,7 +290,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>开始时间范围，ISO-8601 字符串，如 2026-08-05T16:30:00.000Z</p>
+         * <p>The query start time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -295,7 +302,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>状态（可选筛选）</p>
+         * <p>The node status. Running is returned upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -307,7 +314,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -319,7 +326,7 @@ public class ListBillingRequest extends Request {
         }
 
         /**
-         * <p>用户ID（WINNEXO 平台用户ID，可选筛选）</p>
+         * <p>The user ID (WINNEXO platform user ID, optional filter).</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

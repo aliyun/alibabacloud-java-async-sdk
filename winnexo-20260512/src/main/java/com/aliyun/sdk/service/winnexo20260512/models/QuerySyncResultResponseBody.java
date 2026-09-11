@@ -236,7 +236,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -247,7 +247,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>任务完成时间（ISO 8601）</p>
+         * <p>The time when the task was completed (ISO 8601 format).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -258,7 +258,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>企业标识</p>
+         * <p>The enterprise identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleCorpId</p>
@@ -269,7 +269,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>部门同步统计（完成时有值）</p>
+         * <p>The department synchronization statistics. This field has a value when the task is completed.</p>
          */
         public Builder deptStats(DeptStats deptStats) {
             this.deptStats = deptStats;
@@ -277,7 +277,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>执行时长（秒）</p>
+         * <p>The execution duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,7 +288,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误信息（失败时有值）</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -299,7 +299,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>成员同步统计（syncMembers=true 且完成时有值）</p>
+         * <p>The member synchronization statistics. This field has a value when syncMembers is set to true and the task is completed.</p>
          */
         public Builder memberStats(MemberStats memberStats) {
             this.memberStats = memberStats;
@@ -307,7 +307,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -318,7 +318,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>平台类型</p>
+         * <p>The platform type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -329,7 +329,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -340,7 +340,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>任务开始执行时间（ISO 8601）</p>
+         * <p>The time when the task started (ISO 8601 format).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -351,7 +351,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>任务状态: PENDING / RUNNING / COMPLETED / FAILED / TIMEOUT / CANCELED</p>
+         * <p>The task status. Valid values: PENDING, RUNNING, COMPLETED, FAILED, TIMEOUT, and CANCELED.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -362,7 +362,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>任务提交时间（ISO 8601）</p>
+         * <p>The time when the task was submitted (ISO 8601 format).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -373,7 +373,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>执行摘要（人可读）</p>
+         * <p>The intelligent meeting summary content.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -384,7 +384,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>任务 ID</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -505,7 +505,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>新增的用户组数</p>
+             * <p>The total number of external departments.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -516,7 +516,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标记删除的用户组数</p>
+             * <p>The number of user groups marked for deletion.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -527,7 +527,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>移动的用户组数</p>
+             * <p>The number of moved user groups.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -538,7 +538,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更名的用户组数</p>
+             * <p>The number of renamed user groups.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -549,7 +549,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过的用户组数</p>
+             * <p>The number of skipped user groups.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -560,7 +560,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>外部部门总数</p>
+             * <p>The total number of external departments.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -669,7 +669,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>失败的成员数</p>
+             * <p>The number of failed members.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -680,7 +680,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>新增的成员关系数</p>
+             * <p>The number of added member relationships.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -691,7 +691,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>移除的成员关系数</p>
+             * <p>The number of removed member relationships.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -702,7 +702,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>外部成员总数</p>
+             * <p>The total number of external members.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -713,7 +713,7 @@ public class QuerySyncResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>未变更的成员关系数</p>
+             * <p>The number of unchanged member relationships.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

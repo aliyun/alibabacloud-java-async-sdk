@@ -184,7 +184,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码；成功为 200</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -195,7 +195,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求指定的目标群目录 ID；默认群根场景为空</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dir_group_child</p>
@@ -206,7 +206,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>已提交的飞书文档 URL</p>
+         * <p>The document URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.feishu.cn/docx/doxcnExample">https://example.feishu.cn/docx/doxcnExample</a></p>
@@ -217,7 +217,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-26T10:00:00+08:00</p>
@@ -228,7 +228,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目标群组 ID</p>
+         * <p>The project group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>group_delivery</p>
@@ -239,7 +239,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述；成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>The current zone list is illegal.</p>
@@ -250,10 +250,10 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源名称</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
-         * <p>项目方案</p>
+         * <p>ProjectPlan</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -261,7 +261,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -272,7 +272,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源范围，固定为 GROUP</p>
+         * <p>The permission scope.</p>
          * 
          * <strong>example:</strong>
          * <p>GROUP</p>
@@ -283,7 +283,7 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建 Source ID</p>
+         * <p>The original project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>src_feishu_doc_1</p>
@@ -294,7 +294,12 @@ public class CreateGroupFeishuDocResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源状态</p>
+         * <p>The signing status. Valid values:</p>
+         * <ul>
+         * <li>CREATED: Created but not signed.</li>
+         * <li>SUCCESS: Signed successfully.</li>
+         * <li>STOP: Terminated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>

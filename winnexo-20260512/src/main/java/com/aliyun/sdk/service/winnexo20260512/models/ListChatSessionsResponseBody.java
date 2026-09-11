@@ -158,7 +158,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否有更多数据</p>
+         * <p>Indicates whether there is a next page.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -180,7 +180,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -191,7 +191,10 @@ public class ListChatSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * page.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.page = page;
@@ -199,7 +202,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页条数</p>
+         * <p>The number of entries per page. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -210,7 +213,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -221,7 +224,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>响应数据负载</p>
+         * <p>The list of sessions.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -232,7 +235,7 @@ public class ListChatSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>租户ID</p>
+         * <p>The effective tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -243,7 +246,10 @@ public class ListChatSessionsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1159</p>
          */
         public Builder total(Integer total) {
             this.total = total;

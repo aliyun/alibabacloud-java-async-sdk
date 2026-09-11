@@ -118,7 +118,7 @@ public class SaveGroupOutputFileToPersonalResourceRequest extends Request {
         } 
 
         /**
-         * <p>当前操作人的目标个人目录 ID；不传时使用默认个人目录</p>
+         * <p>The enterprise knowledge base directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -130,7 +130,7 @@ public class SaveGroupOutputFileToPersonalResourceRequest extends Request {
         }
 
         /**
-         * <p>群产出所属协作群 ID</p>
+         * <p>The project group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,11 @@ public class SaveGroupOutputFileToPersonalResourceRequest extends Request {
         }
 
         /**
-         * <p>保存方式：link=保持产出关联，copy=创建独立快照</p>
+         * <p>The save mode. Valid values:</p>
+         * <ul>
+         * <li>link: creates a link (1:1 idempotent, editing the output synchronizes the resource).</li>
+         * <li>copy: creates a copy (unlimited times, snapshot).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +174,7 @@ public class SaveGroupOutputFileToPersonalResourceRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；缺省时使用调用方默认租户</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

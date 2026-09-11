@@ -89,7 +89,7 @@ public class RemoveUserGroupMembersRequest extends Request {
         } 
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. You can explicitly pass this parameter in winnexo-cli by using <code>--tenant-id</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -101,7 +101,7 @@ public class RemoveUserGroupMembersRequest extends Request {
         }
 
         /**
-         * <p>目标用户组ID</p>
+         * <p>The ID of the target user group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class RemoveUserGroupMembersRequest extends Request {
         }
 
         /**
-         * <p>待移除的平台用户ID列表，1至100个</p>
+         * <p>The list of platform user IDs to be removed. You can specify one or more IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

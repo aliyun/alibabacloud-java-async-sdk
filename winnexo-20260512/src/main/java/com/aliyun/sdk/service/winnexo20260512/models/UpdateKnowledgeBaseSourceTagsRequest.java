@@ -88,7 +88,7 @@ public class UpdateKnowledgeBaseSourceTagsRequest extends Request {
         } 
 
         /**
-         * <p>数据源 ID（租户内唯一）</p>
+         * <p>The unique identifier on the business system side, that is, the business ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class UpdateKnowledgeBaseSourceTagsRequest extends Request {
         }
 
         /**
-         * <p>资源标签（JSON 字符串列表，如 [&quot;tagA&quot;,&quot;tagB&quot;]；传 null 表示清空标签）</p>
+         * <p>The resource tags. This is an optional parameter that accepts a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -113,7 +113,7 @@ public class UpdateKnowledgeBaseSourceTagsRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

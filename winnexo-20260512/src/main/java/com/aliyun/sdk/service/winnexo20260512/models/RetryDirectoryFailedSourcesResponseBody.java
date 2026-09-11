@@ -158,7 +158,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目录 ID</p>
+         * <p>The ID of the enterprise knowledge base folder. Failed resources in subfolders are recursively included.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -180,7 +180,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>成功入队重试的数量</p>
+         * <p>The number of resources successfully enqueued for retry.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +191,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>enqueuedIds。</p>
+         * <p>The list of source IDs that have been re-enqueued.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -202,7 +202,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>目录下失败资源总数</p>
+         * <p>The total number of failed resources in the folder.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -213,7 +213,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * failedSources.
+         * <p>The list of failed data source IDs.</p>
          */
         public Builder failedSources(java.util.List<FailedSources> failedSources) {
             this.failedSources = failedSources;
@@ -221,7 +221,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -232,7 +232,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -243,7 +243,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>跳过（非 FAILED 或无权限）的数量</p>
+         * <p>The number of resources skipped because they are not in FAILED status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -325,10 +325,10 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>文件名</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -336,7 +336,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据源 ID</p>
+             * <p>The data source ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleSourceId</p>
@@ -347,7 +347,7 @@ public class RetryDirectoryFailedSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数据源类型</p>
+             * <p>The data source type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

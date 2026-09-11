@@ -106,7 +106,7 @@ public class RecommendNextActionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class RecommendNextActionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -128,7 +128,7 @@ public class RecommendNextActionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>0-3 项下一步推荐</p>
+         * <p>The next-step recommendations.</p>
          */
         public Builder nextActions(java.util.List<NextActions> nextActions) {
             this.nextActions = nextActions;
@@ -136,7 +136,7 @@ public class RecommendNextActionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -147,10 +147,10 @@ public class RecommendNextActionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>会话标题</p>
+         * <p>The scheduled meeting title.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例会话标题</p>
+         * <p>Sample session title</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -242,10 +242,10 @@ public class RecommendNextActionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>不超过 15 字的祈使句标题</p>
+             * <p>The recommendation title.</p>
              * 
              * <strong>example:</strong>
-             * <p>继续分析这个指标</p>
+             * <p>Continue analyzing this metric</p>
              */
             public Builder actionTitle(String actionTitle) {
                 this.actionTitle = actionTitle;
@@ -253,7 +253,7 @@ public class RecommendNextActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>技能唯一编码，recommend_action 时返回；前端据此触发技能</p>
+             * <p>The skill code.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleSkillCode</p>
@@ -264,10 +264,10 @@ public class RecommendNextActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>技能展示名，recommend_action 时返回；仅用于展示</p>
+             * <p>The skill name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例技能</p>
+             * <p>SampleSkill</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -275,7 +275,7 @@ public class RecommendNextActionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>推荐类型：recommend_reply=继续追问，recommend_action=触发技能</p>
+             * <p>The recommendation type.</p>
              * 
              * <strong>example:</strong>
              * <p>recommend_reply</p>

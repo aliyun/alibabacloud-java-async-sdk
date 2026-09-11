@@ -115,7 +115,7 @@ public class GetSkillRequest extends Request {
         } 
 
         /**
-         * <p>是否返回完整文件树（默认 False，避免大体积响应）</p>
+         * <p>Specifies whether to return the complete file tree. Default value: False. This avoids large response payloads.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -127,7 +127,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>技能编码（全局唯一），优先级高于 skillName</p>
+         * <p>The skill code. This parameter has a value when type is set to skill.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -139,7 +139,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>技能名称，未传 skillCode 时使用；租户范围内必须唯一</p>
+         * <p>The skill name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -151,7 +151,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -163,7 +163,7 @@ public class GetSkillRequest extends Request {
         }
 
         /**
-         * <p>视角：draft（草稿/编辑视角）或 published（已发布视角，默认）</p>
+         * <p>The view mode. Valid values: draft (draft/editing view) or published (published view, default).</p>
          * 
          * <strong>example:</strong>
          * <p>draft</p>

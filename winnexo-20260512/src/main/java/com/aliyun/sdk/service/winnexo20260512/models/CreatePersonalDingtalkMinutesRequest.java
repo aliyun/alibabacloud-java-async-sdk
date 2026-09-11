@@ -43,6 +43,10 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String shanjiUrl;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTags")
+    private String sourceTags;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
@@ -55,6 +59,7 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
         this.notes = builder.notes;
         this.operatingObjectName = builder.operatingObjectName;
         this.shanjiUrl = builder.shanjiUrl;
+        this.sourceTags = builder.sourceTags;
         this.tenantId = builder.tenantId;
     }
 
@@ -114,6 +119,13 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
     }
 
     /**
+     * @return sourceTags
+     */
+    public String getSourceTags() {
+        return this.sourceTags;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
@@ -127,6 +139,7 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
         private String notes; 
         private String operatingObjectName; 
         private String shanjiUrl; 
+        private String sourceTags; 
         private String tenantId; 
 
         private Builder() {
@@ -141,14 +154,15 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
             this.notes = request.notes;
             this.operatingObjectName = request.operatingObjectName;
             this.shanjiUrl = request.shanjiUrl;
+            this.sourceTags = request.sourceTags;
             this.tenantId = request.tenantId;
         } 
 
         /**
-         * <p>资源描述</p>
+         * <p>The pipeline description.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>Sample description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -157,7 +171,7 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
         }
 
         /**
-         * <p>目标个人目录 ID；不传时使用当前数字员工默认根目录</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -169,11 +183,11 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
         }
 
         /**
-         * <p>资源显示名称</p>
+         * <p>The name of the worksheet.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -182,7 +196,7 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
         }
 
         /**
-         * <p>会议补充笔记，会参与辅助分析</p>
+         * <p>The meeting notes content (optional). The notes are used for auxiliary analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -194,7 +208,7 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称（仅用于来源追溯）</p>
+         * <p>The name of the digital employee (operating object name, optional).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -206,7 +220,7 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
         }
 
         /**
-         * <p>普通钉钉闪记链接或 taskUuid</p>
+         * <p>The original Shanji note link (required).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +233,19 @@ public class CreatePersonalDingtalkMinutesRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>A list of resource tag JSON strings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;Important&quot;,&quot;Shanji&quot;]</p>
+         */
+        public Builder sourceTags(String sourceTags) {
+            this.putBodyParameter("sourceTags", sourceTags);
+            this.sourceTags = sourceTags;
+            return this;
+        }
+
+        /**
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>692318833855074</p>

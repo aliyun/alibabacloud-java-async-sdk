@@ -327,7 +327,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -338,7 +338,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>完成时间 ISO8601</p>
+         * <p>The completion time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -349,10 +349,10 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>执行完整内容</p>
+         * <p>The full execution content.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例内容</p>
+         * <p>Sample content</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -360,7 +360,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建人</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -371,7 +371,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>digitalEmployeeName</p>
+         * <p>The list of digital employee names.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -382,7 +382,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误信息</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -393,7 +393,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>执行 ID</p>
+         * <p>The execution ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleExecutionId</p>
@@ -404,7 +404,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * files.
+         * <p>The list of output files.</p>
          */
         public Builder files(java.util.List<Files> files) {
             this.files = files;
@@ -412,7 +412,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -423,7 +423,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -434,7 +434,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * metadata.
+         * <p>The extended metadata.</p>
          */
         public Builder metadata(Metadata metadata) {
             this.metadata = metadata;
@@ -442,7 +442,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>结构化输出内容</p>
+         * <p>The structured output content.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -453,7 +453,10 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * pushResult.
+         * <p>The push status of the execution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>succuss</p>
          */
         public Builder pushResult(String pushResult) {
             this.pushResult = pushResult;
@@ -461,7 +464,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -472,7 +475,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>skillCodes</p>
+         * <p>The list of associated skill codes.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -483,7 +486,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>开始时间 ISO8601</p>
+         * <p>The start time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -494,7 +497,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>执行状态</p>
+         * <p>The execution status.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -505,7 +508,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>任务 ID</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleTaskId</p>
@@ -516,10 +519,10 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>执行结果标题</p>
+         * <p>The execution result title.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例标题</p>
+         * <p>Sample title</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -527,7 +530,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * triggerInfo.
+         * <p>The trigger information.</p>
          */
         public Builder triggerInfo(TriggerInfo triggerInfo) {
             this.triggerInfo = triggerInfo;
@@ -535,7 +538,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>触发类型</p>
+         * <p>The trigger type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -546,7 +549,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>执行记录可见范围（恒等于所属任务可见范围）：PRIVATE/COLLABORATIVE/PUBLIC；个人任务执行为空</p>
+         * <p>The visibility scope of the execution record, which is always equal to the visibility scope of the associated task. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC. This field is empty for personal task executions.</p>
          * 
          * <strong>example:</strong>
          * <p>COLLABORATIVE</p>
@@ -615,10 +618,10 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>文件名</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -626,7 +629,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件 OSS URL</p>
+             * <p>The OSS URL of the file.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></p>
@@ -696,7 +699,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>会话 ID</p>
+             * <p>The session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleSessionId</p>
@@ -707,7 +710,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行结果推送状态（多频道时为列表）</p>
+             * <p>The token usage information.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -764,7 +767,7 @@ public class GetScheduledTaskExecutionDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>触发执行的用户标识</p>
+             * <p>The user identifier that triggered the execution.</p>
              * 
              * <strong>example:</strong>
              * <p>user_10001</p>

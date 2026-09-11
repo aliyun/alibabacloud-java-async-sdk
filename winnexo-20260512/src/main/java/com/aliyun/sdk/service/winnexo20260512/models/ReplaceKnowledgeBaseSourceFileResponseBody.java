@@ -171,7 +171,7 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -182,7 +182,7 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>替换后的文件 OSS 持久化地址</p>
+         * <p>The OSS persistent storage address of the replacement file.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -193,7 +193,7 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>替换后的文件公开访问 URL</p>
+         * <p>The OSS persistent storage address of the replacement file.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></p>
@@ -204,7 +204,7 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>替换后的文件记录 ID</p>
+         * <p>The file record ID of the replacement file.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleFileRecordId</p>
@@ -215,7 +215,7 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -226,10 +226,10 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -237,7 +237,7 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request trace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -248,7 +248,7 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源 ID</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>
@@ -259,7 +259,7 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>数据源类型，固定为 FILE</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -270,7 +270,7 @@ public class ReplaceKnowledgeBaseSourceFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>重新解析后的数据源状态</p>
+         * <p>The task status. The value Running is returned upon submission.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>

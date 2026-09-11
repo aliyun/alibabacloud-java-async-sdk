@@ -87,7 +87,7 @@ public class GetUserRequest extends Request {
         } 
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The ID of the tenant to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -99,7 +99,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * <p>平台账号ID（与 wnUserId 二选一，支持 WINNEXO/BUC/SSO）</p>
+         * <p>The WINNEXO logon account. This is a unique identifier and cannot be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleAccountId</p>
@@ -111,7 +111,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * <p>平台用户ID（与 accountId 二选一）</p>
+         * <p>The WINNEXO platform user ID. Specify either this parameter or accountId.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

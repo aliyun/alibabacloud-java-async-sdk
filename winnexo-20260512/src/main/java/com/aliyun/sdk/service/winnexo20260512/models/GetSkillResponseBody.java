@@ -353,7 +353,7 @@ public class GetSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * arguments.
+         * <p>The simplified parameter schema that describes what needs to be passed in runSkill.arguments. This is automatically extracted from inputConfigFormatted.</p>
          */
         public Builder arguments(java.util.List<Arguments> arguments) {
             this.arguments = arguments;
@@ -361,7 +361,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -372,7 +372,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间，ISO8601 格式</p>
+         * <p>The creation time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -383,10 +383,10 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>技能描述（已 i18n 解析）</p>
+         * <p>The skill description, which has been resolved through internationalization (i18n).</p>
          * 
          * <strong>example:</strong>
-         * <p>示例描述</p>
+         * <p>Sample description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -394,7 +394,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>技能详细逻辑</p>
+         * <p>The detailed logic of the skill.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -405,7 +405,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>展示名称</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -416,7 +416,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>执行模式</p>
+         * <p>The execution mode.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -427,7 +427,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否全局可访问</p>
+         * <p>Indicates whether the skill is globally accessible.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -438,7 +438,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否存在未发布的草稿修改</p>
+         * <p>Indicates whether unpublished draft changes exist.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -449,7 +449,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>入参配置原文</p>
+         * <p>The raw input parameter configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -460,7 +460,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * inputConfigFormatted.
+         * <p>The structured input parameter schema array.</p>
          */
         public Builder inputConfigFormatted(java.util.List<java.util.Map<String, ?>> inputConfigFormatted) {
             this.inputConfigFormatted = inputConfigFormatted;
@@ -468,7 +468,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -479,10 +479,10 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The skill name, which has been resolved through internationalization (i18n).</p>
          * 
          * <strong>example:</strong>
-         * <p>示例名称.pdf</p>
+         * <p>SampleName.pdf</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -490,7 +490,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -501,7 +501,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>技能编码（全局唯一）</p>
+         * <p>The skill code, which is globally unique.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -512,7 +512,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * skillFiles.
+         * <p>The nested tree of skill files. This is returned only when includeSkillFiles is set to True.</p>
          */
         public Builder skillFiles(java.util.List<java.util.Map<String, ?>> skillFiles) {
             this.skillFiles = skillFiles;
@@ -520,7 +520,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>技能定义 ID</p>
+         * <p>The skill definition ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -531,7 +531,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>SKILL.md 简介（由 LLM 生成）</p>
+         * <p>The SKILL.md summary, which is generated by a large language model (LLM).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -542,7 +542,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>来源类型: BUILTIN / CUSTOM</p>
+         * <p>The source type. Valid values: BUILTIN and CUSTOM.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -553,7 +553,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>技能状态: ACTIVE / DRAFT</p>
+         * <p>The skill status. Valid values: ACTIVE and DRAFT.</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -564,7 +564,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>tags</p>
+         * <p>The tag list, which has been resolved through internationalization (i18n).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -575,7 +575,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>修改时间，ISO8601 格式</p>
+         * <p>The modification time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-10-01T12:00:00Z</p>
@@ -586,7 +586,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>版本总数</p>
+         * <p>The total number of versions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -597,7 +597,7 @@ public class GetSkillResponseBody extends TeaModel {
         }
 
         /**
-         * <p>版本号</p>
+         * <p>The version number.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -718,7 +718,7 @@ public class GetSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>默认值</p>
+             * <p>The default value.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -729,10 +729,10 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>参数说明</p>
+             * <p>The parameter description.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例描述</p>
+             * <p>Sample description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -740,7 +740,7 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>enum</p>
+             * <p>The list of valid values, which is available when the options are limited.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -751,10 +751,10 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The parameter name, which corresponds to the key in runSkill.arguments.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -762,7 +762,7 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否必填</p>
+             * <p>Indicates whether the parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -773,7 +773,7 @@ public class GetSkillResponseBody extends TeaModel {
             }
 
             /**
-             * <p>参数类型: string / number / boolean / array</p>
+             * <p>The parameter type. Valid values: string, number, boolean, and array.</p>
              * 
              * <strong>example:</strong>
              * <p>text</p>

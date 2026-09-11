@@ -106,7 +106,7 @@ public class DeleteSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DeleteSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否已删除</p>
+         * <p>Indicates whether the deletion is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -128,7 +128,7 @@ public class DeleteSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -139,7 +139,7 @@ public class DeleteSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -150,7 +150,7 @@ public class DeleteSourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>被删除的数据源 ID</p>
+         * <p>The source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleSourceId</p>

@@ -74,7 +74,7 @@ public class PreviewKnowledgeBaseSourceRequest extends Request {
         } 
 
         /**
-         * <p>知识 ID（数据源唯一标识）</p>
+         * <p>The data source ID, which is unique within the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class PreviewKnowledgeBaseSourceRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

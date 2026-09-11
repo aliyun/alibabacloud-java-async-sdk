@@ -73,10 +73,10 @@ public class ListUserVisibleKnowledgeBasesRequest extends Request {
         } 
 
         /**
-         * <p>知识库名称或描述关键词；不传时返回全部可见知识库</p>
+         * <p>The keyword for fuzzy match on form component data.</p>
          * 
          * <strong>example:</strong>
-         * <p>产品知识</p>
+         * <p>ProductKnowledge</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("keyword", keyword);
@@ -85,7 +85,7 @@ public class ListUserVisibleKnowledgeBasesRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. Pass it explicitly in winnexo-cli by using --tenant-id.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

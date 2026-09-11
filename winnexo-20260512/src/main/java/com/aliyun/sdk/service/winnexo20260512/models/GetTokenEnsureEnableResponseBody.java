@@ -119,7 +119,7 @@ public class GetTokenEnsureEnableResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class GetTokenEnsureEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Token 创建时间（ISO 8601）</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-25T10:00:00+08:00</p>
@@ -141,7 +141,7 @@ public class GetTokenEnsureEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -152,7 +152,7 @@ public class GetTokenEnsureEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -163,7 +163,7 @@ public class GetTokenEnsureEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>生效中的 Token 明文（始终返回，请妥善保管）</p>
+         * <p>The temporary access credential for the data catalog.</p>
          * 
          * <strong>example:</strong>
          * <p>example_token_value</p>
@@ -174,7 +174,7 @@ public class GetTokenEnsureEnableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>脱敏后的 Token 值</p>
+         * <p>The masked token value.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>

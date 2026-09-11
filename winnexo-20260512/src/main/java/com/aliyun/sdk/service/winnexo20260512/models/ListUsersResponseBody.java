@@ -132,7 +132,7 @@ public class ListUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -143,7 +143,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>成员列表</p>
+         * <p>The user information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -162,7 +162,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页数量</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -184,7 +184,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -195,7 +195,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>符合条件的总记录数</p>
+         * <p>The total number of data entries in the project.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -329,7 +329,7 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>平台账号ID</p>
+             * <p>The account ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleAccountId</p>
@@ -340,7 +340,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户显示名称</p>
+             * <p>The display name of the tool.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -351,7 +351,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>加入租户时间</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -362,7 +362,11 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>启用/停用状态</p>
+             * <p>Indicates whether the account is activated:</p>
+             * <ul>
+             * <li>1: Activated.</li>
+             * <li>0: Not activated.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -373,7 +377,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>最后登录时间</p>
+             * <p>The last logon time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-10-01T12:00:00Z</p>
@@ -384,7 +388,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户拥有的系统角色 code 列表</p>
+             * <p>The list of new system role codes (full replacement, at least one role must be included). Valid values: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -395,7 +399,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户ID</p>
+             * <p>The user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

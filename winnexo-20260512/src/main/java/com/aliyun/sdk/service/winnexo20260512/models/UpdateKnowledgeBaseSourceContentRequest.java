@@ -103,11 +103,11 @@ public class UpdateKnowledgeBaseSourceContentRequest extends Request {
         } 
 
         /**
-         * <p>更新后的完整正文；允许空字符串</p>
+         * <p>Specifies whether the operation is successful. A value of true indicates success.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>示例内容</p>
+         * <p>Sample content</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -116,7 +116,7 @@ public class UpdateKnowledgeBaseSourceContentRequest extends Request {
         }
 
         /**
-         * <p>是否同步等待重新解析完成；默认 false，异步入队</p>
+         * <p>Specifies whether to force synchronous processing.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -128,7 +128,7 @@ public class UpdateKnowledgeBaseSourceContentRequest extends Request {
         }
 
         /**
-         * <p>待编辑的企业知识库数据源 ID</p>
+         * <p>The source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class UpdateKnowledgeBaseSourceContentRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</p>
+         * <p>The tenant ID that takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

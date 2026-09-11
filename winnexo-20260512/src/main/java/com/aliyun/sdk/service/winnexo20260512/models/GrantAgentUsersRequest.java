@@ -130,7 +130,7 @@ public class GrantAgentUsersRequest extends Request {
         } 
 
         /**
-         * <p>授权截止时间戳（毫秒），不传表示永不过期</p>
+         * <p>The authorization expiration timestamp in milliseconds. If this parameter is not specified, the authorization never expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -142,7 +142,7 @@ public class GrantAgentUsersRequest extends Request {
         }
 
         /**
-         * <p>数字员工名称</p>
+         * <p>The name of the digital human.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class GrantAgentUsersRequest extends Request {
         }
 
         /**
-         * <p>权限列表：USE（使用权限）和/或 MANAGE（管理权限），不传时默认仅 USE；不得为空列表</p>
+         * <p>The permission items.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -168,7 +168,7 @@ public class GrantAgentUsersRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>676577544219585</p>
@@ -180,7 +180,7 @@ public class GrantAgentUsersRequest extends Request {
         }
 
         /**
-         * <p>被授权的用户组 ID 列表（16位 hex 字符串）</p>
+         * <p>The list of user group IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -193,7 +193,7 @@ public class GrantAgentUsersRequest extends Request {
         }
 
         /**
-         * <p>被授权的用户 ID 列表</p>
+         * <p>The list of user IDs to be authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

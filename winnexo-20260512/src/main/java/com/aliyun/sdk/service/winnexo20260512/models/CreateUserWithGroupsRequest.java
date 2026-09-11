@@ -132,7 +132,7 @@ public class CreateUserWithGroupsRequest extends Request {
         } 
 
         /**
-         * <p>用户显示名称（租户内唯一，不可为空，最多100字）</p>
+         * <p>The display name of the user. The name must be unique within the tenant and cannot exceed 100 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class CreateUserWithGroupsRequest extends Request {
         }
 
         /**
-         * <p>RSA-OAEP-SHA256 加密后的 base64 密码密文（必填，不可为空）</p>
+         * <p>The Base64-encoded password ciphertext encrypted by using the RSA-OAEP-SHA256 algorithm.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class CreateUserWithGroupsRequest extends Request {
         }
 
         /**
-         * <p>系统角色 code 列表，可选值: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER。不传默认 APPLICATION_USER</p>
+         * <p>The list of initial system role codes. If this parameter is not specified, the <code>APPLICATION_USER</code> role is assigned by default.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -171,7 +171,7 @@ public class CreateUserWithGroupsRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using <code>--tenant-id</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -183,7 +183,7 @@ public class CreateUserWithGroupsRequest extends Request {
         }
 
         /**
-         * <p>初始用户组 ID 列表，可选；所有用户组必须属于当前租户</p>
+         * <p>The list of initial user group IDs. A maximum of 100 user group IDs can be specified. All user groups must belong to the current tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -196,7 +196,7 @@ public class CreateUserWithGroupsRequest extends Request {
         }
 
         /**
-         * <p>WINNEXO 登录账号（唯一标识，不可为空）</p>
+         * <p>The WINNEXO logon account. This parameter is a unique identifier and cannot be empty.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

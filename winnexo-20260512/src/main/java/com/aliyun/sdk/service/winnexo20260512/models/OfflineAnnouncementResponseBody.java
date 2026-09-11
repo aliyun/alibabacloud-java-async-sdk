@@ -145,7 +145,7 @@ public class OfflineAnnouncementResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>公告业务 ID</p>
+         * <p>The business ID of the announcement.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -156,7 +156,7 @@ public class OfflineAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次调用是否发生 PUBLISHED 到 OFFLINE 状态变更</p>
+         * <p>Indicates whether the status was changed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -167,7 +167,7 @@ public class OfflineAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -178,7 +178,7 @@ public class OfflineAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>公告最近修改时间，ISO8601 格式</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-20T14:00:00+08:00</p>
@@ -189,7 +189,7 @@ public class OfflineAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -200,7 +200,7 @@ public class OfflineAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -211,7 +211,7 @@ public class OfflineAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>下线后的公告状态：OFFLINE 或 EXPIRED</p>
+         * <p>The data source status after re-parsing.</p>
          * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>
@@ -222,7 +222,7 @@ public class OfflineAnnouncementResponseBody extends TeaModel {
         }
 
         /**
-         * <p>最近操作人平台用户 ID</p>
+         * <p>The user who performed the update.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>

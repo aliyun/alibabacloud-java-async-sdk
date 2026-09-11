@@ -106,7 +106,7 @@ public class TogglePrimaryObjectFavoriteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class TogglePrimaryObjectFavoriteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>该用户的关注总数（针对该对象类型）</p>
+         * <p>The total number of follows by the user for the specified object type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class TogglePrimaryObjectFavoriteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -139,7 +139,7 @@ public class TogglePrimaryObjectFavoriteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -150,7 +150,7 @@ public class TogglePrimaryObjectFavoriteResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>The list of results.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -242,7 +242,7 @@ public class TogglePrimaryObjectFavoriteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>操作后是否已关注</p>
+             * <p>Indicates whether the object is followed after the operation.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -253,7 +253,7 @@ public class TogglePrimaryObjectFavoriteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>失败原因（成功时为 null）</p>
+             * <p>The description of the status code.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -264,7 +264,7 @@ public class TogglePrimaryObjectFavoriteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>主对象业务ID</p>
+             * <p>The ID of the aligned object: target ID or KR ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleObjectId</p>
@@ -275,7 +275,7 @@ public class TogglePrimaryObjectFavoriteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>操作是否成功</p>
+             * <p>Indicates whether the operation is successful.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

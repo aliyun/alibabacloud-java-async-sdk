@@ -171,7 +171,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -182,7 +182,11 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>是否有更多数据</p>
+         * <p>Indicates whether more data is available. Valid values:</p>
+         * <ul>
+         * <li>true: More data is available.</li>
+         * <li>false: No more data is available.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -193,7 +197,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * items.
+         * <p>The list of skill cards.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -201,7 +205,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>本次实际生效的单页最大返回数量</p>
+         * <p>The maximum number of entries to return in this request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -212,7 +216,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -223,7 +227,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>下一页翻页令牌，原样回传即可取下一页；无更多数据时为空字符串</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>1763604514518000_531300</p>
@@ -234,7 +238,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页码（实际生效值）</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -245,7 +249,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>每页条数（实际生效值）</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -256,7 +260,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -267,7 +271,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>满足条件的总数</p>
+         * <p>The total number of tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -596,7 +600,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>异常原因；仅 status=abnormal 时有值</p>
+             * <p>The reason for the exception. This field has a value only when status is abnormal.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -607,7 +611,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前调用者是否可删除（仅任务创建人与群主）；个人任务恒 true</p>
+             * <p>Indicates whether the current caller can delete the task (only the task creator and group owner can do so). Always returns true for personal tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -618,7 +622,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前调用者是否可编辑（仅任务创建人与群主）；个人任务恒 true</p>
+             * <p>Indicates whether the task can be edited or deleted.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -629,7 +633,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前调用者是否可立即执行（可见即可操作；异常任务 false）；个人任务恒 true</p>
+             * <p>Indicates whether the current caller can immediately execute the task (anyone with visibility can operate. Returns false for abnormal tasks). Always returns true for personal tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -640,7 +644,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当前调用者是否可启停（仅任务创建人与群主；异常任务 false）；个人任务恒 true</p>
+             * <p>Indicates whether the current caller can start or stop the task (only the task creator and group owner can do so. Returns false for abnormal tasks). Always returns true for personal tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -651,7 +655,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>所属协作群组 ID；为空表示个人任务</p>
+             * <p>The ID of the collaboration group (such as cg_101). If specified, a group task is created (the caller must be a valid group member). If left empty, a personal task is created.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleCollaborationGroupId</p>
@@ -662,7 +666,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建人</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -673,7 +677,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建人显示名：租户显示名优先，回退用户名</p>
+             * <p>The creator.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -684,7 +688,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cron 表达式</p>
+             * <p>The cron expression.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -695,10 +699,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务简述</p>
+             * <p>The description of the to-do card type.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例描述</p>
+             * <p>SampleDescription</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -706,7 +710,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>数字员工名称列表</p>
+             * <p>The list of digital employee names.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -717,7 +721,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>累计执行次数</p>
+             * <p>The total number of executions.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -728,7 +732,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建时间 ISO8601</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -739,7 +743,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>修改时间 ISO8601</p>
+             * <p>The last modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -750,7 +754,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>是否公开</p>
+             * <p>Indicates whether public access is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -761,7 +765,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>执行模型档位：flagship(旗舰)/standard(标准)/quick(轻量)</p>
+             * <p>The execution model tier. If not specified, the value is not updated.</p>
              * 
              * <strong>example:</strong>
              * <p>standard</p>
@@ -772,10 +776,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>文件名</p>
+             * <p>The name.</p>
              * 
              * <strong>example:</strong>
-             * <p>示例名称.pdf</p>
+             * <p>SampleName.pdf</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -783,7 +787,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务状态：active(正常)/disabled(已停用)/abnormal(异常，如引用资源失效)</p>
+             * <p>The task status. Running is returned upon submission.</p>
              * 
              * <strong>example:</strong>
              * <p>active</p>
@@ -794,7 +798,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务 ID</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleTaskId</p>
@@ -805,7 +809,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>触发类型（manual/cron/event）</p>
+             * <p>The trigger type.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>
@@ -816,7 +820,13 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>群任务可见范围：PRIVATE/COLLABORATIVE/PUBLIC；个人任务为空</p>
+             * <p>The visibility scope of the group task. Valid values:</p>
+             * <ul>
+             * <li>PRIVATE: visible only to the creator and group owner.</li>
+             * <li>COLLABORATIVE: visible to specified collaborators.</li>
+             * <li>PUBLIC: visible to all group members.</li>
+             * </ul>
+             * <p>For group tasks, the default value is PRIVATE if not specified. This field is ignored for personal tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>PRIVATE</p>
@@ -827,7 +837,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>协作成员名单（不含任务创建人与群创建人，二者由鉴权层覆盖）；仅群任务返回，PRIVATE/PUBLIC 档返回空列表</p>
+             * <p>The list of collaborators (excluding the task creator and group creator, who are covered by the authentication layer). This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility.</p>
              * 
              * <strong>example:</strong>
              * <p>string_value</p>

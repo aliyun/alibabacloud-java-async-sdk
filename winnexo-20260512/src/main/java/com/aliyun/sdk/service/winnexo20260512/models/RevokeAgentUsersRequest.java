@@ -102,7 +102,7 @@ public class RevokeAgentUsersRequest extends Request {
         } 
 
         /**
-         * <p>数字员工名称</p>
+         * <p>The name of the digital human.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class RevokeAgentUsersRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -127,7 +127,7 @@ public class RevokeAgentUsersRequest extends Request {
         }
 
         /**
-         * <p>被撤销的用户组 ID 列表（16位 hex 字符串）</p>
+         * <p>The list of user group IDs to be revoked (16-character hex strings).</p>
          * 
          * <strong>example:</strong>
          * <p>string_value</p>
@@ -140,7 +140,7 @@ public class RevokeAgentUsersRequest extends Request {
         }
 
         /**
-         * <p>被撤销的用户 ID 列表</p>
+         * <p>The list of user IDs to be revoked.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

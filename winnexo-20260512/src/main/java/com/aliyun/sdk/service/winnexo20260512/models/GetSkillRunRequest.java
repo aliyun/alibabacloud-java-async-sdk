@@ -88,7 +88,7 @@ public class GetSkillRunRequest extends Request {
         } 
 
         /**
-         * <p>是否附带执行日志（默认 false，仅在排查问题时建议开启）</p>
+         * <p>Specifies whether to include execution logs. Default value: false. Enable this parameter only for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -100,7 +100,7 @@ public class GetSkillRunRequest extends Request {
         }
 
         /**
-         * <p>runSkill 返回的异步任务 ID</p>
+         * <p>The evaluation run ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class GetSkillRunRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID to which the task belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

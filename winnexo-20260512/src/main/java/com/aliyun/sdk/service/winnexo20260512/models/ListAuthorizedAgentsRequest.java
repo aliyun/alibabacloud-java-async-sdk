@@ -87,7 +87,7 @@ public class ListAuthorizedAgentsRequest extends Request {
         } 
 
         /**
-         * <p>权限类型：USE=使用权限, MANAGE=管理权限，默认 USE</p>
+         * <p>The userId of the responsible user.</p>
          * 
          * <strong>example:</strong>
          * <p>USE</p>
@@ -99,7 +99,7 @@ public class ListAuthorizedAgentsRequest extends Request {
         }
 
         /**
-         * <p>目标用户 ID，管理员代查指定用户可用的数字员工时传入（需 APPLICATION_AGENT_VIEW 权限）；不传则查询调用方自身</p>
+         * <p>The target user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,7 +111,7 @@ public class ListAuthorizedAgentsRequest extends Request {
         }
 
         /**
-         * <p>租户ID，公共参数，缺省时使用调用方默认租户</p>
+         * <p>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

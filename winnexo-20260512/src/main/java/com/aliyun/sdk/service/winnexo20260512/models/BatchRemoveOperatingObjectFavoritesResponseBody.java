@@ -171,7 +171,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -182,7 +182,10 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * graphName.
+         * <p>The graph name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
          */
         public Builder graphName(String graphName) {
             this.graphName = graphName;
@@ -190,7 +193,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -201,7 +204,10 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * objectType.
+         * <p>The object type, such as customer. This parameter has a value when type is set to mention.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;
@@ -209,7 +215,10 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * operatingObjectName.
+         * <p>The digital employee name (operating object name, optional).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string_value</p>
          */
         public Builder operatingObjectName(String operatingObjectName) {
             this.operatingObjectName = operatingObjectName;
@@ -217,7 +226,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>精确范围内剩余关注对象数量</p>
+         * <p>The number of remaining subscribed objects within the precise scope.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -228,7 +237,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>实际删除的物理关注记录数量</p>
+         * <p>The number of physical subscription records that are actually deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -239,7 +248,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>019FF406-1B10-0065-A97D-2D1920C2A03D</p>
@@ -250,7 +259,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>去重后的请求对象数量</p>
+         * <p><strong>The number of requested members before deduplication.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -261,7 +270,7 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * results.
+         * <p>The relationships between internal and external DingTalk users that failed to be created.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -340,7 +349,10 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
             } 
 
             /**
-             * isFavorited.
+             * <p>Indicates whether the object is subscribed after the operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFavorited(Boolean isFavorited) {
                 this.isFavorited = isFavorited;
@@ -348,7 +360,10 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
             }
 
             /**
-             * objectId.
+             * <p>The aligned object ID: target ID or KR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleObjectId</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -356,7 +371,10 @@ public class BatchRemoveOperatingObjectFavoritesResponseBody extends TeaModel {
             }
 
             /**
-             * processed.
+             * <p>Indicates whether the request is processed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder processed(Boolean processed) {
                 this.processed = processed;

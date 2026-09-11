@@ -158,7 +158,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -169,7 +169,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>绑定的目录 ID</p>
+         * <p>The directory ID.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleDirectoryId</p>
@@ -180,7 +180,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>创建时间 ISO8601</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-12T03:08:56Z</p>
@@ -191,7 +191,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>错误描述，成功时为空</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -202,7 +202,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>文件名</p>
+         * <p>The name of the bot.</p>
          * 
          * <strong>example:</strong>
          * <p>p-toolset-80a4520e-b35c-4e8b-acf7-3a01c7307522</p>
@@ -213,7 +213,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求追踪 ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>247FBC97-433C-544A-BB29-98F572C06E9F</p>
@@ -224,7 +224,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源 scope，固定为 PERSONAL</p>
+         * <p>The permission scope.</p>
          * 
          * <strong>example:</strong>
          * <p>user_info projects pull_requests hook gists emails</p>
@@ -235,7 +235,7 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>新建资源 ID</p>
+         * <p>The unique identifier on the business system side, that is, the business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2000358</p>
@@ -246,10 +246,15 @@ public class CreatePersonalAliDingMeetingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>资源状态</p>
+         * <p>The signing status. Valid values:</p>
+         * <ul>
+         * <li>CREATED: Created but not signed.</li>
+         * <li>SUCCESS: Signed.</li>
+         * <li>STOP: Terminated.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;observedGeneration&quot;: 2, &quot;servicesInstances&quot;: {}, &quot;observedTime&quot;: &quot;2026-03-05T16:00:09Z&quot;, &quot;servicesWithPendingChanges&quot;: [], &quot;latestEnvironmentDeploymentName&quot;: &quot;manual-1772726409137-lmvsqr&quot;}</p>
+         * <p>{\&quot;observedGeneration\&quot;: 2, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2026-03-05T16:00:09Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1772726409137-lmvsqr\&quot;}</p>
          */
         public Builder status(String status) {
             this.status = status;
