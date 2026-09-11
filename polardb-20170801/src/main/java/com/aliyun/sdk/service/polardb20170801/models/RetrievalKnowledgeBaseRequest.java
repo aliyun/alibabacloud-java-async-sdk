@@ -132,11 +132,11 @@ public class RetrievalKnowledgeBaseRequest extends Request {
         } 
 
         /**
-         * <p>The unique ID of the knowledge base.</p>
+         * <p>The unique identifier of the knowledge base. You can specify multiple knowledge bases separated by commas. A maximum of 50 knowledge bases can be specified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pkb-xxxxx</p>
+         * <p>pkb-1xxxxx,pkb-2xxxxx</p>
          */
         public Builder knowledgeBaseId(String knowledgeBaseId) {
             this.putQueryParameter("KnowledgeBaseId", knowledgeBaseId);

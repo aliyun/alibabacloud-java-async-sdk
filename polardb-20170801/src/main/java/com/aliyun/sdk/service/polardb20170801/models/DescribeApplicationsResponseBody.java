@@ -106,7 +106,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Contains the returned applications.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of records on the current page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total record count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -455,6 +455,9 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationType")
         private String applicationType;
 
+        @com.aliyun.core.annotation.NameInMap("BranchId")
+        private String branchId;
+
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
@@ -497,6 +500,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         private Applications(Builder builder) {
             this.applicationId = builder.applicationId;
             this.applicationType = builder.applicationType;
+            this.branchId = builder.branchId;
             this.creationTime = builder.creationTime;
             this.DBClusterId = builder.DBClusterId;
             this.description = builder.description;
@@ -532,6 +536,13 @@ public class DescribeApplicationsResponseBody extends TeaModel {
          */
         public String getApplicationType() {
             return this.applicationType;
+        }
+
+        /**
+         * @return branchId
+         */
+        public String getBranchId() {
+            return this.branchId;
         }
 
         /**
@@ -628,6 +639,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private String applicationId; 
             private String applicationType; 
+            private String branchId; 
             private String creationTime; 
             private String DBClusterId; 
             private String description; 
@@ -648,6 +660,7 @@ public class DescribeApplicationsResponseBody extends TeaModel {
             private Builder(Applications model) {
                 this.applicationId = model.applicationId;
                 this.applicationType = model.applicationType;
+                this.branchId = model.branchId;
                 this.creationTime = model.creationTime;
                 this.DBClusterId = model.DBClusterId;
                 this.description = model.description;
@@ -676,6 +689,14 @@ public class DescribeApplicationsResponseBody extends TeaModel {
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
+                return this;
+            }
+
+            /**
+             * BranchId.
+             */
+            public Builder branchId(String branchId) {
+                this.branchId = branchId;
                 return this;
             }
 
