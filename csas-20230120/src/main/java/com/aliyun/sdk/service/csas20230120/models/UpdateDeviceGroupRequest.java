@@ -31,6 +31,10 @@ public class UpdateDeviceGroupRequest extends Request {
     private String dynamicOperator;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DynamicRule")
+    private Rule dynamicRule;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -39,6 +43,7 @@ public class UpdateDeviceGroupRequest extends Request {
         this.description = builder.description;
         this.deviceGroupId = builder.deviceGroupId;
         this.dynamicOperator = builder.dynamicOperator;
+        this.dynamicRule = builder.dynamicRule;
         this.name = builder.name;
     }
 
@@ -77,6 +82,13 @@ public class UpdateDeviceGroupRequest extends Request {
     }
 
     /**
+     * @return dynamicRule
+     */
+    public Rule getDynamicRule() {
+        return this.dynamicRule;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -87,6 +99,7 @@ public class UpdateDeviceGroupRequest extends Request {
         private String description; 
         private String deviceGroupId; 
         private String dynamicOperator; 
+        private Rule dynamicRule; 
         private String name; 
 
         private Builder() {
@@ -98,11 +111,12 @@ public class UpdateDeviceGroupRequest extends Request {
             this.description = request.description;
             this.deviceGroupId = request.deviceGroupId;
             this.dynamicOperator = request.dynamicOperator;
+            this.dynamicRule = request.dynamicRule;
             this.name = request.name;
         } 
 
         /**
-         * <p>The description of the device label. If you pass in an empty string, the description is cleared. The description can contain letters, digits, spaces, periods (.), underscores (_), and hyphens (-). Chinese characters are supported.</p>
+         * <p>The description of the device label. Set this parameter to an empty string to clear the description. The description can contain letters, digits, Chinese characters, spaces, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>Test device group description</p>
@@ -126,7 +140,7 @@ public class UpdateDeviceGroupRequest extends Request {
         }
 
         /**
-         * <p>The rule operator of the dynamic device group.</p>
+         * <p>The operator of the dynamic device group rule.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>
@@ -138,7 +152,17 @@ public class UpdateDeviceGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the device label. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). Chinese characters are supported. Spaces are not supported.</p>
+         * <p>The matching rule of the dynamic device label.</p>
+         */
+        public Builder dynamicRule(Rule dynamicRule) {
+            String dynamicRuleShrink = shrink(dynamicRule, "DynamicRule", "json");
+            this.putBodyParameter("DynamicRule", dynamicRuleShrink);
+            this.dynamicRule = dynamicRule;
+            return this;
+        }
+
+        /**
+         * <p>The name of the device label. The name must be 1 to 128 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), and hyphens (-). Spaces are not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
