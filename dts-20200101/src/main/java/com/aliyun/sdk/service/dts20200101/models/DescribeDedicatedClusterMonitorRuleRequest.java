@@ -101,7 +101,7 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsClustervcwn1oeyu5fx4yf</p>
@@ -122,7 +122,7 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region in which the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -134,10 +134,10 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID. This is a global parameter that does not need to be passed in for this operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmzawhxxc****</p>
+         * <p>资源组ID，全局参数，当前API无需传入。</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

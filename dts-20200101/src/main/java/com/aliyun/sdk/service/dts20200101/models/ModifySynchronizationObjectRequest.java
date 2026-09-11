@@ -145,7 +145,7 @@ public class ModifySynchronizationObjectRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be discontinued.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -166,7 +166,10 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +178,7 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -189,14 +192,16 @@ public class ModifySynchronizationObjectRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong></li>
-         * <li><strong>Reverse</strong></li>
+         * <li><strong>Forward</strong>: forward.</li>
+         * <li><strong>Reverse</strong>: reverse.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
          * <li>Default value: <strong>Forward</strong>.</li>
-         * <li>This parameter is required only when the topology of the data synchronization instance is two-way synchronization.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter is required only when the synchronization topology of the data synchronization instance is two-way synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +214,7 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</p>
+         * <p>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +227,11 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
+         * <p>The modified synchronization objects. The value is a JSON string that supports certain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">Synchronization object configuration</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;DBName&quot;: &quot;dtstestdata&quot;}]</p>
          */
         public Builder synchronizationObjects(String synchronizationObjects) {
             this.putBodyParameter("SynchronizationObjects", synchronizationObjects);

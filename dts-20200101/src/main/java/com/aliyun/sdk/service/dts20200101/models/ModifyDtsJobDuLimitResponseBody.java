@@ -132,7 +132,7 @@ public class ModifyDtsJobDuLimitResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned by the backend service. The number is incremented.</p>
+         * <p>The backend error code, which is an incrementing number.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -143,7 +143,7 @@ public class ModifyDtsJobDuLimitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace the %s variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <p>The dynamic error message. This parameter is used to replace the %s variable in the <strong>ErrMessage</strong> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Type</p>
@@ -154,7 +154,7 @@ public class ModifyDtsJobDuLimitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -165,7 +165,7 @@ public class ModifyDtsJobDuLimitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -187,7 +187,7 @@ public class ModifyDtsJobDuLimitResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>

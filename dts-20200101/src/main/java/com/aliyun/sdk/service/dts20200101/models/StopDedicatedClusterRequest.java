@@ -129,9 +129,9 @@ public class StopDedicatedClusterRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * <blockquote>
-         * <p> You must specify one of the <strong>InstanceId</strong> and <strong>DedicatedClusterId</strong> parameters.</p>
+         * <p>You must specify either <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class StopDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>dtscluster_test_001</p>
@@ -156,9 +156,9 @@ public class StopDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You must specify one of the <strong>InstanceId</strong> and <strong>DedicatedClusterId</strong> parameters.</p>
+         * <p>You must specify either <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class StopDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region in which the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -192,10 +192,10 @@ public class StopDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. This parameter is a global parameter and not required.</p>
+         * <p>The resource group ID. This is a global parameter that does not need to be specified for this operation.</p>
          * 
          * <strong>example:</strong>
-         * <p>The resource group ID. This parameter is a global parameter and not required.</p>
+         * <p>资源组ID，全局参数，当前API无需传入。</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

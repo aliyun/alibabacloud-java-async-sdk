@@ -139,7 +139,7 @@ public class ModifySubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>068FA72F-4800-4A54-90BB-94806068****</p>
@@ -150,7 +150,7 @@ public class ModifySubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

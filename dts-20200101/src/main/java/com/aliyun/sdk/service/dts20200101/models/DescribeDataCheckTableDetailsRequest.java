@@ -184,10 +184,10 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The data verification method. Valid values:</p>
+         * <p>The data validation method. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: full data verification.</li>
-         * <li><strong>2</strong>: incremental data verification.</li>
+         * <li><strong>1</strong>: full data validation.</li>
+         * <li><strong>2</strong>: incremental data validation.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -214,7 +214,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value:<strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -226,7 +226,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -250,7 +250,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The name of the schema whose data is verified in the source database.</p>
+         * <p>The schema name of the object to be verified in the source database.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstest</p>
@@ -262,10 +262,10 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The status of the data verification result. Valid values:</p>
+         * <p>The status of the verification result. Valid values:</p>
          * <ul>
-         * <li><strong>-1</strong> (default): All status.</li>
-         * <li><strong>6</strong>: Inconsistent data detected in the table.</li>
+         * <li><strong>-1</strong> (default): all statuses.</li>
+         * <li><strong>6</strong>: tables with inconsistent data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class DescribeDataCheckTableDetailsRequest extends Request {
         }
 
         /**
-         * <p>The name of the table whose data is verified in the source database.</p>
+         * <p>The name of the table to be verified in the source database.</p>
          * 
          * <strong>example:</strong>
          * <p>student</p>

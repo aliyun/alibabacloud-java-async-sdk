@@ -115,7 +115,7 @@ public class ModifyConsumptionTimestampResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ABBACEFC-CBA9-4F80-A337-42F202F5****</p>
@@ -126,7 +126,7 @@ public class ModifyConsumptionTimestampResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

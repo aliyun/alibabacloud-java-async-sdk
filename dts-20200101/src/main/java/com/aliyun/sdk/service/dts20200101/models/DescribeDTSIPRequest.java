@@ -102,9 +102,9 @@ public class DescribeDTSIPRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region ID of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * <blockquote>
-         * <p> If the destination instance is a self-managed database with a public IP address, you can set the parameter to <strong>cn-hangzhou</strong> or the ID of the closest region.</p>
+         * <p>If the destination instance is a self-managed database that has a public IP address, you can specify <strong>ap-southeast-1</strong> or the region ID that is geographically closest to the self-managed database.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DescribeDTSIPRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region in which the DTS task instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -129,7 +129,7 @@ public class DescribeDTSIPRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -141,9 +141,9 @@ public class DescribeDTSIPRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region ID of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * <blockquote>
-         * <p> If the source instance is a self-managed database with a public IP address, you can set the parameter to <strong>cn-hangzhou</strong> or the ID of the closest region.</p>
+         * <p>If the source instance is a self-managed database that has a public IP address, you can specify <strong>ap-southeast-1</strong> or the region ID that is geographically closest to the self-managed database.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

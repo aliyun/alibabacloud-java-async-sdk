@@ -60,8 +60,20 @@ public class ModifyDtsJobEndpointRequest extends Request {
     private String endpointPort;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointPrimaryVswId")
+    private String endpointPrimaryVswId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndpointRegionId")
     private String endpointRegionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointSecondaryVswId")
+    private String endpointSecondaryVswId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointVpcId")
+    private String endpointVpcId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModifyAccount")
@@ -115,7 +127,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         this.endpointInstanceType = builder.endpointInstanceType;
         this.endpointIp = builder.endpointIp;
         this.endpointPort = builder.endpointPort;
+        this.endpointPrimaryVswId = builder.endpointPrimaryVswId;
         this.endpointRegionId = builder.endpointRegionId;
+        this.endpointSecondaryVswId = builder.endpointSecondaryVswId;
+        this.endpointVpcId = builder.endpointVpcId;
         this.modifyAccount = builder.modifyAccount;
         this.password = builder.password;
         this.regionId = builder.regionId;
@@ -212,10 +227,31 @@ public class ModifyDtsJobEndpointRequest extends Request {
     }
 
     /**
+     * @return endpointPrimaryVswId
+     */
+    public String getEndpointPrimaryVswId() {
+        return this.endpointPrimaryVswId;
+    }
+
+    /**
      * @return endpointRegionId
      */
     public String getEndpointRegionId() {
         return this.endpointRegionId;
+    }
+
+    /**
+     * @return endpointSecondaryVswId
+     */
+    public String getEndpointSecondaryVswId() {
+        return this.endpointSecondaryVswId;
+    }
+
+    /**
+     * @return endpointVpcId
+     */
+    public String getEndpointVpcId() {
+        return this.endpointVpcId;
     }
 
     /**
@@ -299,7 +335,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         private String endpointInstanceType; 
         private String endpointIp; 
         private String endpointPort; 
+        private String endpointPrimaryVswId; 
         private String endpointRegionId; 
+        private String endpointSecondaryVswId; 
+        private String endpointVpcId; 
         private Boolean modifyAccount; 
         private String password; 
         private String regionId; 
@@ -327,7 +366,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
             this.endpointInstanceType = request.endpointInstanceType;
             this.endpointIp = request.endpointIp;
             this.endpointPort = request.endpointPort;
+            this.endpointPrimaryVswId = request.endpointPrimaryVswId;
             this.endpointRegionId = request.endpointRegionId;
+            this.endpointSecondaryVswId = request.endpointSecondaryVswId;
+            this.endpointVpcId = request.endpointVpcId;
             this.modifyAccount = request.modifyAccount;
             this.password = request.password;
             this.regionId = request.regionId;
@@ -341,9 +383,9 @@ public class ModifyDtsJobEndpointRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account (primary account) to which the database instance belongs.</p>
+         * <p>The ID of the Alibaba Cloud account that owns the database instance.</p>
          * <blockquote>
-         * <p> Passing this parameter indicates that cross-Alibaba Cloud account data synchronization will be performed, and you also need to pass the <strong>RoleName</strong> parameter.</p>
+         * <p>Specifying this parameter indicates cross-account data synchronization. You must also specify the <strong>RoleName</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -356,9 +398,9 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>When the database type is <strong>PostgreSQL</strong>, <strong>PolarDB for PostgreSQL</strong>, or <strong>AnalyticDB PostgreSQL</strong>, it represents the database name; when the database type is <strong>MongoDB</strong>, it represents the authentication database name.</p>
+         * <p>The database name when the database type is <strong>PostgreSQL</strong>, <strong>PolarDB for PostgreSQL</strong>, or <strong>AnalyticDB PostgreSQL</strong>. The authentication database name when the database type is <strong>MongoDB</strong>.</p>
          * <blockquote>
-         * <p>This parameter is only available and must be provided when the database type is <strong>PostgreSQL</strong>, <strong>PolarDB for PostgreSQL</strong>, <strong>AnalyticDB PostgreSQL</strong>, or <strong>MongoDB</strong>.</p>
+         * <p>This parameter is available and required only when the database type is <strong>PostgreSQL</strong>, <strong>PolarDB for PostgreSQL</strong>, <strong>AnalyticDB PostgreSQL</strong>, or <strong>MongoDB</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -371,10 +413,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform only a precheck. Valid values:</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Yes. After the precheck is passed, the database is not changed.</li>
-         * <li><strong>false</strong> (default): No. After the precheck is passed, the system changes the original database of the DTS task and runs the task.</li>
+         * <li><strong>true</strong>: Yes. After the dry run succeeds, the instance is not modified.</li>
+         * <li><strong>false</strong> (default): No. After the dry run succeeds, the database instance of the DTS task is modified and the task runs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +429,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DTS instance. If this parameter is not provided, <strong>DtsJobId</strong> must be specified.</p>
+         * <p>The ID of the DTS instance.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, you must specify <strong>DtsJobId</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>dtsaw012y2g15q****</p>
@@ -399,9 +444,9 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>DTS job ID, which can be queried by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.</p>
+         * <p>The ID of the DTS task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
          * <blockquote>
-         * <p>If this parameter is not provided, <strong>DtsInstanceId</strong> must be filled in.</p>
+         * <p>If you do not specify this parameter, you must specify <strong>DtsInstanceId</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -414,9 +459,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>The database instance to be modified, with values:</p>
+         * <p>The database instance to be modified. Valid values:</p>
          * <ul>
-         * <li><strong>src</strong>: Source database instance. - <strong>dest</strong>: Target database instance.</li>
+         * <li><strong>src</strong>: source instance.</li>
+         * <li><strong>dest</strong>: destination instance.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -430,7 +476,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>ID of the database instance.</p>
+         * <p>The ID of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp10k50h8374w****</p>
@@ -442,29 +488,32 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>The type of the database. Valid values:</p>
+         * <p>The type of the database instance. Valid values:</p>
          * <ul>
-         * <li><strong>rds</strong>: ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, or ApsaraDB RDS for PostgreSQL instance.</li>
-         * <li><strong>polardb</strong>: PolarDB for MySQL cluster or PolarDB for PostgreSQL cluster.</li>
-         * <li><strong>mongodb</strong>: ApsaraDB for MongoDB replica set instance.</li>
-         * <li><strong>distributed_mongodb</strong>: ApsaraDB for MongoDB sharded cluster instance.</li>
-         * <li><strong>greenplum</strong>: AnalyticDB for PostgreSQL instance.</li>
-         * <li><strong>kafka</strong>: ApsaraMQ for Kafka instance.</li>
-         * <li><strong>ecs</strong>: self-managed database that is hosted on an Elastic Compute Service (ECS) instance. If you set this parameter to ecs, the database must be the supported one.</li>
-         * <li><strong>express</strong>: database that is connected over Express Connect. If you set this parameter to express, the database must be the supported one.</li>
-         * <li><strong>other</strong>: database that is connected over Internet. If you set this parameter to other, the database must be the supported one.</li>
+         * <li><strong>rds</strong>: ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL.</li>
+         * <li><strong>polardb</strong>: PolarDB for MySQL or PolarDB for PostgreSQL.</li>
+         * <li><strong>mongodb</strong>: when used as the source, ApsaraDB for MongoDB (replica set architecture). When used as the destination, ApsaraDB for MongoDB (replica set or sharded cluster architecture).</li>
+         * <li><strong>distributed_mongodb</strong>: supported only as the source of a distributed instance. Indicates ApsaraDB for MongoDB (sharded cluster architecture).</li>
          * </ul>
          * <blockquote>
+         * <p>The incremental node of a distributed instance must obtain data changes from the source through Oplog.</p>
          * </blockquote>
          * <ul>
-         * <li><p>The following types of databases are supported: <strong>MySQL</strong>, <strong>PolarDB for MySQL</strong>, <strong>PostgreSQL</strong>, <strong>PolarDB for PostgreSQL</strong>, <strong>MongoDB</strong>, <strong>SQL Server</strong>, <strong>Kafka</strong>, and <strong>AnalyticDB for PostgreSQL</strong>.</p>
-         * </li>
-         * <li><p>If the original database is an ApsaraDB for MongoDB sharded cluster instance, the new database must have the same number of shards as the original database.</p>
-         * </li>
-         * <li><p>If the database that you want to change is a source <strong>PostgreSQL</strong> database, you must make sure that the latency of the DTS instance is less than 30 seconds and no data is written to the source database during the change. Otherwise, data inconsistency may occur.</p>
-         * </li>
-         * <li><p>The value of this parameter is case-insensitive.</p>
-         * </li>
+         * <li><strong>greenplum</strong>: cloud-native data warehouse AnalyticDB for PostgreSQL.</li>
+         * <li><strong>kafka</strong>: ApsaraMQ for Kafka.</li>
+         * <li><strong>ecs</strong>: self-managed database on an ECS instance (only supported database types).</li>
+         * <li><strong>express</strong>: database connected over Express Connect (only supported database types).</li>
+         * <li><strong>other</strong>: database connected over the Internet (only supported database types).</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Currently supported database types include <strong>MySQL</strong>, <strong>PolarDB for MySQL</strong>, <strong>PostgreSQL</strong>, <strong>PolarDB for PostgreSQL</strong>, <strong>MongoDB</strong>, <strong>Kafka</strong>, and <strong>AnalyticDB PostgreSQL</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>If the database is MongoDB (sharded cluster), the number of shards in the new database must be the same as that in the original MongoDB (sharded cluster).</li>
+         * <li>If the source instance is to be modified and the database type is <strong>PostgreSQL</strong>, make sure that the latency of the DTS instance is less than 30 seconds and stop writing data to the source. Otherwise, inconsistent data may occur.</li>
+         * <li>The parameter values are case-insensitive.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -478,7 +527,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>The IP of the database instance.</p>
+         * <p>The IP address of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>172.168.XX.XXX</p>
@@ -490,7 +539,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>port of the database instance.</p>
+         * <p>The port of the database instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -502,7 +551,19 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the database resides.</p>
+         * <p>The primary vSwitch for Express Connect access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1w7gscw7pky*******</p>
+         */
+        public Builder endpointPrimaryVswId(String endpointPrimaryVswId) {
+            this.putQueryParameter("EndpointPrimaryVswId", endpointPrimaryVswId);
+            this.endpointPrimaryVswId = endpointPrimaryVswId;
+            return this;
+        }
+
+        /**
+         * <p>The region to which the database instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -514,10 +575,34 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to change the password of the database account. Valid values:</p>
+         * <p>The secondary vSwitch for Express Connect access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1ud8e2mhw*****</p>
+         */
+        public Builder endpointSecondaryVswId(String endpointSecondaryVswId) {
+            this.putQueryParameter("EndpointSecondaryVswId", endpointSecondaryVswId);
+            this.endpointSecondaryVswId = endpointSecondaryVswId;
+            return this;
+        }
+
+        /**
+         * <p>The VPC ID for Express Connect access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1q00qitocaem****</p>
+         */
+        public Builder endpointVpcId(String endpointVpcId) {
+            this.putQueryParameter("EndpointVpcId", endpointVpcId);
+            this.endpointVpcId = endpointVpcId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to modify the account and password. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong> (default): No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -530,9 +615,9 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>The password of the database account.</p>
+         * <p>The database password.</p>
          * <blockquote>
-         * <p> This parameter is valid only if <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
+         * <p>This parameter takes effect only when <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -545,7 +630,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the DTS instance resides.</p>
+         * <p>The region to which the DTS instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -557,7 +642,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -569,7 +654,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>Cross Alibaba Cloud account role name. When performing data synchronization across Alibaba Cloud accounts, this parameter must be passed. For the required permissions and authorization methods for this role, please refer to <a href="https://help.aliyun.com/document_detail/48468.html">How to Configure RAM Authorization for Cross-Account Data Migration or Synchronization</a>.</p>
+         * <p>The name of the RAM role for cross-account access.</p>
+         * <blockquote>
+         * <p>Specify this parameter when performing cross-account data synchronization. For the required permissions and authorization method of this role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ram-for-dts</p>
@@ -581,14 +669,14 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>The account password of the shard of the ApsaraDB for MongoDB sharded cluster instance.</p>
+         * <p>The password of the shard in the MongoDB sharded cluster instance.</p>
          * <blockquote>
+         * <ul>
+         * <li>This parameter is available and required only when the source database instance is ApsaraDB for MongoDB (sharded cluster architecture).</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>This parameter is valid and required only if the source database is an ApsaraDB for MongoDB sharded cluster instance.</p>
-         * </li>
-         * <li><p>This parameter is valid only if <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
-         * </li>
+         * <li>This parameter takes effect only when <strong>ModifyAccount</strong> is set to <strong>true</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -601,14 +689,14 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>The account username of the shard of the ApsaraDB for MongoDB sharded cluster instance.</p>
+         * <p>The account of the shard in the MongoDB sharded cluster instance.</p>
          * <blockquote>
+         * <ul>
+         * <li>This parameter is available and required only when the source database instance is ApsaraDB for MongoDB (sharded cluster architecture).</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li><p>This parameter is valid and required only if the source database is an ApsaraDB for MongoDB sharded cluster instance.</p>
-         * </li>
-         * <li><p>This parameter is valid only if <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
-         * </li>
+         * <li>This parameter takes effect only when <strong>ModifyAccount</strong> is set to <strong>true</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -621,9 +709,10 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * <p>Synchronization direction, with values:</p>
+         * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong> (default): Forward. - <strong>Reverse</strong>: Reverse.</li>
+         * <li><strong>Forward</strong> (default): forward.</li>
+         * <li><strong>Reverse</strong>: reverse.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -638,7 +727,7 @@ public class ModifyDtsJobEndpointRequest extends Request {
         /**
          * <p>The database account.</p>
          * <blockquote>
-         * <p> This parameter is valid only if <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
+         * <p>This parameter takes effect only when <strong>ModifyAccount</strong> is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -651,7 +740,14 @@ public class ModifyDtsJobEndpointRequest extends Request {
         }
 
         /**
-         * ZeroEtlJob.
+         * <p>Specifies whether this is a seamless integration (zero-ETL) node. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder zeroEtlJob(Boolean zeroEtlJob) {
             this.putQueryParameter("ZeroEtlJob", zeroEtlJob);

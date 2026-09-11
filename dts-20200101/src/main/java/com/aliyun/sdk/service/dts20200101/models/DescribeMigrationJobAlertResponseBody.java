@@ -184,7 +184,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Phone number of the contact for delay alarm.</p>
+         * <p>The mobile phone number of the contact for latency alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>1361234****,1371234****</p>
@@ -195,9 +195,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to monitor the delay status, return values:</p>
+         * <p>Indicates whether latency status monitoring is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: Yes. - <strong>disable</strong>: No.</li>
+         * <li><strong>enable</strong>: Enabled.</li>
+         * <li><strong>disable</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +210,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The threshold for triggering a delayed alarm, in seconds.</p>
+         * <p>The threshold that triggers a latency alert. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -220,7 +221,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code returned when the call fails.</p>
+         * <p>The error code returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -231,7 +232,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -242,7 +243,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Phone number of the contact for abnormal alarm notifications</p>
+         * <p>The mobile phone number of the contact for error alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>1361234****,1371234****</p>
@@ -253,9 +254,10 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether to monitor for abnormal status, return values:</p>
+         * <p>Indicates whether error status monitoring is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>enable</strong>: Yes. - <strong>disable</strong>: No.</li>
+         * <li><strong>enable</strong>: Enabled.</li>
+         * <li><strong>disable</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +269,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data migration instance ID.</p>
+         * <p>The ID of the data migration instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtslb9113qq11n****</p>
@@ -278,7 +280,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Name of the data migration task.</p>
+         * <p>The name of the data migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>zwy-test5</p>
@@ -289,7 +291,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CFB89C51-6F03-519C-A921-AAE28D50AEFB</p>
@@ -300,7 +302,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

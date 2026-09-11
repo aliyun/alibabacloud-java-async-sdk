@@ -171,7 +171,10 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code. This parameter will be deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -179,7 +182,10 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the %s placeholder in the ErrMessage response parameter.</p>
+         * <blockquote>
+         * <p>If ErrMessage returns The Value of Input Parameter %s is not valid and DynamicMessage returns JobId, the value of the JobId request parameter is invalid.</p>
+         * </blockquote>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -187,7 +193,10 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -195,7 +204,10 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -203,7 +215,10 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -211,7 +226,10 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the active geo-redundancy instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp162d4tp0500****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -219,7 +237,10 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region in which the instance resides. For more information, see Supported regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -227,7 +248,10 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C166D79D-436B-45F0-B5A5-25E1959F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +259,14 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -243,7 +274,10 @@ public class PreCheckCreateGadOrderResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The precheck task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>z2v12jfo309****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

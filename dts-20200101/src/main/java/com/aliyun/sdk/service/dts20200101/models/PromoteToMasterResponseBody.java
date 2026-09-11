@@ -145,7 +145,10 @@ public class PromoteToMasterResponseBody extends TeaModel {
         } 
 
         /**
-         * DynamicCode.
+         * <p>Dynamic error code. This parameter will be unpublished soon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -153,7 +156,13 @@ public class PromoteToMasterResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>Dynamic error message, used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> error message.  </p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>present environment is not support,so skip.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -161,7 +170,10 @@ public class PromoteToMasterResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>Error code returned when the invocation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -169,7 +181,10 @@ public class PromoteToMasterResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>Error message returned when the invocation fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -177,7 +192,10 @@ public class PromoteToMasterResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +203,10 @@ public class PromoteToMasterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>210ec2e116055198849072222d****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +214,10 @@ public class PromoteToMasterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +225,10 @@ public class PromoteToMasterResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>Job ID. This parameter will be unpublished soon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>z2v12jfo309****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

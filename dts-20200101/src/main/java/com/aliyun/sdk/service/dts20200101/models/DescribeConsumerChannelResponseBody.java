@@ -158,7 +158,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the consumer groups.</p>
+         * <p>The list of consumer groups.</p>
          */
         public Builder consumerChannels(java.util.List<ConsumerChannels> consumerChannels) {
             this.consumerChannels = consumerChannels;
@@ -166,7 +166,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -177,7 +177,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The error message returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -199,7 +199,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -221,7 +221,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D66140B3-C747-42B6-8315-BAF6490E****</p>
@@ -364,7 +364,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the consumer group.</p>
+             * <p>The consumer group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>dtsor2y66j4219****</p>
@@ -378,7 +378,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
              * <p>The name of the consumer group.</p>
              * 
              * <strong>example:</strong>
-             * <p>consumergrouptest</p>
+             * <p>订阅组A</p>
              */
             public Builder consumerGroupName(String consumerGroupName) {
                 this.consumerGroupName = consumerGroupName;
@@ -386,7 +386,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the consumer group.</p>
+             * <p>The account of the consumer group.</p>
              * 
              * <strong>example:</strong>
              * <p>dtstest</p>
@@ -397,7 +397,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumption checkpoint, which is the time when the latest data record was consumed by the change tracking client. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
+             * <p>The consumption checkpoint, which is the point in time when the client consumed the last message in the subscription channel. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-06-20T12:00:00Z</p>
@@ -408,10 +408,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message latency, which is the timestamp of the latest data consumed by the downstream client minus the timestamp of the latest data tracked by the change tracking task. The value is a UNIX timestamp. Unit: seconds.</p>
-             * <p>For example, the latest data in the source database is generated at 10:00. The change tracking task reads the data generated at 09:55, and the downstream client consumes the data generated at 09:30. In this case, the message latency is the UNIX timestamp difference between 09:55 and 09:30.</p>
+             * <p>The message delay. This value is calculated as the timestamp of the latest data consumed by the downstream client minus the timestamp of the latest data in the change tracking task. The value is a UNIX timestamp. Unit: seconds.
+             * For example, if the latest data in the source database was generated at 10:00, the DTS change tracking task has read data up to 09:55, and the downstream client has consumed data up to 09:30, the message delay is the difference in UNIX timestamps between 09:55 and 09:30.</p>
              * <blockquote>
-             * <p> If the return value of this parameter is <strong>-1</strong>, no client is connected to the consumer group.</p>
+             * <p>If this parameter returns <strong>-1</strong>, no client is connected to the consumer group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -423,9 +423,9 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of unconsumed messages, which is the number of unconsumed data records plus the number of heartbeat messages.</p>
+             * <p>The total number of unconsumed messages, which is the sum of unconsumed subscription data and heartbeat messages.</p>
              * <blockquote>
-             * <p> If the return value of this parameter is -1, no client is connected to the consumer group.</p>
+             * <p>If this parameter returns -1, no client is connected to the consumer group.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

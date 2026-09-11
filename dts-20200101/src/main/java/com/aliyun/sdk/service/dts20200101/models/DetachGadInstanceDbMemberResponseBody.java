@@ -210,7 +210,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The time when the task was created, in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-28 17:34:53.0</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -218,7 +221,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code associated with this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -226,7 +232,13 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -234,7 +246,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -242,7 +257,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned if the call failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -250,7 +268,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -258,7 +279,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the active geo-redundancy instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gad-bp1i99e8l7913****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -266,7 +290,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the active geo-redundancy instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -274,7 +301,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -282,7 +312,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6063641E-BAD1-4BA7-B70B-26FFFD18****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -290,7 +323,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -298,7 +334,10 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * SlaveDbInstanceId.
+         * <p>The instance ID of the secondary role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1i99e8l7913****</p>
          */
         public Builder slaveDbInstanceId(String slaveDbInstanceId) {
             this.slaveDbInstanceId = slaveDbInstanceId;
@@ -306,7 +345,14 @@ public class DetachGadInstanceDbMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;

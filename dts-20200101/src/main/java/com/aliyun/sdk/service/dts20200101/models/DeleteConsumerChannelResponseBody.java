@@ -139,7 +139,7 @@ public class DeleteConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F9E00ABE-2AD9-40A9-8C3C-D817E648****</p>
@@ -150,7 +150,7 @@ public class DeleteConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

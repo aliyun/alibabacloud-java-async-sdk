@@ -119,7 +119,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The connectivity of DTS servers to the destination database.</p>
+         * <p>The connectivity test result of the destination database.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;connectDetail&quot;: [       {         &quot;testName&quot;: &quot;PolarDB_o JDBC Connect&quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Ping &quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Telnet &quot;,         &quot;testSuccess&quot;: true       }     ],     &quot;connectRes&quot;: true,     &quot;connectAdvice&quot;: &quot;&quot;   }</p>
@@ -152,7 +152,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0A47C784-70EF-4111-8677-369CAA00****</p>
@@ -163,7 +163,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The connectivity of DTS servers to the source database.</p>
+         * <p>The connectivity test result of the source database.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;connectDetail&quot;: [       {         &quot;testName&quot;: &quot;Oracle JDBC Connect&quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Ping &quot;,         &quot;testSuccess&quot;: false       },       {         &quot;testName&quot;: &quot;Telnet &quot;,         &quot;testSuccess&quot;: true       }     ],     &quot;connectRes&quot;: true,     &quot;connectAdvice&quot;: &quot;&quot;   }</p>

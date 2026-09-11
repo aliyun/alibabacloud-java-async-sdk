@@ -125,7 +125,7 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the synchronization or migration task, which can be queried by calling <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a>.</p>
+         * <p>The ID of the synchronization or migration task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * <p>Resource GroupId</p>
+         * <p>The ID of the resource group. This is a global parameter that does not need to be specified for this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -150,7 +150,15 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * <p>Shard Password</p>
+         * <p>The password of the shard in a MongoDB sharded cluster instance.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available and required only when the source database instance is a MongoDB sharded cluster instance.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter takes effect only when <strong>ModifyAccount</strong> is set to <strong>true</strong>.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DTStest****</p>
@@ -162,7 +170,7 @@ public class CreateReverseDtsJobRequest extends Request {
         }
 
         /**
-         * <p>Shard User name</p>
+         * <p>The account of the shard in a MongoDB sharded cluster instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstest</p>

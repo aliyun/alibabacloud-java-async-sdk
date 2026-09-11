@@ -93,7 +93,7 @@ public class ShieldPrecheckResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -115,7 +115,7 @@ public class ShieldPrecheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6F4B5BC4-34B1-49C9-9C8F-C8F16AC4****</p>
@@ -126,7 +126,7 @@ public class ShieldPrecheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

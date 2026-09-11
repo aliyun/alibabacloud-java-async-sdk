@@ -131,7 +131,7 @@ public class ModifySubscriptionObjectRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -152,7 +152,10 @@ public class ModifySubscriptionObjectRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +164,7 @@ public class ModifySubscriptionObjectRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -186,7 +189,7 @@ public class ModifySubscriptionObjectRequest extends Request {
         }
 
         /**
-         * <p>The objects from which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141902.html">SubscriptionObjects</a>.</p>
+         * <p>The subscription objects. The value is a JSON string that supports regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141902.html">Subscription object configuration</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

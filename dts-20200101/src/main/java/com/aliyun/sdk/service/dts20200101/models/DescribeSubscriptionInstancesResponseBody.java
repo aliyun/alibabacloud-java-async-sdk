@@ -145,7 +145,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -156,7 +156,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned if the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -167,7 +167,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +178,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries that can be displayed on the current page.</p>
+         * <p>The maximum number of records that can be displayed on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -189,7 +189,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FC3BAAF2-74E3-4471-8EB5-96202D6A****</p>
@@ -200,7 +200,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of change tracking instances and the details of each instance.</p>
+         * SubscriptionInstances.
          */
         public Builder subscriptionInstances(SubscriptionInstances subscriptionInstances) {
             this.subscriptionInstances = subscriptionInstances;
@@ -208,7 +208,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -219,7 +219,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of change tracking instances that belong to your Alibaba Cloud account.</p>
+         * <p>The total number of change tracking instances that meet the specified conditions under the Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -288,10 +288,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the source instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-bp1162kryivb8****</p>
+             * InstanceID.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -299,13 +296,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source instance.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for change tracking instances of the new version.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>RDS</p>
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -372,14 +363,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether data definition language (DDL) operations are tracked. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DDL.
              */
             public Builder DDL(Boolean DDL) {
                 this.DDL = DDL;
@@ -387,14 +371,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether data manipulation language (DML) operations are tracked. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DML.
              */
             public Builder DML(Boolean DML) {
                 this.DML = DML;
@@ -474,10 +451,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The private endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dts-cn-****-internal.aliyuncs.com:18002</p>
+             * PrivateHost.
              */
             public Builder privateHost(String privateHost) {
                 this.privateHost = privateHost;
@@ -485,10 +459,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dts-cn-****.aliyuncs.com:18001</p>
+             * PublicHost.
              */
             public Builder publicHost(String publicHost) {
                 this.publicHost = publicHost;
@@ -496,10 +467,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The virtual private cloud (VPC) endpoint of the change tracking instance. The format is <code>&lt;Address&gt;:&lt;Port number&gt;</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dts-cn-****-vpc.aliyuncs.com:18003</p>
+             * VPCHost.
              */
             public Builder VPCHost(String VPCHost) {
                 this.VPCHost = VPCHost;
@@ -633,10 +601,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database to which the object belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dtstestdata</p>
+             * DatabaseName.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -644,7 +609,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The table name.</p>
+             * TableList.
              */
             public Builder tableList(TableList tableList) {
                 this.tableList = tableList;
@@ -652,14 +617,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the data of an entire database is tracked. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: yes</li>
-             * <li><strong>false</strong>: no</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * WholeDatabase.
              */
             public Builder wholeDatabase(String wholeDatabase) {
                 this.wholeDatabase = wholeDatabase;
@@ -780,10 +738,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testkey1</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -791,10 +746,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value that corresponds to the tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testvalue1</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1110,10 +1062,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start of the time range for change tracking. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-06-21T08:25:43Z</p>
+             * BeginTimestamp.
              */
             public Builder beginTimestamp(String beginTimestamp) {
                 this.beginTimestamp = beginTimestamp;
@@ -1121,10 +1070,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumption checkpoint of the change tracking instance. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-06-21T09:30:31Z</p>
+             * ConsumptionCheckpoint.
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -1132,10 +1078,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The downstream client information, in the following format: &lt;IP address of the downstream client&gt;:&lt;Random ID generated by DTS&gt;.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>114.<em><strong>.</strong></em>.<strong>:dts</strong>******</p>
+             * ConsumptionClient.
              */
             public Builder consumptionClient(String consumptionClient) {
                 this.consumptionClient = consumptionClient;
@@ -1143,10 +1086,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range for change tracking. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-06-21T10:17:21Z</p>
+             * EndTimestamp.
              */
             public Builder endTimestamp(String endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -1154,10 +1094,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned if change tracking failed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>xxxxxxxx</p>
+             * ErrorMessage.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1165,10 +1102,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change tracking instance was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-06-21T02:48:20Z</p>
+             * InstanceCreateTime.
              */
             public Builder instanceCreateTime(String instanceCreateTime) {
                 this.instanceCreateTime = instanceCreateTime;
@@ -1176,10 +1110,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change tracking task was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-06-21T02:48:20Z</p>
+             * JobCreateTime.
              */
             public Builder jobCreateTime(String jobCreateTime) {
                 this.jobCreateTime = jobCreateTime;
@@ -1187,14 +1118,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the change tracking instance. Valid values:</p>
-             * <ul>
-             * <li><strong>PrePaid</strong>: subscription</li>
-             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PrePaid</p>
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1202,7 +1126,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The connection settings of the source instance.</p>
+             * SourceEndpoint.
              */
             public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -1210,18 +1134,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the change tracking task. Valid values:</p>
-             * <ul>
-             * <li><strong>NotStarted</strong>: The task is not started.</li>
-             * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
-             * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
-             * <li><strong>Starting</strong>: The task is being started.</li>
-             * <li><strong>Normal</strong>: The task is running as expected.</li>
-             * <li><strong>Abnormal</strong>: The task is not running as expected.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1229,13 +1142,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The topic of the change tracking instance.</p>
-             * <blockquote>
-             * <p> This parameter is returned only if your change tracking instances are of the new version and you have called the <a href="https://help.aliyun.com/document_detail/122863.html">CreateConsumerGroup</a> operation to create a consumer group.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>cn_hangzhou_rm_bp1162kryivb8****_dtstest_version2</p>
+             * SubscribeTopic.
              */
             public Builder subscribeTopic(String subscribeTopic) {
                 this.subscribeTopic = subscribeTopic;
@@ -1243,7 +1150,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The types of operations that are tracked by the task.</p>
+             * SubscriptionDataType.
              */
             public Builder subscriptionDataType(SubscriptionDataType subscriptionDataType) {
                 this.subscriptionDataType = subscriptionDataType;
@@ -1251,7 +1158,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the change tracking instance.</p>
+             * SubscriptionHost.
              */
             public Builder subscriptionHost(SubscriptionHost subscriptionHost) {
                 this.subscriptionHost = subscriptionHost;
@@ -1259,10 +1166,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the change tracking instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-bp1162kryivb8****</p>
+             * SubscriptionInstanceID.
              */
             public Builder subscriptionInstanceID(String subscriptionInstanceID) {
                 this.subscriptionInstanceID = subscriptionInstanceID;
@@ -1270,10 +1174,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the change tracking instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dtstest</p>
+             * SubscriptionInstanceName.
              */
             public Builder subscriptionInstanceName(String subscriptionInstanceName) {
                 this.subscriptionInstanceName = subscriptionInstanceName;
@@ -1281,7 +1182,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The objects for change tracking.</p>
+             * SubscriptionObject.
              */
             public Builder subscriptionObject(SubscriptionObject subscriptionObject) {
                 this.subscriptionObject = subscriptionObject;
@@ -1289,7 +1190,7 @@ public class DescribeSubscriptionInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collection of tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

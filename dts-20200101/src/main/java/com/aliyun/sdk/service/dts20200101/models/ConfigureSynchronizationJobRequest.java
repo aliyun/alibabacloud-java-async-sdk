@@ -286,7 +286,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be discontinued.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -312,11 +312,11 @@ public class ConfigureSynchronizationJobRequest extends Request {
         /**
          * <p>Specifies whether to perform initial full data synchronization. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
-         * <p> Default value: <strong>true</strong>.</p>
+         * <p>Default value: <strong>true</strong>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -330,9 +330,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, such as specifying whether to automatically start the precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved parameter description</a>.</p>
          * <blockquote>
-         * <p> This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see <a href="https://help.aliyun.com/document_detail/155967.html">Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances</a>.</p>
+         * <p>For example, you can use this parameter for data synchronization between ApsaraDB for Redis Enhanced Edition (Tair) instances. For more information, see <a href="https://help.aliyun.com/document_detail/155967.html">Use OpenAPI to configure one-way or bidirectional data synchronization between ApsaraDB for Redis Enhanced Edition instances</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -354,7 +354,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -363,7 +366,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>资源组ID。</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -377,11 +380,11 @@ public class ConfigureSynchronizationJobRequest extends Request {
         /**
          * <p>Specifies whether to perform initial schema synchronization. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes</li>
-         * <li><strong>false</strong>: no</li>
+         * <li><strong>true</strong>: yes.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <blockquote>
-         * <p> Default value: <strong>true</strong>.</p>
+         * <p>Default value: <strong>true</strong>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -397,14 +400,16 @@ public class ConfigureSynchronizationJobRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong></li>
-         * <li><strong>Reverse</strong></li>
+         * <li><strong>Forward</strong>: forward.</li>
+         * <li><strong>Reverse</strong>: reverse.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
          * <li>Default value: <strong>Forward</strong>.</li>
-         * <li>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization instance is two-way synchronization.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter takes effect only if you set it to <strong>Reverse</strong> and the synchronization topology of the data synchronization instance is two-way synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -430,9 +435,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>The name of the data synchronization task.</p>
+         * <p>The name of the synchronization task.</p>
          * <blockquote>
-         * <p> We recommend that you specify an informative name for easy identification. You do not need to use a unique task name.</p>
+         * <p>Specify a descriptive name that makes it easy to identify the task. It does not need to be unique.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -445,7 +450,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">SynchronizationObjects</a>.</p>
+         * <p>The objects to be synchronized. The value is a JSON string and supports certain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">Synchronization object configuration</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -582,7 +587,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
             } 
 
             /**
-             * <p>The name of the database to which the synchronization object in the destination instance belongs.</p>
+             * <p>目标实例中的同步对象所属数据库名称。</p>
              * 
              * <strong>example:</strong>
              * <p>dtstestdata</p>
@@ -593,9 +598,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the destination database.</p>
+             * <p>目标库的IP地址。</p>
              * <blockquote>
-             * <p> You must specify this parameter only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数必须传入本参数才可用且必须传入。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -607,11 +612,11 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The ID of the destination instance.</p>
+             * <p>同步目标实例的实例ID</p>
              * <blockquote>
-             * <p> If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong> or <strong>DataHub</strong>, you must specify the name of the MaxCompute project or the DataHub project.</p>
+             * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>MaxCompute</strong>或<strong>DataHub</strong>时，本参数传入MaxCompute实例或DataHub的Project名称。
+             * 当目标实例为阿里云分析型数据库MySQL版时，传入分析型数据库MySQL版的集群ID。</p>
              * </blockquote>
-             * <p>If the destination instance is an AnalyticDB for MySQL cluster, specify the ID of the AnalyticDB for MySQL cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-bp1r46452ai50****</p>
@@ -622,20 +627,20 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the destination instance. Valid values:</p>
+             * <p>目标实例类型，取值为：</p>
              * <ul>
-             * <li><strong>Redis</strong>: ApsaraDB for Redis instance</li>
-             * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
-             * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster or PolarDB O Edition cluster</li>
-             * <li><strong>ECS</strong>: self-managed database that is hosted on ECS</li>
-             * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
-             * <li><strong>DataHub</strong>: DataHub project</li>
-             * <li><strong>MaxCompute</strong>: MaxCompute project</li>
-             * <li><strong>AnalyticDB</strong>: AnalyticDB for MySQL cluster V3.0 or V2.0</li>
-             * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance</li>
+             * <li><strong>Redis</strong>：阿里云Redis实例。</li>
+             * <li><strong>RDS</strong>：阿里云RDS实例。</li>
+             * <li><strong>PolarDB</strong>：阿里云PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</li>
+             * <li><strong>ECS</strong>：ECS上的自建数据库。</li>
+             * <li><strong>Express</strong>：通过专线接入的本地数据库。</li>
+             * <li><strong>DataHub</strong>：阿里云DataHub实例。</li>
+             * <li><strong>MaxCompute</strong>：阿里云MaxCompute实例。</li>
+             * <li><strong>AnalyticDB</strong>：云原生数据仓库AnalyticDB MySQL  3.0和2.0版本。</li>
+             * <li><strong>Greenplum</strong>：云原生数据仓库ADB PostgreSQL版（原分析型数据库PostgreSQL版）。</li>
              * </ul>
              * <blockquote>
-             * <p> The default value is <strong>RDS</strong>.</p>
+             * <p>默认取值为<strong>RDS</strong>。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -647,12 +652,12 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The password of the destination database account.</p>
+             * <p>目标库数据库账号密码。</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>, you must specify the DestinationEndpoint.Password parameter.</li>
+             * <li>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数必须传入。</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>Test654321</p>
@@ -663,9 +668,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The service port number of the destination database.</p>
+             * <p>目标库的数据库服务端口。</p>
              * <blockquote>
-             * <p> You must specify this parameter only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数才可用且必须传入。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -677,14 +682,16 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The database account of the destination database.</p>
+             * <p>目标库的数据库账号。</p>
              * <blockquote>
+             * <ul>
+             * <li>同步不同的数据库所需的权限有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/140954.html">DTS数据同步方案概览</a>中对应的配置案例。</li>
+             * </ul>
              * </blockquote>
              * <ul>
-             * <li>The permissions that are required for database accounts vary with the synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/140954.html">Overview of data synchronization scenarios</a>.</li>
-             * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>, you must specify the DestinationEndpoint.UserName parameter.</li>
-             * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to RDS and the database version is MySQL 5.5 or MySQL 5.6, you do not need to specify the DestinationEndpoint.UserName and <strong>DestinationEndpoint.Password</strong> parameters.</li>
-             * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>Redis</strong>, you do not need to specify the DestinationEndpoint.UserName parameter.</li>
+             * <li>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数必须传入。</li>
+             * <li>当<strong>DestinationEndpoint.InstanceType</strong>取值为RDS且数据库版本为MySQL 5.5或MySQL 5.6，无需传入本参数和<strong>DestinationEndpoint.Password</strong>参数。</li>
+             * <li>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>Redis</strong>时，无需传入本参数。</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -794,9 +801,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_day field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <p>设置增量日志表是否包含以增量更新时间对应日期信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
              * <blockquote>
-             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -808,9 +815,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_hour field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <p>设置增量日志表是否包含以增量更新时间对应小时信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
              * <blockquote>
-             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -822,9 +829,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_minute field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <p>设置增量日志表是否包含以增量更新时间对应分钟信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
              * <blockquote>
-             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -836,9 +843,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_month field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <p>设置增量日志表是否包含以增量更新时间对应月份信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
              * <blockquote>
-             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -850,9 +857,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_year field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+             * <p>设置增量日志表是否包含以增量更新时间对应年份信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
              * <blockquote>
-             * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+             * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1014,7 +1021,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
             } 
 
             /**
-             * <p>The name of the database to which the synchronization object in the source instance belongs.</p>
+             * <p>源实例中的同步对象所属数据库名称。</p>
              * 
              * <strong>example:</strong>
              * <p>dtstestdata</p>
@@ -1025,9 +1032,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the source database.</p>
+             * <p>源库的IP地址。</p>
              * <blockquote>
-             * <p> You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * <p>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数才可用且必须传入。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1039,7 +1046,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The ID of the source instance.</p>
+             * <p>源实例ID。</p>
              * 
              * <strong>example:</strong>
              * <p>rm-bp1i99e8l7913****</p>
@@ -1050,18 +1057,18 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The type of the source instance. Valid values:</p>
+             * <p>源实例类型，取值为：</p>
              * <ul>
-             * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
-             * <li><strong>Redis</strong>: ApsaraDB for Redis instance</li>
-             * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster or PolarDB O Edition cluster</li>
-             * <li><strong>ECS</strong>: self-managed database that is hosted on Elastic Compute Service (ECS)</li>
-             * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
-             * <li><strong>dg</strong>: self-managed database that is connected over Database Gateway</li>
-             * <li><strong>cen</strong>: self-managed database that is connected over Cloud Enterprise Network (CEN)</li>
+             * <li><strong>RDS</strong>：阿里云RDS实例。</li>
+             * <li><strong>Redis</strong>：阿里云Redis实例。</li>
+             * <li><strong>PolarDB</strong>：阿里云PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</li>
+             * <li><strong>ECS</strong>：ECS上的自建数据库。</li>
+             * <li><strong>Express</strong>：通过专线接入的自建数据库。</li>
+             * <li><strong>dg</strong>：通过数据库网关DG接入的自建数据库。</li>
+             * <li><strong>cen</strong>：通过云企业网CEN接入的自建数据库。</li>
              * </ul>
              * <blockquote>
-             * <p> The default value is <strong>RDS</strong>.</p>
+             * <p>默认取值为<strong>RDS</strong>。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1073,9 +1080,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that owns the source RDS instance.</p>
+             * <p>源RDS实例所属的阿里云账号ID。</p>
              * <blockquote>
-             * <p> You can specify this parameter to synchronize data across different Alibaba Cloud accounts. In this case, you also need to specify the <strong>SourceEndpoint.Role</strong> parameter.</p>
+             * <p>传入本参数即代表执行跨阿里云账号的数据同步，同时您还需要传入<strong>SourceEndpoint.Role</strong>参数。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1087,9 +1094,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The password of the source database account.</p>
+             * <p>源库数据库账号密码。</p>
              * <blockquote>
-             * <p> You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * <p>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数必须传入。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1101,9 +1108,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The service port number of the source database.</p>
+             * <p>源库的数据库服务端口。</p>
              * <blockquote>
-             * <p> You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+             * <p>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数才可用且必须传入。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1115,9 +1122,9 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.</p>
+             * <p>源实例所属云账号配置的角色名称。</p>
              * <blockquote>
-             * <p> You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+             * <p>执行跨阿里云账号的数据同步时须传入本参数，该角色所需的权限及授权方式请参见<a href="https://help.aliyun.com/document_detail/48468.html">跨阿里云账号数据迁移或同步时如何配置RAM授权</a>。</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1129,13 +1136,15 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * <p>The database account of the source database.</p>
+             * <p>源库的数据库账号。</p>
              * <blockquote>
+             * <ul>
+             * <li>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数才可用且必须传入。</li>
+             * </ul>
              * </blockquote>
              * <ul>
-             * <li>You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</li>
-             * <li>If the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>Redis</strong>, you do not need to specify the database account.</li>
-             * <li>The permissions that are required for database accounts vary with the synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/140954.html">Overview of data synchronization scenarios</a>.</li>
+             * <li>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>Redis</strong>时，本参数无需传入。</li>
+             * <li>同步不同的数据库所需的权限有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/140954.html">DTS数据同步方案概览</a>中对应的配置案例。</li>
              * </ul>
              * 
              * <strong>example:</strong>

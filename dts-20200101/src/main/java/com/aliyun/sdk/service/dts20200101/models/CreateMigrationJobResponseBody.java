@@ -128,7 +128,7 @@ public class CreateMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the data migration instance.</p>
+         * <p>The instance ID of the data migration instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsi8911td9233****</p>
@@ -139,7 +139,7 @@ public class CreateMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C166D79D-436B-45F0-B5A5-25E1959F****</p>
@@ -150,7 +150,7 @@ public class CreateMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -168,7 +168,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>Check the task job ID.</p>
+         * <p>The ID of the data validation task.</p>
          * 
          * <strong>example:</strong>
          * <p>z9p104ib23***</p>
@@ -180,12 +180,12 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>The type of the check</p>
-         * <blockquote>
-         * <blockquote>
-         * <p>1 full quantity, 2 incremental, 3 all</p>
-         * </blockquote>
-         * </blockquote>
+         * <p>The data validation method. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: full data validation.</li>
+         * <li><strong>2</strong>: incremental data validation.</li>
+         * <li><strong>3</strong>: all.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +197,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>Data migration instance ID, which can be queried by calling the <strong>describemigrationjobs</strong> API.</p>
+         * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsz9p104ib23e972e</p>
@@ -209,7 +209,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>The name of the data migration or synchronization job.</p>
+         * <p>The name of the data migration or data synchronization task.</p>
          * 
          * <strong>example:</strong>
          * <p>zwy_test</p>
@@ -221,7 +221,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -233,7 +233,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of records per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -245,7 +245,7 @@ public class DescribeCheckJobsRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

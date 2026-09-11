@@ -161,7 +161,7 @@ public class CreateConsumerGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -173,7 +173,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</p>
+         * <p>The name of the consumer group. The name can be up to 128 characters in length. We recommend that you use a descriptive name for easy identification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,10 +186,10 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The password that corresponds to the username of the consumer group.</p>
+         * <p>The password of the consumer group account.</p>
          * <ul>
-         * <li>A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</li>
-         * <li>A password must be 8 to 32 characters in length.</li>
+         * <li>The password must contain characters from at least two of the following categories: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>The password must be 8 to 32 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -203,11 +203,8 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The username of the consumer group.</p>
-         * <ul>
-         * <li>A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</li>
-         * <li>A username cannot exceed 16 characters in length.</li>
-         * </ul>
+         * <p>The account of the consumer group.</p>
+         * <p>The account can contain uppercase letters, lowercase letters, digits, and underscores (_). The account can be up to 16 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +226,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -241,7 +238,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

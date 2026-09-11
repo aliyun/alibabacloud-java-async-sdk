@@ -119,7 +119,10 @@ public class ListJobStepResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListJobStepResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class ListJobStepResponseBody extends TeaModel {
         }
 
         /**
-         * JobSteps.
+         * <p>The task step information.</p>
          */
         public Builder jobSteps(java.util.List<JobSteps> jobSteps) {
             this.jobSteps = jobSteps;
@@ -143,7 +149,10 @@ public class ListJobStepResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ListJobStepResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +171,10 @@ public class ListJobStepResponseBody extends TeaModel {
         }
 
         /**
-         * UseV2API.
+         * <p>Indicates whether the Console 2.0 API is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder useV2API(Boolean useV2API) {
             this.useV2API = useV2API;
@@ -225,7 +240,10 @@ public class ListJobStepResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>Error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -233,7 +251,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * HelpUrl.
+             * <p>URL of the help document.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder helpUrl(String helpUrl) {
                 this.helpUrl = helpUrl;
@@ -300,7 +321,10 @@ public class ListJobStepResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>Error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -308,7 +332,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * HelpUrl.
+             * <p>URL of the help document.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder helpUrl(String helpUrl) {
                 this.helpUrl = helpUrl;
@@ -544,7 +571,10 @@ public class ListJobStepResponseBody extends TeaModel {
             } 
 
             /**
-             * BootTime.
+             * <p>The time when the sub-job was started, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-02T02:00:21Z</p>
              */
             public Builder bootTime(String bootTime) {
                 this.bootTime = bootTime;
@@ -552,7 +582,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>Sub-task step identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>03</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -560,7 +593,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the sub-job was created, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-20T02:13:12Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -568,7 +604,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMsg.
+             * <p>Error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UncaughtException:java.lang.NullPointerException</p>
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -576,7 +615,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorDetails.
+             * <p>Error message.</p>
              */
             public Builder errorDetails(java.util.List<SubJobStepsErrorDetails> errorDetails) {
                 this.errorDetails = errorDetails;
@@ -584,7 +623,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>End time of the sub-task, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T02:15:14Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -592,7 +634,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * IncLatencyMilliseconds.
+             * <p>Incremental data latency, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder incLatencyMilliseconds(String incLatencyMilliseconds) {
                 this.incLatencyMilliseconds = incLatencyMilliseconds;
@@ -600,7 +645,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * IncLatencySeconds.
+             * <p>Incremental data latency, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder incLatencySeconds(Long incLatencySeconds) {
                 this.incLatencySeconds = incLatencySeconds;
@@ -608,7 +656,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * JobStepId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mj3z9w9s10am68o_0004_0000</p>
              */
             public Builder jobStepId(String jobStepId) {
                 this.jobStepId = jobStepId;
@@ -616,7 +667,19 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * JobStepName.
+             * <p>Sub-job step information. Valid values are as follows:</p>
+             * <ul>
+             * <li>Precheck: precheck phase</li>
+             * <li>Incremental data service: incremental data collection phase</li>
+             * <li>dts.step.struct.load: schema migration phase</li>
+             * <li>dts.step.data.load: full migration phase</li>
+             * <li>etl-check: extract, transform, and load (ETL) phase</li>
+             * <li>Consistency validation: data verification phase</li>
+             * <li>Synchronization: incremental synchronization phase</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder jobStepName(String jobStepName) {
                 this.jobStepName = jobStepName;
@@ -624,7 +687,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the sub-job was updated, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-22T02:04:35Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -632,7 +698,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * NeedAcceleration.
+             * <p>Indicates whether the acceleration feature is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needAcceleration(Boolean needAcceleration) {
                 this.needAcceleration = needAcceleration;
@@ -640,7 +709,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>Progress of the sub-job step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -648,7 +720,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * Serial.
+             * <p>Serial number of the sub-task step. Indicates the task execution order; the smaller the numeric value, the earlier the execution order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder serial(Integer serial) {
                 this.serial = serial;
@@ -656,7 +731,19 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Status of the sub-task step. Valid values:</p>
+             * <ul>
+             * <li>Failed: failed.</li>
+             * <li>Pause: paused.</li>
+             * <li>Schedule: scheduled.</li>
+             * <li>Init: initialization.</li>
+             * <li>Running: synchronizing.</li>
+             * <li>Catched: waiting for synchronization.</li>
+             * <li>Finished: ended.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -931,7 +1018,10 @@ public class ListJobStepResponseBody extends TeaModel {
             } 
 
             /**
-             * BootTime.
+             * <p>The job start time, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-11T09:33:23Z</p>
              */
             public Builder bootTime(String bootTime) {
                 this.bootTime = bootTime;
@@ -939,7 +1029,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>Task step identity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>01</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -947,7 +1040,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The job creation time, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-28T17:13:51Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -955,7 +1051,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * ErrMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fullcheck find different records : 2372</p>
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -963,7 +1062,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorDetails.
+             * <p>The error message.</p>
              */
             public Builder errorDetails(java.util.List<ErrorDetails> errorDetails) {
                 this.errorDetails = errorDetails;
@@ -971,7 +1070,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>Task end time, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-15T02:15:14Z</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -979,7 +1081,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * IncLatencyMilliseconds.
+             * <p>Incremental data latency, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder incLatencyMilliseconds(Long incLatencyMilliseconds) {
                 this.incLatencyMilliseconds = incLatencyMilliseconds;
@@ -987,7 +1092,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * IncLatencySeconds.
+             * <p>Incremental data latency, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder incLatencySeconds(Long incLatencySeconds) {
                 this.incLatencySeconds = incLatencySeconds;
@@ -995,7 +1103,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * JobStepId.
+             * <p>The task step ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>l02c1f7h179****</p>
              */
             public Builder jobStepId(String jobStepId) {
                 this.jobStepId = jobStepId;
@@ -1003,7 +1114,19 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * JobStepName.
+             * <p>Task step information. Valid values:</p>
+             * <ul>
+             * <li>Precheck: precheck phase</li>
+             * <li>Incremental data service: incremental data collection phase</li>
+             * <li>dts.step.struct.load: schema migration phase</li>
+             * <li>dts.step.data.load: full migration phase</li>
+             * <li>etl-check: extract, transform, and load phase</li>
+             * <li>Consistency validation: data verification phase</li>
+             * <li>Synchronization: incremental synchronization phase</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>预检查</p>
              */
             public Builder jobStepName(String jobStepName) {
                 this.jobStepName = jobStepName;
@@ -1011,7 +1134,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the job was updated, in the format <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-03T02:26:14Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1019,7 +1145,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * NeedAcceleration.
+             * <p>Indicates whether the acceleration feature should be provided.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder needAcceleration(Boolean needAcceleration) {
                 this.needAcceleration = needAcceleration;
@@ -1027,7 +1156,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress of the task step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -1035,7 +1167,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * Serial.
+             * <p>Task step serial number. Indicates the task execution order. A smaller value indicates an earlier execution order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serial(Integer serial) {
                 this.serial = serial;
@@ -1043,7 +1178,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>Task step status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>○ Finished</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1051,7 +1189,10 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * SubJobCount.
+             * <p>The number of sub-jobs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subJobCount(Integer subJobCount) {
                 this.subJobCount = subJobCount;
@@ -1059,7 +1200,7 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * SubJobSteps.
+             * <p>Step information of the sub-job.</p>
              */
             public Builder subJobSteps(java.util.List<SubJobSteps> subJobSteps) {
                 this.subJobSteps = subJobSteps;
@@ -1067,7 +1208,14 @@ public class ListJobStepResponseBody extends TeaModel {
             }
 
             /**
-             * redisPhaseType.
+             * <p>Used to distinguish between the Redis full and incremental phases. Valid values:</p>
+             * <ul>
+             * <li>full: Full phase</li>
+             * <li>inc: Incremental phase</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>full</p>
              */
             public Builder redisPhaseType(String redisPhaseType) {
                 this.redisPhaseType = redisPhaseType;

@@ -262,7 +262,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned by the backend service. The number is incremented.</p>
+         * <p>The internal error code. The value is incremented.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -273,7 +273,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The CPU utilization of the cluster. Unit: percentage.</p>
+         * <p>The CPU utilization of the cluster. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -284,7 +284,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dtscluster_h3fl1cs217sx952</p>
@@ -295,7 +295,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total disk size of the cluster. Unit: GB.</p>
+         * <p>The total disk space of the cluster. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -317,7 +317,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of DTS units (DUs).</p>
+         * <p>The total number of DUs.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -328,7 +328,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The usage of DUs.</p>
+         * <p>The number of used DUs.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -339,7 +339,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.</p>
+         * <p>The dynamic error message. This parameter is used to replace the %s placeholder in the ErrMessage response parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Type</p>
@@ -350,7 +350,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -361,7 +361,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -372,7 +372,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -383,7 +383,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total amount of memory. A value of 0 is temporarily returned.</p>
+         * <p>The total memory. The value 0 is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -394,7 +394,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The memory usage. A value of 0 is temporarily returned.</p>
+         * <p>The memory usage. The value 0 is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -405,7 +405,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The memory usage.</p>
+         * <p>The memory usage percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -416,7 +416,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -427,7 +427,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -438,7 +438,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of tasks that are in progress.</p>
+         * <p>The number of running tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

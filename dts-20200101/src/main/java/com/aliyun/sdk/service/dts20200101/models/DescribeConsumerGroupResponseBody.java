@@ -145,7 +145,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of consumer groups.</p>
+         * ConsumerChannels.
          */
         public Builder consumerChannels(ConsumerChannels consumerChannels) {
             this.consumerChannels = consumerChannels;
@@ -175,7 +175,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +197,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4204E899-8193-4D7D-A4FB-3A7F9063****</p>
@@ -208,7 +208,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -340,10 +340,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the consumer group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dtspis1110z232****</p>
+             * ConsumerGroupID.
              */
             public Builder consumerGroupID(String consumerGroupID) {
                 this.consumerGroupID = consumerGroupID;
@@ -351,10 +348,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the consumer group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>consumergrouptest</p>
+             * ConsumerGroupName.
              */
             public Builder consumerGroupName(String consumerGroupName) {
                 this.consumerGroupName = consumerGroupName;
@@ -362,10 +356,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the consumer group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * ConsumerGroupUserName.
              */
             public Builder consumerGroupUserName(String consumerGroupUserName) {
                 this.consumerGroupUserName = consumerGroupUserName;
@@ -373,10 +364,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The consumption checkpoint, which is the time when the latest data record was consumed by the change tracking client. The format is <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-10-02T12:00:00Z</p>
+             * ConsumptionCheckpoint.
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -384,13 +372,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The message delay, which is the current time minus the timestamp of the earliest unconsumed message in the change tracking instance. Unit: seconds.</p>
-             * <blockquote>
-             * <p> If the return value of this parameter is <strong>-1</strong>, no client is connected to the consumer group.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>172714</p>
+             * MessageDelay.
              */
             public Builder messageDelay(Long messageDelay) {
                 this.messageDelay = messageDelay;
@@ -398,13 +380,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of unconsumed messages, which is the number of unconsumed data records plus the number of heartbeat messages.</p>
-             * <blockquote>
-             * <p> If the return value of this parameter is <strong>-1</strong>, no client is connected to the consumer group.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>186600</p>
+             * UnconsumedData.
              */
             public Builder unconsumedData(Long unconsumedData) {
                 this.unconsumedData = unconsumedData;

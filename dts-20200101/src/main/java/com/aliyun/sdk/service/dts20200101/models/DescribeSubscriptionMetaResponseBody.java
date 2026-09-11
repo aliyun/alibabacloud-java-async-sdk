@@ -119,7 +119,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>The error code returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -130,7 +130,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request failed.</p>
+         * <p>The error message returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -152,7 +152,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C12E7A51-09A4-5796-94BE-08B6DA******</p>
@@ -163,7 +163,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the subtasks.</p>
+         * <p>The data information about the change tracking subtasks.</p>
          */
         public Builder subscriptionMetaList(java.util.List<SubscriptionMetaList> subscriptionMetaList) {
             this.subscriptionMetaList = subscriptionMetaList;
@@ -279,9 +279,9 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.</p>
+             * <p>The consumption checkpoint of the subtask, which is the timestamp of the first data record consumed by the client. The value is a UNIX timestamp. Unit: seconds.</p>
              * <blockquote>
-             * <p> You can use a search engine to obtain a UNIX timestamp converter.</p>
+             * <p>You can use a search engine to find a UNIX timestamp converter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -296,7 +296,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
              * <p>The objects of the subtask. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;dtstestdata&quot;:{&quot;name&quot;:&quot;dtstestdata&quot;,&quot;all&quot;:false,&quot;Table&quot;:{&quot;order&quot;:{&quot;name&quot;:&quot;order&quot;,&quot;all&quot;:true}}}}</p>
+             * <p>{\&quot;dtstestdata\&quot;:{\&quot;name\&quot;:\&quot;dtstestdata\&quot;,\&quot;all\&quot;:false,\&quot;Table\&quot;:{\&quot;order\&quot;:{\&quot;name\&quot;:\&quot;order\&quot;,\&quot;all\&quot;:true}}}}</p>
              */
             public Builder DBList(String DBList) {
                 this.DBList = DBList;
@@ -304,7 +304,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint and port number of the change tracking instance.</p>
+             * <p>The network address and port number of the change tracking channel.</p>
              * 
              * <strong>example:</strong>
              * <p>dts-cn-hangzhou.aliyuncs.com:18001</p>

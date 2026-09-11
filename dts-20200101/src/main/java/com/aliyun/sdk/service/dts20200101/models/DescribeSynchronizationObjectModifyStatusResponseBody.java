@@ -171,7 +171,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The status of full data synchronization.</p>
+         * <p>The initial full data synchronization status.</p>
          */
         public Builder dataInitializationStatus(DataInitializationStatus dataInitializationStatus) {
             this.dataInitializationStatus = dataInitializationStatus;
@@ -179,9 +179,9 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * <p>The status of incremental data synchronization.</p>
+         * <p>The incremental data synchronization status.</p>
          * <blockquote>
-         * <p> This parameter and its sub-parameters will be removed in the future.</p>
+         * <p>This parameter set and its response parameters will be discontinued.</p>
          * </blockquote>
          */
         public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
@@ -190,7 +190,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned when the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -201,7 +201,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned when the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -212,7 +212,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * <p>The error message returned if the task failed to modify the objects to be synchronized.</p>
+         * <p>The error message returned when the task to modify synchronization objects failed.</p>
          * 
          * <strong>example:</strong>
          * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
@@ -231,7 +231,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B38C644B-4395-4F6F-86E3-592F26BE****</p>
@@ -242,14 +242,14 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * <p>The status of the task that changes the objects to be synchronized. Valid values:</p>
+         * <p>The status of the synchronization object change. Valid values:</p>
          * <ul>
-         * <li><strong>NotStarted</strong>: The task is not started.</li>
-         * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
-         * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
-         * <li><strong>Migrating</strong>: The task is running.</li>
-         * <li><strong>Failed</strong>: The task failed.</li>
-         * <li><strong>Finished</strong>: The task is completed.</li>
+         * <li><strong>NotStarted</strong>: not started.</li>
+         * <li><strong>Prechecking</strong>: running the precheck.</li>
+         * <li><strong>PrecheckFailed</strong>: the precheck failed.</li>
+         * <li><strong>Migrating</strong>: synchronizing.</li>
+         * <li><strong>Failed</strong>: synchronization failed.</li>
+         * <li><strong>Finished</strong>: synchronization completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * <p>The status of schema synchronization.</p>
+         * <p>The initial schema synchronization status.</p>
          */
         public Builder structureInitializationStatus(StructureInitializationStatus structureInitializationStatus) {
             this.structureInitializationStatus = structureInitializationStatus;
@@ -269,7 +269,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -364,10 +364,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The error message returned if full data synchronization failed.</p>
+             * <p>The error message returned when initial full data synchronization failed.</p>
              * 
              * <strong>example:</strong>
-             * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -375,7 +375,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The progress of full data synchronization. Unit: %.</p>
+             * <p>The progress of initial full data synchronization, in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -386,7 +386,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The number of records that have been synchronized during full data synchronization.</p>
+             * <p>The number of records that have been synchronized during initial full data synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>39754</p>
@@ -397,13 +397,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The status of full data synchronization. Valid values:</p>
-             * <ul>
-             * <li><strong>NotStarted</strong>: Full data synchronization is not started.</li>
-             * <li><strong>Migrating</strong>: Full data synchronization is in progress.</li>
-             * <li><strong>Failed</strong>: Full data synchronization failed.</li>
-             * <li><strong>Finished</strong>: Full data synchronization is completed.</li>
-             * </ul>
+             * <p>The status of the synchronization object change. Valid values: -<strong>notstarted</strong>: not started. -<strong>migrating</strong>: synchronizing. -<strong>failed</strong>: synchronization failed. -<strong>finaciallocked</strong>: financial lock.</p>
              * 
              * <strong>example:</strong>
              * <p>Finished</p>
@@ -499,7 +493,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The synchronization latency, in seconds.</p>
+             * <p>The synchronization latency of incremental data synchronization, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -510,7 +504,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The error message returned if incremental data synchronization failed.</p>
+             * <p>The error message returned when incremental data synchronization failed.</p>
              * 
              * <strong>example:</strong>
              * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
@@ -521,7 +515,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The progress of incremental data synchronization. Unit: %.</p>
+             * <p>The progress of incremental data synchronization, in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -532,16 +526,18 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The status of incremental data synchronization. Valid values:</p>
+             * <p>The status of the synchronization object change. Valid values:</p>
              * <ul>
-             * <li><strong>NotStarted</strong>: Incremental data synchronization is not started.</li>
-             * <li><strong>Migrating</strong>: Incremental data synchronization is in progress.</li>
-             * <li><strong>Failed</strong>: Incremental data synchronization failed.</li>
-             * <li><strong>Finished</strong>: Incremental data synchronization is completed.</li>
+             * <li><strong>NotStarted</strong>: not started.</li>
+             * <li><strong>Prechecking</strong>: running the precheck.</li>
+             * <li><strong>PrecheckFailed</strong>: the precheck failed.</li>
+             * <li><strong>Migrating</strong>: synchronizing.</li>
+             * <li><strong>Failed</strong>: synchronization failed.</li>
+             * <li><strong>Finished</strong>: synchronization completed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Migrating</p>
+             * <p>Finished</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -634,10 +630,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The precheck result. Valid values:</p>
+             * <p>The check result. Valid values:</p>
              * <ul>
-             * <li>Success: The task passed the precheck.</li>
-             * <li>Failed: The task failed to pass the precheck.</li>
+             * <li>Success: The precheck item was passed.</li>
+             * <li>Failed: The precheck item was not passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -649,13 +645,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The error message returned if the task failed to pass the precheck.</p>
-             * <blockquote>
-             * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
-             * </blockquote>
+             * <p>The error message returned when the precheck item was not passed.</p>
              * 
              * <strong>example:</strong>
-             * <p>Original error: Access denied for user &quot;dtstest&quot;@&quot;100.104.xxx.xx&quot; (using password: YES)</p>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -663,7 +656,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The name of the precheck item.</p>
+             * <p>The precheck item.</p>
              * 
              * <strong>example:</strong>
              * <p>CHECK_CONN_SRC</p>
@@ -676,7 +669,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             /**
              * <p>The method to fix the precheck failure.</p>
              * <blockquote>
-             * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is Failed.</p>
+             * <p>This parameter is returned only when the value of the <strong>CheckStatus</strong> parameter is Failed.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -760,7 +753,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The result of each precheck item.</p>
+             * <p>The execution details of each precheck item.</p>
              */
             public Builder detail(java.util.List<Detail> detail) {
                 this.detail = detail;
@@ -768,7 +761,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The precheck progress. Unit: %.</p>
+             * <p>The precheck progress, in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -875,10 +868,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             } 
 
             /**
-             * <p>The error message returned if schema synchronization failed.</p>
+             * <p>The error message returned when initial schema synchronization failed.</p>
              * 
              * <strong>example:</strong>
-             * <p>DTS-1020042 Execute sql error sql: Table &quot;customer&quot; already exists</p>
+             * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -886,7 +879,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The progress of schema synchronization. Unit: %.</p>
+             * <p>The progress of initial schema synchronization, in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -897,7 +890,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The number of tables whose schemas have been synchronized.</p>
+             * <p>The number of tables for which initial schema synchronization has been completed.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -908,13 +901,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * <p>The status of schema synchronization. Valid values:</p>
-             * <ul>
-             * <li><strong>NotStarted</strong>: Schema synchronization is not started.</li>
-             * <li><strong>Migrating</strong>: Schema synchronization is in progress.</li>
-             * <li><strong>Failed</strong>: Schema synchronization failed.</li>
-             * <li><strong>Finished</strong>: Schema synchronization is completed.</li>
-             * </ul>
+             * <p>The initial schema synchronization status. Valid values: NotStarted: not started. Migrating: initializing. Failed: initialization failed. Finished: initialization completed.</p>
              * 
              * <strong>example:</strong>
              * <p>Finished</p>

@@ -213,7 +213,10 @@ public class PreCheckCreateGadOrderRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the active geo-redundancy instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gad-bp1i99e8l7913****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -267,7 +270,10 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -276,7 +282,10 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfntftbiobqyky</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -294,7 +303,10 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * SlaveDbInstanceId.
+         * <p>The instance ID of the database instance that assumes the secondary role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp17562h64****</p>
          */
         public Builder slaveDbInstanceId(String slaveDbInstanceId) {
             this.putQueryParameter("SlaveDbInstanceId", slaveDbInstanceId);
@@ -303,7 +315,10 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
-         * SlaveDbInstanceRegion.
+         * <p>The region of the database instance that assumes the secondary role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder slaveDbInstanceRegion(String slaveDbInstanceRegion) {
             this.putQueryParameter("SlaveDbInstanceRegion", slaveDbInstanceRegion);

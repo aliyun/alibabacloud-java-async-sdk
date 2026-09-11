@@ -211,13 +211,15 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. You can call the <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> operation to query the execution time of the subtasks.</p>
+         * <p>The end time of the log information. You can call <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> to query the end time.</p>
          * <blockquote>
          * <ul>
-         * <li>To obtain the logs that are generated for DTS subtasks within a specific period of time, you can call the <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> operation to query the execution time of the subtasks.</li>
-         * <li>Specify the time in the 13-digit UNIX timestamp format. Unit: milliseconds. You can use a search engine to obtain a UNIX timestamp converter.</li>
+         * <li>To query the log information of a DTS subtask within a specific time range, call <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> to query the execution time of the DTS subtask.</li>
          * </ul>
          * </blockquote>
+         * <ul>
+         * <li>The time is a 13-digit UNIX timestamp in milliseconds. You can use a search engine to find a UNIX timestamp converter.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1620897227000</p>
@@ -229,9 +231,9 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The keyword that is passed to specify the query content.</p>
+         * <p>The keyword used to filter query results.</p>
          * <blockquote>
-         * <p> Fuzzy match is used and the keyword is case-sensitive.</p>
+         * <p>Fuzzy match is used and the keyword is case-sensitive.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -244,7 +246,7 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. The value must be an integer that is greater than 0 and less than or equal to the maximum value supported by the integer data type. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -256,7 +258,7 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The number of log entries to return on each page. Valid values: <strong>20</strong>, <strong>50</strong>, <strong>100</strong>, <strong>500</strong>, and <strong>1000</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of log entries per page. Valid values: <strong>20</strong>, <strong>50</strong>, <strong>100</strong>, <strong>500</strong>, and <strong>1000</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -268,7 +270,7 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -280,7 +282,7 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -292,13 +294,15 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
+         * <p>The start time of the log information.</p>
          * <blockquote>
          * <ul>
-         * <li>To obtain the logs that are generated for Data Transmission Service (DTS) subtasks within a specific period of time, you can call the <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> operation to query the execution time of the subtasks.</li>
-         * <li>Specify the time in the 13-digit UNIX timestamp format. Unit: milliseconds. You can use a search engine to obtain a UNIX timestamp converter.</li>
+         * <li>To query the log information of a DTS subtask within a specific time range, call <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> to query the execution time of the DTS subtask.</li>
          * </ul>
          * </blockquote>
+         * <ul>
+         * <li>The start time is a 13-digit UNIX timestamp in milliseconds. You can use a search engine to find a UNIX timestamp converter.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1620896327000</p>
@@ -310,11 +314,11 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The log level. Separate multiple log levels with commas (,). Valid values:</p>
+         * <p>The log level of the log information. Separate multiple values with commas (,). Valid values:</p>
          * <ul>
-         * <li><strong>NORMAL</strong>: displays the logs that are generated when the DTS task runs as expected.</li>
-         * <li><strong>WARN</strong>: displays the logs about severe issues that stop the DTS task from running.</li>
-         * <li><strong>ERROR</strong>: displays the logs about unexpected issues that stop specific processes form running.</li>
+         * <li><strong>NORMAL</strong>: Normal.</li>
+         * <li><strong>WARN</strong>: Warning.</li>
+         * <li><strong>ERROR</strong>: Error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,11 +331,11 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>The type of a DTS subtask. Valid values:</p>
+         * <p>The type of the DTS task subnode. Valid values:</p>
          * <ul>
-         * <li><strong>DATA_LOAD</strong>: full migration or full synchronization</li>
-         * <li><strong>ONLINE_WRITER</strong>: incremental migration</li>
-         * <li><strong>SYNC_WRITER</strong>: incremental synchronization</li>
+         * <li><strong>DATA_LOAD</strong>: full data migration or initial full data synchronization.</li>
+         * <li><strong>ONLINE_WRITER</strong>: incremental data migration.</li>
+         * <li><strong>SYNC_WRITER</strong>: incremental data synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,7 +348,11 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be: - <strong>true</strong>: Yes. - <strong>false</strong>: No.</p>
+         * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

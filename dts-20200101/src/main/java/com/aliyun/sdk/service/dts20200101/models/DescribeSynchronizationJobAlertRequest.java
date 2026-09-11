@@ -144,7 +144,7 @@ public class DescribeSynchronizationJobAlertRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be discontinued.</p>
          * 
          * <strong>example:</strong>
          * <p>12323344****</p>
@@ -156,7 +156,7 @@ public class DescribeSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The value can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -177,7 +177,7 @@ public class DescribeSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region ID. Specify this parameter to indicate the region where the subscription channel resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -189,7 +189,7 @@ public class DescribeSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -203,11 +203,11 @@ public class DescribeSynchronizationJobAlertRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong></li>
-         * <li><strong>Reverse</strong></li>
+         * <li><strong>Forward</strong>: forward.</li>
+         * <li><strong>Reverse</strong>: reverse.</li>
          * </ul>
          * <blockquote>
-         * <p> Default value: <strong>Forward</strong>.</p>
+         * <p>Default value: <strong>Forward</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -220,11 +220,11 @@ public class DescribeSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data synchronization instance. You can call the <strong>DescribeSynchronizationJobs</strong> operation to query the instance ID.</p>
+         * <p>Instance ID of the data synchronization instance. You can call the <strong>DescribeSynchronizationJobs</strong> operation to query instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dtskxz1170c10p****</p>
+         * <p>kxz1170c10p****</p>
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);

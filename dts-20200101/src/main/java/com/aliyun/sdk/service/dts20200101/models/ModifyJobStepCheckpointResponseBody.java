@@ -132,7 +132,10 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,13 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message used to replace the %s placeholder in the ErrMessage parameter.</p>
+         * <blockquote>
+         * <p>For example, if ErrMessage returns &quot;The Value of Input Parameter %s is not valid&quot; and DynamicMessage returns &quot;JobId&quot;, it indicates that the JobId request parameter you provided is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>can not find env: zbyk-pre</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -148,7 +157,10 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code returned when the API call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -156,7 +168,10 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned when the API call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -164,7 +179,10 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -172,7 +190,10 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C306C198-7807-409D-930A-D6CE6C32****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +201,14 @@ public class ModifyJobStepCheckpointResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request succeeded. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request succeeded.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

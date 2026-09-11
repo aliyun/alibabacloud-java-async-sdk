@@ -200,12 +200,12 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The task code that specifies the type of the DTS subtask. Valid values:</p>
+         * <p>The task code. Specify this parameter to query a specific subtask type of the DTS task. Valid values:</p>
          * <ul>
          * <li><strong>01</strong>: precheck.</li>
          * <li><strong>02</strong>: schema migration or initial schema synchronization.</li>
          * <li><strong>03</strong>: full data migration or initial full data synchronization.</li>
-         * <li><strong>04</strong>: incremental data migration or synchronization.</li>
+         * <li><strong>04</strong>: incremental data migration or incremental data synchronization.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -219,7 +219,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The filter item used to filter tables in fuzzy match.</p>
+         * <p>The filter. Performs a fuzzy match on table names.</p>
          * 
          * <strong>example:</strong>
          * <p>dewuprop</p>
@@ -231,7 +231,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -243,7 +243,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>20</strong>.</p>
+         * <p>The number of records per page. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -255,10 +255,10 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-beijing</p>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -267,7 +267,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekz4us4iruleja</p>
@@ -279,7 +279,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>The filter item used to filter tables, views, and functions during schema migration.</p>
+         * <p>The filter. Filters tables, views, and functions in schema migration.</p>
          * 
          * <strong>example:</strong>
          * <p>View</p>
@@ -294,7 +294,7 @@ public class DescribePreCheckStatusRequest extends Request {
          * <p>The type of schema definition. Valid values:</p>
          * <ul>
          * <li><strong>before</strong>: schema migration or initial schema synchronization.</li>
-         * <li><strong>after</strong>: DDL operations performed during incremental data migration or synchronization.</li>
+         * <li><strong>after</strong>: DDL operations during incremental data migration or incremental data synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -307,9 +307,10 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * <li><strong>true</strong>: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>

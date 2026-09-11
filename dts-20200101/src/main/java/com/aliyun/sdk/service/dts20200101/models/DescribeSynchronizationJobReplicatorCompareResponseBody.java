@@ -128,7 +128,7 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E6EB407F-C59F-4682-A682-A00FA6A2****</p>
@@ -139,7 +139,7 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -150,10 +150,10 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * <p>Indicates whether image matching is enabled. Valid values:</p>
+         * <p>The full image switch. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Image matching is enabled.</li>
-         * <li><strong>false</strong>: Image matching is disabled.</li>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

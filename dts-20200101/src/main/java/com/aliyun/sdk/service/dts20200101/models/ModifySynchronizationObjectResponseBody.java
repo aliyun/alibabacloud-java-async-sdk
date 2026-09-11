@@ -106,7 +106,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -117,7 +117,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -128,7 +128,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>902DDCDE-C755-4458-85DA-DF9A323C****</p>
@@ -139,7 +139,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -150,7 +150,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task that changes the objects. You must specify the task ID when you call the DescribeSynchronizationObjectModifyStatus operation to query the status and progress of the task.</p>
+         * <p>The task ID. You can call the <a href="https://help.aliyun.com/document_detail/49452.html">DescribeSynchronizationObjectModifyStatus</a> operation based on this parameter to query the status and progress of the synchronization object modification.</p>
          * 
          * <strong>example:</strong>
          * <p>tl911uvi25z****</p>

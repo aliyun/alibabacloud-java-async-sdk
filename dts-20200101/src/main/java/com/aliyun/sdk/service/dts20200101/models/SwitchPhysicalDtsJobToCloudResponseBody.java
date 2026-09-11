@@ -132,7 +132,7 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Dynamic error code, this parameter will be deprecated.</p>
+         * <p>The dynamic error code. This parameter will be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>403</p>
@@ -143,7 +143,10 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Dynamic error message used to replace the <strong>%s</strong> in the <strong>ErrMessage</strong> return parameter.  &gt; If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong>, and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>DtsJobId</p>
@@ -154,7 +157,7 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code returned when the call fails.</p>
+         * <p>The error code returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -165,7 +168,7 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns the corresponding error message when an invocation error occurs.</p>
+         * <p>The error message returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -176,7 +179,7 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -187,7 +190,7 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * <p>request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>659304E3-D44E-5EFA-BDE3-60015E30403B</p>
@@ -198,7 +201,7 @@ public class SwitchPhysicalDtsJobToCloudResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

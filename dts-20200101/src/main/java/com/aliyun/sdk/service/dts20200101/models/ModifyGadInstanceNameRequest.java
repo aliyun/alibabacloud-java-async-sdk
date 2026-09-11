@@ -115,7 +115,10 @@ public class ModifyGadInstanceNameRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the active geo-redundancy instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1i99e8l7913****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +127,10 @@ public class ModifyGadInstanceNameRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name of the active geo-redundancy instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6b0m001ir8mr9i9</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -142,7 +148,10 @@ public class ModifyGadInstanceNameRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the task. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +160,10 @@ public class ModifyGadInstanceNameRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek26mat2ldb4oy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

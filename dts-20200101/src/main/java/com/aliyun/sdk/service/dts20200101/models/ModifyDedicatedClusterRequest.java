@@ -143,9 +143,9 @@ public class ModifyDedicatedClusterRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The ID of the dedicated cluster.</p>
          * <blockquote>
-         * <p> You must specify one of the <strong>InstanceId</strong> and <strong>DedicatedClusterId</strong> parameters.</p>
+         * <p>Either <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong> must be specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -170,9 +170,9 @@ public class ModifyDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID of the cluster.</p>
          * <blockquote>
-         * <p> You must specify one of the <strong>InstanceId</strong> and <strong>DedicatedClusterId</strong> parameters.</p>
+         * <p>Either the <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong> parameter must be specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class ModifyDedicatedClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides.</p>
+         * <p>The region in which the DTS instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

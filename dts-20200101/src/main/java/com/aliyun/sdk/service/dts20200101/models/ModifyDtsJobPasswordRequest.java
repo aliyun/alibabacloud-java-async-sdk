@@ -171,10 +171,7 @@ public class ModifyDtsJobPasswordRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/208139.html">DescribeMigrationJobs</a>, <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a>, or <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID</p>
-         * </blockquote>
+         * <p>The instance ID of the data migration, synchronization, or subscribe instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsl3m1213ye7l****</p>
@@ -186,7 +183,7 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DTS task. The DTS task can be a data migration, data synchronization, or change tracking task.</p>
+         * <p>The ID of the data migration, synchronization, or change tracking task.</p>
          * 
          * <strong>example:</strong>
          * <p>l3m1213ye7l****</p>
@@ -198,13 +195,13 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * <p>The database to which the password belongs. Valid values:</p>
+         * <p>The database to which the account belongs. Valid values:</p>
          * <ul>
-         * <li><strong>src</strong>: source database.</li>
-         * <li><strong>dest</strong>: destination database.</li>
+         * <li><strong>src</strong>: the source database.</li>
+         * <li><strong>dest</strong>: the destination database.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required.</p>
+         * <p>This parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -217,9 +214,9 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * <p>The new password.</p>
+         * <p>The new password for the database account.</p>
          * <blockquote>
-         * <p> This parameter is required and cannot be set to a value that is the same as the current password.</p>
+         * <p>This parameter is required and must be different from the current password.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -232,7 +229,7 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region ID of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -244,7 +241,7 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -256,9 +253,18 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * <p>Synchronization direction, with values:</p>
+         * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong> (default): Forward. - <strong>Reverse</strong>: Reverse.</li>
+         * <li><strong>Forward</strong>: forward.</li>
+         * <li><strong>Reverse</strong>: reverse.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Default value: <strong>Forward</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>This parameter is required only when the synchronization topology of the data synchronization instance is two-way synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,10 +277,7 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * <p>The account of the source or destination database.</p>
-         * <blockquote>
-         * <p> This parameter is required.</p>
-         * </blockquote>
+         * <p>The username of the database account to modify.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstest</p>
@@ -286,9 +289,10 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

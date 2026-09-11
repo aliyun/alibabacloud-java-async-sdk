@@ -132,7 +132,7 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance corresponding to the generated reverse task.</p>
+         * <p>The ID of the DTS instance that corresponds to the generated reverse task.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsor1f9kr822l****</p>
@@ -154,7 +154,7 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error code returned when the call fails.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -165,7 +165,7 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Error message returned when the call fails.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -176,7 +176,7 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -187,7 +187,7 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -198,7 +198,7 @@ public class CreateReverseDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the request was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

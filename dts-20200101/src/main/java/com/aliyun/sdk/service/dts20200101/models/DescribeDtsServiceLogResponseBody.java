@@ -184,7 +184,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The dynamic error code. This parameter will be removed soon.</p>
+         * <p>The dynamic error code. This parameter will be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>403</p>
@@ -195,7 +195,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the <strong>ErrMessage</strong> parameter.</p>
+         * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>DtsJobId</p>
@@ -206,7 +206,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request fails.</p>
+         * <p>The error code returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -217,7 +217,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The error message returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -228,7 +228,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -239,7 +239,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -250,7 +250,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of log entries returned per page.</p>
+         * <p>The number of log entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -261,7 +261,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F87DF250-952C-47FE-8A02-69414FAA****</p>
@@ -272,7 +272,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the logs.</p>
+         * <p>The task logs details of the node.</p>
          */
         public Builder serviceLogContexts(java.util.List<ServiceLogContexts> serviceLogContexts) {
             this.serviceLogContexts = serviceLogContexts;
@@ -280,7 +280,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -291,7 +291,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of logs that meet the query conditions.</p>
+         * <p>The total number of log entries that meet the specified conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>35</p>
@@ -373,7 +373,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The log content.</p>
+             * <p>The specific log information.</p>
              * 
              * <strong>example:</strong>
              * <p>Statistics: generator = 369173; collector = 470109; replicator = 2470; ping = 2/2/2; execute = 29/29/29; rt = 29/29/29; state = IDLE; queries = -1; exceptions = {connects = 0, replicates = 0}; infos = {}</p>
@@ -384,7 +384,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log level.</p>
+             * <p>The status of the log entry.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -395,7 +395,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the logs were collected. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The time when the log was collected, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-05-13T09:13:39.443+00:00</p>

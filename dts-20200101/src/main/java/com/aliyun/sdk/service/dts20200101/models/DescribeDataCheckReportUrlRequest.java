@@ -142,11 +142,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * <p>The data verification method. Valid values:</p>
-         * <ul>
-         * <li><strong>1</strong>: full data verification.</li>
-         * <li><strong>2</strong>: incremental data verification.</li>
-         * </ul>
+         * <p>The data verification method. Currently, only the value <strong>1</strong> is supported, which indicates full verification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +155,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * <p>The name of the verified source database.</p>
+         * <p>The name of the source database to be verified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +168,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Data Transmission Service (DTS) task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <p>The ID of the DTS task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +181,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -197,7 +193,7 @@ public class DescribeDataCheckReportUrlRequest extends Request {
         }
 
         /**
-         * <p>The name of the table verified in the source database.</p>
+         * <p>The name of the table in the source database to be verified.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

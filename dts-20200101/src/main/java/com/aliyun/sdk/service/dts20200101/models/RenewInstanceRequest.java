@@ -131,7 +131,7 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The subscription duration of the DTS instance after renewal. Default value: 1.</p>
+         * <p>The subscription duration of the renewed instance. Default value: 1.</p>
          * <ul>
          * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values are <strong>1 to 5</strong>.</li>
          * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values are <strong>1 to 60</strong>.</li>
@@ -147,7 +147,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the DTS instance. Set the value to <strong>PREPAY</strong>, which specifies the subscription billing method.</p>
+         * <p>The billing method. Set the value to <strong>PREPAY</strong>, which indicates the subscription billing method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data synchronization or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <p>The ID of the data synchronization or change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,10 +173,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing cycle of the DTS instance after renewal. Valid values:</p>
+         * <p>The billing method for the renewal instance. Valid values:</p>
          * <ul>
-         * <li><strong>Year</strong></li>
-         * <li><strong>Month</strong> (default)</li>
+         * <li><strong>Year</strong>: yearly subscription.</li>
+         * <li><strong>Month</strong>: monthly subscription (default).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The ID of the region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -201,7 +201,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

@@ -106,7 +106,7 @@ public class SwitchSynchronizationEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -117,7 +117,7 @@ public class SwitchSynchronizationEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -128,7 +128,7 @@ public class SwitchSynchronizationEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3232F84C-C961-4811-B014-4EA7A27C****</p>
@@ -139,7 +139,7 @@ public class SwitchSynchronizationEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -150,7 +150,7 @@ public class SwitchSynchronizationEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID. You must specify the task ID when you call the <a href="https://help.aliyun.com/document_detail/135598.html">DescribeEndpointSwitchStatus</a> operation to query the execution status of the task.</p>
+         * <p>The task ID. You can call the <a href="https://help.aliyun.com/document_detail/135598.html">DescribeEndpointSwitchStatus</a> operation to query the execution status of this task.</p>
          * 
          * <strong>example:</strong>
          * <p>11****</p>

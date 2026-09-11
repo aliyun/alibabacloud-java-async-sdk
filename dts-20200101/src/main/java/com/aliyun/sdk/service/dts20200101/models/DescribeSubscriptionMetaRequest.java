@@ -130,7 +130,10 @@ public class DescribeSubscriptionMetaRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the distributed change tracking instance.</p>
+         * <p>The instance ID of the distributed change tracking task.</p>
+         * <blockquote>
+         * <p>This parameter is required.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>dtsbr4m9luv2******</p>
@@ -142,7 +145,7 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the change tracking instance resides.</p>
+         * <p>The region in which the change tracking instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -154,7 +157,7 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -166,7 +169,7 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * <p>The ID of the consumer group.</p>
+         * <p>The consumer group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,13 +182,13 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * <p>The IDs of all subtasks in the distributed change tracking task. Separate multiple subtask IDs with commas (,).</p>
+         * <p>The IDs of all change tracking subtasks in the distributed change tracking task. Separate multiple IDs with commas (,).</p>
          * <blockquote>
-         * <p> You must specify at least one of the SubMigrationJobIds and <strong>Topics</strong> parameters. We recommend that you specify the SubMigrationJobIds parameter.</p>
+         * <p>You must specify at least one of this parameter and <strong>Topics</strong>. We recommend that you specify this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>z38m91gg2******</p>
+         * <p>[&quot;zsls58agp6f****&quot;]</p>
          */
         public Builder subMigrationJobIds(java.util.Map<String, ?> subMigrationJobIds) {
             String subMigrationJobIdsShrink = shrink(subMigrationJobIds, "SubMigrationJobIds", "json");
@@ -195,13 +198,13 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * <p>The topics of all subtasks in the distributed change tracking task. Separate multiple topics with commas (,).</p>
+         * <p>All topics of the distributed change tracking task. Separate multiple topics with commas (,).</p>
          * <blockquote>
-         * <p> You must specify at least one of the <strong>SubMigrationJobIds</strong> and Topics parameters. We recommend that you specify the <strong>SubMigrationJobIds</strong> parameter.</p>
+         * <p>You must specify at least one of this parameter and <strong>SubMigrationJobIds</strong>. We recommend that you specify <strong>SubMigrationJobIds</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>cn_hangzhou_rm_bp1n0x0x5tz******_dtstestdata_version2</p>
+         * <p>[&quot;rm_bp15jj3qi1p8f****&quot;]</p>
          */
         public Builder topics(java.util.Map<String, ?> topics) {
             String topicsShrink = shrink(topics, "Topics", "json");

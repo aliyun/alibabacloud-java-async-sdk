@@ -101,7 +101,10 @@ public class DescribeDocParserJobResultRequest extends Request {
         } 
 
         /**
-         * DtsJobId.
+         * <p>The task ID (DtsJobId) returned when the document parsing task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts-20250729-y0zz3t13h7d****</p>
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -110,7 +113,10 @@ public class DescribeDocParserJobResultRequest extends Request {
         }
 
         /**
-         * RagInstanceId.
+         * <p>The instance ID of the DTS RagFlow instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsgbe12he619iy801</p>
          */
         public Builder ragInstanceId(String ragInstanceId) {
             this.putQueryParameter("RagInstanceId", ragInstanceId);
@@ -119,7 +125,10 @@ public class DescribeDocParserJobResultRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the task. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -128,7 +137,10 @@ public class DescribeDocParserJobResultRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

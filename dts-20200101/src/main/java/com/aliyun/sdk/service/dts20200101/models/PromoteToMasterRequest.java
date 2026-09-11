@@ -115,7 +115,10 @@ public class PromoteToMasterRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gad-bp162d4tp0500****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +127,10 @@ public class PromoteToMasterRequest extends Request {
         }
 
         /**
-         * MasterDbInstanceId.
+         * <p>Primary instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1756****</p>
          */
         public Builder masterDbInstanceId(String masterDbInstanceId) {
             this.putQueryParameter("MasterDbInstanceId", masterDbInstanceId);
@@ -133,7 +139,10 @@ public class PromoteToMasterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>Region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +151,10 @@ public class PromoteToMasterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -151,7 +163,10 @@ public class PromoteToMasterRequest extends Request {
         }
 
         /**
-         * SlaveDbInstanceId.
+         * <p>Secondary instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1756****</p>
          */
         public Builder slaveDbInstanceId(String slaveDbInstanceId) {
             this.putQueryParameter("SlaveDbInstanceId", slaveDbInstanceId);

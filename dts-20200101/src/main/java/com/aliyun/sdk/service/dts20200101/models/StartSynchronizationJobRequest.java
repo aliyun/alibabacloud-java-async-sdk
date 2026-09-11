@@ -130,10 +130,10 @@ public class StartSynchronizationJobRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+         * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be discontinued.</p>
          * 
          * <strong>example:</strong>
-         * <p>12323344****</p>
+         * <p>1689726061829****</p>
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -151,7 +151,10 @@ public class StartSynchronizationJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -160,7 +163,7 @@ public class StartSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -174,17 +177,15 @@ public class StartSynchronizationJobRequest extends Request {
         /**
          * <p>The synchronization direction. Valid values:</p>
          * <ul>
-         * <li><strong>Forward</strong></li>
-         * <li><strong>Reverse</strong></li>
+         * <li><strong>Forward</strong>: forward.</li>
+         * <li><strong>Reverse</strong>: reverse.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The default value is <strong>Forward</strong>.</p>
-         * </li>
-         * <li><p>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization task only if the topology is two-way synchronization.</p>
-         * </li>
+         * <li>Default value: <strong>Forward</strong>.</li>
+         * <li>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Forward</p>

@@ -131,7 +131,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Data Transmission Service (DTS) instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+         * <p>The DTS instance ID. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ETL task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+         * <p>The ETL task ID. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>l5512es7w15****</p>
@@ -156,7 +156,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number of the instance status list. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -168,7 +168,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * <p>The number of entries per page in a paged query. Settings this parameter for paging. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -180,7 +180,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the DTS instance resides. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the available Alibaba Cloud regions.</p>
+         * <p>The region ID of the DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query available regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -192,7 +192,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>

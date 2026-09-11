@@ -85,16 +85,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "dts.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "dts.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "dts.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "dts.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "dts.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-northeast-2", "dts.ap-northeast-2.aliyuncs.com"),
-            new TeaPair("ap-southeast-6", "dts.ap-southeast-6.aliyuncs.com"),
-            new TeaPair("ap-southeast-7", "dts.ap-southeast-7.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "dts.cn-guangzhou.aliyuncs.com"),
-            new TeaPair("cn-heyuan", "dts.cn-heyuan.aliyuncs.com"),
-            new TeaPair("cn-wuhan-lr", "dts.cn-wuhan-lr.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-jva", "dts.cn-zhengzhou-jva.aliyuncs.com"),
-            new TeaPair("me-central-1", "dts.me-central-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "dts.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -143,7 +134,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can preview related API operation parameters when you configure a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</p>
+     * <p>You can perform the required pre-configurations in the console and then preview the corresponding OpenAPI parameter information to help you specify request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ConfigureSubscription  ConfigureSubscriptionRequest
@@ -166,6 +157,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to create a change tracking instance.</p>
+     * <blockquote>
+     * <p>In the <strong>Advanced Settings</strong> step of the console, move the pointer over the <strong>Next: Save the task and perform a precheck</strong> button, and then click <strong>Preview OpenAPI parameters</strong> in the tooltip to view the parameter information for configuring this instance by using API operations.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of ConfigureSubscriptionInstance  ConfigureSubscriptionInstanceRequest
      * @return ConfigureSubscriptionInstanceResponse
@@ -206,10 +200,12 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/49446.html">CreateSynchronizationJob</a> operation to create a data synchronization instance.</p>
      * <blockquote>
+     * <ul>
+     * <li>After this operation is called, the data synchronization instance automatically starts and performs a precheck. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the instance.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>After you call this operation to configure a data synchronization task, the task will be automatically started and prechecked. You do not need to call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to start the task.</li>
-     * <li>A data synchronization task may fail to be started due to precheck failures. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the task. Then, you can change parameter settings based on the error messages about the precheck failures. After you fix the issue, you must call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization task.</li>
+     * <li>If the data synchronization instance fails to start, the precheck may have failed. You can call the <a href="https://help.aliyun.com/document_detail/49453.html">DescribeSynchronizationJobStatus</a> operation to query the status of the data synchronization instance, obtain the error message of the precheck failure, and adjust the parameters. After the adjustment, you can call the <a href="https://help.aliyun.com/document_detail/49448.html">StartSynchronizationJob</a> operation to restart the data synchronization instance.</li>
      * </ul>
      * 
      * @param request the request parameters of ConfigureSynchronizationJob  ConfigureSynchronizationJobRequest
@@ -357,9 +353,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing">pricing</a> of DTS.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If you want to run a DTS task on a DTS dedicated cluster, you must configure the task before you purchase a DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a DTS task.</li>
+     * <li>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Before invoking this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</li>
+     * <li>Nodes on a dedicated cluster support only the workflow of configuring a node before purchasing an instance. You can invoke the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to configure a node.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDtsInstance  CreateDtsInstanceRequest
@@ -381,11 +380,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>DTS provides the following metrics for DTS tasks:************</p>
+     * <p>DTS currently supports the following alert metrics: <strong>Latency</strong>, <strong>Migration Status</strong>, and <strong>Full Migration Duration</strong>:</p>
      * <ul>
-     * <li><strong>Latency</strong>: DTS monitors the latency of a DTS task. If the latency of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of seconds.</li>
-     * <li><strong>Status</strong>: DTS monitors the status of a DTS task. If the state of the task changes to <strong>Error</strong> or <strong>Restore</strong>, an alert is triggered.</li>
-     * <li><strong>Full Timeout</strong>: DTS monitors the duration of a DTS task. If the duration of the task exceeds the specified threshold, an alert is triggered. The threshold is specified in units of hours.</li>
+     * <li><strong>Latency</strong>: Monitors incremental data migration latency. An alert is triggered when the migration latency, synchronization latency, or change tracking latency exceeds the specified threshold (in seconds).</li>
+     * <li><strong>Migration Status</strong>: Monitors the task status. An alert is triggered when the task status is <strong>Error</strong> or <strong>Recovered</strong>.</li>
+     * <li><strong>Full Migration Duration</strong>: Monitors the duration of full data migration. An alert is triggered when the duration exceeds the specified threshold (in hours).</li>
      * </ul>
      * 
      * @param request the request parameters of CreateJobMonitorRule  CreateJobMonitorRuleRequest
@@ -425,9 +424,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>调用接口创建的反向任务会立即进行预检查，预检查通过后会进行增量数据采集，增量数据写入模块不会运行（需要调用<strong>StartReverseWriter</strong>接口运行）。</p>
+     * <p>The reverse task created by calling this operation immediately starts a precheck. After the precheck is passed, incremental data collection begins, but the incremental data write module does not run. You must call the <strong>StartReverseWriter</strong> operation to start it.</p>
      * <blockquote>
-     * <p>创建的反向任务固定为同步任务，且只有增量写入模块。</p>
+     * <p>The created reverse task is a synchronization task that contains only the incremental write module.</p>
      * </blockquote>
      * 
      * @param request the request parameters of CreateReverseDtsJob  CreateReverseDtsJobRequest
@@ -520,6 +519,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling this API operation. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteDtsJob  DeleteDtsJobRequest
      * @return DeleteDtsJobResponse
      */
@@ -538,6 +542,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>Subscription DTS instances cannot be released by calling API operations. You can release them by unsubscribing. For more information, see <a href="https://help.aliyun.com/document_detail/289054.html">Release a DTS instance</a>.</ph>&lt;props=&quot;intl&quot;&gt;<ph>Subscription DTS instances cannot be released.</ph>.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteDtsJobs  DeleteDtsJobsRequest
      * @return DeleteDtsJobsResponse
      */
@@ -844,6 +853,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative call threshold per region is 100 calls per second.</li>
+     * <li>The call threshold per account per region is 5 calls per second.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeDocParserJobResult  DescribeDocParserJobResultRequest
      * @return DescribeDocParserJobResultResponse
      */
@@ -862,6 +878,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has call frequency limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative call threshold for a single region is 200 calls per second.</li>
+     * <li>The call threshold for a single account in a single region is 20 calls per second.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeDocParserJobStatus  DescribeDocParserJobStatusRequest
      * @return DescribeDocParserJobStatusResponse
      */
@@ -916,6 +939,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative threshold for calls in a single region is 160 calls per second.</li>
+     * <li>The threshold for calls by a single account in a single region is 40 calls per second.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeDtsJobDetail  DescribeDtsJobDetailRequest
      * @return DescribeDtsJobDetailResponse
      */
@@ -935,8 +965,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=Dts%5C&api=DescribeDtsJobs%5C&type=RPC%5C&version=2020-01-01">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
+     * <p>This operation has rate limits. Calls that exceed the limits are rejected.</p>
+     * <ul>
+     * <li>The cumulative threshold for calls in a single region is 200 calls per second.</li>
+     * <li>The threshold for calls by a single account in a single region is 20 calls per second.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeDtsJobs  DescribeDtsJobsRequest
      * @return DescribeDtsJobsResponse
@@ -1263,9 +1296,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  When Data Transmission Service (DTS) tracks data changes from a PolarDB-X 1.0 instance, data is distributed across the attached ApsaraDB RDS for MySQL instances. DTS runs a subtask for each ApsaraDB RDS for MySQL instance. You can call this operation to query the details of the subtasks in a distributed change tracking task.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the change tracking instance and the ID of the consumer group.</li>
+     * <li>Because a PolarDB-X 1.0 change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a PolarDB-X 1.0 change tracking task.
+     * &lt;props=&quot;intl&quot;&gt;</li>
+     * <li>Because a DRDS change tracking task is a distributed change tracking task, each ApsaraDB RDS for MySQL instance associated with the task corresponds to a change tracking subtask. You can call this operation to query the information about change tracking subtasks.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID, consumer group ID, and other information about a DRDS change tracking task.
+     * .</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSubscriptionMeta  DescribeSubscriptionMetaRequest
@@ -1467,9 +1505,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database that is connected over Cloud Enterprise Network (CEN).</p>
      * <ul>
-     * <li>This operation is used to initialize the built-in account named rdsdt_dtsacct on a node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform data synchronization tasks.</li>
+     * <li>The unit node must be an ApsaraDB RDS for MySQL instance or a self-managed MySQL database connected through Cloud Enterprise Network (CEN).</li>
+     * <li>This operation initializes a built-in account named rdsdt_dtsacct in a unit node of an active geo-redundancy database cluster. DTS uses this account to connect to the node and perform synchronization tasks.</li>
      * </ul>
      * 
      * @param request the request parameters of InitDtsRdsInstance  InitDtsRdsInstanceRequest
@@ -1527,7 +1565,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <hr>
+     * <p>***.</p>
      * 
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -1602,7 +1640,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can modify only the overcommit ratio.</p>
+     * <p>Currently, only the overcommit ratio can be modified.</p>
      * 
      * @param request the request parameters of ModifyDedicatedCluster  ModifyDedicatedClusterRequest
      * @return ModifyDedicatedClusterResponse
@@ -1642,7 +1680,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After a DTS task is migrated from a dedicated cluster to a shared cluster, the task is billed on a pay-as-you-go basis.</p>
+     * <p>After a migration task is changed from a dedicated cluster to a public cluster, the billing method of the task changes to pay-as-you-go, and billing starts.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDtsJobDedicatedCluster  ModifyDtsJobDedicatedClusterRequest
@@ -1664,9 +1702,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  DTS allows you to upgrade or downgrade the configurations of DTS instances in a dedicated cluster. You can adjust the resources that are occupied for task execution to dynamically adjust the number of tasks that can be scheduled in the cluster. This way, you can reduce the total number of DUs required for the cluster or release DUs.</p>
      * <ul>
-     * <li>Before you modify the upper limit of DUs for a DTS task, make sure that sufficient DUs are available.</li>
+     * <li>DTS instances in a dedicated cluster must support specification changes. By changing the resources consumed by a task at runtime, you can dynamically adjust the number of schedulable tasks in the current cluster, thereby deducting or releasing the total number of DUs in the cluster.</li>
+     * <li>Before modifying the DU upper limit of a task, ensure that sufficient resources are available.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDtsJobDuLimit  ModifyDtsJobDuLimitRequest
@@ -1689,7 +1727,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> After the database is changed, Data Transmission Service (DTS) rolls back the incremental write offset for 10 seconds. If the synchronized or migrated data does not have a primary key, make sure that no data is written to the source database while the source or destination database is being replaced. Otherwise, duplicate data may exist.</p>
+     * <p>After the database instance is modified, the DTS incremental write module rolls back writes by 10 seconds. If the data being synchronized or migrated does not have a primary key, stop writing data to the business associated with the source instance during the database instance replacement. Otherwise, duplicate data may occur.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyDtsJobEndpoint  ModifyDtsJobEndpointRequest
@@ -1802,7 +1840,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can preview related API operation parameters when you modify the information about a change tracking task in the Data Transmission Service (DTS) console. This helps you configure the request parameters of this API operation. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview the request parameters of API operations</a>.</p>
+     * <p>You can perform the required preconfigurations in the console and then preview the corresponding OpenAPI parameter information to help you fill in the request parameters. For more information, see <a href="https://help.aliyun.com/document_detail/2851612.html">Preview OpenAPI request parameters</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifySubscription  ModifySubscriptionRequest
@@ -1915,7 +1953,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If you clear the configurations of a data synchronization or change tracking task, DTS deletes the task. Then, DTS creates another task. The task is in the Not Configured state. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation reconfigure the task.</p>
+     * <p>After the configuration of a data synchronization or change tracking task is cleared, the original task is deleted. DTS creates a new unconfigured task. You must call the <a href="https://help.aliyun.com/document_detail/208399.html">ConfigureDtsJob</a> operation to reconfigure the task.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetDtsJob  ResetDtsJobRequest
@@ -1938,7 +1976,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If you clear the configurations of a data synchronization task, the task will be released. To start the task again, you must call the <strong>ConfigureSynchronizationJob</strong> operation to reconfigure the task.</p>
+     * <p>After you reset the configuration of a data synchronization task, the original synchronization task is released. You must call the <strong>ConfigureSynchronizationJob</strong> operation to reconfigure the synchronization task before you can start the task.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ResetSynchronizationJob  ResetSynchronizationJobRequest
@@ -2086,7 +2124,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that your instance is not released and is paused. You can check the status of the instance in the Data Transmission Service (DTS) console or by calling the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation.</p>
+     * <p>Before you call this operation, check the status of the reverse task in the console or by calling <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a>. Make sure that the task has not been released and is in the paused state.</p>
      * 
      * @param request the request parameters of StartReverseWriter  StartReverseWriterRequest
      * @return StartReverseWriterResponse
@@ -2291,11 +2329,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
+     * <ul>
+     * <li>When you call this operation, the synchronization task must be in the Synchronizing state.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li>When you call this operation, the data synchronization task must be in the Synchronizing state.</li>
-     * <li>We recommend that you do not pause a data synchronization task for more than 6 hours. Otherwise, the task cannot be started again.</li>
-     * <li>If the billing method is pay-as-you-go, DTS charges a fee even when the task is paused. This is because DTS only stops writing data to the destination database. DTS continues to pull the logs of the source database so that the task can resume quickly after it is restarted. Therefore, data synchronization consumes resources such as the bandwidth of the source database.</li>
+     * <li>A synchronization task cannot be paused for more than 6 hours. Otherwise, the task cannot be restarted.</li>
+     * <li>DTS continues to charge fees for a pay-as-you-go synchronization task even if the task is paused. This is because DTS only pauses writing data to the destination instance but continues to pull logs from the source instance to ensure quick resumption when the task is restarted. Therefore, the task still consumes resources such as bandwidth of the source database.</li>
      * </ul>
      * 
      * @param request the request parameters of SuspendSynchronizationJob  SuspendSynchronizationJobRequest
@@ -2353,13 +2393,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can query instances by tag.</p>
+     * <p>If you have a large number of instances, you can create multiple tags and attach different tags to instances for categorization. Then, you can filter instances by tag.</p>
      * <ul>
-     * <li>A tag consists of a key and a value. Each key must be unique in a region within an Alibaba Cloud account. Different keys can be mapped to the same value.</li>
-     * <li>If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.</li>
-     * <li>If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.</li>
-     * <li>You can add up to 20 tags to an instance.</li>
-     * <li>You can add tags to up to 50 instances in each request.</li>
+     * <li>A tag consists of a key-value pair. Tag keys must be unique within the same Alibaba Cloud account and region. Tag values do not have this restriction.</li>
+     * <li>If the specified tag does not exist, the tag is automatically created and attached to the destination instance.</li>
+     * <li>If the instance already has a tag with the same key, the existing tag is overwritten.</li>
+     * <li>You can attach up to 20 tags to each instance.</li>
+     * <li>You can invoke the operation to attach tags to up to 50 instances at a time.</li>
      * </ul>
      * 
      * @param request the request parameters of TagResources  TagResourcesRequest
@@ -2380,6 +2420,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Downgrading DTS instance specifications is no longer supported.</li>
+     * </ul>
+     * </blockquote>
+     * <ul>
+     * <li>If the source of a DTS instance is Redis 6.0 and incremental data updates exist, do not perform an upgrade. Otherwise, the DTS instance may fail and cannot be recovered. You must reconfigure the instance after a failure.</li>
+     * </ul>
+     * 
      * @param request the request parameters of TransferInstanceClass  TransferInstanceClassRequest
      * @return TransferInstanceClassResponse
      */
@@ -2399,10 +2449,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">billing</a> of DTS.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of Data Transmission Service (DTS).
+     * &lt;props=&quot;intl&quot;&gt;Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS).</p>
      * <ul>
-     * <li>To prevent resource waste, make sure that the billing method of your DTS instances has to be changed.</li>
-     * <li>Data migration instances only support the pay-as-you-go billing method.</li>
+     * <li>To avoid resource waste, confirm the payment method transformation before you perform the operation.</li>
+     * <li>Data migration instances support only the pay-as-you-go billing method. No transformation is required.
+     * &lt;props=&quot;china&quot;&gt;</li>
+     * <li>Serverless instances do not support payment method transformation.</li>
      * </ul>
      * 
      * @param request the request parameters of TransferPayType  TransferPayTypeRequest
@@ -2425,7 +2478,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> If a tag is unbound from an instance and is not bound to other instances, the tag is deleted.</p>
+     * <p>After a tag is unbound from an instance, the tag is automatically deleted if it is not bound to any other instance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UntagResources  UntagResourcesRequest
@@ -2447,13 +2500,14 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of Data Transmission Service (DTS)
-     * When you call this operation, take note of the following information:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/dts/detail">pricing</a> of ApsaraDB DTS.
+     * &lt;props=&quot;intl&quot;&gt;Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.alibabacloud.com/zh/product/data-transmission-service/pricing">pricing</a> of ApsaraDB DTS.
+     * Before you begin:</p>
      * <ul>
-     * <li>The source and destination databases of the data synchronization task are both <strong>MySQL</strong> databases.</li>
-     * <li>The synchronization topology of the data synchronization task is <strong>one-way synchronization</strong>.</li>
-     * <li>The data synchronization task is in the <strong>Synchronizing</strong> state.</li>
-     * <li>The upgrade operation causes data synchronization latency of about 5 seconds. We recommend that you perform this operation during off-peak hours.</li>
+     * <li>The database type of both the source instance and the destination instance of the data synchronization node must be <strong>MySQL</strong>.</li>
+     * <li>The synchronization topology of the data synchronization node must be <strong>one-way synchronization</strong>.</li>
+     * <li>The data synchronization node must be in the <strong>Synchronizing</strong> state.</li>
+     * <li>During the upgrade, data synchronization may experience a latency of approximately 5 seconds. Perform this operation during off-peak hours.</li>
      * </ul>
      * 
      * @param request the request parameters of UpgradeTwoWay  UpgradeTwoWayRequest
@@ -2475,7 +2529,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The operation that you want to perform. Set the value to <strong>WhiteIpList</strong>.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party ApsaraDB database</strong>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/84900.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database for migration, synchronization, or subscribe</a>.
+     * &lt;props=&quot;intl&quot;&gt;If the <strong>source or destination instance</strong> is a <strong>self-managed database</strong> or a <strong>third-party ApsaraDB database</strong>, you need to invoke this operation to query the IP addresses of DTS servers, and then add the returned IP addresses to the security settings (typically the firewall) of the source or destination instance. For more information about how to add IP addresses, see <a href="https://help.aliyun.com/document_detail/176627.html">Add the CIDR blocks of DTS servers to the whitelist of a self-managed database</a>.</p>
+     * <blockquote>
+     * <p>If the <strong>source or destination database</strong> is an <strong>Alibaba Cloud database instance</strong> (such as ApsaraDB RDS or ApsaraDB for MongoDB) or a <strong>self-managed database hosted on ECS</strong>, the system automatically adds the IP addresses of DTS servers to the security settings of the instance when you click <strong>Authorize Whitelist and Proceed to Next Step</strong> during the configuration of the source or destination instance. You do not need to manually add the IP addresses.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of WhiteIpList  WhiteIpListRequest
      * @return WhiteIpListResponse

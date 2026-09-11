@@ -115,7 +115,7 @@ public class DeleteConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4D0ADAD5-DD97-41B6-B78F-D1961AB1****</p>
@@ -126,7 +126,7 @@ public class DeleteConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

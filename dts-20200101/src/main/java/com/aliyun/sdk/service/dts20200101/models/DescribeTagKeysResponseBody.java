@@ -119,7 +119,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The type of the tag.</p>
+         * <p>The tag type.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -130,7 +130,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start page of the returned pages.</p>
+         * <p>The page number of the returned page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -152,7 +152,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AD110813-9AD6-5F07-BFC8-4C841309****</p>
@@ -163,7 +163,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The list of tag keys.</p>
          */
         public Builder tagKeys(java.util.List<String> tagKeys) {
             this.tagKeys = tagKeys;
@@ -171,7 +171,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned tag keys.</p>
+         * <p>The total number of tag keys.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

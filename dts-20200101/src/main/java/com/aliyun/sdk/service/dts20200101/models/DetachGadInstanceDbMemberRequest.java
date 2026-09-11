@@ -115,7 +115,10 @@ public class DetachGadInstanceDbMemberRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the active geo-redundancy instance group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gad-bp162d4tp0500****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -133,7 +136,10 @@ public class DetachGadInstanceDbMemberRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see the list of supported regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +148,10 @@ public class DetachGadInstanceDbMemberRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -151,7 +160,10 @@ public class DetachGadInstanceDbMemberRequest extends Request {
         }
 
         /**
-         * SlaveDbInstanceId.
+         * <p>The instance ID of the secondary role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-sdfghjk****</p>
          */
         public Builder slaveDbInstanceId(String slaveDbInstanceId) {
             this.putQueryParameter("SlaveDbInstanceId", slaveDbInstanceId);

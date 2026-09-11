@@ -115,7 +115,7 @@ public class DeleteMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F28A96B1-F897-4246-833B-310A3345****</p>
@@ -126,7 +126,7 @@ public class DeleteMigrationJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

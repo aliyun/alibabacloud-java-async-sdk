@@ -132,7 +132,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>DeleteDtsJob</strong>.</p>
+         * <p>The dynamic error code. This parameter will be deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p>403</p>
@@ -143,7 +143,10 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation that you want to perform. Set the value to <strong>DeleteDtsJob</strong>.</p>
+         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>DtsJobId</p>
@@ -154,7 +157,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error code returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -165,7 +168,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The error message returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -176,7 +179,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -187,17 +190,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The synchronization direction. Valid values:</p>
-         * <ul>
-         * <li><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</li>
-         * <li><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</li>
-         * </ul>
-         * <blockquote>
-         * </blockquote>
-         * <ul>
-         * <li>Default value: <strong>Forward</strong>.</li>
-         * <li>You can set this parameter to <strong>Reverse</strong> to delete the reverse synchronization task only if the topology is two-way synchronization.</li>
-         * </ul>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01B6F25-21E7-4484-99D5-3EF2625C****</p>
@@ -208,7 +201,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region in which the data migration or synchronization task resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

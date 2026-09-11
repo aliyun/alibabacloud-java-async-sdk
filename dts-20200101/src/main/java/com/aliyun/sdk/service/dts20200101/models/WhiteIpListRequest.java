@@ -271,7 +271,7 @@ public class WhiteIpListRequest extends Request {
         } 
 
         /**
-         * <p>destination aliyun uid</p>
+         * <p>The UID of the destination Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -283,7 +283,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>VPCNAT destination main VSW</p>
+         * <p>The primary vSwitch of the destination for VPC NAT.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -295,7 +295,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>destination role name</p>
+         * <p>The name of the destination role.</p>
          * 
          * <strong>example:</strong>
          * <p>ram-for-dts-sq</p>
@@ -307,7 +307,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>VPCNAT destination backup VSW</p>
+         * <p>The secondary vSwitch of the destination for VPC NAT.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -319,7 +319,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>source vpc id</p>
+         * <p>The ID of the destination VPC.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -331,14 +331,14 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>The region ID to which the target instance belongs, please refer to the supported region list for details.</p>
+         * <p>The region ID of the destination instance. For details, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * <blockquote>
-         * <blockquote>
-         * <p>If the target instance is a self built database or third-party cloud database with a public IP address, you can pass in the cn Hangzhou or the region ID closest to the physical distance of the database.</p>
-         * </blockquote>
+         * <ul>
+         * <li>If the destination instance is a self-managed database with a public IP address or a third-party ApsaraDB database, you can set this parameter to <strong>ap-southeast-1</strong> or the area ID that is geographically closest to the database.</li>
+         * </ul>
          * </blockquote>
          * <ul>
-         * <li>When the DTS task is migration or synchronization, this parameter must be passed in.</li>
+         * <li>This parameter is required when the DTS task is a data migration or data synchronization task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,7 +351,10 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region ID of the source instance. For details, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <blockquote>
+         * <p>If the source instance is a self-managed database with a public IP address or a third-party ApsaraDB database, you can set this parameter to <strong>ap-southeast-1</strong> or the area ID that is geographically closest to the database.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -364,7 +367,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region to which the DTS instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -376,7 +379,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek26mat2ldb4oy</p>
@@ -388,7 +391,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>source aliyun uid</p>
+         * <p>The UID of the source Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>1971721963139419</p>
@@ -400,7 +403,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>VPCNAT source end main VSW</p>
+         * <p>The primary vSwitch of the source for VPC NAT.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -412,7 +415,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>source role Name</p>
+         * <p>The name of the source role.</p>
          * 
          * <strong>example:</strong>
          * <p>ram-for-dts</p>
@@ -424,7 +427,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>VPCNAT source backup VSW</p>
+         * <p>The secondary vSwitch of the source for VPC NAT.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -436,7 +439,7 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>source vpc id</p>
+         * <p>The ID of the source VPC.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -448,10 +451,10 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>The access method for self built databases or third-party cloud databases, with a value of</p>
+         * <p>The connection method of the self-managed database or third-party ApsaraDB database. Valid values:</p>
          * <ul>
-         * <li>Internet: accessed through the public network.</li>
-         * <li>VPC: Connected through dedicated line/VPN gateway/intelligent gateway.</li>
+         * <li><strong>internet</strong>: connected over the Internet.</li>
+         * <li><strong>vpc</strong>: connected over Express Connect, VPN Gateway, or Smart Access Gateway.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -465,9 +468,10 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * <p>Whether it is a seamless integration (Zero-ETL) task, the value can be:</p>
+         * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: No. - <strong>true</strong>: Yes.</li>
+         * <li><strong>true</strong>: The node is a seamless integration (Zero-ETL) node.</li>
+         * <li><strong>false</strong>: The node is not a seamless integration (Zero-ETL) node.</li>
          * </ul>
          * 
          * <strong>example:</strong>

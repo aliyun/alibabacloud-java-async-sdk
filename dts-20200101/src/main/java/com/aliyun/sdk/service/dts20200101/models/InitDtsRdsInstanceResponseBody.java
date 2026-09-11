@@ -132,7 +132,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The built-in account that is used by DTS to connect to the node.</p>
+         * <p>The built-in account that DTS uses to connect to the unit node.</p>
          * 
          * <strong>example:</strong>
          * <p>rdsdt_dtsacct</p>
@@ -154,7 +154,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned if the request fails.</p>
+         * <p>The error code returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -165,7 +165,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the request fails.</p>
+         * <p>The error message returned if the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The Value of Input Parameter %s is not valid.</p>
@@ -187,7 +187,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7796ECE0-9C17-5E4D-9CE6-B7EC825A****</p>

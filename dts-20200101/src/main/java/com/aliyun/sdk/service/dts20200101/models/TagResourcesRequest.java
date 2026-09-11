@@ -118,7 +118,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the Data Transmission Service (DTS) instances. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -143,9 +143,9 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the data migration, data synchronization, or change tracking instances. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance IDs.</p>
+         * <p>The ID of the data migration, synchronization, or change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query instance IDs.</p>
          * <blockquote>
-         * <p>N specifies the serial number of the instance. For example, ResourceId.1 specifies the ID of the first instance and ResourceId.2 specifies the ID of the second instance.</p>
+         * <p>N specifies the sequence number of the instance ID. For example, ResourceId.0 specifies the first instance ID, and ResourceId.1 specifies the second instance ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -171,7 +171,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags to be added to the instances.</p>
+         * <p>The list of tags (key-value pairs) to bind.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -242,14 +242,14 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N.</p>
+             * <p>The key of the tag.</p>
              * <blockquote>
+             * <ul>
+             * <li>N specifies the sequence number of the tag key. For example, Tag.0.Key specifies the key of the first tag, and Tag.1.Key specifies the key of the second tag.</li>
+             * </ul>
              * </blockquote>
              * <ul>
-             * <li><p>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag, and Tag.2.Key specifies the key of the second tag.</p>
-             * </li>
-             * <li><p>The tag key cannot be an empty string.</p>
-             * </li>
+             * <li>Empty strings are not allowed.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -262,14 +262,14 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N.</p>
+             * <p>The value of the tag.</p>
              * <blockquote>
+             * <ul>
+             * <li>N specifies the sequence number of the tag value. For example, Tag.0.Value specifies the value of the first tag, and Tag.1.Value specifies the value of the second tag.</li>
+             * </ul>
              * </blockquote>
              * <ul>
-             * <li><p>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.</p>
-             * </li>
-             * <li><p>The tag value can be an empty string.</p>
-             * </li>
+             * <li>Empty strings are allowed.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 

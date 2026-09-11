@@ -227,7 +227,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>Ensures the idempotency of the request. Generate a parameter value from your client to make sure that the value is unique among different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -239,7 +239,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data migration or synchronization task.</p>
+         * <p>The ID of the data migration or data synchronization task.</p>
          * 
          * <strong>example:</strong>
          * <p>k2gm967v16f****</p>
@@ -251,7 +251,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The timestamp that indicates the end of the time range to query. Unit: milliseconds.</p>
+         * <p>The end timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642476194000</p>
@@ -276,13 +276,13 @@ public class DescribeMetricListRequest extends Request {
 
         /**
          * <ul>
-         * <li><strong>InternetOut</strong>: the outbound traffic over the Internet. Unit: byte.</li>
-         * <li><strong>diskusage_utilization</strong>: the disk usage.</li>
-         * <li><strong>IntranetInRate</strong>: the inbound traffic over the internal network. Unit: byte.</li>
-         * <li><strong>InternetIn</strong>: the inbound traffic from the Internet. Unit: byte.</li>
-         * <li><strong>cpu_total</strong>: the CPU utilization.</li>
-         * <li><strong>memory_usedutilization</strong>: the memory usage.</li>
-         * <li><strong>IntranetOutRate</strong>: the outbound traffic over the internal network. Unit: byte.</li>
+         * <li><strong>InternetOut</strong>: outbound Internet traffic, in bytes.</li>
+         * <li><strong>diskusage_utilization</strong>: disk usage.</li>
+         * <li><strong>IntranetInRate</strong>: inbound internal network traffic, in bytes.</li>
+         * <li><strong>InternetIn</strong>: inbound Internet traffic, in bytes.</li>
+         * <li><strong>cpu_total</strong>: CPU utilization.</li>
+         * <li><strong>memory_usedutilization</strong>: memory utilization.</li>
+         * <li><strong>IntranetOutRate</strong>: outbound internal network traffic, in bytes.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -296,10 +296,10 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the metrics of the cluster or a node are queried. Valid values:</p>
+         * <p>Specifies whether to query a cluster or a node. Valid values:</p>
          * <ul>
-         * <li><strong>CLUSTER</strong>: The metrics of the cluster are queried.</li>
-         * <li><strong>NODE</strong>: The metrics of a node are queried.</li>
+         * <li><strong>CLUSTER</strong>: cluster.</li>
+         * <li><strong>NODE</strong>: node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -321,7 +321,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The monitored object. If the <strong>MetricType</strong> parameter is set to <strong>NODE</strong>, set this parameter to the ID of the node that is monitored.</p>
+         * <p>The observation value. If <strong>MetricType</strong> is set to <strong>NODE</strong>, the value is <strong>nodeid</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,7 +334,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The monitoring interval. Unit: seconds. The minimum value is 15.</p>
+         * <p>The observation interval in seconds. The minimum interval is 15 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -358,7 +358,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * <p>The timestamp that indicates the beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>The start timestamp, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1642476144000</p>

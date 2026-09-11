@@ -160,11 +160,11 @@ public class DescribeTagValuesRequest extends Request {
         /**
          * <p>The type of the tag key. Valid values:</p>
          * <ul>
-         * <li><strong>Custom</strong>: The tag key is created by users.</li>
-         * <li><strong>System</strong>: The tag key is created by the system.</li>
+         * <li><strong>Custom</strong>: a user-added tag key.</li>
+         * <li><strong>System</strong>: a system-created tag key.</li>
          * </ul>
          * <blockquote>
-         * <p> By default, if the parameter is left empty, both custom tag keys and system tag keys are returned.</p>
+         * <p>If this parameter is left empty, all tag keys are returned by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -177,9 +177,9 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * <blockquote>
-         * <p> This parameter is required.</p>
+         * <p>This parameter is required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the start page to return for a tag key that has multiple values. The valid value ranges from 1 to the maximum value of the INTEGER data type. This parameter is often used with the PageSize parameter. Default value: 1.</p>
+         * <p>The page number. Specifies the page to return when a tag key has multiple tag values. The value must be a positive integer that does not exceed the maximum value of the Integer data type. This parameter is typically used together with PageSize. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -204,7 +204,7 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * <p>The number of tag values to return each time for a tag key that has multiple values. Default value: 20.</p>
+         * <p>The number of tag values to return per page when a tag key has multiple tag values. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -216,7 +216,7 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -228,7 +228,7 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmzawhxxc****</p>
@@ -242,7 +242,7 @@ public class DescribeTagValuesRequest extends Request {
         /**
          * <p>The ID of the data migration, data synchronization, or change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
          * <blockquote>
-         * <p> If this parameter is left empty, the values of all tag keys of the current user are returned.</p>
+         * <p>If this parameter is left empty, all tag values of the specified tag key for the current account are returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * <p>The resource type. Set the value to <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
+         * <p>The resource type defined by the system. Set the value to <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN::DTS::INSTANCE</p>

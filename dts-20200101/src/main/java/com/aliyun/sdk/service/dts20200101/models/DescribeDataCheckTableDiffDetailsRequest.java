@@ -170,10 +170,10 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * <p>The data verification method. Valid values:</p>
+         * <p>The data validation method. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: full data verification.</li>
-         * <li><strong>2</strong>: incremental data verification.</li>
+         * <li><strong>1</strong>: full verification.</li>
+         * <li><strong>2</strong>: incremental verification.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -187,7 +187,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * <p>The name of the database to which the table that contains inconsistent data belongs.</p>
+         * <p>The name of the database that contains the table with inconsistent data.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID of the task.</p>
+         * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return. The value must be an integer greater than 0. Default value: 1.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -225,7 +225,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -249,7 +249,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends Request {
         }
 
         /**
-         * <p>The name of the table that contains inconsistent data exists.</p>
+         * <p>The name of the table that contains inconsistent data.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

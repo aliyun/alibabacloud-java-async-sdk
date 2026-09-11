@@ -171,7 +171,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         } 
 
         /**
-         * ContentList.
+         * <p>The complete text parsing content.</p>
+         * <blockquote>
+         * <p>If the task type is content, ContentList splits the original document by page. Each page has a separate Markdown text entry.</p>
+         * </blockquote>
          */
         public Builder contentList(java.util.List<ContentList> contentList) {
             this.contentList = contentList;
@@ -179,7 +182,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code. This parameter will be deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -187,7 +193,13 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -195,7 +207,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -203,7 +218,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -211,7 +229,13 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * FileUrl.
+         * <p>The OSS download URL of the file.</p>
+         * <blockquote>
+         * <p>If the task type is zip, this field returns the download URL of the zip package. The URL is valid for 30 minutes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/806a_209584525031252870_078f1180f27b4c069c0f271758aa">https://oss-cn-hangzhou.aliyuncs.com/806a_209584525031252870_078f1180f27b4c069c0f271758aa</a>****</p>
          */
         public Builder fileUrl(String fileUrl) {
             this.fileUrl = fileUrl;
@@ -219,7 +243,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -227,7 +254,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * OuterFileUrl.
+         * <p>The public OSS download URL of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oss-cn-hangzhou.aliyuncs.com/806a_209584525031252870_078f1180f27b4c069c0f271758aa">https://oss-cn-hangzhou.aliyuncs.com/806a_209584525031252870_078f1180f27b4c069c0f271758aa</a>****</p>
          */
         public Builder outerFileUrl(String outerFileUrl) {
             this.outerFileUrl = outerFileUrl;
@@ -235,7 +265,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C166D79D-436B-45F0-B5A5-25E1959F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,7 +276,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -309,7 +345,12 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The text content of the corresponding page, which is the complete Markdown text after parsing.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li>Demo * ** Demo title **</li>
+             * </ul>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -317,7 +358,10 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;

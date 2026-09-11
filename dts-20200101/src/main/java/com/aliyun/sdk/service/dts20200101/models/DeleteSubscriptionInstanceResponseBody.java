@@ -115,7 +115,7 @@ public class DeleteSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C306C198-7807-409D-930A-D6CE6C32****</p>
@@ -126,7 +126,7 @@ public class DeleteSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

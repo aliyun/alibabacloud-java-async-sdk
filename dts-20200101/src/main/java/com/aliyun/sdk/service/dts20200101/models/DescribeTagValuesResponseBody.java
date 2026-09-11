@@ -130,7 +130,7 @@ public class DescribeTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start page of the returned pages.</p>
+         * <p>The page number of the returned tag values.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class DescribeTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of tag values returned on each page.</p>
+         * <p>The number of tag values returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -152,7 +152,7 @@ public class DescribeTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AD110813-9AD6-5F07-BFC8-4C841309****</p>
@@ -163,7 +163,7 @@ public class DescribeTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tag values that are associated with the tag key.</p>
+         * <p>The tag information.</p>
          */
         public Builder tagValues(java.util.List<String> tagValues) {
             this.tagValues = tagValues;
@@ -171,7 +171,7 @@ public class DescribeTagValuesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of tag values that are associated with the tag key.</p>
+         * <p>The total number of tag values that correspond to the tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>13</p>

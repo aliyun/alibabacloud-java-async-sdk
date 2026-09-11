@@ -119,7 +119,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned if the call failed.</p>
+         * <p>The error code returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InternalError</p>
@@ -130,7 +130,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned if the call failed.</p>
+         * <p>The error message returned when the call fails.</p>
          * 
          * <strong>example:</strong>
          * <p>The request processing has failed due to some unknown error.</p>
@@ -143,7 +143,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * <p>The query token.</p>
          * <blockquote>
-         * <p> If a query does not return all results, you can specify the returned <strong>NextToken</strong> parameter in the next query to obtain more results.</p>
+         * <p>If this request does not return all results, you can pass this <strong>NextToken</strong> value in the subsequent request to continue the query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>609AD332-F2B1-48B7-BF43-41FEE641****</p>
@@ -166,7 +166,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -177,7 +177,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The collection of tags.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -269,10 +269,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the DTS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dtsntk10k6r12v****</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -280,10 +277,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. Valid value: <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ALIYUN::DTS::INSTANCE</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -291,10 +285,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testkey1</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -302,10 +293,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value that corresponds to the tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testvalue1</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

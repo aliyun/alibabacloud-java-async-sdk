@@ -145,7 +145,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code. This parameter will be deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>403</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -153,7 +156,13 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+         * <blockquote>
+         * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>DtsJobId</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -161,7 +170,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * <p>The error code returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -169,7 +181,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * <p>The error message returned when the call fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request processing has failed due to some unknown error.</p>
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -177,7 +192,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -185,7 +203,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDC111B1-ACBF-457D-9656-247FDEE9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +214,17 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the DTS document parsing task. Valid values:</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: not started.</li>
+         * <li><strong>Running</strong>: document parsing in progress.</li>
+         * <li><strong>Suspending</strong>: pausing.</li>
+         * <li><strong>Failed</strong>: document parsing failed.</li>
+         * <li><strong>Finished</strong>: document parsing completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -201,7 +232,10 @@ public class DescribeDocParserJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
